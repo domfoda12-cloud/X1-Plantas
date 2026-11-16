@@ -56,7 +56,23 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 - **Stories diários** para responder dúvidas e mostrar bastidores.
 - Responda a todos os comentários em até 24 horas.
 
-## 6. Antes de publicar
+## 6. Estratégias tiradas do reel de referência
+
+Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado para plantas de casas. Só vi a imagem e os textos na tela, não o áudio.
+
+| Item na referência | Como aplicar aqui |
+|---|---|
+| Watch time (tempo médio assistido) | Acompanhe o tempo médio de cada reel. Abertura forte nos 3 primeiros segundos, com a casa já aparecendo. |
+| Estrutura gancho, desenvolvimento, desfecho | Gancho: "8 erros na planta". Desenvolvimento: um erro por vez. Desfecho: o mais importante + chamada. |
+| Pergunta e resposta | O gancho faz uma pergunta ("Você constrói sem ver a casa?") e o fim do vídeo responde. |
+| Repostar o que funcionou | O reel que mais performar volta em versão nova (outra planta, mesmo formato). |
+| Trial reels (reels de teste) | Use os reels de teste do Instagram, que mostram o vídeo primeiro para quem não segue. Faça várias versões do gancho e publique para todos a que for melhor. |
+| Formatos vencedores | Formato fixo: apresentador + cartão no alto + legenda no meio. Troque só a planta e o tema. |
+| 3 E's: entretenimento, educação, emoção | Educação: as dicas. Entretenimento: a casa subindo em 3D. Emoção: "a casa que você vai morar". |
+| Linha de base | Compare cada reel com a média dos seus reels anteriores, não com contas grandes. |
+| Mais importante: o público | Fale com quem vai construir a primeira casa. Tudo o mais vem depois. |
+
+## 7. Antes de publicar
 
 - [ ] Conta criada por você, com seu e-mail e telefone
 - [ ] Bio com o link certo

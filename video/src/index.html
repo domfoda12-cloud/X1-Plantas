@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Plantas: vídeo 9:16</title>
+<style>
+  :root {
+    --papel: #FFFFFF;
+    --tinta: #2B2620;
+    --tinta-suave: #6B5B45;
+    --musgo: #5E7350;
+    --terracota: #C2683F;
+    --parede: #3A332B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+  body { font-family: 'Inter', 'DejaVu Sans', sans-serif; color: var(--tinta); position: relative; }
+
+  /* Fundo provisório: só aparece no modo "fundo", que vira a base do rascunho. */
+  #fundo { position: absolute; inset: 0; display: none;
+    background: linear-gradient(180deg, #4A4038 0%, #2F2924 100%); }
+  #fundo .silhueta { position: absolute; left: 50%; top: 820px; transform: translateX(-50%);
+    width: 520px; height: 1100px; border-radius: 260px 260px 0 0; background: #5A4F45; }
+  #fundo .cabeca { position: absolute; left: 50%; top: 560px; transform: translateX(-50%);
+    width: 300px; height: 360px; border-radius: 50%; background: #5A4F45; }
+  #fundo .aviso { position: absolute; left: 0; right: 0; top: 1640px; text-align: center;
+    color: #CBBFAF; font-size: 34px; font-weight: 600; letter-spacing: 3px; }
+  body.modo-fundo #fundo { display: block; }
+  body.modo-fundo #camada { display: none; }
+
+  #camada { position: absolute; inset: 0; }
+
+  /* Título de abertura, no alto, como na referência */
+  #abertura { position: absolute; left: 60px; right: 60px; top: 210px; text-align: center;
+    color: #fff; font-size: 74px; font-weight: 700; line-height: 1.12; opacity: 0;
+    text-shadow: 0 3px 10px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.8); }
+  #abertura small { display: block; font-size: 58px; font-weight: 600; margin-top: 8px; }
+
+  /* Cartão do terço superior */
+  #cartao { position: absolute; left: 90px; top: 140px; width: 900px; height: 640px;
+    background: var(--papel); border-radius: 28px; overflow: hidden; opacity: 0;
+    box-shadow: 0 18px 50px rgba(0,0,0,.35); transform-origin: 50% 0%; }
+  #cartao .rotulo { height: 78px; padding: 0 34px; display: flex; align-items: center;
+    justify-content: space-between; border-bottom: 2px solid #EFE7DA; }
+  #cartao .rotulo b { font-size: 32px; font-weight: 700; color: var(--tinta); }
+  #cartao .rotulo span { font-size: 26px; font-weight: 600; color: var(--tinta-suave); }
+  #cartao .conteudo { position: absolute; left: 0; top: 80px; width: 900px; height: 560px; }
+  #cartao canvas, #cartao svg { position: absolute; left: 0; top: 0; width: 900px; height: 560px; }
+
+  /* Legendas no meio da tela, como na referência */
+  #legenda { position: absolute; left: 40px; right: 40px; top: 1190px; text-align: center; color: #fff;
+    text-shadow: 0 3px 10px rgba(0,0,0,.6), 0 0 3px rgba(0,0,0,.9); }
+  #legenda .titulo { font-size: 68px; font-weight: 700; line-height: 1.1; min-height: 76px; }
+  #legenda .palavra { font-size: 66px; font-weight: 600; margin-top: 26px; min-height: 80px; }
+</style>
+</head>
+<body>
+  <div id="fundo">
+    <div class="cabeca"></div>
+    <div class="silhueta"></div>
+    <div class="aviso">GRAVAÇÃO DO APRESENTADOR AQUI</div>
+  </div>
+  <div id="camada">
+    <div id="abertura"></div>
+    <div id="cartao">
+      <div class="rotulo"><b id="rotulo-titulo"></b><span id="rotulo-info"></span></div>
+      <div class="conteudo" id="conteudo">
+        <canvas id="tres" width="900" height="560"></canvas>
+        <div id="desenho"></div>
+      </div>
+    </div>
+    <div id="legenda"><div class="titulo" id="leg-titulo"></div><div class="palavra" id="leg-palavra"></div></div>
+  </div>
+  <script type="module" src="./cena.js"></script>
+</body>
+</html>
