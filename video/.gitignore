@@ -3,3 +3,7 @@ saida/quadros/
 saida/amostra-*.png
 saida/fundo.png
 saida/render.log
+saida/recod.log
+saida/render-planta.log
+saida/recodificar.sh
+__pycache__/
