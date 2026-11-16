@@ -58,7 +58,7 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 
 ## 6. Estratégias tiradas do reel de referência
 
-Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado para plantas de casas. Só vi a imagem e os textos na tela, não o áudio.
+Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado para plantas de casas. Transcrevi o áudio; o resumo completo, com os tempos, está em `video/guia-editor.md`.
 
 | Item na referência | Como aplicar aqui |
 |---|---|
@@ -69,8 +69,8 @@ Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado
 | Trial reels (reels de teste) | Use os reels de teste do Instagram, que mostram o vídeo primeiro para quem não segue. Faça várias versões do gancho e publique para todos a que for melhor. |
 | Formatos vencedores | Formato fixo: apresentador + cartão no alto + legenda no meio. Troque só a planta e o tema. |
 | 3 E's: entretenimento, educação, emoção | Educação: as dicas. Entretenimento: a casa subindo em 3D. Emoção: "a casa que você vai morar". |
-| Linha de base | Compare cada reel com a média dos seus reels anteriores, não com contas grandes. |
-| Mais importante: o público | Fale com quem vai construir a primeira casa. Tudo o mais vem depois. |
+| Sequência de resultados | Três reels fracos seguidos diminuem o público inicial do próximo; três fortes aumentam. Só publique para todos a versão que ganhou o teste. |
+| Cada vez mais específico | Ordene os itens do mais geral ao mais específico, para a pessoa querer ver o próximo. |
 
 ## 7. Antes de publicar
 

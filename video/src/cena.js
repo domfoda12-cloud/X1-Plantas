@@ -4,31 +4,43 @@ import * as THREE from '../node_modules/three/build/three.module.js';
 import { ambientes, paredes, janelas, LARGURA, PROFUNDIDADE, PE_DIREITO, ESPESSURA } from './planta.js';
 
 // ---------------------------------------------------------------------------
-// Roteiro: uma cena por item da lista, no formato da referência.
+// Roteiro, pensado para retenção (tempo assistido), como no reel de referência:
+//   Gancho (0 a 3 s): faz uma pergunta e a casa já aparece subindo em 3D.
+//   Desenvolvimento (3 a 27 s): seis erros, 4 s cada, do mais geral ao mais específico.
+//   Desfecho (27 a 34 s): responde a pergunta do gancho, com a casa girando em 3D.
+//   Chamada (34 a 38 s): comentar PLANTA para receber o material.
+// O corpo é igual em todas as versões; só o gancho muda (5 versões para os reels de teste).
 // ---------------------------------------------------------------------------
 const INFO = '55 m² · 2 quartos · 1 banho';
+export const GANCHOS = [
+  { titulo: 'Qual é o erro mais caro<br>na planta de uma casa?', fala: 'fica até o final' },
+  { titulo: '7 erros na planta<br>(o último é o pior)', fala: 'veja antes de construir' },
+  { titulo: 'Antes de construir,<br>confira esses 7 pontos', fala: 'o último quase ninguém faz' },
+  { titulo: 'O erro de planta<br>que ninguém te conta', fala: 'e mais seis no caminho' },
+  { titulo: 'Construir sem esse<br>cuidado sai caro', fala: 'você vai ver no final' },
+];
+const versao = clampVersao(Number(new URLSearchParams(location.search).get('v') || 1));
+function clampVersao(v) { return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; }
+export const DURACAO_GANCHO = 3;
+
 export const cenas = [
-  { ini: 0, fim: 3.5, tipo: 'abertura',
-    abertura: '8 erros na planta<br>que custam caro<small>(antes de construir)</small>',
-    titulo: '', fala: 'antes de construir sua casa, veja isso' },
-  { ini: 3.5, fim: 9, tipo: '3d-crescer', rotulo: 'Casa Compacta', info: INFO,
-    titulo: '1. Construir sem ver em 3D', fala: 'veja a casa antes do primeiro tijolo' },
-  { ini: 9, fim: 14, tipo: 'sol', rotulo: 'Posição do sol', info: 'Casa Compacta',
-    titulo: '2. Ignorar o sol', fala: 'quartos com sol da manhã' },
-  { ini: 14, fim: 19, tipo: 'corredor', rotulo: 'Circulação', info: 'Casa Compacta',
-    titulo: '3. Corredor comprido', fala: 'corredor também custa por metro' },
-  { ini: 19, fim: 24, tipo: 'banho-porta', rotulo: 'Privacidade', info: 'Casa Compacta',
-    titulo: '4. Banheiro de frente pra sala', fala: 'a porta abre para o hall' },
-  { ini: 24, fim: 29, tipo: 'banho-janela', rotulo: 'Ventilação', info: 'Casa Compacta',
-    titulo: '5. Banheiro sem janela', fala: 'ventilação natural evita mofo' },
-  { ini: 29, fim: 34, tipo: 'recuos', rotulo: 'Terreno e recuos', info: 'Lote 10 x 20 m',
-    titulo: '6. Esquecer os recuos', fala: 'o terreno manda na planta' },
-  { ini: 34, fim: 39, tipo: 'ampliacao', rotulo: 'Ampliação', info: 'Casa Compacta',
-    titulo: '7. Não prever ampliação', fala: 'pense na casa daqui a cinco anos' },
-  { ini: 39, fim: 45, tipo: '3d-orbita', rotulo: 'Casa Compacta', info: INFO,
-    titulo: '8. Mais importante!', fala: 'escolha a planta pelo seu jeito de viver' },
-  { ini: 45, fim: 50, tipo: 'cta', rotulo: 'Material gratuito', info: 'pelo WhatsApp',
-    titulo: 'Comente PLANTA', fala: 'e receba o material grátis' },
+  { ini: 0, fim: 3, tipo: '3d-gancho', rotulo: 'Casa Compacta', info: INFO, ...GANCHOS[versao - 1] },
+  { ini: 3, fim: 7, tipo: 'sol', rotulo: 'Posição do sol', info: 'Casa Compacta',
+    titulo: '1. Ignorar o sol', fala: 'quarto com sol da manhã' },
+  { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'Circulação', info: 'Casa Compacta',
+    titulo: '2. Corredor comprido', fala: 'corredor também custa por metro' },
+  { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'Privacidade', info: 'Casa Compacta',
+    titulo: '3. Banheiro de frente pra sala', fala: 'a porta abre para o hall' },
+  { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'Ventilação', info: 'Casa Compacta',
+    titulo: '4. Banheiro sem janela', fala: 'ventilação natural evita mofo' },
+  { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'Terreno e recuos', info: 'Lote 10 x 20 m',
+    titulo: '5. Esquecer os recuos', fala: 'o terreno manda na planta' },
+  { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'Ampliação', info: 'Casa Compacta',
+    titulo: '6. Não prever ampliação', fala: 'pense na casa daqui a cinco anos' },
+  { ini: 27, fim: 34, tipo: '3d-orbita', rotulo: 'A resposta', info: INFO,
+    titulo: '7. O mais caro:<br>não ver a casa em 3D', fala: 'veja cada cômodo antes do primeiro tijolo' },
+  { ini: 34, fim: 38, tipo: 'cta', rotulo: 'Material gratuito', info: 'pelo WhatsApp',
+    titulo: 'Comente PLANTA', fala: 'e receba a planta grátis' },
 ];
 export const DURACAO = cenas[cenas.length - 1].fim;
 
@@ -357,6 +369,11 @@ function posicionar3D(subida, mov, theta, raio, altura) {
 }
 
 const cenas3D = {
+  '3d-gancho'(tc) {
+    // Gancho: a casa sobe rápido já no primeiro segundo, para prender o olhar.
+    const k = clamp(tc / 3);
+    posicionar3D(tc * 1.6 - 0.1, tc * 1.6 - 2.2, lerp(-0.6, 0.05, suave(k)), lerp(9.5, 8, saida(k)), lerp(16, 13.5, saida(k)));
+  },
   '3d-crescer'(tc) {
     // Paredes sobem de 0,3 s a ~2,6 s; móveis aparecem depois; câmera gira devagar.
     const k = clamp(tc / 5.5);
@@ -400,7 +417,7 @@ window.renderAt = (t) => {
   }
 
   // Legenda: título do item e uma palavra por vez, como na referência
-  dom.legT.textContent = c.titulo;
+  dom.legT.innerHTML = c.titulo;
   const palavras = c.fala.split(' ');
   const passo = (c.fim - c.ini - 0.3) / palavras.length;
   dom.legP.textContent = palavras[clamp(Math.floor((tc - 0.15) / passo), 0, palavras.length - 1)];
@@ -408,4 +425,6 @@ window.renderAt = (t) => {
 
 window.modoFundo = (ativo) => document.body.classList.toggle('modo-fundo', ativo);
 window.DURACAO = DURACAO;
+window.DURACAO_GANCHO = DURACAO_GANCHO;
+window.VERSOES = GANCHOS.length;
 document.fonts.ready.then(() => { window.renderAt(0); window.pronto = true; });

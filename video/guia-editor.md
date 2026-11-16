@@ -1,67 +1,97 @@
-# Guia para o editor: vídeo "8 erros na planta"
+# Guia para o editor: vídeo "O erro mais caro na planta"
 
 > Referência principal: reel de Robert McKeaveney, "10/10 content strategies (niche edition)", 52 s, 9:16.
 > Link: https://www.instagram.com/reel/DfY-8rETTPs/
-> Copiamos o **formato**, não o conteúdo nem a imagem dele.
+> Copiamos o **formato e as regras de retenção**, não o conteúdo nem a imagem dele.
 
-## 1. O que copiar da referência
+## 1. O que a referência ensina (resumo da fala, 0:00 a 0:52)
 
-| Elemento | Como é na referência | Como fica no nosso vídeo |
+Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
+
+| Tempo | O que ele diz (resumo) | Como usamos |
 |---|---|---|
-| Apresentador | Fala direto para a câmera, enquadramento do peito para cima, fundo de casa simples | Você (ou o parceiro) gravando no celular, fundo claro e arrumado |
-| Ritmo | Um item novo a cada 4 a 6 s, sem pausa | 8 itens + abertura + chamada final, 50 s no total |
-| Cartão no terço superior | Cartão branco com diagrama, print ou gráfico, troca a cada item | Cartão branco com a planta 2D ou a casa em 3D |
-| Legenda no meio | Título do item em negrito ("1. Watch time") e uma palavra da fala por vez embaixo | Título do item ("1. Construir sem ver em 3D") e uma palavra da fala por vez |
-| Abertura | Título grande no alto, sem cartão, nos 3 primeiros segundos | "8 erros na planta que custam caro (antes de construir)" |
-| Fecho | Último item marcado como "Most important!" | "8. Mais importante!" antes da chamada |
+| 0:00 | São 10 estratégias, cada uma mais específica que a anterior | Os itens vão do mais geral (sol) ao mais específico (ampliação) |
+| 0:03 | **Tempo assistido** é o principal fator para viralizar; sem ele, não viraliza | Tudo foi pensado para a pessoa ficar até o fim |
+| 0:08 | Estrutura **gancho, desenvolvimento, desfecho** | Gancho 0 a 3 s, desenvolvimento 3 a 27 s, desfecho 27 a 34 s |
+| 0:11 | O gancho faz a pessoa **se perguntar algo**; o desfecho **responde** no final | Gancho: "Qual é o erro mais caro?" Desfecho: "não ver a casa em 3D" |
+| 0:17 | Se um vídeo for bem, mude 1 ou 2 partes e **reposte um mês depois** | Repetir com outra planta e o mesmo formato |
+| 0:21 | Faça **5 versões** de cada vídeo, poste todas como **reels de teste** e libere para todos a melhor | 5 versões prontas, só o gancho muda |
+| 0:28 | Pegue o formato de um vídeo que já viralizou e coloque o seu tema | É o que este vídeo faz com o reel de referência |
+| 0:32 | Todo vídeo viral tem pelo menos um dos **3 E's**: entretenimento, educação, emoção | Educação: os erros. Entretenimento: a casa subindo em 3D. Emoção: "a sua casa" |
+| 0:38 | 3 vídeos fracos seguidos diminuem o público inicial do próximo; 3 fortes aumentam | Só publique para todos a versão que ganhou o teste |
+| 0:47 | Chamada final para seguir | Nosso fim: "Comente PLANTA" |
 
-## 2. Arquivos
+## 2. Por que este vídeo prende quem quer construir
 
-Todos na pasta `video/saida/`:
+- **A planta aparece desde o primeiro quadro.** O gancho já mostra a Casa Compacta subindo em 3D.
+- **Todos os itens usam a mesma casa.** A pessoa vai montando a casa na cabeça: sala, cozinha, quartos, banheiro, terreno. No fim, ela conhece a planta e quer recebê-la.
+- **A resposta só vem no item 7**, com a casa girando em 3D, que é a parte mais bonita do vídeo.
+- **A chamada oferece exatamente essa planta**, grátis, pelo WhatsApp.
+
+## 3. Arquivos
+
+Cada versão fica em `video/saida/v1` a `video/saida/v5`:
 
 - **`camada-transparente.webm`**: só os cartões e as legendas, com fundo transparente (VP9 com canal alfa). Coloque **por cima** da gravação do apresentador.
 - **`rascunho.mp4`**: o mesmo vídeo com um boneco no lugar do apresentador, para ver o resultado antes de gravar.
 
-Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
+As 5 versões são iguais depois dos 3 primeiros segundos. Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
 
-## 3. Roteiro de fala (teleprompter)
+## 4. Roteiro de fala (teleprompter)
 
-O texto abaixo é para o apresentador ler. As palavras que aparecem na legenda são um resumo de cada fala; ajuste a legenda se mudar o texto.
+### Gancho (0:00 a 0:03), um por versão
+
+| Versão | Texto na tela | Fala |
+|---|---|---|
+| v1 | Qual é o erro mais caro na planta de uma casa? | "Qual é o erro mais caro na planta de uma casa? Fica até o final." |
+| v2 | 7 erros na planta (o último é o pior) | "Sete erros na planta da sua casa. O último é o pior." |
+| v3 | Antes de construir, confira esses 7 pontos | "Antes de construir, confira esses sete pontos. O último quase ninguém faz." |
+| v4 | O erro de planta que ninguém te conta | "Tem um erro de planta que ninguém te conta. E mais seis no caminho." |
+| v5 | Construir sem esse cuidado sai caro | "Construir sem esse cuidado sai caro. Você vai ver no final." |
+
+### Corpo (igual em todas as versões)
 
 | Tempo | Item na tela | Fala |
 |---|---|---|
-| 0:00 a 0:03,5 | Abertura | "Antes de construir sua casa, veja esses 8 erros na planta que custam caro." |
-| 0:03,5 a 0:09 | 1. Construir sem ver em 3D | "Primeiro: construir sem ver a casa em 3D. Você precisa ver a casa antes do primeiro tijolo." |
-| 0:09 a 0:14 | 2. Ignorar o sol | "Dois: ignorar o sol. Quarto com sol da manhã fica mais fresco à tarde." |
-| 0:14 a 0:19 | 3. Corredor comprido | "Três: corredor comprido. Corredor também custa por metro, e ninguém mora no corredor." |
-| 0:19 a 0:24 | 4. Banheiro de frente pra sala | "Quatro: banheiro de frente para a sala. A porta tem que abrir para o hall." |
-| 0:24 a 0:29 | 5. Banheiro sem janela | "Cinco: banheiro sem janela. Ventilação natural evita mofo." |
-| 0:29 a 0:34 | 6. Esquecer os recuos | "Seis: esquecer os recuos. Quem manda na planta é o terreno, e cada prefeitura tem a sua regra." |
-| 0:34 a 0:39 | 7. Não prever ampliação | "Sete: não prever ampliação. Pense na sua casa daqui a cinco anos." |
-| 0:39 a 0:45 | 8. Mais importante! | "E o mais importante: escolha a planta pelo seu jeito de viver, não pela foto bonita." |
-| 0:45 a 0:50 | Comente PLANTA | "Comenta PLANTA que eu te mando o material grátis no WhatsApp." |
+| 0:03 a 0:07 | 1. Ignorar o sol | "Um: ignorar o sol. Quarto com sol da manhã fica mais fresco à tarde." |
+| 0:07 a 0:11 | 2. Corredor comprido | "Dois: corredor comprido. Corredor também custa por metro, e ninguém mora nele." |
+| 0:11 a 0:15 | 3. Banheiro de frente pra sala | "Três: banheiro de frente pra sala. A porta tem que abrir para o hall." |
+| 0:15 a 0:19 | 4. Banheiro sem janela | "Quatro: banheiro sem janela. Ventilação natural evita mofo." |
+| 0:19 a 0:23 | 5. Esquecer os recuos | "Cinco: esquecer os recuos. O terreno manda na planta, e cada prefeitura tem a sua regra." |
+| 0:23 a 0:27 | 6. Não prever ampliação | "Seis: não prever ampliação. Pense na sua casa daqui a cinco anos." |
+| 0:27 a 0:34 | 7. O mais caro: não ver a casa em 3D | "E o mais caro: não ver a casa em 3D antes de construir. Olha cada cômodo antes do primeiro tijolo." |
+| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta grátis no WhatsApp." |
 
-## 4. Como gravar
+O ritmo é rápido, de 3 a 4 palavras por segundo, como na referência. Se a fala não couber, encurte a frase; não estique o item.
+
+## 5. Como gravar
 
 - Celular na vertical, 1080 x 1920, 30 fps.
 - Rosto entre 45% e 75% da altura da tela: o terço de cima fica livre para o cartão e a legenda fica na altura do peito.
 - Microfone de lapela ou fone com microfone, como na referência.
-- Grave cada item separado. Fica mais fácil cortar no ritmo do cartão.
+- Grave o corpo uma vez e os 5 ganchos separados. Assim as 5 versões saem da mesma gravação.
 
-## 5. Edição
+## 6. Edição
 
-1. Coloque a gravação na trilha de baixo e a `camada-transparente.webm` na trilha de cima, começando no mesmo ponto.
-2. Corte a gravação para que cada fala caiba no tempo do item (tabela acima). Se uma fala ficar maior, me avise o novo tempo que eu renderizo de novo.
+1. Gravação do apresentador na trilha de baixo, `camada-transparente.webm` na trilha de cima, começando no mesmo ponto.
+2. Corte a gravação para que cada fala caiba no tempo do item (tabela acima). Sem pausas entre os itens.
 3. Música de fundo baixa, sem letra.
 4. Exporte em 1080 x 1920.
 
-## 6. Antes de publicar
+## 7. Como testar
+
+1. Publique as 5 versões como **reels de teste** (só para quem não segue).
+2. Depois de 24 a 48 horas, compare o **tempo médio assistido** e quantas pessoas chegaram aos 27 s (o desfecho).
+3. Publique para todos só a melhor versão.
+4. Se ela for bem, repita o formato daqui a um mês com outra planta (Casa Família ou Casa Estreita).
+
+## 8. Antes de publicar
 
 Passe pelo `checklist-revisao-anuncio.md` na raiz do repositório. As medidas da Casa Compacta são provisórias até o arquiteto validar a planta.
 
-## 7. Como alterar o vídeo
+## 9. Como alterar o vídeo
 
-Os textos, tempos e cartões estão em `video/src/cena.js` (lista `cenas` no início). A planta está em `video/src/planta.js`.
+Os ganchos, textos, tempos e cartões estão em `video/src/cena.js` (listas `GANCHOS` e `cenas` no início). A planta está em `video/src/planta.js`.
 
 Para renderizar de novo, o computador precisa de Node.js, ffmpeg e do Playwright com o Chromium. Dentro da pasta `video`:
 
@@ -81,4 +111,4 @@ npx playwright install chromium
 node render.cjs
 ```
 
-Para conferir só alguns quadros, sem renderizar tudo: `node render.cjs --amostras 6,20,43`.
+Para conferir só alguns quadros: `node render.cjs --amostras 1,5,30 --versao 2`.

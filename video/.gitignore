@@ -2,3 +2,4 @@ node_modules/
 saida/quadros/
 saida/amostra-*.png
 saida/fundo.png
+saida/render.log

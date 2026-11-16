@@ -54,6 +54,15 @@ Todo vídeo precisa funcionar sem som: legenda na tela em todas as cenas.
 
 Teste uma variação por vez, com o mesmo orçamento, e mantenha a que tiver mais cadastros.
 
+### Regras de retenção (do reel de referência)
+
+O vídeo "O erro mais caro na planta" (`video/guia-editor.md`) segue estas regras, e os anúncios devem seguir também:
+
+- **Tempo assistido é o que importa.** Cada segundo precisa dar um motivo para ver o próximo.
+- **O gancho faz uma pergunta e o final responde.** A resposta só aparece no desfecho.
+- **A planta aparece desde o primeiro segundo**, para segurar quem tem interesse em construir.
+- **Cinco versões do gancho por vídeo**, testadas como reels de teste antes de publicar para todos.
+
 ## 7. Checklist antes de publicar
 
 - [ ] Legenda na tela em todas as cenas
