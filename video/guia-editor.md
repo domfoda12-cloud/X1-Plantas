@@ -24,6 +24,57 @@ Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 | 0:38 | 3 vídeos fracos seguidos diminuem o público inicial do próximo; 3 fortes aumentam | Só publique para todos a versão que ganhou o teste |
 | 0:47 | Chamada final para seguir | Nosso fim: "Comente PLANTA" |
 
+## 1.1. Referências de edição: Mino Lee (@minolee.mp4)
+
+Assisti e transcrevi três reels dele. Esta é a referência de **como editar**.
+
+### Estilo de edição (vale para os três)
+
+| Elemento | Como ele faz | Como fica no nosso vídeo |
+|---|---|---|
+| Gancho escrito | Frase pequena e fina no alto, **fica na tela o vídeo inteiro**. É diferente do que ele fala: o texto promete, a voz explica | A frase dos R$ 1.000 fica fixa no alto do começo ao fim |
+| Legendas | Letra fina e pequena, **2 a 3 palavras por vez**, no meio da tela, sem caixa alta. Só a palavra-chave em amarelo | Igual: blocos de 2 a 3 palavras, palavra-chave em amarelo |
+| Etiqueta de seção | Texto pequeno ("agent 1") em cima de um título em negrito ("Websites") | "erro 1" em cima de "Ignorar o sol" |
+| Imagens de apoio | A cada frase entra uma prova: prints, números, 3 miniaturas lado a lado, tela cheia de gravação de tela | Cartões blueprint e a casa 3D em tela cheia |
+| Cortes | Sem respiro entre frases. Troca de ângulo ou de imagem a cada 2 a 4 s, com movimento rápido de câmera na transição | Um visual novo a cada 4 s; nenhum trecho parado |
+| Gravação | Celular na mão, luz natural ou ambiente, roupa comum. Parece conversa, não anúncio | Grave assim: nada de estúdio |
+| Números | Sempre valores concretos: "US$ 4.000 que eu pagaria a um designer", "80 vídeos em 30 dias" | "R$ 1.000 que um arquiteto te economizaria" |
+| Final | Chamada simples: "comenta CLASS que eu te mando o guia grátis" | "Comenta PLANTA que eu te mando a planta grátis" |
+
+### Reel 1: o gancho "É possível…?" (para adicionar ao repertório)
+
+Link: https://www.instagram.com/reel/DflcLspiT9H/ (78 s)
+
+- **Texto no alto:** "This 4-word hook got me 70 million views". **Modelo:** "É possível [resultado extremo]?"
+- **O que ele diz:** vídeos com esse gancho deram a ele 100 mil seguidores quando ele não tinha autoridade nenhuma. O primeiro foi "É possível gabaritar uma prova estudando só uma hora?". Ele gravou o processo e a nota no final.
+- **Por que funciona:** não é a fórmula de roteiro, é ver alguém passar por **altos e baixos de verdade**. Não precisa ser especialista nem ter vida bonita; precisa **mostrar o esforço na câmera**.
+- **Lição:** se você está ocupado correndo atrás de uma meta, já tem a história. Só precisa filmar.
+
+**Ideias desse formato para plantas de casas** (vídeos de desafio, gravados no celular):
+
+1. "É possível desenhar a planta de uma casa em 1 hora?"
+2. "É possível caber 3 quartos num terreno de 8 metros de frente?"
+3. "É possível vender 10 plantas em 30 dias começando do zero?" (série, um vídeo por semana)
+4. "É possível transformar um rabisco de guardanapo numa planta 3D?"
+
+Em cada um: mostre o processo, o que deu errado no meio e o resultado no final. O resultado é o desfecho que segura a pessoa até o fim.
+
+### Reel 2: lista com prova e valor crescente
+
+Link: https://www.instagram.com/reel/DfbA-o1u4FI/ (104 s)
+
+- **Texto no alto:** "i pay Claude $200/month … it pays me $400k/month". **Fala:** "cada coisa me dá cada vez mais dinheiro" (a lista cresce, como no reel do Robert).
+- **Estrutura:** "Número um… Número dois… Número três", cada item com (a) o que é, (b) **quanto custaria sem isso**, (c) uma prova na tela.
+- **Para nós:** em cada erro, dizer quanto ele custa quando acontece na obra, se você tiver o número real.
+
+### Reel 3: bastidor do processo
+
+Link: https://www.instagram.com/reel/De9dwH9yDB9/ (91 s)
+
+- **Texto no alto:** "POV: Making a viral video in 10 minutes with AI". Câmera na mão, conversa com um amigo, erros e risadas ficam no vídeo.
+- **Estrutura:** promessa com prazo ("em menos de 10 minutos") → processo ao vivo → resultado.
+- **Para nós:** "POV: fazendo a planta 3D de uma casa em 10 minutos", mostrando a tela e a casa aparecendo.
+
 ## 2. Por que este vídeo prende quem quer construir
 
 - **A planta aparece desde o primeiro quadro.** O gancho mostra, em tela cheia, a planta azul se desenhando e a casa ganhando vida.
@@ -82,7 +133,7 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela c
 
 - **O narrador nunca para.** O fim de cada frase emenda no número do item seguinte ("…fresco à tarde. Dois: …"). Corte qualquer respiração, "é…" ou silêncio na edição.
 - **Só uma pausa, de propósito:** depois de "construir sem ver a casa pronta", por cerca de meio segundo, enquanto a casa ganha vida na tela. É o momento da revelação.
-- **A legenda é a própria fala**, uma palavra por vez, em amarelo. Se mudar o texto falado, me avise que eu ajusto a legenda e renderizo de novo.
+- **A legenda é a própria fala**, em blocos de 2 a 3 palavras, com a palavra-chave em amarelo. Se mudar o texto falado, me avise que eu ajusto a legenda e renderizo de novo.
 - O ritmo é de 3 a 4 palavras por segundo, como na referência. Se uma frase não couber, encurte a frase; não estique o item.
 
 ### O que prende o olho em cada momento
@@ -90,7 +141,8 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela c
 | Tempo | Movimento na tela |
 |---|---|
 | 0:00 a 0:03 | Blueprint se desenhando, paredes subindo, cômodos ganhando vida (tela cheia) |
-| 0:03 a 0:27 | Planta do cartão se desenhando, destaque amarelo pulsando, zoom lento contínuo, palavras da legenda entrando com um "pulo" leve |
+| 0:03 a 0:27 | Planta do cartão se desenhando, destaque amarelo pulsando, zoom lento contínuo, blocos da legenda entrando com um "pulo" leve |
+| 0:03 a 0:38 | Gancho dos R$ 1.000 fixo no alto, lembrando a promessa |
 | Sempre | Barra de progresso no alto, enchendo item a item (mostra quantos faltam) |
 | 0:27 a 0:34 | Casa ganhando vida e câmera deslizando (tela cheia) |
 | 0:34 a 0:38 | Foto da planta humanizada e botão PLANTA pulsando |

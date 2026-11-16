@@ -72,6 +72,14 @@ Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado
 | Sequência de resultados | Três reels fracos seguidos diminuem o público inicial do próximo; três fortes aumentam. Só publique para todos a versão que ganhou o teste. |
 | Cada vez mais específico | Ordene os itens do mais geral ao mais específico, para a pessoa querer ver o próximo. |
 
+### Formato de desafio: "É possível…?"
+
+Do reel do Mino Lee (@minolee.mp4). O gancho "É possível [resultado extremo]?" funciona mesmo sem autoridade, porque as pessoas ficam para ver o resultado e os altos e baixos do caminho. Ideias, exemplos e os outros reels dele estão em `video/guia-editor.md` (seção 1.1).
+
+- "É possível desenhar a planta de uma casa em 1 hora?"
+- "É possível caber 3 quartos num terreno de 8 metros de frente?"
+- "É possível vender 10 plantas em 30 dias começando do zero?"
+
 ## 7. Antes de publicar
 
 - [ ] Conta criada por você, com seu e-mail e telefone

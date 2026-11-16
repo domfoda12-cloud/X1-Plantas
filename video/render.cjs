@@ -91,14 +91,21 @@ async function quadros(pagina, dir, de, ate, rotulo) {
 
       const destino = path.join(SAIDA, `v${v}`);
       fs.mkdirSync(destino, { recursive: true });
-      const entradas = ['-framerate', String(FPS), '-i', path.join(dirGancho, 'q_%05d.png'), '-framerate', String(FPS), '-i', path.join(dirCorpo, 'q_%05d.png')];
+      // Gancho fixo do alto (muda por versão): imagem transparente sobreposta ao corpo
+      const topo = path.join(QUADROS, `topo-v${v}.png`);
+      await pagina.evaluate(() => { window.renderAt(window.DURACAO_GANCHO + 1); window.modoTopo(true); });
+      await pagina.screenshot({ path: topo, omitBackground: true });
+      await pagina.evaluate(() => window.modoTopo(false));
+      const entradas = ['-framerate', String(FPS), '-i', path.join(dirGancho, 'q_%05d.png'), '-framerate', String(FPS), '-i', path.join(dirCorpo, 'q_%05d.png'),
+        '-loop', '1', '-framerate', String(FPS), '-i', topo];
+      const junta = (g, c, t) => `[${c}:v]format=rgba[cb];[${t}:v]format=rgba[tp];[cb][tp]overlay=format=auto:shortest=1[corpo];[${g}:v]format=rgba[ga];[ga][corpo]concat=n=2:v=1[c]`;
       // Camada com transparência, para o editor colocar por cima da gravação
-      ffmpeg([...entradas, '-filter_complex', '[0:v][1:v]concat=n=2:v=1[c]', '-map', '[c]',
+      ffmpeg([...entradas, '-filter_complex', junta(0, 1, 2), '-map', '[c]',
         '-c:v', 'libvpx-vp9', '-pix_fmt', 'yuva420p', '-b:v', '0', '-crf', '30', '-row-mt', '1',
         path.join(destino, 'camada-transparente.webm')]);
       // Rascunho com o fundo provisório no lugar do apresentador
       ffmpeg(['-loop', '1', '-framerate', String(FPS), '-i', path.join(SAIDA, 'fundo.png'), ...entradas,
-        '-filter_complex', '[1:v][2:v]concat=n=2:v=1[c];[0:v][c]overlay=shortest=1,format=yuv420p',
+        '-filter_complex', `${junta(1, 2, 3)};[0:v][c]overlay=shortest=1,format=yuv420p`,
         '-c:v', 'libx264', '-crf', '20', '-preset', 'medium', '-movflags', '+faststart', path.join(destino, 'rascunho.mp4')]);
       console.log(`Versão ${v} pronta em ${destino}`);
     }

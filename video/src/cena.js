@@ -14,11 +14,11 @@ import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA }
 // ---------------------------------------------------------------------------
 const INFO = '55 m² · 2 quartos · 1 banho';
 export const GANCHOS = [
-  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'Vou te economizar os mil reais que um arquiteto te economizaria.' },
-  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'Os mil reais que um arquiteto te faria economizar, de graça.' },
-  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'Antes de pagar mil reais a um arquiteto, veja isso aqui.' },
-  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'Sete erros que um arquiteto te cobraria mil reais pra achar.' },
-  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'Um arquiteto te cobraria mil reais pra te mostrar isso.' },
+  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'Vou te economizar os *mil* *reais* que um arquiteto te economizaria.' },
+  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'Os *mil* *reais* que um arquiteto te faria economizar, de graça.' },
+  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'Antes de pagar *mil* *reais* a um arquiteto, veja isso aqui.' },
+  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'Sete erros que um arquiteto te cobraria *mil* *reais* pra achar.' },
+  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'Um arquiteto te cobraria *mil* *reais* pra te mostrar isso.' },
 ];
 const versao = (() => { const v = Number(new URLSearchParams(location.search).get('v') || 1); return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; })();
 export const DURACAO_GANCHO = 3;
@@ -26,21 +26,21 @@ export const DURACAO_GANCHO = 3;
 export const cenas = [
   { ini: 0, fim: 3, tipo: 'tela-gancho', ...GANCHOS[versao - 1] },
   { ini: 3, fim: 7, tipo: 'sol', rotulo: 'POSIÇÃO DO SOL', info: 'Casa Compacta',
-    titulo: '1. Ignorar o sol', fala: 'Um: ignorar o sol. Quarto virado pro nascente fica fresco à tarde.' },
+    etiqueta: 'erro 1', titulo: 'Ignorar o sol', fala: 'Um: ignorar o sol. Quarto virado pro *nascente* fica fresco à tarde.' },
   { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'CIRCULAÇÃO', info: 'Casa Compacta',
-    titulo: '2. Corredor comprido', fala: 'Dois: corredor comprido. Corredor custa por metro, e ninguém mora nele.' },
+    etiqueta: 'erro 2', titulo: 'Corredor comprido', fala: 'Dois: corredor comprido. Corredor *custa* *por* *metro,* e ninguém mora nele.' },
   { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'PRIVACIDADE', info: 'Casa Compacta',
-    titulo: '3. Banheiro de frente pra sala', fala: 'Três: banheiro de frente pra sala. A porta tem que abrir pro hall.' },
+    etiqueta: 'erro 3', titulo: 'Banheiro de frente pra sala', fala: 'Três: banheiro de frente pra sala. A porta tem que abrir *pro* *hall.*' },
   { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'VENTILAÇÃO', info: 'Casa Compacta',
-    titulo: '4. Banheiro sem janela', fala: 'Quatro: banheiro sem janela. Sem ventilação natural, o mofo aparece rápido.' },
+    etiqueta: 'erro 4', titulo: 'Banheiro sem janela', fala: 'Quatro: banheiro sem janela. Sem ventilação natural, o *mofo* aparece rápido.' },
   { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'TERRENO E RECUOS', info: 'Lote 10 x 20 m',
-    titulo: '5. Esquecer os recuos', fala: 'Cinco: esquecer os recuos. Cada prefeitura tem a sua regra, confira antes.' },
+    etiqueta: 'erro 5', titulo: 'Esquecer os recuos', fala: 'Cinco: esquecer os recuos. Cada *prefeitura* tem a sua regra, confira antes.' },
   { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'AMPLIAÇÃO', info: 'Casa Compacta',
-    titulo: '6. Não prever ampliação', fala: 'Seis: não prever ampliação. Deixe pronto por onde a casa vai crescer.' },
+    etiqueta: 'erro 6', titulo: 'Não prever ampliação', fala: 'Seis: não prever ampliação. Deixe pronto por onde a casa *vai* *crescer.*' },
   { ini: 27, fim: 34, tipo: 'tela-resposta',
-    titulo: '7. O mais caro:<br>não ver a casa em 3D', fala: 'E o mais caro de todos: construir sem ver a casa pronta. … Olha só: cada cômodo, cada móvel, antes do primeiro tijolo.' },
+    etiqueta: 'erro 7 · o mais caro', titulo: 'Não ver a casa em 3D', fala: 'E o *mais* *caro* de todos: construir sem ver a casa pronta. … Olha só: cada cômodo, cada móvel, *antes* *do* *primeiro* *tijolo.*' },
   { ini: 34, fim: 38, tipo: 'cta', rotulo: 'PLANTA GRÁTIS', info: 'pelo WhatsApp',
-    titulo: 'Comente PLANTA', fala: 'Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp.' },
+    etiqueta: 'planta grátis', titulo: 'Comente PLANTA', fala: 'Comenta *PLANTA* que eu te mando essa planta humanizada *de* *graça* no WhatsApp.' },
 ];
 export const DURACAO = cenas[cenas.length - 1].fim;
 
@@ -253,7 +253,7 @@ const telas = {
 // Quadro
 // ---------------------------------------------------------------------------
 const el = (id) => document.getElementById(id);
-const dom = { progresso: [...document.querySelectorAll('#progresso .seg')], cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
+const dom = { topo: el('gancho-topo'), progresso: [...document.querySelectorAll('#progresso .seg')], cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
 
 window.renderAt = (t) => {
   const c = cenas.find((x) => t >= x.ini && t < x.fim) || cenas[cenas.length - 1];
@@ -274,13 +274,16 @@ window.renderAt = (t) => {
     dom.desenho.innerHTML = `<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${GRADE}<g transform="translate(450 280) scale(${zoom}) translate(-450 -280)">${cartoes2D[c.tipo](tc)}</g></svg>`;
   }
 
-  // Legenda: título do item e uma palavra por vez, como na referência
-  dom.legT.innerHTML = c.titulo;
-  dom.legT.classList.toggle('gancho', c.tipo === 'tela-gancho');
-  const { palavra, desde } = palavraNoTempo(c, tc);
-  dom.legP.textContent = palavra;
-  const pop = 1 + 0.14 * (1 - saida(desde / 0.14));
-  dom.legP.style.transform = `scale(${pop})`;
+  // Legenda no estilo das referências: etiqueta pequena + título do item, e a fala
+  // em blocos de 2 a 3 palavras, em letra fina; a palavra-chave aparece em amarelo.
+  const gancho = c.tipo === 'tela-gancho';
+  dom.legT.innerHTML = gancho ? c.titulo : `<small>${c.etiqueta}</small>${c.titulo}`;
+  dom.legT.classList.toggle('gancho', gancho);
+  const { texto: bloco, desde } = blocoNoTempo(c, tc);
+  dom.legP.innerHTML = bloco;
+  dom.legP.style.transform = `scale(${1 + 0.08 * (1 - saida(desde / 0.12))})`;
+  dom.topo.innerHTML = GANCHOS[versao - 1].titulo;
+  dom.topo.style.opacity = gancho ? 0 : 1;
 
   // Barra de progresso: 7 itens; mostra quantos faltam
   const idx = c.tipo === 'tela-gancho' ? -1 : c.tipo === 'cta' ? 7 : cenas.indexOf(c) - 1;
@@ -290,23 +293,41 @@ window.renderAt = (t) => {
   });
 };
 
-// Divide a fala em palavras com duração proporcional ao tamanho; "…" é uma pausa proposital.
-function palavraNoTempo(c, tc) {
-  const toks = c.fala.split(' ');
-  const pesos = toks.map((w) => (w === '…' ? 2.2 : 0.7 + w.replace(/[^\p{L}\d]/gu, '').length / 5));
+// Divide a fala em blocos de até 3 palavras (quebra na pontuação); "…" é pausa proposital.
+// A duração de cada bloco é proporcional ao tamanho das palavras. *palavra* = ênfase.
+function blocosDaFala(fala) {
+  const blocos = []; let atual = [];
+  const fecha = () => { if (atual.length) { blocos.push(atual); atual = []; } };
+  for (const tok of fala.split(' ')) {
+    if (tok === '…') { fecha(); blocos.push(null); continue; }
+    atual.push(tok);
+    const limpo = tok.replace(/\*/g, '');
+    const letras = atual.reduce((n, w) => n + w.replace(/\*/g, '').length, 0);
+    if (/[.,:!?]$/.test(limpo) || atual.length >= 3 || letras >= 15) fecha();
+  }
+  fecha();
+  return blocos;
+}
+const peso = (w) => 0.7 + w.replace(/[^\p{L}\d]/gu, '').length / 5;
+function blocoNoTempo(c, tc) {
+  const blocos = blocosDaFala(c.fala);
+  const pesos = blocos.map((b) => (b ? b.reduce((n, w) => n + peso(w), 0) : 2.2));
   const total = pesos.reduce((a, b) => a + b, 0);
-  const util = c.fim - c.ini - 0.15;
-  let acum = 0.05; let ultimo = '';
-  for (let i = 0; i < toks.length; i++) {
+  const util = c.fim - c.ini - 0.1;
+  const html = (b) => b.map((w) => (w.includes('*') ? `<em>${w.replace(/\*/g, '')}</em>` : w)).join(' ');
+  let acum = 0.03; let ultimo = '';
+  for (let i = 0; i < blocos.length; i++) {
     const dur = (pesos[i] / total) * util;
-    if (tc < acum + dur) return toks[i] === '…' ? { palavra: ultimo, desde: 1 } : { palavra: toks[i], desde: tc - acum };
-    if (toks[i] !== '…') ultimo = toks[i];
+    if (tc < acum + dur) return blocos[i] ? { texto: html(blocos[i]), desde: tc - acum } : { texto: ultimo, desde: 1 };
+    if (blocos[i]) ultimo = html(blocos[i]);
     acum += dur;
   }
-  return { palavra: ultimo, desde: 1 };
+  return { texto: ultimo, desde: 1 };
 }
 
 window.modoFundo = (ativo) => document.body.classList.toggle('modo-fundo', ativo);
+// Só o gancho fixo do alto (muda por versão): o render sobrepõe essa imagem ao corpo, que é igual em todas.
+window.modoTopo = (ativo) => document.body.classList.toggle('modo-topo', ativo);
 window.DURACAO = DURACAO;
 window.DURACAO_GANCHO = DURACAO_GANCHO;
 window.VERSOES = GANCHOS.length;

@@ -35,7 +35,7 @@
     background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(5,20,45,.55) 0%, rgba(5,20,45,0) 100%); }
 
   /* Cartão no terço superior, em estilo blueprint */
-  #cartao { position: absolute; left: 90px; top: 140px; width: 900px; height: 640px;
+  #cartao { position: absolute; left: 90px; top: 186px; width: 900px; height: 640px;
     background: var(--azul); border-radius: 28px; overflow: hidden; opacity: 0;
     box-shadow: 0 18px 50px rgba(0,0,0,.4); border: 3px solid rgba(255,255,255,.35); }
   #cartao .rotulo { height: 78px; padding: 0 34px; display: flex; align-items: center;
@@ -45,18 +45,28 @@
   #cartao .conteudo { position: absolute; left: 0; top: 80px; width: 900px; height: 560px; }
   #cartao svg { position: absolute; left: 0; top: 0; width: 900px; height: 560px; }
 
-  /* Barra de progresso: 7 itens */
-  #progresso { position: absolute; left: 90px; right: 90px; top: 70px; height: 12px; display: flex; gap: 10px; }
-  #progresso .seg { flex: 1; height: 12px; border-radius: 6px; background: rgba(255,255,255,.30); overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,.35); }
-  #progresso .seg i { display: block; height: 100%; width: 0; background: var(--destaque); border-radius: 6px; }
+  /* Gancho fixo no alto durante o vídeo todo (estilo Mino Lee): lembra a promessa */
+  #gancho-topo { position: absolute; left: 60px; right: 60px; top: 44px; text-align: center; color: #fff;
+    font-size: 35px; font-weight: 500; line-height: 1.22; opacity: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,.75), 0 0 2px rgba(0,0,0,.9); }
+  body.modo-topo #camada > *:not(#gancho-topo) { display: none !important; }
+  body.modo-topo #gancho-topo { opacity: 1 !important; }
+  body:not(.modo-topo) #gancho-topo { display: none; }
 
-  /* Legendas no meio da tela, como na referência */
-  #legenda { position: absolute; left: 40px; right: 40px; top: 1190px; text-align: center; color: #fff;
+  /* Barra de progresso: 7 itens */
+  #progresso { position: absolute; left: 90px; right: 90px; top: 150px; height: 10px; display: flex; gap: 10px; }
+  #progresso .seg { flex: 1; height: 10px; border-radius: 5px; background: rgba(255,255,255,.30); overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+  #progresso .seg i { display: block; height: 100%; width: 0; background: var(--destaque); border-radius: 5px; }
+
+  /* Legendas: etiqueta pequena + título em negrito, e a fala em letra fina, 2 a 3 palavras por vez */
+  #legenda { position: absolute; left: 40px; right: 40px; top: 1150px; text-align: center; color: #fff;
     text-shadow: 0 3px 12px rgba(0,0,0,.7), 0 0 3px rgba(0,0,0,.9); }
-  #legenda .titulo { font-size: 68px; font-weight: 800; line-height: 1.1; min-height: 76px; }
+  #legenda .titulo { font-size: 62px; font-weight: 800; line-height: 1.1; min-height: 70px; }
+  #legenda .titulo small { display: block; font-size: 32px; font-weight: 500; letter-spacing: .5px; margin-bottom: 4px; opacity: .92; }
   #legenda .titulo.gancho { font-size: 58px; }
-  #legenda .palavra { font-size: 66px; font-weight: 700; margin-top: 26px; min-height: 80px; color: var(--destaque); display: inline-block; }
+  #legenda .palavra { font-size: 50px; font-weight: 500; margin-top: 30px; min-height: 64px; display: inline-block; }
+  #legenda .palavra em { font-style: normal; font-weight: 700; color: var(--destaque); }
 </style>
 <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
 </head>
@@ -73,6 +83,7 @@
       <div class="rotulo"><b id="rotulo-titulo"></b><span id="rotulo-info"></span></div>
       <div class="conteudo" id="desenho"></div>
     </div>
+    <div id="gancho-topo"></div>
     <div id="progresso"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div></div>
     <div id="legenda"><div class="titulo" id="leg-titulo"></div><div class="palavra" id="leg-palavra"></div></div>
   </div>
