@@ -96,17 +96,24 @@ async function quadros(pagina, dir, de, ate, rotulo) {
       await pagina.evaluate(() => { window.renderAt(window.DURACAO_GANCHO + 1); window.modoTopo(true); });
       await pagina.screenshot({ path: topo, omitBackground: true });
       await pagina.evaluate(() => window.modoTopo(false));
-      const entradas = ['-framerate', String(FPS), '-i', path.join(dirGancho, 'q_%05d.png'), '-framerate', String(FPS), '-i', path.join(dirCorpo, 'q_%05d.png'),
-        '-loop', '1', '-framerate', String(FPS), '-i', topo];
-      const junta = (g, c, t) => `[${c}:v]format=rgba[cb];[${t}:v]format=rgba[tp];[cb][tp]overlay=format=auto:shortest=1[corpo];[${g}:v]format=rgba[ga];[ga][corpo]concat=n=2:v=1[c]`;
+      // Passo 1: carimba o gancho do alto nos quadros do corpo (nova sequência de PNGs).
+      // Fazer isso em um passo separado evita perda de quadros ao combinar overlay e concat.
+      const dirCorpoV = path.join(QUADROS, `corpo-v${v}`);
+      limpar(dirCorpoV);
+      ffmpeg(['-framerate', String(FPS), '-i', path.join(dirCorpo, 'q_%05d.png'), '-i', topo,
+        '-filter_complex', '[0:v]format=rgba[cb];[1:v]format=rgba[tp];[cb][tp]overlay=format=auto:eof_action=repeat,format=rgba',
+        '-fps_mode', 'passthrough', '-start_number', '0', path.join(dirCorpoV, 'q_%05d.png')]);
+      // Passo 2: junta gancho + corpo
+      const entradas = ['-framerate', String(FPS), '-i', path.join(dirGancho, 'q_%05d.png'), '-framerate', String(FPS), '-i', path.join(dirCorpoV, 'q_%05d.png')];
       // Camada com transparência, para o editor colocar por cima da gravação
-      ffmpeg([...entradas, '-filter_complex', junta(0, 1, 2), '-map', '[c]',
+      ffmpeg([...entradas, '-filter_complex', '[0:v][1:v]concat=n=2:v=1[c]', '-map', '[c]',
         '-c:v', 'libvpx-vp9', '-pix_fmt', 'yuva420p', '-b:v', '0', '-crf', '30', '-row-mt', '1',
         path.join(destino, 'camada-transparente.webm')]);
       // Rascunho com o fundo provisório no lugar do apresentador
       ffmpeg(['-loop', '1', '-framerate', String(FPS), '-i', path.join(SAIDA, 'fundo.png'), ...entradas,
-        '-filter_complex', `${junta(1, 2, 3)};[0:v][c]overlay=shortest=1,format=yuv420p`,
+        '-filter_complex', '[1:v][2:v]concat=n=2:v=1[c];[0:v][c]overlay=shortest=1,format=yuv420p',
         '-c:v', 'libx264', '-crf', '20', '-preset', 'medium', '-movflags', '+faststart', path.join(destino, 'rascunho.mp4')]);
+      fs.rmSync(dirCorpoV, { recursive: true, force: true });
       console.log(`Versão ${v} pronta em ${destino}`);
     }
   }
