@@ -28,6 +28,8 @@ Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 
 Assisti e transcrevi três reels dele. Esta é a referência de **como editar**.
 
+> A análise completa, com roteiro, gravação, edição e modelos para plantas, está em `video/referencias-mino-lee.md`. Abaixo fica o resumo.
+
 ### Estilo de edição (vale para os três)
 
 | Elemento | Como ele faz | Como fica no nosso vídeo |
