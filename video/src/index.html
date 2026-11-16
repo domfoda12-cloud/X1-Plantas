@@ -45,12 +45,18 @@
   #cartao .conteudo { position: absolute; left: 0; top: 80px; width: 900px; height: 560px; }
   #cartao svg { position: absolute; left: 0; top: 0; width: 900px; height: 560px; }
 
+  /* Barra de progresso: 7 itens */
+  #progresso { position: absolute; left: 90px; right: 90px; top: 70px; height: 12px; display: flex; gap: 10px; }
+  #progresso .seg { flex: 1; height: 12px; border-radius: 6px; background: rgba(255,255,255,.30); overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+  #progresso .seg i { display: block; height: 100%; width: 0; background: var(--destaque); border-radius: 6px; }
+
   /* Legendas no meio da tela, como na referência */
   #legenda { position: absolute; left: 40px; right: 40px; top: 1190px; text-align: center; color: #fff;
     text-shadow: 0 3px 12px rgba(0,0,0,.7), 0 0 3px rgba(0,0,0,.9); }
   #legenda .titulo { font-size: 68px; font-weight: 800; line-height: 1.1; min-height: 76px; }
   #legenda .titulo.gancho { font-size: 58px; }
-  #legenda .palavra { font-size: 66px; font-weight: 600; margin-top: 26px; min-height: 80px; }
+  #legenda .palavra { font-size: 66px; font-weight: 700; margin-top: 26px; min-height: 80px; color: var(--destaque); display: inline-block; }
 </style>
 <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
 </head>
@@ -67,6 +73,7 @@
       <div class="rotulo"><b id="rotulo-titulo"></b><span id="rotulo-info"></span></div>
       <div class="conteudo" id="desenho"></div>
     </div>
+    <div id="progresso"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div></div>
     <div id="legenda"><div class="titulo" id="leg-titulo"></div><div class="palavra" id="leg-palavra"></div></div>
   </div>
   <script type="module" src="./cena.js"></script>

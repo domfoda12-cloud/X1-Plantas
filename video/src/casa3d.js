@@ -285,7 +285,7 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
     cota(0, -0.8, LARGURA, -0.8, '6,50 m', false);
     cota(-0.8, 0, -0.8, PROFUNDIDADE, '8,50 m', true);
     g.font = '700 30px Inter, sans-serif'; g.textAlign = 'left';
-    const [tx, ty] = P(LARGURA + 0.6, PROFUNDIDADE + 0.9);
+    const [tx, ty] = P(0, PROFUNDIDADE + 1.0);
     g.fillText('CASA COMPACTA', tx, ty); g.font = '500 26px Inter, sans-serif'; g.fillText('55 m² · 2 quartos · 1 banho', tx, ty + 34);
   }
 }

@@ -69,16 +69,31 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela c
 
 | Tempo | Item na tela | Fala |
 |---|---|---|
-| 0:03 a 0:07 | 1. Ignorar o sol | "Um: ignorar o sol. Quarto com sol da manhã fica mais fresco à tarde." |
-| 0:07 a 0:11 | 2. Corredor comprido | "Dois: corredor comprido. Corredor também custa por metro, e ninguém mora nele." |
-| 0:11 a 0:15 | 3. Banheiro de frente pra sala | "Três: banheiro de frente pra sala. A porta tem que abrir para o hall." |
-| 0:15 a 0:19 | 4. Banheiro sem janela | "Quatro: banheiro sem janela. Ventilação natural evita mofo." |
-| 0:19 a 0:23 | 5. Esquecer os recuos | "Cinco: esquecer os recuos. O terreno manda na planta, e cada prefeitura tem a sua regra." |
-| 0:23 a 0:27 | 6. Não prever ampliação | "Seis: não prever ampliação. Pense na sua casa daqui a cinco anos." |
-| 0:27 a 0:34 | 7. O mais caro: não ver a casa em 3D | "E o mais caro: não ver a casa em 3D antes de construir. Olha cada cômodo antes do primeiro tijolo." |
-| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta humanizada grátis no WhatsApp." |
+| 0:03 a 0:07 | 1. Ignorar o sol | "Um: ignorar o sol. Quarto virado pro nascente fica fresco à tarde." |
+| 0:07 a 0:11 | 2. Corredor comprido | "Dois: corredor comprido. Corredor custa por metro, e ninguém mora nele." |
+| 0:11 a 0:15 | 3. Banheiro de frente pra sala | "Três: banheiro de frente pra sala. A porta tem que abrir pro hall." |
+| 0:15 a 0:19 | 4. Banheiro sem janela | "Quatro: banheiro sem janela. Sem ventilação natural, o mofo aparece rápido." |
+| 0:19 a 0:23 | 5. Esquecer os recuos | "Cinco: esquecer os recuos. Cada prefeitura tem a sua regra, confira antes." |
+| 0:23 a 0:27 | 6. Não prever ampliação | "Seis: não prever ampliação. Deixe pronto por onde a casa vai crescer." |
+| 0:27 a 0:34 | 7. O mais caro: não ver a casa em 3D | "E o mais caro de todos: construir sem ver a casa pronta. *(pausa curta)* Olha só: cada cômodo, cada móvel, antes do primeiro tijolo." |
+| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp." |
 
-O ritmo é rápido, de 3 a 4 palavras por segundo, como na referência. Se a fala não couber, encurte a frase; não estique o item.
+### Regras da fala
+
+- **O narrador nunca para.** O fim de cada frase emenda no número do item seguinte ("…fresco à tarde. Dois: …"). Corte qualquer respiração, "é…" ou silêncio na edição.
+- **Só uma pausa, de propósito:** depois de "construir sem ver a casa pronta", por cerca de meio segundo, enquanto a casa ganha vida na tela. É o momento da revelação.
+- **A legenda é a própria fala**, uma palavra por vez, em amarelo. Se mudar o texto falado, me avise que eu ajusto a legenda e renderizo de novo.
+- O ritmo é de 3 a 4 palavras por segundo, como na referência. Se uma frase não couber, encurte a frase; não estique o item.
+
+### O que prende o olho em cada momento
+
+| Tempo | Movimento na tela |
+|---|---|
+| 0:00 a 0:03 | Blueprint se desenhando, paredes subindo, cômodos ganhando vida (tela cheia) |
+| 0:03 a 0:27 | Planta do cartão se desenhando, destaque amarelo pulsando, zoom lento contínuo, palavras da legenda entrando com um "pulo" leve |
+| Sempre | Barra de progresso no alto, enchendo item a item (mostra quantos faltam) |
+| 0:27 a 0:34 | Casa ganhando vida e câmera deslizando (tela cheia) |
+| 0:34 a 0:38 | Foto da planta humanizada e botão PLANTA pulsando |
 
 ## 5. Como gravar
 

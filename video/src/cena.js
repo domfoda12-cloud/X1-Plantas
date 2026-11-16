@@ -14,11 +14,11 @@ import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA }
 // ---------------------------------------------------------------------------
 const INFO = '55 m² · 2 quartos · 1 banho';
 export const GANCHOS = [
-  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'fica até o final' },
-  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'sete erros que custam caro' },
-  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'o último é o mais caro' },
-  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'o último é o pior' },
-  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'de graça, até o final' },
+  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'Vou te economizar os mil reais que um arquiteto te economizaria.' },
+  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'Os mil reais que um arquiteto te faria economizar, de graça.' },
+  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'Antes de pagar mil reais a um arquiteto, veja isso aqui.' },
+  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'Sete erros que um arquiteto te cobraria mil reais pra achar.' },
+  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'Um arquiteto te cobraria mil reais pra te mostrar isso.' },
 ];
 const versao = (() => { const v = Number(new URLSearchParams(location.search).get('v') || 1); return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; })();
 export const DURACAO_GANCHO = 3;
@@ -26,21 +26,21 @@ export const DURACAO_GANCHO = 3;
 export const cenas = [
   { ini: 0, fim: 3, tipo: 'tela-gancho', ...GANCHOS[versao - 1] },
   { ini: 3, fim: 7, tipo: 'sol', rotulo: 'POSIÇÃO DO SOL', info: 'Casa Compacta',
-    titulo: '1. Ignorar o sol', fala: 'quarto com sol da manhã' },
+    titulo: '1. Ignorar o sol', fala: 'Um: ignorar o sol. Quarto virado pro nascente fica fresco à tarde.' },
   { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'CIRCULAÇÃO', info: 'Casa Compacta',
-    titulo: '2. Corredor comprido', fala: 'corredor também custa por metro' },
+    titulo: '2. Corredor comprido', fala: 'Dois: corredor comprido. Corredor custa por metro, e ninguém mora nele.' },
   { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'PRIVACIDADE', info: 'Casa Compacta',
-    titulo: '3. Banheiro de frente pra sala', fala: 'a porta abre para o hall' },
+    titulo: '3. Banheiro de frente pra sala', fala: 'Três: banheiro de frente pra sala. A porta tem que abrir pro hall.' },
   { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'VENTILAÇÃO', info: 'Casa Compacta',
-    titulo: '4. Banheiro sem janela', fala: 'ventilação natural evita mofo' },
+    titulo: '4. Banheiro sem janela', fala: 'Quatro: banheiro sem janela. Sem ventilação natural, o mofo aparece rápido.' },
   { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'TERRENO E RECUOS', info: 'Lote 10 x 20 m',
-    titulo: '5. Esquecer os recuos', fala: 'o terreno manda na planta' },
+    titulo: '5. Esquecer os recuos', fala: 'Cinco: esquecer os recuos. Cada prefeitura tem a sua regra, confira antes.' },
   { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'AMPLIAÇÃO', info: 'Casa Compacta',
-    titulo: '6. Não prever ampliação', fala: 'pense na casa daqui a cinco anos' },
+    titulo: '6. Não prever ampliação', fala: 'Seis: não prever ampliação. Deixe pronto por onde a casa vai crescer.' },
   { ini: 27, fim: 34, tipo: 'tela-resposta',
-    titulo: '7. O mais caro:<br>não ver a casa em 3D', fala: 'veja cada cômodo antes do primeiro tijolo' },
+    titulo: '7. O mais caro:<br>não ver a casa em 3D', fala: 'E o mais caro de todos: construir sem ver a casa pronta. … Olha só: cada cômodo, cada móvel, antes do primeiro tijolo.' },
   { ini: 34, fim: 38, tipo: 'cta', rotulo: 'PLANTA GRÁTIS', info: 'pelo WhatsApp',
-    titulo: 'Comente PLANTA', fala: 'e receba a planta grátis' },
+    titulo: 'Comente PLANTA', fala: 'Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp.' },
 ];
 export const DURACAO = cenas[cenas.length - 1].fim;
 
@@ -132,7 +132,7 @@ const cartoes2D = {
       raios += `<line x1="${sx + Math.cos(ang) * (r + 10)}" y1="${sy + Math.sin(ang) * (r + 10)}" x2="${sx + Math.cos(ang) * (r + 26)}" y2="${sy + Math.sin(ang) * (r + 26)}" stroke="${COR.destaque}" stroke-width="5" stroke-linecap="round" opacity="${a}"/>`;
     }
     const q2 = amb('quarto2');
-    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['quarto2'], hp: a }) +
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['quarto2'], hp: a * (0.78 + 0.22 * Math.sin(tc * 5.5)) }) +
       `<circle cx="${sx}" cy="${sy}" r="${r}" fill="${COR.destaque}" opacity="${a}"/>${raios}` +
       seta(sx - 64, sy + 42, OX + ((q2.x0 + q2.x1) / 2) * S + 40, OY + ((q2.y0 + q2.y1) / 2) * S - 30, a) +
       texto(570, 340, ['Nascente (leste)'], { tam: 32, peso: 800, ...entra(tc, 1.0) }) +
@@ -143,14 +143,14 @@ const cartoes2D = {
     const hall = amb('hall');
     const barra = (y, rot, larg, cor, ini) => { const v = saida((tc - ini) / 0.7); return `<text x="520" y="${y}" font-size="24" font-weight="600" fill="${COR.claro}" opacity="${v}">${rot}</text>
       <rect x="520" y="${y + 14}" width="${Math.max(larg * v, 0.1)}" height="32" rx="8" fill="${cor}"/>`; };
-    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['hall'], hp: a }) +
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['hall'], hp: a * (0.78 + 0.22 * Math.sin(tc * 5.5)) }) +
       texto(520, 110, [`Hall: ${m2(areaDe(hall))}`], { tam: 40, peso: 800, cor: COR.destaque, ...entra(tc, 0.9) }) +
       texto(520, 160, ['Circulação curta,', 'mais área para', 'os ambientes.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.1) }) +
       barra(330, 'Corredor comprido', 320, COR.ruim, 1.4) + barra(420, 'Hall compacto', 110, COR.ok, 1.7);
   },
   'banho-porta'(tc) {
     const p = saida(tc / 0.9); const a = saida((tc - 0.8) / 0.8);
-    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho', 'hall'], hp: a }) +
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho', 'hall'], hp: a * (0.78 + 0.22 * Math.sin(tc * 5.5)) }) +
       texto(510, 140, ['✓ Abre para o hall'], { tam: 32, peso: 800, cor: COR.ok, ...entra(tc, 1.0) }) +
       texto(510, 190, ['Quem está na sala', 'não vê a porta', 'do banheiro.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.2) }) +
       texto(510, 400, ['✗ De frente', 'para a sala'], { tam: 30, peso: 800, cor: COR.ruim, ...entra(tc, 1.8) });
@@ -164,7 +164,7 @@ const cartoes2D = {
       const x = X(6.5) + 12 + fase * 70; const y = Y(4.8 + i * 0.22);
       ar += `<path d="M ${x} ${y} q 12 -10 24 0 t 24 0" fill="none" stroke="${COR.claro}" stroke-width="5" stroke-linecap="round" opacity="${a * (1 - fase)}"/>`;
     }
-    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho'], hp: a }) + ar +
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho'], hp: a * (0.78 + 0.22 * Math.sin(tc * 5.5)) }) + ar +
       texto(570, 140, ['Janela alta'], { tam: 36, peso: 800, cor: COR.destaque, ...entra(tc, 1.0) }) +
       texto(570, 185, ['peitoril de 1,6 m'], { tam: 26, peso: 600, cor: COR.branco, ...entra(tc, 1.15) }) +
       texto(570, 300, ['Ventilação natural', 'evita mofo e', 'cheiro parado.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.35) });
@@ -211,8 +211,8 @@ const cartoes2D = {
       </g>
       <g opacity="${q}" transform="translate(520 ${150 + (1 - q) * 20})">
         <text x="0" y="0" font-size="34" font-weight="800" fill="${COR.branco}">Comente</text>
-        <rect x="0" y="22" width="300" height="96" rx="48" fill="${COR.destaque}"/>
-        <text x="150" y="88" text-anchor="middle" font-size="46" font-weight="900" fill="${COR.escuro}">PLANTA</text>
+        <g transform="translate(150 70) scale(${1 + 0.05 * Math.sin(tc * 6)}) translate(-150 -70)"><rect x="0" y="22" width="300" height="96" rx="48" fill="${COR.destaque}"/>
+        <text x="150" y="88" text-anchor="middle" font-size="46" font-weight="900" fill="${COR.escuro}">PLANTA</text></g>
         <text x="0" y="178" font-size="25" font-weight="500" fill="${COR.claro}">e receba a planta</text>
         <text x="0" y="210" font-size="25" font-weight="500" fill="${COR.claro}">humanizada grátis</text>
         <text x="0" y="242" font-size="25" font-weight="500" fill="${COR.claro}">no WhatsApp</text>
@@ -253,7 +253,7 @@ const telas = {
 // Quadro
 // ---------------------------------------------------------------------------
 const el = (id) => document.getElementById(id);
-const dom = { cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
+const dom = { progresso: [...document.querySelectorAll('#progresso .seg')], cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
 
 window.renderAt = (t) => {
   const c = cenas.find((x) => t >= x.ini && t < x.fim) || cenas[cenas.length - 1];
@@ -270,16 +270,41 @@ window.renderAt = (t) => {
   dom.cartao.style.transform = `translateY(${(1 - entrada) * 40}px)`;
   if (!tela) {
     dom.rotT.textContent = c.rotulo; dom.rotI.textContent = c.info;
-    dom.desenho.innerHTML = `<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${GRADE}${cartoes2D[c.tipo](tc)}</svg>`;
+    const zoom = 1 + 0.045 * suave(tc / (c.fim - c.ini));
+    dom.desenho.innerHTML = `<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${GRADE}<g transform="translate(450 280) scale(${zoom}) translate(-450 -280)">${cartoes2D[c.tipo](tc)}</g></svg>`;
   }
 
   // Legenda: título do item e uma palavra por vez, como na referência
   dom.legT.innerHTML = c.titulo;
   dom.legT.classList.toggle('gancho', c.tipo === 'tela-gancho');
-  const palavras = c.fala.split(' ');
-  const passo = (c.fim - c.ini - 0.3) / palavras.length;
-  dom.legP.textContent = palavras[clamp(Math.floor((tc - 0.15) / passo), 0, palavras.length - 1)];
+  const { palavra, desde } = palavraNoTempo(c, tc);
+  dom.legP.textContent = palavra;
+  const pop = 1 + 0.14 * (1 - saida(desde / 0.14));
+  dom.legP.style.transform = `scale(${pop})`;
+
+  // Barra de progresso: 7 itens; mostra quantos faltam
+  const idx = c.tipo === 'tela-gancho' ? -1 : c.tipo === 'cta' ? 7 : cenas.indexOf(c) - 1;
+  dom.progresso.forEach((seg, i) => {
+    const cheio = i < idx ? 1 : i === idx ? clamp(tc / (c.fim - c.ini)) : 0;
+    seg.firstChild.style.width = `${cheio * 100}%`;
+  });
 };
+
+// Divide a fala em palavras com duração proporcional ao tamanho; "…" é uma pausa proposital.
+function palavraNoTempo(c, tc) {
+  const toks = c.fala.split(' ');
+  const pesos = toks.map((w) => (w === '…' ? 2.2 : 0.7 + w.replace(/[^\p{L}\d]/gu, '').length / 5));
+  const total = pesos.reduce((a, b) => a + b, 0);
+  const util = c.fim - c.ini - 0.15;
+  let acum = 0.05; let ultimo = '';
+  for (let i = 0; i < toks.length; i++) {
+    const dur = (pesos[i] / total) * util;
+    if (tc < acum + dur) return toks[i] === '…' ? { palavra: ultimo, desde: 1 } : { palavra: toks[i], desde: tc - acum };
+    if (toks[i] !== '…') ultimo = toks[i];
+    acum += dur;
+  }
+  return { palavra: ultimo, desde: 1 };
+}
 
 window.modoFundo = (ativo) => document.body.classList.toggle('modo-fundo', ativo);
 window.DURACAO = DURACAO;
