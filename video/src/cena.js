@@ -14,11 +14,11 @@ import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA }
 // ---------------------------------------------------------------------------
 const INFO = '55 m² · 2 quartos · 1 banho';
 export const GANCHOS = [
-  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'Vou te economizar os *mil* *reais* que um arquiteto te economizaria.' },
-  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'Os *mil* *reais* que um arquiteto te faria economizar, de graça.' },
-  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'Antes de pagar *mil* *reais* a um arquiteto, veja isso aqui.' },
-  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'Sete erros que um arquiteto te cobraria *mil* *reais* pra achar.' },
-  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'Um arquiteto te cobraria *mil* *reais* pra te mostrar isso.' },
+  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'Sete erros de planta que saem *caro* na obra. O último é *o* *pior.*' },
+  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'Olha o que um arquiteto ia te *cobrar* pra te mostrar.' },
+  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'São *sete* *erros.* Quase todo mundo comete o último.' },
+  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'Confere a sua planta comigo. O último é *o* *pior.*' },
+  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'Fica até o final, que o último é *o* *mais* *caro.*' },
 ];
 const versao = (() => { const v = Number(new URLSearchParams(location.search).get('v') || 1); return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; })();
 export const DURACAO_GANCHO = 3;
@@ -26,19 +26,19 @@ export const DURACAO_GANCHO = 3;
 export const cenas = [
   { ini: 0, fim: 3, tipo: 'tela-gancho', ...GANCHOS[versao - 1] },
   { ini: 3, fim: 7, tipo: 'sol', rotulo: 'POSIÇÃO DO SOL', info: 'Casa Compacta',
-    etiqueta: 'erro 1', titulo: 'Ignorar o sol', fala: 'Um: ignorar o sol. Quarto virado pro *nascente* fica fresco à tarde.' },
+    etiqueta: 'erro 1', titulo: 'Ignorar o sol', glossario: 'nascente = lado onde o sol nasce (leste)', fala: 'Um: ignorar o sol. Quarto virado pro *nascente* fica fresco à tarde.' },
   { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'CIRCULAÇÃO', info: 'Casa Compacta',
-    etiqueta: 'erro 2', titulo: 'Corredor comprido', fala: 'Dois: corredor comprido. Corredor *custa* *por* *metro,* e ninguém mora nele.' },
+    etiqueta: 'erro 2', titulo: 'Corredor comprido', glossario: 'hall = espaço pequeno que liga os cômodos', fala: 'Dois: corredor comprido. Corredor *custa* *por* *metro,* e ninguém mora nele.' },
   { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'PRIVACIDADE', info: 'Casa Compacta',
     etiqueta: 'erro 3', titulo: 'Banheiro de frente pra sala', fala: 'Três: banheiro de frente pra sala. A porta tem que abrir *pro* *hall.*' },
   { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'VENTILAÇÃO', info: 'Casa Compacta',
-    etiqueta: 'erro 4', titulo: 'Banheiro sem janela', fala: 'Quatro: banheiro sem janela. Sem ventilação natural, o *mofo* aparece rápido.' },
+    etiqueta: 'erro 4', titulo: 'Banheiro sem janela', glossario: 'peitoril = altura da base da janela', fala: 'Quatro: banheiro sem janela. Sem ventilação natural, o *mofo* aparece rápido.' },
   { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'TERRENO E RECUOS', info: 'Lote 10 x 20 m',
-    etiqueta: 'erro 5', titulo: 'Esquecer os recuos', fala: 'Cinco: esquecer os recuos. Cada *prefeitura* tem a sua regra, confira antes.' },
+    etiqueta: 'erro 5', titulo: 'Esquecer os recuos', glossario: 'recuo = distância mínima entre a casa e a divisa', fala: 'Cinco: esquecer os recuos. Cada *prefeitura* tem a sua regra, confira antes.' },
   { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'AMPLIAÇÃO', info: 'Casa Compacta',
     etiqueta: 'erro 6', titulo: 'Não prever ampliação', fala: 'Seis: não prever ampliação. Deixe pronto por onde a casa *vai* *crescer.*' },
   { ini: 27, fim: 34, tipo: 'tela-resposta',
-    etiqueta: 'erro 7 · o mais caro', titulo: 'Não ver a casa em 3D', fala: 'E o *mais* *caro* de todos: construir sem ver a casa pronta. … Olha só: cada cômodo, cada móvel, *antes* *do* *primeiro* *tijolo.*' },
+    etiqueta: 'erro 7 · o mais caro', titulo: 'Não ver a casa em 3D', glossario: 'planta humanizada = planta com móveis e acabamentos', fala: 'E o *mais* *caro* de todos: construir sem ver a casa pronta. … Olha só: cada cômodo, cada móvel, *antes* *do* *primeiro* *tijolo.*' },
   { ini: 34, fim: 38, tipo: 'cta', rotulo: 'PLANTA GRÁTIS', info: 'pelo WhatsApp',
     etiqueta: 'planta grátis', titulo: 'Comente PLANTA', fala: 'Comenta *PLANTA* que eu te mando essa planta humanizada *de* *graça* no WhatsApp.' },
 ];
@@ -253,7 +253,7 @@ const telas = {
 // Quadro
 // ---------------------------------------------------------------------------
 const el = (id) => document.getElementById(id);
-const dom = { topo: el('gancho-topo'), progresso: [...document.querySelectorAll('#progresso .seg')], cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
+const dom = { gloss: el('glossario'), topo: el('gancho-topo'), progresso: [...document.querySelectorAll('#progresso .seg')], cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
 
 window.renderAt = (t) => {
   const c = cenas.find((x) => t >= x.ini && t < x.fim) || cenas[cenas.length - 1];
@@ -282,6 +282,10 @@ window.renderAt = (t) => {
   const { texto: bloco, desde } = blocoNoTempo(c, tc);
   dom.legP.innerHTML = bloco;
   dom.legP.style.transform = `scale(${1 + 0.08 * (1 - saida(desde / 0.12))})`;
+  const vg = c.glossario ? saida((tc - 1.0) / 0.4) : 0;
+  dom.gloss.textContent = c.glossario || '';
+  dom.gloss.style.opacity = vg;
+  dom.gloss.style.transform = `translateY(${(1 - vg) * 12}px)`;
   dom.topo.innerHTML = GANCHOS[versao - 1].titulo;
   dom.topo.style.opacity = gancho ? 0 : 1;
 

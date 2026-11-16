@@ -66,6 +66,8 @@
   #legenda .titulo small { display: block; font-size: 32px; font-weight: 500; letter-spacing: .5px; margin-bottom: 4px; opacity: .92; }
   #legenda .titulo.gancho { font-size: 58px; }
   #legenda .palavra { font-size: 50px; font-weight: 500; margin-top: 30px; min-height: 64px; display: inline-block; }
+  /* Glossário: explica o termo técnico em letra miúda, abaixo da legenda */
+  #glossario { font-size: 31px; font-weight: 500; margin-top: 30px; min-height: 40px; opacity: 0; color: #fff; }
   #legenda .palavra em { font-style: normal; font-weight: 700; color: var(--destaque); }
 </style>
 <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
@@ -85,7 +87,7 @@
     </div>
     <div id="gancho-topo"></div>
     <div id="progresso"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div></div>
-    <div id="legenda"><div class="titulo" id="leg-titulo"></div><div class="palavra" id="leg-palavra"></div></div>
+    <div id="legenda"><div class="titulo" id="leg-titulo"></div><div class="palavra" id="leg-palavra"></div><div id="glossario"></div></div>
   </div>
   <script type="module" src="./cena.js"></script>
 </body>

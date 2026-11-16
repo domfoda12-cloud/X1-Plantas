@@ -138,8 +138,8 @@ Depois dos três itens vem a **visão geral** ("você tem a força de 100 pessoa
 | Imagem nova a cada 4 s, nada parado | Feito |
 | Promessa de que o último é o pior | Feito (ganchos v3 e v4) |
 | Chamada de uma linha ("Comenta PLANTA") | Feito |
-| Texto do gancho diferente da fala | **Falta:** hoje texto e fala são quase iguais |
-| Glossário na tela (recuo, peitoril, nascente, planta humanizada) | **Falta** |
+| Texto do gancho diferente da fala | Feito |
+| Glossário na tela (recuo, peitoril, nascente, hall, planta humanizada) | Feito |
 | Custo de cada erro, com o valor riscado | **Falta:** precisa de valores reais |
 | Prova nos primeiros 3 s (plantas entregues, depoimentos) | **Falta:** só quando houver clientes |
 | Novo ângulo de câmera a cada seção | Depende da gravação |

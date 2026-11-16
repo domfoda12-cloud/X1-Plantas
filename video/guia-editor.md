@@ -108,15 +108,15 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela c
 
 ### Gancho (0:00 a 0:03), um por versão
 
-| Versão | Texto na tela | Fala |
-|---|---|---|
-| v1 | Vou te economizar os R$ 1.000 que um arquiteto te economizaria | "Vou te economizar os mil reais que um arquiteto te economizaria. Fica até o final." |
-| v2 | Os R$ 1.000 que um arquiteto te faria economizar, de graça | "Os mil reais que um arquiteto te faria economizar, de graça. Sete erros que custam caro." |
-| v3 | Antes de pagar R$ 1.000 a um arquiteto, veja isso | "Antes de pagar mil reais a um arquiteto, veja isso. O último é o mais caro." |
-| v4 | 7 erros que um arquiteto te cobraria R$ 1.000 pra achar | "Sete erros que um arquiteto te cobraria mil reais pra achar. O último é o pior." |
-| v5 | Um arquiteto cobraria R$ 1.000 pra te mostrar isso | "Um arquiteto cobraria mil reais pra te mostrar isso. De graça, até o final." |
+O texto na tela e a fala são diferentes de propósito, como nas referências: o texto promete, a voz puxa para o final.
 
-> **Atenção ao valor de R$ 1.000:** é uma promessa de economia. Antes de publicar, confirme quanto um arquiteto cobra por uma consulta ou revisão de planta na sua região e ajuste o número, ou use "até R$ 1.000". Veja o `checklist-revisao-anuncio.md`.
+| Versão | Texto na tela (fica no alto o vídeo todo) | Fala |
+|---|---|---|
+| v1 | Vou te economizar os R$ 1.000 que um arquiteto te economizaria | "Sete erros de planta que saem caro na obra. O último é o pior." |
+| v2 | Os R$ 1.000 que um arquiteto te faria economizar, de graça | "Olha o que um arquiteto ia te cobrar pra te mostrar." |
+| v3 | Antes de pagar R$ 1.000 a um arquiteto, veja isso | "São sete erros. Quase todo mundo comete o último." |
+| v4 | 7 erros que um arquiteto te cobraria R$ 1.000 pra achar | "Confere a sua planta comigo. O último é o pior." |
+| v5 | Um arquiteto cobraria R$ 1.000 pra te mostrar isso | "Fica até o final, que o último é o mais caro." |
 
 ### Corpo (igual em todas as versões)
 
@@ -135,6 +135,7 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela c
 
 - **O narrador nunca para.** O fim de cada frase emenda no número do item seguinte ("…fresco à tarde. Dois: …"). Corte qualquer respiração, "é…" ou silêncio na edição.
 - **Só uma pausa, de propósito:** depois de "construir sem ver a casa pronta", por cerca de meio segundo, enquanto a casa ganha vida na tela. É o momento da revelação.
+- **Glossário na tela:** quando a fala usa um termo técnico (nascente, hall, peitoril, recuo, planta humanizada), a explicação aparece em letra miúda abaixo da legenda.
 - **A legenda é a própria fala**, em blocos de 2 a 3 palavras, com a palavra-chave em amarelo. Se mudar o texto falado, me avise que eu ajusto a legenda e renderizo de novo.
 - O ritmo é de 3 a 4 palavras por segundo, como na referência. Se uma frase não couber, encurte a frase; não estique o item.
 
