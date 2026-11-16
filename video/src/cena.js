@@ -1,45 +1,45 @@
 // Desenha cada quadro do vídeo a partir do tempo t (em segundos).
 // O render.cjs chama window.renderAt(t) quadro a quadro e tira uma captura de tela.
 import * as THREE from '../node_modules/three/build/three.module.js';
-import { ambientes, paredes, janelas, LARGURA, PROFUNDIDADE, PE_DIREITO, ESPESSURA } from './planta.js';
+import { criarCasa } from './casa3d.js';
+import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } from './planta.js';
 
 // ---------------------------------------------------------------------------
 // Roteiro, pensado para retenção (tempo assistido), como no reel de referência:
-//   Gancho (0 a 3 s): faz uma pergunta e a casa já aparece subindo em 3D.
-//   Desenvolvimento (3 a 27 s): seis erros, 4 s cada, do mais geral ao mais específico.
-//   Desfecho (27 a 34 s): responde a pergunta do gancho, com a casa girando em 3D.
-//   Chamada (34 a 38 s): comentar PLANTA para receber o material.
+//   Gancho (0 a 3 s), tela cheia: o blueprint se desenha e a casa começa a ganhar vida.
+//   Desenvolvimento (3 a 27 s): seis erros em cartões blueprint, do geral ao específico.
+//   Desfecho (27 a 34 s), tela cheia: a casa ganha vida por completo (planta humanizada).
+//   Chamada (34 a 38 s): comentar PLANTA para receber a planta.
 // O corpo é igual em todas as versões; só o gancho muda (5 versões para os reels de teste).
 // ---------------------------------------------------------------------------
 const INFO = '55 m² · 2 quartos · 1 banho';
 export const GANCHOS = [
-  { titulo: 'Qual é o erro mais caro<br>na planta de uma casa?', fala: 'fica até o final' },
-  { titulo: '7 erros na planta<br>(o último é o pior)', fala: 'veja antes de construir' },
-  { titulo: 'Antes de construir,<br>confira esses 7 pontos', fala: 'o último quase ninguém faz' },
-  { titulo: 'O erro de planta<br>que ninguém te conta', fala: 'e mais seis no caminho' },
-  { titulo: 'Construir sem esse<br>cuidado sai caro', fala: 'você vai ver no final' },
+  { titulo: 'Vou te economizar os R$ 1.000<br>que um arquiteto te economizaria', fala: 'fica até o final' },
+  { titulo: 'Os R$ 1.000 que um arquiteto<br>te faria economizar, de graça', fala: 'sete erros que custam caro' },
+  { titulo: 'Antes de pagar R$ 1.000<br>a um arquiteto, veja isso', fala: 'o último é o mais caro' },
+  { titulo: '7 erros que um arquiteto<br>te cobraria R$ 1.000 pra achar', fala: 'o último é o pior' },
+  { titulo: 'Um arquiteto cobraria R$ 1.000<br>pra te mostrar isso', fala: 'de graça, até o final' },
 ];
-const versao = clampVersao(Number(new URLSearchParams(location.search).get('v') || 1));
-function clampVersao(v) { return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; }
+const versao = (() => { const v = Number(new URLSearchParams(location.search).get('v') || 1); return Number.isInteger(v) && v >= 1 && v <= GANCHOS.length ? v : 1; })();
 export const DURACAO_GANCHO = 3;
 
 export const cenas = [
-  { ini: 0, fim: 3, tipo: '3d-gancho', rotulo: 'Casa Compacta', info: INFO, ...GANCHOS[versao - 1] },
-  { ini: 3, fim: 7, tipo: 'sol', rotulo: 'Posição do sol', info: 'Casa Compacta',
+  { ini: 0, fim: 3, tipo: 'tela-gancho', ...GANCHOS[versao - 1] },
+  { ini: 3, fim: 7, tipo: 'sol', rotulo: 'POSIÇÃO DO SOL', info: 'Casa Compacta',
     titulo: '1. Ignorar o sol', fala: 'quarto com sol da manhã' },
-  { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'Circulação', info: 'Casa Compacta',
+  { ini: 7, fim: 11, tipo: 'corredor', rotulo: 'CIRCULAÇÃO', info: 'Casa Compacta',
     titulo: '2. Corredor comprido', fala: 'corredor também custa por metro' },
-  { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'Privacidade', info: 'Casa Compacta',
+  { ini: 11, fim: 15, tipo: 'banho-porta', rotulo: 'PRIVACIDADE', info: 'Casa Compacta',
     titulo: '3. Banheiro de frente pra sala', fala: 'a porta abre para o hall' },
-  { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'Ventilação', info: 'Casa Compacta',
+  { ini: 15, fim: 19, tipo: 'banho-janela', rotulo: 'VENTILAÇÃO', info: 'Casa Compacta',
     titulo: '4. Banheiro sem janela', fala: 'ventilação natural evita mofo' },
-  { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'Terreno e recuos', info: 'Lote 10 x 20 m',
+  { ini: 19, fim: 23, tipo: 'recuos', rotulo: 'TERRENO E RECUOS', info: 'Lote 10 x 20 m',
     titulo: '5. Esquecer os recuos', fala: 'o terreno manda na planta' },
-  { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'Ampliação', info: 'Casa Compacta',
+  { ini: 23, fim: 27, tipo: 'ampliacao', rotulo: 'AMPLIAÇÃO', info: 'Casa Compacta',
     titulo: '6. Não prever ampliação', fala: 'pense na casa daqui a cinco anos' },
-  { ini: 27, fim: 34, tipo: '3d-orbita', rotulo: 'A resposta', info: INFO,
+  { ini: 27, fim: 34, tipo: 'tela-resposta',
     titulo: '7. O mais caro:<br>não ver a casa em 3D', fala: 'veja cada cômodo antes do primeiro tijolo' },
-  { ini: 34, fim: 38, tipo: 'cta', rotulo: 'Material gratuito', info: 'pelo WhatsApp',
+  { ini: 34, fim: 38, tipo: 'cta', rotulo: 'PLANTA GRÁTIS', info: 'pelo WhatsApp',
     titulo: 'Comente PLANTA', fala: 'e receba a planta grátis' },
 ];
 export const DURACAO = cenas[cenas.length - 1].fim;
@@ -55,333 +55,197 @@ const m2 = (a) => a.toFixed(1).replace('.', ',') + ' m²';
 const areaDe = (a) => (a.x1 - a.x0) * (a.y1 - a.y0);
 const amb = (id) => ambientes.find((a) => a.id === id);
 
-// Divide as paredes em trechos cheios e trechos de janela (peitoril e verga).
-function trechosDeParede() {
-  const trechos = [];
-  for (const [x0, y0, x1, y1] of paredes) {
-    const horizontal = y0 === y1;
-    const ini = horizontal ? Math.min(x0, x1) : Math.min(y0, y1);
-    const fim = horizontal ? Math.max(x0, x1) : Math.max(y0, y1);
-    const fixo = horizontal ? y0 : x0;
-    const nessa = janelas
-      .map((j) => ({ ...j, h: j.seg[1] === j.seg[3] }))
-      .filter((j) => j.h === horizontal && (horizontal ? j.seg[1] : j.seg[0]) === fixo)
-      .map((j) => ({ ...j, a: horizontal ? j.seg[0] : j.seg[1], b: horizontal ? j.seg[2] : j.seg[3] }))
-      .filter((j) => j.a >= ini && j.b <= fim)
-      .sort((p, q) => p.a - q.a);
-    let cursor = ini;
-    const ponto = (s) => (horizontal ? [s, fixo] : [fixo, s]);
-    const add = (a, b, z0, z1, janela) => {
-      if (b - a < 0.01) return;
-      const [ax, ay] = ponto(a); const [bx, by] = ponto(b);
-      trechos.push({ x0: ax, y0: ay, x1: bx, y1: by, z0, z1, janela });
-    };
-    for (const j of nessa) {
-      add(cursor, j.a, 0, PE_DIREITO, false);
-      add(j.a, j.b, 0, j.peitoril, true);
-      add(j.a, j.b, j.verga, PE_DIREITO, true);
-      cursor = j.b;
-    }
-    add(cursor, fim, 0, PE_DIREITO, false);
-  }
-  return trechos;
-}
+const COR = { branco: '#FFFFFF', claro: '#BFD4F2', destaque: '#FFC857', ok: '#7EE2A8', ruim: '#FF9C8A', azul: '#0B4FA8', escuro: '#083B80' };
 
 // ---------------------------------------------------------------------------
-// Planta 2D em SVG
+// Planta 2D em estilo blueprint (SVG), desenhada progressivamente (p de 0 a 1)
 // ---------------------------------------------------------------------------
-function svgPlanta({ ox, oy, s, destaque = [], nomes = true, opacidade = 1 }) {
+function svgPlanta({ ox, oy, s, destaque = [], hp = 1, nomes = true, p = 1 }) {
   const X = (x) => ox + x * s; const Y = (y) => oy + y * s;
-  let out = `<g opacity="${opacidade}">`;
+  const dash = (q) => `pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="${1 - q}"`;
+  let out = '<g>';
   for (const a of ambientes) {
-    const d = destaque.includes(a.id);
+    if (!destaque.includes(a.id) || hp <= 0) continue;
     out += `<rect x="${X(a.x0)}" y="${Y(a.y0)}" width="${(a.x1 - a.x0) * s}" height="${(a.y1 - a.y0) * s}"
-      fill="${a.cor}" ${d ? 'stroke="#C2683F" stroke-width="5"' : ''}/>`;
+      fill="${COR.destaque}" fill-opacity="${0.28 * hp}" stroke="${COR.destaque}" stroke-width="4" stroke-opacity="${hp}"/>`;
   }
-  for (const [x0, y0, x1, y1] of paredes) {
-    out += `<line x1="${X(x0)}" y1="${Y(y0)}" x2="${X(x1)}" y2="${Y(y1)}" stroke="#3A332B"
-      stroke-width="${ESPESSURA * s}" stroke-linecap="square"/>`;
-  }
+  const e = ESPESSURA * s;
+  paredes.forEach(([x0, y0, x1, y1], i) => {
+    const q = clamp(p * 1.6 - i * 0.04);
+    if (q <= 0) return;
+    out += `<line x1="${X(x0)}" y1="${Y(y0)}" x2="${X(x1)}" y2="${Y(y1)}" stroke="${COR.branco}" stroke-width="${e + 2}" stroke-linecap="square" ${dash(q)}/>`;
+    out += `<line x1="${X(x0)}" y1="${Y(y0)}" x2="${X(x1)}" y2="${Y(y1)}" stroke="${COR.azul}" stroke-width="${Math.max(e - 4, 1)}" stroke-linecap="square" ${dash(q)}/>`;
+  });
+  const pj = clamp((p - 0.55) / 0.3);
   for (const j of janelas) {
-    const [x0, y0, x1, y1] = j.seg; const h = y0 === y1; const e = (ESPESSURA * s) / 2;
-    out += `<line x1="${X(x0)}" y1="${Y(y0)}" x2="${X(x1)}" y2="${Y(y1)}" stroke="#FFFFFF" stroke-width="${ESPESSURA * s}"/>`;
-    for (const k of [-e, e]) {
-      out += h
-        ? `<line x1="${X(x0)}" y1="${Y(y0) + k}" x2="${X(x1)}" y2="${Y(y1) + k}" stroke="#3A332B" stroke-width="2"/>`
-        : `<line x1="${X(x0) + k}" y1="${Y(y0)}" x2="${X(x1) + k}" y2="${Y(y1)}" stroke="#3A332B" stroke-width="2"/>`;
+    const [x0, y0, x1, y1] = j.seg; const h = y0 === y1; const k = e / 2;
+    out += `<line x1="${X(x0)}" y1="${Y(y0)}" x2="${X(x1)}" y2="${Y(y1)}" stroke="${COR.azul}" stroke-width="${e + 3}" opacity="${pj}"/>`;
+    for (const d of [-k, 0, k]) {
+      out += h ? `<line x1="${X(x0)}" y1="${Y(y0) + d}" x2="${X(x1)}" y2="${Y(y1) + d}" stroke="${COR.branco}" stroke-width="1.6" opacity="${pj}"/>`
+        : `<line x1="${X(x0) + d}" y1="${Y(y0)}" x2="${X(x1) + d}" y2="${Y(y1)}" stroke="${COR.branco}" stroke-width="1.6" opacity="${pj}"/>`;
     }
   }
+  const pd = clamp((p - 0.6) / 0.3);
+  for (const d of portas) {
+    const r = d.r * s; const cx = X(d.x); const cy = Y(d.y);
+    const ang = lerp(d.a0, d.a1, pd);
+    const xa = cx + Math.cos(d.a0) * r; const ya = cy + Math.sin(d.a0) * r;
+    const xb = cx + Math.cos(ang) * r; const yb = cy + Math.sin(ang) * r;
+    if (pd > 0.01) out += `<path d="M ${xa} ${ya} A ${r} ${r} 0 0 1 ${xb} ${yb}" fill="none" stroke="${COR.branco}" stroke-width="1.6" stroke-dasharray="5 4" opacity="${pd * 0.9}"/>
+      <line x1="${cx}" y1="${cy}" x2="${xb}" y2="${yb}" stroke="${COR.branco}" stroke-width="2" opacity="${pd}"/>`;
+  }
   if (nomes) {
+    const pn = clamp((p - 0.7) / 0.3);
     for (const a of ambientes) {
       const cx = X((a.x0 + a.x1) / 2); const cy = Y((a.y0 + a.y1) / 2);
       const pequeno = a.id === 'hall' || a.id === 'banho';
-      out += `<text x="${cx}" y="${cy - 2}" text-anchor="middle" font-size="${pequeno ? 17 : 22}" font-weight="700" fill="#2B2620">${a.nome}</text>`;
-      out += `<text x="${cx}" y="${cy + (pequeno ? 18 : 24)}" text-anchor="middle" font-size="${pequeno ? 15 : 18}" fill="#6B5B45">${m2(areaDe(a))}</text>`;
+      out += `<text x="${cx}" y="${cy - 2}" text-anchor="middle" font-size="${pequeno ? 15 : 20}" font-weight="700" fill="${COR.branco}" opacity="${pn}" letter-spacing="0.5">${a.nome.toUpperCase()}</text>`;
+      out += `<text x="${cx}" y="${cy + (pequeno ? 17 : 22)}" text-anchor="middle" font-size="${pequeno ? 13 : 16}" fill="${COR.claro}" opacity="${pn}">${m2(areaDe(a))}</text>`;
     }
   }
   return out + '</g>';
 }
 
-function seta(x1, y1, x2, y2, p, cor = '#C2683F') {
+function seta(x1, y1, x2, y2, p, cor = COR.destaque) {
+  if (p <= 0.02) return '';
   const x = lerp(x1, x2, p); const y = lerp(y1, y2, p);
   const ang = Math.atan2(y2 - y1, x2 - x1); const t = 18;
   const pa = `${x},${y} ${x - t * Math.cos(ang - 0.45)},${y - t * Math.sin(ang - 0.45)} ${x - t * Math.cos(ang + 0.45)},${y - t * Math.sin(ang + 0.45)}`;
-  return p <= 0.02 ? '' : `<line x1="${x1}" y1="${y1}" x2="${x}" y2="${y}" stroke="${cor}" stroke-width="6" stroke-linecap="round"/>
-    <polygon points="${pa}" fill="${cor}"/>`;
+  return `<line x1="${x1}" y1="${y1}" x2="${x}" y2="${y}" stroke="${cor}" stroke-width="6" stroke-linecap="round"/><polygon points="${pa}" fill="${cor}"/>`;
 }
 
-function texto(x, y, linhas, { tam = 30, peso = 600, cor = '#2B2620', op = 1 } = {}) {
-  return linhas.map((l, i) => `<text x="${x}" y="${y + i * tam * 1.3}" font-size="${tam}" font-weight="${peso}" fill="${cor}" opacity="${op}">${l}</text>`).join('');
+function texto(x, y, linhas, { tam = 30, peso = 600, cor = COR.branco, op = 1, sobe = 0 } = {}) {
+  return linhas.map((l, i) => `<text x="${x}" y="${y + i * tam * 1.3 + sobe}" font-size="${tam}" font-weight="${peso}" fill="${cor}" opacity="${op}">${l}</text>`).join('');
 }
+// Texto que entra subindo e aparecendo, para não "pular" na tela
+const entra = (tc, ini, dur = 0.5) => { const v = saida((tc - ini) / dur); return { op: v, sobe: (1 - v) * 18 }; };
 
-// Cada tipo de cartão 2D recebe o progresso local (segundos desde o início da cena).
+const S = 58; const OX = 60; const OY = 30; // escala e origem padrão da planta nos cartões
+
 const cartoes2D = {
   sol(tc) {
-    const s = 58; const ox = 60; const oy = 28;
-    const p = saida((tc - 0.4) / 1.0);
-    const sx = 760; const sy = 120; const r = 46;
+    const p = saida(tc / 0.9); const a = saida((tc - 0.8) / 0.9);
+    const sx = 770; const sy = 115; const r = 44;
     let raios = '';
     for (let i = 0; i < 12; i++) {
-      const a = (i / 12) * Math.PI * 2 + tc * 0.4;
-      raios += `<line x1="${sx + Math.cos(a) * (r + 10)}" y1="${sy + Math.sin(a) * (r + 10)}" x2="${sx + Math.cos(a) * (r + 28)}" y2="${sy + Math.sin(a) * (r + 28)}" stroke="#E0A33A" stroke-width="6" stroke-linecap="round"/>`;
+      const ang = (i / 12) * Math.PI * 2 + tc * 0.35;
+      raios += `<line x1="${sx + Math.cos(ang) * (r + 10)}" y1="${sy + Math.sin(ang) * (r + 10)}" x2="${sx + Math.cos(ang) * (r + 26)}" y2="${sy + Math.sin(ang) * (r + 26)}" stroke="${COR.destaque}" stroke-width="5" stroke-linecap="round" opacity="${a}"/>`;
     }
     const q2 = amb('quarto2');
-    return svgPlanta({ ox, oy, s, destaque: p > 0.5 ? ['quarto2'] : [] }) +
-      `<circle cx="${sx}" cy="${sy}" r="${r}" fill="#F2C14E"/>${raios}` +
-      seta(sx - 70, sy + 40, ox + ((q2.x0 + q2.x1) / 2) * s + 40, oy + ((q2.y0 + q2.y1) / 2) * s - 30, p) +
-      texto(570, 340, ['Nascente (leste)'], { tam: 32, peso: 700, op: p }) +
-      texto(570, 390, ['Sol da manhã nos', 'quartos: ambiente', 'mais fresco à tarde.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p });
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['quarto2'], hp: a }) +
+      `<circle cx="${sx}" cy="${sy}" r="${r}" fill="${COR.destaque}" opacity="${a}"/>${raios}` +
+      seta(sx - 64, sy + 42, OX + ((q2.x0 + q2.x1) / 2) * S + 40, OY + ((q2.y0 + q2.y1) / 2) * S - 30, a) +
+      texto(570, 340, ['Nascente (leste)'], { tam: 32, peso: 800, ...entra(tc, 1.0) }) +
+      texto(570, 390, ['Sol da manhã nos', 'quartos: ambiente', 'mais fresco à tarde.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.2) });
   },
   corredor(tc) {
-    const s = 58; const ox = 60; const oy = 28;
-    const p = saida((tc - 0.4) / 1.0);
+    const p = saida(tc / 0.9); const a = saida((tc - 0.8) / 0.8);
     const hall = amb('hall');
-    const barra = (y, rot, larg, cor) => `<text x="520" y="${y}" font-size="25" font-weight="600" fill="#6B5B45">${rot}</text>
-      <rect x="520" y="${y + 14}" width="${larg * p}" height="34" rx="8" fill="${cor}"/>`;
-    return svgPlanta({ ox, oy, s, destaque: p > 0.3 ? ['hall'] : [] }) +
-      texto(520, 110, [`Hall: ${m2(areaDe(hall))}`], { tam: 40, peso: 800, cor: '#C2683F', op: p }) +
-      texto(520, 160, ['Circulação curta,', 'mais área para', 'os ambientes.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p }) +
-      barra(330, 'Corredor comprido', 320, '#D9B9A5') +
-      barra(420, 'Hall compacto', 110, '#5E7350');
+    const barra = (y, rot, larg, cor, ini) => { const v = saida((tc - ini) / 0.7); return `<text x="520" y="${y}" font-size="24" font-weight="600" fill="${COR.claro}" opacity="${v}">${rot}</text>
+      <rect x="520" y="${y + 14}" width="${Math.max(larg * v, 0.1)}" height="32" rx="8" fill="${cor}"/>`; };
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['hall'], hp: a }) +
+      texto(520, 110, [`Hall: ${m2(areaDe(hall))}`], { tam: 40, peso: 800, cor: COR.destaque, ...entra(tc, 0.9) }) +
+      texto(520, 160, ['Circulação curta,', 'mais área para', 'os ambientes.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.1) }) +
+      barra(330, 'Corredor comprido', 320, COR.ruim, 1.4) + barra(420, 'Hall compacto', 110, COR.ok, 1.7);
   },
   'banho-porta'(tc) {
-    const s = 58; const ox = 60; const oy = 28;
-    const p = saida((tc - 0.4) / 1.0);
-    const X = (x) => ox + x * s; const Y = (y) => oy + y * s;
-    // Arco da porta do banheiro (abre para o hall)
-    const porta = `<path d="M ${X(4.6)} ${Y(4.5)} A ${0.8 * s} ${0.8 * s} 0 0 0 ${X(3.8)} ${Y(5.3)} L ${X(4.6)} ${Y(5.3)}" fill="none" stroke="#C2683F" stroke-width="3" stroke-dasharray="6 5" opacity="${p}"/>`;
-    return svgPlanta({ ox, oy, s, destaque: p > 0.3 ? ['banho', 'hall'] : [] }) + porta +
-      texto(510, 140, ['✓ Abre para o hall'], { tam: 32, peso: 700, cor: '#5E7350', op: p }) +
-      texto(510, 190, ['Quem está na sala', 'não vê a porta', 'do banheiro.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p }) +
-      texto(510, 400, ['✗ De frente', 'para a sala'], { tam: 30, peso: 700, cor: '#C2683F', op: saida((tc - 1.4) / 0.8) });
+    const p = saida(tc / 0.9); const a = saida((tc - 0.8) / 0.8);
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho', 'hall'], hp: a }) +
+      texto(510, 140, ['✓ Abre para o hall'], { tam: 32, peso: 800, cor: COR.ok, ...entra(tc, 1.0) }) +
+      texto(510, 190, ['Quem está na sala', 'não vê a porta', 'do banheiro.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.2) }) +
+      texto(510, 400, ['✗ De frente', 'para a sala'], { tam: 30, peso: 800, cor: COR.ruim, ...entra(tc, 1.8) });
   },
   'banho-janela'(tc) {
-    const s = 58; const ox = 60; const oy = 28;
-    const p = saida((tc - 0.4) / 1.0);
-    const X = (x) => ox + x * s; const Y = (y) => oy + y * s;
+    const p = saida(tc / 0.9); const a = saida((tc - 0.8) / 0.8);
+    const X = (x) => OX + x * S; const Y = (y) => OY + y * S;
     let ar = '';
     for (let i = 0; i < 3; i++) {
-      const fase = ((tc * 0.8 + i / 3) % 1);
-      const x = X(6.5) + 10 + fase * 70; const y = Y(4.8 + i * 0.22);
-      ar += `<path d="M ${x} ${y} q 12 -10 24 0 t 24 0" fill="none" stroke="#7FA7B5" stroke-width="5" stroke-linecap="round" opacity="${p * (1 - fase)}"/>`;
+      const fase = (tc * 0.8 + i / 3) % 1;
+      const x = X(6.5) + 12 + fase * 70; const y = Y(4.8 + i * 0.22);
+      ar += `<path d="M ${x} ${y} q 12 -10 24 0 t 24 0" fill="none" stroke="${COR.claro}" stroke-width="5" stroke-linecap="round" opacity="${a * (1 - fase)}"/>`;
     }
-    return svgPlanta({ ox, oy, s, destaque: p > 0.3 ? ['banho'] : [] }) + ar +
-      texto(560, 140, ['Janela alta'], { tam: 34, peso: 800, cor: '#C2683F', op: p }) +
-      texto(560, 185, ['peitoril de 1,6 m'], { tam: 27, peso: 600, cor: '#6B5B45', op: p }) +
-      texto(560, 300, ['Ventilação natural', 'evita mofo e', 'cheiro parado.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p });
+    return svgPlanta({ ox: OX, oy: OY, s: S, p, destaque: ['banho'], hp: a }) + ar +
+      texto(570, 140, ['Janela alta'], { tam: 36, peso: 800, cor: COR.destaque, ...entra(tc, 1.0) }) +
+      texto(570, 185, ['peitoril de 1,6 m'], { tam: 26, peso: 600, cor: COR.branco, ...entra(tc, 1.15) }) +
+      texto(570, 300, ['Ventilação natural', 'evita mofo e', 'cheiro parado.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.35) });
   },
   recuos(tc) {
-    const s = 25; const ox = 70; const oy = 30; // lote 10 x 20 m
-    const p = saida((tc - 0.3) / 1.0);
+    const s = 25; const ox = 70; const oy = 30;
+    const p = saida(tc / 0.8); const a = saida((tc - 0.7) / 0.8);
     const X = (x) => ox + x * s; const Y = (y) => oy + y * s;
-    // Casa no lote: 1,5 m da divisa esquerda e 4 m da frente (valores de exemplo)
-    const cx = 1.5; const cy = 4;
-    let out = `<rect x="${X(0)}" y="${Y(0)}" width="${10 * s}" height="${20 * s}" fill="#DCE4CF" stroke="#5E7350" stroke-width="4"/>`;
-    out += `<rect x="${X(cx)}" y="${Y(cy)}" width="${LARGURA * s}" height="${PROFUNDIDADE * s}" fill="#E8D7BC" stroke="#3A332B" stroke-width="4"/>`;
-    out += `<text x="${X(cx + LARGURA / 2)}" y="${Y(cy + PROFUNDIDADE / 2) + 8}" text-anchor="middle" font-size="22" font-weight="700" fill="#2B2620">Casa</text>`;
-    out += `<line x1="${X(0)}" y1="${Y(cy)}" x2="${X(10)}" y2="${Y(cy)}" stroke="#C2683F" stroke-width="3" stroke-dasharray="10 8" opacity="${p}"/>`;
-    out += `<line x1="${X(cx)}" y1="${Y(0)}" x2="${X(cx)}" y2="${Y(20)}" stroke="#C2683F" stroke-width="3" stroke-dasharray="10 8" opacity="${p}"/>`;
-    out += `<text x="${X(5)}" y="${Y(cy / 2) + 8}" text-anchor="middle" font-size="20" font-weight="700" fill="#C2683F" opacity="${p}">recuo frontal</text>`;
-    out += `<text x="${X(5)}" y="${Y(0) - 8}" text-anchor="middle" font-size="18" fill="#6B5B45">rua</text>`;
+    const cx = 1.5; const cy = 4; // casa a 1,5 m da divisa e 4 m da frente (exemplo)
+    let out = `<rect x="${X(0)}" y="${Y(0)}" width="${10 * s}" height="${20 * s}" fill="none" stroke="${COR.branco}" stroke-width="3" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="${1 - p}"/>`;
+    out += `<g opacity="${saida((tc - 0.4) / 0.6)}"><rect x="${X(cx)}" y="${Y(cy)}" width="${LARGURA * s}" height="${PROFUNDIDADE * s}" fill="rgba(255,255,255,0.16)" stroke="${COR.branco}" stroke-width="3"/>
+      <text x="${X(cx + LARGURA / 2)}" y="${Y(cy + PROFUNDIDADE / 2) + 8}" text-anchor="middle" font-size="22" font-weight="800" fill="${COR.branco}">CASA</text></g>`;
+    out += `<line x1="${X(0)}" y1="${Y(cy)}" x2="${X(10)}" y2="${Y(cy)}" stroke="${COR.destaque}" stroke-width="3" stroke-dasharray="10 8" opacity="${a}"/>`;
+    out += `<line x1="${X(cx)}" y1="${Y(0)}" x2="${X(cx)}" y2="${Y(20)}" stroke="${COR.destaque}" stroke-width="3" stroke-dasharray="10 8" opacity="${a}"/>`;
+    out += `<text x="${X(5)}" y="${Y(cy / 2) + 8}" text-anchor="middle" font-size="19" font-weight="800" fill="${COR.destaque}" opacity="${a}">RECUO FRONTAL</text>`;
+    out += `<text x="${X(5)}" y="${Y(0) - 8}" text-anchor="middle" font-size="17" fill="${COR.claro}">rua</text>`;
     return out +
-      texto(400, 110, ['Lote 10 x 20 m'], { tam: 34, peso: 800, cor: '#2B2620' }) +
-      texto(400, 165, ['A casa precisa caber', 'dentro dos recuos,', 'não só no terreno.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p }) +
-      texto(400, 380, ['Os recuos mudam', 'de cidade para cidade:', 'confira na prefeitura.'], { tam: 25, peso: 700, cor: '#C2683F', op: saida((tc - 1.2) / 0.8) });
+      texto(400, 110, ['Lote 10 x 20 m'], { tam: 34, peso: 800, ...entra(tc, 0.3) }) +
+      texto(400, 165, ['A casa precisa caber', 'dentro dos recuos,', 'não só no terreno.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 0.9) }) +
+      texto(400, 380, ['Os recuos mudam', 'de cidade para cidade:', 'confira na prefeitura.'], { tam: 25, peso: 800, cor: COR.destaque, ...entra(tc, 1.5) });
   },
   ampliacao(tc) {
     const s = 52; const ox = 40; const oy = 40;
-    const p = saida((tc - 0.5) / 1.0);
+    const p = saida(tc / 0.9); const a = saida((tc - 0.9) / 0.8);
     const X = (x) => ox + x * s; const Y = (y) => oy + y * s;
-    const ext = `<rect x="${X(6.5)}" y="${Y(5.8)}" width="${2.8 * s}" height="${2.7 * s}" fill="#F3E5DB" fill-opacity="${p}"
-      stroke="#C2683F" stroke-width="4" stroke-dasharray="12 8" opacity="${p}"/>
-      <text x="${X(7.9)}" y="${Y(7.05)}" text-anchor="middle" font-size="20" font-weight="700" fill="#C2683F" opacity="${p}">Quarto 3</text>
-      <text x="${X(7.9)}" y="${Y(7.05) + 24}" text-anchor="middle" font-size="17" fill="#C2683F" opacity="${p}">(futuro)</text>`;
-    return svgPlanta({ ox, oy, s }) + ext +
-      texto(560, 110, ['Pronta para', 'crescer'], { tam: 36, peso: 800, cor: '#2B2620' }) +
-      texto(560, 220, ['Deixe previsto', 'por onde a casa', 'vai aumentar.'], { tam: 27, peso: 500, cor: '#6B5B45', op: p });
+    const ext = `<rect x="${X(6.5)}" y="${Y(5.8)}" width="${2.8 * s}" height="${2.7 * s}" fill="${COR.destaque}" fill-opacity="${0.18 * a}"
+      stroke="${COR.destaque}" stroke-width="4" stroke-dasharray="12 8" opacity="${a}"/>
+      <text x="${X(7.9)}" y="${Y(7.05)}" text-anchor="middle" font-size="19" font-weight="800" fill="${COR.destaque}" opacity="${a}">QUARTO 3</text>
+      <text x="${X(7.9)}" y="${Y(7.05) + 24}" text-anchor="middle" font-size="16" fill="${COR.destaque}" opacity="${a}">(futuro)</text>`;
+    return svgPlanta({ ox, oy, s, p }) + ext +
+      texto(570, 110, ['Pronta para', 'crescer'], { tam: 36, peso: 800, ...entra(tc, 0.5) }) +
+      texto(570, 220, ['Deixe previsto', 'por onde a casa', 'vai aumentar.'], { tam: 26, peso: 500, cor: COR.claro, ...entra(tc, 1.1) });
   },
   cta(tc) {
-    const p = saida((tc - 0.2) / 0.8);
-    const q = saida((tc - 0.9) / 0.6);
-    // Página do material gratuito, levemente inclinada
-    let out = `<g transform="translate(110 40) rotate(-4 160 230)" opacity="${p}">
-      <rect x="0" y="0" width="330" height="460" rx="10" fill="#FBF8F2" stroke="#E2D6C4" stroke-width="3"/>
-      <rect x="0" y="0" width="330" height="70" rx="10" fill="#5E7350"/>
-      <text x="24" y="45" font-size="26" font-weight="800" fill="#FFFFFF">Casa Compacta</text>
-      ${svgPlanta({ ox: 70, oy: 100, s: 28, nomes: false })}
-      <text x="24" y="370" font-size="20" font-weight="700" fill="#2B2620">Planta baixa + guia</text>
-      <text x="24" y="400" font-size="18" fill="#6B5B45">Como ler a planta e o que</text>
-      <text x="24" y="425" font-size="18" fill="#6B5B45">checar antes de construir</text>
-    </g>`;
-    out += `<g opacity="${q}" transform="translate(520 170)">
-      <text x="0" y="0" font-size="34" font-weight="700" fill="#2B2620">Comente</text>
-      <rect x="0" y="22" width="300" height="96" rx="48" fill="#C2683F"/>
-      <text x="150" y="88" text-anchor="middle" font-size="46" font-weight="800" fill="#FFFFFF">PLANTA</text>
-      <text x="0" y="180" font-size="26" font-weight="500" fill="#6B5B45">e receba grátis</text>
-      <text x="0" y="214" font-size="26" font-weight="500" fill="#6B5B45">no WhatsApp</text>
-    </g>`;
-    return out;
+    const p = saida(tc / 0.6); const q = saida((tc - 0.7) / 0.6);
+    const img = imagemHumanizada ? `<image href="${imagemHumanizada}" x="0" y="70" width="330" height="390" preserveAspectRatio="xMidYMid slice" clip-path="url(#recorte)"/>` : '';
+    return `<defs><clipPath id="recorte"><rect x="0" y="70" width="330" height="390"/></clipPath></defs>
+      <g transform="translate(100 ${40 + (1 - p) * 30}) rotate(-3 165 230)" opacity="${p}">
+        <rect x="-6" y="-6" width="342" height="472" rx="12" fill="rgba(0,0,0,0.25)"/>
+        <rect x="0" y="0" width="330" height="460" rx="10" fill="#FBF8F2"/>
+        <rect x="0" y="0" width="330" height="70" rx="10" fill="${COR.escuro}"/>
+        <text x="22" y="44" font-size="25" font-weight="800" fill="#FFFFFF">CASA COMPACTA</text>
+        ${img}
+      </g>
+      <g opacity="${q}" transform="translate(520 ${150 + (1 - q) * 20})">
+        <text x="0" y="0" font-size="34" font-weight="800" fill="${COR.branco}">Comente</text>
+        <rect x="0" y="22" width="300" height="96" rx="48" fill="${COR.destaque}"/>
+        <text x="150" y="88" text-anchor="middle" font-size="46" font-weight="900" fill="${COR.escuro}">PLANTA</text>
+        <text x="0" y="178" font-size="25" font-weight="500" fill="${COR.claro}">e receba a planta</text>
+        <text x="0" y="210" font-size="25" font-weight="500" fill="${COR.claro}">humanizada grátis</text>
+        <text x="0" y="242" font-size="25" font-weight="500" fill="${COR.claro}">no WhatsApp</text>
+      </g>`;
   },
 };
 
+// Grade do blueprint de fundo dos cartões
+const GRADE = `<defs><pattern id="grade" width="29" height="29" patternUnits="userSpaceOnUse">
+  <path d="M 29 0 L 0 0 0 29" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/></pattern></defs>
+  <rect x="0" y="0" width="900" height="560" fill="url(#grade)"/>`;
+
 // ---------------------------------------------------------------------------
-// Cena 3D
+// 3D em tela cheia
 // ---------------------------------------------------------------------------
+const SS = Number(new URLSearchParams(location.search).get('ss') || 1.25);
 const canvas = document.getElementById('tres');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
-renderer.setPixelRatio(1);
-renderer.setSize(900, 560, false);
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.setPixelRatio(SS); renderer.setSize(1080, 1920, false);
+const casa = criarCasa(renderer);
+const ASPECTO = 1080 / 1920;
+let imagemHumanizada = null;
 
-const cena3d = new THREE.Scene();
-cena3d.background = new THREE.Color('#F4EFE6');
-const camera = new THREE.PerspectiveCamera(38, 900 / 560, 0.1, 200);
-const centro = new THREE.Vector3(LARGURA / 2, 0, PROFUNDIDADE / 2);
-// No 3D o eixo x é espelhado, para a casa vista da rua bater com as plantas 2D (frente no alto).
-const mx = (x) => LARGURA - x;
-
-cena3d.add(new THREE.HemisphereLight('#FFFFFF', '#D8D2C6', 1.25));
-const sol = new THREE.DirectionalLight('#FFF0DC', 2.1);
-sol.position.set(-8, 14, -10);
-sol.target.position.copy(centro);
-sol.castShadow = true;
-sol.shadow.mapSize.set(2048, 2048);
-Object.assign(sol.shadow.camera, { left: -10, right: 10, top: 10, bottom: -10, near: 1, far: 40 });
-sol.shadow.bias = -0.0005;
-cena3d.add(sol, sol.target);
-
-// Terreno: gramado e lote
-const chao = new THREE.Mesh(new THREE.PlaneGeometry(60, 60), new THREE.MeshStandardMaterial({ color: '#A9BC8C', roughness: 1 }));
-chao.rotation.x = -Math.PI / 2; chao.position.y = -0.02; chao.receiveShadow = true;
-cena3d.add(chao);
-const calcada = new THREE.Mesh(new THREE.PlaneGeometry(10, 4), new THREE.MeshStandardMaterial({ color: '#DDD6C8', roughness: 1 }));
-calcada.rotation.x = -Math.PI / 2; calcada.position.set(LARGURA / 2 + 0.25, -0.01, -2.2); calcada.receiveShadow = true;
-cena3d.add(calcada);
-
-// Pisos e nomes dos ambientes
-const rotulos = [];
-for (const a of ambientes) {
-  const w = a.x1 - a.x0; const d = a.y1 - a.y0;
-  const piso = new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, d), new THREE.MeshStandardMaterial({ color: a.cor, roughness: 0.9 }));
-  piso.position.set(mx(a.x0 + w / 2), 0.03, a.y0 + d / 2); piso.receiveShadow = true;
-  cena3d.add(piso);
-  if (a.id === 'hall') continue;
-  const c = document.createElement('canvas'); c.width = 512; c.height = 200;
-  const g = c.getContext('2d');
-  g.fillStyle = '#2B2620'; g.font = '700 74px Inter, sans-serif'; g.textAlign = 'center';
-  g.fillText(a.nome, 256, 92);
-  g.fillStyle = '#6B5B45'; g.font = '500 54px Inter, sans-serif';
-  g.fillText(m2(areaDe(a)), 256, 160);
-  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
-  const larg = Math.min(w * 0.9, 2.5);
-  const r = new THREE.Mesh(new THREE.PlaneGeometry(larg, larg * 200 / 512), new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false }));
-  r.rotation.set(-Math.PI / 2, 0, Math.PI); r.position.set(mx(a.x0 + w / 2), 0.07, a.y0 + d / 2 + 0.15);
-  cena3d.add(r); rotulos.push(r);
-}
-
-// Paredes: cada trecho é um grupo com altura 1, escalado conforme a "subida" da parede.
-const matParede = new THREE.MeshStandardMaterial({ color: '#FFFFFF', roughness: 0.9 });
-const matJanela = new THREE.MeshStandardMaterial({ color: '#F3EEE6', roughness: 0.9 });
-const matAresta = new THREE.LineBasicMaterial({ color: '#6E6354' });
-const grupos = trechosDeParede().map((tr, i) => {
-  const comp = Math.hypot(tr.x1 - tr.x0, tr.y1 - tr.y0) + (tr.janela ? 0 : ESPESSURA);
-  const horizontal = tr.y0 === tr.y1;
-  const geo = new THREE.BoxGeometry(horizontal ? comp : ESPESSURA, 1, horizontal ? ESPESSURA : comp);
-  const g = new THREE.Group();
-  const m = new THREE.Mesh(geo, tr.janela ? matJanela : matParede); m.castShadow = true; m.receiveShadow = true;
-  g.add(m, new THREE.LineSegments(new THREE.EdgesGeometry(geo), matAresta));
-  g.position.set(mx((tr.x0 + tr.x1) / 2), 0, (tr.y0 + tr.y1) / 2);
-  cena3d.add(g);
-  return { g, tr, atraso: (i % 8) * 0.12 };
-});
-
-// Vidros das janelas
-for (const j of janelas) {
-  const [x0, y0, x1, y1] = j.seg; const horizontal = y0 === y1;
-  const comp = Math.hypot(x1 - x0, y1 - y0); const alt = j.verga - j.peitoril;
-  const vidro = new THREE.Mesh(new THREE.BoxGeometry(horizontal ? comp : 0.03, alt, horizontal ? 0.03 : comp),
-    new THREE.MeshStandardMaterial({ color: '#9CC3D0', roughness: 0.2, metalness: 0.1, transparent: true, opacity: 0.55 }));
-  vidro.position.set(mx((x0 + x1) / 2), j.peitoril + alt / 2, (y0 + y1) / 2);
-  vidro.userData.janela = j; cena3d.add(vidro);
-  grupos.push({ vidro, atraso: 0.9 });
-}
-
-// Móveis simples, para dar escala
-const movel = (w, h, d, x, y, cor, z0 = 0) => {
-  const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshStandardMaterial({ color: cor, roughness: 0.8 }));
-  m.position.set(mx(x), z0 + h / 2 + 0.06, y); m.castShadow = true; m.receiveShadow = true;
-  m.userData.base = { h, z0 }; cena3d.add(m); return m;
-};
-const moveis = [
-  movel(2.1, 0.75, 0.85, 1.6, 3.55, '#C2683F'), // sofá
-  movel(1.6, 0.5, 0.4, 1.6, 0.35, '#7A5C3E'), // rack
-  movel(0.6, 0.9, 2.6, 6.1, 1.6, '#9C7A55'), // bancada
-  movel(1.2, 0.75, 0.8, 4.6, 2.6, '#B08B62'), // mesa
-  movel(1.45, 0.5, 1.95, 1.6, 7.35, '#EEE7DB'), // cama de casal
-  movel(1.45, 1.0, 0.1, 1.6, 8.36, '#7A5C3E'), // cabeceira
-  movel(0.95, 0.5, 1.95, 5.75, 7.4, '#EEE7DB'), // cama de solteiro
-  movel(0.5, 0.45, 0.65, 6.1, 5.3, '#FFFFFF'), // vaso
-  movel(0.6, 0.85, 0.45, 5.2, 4.45, '#FFFFFF'), // pia
-];
-
-function posicionar3D(subida, mov, theta, raio, altura) {
-  const topo = PE_DIREITO * 1.0;
-  for (const it of grupos) {
-    const v = suave((subida - it.atraso) / 1.4);
-    if (it.vidro) { it.vidro.visible = v > 0.98; continue; }
-    const { g, tr } = it;
-    const limite = topo * v;
-    const vis = Math.max(0, Math.min(tr.z1, limite) - tr.z0);
-    g.visible = vis > 0.005;
-    g.scale.y = Math.max(vis, 0.0001);
-    g.position.y = tr.z0 + vis / 2;
-  }
-  moveis.forEach((m, i) => {
-    const v = saida((mov - i * 0.08) / 0.5);
-    m.visible = v > 0.01; m.scale.set(1, Math.max(v, 0.001), 1);
-    m.position.y = m.userData.base.z0 + 0.06 + (m.userData.base.h * v) / 2;
-  });
-  camera.position.set(centro.x + raio * Math.sin(theta), altura, centro.z - raio * Math.cos(theta));
-  camera.lookAt(centro);
-  renderer.render(cena3d, camera);
-}
-
-const cenas3D = {
-  '3d-gancho'(tc) {
-    // Gancho: a casa sobe rápido já no primeiro segundo, para prender o olhar.
-    const k = clamp(tc / 3);
-    posicionar3D(tc * 1.6 - 0.1, tc * 1.6 - 2.2, lerp(-0.6, 0.05, suave(k)), lerp(9.5, 8, saida(k)), lerp(16, 13.5, saida(k)));
+const telas = {
+  // Gancho: blueprint se desenha, paredes sobem e a casa começa a ganhar vida.
+  'tela-gancho'(tc) {
+    casa.aplicar({ desenho: saida((tc + 0.3) / 1.3), paredes: suave((tc - 0.8) / 1.1), vida: 0.85 * suave((tc - 1.4) / 1.6) });
+    casa.enquadrar({ theta: lerp(0, 0.22, suave(tc / 3)), inclinacao: lerp(0.02, 0.4, suave((tc - 0.6) / 2.4)), distancia: lerp(35, 31, saida(tc / 3)), alvo: [0, 3.8], aspecto: ASPECTO });
   },
-  '3d-crescer'(tc) {
-    // Paredes sobem de 0,3 s a ~2,6 s; móveis aparecem depois; câmera gira devagar.
-    const k = clamp(tc / 5.5);
-    posicionar3D(tc - 0.3, tc - 2.6, lerp(-0.7, 0.15, suave(k)), lerp(10, 8, saida(k)), lerp(17, 13.5, saida(k)));
-  },
-  '3d-orbita'(tc) {
-    const k = clamp(tc / 6);
-    posicionar3D(99, 99, lerp(0.35, 1.9, suave(k)), 9.5, lerp(14, 12.5, k));
+  // Resposta: a casa ganha vida por completo e a câmera desliza devagar.
+  'tela-resposta'(tc) {
+    casa.aplicar({ desenho: 1, paredes: suave(tc / 1.2), vida: suave((tc - 0.6) / 2.6) });
+    casa.enquadrar({ theta: lerp(-0.15, 0.5, suave(tc / 7)), inclinacao: lerp(0.05, 0.5, suave((tc - 0.4) / 5.5)), distancia: lerp(35, 29, suave(tc / 7)), alvo: [0, lerp(3.8, 3.2, suave(tc / 7))], aspecto: ASPECTO });
   },
 };
 
@@ -389,35 +253,29 @@ const cenas3D = {
 // Quadro
 // ---------------------------------------------------------------------------
 const el = (id) => document.getElementById(id);
-const dom = {
-  abertura: el('abertura'), cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'),
-  desenho: el('desenho'), tres: el('tres'), legT: el('leg-titulo'), legP: el('leg-palavra'),
-};
+const dom = { cartao: el('cartao'), rotT: el('rotulo-titulo'), rotI: el('rotulo-info'), desenho: el('desenho'), tres: el('tres'), vinheta: el('vinheta'), legT: el('leg-titulo'), legP: el('leg-palavra') };
 
 window.renderAt = (t) => {
   const c = cenas.find((x) => t >= x.ini && t < x.fim) || cenas[cenas.length - 1];
   const tc = t - c.ini;
-  const entrada = saida(tc / 0.25);
+  const tela = c.tipo.startsWith('tela');
 
-  // Abertura
-  dom.abertura.innerHTML = c.abertura || '';
-  dom.abertura.style.opacity = c.tipo === 'abertura' ? entrada : 0;
+  dom.tres.style.display = tela ? 'block' : 'none';
+  dom.vinheta.style.display = tela ? 'block' : 'none';
+  if (tela) { telas[c.tipo](tc); casa.render(); }
 
-  // Cartão
-  const temCartao = c.tipo !== 'abertura';
-  dom.cartao.style.opacity = temCartao ? entrada : 0;
-  dom.cartao.style.transform = `scale(${0.94 + 0.06 * entrada})`;
-  if (temCartao) {
+  // Cartão: entra deslizando de leve (sem "pulo")
+  const entrada = saida(tc / 0.35);
+  dom.cartao.style.opacity = tela ? 0 : entrada;
+  dom.cartao.style.transform = `translateY(${(1 - entrada) * 40}px)`;
+  if (!tela) {
     dom.rotT.textContent = c.rotulo; dom.rotI.textContent = c.info;
-    const e3d = c.tipo.startsWith('3d');
-    dom.tres.style.display = e3d ? 'block' : 'none';
-    dom.desenho.style.display = e3d ? 'none' : 'block';
-    if (e3d) cenas3D[c.tipo](tc);
-    else dom.desenho.innerHTML = `<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${cartoes2D[c.tipo](tc)}</svg>`;
+    dom.desenho.innerHTML = `<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${GRADE}${cartoes2D[c.tipo](tc)}</svg>`;
   }
 
   // Legenda: título do item e uma palavra por vez, como na referência
   dom.legT.innerHTML = c.titulo;
+  dom.legT.classList.toggle('gancho', c.tipo === 'tela-gancho');
   const palavras = c.fala.split(' ');
   const passo = (c.fim - c.ini - 0.3) / palavras.length;
   dom.legP.textContent = palavras[clamp(Math.floor((tc - 0.15) / passo), 0, palavras.length - 1)];
@@ -427,4 +285,13 @@ window.modoFundo = (ativo) => document.body.classList.toggle('modo-fundo', ativo
 window.DURACAO = DURACAO;
 window.DURACAO_GANCHO = DURACAO_GANCHO;
 window.VERSOES = GANCHOS.length;
-document.fonts.ready.then(() => { window.renderAt(0); window.pronto = true; });
+
+document.fonts.ready.then(() => {
+  // Foto da planta humanizada para o cartão final (renderizada uma vez)
+  casa.aplicar({ desenho: 1, paredes: 1, vida: 1 });
+  casa.enquadrar({ theta: 0, inclinacao: 0.02, distancia: 21, alvo: [0, 0], aspecto: ASPECTO });
+  casa.render();
+  imagemHumanizada = canvas.toDataURL('image/jpeg', 0.9);
+  window.renderAt(0);
+  window.pronto = true;
+});

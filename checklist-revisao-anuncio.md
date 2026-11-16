@@ -5,8 +5,9 @@
 ## Conteúdo
 
 - [ ] Nenhuma promessa de prazo de obra
-- [ ] Nenhuma promessa de economia ou valor de construção exato
+- [ ] Nenhum valor exato de custo de construção
 - [ ] Nenhuma garantia de aprovação na prefeitura
+- [ ] Valor de economia (ex.: "R$ 1.000 que um arquiteto te economizaria") conferido com o preço real de uma consulta ou revisão de planta na sua região, ou escrito como "até R$ 1.000"
 - [ ] Área, quartos e banheiros batem com a planta final
 - [ ] Preço e forma de pagamento conferidos
 - [ ] Texto em português brasileiro, sem erros de digitação

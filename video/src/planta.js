@@ -40,3 +40,11 @@ export const janelas = [
 ];
 
 export const areaTotal = () => LARGURA * PROFUNDIDADE; // ~55 m²
+
+// Portas: dobradiça (x, y), raio da folha e ângulos de abertura (radianos, 0 = +x, PI/2 = +y).
+export const portas = [
+  { id: 'entrada', x: 1.0, y: 0, r: 0.9, a0: 0, a1: Math.PI / 2 },
+  { id: 'quarto1', x: 3.2, y: 4.4, r: 0.8, a0: Math.PI / 2, a1: Math.PI },
+  { id: 'quarto2', x: 3.4, y: 5.8, r: 0.8, a0: 0, a1: Math.PI / 2 },
+  { id: 'banho', x: 4.6, y: 4.5, r: 0.8, a0: 0, a1: Math.PI / 2 },
+];

@@ -1,8 +1,11 @@
-# Guia para o editor: vídeo "O erro mais caro na planta"
+# Guia para o editor: vídeo "Os R$ 1.000 do arquiteto"
 
-> Referência principal: reel de Robert McKeaveney, "10/10 content strategies (niche edition)", 52 s, 9:16.
-> Link: https://www.instagram.com/reel/DfY-8rETTPs/
-> Copiamos o **formato e as regras de retenção**, não o conteúdo nem a imagem dele.
+> Referências:
+> - **Formato e retenção:** reel de Robert McKeaveney, "10/10 content strategies (niche edition)", 52 s, 9:16. https://www.instagram.com/reel/DfY-8rETTPs/
+> - **Visual da casa:** vídeo da página Virtual Floor Plan (planta humanizada 3D, vista de cima, câmera lenta e suave). https://www.facebook.com/watch/?v=2617867535326380
+> - **Blueprint ganhando vida:** planta azul de fundo quadriculado (estilo da imagem de referência do Freepik). O desenho do vídeo é nosso, feito a partir da planta da Casa Compacta; não usamos a imagem do Freepik.
+>
+> Copiamos o **formato e as regras**, não o conteúdo nem as imagens de ninguém.
 
 ## 1. O que a referência ensina (resumo da fala, 0:00 a 0:52)
 
@@ -13,7 +16,7 @@ Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 | 0:00 | São 10 estratégias, cada uma mais específica que a anterior | Os itens vão do mais geral (sol) ao mais específico (ampliação) |
 | 0:03 | **Tempo assistido** é o principal fator para viralizar; sem ele, não viraliza | Tudo foi pensado para a pessoa ficar até o fim |
 | 0:08 | Estrutura **gancho, desenvolvimento, desfecho** | Gancho 0 a 3 s, desenvolvimento 3 a 27 s, desfecho 27 a 34 s |
-| 0:11 | O gancho faz a pessoa **se perguntar algo**; o desfecho **responde** no final | Gancho: "Qual é o erro mais caro?" Desfecho: "não ver a casa em 3D" |
+| 0:11 | O gancho faz a pessoa **se perguntar algo**; o desfecho **responde** no final | Gancho: "Vou te economizar os R$ 1.000 que um arquiteto te economizaria" (como?). Desfecho: "o mais caro: não ver a casa em 3D" |
 | 0:17 | Se um vídeo for bem, mude 1 ou 2 partes e **reposte um mês depois** | Repetir com outra planta e o mesmo formato |
 | 0:21 | Faça **5 versões** de cada vídeo, poste todas como **reels de teste** e libere para todos a melhor | 5 versões prontas, só o gancho muda |
 | 0:28 | Pegue o formato de um vídeo que já viralizou e coloque o seu tema | É o que este vídeo faz com o reel de referência |
@@ -23,10 +26,21 @@ Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 
 ## 2. Por que este vídeo prende quem quer construir
 
-- **A planta aparece desde o primeiro quadro.** O gancho já mostra a Casa Compacta subindo em 3D.
+- **A planta aparece desde o primeiro quadro.** O gancho mostra, em tela cheia, a planta azul se desenhando e a casa ganhando vida.
 - **Todos os itens usam a mesma casa.** A pessoa vai montando a casa na cabeça: sala, cozinha, quartos, banheiro, terreno. No fim, ela conhece a planta e quer recebê-la.
-- **A resposta só vem no item 7**, com a casa girando em 3D, que é a parte mais bonita do vídeo.
-- **A chamada oferece exatamente essa planta**, grátis, pelo WhatsApp.
+- **A resposta só vem no item 7**, em tela cheia: o blueprint vira a planta humanizada, com móveis, piso e jardim. É a parte mais bonita do vídeo.
+- **A chamada mostra a planta que a pessoa vai receber** (foto da planta humanizada), grátis, pelo WhatsApp.
+
+## 2.1. Estrutura visual
+
+| Tempo | Tela | O que aparece |
+|---|---|---|
+| 0:00 a 0:03 | **Tela cheia** | Blueprint azul se desenha, paredes sobem, cômodos começam a ganhar vida |
+| 0:03 a 0:27 | Apresentador + cartão | Cartões blueprint (planta azul) com o erro destacado em amarelo |
+| 0:27 a 0:34 | **Tela cheia** | Casa ganha vida por completo: planta humanizada com câmera deslizando |
+| 0:34 a 0:38 | Apresentador + cartão | Foto da planta humanizada e "Comente PLANTA" |
+
+Nos trechos de **tela cheia**, a camada cobre a tela inteira: o apresentador não aparece, mas **a voz dele continua** por cima (como imagem de apoio).
 
 ## 3. Arquivos
 
@@ -35,7 +49,7 @@ Cada versão fica em `video/saida/v1` a `video/saida/v5`:
 - **`camada-transparente.webm`**: só os cartões e as legendas, com fundo transparente (VP9 com canal alfa). Coloque **por cima** da gravação do apresentador.
 - **`rascunho.mp4`**: o mesmo vídeo com um boneco no lugar do apresentador, para ver o resultado antes de gravar.
 
-As 5 versões são iguais depois dos 3 primeiros segundos. Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
+As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
 
 ## 4. Roteiro de fala (teleprompter)
 
@@ -43,11 +57,13 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Se o seu editor não 
 
 | Versão | Texto na tela | Fala |
 |---|---|---|
-| v1 | Qual é o erro mais caro na planta de uma casa? | "Qual é o erro mais caro na planta de uma casa? Fica até o final." |
-| v2 | 7 erros na planta (o último é o pior) | "Sete erros na planta da sua casa. O último é o pior." |
-| v3 | Antes de construir, confira esses 7 pontos | "Antes de construir, confira esses sete pontos. O último quase ninguém faz." |
-| v4 | O erro de planta que ninguém te conta | "Tem um erro de planta que ninguém te conta. E mais seis no caminho." |
-| v5 | Construir sem esse cuidado sai caro | "Construir sem esse cuidado sai caro. Você vai ver no final." |
+| v1 | Vou te economizar os R$ 1.000 que um arquiteto te economizaria | "Vou te economizar os mil reais que um arquiteto te economizaria. Fica até o final." |
+| v2 | Os R$ 1.000 que um arquiteto te faria economizar, de graça | "Os mil reais que um arquiteto te faria economizar, de graça. Sete erros que custam caro." |
+| v3 | Antes de pagar R$ 1.000 a um arquiteto, veja isso | "Antes de pagar mil reais a um arquiteto, veja isso. O último é o mais caro." |
+| v4 | 7 erros que um arquiteto te cobraria R$ 1.000 pra achar | "Sete erros que um arquiteto te cobraria mil reais pra achar. O último é o pior." |
+| v5 | Um arquiteto cobraria R$ 1.000 pra te mostrar isso | "Um arquiteto cobraria mil reais pra te mostrar isso. De graça, até o final." |
+
+> **Atenção ao valor de R$ 1.000:** é uma promessa de economia. Antes de publicar, confirme quanto um arquiteto cobra por uma consulta ou revisão de planta na sua região e ajuste o número, ou use "até R$ 1.000". Veja o `checklist-revisao-anuncio.md`.
 
 ### Corpo (igual em todas as versões)
 
@@ -60,7 +76,7 @@ As 5 versões são iguais depois dos 3 primeiros segundos. Se o seu editor não 
 | 0:19 a 0:23 | 5. Esquecer os recuos | "Cinco: esquecer os recuos. O terreno manda na planta, e cada prefeitura tem a sua regra." |
 | 0:23 a 0:27 | 6. Não prever ampliação | "Seis: não prever ampliação. Pense na sua casa daqui a cinco anos." |
 | 0:27 a 0:34 | 7. O mais caro: não ver a casa em 3D | "E o mais caro: não ver a casa em 3D antes de construir. Olha cada cômodo antes do primeiro tijolo." |
-| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta grátis no WhatsApp." |
+| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta humanizada grátis no WhatsApp." |
 
 O ritmo é rápido, de 3 a 4 palavras por segundo, como na referência. Se a fala não couber, encurte a frase; não estique o item.
 

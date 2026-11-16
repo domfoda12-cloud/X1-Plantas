@@ -19,8 +19,9 @@ Materiais para vender plantas de casas no Brasil: anúncios, conteúdo gratuito,
 | `animacao-3d-e-plantas.md` | Conceitos de planta e fluxo de animação 3D |
 | `instagram-plano.md` | Identidade, pilares e primeiros posts do perfil |
 | `checklist-revisao-anuncio.md` | Revisão antes de publicar qualquer anúncio |
-| `video/guia-editor.md` | Guia do vídeo "8 erros na planta": referência, roteiro de fala e edição |
-| `video/saida/` | Vídeo pronto: rascunho e camada transparente para o editor |
+| `video/guia-editor.md` | Guia do vídeo "Os R$ 1.000 do arquiteto": referências, roteiro de fala e edição |
+| `video/saida/` | Vídeo pronto (5 versões): rascunho e camada para o editor |
+| `entregas/casa-compacta/` | O que o cliente recebe: blueprint, planta humanizada, perspectivas e animação |
 
 ## Antes de publicar
 
