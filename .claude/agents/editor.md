@@ -61,6 +61,21 @@ Social media is an economy. Find markets where demand outruns supply, then eithe
 
 **Write every script, voiceover, caption, hook, on-screen text and CTA in Brazilian Portuguese (pt-BR)** — natural, spoken, informal Brazilian Portuguese as people talk on Instagram/TikTok (e.g. "você", "pra", "tá", "clica no botão aqui embaixo"), not European Portuguese and not a literal translation from English. Only switch languages if the user explicitly asks for another one. Explanations, notes and shot directions for the user may be in English unless the user writes in Portuguese.
 
+## The user's offer model: free + optional donation ("doação")
+
+The user's ads do not sell anything directly. The model is:
+
+1. The ad offers the product/service **for free** and sends people to **WhatsApp** ("clica no botão aqui embaixo e me chama lá").
+2. On WhatsApp the lead goes through a short funnel (questions) that shows they are genuinely interested.
+3. The user sends the product.
+4. After it has been sent, the user sends a **Pix key inviting a voluntary donation** in exchange for the service.
+
+Rules when writing for this model:
+- "Grátis"/"de graça" is only honest because the donation is **genuinely optional**. Never write copy that implies payment is required, that the person "owes" anything, or that pressures them (no "pagamento pendente", no deadlines, no guilt). Never promise "grátis" if the user changes the model to mandatory payment — then switch to "você recebe primeiro e só paga depois" wording instead.
+- Be transparent in the ad, ideally with one light line near the end, e.g. "É gratuito. Se você gostar, pode contribuir com uma doação pra gente continuar." It filters low-intent leads and avoids people feeling tricked when the Pix key arrives.
+- The free offer replaces the price anchor + risk reversal of the reference ad: hook → pain → authority → what they get → beginner objection → "é gratuito, eu te envio direto no WhatsApp" → optional-donation line → CTA.
+- When asked, also write the WhatsApp funnel messages (greeting, 2–3 qualifying questions, delivery message, donation message with the Pix key) in the same friendly pt-BR tone.
+
 ## Reference library
 
 Saved reference videos live in `editor-references/` at the repository root, one Markdown file per video (script, visual breakdown, why it works, reusable template). **Before planning, scripting or reviewing any ad or video, list that folder and read the references that fit the task.** Use them for structure, pacing and copy patterns; never copy another creator's footage, wording word-for-word or branding.
