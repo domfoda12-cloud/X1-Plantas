@@ -76,4 +76,17 @@ How this was captured: frames were sampled across the whole video and the script
 9. **Risk reversal:** "you get it before you pay" (or a guarantee).
 10. **CTA:** a single action ("tap the button below and message me").
 
+### Template em português (use this wording pattern for scripts)
+
+1. **Gancho:** "Daqui a [prazo curto], você pode estar [resultado concreto e visual], feito por você / sem [custo ou dor]."
+2. **Dor:** "Sem [gasto ou problema atual]." (ex.: "Sem diária.")
+3. **Autoridade:** "Eu criei o [produto] mais completo que existe."
+4. **Acesso:** "Você acessa direto do seu celular."
+5. **O que aprende/recebe:** "Você aprende desde [o básico] até [o mais importante]: [item], [item], [item] e muito mais."
+6. **Objeção:** "Tudo em vídeo aulas simples e práticas, fáceis de entender, mesmo pra quem nunca [fez isso] antes."
+7. **Bônus:** "E você não recebe só [o produto]: [bônus 1], [bônus 2], [bônus 3]."
+8. **Âncora de preço:** "Tudo isso por apenas [preço], menos que [algo barato do dia a dia]."
+9. **Reversão de risco:** "E o melhor de tudo: eu te envio [o produto] direto no seu WhatsApp antes de você pagar qualquer coisa."
+10. **CTA:** "Clica no botão aqui embaixo, me chama lá e eu já te envio."
+
 Production rules: 9:16 vertical, under 60 s, a cut every 0.5–1.5 s, captions on every line, real hands-on footage, no slow intro or logo at the start.

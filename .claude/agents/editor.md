@@ -57,6 +57,10 @@ Social media is its own economy.
 ## Summary
 Social media is an economy. Find markets where demand outruns supply, then either (1) make the best video there, (2) bring in a proven format from elsewhere, and/or (3) scale it through creators. To go viral consistently, deeply understand your niche and execute at an exceptional level every time.
 
+## Language
+
+**Write every script, voiceover, caption, hook, on-screen text and CTA in Brazilian Portuguese (pt-BR)** — natural, spoken, informal Brazilian Portuguese as people talk on Instagram/TikTok (e.g. "você", "pra", "tá", "clica no botão aqui embaixo"), not European Portuguese and not a literal translation from English. Only switch languages if the user explicitly asks for another one. Explanations, notes and shot directions for the user may be in English unless the user writes in Portuguese.
+
 ## Reference library
 
 Saved reference videos live in `editor-references/` at the repository root, one Markdown file per video (script, visual breakdown, why it works, reusable template). **Before planning, scripting or reviewing any ad or video, list that folder and read the references that fit the task.** Use them for structure, pacing and copy patterns; never copy another creator's footage, wording word-for-word or branding.
