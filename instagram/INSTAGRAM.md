@@ -11,6 +11,9 @@
 | `INSTAGRAM.md` | Este guia: rotina do editor, regras, estilo, formatos e testes |
 | `plano-perfil.md` | Identidade do perfil, bio, pilares, primeiros 9 posts e ritmo |
 | `referencias-mino-lee.md` | Análise completa dos 3 reels do Mino Lee e lista de conferência |
+| [`calendario.md`](calendario.md) | Calendário das 2 primeiras semanas, com os 5 reels de teste |
+| [`posts/POSTS.md`](posts/POSTS.md) | Os 9 primeiros posts prontos: legendas, telas, imagens e roteiros dos reels |
+| `posts/imagens/` | Telas dos carrosséis (1080 x 1350) e capas dos reels, geradas por `posts/gerar-imagens.cjs` |
 
 **Material que o editor usa, de outras pastas:**
 
@@ -125,8 +128,28 @@ Identidade, bio, pilares de conteúdo, os primeiros 9 posts, ritmo de publicaç�
 
 ## 6. Registro dos testes
 
-Anote aqui cada teste para saber o que funciona.
+Anote aqui cada teste para saber o que funciona. Datas do primeiro teste: [`calendario.md`](calendario.md).
+
+**Onde ver os números:** abra o reel > Ver estatísticas. *Tempo médio de visualização* é o tempo médio assistido. *Chegaram ao desfecho* é a porcentagem no gráfico de retenção no segundo 27 (o começo do erro 7).
+
+### 6.1. Resumo de cada teste
 
 | Data | Vídeo | Versão vencedora | Tempo médio assistido | Chegaram ao desfecho | Comentários "PLANTA" |
 |---|---|---|---|---|---|
-| | | | | | |
+| 25/11/2026 | Anúncio "7 erros na planta" | | | | |
+
+### 6.2. Detalhe por versão: anúncio "7 erros na planta"
+
+Publicadas como reels de teste em 25/11/2026. Leitura de 24 h em 26/11 e de 48 h em 27/11. Duração do vídeo: 38 s.
+
+| Versão | Gancho na tela | Hora | Contas alcançadas (48 h) | Tempo médio (24 h) | Tempo médio (48 h) | Chegaram aos 27 s (48 h) | Comentários "PLANTA" | Vencedora? |
+|---|---|---|---|---|---|---|---|---|
+| v1 | Vou te economizar os R$ 1.000 que um arquiteto te economizaria | 13h | | | | | | |
+| v2 | Os R$ 1.000 que um arquiteto te faria economizar, de graça | 14h | | | | | | |
+| v3 | Antes de pagar R$ 1.000 a um arquiteto, veja isso | 15h | | | | | | |
+| v4 | 7 erros que um arquiteto te cobraria R$ 1.000 pra achar | 16h | | | | | | |
+| v5 | Um arquiteto cobraria R$ 1.000 pra te mostrar isso | 17h | | | | | | |
+
+**Leitura de 7 dias da vencedora (04/12):** alcance ___ · tempo médio ___ · chegaram aos 27 s ___ · comentários "PLANTA" ___ · seguidores novos ___
+
+**Como escolher:** ganha a versão com o maior tempo médio **e** a maior porcentagem nos 27 s. Se uma ganhar em cada, fique com a dos 27 s: é ela que leva ao "Comente PLANTA".

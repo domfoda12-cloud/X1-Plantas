@@ -31,6 +31,8 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 
 ## 3. Primeiros 9 posts
 
+> Legendas finais, telas, imagens e roteiros: [`posts/POSTS.md`](posts/POSTS.md). Datas: [`calendario.md`](calendario.md).
+
 | # | Formato | Tema | Legenda (resumo) |
 |---|---|---|---|
 | 1 | Reel | Apresentação: passeio 3D da Casa Compacta | "Você consegue ver a casa antes de construir?" |
