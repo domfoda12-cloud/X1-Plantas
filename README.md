@@ -1,3 +1,12 @@
 # X1-Plantas
 
-E-book com dezenas de plantas de casas. Comece pelo [`PAINEL.md`](PAINEL.md).
+E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
+
+**Comece pelo [`PAINEL.md`](PAINEL.md):** objetivo, frentes, situação, decisões e o que falta.
+
+| Frente | Guia |
+|---|---|
+| Vídeo de anúncio | [`video/VIDEO.md`](video/VIDEO.md) |
+| Animações 3D | [`animacoes-3d/ANIMACOES-3D.md`](animacoes-3d/ANIMACOES-3D.md) |
+| Instagram (editor) | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md) |
+| E-book | [`ebook/EBOOK.md`](ebook/EBOOK.md) |
