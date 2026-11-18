@@ -13,7 +13,7 @@
 
 | Lançamento | Plantas | Por quê |
 |---|---|---|
-| **1** | 12 | Só casas térreas que o motor 3D já faz, cobrindo as categorias mais procuradas (compacta, estreita, família e home office) |
+| **1** | 12 | Só casas térreas que o motor 3D já faz, cobrindo os lotes mais comuns do público (5 x 25, 8 x 20, 8 x 25, 10 x 20, 10 x 25, 12 x 25) |
 | **2** | 12 | As outras térreas. Cada planta nova vira post e reel no Instagram |
 | **3** | 11 | Sobrados, edícula, geminadas e casas grandes. Precisam de ajuste no motor 3D antes |
 
@@ -33,7 +33,7 @@
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Casa Compacta | 55 m² | 2 | 1 | 10 x 20 | Sala e cozinha integradas, hall curto | 1 | `3D` |
-| C02 | Casa Studio | 32 m² | studio | 1 | 8 x 15 | Tudo em um ambiente; boa para aluguel | 1 | `ideia` |
+| C02 | Casa Studio | 32 m² | studio | 1 | 8 x 15 | Tudo em um ambiente; boa para aluguel | 2 | `ideia` |
 | C03 | Casa Inicial | 42 m² | 1 | 1 | 8 x 20 | Pronta para ganhar o 2º quarto depois | 1 | `ideia` |
 | C04 | Casa Duo | 48 m² | 2 | 1 | 8 x 20 | Dois quartos no menor espaço possível | 1 | `ideia` |
 | C05 | Casa Popular | 45 m² | 2 | 1 | 10 x 20 | Paredes alinhadas, construção econômica | 2 | `ideia` |
@@ -46,7 +46,7 @@
 |---|---|---|---|---|---|---|---|---|
 | E01 | Casa Estreita | 70 m² | 2 | 2 | 8 x 30 | Corredor lateral com luz natural em todos os cômodos | 1 | `ideia` |
 | E02 | Casa Corredor | 52 m² | 2 | 1 | 6 x 25 | Cômodos em fila, sem perder ventilação | 1 | `ideia` |
-| E03 | Casa Fita | 40 m² | 1 | 1 | 5 x 25 | Para o lote mais estreito | 2 | `ideia` |
+| E03 | Casa Fita | 40 m² | 1 | 1 | 5 x 25 | Para o lote mais estreito | 1 | `ideia` |
 | E04 | Casa Pátio | 68 m² | 2 | 1 | 8 x 25 | Pátio interno que ilumina o meio da casa | 2 | `ideia` |
 | E05 | Casa Estreita Suíte | 60 m² | 2 (1 suíte) | 2 | 6 x 30 | Suíte nos fundos, longe da rua | 1 | `ideia` |
 | E06 | Casa Estreita Gourmet | 78 m² | 2 | 2 | 7 x 30 | Área gourmet nos fundos | 2 | `ideia` |
@@ -89,6 +89,19 @@
 | O04 | Sobrado com Varanda | 160 m² | 4 (2 suítes) | 3 | 10 x 25 | Varanda no andar de cima | 3 | `ideia` |
 
 > **Atenção para o 3D:** o motor de hoje faz casas térreas de um bloco só. Sobrados (O), edícula (S01) e geminadas (S02) precisam de ajuste no motor antes de entrar. Ver [`../animacoes-3d/ANIMACOES-3D.md`](../animacoes-3d/ANIMACOES-3D.md), seção 6.
+
+## Casas que crescem
+
+Quem constrói por etapas quer começar menor e aumentar depois ([estratégia](../ESTRATEGIA.md), seção 5). Estas plantas precisam mostrar a ampliação prevista (a casa hoje e a casa ampliada):
+
+| ID | Começa com | Cresce para |
+|---|---|---|
+| C01 | 2 quartos | 3 quartos (Quarto 3 na lateral, já previsto no vídeo) |
+| C03 | 1 quarto | 2 quartos |
+| C04 | 2 quartos | 2 quartos + varanda |
+| F01 | 3 quartos, 1 banheiro | 3 quartos com suíte |
+
+Ao desenhar as outras plantas, marque aqui as que também têm ampliação prevista.
 
 ## O que vem em cada planta do e-book
 

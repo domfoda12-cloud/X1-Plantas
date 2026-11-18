@@ -46,8 +46,10 @@ def ler_catalogo():
         if not m:
             continue
         celulas = [c.strip() for c in linha.strip().strip("|").split("|")]
+        if len(celulas) < 9:  # outras tabelas que citam IDs (ex.: "Casas que crescem")
+            continue
         situacao = re.sub(r"[`\s]", "", celulas[-1])
-        lote_lancamento = celulas[-2] if len(celulas) >= 9 else ""
+        lote_lancamento = celulas[-2]
         plantas.append({"id": celulas[0], "nome": celulas[1], "situacao": situacao,
                         "lote_lancamento": lote_lancamento.strip()})
     return plantas

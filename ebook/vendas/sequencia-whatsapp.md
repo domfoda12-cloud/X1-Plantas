@@ -58,7 +58,9 @@ E mais:
 - checklist de obra;
 - **as próximas plantas que eu lançar, sem pagar de novo.**
 
-Valor de lançamento: **R$ [preço]**, no [forma de pagamento]. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book são [nº] plantas, todas em 3D.
+
+Valor de lançamento: **R$ [preço]** no Pix, ou parcelado no cartão. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
 
 Quer o link?
 
@@ -76,7 +78,7 @@ Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançam
 
 ## Depois da compra
 
-- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou.
+- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou e **"você vai construir agora, financiar ou construir para alugar?"**. A resposta diz qual perfil compra mais ([estratégia](../../ESTRATEGIA.md), seção 3) e vai para o painel.
 - **A cada lançamento novo:** envie as plantas novas. Peça para indicar alguém que está planejando construir.
 
 ## Regras do funil
@@ -85,4 +87,5 @@ Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançam
 - Respeite o "não" e pare quando a pessoa pedir.
 - Responda dúvidas em até 24 horas, mesmo de quem não comprou.
 - Nunca prometa prazo de obra, custo exato de construção ou aprovação na prefeitura.
-- Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.
+- Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno, **qual tamanho de lote mais apareceu** e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.
+- Fale como na [estratégia](../../ESTRATEGIA.md), seção 9: simples, como quem já passou por obra.

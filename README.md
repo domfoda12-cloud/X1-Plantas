@@ -10,6 +10,8 @@ Para atualizar a situação do painel e conferir arquivos e links:
 python3 ferramentas/atualizar-painel.py
 ```
 
+**Antes de escrever para o cliente, leia a [`ESTRATEGIA.md`](ESTRATEGIA.md):** público, oferta, ângulos de anúncio e tom de voz.
+
 | Frente | Guia |
 |---|---|
 | Vídeo de anúncio | [`video/VIDEO.md`](video/VIDEO.md) |

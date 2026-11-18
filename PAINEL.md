@@ -21,8 +21,8 @@ _Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão.
 
 | Categoria | Plantas | No 1º lançamento | Com 3D | Prontas |
 |---|---|---|---|---|
-| Compactas | 7 | 5 | 1 | 0 |
-| Terreno estreito | 7 | 3 | 0 | 0 |
+| Compactas | 7 | 4 | 1 | 0 |
+| Terreno estreito | 7 | 4 | 0 | 0 |
 | Família | 7 | 3 | 0 | 0 |
 | Especiais | 10 | 1 | 0 | 0 |
 | Sobrados | 4 | 0 | 0 | 0 |
@@ -52,13 +52,19 @@ _Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão.
 
 **Uma planta trabalha três vezes:** vira página do e-book, post no Instagram e cena de vídeo. Por isso o gargalo do projeto é **produzir plantas** (fase 2).
 
+**Para quem vendemos** (detalhes, dados e fontes em [`ESTRATEGIA.md`](ESTRATEGIA.md)):
+- **Quem:** quem tem um lote e vai construir, quase sempre **com pedreiro e sem arquiteto** (85% das obras no Brasil são feitas assim, segundo CAU/BR e Datafolha), muitas vezes **por etapas**.
+- **A primeira pergunta dessa pessoa:** "que casa cabe no meu lote?".
+- **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **casa que cresce**.
+- **O que fica dos dois lados:** os pacotes baratos de "1.500 plantas" sem curadoria e as plantas avulsas que custam centenas de reais cada.
+
 ## 3. Estratégia do e-book: lançar cedo e crescer em levas
 
 As 35 plantas do [catálogo](ebook/catalogo.md) levariam semanas para ficar prontas e validadas. A recomendação é **não esperar todas**:
 
 | Lançamento | Plantas | Conteúdo | Por quê |
 |---|---|---|---|
-| **1º** | 12 | Térreas que o motor 3D já faz: 5 compactas, 3 estreitas, 3 família, 1 home office | Cobre quem mais procura (primeira casa e terreno pequeno) e dá para fazer agora |
+| **1º** | 12 | Térreas que o motor 3D já faz: 4 compactas, 4 estreitas, 3 família, 1 home office | Cobre os lotes mais comuns do público (5 x 25 a 12 x 25) e dá para fazer agora |
 | **2º** | 12 | As outras térreas | Cada planta nova vira um post "planta da semana" |
 | **3º** | 11 | Sobrados, edícula, geminadas, casas grandes | Exigem ajuste no motor 3D |
 
@@ -117,6 +123,7 @@ Cada fase tem um **critério para passar para a próxima**. Não pule o critéri
 | 5 | Criar o perfil do Instagram | Você | Nada | Conta criada com o [`plano-perfil.md`](instagram/plano-perfil.md) |
 | 6 | Revisar os textos do funil para o e-book e preencher preço | Parceiro | Tarefa 2 | Textos de [`ebook/vendas/`](ebook/vendas/) sem campos em branco |
 | 7 | Montar e publicar os 5 reels de teste | Editor | Tarefas 1 e 5 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
+| 8 | Subir o anúncio "Tem um lote 10 x 20?" com a Casa Compacta | Você | Tarefa 5 | Anúncio rodando com orçamento pequeno ([textos](video/anuncios/anuncio-facebook.md)) |
 
 ## 7. Números para acompanhar
 
@@ -128,6 +135,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | Vídeo | Custo por contato | Gerenciador de Anúncios | Subindo 3 semanas seguidas: trocar o gancho |
 | Instagram | Comentários "PLANTA" por reel; seguidores novos | Instagram | 3 reels fracos seguidos diminuem o alcance do próximo |
 | Funil | Contatos → compras (taxa de conversão) | Parceiro | Abaixo da semana anterior: revisar a planta grátis e a oferta |
+| Funil | % que manda o tamanho do lote; **lote mais pedido** | Parceiro | Pouca gente manda o lote: mudar a primeira mensagem. O lote mais pedido define as próximas plantas e anúncios |
 | E-book | Vendas; pedidos de reembolso | Plataforma de pagamento | Reembolsos: o e-book não entregou o que o anúncio prometeu |
 | 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
 
@@ -148,17 +156,21 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Lançar com **12 plantas** e crescer em levas (proposta da seção 3; confirme na seção 9) |
+| 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas** ([estratégia](ESTRATEGIA.md)) |
 
 ## 9. Decisões pendentes
 
 | Decisão | Opções | Recomendação |
 |---|---|---|
-| **Título** | "Planta Certa", "Plantas de Casas Prontas para Construir", "Casa Certa para o Seu Terreno" | Um título **sem número**, para não precisar mudar a cada lançamento. Ex.: "Planta Certa: casas prontas para todo terreno" |
-| **Preço** | Um preço só; ou preço de lançamento que sobe a cada leva | **Preço de lançamento** que sobe no 2º e no 3º lançamento. Use a conta da seção 4 para escolher o valor |
+| **Título** | "Planta Certa", "Casa Certa para o Seu Lote", "Cabe no Meu Lote" | Um título **sem número** e **com a palavra lote**, que é como o público fala. Ex.: **"Planta Certa: as casas que cabem no seu lote"**. Evite "prontas para construir": as plantas são de referência |
+| **Preço** | R$ 47, R$ 67 ou R$ 97; preço único ou de lançamento | **R$ 67 de lançamento**, subindo no 2º e no 3º. Fica abaixo de uma planta avulsa (a partir de ~R$ 98 nos catálogos) e na faixa de compra por impulso. Confirme com a conta da seção 4 |
+| **Pagamento e plataforma** | Pix direto; Kiwify; Hotmart | **Kiwify ou Hotmart**, com **Pix e cartão parcelado** e garantia de 7 dias. Já entregam checkout, área de membros e reembolso |
+| **Order bump** | Nenhum; planilha de orçamento por etapa | **Planilha de orçamento por etapa**, a R$ 17–27, quando existir. Fala com quem constrói aos poucos |
 | **Bônus** | Atualizações grátis; checklist de obra; os 7 erros; animações por QR code | Os quatro. As **atualizações grátis** são o mais forte |
 | **Versão completa** (pranchas para obra) | Agora; depois; nunca | **Depois.** Exige projeto validado e assinado por arquiteto |
 | **Planta grátis do funil** | Casa Compacta; outra | **Casa Compacta**: já tem 3D e aparece no vídeo |
-| **Confirmar os 3 lançamentos** | Como na seção 3; ou outra divisão | Como na seção 3 |
+| **Confirmar os 3 lançamentos** | Como na seção 3; ou outra divisão | Como na seção 3. Se os anúncios de **renda extra** (kitnet, edícula) forem bem, antecipe as especiais |
+| **Ângulo do próximo anúncio** | Os 8 da [estratégia](ESTRATEGIA.md), seção 8 | **"Tem um lote 10 x 20?"**: concreto, a pessoa se reconhece na hora, e cada lote vira um anúncio |
 
 Quando decidir, mova a linha para a seção 8 com a data.
 
@@ -202,6 +214,7 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 ```
 PAINEL.md                     ← este painel (centro de controle)
+ESTRATEGIA.md                 público, posicionamento, oferta, ângulos e tom de voz
 ferramentas/
   atualizar-painel.py           atualiza a seção 1 e confere arquivos e links
 video/                        Vídeo de anúncio
