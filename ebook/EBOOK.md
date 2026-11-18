@@ -10,6 +10,10 @@
 |---|---|
 | `EBOOK.md` | Este guia: produto, estrutura, página de cada planta, fluxo de produção |
 | `catalogo.md` | Lista das 35 plantas propostas, com ficha e situação de cada uma |
+| `config.json` | Título, bônus, lançamento atual, planta da capa e da amostra grátis, link das animações |
+| `fichas/<ID>.md` | Textos da página de cada planta: para quem é, por que funciona, cuidados, erros que evita |
+| `gerador/` | Gera o PDF a partir do catálogo, das fichas e das imagens 3D (seção 8) |
+| `saida/` | `ebook.pdf` e `planta-gratis-C01.pdf`, gerados pelo `gerador/` |
 | `vendas/material-gratuito.md` | Amostra grátis enviada depois do cadastro |
 | `vendas/sequencia-whatsapp.md` | Mensagens do funil no WhatsApp, dia a dia |
 | `vendas/faq-compradores.md` | Perguntas frequentes |
@@ -85,3 +89,23 @@ Faltam só os campos entre [colchetes]: título, preço, forma de pagamento e da
 - **Plantas originais.** Só entram plantas desenhadas para o produto, ou com licença escrita que permita a venda.
 - **Medidas provisórias** até um arquiteto validar.
 - **Ilustração.** Móveis e acabamentos são ilustrativos. O e-book não substitui projeto aprovado na prefeitura nem responsável técnico pela obra. Deixe isso escrito no e-book (parte 8).
+
+## 8. Como gerar o PDF
+
+Na raiz do projeto:
+
+```bash
+python3 ebook/gerador/gerar.py
+```
+
+Sai em `ebook/saida/`: o **e-book** (`ebook.pdf`) e a **planta grátis** do funil (`planta-gratis-C01.pdf`, só a página dupla, com a frase final que puxa a pergunta do terreno). Com `--previa <pasta>`, também salva um PNG de cada página para revisão.
+
+**O que entra sozinho:** toda planta do catálogo com Situação `3D` ou `pronta`, do lançamento atual ou anterior (`lancamento_atual` em `config.json`), com as 4 imagens em `../animacoes-3d/plantas/<nome>/`. O índice rápido, o sumário, os números de página e os exemplos dos 7 erros se atualizam sozinhos. Cada página dupla começa numa página par, para ficar lado a lado na visualização de duas páginas e na impressão frente e verso.
+
+**Para uma planta nova:** crie `fichas/<ID>.md` copiando o modelo [`fichas/C01.md`](fichas/C01.md). Sem ficha, a planta entra com textos padrão da categoria e campos [entre colchetes], e o gerador avisa.
+
+**Campos entre [colchetes]** saem destacados em amarelo no PDF: título, nº de plantas (aparece sozinho quando todas as plantas do lançamento estiverem prontas), bônus, contato e o QR code. Para o QR code, preencha `link_animacao` em `config.json` com o endereço onde as animações vão ficar, usando `{pasta}` ou `{id}` no lugar do nome (ex.: `https://seusite.com/animacoes/{pasta}.mp4`).
+
+**O gerador avisa** quando uma planta com 3D está sem imagem, sem ficha ou fora do lançamento atual, e quando algum texto passa do limite da página.
+
+Precisa de Python 3 com Pillow e do Node.js com Playwright (Chromium). O QR code usa o pacote `qrcode` do Python.

@@ -1,0 +1,16 @@
+{
+  "titulo": "[título]",
+  "subtitulo": "Plantas de casas para quem vai construir no Brasil",
+  "preco": "[preço]",
+  "bonus": [
+    "[bônus: atualizações grátis com as próximas plantas]",
+    "[bônus: checklist de obra]",
+    "[bônus: animações por QR code]"
+  ],
+  "lancamento_atual": 1,
+  "planta_da_capa": "C01",
+  "planta_gratis": "C01",
+  "link_animacao": "",
+  "contato": "[WhatsApp do parceiro]",
+  "ano": "2026"
+}

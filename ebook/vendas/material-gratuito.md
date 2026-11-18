@@ -16,7 +16,7 @@ A página dupla da **Casa Compacta (C01)**, no mesmo formato do e-book ([`../EBO
 | Animação de 12 s | [`../../animacoes-3d/plantas/casa-compacta/animacao.mp4`](../../animacoes-3d/plantas/casa-compacta/animacao.mp4) |
 | Ficha | Abaixo |
 
-Enquanto o PDF da página não estiver pronto, mande as imagens e a animação direto no WhatsApp, com a ficha em texto.
+O PDF da página dupla já existe: [`../saida/planta-gratis-C01.pdf`](../saida/planta-gratis-C01.pdf) (gerado por `python3 ebook/gerador/gerar.py`). Mande o PDF e a animação no WhatsApp. Os campos [nº] e [título] da frase final se preenchem quando o título for decidido e o 1º lançamento estiver completo.
 
 ## 2. Ficha da Casa Compacta
 
