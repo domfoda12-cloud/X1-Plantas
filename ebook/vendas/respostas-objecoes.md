@@ -1,41 +1,46 @@
 # Respostas para objeções comuns
 
-> Rascunho. Use como base e ajuste ao seu jeito de falar.
+> Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
+>
+> Use como base e ajuste ao seu jeito de falar. Termine sempre com uma pergunta, para a conversa continuar.
 
 ## "É caro."
 
-Entendo. Muita gente compara com o valor de um arquiteto, mas a planta pronta custa uma fração disso. Se quiser, eu te mostro o que está incluso para você comparar com o que já tem em mente.
+Entendo. Pensa assim: são [nº] plantas, e você só precisa acertar uma. Escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
 
 ## "Não tenho terreno ainda."
 
-Ótimo momento para escolher a planta. Sabendo o tamanho do lote, você já sabe qual planta cabe e evita gastar com um projeto que não encaixa. Me passe as medidas do seu terreno, que eu te indico a melhor opção.
+Então é o melhor momento: escolhendo a casa primeiro, você procura um terreno onde ela caiba. Quantas pessoas vão morar?
 
 ## "Vou pensar."
 
-Claro, sem pressa. Enquanto isso, o material gratuito fica com você. Se surgir alguma dúvida sobre medidas ou terreno, me chama aqui.
+Claro. A planta grátis fica com você. Só um aviso: o preço de lançamento vale até [data]. Tem alguma dúvida que eu possa responder agora?
 
-## "Preciso de um arquiteto para aprovar."
+> Só fale do prazo se ele for verdadeiro.
 
-Isso é comum e faz sentido. A planta é um ponto de partida: o profissional da sua cidade confere a legislação e aprova na prefeitura. Muitos arquitetos gostam de começar com um projeto pronto, porque economiza tempo.
+## "Preciso de um arquiteto mesmo assim."
+
+Precisa, e isso é bom. O e-book serve para você chegar no arquiteto sabendo o que quer, sem pagar por várias versões de projeto. Você já tem um profissional em vista?
 
 ## "Já tenho um projeto."
 
-Que bom! Se quiser comparar, me manda as medidas e a área do seu projeto. Às vezes ajuda para ver se há algo que você ainda não tinha considerado.
+Que bom! Se quiser, compara com as plantas do e-book para ver se tem algo que você ainda não pensou: sol, recuo, porta do banheiro. Qual é a área do seu projeto?
 
-## "Não sei se consigo construir isso."
+## "Dá para construir direto com isso?"
 
-As plantas são pensadas para [perfil de construtor ou orçamento]. Se quiser, me conta a sua região e o tamanho do terreno, e eu te ajudo a entender o que é possível.
+Não direto: as plantas são de referência. Um profissional faz o projeto completo para aprovar na prefeitura. O e-book te ajuda a escolher a casa certa antes disso. Quer ver as que cabem no seu terreno?
 
-## "Vocês têm garantia?"
+## "E se eu não gostar?"
 
-Para o arquivo digital, a [política de garantia]. Se tiver dúvida antes de comprar, me pergunta que eu explico direitinho.
+Você tem 7 dias para pedir o dinheiro de volta. Sem complicação.
 
 ## "Posso ver antes de pagar?"
 
-Sim. O material gratuito mostra a planta baixa e as principais medidas. O projeto completo só é enviado depois do pagamento.
+Pode: a planta grátis que você recebeu é uma página igual às do e-book. Quer ver mais uma em 3D, das que cabem no seu terreno?
 
 ## Regras para as respostas
 
-- Responda rápido e com uma pergunta de volta, para manter a conversa.
+- Responda rápido e sempre com uma pergunta de volta.
 - Não insista depois de dois "não".
-- Não prometa prazo de obra, economia exata ou aprovação na prefeitura.
+- Não prometa prazo de obra, custo exato ou aprovação na prefeitura.
+- Anote cada objeção nova aqui. As que mais se repetem viram gancho de vídeo.

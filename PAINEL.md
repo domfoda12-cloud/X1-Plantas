@@ -1,71 +1,209 @@
 # Painel X1-Plantas
 
-> **Comece por aqui.** Este painel mostra o objetivo, as frentes do projeto, a situação de cada uma, as decisões tomadas e o que falta. Atualize a seção 3 sempre que algo avançar.
+> **Comece por aqui.** Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que fase estamos, o que fazer esta semana e o que decidir.
+>
+> A seção 1 se atualiza sozinha. Rode `python3 ferramentas/atualizar-painel.py` na raiz do projeto sempre que algo mudar (ver seção 11).
 
-## 1. Objetivo
+## 1. Situação agora
 
-Vender um **e-book com dezenas de plantas de casas**, com grande variação, para quem vai construir no Brasil. As pessoas chegam pelos vídeos (Facebook Ads e Instagram), recebem uma planta grátis no WhatsApp e são levadas ao e-book pelo funil.
+<!-- situacao:inicio -->
+_Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão._
+
+| Indicador | Situação |
+|---|---|
+| **1º lançamento do e-book** | 0 de 12 prontas · 1 com 3D |
+| Plantas no catálogo | 35 · ideia 34 · dados 0 · 3D 1 · pronta 0 |
+| Progresso do 1º lançamento | `░░░░░░░░░░░░░░░░░░░░` 0/12 |
+| Vídeo de anúncio | 5 de 5 versões renderizadas · apresentador não gravado |
+| Avisos de conferência | 0 |
+
+**Por categoria:**
+
+| Categoria | Plantas | No 1º lançamento | Com 3D | Prontas |
+|---|---|---|---|---|
+| Compactas | 7 | 5 | 1 | 0 |
+| Terreno estreito | 7 | 3 | 0 | 0 |
+| Família | 7 | 3 | 0 | 0 |
+| Especiais | 10 | 1 | 0 | 0 |
+| Sobrados | 4 | 0 | 0 | 0 |
+<!-- situacao:fim -->
+
+## 2. O negócio em uma frase
+
+**Um e-book com dezenas de plantas de casas originais**, em blueprint, planta humanizada e 3D, para quem vai construir no Brasil e ainda não sabe qual casa cabe no terreno e no bolso. As pessoas chegam pelos vídeos, ganham uma planta grátis no WhatsApp e compram o e-book.
 
 ```
-Animações 3D ──► E-book (produto)
-     │                 ▲
-     ▼                 │
-Vídeo + Instagram ──► Funil no WhatsApp
+                 ┌──────────────────────────────┐
+                 │  Animações 3D (as plantas)   │
+                 └───┬──────────────┬───────────┘
+        imagens e    │              │  imagens e animação
+        animações    ▼              ▼  de cada planta
+   ┌──────────────────────┐   ┌──────────────────┐
+   │ Vídeo de anúncio     │   │ E-book (produto) │
+   │ + Instagram (editor) │   └────────▲─────────┘
+   └──────────┬───────────┘            │ compra
+              │ comentário "PLANTA"    │
+              ▼                        │
+   ┌──────────────────────────────────┴──┐
+   │ Funil no WhatsApp (parceiro):       │
+   │ planta grátis → conversa → oferta   │
+   └─────────────────────────────────────┘
 ```
 
-- As **Animações 3D** geram as imagens de cada planta. Elas alimentam o e-book, os posts e os vídeos.
-- O **Vídeo** e o **Instagram** trazem as pessoas.
-- O **funil** (seu parceiro) entrega a planta grátis e oferece o e-book.
+**Uma planta trabalha três vezes:** vira página do e-book, post no Instagram e cena de vídeo. Por isso o gargalo do projeto é **produzir plantas** (fase 2).
 
-## 2. Quem faz o quê
+## 3. Estratégia do e-book: lançar cedo e crescer em levas
+
+As 35 plantas do [catálogo](ebook/catalogo.md) levariam semanas para ficar prontas e validadas. A recomendação é **não esperar todas**:
+
+| Lançamento | Plantas | Conteúdo | Por quê |
+|---|---|---|---|
+| **1º** | 12 | Térreas que o motor 3D já faz: 5 compactas, 3 estreitas, 3 família, 1 home office | Cobre quem mais procura (primeira casa e terreno pequeno) e dá para fazer agora |
+| **2º** | 12 | As outras térreas | Cada planta nova vira um post "planta da semana" |
+| **3º** | 11 | Sobrados, edícula, geminadas, casas grandes | Exigem ajuste no motor 3D |
+
+**Quem compra no 1º lançamento recebe o 2º e o 3º sem pagar de novo.** Isso:
+- justifica comprar agora, sem esperar a versão completa;
+- dá um motivo para voltar a falar com cada comprador a cada lançamento (e pedir indicação);
+- permite subir o preço a cada lançamento, já que o e-book fica maior.
+
+> O título não deve prometer "35 plantas" enquanto o e-book tiver 12. Ver as decisões pendentes (seção 9).
+
+## 4. A conta que diz se o anúncio paga
+
+O anúncio só se paga se **o custo para gerar uma venda for menor que o preço do e-book**.
+
+```
+custo por venda = custo por contato ÷ taxa de conversão
+```
+
+- **Custo por contato:** quanto o Facebook Ads cobra, em média, por cada pessoa que chama no WhatsApp. Aparece no Gerenciador de Anúncios.
+- **Taxa de conversão:** de cada 100 pessoas que chamam no WhatsApp, quantas compram. Quem mede é o parceiro.
+
+**Exemplo só para mostrar a conta** (não é previsão; troque pelos seus números assim que tiver):
+
+| Custo por contato | Conversão | Custo por venda | Com o e-book a R$ [preço] |
+|---|---|---|---|
+| R$ 3,00 | 3% | R$ 100,00 | Paga se o preço for maior que R$ 100 |
+| R$ 3,00 | 6% | R$ 50,00 | Paga se o preço for maior que R$ 50 |
+| R$ 1,50 | 3% | R$ 50,00 | Paga se o preço for maior que R$ 50 |
+
+**O que essa conta ensina:**
+- **Dobrar a conversão vale o mesmo que cortar pela metade o custo do anúncio.** A conversão depende do funil e da planta grátis, que custam pouco para melhorar.
+- O vídeo bom (tempo assistido alto) **baixa o custo por contato**, porque o Facebook entrega mais barato o que as pessoas assistem.
+- Comece com **orçamento pequeno por dia** e só aumente quando o custo por venda estiver abaixo do preço por pelo menos uma semana.
+
+Anote os números reais na tabela da seção 7.
+
+## 5. Fases
+
+Cada fase tem um **critério para passar para a próxima**. Não pule o critério.
+
+| Fase | O que fazer | Critério para avançar | Situação |
+|---|---|---|---|
+| **1. Testar o anúncio** | Gravar o apresentador, publicar as 5 versões como reels de teste, escolher a melhor | Uma versão com tempo médio assistido claramente acima das outras, e comentários "PLANTA" chegando | **Agora** |
+| **2. Montar o 1º lançamento** | Motor 3D para várias plantas; 12 plantas em dados, 3D e página; PDF do e-book | 12 páginas revisadas por você, PDF fechado, preço decidido | Pode começar junto com a fase 1 |
+| **3. Vender** | Funil ajustado para o e-book; anúncio com orçamento pequeno; medir custo por venda | Custo por venda abaixo do preço por 1 semana | Depois da 2 |
+| **4. Crescer** | 2º e 3º lançamentos, "planta da semana" no Instagram, novos ganchos, outros países | — | Depois da 3 |
+
+## 6. Esta semana
+
+| # | Tarefa | Quem | Depende de | Pronto quando |
+|---|---|---|---|---|
+| 1 | Gravar o apresentador (corpo + 5 ganchos) | Apresentador | Nada | Gravação no celular, vertical, como em [`video/VIDEO.md`](video/VIDEO.md), seção 4 |
+| 2 | Decidir título, preço e bônus do e-book | Você | Nada | Seção 9 preenchida |
+| 3 | Adaptar o motor 3D para várias plantas | Claude | Nada | `render-planta.cjs` gera qualquer planta do catálogo pelo ID |
+| 4 | Desenhar em dados as 11 plantas que faltam do 1º lançamento | Claude | Tarefa 3 | Situação `dados` no catálogo |
+| 5 | Criar o perfil do Instagram | Você | Nada | Conta criada com o [`plano-perfil.md`](instagram/plano-perfil.md) |
+| 6 | Revisar os textos do funil para o e-book e preencher preço | Parceiro | Tarefa 2 | Textos de [`ebook/vendas/`](ebook/vendas/) sem campos em branco |
+| 7 | Montar e publicar os 5 reels de teste | Editor | Tarefas 1 e 5 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
+
+## 7. Números para acompanhar
+
+Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas grandes.
+
+| Frente | O que medir | Onde ver | Sinal de alerta |
+|---|---|---|---|
+| Vídeo | Tempo médio assistido; % que chega aos 27 s (o desfecho) | Instagram (estatísticas do reel) | Metade sai antes do erro 2: o gancho não prendeu |
+| Vídeo | Custo por contato | Gerenciador de Anúncios | Subindo 3 semanas seguidas: trocar o gancho |
+| Instagram | Comentários "PLANTA" por reel; seguidores novos | Instagram | 3 reels fracos seguidos diminuem o alcance do próximo |
+| Funil | Contatos → compras (taxa de conversão) | Parceiro | Abaixo da semana anterior: revisar a planta grátis e a oferta |
+| E-book | Vendas; pedidos de reembolso | Plataforma de pagamento | Reembolsos: o e-book não entregou o que o anúncio prometeu |
+| 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
+
+| Semana | Custo por contato | Contatos | Vendas | Conversão | Custo por venda | Preço | Observação |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+## 8. Decisões tomadas
+
+| Data | Decisão |
+|---|---|
+| 16/11 | Tudo em **português do Brasil**, preços em **R$**. Brasil primeiro; outros países depois |
+| 16/11 | **Sem landing page:** o anúncio leva direto ao WhatsApp |
+| 16/11 | Anúncios no **Facebook Ads**, acompanhamento no **WhatsApp** |
+| 16/11 | Gancho principal: **"Vou te economizar os R$ 1.000 que um arquiteto te economizaria"**, em 5 versões para reels de teste |
+| 16/11 | Visual: **blueprint azul que ganha vida** e vira **planta humanizada** em 3D |
+| 16/11 | Edição no estilo do **Mino Lee**; retenção pelas regras do **Robert McKeaveney** ([`instagram/`](instagram/INSTAGRAM.md)) |
+| 16/11 | Plantas **originais**; nada copiado de outros escritórios |
+| 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
+| 18/11 | Lançar com **12 plantas** e crescer em levas (proposta da seção 3; confirme na seção 9) |
+
+## 9. Decisões pendentes
+
+| Decisão | Opções | Recomendação |
+|---|---|---|
+| **Título** | "Planta Certa", "Plantas de Casas Prontas para Construir", "Casa Certa para o Seu Terreno" | Um título **sem número**, para não precisar mudar a cada lançamento. Ex.: "Planta Certa: casas prontas para todo terreno" |
+| **Preço** | Um preço só; ou preço de lançamento que sobe a cada leva | **Preço de lançamento** que sobe no 2º e no 3º lançamento. Use a conta da seção 4 para escolher o valor |
+| **Bônus** | Atualizações grátis; checklist de obra; os 7 erros; animações por QR code | Os quatro. As **atualizações grátis** são o mais forte |
+| **Versão completa** (pranchas para obra) | Agora; depois; nunca | **Depois.** Exige projeto validado e assinado por arquiteto |
+| **Planta grátis do funil** | Casa Compacta; outra | **Casa Compacta**: já tem 3D e aparece no vídeo |
+| **Confirmar os 3 lançamentos** | Como na seção 3; ou outra divisão | Como na seção 3 |
+
+Quando decidir, mova a linha para a seção 8 com a data.
+
+## 10. Riscos e cuidados
+
+| Risco | O que fazer |
+|---|---|
+| **Responsabilidade técnica.** Para construir e aprovar na prefeitura, a obra precisa de projeto com profissional habilitado | Escrever no e-book (capa interna e cada página) que as plantas são **de referência**, não projeto executivo, e que a obra precisa de responsável técnico. Confirmar o texto com um arquiteto |
+| **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Combinar com o parceiro como devolver o dinheiro; deixar a política escrita na oferta |
+| **Direitos autorais** | Só plantas originais ou com licença escrita de venda. Nada de imagem de terceiros no e-book |
+| **Regras de anúncio da Meta** para imóveis e construção | Conferir no Gerenciador de Anúncios antes de subir cada campanha, porque as regras mudam |
+| **Medidas provisórias** | Nenhuma planta passa para `pronta` sem revisão de medidas |
+| **Promessa do anúncio maior que o e-book** | O anúncio promete economia com um arquiteto; o e-book precisa mostrar, em cada planta, os erros que ela evita |
+
+## 11. Rotina
+
+| Quando | O quê | Quem |
+|---|---|---|
+| **Segunda** | Rodar `python3 ferramentas/atualizar-painel.py`, preencher os números da seção 7 e escolher as tarefas da semana (seção 6) | Você |
+| **Terça a quinta** | Produção: plantas (Claude), gravação (apresentador), edição e publicação (editor) | Todos |
+| **Quarta** | Conversa com o parceiro: o que as pessoas perguntam no WhatsApp vira gancho de vídeo e resposta no [FAQ](ebook/vendas/faq-compradores.md) | Você e parceiro |
+| **Sexta** | Editor preenche o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes); você decide o gancho da semana seguinte | Editor e você |
+
+**Para manter o painel em dia:**
+- **Situação das plantas:** mude só a coluna **Situação** do [catálogo](ebook/catalogo.md). A seção 1 conta sozinha quando você roda o script.
+- **O script também avisa** quando uma planta está como `3D` mas faltam arquivos, quando falta uma versão do vídeo e quando há link quebrado em qualquer guia.
+- **Decisões:** ao decidir, mova a linha da seção 9 para a seção 8 com a data.
+
+## 12. Quem faz o quê
 
 | Pessoa | Responsabilidade | Onde trabalha |
 |---|---|---|
-| Você | Material (plantas, e-book) e anúncios | [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
-| Parceiro | Funil: WhatsApp, sequência de mensagens, venda | [`ebook/vendas/`](ebook/vendas/) |
+| Você | Decisões, plantas (ideia e revisão) e anúncios | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
+| Parceiro | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |
 | Editor | Edição e publicação dos vídeos do perfil | [`instagram/`](instagram/INSTAGRAM.md) |
-| Apresentador | Gravação dos vídeos | [`video/VIDEO.md`](video/VIDEO.md) (teleprompter) |
-| Arquiteto | Validação das plantas | [`ebook/catalogo.md`](ebook/catalogo.md) |
-| Claude | Dados das plantas, 3D, vídeos, páginas e textos | Todas as pastas |
+| Apresentador | Gravação dos vídeos | [`video/VIDEO.md`](video/VIDEO.md), seção 3 (teleprompter) |
+| Arquiteto | Validação das plantas e do texto de responsabilidade técnica | [`ebook/catalogo.md`](ebook/catalogo.md) |
+| Claude | Dados das plantas, 3D, vídeos, páginas do e-book e textos | Todas as pastas |
 
-## 3. Frentes e situação
-
-| Frente | Guia | Situação | Próximo passo |
-|---|---|---|---|
-| **Vídeo de anúncio** | [`video/VIDEO.md`](video/VIDEO.md) | 5 versões prontas (38 s), falta o apresentador | Gravar o apresentador com o teleprompter |
-| **Animações 3D** | [`animacoes-3d/ANIMACOES-3D.md`](animacoes-3d/ANIMACOES-3D.md) | Motor pronto; 1 planta gerada (Casa Compacta) | Adaptar o motor para várias plantas (seção 6 do guia) |
-| **Instagram** | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md) | Rotina, estilo, formatos e plano do perfil prontos; perfil não criado | Criar o perfil e publicar os 5 testes do anúncio |
-| **E-book** | [`ebook/EBOOK.md`](ebook/EBOOK.md) | Estrutura e catálogo de 35 plantas propostos | Decidir título, preço e versões; desenhar as plantas em dados |
-| **Funil** | [`ebook/vendas/`](ebook/vendas/) | Textos escritos para vender uma planta | Ajustar para vender o e-book |
-
-**Plantas (do [catálogo](ebook/catalogo.md)):** 35 propostas · 1 com 3D (C01) · 0 validadas por arquiteto · 0 páginas do e-book.
-
-## 4. Decisões tomadas
-
-- Tudo em **português do Brasil**, preços em **R$**. Brasil primeiro; outros países depois.
-- **Sem landing page:** o anúncio leva direto ao WhatsApp.
-- Anúncios no **Facebook Ads**, acompanhamento no **WhatsApp**.
-- Gancho principal: **"Vou te economizar os R$ 1.000 que um arquiteto te economizaria"**, em 5 versões para reels de teste.
-- Visual: **blueprint azul que ganha vida** e vira **planta humanizada** em 3D.
-- Edição no estilo do **Mino Lee** e retenção pelas regras do **Robert McKeaveney** (ver [`instagram/`](instagram/INSTAGRAM.md)).
-- Produto: **e-book com dezenas de plantas** em vez de uma planta por vez.
-- Plantas **originais**; nada copiado de outros escritórios.
-
-## 5. O que falta (em ordem)
-
-1. **Gravar o apresentador** e montar o anúncio. Teleprompter em [`video/VIDEO.md`](video/VIDEO.md), seção 3.
-2. **Decidir título, preço e versões do e-book.** Opções em [`ebook/EBOOK.md`](ebook/EBOOK.md), seção 5.
-3. **Adaptar o motor 3D para várias plantas.** É o que permite gerar as dezenas de plantas.
-4. **Desenhar as plantas em dados**, começando pelas compactas e estreitas.
-5. **Validar as plantas com um arquiteto**, começando pela Casa Compacta.
-6. **Montar o e-book em PDF** a partir das imagens e fichas.
-7. **Ajustar o funil** para vender o e-book.
-8. **Criar o perfil no Instagram** (só você pode criar a conta) e começar a rotina do editor.
-
-## 6. Mapa do projeto
+## 13. Mapa do projeto
 
 ```
-PAINEL.md                     ← este painel
+PAINEL.md                     ← este painel (centro de controle)
+ferramentas/
+  atualizar-painel.py           atualiza a seção 1 e confere arquivos e links
 video/                        Vídeo de anúncio
   VIDEO.md                      guia: roteiro, teleprompter, gravação, edição
   saida/v1 … v5                 as 5 versões prontas
@@ -73,19 +211,13 @@ video/                        Vídeo de anúncio
   src/, render.cjs …            código do vídeo e do motor 3D
 animacoes-3d/                 Animações 3D das plantas
   ANIMACOES-3D.md               guia: motor, estilo, entregas
-  plantas/casa-compacta/        imagens e animação da C01
+  plantas/<nome>/               imagens e animação de cada planta
 instagram/                    Espaço do editor
   INSTAGRAM.md                  guia: rotina, retenção, estilo, formatos, testes
   plano-perfil.md               identidade, pilares, primeiros posts
   referencias-mino-lee.md       análise completa das referências
 ebook/                        O produto
   EBOOK.md                      guia: estrutura, página da planta, produção
-  catalogo.md                   as 35 plantas e a situação de cada uma
+  catalogo.md                   as 35 plantas, lançamento e situação de cada uma
   vendas/                       material do funil (parceiro)
 ```
-
-## 7. Como manter o painel em dia
-
-- A cada planta que avança, atualize a **Situação** no [catálogo](ebook/catalogo.md) e a contagem na seção 3.
-- A cada decisão nova, acrescente na seção 4.
-- Quando um item da seção 5 for feito, risque e passe para o próximo.

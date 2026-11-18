@@ -19,7 +19,7 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 
 ## 1. O produto
 
-- **O que é:** um e-book em PDF com **35 plantas** de casas (proposta inicial), cada uma com imagens 3D e ficha.
+- **O que é:** um e-book em PDF com dezenas de plantas de casas (35 propostas, lançadas em 3 levas), cada uma com imagens 3D e ficha.
 - **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso.
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto", ligada ao gancho dos vídeos ("os R$ 1.000 que um arquiteto te economizaria").
 - **Grande variação:** compactas, terreno estreito, família, especiais (edícula, geminadas, acessível, home office, praia, campo, esquina) e sobrados. Ver [`catalogo.md`](catalogo.md).
@@ -36,7 +36,7 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 | 5 | Índice rápido | Tabela de todas as plantas por categoria, área, quartos e lote mínimo |
 | 6 | As plantas | Uma página dupla por planta (seção 3), separadas por categoria |
 | 7 | Terreno e recuos | Como conferir as regras da sua cidade antes de escolher |
-| 8 | Próximos passos | Responsável técnico, aprovação na prefeitura, orçamento da obra |
+| 8 | Próximos passos | Responsável técnico, aprovação na prefeitura, orçamento da obra. Aviso: as plantas são **de referência**, não projeto executivo |
 | 9 | Bônus | QR codes das animações, checklist de obra |
 
 ## 3. Página dupla de cada planta
@@ -64,17 +64,21 @@ As imagens saem prontas das [`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md
 
 Atualize a coluna **Situação** do catálogo a cada passo. O andamento geral fica no [painel](../PAINEL.md).
 
-## 5. Decisões em aberto
+## 5. Lançamentos e decisões
 
-- **Título do e-book.** Sugestões: "35 Plantas de Casas Prontas para Construir", "Planta Certa: 35 casas para todo terreno".
-- **Preço** e **forma de pagamento**.
-- **Versões:** só o e-book, ou também uma versão completa com pranchas para obra (PDF e DWG)? A versão completa exige projeto validado por arquiteto.
-- **Quantidade inicial:** lançar com as 35, ou começar com 10 a 15 e ir aumentando (cada lote novo vira conteúdo para o Instagram).
-- **Amostra grátis do funil:** qual planta vai de graça (hoje é a Casa Compacta).
+- **Lançar em levas:** 12 plantas no 1º lançamento, 12 no 2º e 11 no 3º. Quem compra no 1º recebe os outros sem pagar de novo. A coluna **Lançamento** do [catálogo](catalogo.md) diz em qual leva cada planta entra.
+- **Título, preço, bônus e versão completa** são decididos no [painel](../PAINEL.md), seção 9, que tem as opções e a recomendação de cada um.
+- **Planta grátis do funil:** Casa Compacta (C01), a única com 3D pronto hoje.
 
 ## 6. Funil de vendas
 
-Os textos de `vendas/` foram escritos para vender **uma planta por vez**. Eles precisam ser ajustados para vender o e-book: a amostra grátis vira uma planta do e-book, e a oferta final passa a ser o e-book inteiro. Isso fica pendente até você decidir preço e versões (seção 5).
+Os textos de `vendas/` já vendem o **e-book**:
+
+1. A **planta grátis** é uma página do e-book ([`vendas/material-gratuito.md`](vendas/material-gratuito.md)).
+2. A primeira mensagem pergunta o **tamanho do terreno**.
+3. A resposta mostra as plantas do e-book que cabem nele ([`vendas/sequencia-whatsapp.md`](vendas/sequencia-whatsapp.md)).
+
+Faltam só os campos entre [colchetes]: título, preço, forma de pagamento e datas, que dependem das decisões do painel.
 
 ## 7. Cuidados
 

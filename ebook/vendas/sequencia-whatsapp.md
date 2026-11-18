@@ -1,45 +1,88 @@
 # Sequência de mensagens no WhatsApp
 
-> Rascunho para seu parceiro usar no funil. Cada mensagem é enviada só depois que a anterior foi lida ou respondida. Nada é enviado sem a pessoa ter deixado o contato.
+> Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
+>
+> **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
+>
+> Campos entre [colchetes]: preencha depois de decidir preço e título ([painel](../../PAINEL.md), seção 9).
 
-## Dia 0: entrega do material
+## Dia 0: entrega da planta grátis (logo após o comentário "PLANTA")
 
-Oi, [nome]! Aqui está o material que prometi: [link ou arquivo].
+Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 55 m², 2 quartos.
 
-Ele mostra como ler uma planta baixa e o que checar antes de contratar um construtor. Se tiver dúvida, me responde aqui.
+[planta humanizada + blueprint + animação]
 
-## Dia 2: pergunta de uso
+Ela cabe num terreno de 10 x 20 m. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
 
-Oi, [nome]! Você conseguiu abrir o material? Qual parte te ajudou mais?
+> Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
 
-> Se a pessoa responder, siga para o Dia 4. Se não, não insista mais de uma vez.
+## Dia 0, depois da resposta: as plantas que cabem no terreno
 
-## Dia 4: apresentação da planta
+**Se a pessoa mandou as medidas:**
 
-Oi, [nome]! Montei [nº] plantas pensadas para [tipo de terreno ou família]. Quer ver uma delas em 3D?
+Com [frente] x [fundo] m, essas plantas cabem no seu terreno:
 
-[Link para o vídeo ou imagem da planta]
+- **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
+- **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
+- **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-## Dia 7: pedido de retorno
+Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver uma delas em 3D?
 
-Oi, [nome]! Se o material te ajudou, você pode [ação de retorno: compartilhar com alguém que está planejando construir, ou comentar no post]. Isso ajuda muito a gente a chegar em mais pessoas.
+> Use a coluna **Lote** do [catálogo](../catalogo.md) para escolher 2 ou 3 plantas com lote mínimo menor ou igual ao terreno. Ofereça só as que já estão no e-book (Lançamento 1 enquanto for o atual).
 
-> Não envie o pedido de retorno para quem já saiu da conversa.
+**Se a pessoa ainda não tem terreno:**
 
-## Dia 10: oferta do projeto completo
+Ótimo momento: sabendo que casa você quer, você escolhe um terreno que caiba nela. Quantas pessoas vão morar na casa?
 
-Oi, [nome]! A planta [nome] completa tem [itens do projeto]. Valor: R$ [preço]. Forma de pagamento: [forma].
+> Com a resposta, indique uma categoria do catálogo: até 2 pessoas, compactas; família, categoria F.
 
-Quer que eu te envie o link para comprar?
+## Dia 1: a planta em 3D
 
-## Dia 14: última mensagem
+Oi, [nome]! Olha como fica a **[nome da planta]** por dentro:
 
-Oi, [nome]! Vou deixar essa oferta em aberto por mais alguns dias. Qualquer dúvida sobre medidas ou terreno, me chama.
+[animação de 12 s da planta]
 
-> Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir.
+No e-book ela vem com blueprint com cotas, planta humanizada, duas perspectivas e os cuidados antes de construir.
 
-## Regras para o funil
+## Dia 3: a oferta
+
+Oi, [nome]! O e-book **[título]** tem [nº] plantas de casas, para terreno estreito, primeira casa e família.
+
+Cada planta vem com:
+- planta humanizada e blueprint com medidas;
+- duas perspectivas 3D e animação;
+- ficha com lote mínimo, para quem é e os cuidados.
+
+E mais:
+- os 7 erros de planta que saem caro, com o jeito certo;
+- checklist de obra;
+- **as próximas plantas que eu lançar, sem pagar de novo.**
+
+Valor de lançamento: **R$ [preço]**, no [forma de pagamento]. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
+
+Quer o link?
+
+## Dia 5: a dúvida que trava
+
+Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode perguntar, mesmo que não vá comprar agora.
+
+> Responda com o [FAQ](faq-compradores.md) ou as [respostas a objeções](respostas-objecoes.md). Anote a dúvida: ela vira gancho de vídeo (combinado na conversa de quarta, no [painel](../../PAINEL.md), seção 11).
+
+## Dia 7: última mensagem
+
+Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançamento o e-book fica maior e o preço sobe. Qualquer dúvida sobre o seu terreno, me chama.
+
+> Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Só diga que o preço sobe se isso for verdade.
+
+## Depois da compra
+
+- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou.
+- **A cada lançamento novo:** envie as plantas novas. Peça para indicar alguém que está planejando construir.
+
+## Regras do funil
 
 - No máximo uma mensagem por dia.
 - Respeite o "não" e pare quando a pessoa pedir.
-- Responda dúvidas em até 24 horas, mesmo que a pessoa não tenha comprado.
+- Responda dúvidas em até 24 horas, mesmo de quem não comprou.
+- Nunca prometa prazo de obra, custo exato de construção ou aprovação na prefeitura.
+- Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.

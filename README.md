@@ -2,7 +2,13 @@
 
 E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
 
-**Comece pelo [`PAINEL.md`](PAINEL.md):** objetivo, frentes, situação, decisões e o que falta.
+**Comece pelo [`PAINEL.md`](PAINEL.md):** situação, estratégia, a conta do anúncio, fases, tarefas da semana e decisões.
+
+Para atualizar a situação do painel e conferir arquivos e links:
+
+```bash
+python3 ferramentas/atualizar-painel.py
+```
 
 | Frente | Guia |
 |---|---|
