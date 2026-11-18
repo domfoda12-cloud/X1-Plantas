@@ -58,7 +58,7 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 
 ## 6. Estratégias tiradas do reel de referência
 
-Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado para plantas de casas. Transcrevi o áudio; o resumo completo, com os tempos, está em `video/guia-editor.md`.
+Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado para plantas de casas. Transcrevi o áudio; o resumo completo, com os tempos, está em [`INSTAGRAM.md`](INSTAGRAM.md).
 
 | Item na referência | Como aplicar aqui |
 |---|---|
@@ -74,7 +74,7 @@ Do reel "10/10 content strategies (niche edition)" (Robert McKeaveney), adaptado
 
 ### Formato de desafio: "É possível…?"
 
-Do reel do Mino Lee (@minolee.mp4). O gancho "É possível [resultado extremo]?" funciona mesmo sem autoridade, porque as pessoas ficam para ver o resultado e os altos e baixos do caminho. Ideias, exemplos e os outros reels dele estão em `video/guia-editor.md` (seção 1.1).
+Do reel do Mino Lee (@minolee.mp4). O gancho "É possível [resultado extremo]?" funciona mesmo sem autoridade, porque as pessoas ficam para ver o resultado e os altos e baixos do caminho. Ideias, exemplos e os outros reels dele estão em [`referencias-mino-lee.md`](referencias-mino-lee.md).
 
 - "É possível desenhar a planta de uma casa em 1 hora?"
 - "É possível caber 3 quartos num terreno de 8 metros de frente?"

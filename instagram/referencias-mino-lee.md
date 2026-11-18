@@ -1,5 +1,7 @@
 # Referências de vídeo: Mino Lee (@minolee.mp4)
 
+> Parte da pasta Instagram. Guia da frente: [`INSTAGRAM.md`](INSTAGRAM.md). Painel geral: [`../PAINEL.md`](../PAINEL.md).
+>
 > Tudo o que vale a pena aproveitar dos três reels, para roteiro, gravação e edição.
 > Assisti aos três quadro a quadro (um quadro a cada 1,5 s) e transcrevi o áudio.
 > Copiamos o **método**, não o conteúdo nem a imagem dele.

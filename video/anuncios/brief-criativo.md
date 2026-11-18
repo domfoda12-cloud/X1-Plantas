@@ -56,7 +56,7 @@ Teste uma variação por vez, com o mesmo orçamento, e mantenha a que tiver mai
 
 ### Regras de retenção (do reel de referência)
 
-O vídeo "O erro mais caro na planta" (`video/guia-editor.md`) segue estas regras, e os anúncios devem seguir também:
+O vídeo "Os R$ 1.000 do arquiteto" ([`../VIDEO.md`](../VIDEO.md)) segue estas regras, e os anúncios devem seguir também:
 
 - **Tempo assistido é o que importa.** Cada segundo precisa dar um motivo para ver o próximo.
 - **O gancho faz uma pergunta e o final responde.** A resposta só aparece no desfecho.

@@ -1,7 +1,7 @@
 // Gera o material da planta que o cliente recebe: imagens estáticas e animação.
 //
 // Uso (dentro da pasta video):
-//   node render-planta.cjs                 → tudo em ../entregas/casa-compacta
+//   node render-planta.cjs                 → tudo em ../animacoes-3d/plantas/casa-compacta
 //   node render-planta.cjs --so-imagens    → só as imagens
 //   node render-planta.cjs --fps 24
 const { chromium } = require('playwright');
@@ -16,7 +16,7 @@ const FPS = Number(opc('--fps', 30));
 const soImagens = args.includes('--so-imagens');
 
 const RAIZ = __dirname;
-const DESTINO = path.resolve(RAIZ, opc('--saida', '../entregas/casa-compacta'));
+const DESTINO = path.resolve(RAIZ, opc('--saida', '../animacoes-3d/plantas/casa-compacta'));
 const QUADROS = path.join(RAIZ, 'saida', 'quadros', 'planta');
 const PORTA = 8767;
 
