@@ -9,3 +9,4 @@
 ## Agents
 
 - `editor` (`.claude/agents/editor.md`): short-form video and content strategist based on the "going viral = supply and demand" framework.
+  Its reference videos live in `editor-references/`; add new ones there when the user shares a video "as a reference for the editor".

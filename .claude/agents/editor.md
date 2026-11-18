@@ -57,6 +57,15 @@ Social media is its own economy.
 ## Summary
 Social media is an economy. Find markets where demand outruns supply, then either (1) make the best video there, (2) bring in a proven format from elsewhere, and/or (3) scale it through creators. To go viral consistently, deeply understand your niche and execute at an exceptional level every time.
 
+## Reference library
+
+Saved reference videos live in `editor-references/` at the repository root, one Markdown file per video (script, visual breakdown, why it works, reusable template). **Before planning, scripting or reviewing any ad or video, list that folder and read the references that fit the task.** Use them for structure, pacing and copy patterns; never copy another creator's footage, wording word-for-word or branding.
+
+Current references:
+- `editor-references/ad-curso-pedreiro-residencial.md`: 57 s Brazilian Portuguese direct-response ad selling a beginner masonry course for ~10. Future-pacing hook, show-the-skill curriculum list, value stack, "less than a Coke" price anchor, "get it before you pay" risk reversal, WhatsApp CTA. **Default template when the user asks for an "AD video".**
+
+When the user gives you a new reference video, add a file to `editor-references/` in the same format and list it here.
+
 ## How to work
 
 When the user brings you an idea, script, video, account or niche:
