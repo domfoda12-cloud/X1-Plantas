@@ -187,6 +187,8 @@ function desenharBlueprint(g, p, pl, { cotas = true, nomes = true, moveis = true
   const { BP, TRECHOS, ambientes, portas, moveis: MOVEIS, largura: LARGURA, profundidade: PROFUNDIDADE } = pl;
   const K = BP.px / BP.tam;
   const P = (x, z) => [(x - BP.x0) * K, (z - BP.z0) * K];
+  const L = Math.pow(BP.tam / 16, 0.8); // letras um pouco maiores em casas grandes (1 na C01)
+  const px = (v) => Math.round(v * L);
   g.clearRect(0, 0, BP.px, BP.px);
   g.lineCap = 'round'; g.lineJoin = 'round';
   // Paredes: linhas duplas desenhadas em sequência
@@ -218,7 +220,7 @@ function desenharBlueprint(g, p, pl, { cotas = true, nomes = true, moveis = true
     g.strokeStyle = `rgba(255,255,255,${0.9 * pp})`; g.lineWidth = 2;
     for (const d of portas) {
       const [cx, cy] = P(d.x, d.y); const r = d.r * K;
-      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp)); g.stroke();
+      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp), d.a1 < d.a0); g.stroke();
       g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(d.a1) * r * pp, cy + Math.sin(d.a1) * r * pp); g.stroke();
     }
   }
@@ -252,25 +254,25 @@ function desenharBlueprint(g, p, pl, { cotas = true, nomes = true, moveis = true
       const [rx, ry] = a.rotulo || [(a.x0 + a.x1) / 2, (a.y0 + a.y1) / 2];
       const [cx, cy] = P(rx, ry);
       const f = a.letra || 1; // letra menor em cômodos estreitos
-      g.font = `700 ${Math.round(34 * f)}px Inter, sans-serif`; g.fillText(a.nome.toUpperCase(), cx, cy - 6 * f);
-      g.font = `500 ${Math.round(28 * f)}px Inter, sans-serif`; g.fillText(m2(a.area ?? (a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30 * f);
+      g.font = `700 ${px(34 * f)}px Inter, sans-serif`; g.fillText(a.nome.toUpperCase(), cx, cy - 6 * f * L);
+      g.font = `500 ${px(28 * f)}px Inter, sans-serif`; g.fillText(m2(a.area ?? (a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30 * f * L);
     }
   }
   const pc = suave((p - 0.8) / 0.2);
   if (cotas && pc > 0) {
-    g.strokeStyle = `rgba(255,255,255,${0.9 * pc})`; g.fillStyle = `rgba(255,255,255,${pc})`; g.lineWidth = 2; g.font = '600 30px Inter, sans-serif';
+    g.strokeStyle = `rgba(255,255,255,${0.9 * pc})`; g.fillStyle = `rgba(255,255,255,${pc})`; g.lineWidth = 2; g.font = `600 ${px(30)}px Inter, sans-serif`;
     const cota = (xa, za, xb, zb, txt, vertical) => {
       const [a, b] = P(xa, za); const [c2, d2] = P(xb, zb);
       g.beginPath(); g.moveTo(a, b); g.lineTo(c2, d2); g.stroke();
       for (const [u, v] of [[a, b], [c2, d2]]) { g.beginPath(); g.moveTo(u - 10, v + 10); g.lineTo(u + 10, v - 10); g.stroke(); }
       g.save(); g.translate((a + c2) / 2, (b + d2) / 2); if (vertical) g.rotate(-Math.PI / 2);
-      g.textAlign = 'center'; g.fillText(txt, 0, -14); g.restore();
+      g.textAlign = 'center'; g.fillText(txt, 0, -14 * L); g.restore();
     };
     cota(0, -0.8, LARGURA, -0.8, metros(LARGURA), false);
     cota(-0.8, 0, -0.8, PROFUNDIDADE, metros(PROFUNDIDADE), true);
-    g.font = '700 30px Inter, sans-serif'; g.textAlign = 'left';
+    g.font = `700 ${px(30)}px Inter, sans-serif`; g.textAlign = 'left';
     const [tx, ty] = P(0, PROFUNDIDADE + 1.0);
-    g.fillText(pl.nome.toUpperCase(), tx, ty); g.font = '500 26px Inter, sans-serif'; g.fillText(pl.ficha, tx, ty + 34);
+    g.fillText(pl.nome.toUpperCase(), tx, ty); g.font = `500 ${px(26)}px Inter, sans-serif`; g.fillText(pl.ficha, tx, ty + 34 * L);
   }
 }
 
@@ -593,9 +595,16 @@ function construirMovel(m) {
       break;
     }
     case 'estante': {
-      g.add(em(caixa(m.w, 1.6, m.d, madeira, 0.02), 0, 0.8, 0));
-      const cores = ['#C75D4A', '#E3B84F', '#4F7FA8', '#6E8F5A', '#EDE6DA'];
-      for (let i = 0; i < 6; i++) g.add(em(caixa(m.w / 7, 0.24, m.d * 0.7, cores[i % 5], 0.01), -m.w / 2 + (m.w / 6.5) * (i + 0.6), 1.72, 0));
+      // Estante baixa (1,2 m) com uma fileira de livros finos em cima
+      g.add(em(caixa(m.w, 1.2, m.d, madeira, 0.02), 0, 0.6, 0));
+      const cores = ['#C75D4A', '#E3B84F', '#4F7FA8', '#6E8F5A', '#EDE6DA', '#8A6FA0'];
+      const rl = aleatorio(Math.round(m.x * 31 + m.y * 17));
+      let bx = -m.w / 2 + 0.08;
+      while (bx < m.w / 2 - 0.12) {
+        const esp = 0.035 + rl() * 0.03; const alt = 0.18 + rl() * 0.08;
+        g.add(em(caixa(esp, alt, m.d * 0.75, cores[Math.floor(rl() * cores.length)], 0.005), bx + esp / 2, 1.2 + alt / 2, 0));
+        bx += esp + 0.005; if (rl() < 0.12) bx += 0.12;
+      }
       break;
     }
     case 'pia': g.add(em(caixa(m.w, 0.8, m.d, madeiraClara, 0.02), 0, 0.4, 0)); g.add(em(caixa(m.w - 0.12, 0.05, m.d - 0.12, '#FFFFFF', 0.04, 0.3), 0, 0.83, 0)); break;
