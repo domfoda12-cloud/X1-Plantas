@@ -2,6 +2,8 @@
 
 > **Comece por aqui.** Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que fase estamos, o que fazer esta semana e o que decidir.
 >
+> **Quem rege é a MinoAI Frontier**, o maestro: no seu computador, ela conduz a semana por este painel, faz o que é vídeo e rede social e manda fazer o resto. Ver [`MAESTRO.md`](MAESTRO.md).
+>
 > A seção 1 se atualiza sozinha. Rode `python3 ferramentas/atualizar-painel.py` na raiz do projeto sempre que algo mudar (ver seção 11).
 
 ## 1. Situação agora
@@ -156,6 +158,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Edição no estilo do **Mino Lee**; retenção pelas regras do **Robert McKeaveney** ([`instagram/`](instagram/INSTAGRAM.md)) |
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
 | 19/11 | Editor: **MinoAI Frontier**, no seu computador ([contexto](instagram/MINOAI-FRONTIER.md)) |
+| 19/11 | Maestro da operação: **MinoAI Frontier** ([`MAESTRO.md`](MAESTRO.md)) |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Lançar com **12 plantas** e crescer em levas (proposta da seção 3; confirme na seção 9) |
 | 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas** ([estratégia](ESTRATEGIA.md)) |
@@ -191,10 +194,10 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 | Quando | O quê | Quem |
 |---|---|---|
-| **Segunda** | Rodar `python3 ferramentas/atualizar-painel.py`, preencher os números da seção 7 e escolher as tarefas da semana (seção 6) | Você |
-| **Terça a quinta** | Produção: plantas (Claude), gravação (apresentador), edição (MinoAI Frontier, no seu computador) e publicação (você) | Todos |
+| **Segunda** | O maestro puxa os números, roda `python3 ferramentas/atualizar-painel.py`, preenche a seção 7 e propõe as tarefas e os ganchos da semana; você aprova | MinoAI Frontier e você |
+| **Terça a quinta** | Produção conduzida pelo maestro: roteiros, edição e plantas novas (MinoAI Frontier), gravação (apresentador), aprovação e publicação (você) | Todos |
 | **Quarta** | Conversa com o parceiro: o que as pessoas perguntam no WhatsApp vira gancho de vídeo e resposta no [FAQ](ebook/vendas/faq-compradores.md) | Você e parceiro |
-| **Sexta** | Preencher o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) e decidir o gancho da semana seguinte | Você |
+| **Sexta** | O maestro preenche o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) com os números de cada reel e aponta a vencedora; você decide o gancho da semana seguinte | MinoAI Frontier e você |
 
 **Para manter o painel em dia:**
 - **Situação das plantas:** mude só a coluna **Situação** do [catálogo](ebook/catalogo.md). A seção 1 conta sozinha quando você roda o script.
@@ -205,17 +208,19 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 | Pessoa | Responsabilidade | Onde trabalha |
 |---|---|---|
-| Você | Decisões, plantas (ideia e revisão) e anúncios | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
+| **Maestro: MinoAI Frontier** | Conduz a semana pelo painel; ganchos, roteiros, edição, publicação (com o seu "sim") e números; roda os scripts de 3D e e-book | [`MAESTRO.md`](MAESTRO.md) |
+| Você | Decisões, aprovação de cada publicação, plantas (ideia e revisão) e gravação | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
 | Parceiro | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |
 | Editor: **MinoAI Frontier** | Edição dos vídeos do perfil e do anúncio, no seu computador (app do Claude, aba Code) | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 | Apresentador | Gravação dos vídeos | [`video/VIDEO.md`](video/VIDEO.md), seção 3 (teleprompter) |
 | Arquiteto | Validação das plantas e do texto de responsabilidade técnica | [`ebook/catalogo.md`](ebook/catalogo.md) |
-| Claude | Dados das plantas, 3D, vídeos, páginas do e-book e textos | Todas as pastas |
+| Chats na nuvem (Claude) | Trabalho pesado quando o maestro pedir: dados das plantas, 3D, páginas do e-book e textos | Todas as pastas |
 
 ## 13. Mapa do projeto
 
 ```
 PAINEL.md                     ← este painel (centro de controle)
+MAESTRO.md                    o maestro (MinoAI Frontier): papel, mensagem de abertura, rotina
 ESTRATEGIA.md                 público, posicionamento, oferta, ângulos e tom de voz
 ferramentas/
   atualizar-painel.py           atualiza a seção 1 e confere arquivos e links

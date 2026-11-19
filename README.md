@@ -2,6 +2,8 @@
 
 E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
 
+**Quem rege a operação é a MinoAI Frontier:** veja [`MAESTRO.md`](MAESTRO.md).
+
 **Comece pelo [`PAINEL.md`](PAINEL.md):** situação, estratégia, a conta do anúncio, fases, tarefas da semana e decisões.
 
 Para atualizar a situação do painel e conferir arquivos e links:
