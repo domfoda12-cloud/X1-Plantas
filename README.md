@@ -16,5 +16,5 @@ python3 ferramentas/atualizar-painel.py
 |---|---|
 | Vídeo de anúncio | [`video/VIDEO.md`](video/VIDEO.md) |
 | Animações 3D | [`animacoes-3d/ANIMACOES-3D.md`](animacoes-3d/ANIMACOES-3D.md) |
-| Instagram (editor) | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md) |
+| Instagram (editor: MinoAI Frontier) | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md) · [contexto do editor](instagram/MINOAI-FRONTIER.md) |
 | E-book | [`ebook/EBOOK.md`](ebook/EBOOK.md) |

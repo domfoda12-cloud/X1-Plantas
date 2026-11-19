@@ -7,7 +7,7 @@
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 19/11/2026. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|
@@ -122,7 +122,8 @@ Cada fase tem um **critério para passar para a próxima**. Não pule o critéri
 | 4 | Desenhar em dados as 11 plantas que faltam do 1º lançamento | Claude | Tarefa 3 | Situação `dados` no catálogo |
 | 5 | Criar o perfil do Instagram | Você | Nada | Conta criada com o [`plano-perfil.md`](instagram/plano-perfil.md) |
 | 6 | Revisar os textos do funil para o e-book e preencher preço | Parceiro | Tarefa 2 | Textos de [`ebook/vendas/`](ebook/vendas/) sem campos em branco |
-| 7 | Montar e publicar os 5 reels de teste | Editor | Tarefas 1 e 5 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
+| 7 | Configurar a MinoAI Frontier: pasta, estilo salvo com os 3 reels do Mino Lee, Instagram conectado | Você | Nada | Os 4 passos de [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md), seção 2 |
+| 7b | Editar e publicar os 5 reels de teste | MinoAI Frontier e você | Tarefas 1, 5 e 7 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
 | 8 | Subir o anúncio "Tem um lote 10 x 20?" com a Casa Compacta | Você | Tarefa 5 | Anúncio rodando com orçamento pequeno ([textos](video/anuncios/anuncio-facebook.md)) |
 
 ## 7. Números para acompanhar
@@ -154,6 +155,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Visual: **blueprint azul que ganha vida** e vira **planta humanizada** em 3D |
 | 16/11 | Edição no estilo do **Mino Lee**; retenção pelas regras do **Robert McKeaveney** ([`instagram/`](instagram/INSTAGRAM.md)) |
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
+| 19/11 | Editor: **MinoAI Frontier**, no seu computador ([contexto](instagram/MINOAI-FRONTIER.md)) |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Lançar com **12 plantas** e crescer em levas (proposta da seção 3; confirme na seção 9) |
 | 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas** ([estratégia](ESTRATEGIA.md)) |
@@ -190,9 +192,9 @@ Quando decidir, mova a linha para a seção 8 com a data.
 | Quando | O quê | Quem |
 |---|---|---|
 | **Segunda** | Rodar `python3 ferramentas/atualizar-painel.py`, preencher os números da seção 7 e escolher as tarefas da semana (seção 6) | Você |
-| **Terça a quinta** | Produção: plantas (Claude), gravação (apresentador), edição e publicação (editor) | Todos |
+| **Terça a quinta** | Produção: plantas (Claude), gravação (apresentador), edição (MinoAI Frontier, no seu computador) e publicação (você) | Todos |
 | **Quarta** | Conversa com o parceiro: o que as pessoas perguntam no WhatsApp vira gancho de vídeo e resposta no [FAQ](ebook/vendas/faq-compradores.md) | Você e parceiro |
-| **Sexta** | Editor preenche o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes); você decide o gancho da semana seguinte | Editor e você |
+| **Sexta** | Preencher o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) e decidir o gancho da semana seguinte | Você |
 
 **Para manter o painel em dia:**
 - **Situação das plantas:** mude só a coluna **Situação** do [catálogo](ebook/catalogo.md). A seção 1 conta sozinha quando você roda o script.
@@ -205,7 +207,7 @@ Quando decidir, mova a linha para a seção 8 com a data.
 |---|---|---|
 | Você | Decisões, plantas (ideia e revisão) e anúncios | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
 | Parceiro | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |
-| Editor | Edição e publicação dos vídeos do perfil | [`instagram/`](instagram/INSTAGRAM.md) |
+| Editor: **MinoAI Frontier** | Edição dos vídeos do perfil e do anúncio, no seu computador (app do Claude, aba Code) | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 | Apresentador | Gravação dos vídeos | [`video/VIDEO.md`](video/VIDEO.md), seção 3 (teleprompter) |
 | Arquiteto | Validação das plantas e do texto de responsabilidade técnica | [`ebook/catalogo.md`](ebook/catalogo.md) |
 | Claude | Dados das plantas, 3D, vídeos, páginas do e-book e textos | Todas as pastas |
@@ -226,6 +228,7 @@ animacoes-3d/                 Animações 3D das plantas
   ANIMACOES-3D.md               guia: motor, estilo, entregas
   plantas/<nome>/               imagens e animação de cada planta
 instagram/                    Espaço do editor
+  MINOAI-FRONTIER.md            o editor: contexto, mensagem de abertura, B-roll
   INSTAGRAM.md                  guia: rotina, retenção, estilo, formatos, testes
   plano-perfil.md               identidade, pilares, primeiros posts
   referencias-mino-lee.md       análise completa das referências

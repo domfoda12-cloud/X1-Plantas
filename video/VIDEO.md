@@ -42,7 +42,7 @@ Cada versão fica em `video/saida/v1` a `video/saida/v5`:
 - **`camada-transparente.webm`**: só os cartões e as legendas, com fundo transparente (VP9 com canal alfa). Coloque **por cima** da gravação do apresentador.
 - **`rascunho.mp4`**: o mesmo vídeo com um boneco no lugar do apresentador, para ver o resultado antes de gravar.
 
-As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
+As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Quem edita é a **MinoAI Frontier**: ela corta a fala do apresentador e coloca a camada por cima, sem legenda extra (ver [`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md), seção 3). Se a fala cortada não bater com os tempos da camada, mande a transcrição com os tempos para eu renderizar a camada de novo.
 
 ## 3. Roteiro de fala (teleprompter)
 

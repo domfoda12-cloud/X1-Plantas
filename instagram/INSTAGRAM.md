@@ -3,12 +3,15 @@
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
 >
 > **Esta pasta é o espaço do editor.** Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para todo vídeo do perfil, inclusive o de anúncio.
+>
+> **O editor é a MinoAI Frontier.** O contexto que ela precisa (configuração, mensagem de abertura, pasta de B-roll, regras) está em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md).
 
 ## Nesta pasta
 
 | Arquivo | Para que serve |
 |---|---|
 | `INSTAGRAM.md` | Este guia: rotina do editor, regras, estilo, formatos e testes |
+| `MINOAI-FRONTIER.md` | **O editor:** configuração da MinoAI Frontier, mensagem de abertura, pasta de B-roll e rotina |
 | `plano-perfil.md` | Identidade do perfil, bio, pilares, primeiros 9 posts e ritmo |
 | `referencias-mino-lee.md` | Análise completa dos 3 reels do Mino Lee e lista de conferência |
 
@@ -25,8 +28,8 @@
 
 **Toda semana:**
 
-1. **Receber** a gravação do apresentador (celular na vertical, 1080 x 1920, 30 fps).
-2. **Editar** no estilo da seção 4: gancho fixo no alto, legenda fina em blocos de 2 a 3 palavras, palavra-chave em amarelo, uma imagem nova a cada 2 a 4 s, sem respiro entre frases.
+1. **Receber** a gravação do apresentador (celular na vertical, 1080 x 1920, 30 fps) na pasta **brutos/** do seu computador.
+2. **Editar com a MinoAI Frontier**, colando a [mensagem de abertura](MINOAI-FRONTIER.md#3-a-mensagem-de-abertura) na aba Code do Claude. Ela segue o estilo da seção 4: gancho fixo no alto, legenda fina em blocos de 2 a 3 palavras, palavra-chave em amarelo, uma imagem nova a cada 2 a 4 s, sem respiro entre frases.
 3. **Montar 5 versões** de cada reel, mudando só os 3 primeiros segundos (o gancho).
 4. **Publicar as 5 como reels de teste** (só para quem não segue).
 5. **Depois de 24 a 48 h**, comparar o tempo médio assistido e quantas pessoas chegaram ao desfecho.
