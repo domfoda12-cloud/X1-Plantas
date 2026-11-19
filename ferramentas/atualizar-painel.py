@@ -15,6 +15,7 @@ Sai com código 1 se houver aviso (link quebrado, arquivo faltando, situação i
 import re
 import sys
 import unicodedata
+from urllib.parse import unquote
 from datetime import date
 from pathlib import Path
 
@@ -65,7 +66,7 @@ def conferir_links():
         for alvo in re.findall(r"\]\(([^)\s]+)\)", texto):
             if re.match(r"^(https?:|mailto:|#)", alvo):
                 continue
-            caminho = alvo.split("#")[0]
+            caminho = unquote(alvo.split("#")[0])
             if caminho and not (md.parent / caminho).exists():
                 quebrados.append(f"{md.relative_to(RAIZ)} → {alvo}")
     return quebrados

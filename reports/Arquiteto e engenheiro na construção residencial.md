@@ -2,6 +2,37 @@
 
 A planta pronta barateia o projeto, mas não substitui o responsável técnico da obra. A lógica legal encontrada é que alguém precisa assinar a responsabilidade técnica: engenheiro emite ART no Crea, arquiteto emite RRT no CAU, e a Lei 6.496/1977 e a Lei 12.378/2010 (arts. 45 a 50) são as bases citadas. Essa conclusão tem limite sério. Os sites oficiais (planalto.gov.br, caixa.gov.br, caubr.gov.br) não carregaram na pesquisa, e nenhum texto de lei foi lido na íntegra. Tudo o que é legal vem de trechos de busca, resoluções que citam as leis ou blogs, e está marcado abaixo como "não verificado na fonte primária". Duas afirmações populares continuam **sem confirmação**: que a lei exija profissional para qualquer construção, e que exista dispensa para casas de até 70 m². Sobre o mercado, um projeto arquitetônico residencial é anunciado entre cerca de R$ 20 e R$ 180 por m², conforme o escopo, e uma planta pronta em kit custa centenas a poucos milhares de reais, mas as faixas são de sites comerciais. Sobre o público, a maioria das obras particulares é feita sem arquiteto ou engenheiro segundo a pesquisa CAU/BR-Datafolha de 2015, e o custo percebido é a barreira mais citada. As fontes divergem nos percentuais, e isso é discutido abaixo.
 
+## Atualização de 19/11/2026: o que passou a ser verificado em fonte primária
+
+Depois da primeira versão, o texto original das leis foi aberto no site do Planalto (planalto.gov.br abre pelo terminal; o que falhou antes foi a ferramenta de busca usada pelos pesquisadores). O site do CAU/BR (caubr.gov.br) continua fechado a leituras automáticas: está atrás de um firewall que exige JavaScript, e não foi contornado. Onde ele era necessário, o texto vem do Legisweb e do CREA-SC, que republicam os atos. **Onde esta atualização contradiz o texto de baixo, vale esta atualização.**
+
+**Confirmado no texto da lei (Planalto):**
+
+| Ponto | O que a lei diz | Fonte |
+|---|---|---|
+| ART | "Todo contrato, escrito ou verbal, para a execução de obras ou prestação de quaisquer serviços profissionais referentes à Engenharia, à Arquitetura e à Agronomia fica sujeito à 'Anotação de Responsabilidade Técnica' (ART)." A falta da ART gera multa (art. 3º) | [Lei 6.496/1977, arts. 1º e 3º](https://www.planalto.gov.br/ccivil_03/leis/l6496.htm) |
+| RRT | "Toda realização de trabalho de competência privativa ou de atuação compartilhada com outras profissões regulamentadas será objeto de Registro de Responsabilidade Técnica (RRT)." **Os casos em que é obrigatório são detalhados em ato do CAU/BR (§ 1º), não na lei.** O arquiteto pode fazer RRT mesmo fora dos casos obrigatórios (§ 2º). A taxa é de R$ 60 corrigidos pelo INPC (art. 49). A falta do RRT obriga a paralisar o trabalho (art. 50) | [Lei 12.378/2010, arts. 45 a 50](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12378.htm) |
+| Valor jurídico de plantas e projetos | "Os estudos, plantas, projetos, laudos e qualquer outro trabalho de engenharia, de arquitetura e de agronomia, quer público, quer particular, sòmente poderão ser submetidos ao julgamento das autoridades competentes e só terão valor jurídico quando seus autores forem profissionais habilitados de acôrdo com esta lei." | [Lei 5.194/1966, art. 13](https://www.planalto.gov.br/ccivil_03/leis/l5194.htm) |
+| Autoria e alterações | Os direitos de autoria de um projeto "são do profissional que os elaborar" (art. 17). As alterações "só poderão ser feitas pelo profissional que o tenha elaborado"; se ele estiver impedido ou se recusar, outro profissional habilitado pode alterar e assume a responsabilidade pelo projeto modificado (art. 18) | Lei 5.194/1966, arts. 17 e 18 |
+| Exercício ilegal | Exerce ilegalmente a profissão "a pessoa física ou jurídica que realizar atos ou prestar serviços público ou privado reservados aos profissionais de que trata esta lei e que não possua registro nos Conselhos Regionais" (art. 6º, a) | Lei 5.194/1966, art. 6º |
+| Garantia da obra | "Nos contratos de empreitada de edifícios ou outras construções consideráveis, o empreiteiro de materiais e execução responderá, durante o prazo irredutível de cinco anos, pela solidez e segurança do trabalho, assim em razão dos materiais, como do solo." O dono da obra decai do direito se não propuser a ação em 180 dias depois que o vício aparecer | [Código Civil, art. 618](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm) |
+
+**Corrige o que estava como dúvida:**
+
+- **A "dispensa para casas de até 70 m²" não existe como dispensa.** O limite de 70 m² aparece na Resolução CAU/BR 17/2012 como **"RRT Mínimo"**: um tipo de registro simplificado "quando se referir a edificação com área de construção total de até 70 m², destinada ao uso residencial". O RRT continua sendo feito. Essa resolução foi revogada pela Resolução 91/2014 ([Legisweb](https://www.legisweb.com.br/legislacao/?id=239850)), e o texto da 91 não pôde ser lido. No CREA-SC, o limite de 70 m² (alvenaria) define "Moradia Econômica" de um só pavimento, e o ato exige a ART com taxa própria ([Ato Normativo 5/2013](https://portal.crea-sc.org.br/leis/atos/conceito-programa-moradia-economica/)). Nos dois casos, **o registro de responsabilidade técnica continua obrigatório, só com condição mais simples ou mais barata.** O e-book não deve citar 70 m² como dispensa.
+- **Lei 5.194/1966 para "qualquer construção":** o texto não diz isso de forma geral. O que está verificado é o art. 13: projetos e plantas só têm valor jurídico diante das autoridades quando feitos por profissional habilitado.
+- **Art. 618 do Código Civil:** confirmado, e se aplica ao empreiteiro (quem executa a obra por contrato de empreitada), não ao vendedor de planta.
+
+**O que continua sem confirmação:** a Resolução CAU/BR 91/2014 (casos de RRT obrigatório e se o RRT Mínimo continua), as resoluções do Confea sobre a ART, qualquer código de obras municipal e a página oficial da Caixa.
+
+### O que isso muda para o nosso e-book
+
+O art. 13 da Lei 5.194 e o art. 6º tratam de quem assina o desenho. **As plantas do e-book são desenhadas por pessoas que não são arquitetos nem engenheiros, e o e-book deve ser apresentado como referência para conversar com o profissional, não como projeto.** Para reduzir o risco, as plantas deveriam ser **revisadas e assinadas por um arquiteto registrado no CAU, que assume a autoria ou a revisão**, e o texto do e-book deve dizer que as plantas não substituem o projeto legal. **Isto não é parecer jurídico.** Confirmar com um arquiteto e um advogado antes de lançar.
+
+---
+
+*O texto abaixo é a primeira versão, feita antes de abrir as leis. Em caso de diferença, vale a atualização acima.*
+
 ## A lei aponta para ART ou RRT, mas nenhum texto oficial foi lido
 
 **Status geral desta seção: não verificado na fonte primária.** A Lei 6.496/1977 sujeita à ART o contrato, escrito ou verbal, de execução de obras ou serviços das áreas do sistema Confea/Crea ([Câmara dos Deputados, publicação original](https://www2.camara.leg.br/legin/fed/lei/1970-1979/lei-6496-7-dezembro-1977-366461-publicacaooriginal-1-pl.html); o trecho foi lido só em resumo de busca). Para arquitetos, a Lei 12.378/2010, arts. 45 a 50, torna o RRT exigível para projetos, execução de obras e outros serviços técnicos de arquitetura e urbanismo, segundo uma resolução do CAU/BR que cita esses artigos ([Resolução CAU/BR 91/2014](https://www.normasbrasil.com.br/norma/resolucao-91-2014_276004.html)). A separação de quem emite o quê (Crea para engenheiros, CAU para arquitetos) é consistente nas fontes, mas também não foi confirmada em texto oficial. Os números de artigo vêm de resumos de busca. Um blog também distingue ART e RRT de laudos, que seriam relatórios sem função de atribuir responsabilidade técnica, mas essa fonte não abriu e é só pista ([OrçaFascio](https://www.orcafascio.com/papodeengenheiro/art-ou-rrt)).
@@ -61,10 +92,11 @@ A base empírica é mais fraca do que parece. As leis são citadas por resumos, 
 
 ## O que confirmar com um arquiteto ou advogado antes de publicar
 
-- Texto oficial da Lei 5.194/1966, da Lei 6.496/1977 e da Lei 12.378/2010: se existe obrigação de profissional para qualquer construção, e o texto exato dos artigos citados.
-- Se existe hoje alguma dispensa de ART ou RRT para residência unifamiliar de até 70 m² (norma de origem, vigência, abrangência), e como ela trata autoconstrução; até confirmar, o e-book não deve citar o limite de 70 m².
+- Texto das leis: **lido no Planalto** (ver atualização). Falta só a Resolução CAU/BR 91/2014 e as resoluções do Confea sobre a ART.
+- **Respondido na atualização:** o limite de 70 m² não é dispensa, é um registro mínimo ou mais barato. Falta ler a Resolução CAU/BR 91/2014 para saber se o RRT Mínimo continua; o e-book não deve citar 70 m² como dispensa.
+- **Se um arquiteto registrado pode revisar e assinar as plantas do e-book**, e como isso deve aparecer no produto (autoria, revisão, RRT), diante dos arts. 6º e 13 da Lei 5.194/1966.
 - Se o proprietário pode assinar o próprio projeto e em quais municípios, e como a prefeitura trata uma planta de terceiros (autoria, adaptação, quem assina).
-- Responsabilidade por erro em planta vendida: do vendedor, do profissional que assina a obra e do construtor; o art. 618 do Código Civil precisa de verificação no Planalto, e deve-se redigir isenções e avisos do e-book com orientação jurídica.
+- Responsabilidade por erro em planta vendida: do vendedor, do profissional que assina a obra e do construtor. O art. 618 do Código Civil foi lido e trata do empreiteiro, não do vendedor de planta; redigir isenções e avisos do e-book com orientação jurídica.
 - Exigências atuais da Caixa para financiamento de construção em terreno próprio (documentos, PCI, ART ou RRT), na página oficial ou com o gerente.
 - Se uma planta pronta pode ser vendida com RRT de projeto e de obra incluídos, como no kit do Asaas, e quais obrigações isso cria para o e-book.
 - Percentuais de obras sem profissional: abrir os relatórios CAU/BR-Datafolha de 2015 e 2022 e decidir qual dado e qual formulação citar; os valores de 85,4%, 82%, "menos de 15%" e 9% não foram reconciliados.
