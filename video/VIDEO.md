@@ -12,7 +12,8 @@
 |---|---|
 | `VIDEO.md` | Este guia: estrutura, teleprompter, gravação, edição, teste |
 | `saida/v1` a `saida/v5` | As 5 versões prontas (rascunho e camada para o editor) |
-| `anuncios/anuncio-facebook.md` | Três variações de texto de anúncio |
+| `roteiro-lancamento.md` | Vídeo de aquecimento do lançamento ("casas na mala"): roteiro, tela, B-roll, 5 ganchos e série até o lançamento |
+| `anuncios/anuncio-facebook.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
 | `anuncios/brief-criativo.md` | Brief dos criativos (formatos, estilo, variações) |
 | `anuncios/checklist-revisao.md` | Revisão antes de publicar qualquer anúncio |
 | `src/`, `render.cjs`, `carimbar.py` | Código que gera o vídeo |
