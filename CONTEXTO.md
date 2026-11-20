@@ -77,7 +77,12 @@
 
 | 20/11/2026 | (loop) Rodada final do OpenArt em extra-alta | 6 finais em 2048 x 2560 (lote na qualidade máxima) com recortes 9:16 e 1:1; teste mostrou máxima quase igual à extra-alta, então extra-alta é o padrão. Saldo: 2.757 créditos. Fotos entraram no e-book com "Imagem ilustrativa": mãos medindo (como usar), lote com trena (ficha do terreno), planta no canteiro (próximos passos), família (página final) e papel azul no fundo da capa |
 
+| 20/11/2026 | "Preste atenção no limite semanal e separe quanto gastar em cada uma das três partes que faltam: e-book, animações, vídeo" | [`ORCAMENTO.md`](ORCAMENTO.md): animações 45% (1.500 créditos do OpenArt), vídeo 30% (800), e-book 25% (450). A sessão não enxerga o limite semanal: o dono informa a porcentagem e a tabela vira número. Recomendação: uma sessão nova por parte |
+
 ## Em aberto (esperando o dono)
+
+- Informar quanto resta do limite semanal (claude.ai, Configurações → Uso) para fechar o orçamento em números.
+
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.
 - Os 5 vídeos de anúncio (`video/saida/v1` a `v5`) usam o 3D antigo da Casa Compacta: refazer quando o 3D for liberado.
