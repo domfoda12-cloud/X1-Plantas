@@ -60,7 +60,12 @@
 
 | 20/11/2026 | (loop) Conferência do funil e dos anúncios | Anúncio "Tem um lote 10 x 20?" com a contagem real (14 casas; 8 x 25: 11; 10 x 25: 17; 12 x 25: 22); WhatsApp manda o PDF novo e diz "a partir de 8 x 15"; "todas em 3D" virou "mobiliadas e desenhadas no lote" (o 3D é o último passo) |
 
+| 20/11/2026 | (loop) Ferramenta de venda | Calculadora de lote para o parceiro: frente x fundo → casas que cabem, com página do e-book e mensagem pronta ([`ebook/vendas/calculadora-lote.html`](ebook/vendas/calculadora-lote.html), página privada no claude.ai: https://claude.ai/artifact/1aTFXGXffcoWXPeBXsdYA6) |
+
 ## Em aberto (esperando o dono)
+
+- Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.
+- Os 5 vídeos de anúncio (`video/saida/v1` a `v5`) usam o 3D antigo da Casa Compacta: refazer quando o 3D for liberado.
 
 - Testar a palavra do comentário "PLANTA" contra "LOTE" ([`ebook/referencias/concorrentes.md`](ebook/referencias/concorrentes.md)): "PLANTA" também é usada por criadores de jardinagem.
 

@@ -15,6 +15,8 @@ Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 55 m², 2 q
 Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
 
 > Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
+>
+> **Para responder rápido:** abra a [calculadora de lote](calculadora-lote.html) (também publicada como página no claude.ai, a pedir ao dono), digite frente e fundo e copie a mensagem pronta com as casas que cabem.
 
 ## Dia 0, depois da resposta: as plantas que cabem no terreno
 

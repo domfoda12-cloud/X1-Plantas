@@ -1,0 +1,88 @@
+<title>Calculadora de Lote</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Ferramenta do parceiro no WhatsApp: duas medidas entram, a lista de casas sai pronta para copiar. */
+:root { --fundo:#EEF2F7; --texto:#131C27; --texto-2:#4D5A6A; --cartao:#FFFFFF; --borda:#D3DCE6; --azul:#0B4FA8; --fita:#FFC857; --fita-tinta:#1D1A12; --ok:#1F7A4D;
+  --tit:"Bricolage Grotesque","Inter",system-ui,sans-serif; --corpo:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fundo:#0B1521; --texto:#E6ECF3; --texto-2:#A0B0C2; --cartao:#122236; --borda:#24374E; --azul:#7FB2F0; --ok:#5CC48E; color-scheme:dark } }
+:root[data-theme="dark"] { --fundo:#0B1521; --texto:#E6ECF3; --texto-2:#A0B0C2; --cartao:#122236; --borda:#24374E; --azul:#7FB2F0; --ok:#5CC48E; color-scheme:dark }
+* { box-sizing:border-box }
+body { background:var(--fundo); color:var(--texto); font-family:var(--corpo); font-size:15px; line-height:1.5 }
+.wrap { max-width:860px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:24px 56px; display:grid; gap:22px }
+h1 { font-family:var(--tit); font-weight:800; font-size:clamp(28px,5vw,40px); line-height:1.05; margin:0; letter-spacing:-.02em; text-wrap:balance }
+.sub { color:var(--texto-2); margin:0; max-width:62ch }
+.medidas { display:flex; flex-wrap:wrap; gap:12px; align-items:end; background:var(--fita); color:var(--fita-tinta); padding:16px; border-radius:10px }
+.medidas label { display:grid; gap:4px; font-weight:600; font-size:13px }
+.medidas input { font-family:var(--mono); font-size:24px; font-weight:700; width:120px; padding:6px 10px; border:2px solid var(--fita-tinta); border-radius:6px; background:#FFF8E6; color:var(--fita-tinta) }
+.medidas input:focus-visible { outline:3px solid var(--azul); outline-offset:2px }
+.x { font-family:var(--mono); font-size:24px; font-weight:700; padding-bottom:8px }
+.resumo { font-size:18px; font-weight:600 }
+.lista { display:grid; gap:8px; list-style:none; padding:0; margin:0 }
+.lista li { background:var(--cartao); border:1px solid var(--borda); border-radius:8px; padding:10px 14px; display:grid; grid-template-columns:56px 1fr auto; gap:4px 12px; align-items:baseline }
+.lista b.id { font-family:var(--mono); color:var(--azul) }
+.lista .nome { font-weight:600 }
+.lista .info { grid-column:2; color:var(--texto-2); font-size:13.5px }
+.lista .pag { font-family:var(--mono); font-size:13px; color:var(--texto-2); grid-row:1 / span 2; grid-column:3 }
+.msg { background:var(--cartao); border:1px dashed var(--borda); border-radius:8px; padding:14px; white-space:pre-wrap; font-size:14px; min-width:0 }
+.acoes { display:flex; gap:10px; flex-wrap:wrap; align-items:center }
+button { font:inherit; font-weight:600; background:var(--azul); color:#fff; border:0; border-radius:6px; padding:10px 16px; cursor:pointer }
+:root[data-theme="dark"] button { color:#0B1521 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) button { color:#0B1521 } }
+button:focus-visible { outline:3px solid var(--fita); outline-offset:2px }
+.status { color:var(--ok); font-weight:600; font-size:14px }
+.nota { font-size:12.5px; color:var(--texto-2); margin:0 }
+.vazio { color:var(--texto-2) }
+@media (max-width:520px) { .lista li { grid-template-columns:48px 1fr } .lista .pag { grid-row:auto; grid-column:2 } }
+</style>
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-2)">Para o WhatsApp · e-book X1-Plantas</span>
+    <h1>Qual casa cabe neste lote?</h1>
+    <p class="sub">Digite a frente e o fundo que o cliente mandou. A lista e a mensagem pronta aparecem embaixo.</p>
+  </header>
+  <form class="medidas" id="form" autocomplete="off">
+    <label for="frente">Frente (m)<input id="frente" inputmode="decimal" value="8"></label>
+    <span class="x">x</span>
+    <label for="fundo">Fundo (m)<input id="fundo" inputmode="decimal" value="25"></label>
+  </form>
+  <p class="resumo" id="resumo"></p>
+  <ul class="lista" id="lista"></ul>
+  <div style="display:grid;gap:8px">
+    <strong>Mensagem pronta</strong>
+    <div class="msg" id="msg"></div>
+    <div class="acoes"><button type="button" id="copiar">Copiar mensagem</button><span class="status" id="status" aria-live="polite"></span></div>
+  </div>
+  <p class="nota">Conta feita com os recuos de referência do e-book: 3 m na frente, 1,5 m nos fundos e numa lateral (nas casas de corredor, nas duas; na de esquina, 3 m na rua lateral). A prefeitura do cliente pode pedir recuos maiores. Lote mínimo de cada casa conferido pelo validador em 20/11/2026.</p>
+</div>
+<script>
+const CASAS = [{"id": "C01", "nome": "Casa Compacta", "area": 55, "q": "2 quartos", "b": 1, "fr": 8.0, "fu": 13.0, "pag": 10, "dest": "A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto"}, {"id": "C02", "nome": "Casa Studio", "area": 32, "q": "studio", "b": 1, "fr": 6.0, "fu": 11.7, "pag": 12, "dest": ""}, {"id": "C03", "nome": "Casa Inicial", "area": 41, "q": "1 quarto (+1 depois)", "b": 1, "fr": 7.0, "fu": 15.5, "pag": 14, "dest": ""}, {"id": "C04", "nome": "Casa Duo", "area": 48, "q": "2 quartos", "b": 1, "fr": 7.5, "fu": 14.1, "pag": 16, "dest": "Varanda na frente e dois quartos do mesmo tamanho"}, {"id": "C05", "nome": "Casa Popular", "area": 47, "q": "2 quartos", "b": 1, "fr": 7.5, "fu": 12.3, "pag": 18, "dest": "A casa de 2 quartos mais enxuta, sem desperdiçar um metro"}, {"id": "C06", "nome": "Casa Compacta Suíte", "area": 57, "q": "2 quartos (1 suíte)", "b": 2, "fr": 9.0, "fu": 12.1, "pag": 20, "dest": ""}, {"id": "C07", "nome": "Casa Compacta Varanda", "area": 55, "q": "2 quartos", "b": 1, "fr": 8.0, "fu": 14.8, "pag": 22, "dest": "Varanda larga para a rede e a cadeira de fim de tarde"}, {"id": "E01", "nome": "Casa Estreita", "area": 58, "q": "2 quartos (1 suíte)", "b": 2, "fr": 8.0, "fu": 23.7, "pag": 24, "dest": "Garagem na frente e todos os cômodos abrindo para o corredor"}, {"id": "E02", "nome": "Casa Corredor", "area": 40, "q": "2 quartos", "b": 1, "fr": 6.6, "fu": 19.8, "pag": 26, "dest": ""}, {"id": "E03", "nome": "Casa Fita", "area": 34, "q": "1 quarto", "b": 1, "fr": 5.0, "fu": 17.7, "pag": 28, "dest": "Cabe em lote de 5 m de frente: todas as janelas dão para o corredor"}, {"id": "E04", "nome": "Casa Pátio", "area": 55, "q": "2 quartos", "b": 1, "fr": 9.0, "fu": 12.5, "pag": 30, "dest": "Pátio de luz entre os quartos: ventilação cruzada e privacidade"}, {"id": "E05", "nome": "Casa Estreita Suíte", "area": 58, "q": "2 quartos (1 suíte)", "b": 2, "fr": 7.9, "fu": 19.5, "pag": 32, "dest": ""}, {"id": "E06", "nome": "Casa Estreita Gourmet", "area": 68, "q": "2 quartos (1 suíte)", "b": 2, "fr": 8.6, "fu": 22.5, "pag": 34, "dest": "Área gourmet nos fundos, aberta para o corredor"}, {"id": "E07", "nome": "Casa Estreita 3 Quartos", "area": 72, "q": "3 quartos (1 suíte)", "b": 2, "fr": 8.0, "fu": 22.4, "pag": 36, "dest": "3 quartos, um deles suíte, num lote de 8 m de frente"}, {"id": "F01", "nome": "Casa Família Compacta", "area": 68, "q": "3 quartos", "b": 1, "fr": 9.9, "fu": 12.6, "pag": 38, "dest": ""}, {"id": "F02", "nome": "Casa Integrada", "area": 86, "q": "3 quartos (1 suíte)", "b": 2, "fr": 11.5, "fu": 13.1, "pag": 40, "dest": ""}, {"id": "F03", "nome": "Casa Família", "area": 78, "q": "3 quartos (1 suíte)", "b": 2, "fr": 10.9, "fu": 14.6, "pag": 42, "dest": ""}, {"id": "F04", "nome": "Casa Família Suíte", "area": 80, "q": "3 quartos (1 suíte)", "b": 2, "fr": 10.9, "fu": 18.0, "pag": 44, "dest": ""}, {"id": "F05", "nome": "Casa em L", "area": 90, "q": "3 quartos (1 suíte)", "b": 2, "fr": 12.9, "fu": 13.1, "pag": 46, "dest": ""}, {"id": "S03", "nome": "Casa Acessível", "area": 75, "q": "2 quartos", "b": 1, "fr": 10.3, "fu": 13.0, "pag": 48, "dest": "Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas"}, {"id": "S04", "nome": "Casa Home Office", "area": 66, "q": "2 quartos + escritório", "b": 1, "fr": 9.3, "fu": 15.3, "pag": 50, "dest": "Escritório com porta para a rua: cliente entra sem passar pela casa"}, {"id": "S05", "nome": "Casa de Praia", "area": 59, "q": "2 quartos (1 suíte)", "b": 2, "fr": 8.9, "fu": 14.9, "pag": 52, "dest": "Varandão na frente e ventilação cruzada em todos os cômodos"}, {"id": "S07", "nome": "Casa Gourmet", "area": 74, "q": "3 quartos (1 suíte)", "b": 2, "fr": 10.9, "fu": 13.1, "pag": 54, "dest": "Cozinha aberta para a área gourmet, a casa que recebe"}, {"id": "S09", "nome": "Casa de Esquina", "area": 78, "q": "3 quartos (1 suíte)", "b": 2, "fr": 13.9, "fu": 14.6, "pag": 56, "dest": ""}];
+const num = (v) => parseFloat(String(v).replace(',', '.'));
+const fmt = (v) => String(v).replace('.', ',');
+function atualizar() {
+  const f = num(document.getElementById('frente').value), d = num(document.getElementById('fundo').value);
+  const lista = document.getElementById('lista'); lista.replaceChildren();
+  const res = document.getElementById('resumo'), msg = document.getElementById('msg');
+  if (!(f > 0 && d > 0)) { res.textContent = 'Digite a frente e o fundo em metros.'; msg.textContent = ''; return; }
+  const cabem = CASAS.filter(c => c.fr <= f + 1e-9 && c.fu <= d + 1e-9).sort((a, b) => b.area - a.area);
+  res.textContent = cabem.length ? `${cabem.length} casa${cabem.length > 1 ? 's' : ''} cabe${cabem.length > 1 ? 'm' : ''} num lote de ${fmt(f)} x ${fmt(d)} m` : `Nenhuma casa do e-book cabe em ${fmt(f)} x ${fmt(d)} m com os recuos de referência.`;
+  for (const c of cabem) {
+    const li = document.createElement('li');
+    li.innerHTML = `<b class="id">${c.id}</b><span class="nome"></span><span class="pag">p. ${c.pag}</span><span class="info"></span>`;
+    li.querySelector('.nome').textContent = c.nome;
+    li.querySelector('.info').textContent = `${c.area} m² · ${c.q} · ${c.b} banheiro${c.b > 1 ? 's' : ''}`;
+    lista.append(li);
+  }
+  if (!cabem.length) { msg.textContent = `Com ${fmt(f)} x ${fmt(d)} m e os recuos de referência, nenhuma casa do e-book cabe. Me confirma as medidas? Se a sua prefeitura deixar encostar na divisa, a conta muda.`; return; }
+  const top = cabem.slice(0, 3).map(c => `🏠 ${c.nome} · ${c.area} m² · ${c.q}`).join('\n');
+  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m cabem ${cabem.length} casa${cabem.length > 1 ? 's' : ''} do e-book, com os recuos de referência. Algumas:\n\n${top}\n\nCada uma vem mobiliada, desenhada no lote e com o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\nQuer que eu te mande uma delas inteira?`;
+}
+document.getElementById('form').addEventListener('input', atualizar);
+document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
+document.getElementById('copiar').addEventListener('click', () => {
+  const t = document.getElementById('msg').textContent, st = document.getElementById('status');
+  const sel = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById('msg')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); st.textContent = 'Texto selecionado: copie com o menu do aparelho.'; };
+  try { navigator.clipboard.writeText(t).then(() => { st.textContent = 'Copiado.'; }, sel); } catch (e) { sel(); }
+});
+atualizar();
+</script>
