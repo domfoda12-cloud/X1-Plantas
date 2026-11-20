@@ -625,6 +625,60 @@ def _porta_ext(d, c, lado, pos, X, Y, escala):
         d.rectangle([X(x) - 5, Y(cy - larg / 2), X(x) + 5, Y(cy + larg / 2)], fill="#FFC857", outline="#111")
 
 
+ORI_NOME = {"norte": "norte", "sul": "sul", "leste": "leste", "oeste": "oeste"}
+
+
+def pensou(planta):
+    """Três decisões do arquiteto, em português, a partir do que o validador mediu."""
+    r = planta["_r"]
+    m = r.metricas
+    cs = planta["comodos"]
+    tipos = [c["tipo"] for c in cs]
+    out = []
+    o = m["orientacao"]
+    out.append(f"Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o "
+               f"{ORI_NOME[o['melhor']]} e pior para o {ORI_NOME[o['pior']]}. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.")
+    if any(t == "patio" for t in tipos):
+        out.append("Ventilação cruzada: o pátio de luz entre os quartos faz o ar entrar por um lado e sair pelo outro, e dá luz sem abrir a casa para o vizinho.")
+    elif any(t == "varanda" for t in tipos):
+        out.append("Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.")
+    else:
+        out.append("Luz e ar: sala, cozinha e quartos têm janela para fora, nas proporções que o validador confere (um sexto do piso nos cômodos de permanência).")
+    molhados = [c for c in cs if c["tipo"] in MOLHADOS]
+    if molhados:
+        out.append("Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.")
+    if planta.get("servico_externo") or planta["id"] in ("C03",):
+        out.append("A casa cresce: a planta já deixa o lugar do quarto 2 nos fundos, sem quebrar nada do que foi construído.")
+    elif m["circulacao"]:
+        out.append(f"Circulação: só {m['circulacao'] * 100:.0f}% da área é corredor. O resto é cômodo que você usa.")
+    else:
+        out.append("Corredor coberto: todos os cômodos abrem para ele, então não existe corredor interno comendo metro quadrado.")
+    return out[:3] if len(out) > 3 else out
+
+
+def cmd_fichas():
+    L = ["# As 24 plantas: ficha de cada uma", "",
+         "> Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). "
+         "Regras: [`../referencias/regras-do-arquiteto.md`](../referencias/regras-do-arquiteto.md). "
+         "**Plantas de referência**: o projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.", ""]
+    for p in carregar():
+        m = p["_r"].metricas
+        L += [f"## {p['id']} · {p['nome']}", "",
+              f"![{p['id']}](previas/{p['id']}.png)", "",
+              f"**{m['area_fechada']:.0f} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · lote a partir de "
+              f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** · frente para o **{m['orientacao']['melhor']}**", ""]
+        if p.get("destaque"):
+            L += [f"*{p['destaque']}*", ""]
+        L += ["**O que o arquiteto pensou**", ""] + [f"- {t}" for t in pensou(p)]
+        if p["_r"].avisos:
+            L += ["", "**Atenção**", ""] + [f"- {a}" for a in p["_r"].avisos]
+        if p["_r"].info:
+            L += [""] + [f"- {a}" for a in p["_r"].info]
+        L += [""]
+    (PASTA / "PLANTAS.md").write_text("\n".join(L), encoding="utf-8")
+    print("ebook/plantas/PLANTAS.md gerado")
+
+
 # --------------------------------------------------------------------------------------
 # Linha de comando
 # --------------------------------------------------------------------------------------
@@ -670,6 +724,7 @@ def cmd_exportar():
     for p in plantas:
         r = p["_r"]
         dado = {k: v for k, v in p.items() if k != "_r"}
+        dado["pensou"] = pensou(p)
         dado["validacao"] = {"erros": r.erros, "avisos": r.avisos, "info": r.info, "metricas": r.metricas}
         (saida / f"{p['id']}.json").write_text(json.dumps(dado, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(plantas)} arquivos em {saida}")
@@ -693,6 +748,8 @@ if __name__ == "__main__":
         cmd_previa(args)
     elif cmd == "exportar":
         cmd_exportar()
+    elif cmd == "fichas":
+        cmd_fichas()
     elif cmd == "resumo":
         cmd_resumo()
     else:

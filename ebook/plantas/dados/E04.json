@@ -151,6 +151,11 @@
   ]
  },
  "destaque": "Pátio de luz entre os quartos: ventilação cruzada e privacidade",
+ "pensou": [
+  "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.",
+  "Ventilação cruzada: o pátio de luz entre os quartos faz o ar entrar por um lado e sair pelo outro, e dá luz sem abrir a casa para o vizinho.",
+  "Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar."
+ ],
  "validacao": {
   "erros": [],
   "avisos": [],

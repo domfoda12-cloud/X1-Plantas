@@ -23,6 +23,7 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 - **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso.
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto", ligada ao gancho dos vídeos ("os R$ 1.000 que um arquiteto te economizaria").
 - **Grande variação:** compactas, terreno estreito, família, especiais (edícula, geminadas, acessível, home office, praia, campo, esquina) e sobrados. Ver [`catalogo.md`](catalogo.md).
+- **Plantas já desenhadas (24, lançamentos 1 e 2):** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam pelo validador de arquiteto ([`referencias/regras-do-arquiteto.md`](referencias/regras-do-arquiteto.md)). Público e persona: [`referencias/persona-e-mercado.md`](referencias/persona-e-mercado.md). Linguagem, visual e animação: [`referencias/linguagem-visual-e-animacao.md`](referencias/linguagem-visual-e-animacao.md). Análise dos catálogos de porcelanato: [`referencias/analise-catalogos-porcelanato.md`](referencias/analise-catalogos-porcelanato.md).
 - **Idioma e moeda:** português do Brasil, preços em R$.
 
 ## 2. Estrutura do e-book

@@ -155,6 +155,11 @@
   ]
  },
  "destaque": "Varanda larga para a rede, a cadeira e o carro parado na chuva",
+ "pensou": [
+  "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.",
+  "Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.",
+  "Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar."
+ ],
  "validacao": {
   "erros": [],
   "avisos": [],
