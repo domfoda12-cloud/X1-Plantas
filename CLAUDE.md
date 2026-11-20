@@ -14,6 +14,10 @@ O comprador fica feliz quando acha a casa que cabe no lote dele, entende por qu�
 
 **A prioridade é sempre a maior qualidade** (decisão do dono, 20/11/2026). Economia vale para rascunho, teste e retrabalho evitável, nunca para a peça final: imagem, vídeo, PDF e texto que vão ao público saem na melhor configuração disponível. Em dúvida entre mais barato e melhor, escolha melhor.
 
+## Uma coisa por vez
+
+Termine uma frente antes de abrir outra (decisão do dono, 20/11/2026). Ordem: **e-book → animações → vídeo** ([`ORCAMENTO.md`](ORCAMENTO.md)). Dentro da frente, uma tarefa de cada vez, entregue e salva antes da próxima.
+
 ## O Conselho decide quais skills e ferramentas usar
 
 Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
