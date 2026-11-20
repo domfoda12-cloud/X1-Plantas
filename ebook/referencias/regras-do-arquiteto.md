@@ -4,24 +4,28 @@
 >
 > **São regras de referência.** Recuo, taxa de ocupação, iluminação e áreas mínimas mudam por cidade e por zona bioclimática (NBR 15220). Elas não substituem o código de obras local nem um projeto assinado por arquiteto ou engenheiro. Um arquiteto registrado deve revisar as 24 plantas e este texto antes da venda.
 
-## 1. Dimensões
+## 1. Dimensões (medidas **por dentro** das paredes)
 
-| Cômodo | Mínimo que usamos | Origem |
-|---|---|---|
-| Sala | 10 m², lado 2,6 m | Acima do mínimo legal (NBR 15575 pede lado de 2,40 m; COE-SP, 5 m²) |
-| Quarto de casal | 8,5 m², lado 2,6 m | Cama 1,40 x 1,90 m com 0,50 m de circulação ao redor (NBR 15575) |
-| Quarto | 7 m², lado 2,4 m | Mesma lógica, cama de solteiro |
-| Cozinha | 4,5 m², lado 1,7 m | Cabe o círculo de 1,50 m e 0,85 m livres na frente de pia e fogão |
-| Banheiro | 2,4 m², lado 1,2 m (1,5 m na casa acessível) | Cabe o círculo de 0,90 m; acessível pede giro de 1,50 m |
-| Serviço | 2 m², lado 1,2 m | Tanque e máquina |
-| Circulação | 0,90 m, 1,20 m na casa acessível; **no máximo 14%** da área | Corredor não pode virar a casa |
-| Pé-direito | 2,50 m em cômodo de permanência | COE-SP; verificar no município |
+Desde o rascunho 1, as medidas da casa são **por fora** e cada cômodo perde a parede por dentro: parede externa de 15 cm inteira, metade da interna de 12 cm (`PAREDE_EXT` e `PAREDE_INT` em `ferramentas/plantas.py`). Os mínimos abaixo (`MINIMOS_UTIL`) são de área e lado **livres**. Abaixo do limite de conforto (`CONFORTO_UTIL`), a casa passa com aviso para o engenheiro conferir a mobília.
+
+| Cômodo | Mínimo livre (erro abaixo disso) | Conforto (aviso abaixo disso) | Origem |
+|---|---|---|---|
+| Sala | 8 m², lado 2,30 m | 9 m², lado 2,50 m | NBR 15575 Anexo G: sofá de 2 lugares 1,20 x 0,70 e estante |
+| Quarto de casal | 7 m², lado 2,30 m | 8 m², lado **2,40 m** | Cama 1,40 + 0,50 + 0,50 de passagem (Anexo G) |
+| Quarto | 6 m², lado 2,00 m | | Cama 0,80 x 1,90, guarda-roupa 1,50 x 0,50 |
+| Cozinha | 4 m², lado 1,50 m | | 0,85 m livres na frente de pia, fogão e geladeira (Anexo G) |
+| Banheiro | 1,8 m², lado 1,00 m | (estudo cita 1,10 m fora o box: ver a [apostila](arquiteto-fontes-brasileiras.md), seção 3) | Vaso 0,60 x 0,60, lavatório |
+| Serviço | 1,5 m², lado 0,95 m | | Tanque 0,52 x 0,53 e máquina 0,60 x 0,65 |
+| Circulação | 0,80 m livres; **no máximo 14%** da área | | Corredor não pode virar a casa |
+| Casa acessível (S03) | Banheiro e circulação com **1,50 m livres** | | Giro de cadeira de rodas (NBR 9050); o resto da norma é do engenheiro |
+| Pé-direito | 2,50 m em cômodo de permanência | | COE-SP; verificar no município |
 
 ## 2. Luz e ventilação
 
 - Janela de **1/6 do piso** em sala, quarto e escritório; **1/8** em cozinha, serviço e banheiro (valores típicos de códigos de obras).
 - Janela só em parede que dá para fora **e** que não seja a divisa. A parede da esquerda das plantas é divisa (sem janela), salvo as que declaram recuo dos dois lados.
 - Banheiro sem janela só com exaustão mecânica (aparece como aviso, e nenhuma das 24 depende disso).
+- **O clima manda na janela** (NBR 15220-3, orientativa): abertura **efetiva** de ventilação de 15% a 25% do piso nas zonas 1 a 6, pequena (10% a 15%) na zona 7 e grande (mais de 40%) na zona 8 (Rio, Salvador, Recife, Fortaleza, Manaus, Belém). Nossa janela de 1/6 do piso, de correr, dá perto de 8% de abertura efetiva: o arquiteto da obra aumenta a janela, usa veneziana e beiral onde o clima pede. Detalhes na [apostila](arquiteto-fontes-brasileiras.md), seção 2.
 
 ## 3. Circulação e privacidade
 
@@ -60,8 +64,8 @@ Rodar: `python3 ferramentas/plantas.py validar`. Desenhar: `python3 ferramentas/
 
 ## 9. O que o validador NÃO faz
 
-Não calcula estrutura, instalações, conforto térmico detalhado, taxa de ocupação nem coeficiente de aproveitamento do município, não confere acessibilidade além do que está na seção 1 (a S03 segue 1,20 m e giro de 1,50 m, não a NBR 9050 inteira) e não sabe o recuo da sua cidade.
+Não calcula estrutura, instalações, conforto térmico detalhado, taxa de ocupação nem coeficiente de aproveitamento do município. Não confere acessibilidade além do giro de 1,50 m da S03, nem a NBR 9050 inteira. Não mede ainda a ventilação cruzada (janelas em paredes opostas) nem a abertura efetiva por zona bioclimática. E não sabe o recuo da sua cidade.
 
 ## Fontes
 
-IBGE (Censo 2022); Lei 6.766/1979; Portaria MCID 725/2023; COE São Paulo 2017 e NBR 15575 (dimensões, pelo resumo de um arquiteto); Gelker Ribeiro, arquiteto, sobre orientação solar; NBR 15220 (zonas bioclimáticas). Confira os textos oficiais antes de afirmar em anúncio.
+Apostila com as fontes brasileiras lidas (NBR 15220-3, nota técnica do LabEEE/UFSC, Anexo G da NBR 15575, Lelé): [`arquiteto-fontes-brasileiras.md`](arquiteto-fontes-brasileiras.md). IBGE (Censo 2022); Lei 6.766/1979; Portaria MCID 725/2023; COE São Paulo 2017 e NBR 15575 (dimensões, pelo resumo de um arquiteto); Gelker Ribeiro, arquiteto, sobre orientação solar; NBR 15220 (zonas bioclimáticas). Confira os textos oficiais antes de afirmar em anúncio.
