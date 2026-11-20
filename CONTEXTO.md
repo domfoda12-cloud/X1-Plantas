@@ -41,6 +41,13 @@
 - Atualizar o relatório jurídico com Caixa e Confea (pedido antes, sem resposta).
 - Reels 1 e 6 usam o vídeo 3D antigo da Casa Compacta: usar o B-roll do e-book ou esperar o 3D novo.
 
+## Ferramentas: o que cada uma é (e o que não é)
+
+- **Skills do Ponytail** (`/ponytail`, `/ponytail-review`, `/ponytail-audit`): só para o código das ferramentas. O texto que vai ao público é do Redator e do Revisor.
+- **AgentScope:** não é skill do Claude Code. É uma biblioteca em Python para construir agentes próprios num servidor, pagos por token na API. Não foi instalado; só as ideias dele entraram (Conselho, roteiro, modelo por tarefa). Pode servir um dia para um agente de WhatsApp num servidor do dono.
+- **product-demo-agent-toolkit:** grava vídeo de **página web** (calculadora do parceiro, leitor do e-book) com cursor humano, roteiro e locução. É da frente de vídeo. **Não instalado:** a proteção automática do Claude Code bloqueia pacote de terceiros que traz skills para o agente. Não contorne; o dono libera trocando o modo da sessão para "Accept edits" ou instalando ele mesmo.
+- **Onde roda:** esta sessão roda na nuvem da Anthropic; servidor próprio não economiza token. O que economiza é ler pouco (o seu `contexto/<papel>.md` e o último resumo em `contexto/entregas/`) e usar o modelo certo (Opus para decidir e revisar, Sonnet para o rotineiro, Fable para o que é muito difícil).
+
 ## Mapa: onde está cada coisa
 
 | Quero saber… | Abra |
