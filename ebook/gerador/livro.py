@@ -324,13 +324,13 @@ def fachada_bloco(p):
     n = len(avisos_juntos(p))
     corredor = any(c["id"] == "corr" for c in p["comodos"])
     aperto = n + (1 if corredor else 0) + (1 if p["_r"].metricas.get("area_coberta_aberta") else 0)
-    alt = 62 if not n else (50 if aperto < 3 else 40)
+    alt = 62 if not n else (36 if aperto < 3 else 30)
     if (FACHADAS / f"{p['id']}.png").exists():
         rua = (f'<h4>Vista da rua</h4>'
                f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}')
     else:
         rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg" style="height:{alt}mm">{svg_fachada(p)}</div>'
-    v3d = foto(p["id"], alt, "Imagem ilustrativa do modelo 3D, sem telhado.", "center", VISTAS3D)
+    v3d = foto(p["id"], alt, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D)
     if not v3d:
         return f'<div class="fachada">{rua}</div>'
     return f'<div class="fachada vistas"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'

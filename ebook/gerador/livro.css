@@ -141,6 +141,9 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .vistas .v-rua { flex: 1 1 auto; min-width: 0; }
 .vistas .v-3d { flex: 0 0 auto; }
 .vistas .foto { width: 100%; }
-.vistas .v-3d .foto { aspect-ratio: 4 / 5; width: auto; }
+.vistas .v-3d { max-width: 52%; }
+.vistas .v-3d .foto { width: auto; }
+.vistas .v-3d .foto img { width: auto; max-width: 100%; height: 100%; object-fit: contain; }
 .vistas .rua-svg { display: flex; align-items: center; }
 .vistas .rua-svg svg { max-height: 100%; width: 100%; }
+.vistas .v-3d .foto figcaption { font-size: 5pt; right: 1mm; bottom: 1mm; padding: .2mm 1mm; }
