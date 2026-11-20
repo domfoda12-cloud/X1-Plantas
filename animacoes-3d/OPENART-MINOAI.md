@@ -140,3 +140,17 @@ A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica pa
 - **Casa só a partir da nossa imagem.** O rascunho de texto da "casa que cresce" inventou uma casa que não existe no e-book: o Arquiteto vetou. Refeito com a **vista da rua da C03** como referência (subida sem texto: `ebook/visual/openart/referencias/c03-fachada.png`), saiu a mesma frente: porta no canto, janela de duas folhas, platibanda. É o caminho para todas as fachadas.
 - **Limite do plano:** mande no máximo 4 imagens por vez. O 5º item de um lote é recusado sem cobrança.
 - **Gasto da rodada:** 4 rascunhos a 10 + 3 rascunhos a 5 + 6 finais em 4K média a 20 a 22 = cerca de 180 créditos para 6 imagens finais.
+
+### Teste de qualidade lado a lado (20/11/2026) e a configuração da peça final
+
+Mesma foto de partida (o rascunho do lote), dois modelos:
+
+| | GPT Image 2.5 Sunburst, 4K, extra-alta | Kling 3 Omni, 4K |
+|---|---|---|
+| Pixels entregues | 2048 x 2560 | **3520 x 4672** |
+| Créditos | 123 | 20 |
+| Cor e luz | **Dourada, rica, parece câmera boa** | Mais apagada |
+| Detalhe ampliado | **Grama e terra nítidas** | Leve borrado típico de IA |
+| Fidelidade ao rascunho | Alta | Alta |
+
+**Decisão (qualidade em primeiro lugar):** peça final no **Sunburst 4K extra-alta**. Os 2048 x 2560 sobram para o feed (1080 x 1350) e o recorte 9:16 sai com 1440 x 2560, acima do Full HD vertical. O Kling 3 Omni 4K fica para quando o tamanho em pixels importar mais que a cor (impressão grande, fundo de tela 4K). A qualidade **máxima** (273 créditos) está em teste na imagem do lote; ela só vira padrão se a diferença aparecer.
