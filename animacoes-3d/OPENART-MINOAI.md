@@ -153,4 +153,6 @@ Mesma foto de partida (o rascunho do lote), dois modelos:
 | Detalhe ampliado | **Grama e terra nítidas** | Leve borrado típico de IA |
 | Fidelidade ao rascunho | Alta | Alta |
 
-**Decisão (qualidade em primeiro lugar):** peça final no **Sunburst 4K extra-alta**. Os 2048 x 2560 sobram para o feed (1080 x 1350) e o recorte 9:16 sai com 1440 x 2560, acima do Full HD vertical. O Kling 3 Omni 4K fica para quando o tamanho em pixels importar mais que a cor (impressão grande, fundo de tela 4K). A qualidade **máxima** (273 créditos) está em teste na imagem do lote; ela só vira padrão se a diferença aparecer.
+**Decisão (qualidade em primeiro lugar):** peça final no **Sunburst 4K extra-alta**. Os 2048 x 2560 sobram para o feed (1080 x 1350) e o recorte 9:16 sai com 1440 x 2560, acima do Full HD vertical. O Kling 3 Omni 4K fica para quando o tamanho em pixels importar mais que a cor (impressão grande, fundo de tela 4K). **Teste da qualidade máxima (273 créditos) contra a extra-alta (123), mesma foto:** praticamente iguais. A máxima deixa as juntas dos blocos um pouco mais limpas, nada que se veja no celular. **Padrão das finais: extra-alta. Máxima só na peça principal** (capa do e-book, imagem do anúncio campeão). A final do lote ficou na máxima porque o teste já estava pago.
+
+**Configuração das finais, em resumo:** GPT Image 2.5 Sunburst, imagem para imagem a partir do rascunho aprovado, 4K, qualidade extra-alta, formato 4:5; recortes 9:16 e 1:1 com `python3 ferramentas/recortes.py`.
