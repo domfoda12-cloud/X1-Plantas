@@ -149,12 +149,51 @@
  ],
  "validacao": {
   "erros": [],
-  "avisos": [],
+  "avisos": [
+   "Sala fica com 2,79 x 3,19 m livres (8,9 m²): funciona, mas é apertado; o engenheiro confere a mobília"
+  ],
   "info": [],
   "metricas": {
    "area_fechada": 46.8,
    "area_total": 46.8,
    "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     2.79,
+     3.19,
+     8.9
+    ],
+    "cozinha": [
+     1.68,
+     3.19,
+     5.4
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     3.69,
+     1.08,
+     4.0
+    ],
+    "banho": [
+     1.89,
+     1.08,
+     2.0
+    ],
+    "quarto1": [
+     2.79,
+     2.99,
+     8.3
+    ],
+    "quarto2": [
+     2.79,
+     2.99,
+     8.3
+    ]
+   },
    "luz": {
     "sala": 0.21,
     "cozinha": 0.16,

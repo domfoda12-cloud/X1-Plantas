@@ -65,7 +65,11 @@
    "x0": 0.0,
    "y0": 6.7,
    "x1": 2.6,
-   "y1": 10.1
+   "y1": 10.1,
+   "pref": [
+    "esq",
+    "fundos"
+   ]
   },
   {
    "id": "quarto3",
@@ -170,7 +174,7 @@
   ],
   "quarto2": [
    [
-    "fundos",
+    "esq",
     1.5
    ]
   ],
@@ -211,6 +215,58 @@
    "area_fechada": 78.0,
    "area_total": 94.9,
    "area_coberta_aberta": 16.9,
+   "util": {
+    "varanda": [
+     9.4,
+     1.8,
+     16.9
+    ],
+    "sala": [
+     4.19,
+     3.59,
+     15.0
+    ],
+    "cozinha": [
+     2.68,
+     3.59,
+     9.6
+    ],
+    "servico": [
+     1.99,
+     1.79,
+     3.6
+    ],
+    "banho": [
+     1.99,
+     1.68,
+     3.3
+    ],
+    "circ": [
+     9.1,
+     0.98,
+     8.9
+    ],
+    "quarto2": [
+     2.39,
+     3.19,
+     7.6
+    ],
+    "quarto3": [
+     2.48,
+     3.19,
+     7.9
+    ],
+    "quarto1": [
+     2.78,
+     3.19,
+     8.9
+    ],
+    "bsuite": [
+     1.09,
+     3.19,
+     3.5
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,
@@ -239,13 +295,13 @@
    "taxa_ocupacao": 0.47,
    "orientacao": {
     "melhor": "sul",
-    "segunda": "norte",
+    "segunda": "oeste",
     "pior": "leste",
     "pontos": {
-     "norte": 12.9,
-     "leste": -5.9,
-     "sul": 17.4,
-     "oeste": 12.8
+     "norte": 6.9,
+     "leste": 1.6,
+     "sul": 18.9,
+     "oeste": 9.8
     }
    }
   }

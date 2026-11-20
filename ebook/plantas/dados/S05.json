@@ -175,7 +175,7 @@
    ]
   ]
  },
- "destaque": "Varandão na frente e ventilação cruzada em todos os cômodos",
+ "destaque": "Varandão na frente e suíte para o casal",
  "pensou": [
   "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
@@ -183,12 +183,61 @@
  ],
  "validacao": {
   "erros": [],
-  "avisos": [],
+  "avisos": [
+   "Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho"
+  ],
   "info": [],
   "metricas": {
    "area_fechada": 59.2,
    "area_total": 77.0,
    "area_coberta_aberta": 17.8,
+   "util": {
+    "varanda": [
+     7.4,
+     2.4,
+     17.8
+    ],
+    "sala": [
+     3.59,
+     3.39,
+     12.2
+    ],
+    "cozinha": [
+     2.28,
+     3.39,
+     7.7
+    ],
+    "servico": [
+     0.99,
+     3.39,
+     3.4
+    ],
+    "circ": [
+     4.79,
+     1.08,
+     5.2
+    ],
+    "banho": [
+     2.19,
+     1.08,
+     2.4
+    ],
+    "quarto2": [
+     2.79,
+     2.99,
+     8.3
+    ],
+    "quarto1": [
+     2.88,
+     2.99,
+     8.6
+    ],
+    "bsuite": [
+     1.19,
+     2.99,
+     3.6
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,

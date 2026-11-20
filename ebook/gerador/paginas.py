@@ -77,7 +77,7 @@ ERROS = [
 GLOSSARIO = [
     ("Área construída", "Área total da casa, medida por fora das paredes. É a que conta para a prefeitura e para o orçamento."),
     ("Área útil", "Área de piso por dentro das paredes, a que você realmente usa. É menor que a construída."),
-    ("Área fechada", "A parte da casa com paredes e telhado, sem contar varanda nem garagem."),
+    ("Área fechada", "A parte da casa com paredes e telhado, medida por fora, sem contar varanda nem garagem."),
     ("Cota", "Número na planta que mostra uma medida, em metros. Ex.: 6,50 m de frente."),
     ("Divisa", "Linha que separa o seu lote do vizinho ou da rua."),
     ("Hall", "Espaço pequeno que liga os cômodos. Substitui o corredor comprido."),
@@ -250,11 +250,11 @@ SIMBOLOS = [
 # Posições (em % da imagem) das marcas sobre o blueprint da planta usada como exemplo (C01).
 MARCAS_C01 = [(57, 4.8), (36, 18), (52, 10), (34, 47), (27, 30), (34, 77), (14, 89.5)]
 LEGENDA_LEITURA = [
-    ("Cotas", "As medidas da casa, em metros. Aqui, 6,50 m de frente e 8,50 m de fundo."),
+    ("Cotas", "As medidas da casa por fora das paredes, em metros. Aqui, 6,50 m de frente e 8,50 m de fundo."),
     ("Porta", "O arco mostra para que lado a folha abre. Confira se ela não bate em móvel."),
     ("Janela", "O trecho da parede com linhas finas. A largura dela aparece na cota."),
-    ("Parede", "A faixa dupla. As externas são mais grossas que as internas."),
-    ("Nome e área do cômodo", "A área vem em m². Compare com o seu cômodo de hoje."),
+    ("Parede", "A faixa escura. Nas contas do e-book, a externa tem 15 cm e a interna 12 cm."),
+    ("Nome e área do cômodo", "A área livre, por dentro das paredes, em m². Compare com o seu cômodo de hoje."),
     ("Móveis", "Desenhados em escala, para mostrar que a cama, o sofá e a mesa cabem."),
     ("Ficha", "Nome da planta, área total, quartos e banheiros."),
     ("Sol", "Em cada casa testamos as quatro posições da rua em relação ao sol, numa conta simples. A ficha diz o melhor e o pior lado; o arquiteto confere para o clima da sua cidade."),

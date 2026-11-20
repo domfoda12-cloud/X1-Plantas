@@ -102,6 +102,28 @@
    "area_fechada": 32.4,
    "area_total": 32.4,
    "area_coberta_aberta": 0,
+   "util": {
+    "estar": [
+     4.2,
+     3.79,
+     15.9
+    ],
+    "cozinha": [
+     2.49,
+     2.99,
+     7.4
+    ],
+    "banho": [
+     1.59,
+     1.48,
+     2.4
+    ],
+    "servico": [
+     1.59,
+     1.39,
+     2.2
+    ]
+   },
    "luz": {
     "estar": 0.2,
     "cozinha": 0.15,

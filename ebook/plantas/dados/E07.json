@@ -189,12 +189,13 @@
  "destaque": "3 quartos, um deles suíte, num lote de 8 m de frente",
  "pensou": [
   "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa (o código de obras da sua cidade diz se janela para área coberta conta como ventilação).",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
   "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
  "validacao": {
   "erros": [],
   "avisos": [
+   "Suíte fica com 2,49 x 3,09 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília",
    "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)"
   ],
   "info": [],
@@ -202,6 +203,53 @@
    "area_fechada": 71.6,
    "area_total": 89.5,
    "area_coberta_aberta": 17.9,
+   "util": {
+    "sala": [
+     3.7,
+     3.59,
+     13.3
+    ],
+    "cozinha": [
+     3.7,
+     2.68,
+     9.9
+    ],
+    "servico": [
+     1.59,
+     1.88,
+     3.0
+    ],
+    "banho": [
+     1.99,
+     1.88,
+     3.7
+    ],
+    "quarto2": [
+     3.7,
+     2.88,
+     10.7
+    ],
+    "quarto3": [
+     3.7,
+     2.88,
+     10.7
+    ],
+    "bsuite": [
+     1.09,
+     3.09,
+     3.4
+    ],
+    "quarto1": [
+     2.49,
+     3.09,
+     7.7
+    ],
+    "corr": [
+     1.0,
+     17.9,
+     17.9
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,

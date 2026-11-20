@@ -189,7 +189,7 @@
  "destaque": "Área gourmet nos fundos, aberta para o corredor",
  "pensou": [
   "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa (o código de obras da sua cidade diz se janela para área coberta conta como ventilação).",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
@@ -204,6 +204,53 @@
    "area_fechada": 68.1,
    "area_total": 100.8,
    "area_coberta_aberta": 32.7,
+   "util": {
+    "sala": [
+     4.3,
+     3.59,
+     15.4
+    ],
+    "cozinha": [
+     4.3,
+     2.68,
+     11.5
+    ],
+    "servico": [
+     1.79,
+     1.88,
+     3.4
+    ],
+    "banho": [
+     2.39,
+     1.88,
+     4.5
+    ],
+    "bsuite": [
+     1.19,
+     3.08,
+     3.7
+    ],
+    "quarto1": [
+     2.99,
+     3.08,
+     9.2
+    ],
+    "quarto2": [
+     4.3,
+     2.79,
+     12.0
+    ],
+    "corr": [
+     1.0,
+     14.8,
+     14.8
+    ],
+    "gourmet": [
+     5.6,
+     3.2,
+     17.9
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,

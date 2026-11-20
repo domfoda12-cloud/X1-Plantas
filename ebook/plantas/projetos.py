@@ -77,7 +77,7 @@ def todas():
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("sala", "circ", "aberto"), ("circ", "banho"),
                    ("circ", "quarto1"), ("ext", "servico", "dir")],
                   "1 quarto (+1 depois)", 1, servico_externo=True,
-                  extra=[R("futuro1", "Quarto 2 (ampliação)", "futuro", 0, 7.5, 3.2, 11.0)]))
+                  extra=[R("futuro1", "Quarto 2 (ampliação)", "futuro", 3.2, 7.5, 5.5, 10.9)]))
     P.append(_compacta("C04", "Casa Duo", 6.0, 0, 3.0, 1.8, varanda=1.6, h1=3.4, h3=3.4,
                        destaque="Varanda na frente e dois quartos do mesmo tamanho"))
     P.append(_compacta("C05", "Casa Popular", 6.0, 0, 3.0, 1.8, h1=3.4, h3=3.2,
@@ -119,11 +119,11 @@ def todas():
     P.append(casa("E04", "Casa Pátio", 7.5, 8.0,
                   H((3.4, V((4.0, F("sala", "Sala", "sala")), (2.3, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
                     (1.2, V((5.5, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
-                    (None, V((3.0, F("quarto1", "Quarto casal", "casal")), (1.5, F("patio", "Pátio de luz", "patio")),
-                             (None, F("quarto2", "Quarto", "dorm"))))),
+                    (None, V((3.0, F("quarto1", "Quarto casal", "casal", pref=("dir", "fundos"))), (1.5, F("patio", "Pátio de luz", "patio")),
+                             (None, F("quarto2", "Quarto", "dorm", pref=("esq", "fundos")))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("sala", "circ", "aberto"),
                    ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2")],
-                  "2 quartos", 1, destaque="Pátio de luz entre os quartos: ventilação cruzada e privacidade"))
+                  "2 quartos", 1, destaque="Pátio de luz entre os quartos: os dois abrem janela para ele"))
     P.append(_estreita("E05", "Casa Estreita Suíte", 3.9,
                        _fila(3.9, 3.8, 2.8, 1.8, 0, 2.0, [suite(1.3, 2.6, 3.4), (3.0, F("quarto2", "Quarto", "dorm"))]),
                        PORTAS_FILA + [("corr", "quarto1"), ("quarto1", "bsuite"), ("corr", "quarto2")],
@@ -150,7 +150,7 @@ def todas():
                             (2.4, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
                     (1.2, V((6.8, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
                     (None, V((2.8, F("quarto3", "Quarto", "dorm")), (2.8, F("quarto2", "Quarto", "dorm")),
-                             (3.2, F("quarto1", "Suíte", "casal")), (None, F("bsuite", "Banho da suíte", "banho", privativo="quarto1"))))),
+                             (3.1, F("quarto1", "Suíte", "casal")), (None, F("bsuite", "Banho da suíte", "banho", privativo="quarto1"))))),
                   [("ext", "sala", "frente"), ("sala", "jantar", "aberto"), ("jantar", "cozinha", "aberto"), ("cozinha", "servico"),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto3"), ("circ", "quarto2"), ("circ", "quarto1"), ("quarto1", "bsuite")],
                   "3 quartos (1 suíte)", 2))
@@ -162,7 +162,7 @@ def todas():
                     (1.2, V((7.4, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
                     (None, V((2.6, F("quarto2", "Quarto", "dorm")), (2.6, F("quarto3", "Quarto", "dorm")),
                              (2.8, F("quarto1", "Suíte", "casal")), (1.3, F("bsuite", "Banho da suíte", "banho", privativo="quarto1")),
-                             (None, F("jardim", "Jardim interno", "externo"))))),
+                             (None, F("jardim", "Jardim", "externo"))))),
                   [("ext", "sala", "frente"), ("sala", "jantar", "aberto"), ("jantar", "cozinha", "aberto"), ("cozinha", "servico"),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto2"), ("circ", "quarto3"), ("circ", "quarto1"), ("quarto1", "bsuite")],
                   "3 quartos (1 suíte)", 2))
@@ -175,7 +175,7 @@ def todas():
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("sala", "circ", "aberto"),
                    ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2")],
                   "2 quartos", 1, acessivel=True,
-                  destaque="Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas"))
+                  destaque="Circulação e banheiro largos, pensados para cadeira de rodas (o engenheiro adapta à NBR 9050)"))
     P.append(casa("S04", "Casa Home Office", 7.8, 10.8,
                   H((3.2, V((2.0, F("escritorio", "Escritório", "escritorio")), (None, F("varanda", "Varanda", "varanda")))),
                     (3.2, V((4.8, F("sala", "Sala", "sala")), (1.8, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
@@ -195,7 +195,7 @@ def todas():
                   [("ext", "varanda", "frente"), ("varanda", "sala", "aberto"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto2"), ("circ", "quarto1"), ("quarto1", "bsuite")],
                   "2 quartos (1 suíte)", 2,
-                  destaque="Varandão na frente e ventilação cruzada em todos os cômodos"))
+                  destaque="Varandão na frente e suíte para o casal"))
     P.append(casa("S07", "Casa Gourmet", 9.4, 8.6,
                   H((3.8, V((3.6, F("sala", "Sala", "sala")), (2.8, F("cozinha", "Cozinha", "cozinha")),
                             (None, H((2.4, F("gourmet", "Área gourmet", "varanda")), (None, F("servico", "Serviço", "servico")))))),
@@ -208,6 +208,9 @@ def todas():
                   destaque="Cozinha aberta para a área gourmet, a casa que recebe"))
     p = _familia("S09", "Casa de Esquina", 9.4, sala=4.4, coz=2.8, col=2.2, h1=3.8, h3=3.4, suite=True, varanda=1.8)
     p["recuos"] = {"esq": 3.0}
+    for c in p["comodos"]:
+        if abs(c["x0"]) < 1e-6 and c["tipo"] in ("dorm", "casal"):
+            c["pref"] = ("esq", "fundos")  # na esquina, o quarto abre janela para a rua do lado
     P.append(p)
     return P
 

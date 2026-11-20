@@ -53,6 +53,10 @@
    "id": "quarto1",
    "nome": "Quarto casal",
    "tipo": "casal",
+   "pref": [
+    "dir",
+    "fundos"
+   ],
    "x0": 0.0,
    "y0": 4.6,
    "x1": 3.0,
@@ -71,6 +75,10 @@
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
+   "pref": [
+    "esq",
+    "fundos"
+   ],
    "x0": 4.5,
    "y0": 4.6,
    "x1": 7.5,
@@ -139,20 +147,20 @@
   ],
   "quarto1": [
    [
-    "fundos",
+    "dir",
     1.7
    ]
   ],
   "quarto2": [
    [
-    "fundos",
+    "esq",
     1.7
    ]
   ]
  },
- "destaque": "Pátio de luz entre os quartos: ventilação cruzada e privacidade",
+ "destaque": "Pátio de luz entre os quartos: os dois abrem janela para ele",
  "pensou": [
-  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua a leste; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
@@ -164,6 +172,48 @@
    "area_fechada": 54.9,
    "area_total": 60.0,
    "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.79,
+     3.19,
+     12.1
+    ],
+    "cozinha": [
+     2.18,
+     3.19,
+     7.0
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     5.29,
+     1.08,
+     5.7
+    ],
+    "banho": [
+     1.79,
+     1.08,
+     1.9
+    ],
+    "quarto1": [
+     2.79,
+     3.19,
+     8.9
+    ],
+    "patio": [
+     1.38,
+     3.19,
+     4.4
+    ],
+    "quarto2": [
+     2.79,
+     3.19,
+     8.9
+    ]
+   },
    "luz": {
     "sala": 0.21,
     "cozinha": 0.15,
@@ -189,14 +239,14 @@
    ],
    "taxa_ocupacao": 0.53,
    "orientacao": {
-    "melhor": "sul",
+    "melhor": "leste",
     "segunda": "norte",
-    "pior": "leste",
+    "pior": "oeste",
     "pontos": {
-     "norte": 9.7,
-     "leste": -4.0,
-     "sul": 12.9,
-     "oeste": 8.5
+     "norte": 6.3,
+     "leste": 11.3,
+     "sul": 6.1,
+     "oeste": 3.4
     }
    }
   }

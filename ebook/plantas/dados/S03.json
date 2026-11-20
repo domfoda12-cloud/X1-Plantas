@@ -142,7 +142,7 @@
   ]
  },
  "acessivel": true,
- "destaque": "Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas",
+ "destaque": "Circulação e banheiro largos, pensados para cadeira de rodas (o engenheiro adapta à NBR 9050)",
  "pensou": [
   "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
@@ -156,6 +156,43 @@
    "area_fechada": 74.8,
    "area_total": 74.8,
    "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.79,
+     3.39,
+     12.8
+    ],
+    "cozinha": [
+     3.08,
+     3.39,
+     10.4
+    ],
+    "servico": [
+     1.39,
+     3.39,
+     4.7
+    ],
+    "circ": [
+     6.39,
+     1.38,
+     8.8
+    ],
+    "banho": [
+     1.99,
+     1.38,
+     2.7
+    ],
+    "quarto1": [
+     4.19,
+     3.19,
+     13.4
+    ],
+    "quarto2": [
+     4.19,
+     3.19,
+     13.4
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,

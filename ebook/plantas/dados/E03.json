@@ -135,17 +135,52 @@
  "destaque": "Cabe em lote de 5 m de frente: todas as janelas dão para o corredor",
  "pensou": [
   "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa (o código de obras da sua cidade diz se janela para área coberta conta como ventilação).",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
   "Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
   "erros": [],
-  "avisos": [],
+  "avisos": [
+   "Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília",
+   "Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília"
+  ],
   "info": [],
   "metricas": {
    "area_fechada": 34.3,
    "area_total": 46.2,
    "area_coberta_aberta": 11.9,
+   "util": {
+    "sala": [
+     2.3,
+     3.69,
+     8.5
+    ],
+    "cozinha": [
+     2.3,
+     2.68,
+     6.2
+    ],
+    "servico": [
+     2.3,
+     1.18,
+     2.7
+    ],
+    "banho": [
+     2.3,
+     1.68,
+     3.9
+    ],
+    "quarto1": [
+     2.3,
+     3.19,
+     7.3
+    ],
+    "corr": [
+     0.9,
+     13.2,
+     11.9
+    ]
+   },
    "luz": {
     "sala": 0.21,
     "cozinha": 0.15,

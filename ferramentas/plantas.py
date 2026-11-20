@@ -38,7 +38,18 @@ EXTERNOS = {"externo", "patio", "futuro"}          # fora da casa fechada
 SEMIEXTERNOS = {"varanda", "garagem"}              # cobertos, abertos nas laterais
 MOLHADOS = {"banho", "lavabo", "cozinha", "servico"}
 PERMANENCIA = {"sala", "estar", "jantar", "dorm", "casal", "escritorio"}
-# (área mínima m², menor lado m): acima do mínimo legal, como um arquiteto projeta
+# Paredes: as medidas da casa (W x D) são pela face de fora; cada cômodo perde a parede por dentro.
+PAREDE_EXT, PAREDE_INT = 0.15, 0.12
+# (área útil mínima m², menor lado livre m), medidos por dentro das paredes. Valores de referência do
+# X1-Plantas, perto dos códigos de obras comuns; o código da cidade manda.
+MINIMOS_UTIL = {
+    "sala": (8.0, 2.3), "estar": (12.0, 2.8), "jantar": (5.0, 2.0), "dorm": (6.0, 2.0), "casal": (7.0, 2.3),
+    "escritorio": (4.0, 1.6), "cozinha": (4.0, 1.5), "servico": (1.5, 0.95), "banho": (1.8, 1.0),
+    "lavabo": (1.0, 0.8), "circ": (0.0, 0.8), "varanda": (0.0, 0.9), "garagem": (0.0, 2.5), "deposito": (0.8, 0.7),
+}
+# abaixo disto (por dentro) o cômodo funciona, mas é apertado: vira aviso para o engenheiro
+CONFORTO_UTIL = {"sala": (9.0, 2.5), "casal": (8.0, 2.4)}
+# (área mínima m², menor lado m) de eixo: usados só para as janelas automáticas
 MINIMOS = {
     "sala": (10.0, 2.6), "estar": (14.0, 3.0), "jantar": (6.0, 2.2),
     "dorm": (7.0, 2.4), "casal": (8.5, 2.6), "escritorio": (4.5, 1.8),
@@ -112,6 +123,33 @@ def lados(c):
     return c["x1"] - c["x0"], c["y1"] - c["y0"]
 
 
+def _desconto(planta, c, lado):
+    """Quanto o cômodo perde de parede naquele lado: parede externa inteira, metade da interna."""
+    abertos = SEMIEXTERNOS | {"futuro"}
+    aberto = c["tipo"] in abertos
+    borda = {"esq": abs(c["x0"]) < 1e-6, "dir": abs(c["x1"] - planta["W"]) < 1e-6,
+             "frente": abs(c["y0"]) < 1e-6, "fundos": abs(c["y1"] - planta["D"]) < 1e-6}[lado]
+    d = 0.0 if aberto else (PAREDE_EXT if borda else 0.0)
+    eixo = {"esq": ("v", c["x0"]), "dir": ("v", c["x1"]), "frente": ("h", c["y0"]), "fundos": ("h", c["y1"])}[lado]
+    for o in planta["comodos"]:
+        if o is c or o["tipo"] == "futuro":
+            continue
+        pc = parede_comum(c, o)
+        if not pc or pc[0] != eixo[0] or abs(pc[1] - eixo[1]) > 1e-6:
+            continue
+        o_aberto = o["tipo"] in abertos
+        dd = 0.0 if aberto else (PAREDE_EXT if o_aberto else PAREDE_INT / 2)
+        d = max(d, dd)
+    return d
+
+
+def util(planta, c):
+    """Medidas livres do cômodo, por dentro das paredes: (largura, profundidade, área)."""
+    lx = c["x1"] - c["x0"] - _desconto(planta, c, "esq") - _desconto(planta, c, "dir")
+    ly = c["y1"] - c["y0"] - _desconto(planta, c, "frente") - _desconto(planta, c, "fundos")
+    return lx, ly, lx * ly
+
+
 def _intervalo(a0, a1, b0, b1):
     lo, hi = max(a0, b0), min(a1, b1)
     return (lo, hi) if hi - lo > 1e-6 else None
@@ -156,7 +194,7 @@ def trecho_externo(planta, c, lado):
     for (px, py) in pts:
         viz = _dentro(planta, px, py, ignorar=(c["id"],))
         n += 1
-        if viz is None or viz["tipo"] in EXTERNOS or viz["tipo"] in SEMIEXTERNOS and c["tipo"] not in SEMIEXTERNOS:
+        if viz is None or (viz["tipo"] in EXTERNOS and viz["tipo"] != "futuro") or viz["tipo"] in SEMIEXTERNOS and c["tipo"] not in SEMIEXTERNOS:
             total += 1
     return (b - a) * total / max(n, 1)
 
@@ -170,6 +208,11 @@ def _rec(planta):
     rec = dict(RECUOS_PADRAO)
     rec.update(planta.get("recuos", {}))
     return rec
+
+
+def _na_borda(planta, c, lado):
+    """A parede está na lateral da casa (e não virada para um pátio interno)?"""
+    return abs(c["x0"]) < 1e-6 if lado == "esq" else abs(c["x1"] - planta["W"]) < 1e-6
 
 
 def _vizinho_coberto(planta, c, lado):
@@ -230,7 +273,7 @@ def _livre_para_fora(planta, c, lado):
     ext = trecho_externo(planta, c, lado)
     if ext <= 0:
         return 0.0
-    if lado in ("esq", "dir") and _rec(planta)[lado] < 1.4 and not _vizinho_coberto(planta, c, lado):
+    if lado in ("esq", "dir") and _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4 and not _vizinho_coberto(planta, c, lado):
         return 0.0
     return ext
 
@@ -251,7 +294,7 @@ def auto_janelas(planta):
             continue
         falta = RAZAO_JANELA[t] * area(c) * 1.18 / ALTURA_JANELA[t]
         lista = []
-        for lado in PREFERENCIA[t]:
+        for lado in c.get("pref", PREFERENCIA[t]):
             if falta <= 0.01:
                 break
             ext = _livre_para_fora(planta, c, lado)
@@ -322,17 +365,23 @@ def validar(planta):
     r.metricas["area_total"] = round(W * D, 1)
     r.metricas["area_coberta_aberta"] = round(sum(area(c) for c in cs if c["tipo"] in SEMIEXTERNOS), 1)
 
-    # Dimensões mínimas
+    # Dimensões mínimas, por dentro das paredes
+    r.metricas["util"] = {}
     for c in cs:
         t = c["tipo"]
-        if t in MINIMOS:
-            amin, lmin = MINIMOS[t]
-            lmin = max(lmin, c.get("min_lado", 0))
-            a, (lx, ly) = area(c), lados(c)
+        lx, ly, a = util(planta, c)
+        r.metricas["util"][c["id"]] = [round(lx, 2), round(ly, 2), round(a, 1)]
+        if t in MINIMOS_UTIL:
+            amin, lmin = MINIMOS_UTIL[t]
+            lmin = max(lmin, c.get("min_lado", 0) - 2 * PAREDE_INT / 2)
             if a < amin - 1e-6:
-                r.erro(f"{c['nome']}: {a:.1f} m² (mínimo de referência {amin:.1f} m²)")
+                r.erro(f"{c['nome']}: {a:.1f} m² livres (mínimo de referência {amin:.1f} m²)")
             if min(lx, ly) < lmin - 1e-6:
-                r.erro(f"{c['nome']}: menor lado {min(lx, ly):.2f} m (mínimo de referência {lmin:.2f} m)")
+                r.erro(f"{c['nome']}: menor lado livre {min(lx, ly):.2f} m (mínimo de referência {lmin:.2f} m)")
+            if t in CONFORTO_UTIL:
+                ac, lc = CONFORTO_UTIL[t]
+                if a < ac - 1e-6 or min(lx, ly) < lc - 1e-6:
+                    r.aviso(f"{c['nome']} fica com {lx:.2f} x {ly:.2f} m livres ({_f(a)} m²)".replace(".", ",") + ": funciona, mas é apertado; o engenheiro confere a mobília")
         if t in PERMANENCIA or t == "cozinha":
             if max(lados(c)) > VAO_MAX + 1e-6:
                 r.info.append(f"{c['nome']} tem vão de {max(lados(c)):.1f} m: o engenheiro confere laje e vigas")
@@ -351,7 +400,7 @@ def validar(planta):
         a_jan = 0.0
         for (lado, larg) in lista:
             ext = trecho_externo(planta, c, lado)
-            if lado in ("esq", "dir") and _rec(planta)[lado] < 1.4 and not _vizinho_coberto(planta, c, lado):
+            if lado in ("esq", "dir") and _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4 and not _vizinho_coberto(planta, c, lado):
                 r.erro(f"{c['nome']}: janela na {NOMES_LADO[lado]}, que é divisa (recuo {_rec(planta)[lado]:.1f} m)")
             if ext < larg + 0.3 - 1e-6:
                 r.erro(f"{c['nome']}: janela de {larg:.1f} m na {NOMES_LADO[lado]} não cabe "
@@ -437,6 +486,14 @@ def validar(planta):
                 # o banheiro social não deve abrir direto para a cozinha
                 if "cozinha" in g.get(c["id"], ()) or any(por_id[x]["tipo"] == "cozinha" for x in g.get(c["id"], ()) if x != "ext"):
                     r.erro(f"{c['nome']} abre direto para a cozinha")
+
+    # Varanda encostada numa divisa: a lateral dela fica fechada (Código Civil, art. 1.301)
+    for c in cs:
+        if c["tipo"] == "varanda" and c["id"] != "corr":
+            for lado in ("esq", "dir"):
+                if _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4:
+                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral fica fechada, sem abertura para o vizinho")
+                    break
 
     # Áreas molhadas juntas
     for c in cs:
@@ -643,8 +700,9 @@ def pensou(planta):
     if any(t == "patio" for t in tipos):
         out.append("Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.")
     elif any(c["id"] == "corr" for c in cs):
-        out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa "
-                   "(o código de obras da sua cidade diz se janela para área coberta conta como ventilação).")
+        out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro "
+                   "e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para "
+                   "área coberta conta como ventilação.")
     elif any(c["tipo"] == "varanda" and c["id"] in portas_ext for c in cs):
         out.append("Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.")
     else:
@@ -673,9 +731,9 @@ def pensou(planta):
         onde = " e ".join(nome_viz[v] for v in viz[:2]) if viz else "em outra área molhada"
         out.append(f"Banheiro colado {onde}: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.")
     if planta.get("servico_externo") or planta["id"] in ("C03",):
-        out.append("A casa cresce: a planta já deixa o lugar do quarto 2 nos fundos, sem quebrar nada do que foi construído.")
+        out.append("A casa cresce: o quarto 2 entra nos fundos, atrás da área de serviço, com porta para o quintal do lado. Não quebra nada do que foi construído e não tapa a janela do quarto casal.")
     elif m["circulacao"]:
-        out.append(f"Circulação: só {m['circulacao'] * 100:.0f}% da área é corredor. O resto é cômodo que você usa.")
+        out.append(f"Circulação: só {int(m['circulacao'] * 100 + 0.5)}% da área é corredor. O resto é cômodo que você usa.")
     else:
         out.append("Corredor coberto: todos os cômodos abrem para ele, então não existe corredor interno comendo metro quadrado.")
     return out[:3] if len(out) > 3 else out

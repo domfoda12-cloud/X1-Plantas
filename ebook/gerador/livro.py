@@ -75,7 +75,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
             halo = 'stroke="#FBF8F2" stroke-width=".09" paint-order="stroke" stroke-linejoin="round"'
             rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) - .04}" text-anchor="middle" font-size="{fs:.3f}" font-weight="700" fill="#1E2733" {halo}>{E(nome)}</text>')
             if t not in ABERTOS:
-                rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .3}" text-anchor="middle" font-size=".22" class="mono" fill="#56616E" {halo}>{m1(w * h)} m²</text>')
+                rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .3}" text-anchor="middle" font-size=".22" class="mono" fill="#56616E" {halo}>{m1(p["_r"].metricas["util"][c["id"]][2] if "_r" in p else w * h)} m²</text>')
     if moveis:
         _, _, portas3d, mov = P3.construir(p)
         for mv in mov:
@@ -88,23 +88,20 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{ax:.3f}" y2="{Y(ay):.3f}" stroke="#FBF8F2" stroke-width=".16"/>')
             s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 1 {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{bx:.3f}" y2="{Y(by):.3f}" stroke="#C2683F" stroke-width=".04"/>')
-    por_id = {c["id"]: c for c in p["comodos"]}
-    for cid, lista in p["janelas"].items():
-        c = por_id[cid]
-        for lado, larg in lista:
-            if lado in ("frente", "fundos"):
-                yy = c["y0"] if lado == "frente" else c["y1"]
-                x, y, w, h = (c["x0"] + c["x1"]) / 2 - larg / 2, Y(yy) - .07, larg, .14
-            else:
-                xx = c["x0"] if lado == "esq" else c["x1"]
-                x, y, w, h = xx - .07, Y((c["y0"] + c["y1"]) / 2 + larg / 2), .14, larg
-            s.append(f'<rect x="{x:.3f}" y="{y:.3f}" width="{w:.3f}" height="{h:.3f}" fill="#8ED2FF" stroke="#0B4FA8" stroke-width=".03"/>')
-    for porta in p["portas"]:
-        if porta[0] == "ext":
-            c = por_id[porta[1]]
-            if porta[2] == "frente":
-                cx = porta[3] if len(porta) > 3 else (c["x0"] + c["x1"]) / 2
-                s.append(f'<rect x="{cx - .45:.3f}" y="{Y(c["y0"]) - .1:.3f}" width=".9" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
+    # janelas e porta de entrada nas mesmas posições do motor 3D (a mesma da vista da rua e das imagens)
+    _, jan3d, portas_ext, _ = P3.construir(p)
+    for j in jan3d:
+        x0s, y0s, x1s, y1s = j["seg"]
+        if abs(y0s - y1s) < 1e-6:
+            x, y, w, h = min(x0s, x1s), Y(y0s) - .07, abs(x1s - x0s), .14
+        else:
+            x, y, w, h = x0s - .07, Y(max(y0s, y1s)), .14, abs(y1s - y0s)
+        s.append(f'<rect x="{x:.3f}" y="{y:.3f}" width="{w:.3f}" height="{h:.3f}" fill="#8ED2FF" stroke="#0B4FA8" stroke-width=".03"/>')
+    for d in portas_ext:
+        if not str(d["id"]).startswith("ext-") or abs(math.sin(d["a0"])) > 1e-6:
+            continue
+        a = d["x"] if abs(d["a0"]) < 1e-6 else d["x"] - d["r"]
+        s.append(f'<rect x="{a:.3f}" y="{Y(d["y"]) - .1:.3f}" width="{d["r"]:.3f}" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
     s.extend(rotulos)
     if cotas:
         s.append(f'<g stroke="#0B4FA8" stroke-width=".03" fill="#0B4FA8" font-size=".3" class="mono">'
@@ -402,19 +399,19 @@ def montar(plantas, config, numeros):
     linhas = []
     for f in sorted(contagem):
         casas = [p for p in plantas if lote_frente(p) == f]
-        itens = "".join(f'<li><b>{p["id"]}</b> {E(p["nome"])} <span>{p["_r"].metricas["area_fechada"]:.0f} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span><i>p. {numeros[p["id"]]}</i></li>' for p in casas)
+        itens = "".join(f'<li><b>{p["id"]}</b> {E(p["nome"])} <span>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span><i>p. {numeros[p["id"]]}</i></li>' for p in casas)
         linhas.append(f'<div class="faixa"><div class="faixa-m">{f} m</div><ul>{itens}</ul></div>')
     L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
-      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a <b>menor frente</b> para cada casa.</p>
+      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
       <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais, menos a E03 Casa Fita, que encosta numa divisa. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
 
     # 4. ache pelo jeito da família
     grupos = [
         ("Mora sozinho ou vai alugar", ["C02", "E03"]),
-        ("Quer sair do aluguel e crescer depois", ["C03", "C01", "C05"]),
-        ("Casal com 1 ou 2 filhos", ["C01", "C04", "C06", "E02", "E04", "E05"]),
+        ("Quer sair do aluguel e crescer depois", ["C03"]),
+        ("Casal com 1 ou 2 filhos", ["C01", "C04", "C05", "C06", "E02", "E04", "E05"]),
         ("Família de 4 ou mais", ["F01", "F02", "F03", "F04", "E07", "S09"]),
         ("Trabalha em casa", ["S04"]),
         ("Gosta de receber", ["S07", "E06", "F05"]),
@@ -449,7 +446,7 @@ def montar(plantas, config, numeros):
 
     # 9. índice
     linhas = "".join(
-        f'<tr><td class="mono">{p["id"]}</td><td>{E(p["nome"])}</td><td class="n">{p["_r"].metricas["area_fechada"]:.0f} m²</td>'
+        f'<tr><td class="mono">{p["id"]}</td><td>{E(p["nome"])}</td><td class="n">{n0(p["_r"].metricas["area_fechada"])} m²</td>'
         f'<td>{E(p["quartos_txt"])}</td><td class="n">{p["banheiros"]}</td>'
         f'<td class="n">{lote_frente(p)} x {p["_r"].metricas["lote_comercial"][1]}</td><td class="n">{numeros[p["id"]]}</td></tr>'
         for p in plantas)
@@ -513,6 +510,21 @@ def montar(plantas, config, numeros):
     return L
 
 
+def n0(x):
+    """Arredonda como na escola: 90,5 vira 91."""
+    import decimal
+    return str(decimal.Decimal(str(round(x, 6))).quantize(decimal.Decimal("1"), rounding=decimal.ROUND_HALF_UP))
+
+
+def melhor_lado(o):
+    """Melhor lado da rua; quando o segundo lado empata quase, diz os dois."""
+    pts = o.get("pontos", {})
+    seg = o.get("segunda")
+    if seg and pts and pts[o["melhor"]] - pts[seg] <= 0.05 * abs(pts[o["melhor"]]):
+        return f"{ORI[o['melhor']]} ou {ORI[seg]}"
+    return ORI[o["melhor"]]
+
+
 def avisos_juntos(p):
     """Junta avisos repetidos do validador ("Sala tem vão de 4.6 m...", "Quarto tem vão...") numa frase só."""
     import re
@@ -538,14 +550,20 @@ def dupla(L, p, por_id, numeros):
     quartos = p["quartos_txt"].replace(" (+1 depois)", "")
     pens = PL.pensou(p)
     g = t.get("gancho", "")
-    if g and (f"{f} m de frente" not in g or (f"{r['area_fechada']:.0f} m²" not in g and "m²" in g)):
-        print(f"AVISO: gancho de {p['id']} não bate com o validador ({f} m, {r['area_fechada']:.0f} m²): {g}")
-    erros = t.get("erros", [1, 2, 4])
+    if g and (f"{f} m de frente" not in g or (f"{n0(r['area_fechada'])} m²" not in g and "m²" in g)):
+        print(f"AVISO: gancho de {p['id']} não bate com o validador ({f} m, {n0(r['area_fechada'])} m²): {g}")
+    erros = list(t.get("erros", [1, 2, 4]))
+    # "corredor comprido" só conta como evitado se a casa não tiver corredor de fora a fora
+    circs = [c for c in p["comodos"] if c["tipo"] == "circ"]
+    if 2 in erros and (r["circulacao"] > 0.12 or any(max(c["x1"] - c["x0"], c["y1"] - c["y0"]) > 6.0 for c in circs)):
+        erros.remove(2)
+        erros.append(next(a for a in (1, 5, 7) if a not in erros))
+        erros.sort()
     erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
     cat = CATEGORIAS[p["id"][0]]
     L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · LOTE A PARTIR DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
-        <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {r["area_fechada"]:.0f} m².'))}</p></div>
+        <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p></div>
       <div class="planta-grande">{svg_planta(p, moveis=True)}</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
         <div><h4>Erros que esta casa evita</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
@@ -561,16 +579,17 @@ def dupla(L, p, por_id, numeros):
       <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]}.</h2></div>
       <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
-          <div class="r-por">Desenhada num lote de {f} x {r['lote_comercial'][1]} m</div>
+          <div class="r-por">Cabe a partir de {m(r['lote'][0])} x {m(r['lote'][1])} m · lote comercial {f} x {r['lote_comercial'][1]} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
-          {linha('Área fechada', f"{r['area_fechada']:.0f} m²")}
-          {linha('Medidas da casa', f"{m(p['W'])} x {m(p['D'])} m")}
-          {linha('Varanda e garagem', f"{r['area_coberta_aberta']:.0f} m²" if r['area_coberta_aberta'] else '—')}
+          {linha('Área fechada', f"{n0(r['area_fechada'])} m²")}
+          {linha('Medidas por fora', f"{m(p['W'])} x {m(p['D'])} m")}
+          {linha('Varanda e garagem', f"{n0(r['area_coberta_aberta'])} m²" if r['area_coberta_aberta'] else '—')}
+          {linha('Área coberta total', f"{n0(r['area_fechada'] + r['area_coberta_aberta'])} m²", 'conta no orçamento') if r['area_coberta_aberta'] else ''}
           {linha('Quartos', E(quartos))}
           {linha('Banheiros', p['banheiros'])}
-          {linha('Corredor', f"{r['circulacao'] * 100:.0f}% da casa" if r['circulacao'] else 'externo', 'bom: até 14%')}
-          {linha('Janela nos quartos', '✓', 'mín. 1/6 do piso')}
-          {linha('Melhor lado da rua', ORI[r['orientacao']['melhor']])}
+          {linha('Corredor', f"{n0(r['circulacao'] * 100)}% da casa" if r['circulacao'] else ('externo' if any(c['id'] == 'corr' for c in p['comodos']) else 'não tem'), 'bom: até 14%')}
+          {linha('Janela nos quartos' if any(c['tipo'] in ('dorm', 'casal') for c in p['comodos']) else 'Janela no ambiente', '✓', 'mín. 1/6 do piso')}
+          {linha('Melhor lado da rua', melhor_lado(r['orientacao']))}
           {linha('Pode espelhar', 'sim', 'troca o lado')}
           <div class="r-nota">Conferido medida por medida pelo X1-Plantas, com recuos de referência. Não substitui o profissional: confira os da sua cidade.</div></div></div>
       {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in avisos_juntos(p)) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}

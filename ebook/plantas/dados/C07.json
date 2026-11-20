@@ -162,12 +162,56 @@
  ],
  "validacao": {
   "erros": [],
-  "avisos": [],
+  "avisos": [
+   "Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho"
+  ],
   "info": [],
   "metricas": {
    "area_fechada": 55.3,
    "area_total": 67.0,
    "area_coberta_aberta": 11.7,
+   "util": {
+    "varanda": [
+     6.5,
+     1.8,
+     11.7
+    ],
+    "sala": [
+     3.09,
+     3.19,
+     9.9
+    ],
+    "cozinha": [
+     1.88,
+     3.19,
+     6.0
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     4.19,
+     1.08,
+     4.5
+    ],
+    "banho": [
+     1.89,
+     1.08,
+     2.0
+    ],
+    "quarto1": [
+     3.04,
+     3.69,
+     11.2
+    ],
+    "quarto2": [
+     3.04,
+     3.69,
+     11.2
+    ]
+   },
    "luz": {
     "sala": 0.2,
     "cozinha": 0.16,

@@ -12,9 +12,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## C02 · Casa Studio
 
@@ -24,9 +24,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o oeste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala e cozinha têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## C03 · Casa Inicial
 
@@ -36,9 +36,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quarto têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## C04 · Casa Duo
 
@@ -50,9 +50,14 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Sala fica com 2,79 x 3,19 m livres (8,9 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
 
 ## C05 · Casa Popular
 
@@ -64,9 +69,13 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Sala fica com 2,79 x 3,19 m livres (8,9 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## C06 · Casa Compacta Suíte
 
@@ -76,9 +85,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## C07 · Casa Compacta Varanda
 
@@ -90,9 +99,13 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
 
 ## E01 · Casa Estreita
 
@@ -104,9 +117,13 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Suíte fica com 2,49 x 3,08 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E02 · Casa Corredor
 
@@ -116,9 +133,14 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Quarto casal fica com 2,30 x 3,18 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E03 · Casa Fita
 
@@ -130,23 +152,28 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E04 · Casa Pátio
 
 ![E04](previas/E04.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **sul**
+**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **leste**
 
-*Pátio de luz entre os quartos: ventilação cruzada e privacidade*
+*Pátio de luz entre os quartos: os dois abrem janela para ele*
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua a leste; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## E05 · Casa Estreita Suíte
 
@@ -156,9 +183,13 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Suíte fica com 2,39 x 3,28 m livres (7,8 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E06 · Casa Estreita Gourmet
 
@@ -170,9 +201,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 - Sala tem vão de 4.6 m: o engenheiro confere laje e vigas
 - Cozinha tem vão de 4.6 m: o engenheiro confere laje e vigas
@@ -188,13 +219,14 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
-- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)
+- Suíte fica com 2,49 x 3,09 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F01 · Casa Família Compacta
 
@@ -204,9 +236,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## F02 · Casa Integrada
 
@@ -216,9 +248,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## F03 · Casa Família
 
@@ -228,13 +260,14 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
-- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F04 · Casa Família Suíte
 
@@ -244,13 +277,13 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
-- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)
+- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F05 · Casa em L
 
@@ -260,9 +293,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 - Sala tem vão de 4.6 m: o engenheiro confere laje e vigas
 
@@ -272,13 +305,13 @@
 
 **75 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
 
-*Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas*
+*Circulação e banheiro largos, pensados para cadeira de rodas (o engenheiro adapta à NBR 9050)*
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## S04 · Casa Home Office
 
@@ -290,9 +323,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 - Sala tem vão de 4.8 m: o engenheiro confere laje e vigas
 
@@ -302,13 +335,17 @@
 
 **59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **sul**
 
-*Varandão na frente e ventilação cruzada em todos os cômodos*
+*Varandão na frente e suíte para o casal*
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+**Atenção**
+
+- Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
 
 ## S07 · Casa Gourmet
 
@@ -320,9 +357,9 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).
-- Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
+- Banheiro colado na área de serviço e no outro banheiro: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## S09 · Casa de Esquina
 
@@ -332,10 +369,10 @@
 
 **Por que esta planta é assim**
 
-- Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
-- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)
+- Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
