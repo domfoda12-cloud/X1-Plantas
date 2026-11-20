@@ -78,7 +78,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 | Reel "work week" | Eartheater, "Solid Liquid Gas" (rótulo de áudio do Instagram) |
 | Reel "i rejected that culture…" | Eartheater, "C.L.I.T." (rótulo de áudio; a legenda do post é tirada da letra) |
 | Reels "brb", "dont get paid by the hour", ECDYSIS XII, pulo da ponte | "Original audio". Nos comentários, as perguntas mais comuns são "song name?", "Song ?" e "THE SONG" |
-| Files of Lars (YouTube) | "Music Produced by Payton Talbott": ele mesmo faz a música. Cada personagem tem uma música diferente |
+| Files of Lars (YouTube) | Os créditos dizem "Music Produced by Payton Talbott", mas isso vale só para esse filme. Na correção do dono (20/11/2026): no dia a dia ele **não produz música**, no máximo usa **remixes** |
 | BPPV IX (YouTube) | Trecho de uma música inédita do Frank Ocean, que virou notícia (Genius, 14/03/2025) |
 | [Playlist "Payton Talbott" no Spotify](https://open.spotify.com/playlist/0eO5fHNsuLX4cCcaSSoAOF), feita por fã, com "all tracks from Payton Talbott's yt videos and instagram posts" (100 faixas) | Nextime / We Are Not Friends aparecem em 20 faixas; Crystal Castles em 5; $uicideboy$ em 4; Deftones e Pastel Ghost em 3 cada; The Cure e Slowdive em 2 cada. Também têm Cocteau Twins, Radiohead, Nirvana, Pixies, The Prodigy, Enigma, Molchat Doma, TV Girl, Lil Peep |
 
@@ -88,7 +88,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 3. **Fora das paradas.** São artistas alternativos e faixas raras ou inéditas, e por isso o público pergunta "qual é a música?" nos comentários. Isso é comentário de graça, que o algoritmo conta.
 4. **Nostalgia.** Muita coisa dos anos 90 e 2000 (The Cure, Deftones, Nirvana, Slowdive) para o público que cresceu com elas.
 5. **Letra que vira legenda.** "i rejected that culture, do you blame me?" é a letra e também a legenda. O golpe e o mortal caem na batida e na nota alta (0:01–0:08).
-6. **Música autoral.** No Files of Lars, a música é dele. Ninguém consegue copiar.
+6. **Remix em vez da original.** Na playlist aparecem versões misturadas e refeitas: "Leni (Crystal Castles vs GoodBooks)", "Sadeness, Part 2" (Tranceparence), "Pride x New Magic Wand" (Infinity092), "stay - but it's even more heart wrenching". A música é conhecida, mas soa diferente, e o público pergunta qual é.
 
 ### Como isso vira o B-roll e a música dos reels de planta
 
@@ -103,7 +103,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 | **Som de assinatura** | Uma faixa instrumental tema para a série CASA I, II, III…, sempre a mesma abertura de 2 s. O ouvido reconhece a série |
 | **"Qual é a música?"** gerando comentário | A palavra do comentário continua sendo PLANTA ou LOTE (decisão do dono, em aberto). A música serve para prender, e não para pedir comentário |
 | **Letra como legenda** | Com música instrumental, a "letra" é o texto na tela, cortado no tempo da batida: "8 metros." *(batida)* "3 quartos." *(batida)* "Cabe." |
-| **Música autoral** | Um tema curto composto para o X1-Plantas (contratar é decisão do dono). Até lá, faixa licenciada |
+| **Remix** | Pegar uma faixa licenciada e mudar o clima dela: mais lenta, com eco, ou cortada só no trecho que importa. Antes, conferir se a licença deixa editar |
 | **B-roll por frase** (MinoAI: um clipe por frase, 2 a 4 clipes nos primeiros 5 s, movimento dinâmico; "primeiro o clima, depois a música") | Lista de planos frase a frase em todo roteiro, antes de editar |
 
 ### Cuidados (Revisor de risco e Estrategista)
