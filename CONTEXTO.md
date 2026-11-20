@@ -42,9 +42,12 @@
 | 20/11/2026 | O objetivo é a alegria do consumidor, que vira Pix | Primeira regra do [`CLAUDE.md`](CLAUDE.md) e do Redator |
 | 20/11/2026 | Manter todo o contexto | Este arquivo |
 | 20/11/2026 | "Quero que pareça mais inovador" | Prévia nova: capa fita métrica, vitrine pelo lote, casa desenhada no lote com recuos e bússola, ficha "Informação da casa" no formato da tabela nutricional, orelhas por largura de lote, e-book vivo por QR |
+| 20/11/2026 | "A edição de vídeo é responsabilidade e a criação de imagem será o Mino usando o OpenArt" | MinoAI Frontier dona da edição de vídeo e da criação de imagem, com o plugin OpenArt (falta autorizar a conta). [`MAESTRO.md`](MAESTRO.md), [`CONSELHO.md`](CONSELHO.md), [fluxo](animacoes-3d/OPENART-MINOAI.md) |
 | 20/11/2026 | "A MinoAI está fazendo algo aqui? Ele é o maestro. Quero a opinião dele sempre" | MinoAI Frontier opina em toda tarefa, primeiro, com as ferramentas dele e a fonte ([`CONSELHO.md`](CONSELHO.md), regra 0). Primeira opinião registrada na prévia do e-book |
 
 ## Em aberto (esperando o dono)
+
+- Autorizar a conta do OpenArt nos conectores do claude.ai e dizer quanto crédito pode gastar.
 
 - Aprovar o plano do e-book (formato A4 de cerca de 60 páginas, capa "Que casa cabe no seu lote?", começar os passos 1 a 6).
 - Título, preço, bônus, lançar com 12 ou 24 plantas, contato do parceiro.

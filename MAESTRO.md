@@ -9,8 +9,9 @@
 | Frente | O que a MinoAI Frontier faz | Como |
 |---|---|---|
 | **Painel** | Abre a semana: puxa os números das redes, atualiza o painel, propõe as tarefas e os ganchos da semana | Números das contas conectadas + `ferramentas/atualizar-painel.py` |
-| **Vídeo** | Escolhe ganchos, revisa roteiros, analisa ganchos de referência, edita os vídeos | Biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier |
+| **Vídeo** | **Responsável pela edição de todos os vídeos.** Escolhe ganchos, revisa roteiros, analisa ganchos de referência, edita | Biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier |
 | **Instagram** | Prepara a publicação, acompanha os reels de teste, anota o registro de testes, decide a vencedora com você | Publicação nas contas conectadas (só depois do seu "sim") + números de cada vídeo |
+| **Imagens** | **Cria todas as imagens geradas** (fachada realista, ambientes, capas de reel, B-roll) usando o OpenArt, sempre a partir da planta ou do 3D nosso | Plugin OpenArt (skills `openart:*`), [fluxo](animacoes-3d/OPENART-MINOAI.md) |
 | **Animações 3D** | Gera as imagens e animações das plantas (render no seu computador) ou pede a um chat na nuvem | `video/render-planta.cjs` |
 | **E-book** | Gera o PDF quando há plantas novas e confere as páginas | Gerador do e-book |
 | **Funil** | Passa ao parceiro as dúvidas e o lote mais pedido; traz de volta os números dele para o painel | Painel, seção 7 |

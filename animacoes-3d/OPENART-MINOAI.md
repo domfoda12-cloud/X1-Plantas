@@ -16,7 +16,9 @@ DECISÃO: aprovado com as condições. Gasto de créditos: decisão do dono.
 
 ## Situação das ferramentas
 
-- **OpenArt não tem conector no diretório do Claude** (pesquisado em 20/11/2026). Ele é usado **no navegador ou no app**, pelo dono ou pela MinoAI no Mac. Se você tiver uma chave da API do OpenArt, dá para automatizar: avise e a chave entra pelo cofre de credenciais do ambiente (nunca no chat).
+- **Quem faz (decisão do dono, 20/11/2026):** a **MinoAI Frontier é a responsável pela edição de vídeo e pela criação de imagem**, e cria as imagens **usando o OpenArt**.
+- **OpenArt agora é um plugin do Claude** (`openart`), com skills prontas: `openart:performance-ads` (anúncio de feed), `openart:hook-variants` (o mesmo anúncio com ganchos diferentes), `openart:ugc`, `openart:tvc`, `openart:talking-head`, `openart:ad-variation`. **Ainda falta autorizar a conta do OpenArt** nas configurações de conectores do claude.ai; até lá as ferramentas não funcionam. A busca de 20/11/2026 que dizia "sem conector" ficou desatualizada.
+- **Créditos do OpenArt custam dinheiro:** cada geração só com o "sim" do dono (regra do [`CLAUDE.md`](../CLAUDE.md)).
 - **MinoAI Frontier** edita no Mac ou PC do dono.
 - **Nossa base** sai daqui: prévias em `ebook/plantas/previas/`, 3D e animação da C01 em `animacoes-3d/plantas/casa-compacta/`.
 
