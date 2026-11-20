@@ -488,12 +488,14 @@ def dupla(L, p, por_id, numeros):
           <div class="r-por">Porção de 1 lote de {f} x {r['lote_comercial'][1]} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
           {linha('Área fechada', f"{r['area_fechada']:.0f} m²")}
+          {linha('Medidas da casa', f"{m(p['W'])} x {m(p['D'])} m")}
           {linha('Varanda e garagem', f"{r['area_coberta_aberta']:.0f} m²" if r['area_coberta_aberta'] else '—')}
           {linha('Quartos', E(quartos))}
           {linha('Banheiros', p['banheiros'])}
           {linha('Corredor', f"{r['circulacao'] * 100:.0f}%" if r['circulacao'] else 'externo', 'até 14%')}
           {linha('Janela nos quartos', '✓', '1/6 do piso')}
           {linha('Melhor frente', ORI[r['orientacao']['melhor']])}
+          {linha('Pode espelhar', 'sim', 'troca o lado')}
           <div class="r-nota">Conferido pelo validador do X1-Plantas com recuos de referência. Confira os da sua cidade.</div></div></div>
       {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in p['_r'].avisos + p['_r'].info) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}
       <div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>

@@ -64,6 +64,9 @@
 
 | 20/11/2026 | (loop) Planta grátis por lote | 6 plantas grátis prontas (C01, E03, E02, E07, F01, C06): o parceiro manda a que cabe no lote do cliente ([`ebook/vendas/material-gratuito.md`](ebook/vendas/material-gratuito.md)) |
 
+| 20/11/2026 | "Procure referências de projetos similares; se for internacional, adapte aos termos do Brasil" | [`ebook/referencias/projetos-similares.md`](ebook/referencias/projetos-similares.md): Só Projetos, Planta Pronta, Projeto Pronto, Archshop, sites americanos de "terreno estreito" e Etsy. Corrigida a afirmação de que ninguém busca pelo terreno; ficha ganhou medidas da casa e "pode espelhar"; âncora de preço com fonte |
+| 20/11/2026 | "A operação está rodando no computador correto?" | Não é o computador do dono: a sessão roda num contêiner na nuvem, e tudo fica salvo no GitHub (branch `planta-de-casas-anuncio`). A edição de vídeo da MinoAI precisa do Mac do dono |
+
 ## Em aberto (esperando o dono)
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.

@@ -87,7 +87,7 @@
 | **Order bump** (oferta no checkout) | "Planilha de orçamento por etapa" a R$ 17–27 | Fala com quem constrói por etapas. Só lance quando a planilha existir |
 | **Oferta depois da compra** | "Adaptação da planta ao seu terreno", feita por um arquiteto parceiro | Produto de valor alto para quem já confia em nós. Depende de ter o parceiro |
 
-**Preço ancorado na oferta:** _"Uma planta pronta avulsa custa a partir de R$ 98 nos catálogos. Aqui são [nº] plantas, em 3D, por R$ 67."_ Confira o preço do concorrente na semana do anúncio.
+**Preço ancorado na oferta:** _"Uma planta pronta avulsa custa a partir de R$ 98 nos catálogos. Aqui são [nº] plantas, cada uma desenhada no lote, por R$ 67."_ Confira o preço do concorrente na semana do anúncio.
 
 ## 8. Ângulos de anúncio
 

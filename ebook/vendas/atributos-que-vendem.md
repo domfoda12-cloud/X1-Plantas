@@ -8,13 +8,13 @@
 
 | Atributo | Escada até o dinheiro | D | P | E | Frase pronta |
 |---|---|---|---|---|---|
-| **Achar pelo lote** | índice por largura do terreno → acha em 1 minuto → não compra casa que não cabe → não joga fora projeto nem fundação | 5 | 5 | 5 | "Mede a frente do seu lote. A página certa é essa." |
+| **Achar pelo lote** | índice por largura do terreno → acha em 1 minuto → não compra casa que não cabe → não joga fora projeto nem fundação | 5 | 5 | 3 (a Só Projetos também filtra por frente x fundo; o nosso diferencial é a casa desenhada no lote) | "Mede a frente do seu lote. A página certa é essa." |
 | **Casas conferidas** | cada planta passa por um validador de medidas → quarto com cama e circulação, cozinha com 1,50 m livres → não descobre o erro depois da laje | 5 | 5 | 5 | "Cada uma das 24 foi conferida contra as medidas mínimas de quarto, cozinha e banheiro." |
 | **Constrói por etapas** | plantas que crescem → começa com o que dá → sai do aluguel antes | 5 | 4 | 4 | "Comece com 1 quarto. Termine com 2 sem quebrar nada." |
 | **O porquê de cada decisão** | "por que esta planta é assim" em 3 pontos → entende a casa → conversa de igual com o pedreiro | 4 | 5 | 5 | "Não é só o desenho. É o porquê de cada parede." |
 | **Leve ao engenheiro** | chega com a casa escolhida → menos horas de projeto → orçamento mais rápido | 4 | 3 | 4 | "Chegue no seu engenheiro sabendo exatamente que casa você quer." |
 | **Ver antes de construir** | planta humanizada e 3D → a família enxerga a casa → decide sem briga | 5 | 4 (as 24 já saem mobiliadas, com a vista da rua; o 3D é o último passo) | 3 | "Veja a casa mobiliada antes de comprar o primeiro tijolo." |
-| **Preço de um saco de cimento a mais** | R$ 67 contra projeto pronto de R$ 98 a R$ 2.000 por casa → 24 casas pelo preço de um detalhe | 4 | 4 (preços de anúncio, mudam) | 3 | "24 casas pelo preço de uma ida a mais no depósito." *(confirmar o preço do saco na época)* |
+| **Preço de um saco de cimento a mais** | R$ 67 contra planta avulsa de R$ 98 (só a planta baixa em PDF) a R$ 899 (projeto arquitetônico no Projeto Pronto, 20/11/2026) → 24 casas pelo preço de um detalhe | 4 | 4 (preços de anúncio, mudam) | 3 | "24 casas pelo preço de uma ida a mais no depósito." *(confirmar o preço do saco na época)* |
 | **Garantia de 7 dias** | sem risco → compra por impulso | 3 | 5 | 2 | "Abriu e não serviu? Devolvemos em 7 dias." |
 
 ## 2. Atributos que aparecem nas plantas (use a ficha da casa)
