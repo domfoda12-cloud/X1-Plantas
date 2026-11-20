@@ -105,7 +105,7 @@ One-shot report, changes no code.
 ## Neste projeto (X1-Plantas)
 
 Antes de usar esta skill aqui, alcance o projeto:
-- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (tudo o que o dono pediu e o que está em aberto).
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o resumo mais recente em `contexto/entregas/`.
 - Responda e escreva em português do Brasil, com palavras simples.
 - O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
 - Uma coisa por vez, na ordem e-book → animações → vídeo.

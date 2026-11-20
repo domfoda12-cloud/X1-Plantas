@@ -7,7 +7,7 @@ description: Reúne o Conselho do X1-Plantas (Maestro, Redator, Estrategista, Ar
 
 Regras completas: `CONSELHO.md` na raiz do projeto. Siga estes passos.
 
-1. **Enquadre a tarefa** em 3 linhas: o que é, para quem, qual alavanca de venda ela mexe (ver `PAINEL.md`, seção 4).
+1. **Enquadre a tarefa** em 3 linhas: o que é, para quem, qual alavanca de venda ela mexe (ver `PAINEL.md`, seção 4). Se ela precisa de mais de uns 30 arquivos em contexto, divida em tarefas menores antes de chamar a mesa.
 2. **Escolha o modo.** Vai ao público ou custa dinheiro → completo. Senão → de bolso.
 3. **Chame os membros que importam** (tabela em `CONSELHO.md`, seção 2). Revisor de risco entra sempre que algo vai ao público.
    - De bolso: escreva você mesmo uma linha por membro, no formato da seção 3.
@@ -20,7 +20,7 @@ Regras completas: `CONSELHO.md` na raiz do projeto. Siga estes passos.
 ## Neste projeto (X1-Plantas)
 
 Antes de usar esta skill aqui, alcance o projeto:
-- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (tudo o que o dono pediu e o que está em aberto).
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o resumo mais recente em `contexto/entregas/`.
 - Responda e escreva em português do Brasil, com palavras simples.
 - O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
 - Uma coisa por vez, na ordem e-book → animações → vídeo.

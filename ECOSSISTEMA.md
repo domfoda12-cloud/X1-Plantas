@@ -13,7 +13,7 @@
 |---|---|
 | **Qualquer modelo** (Fable, Opus, Sonnet, Haiku) na sessão principal | Automático: o Claude Code carrega o `CLAUDE.md` em toda sessão, seja qual for o modelo escolhido no `/model` |
 | **Skill do projeto** (`.claude/skills/`) | Seção "Neste projeto (X1-Plantas)" no próprio `SKILL.md`. O `checar.py` confere |
-| **Agente do projeto** (`.claude/agents/`) | Linha "Alcance o projeto": manda ler `CLAUDE.md` e `CONTEXTO.md`. O `checar.py` confere |
+| **Agente do projeto** (`.claude/agents/`) | Linha "Alcance o projeto": manda ler `CLAUDE.md` e o seu `contexto/<agente>.md`. O `checar.py` confere, e confere também o tamanho |
 | **Plugin e conector** (ficam fora do repositório) | Rodam dentro da sessão, que já tem o `CLAUDE.md`. Quando um deles abre um agente ou uma sessão própria, essa sessão nova não leva o contexto: na mensagem de abertura vai o **texto de entrada** da seção 5 |
 
 ## 2. Do projeto (no repositório)
@@ -58,7 +58,7 @@ Cole no começo da mensagem de abertura:
 
 ```text
 Projeto X1-Plantas: e-book brasileiro de plantas de casas térreas, vendido por Instagram e Facebook com funil no WhatsApp. Público: quem tem o lote e vai construir com pedreiro, classe C, 25 a 50 anos.
-Antes de tudo, leia CLAUDE.md (regras que não mudam) e CONTEXTO.md (tudo o que o dono pediu e o que está em aberto). Responda em português do Brasil, com palavras simples.
+Antes de tudo, leia CLAUDE.md (regras que não mudam) e CONTEXTO.md (o resumo: o que nunca muda e o que está em aberto). Responda em português do Brasil, com palavras simples.
 Regras: qualidade antes de economia; uma coisa por vez (e-book → animações → vídeo); nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo de obra; só relatar números que uma ferramenta devolveu; imagem gerada leva "Imagem ilustrativa"; ferramenta paga só com o "sim" do dono.
 ```
 
@@ -82,7 +82,13 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 | **`dataviz`** | Gráficos do painel só com números que uma ferramenta devolveu |
 | **`pdf`, `docx`, `pptx`, `xlsx`** | O e-book sai do `livro.py` e nunca é editado à mão. Use só para material avulso que o dono pedir |
 
-## 6. Como manter este inventário
+## 6. Frameworks de agentes de fora
+
+| Nome | Status | O que é, e o que aproveitamos |
+|---|---|---|
+| **AgentScope 2.0** ([agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope), Apache-2.0, Python 3.11 ou mais) | Liberado, não usado: só ideias | Framework para **construir** agentes em Python que chamam modelos pela API (cobrada por token, à parte da assinatura). Não roda o Claude Code. Li o README e a lista de módulos; **não instalei nem rodei**. Ideias que já usamos ou passamos a usar: compactação automática do contexto e descarte de resultado de ferramenta grande (nosso resumo de passagem e o `CONTEXTO-HISTORICO.md`), escolha do modelo por resposta (nossa regra de Opus para decidir e Sonnet para o rotineiro), equipe com líder que delega (o Conselho) e procedimentos padrão em etapas (o roteiro de entrada). Só valeria instalar se um dia houvesse um agente próprio, por exemplo o que responde no WhatsApp |
+
+## 7. Como manter este inventário
 
 - **Apareceu um nome novo** na lista de skills, plugins ou conectores da sessão: ele entra aqui como "Liberado, não usado" e passa pelo roteiro antes do primeiro uso.
 - **Usou pela primeira vez:** passa a "Integrado", com a evidência (o arquivo ou a linha do `CONTEXTO.md`).

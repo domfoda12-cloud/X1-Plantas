@@ -65,8 +65,18 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
         fora.append(f"agente {ag.stem}: não está no inventário ECOSSISTEMA.md")
     if "Seu prompt de entrada" not in ag.read_text(encoding="utf-8"):
         fora.append(f"agente {ag.stem}: falta o 'Seu prompt de entrada'")
-    if "CONTEXTO.md" not in ag.read_text(encoding="utf-8"):
-        fora.append(f"agente {ag.stem}: não manda ler o CONTEXTO.md")
+    if f"contexto/{ag.stem}.md" not in ag.read_text(encoding="utf-8"):
+        fora.append(f"agente {ag.stem}: não manda ler o seu contexto/{ag.stem}.md")
+    if not (RAIZ / "contexto" / f"{ag.stem}.md").exists():
+        fora.append(f"agente {ag.stem}: falta o arquivo contexto/{ag.stem}.md")
+# Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
+LIMITES = [("CLAUDE.md", 6000), ("CONTEXTO.md", 8000)]
+LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md"))]
+LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md"))]
+for nome, limite in LIMITES:
+    n = len((RAIZ / nome).read_text(encoding="utf-8"))
+    if n > limite:
+        fora.append(f"{nome}: {n} caracteres, passa do limite de {limite}. Mova o excesso para CONTEXTO-HISTORICO.md ou divida")
 if fora:
     falhas.append("roteiro de entrada de skills e agentes")
     print("[ERRO] roteiro de entrada de skills e agentes:\n  " + "\n  ".join(fora))
