@@ -48,9 +48,11 @@
 | 20/11/2026 | "Economizar o máximo do OpenArt, mas enfeitado; pode começar, mas não use o primeiro modelo" | Plano de economia em [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md): modelo de imagem em vez do padrão de vídeo, rascunho antes, uma imagem para vários formatos, teto de 6. OpenArt ainda sem autorização |
 | 20/11/2026 | "Prepare tudo o que precisa ser preparado, e dale. EFICIÊNCIA" | E-book gerado: [`ebook/saida/ebook.pdf`](ebook/saida/ebook.pdf) (61 páginas) e a planta grátis C01 com a página-ímã; 3 mockups grátis em `ebook/visual/mockups/` |
 
+| 20/11/2026 | "Esquece o limite de crédito do OpenArt, volta para ele" | Sem teto de crédito. Geração começa assim que a conta do OpenArt for autorizada (ainda pede login) |
+
 ## Em aberto (esperando o dono)
 
-- Autorizar a conta do OpenArt nos conectores do claude.ai e dizer quanto crédito pode gastar.
+- Autorizar a conta do OpenArt nos conectores do claude.ai (o crédito já está liberado).
 
 - Aprovar o plano do e-book (formato A4 de cerca de 60 páginas, capa "Que casa cabe no seu lote?", começar os passos 1 a 6).
 - Título, preço, bônus, lançar com 12 ou 24 plantas, contato do parceiro.

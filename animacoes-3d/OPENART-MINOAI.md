@@ -18,7 +18,7 @@ DECISÃO: aprovado com as condições. Gasto de créditos: decisão do dono.
 
 - **Quem faz (decisão do dono, 20/11/2026):** a **MinoAI Frontier é a responsável pela edição de vídeo e pela criação de imagem**, e cria as imagens **usando o OpenArt**.
 - **OpenArt agora é um plugin do Claude** (`openart`), com skills prontas: `openart:performance-ads` (anúncio de feed), `openart:hook-variants` (o mesmo anúncio com ganchos diferentes), `openart:ugc`, `openart:tvc`, `openart:talking-head`, `openart:ad-variation`. **Ainda falta autorizar a conta do OpenArt** nas configurações de conectores do claude.ai; até lá as ferramentas não funcionam. A busca de 20/11/2026 que dizia "sem conector" ficou desatualizada.
-- **Créditos do OpenArt custam dinheiro:** cada geração só com o "sim" do dono (regra do [`CLAUDE.md`](../CLAUDE.md)).
+- **Créditos do OpenArt:** liberados pelo dono sem limite (20/11/2026). Pode gerar assim que a conta estiver autorizada.
 - **MinoAI Frontier** edita no Mac ou PC do dono.
 - **Nossa base** sai daqui: prévias em `ebook/plantas/previas/`, 3D e animação da C01 em `animacoes-3d/plantas/casa-compacta/`.
 
@@ -75,7 +75,7 @@ DECISÃO: aprovado com as regras abaixo
 2. **Rascunho primeiro, qualidade final só no aprovado.** Gerar em resolução de rascunho, escolher, e só então gerar a final daquela uma.
 3. **Uma imagem, vários formatos.** Gerar em 4:5 com sobra nas bordas e recortar para 9:16 (reel e story), 1:1 (WhatsApp) e capa. Nunca gerar a mesma cena duas vezes por causa do formato.
 4. **O que é grátis não vai para o OpenArt.** Plantas, páginas, fita, mockups do e-book no celular e o 3D saem dos nossos scripts (`ebook/visual/mockups/` já tem 3).
-5. **Teto:** 6 imagens na primeira rodada. Mais, só com o "sim" do dono e o número do teste.
+5. **Sem teto de crédito** (o dono liberou em 20/11/2026). As regras 1 a 4 continuam, para render mais por crédito.
 
 **A primeira rodada (6 imagens de ambientação, sem mostrar planta)**
 
