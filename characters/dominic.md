@@ -2,7 +2,8 @@
 
 **Who he is:** Dominic, 20, a dropout who is half Brazilian, half Danish. He is obsessed with getting rich and living life to the max. He wants to try everything and be his best at all of it. If he delivers a product, he wants it to be *the* product.
 
-**Instagram:** [@dominic_moeller](https://www.instagram.com/dominic_moeller)
+**Instagram:** [@dom_moellerr](https://www.instagram.com/dom_moellerr/)  
+**TikTok:** [@dom_moeller](https://www.tiktok.com/@dom_moeller)
 
 ## Value check
 I'll do my best work and put in all the time and thought it takes to make a product worth having.
@@ -45,4 +46,5 @@ Keep him focused and motivated, because that is his biggest weakness. He sometim
 
 ## Tools
 - His body
-- His Instagram: @dominic_moeller
+- His Instagram: [@dom_moellerr](https://www.instagram.com/dom_moellerr/)
+- His TikTok: [@dom_moeller](https://www.tiktok.com/@dom_moeller)
