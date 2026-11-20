@@ -13,7 +13,7 @@
 | **Constrói por etapas** | plantas que crescem → começa com o que dá → sai do aluguel antes | 5 | 4 | 4 | "Comece com 1 quarto. Termine com 2 sem quebrar nada." |
 | **O porquê de cada decisão** | "por que esta planta é assim" em 3 pontos → entende a casa → conversa de igual com o pedreiro | 4 | 5 | 5 | "Não é só o desenho. É o porquê de cada parede." |
 | **Leve ao engenheiro** | chega com a casa escolhida → menos horas de projeto → orçamento mais rápido | 4 | 3 | 4 | "Chegue no seu engenheiro sabendo exatamente que casa você quer." |
-| **Ver antes de construir** | planta humanizada e 3D → a família enxerga a casa → decide sem briga | 5 | 3 (só a C01 tem 3D hoje) | 3 | "Veja a casa pronta antes de comprar o primeiro tijolo." |
+| **Ver antes de construir** | planta humanizada e 3D → a família enxerga a casa → decide sem briga | 5 | 4 (as 24 já saem mobiliadas, com a vista da rua; o 3D é o último passo) | 3 | "Veja a casa mobiliada antes de comprar o primeiro tijolo." |
 | **Preço de um saco de cimento a mais** | R$ 67 contra projeto pronto de R$ 98 a R$ 2.000 por casa → 24 casas pelo preço de um detalhe | 4 | 4 (preços de anúncio, mudam) | 3 | "24 casas pelo preço de uma ida a mais no depósito." *(confirmar o preço do saco na época)* |
 | **Garantia de 7 dias** | sem risco → compra por impulso | 3 | 5 | 2 | "Abriu e não serviu? Devolvemos em 7 dias." |
 

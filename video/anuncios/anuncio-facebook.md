@@ -19,19 +19,19 @@ Um anúncio para cada tamanho de lote. A pessoa se reconhece na hora.
 **Texto na imagem:** Tem um lote 10 x 20?
 
 **Texto principal:**
-Essas casas cabem num lote 10 x 20:
+14 casas do e-book cabem num lote 10 x 20, com os recuos de referência. Três delas:
 
 🏠 Casa Compacta · 55 m² · 2 quartos
-🏠 [planta] · [área] · [quartos] quartos
-🏠 [planta] · [área] · [quartos] quartos
+🏠 Casa Compacta Suíte · 57 m² · 2 quartos (1 suíte)
+🏠 Casa Família Compacta · 68 m² · 3 quartos
 
-Todas em 3D, para você ver como fica antes de começar a obra.
+Cada uma desenhada no lote, com as medidas e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.
 
 Quer receber uma de graça no WhatsApp? Me chama.
 
 **Botão:** Enviar mensagem
 
-> Repita para 8 x 25, 10 x 25, 12 x 25 e 5 x 25, usando a coluna **Lote** do [catálogo](../../ebook/catalogo.md). Só cite plantas que já estão no e-book.
+> Repita para os outros lotes. Contagem conferida pelo validador em 20/11/2026 (frente e fundo, recuos de referência): **8 x 25: 11 casas** (ex.: Casa Estreita 3 Quartos · 72 m² · 3 quartos (1 suíte)), **10 x 25: 17**, **12 x 25: 22**, **5 x 25: 1** (Casa Fita). Só cite plantas que já estão no e-book; recalcule se o catálogo mudar.
 
 ## Ângulo 2: erro caro
 
@@ -55,7 +55,7 @@ Vai construir aos poucos? Então a planta precisa já nascer pronta para crescer
 
 Essa casa de 55 m² começa com 2 quartos e já tem o lugar do 3º previsto, sem derrubar nada.
 
-Te mando a planta em 3D de graça. É só chamar no WhatsApp.
+Te mando uma planta mobiliada de graça. É só chamar no WhatsApp.
 
 **Botão:** Enviar mensagem
 
@@ -66,7 +66,7 @@ Te mando a planta em 3D de graça. É só chamar no WhatsApp.
 **Texto principal:**
 O pedreiro sabe levantar parede. Mas ele não te mostra como a casa vai ficar antes.
 
-Com a planta em 3D, você vê cada cômodo, cada móvel e a medida de tudo, e chega na obra sabendo o que quer.
+Com a planta mobiliada e desenhada no lote, você vê cada cômodo, cada móvel e as medidas principais, e chega na obra sabendo o que quer.
 
 Comenta PLANTA que eu te mando uma de graça.
 
@@ -77,7 +77,7 @@ Comenta PLANTA que eu te mando uma de graça.
 As 5 versões do vídeo em [`../saida/`](../saida/) são deste ângulo. Texto para acompanhar o vídeo:
 
 **Texto principal:**
-Os 7 erros de planta que um arquiteto te faria evitar, explicados em 38 segundos, com a casa em 3D.
+Os 7 erros de planta que um arquiteto te faria evitar, explicados em 38 segundos, com a planta na tela.
 
 O último é o mais caro. Comenta PLANTA que eu te mando a planta grátis.
 
@@ -85,10 +85,10 @@ O último é o mais caro. Comenta PLANTA que eu te mando a planta grátis.
 
 Use em **remarketing**: pessoas que assistiram ao vídeo, comentaram ou chamaram no WhatsApp e não compraram.
 
-**Texto na imagem:** [nº] plantas de casas em 3D por R$ [preço]
+**Texto na imagem:** [nº] plantas de casas, organizadas pelo seu lote, por R$ [preço]
 
 **Texto principal:**
-Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book [título] são [nº] plantas, organizadas pelo tamanho do lote, todas em 3D.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book [título] são [nº] plantas, organizadas pelo tamanho do lote, cada uma mobiliada e desenhada no lote.
 
 ✅ Pix ou cartão parcelado
 ✅ 7 dias de garantia
