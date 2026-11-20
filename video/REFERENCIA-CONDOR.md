@@ -53,6 +53,72 @@ O `analyze_hook` não aceita YouTube ("Provide a public HTTPS TikTok or Instagra
 | 12 | **Fim numa imagem forte, sem silêncio** | Terminar na fachada iluminada ao entardecer e cortar seco. Nada de 5 s de preto, porque o fim precisa emendar com o começo para o vídeo repetir |
 | 13 | **Evitar os erros que a análise apontou** | Nada de clarão que lava a planta, plano repetido, efeito solto no fim nem ordem fora do tempo |
 
+## 1c. B-roll e música: o coração do estilo (pedido do dono: "preste muita atenção")
+
+### O B-roll dele
+
+Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-chave do CONDOR:
+
+| Tipo de B-roll | Exemplo visto (com o tempo) | Para que serve |
+|---|---|---|
+| **Metáfora animal ou da natureza** | O cavalo de corrida na esteira, cortado com o chute ("work week", 0:02–0:05). No fim, o cavalo correndo no escuro, em silhueta (0:19–0:22). No CONDOR, gansos-das-neves e gansos-do-canadá (palavras-chave) e montanha refletida no lago (miniatura) | Diz o sentimento sem palavra: esforço, instinto, liberdade. É o efeito Kuleshov: dois planos criam um terceiro sentido |
+| **Ritual de preparação em close** | Máquina raspando o cabelo, atadura nas mãos, suor (0:12–0:15) | Mostra o *processo*, não o resultado. Detalhe de mão e textura dá intimidade |
+| **Textura e macro** | Água e folhas em macro (0:16–0:17); clarões brancos e rosa como pontuação | Respiro e ritmo entre as cenas fortes |
+| **Lugar comum filmado como capa de revista** | Lookbook num **terreno de terra com alambrado**, sol forte (reel "💿🔂", 0:00) | Um lugar sem graça vira estético pelo enquadramento e pela cor |
+| **Mídia misturada** | DNA virando código Python, telas de tubo flutuando, janela branca em 3D, montagem com falha de imagem (ECDYSIS XII, 0:26–0:34 e 0:43–0:49); coração em 3D ("brb", 0:13) | Ilustra a ideia abstrata da narração ao pé da letra |
+| **Ação crua desde o quadro zero** | Pulo da ponte no rio verde (0:00) | Para o dedo de quem rola o feed sem precisar de texto |
+| **Cor como capítulo** | Preto e branco limpo no "work week"; troca de cor em 0:03 no pulo da ponte | Separa os momentos. A análise avisou: troca brusca demais incomoda |
+
+**A regra por trás:** quase nunca o B-roll mostra literalmente o que acontece. Ele mostra **o que a cena significa**: o cavalo é o trabalho, o DNA é a máquina. Para isso ele junta material de origens diferentes (luta, natureza, animação, arquivo) e une tudo pela música e pela cor.
+
+### A música dele
+
+| Onde | Música (o que a fonte mostrou) |
+|---|---|
+| Reel "work week" | Eartheater, "Solid Liquid Gas" (rótulo de áudio do Instagram) |
+| Reel "i rejected that culture…" | Eartheater, "C.L.I.T." (rótulo de áudio; a legenda do post é tirada da letra) |
+| Reels "brb", "dont get paid by the hour", ECDYSIS XII, pulo da ponte | "Original audio". Nos comentários, as perguntas mais comuns são "song name?", "Song ?" e "THE SONG" |
+| Files of Lars (YouTube) | "Music Produced by Payton Talbott": ele mesmo faz a música. Cada personagem tem uma música diferente |
+| BPPV IX (YouTube) | Trecho de uma música inédita do Frank Ocean, que virou notícia (Genius, 14/03/2025) |
+| [Playlist "Payton Talbott" no Spotify](https://open.spotify.com/playlist/0eO5fHNsuLX4cCcaSSoAOF), feita por fã, com "all tracks from Payton Talbott's yt videos and instagram posts" (100 faixas) | Nextime / We Are Not Friends aparecem em 20 faixas; Crystal Castles em 5; $uicideboy$ em 4; Deftones e Pastel Ghost em 3 cada; The Cure e Slowdive em 2 cada. Também têm Cocteau Twins, Radiohead, Nirvana, Pixies, The Prodigy, Enigma, Molchat Doma, TV Girl, Lil Peep |
+
+**O padrão da música:**
+1. **Contraste.** A imagem é violenta (luta, sangue, suor) e a música é sonhadora e melancólica (shoegaze, dream pop, witch house). O choque é o que fica na memória.
+2. **Som de assinatura.** Nextime / We Are Not Friends voltam em 20 faixas, então o ouvido reconhece o canal antes do olho.
+3. **Fora das paradas.** São artistas alternativos e faixas raras ou inéditas, e por isso o público pergunta "qual é a música?" nos comentários. Isso é comentário de graça, que o algoritmo conta.
+4. **Nostalgia.** Muita coisa dos anos 90 e 2000 (The Cure, Deftones, Nirvana, Slowdive) para o público que cresceu com elas.
+5. **Letra que vira legenda.** "i rejected that culture, do you blame me?" é a letra e também a legenda. O golpe e o mortal caem na batida e na nota alta (0:01–0:08).
+6. **Música autoral.** No Files of Lars, a música é dele. Ninguém consegue copiar.
+
+### Como isso vira o B-roll e a música dos reels de planta
+
+| Conceito do Payton | No X1-Plantas |
+|---|---|
+| B-roll de **significado**, não literal | Mão calejada de pedreiro, café na marmita ao amanhecer, criança desenhando casa com giz no chão, chave na fechadura, a família medindo o terreno com trena. É o sentido de "a nossa casa", não uma obra genérica |
+| **Ritual em close** (atadura, máquina de cabelo) | O ritual da obra: amarrar ferragem, bater a colher na massa, esticar a linha de nível, lápis riscando a planta, o clique da trena travando |
+| **Terreno de terra filmado como revista** | É *exatamente* o lote do nosso comprador: terreno de terra, muro de bloco, estaca. Filmar o lote vazio ao pôr do sol, com enquadramento de capa, e depois a casa da planta aparecendo nele (fachada realista, "Imagem ilustrativa") |
+| **Natureza como metáfora** (gansos, montanha) | Sol nascendo e se pondo atrás do lote (orientação solar, que já está na ficha), passarinho fazendo ninho (fazer a casa por etapas), semente brotando no canto do terreno |
+| **Mídia misturada** | A planta 2D, o 3D, a fachada realista e o vídeo real do lote no mesmo reel, unidos pela música e por uma cor só |
+| **Contraste** música × imagem | Imagem dura (canteiro, concreto, poeira) com música calma e afetiva. A obra é pesada; o que se sonha é a casa da família |
+| **Som de assinatura** | Uma faixa instrumental tema para a série CASA I, II, III…, sempre a mesma abertura de 2 s. O ouvido reconhece a série |
+| **"Qual é a música?"** gerando comentário | A palavra do comentário continua sendo PLANTA ou LOTE (decisão do dono, em aberto). A música serve para prender, e não para pedir comentário |
+| **Letra como legenda** | Com música instrumental, a "letra" é o texto na tela, cortado no tempo da batida: "8 metros." *(batida)* "3 quartos." *(batida)* "Cabe." |
+| **Música autoral** | Um tema curto composto para o X1-Plantas (contratar é decisão do dono). Até lá, faixa licenciada |
+| **B-roll por frase** (MinoAI: um clipe por frase, 2 a 4 clipes nos primeiros 5 s, movimento dinâmico; "primeiro o clima, depois a música") | Lista de planos frase a frase em todo roteiro, antes de editar |
+
+### Cuidados (Revisor de risco e Estrategista)
+
+- **Direito autoral:**
+  - **Anúncio pago** só pode usar música com licença comercial (biblioteca de sons da Meta ou trilha livre de direitos). Música de artista, como Eartheater ou Crystal Castles, **não** entra em anúncio.
+  - No **reel orgânico**, conta comercial também só tem acesso à biblioteca comercial do Instagram.
+  - O que vale copiar do Payton é o **princípio** (contraste, assinatura, nostalgia), e não as faixas.
+- **Nostalgia certa para o nosso público:** o comprador é brasileiro, classe C, de 25 a 50 anos. A nostalgia dele não é shoegaze americano. Qual estilo instrumental evoca a infância dele é pergunta para o Pesquisador, com fonte, antes de escolher. Nada de chute.
+- **B-roll que não engana:**
+  - Casa pronta gerada por IA leva "Imagem ilustrativa".
+  - Obra filmada não pode dar a entender que foi feita com a nossa planta, se não foi.
+  - Mão de pedreiro aparece como respeito ao profissional, nunca como "dispensa o pedreiro".
+- **Biblioteca a montar** (frente vídeo): pasta `video/broll/` com os planos acima, gravados ou gerados (OpenArt na frente de vídeo, com o orçamento de [`ORCAMENTO.md`](../ORCAMENTO.md)). Hoje ela só tem `ebook-folheando.mp4`.
+
 ## 2. Os conceitos, levados para o reel de planta (30 a 60 s, vertical)
 
 | # | Conceito do CONDOR | Como vira reel de planta | Onde entra |
