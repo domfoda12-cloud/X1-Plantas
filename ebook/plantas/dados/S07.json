@@ -1,0 +1,245 @@
+{
+ "id": "S07",
+ "nome": "Casa Gourmet",
+ "W": 9.4,
+ "D": 8.6,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.6,
+   "y1": 3.8
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.6,
+   "y0": 0.0,
+   "x1": 6.4,
+   "y1": 3.8
+  },
+  {
+   "id": "gourmet",
+   "nome": "Área gourmet",
+   "tipo": "varanda",
+   "x0": 6.4,
+   "y0": 0.0,
+   "x1": 9.4,
+   "y1": 2.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 6.4,
+   "y0": 2.4,
+   "x1": 9.4,
+   "y1": 3.8
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.8,
+   "x1": 6.4,
+   "y1": 5.0
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 6.4,
+   "y0": 3.8,
+   "x1": 9.4,
+   "y1": 5.0
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 5.0,
+   "x1": 2.6,
+   "y1": 8.6
+  },
+  {
+   "id": "quarto3",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 2.6,
+   "y0": 5.0,
+   "x1": 5.2,
+   "y1": 8.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 5.2,
+   "y0": 5.0,
+   "x1": 8.1,
+   "y1": 8.6
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 8.1,
+   "y0": 5.0,
+   "x1": 9.4,
+   "y1": 8.6
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "gourmet",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto3"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ]
+ ],
+ "quartos_txt": "3 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.0
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.6
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.9
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "quarto3": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.8
+   ]
+  ],
+  "bsuite": [
+   [
+    "dir",
+    1.2
+   ]
+  ]
+ },
+ "destaque": "Cozinha aberta para a área gourmet, a casa que recebe",
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 73.6,
+   "area_total": 80.8,
+   "area_coberta_aberta": 7.2,
+   "luz": {
+    "sala": 0.2,
+    "cozinha": 0.15,
+    "servico": 0.17,
+    "banho": 0.15,
+    "quarto2": 0.21,
+    "quarto3": 0.21,
+    "quarto1": 0.21,
+    "bsuite": 0.15
+   },
+   "circulacao": 0.104,
+   "lote": [
+    10.9,
+    13.1
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    11,
+    15
+   ],
+   "taxa_ocupacao": 0.57,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 13.6,
+     "leste": -6.1,
+     "sul": 14.4,
+     "oeste": 14.1
+    }
+   }
+  }
+ }
+}

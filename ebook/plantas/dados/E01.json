@@ -1,0 +1,235 @@
+{
+ "id": "E01",
+ "nome": "Casa Estreita",
+ "W": 5.0,
+ "D": 19.2,
+ "comodos": [
+  {
+   "id": "garagem",
+   "nome": "Garagem",
+   "tipo": "garagem",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.0,
+   "y1": 4.6
+  },
+  {
+   "id": "jardim",
+   "nome": "Jardim",
+   "tipo": "externo",
+   "x0": 3.0,
+   "y0": 0.0,
+   "x1": 5.0,
+   "y1": 4.6
+  },
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 4.0,
+   "y1": 8.2
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 8.2,
+   "x1": 4.0,
+   "y1": 11.0
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 0.0,
+   "y0": 11.0,
+   "x1": 1.8,
+   "y1": 13.0
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 1.8,
+   "y0": 11.0,
+   "x1": 4.0,
+   "y1": 13.0
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 0.0,
+   "y0": 13.0,
+   "x1": 1.3,
+   "y1": 16.2
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 1.3,
+   "y0": 13.0,
+   "x1": 4.0,
+   "y1": 16.2
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 16.2,
+   "x1": 4.0,
+   "y1": 19.2
+  },
+  {
+   "id": "corr",
+   "nome": "Corredor coberto",
+   "tipo": "varanda",
+   "x0": 4.0,
+   "y0": 4.6,
+   "x1": 5.0,
+   "y1": 19.2
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "corr",
+   "frente"
+  ],
+  [
+   "corr",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "corr",
+   "cozinha"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "corr",
+   "banho"
+  ],
+  [
+   "corr",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ],
+  [
+   "corr",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.1
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.7
+   ]
+  ],
+  "servico": [
+   [
+    "esq",
+    0.6
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    1.1
+   ]
+  ],
+  "bsuite": [
+   [
+    "esq",
+    1.1
+   ]
+  ],
+  "quarto1": [
+   [
+    "dir",
+    1.5
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    2.0
+   ]
+  ]
+ },
+ "recuos": {
+  "esq": 1.5
+ },
+ "destaque": "Garagem na frente e todos os cômodos abrindo para o corredor",
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 58.4,
+   "area_total": 96.0,
+   "area_coberta_aberta": 28.4,
+   "luz": {
+    "sala": 0.2,
+    "cozinha": 0.15,
+    "servico": 0.17,
+    "banho": 0.15,
+    "bsuite": 0.16,
+    "quarto1": 0.21,
+    "quarto2": 0.2
+   },
+   "circulacao": 0.0,
+   "lote": [
+    8.0,
+    23.7
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 1.5,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    8,
+    25
+   ],
+   "taxa_ocupacao": 0.51,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "sul",
+    "pontos": {
+     "norte": 16.8,
+     "leste": 4.2,
+     "sul": 2.7,
+     "oeste": 8.6
+    }
+   }
+  }
+ }
+}

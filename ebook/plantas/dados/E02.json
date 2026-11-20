@@ -1,0 +1,195 @@
+{
+ "id": "E02",
+ "nome": "Casa Corredor",
+ "W": 3.6,
+ "D": 15.299999999999999,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 2.6,
+   "y1": 3.9
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 3.9,
+   "x1": 2.6,
+   "y1": 6.7
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 0.0,
+   "y0": 6.7,
+   "x1": 1.3,
+   "y1": 8.7
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 1.3,
+   "y0": 6.7,
+   "x1": 2.6,
+   "y1": 8.7
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 8.7,
+   "x1": 2.6,
+   "y1": 12.0
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 12.0,
+   "x1": 2.6,
+   "y1": 15.3
+  },
+  {
+   "id": "corr",
+   "nome": "Corredor coberto",
+   "tipo": "varanda",
+   "x0": 2.6,
+   "y0": 0.0,
+   "x1": 3.6,
+   "y1": 15.3
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "corr",
+   "frente"
+  ],
+  [
+   "corr",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "corr",
+   "cozinha"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "corr",
+   "banho"
+  ],
+  [
+   "corr",
+   "quarto1"
+  ],
+  [
+   "corr",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.5
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.1
+   ]
+  ],
+  "servico": [
+   [
+    "esq",
+    0.6
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "dir",
+    1.5
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.5
+   ]
+  ]
+ },
+ "recuos": {
+  "esq": 1.5
+ },
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 39.8,
+   "area_total": 55.1,
+   "area_coberta_aberta": 15.3,
+   "luz": {
+    "sala": 0.21,
+    "cozinha": 0.15,
+    "servico": 0.23,
+    "banho": 0.16,
+    "quarto1": 0.21,
+    "quarto2": 0.21
+   },
+   "circulacao": 0.0,
+   "lote": [
+    6.6,
+    19.8
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 1.5,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    7,
+    20
+   ],
+   "taxa_ocupacao": 0.42,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "sul",
+    "pontos": {
+     "norte": 13.1,
+     "leste": 2.5,
+     "sul": 0.4,
+     "oeste": 7.0
+    }
+   }
+  }
+ }
+}

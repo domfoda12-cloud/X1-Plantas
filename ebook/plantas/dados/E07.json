@@ -1,0 +1,238 @@
+{
+ "id": "E07",
+ "nome": "Casa Estreita 3 Quartos",
+ "W": 5.4,
+ "D": 17.6,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.4,
+   "y1": 3.6
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 3.6,
+   "x1": 4.4,
+   "y1": 6.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 0.0,
+   "y0": 6.4,
+   "x1": 1.8,
+   "y1": 8.4
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 1.8,
+   "y0": 6.4,
+   "x1": 4.4,
+   "y1": 8.4
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 8.4,
+   "x1": 4.4,
+   "y1": 11.4
+  },
+  {
+   "id": "quarto3",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 11.4,
+   "x1": 4.4,
+   "y1": 14.4
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 0.0,
+   "y0": 14.4,
+   "x1": 1.4,
+   "y1": 17.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 1.4,
+   "y0": 14.4,
+   "x1": 4.4,
+   "y1": 17.6
+  },
+  {
+   "id": "corr",
+   "nome": "Corredor coberto",
+   "tipo": "varanda",
+   "x0": 4.4,
+   "y0": 0.0,
+   "x1": 5.4,
+   "y1": 17.6
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "corr",
+   "frente"
+  ],
+  [
+   "corr",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "corr",
+   "cozinha"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "corr",
+   "banho"
+  ],
+  [
+   "corr",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ],
+  [
+   "corr",
+   "quarto2"
+  ],
+  [
+   "corr",
+   "quarto3"
+  ]
+ ],
+ "quartos_txt": "3 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.3
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.9
+   ]
+  ],
+  "servico": [
+   [
+    "esq",
+    0.6
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    1.3
+   ]
+  ],
+  "quarto2": [
+   [
+    "dir",
+    2.2
+   ]
+  ],
+  "quarto3": [
+   [
+    "dir",
+    2.2
+   ]
+  ],
+  "bsuite": [
+   [
+    "esq",
+    1.2
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.6
+   ]
+  ]
+ },
+ "recuos": {
+  "esq": 1.5
+ },
+ "validacao": {
+  "erros": [],
+  "avisos": [
+   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)"
+  ],
+  "info": [],
+  "metricas": {
+   "area_fechada": 77.4,
+   "area_total": 95.0,
+   "area_coberta_aberta": 17.6,
+   "luz": {
+    "sala": 0.2,
+    "cozinha": 0.15,
+    "servico": 0.17,
+    "banho": 0.15,
+    "quarto2": 0.2,
+    "quarto3": 0.2,
+    "bsuite": 0.16,
+    "quarto1": 0.2
+   },
+   "circulacao": 0.0,
+   "lote": [
+    8.4,
+    22.1
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 1.5,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    9,
+    25
+   ],
+   "taxa_ocupacao": 0.51,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "sul",
+    "pontos": {
+     "norte": 26.1,
+     "leste": 9.2,
+     "sul": -6.5,
+     "oeste": 13.2
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "id": "S03",
+ "nome": "Casa Acessível",
+ "W": 8.8,
+ "D": 8.5,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.0,
+   "y1": 3.6
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 4.0,
+   "y0": 0.0,
+   "x1": 7.2,
+   "y1": 3.6
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 7.2,
+   "y0": 0.0,
+   "x1": 8.8,
+   "y1": 3.6
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.6,
+   "x1": 6.6,
+   "y1": 5.1
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro acessível",
+   "tipo": "banho",
+   "x0": 6.6,
+   "y0": 3.6,
+   "x1": 8.8,
+   "y1": 5.1
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 5.1,
+   "x1": 4.4,
+   "y1": 8.5
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 4.4,
+   "y0": 5.1,
+   "x1": 8.8,
+   "y1": 8.5
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.1
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.7
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.9
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.9
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    2.5
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    2.5
+   ]
+  ]
+ },
+ "acessivel": true,
+ "destaque": "Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas",
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 74.8,
+   "area_total": 74.8,
+   "area_coberta_aberta": 0,
+   "luz": {
+    "sala": 0.2,
+    "cozinha": 0.15,
+    "servico": 0.16,
+    "banho": 0.16,
+    "quarto1": 0.2,
+    "quarto2": 0.2
+   },
+   "circulacao": 0.132,
+   "lote": [
+    10.3,
+    13.0
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    11,
+    15
+   ],
+   "taxa_ocupacao": 0.56,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 11.8,
+     "leste": -7.7,
+     "sul": 17.8,
+     "oeste": 13.3
+    }
+   }
+  }
+ }
+}

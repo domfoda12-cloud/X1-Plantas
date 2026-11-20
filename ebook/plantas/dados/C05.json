@@ -1,0 +1,190 @@
+{
+ "id": "C05",
+ "nome": "Casa Popular",
+ "W": 6.0,
+ "D": 7.8,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.0,
+   "y1": 3.4
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.0,
+   "y0": 0.0,
+   "x1": 4.8,
+   "y1": 3.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 4.8,
+   "y0": 0.0,
+   "x1": 6.0,
+   "y1": 3.4
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.4,
+   "x1": 3.9,
+   "y1": 4.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 3.9,
+   "y0": 3.4,
+   "x1": 6.0,
+   "y1": 4.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 3.0,
+   "y1": 7.8
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 3.0,
+   "y0": 4.6,
+   "x1": 6.0,
+   "y1": 7.8
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.5
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.0
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.6
+   ]
+  ]
+ },
+ "destaque": "Cabe no padrão de programa habitacional (40 m² ou mais) sem desperdiçar um metro",
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 46.8,
+   "area_total": 46.8,
+   "area_coberta_aberta": 0,
+   "luz": {
+    "sala": 0.21,
+    "cozinha": 0.16,
+    "servico": 0.17,
+    "banho": 0.17,
+    "quarto1": 0.2,
+    "quarto2": 0.2
+   },
+   "circulacao": 0.1,
+   "lote": [
+    7.5,
+    12.3
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    8,
+    15
+   ],
+   "taxa_ocupacao": 0.51,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 8.0,
+     "leste": -4.6,
+     "sul": 11.6,
+     "oeste": 8.5
+    }
+   }
+  }
+ }
+}

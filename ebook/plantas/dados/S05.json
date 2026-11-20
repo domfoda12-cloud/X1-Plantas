@@ -1,0 +1,225 @@
+{
+ "id": "S05",
+ "nome": "Casa de Praia",
+ "W": 7.4,
+ "D": 10.4,
+ "comodos": [
+  {
+   "id": "varanda",
+   "nome": "Varandão",
+   "tipo": "varanda",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 7.4,
+   "y1": 2.4
+  },
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 2.4,
+   "x1": 3.8,
+   "y1": 6.0
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.8,
+   "y0": 2.4,
+   "x1": 6.2,
+   "y1": 6.0
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 6.2,
+   "y0": 2.4,
+   "x1": 7.4,
+   "y1": 6.0
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 6.0,
+   "x1": 5.0,
+   "y1": 7.2
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 5.0,
+   "y0": 6.0,
+   "x1": 7.4,
+   "y1": 7.2
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 7.2,
+   "x1": 3.0,
+   "y1": 10.4
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 3.0,
+   "y0": 7.2,
+   "x1": 6.0,
+   "y1": 10.4
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 6.0,
+   "y0": 7.2,
+   "x1": 7.4,
+   "y1": 10.4
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "varanda",
+   "frente"
+  ],
+  [
+   "varanda",
+   "sala",
+   "aberto"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ]
+ ],
+ "quartos_txt": "2 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.0
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.3
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.8
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "bsuite": [
+   [
+    "dir",
+    1.2
+   ]
+  ]
+ },
+ "destaque": "Varandão na frente e ventilação cruzada em todos os cômodos",
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 59.2,
+   "area_total": 77.0,
+   "area_coberta_aberta": 17.8,
+   "luz": {
+    "sala": 0.2,
+    "cozinha": 0.15,
+    "servico": 0.16,
+    "banho": 0.17,
+    "quarto2": 0.2,
+    "quarto1": 0.2,
+    "bsuite": 0.16
+   },
+   "circulacao": 0.101,
+   "lote": [
+    8.9,
+    14.9
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    9,
+    15
+   ],
+   "taxa_ocupacao": 0.58,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "norte",
+    "pior": "leste",
+    "pontos": {
+     "norte": 10.2,
+     "leste": -2.6,
+     "sul": 13.4,
+     "oeste": 8.6
+    }
+   }
+  }
+ }
+}
