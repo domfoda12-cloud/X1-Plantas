@@ -1,0 +1,260 @@
+<title>E-book Que Casa Cabe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: uma mesa de prova azul; as páginas do e-book são papel branco por cima, em escala real de A4. */
+:root {
+  --azul: #0B4FA8; --azul-grade: #1A5DB4; --amarelo: #FFC857;
+  --papel: #FFFFFF; --tinta: #1B2430; --tinta-suave: #4A5463; --linha: #DCE3EC;
+  --fundo: #EEF2F7; --texto: #16202C; --texto-suave: #4E5B6B; --cartao: #FFFFFF; --borda: #D3DCE7;
+  --titulo: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --corpo: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --fundo: #0C1624; --texto: #E6ECF3; --texto-suave: #A3B1C2; --cartao: #132235; --borda: #24364D; color-scheme: dark } }
+:root[data-theme="dark"] { --fundo: #0C1624; --texto: #E6ECF3; --texto-suave: #A3B1C2; --cartao: #132235; --borda: #24364D; color-scheme: dark }
+body { background: var(--fundo); color: var(--texto); font-family: var(--corpo); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 64px; display: grid; gap: 56px; }
+h1, h2 { font-family: var(--titulo); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.olho { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-suave); }
+.intro { max-width: 68ch; color: var(--texto-suave); margin: 0; }
+section { display: grid; gap: 18px; min-width: 0; }
+
+/* ---------- miniaturas das páginas ---------- */
+.trilha { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
+.mini { display: grid; gap: 8px; }
+.folha { aspect-ratio: 210 / 297; max-width: 100%; background: var(--papel); color: var(--tinta); border-radius: 3px; box-shadow: 0 1px 2px rgba(11,40,80,.15), 0 8px 20px rgba(11,40,80,.10); overflow: hidden; position: relative; padding: 9%; display: flex; flex-direction: column; gap: 5%; font-size: 7px; line-height: 1.35; }
+.folha.azul { background: var(--azul); color: #fff; background-image: linear-gradient(var(--azul-grade) 1px, transparent 1px), linear-gradient(90deg, var(--azul-grade) 1px, transparent 1px); background-size: 12px 12px; }
+.folha .t { font-family: var(--titulo); font-weight: 800; font-size: 13px; line-height: 1.05; letter-spacing: -0.01em; }
+.folha.azul .t { color: #fff; }
+.folha:not(.azul) .t { color: var(--azul); }
+.folha .tag { font-size: 6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: .75; }
+.folha img { width: 100%; border-radius: 2px; display: block; }
+.folha .barra { height: 5px; border-radius: 2px; background: var(--linha); }
+.folha .barra.c { width: 70%; } .folha .barra.m { width: 50%; }
+.folha .rod { position: absolute; left: 9%; right: 9%; bottom: 4%; font-size: 5px; color: var(--tinta-suave); border-top: 1px solid var(--linha); padding-top: 2px; }
+.folha.azul .rod { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.25); }
+.mini figcaption { font-size: 13px; color: var(--texto-suave); }
+.mini figcaption b { color: var(--texto); font-weight: 600; display: block; }
+.lotes { display: grid; gap: 3px; }
+.lotes div { display: flex; justify-content: space-between; gap: 4px; padding: 2px 3px; background: #F2F6FB; border-radius: 2px; }
+.lotes b { color: var(--azul); }
+.selo { display: inline-block; background: var(--amarelo); color: #1B2430; font-weight: 700; border-radius: 2px; padding: 1px 4px; width: max-content; }
+figure { margin: 0; }
+
+/* ---------- página dupla ---------- */
+.mesa { background: var(--azul); background-image: linear-gradient(var(--azul-grade) 1px, transparent 1px), linear-gradient(90deg, var(--azul-grade) 1px, transparent 1px); background-size: 24px 24px; border-radius: 6px; padding: clamp(14px, 3vw, 32px); overflow-x: auto; }
+.dupla { display: grid; grid-template-columns: repeat(2, minmax(300px, 1fr)); gap: 4px; min-width: 620px; }
+.pg { background: var(--papel); color: var(--tinta); aspect-ratio: 210 / 297; padding: 6% 7% 4%; display: flex; flex-direction: column; gap: 10px; font-size: 10.5px; line-height: 1.45; box-shadow: 0 10px 30px rgba(0,0,0,.25); position: relative; }
+.pg h3 { font-family: var(--titulo); font-weight: 800; color: var(--azul); font-size: 22px; line-height: 1; margin: 0; letter-spacing: -0.01em; }
+.pg h4 { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--azul); margin: 0 0 4px; }
+.pg .cab { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border-bottom: 2px solid var(--azul); padding-bottom: 6px; }
+.pg .cab span { font-size: 9px; color: var(--tinta-suave); font-weight: 600; }
+.pg .gancho { font-family: var(--titulo); font-weight: 600; font-size: 14px; color: var(--tinta); margin: 0; }
+.topo { display: grid; grid-template-columns: 1fr 34%; gap: 10px; min-height: 0; }
+.topo img { width: 100%; border-radius: 3px; display: block; }
+.ficha { display: grid; gap: 5px; align-content: start; }
+.ficha div { display: grid; border-bottom: 1px solid var(--linha); padding-bottom: 4px; }
+.ficha small { font-size: 8px; color: var(--tinta-suave); text-transform: uppercase; letter-spacing: .08em; }
+.ficha strong { font-size: 13px; font-variant-numeric: tabular-nums; }
+.pg p { margin: 0; }
+.pg ul { margin: 0; padding-left: 14px; display: grid; gap: 3px; }
+.pensou { display: grid; gap: 6px; }
+.pensou div { display: grid; grid-template-columns: 22px 1fr; gap: 6px; align-items: start; }
+.ico { width: 22px; height: 22px; border-radius: 50%; background: #E7EFFA; color: var(--azul); display: grid; place-items: center; font-weight: 800; font-size: 11px; }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.qr { display: grid; grid-template-columns: 52px 1fr; gap: 8px; align-items: center; background: #FFF6DE; border-radius: 3px; padding: 6px; margin-top: auto; }
+.qr i { width: 52px; height: 52px; background: repeating-conic-gradient(#1B2430 0 25%, #fff 0 50%) 0 0 / 10px 10px; border: 3px solid #fff; outline: 1px solid #1B2430; }
+.aviso { font-size: 8px; color: var(--tinta-suave); border-top: 1px solid var(--linha); padding-top: 4px; margin-top: auto; }
+.legenda-dupla { font-size: 13px; color: var(--texto-suave); max-width: 72ch; margin: 0; }
+.marca { background: var(--amarelo); color: #1B2430; font-weight: 700; padding: 0 4px; border-radius: 2px; }
+
+/* ---------- etapas ---------- */
+.etapas { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; counter-reset: e; }
+.etapas li { display: grid; grid-template-columns: 34px 1fr auto; gap: 14px; align-items: start; background: var(--cartao); border: 1px solid var(--borda); border-radius: 6px; padding: 12px 14px; counter-increment: e; }
+.etapas li::before { content: counter(e); font-family: var(--titulo); font-weight: 800; font-size: 20px; color: var(--azul); line-height: 1.2; }
+:root[data-theme="dark"] .etapas li::before { color: #7FB2F0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .etapas li::before { color: #7FB2F0; } }
+.etapas b { display: block; font-weight: 600; }
+.etapas span { color: var(--texto-suave); font-size: 14px; }
+.chip { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 99px; white-space: nowrap; border: 1px solid var(--borda); color: var(--texto-suave); }
+.chip.eu { background: #DDEBFB; color: #0B3F86; border-color: #BCD4F3; }
+.chip.voce { background: #FFF1CC; color: #6B4C00; border-color: #F3D98F; }
+.chip.fim { background: transparent; border-style: dashed; }
+@media (max-width: 560px) { .etapas li { grid-template-columns: 28px 1fr; } .etapas .chip { grid-column: 2; justify-self: start; } }
+.perguntas { display: grid; gap: 8px; margin: 0; padding-left: 20px; }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="olho">E-book X1-Plantas · como vai ficar</span>
+    <h1>Que casa cabe no seu lote?</h1>
+    <p class="intro">Prévia visual do plano: PDF A4 de cerca de 60 páginas, 24 casas térreas, uma página dupla por casa, organizado pela largura do terreno. As imagens das casas abaixo são as plantas reais já validadas. O 3D e as animações entram por último.</p>
+  </header>
+
+  <section>
+    <span class="olho">1 · A sequência de páginas</span>
+    <h2>Do "qual é o seu lote" até "leve ao seu engenheiro"</h2>
+    <div class="trilha">
+      <figure class="mini">
+        <div class="folha azul">
+          <span class="tag">24 plantas de casas térreas</span>
+          <span class="t" style="font-size:17px">Que casa cabe no seu lote?</span>
+          <span>Organizadas pela largura do terreno</span>
+          <img src="previas/C01.png" alt="Planta da Casa Compacta na capa" style="margin-top:auto;opacity:.95">
+          <span class="rod">Plantas de referência</span>
+        </div>
+        <figcaption><b>Capa</b>pág. 1</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">Comece aqui</span>
+          <span class="t">Ache pelo seu lote</span>
+          <div class="lotes">
+            <div><b>5–6 m</b><span>E03 · C02</span></div>
+            <div><b>7 m</b><span>C03 · E02</span></div>
+            <div><b>8 m</b><span>C01 · C04 · C05 · C07 · E01 · E05</span></div>
+            <div><b>9 m</b><span>C06 · E04 · E06 · E07 · S05</span></div>
+            <div><b>10–11 m</b><span>F01 · F03 · F04 · S03 · S04 · S07</span></div>
+            <div><b>12 m+</b><span>F02 · F05 · S09</span></div>
+          </div>
+          <span class="rod">págs. 3–4</span>
+        </div>
+        <figcaption><b>Ache pelo seu lote</b>págs. 3–4</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">Antes de escolher</span>
+          <span class="t">Como ler uma planta</span>
+          <img src="previas/E03.png" alt="Planta da Casa Fita como exemplo" style="width:55%;align-self:center">
+          <div class="barra"></div><div class="barra c"></div>
+          <span class="rod">págs. 6–7</span>
+        </div>
+        <figcaption><b>Como ler uma planta</b>cota, porta, janela, recuo</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">Antes da laje</span>
+          <span class="t">Os 7 erros que saem caro</span>
+          <div class="barra"></div><div class="barra c"></div><div class="barra"></div><div class="barra m"></div><div class="barra"></div><div class="barra c"></div><div class="barra m"></div>
+          <span class="selo">1. corredor comprido</span>
+          <span class="rod">págs. 8–9</span>
+        </div>
+        <figcaption><b>Os 7 erros</b>com a planta mostrando o certo</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">C01 · Compactas</span>
+          <span class="t">Casa Compacta</span>
+          <img src="previas/C01.png" alt="Planta da Casa Compacta">
+          <div class="barra"></div><div class="barra c"></div>
+          <span class="rod">Planta de referência</span>
+        </div>
+        <figcaption><b>Casa: página esquerda</b>planta, ficha, para quem é</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">C01 · continuação</span>
+          <span class="t">O que o arquiteto pensou</span>
+          <div class="barra"></div><div class="barra c"></div><div class="barra"></div><div class="barra m"></div>
+          <span class="selo" style="margin-top:auto">QR: veja ganhar vida</span>
+          <span class="rod">Planta de referência</span>
+        </div>
+        <figcaption><b>Casa: página direita</b>raciocínio, cuidados, QR</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha">
+          <span class="tag" style="color:var(--azul)">F02 · Família</span>
+          <span class="t">Casa Integrada</span>
+          <img src="previas/F02.png" alt="Planta da Casa Integrada">
+          <div class="barra"></div><div class="barra m"></div>
+          <span class="rod">x 24 casas · págs. 11–58</span>
+        </div>
+        <figcaption><b>As 24 casas</b>por categoria, 2 páginas cada</figcaption>
+      </figure>
+      <figure class="mini">
+        <div class="folha azul">
+          <span class="tag">Depois de escolher</span>
+          <span class="t">Leve ao seu engenheiro</span>
+          <span>Recuo da sua cidade · projeto legal · ART ou RRT · financiamento</span>
+          <div class="barra" style="background:rgba(255,255,255,.3)"></div><div class="barra c" style="background:rgba(255,255,255,.3)"></div>
+          <span class="rod">págs. 59–61</span>
+        </div>
+        <figcaption><b>Terreno e próximos passos</b>fecha com confiança, sem prometer</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <span class="olho">2 · A página dupla de cada casa</span>
+    <h2>C01 · Casa Compacta, como vai sair no PDF</h2>
+    <div class="mesa">
+      <div class="dupla">
+        <article class="pg">
+          <div class="cab"><h3>Casa Compacta</h3><span>C01 · Compactas</span></div>
+          <p class="gancho">8 m de frente. 2 quartos. 55 m².</p>
+          <div class="topo">
+            <img src="previas/C01.png" alt="Planta da Casa Compacta com cômodos, áreas e cotas">
+            <div class="ficha">
+              <div><small>Área fechada</small><strong>55 m²</strong></div>
+              <div><small>Quartos</small><strong>2</strong></div>
+              <div><small>Banheiros</small><strong>1</strong></div>
+              <div><small>Lote a partir de</small><strong>8 x 15 m</strong></div>
+              <div><small>Melhor frente</small><strong>Sul</strong></div>
+              <div><small>Circulação</small><strong>10%</strong></div>
+            </div>
+          </div>
+          <div class="duas">
+            <div><h4>Para quem é</h4><p>Casal com 1 ou 2 filhos, lote de 8 m de frente, que quer 2 quartos de verdade sem gastar com corredor.</p></div>
+            <div><h4>Erros que evita</h4><ul><li>Corredor comprido</li><li>Banheiro longe da cozinha</li><li>Quarto sem janela</li></ul></div>
+          </div>
+          <p class="aviso">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>
+        </article>
+        <article class="pg">
+          <div class="cab"><h3>O que o arquiteto pensou</h3><span>C01 · continuação</span></div>
+          <div class="pensou">
+            <div><span class="ico">☀</span><p><b>Sol.</b> Testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.</p></div>
+            <div><span class="ico">↔</span><p><b>Luz e ar.</b> Sala, cozinha e quartos têm janela para fora, nas proporções que o validador confere.</p></div>
+            <div><span class="ico">≈</span><p><b>Núcleo molhado.</b> Cozinha, serviço e banheiro encostados: uma tubulação só, mão de obra mais curta.</p></div>
+          </div>
+          <div class="duas">
+            <div><h4>Para quem não serve</h4><p>Quem quer subir um 2º andar depois: veja a F03.</p></div>
+            <div><h4>Leve ao seu engenheiro</h4><ul><li>Qual o recuo da minha cidade?</li><li>Que fundação o meu solo pede?</li><li>Laje ou forro?</li></ul></div>
+          </div>
+          <div class="qr"><i aria-hidden="true"></i><p><b>Veja a casa ganhar vida.</b> Aponte a câmera: animação de 12 s, o blueprint se desenha e a casa aparece mobiliada. <span class="marca">entra no passo 9</span></p></div>
+          <p class="aviso">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>
+        </article>
+      </div>
+    </div>
+    <p class="legenda-dupla">Os números da ficha e do "o que o arquiteto pensou" saem direto do validador. Os textos de "para quem é", "erros que evita" e das perguntas são exemplo e serão escritos pelo Redator no passo 4. A planta em azul vira um desenho claro no estilo do e-book no passo 3, e o 3D entra por último.</p>
+  </section>
+
+  <section>
+    <span class="olho">3 · O passo a passo</span>
+    <h2>Dez passos, o 3D por último</h2>
+    <ol class="etapas">
+      <li><div><b>Juntar o gerador do PDF</b><span>trazer o gerador que já existe para a branch principal</span></div><span class="chip eu">eu</span></li>
+      <li><div><b>Fazer as 24 casas entrarem no PDF</b><span>usando a planta 2D e as fichas automáticas, sem esperar o 3D</span></div><span class="chip eu">eu</span></li>
+      <li><div><b>Desenho 2D no estilo do e-book</b><span>cor por cômodo, nomes, m², cotas, portas, janelas e móveis em traço</span></div><span class="chip eu">eu + Designer</span></li>
+      <li><div><b>Texto de cada casa</b><span>gancho, para quem é e não é, erros que evita, perguntas ao engenheiro</span></div><span class="chip eu">Redator + Revisor</span></li>
+      <li><div><b>Abertura e fechamento</b><span>capa, ache pelo lote, como ler, 7 erros, terreno, próximos passos</span></div><span class="chip eu">eu</span></li>
+      <li><div><b>Prévia para você</b><span>PDF e 6 páginas em imagem para aprovar</span></div><span class="chip voce">você aprova</span></li>
+      <li><div><b>Suas decisões</b><span>título, preço, bônus, lançar com 12 ou 24, contato do parceiro</span></div><span class="chip voce">você</span></li>
+      <li><div><b>Revisão de um arquiteto registrado</b><span>nas 24 plantas e nas regras</span></div><span class="chip voce">arquiteto externo</span></li>
+      <li><div><b>3D e animações</b><span>humanizada 3D, perspectiva, animação de 12 s, QR por página; OpenArt + MinoAI nos anúncios</span></div><span class="chip fim">por último</span></li>
+      <li><div><b>Versão final e planta grátis do funil</b><span>ebook.pdf e planta-gratis.pdf</span></div><span class="chip eu">eu + Revisor</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <span class="olho">4 · Para aprovar</span>
+    <h2>Três respostas e eu começo</h2>
+    <ol class="perguntas">
+      <li>O formato (A4, cerca de 60 páginas, página dupla por casa) está bom?</li>
+      <li>A capa com "Que casa cabe no seu lote?" está aprovada como direção? O título final continua com você.</li>
+      <li>Posso começar os passos 1 a 6?</li>
+    </ol>
+  </section>
+</div>

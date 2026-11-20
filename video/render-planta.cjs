@@ -16,7 +16,17 @@ const FPS = Number(opc('--fps', 30));
 const soImagens = args.includes('--so-imagens');
 
 const RAIZ = __dirname;
-const DESTINO = path.resolve(RAIZ, opc('--saida', '../animacoes-3d/plantas/casa-compacta'));
+const PLANTA = opc('--planta', '');
+const DISTANCIA = Number(opc('--escala', 0)) || (() => {
+  // Afasta a câmera conforme o tamanho da casa (a C01 de 8,5 m é a referência).
+  if (!PLANTA) return 1;
+  const txt = fs.readFileSync(path.join(RAIZ, 'src', 'plantas', `${PLANTA}.js`), 'utf8');
+  const W = Number(/LARGURA = ([\d.]+)/.exec(txt)[1]); const D = Number(/PROFUNDIDADE = ([\d.]+)/.exec(txt)[1]);
+  return Math.max(1, Math.max(W * 1.25, D) / 8.5);
+})();
+const NOME = PLANTA ? JSON.parse(/META = (\{.*\});/.exec(fs.readFileSync(path.join(RAIZ, 'src', 'plantas', `${PLANTA}.js`), 'utf8'))[1]).nome : 'Casa Compacta';
+const pasta = NOME.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const DESTINO = path.resolve(RAIZ, opc('--saida', `../animacoes-3d/plantas/${pasta}`));
 const QUADROS = path.join(RAIZ, 'saida', 'quadros', 'planta');
 const PORTA = 8767;
 
@@ -57,7 +67,7 @@ function quadroAnimacao(t) {
 async function abrir(navegador, w, h, ss) {
   const pagina = await navegador.newPage({ viewport: { width: w, height: h }, deviceScaleFactor: 1 });
   pagina.on('pageerror', (e) => console.error('[página]', e.message));
-  await pagina.goto(`http://127.0.0.1:${PORTA}/src/casa.html?w=${w}&h=${h}&ss=${ss}`);
+  await pagina.goto(`http://127.0.0.1:${PORTA}/src/casa.html?w=${w}&h=${h}&ss=${ss}${PLANTA ? `&planta=${PLANTA}` : ''}`);
   await pagina.waitForFunction(() => window.pronto === true, null, { timeout: 60000 });
   return pagina;
 }
@@ -69,7 +79,7 @@ async function abrir(navegador, w, h, ss) {
 
   const pImg = await abrir(navegador, 2000, 2500, 1);
   for (const img of IMAGENS) {
-    await pImg.evaluate(([e, c]) => window.desenhar(e, c), [img.estado, img.camera]);
+    await pImg.evaluate(([e, c]) => window.desenhar(e, c), [img.estado, { ...img.camera, distancia: img.camera.distancia * DISTANCIA }]);
     await pImg.screenshot({ path: path.join(DESTINO, img.arquivo) });
     console.log('imagem', img.arquivo);
   }
@@ -81,7 +91,7 @@ async function abrir(navegador, w, h, ss) {
     const total = Math.round(DURACAO * FPS); const inicio = Date.now();
     for (let i = 0; i < total; i++) {
       const { estado, camera } = quadroAnimacao(i / FPS);
-      await pAnim.evaluate(([e, c]) => window.desenhar(e, c), [estado, camera]);
+      await pAnim.evaluate(([e, c]) => window.desenhar(e, c), [estado, { ...camera, distancia: camera.distancia * DISTANCIA }]);
       await pAnim.screenshot({ path: path.join(QUADROS, `q_${String(i).padStart(5, '0')}.png`) });
       if (i % 60 === 0) console.log(`animação: quadro ${i}/${total} (${((Date.now() - inicio) / 1000).toFixed(0)} s)`);
     }
