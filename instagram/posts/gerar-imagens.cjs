@@ -158,7 +158,7 @@ posts['post-03-como-ler-planta'] = () => {
       recorte(pl, [300, 230, 1000, 900], 900, 810, marca.porta(1.0, 0, 0.9, 0, Math.PI / 2))),
     dica(3, 'Linha fina na parede é janela', `Onde a parede vira ${y('linhas finas e duplas')}, há uma janela. Confira se cada quarto tem a sua.`,
       recorte(pl, [600, 140, 1100, 760], 900, 622, marca.ret(2.2, -0.12, 3.2, 0.12) + marca.ret(4.2, -0.12, 5.6, 0.12))),
-    dica(4, 'O m² é a área do cômodo', `${y('8,9 m²')} quer dizer um quarto de 3,30 x 2,70 m. Compare com o quarto onde você dorme hoje.`,
+    dica(4, 'O m² é a área do cômodo', `${y('12,7 m²')} quer dizer um quarto de 3,25 x 3,90 m. Compare com o quarto onde você dorme hoje.`,
       recorte(pl, [980, 1330, 760, 820], 760, 820, marca.ret(3.2, 5.8, 6.5, 8.5))),
     dica(5, 'Planta humanizada', `É a mesma planta com ${y('piso e móveis em escala')}. Fica fácil ver como cada cômodo vai ser usado.`,
       img(pl, 'humanizada', 640, 800)),
@@ -221,7 +221,7 @@ posts['post-08-erros-comuns'] = () => {
       etiqueta: 'e como evitar cada um', n: 1, total: T, capa: true,
       corpo: `<div class="t1">3 erros na planta<br>que ${y('saem caro')}<br>na obra</div><div class="centro">${img(pl, 'blueprint', 620, 775)}</div>`,
     }),
-    erro(1, 'Corredor comprido', 'Corredor custa por metro, e ninguém mora nele.', `Na Casa Compacta, um ${y('hall de 2,2 m²')} liga os quartos e o banheiro.`,
+    erro(1, 'Corredor comprido', 'Corredor custa por metro, e ninguém mora nele.', `Na Casa Compacta, só ${y('10% da área')} é circulação: ela liga os quartos e o banheiro.`,
       recorte(pl, [700, 900, 1100, 900], 860, 704, marca.ret(3.2, 4.2, 4.6, 5.8))),
     erro(2, 'Banheiro de frente pra sala', 'Quem está na sala vê a porta do banheiro.', `A porta do banho ${y('abre para o hall')}, longe da sala.`,
       recorte(pl, [330, 250, 1380, 1300], 860, 810, marca.porta(4.6, 4.5, 0.8, 0, Math.PI / 2))),
@@ -251,7 +251,7 @@ posts['reserva-casa-compacta'] = () => {
       corpo: `<div class="t2">Por que ${y('funciona')}</div>
         <div class="lista">
           <div class="item"><div class="caixa">✓</div><div><div class="item-t">Sala e cozinha integradas</div><div class="item-d">A casa parece maior do que é.</div></div></div>
-          <div class="item"><div class="caixa">✓</div><div><div class="item-t">Hall de 2,2 m² em vez de corredor</div><div class="item-d">Sobra área para os cômodos.</div></div></div>
+          <div class="item"><div class="caixa">✓</div><div><div class="item-t">Só 10% da área é circulação</div><div class="item-d">Sobra área para os cômodos.</div></div></div>
           <div class="item"><div class="caixa">✓</div><div><div class="item-t">Banheiro abre para o hall</div><div class="item-d">Não para a sala.</div></div></div>
         </div>`,
     }),

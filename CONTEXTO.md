@@ -56,6 +56,8 @@
 
 | 20/11/2026 | "Expanda a base de dados: procure animações 3D de plantas ganhando vida. Só pare quando os tokens acabarem" | [`animacoes-3d/REFERENCIAS-BLUEPRINT.md`](animacoes-3d/REFERENCIAS-BLUEPRINT.md): 11 referências com links, anatomia do efeito, 10 melhorias para o motor e roteiro de 12 s revisado. Loop continua |
 
+| 20/11/2026 | (loop) Revisão do Revisor de risco nos posts e no vídeo 2 | 9 vetos e 10 ajustes aplicados: posts com o 3D antigo da C01 saem do calendário até o 3D novo; números da C01 e da F03 corrigidos; vídeo 2 sem a "virada" da divisa (a E07 não encosta), com aviso de planta de referência e planta grátis C01; material gratuito agora é o PDF novo |
+
 ## Em aberto (esperando o dono)
 
 - Testar a palavra do comentário "PLANTA" contra "LOTE" ([`ebook/referencias/concorrentes.md`](ebook/referencias/concorrentes.md)): "PLANTA" também é usada por criadores de jardinagem.

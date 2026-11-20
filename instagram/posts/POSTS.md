@@ -19,16 +19,16 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
 | # | Formato | Tema | Imagens | Situação |
 |---|---|---|---|---|
-| 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Pronto para editar** |
+| 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
 | 2 | Carrossel (6) | Três plantas lado a lado | [`imagens/post-02-tres-plantas/`](imagens/post-02-tres-plantas/) | **Falta 3D:** E01 Casa Estreita e F03 Casa Família |
-| 3 | Carrossel (7) | Como ler uma planta baixa | [`imagens/post-03-como-ler-planta/`](imagens/post-03-como-ler-planta/) | **Pronto** |
+| 3 | Carrossel (7) | Como ler uma planta baixa | [`imagens/post-03-como-ler-planta/`](imagens/post-03-como-ler-planta/) | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
 | 4 | Reel | Passeio 3D da Casa Estreita | capa em [`imagens/capas-reels/`](imagens/capas-reels/) | **Falta 3D:** E01 Casa Estreita |
 | 5 | Carrossel (5) | Checklist antes de contratar o pedreiro | [`imagens/post-05-checklist-pedreiro/`](imagens/post-05-checklist-pedreiro/) | **Pronto** |
-| 6 | Reel | Bastidor: a planta virando 3D | imagens da Casa Compacta + capa | **Pronto para editar** |
+| 6 | Reel | Bastidor: a planta virando 3D | imagens da Casa Compacta + capa | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
 | 7 | Imagem | Casa Família, vista 3D | [`imagens/post-07-casa-familia/`](imagens/post-07-casa-familia/) | **Falta 3D:** F03 Casa Família |
-| 8 | Carrossel (5) | 3 erros comuns na planta | [`imagens/post-08-erros-comuns/`](imagens/post-08-erros-comuns/) | **Pronto** |
-| 9 | Reel | O material gratuito | imagens da Casa Compacta + capa | **Pronto para editar** |
-| R | Carrossel (6) | Reserva: Casa Compacta completa | [`imagens/reserva-casa-compacta/`](imagens/reserva-casa-compacta/) | **Pronto.** Entra no lugar do 2 ou do 7 se o 3D atrasar |
+| 8 | Carrossel (5) | 3 erros comuns na planta | [`imagens/post-08-erros-comuns/`](imagens/post-08-erros-comuns/) | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
+| 9 | Reel | O material gratuito | imagens da Casa Compacta + capa | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
+| R | Carrossel (6) | Reserva: Casa Compacta completa | [`imagens/reserva-casa-compacta/`](imagens/reserva-casa-compacta/) | **Espera o 3D/blueprint novo da C01** (o atual é do desenho antigo) |
 
 **O que falta de outra frente** (pedir ao chat de **Animações 3D**): gerar as plantas **E01 Casa Estreita** e **F03 Casa Família** em `animacoes-3d/plantas/casa-estreita/` e `animacoes-3d/plantas/casa-familia/`, com os 5 arquivos de sempre. Quando existirem, rode o gerador de novo (abaixo) e as telas saem com as imagens no lugar do aviso.
 
@@ -85,9 +85,11 @@ Essa é a Casa Compacta:
 🚿 1 banheiro
 📏 lote a partir de 8 x 15 m
 
-Dois quartos do mesmo tamanho, serviço coberto e só 10% de corredor. Tudo em escala, com os móveis no lugar.
+Dois quartos do mesmo tamanho, serviço coberto e só 10% de circulação. Tudo em escala, com os móveis no lugar.
 
 Quer receber essa planta humanizada de graça? Comente PLANTA que eu te mando no WhatsApp.
+
+Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
 
 Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
 
@@ -124,7 +126,7 @@ Qual dessas cabe no seu terreno? Me conta nos comentários a frente e o fundo do
 
 Quer a planta humanizada da Casa Compacta de graça? Comente PLANTA.
 
-Plantas de referência, não são projeto executivo. Os recuos mudam de cidade para cidade.
+Plantas de referência, não são projeto executivo. A obra precisa de responsável técnico. Os recuos mudam de cidade para cidade.
 
 #plantadecasa #plantabaixa #casapropria #terreno #arquitetura
 ```
@@ -141,7 +143,7 @@ Plantas de referência, não são projeto executivo. Os recuos mudam de cidade p
 | 2 | *dica 1 de 5* · **A cota é a medida** · "A linha com um traço em cada ponta mostra a medida, em metros. Aqui, a casa tem 6,50 m de largura." | Recorte da cota de cima, em amarelo |
 | 3 | *dica 2 de 5* · **O arco é a porta** · "Ele mostra para que lado a porta abre. Esse espaço precisa ficar livre: nada de móvel ali." | Porta de entrada em amarelo |
 | 4 | *dica 3 de 5* · **Linha fina na parede é janela** · "Onde a parede vira linhas finas e duplas, há uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha em amarelo |
-| 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "8,9 m² quer dizer um quarto de 3,30 x 2,70 m. Compare com o quarto onde você dorme hoje." | Quarto 2 em amarelo |
+| 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "12,7 m² quer dizer um quarto de 3,25 x 3,90 m. Compare com o quarto onde você dorme hoje." | Quarto 2 em amarelo |
 | 6 | *dica 5 de 5* · **Planta humanizada** · "É a mesma planta com piso e móveis em escala. Fica fácil ver como cada cômodo vai ser usado." | Planta humanizada |
 | 7 | *planta grátis* · **Quer treinar numa planta de verdade?** · Comente PLANTA | Miniaturas |
 
@@ -160,6 +162,8 @@ Salve para olhar de novo quando receber a planta da sua casa.
 
 A planta do exemplo é a Casa Compacta: 55 m², 2 quartos, 1 banheiro.
 Quer ela inteira, de graça? Comente PLANTA que eu te mando no WhatsApp.
+
+Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
 
 #plantadecasa #plantabaixa #casapropria #construcao #arquitetura
 ```
@@ -190,7 +194,7 @@ Terreno estreito não precisa virar casa apertada. 📏
 
 Casa Estreita:
 📐 58 m²
-🛏️ 2 quartos
+🛏️ 2 quartos (1 suíte)
 🚿 2 banheiros
 📏 lote a partir de 8 x 25 m
 
@@ -291,11 +295,11 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 Casa Família: espaço para todo mundo. 🏡
 
 📐 78 m²
-🛏️ 3 quartos
+🛏️ 3 quartos (1 suíte)
 🚿 2 banheiros
 📏 lote a partir de 11 x 15 m
 
-Dois quartos perto do banheiro social e varanda nos fundos.
+Suíte com banheiro próprio para o casal e varanda na frente, cobrindo a porta da sala.
 
 Você moraria nessa? Comenta aqui o que mudaria.
 Quer uma planta humanizada de graça? Comente PLANTA.
@@ -325,7 +329,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 3 erros de planta que você só percebe depois da obra pronta. 👇
 
 1. Corredor comprido: custa por metro e ninguém mora nele.
-2. Banheiro de frente pra sala: a porta tem que abrir pro hall.
+2. Banheiro de frente pra sala: o melhor é a porta abrir pro hall.
 3. Banheiro sem janela: sem ventilação natural, aparece mofo.
 
 Na Casa Compacta (55 m², 2 quartos, 1 banheiro) os três estão resolvidos. Arrasta para ver onde.
@@ -361,7 +365,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 Tá aqui o que você recebe de graça. 🎁
 
 ✅ Planta humanizada, com móveis em escala
-✅ Blueprint com todas as medidas
+✅ Blueprint com as medidas principais (cotas)
 ✅ A casa em 3D, de dois ângulos
 ✅ A animação da casa ganhando vida
 
@@ -386,7 +390,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | 2 | *a planta com medidas* · **Blueprint com cotas** |
 | 3 | *a casa em 3D* · **Como ela fica por dentro** |
 | 4 | *o outro lado* · **Sala, cozinha e quartos** |
-| 5 | *por que funciona* · Sala e cozinha integradas · Hall de 2,2 m² em vez de corredor · Banheiro abre para o hall |
+| 5 | *por que funciona* · Sala e cozinha integradas · Só 10% da área é circulação · Banheiro abre para o hall |
 | 6 | *planta grátis* · **Quer essa planta?** · Comente PLANTA |
 
 **Legenda:**
@@ -401,7 +405,7 @@ Planta da semana: Casa Compacta. 🏠
 
 Por que ela funciona:
 • sala e cozinha integradas, a casa parece maior
-• hall de 2,2 m² no lugar do corredor
+• só 10% da área é circulação, e ela liga os quartos e o banheiro
 • o banheiro abre para o hall, não para a sala
 
 Arrasta para ver o blueprint e a casa em 3D.
