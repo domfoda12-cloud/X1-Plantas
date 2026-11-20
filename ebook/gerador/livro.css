@@ -134,3 +134,5 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .foto figcaption { position: absolute; right: 2mm; bottom: 1.5mm; font-size: 6.5pt; color: #fff; background: rgba(0,0,0,.45); padding: .4mm 1.6mm; border-radius: 1mm; }
 .fim .foto { margin-top: auto; }
 .fachada .foto { width: 72%; margin: 0 auto; }
+
+.nq { white-space: nowrap; }

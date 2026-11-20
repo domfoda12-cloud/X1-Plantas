@@ -383,7 +383,7 @@ def montar(plantas, config, numeros):
     L.pagina(f"""
       <div class="capa-topo"><span class="eti">{len(plantas)} PLANTAS DE CASAS TÉRREAS · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
-        <p class="capa-sub">Casas organizadas pela frente do terreno. Mede o seu lote, acha a marca na fita, abre a página.</p></div>
+        <p class="capa-sub">Casas organizadas pela frente do terreno. Meça a frente do seu lote, ache a medida na régua abaixo e abra a página.</p></div>
       <div class="capa-planta">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), nomes=True, cotas=False, moveis=True)}</div>
       {svg_fita(contagem)}""", "capa", rodape=False, estilo=capa_fundo())
 
@@ -393,7 +393,7 @@ def montar(plantas, config, numeros):
       <ol class="passos3">
         <li><b>Meça a frente do seu lote.</b><span>Com a trena, do muro de um vizinho ao do outro. Essa medida é a porta de entrada do e-book.</span></li>
         <li><b>Ache as casas que cabem.</b><span>Na página {numeros['lote']}, cada largura de lote leva às casas que cabem nela. A aba amarela na borda das páginas faz o mesmo quando você folheia.</span></li>
-        <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas para a primeira conversa.</span></li>
+        <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas. Você chega na primeira conversa sabendo o que quer e o que perguntar.</span></li>
       </ol>
       {foto("02-maos-medindo", 66, pos="center 72%")}
       <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""")
@@ -406,7 +406,8 @@ def montar(plantas, config, numeros):
         linhas.append(f'<div class="faixa"><div class="faixa-m">{f} m</div><ul>{itens}</ul></div>')
     L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
-      <p class="abertura">A casa precisa caber com os recuos. A medida ao lado é a <b>menor frente</b> em que a casa cabe com os recuos de referência (3 m na frente, 1,5 m nos fundos e numa lateral; nas casas de corredor, nas duas; na de esquina, 3 m na rua lateral). Um lote mais largo também serve, se tiver o comprimento indicado e se os recuos da sua cidade não forem maiores.</p>
+      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a <b>menor frente</b> para cada casa.</p>
+      <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais, menos a E03 Casa Fita, que encosta numa divisa. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
 
     # 4. ache pelo jeito da família
@@ -425,7 +426,7 @@ def montar(plantas, config, numeros):
     L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
       <p class="abertura">Se ainda não tem o lote, escolha pelo jeito de morar. Depois confira na página {numeros['lote']} se cabe.</p>
       <div class="grupos">{blocos}</div>
-      {galeria(plantas, ["C02", "C03", "C06", "F01", "S03", "S07"], "Seis jeitos de morar, seis casas diferentes.")}""")
+      {galeria(plantas, ["C02", "C03", "C06", "F01", "S03", "S07"], "Algumas das 24 casas, cada uma para um jeito de morar.")}""")
 
     # 5–6. como ler + glossário
     c01 = por_id["C01"]
@@ -433,7 +434,7 @@ def montar(plantas, config, numeros):
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
       <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis e a porta de entrada é amarela.</p>
       <div class="leitura"><div class="leitura-fig">{svg_planta(c01, moveis=True)}</div><ul class="legenda">{legenda}</ul></div>
-      <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a casa coberta, sem varanda e garagem.</div>""")
+      <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""")
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>As palavras da obra</h2>
       <p class="abertura">As palavras que aparecem nas plantas, na prefeitura e na conversa com o engenheiro.</p>
@@ -441,7 +442,7 @@ def montar(plantas, config, numeros):
 
     # 7–8. os 7 erros
     def erro(i, t, porque, certo):
-        return f'<div class="erro"><div class="erro-n">{i}</div><div><h3>{"O mais caro: " if i == 7 else ""}{E(t)}</h3><p>{E(porque)}</p><p class="certo"><b>O jeito certo:</b> {certo}</p></div></div>'
+        return f'<div class="erro"><div class="erro-n">{i}</div><div><h3>{"O mais caro: " + E(t[0].lower() + t[1:]) if i == 7 else E(t)}</h3><p>{E(porque)}</p><p class="certo"><b>O jeito certo:</b> {certo[0].lower() + certo[1:]}</p></div></div>'
     bl = [erro(i, *e) for i, e in enumerate(TX.ERROS, start=1)]
     L.pagina(f'<span class="sobre">Antes da laje</span><h2>Os 7 erros que saem caro</h2><p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}')
     L.pagina(f'<span class="sobre">Antes da laje</span>{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>')
@@ -449,7 +450,7 @@ def montar(plantas, config, numeros):
     # 9. índice
     linhas = "".join(
         f'<tr><td class="mono">{p["id"]}</td><td>{E(p["nome"])}</td><td class="n">{p["_r"].metricas["area_fechada"]:.0f} m²</td>'
-        f'<td>{E(p["quartos_txt"].replace(" (+1 depois)", "+1"))}</td><td class="n">{p["banheiros"]}</td>'
+        f'<td>{E(p["quartos_txt"])}</td><td class="n">{p["banheiros"]}</td>'
         f'<td class="n">{lote_frente(p)} x {p["_r"].metricas["lote_comercial"][1]}</td><td class="n">{numeros[p["id"]]}</td></tr>'
         for p in plantas)
     L.pagina(f"""<span class="sobre">Índice rápido</span><h2>As {len(plantas)} casas</h2>
@@ -461,7 +462,7 @@ def montar(plantas, config, numeros):
 
     # terreno
     L.pagina(f"""<span class="sobre">Depois de escolher</span><h2>Terreno e recuos</h2>
-      <p class="abertura">A planta só serve se couber nas regras do seu lote. Confira <b>antes</b> de escolher, não depois de pagar o projeto.</p>
+      <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
       <div class="duas">
         <div><h3>O que a prefeitura define</h3><ul class="lista">
           <li><b>Recuos:</b> distância mínima da casa até a rua, os vizinhos e os fundos.</li>
@@ -472,13 +473,13 @@ def montar(plantas, config, numeros):
           <li>No Plano Diretor, na lei de zoneamento e no código de obras da sua cidade.</li>
           <li>Melhor: peça na prefeitura a consulta prévia do seu lote (leve a matrícula ou o IPTU).</li>
           <li>Em condomínio, leia também o regulamento.</li>
-          <li>O Código Civil (art. 1.301) proíbe janela a menos de 1,5 m da divisa com o vizinho.</li></ul></div>
+          <li>Em área urbana, o Código Civil (art. 1.301) proíbe janela a menos de 1,5 m da divisa com o vizinho.</li></ul></div>
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
       <div class="lotes-ex">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
-              "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)",
+              "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
     L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}')
 
@@ -488,20 +489,26 @@ def montar(plantas, config, numeros):
         ("Confira as regras do seu lote", "Faça a consulta prévia na prefeitura e preencha a ficha do terreno."),
         ("Contrate um profissional habilitado", "Arquiteto (CAU) ou engenheiro civil (CREA). Ele adapta a planta ao terreno, ao sol e às regras da cidade e emite a RRT ou a ART."),
         ("Aprove o projeto na prefeitura", "Com o projeto legal aprovado, sai o alvará de construção."),
-        ("Projetos complementares e orçamento", "Estrutural, elétrico e hidráulico. Com eles o orçamento deixa de ser chute."),
+        ("Os outros projetos e o orçamento", "Estrutura, elétrica e hidráulica. Com eles o orçamento deixa de ser chute."),
         ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
-        ("Regularize a casa pronta", "Habite-se na prefeitura e averbação na matrícula, no cartório."),
+        ("Regularize a casa pronta", "Habite-se na prefeitura e registro da casa na matrícula do lote, no cartório."),
     ]
     L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto")
 
     # bônus e contato
     bonus = [b for b in config.get("bonus", []) if not b.startswith("[")]
     contato = config.get("contato", "")
-    L.pagina(f"""<span class="sobre">Fim (e começo da obra)</span><h2>O que vem junto</h2>
-      {'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
-      <h3>Novas casas</h3><p>Este e-book cresce em levas.{' ' + E(config['promessa_atualizacao']) if config.get('promessa_atualizacao') else ''}</p>
-      <h3>Dúvidas</h3><p>{E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
-      {foto("05-familia-lote", 92, pos="center 22%")}
+    gerais = FICHAS.PADRAO + ["O meu lote tem matrícula e está regular na prefeitura?",
+                              "Quanto custa o projeto completo e o que está incluído nele?"]
+    L.pagina(f"""<span class="sobre">Fim (e começo da obra)</span><h2>Agora é com você</h2>
+      <p class="abertura">Você já tem o mais difícil: o lote e uma casa que cabe nele, com o porquê de cada parede. O próximo passo é a primeira conversa com o engenheiro ou o arquiteto.</p>
+      <div class="duas"><div><h3>Pergunte em qualquer casa</h3><ul class="lista">{''.join(f'<li>{E(q)}</li>' for q in gerais)}</ul>
+          <p class="pequeno">Leve também a ficha do terreno preenchida e as perguntas da página da casa escolhida.</p></div>
+        <div><h3>O que vem junto</h3>{'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
+          {('<h3>Novas casas</h3><p>' + E(config['promessa_atualizacao']) + '</p>') if config.get('promessa_atualizacao') else ''}
+          <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote: {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
+          <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
+      {foto("05-familia-lote", 78, pos="center 22%")}
       {svg_fita(contagem)}""", "fim")
     return L
 
@@ -517,8 +524,10 @@ def avisos_juntos(p):
         else:
             outros.append(a)
     for (vao, resto), nomes in grupos.items():
-        lista = nomes[0] if len(nomes) == 1 else ", ".join(nomes[:-1]) + " e " + nomes[-1]
-        outros.append(f"{lista} {'tem' if len(nomes) == 1 else 'têm'} vão de {vao.replace('.', ',')} m: {resto}")
+        art = [("a " if n.split()[0].lower().endswith("a") else "o ") + n.lower() for n in nomes]
+        lista = art[0] if len(art) == 1 else ", ".join(art[:-1]) + " e " + art[-1]
+        lista = lista[0].upper() + lista[1:]
+        outros.append(f"{lista} {'tem' if len(nomes) == 1 else 'têm'} vão livre (sem parede no meio) de {vao.replace('.', ',')} m: {resto}")
     return outros
 
 
@@ -545,25 +554,25 @@ def dupla(L, p, por_id, numeros):
     nao_html = ""
     if nao:
         alvo = nao[1]
-        nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])} Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, p. {numeros[alvo]}.</p></div>'
-    perg = t.get("perguntas", [])
+        nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])} Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, {"p. " + str(numeros[alvo]) if isinstance(numeros[alvo], int) else "no e-book"}.</p></div>'
+    perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe? Veja.</h2></div>
+      <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]}.</h2></div>
       <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
-          <div class="r-por">Porção de 1 lote de {f} x {r['lote_comercial'][1]} m</div>
+          <div class="r-por">Desenhada num lote de {f} x {r['lote_comercial'][1]} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
           {linha('Área fechada', f"{r['area_fechada']:.0f} m²")}
           {linha('Medidas da casa', f"{m(p['W'])} x {m(p['D'])} m")}
           {linha('Varanda e garagem', f"{r['area_coberta_aberta']:.0f} m²" if r['area_coberta_aberta'] else '—')}
           {linha('Quartos', E(quartos))}
           {linha('Banheiros', p['banheiros'])}
-          {linha('Corredor', f"{r['circulacao'] * 100:.0f}%" if r['circulacao'] else 'externo', 'até 14%')}
-          {linha('Janela nos quartos', '✓', '1/6 do piso')}
-          {linha('Melhor frente', ORI[r['orientacao']['melhor']])}
+          {linha('Corredor', f"{r['circulacao'] * 100:.0f}% da casa" if r['circulacao'] else 'externo', 'bom: até 14%')}
+          {linha('Janela nos quartos', '✓', 'mín. 1/6 do piso')}
+          {linha('Melhor lado da rua', ORI[r['orientacao']['melhor']])}
           {linha('Pode espelhar', 'sim', 'troca o lado')}
-          <div class="r-nota">Conferido pelo validador do X1-Plantas com recuos de referência. Confira os da sua cidade.</div></div></div>
+          <div class="r-nota">Conferido medida por medida pelo X1-Plantas, com recuos de referência. Não substitui o profissional: confira os da sua cidade.</div></div></div>
       {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in avisos_juntos(p)) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}
       {fachada_bloco(p)}
       <div><h4>Por que esta planta é assim</h4><div class="pensou">
@@ -574,6 +583,14 @@ def dupla(L, p, por_id, numeros):
 
 # ------------------------------------------------------------------ saída
 CSS = (AQUI / "livro.css").read_text(encoding="utf-8")
+
+
+def sem_quebra(doc):
+    """Não deixa "e-book" quebrar no hífen no fim da linha (só no texto do corpo, fora das tags)."""
+    import re
+    cab, corpo = doc.split("<body>", 1)
+    corpo = re.sub(r"(?<![\w/.-])([Ee])-book(?![^<]*>)", r'<span class="nq">\1-book</span>', corpo)
+    return cab + "<body>" + corpo
 
 
 def montar_gratis(plantas, config, pid):
@@ -606,6 +623,7 @@ def montar_gratis(plantas, config, pid):
       <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. {E(frase_ima)}</p>
       {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}
       <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
+      <p class="pequeno"><b>Planta de referência:</b> não é projeto executivo nem legal, não serve para aprovar nem para construir direto. Leve a um arquiteto ou engenheiro.</p>
       {svg_fita(contagem)}""", "fim")
     return L
 
@@ -631,6 +649,7 @@ def gerar(previa=None):
     SAIDA.mkdir(exist_ok=True)
     doc = (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{E(config.get("titulo", "E-book"))}</title>'
            f'<style>{CSS}</style></head><body>{"".join(L.paginas)}</body></html>')
+    doc = sem_quebra(doc)
     arq = SAIDA / "ebook.html"
     arq.write_text(doc, encoding="utf-8")
     env = dict(os.environ)
@@ -646,7 +665,7 @@ def gerar(previa=None):
     for pid in gratis:
         G = montar_gratis(plantas, config, pid)
         arq = SAIDA / f"planta-gratis-{pid}.html"
-        arq.write_text(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>", encoding="utf-8")
+        arq.write_text(sem_quebra(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>"), encoding="utf-8")
         r = subprocess.run(["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")], env=env, capture_output=True, text=True)
         print(r.stdout.strip(), r.stderr.strip())
 

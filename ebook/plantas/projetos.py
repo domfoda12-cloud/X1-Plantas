@@ -170,7 +170,7 @@ def todas():
     # ---------------------------------------------------------------- Especiais (S)
     P.append(casa("S03", "Casa Acessível", 8.8, 8.5,
                   H((3.6, V((4.0, F("sala", "Sala", "sala")), (3.2, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
-                    (1.5, V((6.6, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro acessível", "banho")))),
+                    (1.5, V((6.6, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro amplo", "banho")))),
                     (None, V((4.4, F("quarto1", "Quarto casal", "casal")), (None, F("quarto2", "Quarto", "dorm"))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("sala", "circ", "aberto"),
                    ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2")],

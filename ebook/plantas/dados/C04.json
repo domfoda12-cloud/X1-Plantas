@@ -156,9 +156,9 @@
  },
  "destaque": "Varanda na frente e dois quartos do mesmo tamanho",
  "pensou": [
-  "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
-  "Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro."
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
   "erros": [],

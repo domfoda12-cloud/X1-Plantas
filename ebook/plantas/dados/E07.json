@@ -188,14 +188,14 @@
  },
  "destaque": "3 quartos, um deles suíte, num lote de 8 m de frente",
  "pensou": [
-  "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.",
+  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa (o código de obras da sua cidade diz se janela para área coberta conta como ventilação).",
   "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
  "validacao": {
   "erros": [],
   "avisos": [
-   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)"
+   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)"
   ],
   "info": [],
   "metricas": {

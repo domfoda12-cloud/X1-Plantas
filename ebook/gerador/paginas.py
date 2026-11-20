@@ -7,7 +7,7 @@ import re
 from html import escape
 
 # ------------------------------------------------------------------ textos fixos
-AVISO_CURTO = ("Planta de referência, não é projeto executivo. Medidas provisórias e móveis ilustrativos. "
+AVISO_CURTO = ("Planta de referência, não é projeto executivo. Medidas de referência e móveis ilustrativos. "
                "Para construir, a obra precisa de responsável técnico (arquiteto ou engenheiro).")
 
 AVISO_COMPLETO = """
@@ -18,7 +18,7 @@ prefeitura nem para construir direto a partir delas. Para construir, contrate um
 (arquiteto ou engenheiro). Ele vai adaptar a planta ao seu terreno, à posição do sol e às regras da sua
 cidade, fazer os projetos que a obra exige e assumir a responsabilidade técnica, com RRT (arquiteto) ou
 ART (engenheiro).</p>
-<p>As medidas são provisórias até a validação por arquiteto. Móveis, pisos e acabamentos são ilustrativos.</p>
+<p>As medidas são de referência e precisam ser conferidas pelo arquiteto ou engenheiro que você contratar. Móveis, pisos e acabamentos são ilustrativos.</p>
 """
 
 PARA_QUEM_PADRAO = {
@@ -37,19 +37,19 @@ CUIDADOS_PADRAO = [
 
 ERROS = [
     ("Ignorar o sol",
-     "Quarto que pega o sol da tarde (poente) acumula calor e fica quente à noite. O lado que nunca recebe "
-     "sol fica úmido. Os dois viram gasto com ar-condicionado e com mofo.",
+     "Quarto que pega o sol da tarde (poente) acumula calor e fica quente à noite. O lado que quase não recebe "
+     "sol tende a ficar úmido. Os dois viram gasto com ar-condicionado e com mofo.",
      "Descubra o norte do terreno com a bússola do celular. Quartos para o <strong>nascente</strong> (leste) "
-     "pegam o sol da manhã e ficam frescos à tarde. A planta pode ser espelhada ou girada para casar com o seu "
+     "pegam o sol da manhã e tendem a ficar mais frescos à tarde. A planta pode ser espelhada ou girada para casar com o seu "
      "terreno: isso se decide com o arquiteto."),
     ("Corredor comprido",
      "Cada metro de corredor é piso, parede, reboco, pintura e telhado pagos que não viram cômodo. "
      "Ninguém mora no corredor.",
      "Prefira um <strong>hall</strong> pequeno que distribui as portas dos quartos e do banheiro. Corredor, "
      "só onde não tiver outro jeito."),
-    ("Banheiro de frente pra sala",
-     "Quem está na sala vê e ouve o banheiro. É desconfortável para a família e para a visita, e não tem "
-     "conserto depois que a parede sobe.",
+    ("Banheiro de frente para a sala",
+     "Quem está na sala vê e ouve o banheiro. É desconfortável para a família e para a visita, e consertar "
+     "depois que a parede sobe é caro.",
      "A porta do banheiro abre para o <strong>hall</strong> ou para a circulação, fora da linha de vista "
      "do sofá e da mesa."),
     ("Banheiro sem janela",
@@ -70,14 +70,14 @@ ERROS = [
     ("Construir sem ver a casa pronta",
      "Mudar de ideia com a obra andando é o mais caro de tudo: quebrar, refazer e pagar o material duas vezes. "
      "E quase sempre acontece porque a pessoa só entendeu a casa quando viu as paredes de pé.",
-     "Veja a casa em 3D e na <strong>planta humanizada</strong> antes do primeiro tijolo: se a cama cabe, se o "
-     "sofá fica de frente para a TV, se a cozinha tem bancada. É o que cada planta deste e-book traz."),
+     "Veja a casa antes do primeiro tijolo, na <strong>planta com os móveis em escala</strong>: se a cama cabe, se o "
+     "sofá fica de frente para a TV, se a cozinha tem bancada. É o que cada planta deste e-book mostra."),
 ]
 
 GLOSSARIO = [
     ("Área construída", "Área total da casa, medida por fora das paredes. É a que conta para a prefeitura e para o orçamento."),
     ("Área útil", "Área de piso por dentro das paredes, a que você realmente usa. É menor que a construída."),
-    ("Blueprint", "Planta técnica, desenhada em linhas, com medidas e nomes dos cômodos. Aqui, em azul."),
+    ("Área fechada", "A parte da casa com paredes e telhado, sem contar varanda nem garagem."),
     ("Cota", "Número na planta que mostra uma medida, em metros. Ex.: 6,50 m de frente."),
     ("Divisa", "Linha que separa o seu lote do vizinho ou da rua."),
     ("Hall", "Espaço pequeno que liga os cômodos. Substitui o corredor comprido."),
@@ -89,7 +89,7 @@ GLOSSARIO = [
     ("Recuo", "Distância mínima entre a casa e a divisa do lote: na frente, nos lados e nos fundos."),
     ("Suíte", "Quarto com banheiro próprio, que abre só para ele."),
     ("Taxa de ocupação", "Quanto do lote a casa pode cobrir, vista de cima. Ex.: 60% de um lote de 200 m² = 120 m²."),
-    ("Coeficiente de aproveitamento", "Quanto se pode construir somando todos os andares, em relação à área do lote."),
+    ("Coeficiente de aproveitamento", "Quanto se pode construir somando todos os andares. Ex.: coeficiente 1 num lote de 200 m² = até 200 m² construídos."),
     ("Taxa de permeabilidade", "Parte do lote que precisa ficar sem piso, com terra ou grama, para a chuva infiltrar."),
     ("ART e RRT", "Documentos em que o engenheiro (ART, no CREA) ou o arquiteto (RRT, no CAU) assume a responsabilidade técnica."),
     ("Alvará e habite-se", "Alvará é a licença para começar a obra. Habite-se é a certidão de que a casa pronta pode ser ocupada."),
@@ -257,6 +257,7 @@ LEGENDA_LEITURA = [
     ("Nome e área do cômodo", "A área vem em m². Compare com o seu cômodo de hoje."),
     ("Móveis", "Desenhados em escala, para mostrar que a cama, o sofá e a mesa cabem."),
     ("Ficha", "Nome da planta, área total, quartos e banheiros."),
+    ("Sol", "Em cada casa testamos as quatro posições da rua em relação ao sol, numa conta simples. A ficha diz o melhor e o pior lado; o arquiteto confere para o clima da sua cidade."),
 ]
 
 

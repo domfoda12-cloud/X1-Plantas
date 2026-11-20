@@ -443,7 +443,7 @@ def validar(planta):
         if c["tipo"] == "banho":
             viz = [o for o in cs if o["id"] != c["id"] and o["tipo"] in MOLHADOS and parede_comum(c, o)]
             if not viz:
-                r.aviso(f"{c['nome']} não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)")
+                r.aviso(f"{c['nome']} não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)")
     coz = [c for c in cs if c["tipo"] == "cozinha"]
     serv = [c for c in cs if c["tipo"] == "servico"]
     if not serv:
@@ -626,6 +626,7 @@ def _porta_ext(d, c, lado, pos, X, Y, escala):
 
 
 ORI_NOME = {"norte": "norte", "sul": "sul", "leste": "leste", "oeste": "oeste"}
+ORI_AO = {"norte": "ao norte", "sul": "ao sul", "leste": "a leste", "oeste": "a oeste"}
 
 
 def pensou(planta):
@@ -636,24 +637,41 @@ def pensou(planta):
     tipos = [c["tipo"] for c in cs]
     out = []
     o = m["orientacao"]
-    out.append(f"Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o "
-               f"{ORI_NOME[o['melhor']]} e pior para o {ORI_NOME[o['pior']]} (critério simplificado; o arquiteto confere para o clima da sua cidade). "
+    out.append(f"Sol: melhor com a rua {ORI_AO[o['melhor']]}; evite a rua {ORI_AO[o['pior']]}. "
                "Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.")
     portas_ext = [pt[1] for pt in planta.get("portas", []) if pt[0] == "ext"]
     if any(t == "patio" for t in tipos):
         out.append("Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.")
     elif any(c["id"] == "corr" for c in cs):
-        out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.")
+        out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa "
+                   "(o código de obras da sua cidade diz se janela para área coberta conta como ventilação).")
     elif any(c["tipo"] == "varanda" and c["id"] in portas_ext for c in cs):
         out.append("Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.")
     else:
-        out.append("Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência "
-                   "(valor de referência; o código de obras da sua cidade pode pedir outro).")
+        luz = m.get("luz", {})
+        ok = lambda ts, lim: all(luz.get(c["id"], 0) + 1e-9 >= lim for c in cs if c["tipo"] in ts)
+        grupo = [n for n, ts in (("sala", {"sala", "estar", "jantar"}), ("cozinha", {"cozinha"}), ("quartos", {"dorm", "casal"})) if any(c["tipo"] in ts for c in cs)]
+        if sum(1 for c in cs if c["tipo"] in ("dorm", "casal")) == 1:
+            grupo = ["quarto" if g == "quartos" else g for g in grupo]
+        lista = grupo[0] if len(grupo) == 1 else ", ".join(grupo[:-1]) + " e " + grupo[-1]
+        if ok(PERMANENCIA, 1 / 6) and ok({"cozinha"}, 1 / 8):
+            out.append(f"Luz e ar: {lista} {'tem' if len(grupo) == 1 else 'têm'} janela para fora. Nos cômodos onde a família fica (sala e quartos), "
+                       "a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; "
+                       "o código de obras da sua cidade pode pedir outro).")
+        else:
+            out.append(f"Luz e ar: {lista} {'tem' if len(grupo) == 1 else 'têm'} janela para fora (o tamanho de cada uma o código de obras da sua cidade confere).")
     prumada = any("prumada própria" in a for a in r.avisos)
     if prumada:
         out.append("Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.")
     else:
-        out.append("Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.")
+        viz = []
+        for b in (c for c in cs if c["tipo"] == "banho"):
+            for o2 in cs:
+                if o2["id"] != b["id"] and o2["tipo"] in MOLHADOS and parede_comum(b, o2) and o2["tipo"] not in [v for v in viz]:
+                    viz.append(o2["tipo"])
+        nome_viz = {"cozinha": "na cozinha", "servico": "na área de serviço", "banho": "no outro banheiro", "lavabo": "no lavabo"}
+        onde = " e ".join(nome_viz[v] for v in viz[:2]) if viz else "em outra área molhada"
+        out.append(f"Banheiro colado {onde}: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.")
     if planta.get("servico_externo") or planta["id"] in ("C03",):
         out.append("A casa cresce: a planta já deixa o lugar do quarto 2 nos fundos, sem quebrar nada do que foi construído.")
     elif m["circulacao"]:

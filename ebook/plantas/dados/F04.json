@@ -200,14 +200,14 @@
   ]
  },
  "pensou": [
-  "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência (valor de referência; o código de obras da sua cidade pode pedir outro).",
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
   "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
  "validacao": {
   "erros": [],
   "avisos": [
-   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria (mais cara)"
+   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)"
   ],
   "info": [],
   "metricas": {
