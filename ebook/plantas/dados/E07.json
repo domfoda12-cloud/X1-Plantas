@@ -1,8 +1,8 @@
 {
  "id": "E07",
  "nome": "Casa Estreita 3 Quartos",
- "W": 5.4,
- "D": 17.6,
+ "W": 5.0,
+ "D": 17.9,
  "comodos": [
   {
    "id": "sala",
@@ -10,53 +10,53 @@
    "tipo": "sala",
    "x0": 0.0,
    "y0": 0.0,
-   "x1": 4.4,
-   "y1": 3.6
+   "x1": 4.0,
+   "y1": 3.8
   },
   {
    "id": "cozinha",
    "nome": "Cozinha",
    "tipo": "cozinha",
    "x0": 0.0,
-   "y0": 3.6,
-   "x1": 4.4,
-   "y1": 6.4
+   "y0": 3.8,
+   "x1": 4.0,
+   "y1": 6.6
   },
   {
    "id": "servico",
    "nome": "Serviço",
    "tipo": "servico",
    "x0": 0.0,
-   "y0": 6.4,
+   "y0": 6.6,
    "x1": 1.8,
-   "y1": 8.4
+   "y1": 8.6
   },
   {
    "id": "banho",
    "nome": "Banheiro",
    "tipo": "banho",
    "x0": 1.8,
-   "y0": 6.4,
-   "x1": 4.4,
-   "y1": 8.4
+   "y0": 6.6,
+   "x1": 4.0,
+   "y1": 8.6
   },
   {
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
    "x0": 0.0,
-   "y0": 8.4,
-   "x1": 4.4,
-   "y1": 11.4
+   "y0": 8.6,
+   "x1": 4.0,
+   "y1": 11.6
   },
   {
    "id": "quarto3",
    "nome": "Quarto",
    "tipo": "dorm",
    "x0": 0.0,
-   "y0": 11.4,
-   "x1": 4.4,
-   "y1": 14.4
+   "y0": 11.6,
+   "x1": 4.0,
+   "y1": 14.6
   },
   {
    "id": "bsuite",
@@ -64,27 +64,27 @@
    "tipo": "banho",
    "privativo": "quarto1",
    "x0": 0.0,
-   "y0": 14.4,
-   "x1": 1.4,
-   "y1": 17.6
+   "y0": 14.6,
+   "x1": 1.3,
+   "y1": 17.9
   },
   {
    "id": "quarto1",
    "nome": "Suíte",
    "tipo": "casal",
-   "x0": 1.4,
-   "y0": 14.4,
-   "x1": 4.4,
-   "y1": 17.6
+   "x0": 1.3,
+   "y0": 14.6,
+   "x1": 4.0,
+   "y1": 17.9
   },
   {
    "id": "corr",
    "nome": "Corredor coberto",
    "tipo": "varanda",
-   "x0": 4.4,
+   "x0": 4.0,
    "y0": 0.0,
-   "x1": 5.4,
-   "y1": 17.6
+   "x1": 5.0,
+   "y1": 17.9
   }
  ],
  "portas": [
@@ -137,13 +137,13 @@
   "sala": [
    [
     "frente",
-    2.3
+    2.2
    ]
   ],
   "cozinha": [
    [
     "dir",
-    1.9
+    1.7
    ]
   ],
   "servico": [
@@ -155,37 +155,38 @@
   "banho": [
    [
     "dir",
-    1.3
+    1.1
    ]
   ],
   "quarto2": [
    [
     "dir",
-    2.2
+    2.0
    ]
   ],
   "quarto3": [
    [
     "dir",
-    2.2
+    2.0
    ]
   ],
   "bsuite": [
    [
     "esq",
-    1.2
+    1.1
    ]
   ],
   "quarto1": [
    [
     "fundos",
-    1.6
+    1.5
    ]
   ]
  },
  "recuos": {
   "esq": 1.5
  },
+ "destaque": "3 quartos, um deles suíte, num lote de 8 m de frente",
  "pensou": [
   "Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul (critério simplificado; o arquiteto confere para o clima da sua cidade). Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.",
@@ -198,9 +199,9 @@
   ],
   "info": [],
   "metricas": {
-   "area_fechada": 77.4,
-   "area_total": 95.0,
-   "area_coberta_aberta": 17.6,
+   "area_fechada": 71.6,
+   "area_total": 89.5,
+   "area_coberta_aberta": 17.9,
    "luz": {
     "sala": 0.2,
     "cozinha": 0.15,
@@ -208,13 +209,13 @@
     "banho": 0.15,
     "quarto2": 0.2,
     "quarto3": 0.2,
-    "bsuite": 0.16,
+    "bsuite": 0.15,
     "quarto1": 0.2
    },
    "circulacao": 0.0,
    "lote": [
-    8.4,
-    22.1
+    8.0,
+    22.4
    ],
    "recuos": {
     "frente": 3.0,
@@ -223,19 +224,19 @@
     "dir": 1.5
    },
    "lote_comercial": [
-    9,
+    8,
     25
    ],
-   "taxa_ocupacao": 0.51,
+   "taxa_ocupacao": 0.5,
    "orientacao": {
     "melhor": "norte",
     "segunda": "oeste",
     "pior": "sul",
     "pontos": {
-     "norte": 26.1,
-     "leste": 9.2,
-     "sul": -6.5,
-     "oeste": 13.2
+     "norte": 24.1,
+     "leste": 8.4,
+     "sul": -5.7,
+     "oeste": 12.0
     }
    }
   }

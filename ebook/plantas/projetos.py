@@ -135,12 +135,13 @@ def todas():
                        "2 quartos (1 suíte)", 2, recuos={"esq": 1.5},
                        fundos=(3.2, F("gourmet", "Área gourmet", "varanda")),
                        destaque="Área gourmet nos fundos, aberta para o corredor"))
-    P.append(_estreita("E07", "Casa Estreita 3 Quartos", 4.4,
-                       _fila(4.4, 3.6, 2.8, 1.8, 0, 2.0,
+    P.append(_estreita("E07", "Casa Estreita 3 Quartos", 4.0,
+                       _fila(4.0, 3.8, 2.8, 1.8, 0, 2.0,
                              [(3.0, F("quarto2", "Quarto", "dorm")), (3.0, F("quarto3", "Quarto", "dorm")),
-                              (3.2, V((1.4, F("bsuite", "Banho da suíte", "banho", privativo="quarto1")), (None, F("quarto1", "Suíte", "casal"))))]),
+                              (3.3, V((1.3, F("bsuite", "Banho da suíte", "banho", privativo="quarto1")), (None, F("quarto1", "Suíte", "casal"))))]),
                        PORTAS_FILA + [("corr", "quarto1"), ("quarto1", "bsuite"), ("corr", "quarto2"), ("corr", "quarto3")],
-                       "3 quartos (1 suíte)", 2, recuos={"esq": 1.5}))
+                       "3 quartos (1 suíte)", 2, recuos={"esq": 1.5},
+                       destaque="3 quartos, um deles suíte, num lote de 8 m de frente"))
 
     # ---------------------------------------------------------------- Família (F)
     P.append(_familia("F01", "Casa Família Compacta", 8.4, sala=4.2, coz=2.4, col=1.8, h1=3.6, h3=3.4, suite=False))

@@ -62,7 +62,7 @@ TEXTOS = {
                 para_quem="Quem gosta de receber: a área gourmet fica nos fundos, longe da rua, aberta para o corredor.",
                 nao_serve=("Quem prefere 3 quartos a área gourmet.", "E07"), erros=[2, 3, 4],
                 perguntas=["Qual o melhor lugar para a churrasqueira e a chaminé?", PADRAO[0], PADRAO[1]]),
-    "E07": dict(gancho="9 m de frente. 3 quartos, um deles suíte.",
+    "E07": dict(gancho="8 m de frente. 3 quartos, um deles suíte.",
                 para_quem="Família de 4 ou mais com lote estreito e comprido, que precisa de 3 quartos sem abrir mão da suíte.",
                 nao_serve=("Quem tem lote largo e quer a casa mais compacta.", "F01"), erros=[2, 3, 4], perguntas=PADRAO),
     "F01": dict(gancho="10 m de frente. 3 quartos. 68 m².",

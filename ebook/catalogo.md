@@ -36,9 +36,9 @@
 | C02 | Casa Studio | 32 m² | studio | 1 | 6 x 15 | Tudo em um ambiente; boa para aluguel | 2 | `dados` |
 | C03 | Casa Inicial | 41 m² | 1 (+1 depois) | 1 | 7 x 20 | Pronta para ganhar o 2º quarto depois | 1 | `dados` |
 | C04 | Casa Duo | 48 m² | 2 | 1 | 8 x 15 | Varanda na frente e dois quartos do mesmo tamanho | 1 | `dados` |
-| C05 | Casa Popular | 47 m² | 2 | 1 | 8 x 15 | Cabe no padrão de programa habitacional (40 m² ou mais) sem desperdiçar um metro | 2 | `dados` |
+| C05 | Casa Popular | 47 m² | 2 | 1 | 8 x 15 | A casa de 2 quartos mais enxuta, sem desperdiçar um metro | 2 | `dados` |
 | C06 | Casa Compacta Suíte | 57 m² | 2 (1 suíte) | 2 | 9 x 15 | Suíte do casal sem aumentar muito a área | 1 | `dados` |
-| C07 | Casa Compacta Varanda | 55 m² | 2 | 1 | 8 x 15 | Varanda larga para a rede, a cadeira e o carro parado na chuva | 2 | `dados` |
+| C07 | Casa Compacta Varanda | 55 m² | 2 | 1 | 8 x 15 | Varanda larga para a rede e a cadeira de fim de tarde | 2 | `dados` |
 
 ## E. Terreno estreito: frente de 5 a 8 m
 
@@ -50,7 +50,7 @@
 | E04 | Casa Pátio | 55 m² | 2 | 1 | 9 x 15 | Pátio de luz entre os quartos: ventilação cruzada e privacidade | 2 | `dados` |
 | E05 | Casa Estreita Suíte | 58 m² | 2 (1 suíte) | 2 | 8 x 20 | Suíte nos fundos, longe da rua | 1 | `dados` |
 | E06 | Casa Estreita Gourmet | 68 m² | 2 (1 suíte) | 2 | 9 x 25 | Área gourmet nos fundos, aberta para o corredor | 2 | `dados` |
-| E07 | Casa Estreita 3 Quartos | 77 m² | 3 (1 suíte) | 2 | 9 x 25 | Três quartos em 8 m de frente | 2 | `dados` |
+| E07 | Casa Estreita 3 Quartos | 72 m² | 3 (1 suíte) | 2 | 8 x 25 | 3 quartos, um deles suíte, num lote de 8 m de frente | 2 | `dados` |
 
 ## F. Família: 3 ou 4 quartos
 

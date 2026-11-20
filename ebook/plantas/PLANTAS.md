@@ -182,7 +182,9 @@
 
 ![E07](previas/E07.png)
 
-**77 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **9 x 25 m** · frente para o **norte**
+**72 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 25 m** · frente para o **norte**
+
+*3 quartos, um deles suíte, num lote de 8 m de frente*
 
 **Por que esta planta é assim**
 
