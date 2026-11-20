@@ -24,6 +24,15 @@
 - [@buildwithbert](https://www.instagram.com/p/DbXB9latjHl/): série numerada "PT.35 House update". Para nós: "Casa 3 de 24", uma casa por reel.
 - [@marshallhaas](https://www.instagram.com/p/DUf2OEJEW8u/): a jornada (planta, planilha, fundação, estrutura, casa pronta) em cortes rápidos, com o texto na tela casando com a imagem.
 
+**Técnica de animação (keyframes) que dá para levar para o three.js** ([BlenderNation, bastidores de uma animação isométrica](https://www.blendernation.com/2024/11/02/behind-the-scenes-isometric-animation/), 02/11/2024):
+
+- **Parede em duas etapas:** escala (0,0,0) → (0,1,0) → (1,1,1). Primeiro aparece uma linha fina (o traço da planta), depois ela "abre" em parede. É exatamente o "linha vira parede" do nosso blueprint.
+- **Vão de janela e porta crescendo:** um bloco invisível que corta a parede cresce de (0,1,0) a (1,1,1); o buraco se abre na parede pronta.
+- **Pisos que se colocam sozinhos:** as réguas do piso aparecem conforme um objeto de controle passa por cima (a "varredura" do material).
+- **Objetos chegando por uma curva** enquanto crescem de 0 a 1: móveis "voam" até o lugar.
+- **Pequeno quique** no fim de cada entrada (passa um pouco do tamanho e volta): é o "pop" que segura o olho.
+- **Tutoriais:** [lista "Assembly and isometric rooms animation"](https://www.youtube.com/playlist?list=PLVULV8f7WfPAII98ZFICHf4GcEg0Zpg9n) (Blender, geometry nodes), [casa isométrica no After Effects](https://www.youtube.com/watch?v=wH-WHH3ROOc).
+
 ## 2. A anatomia do efeito (o que todos têm em comum)
 
 1. **Começa plano e reconhecível:** a planta como a pessoa conhece (papel, linhas, nomes).

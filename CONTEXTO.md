@@ -58,6 +58,8 @@
 
 ## Em aberto (esperando o dono)
 
+- Testar a palavra do comentário "PLANTA" contra "LOTE" ([`ebook/referencias/concorrentes.md`](ebook/referencias/concorrentes.md)): "PLANTA" também é usada por criadores de jardinagem.
+
 - Decidir se o e-book promete as próximas casas de graça (o texto só aparece se `promessa_atualizacao` for preenchido em `ebook/config.json`, porque oferta escrita obriga).
 
 - Autorizar a conta do OpenArt nos conectores do claude.ai (o crédito já está liberado).
