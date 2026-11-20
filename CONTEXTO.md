@@ -84,6 +84,7 @@
 
 | 20/11/2026 | (e-book, tarefa 1) Fachadas realistas | C01, E07, F01 e C03 com foto realista da fachada (OpenArt, a partir da nossa vista da rua, 4K extra-alta) no lugar do desenho, com "Imagem ilustrativa gerada a partir da vista da rua desta planta"; as outras casas mantêm o desenho. Conferência de página estourada agora mede o miolo (achou e corrigiu 3 páginas); avisos repetidos do validador viram uma frase só |
 | 20/11/2026 | "Adicione este vídeo como referência… melhor edição que já vi… absorva os conceitos no vídeo curto" (CONDOR XIII, Payton Talbott) | [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md): 7 conceitos levados para o reel de planta (tese antes do assunto, letra como janela, planta invertida que gira, série numerada CASA I, II…, ritmo de mixtape guiado pela música, cortes por semelhança), com o Maestro e o Revisor. O YouTube bloqueou o download na nuvem, então os conceitos vêm da descrição, da miniatura e da imprensa. Falta assistir quadro a quadro no Mac |
+| 20/11/2026 | "O analyze hook é ferramenta da MinoAI? Se sim, faça funcionar" | Sim, é da MinoAI Frontier, mas só aceita TikTok e Instagram. Funcionou nos 7 reels do Instagram do Payton (mesma dupla de edição, um deles trecho do ECDYSIS XII): mais 6 conceitos na seção 1b de [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md) (corte por metáfora, imagem que ilustra a frase, legenda irônica, detalhes na batida, fim forte sem silêncio, erros a evitar). Nenhum reel é trecho do CONDOR XIII |
 
 ## Em aberto (esperando o dono)
 
