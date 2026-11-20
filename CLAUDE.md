@@ -14,6 +14,7 @@ O comprador fica feliz quando acha a casa que cabe no lote dele, entende por qu�
 
 Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
 
+- **O Maestro, MinoAI Frontier, opina sempre e primeiro**, com base nas ferramentas da MinoAI (método e ganchos virais) e com a fonte. A opinião dele aparece para o dono em toda entrega.
 - **Tarefa pequena** (um texto, um ajuste): conselho de bolso, uma linha de cada membro que importa, no máximo 3, sem abrir subagente.
 - **Entrega que vai ao público ou decisão que custa dinheiro**: conselho completo com os subagentes de `.claude/agents/`.
 - **Revisor de risco tem veto** em tudo que toca honestidade e lei. **O dono decide** preço, título, gasto com anúncio, publicação e contratação.

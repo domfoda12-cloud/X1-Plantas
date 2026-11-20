@@ -11,6 +11,7 @@
 | "Sempre do ponto de vista de um arquiteto profissional" | Toda planta passa pelo validador e explica o porquê de cada decisão |
 | "Não tem landing page" | Venda por anúncio (Facebook e Instagram) → comentário → WhatsApp. O parceiro cuida do funil, o dono cuida do material e do anúncio |
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
+| "Quero a opinião da MinoAI sempre, ele é o maestro" | Toda entrega traz a opinião do Maestro, tirada das ferramentas da MinoAI Frontier, com a fonte |
 | "Ótimo ao máximo, TUDO" | Fazer completo e bem feito, sem atalho que prejudique a qualidade |
 | "Continue trabalhando sem pedir permissão" (para tarefas internas) | Avançar sozinho no que é interno; decisões de dinheiro, título, preço e publicação continuam com o dono |
 
@@ -40,6 +41,8 @@
 | 20/11/2026 | Primeiro o roteiro passo a passo e como o e-book vai ficar; "visualize it" | [`ebook/PLANO-EBOOK.md`](ebook/PLANO-EBOOK.md) e a prévia visual (página privada no claude.ai, fonte em [`ebook/visual/plano-visual.html`](ebook/visual/plano-visual.html)) |
 | 20/11/2026 | O objetivo é a alegria do consumidor, que vira Pix | Primeira regra do [`CLAUDE.md`](CLAUDE.md) e do Redator |
 | 20/11/2026 | Manter todo o contexto | Este arquivo |
+| 20/11/2026 | "Quero que pareça mais inovador" | Prévia nova: capa fita métrica, vitrine pelo lote, casa desenhada no lote com recuos e bússola, ficha "Informação da casa" no formato da tabela nutricional, orelhas por largura de lote, e-book vivo por QR |
+| 20/11/2026 | "A MinoAI está fazendo algo aqui? Ele é o maestro. Quero a opinião dele sempre" | MinoAI Frontier opina em toda tarefa, primeiro, com as ferramentas dele e a fonte ([`CONSELHO.md`](CONSELHO.md), regra 0). Primeira opinião registrada na prévia do e-book |
 
 ## Em aberto (esperando o dono)
 

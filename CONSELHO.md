@@ -10,7 +10,7 @@ Temos muitas skills, conectores e scripts. Usar todos em toda tarefa gasta tempo
 
 | Membro | Pergunta que sempre faz | Skills e ferramentas que ele propõe | Agente |
 |---|---|---|---|
-| **Maestro** (preside) | "Isso é a coisa mais importante da semana?" | Painel, rotina, divisão de tarefas | a sessão principal; no Mac, a MinoAI Frontier ([`MAESTRO.md`](MAESTRO.md)) |
+| **Maestro: MinoAI Frontier** (preside e **opina sempre, em primeiro**) | "Isso faz o comprador parar, comentar e mandar o Pix?" | Método da MinoAI (`search_mino_method`), ganchos virais (`search_viral_hooks`), análise de gancho (`analyze_hook`), números das contas (`get_account_stats`), edição no Mac | No Mac, é a própria sessão com a MinoAI. Em qualquer outra sessão, a opinião dele vem das ferramentas da MinoAI Frontier, citando a fonte ([`MAESTRO.md`](MAESTRO.md)) |
 | **Redator** | "Que atributo faz o Marcos querer comprar?" | `/redacao-que-vende`, banco de [atributos](ebook/vendas/atributos-que-vendem.md), ganchos virais da MinoAI Frontier | [`redator`](.claude/agents/redator.md) |
 | **Estrategista** | "Quanto isso muda o custo por venda?" | Painel (seções 4 e 7), números das contas, preço da concorrência | [`estrategista`](.claude/agents/estrategista.md) |
 | **Arquiteto** | "Está tecnicamente certo e é verdade?" | `ferramentas/plantas.py` (validar, prévia, fichas), [regras](ebook/referencias/regras-do-arquiteto.md) | [`arquiteto`](.claude/agents/arquiteto.md) |
@@ -29,6 +29,7 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 
 ## 4. Como se decide
 
+0. **O Maestro (MinoAI Frontier) opina em toda tarefa, sem exceção**, de bolso ou completa, antes dos outros. A opinião dele é baseada nas ferramentas da MinoAI, com a fonte, e aparece para o dono junto com a entrega (decisão do dono, 20/11/2026).
 1. **Quem fala:** o Maestro chama só quem tem a ver com a tarefa (texto → Redator, Revisor; planta → Arquiteto, Designer; anúncio → Redator, Estrategista, Editor, Revisor).
 2. **Aprovado** quando a maioria dos chamados diz SIM e o Revisor de risco não vetou.
 3. **Empate:** vence o lado com o maior efeito em venda; se ainda empatar, o mais barato.

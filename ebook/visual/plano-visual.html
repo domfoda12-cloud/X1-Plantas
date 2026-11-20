@@ -1,260 +1,335 @@
 <title>E-book Que Casa Cabe</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
-/* Layout: uma mesa de prova azul; as páginas do e-book são papel branco por cima, em escala real de A4. */
+/* Layout: o lote vem primeiro. Uma fita métrica atravessa a página e escolhe a casa; as páginas do e-book são papel por cima da mesa azul. */
 :root {
-  --azul: #0B4FA8; --azul-grade: #1A5DB4; --amarelo: #FFC857;
-  --papel: #FFFFFF; --tinta: #1B2430; --tinta-suave: #4A5463; --linha: #DCE3EC;
-  --fundo: #EEF2F7; --texto: #16202C; --texto-suave: #4E5B6B; --cartao: #FFFFFF; --borda: #D3DCE7;
+  --azul: #0B4FA8; --azul-fundo: #08397A; --grade: rgba(255,255,255,.08); --fita: #FFC857; --fita-tinta: #1D1A12;
+  --papel: #FFFFFF; --tinta: #17202B; --tinta-2: #4F5B69; --fio: #DDE3EA; --recuo: #F3E6C4;
+  --fundo: #ECF1F7; --texto: #121B26; --texto-2: #4C596A; --cartao: #FFFFFF; --borda: #D2DBE6; --ativo: #0B4FA8;
   --titulo: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
   --corpo: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --medida: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --fundo: #0C1624; --texto: #E6ECF3; --texto-suave: #A3B1C2; --cartao: #132235; --borda: #24364D; color-scheme: dark } }
-:root[data-theme="dark"] { --fundo: #0C1624; --texto: #E6ECF3; --texto-suave: #A3B1C2; --cartao: #132235; --borda: #24364D; color-scheme: dark }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fundo: #0A1420; --texto: #E5ECF4; --texto-2: #9FB0C3; --cartao: #111F31; --borda: #22354C; --ativo: #7FB2F0; color-scheme: dark } }
+:root[data-theme="dark"] { --fundo: #0A1420; --texto: #E5ECF4; --texto-2: #9FB0C3; --cartao: #111F31; --borda: #22354C; --ativo: #7FB2F0; color-scheme: dark }
+* { box-sizing: border-box; }
 body { background: var(--fundo); color: var(--texto); font-family: var(--corpo); font-size: 15px; line-height: 1.55; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 64px; display: grid; gap: 56px; }
-h1, h2 { font-family: var(--titulo); text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
-h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
-.olho { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-suave); }
-.intro { max-width: 68ch; color: var(--texto-suave); margin: 0; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 72px; display: grid; gap: 64px; }
+h1, h2, h3 { font-family: var(--titulo); text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; letter-spacing: -0.015em; line-height: 1.1; }
+.olho { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-2); }
+.intro { max-width: 66ch; color: var(--texto-2); margin: 0; }
 section { display: grid; gap: 18px; min-width: 0; }
+.ideias { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.ideia { background: var(--cartao); border: 1px solid var(--borda); border-radius: 8px; padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.ideia b { font-family: var(--titulo); font-size: 17px; }
+.ideia span { color: var(--texto-2); font-size: 14px; }
 
-/* ---------- miniaturas das páginas ---------- */
-.trilha { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
-.mini { display: grid; gap: 8px; }
-.folha { aspect-ratio: 210 / 297; max-width: 100%; background: var(--papel); color: var(--tinta); border-radius: 3px; box-shadow: 0 1px 2px rgba(11,40,80,.15), 0 8px 20px rgba(11,40,80,.10); overflow: hidden; position: relative; padding: 9%; display: flex; flex-direction: column; gap: 5%; font-size: 7px; line-height: 1.35; }
-.folha.azul { background: var(--azul); color: #fff; background-image: linear-gradient(var(--azul-grade) 1px, transparent 1px), linear-gradient(90deg, var(--azul-grade) 1px, transparent 1px); background-size: 12px 12px; }
-.folha .t { font-family: var(--titulo); font-weight: 800; font-size: 13px; line-height: 1.05; letter-spacing: -0.01em; }
-.folha.azul .t { color: #fff; }
-.folha:not(.azul) .t { color: var(--azul); }
-.folha .tag { font-size: 6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: .75; }
-.folha img { width: 100%; border-radius: 2px; display: block; }
-.folha .barra { height: 5px; border-radius: 2px; background: var(--linha); }
-.folha .barra.c { width: 70%; } .folha .barra.m { width: 50%; }
-.folha .rod { position: absolute; left: 9%; right: 9%; bottom: 4%; font-size: 5px; color: var(--tinta-suave); border-top: 1px solid var(--linha); padding-top: 2px; }
-.folha.azul .rod { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.25); }
-.mini figcaption { font-size: 13px; color: var(--texto-suave); }
-.mini figcaption b { color: var(--texto); font-weight: 600; display: block; }
-.lotes { display: grid; gap: 3px; }
-.lotes div { display: flex; justify-content: space-between; gap: 4px; padding: 2px 3px; background: #F2F6FB; border-radius: 2px; }
-.lotes b { color: var(--azul); }
-.selo { display: inline-block; background: var(--amarelo); color: #1B2430; font-weight: 700; border-radius: 2px; padding: 1px 4px; width: max-content; }
-figure { margin: 0; }
+/* ---------- capa: a fita métrica ---------- */
+.capa { background: var(--azul-fundo); background-image: linear-gradient(var(--grade) 1px, transparent 1px), linear-gradient(90deg, var(--grade) 1px, transparent 1px); background-size: 28px 28px; color: #fff; border-radius: 10px; overflow: hidden; display: grid; gap: 22px; padding-block: 34px 0; }
+.capa-txt { padding-left: max(18px, 4vw); padding-right: max(18px, 4vw); display: grid; gap: 12px; }
+.capa h1 { font-size: clamp(36px, 7vw, 76px); font-weight: 800; letter-spacing: -0.03em; line-height: .95; max-width: 13ch; }
+.capa p { margin: 0; color: rgba(255,255,255,.82); max-width: 52ch; }
+.capa .eti { font-family: var(--medida); font-size: 12px; letter-spacing: .08em; color: var(--fita); }
+.fita-area { overflow-x: auto; padding-bottom: 6px; }
+.fita { position: relative; min-width: 760px; height: 132px; background: var(--fita); color: var(--fita-tinta); box-shadow: 0 -6px 18px rgba(0,0,0,.25); }
+.fita svg { position: absolute; inset: 0; width: 100%; height: 56px; }
+.marcas { position: absolute; left: 0; right: 0; top: 54px; bottom: 8px; }
+.marca { position: absolute; transform: translateX(-50%); display: grid; justify-items: center; gap: 3px; background: none; border: 0; cursor: pointer; color: inherit; font: inherit; padding: 2px 4px; border-radius: 4px; }
+.marca strong { font-family: var(--medida); font-size: 17px; }
+.marca small { font-size: 11px; font-weight: 600; opacity: .8; white-space: nowrap; }
+.marca[aria-pressed="true"] { background: var(--fita-tinta); color: var(--fita); }
+.marca:focus-visible { outline: 2px solid var(--fita-tinta); outline-offset: 2px; }
+
+/* ---------- vitrine ---------- */
+.controle { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.controle label { font-weight: 600; }
+.controle input[type=range] { width: min(420px, 100%); accent-color: var(--ativo); }
+.controle output { font-family: var(--medida); font-weight: 700; font-size: 22px; color: var(--ativo); min-width: 5ch; }
+.vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.card { background: var(--cartao); border: 1px solid var(--borda); border-radius: 8px; padding: 10px; display: grid; gap: 6px; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.card:hover { border-color: var(--ativo); }
+.card[aria-pressed="true"] { border-color: var(--ativo); box-shadow: 0 0 0 2px var(--ativo); }
+.card:focus-visible { outline: 2px solid var(--ativo); outline-offset: 2px; }
+.card svg { width: 100%; height: 120px; background: #F6F8FB; border-radius: 4px; }
+.card b { font-family: var(--titulo); font-size: 15px; line-height: 1.15; }
+.card span { font-size: 12px; color: var(--texto-2); font-variant-numeric: tabular-nums; }
+.vazio { color: var(--texto-2); }
 
 /* ---------- página dupla ---------- */
-.mesa { background: var(--azul); background-image: linear-gradient(var(--azul-grade) 1px, transparent 1px), linear-gradient(90deg, var(--azul-grade) 1px, transparent 1px); background-size: 24px 24px; border-radius: 6px; padding: clamp(14px, 3vw, 32px); overflow-x: auto; }
-.dupla { display: grid; grid-template-columns: repeat(2, minmax(300px, 1fr)); gap: 4px; min-width: 620px; }
-.pg { background: var(--papel); color: var(--tinta); aspect-ratio: 210 / 297; padding: 6% 7% 4%; display: flex; flex-direction: column; gap: 10px; font-size: 10.5px; line-height: 1.45; box-shadow: 0 10px 30px rgba(0,0,0,.25); position: relative; }
-.pg h3 { font-family: var(--titulo); font-weight: 800; color: var(--azul); font-size: 22px; line-height: 1; margin: 0; letter-spacing: -0.01em; }
-.pg h4 { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--azul); margin: 0 0 4px; }
-.pg .cab { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border-bottom: 2px solid var(--azul); padding-bottom: 6px; }
-.pg .cab span { font-size: 9px; color: var(--tinta-suave); font-weight: 600; }
-.pg .gancho { font-family: var(--titulo); font-weight: 600; font-size: 14px; color: var(--tinta); margin: 0; }
-.topo { display: grid; grid-template-columns: 1fr 34%; gap: 10px; min-height: 0; }
-.topo img { width: 100%; border-radius: 3px; display: block; }
-.ficha { display: grid; gap: 5px; align-content: start; }
-.ficha div { display: grid; border-bottom: 1px solid var(--linha); padding-bottom: 4px; }
-.ficha small { font-size: 8px; color: var(--tinta-suave); text-transform: uppercase; letter-spacing: .08em; }
-.ficha strong { font-size: 13px; font-variant-numeric: tabular-nums; }
+.mesa { background: var(--azul); background-image: linear-gradient(var(--grade) 1px, transparent 1px), linear-gradient(90deg, var(--grade) 1px, transparent 1px); background-size: 24px 24px; border-radius: 10px; padding: clamp(14px, 3vw, 34px); overflow-x: auto; }
+.dupla { display: grid; grid-template-columns: repeat(2, minmax(330px, 1fr)); gap: 3px; min-width: 680px; }
+.pg { background: var(--papel); color: var(--tinta); aspect-ratio: 210 / 297; padding: 6% 8% 4% 7%; display: flex; flex-direction: column; gap: 10px; font-size: 10.5px; line-height: 1.42; position: relative; box-shadow: 0 12px 34px rgba(0,0,0,.28); }
+.pg h4 { font-size: 8.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--azul); margin: 0 0 4px; }
 .pg p { margin: 0; }
-.pg ul { margin: 0; padding-left: 14px; display: grid; gap: 3px; }
-.pensou { display: grid; gap: 6px; }
-.pensou div { display: grid; grid-template-columns: 22px 1fr; gap: 6px; align-items: start; }
-.ico { width: 22px; height: 22px; border-radius: 50%; background: #E7EFFA; color: var(--azul); display: grid; place-items: center; font-weight: 800; font-size: 11px; }
-.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.qr { display: grid; grid-template-columns: 52px 1fr; gap: 8px; align-items: center; background: #FFF6DE; border-radius: 3px; padding: 6px; margin-top: auto; }
-.qr i { width: 52px; height: 52px; background: repeating-conic-gradient(#1B2430 0 25%, #fff 0 50%) 0 0 / 10px 10px; border: 3px solid #fff; outline: 1px solid #1B2430; }
-.aviso { font-size: 8px; color: var(--tinta-suave); border-top: 1px solid var(--linha); padding-top: 4px; margin-top: auto; }
-.legenda-dupla { font-size: 13px; color: var(--texto-suave); max-width: 72ch; margin: 0; }
-.marca { background: var(--amarelo); color: #1B2430; font-weight: 700; padding: 0 4px; border-radius: 2px; }
-
-/* ---------- etapas ---------- */
-.etapas { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; counter-reset: e; }
-.etapas li { display: grid; grid-template-columns: 34px 1fr auto; gap: 14px; align-items: start; background: var(--cartao); border: 1px solid var(--borda); border-radius: 6px; padding: 12px 14px; counter-increment: e; }
-.etapas li::before { content: counter(e); font-family: var(--titulo); font-weight: 800; font-size: 20px; color: var(--azul); line-height: 1.2; }
-:root[data-theme="dark"] .etapas li::before { color: #7FB2F0; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .etapas li::before { color: #7FB2F0; } }
-.etapas b { display: block; font-weight: 600; }
-.etapas span { color: var(--texto-suave); font-size: 14px; }
-.chip { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 99px; white-space: nowrap; border: 1px solid var(--borda); color: var(--texto-suave); }
-.chip.eu { background: #DDEBFB; color: #0B3F86; border-color: #BCD4F3; }
-.chip.voce { background: #FFF1CC; color: #6B4C00; border-color: #F3D98F; }
-.chip.fim { background: transparent; border-style: dashed; }
-@media (max-width: 560px) { .etapas li { grid-template-columns: 28px 1fr; } .etapas .chip { grid-column: 2; justify-self: start; } }
-.perguntas { display: grid; gap: 8px; margin: 0; padding-left: 20px; }
+.orelha { position: absolute; right: -1px; width: 18px; background: var(--fita); color: var(--fita-tinta); font-family: var(--medida); font-weight: 700; font-size: 8px; writing-mode: vertical-rl; display: grid; place-items: center; height: 70px; border-radius: 3px 0 0 3px; }
+.pg.esq .orelha { left: -1px; right: auto; border-radius: 0 3px 3px 0; }
+.cab { display: grid; gap: 2px; }
+.cab .id { font-family: var(--medida); font-size: 10px; color: var(--tinta-2); }
+.cab h3 { font-size: 26px; font-weight: 800; color: var(--azul); letter-spacing: -0.02em; line-height: 1; }
+.gancho { font-family: var(--titulo); font-weight: 700; font-size: 15px; }
+.planta-grande { flex: 1 1 auto; min-height: 0; display: grid; }
+.planta-grande svg { width: 100%; height: 100%; }
+.rodape { font-size: 7.5px; color: var(--tinta-2); border-top: 1px solid var(--fio); padding-top: 4px; margin-top: auto; }
+.lado { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; min-height: 0; }
+.lote-svg svg { width: 100%; height: auto; display: block; }
+/* rótulo no estilo da tabela nutricional */
+.rotulo { border: 2px solid var(--tinta); padding: 5px 6px; font-size: 9.5px; line-height: 1.3; align-self: start; }
+.rotulo .r-tit { font-weight: 800; font-size: 11px; letter-spacing: .02em; border-bottom: 1px solid var(--tinta); padding-bottom: 2px; }
+.rotulo .r-por { font-size: 8.5px; border-bottom: 5px solid var(--tinta); padding: 2px 0 3px; }
+.rotulo .r-cab, .rotulo .r-l { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; padding: 2px 0; border-bottom: 1px solid var(--tinta); font-variant-numeric: tabular-nums; }
+.rotulo .r-cab { font-size: 8px; font-weight: 700; }
+.rotulo .r-l b { font-weight: 700; }
+.rotulo .r-l span:last-child, .rotulo .r-cab span:last-child { min-width: 46px; text-align: right; }
+.rotulo .r-nota { font-size: 7.5px; padding-top: 3px; color: var(--tinta-2); }
+.pensou { display: grid; gap: 7px; }
+.pensou div { display: grid; grid-template-columns: 20px 1fr; gap: 7px; }
+.pensou svg { width: 20px; height: 20px; }
+.perg { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.perg li { border-left: 3px solid var(--fita); padding-left: 6px; }
+.vivo { display: grid; grid-template-columns: 56px 1fr; gap: 8px; align-items: center; background: #EAF2FD; border-radius: 4px; padding: 6px; }
+.vivo i { width: 56px; height: 56px; background: repeating-conic-gradient(#17202B 0 25%, #fff 0 50%) 0 0 / 11px 11px; border: 3px solid #fff; outline: 1px solid #17202B; }
+.nota-final { font-size: 13px; color: var(--texto-2); max-width: 76ch; margin: 0; }
+.maestro { background: var(--cartao); border: 1px solid var(--borda); border-left: 5px solid var(--fita); border-radius: 8px; padding: 18px 20px; display: grid; gap: 12px; }
+.maestro h3 { font-size: 20px; }
+.maestro ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.maestro .fonte { font-size: 12.5px; color: var(--texto-2); }
+.maestro a { color: var(--ativo); }
+.maestro blockquote { margin: 0; padding: 8px 12px; background: var(--fundo); border-radius: 6px; font-size: 14px; }
+@media (max-width: 640px) { .capa h1 { max-width: none; } }
+@media (prefers-reduced-motion: no-preference) { .card, .marca { transition: border-color .15s, background-color .15s, box-shadow .15s; } }
 </style>
 
 <div class="wrap">
-  <header style="display:grid;gap:12px">
-    <span class="olho">E-book X1-Plantas · como vai ficar</span>
-    <h1>Que casa cabe no seu lote?</h1>
-    <p class="intro">Prévia visual do plano: PDF A4 de cerca de 60 páginas, 24 casas térreas, uma página dupla por casa, organizado pela largura do terreno. As imagens das casas abaixo são as plantas reais já validadas. O 3D e as animações entram por último.</p>
-  </header>
+  <section class="capa" aria-label="Capa proposta">
+    <div class="capa-txt">
+      <span class="eti">CAPA PROPOSTA · E-BOOK X1-PLANTAS</span>
+      <h1>Que casa cabe no seu lote?</h1>
+      <p>24 casas térreas, organizadas pela frente do terreno. Mede o seu lote, acha a marca na fita, abre a página.</p>
+    </div>
+    <div class="fita-area"><div class="fita" id="fita"><svg id="reguinha" aria-hidden="true"></svg><div class="marcas" id="marcas"></div></div></div>
+  </section>
 
   <section>
-    <span class="olho">1 · A sequência de páginas</span>
-    <h2>Do "qual é o seu lote" até "leve ao seu engenheiro"</h2>
-    <div class="trilha">
-      <figure class="mini">
-        <div class="folha azul">
-          <span class="tag">24 plantas de casas térreas</span>
-          <span class="t" style="font-size:17px">Que casa cabe no seu lote?</span>
-          <span>Organizadas pela largura do terreno</span>
-          <img src="previas/C01.png" alt="Planta da Casa Compacta na capa" style="margin-top:auto;opacity:.95">
-          <span class="rod">Plantas de referência</span>
-        </div>
-        <figcaption><b>Capa</b>pág. 1</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">Comece aqui</span>
-          <span class="t">Ache pelo seu lote</span>
-          <div class="lotes">
-            <div><b>5–6 m</b><span>E03 · C02</span></div>
-            <div><b>7 m</b><span>C03 · E02</span></div>
-            <div><b>8 m</b><span>C01 · C04 · C05 · C07 · E01 · E05</span></div>
-            <div><b>9 m</b><span>C06 · E04 · E06 · E07 · S05</span></div>
-            <div><b>10–11 m</b><span>F01 · F03 · F04 · S03 · S04 · S07</span></div>
-            <div><b>12 m+</b><span>F02 · F05 · S09</span></div>
-          </div>
-          <span class="rod">págs. 3–4</span>
-        </div>
-        <figcaption><b>Ache pelo seu lote</b>págs. 3–4</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">Antes de escolher</span>
-          <span class="t">Como ler uma planta</span>
-          <img src="previas/E03.png" alt="Planta da Casa Fita como exemplo" style="width:55%;align-self:center">
-          <div class="barra"></div><div class="barra c"></div>
-          <span class="rod">págs. 6–7</span>
-        </div>
-        <figcaption><b>Como ler uma planta</b>cota, porta, janela, recuo</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">Antes da laje</span>
-          <span class="t">Os 7 erros que saem caro</span>
-          <div class="barra"></div><div class="barra c"></div><div class="barra"></div><div class="barra m"></div><div class="barra"></div><div class="barra c"></div><div class="barra m"></div>
-          <span class="selo">1. corredor comprido</span>
-          <span class="rod">págs. 8–9</span>
-        </div>
-        <figcaption><b>Os 7 erros</b>com a planta mostrando o certo</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">C01 · Compactas</span>
-          <span class="t">Casa Compacta</span>
-          <img src="previas/C01.png" alt="Planta da Casa Compacta">
-          <div class="barra"></div><div class="barra c"></div>
-          <span class="rod">Planta de referência</span>
-        </div>
-        <figcaption><b>Casa: página esquerda</b>planta, ficha, para quem é</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">C01 · continuação</span>
-          <span class="t">O que o arquiteto pensou</span>
-          <div class="barra"></div><div class="barra c"></div><div class="barra"></div><div class="barra m"></div>
-          <span class="selo" style="margin-top:auto">QR: veja ganhar vida</span>
-          <span class="rod">Planta de referência</span>
-        </div>
-        <figcaption><b>Casa: página direita</b>raciocínio, cuidados, QR</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha">
-          <span class="tag" style="color:var(--azul)">F02 · Família</span>
-          <span class="t">Casa Integrada</span>
-          <img src="previas/F02.png" alt="Planta da Casa Integrada">
-          <div class="barra"></div><div class="barra m"></div>
-          <span class="rod">x 24 casas · págs. 11–58</span>
-        </div>
-        <figcaption><b>As 24 casas</b>por categoria, 2 páginas cada</figcaption>
-      </figure>
-      <figure class="mini">
-        <div class="folha azul">
-          <span class="tag">Depois de escolher</span>
-          <span class="t">Leve ao seu engenheiro</span>
-          <span>Recuo da sua cidade · projeto legal · ART ou RRT · financiamento</span>
-          <div class="barra" style="background:rgba(255,255,255,.3)"></div><div class="barra c" style="background:rgba(255,255,255,.3)"></div>
-          <span class="rod">págs. 59–61</span>
-        </div>
-        <figcaption><b>Terreno e próximos passos</b>fecha com confiança, sem prometer</figcaption>
-      </figure>
+    <span class="olho">O que muda e por que é inovador</span>
+    <h2>O lote vem primeiro, e cada casa mostra o raciocínio</h2>
+    <div class="ideias">
+      <div class="ideia"><b>A capa é uma fita métrica</b><span>O comprador mede a frente do lote e acha as casas dele na própria capa. Nenhum catálogo de plantas começa pelo terreno.</span></div>
+      <div class="ideia"><b>A casa dentro do lote</b><span>Cada casa aparece desenhada no terreno, com recuos, rua e a melhor frente para o sol. Ele vê se cabe antes de ler qualquer coisa.</span></div>
+      <div class="ideia"><b>Informação da casa</b><span>Uma ficha no formato da tabela nutricional, que todo brasileiro já sabe ler: área, quartos, corredor e luz, comparados com a referência.</span></div>
+      <div class="ideia"><b>Orelhas na borda da página</b><span>Uma aba amarela com a frente do lote em cada página. Folheando o PDF ou a impressão, ele acha o 8 m sem índice.</span></div>
+      <div class="ideia"><b>E-book vivo</b><span>O QR de cada casa abre esta mesma vitrine na web: escolhe a frente do lote, vê as casas e a casa ganhar vida em 3D (no fim).</span></div>
     </div>
   </section>
 
+  <section class="maestro" aria-labelledby="t-maestro">
+    <span class="olho">Opinião do maestro · MinoAI Frontier</span>
+    <h3 id="t-maestro">SIM, com três ajustes para vender mais</h3>
+    <ul>
+      <li><b>A planta grátis é o ímã, e o comentário é o caminho.</b> O método da MinoAI Frontier diz que comentar uma palavra para receber um guia grátis ainda é pouco explorado e funciona melhor que link na bio. Mantém o "comenta PLANTA" e manda a planta grátis já com a fita métrica da capa: ele vê as outras casas que cabem no lote dele e quer o resto.</li>
+      <li><b>Dar valor de verdade, sem vender no vídeo.</b> Venda escancarada no vídeo derruba o engajamento. O vídeo mostra uma casa no lote e o raciocínio; a oferta fica no WhatsApp.</li>
+      <li><b>Gancho de pergunta com prazo curto.</b> Ganchos de casa que viralizaram usam pergunta e promessa rápida. Base: <a href="https://www.instagram.com/p/C8dJXv1PjzF/" target="_blank" rel="noopener">@nate.barger</a>, "Can you tell me how to buy a house in 60 secs?". Esqueleto: "Me fala a frente do seu lote que em [tempo] eu te mostro [quantas] casas que cabem nele." E a série numerada de <a href="https://www.instagram.com/p/DbXB9latjHl/" target="_blank" rel="noopener">@buildwithbert</a> ("PT.35 House update") combina com a contagem até o lançamento.</li>
+    </ul>
+    <blockquote>"Faltando 3 semanas: me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele." (proposta para o 1º reel, a gravar)</blockquote>
+    <p class="fonte">Fontes: busca no método da MinoAI Frontier (lições de ímã e comentário com palavra-chave) e na biblioteca de ganchos virais, em 20/11/2026. A edição dos vídeos continua com a MinoAI no seu Mac.</p>
+  </section>
+
   <section>
-    <span class="olho">2 · A página dupla de cada casa</span>
-    <h2>C01 · Casa Compacta, como vai sair no PDF</h2>
-    <div class="mesa">
-      <div class="dupla">
-        <article class="pg">
-          <div class="cab"><h3>Casa Compacta</h3><span>C01 · Compactas</span></div>
-          <p class="gancho">8 m de frente. 2 quartos. 55 m².</p>
-          <div class="topo">
-            <img src="previas/C01.png" alt="Planta da Casa Compacta com cômodos, áreas e cotas">
-            <div class="ficha">
-              <div><small>Área fechada</small><strong>55 m²</strong></div>
-              <div><small>Quartos</small><strong>2</strong></div>
-              <div><small>Banheiros</small><strong>1</strong></div>
-              <div><small>Lote a partir de</small><strong>8 x 15 m</strong></div>
-              <div><small>Melhor frente</small><strong>Sul</strong></div>
-              <div><small>Circulação</small><strong>10%</strong></div>
-            </div>
-          </div>
-          <div class="duas">
-            <div><h4>Para quem é</h4><p>Casal com 1 ou 2 filhos, lote de 8 m de frente, que quer 2 quartos de verdade sem gastar com corredor.</p></div>
-            <div><h4>Erros que evita</h4><ul><li>Corredor comprido</li><li>Banheiro longe da cozinha</li><li>Quarto sem janela</li></ul></div>
-          </div>
-          <p class="aviso">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>
-        </article>
-        <article class="pg">
-          <div class="cab"><h3>O que o arquiteto pensou</h3><span>C01 · continuação</span></div>
-          <div class="pensou">
-            <div><span class="ico">☀</span><p><b>Sol.</b> Testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o sul e pior para o leste. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.</p></div>
-            <div><span class="ico">↔</span><p><b>Luz e ar.</b> Sala, cozinha e quartos têm janela para fora, nas proporções que o validador confere.</p></div>
-            <div><span class="ico">≈</span><p><b>Núcleo molhado.</b> Cozinha, serviço e banheiro encostados: uma tubulação só, mão de obra mais curta.</p></div>
-          </div>
-          <div class="duas">
-            <div><h4>Para quem não serve</h4><p>Quem quer subir um 2º andar depois: veja a F03.</p></div>
-            <div><h4>Leve ao seu engenheiro</h4><ul><li>Qual o recuo da minha cidade?</li><li>Que fundação o meu solo pede?</li><li>Laje ou forro?</li></ul></div>
-          </div>
-          <div class="qr"><i aria-hidden="true"></i><p><b>Veja a casa ganhar vida.</b> Aponte a câmera: animação de 12 s, o blueprint se desenha e a casa aparece mobiliada. <span class="marca">entra no passo 9</span></p></div>
-          <p class="aviso">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>
-        </article>
-      </div>
+    <span class="olho">Experimente: a vitrine pelo lote (proposta da edição web)</span>
+    <h2>Arraste até a frente do seu lote</h2>
+    <div class="controle">
+      <label for="frente">Frente do lote</label>
+      <input type="range" id="frente" min="5" max="14" step="1" value="8">
+      <output id="saida-frente" for="frente">8 m</output>
+      <span id="conta" class="vazio"></span>
     </div>
-    <p class="legenda-dupla">Os números da ficha e do "o que o arquiteto pensou" saem direto do validador. Os textos de "para quem é", "erros que evita" e das perguntas são exemplo e serão escritos pelo Redator no passo 4. A planta em azul vira um desenho claro no estilo do e-book no passo 3, e o 3D entra por último.</p>
+    <div class="vitrine" id="vitrine"></div>
   </section>
 
   <section>
-    <span class="olho">3 · O passo a passo</span>
-    <h2>Dez passos, o 3D por último</h2>
-    <ol class="etapas">
-      <li><div><b>Juntar o gerador do PDF</b><span>trazer o gerador que já existe para a branch principal</span></div><span class="chip eu">eu</span></li>
-      <li><div><b>Fazer as 24 casas entrarem no PDF</b><span>usando a planta 2D e as fichas automáticas, sem esperar o 3D</span></div><span class="chip eu">eu</span></li>
-      <li><div><b>Desenho 2D no estilo do e-book</b><span>cor por cômodo, nomes, m², cotas, portas, janelas e móveis em traço</span></div><span class="chip eu">eu + Designer</span></li>
-      <li><div><b>Texto de cada casa</b><span>gancho, para quem é e não é, erros que evita, perguntas ao engenheiro</span></div><span class="chip eu">Redator + Revisor</span></li>
-      <li><div><b>Abertura e fechamento</b><span>capa, ache pelo lote, como ler, 7 erros, terreno, próximos passos</span></div><span class="chip eu">eu</span></li>
-      <li><div><b>Prévia para você</b><span>PDF e 6 páginas em imagem para aprovar</span></div><span class="chip voce">você aprova</span></li>
-      <li><div><b>Suas decisões</b><span>título, preço, bônus, lançar com 12 ou 24, contato do parceiro</span></div><span class="chip voce">você</span></li>
-      <li><div><b>Revisão de um arquiteto registrado</b><span>nas 24 plantas e nas regras</span></div><span class="chip voce">arquiteto externo</span></li>
-      <li><div><b>3D e animações</b><span>humanizada 3D, perspectiva, animação de 12 s, QR por página; OpenArt + MinoAI nos anúncios</span></div><span class="chip fim">por último</span></li>
-      <li><div><b>Versão final e planta grátis do funil</b><span>ebook.pdf e planta-gratis.pdf</span></div><span class="chip eu">eu + Revisor</span></li>
-    </ol>
-  </section>
-
-  <section>
-    <span class="olho">4 · Para aprovar</span>
-    <h2>Três respostas e eu começo</h2>
-    <ol class="perguntas">
-      <li>O formato (A4, cerca de 60 páginas, página dupla por casa) está bom?</li>
-      <li>A capa com "Que casa cabe no seu lote?" está aprovada como direção? O título final continua com você.</li>
-      <li>Posso começar os passos 1 a 6?</li>
-    </ol>
+    <span class="olho">A página dupla de cada casa</span>
+    <h2 id="titulo-dupla">Como a casa escolhida sai no PDF</h2>
+    <div class="mesa"><div class="dupla" id="dupla"></div></div>
+    <p class="nota-final">Tudo nesta página dupla sai das plantas validadas: medidas, recuos, corredor, luz e melhor frente. Os textos de "para quem é" e as perguntas ao engenheiro são exemplo; o Redator escreve os definitivos. O 3D e a animação entram por último, no lugar do QR.</p>
   </section>
 </div>
+
+<script>
+const DADOS = [{"id":"C01","nome":"Casa Compacta","area":55,"q":"2 quartos","b":1,"W":6.5,"D":8.5,"lote":[8.0,13.0],"lc":[8,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto","c":[["sala","Sala",0.0,0.0,3.3,3.4,"sala"],["cozinha","Cozinha",3.3,0.0,5.3,3.4,"cozinha"],["servico","Serviço",5.3,0.0,6.5,3.4,"servico"],["circ","Circulação",0.0,3.4,4.4,4.6,"circ"],["banho","Banheiro",4.4,3.4,6.5,4.6,"banho"],["casal","Quarto casal",0.0,4.6,3.25,8.5,"quarto1"],["dorm","Quarto",3.25,4.6,6.5,8.5,"quarto2"]],"j":[["sala","frente",1.6],["cozinha","frente",1.1],["servico","dir",0.7],["banho","dir",0.7],["quarto1","fundos",2.1],["quarto2","fundos",2.1]]},{"id":"C02","nome":"Casa Studio","area":32,"q":"studio","b":1,"W":4.5,"D":7.2,"lote":[6.0,11.7],"lc":[6,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":0,"ori":"norte","pior":"oeste","dest":"","c":[["estar","Sala e cama",0.0,0.0,4.5,4.0,"estar"],["cozinha","Cozinha",0.0,4.0,2.7,7.2,"cozinha"],["banho","Banheiro",2.7,4.0,4.5,5.6,"banho"],["servico","Serviço",2.7,5.6,4.5,7.2,"servico"]],"j":[["estar","frente",2.6],["cozinha","fundos",1.3],["banho","dir",0.8],["servico","dir",0.6]]},{"id":"C03","nome":"Casa Inicial","area":41,"q":"1 quarto (+1 depois)","b":1,"W":5.5,"D":7.5,"lote":[7.0,15.5],"lc":[7,20],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":9,"ori":"norte","pior":"leste","dest":"","c":[["sala","Sala",0.0,0.0,3.2,3.4,"sala"],["cozinha","Cozinha",3.2,0.0,5.5,3.4,"cozinha"],["circ","Circulação",0.0,3.4,3.2,4.6,"circ"],["banho","Banheiro",3.2,3.4,5.5,4.6,"banho"],["casal","Quarto casal",0.0,4.6,3.2,7.5,"quarto1"],["servico","Serviço",3.2,4.6,5.5,7.5,"servico"],["futuro","Quarto 2 (ampliação)",0,7.5,3.2,11.0,"futuro1"]],"j":[["sala","frente",1.6],["cozinha","dir",1.2],["banho","dir",0.7],["quarto1","fundos",1.6],["servico","dir",1.0]]},{"id":"C04","nome":"Casa Duo","area":48,"q":"2 quartos","b":1,"W":6.0,"D":9.6,"lote":[7.5,14.1],"lc":[8,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Varanda na frente e dois quartos do mesmo tamanho","c":[["varanda","Varanda",0.0,0.0,6.0,1.6,"varanda"],["sala","Sala",0.0,1.6,3.0,5.0,"sala"],["cozinha","Cozinha",3.0,1.6,4.8,5.0,"cozinha"],["servico","Serviço",4.8,1.6,6.0,5.0,"servico"],["circ","Circulação",0.0,5.0,3.9,6.2,"circ"],["banho","Banheiro",3.9,5.0,6.0,6.2,"banho"],["casal","Quarto casal",0.0,6.2,3.0,9.6,"quarto1"],["dorm","Quarto",3.0,6.2,6.0,9.6,"quarto2"]],"j":[["sala","frente",1.5],["cozinha","frente",1.0],["servico","dir",0.7],["banho","dir",0.7],["quarto1","fundos",1.7],["quarto2","fundos",1.7]]},{"id":"C05","nome":"Casa Popular","area":47,"q":"2 quartos","b":1,"W":6.0,"D":7.8,"lote":[7.5,12.3],"lc":[8,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Cabe no padrão de programa habitacional (40 m² ou mais) sem desperdiçar um metro","c":[["sala","Sala",0.0,0.0,3.0,3.4,"sala"],["cozinha","Cozinha",3.0,0.0,4.8,3.4,"cozinha"],["servico","Serviço",4.8,0.0,6.0,3.4,"servico"],["circ","Circulação",0.0,3.4,3.9,4.6,"circ"],["banho","Banheiro",3.9,3.4,6.0,4.6,"banho"],["casal","Quarto casal",0.0,4.6,3.0,7.8,"quarto1"],["dorm","Quarto",3.0,4.6,6.0,7.8,"quarto2"]],"j":[["sala","frente",1.5],["cozinha","frente",1.0],["servico","dir",0.7],["banho","dir",0.7],["quarto1","fundos",1.6],["quarto2","fundos",1.6]]},{"id":"C06","nome":"Casa Compacta Suíte","area":57,"q":"2 quartos (1 suíte)","b":2,"W":7.5,"D":7.6,"lote":[9.0,12.1],"lc":[9,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"","c":[["sala","Sala",0.0,0.0,3.8,3.4,"sala"],["cozinha","Cozinha",3.8,0.0,6.1,3.4,"cozinha"],["servico","Serviço",6.1,0.0,7.5,3.4,"servico"],["circ","Circulação",0.0,3.4,5.0,4.6,"circ"],["banho","Banheiro",5.0,3.4,7.5,4.6,"banho"],["dorm","Quarto",0.0,4.6,2.8,7.6,"quarto2"],["casal","Suíte",2.8,4.6,5.8,7.6,"quarto1"],["banho","Banho da suíte",5.8,4.6,7.5,7.6,"bsuite"]],"j":[["sala","frente",1.9],["cozinha","frente",1.2],["servico","dir",0.8],["banho","dir",0.8],["quarto2","fundos",1.4],["quarto1","fundos",1.5],["bsuite","dir",1.3]]},{"id":"C07","nome":"Casa Compacta Varanda","area":55,"q":"2 quartos","b":1,"W":6.5,"D":10.3,"lote":[8.0,14.8],"lc":[8,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Varanda larga para a rede, a cadeira e o carro parado na chuva","c":[["varanda","Varanda",0.0,0.0,6.5,1.8,"varanda"],["sala","Sala",0.0,1.8,3.3,5.2,"sala"],["cozinha","Cozinha",3.3,1.8,5.3,5.2,"cozinha"],["servico","Serviço",5.3,1.8,6.5,5.2,"servico"],["circ","Circulação",0.0,5.2,4.4,6.4,"circ"],["banho","Banheiro",4.4,5.2,6.5,6.4,"banho"],["casal","Quarto casal",0.0,6.4,3.25,10.3,"quarto1"],["dorm","Quarto",3.25,6.4,6.5,10.3,"quarto2"]],"j":[["sala","frente",1.6],["cozinha","frente",1.1],["servico","dir",0.7],["banho","dir",0.7],["quarto1","fundos",2.1],["quarto2","fundos",2.1]]},{"id":"E01","nome":"Casa Estreita","area":58,"q":"2 quartos (1 suíte)","b":2,"W":5.0,"D":19.2,"lote":[8.0,23.7],"lc":[8,25],"rec":{"frente":3.0,"fundos":1.5,"esq":1.5,"dir":1.5},"circ":0,"ori":"norte","pior":"sul","dest":"Garagem na frente e todos os cômodos abrindo para o corredor","c":[["garagem","Garagem",0.0,0.0,3.0,4.6,"garagem"],["externo","Jardim",3.0,0.0,5.0,4.6,"jardim"],["sala","Sala",0.0,4.6,4.0,8.2,"sala"],["cozinha","Cozinha",0.0,8.2,4.0,11.0,"cozinha"],["servico","Serviço",0.0,11.0,1.8,13.0,"servico"],["banho","Banheiro",1.8,11.0,4.0,13.0,"banho"],["banho","Banho da suíte",0.0,13.0,1.3,16.2,"bsuite"],["casal","Suíte",1.3,13.0,4.0,16.2,"quarto1"],["dorm","Quarto",0.0,16.2,4.0,19.2,"quarto2"],["varanda","Corredor coberto",4.0,4.6,5.0,19.2,"corr"]],"j":[["sala","frente",2.1],["cozinha","dir",1.7],["servico","esq",0.6],["banho","dir",1.1],["bsuite","esq",1.1],["quarto1","dir",1.5],["quarto2","fundos",2.0]]},{"id":"E02","nome":"Casa Corredor","area":40,"q":"2 quartos","b":1,"W":3.6,"D":15.299999999999999,"lote":[6.6,19.8],"lc":[7,20],"rec":{"frente":3.0,"fundos":1.5,"esq":1.5,"dir":1.5},"circ":0,"ori":"norte","pior":"sul","dest":"","c":[["sala","Sala",0.0,0.0,2.6,3.9,"sala"],["cozinha","Cozinha",0.0,3.9,2.6,6.7,"cozinha"],["servico","Serviço",0.0,6.7,1.3,8.7,"servico"],["banho","Banheiro",1.3,6.7,2.6,8.7,"banho"],["casal","Quarto casal",0.0,8.7,2.6,12.0,"quarto1"],["dorm","Quarto",0.0,12.0,2.6,15.3,"quarto2"],["varanda","Corredor coberto",2.6,0.0,3.6,15.3,"corr"]],"j":[["sala","frente",1.5],["cozinha","dir",1.1],["servico","esq",0.6],["banho","dir",0.7],["quarto1","dir",1.5],["quarto2","fundos",1.5]]},{"id":"E03","nome":"Casa Fita","area":34,"q":"1 quarto","b":1,"W":3.5,"D":13.2,"lote":[5.0,17.7],"lc":[5,20],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":0,"ori":"norte","pior":"leste","dest":"Cabe em lote de 5 m de frente: todas as janelas dão para o corredor","c":[["sala","Sala",0.0,0.0,2.6,3.9,"sala"],["cozinha","Cozinha",0.0,3.9,2.6,6.7,"cozinha"],["servico","Serviço",0.0,6.7,2.6,8.0,"servico"],["banho","Banheiro",0.0,8.0,2.6,9.8,"banho"],["casal","Quarto casal",0.0,9.8,2.6,13.2,"quarto1"],["varanda","Corredor coberto",2.6,0.0,3.5,13.2,"corr"]],"j":[["sala","frente",1.5],["cozinha","dir",1.1],["servico","dir",0.6],["banho","dir",1.2],["quarto1","fundos",1.5]]},{"id":"E04","nome":"Casa Pátio","area":55,"q":"2 quartos","b":1,"W":7.5,"D":8.0,"lote":[9.0,12.5],"lc":[9,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":12,"ori":"sul","pior":"leste","dest":"Pátio de luz entre os quartos: ventilação cruzada e privacidade","c":[["sala","Sala",0.0,0.0,4.0,3.4,"sala"],["cozinha","Cozinha",4.0,0.0,6.3,3.4,"cozinha"],["servico","Serviço",6.3,0.0,7.5,3.4,"servico"],["circ","Circulação",0.0,3.4,5.5,4.6,"circ"],["banho","Banheiro",5.5,3.4,7.5,4.6,"banho"],["casal","Quarto casal",0.0,4.6,3.0,8.0,"quarto1"],["patio","Pátio de luz",3.0,4.6,4.5,8.0,"patio"],["dorm","Quarto",4.5,4.6,7.5,8.0,"quarto2"]],"j":[["sala","frente",2.0],["cozinha","frente",1.2],["servico","dir",0.7],["banho","dir",0.6],["quarto1","fundos",1.7],["quarto2","fundos",1.7]]},{"id":"E05","nome":"Casa Estreita Suíte","area":58,"q":"2 quartos (1 suíte)","b":2,"W":4.9,"D":15.0,"lote":[7.9,19.5],"lc":[8,20],"rec":{"frente":3.0,"fundos":1.5,"esq":1.5,"dir":1.5},"circ":0,"ori":"norte","pior":"sul","dest":"","c":[["sala","Sala",0.0,0.0,3.9,3.8,"sala"],["cozinha","Cozinha",0.0,3.8,3.9,6.6,"cozinha"],["servico","Serviço",0.0,6.6,1.8,8.6,"servico"],["banho","Banheiro",1.8,6.6,3.9,8.6,"banho"],["banho","Banho da suíte",0.0,8.6,1.3,12.0,"bsuite"],["casal","Suíte",1.3,8.6,3.9,12.0,"quarto1"],["dorm","Quarto",0.0,12.0,3.9,15.0,"quarto2"],["varanda","Corredor coberto",3.9,0.0,4.9,15.0,"corr"]],"j":[["sala","frente",2.1],["cozinha","dir",1.7],["servico","esq",0.6],["banho","dir",1.1],["bsuite","esq",1.1],["quarto1","dir",1.5],["quarto2","fundos",2.0]]},{"id":"E06","nome":"Casa Estreita Gourmet","area":68,"q":"2 quartos (1 suíte)","b":2,"W":5.6,"D":18.0,"lote":[8.6,22.5],"lc":[9,25],"rec":{"frente":3.0,"fundos":1.5,"esq":1.5,"dir":1.5},"circ":0,"ori":"norte","pior":"sul","dest":"Área gourmet nos fundos, aberta para o corredor","c":[["sala","Sala",0.0,0.0,4.6,3.8,"sala"],["cozinha","Cozinha",0.0,3.8,4.6,6.6,"cozinha"],["servico","Serviço",0.0,6.6,2.0,8.6,"servico"],["banho","Banheiro",2.0,6.6,4.6,8.6,"banho"],["banho","Banho da suíte",0.0,8.6,1.4,11.8,"bsuite"],["casal","Suíte",1.4,8.6,4.6,11.8,"quarto1"],["dorm","Quarto",0.0,11.8,4.6,14.8,"quarto2"],["varanda","Corredor coberto",4.6,0.0,5.6,14.8,"corr"],["varanda","Área gourmet",0.0,14.8,5.6,18.0,"gourmet"]],"j":[["sala","frente",2.5],["cozinha","dir",1.9],["servico","esq",0.6],["banho","dir",1.3],["bsuite","esq",1.2],["quarto1","dir",1.7],["quarto2","fundos",2.3]]},{"id":"E07","nome":"Casa Estreita 3 Quartos","area":77,"q":"3 quartos (1 suíte)","b":2,"W":5.4,"D":17.6,"lote":[8.4,22.1],"lc":[9,25],"rec":{"frente":3.0,"fundos":1.5,"esq":1.5,"dir":1.5},"circ":0,"ori":"norte","pior":"sul","dest":"","c":[["sala","Sala",0.0,0.0,4.4,3.6,"sala"],["cozinha","Cozinha",0.0,3.6,4.4,6.4,"cozinha"],["servico","Serviço",0.0,6.4,1.8,8.4,"servico"],["banho","Banheiro",1.8,6.4,4.4,8.4,"banho"],["dorm","Quarto",0.0,8.4,4.4,11.4,"quarto2"],["dorm","Quarto",0.0,11.4,4.4,14.4,"quarto3"],["banho","Banho da suíte",0.0,14.4,1.4,17.6,"bsuite"],["casal","Suíte",1.4,14.4,4.4,17.6,"quarto1"],["varanda","Corredor coberto",4.4,0.0,5.4,17.6,"corr"]],"j":[["sala","frente",2.3],["cozinha","dir",1.9],["servico","esq",0.6],["banho","dir",1.3],["quarto2","dir",2.2],["quarto3","dir",2.2],["bsuite","esq",1.2],["quarto1","fundos",1.6]]},{"id":"F01","nome":"Casa Família Compacta","area":68,"q":"3 quartos","b":1,"W":8.4,"D":8.1,"lote":[9.9,12.6],"lc":[10,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":14,"ori":"sul","pior":"leste","dest":"","c":[["sala","Sala",0.0,0.0,4.2,3.6,"sala"],["cozinha","Cozinha",4.2,0.0,6.6,3.6,"cozinha"],["servico","Serviço",6.6,0.0,8.4,2.0,"servico"],["banho","Banheiro",6.6,2.0,8.4,3.6,"banho"],["circ","Circulação",0.0,3.6,8.4,4.7,"circ"],["casal","Quarto casal",0.0,4.7,2.8,8.1,"quarto1"],["dorm","Quarto",2.8,4.7,5.6,8.1,"quarto2"],["dorm","Quarto",5.6,4.7,8.4,8.1,"quarto3"]],"j":[["sala","frente",2.2],["cozinha","frente",1.3],["servico","dir",0.6],["banho","dir",0.8],["quarto1","fundos",1.6],["quarto2","fundos",1.6],["quarto3","fundos",1.6]]},{"id":"F02","nome":"Casa Integrada","area":86,"q":"3 quartos (1 suíte)","b":2,"W":10.0,"D":8.6,"lote":[11.5,13.1],"lc":[12,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"","c":[["sala","Sala",0.0,0.0,4.0,3.8,"sala"],["jantar","Jantar",4.0,0.0,6.4,3.8,"jantar"],["cozinha","Cozinha",6.4,0.0,8.8,3.8,"cozinha"],["servico","Serviço",8.8,0.0,10.0,3.8,"servico"],["circ","Circulação",0.0,3.8,6.8,5.0,"circ"],["banho","Banheiro",6.8,3.8,10.0,5.0,"banho"],["dorm","Quarto",0.0,5.0,2.8,8.6,"quarto3"],["dorm","Quarto",2.8,5.0,5.6,8.6,"quarto2"],["casal","Suíte",5.6,5.0,8.8,8.6,"quarto1"],["banho","Banho da suíte",8.8,5.0,10.0,8.6,"bsuite"]],"j":[["sala","frente",2.2],["jantar","frente",1.5],["cozinha","frente",1.4],["servico","dir",0.7],["banho","dir",0.9],["quarto3","fundos",1.7],["quarto2","fundos",1.7],["quarto1","fundos",1.9],["bsuite","dir",1.1]]},{"id":"F03","nome":"Casa Família","area":78,"q":"3 quartos (1 suíte)","b":2,"W":9.4,"D":10.1,"lote":[10.9,14.6],"lc":[11,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":13,"ori":"sul","pior":"leste","dest":"","c":[["varanda","Varanda",0.0,0.0,9.4,1.8,"varanda"],["sala","Sala",0.0,1.8,4.4,5.6,"sala"],["cozinha","Cozinha",4.4,1.8,7.2,5.6,"cozinha"],["servico","Serviço",7.2,1.8,9.4,3.8,"servico"],["banho","Banheiro",7.2,3.8,9.4,5.6,"banho"],["circ","Circulação",0.0,5.6,9.4,6.7,"circ"],["dorm","Quarto",0.0,6.7,2.6,10.1,"quarto2"],["dorm","Quarto",2.6,6.7,5.2,10.1,"quarto3"],["casal","Suíte",5.2,6.7,8.1,10.1,"quarto1"],["banho","Banho da suíte",8.1,6.7,9.4,10.1,"bsuite"]],"j":[["sala","frente",2.4],["cozinha","frente",1.6],["servico","dir",0.7],["banho","dir",1.0],["quarto2","fundos",1.5],["quarto3","fundos",1.5],["quarto1","fundos",1.7],["bsuite","dir",1.1]]},{"id":"F04","nome":"Casa Família Suíte","area":80,"q":"3 quartos (1 suíte)","b":2,"W":9.4,"D":13.5,"lote":[10.9,18.0],"lc":[11,20],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":13,"ori":"sul","pior":"leste","dest":"","c":[["garagem","Garagem",0.0,0.0,3.0,5.0,"garagem"],["externo","Jardim",3.0,0.0,9.4,5.0,"jardim"],["sala","Sala",0.0,5.0,4.4,8.8,"sala"],["cozinha","Cozinha",4.4,5.0,7.2,8.8,"cozinha"],["servico","Serviço",7.2,5.0,9.4,7.0,"servico"],["banho","Banheiro",7.2,7.0,9.4,8.8,"banho"],["circ","Circulação",0.0,8.8,9.4,9.9,"circ"],["dorm","Quarto",0.0,9.9,2.6,13.5,"quarto2"],["dorm","Quarto",2.6,9.9,5.2,13.5,"quarto3"],["casal","Suíte",5.2,9.9,8.1,13.5,"quarto1"],["banho","Banho da suíte",8.1,9.9,9.4,13.5,"bsuite"]],"j":[["sala","frente",2.4],["cozinha","frente",1.6],["servico","dir",0.7],["banho","dir",1.0],["quarto2","fundos",1.6],["quarto3","fundos",1.6],["quarto1","fundos",1.8],["bsuite","dir",1.2]]},{"id":"F05","nome":"Casa em L","area":90,"q":"3 quartos (1 suíte)","b":2,"W":11.4,"D":8.6,"lote":[12.9,13.1],"lc":[13,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"","c":[["sala","Sala",0.0,0.0,4.6,3.8,"sala"],["jantar","Jantar",4.6,0.0,7.2,3.8,"jantar"],["cozinha","Cozinha",7.2,0.0,10.0,3.8,"cozinha"],["servico","Serviço",10.0,0.0,11.4,3.8,"servico"],["circ","Circulação",0.0,3.8,7.4,5.0,"circ"],["banho","Banheiro",7.4,3.8,11.4,5.0,"banho"],["dorm","Quarto",0.0,5.0,2.6,8.6,"quarto2"],["dorm","Quarto",2.6,5.0,5.2,8.6,"quarto3"],["casal","Suíte",5.2,5.0,8.0,8.6,"quarto1"],["banho","Banho da suíte",8.0,5.0,9.3,8.6,"bsuite"],["externo","Jardim interno",9.3,5.0,11.4,8.6,"jardim"]],"j":[["sala","frente",2.5],["jantar","frente",1.7],["cozinha","frente",1.6],["servico","dir",0.8],["banho","dir",0.9],["banho","fundos",0.6],["quarto2","fundos",1.6],["quarto3","fundos",1.6],["quarto1","fundos",1.7],["bsuite","dir",1.2]]},{"id":"S03","nome":"Casa Acessível","area":75,"q":"2 quartos","b":1,"W":8.8,"D":8.5,"lote":[10.3,13.0],"lc":[11,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":13,"ori":"sul","pior":"leste","dest":"Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas","c":[["sala","Sala",0.0,0.0,4.0,3.6,"sala"],["cozinha","Cozinha",4.0,0.0,7.2,3.6,"cozinha"],["servico","Serviço",7.2,0.0,8.8,3.6,"servico"],["circ","Circulação",0.0,3.6,6.6,5.1,"circ"],["banho","Banheiro acessível",6.6,3.6,8.8,5.1,"banho"],["casal","Quarto casal",0.0,5.1,4.4,8.5,"quarto1"],["dorm","Quarto",4.4,5.1,8.8,8.5,"quarto2"]],"j":[["sala","frente",2.1],["cozinha","frente",1.7],["servico","dir",0.9],["banho","dir",0.9],["quarto1","fundos",2.5],["quarto2","fundos",2.5]]},{"id":"S04","nome":"Casa Home Office","area":66,"q":"2 quartos + escritório","b":1,"W":7.8,"D":10.8,"lote":[9.3,15.3],"lc":[10,20],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Escritório com porta para a rua: cliente entra sem passar pela casa","c":[["escritorio","Escritório",0.0,0.0,2.0,3.2,"escritorio"],["varanda","Varanda",2.0,0.0,7.8,3.2,"varanda"],["sala","Sala",0.0,3.2,4.8,6.4,"sala"],["cozinha","Cozinha",4.8,3.2,6.6,6.4,"cozinha"],["servico","Serviço",6.6,3.2,7.8,6.4,"servico"],["circ","Circulação",0.0,6.4,5.2,7.6,"circ"],["banho","Banheiro",5.2,6.4,7.8,7.6,"banho"],["casal","Quarto casal",0.0,7.6,3.9,10.8,"quarto1"],["dorm","Quarto",3.9,7.6,7.8,10.8,"quarto2"]],"j":[["escritorio","frente",1.1],["sala","frente",2.2],["cozinha","frente",0.9],["servico","dir",0.6],["banho","dir",0.8],["quarto1","fundos",2.1],["quarto2","fundos",2.1]]},{"id":"S05","nome":"Casa de Praia","area":59,"q":"2 quartos (1 suíte)","b":2,"W":7.4,"D":10.4,"lote":[8.9,14.9],"lc":[9,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Varandão na frente e ventilação cruzada em todos os cômodos","c":[["varanda","Varandão",0.0,0.0,7.4,2.4,"varanda"],["sala","Sala",0.0,2.4,3.8,6.0,"sala"],["cozinha","Cozinha",3.8,2.4,6.2,6.0,"cozinha"],["servico","Serviço",6.2,2.4,7.4,6.0,"servico"],["circ","Circulação",0.0,6.0,5.0,7.2,"circ"],["banho","Banheiro",5.0,6.0,7.4,7.2,"banho"],["dorm","Quarto",0.0,7.2,3.0,10.4,"quarto2"],["casal","Suíte",3.0,7.2,6.0,10.4,"quarto1"],["banho","Banho da suíte",6.0,7.2,7.4,10.4,"bsuite"]],"j":[["sala","frente",2.0],["cozinha","frente",1.3],["servico","dir",0.7],["banho","dir",0.8],["quarto2","fundos",1.6],["quarto1","fundos",1.6],["bsuite","dir",1.2]]},{"id":"S07","nome":"Casa Gourmet","area":74,"q":"3 quartos (1 suíte)","b":2,"W":9.4,"D":8.6,"lote":[10.9,13.1],"lc":[11,15],"rec":{"frente":3.0,"fundos":1.5,"esq":0.0,"dir":1.5},"circ":10,"ori":"sul","pior":"leste","dest":"Cozinha aberta para a área gourmet, a casa que recebe","c":[["sala","Sala",0.0,0.0,3.6,3.8,"sala"],["cozinha","Cozinha",3.6,0.0,6.4,3.8,"cozinha"],["varanda","Área gourmet",6.4,0.0,9.4,2.4,"gourmet"],["servico","Serviço",6.4,2.4,9.4,3.8,"servico"],["circ","Circulação",0.0,3.8,6.4,5.0,"circ"],["banho","Banheiro",6.4,3.8,9.4,5.0,"banho"],["dorm","Quarto",0.0,5.0,2.6,8.6,"quarto2"],["dorm","Quarto",2.6,5.0,5.2,8.6,"quarto3"],["casal","Suíte",5.2,5.0,8.1,8.6,"quarto1"],["banho","Banho da suíte",8.1,5.0,9.4,8.6,"bsuite"]],"j":[["sala","frente",2.0],["cozinha","dir",1.6],["servico","dir",0.7],["banho","dir",0.9],["quarto2","fundos",1.6],["quarto3","fundos",1.6],["quarto1","fundos",1.8],["bsuite","dir",1.2]]},{"id":"S09","nome":"Casa de Esquina","area":78,"q":"3 quartos (1 suíte)","b":2,"W":9.4,"D":10.1,"lote":[13.9,14.6],"lc":[14,15],"rec":{"frente":3.0,"fundos":1.5,"esq":3.0,"dir":1.5},"circ":13,"ori":"sul","pior":"leste","dest":"","c":[["varanda","Varanda",0.0,0.0,9.4,1.8,"varanda"],["sala","Sala",0.0,1.8,4.4,5.6,"sala"],["cozinha","Cozinha",4.4,1.8,7.2,5.6,"cozinha"],["servico","Serviço",7.2,1.8,9.4,3.8,"servico"],["banho","Banheiro",7.2,3.8,9.4,5.6,"banho"],["circ","Circulação",0.0,5.6,9.4,6.7,"circ"],["dorm","Quarto",0.0,6.7,2.6,10.1,"quarto2"],["dorm","Quarto",2.6,6.7,5.2,10.1,"quarto3"],["casal","Suíte",5.2,6.7,8.1,10.1,"quarto1"],["banho","Banho da suíte",8.1,6.7,9.4,10.1,"bsuite"]],"j":[["sala","frente",2.4],["cozinha","frente",1.6],["servico","dir",0.7],["banho","dir",1.0],["quarto2","fundos",1.5],["quarto3","fundos",1.5],["quarto1","fundos",1.7],["bsuite","dir",1.1]]}];
+const AVISO_SUITE = {"C01": false, "C02": false, "C03": false, "C04": false, "C05": false, "C06": false, "C07": false, "E01": false, "E02": false, "E03": false, "E04": false, "E05": false, "E06": false, "E07": true, "F01": false, "F02": false, "F03": true, "F04": true, "F05": false, "S03": false, "S04": false, "S05": false, "S07": false, "S09": true};
+const CORES = { sala:'#E9D8BD', estar:'#E9D8BD', jantar:'#E9D8BD', cozinha:'#D3E1CC', servico:'#D9E5D1', banho:'#CFE2E8', lavabo:'#CFE2E8', casal:'#EEDCC2', dorm:'#F1E4CF', circ:'#F4EFE6', escritorio:'#E4DEF1', varanda:'#E7E3DA', garagem:'#DEDCD8', patio:'#CFE3BB', externo:'#CFE3BB', futuro:'none' };
+const NOMES_ORI = { norte:'norte', sul:'sul', leste:'leste', oeste:'oeste' };
+const m = (v) => v.toFixed(2).replace('.', ',');
+const ns = 'http://www.w3.org/2000/svg';
+const el = (t, a = {}, filhos = []) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); for (const f of filhos) e.append(f); return e; };
+
+// Planta: frente da casa para baixo (o leitor "entra por baixo", como chega da rua).
+function desenharPlanta(p, { nomes = true, cotas = false, pad = 0.6 } = {}) {
+  const fut = p.c.filter(c => c[0] === 'futuro');
+  const Dm = Math.max(p.D, ...fut.map(c => c[5]));
+  const Wm = Math.max(p.W, ...fut.map(c => c[4]));
+  const padB = cotas ? 1.1 : pad;
+  const svg = el('svg', { viewBox: `${-pad} ${-pad} ${Wm + pad * 2} ${Dm + pad + padB}`, role: 'img', 'aria-label': `Planta da ${p.nome}` });
+  const Y = (y) => Dm - y; // frente embaixo
+  for (const [tipo, nome, x0, y0, x1, y1] of p.c) {
+    if (tipo === 'futuro') { svg.append(el('rect', { x: x0, y: Y(y1), width: x1 - x0, height: y1 - y0, fill: 'none', stroke: '#E0A92E', 'stroke-width': .06, 'stroke-dasharray': '.25 .18' })); continue; }
+    svg.append(el('rect', { x: x0, y: Y(y1), width: x1 - x0, height: y1 - y0, fill: CORES[tipo] || '#EEE', stroke: ['varanda','garagem','patio','externo'].includes(tipo) ? '#B9B3A8' : '#2A3340', 'stroke-width': ['varanda','garagem','patio','externo'].includes(tipo) ? .03 : .12 }));
+    const w = x1 - x0, h = y1 - y0;
+    if (nomes && Math.min(w, h) >= 1.15 && !['circ','externo'].includes(tipo)) {
+      let n = nome.toUpperCase(); const fs = Math.min(.36, (w - .2) / (n.length * .74));
+      const t = el('text', { x: x0 + w / 2, y: Y(y0 + h / 2) - .05, 'text-anchor': 'middle', 'font-size': Math.max(fs, .2), 'font-family': 'Inter, sans-serif', 'font-weight': 700, fill: '#1E2733' }); t.textContent = n; svg.append(t);
+      const a = el('text', { x: x0 + w / 2, y: Y(y0 + h / 2) + .32, 'text-anchor': 'middle', 'font-size': .24, 'font-family': 'JetBrains Mono, monospace', fill: '#56616E' }); a.textContent = (w * h).toFixed(1).replace('.', ',') + ' m²'; svg.append(a);
+    }
+  }
+  // janelas
+  for (const [cid, lado, larg] of p.j) {
+    const c = p.byId[cid]; if (!c) continue; const [, , x0, y0, x1, y1] = c;
+    let x, y, w, h;
+    if (lado === 'frente' || lado === 'fundos') { const yy = lado === 'frente' ? y0 : y1; x = (x0 + x1) / 2 - larg / 2; w = larg; y = Y(yy) - .07; h = .14; }
+    else { const xx = lado === 'esq' ? x0 : x1; y = Y((y0 + y1) / 2 + larg / 2); h = larg; x = xx - .07; w = .14; }
+    svg.append(el('rect', { x, y, width: w, height: h, fill: '#8ED2FF', stroke: '#0B4FA8', 'stroke-width': .03 }));
+  }
+  if (cotas) {
+    const g = el('g', { stroke: '#0B4FA8', 'stroke-width': .03, fill: '#0B4FA8', 'font-family': 'JetBrains Mono, monospace', 'font-size': .3 });
+    g.append(el('line', { x1: 0, y1: Dm + .5, x2: p.W, y2: Dm + .5 }));
+    const t = el('text', { x: p.W / 2, y: Dm + .9, 'text-anchor': 'middle', stroke: 'none' }); t.textContent = m(p.W) + ' m'; g.append(t);
+    svg.append(g);
+  }
+  return svg;
+}
+
+// A casa no lote, com recuos, rua e a orientação recomendada
+function desenharLote(p) {
+  const [LW, LD] = p.lote; const r = p.rec; const pad = .4, rua = 1.6;
+  const svg = el('svg', { viewBox: `${-pad - 1.2} ${-pad} ${LW + pad * 2 + 2.4} ${LD + pad + rua + .8}`, role: 'img', 'aria-label': `Casa ${p.nome} no lote mínimo de ${m(LW)} por ${m(LD)} metros` });
+  const Y = (y) => LD - y;
+  svg.append(el('rect', { x: 0, y: 0, width: LW, height: LD, fill: '#F3E6C4', stroke: '#17202B', 'stroke-width': .07, 'stroke-dasharray': '.3 .15' }));
+  const hx = r.esq, hy = r.frente;
+  svg.append(el('rect', { x: hx, y: Y(hy + p.D), width: p.W, height: p.D, fill: '#0B4FA8' }));
+  const tt = el('text', { x: hx + p.W / 2, y: Y(hy + p.D / 2) + .2, 'text-anchor': 'middle', 'font-size': .55, 'font-family': 'Bricolage Grotesque, Inter, sans-serif', 'font-weight': 800, fill: '#fff' }); tt.textContent = p.id; svg.append(tt);
+  svg.append(el('rect', { x: -1.2, y: LD + .15, width: LW + 2.4, height: rua, fill: '#C9CED6' }));
+  const tr = el('text', { x: LW / 2, y: LD + .15 + rua / 2 + .18, 'text-anchor': 'middle', 'font-size': .5, 'font-family': 'Inter, sans-serif', 'font-weight': 700, fill: '#4F5B69', 'letter-spacing': .1 }); tr.textContent = 'RUA'; svg.append(tr);
+  const cota = (txt, x, y, ancora = 'middle', rot = 0) => { const t = el('text', { x, y, 'text-anchor': ancora, 'font-size': .42, 'font-family': 'JetBrains Mono, monospace', fill: '#17202B', transform: rot ? `rotate(${rot} ${x} ${y})` : '' }); t.textContent = txt; svg.append(t); };
+  cota(m(LW) + ' m', LW / 2, -0.05 - .05);
+  cota(m(LD) + ' m', -0.45, LD / 2, 'middle', -90);
+  if (r.frente) cota('recuo ' + m(r.frente), hx + p.W + .1 > LW - .2 ? LW / 2 : hx + p.W / 2, Y(r.frente / 2) + .15);
+  // bússola: a frente (rua, embaixo) aponta para a melhor orientação
+  const angulo = { sul: 0, norte: 180, leste: 90, oeste: -90 }[p.ori];
+  const cx = LW + .6, cy = .8;
+  const b = el('g', { transform: `translate(${cx} ${cy}) rotate(${angulo})` });
+  b.append(el('circle', { r: .55, fill: '#fff', stroke: '#17202B', 'stroke-width': .04 }));
+  b.append(el('path', { d: 'M0 -.48 L.16 .1 L0 0 L-.16 .1 Z', fill: '#C0392B' }));
+  const n = el('text', { y: -.6, 'text-anchor': 'middle', 'font-size': .32, 'font-weight': 800, 'font-family': 'Inter, sans-serif', fill: '#17202B' }); n.textContent = 'N'; b.append(n);
+  svg.append(b);
+  return svg;
+}
+
+function icone(tipo) {
+  const s = el('svg', { viewBox: '0 0 20 20', 'aria-hidden': 'true' });
+  s.append(el('circle', { cx: 10, cy: 10, r: 9.5, fill: '#E7EFFA' }));
+  if (tipo === 'sol') { s.append(el('circle', { cx: 10, cy: 10, r: 3.2, fill: '#E0A92E' })); for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; s.append(el('line', { x1: 10 + Math.cos(a) * 5, y1: 10 + Math.sin(a) * 5, x2: 10 + Math.cos(a) * 6.6, y2: 10 + Math.sin(a) * 6.6, stroke: '#E0A92E', 'stroke-width': 1.3, 'stroke-linecap': 'round' })); } }
+  if (tipo === 'ar') { for (const y of [7, 10.5, 14]) s.append(el('path', { d: `M4 ${y} h9 a2 2 0 1 0 -2 -2`, fill: 'none', stroke: '#0B4FA8', 'stroke-width': 1.3, 'stroke-linecap': 'round' })); }
+  if (tipo === 'agua') s.append(el('path', { d: 'M10 4 C13 8.5 14.5 10.5 14.5 12.5 A4.5 4.5 0 0 1 5.5 12.5 C5.5 10.5 7 8.5 10 4 Z', fill: '#4AA3DF' }));
+  return s;
+}
+
+const linha = (rotulo, valor, ref) => `<div class="r-l"><span>${rotulo}</span><b>${valor}</b><span>${ref}</span></div>`;
+function paraQuem(p) {
+  const q = p.q;
+  if (q.startsWith('studio')) return 'Quem mora sozinho ou quer construir para alugar, gastando o mínimo de obra.';
+  if (q.startsWith('1')) return 'Quem quer sair do aluguel logo com uma casa pequena e crescer depois.';
+  if (q.startsWith('3')) return 'Família de 4 ou mais, ou casal que quer um quarto de escritório.';
+  return 'Casal com 1 ou 2 filhos que quer 2 quartos de verdade sem gastar com corredor.';
+}
+
+function paginaDupla(p) {
+  const esq = document.createElement('article'); esq.className = 'pg esq';
+  esq.innerHTML = `<span class="orelha" style="top:18%">${p.lc[0]} M</span>
+    <div class="cab"><span class="id">${p.id} · LOTE A PARTIR DE ${p.lc[0]} x ${p.lc[1]} M</span><h3>${p.nome}</h3></div>
+    <p class="gancho">${p.lc[0]} m de frente. ${p.q.replace(' (+1 depois)', '')}. ${p.area} m².</p>
+    <div class="planta-grande"></div>
+    <div class="lado"><div><h4>Para quem é</h4><p>${paraQuem(p)}</p></div><div><h4>Destaque</h4><p>${p.dest || 'Tudo o que precisa, nas medidas que um arquiteto usa.'}</p></div></div>
+    <p class="rodape">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>`;
+  esq.querySelector('.planta-grande').append(desenharPlanta(p, { cotas: true }));
+  const dir = document.createElement('article'); dir.className = 'pg';
+  const porcao = `${p.lc[0]} x ${p.lc[1]} m`;
+  dir.innerHTML = `<span class="orelha" style="top:18%">${p.lc[0]} M</span>
+    <div class="cab"><span class="id">${p.id} · A CASA NO SEU LOTE</span><h3>Cabe? Veja.</h3></div>
+    <div class="lado"><div class="lote-svg"></div>
+      <div class="rotulo" role="table" aria-label="Informação da casa">
+        <div class="r-tit">INFORMAÇÃO DA CASA</div>
+        <div class="r-por">Porção de 1 lote de ${porcao}</div>
+        <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
+        ${linha('Área fechada', p.area + ' m²', '')}
+        ${linha('Quartos', p.q.split(' ')[0] === 'studio' ? 'studio' : p.q.split(' ')[0], '')}
+        ${linha('Banheiros', p.b, '')}
+        ${linha('Corredor', p.circ ? p.circ + '%' : 'externo', 'até 14%')}
+        ${linha('Janela nos quartos', '✓', '1/6 do piso')}
+        ${linha('Cozinha e banho juntos', AVISO_SUITE[p.id] ? 'social ✓' : '✓', 'uma prumada')}
+        ${linha('Melhor frente', NOMES_ORI[p.ori], '')}
+        <div class="r-nota">Conferido pelo validador do X1-Plantas. Recuos de referência: confira os da sua cidade.</div>
+      </div></div>
+    <div><h4>O que o arquiteto pensou</h4><div class="pensou">
+      <div><span class="i1"></span><p><b>Sol.</b> Testamos as 4 orientações: melhor com a frente para o ${NOMES_ORI[p.ori]}, pior para o ${NOMES_ORI[p.pior]}. Lote diferente? O arquiteto espelha a planta.</p></div>
+      <div><span class="i2"></span><p><b>Luz e ar.</b> Todo quarto e a sala têm janela para fora, com pelo menos 1/6 do piso.</p></div>
+      <div><span class="i3"></span><p><b>Água junto.</b> Cozinha, serviço e banheiro encostados: menos cano, menos dia de encanador.</p></div>
+    </div></div>
+    <div><h4>Leve ao seu engenheiro</h4><ul class="perg"><li>Qual é o recuo da minha rua?</li><li>Que fundação o meu solo pede?</li><li>Laje ou forro, e quanto muda no orçamento?</li></ul></div>
+    <div class="vivo"><i aria-hidden="true"></i><p><b>Veja ganhar vida.</b> Aponte a câmera: a planta se desenha, as paredes sobem e a casa aparece mobiliada. <em>(3D: último passo)</em></p></div>
+    <p class="rodape">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</p>`;
+  dir.querySelector('.lote-svg').append(desenharLote(p));
+  dir.querySelector('.i1').replaceWith(icone('sol')); dir.querySelector('.i2').replaceWith(icone('ar')); dir.querySelector('.i3').replaceWith(icone('agua'));
+  const d = document.getElementById('dupla'); d.replaceChildren(esq, dir);
+  document.getElementById('titulo-dupla').textContent = `${p.id} · ${p.nome}, como sai no PDF`;
+}
+
+// mapa do id interno do cômodo → retângulo, para posicionar as janelas
+for (const p of DADOS) { p.byId = {}; for (const c of p.c) p.byId[c[6]] = c; }
+
+let escolhida = 'C01';
+function vitrine(frente) {
+  const v = document.getElementById('vitrine'); v.replaceChildren();
+  const cabem = DADOS.filter(p => p.lc[0] <= frente).sort((a, b) => b.lc[0] - a.lc[0] || b.area - a.area);
+  document.getElementById('saida-frente').textContent = frente + ' m';
+  document.getElementById('conta').textContent = cabem.length ? `${cabem.length} casa${cabem.length > 1 ? 's' : ''} cabe${cabem.length > 1 ? 'm' : ''} na frente do seu lote` : 'Nenhuma casa para menos de 5 m de frente.';
+  for (const p of cabem) {
+    const b = document.createElement('button'); b.className = 'card'; b.type = 'button'; b.setAttribute('aria-pressed', p.id === escolhida);
+    b.append(desenharPlanta(p, { nomes: false, pad: .3 }));
+    const t = document.createElement('b'); t.textContent = p.nome;
+    const s = document.createElement('span'); s.textContent = `${p.id} · ${p.area} m² · ${p.q.replace(' (+1 depois)', '')} · lote ${p.lc[0]} x ${p.lc[1]}`;
+    b.append(t, s);
+    b.addEventListener('click', () => { escolhida = p.id; paginaDupla(p); for (const c of v.children) c.setAttribute('aria-pressed', c === b); });
+    v.append(b);
+  }
+}
+
+function fita() {
+  const svg = document.getElementById('reguinha'); const W = 1000, min = 4.5, max = 14.5;
+  svg.setAttribute('viewBox', `0 0 ${W} 56`); svg.setAttribute('preserveAspectRatio', 'none');
+  const X = (v) => (v - min) / (max - min) * W;
+  for (let c = Math.ceil(min * 10); c <= max * 10; c++) {
+    const v = c / 10, h = c % 10 === 0 ? 30 : c % 5 === 0 ? 20 : 11;
+    svg.append(el('line', { x1: X(v), y1: 0, x2: X(v), y2: h, stroke: '#1D1A12', 'stroke-width': c % 10 === 0 ? 2 : 1 }));
+  }
+  const marcas = document.getElementById('marcas');
+  for (let f = 5; f <= 14; f++) {
+    const n = DADOS.filter(p => p.lc[0] === f).length;
+    const b = document.createElement('button'); b.className = 'marca'; b.type = 'button';
+    b.style.left = `${(f - min) / (max - min) * 100}%`;
+    b.innerHTML = `<strong>${f} m</strong><small>${n ? n + ' casa' + (n > 1 ? 's' : '') : '—'}</small>`;
+    b.setAttribute('aria-label', `Lote com ${f} metros de frente: ${n} casas a partir desta medida`);
+    b.setAttribute('aria-pressed', f === 8);
+    b.addEventListener('click', () => { document.getElementById('frente').value = f; vitrine(f); for (const k of marcas.children) k.setAttribute('aria-pressed', k === b); document.getElementById('vitrine').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+    marcas.append(b);
+  }
+}
+
+fita();
+vitrine(8);
+paginaDupla(DADOS.find(p => p.id === 'C01'));
+document.getElementById('frente').addEventListener('input', (e) => {
+  const f = Number(e.target.value); vitrine(f);
+  for (const k of document.getElementById('marcas').children) k.setAttribute('aria-pressed', k.querySelector('strong').textContent === f + ' m');
+});
+</script>
