@@ -105,7 +105,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 ## E02 · Casa Corredor
@@ -117,7 +117,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 ## E03 · Casa Fita
@@ -131,7 +131,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o leste. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 ## E04 · Casa Pátio
@@ -157,7 +157,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 ## E06 · Casa Estreita Gourmet
@@ -171,7 +171,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 - Sala tem vão de 4.6 m: o engenheiro confere laje e vigas
@@ -187,7 +187,7 @@
 **O que o arquiteto pensou**
 
 - Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o norte e pior para o sul. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.
-- Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.
+- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.
 - Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.
 
 **Atenção**

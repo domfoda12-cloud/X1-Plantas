@@ -45,6 +45,9 @@
 | 20/11/2026 | "A edição de vídeo é responsabilidade e a criação de imagem será o Mino usando o OpenArt" | MinoAI Frontier dona da edição de vídeo e da criação de imagem, com o plugin OpenArt (falta autorizar a conta). [`MAESTRO.md`](MAESTRO.md), [`CONSELHO.md`](CONSELHO.md), [fluxo](animacoes-3d/OPENART-MINOAI.md) |
 | 20/11/2026 | "A MinoAI está fazendo algo aqui? Ele é o maestro. Quero a opinião dele sempre" | MinoAI Frontier opina em toda tarefa, primeiro, com as ferramentas dele e a fonte ([`CONSELHO.md`](CONSELHO.md), regra 0). Primeira opinião registrada na prévia do e-book |
 
+| 20/11/2026 | "Economizar o máximo do OpenArt, mas enfeitado; pode começar, mas não use o primeiro modelo" | Plano de economia em [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md): modelo de imagem em vez do padrão de vídeo, rascunho antes, uma imagem para vários formatos, teto de 6. OpenArt ainda sem autorização |
+| 20/11/2026 | "Prepare tudo o que precisa ser preparado, e dale. EFICIÊNCIA" | E-book gerado: [`ebook/saida/ebook.pdf`](ebook/saida/ebook.pdf) (61 páginas) e a planta grátis C01 com a página-ímã; 3 mockups grátis em `ebook/visual/mockups/` |
+
 ## Em aberto (esperando o dono)
 
 - Autorizar a conta do OpenArt nos conectores do claude.ai e dizer quanto crédito pode gastar.

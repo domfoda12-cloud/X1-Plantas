@@ -58,3 +58,34 @@ Imagem → vídeo: "movimento lento de câmera se aproximando da porta, 4 segund
 - Começar pelas 3 casas mais pedidas no WhatsApp (o parceiro informa; hoje a aposta é C01, E02 e F01).
 - Na legenda: "imagem ilustrativa gerada a partir da planta".
 - Guardar tudo em `Filmes/X1-Plantas/broll/ID/` no Mac, com o nome da planta.
+
+## Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo")
+
+**Mesa de bolso**
+
+```text
+[Maestro MinoAI] SIM · imagem parada + edição na MinoAI gasta muito menos que vídeo gerado; ímã do comentário pede só capa forte · fonte: método MinoAI (ímã por comentário)
+[Estrategista]   SIM, SE começar por 6 imagens de ambientação e medir antes de gerar mais
+[Arquiteto]      SIM, SE nenhuma imagem mostrar uma casa que não está no e-book (fachada só depois do 3D)
+[Revisor]        SIM, SE legenda "imagem ilustrativa" e nenhum texto dentro da imagem
+DECISÃO: aprovado com as regras abaixo
+```
+
+1. **Não usar o primeiro modelo (o padrão do plugin, Seedance 2.5, que é de vídeo).** Escolher um **modelo de imagem** na lista viva do OpenArt quando a conta for autorizada: o mais barato que aceite imagem de referência, comparando o custo que a própria ferramenta mostrar. Nada de vídeo gerado agora: o movimento vem do nosso 3D e da edição da MinoAI (zoom lento, recorte, transição).
+2. **Rascunho primeiro, qualidade final só no aprovado.** Gerar em resolução de rascunho, escolher, e só então gerar a final daquela uma.
+3. **Uma imagem, vários formatos.** Gerar em 4:5 com sobra nas bordas e recortar para 9:16 (reel e story), 1:1 (WhatsApp) e capa. Nunca gerar a mesma cena duas vezes por causa do formato.
+4. **O que é grátis não vai para o OpenArt.** Plantas, páginas, fita, mockups do e-book no celular e o 3D saem dos nossos scripts (`ebook/visual/mockups/` já tem 3).
+5. **Teto:** 6 imagens na primeira rodada. Mais, só com o "sim" do dono e o número do teste.
+
+**A primeira rodada (6 imagens de ambientação, sem mostrar planta)**
+
+| # | Para que serve | Prompt (imagem → sem referência) |
+|---|---|---|
+| 1 | Fundo da capa do reel "Que casa cabe no seu lote?" | Lote vazio de bairro brasileiro, terra batida e grama rala, muro baixo de bloco nos dois lados, fim de tarde dourado, trena amarela esticada no chão de um lado ao outro do lote, vista de cima a 45 graus, sem pessoas, sem texto |
+| 2 | B-roll do gancho "me fala a frente do seu lote" | Mãos segurando uma trena amarela aberta sobre um muro de bloco, close, luz natural, fundo desfocado de lote vazio, sem texto, sem marca |
+| 3 | B-roll "leve ao seu engenheiro" | Duas pessoas olhando uma planta impressa sobre uma tábua apoiada em blocos, num terreno com gabarito de madeira e linha de nylon, roupa simples, rosto fora de foco, sem texto legível |
+| 4 | Capa de post "casa que cresce" | Casa térrea brasileira pequena com o lado de uma futura ampliação marcado por estacas e linha de nylon, céu limpo, sem pessoas, sem texto |
+| 5 | Fundo para o depoimento e o "abriu" do lançamento | Família de costas olhando um lote vazio ao entardecer, pai com criança no colo, bairro residencial simples ao fundo, sem texto |
+| 6 | Textura para enfeitar o e-book e os carrosséis | Papel de projeto azul com linhas de grade e manchas sutis, vista de cima, sem desenhos, sem texto |
+
+A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica para depois do 3D, que é o último passo.

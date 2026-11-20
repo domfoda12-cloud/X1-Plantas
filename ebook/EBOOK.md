@@ -24,6 +24,7 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto", ligada ao gancho dos vídeos ("os R$ 1.000 que um arquiteto te economizaria").
 - **Grande variação:** compactas, terreno estreito, família, especiais (edícula, geminadas, acessível, home office, praia, campo, esquina) e sobrados. Ver [`catalogo.md`](catalogo.md).
 - **Plantas já desenhadas (24, lançamentos 1 e 2):** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam pelo validador de arquiteto ([`referencias/regras-do-arquiteto.md`](referencias/regras-do-arquiteto.md)). Público e persona: [`referencias/persona-e-mercado.md`](referencias/persona-e-mercado.md). Linguagem, visual e animação: [`referencias/linguagem-visual-e-animacao.md`](referencias/linguagem-visual-e-animacao.md). Análise dos catálogos de porcelanato: [`referencias/analise-catalogos-porcelanato.md`](referencias/analise-catalogos-porcelanato.md).
+- **Gerador do PDF (novo, 20/11/2026):** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` (61 páginas, 24 casas) e `planta-gratis-<ID>.pdf`, no estilo do [plano](PLANO-EBOOK.md): capa fita métrica, ache pelo lote, casa no lote, "Informação da casa", orelhas. Textos das casas em `fichas/textos.py`. O gerador antigo (`gerar.py`) fica como referência.
 - **Idioma e moeda:** português do Brasil, preços em R$.
 
 ## 2. Estrutura do e-book

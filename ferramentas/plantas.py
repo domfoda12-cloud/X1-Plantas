@@ -640,6 +640,8 @@ def pensou(planta):
                f"{ORI_NOME[o['melhor']]} e pior para o {ORI_NOME[o['pior']]}. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.")
     if any(t == "patio" for t in tipos):
         out.append("Ventilação cruzada: o pátio de luz entre os quartos faz o ar entrar por um lado e sair pelo outro, e dá luz sem abrir a casa para o vizinho.")
+    elif any(c["id"] == "corr" for c in cs):
+        out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.")
     elif any(t == "varanda" for t in tipos):
         out.append("Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.")
     else:
