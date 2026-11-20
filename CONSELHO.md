@@ -35,7 +35,7 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 3. **Empate:** vence o lado com o maior efeito em venda; se ainda empatar, o mais barato.
 4. **Veto do Revisor:** só por honestidade ou lei. Ele precisa dizer o que mudar para virar SIM.
 5. **Reservado ao dono** (o Conselho só recomenda): preço, título, bônus, gasto com anúncio, publicar ou apagar post, contratar alguém, usar ferramenta paga.
-6. **Registro:** decisões de entrega ao público vão para a seção 6 abaixo, com data. Decisões do dono vão para [`PAINEL.md`](PAINEL.md), seção 8.
+6. **Registro:** decisões de entrega ao público vão para a seção 7 abaixo, com data. Decisões do dono vão para [`PAINEL.md`](PAINEL.md), seção 8.
 
 ## 5. Conselho de bolso x conselho completo
 
@@ -45,7 +45,18 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 | Quem | Até 3 membros, opinião escrita pela própria sessão | Os membros chamados, cada um como subagente, em paralelo |
 | Custo | Segundos | Minutos; vale quando o erro custaria uma venda ou um anúncio |
 
-## 6. Registro de decisões do Conselho
+## 6. Skill ou agente novo: o roteiro de entrada
+
+Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Vale para skill do projeto (`.claude/skills/`), agente (`.claude/agents/`), plugin e conector. Nada é usado antes de passar por estes passos:
+
+1. **Ler o que ela roda.** Ganchos, acesso à rede, dados que saem do projeto, arquivos fora da pasta. O Revisor de risco confere e pode vetar uma parte (foi o que aconteceu com os ganchos do Ponytail).
+2. **Conselho de bolso** decide se entra, com o Maestro primeiro.
+3. **Registrar** na tabela de membros (seção 2: quem usa e quando) e no registro de decisões (seção 7).
+4. **Ensinar o projeto.** Toda skill do projeto ganha a seção `## Neste projeto (X1-Plantas)` no `SKILL.md`, e todo agente cita `CLAUDE.md` e `CONTEXTO.md`. A seção diz o que ler antes, o idioma, as regras que não mudam, onde ela entra no fluxo e que ela nunca corta os avisos legais. Plugin e conector, que ficam fora do repositório, recebem o mesmo texto na mensagem do primeiro uso.
+5. **Rodada de alcance.** Rodar a skill uma vez sobre o que já existe onde ela se aplica (exemplo: auditoria no código já escrito, Redator nos textos já publicados). O resultado vai para o `CONTEXTO.md`, e o que precisar de "sim" vai para "Em aberto".
+6. **Conferência automática.** O `python3 ferramentas/checar.py` dá erro se alguma skill de `.claude/skills/` não tiver a seção "Neste projeto" ou não estiver citada aqui, ou se algum agente de `.claude/agents/` não estiver citado aqui.
+
+## 7. Registro de decisões do Conselho
 
 | Data | Tarefa | Votos | Decisão | Resultado medido |
 |---|---|---|---|---|

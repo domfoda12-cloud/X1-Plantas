@@ -99,3 +99,15 @@ Nothing found: `What this change does:`, then `Looks good. Ship.` and one line
 on what you checked.
 
 Lists findings, changes no code.
+
+## Neste projeto (X1-Plantas)
+
+Antes de usar esta skill aqui, alcance o projeto:
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (tudo o que o dono pediu e o que está em aberto).
+- Responda e escreva em português do Brasil, com palavras simples.
+- O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
+- Uma coisa por vez, na ordem e-book → animações → vídeo.
+- Ela é membro do Conselho (`CONSELHO.md`): a decisão de usá-la segue as regras de lá, e o Revisor de risco tem veto em tudo que toca honestidade e lei.
+- Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
+- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
+- Revise também as consequências no que é impresso: um número que muda no validador muda o PDF, a calculadora do parceiro, as imagens e os posts.

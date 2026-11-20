@@ -2,7 +2,8 @@
 
 Uso: python3 ferramentas/checar.py
 Confere: sintaxe de todo .py, .cjs e .js (fora de node_modules), as 24 plantas no validador,
-os módulos do motor 3D e o painel. Sai com código 1 se algo falhar.
+os módulos do motor 3D, o painel e se toda skill e todo agente passaram pelo roteiro de entrada
+(CONSELHO.md, seção 6). Sai com código 1 se algo falhar.
 """
 import subprocess
 import sys
@@ -42,6 +43,26 @@ for f in sorted(list(RAIZ.rglob("*.cjs")) + list((RAIZ / "video" / "src").rglob(
         falhas.append(str(f.relative_to(RAIZ)))
         print(f"[ERRO] sintaxe {f.relative_to(RAIZ)}: {r.stderr.strip()[-400:]}")
 print("[OK ] sintaxe dos .cjs/.js")
+
+# Skill e agente novo alcançam o projeto (CONSELHO.md, seção 6)
+conselho = (RAIZ / "CONSELHO.md").read_text(encoding="utf-8")
+fora = []
+for sk in sorted((RAIZ / ".claude" / "skills").glob("*/SKILL.md")):
+    nome = sk.parent.name
+    if "## Neste projeto" not in sk.read_text(encoding="utf-8"):
+        fora.append(f"skill {nome}: falta a seção '## Neste projeto (X1-Plantas)' no SKILL.md")
+    if nome not in conselho:
+        fora.append(f"skill {nome}: não está citada no CONSELHO.md")
+for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
+    if ag.stem not in conselho:
+        fora.append(f"agente {ag.stem}: não está citado no CONSELHO.md")
+    if "CONTEXTO.md" not in ag.read_text(encoding="utf-8"):
+        fora.append(f"agente {ag.stem}: não manda ler o CONTEXTO.md")
+if fora:
+    falhas.append("roteiro de entrada de skills e agentes")
+    print("[ERRO] roteiro de entrada de skills e agentes:\n  " + "\n  ".join(fora))
+else:
+    print("[OK ] skills e agentes passaram pelo roteiro de entrada")
 
 rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "validar"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])

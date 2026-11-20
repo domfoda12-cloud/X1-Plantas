@@ -50,3 +50,15 @@ Never cut: validation at trust boundaries, error handling that prevents data los
 | **lite** | Build what was asked. Name the smaller option in one line and let the user pick. |
 | **full** | The rules above. Default. |
 | **ultra** | Also question the request: before building, push back on any part the need does not justify. |
+
+## Neste projeto (X1-Plantas)
+
+Antes de usar esta skill aqui, alcance o projeto:
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (tudo o que o dono pediu e o que está em aberto).
+- Responda e escreva em português do Brasil, com palavras simples.
+- O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
+- Uma coisa por vez, na ordem e-book → animações → vídeo.
+- Ela é membro do Conselho (`CONSELHO.md`): a decisão de usá-la segue as regras de lá, e o Revisor de risco tem veto em tudo que toca honestidade e lei.
+- Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
+- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
+- Aqui ele vale para o código das ferramentas (`ferramentas/`, `ebook/gerador/`, `video/*.cjs`). O texto do e-book e dos anúncios é do Redator e do Revisor, não do Ponytail.
