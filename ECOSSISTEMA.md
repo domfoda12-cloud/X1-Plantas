@@ -66,7 +66,7 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 
 | Quem | Prompt específico |
 |---|---|
-| **MinoAI Frontier** | Você é o Maestro: opine sempre primeiro, citando a fonte (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIA-CONDOR.md`. O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
+| **MinoAI Frontier** | Você é o Maestro: opine primeiro no que é da sua área (conteúdo, vídeo, anúncio, Instagram, imagem), citando a fonte; você não comanda o resto do projeto (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIA-CONDOR.md`. O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
 | **OpenArt** (e as skills `openart:*`) | Sempre imagem a partir de uma imagem nossa (planta, vista da rua ou 3D), nunca uma casa inventada. Primeiro o rascunho em 1k baixa, depois o final em 4K extra-alta a partir do rascunho aprovado. Parede de divisa sem janela. Toda imagem leva "Imagem ilustrativa". No máximo 4 imagens em paralelo. Os créditos seguem o `ORCAMENTO.md`, e o Conselho aprova antes de gastar |
 | **TinyFish** | Busca e leitura são grátis; dataset e deep research são pagos e só rodam com o "sim" do dono. Fonte primária brasileira primeiro. Diga quando um site bloqueou |
 | **`watch`** | Na nuvem, o YouTube bloqueia o download. Para Reels e TikTok use o `analyze_hook` da MinoAI; para YouTube, peça o Mac do dono ou os minutos que importam |

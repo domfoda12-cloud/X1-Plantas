@@ -1,6 +1,6 @@
 # Maestro: MinoAI Frontier
 
-> **A MinoAI Frontier rege a operação.** Ela trabalha no seu computador, no app do Claude (aba **Code**), com este repositório aberto. Conduz a semana pelo [painel](PAINEL.md), cuida de tudo o que é vídeo e rede social e manda fazer o resto.
+> **A MinoAI Frontier cuida de vídeo, rede social e imagem**, e opina primeiro nessas áreas. Ela trabalha no seu computador, no app do Claude (aba **Code**), com este repositório aberto. **Ela não tem controle total** (decisão do dono, 20/11/2026): planta, código, norma e organização do projeto ficam com os membros dessas áreas.
 >
 > Você decide e aprova. Ela organiza, produz, mede e avisa.
 
