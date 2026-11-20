@@ -19,6 +19,7 @@
 
 ## Em aberto (esperando o dono)
 
+- Dizer se instalo o toolkit de vídeo de demonstração (filma a calculadora e o leitor do e-book). A proteção automática bloqueou: precisa liberar a permissão ou rodar você mesmo `npx product-demo-agent-toolkit skills .claude/skills` na pasta do projeto.
 - Arquiteto registrado decidir: banheiros com pelo menos 1,10 m livres (hoje 19 casas abaixo) e se o e-book ganha uma nota de clima por zona bioclimática (janela maior, veneziana e beiral na zona 8).
 - Dizer se aplico as correções da revisão técnica (as 2 primeiras: calculadora do parceiro com dados velhos e promessas vetadas; `checar.py` que não pega página estourada).
 - Assistir ao CONDOR XIII quadro a quadro no Mac (o YouTube bloqueia a nuvem), ou mandar 3 a 5 momentos favoritos com o minuto, para completar [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md).
