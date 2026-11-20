@@ -14,6 +14,19 @@
 | 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, "por que esta planta é assim" e as perguntas para o engenheiro |
 | 3 | "No seu lote cabem mais casas": as outras casas do e-book que cabem num lote de 8 x 15, a fita métrica e o convite para mandar a medida do lote |
 
+**Mande a casa que cabe no lote do cliente.** Há 6 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
+
+| Lote do cliente (frente) | Planta grátis |
+|---|---|
+| 5 m | `planta-gratis-E03.pdf` (Casa Fita) |
+| 7 m | `planta-gratis-E02.pdf` (Casa Corredor) |
+| 8 m, quer 2 quartos | `planta-gratis-C01.pdf` (Casa Compacta) |
+| 8 m, quer 3 quartos | `planta-gratis-E07.pdf` (Casa Estreita 3 Quartos) |
+| 9 m ou mais, quer suíte | `planta-gratis-C06.pdf` (Casa Compacta Suíte) |
+| 10 m ou mais, 3 quartos | `planta-gratis-F01.pdf` (Casa Família Compacta) |
+
+Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calculadora-lote.html).
+
 **Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.): são do desenho antigo da C01, com outro layout. O 3D novo é o último passo.
 
 Para acompanhar no WhatsApp, use o mockup [`../visual/mockups/casa-c01-celulares.png`](../visual/mockups/casa-c01-celulares.png).

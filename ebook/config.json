@@ -12,5 +12,13 @@
   "planta_gratis": "C01",
   "link_animacao": "",
   "contato": "[WhatsApp do parceiro]",
-  "ano": "2026"
+  "ano": "2026",
+  "plantas_gratis": [
+    "C01",
+    "E03",
+    "E02",
+    "E07",
+    "F01",
+    "C06"
+  ]
 }

@@ -62,6 +62,8 @@
 
 | 20/11/2026 | (loop) Ferramenta de venda | Calculadora de lote para o parceiro: frente x fundo → casas que cabem, com página do e-book e mensagem pronta ([`ebook/vendas/calculadora-lote.html`](ebook/vendas/calculadora-lote.html), página privada no claude.ai: https://claude.ai/artifact/1aTFXGXffcoWXPeBXsdYA6) |
 
+| 20/11/2026 | (loop) Planta grátis por lote | 6 plantas grátis prontas (C01, E03, E02, E07, F01, C06): o parceiro manda a que cabe no lote do cliente ([`ebook/vendas/material-gratuito.md`](ebook/vendas/material-gratuito.md)) |
+
 ## Em aberto (esperando o dono)
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.

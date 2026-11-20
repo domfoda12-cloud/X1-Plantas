@@ -522,9 +522,20 @@ def montar_gratis(plantas, config, pid):
     f = lote_frente(p)
     fundo = p["_r"].metricas["lote_comercial"][1]
     mesmas = [q for q in plantas if lote_frente(q) <= f and q["_r"].metricas["lote_comercial"][1] <= fundo and q["id"] != pid]
-    L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>No seu lote cabem mais casas</h2>
-      <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. Num lote de {f} x {fundo} m, com os recuos de referência, cabem outras {len(mesmas)} casas do e-book, cada uma com a casa no lote, a "Informação da casa" e o porquê de cada escolha.</p>
-      {galeria(plantas, [q['id'] for q in mesmas[:6]], 'Algumas das casas que também cabem num lote de ' + str(f) + ' x ' + str(fundo) + ' m.')}
+    titulo_ima = "No seu lote cabem mais casas"
+    frase_ima = (f"Num lote de {f} x {fundo} m, com os recuos de referência, cabem outras {len(mesmas)} casas do e-book, "
+                 "cada uma com a casa no lote, a \"Informação da casa\" e o porquê de cada escolha.")
+    legenda_ima = f"Algumas das casas que também cabem num lote de {f} x {fundo} m."
+    if not mesmas:
+        # casa do menor lote: mostra o que cabe com um pouco mais de terreno
+        mesmas = sorted([q for q in plantas if q["id"] != pid], key=lambda q: (lote_frente(q), q["_r"].metricas["area_fechada"]))[:6]
+        titulo_ima = "E se o lote for um pouco maior?"
+        frase_ima = (f"A {p['nome']} é a casa do e-book para o lote de {f} m. Com um pouco mais de frente, as opções crescem: "
+                     f"o e-book tem {len(plantas)} casas, cada uma com o lote mínimo calculado.")
+        legenda_ima = "As casas dos próximos tamanhos de lote."
+    L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>
+      <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. {E(frase_ima)}</p>
+      {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}
       <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
       {svg_fita(contagem)}""", "fim")
     return L
@@ -562,12 +573,13 @@ def gerar(previa=None):
     r = subprocess.run(cmd, env=env, capture_output=True, text=True)
     print(r.stdout.strip(), r.stderr.strip())
     print(f"{len(L.paginas)} páginas, {len(plantas)} casas")
-    pid = config.get("planta_gratis", "C01")
-    G = montar_gratis(plantas, config, pid)
-    arq = SAIDA / f"planta-gratis-{pid}.html"
-    arq.write_text(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>", encoding="utf-8")
-    r = subprocess.run(["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")], env=env, capture_output=True, text=True)
-    print(r.stdout.strip(), r.stderr.strip())
+    gratis = config.get("plantas_gratis") or [config.get("planta_gratis", "C01")]
+    for pid in gratis:
+        G = montar_gratis(plantas, config, pid)
+        arq = SAIDA / f"planta-gratis-{pid}.html"
+        arq.write_text(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>", encoding="utf-8")
+        r = subprocess.run(["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")], env=env, capture_output=True, text=True)
+        print(r.stdout.strip(), r.stderr.strip())
 
 
 if __name__ == "__main__":
