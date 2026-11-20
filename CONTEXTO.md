@@ -50,7 +50,11 @@
 
 | 20/11/2026 | "Esquece o limite de crédito do OpenArt, volta para ele" | Sem teto de crédito. Geração começa assim que a conta do OpenArt for autorizada (ainda pede login) |
 
+| 20/11/2026 | "Continue melhorando sem o OpenArt, estou longe do computador" | Plantas mobiliadas com portas, vista da rua de cada casa, B-roll grátis do e-book folheado (`video/broll/ebook-folheando.mp4`) e revisão completa do Revisor de risco (8 vetos e 16 ajustes aplicados; "o que o arquiteto pensou" virou "por que esta planta é assim" até um arquiteto assinar) |
+
 ## Em aberto (esperando o dono)
+
+- Decidir se o e-book promete as próximas casas de graça (o texto só aparece se `promessa_atualizacao` for preenchido em `ebook/config.json`, porque oferta escrita obriga).
 
 - Autorizar a conta do OpenArt nos conectores do claude.ai (o crédito já está liberado).
 

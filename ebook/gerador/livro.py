@@ -344,7 +344,7 @@ def montar(plantas, config, numeros):
       <ol class="passos3">
         <li><b>Meça a frente do seu lote.</b><span>Com a trena, do muro de um vizinho ao do outro. Essa medida é a porta de entrada do e-book.</span></li>
         <li><b>Ache as casas que cabem.</b><span>Na página {numeros['lote']}, cada largura de lote leva às casas que cabem nela. A aba amarela na borda das páginas faz o mesmo quando você folheia.</span></li>
-        <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa traz o raciocínio do arquiteto e as perguntas certas para a primeira conversa.</span></li>
+        <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas para a primeira conversa.</span></li>
       </ol>
       <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""")
 
@@ -356,7 +356,7 @@ def montar(plantas, config, numeros):
         linhas.append(f'<div class="faixa"><div class="faixa-m">{f} m</div><ul>{itens}</ul></div>')
     L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
-      <p class="abertura">A casa precisa caber com os recuos. A medida ao lado é a <b>menor frente</b> em que a casa cabe com os recuos de referência (3 m na frente, 1,5 m nos fundos e numa lateral). Um lote mais largo também serve.</p>
+      <p class="abertura">A casa precisa caber com os recuos. A medida ao lado é a <b>menor frente</b> em que a casa cabe com os recuos de referência (3 m na frente, 1,5 m nos fundos e numa lateral; nas casas de corredor, nas duas; na de esquina, 3 m na rua lateral). Um lote mais largo também serve, se tiver o comprimento indicado e se os recuos da sua cidade não forem maiores.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
 
     # 4. ache pelo jeito da família
@@ -424,7 +424,7 @@ def montar(plantas, config, numeros):
           <li>Em condomínio, leia também o regulamento.</li>
           <li>O Código Civil (art. 1.301) proíbe janela a menos de 1,5 m da divisa com o vizinho.</li></ul></div>
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
-          <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Todas as casas até 8,50 m de largura cabem.</p>
+          <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
       <div class="lotes-ex">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
@@ -439,7 +439,7 @@ def montar(plantas, config, numeros):
         ("Contrate um profissional habilitado", "Arquiteto (CAU) ou engenheiro civil (CREA). Ele adapta a planta ao terreno, ao sol e às regras da cidade e emite a RRT ou a ART."),
         ("Aprove o projeto na prefeitura", "Com o projeto legal aprovado, sai o alvará de construção."),
         ("Projetos complementares e orçamento", "Estrutural, elétrico e hidráulico. Com eles o orçamento deixa de ser chute."),
-        ("Construa com acompanhamento", "A obra precisa de responsável técnico do começo ao fim. Financiamento pela Caixa também pede."),
+        ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
         ("Regularize a casa pronta", "Habite-se na prefeitura e averbação na matrícula, no cartório."),
     ]
     L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{galeria(plantas, ["C04", "E05", "F03", "S05"])}', "texto")
@@ -449,7 +449,7 @@ def montar(plantas, config, numeros):
     contato = config.get("contato", "")
     L.pagina(f"""<span class="sobre">Fim (e começo da obra)</span><h2>O que vem junto</h2>
       {'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
-      <h3>Novas casas</h3><p>Este e-book cresce em levas. Quem compra agora recebe as próximas casas sem pagar de novo.</p>
+      <h3>Novas casas</h3><p>Este e-book cresce em levas.{' ' + E(config['promessa_atualizacao']) if config.get('promessa_atualizacao') else ''}</p>
       <h3>Dúvidas</h3><p>{E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
       {svg_fita(contagem)}""", "fim")
     return L
@@ -461,6 +461,9 @@ def dupla(L, p, por_id, numeros):
     f = lote_frente(p)
     quartos = p["quartos_txt"].replace(" (+1 depois)", "")
     pens = PL.pensou(p)
+    g = t.get("gancho", "")
+    if g and (f"{f} m de frente" not in g or (f"{r['area_fechada']:.0f} m²" not in g and "m²" in g)):
+        print(f"AVISO: gancho de {p['id']} não bate com o validador ({f} m, {r['area_fechada']:.0f} m²): {g}")
     erros = t.get("erros", [1, 2, 4])
     erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
     cat = CATEGORIAS[p["id"][0]]
@@ -492,8 +495,9 @@ def dupla(L, p, por_id, numeros):
           {linha('Janela nos quartos', '✓', '1/6 do piso')}
           {linha('Melhor frente', ORI[r['orientacao']['melhor']])}
           <div class="r-nota">Conferido pelo validador do X1-Plantas com recuos de referência. Confira os da sua cidade.</div></div></div>
+      {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in p['_r'].avisos + p['_r'].info) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}
       <div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>
-      <div><h4>O que o arquiteto pensou</h4><div class="pensou">
+      <div><h4>Por que esta planta é assim</h4><div class="pensou">
         {''.join(f'<div>{icone(ic)}<p>{E(x)}</p></div>' for ic, x in zip(['sol', 'ar', 'agua', 'seta'], pens))}</div></div>
       <div class="duas">{nao_html}<div><h4>Leve ao seu engenheiro</h4><ul class="perg">{''.join(f'<li>{E(q)}</li>' for q in perg)}</ul></div></div>""",
              "casa dir", orelha=f, aviso=True)
@@ -516,11 +520,12 @@ def montar_gratis(plantas, config, pid):
         contagem[lote_frente(p)] = contagem.get(lote_frente(p), 0) + 1
     p = por_id[pid]
     f = lote_frente(p)
-    mesmas = [q for q in plantas if lote_frente(q) <= f and q["id"] != pid]
+    fundo = p["_r"].metricas["lote_comercial"][1]
+    mesmas = [q for q in plantas if lote_frente(q) <= f and q["_r"].metricas["lote_comercial"][1] <= fundo and q["id"] != pid]
     L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>No seu lote cabem mais casas</h2>
-      <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. Num lote de {f} m cabem outras {len(mesmas)} casas do e-book, cada uma com a casa no lote, a "Informação da casa" e o raciocínio do arquiteto.</p>
-      {galeria(plantas, [q['id'] for q in mesmas[:6]], 'Algumas das casas que também cabem num lote de ' + str(f) + ' m.')}
-      <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele.</p></div>
+      <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. Num lote de {f} x {fundo} m, com os recuos de referência, cabem outras {len(mesmas)} casas do e-book, cada uma com a casa no lote, a "Informação da casa" e o porquê de cada escolha.</p>
+      {galeria(plantas, [q['id'] for q in mesmas[:6]], 'Algumas das casas que também cabem num lote de ' + str(f) + ' x ' + str(fundo) + ' m.')}
+      <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
       {svg_fita(contagem)}""", "fim")
     return L
 

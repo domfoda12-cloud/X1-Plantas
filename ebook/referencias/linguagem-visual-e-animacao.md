@@ -19,7 +19,7 @@
 
 1. **Gancho:** "8 m de frente. 2 quartos. 55 m²."
 2. **Promessa honesta:** "A casa que cabe no lote que você tem."
-3. **O que o arquiteto pensou** (3 pontos, de [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md)).
+3. **Por que esta planta é assim** (3 pontos, de [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md)).
 4. **Para quem serve** e **para quem não serve** (honestidade vende: "Se você pretende subir um 2º andar, escolha a F03").
 5. **Leve ao seu engenheiro:** o que perguntar a ele (laje, fundação, recuo da sua cidade).
 
@@ -42,7 +42,7 @@ Identidade: azul de projeto `#0B4FA8`, amarelo `#FFC857`, fundo quadriculado, t�
 | **Planta humanizada** | Mesmo desenho com móveis e piso; vem da primeira rodada de 3D (C01) e se repete nas outras pela mesma engrenagem |
 | **Fachada e perspectiva** | Imagem 3D gerada do mesmo dado. Nunca renderização com texto dentro |
 | **Cotas** | Todas as medidas em metros, na própria imagem (como nos catálogos de porcelanato) |
-| **Ícones** | Um sol, uma gota, uma seta de vento, na margem de cada ponto de "o que o arquiteto pensou" |
+| **Ícones** | Um sol, uma gota, uma seta de vento, na margem de cada ponto de "por que esta planta é assim" |
 | **Cor por cômodo** | Mesma em todas as plantas (sala bege, cozinha verde, banheiro azul, quarto areia). O leitor aprende uma vez |
 
 ## 3. Animação: como incluir

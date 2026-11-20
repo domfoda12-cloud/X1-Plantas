@@ -8,7 +8,7 @@ Campos:
   perguntas   3 perguntas para a primeira conversa com o engenheiro
 
 Números (área, lote, corredor, orientação) não ficam aqui: saem do validador.
-Revisão do Revisor de risco: nenhuma frase promete aprovação, custo, prazo ou dispensa de profissional.
+Revisão do Revisor de risco: feita em 20/11/2026 (8 vetos e 16 ajustes aplicados). Revisar de novo a cada mudança.
 """
 
 PADRAO = ["Qual é o recuo da minha rua e do meu lote?", "Que fundação o meu solo pede?",
@@ -16,12 +16,12 @@ PADRAO = ["Qual é o recuo da minha rua e do meu lote?", "Que fundação o meu s
 
 TEXTOS = {
     "C01": dict(gancho="8 m de frente. 2 quartos de verdade. 55 m².",
-                para_quem="Casal com 1 ou 2 filhos que quer dois quartos do mesmo tamanho e uma área de serviço coberta, sem pagar por corredor.",
+                para_quem="Casal com 1 ou 2 filhos que quer dois quartos do mesmo tamanho e uma área de serviço coberta, com pouco corredor.",
                 nao_serve=("Quem quer suíte.", "C06"), erros=[2, 3, 4], perguntas=PADRAO),
     "C02": dict(gancho="6 m de frente. Tudo num ambiente só. 32 m².",
                 para_quem="Quem mora sozinho, ou quem quer construir uma casa pequena no fundo do lote para alugar.",
-                nao_serve=("Quem precisa de quarto separado.", "C03"), erros=[2, 4, 7],
-                perguntas=["Posso construir esta casa no mesmo lote de outra (edícula)?", PADRAO[1], "Que padrão de acabamento aguenta aluguel sem manutenção?"]),
+                nao_serve=("Quem precisa de quarto separado.", "C03"), erros=[1, 2, 4],
+                perguntas=["Posso construir esta casa no mesmo lote de outra (edícula)?", PADRAO[1], "Que padrão de acabamento aguenta aluguel com pouca manutenção?"]),
     "C03": dict(gancho="7 m de frente. Começa com 1 quarto, termina com 2.",
                 para_quem="Quem precisa sair do aluguel logo: constrói a parte de agora e deixa o lugar do 2º quarto marcado nos fundos.",
                 nao_serve=("Quem já precisa de 2 quartos no primeiro dia.", "C05"), erros=[2, 4, 6],
@@ -30,14 +30,14 @@ TEXTOS = {
                 para_quem="Casal que quer a varanda para a cadeira de fim de tarde e dois quartos iguais para os filhos não brigarem.",
                 nao_serve=("Quem quer cozinha grande para receber.", "S07"), erros=[2, 3, 4], perguntas=PADRAO),
     "C05": dict(gancho="8 m de frente. 2 quartos. 47 m², sem um metro sobrando.",
-                para_quem="Quem quer a casa de 2 quartos mais enxuta possível, no tamanho dos programas habitacionais.",
+                para_quem="Quem quer a casa de 2 quartos mais enxuta possível.",
                 nao_serve=("Quem quer varanda.", "C04"), erros=[2, 3, 4],
                 perguntas=["Esta casa se encaixa no programa habitacional da minha cidade?", PADRAO[0], PADRAO[1]]),
     "C06": dict(gancho="9 m de frente. Suíte do casal. 57 m².",
                 para_quem="Casal que quer o próprio banheiro sem aumentar muito a casa, e um segundo quarto para o filho ou para visita.",
                 nao_serve=("Quem tem lote de 8 m.", "E05"), erros=[2, 3, 4], perguntas=PADRAO),
     "C07": dict(gancho="8 m de frente. Varanda larga. 2 quartos. 55 m².",
-                para_quem="Quem vive do lado de fora: rede na varanda, churrasco no domingo, o carro abrigado da chuva.",
+                para_quem="Quem vive do lado de fora: rede na varanda, churrasco no domingo, cadeira na sombra no fim da tarde.",
                 nao_serve=("Quem quer suíte.", "S05"), erros=[1, 2, 4], perguntas=PADRAO),
     "E01": dict(gancho="8 m de frente e lote comprido. Garagem, suíte e 2 banheiros.",
                 para_quem="Quem tem o lote estreito e comprido e não abre mão de guardar o carro e de ter suíte.",
@@ -47,8 +47,8 @@ TEXTOS = {
                 para_quem="Quem tem lote estreito e quer 2 quartos com janela de verdade, todos abrindo para um corredor coberto ao lado.",
                 nao_serve=("Quem quer suíte.", "E05"), erros=[2, 3, 4],
                 perguntas=["O corredor coberto conta como área construída na minha cidade?", PADRAO[0], PADRAO[1]]),
-    "E03": dict(gancho="5 m de frente. Sim, cabe uma casa.",
-                para_quem="Quem tem lote de 5 m de frente, o mínimo da lei de loteamento, e achava que lá não cabia nada.",
+    "E03": dict(gancho="5 m de frente. Com os recuos de referência, cabe uma casa.",
+                para_quem="Quem tem lote de 5 m de frente, o mínimo da lei federal de loteamento (a sua cidade pode pedir mais), e achava que lá não cabia nada.",
                 nao_serve=("Quem precisa de 2 quartos.", "E02"), erros=[2, 4, 3],
                 perguntas=["Meu lote de 5 m tem recuo lateral obrigatório?", "O corredor coberto pode encostar na divisa?", PADRAO[1]]),
     "E04": dict(gancho="9 m de frente. Um pátio de luz entre os quartos.",
@@ -81,9 +81,9 @@ TEXTOS = {
                 perguntas=["Preciso rebaixar a guia para a garagem?", PADRAO[0], PADRAO[1]]),
     "F05": dict(gancho="13 m de frente. Casa em L com jardim interno.",
                 para_quem="Família que quer 3 quartos, cozinha integrada e um jardim protegido entre as alas da casa.",
-                nao_serve=("Quem tem lote de até 11 m.", "F02"), erros=[1, 2, 4], perguntas=PADRAO),
-    "S03": dict(gancho="11 m de frente. Sem degrau, com espaço para cadeira de rodas.",
-                para_quem="Quem quer morar a vida toda na mesma casa: circulação de 1,50 m e banheiro com giro de cadeira de rodas.",
+                nao_serve=("Quem tem lote de 12 m.", "F02"), erros=[1, 2, 4], perguntas=PADRAO),
+    "S03": dict(gancho="11 m de frente. Pensada sem degrau e com espaço para cadeira de rodas.",
+                para_quem="Quem quer morar a vida toda na mesma casa: circulação de 1,50 m e banheiro com 1,50 m no menor lado, para o giro da cadeira (o engenheiro confere com a NBR 9050).",
                 nao_serve=("Quem procura a casa mais compacta.", "C05"), erros=[2, 3, 4],
                 perguntas=["O que mais a NBR 9050 pede para esta casa ser acessível?", "Como fazer a entrada sem degrau e sem a água da chuva entrar?", PADRAO[1]]),
     "S04": dict(gancho="10 m de frente. Escritório com porta para a rua.",
@@ -99,7 +99,7 @@ TEXTOS = {
                 nao_serve=("Quem tem lote estreito.", "E06"), erros=[2, 3, 4],
                 perguntas=["Qual o melhor lugar para a churrasqueira e a chaminé?", PADRAO[0], PADRAO[1]]),
     "S09": dict(gancho="14 m de frente. Casa de esquina, 3 quartos com suíte.",
-                para_quem="Quem tem lote de esquina: a casa respeita o recuo das duas ruas e usa a lateral para janela.",
+                para_quem="Quem tem lote de esquina: a casa já deixa recuo de referência de 3 m nas duas ruas (confira os da sua prefeitura) e usa a lateral para janela.",
                 nao_serve=("Quem não tem lote de esquina.", "F03"), erros=[1, 2, 4],
                 perguntas=["Quais são os recuos das duas ruas na esquina?", "Onde o muro pode ter altura cheia sem atrapalhar a visão dos carros?", PADRAO[1]]),
 }

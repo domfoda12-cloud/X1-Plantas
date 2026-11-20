@@ -629,7 +629,7 @@ ORI_NOME = {"norte": "norte", "sul": "sul", "leste": "leste", "oeste": "oeste"}
 
 
 def pensou(planta):
-    """Três decisões do arquiteto, em português, a partir do que o validador mediu."""
+    """Por que a planta é assim: três decisões, em português, a partir do que o validador mediu."""
     r = planta["_r"]
     m = r.metricas
     cs = planta["comodos"]
@@ -637,18 +637,23 @@ def pensou(planta):
     out = []
     o = m["orientacao"]
     out.append(f"Sol: testamos as quatro orientações para as janelas desta planta. Ela funciona melhor com a frente para o "
-               f"{ORI_NOME[o['melhor']]} e pior para o {ORI_NOME[o['pior']]}. Se o seu lote for diferente, o arquiteto espelha a planta ou muda as janelas.")
+               f"{ORI_NOME[o['melhor']]} e pior para o {ORI_NOME[o['pior']]} (critério simplificado; o arquiteto confere para o clima da sua cidade). "
+               "Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.")
+    portas_ext = [pt[1] for pt in planta.get("portas", []) if pt[0] == "ext"]
     if any(t == "patio" for t in tipos):
-        out.append("Ventilação cruzada: o pátio de luz entre os quartos faz o ar entrar por um lado e sair pelo outro, e dá luz sem abrir a casa para o vizinho.")
+        out.append("Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.")
     elif any(c["id"] == "corr" for c in cs):
         out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito, sem corredor dentro de casa.")
-    elif any(t == "varanda" for t in tipos):
-        out.append("Varanda: protege a porta do sol e da chuva e deixa a sala fresca; é o primeiro cômodo que você usa.")
+    elif any(c["tipo"] == "varanda" and c["id"] in portas_ext for c in cs):
+        out.append("Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.")
     else:
-        out.append("Luz e ar: sala, cozinha e quartos têm janela para fora, nas proporções que o validador confere (um sexto do piso nos cômodos de permanência).")
-    molhados = [c for c in cs if c["tipo"] in MOLHADOS]
-    if molhados:
-        out.append("Núcleo molhado: cozinha, serviço e banheiro ficam encostados. Uma tubulação só, mão de obra mais curta e menos vazamento para consertar.")
+        out.append("Luz e ar: sala, cozinha e quartos têm janela para fora, com pelo menos um sexto do piso nos cômodos de permanência "
+                   "(valor de referência; o código de obras da sua cidade pode pedir outro).")
+    prumada = any("prumada própria" in a for a in r.avisos)
+    if prumada:
+        out.append("Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.")
+    else:
+        out.append("Áreas molhadas juntas: o banheiro encosta em outra área molhada, e a tubulação pode ficar concentrada. O traçado final é do engenheiro.")
     if planta.get("servico_externo") or planta["id"] in ("C03",):
         out.append("A casa cresce: a planta já deixa o lugar do quarto 2 nos fundos, sem quebrar nada do que foi construído.")
     elif m["circulacao"]:
@@ -671,7 +676,7 @@ def cmd_fichas():
               f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** · frente para o **{m['orientacao']['melhor']}**", ""]
         if p.get("destaque"):
             L += [f"*{p['destaque']}*", ""]
-        L += ["**O que o arquiteto pensou**", ""] + [f"- {t}" for t in pensou(p)]
+        L += ["**Por que esta planta é assim**", ""] + [f"- {t}" for t in pensou(p)]
         if p["_r"].avisos:
             L += ["", "**Atenção**", ""] + [f"- {a}" for a in p["_r"].avisos]
         if p["_r"].info:

@@ -81,7 +81,7 @@ def todas():
     P.append(_compacta("C04", "Casa Duo", 6.0, 0, 3.0, 1.8, varanda=1.6, h1=3.4, h3=3.4,
                        destaque="Varanda na frente e dois quartos do mesmo tamanho"))
     P.append(_compacta("C05", "Casa Popular", 6.0, 0, 3.0, 1.8, h1=3.4, h3=3.2,
-                       destaque="Cabe no padrão de programa habitacional (40 m² ou mais) sem desperdiçar um metro"))
+                       destaque="A casa de 2 quartos mais enxuta, sem desperdiçar um metro"))
     P.append(casa("C06", "Casa Compacta Suíte", 7.5, 7.6,
                   H((3.4, V((3.8, F("sala", "Sala", "sala")), (2.3, F("cozinha", "Cozinha", "cozinha")),
                             (None, F("servico", "Serviço", "servico")))),
@@ -92,7 +92,7 @@ def todas():
                    ("circ", "banho"), ("circ", "quarto2"), ("circ", "quarto1"), ("quarto1", "bsuite")],
                   "2 quartos (1 suíte)", 2))
     P.append(_compacta("C07", "Casa Compacta Varanda", 6.5, 0, 3.3, 2.0, varanda=1.8, h1=3.4, h3=3.9,
-                       destaque="Varanda larga para a rede, a cadeira e o carro parado na chuva"))
+                       destaque="Varanda larga para a rede e a cadeira de fim de tarde"))
 
     # ---------------------------------------------------------------- Estreitas (E)
     suite = lambda w1, w2, h: (h, V((w1, F("bsuite", "Banho da suíte", "banho", privativo="quarto1")), (None, F("quarto1", "Suíte", "casal"))))

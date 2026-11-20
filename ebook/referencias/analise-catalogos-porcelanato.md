@@ -15,7 +15,7 @@ Série "200 projetos modernos em porcelanato" (material profissional, catálogo 
 | Cotas escritas na própria imagem | Medidas em metros sobre a planta e a fachada. Quem constrói quer a medida na hora |
 | Planta + vistas + especificações **na mesma página** | Página dupla: planta humanizada de um lado; fachada, cortes simples e ficha do outro |
 | Páginas numeradas, uma ideia por página | Cada casa tem um número, um nome e uma frase curta |
-| Caixas de dica e de observação | "O que o arquiteto pensou" em 3 pontos |
+| Caixas de dica e de observação | "por que esta planta é assim" em 3 pontos |
 | "Por que valoriza o serviço" (3 pontos) | "Por que essa casa serve para o seu lote" (3 pontos) |
 | Capa de alto contraste | Capa em azul de projeto com amarelo, a nossa identidade |
 
@@ -29,4 +29,4 @@ Série "200 projetos modernos em porcelanato" (material profissional, catálogo 
 
 ## O diferencial que eles não têm
 
-**"O que o arquiteto pensou"**: em cada planta, três decisões explicadas (orientação, ventilação cruzada, núcleo molhado, circulação, "a casa que cresce"), com fonte nas regras de [`regras-do-arquiteto.md`](regras-do-arquiteto.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.
+**"por que esta planta é assim"**: em cada planta, três decisões explicadas (orientação, ventilação cruzada, núcleo molhado, circulação, "a casa que cresce"), com fonte nas regras de [`regras-do-arquiteto.md`](regras-do-arquiteto.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.
