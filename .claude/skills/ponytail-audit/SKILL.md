@@ -113,3 +113,4 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
 - O maior risco deste repositório é um número ou uma promessa errada chegar ao público (PDF, calculadora do parceiro, posts). Comece por aí.
+- **Prompt de entrada:** a última auditoria foi em 20/11 (`CONTEXTO.md`). Comece conferindo se os 7 achados dela foram corrigidos, antes de procurar novos.

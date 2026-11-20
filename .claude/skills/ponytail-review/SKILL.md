@@ -111,3 +111,4 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
 - Revise também as consequências no que é impresso: um número que muda no validador muda o PDF, a calculadora do parceiro, as imagens e os posts.
+- **Prompt de entrada:** comece pelo diff e depois siga quem usa o que mudou: `livro.py`, `planta3d.py`, a calculadora do parceiro, `imagens2d.py` e os posts.

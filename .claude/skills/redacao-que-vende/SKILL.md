@@ -18,3 +18,4 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
 - Tudo o que esta skill escreve para o público passa pelo Revisor de risco antes de sair.
+- **Prompt de entrada:** parta de `ebook/vendas/atributos-que-vendem.md` e dos números do validador, arredondados como no PDF (0,5 sobe). A lista de frases vetadas está no agente `redator`. Entregue no formato da skill e passe pelo Revisor antes de sair.

@@ -52,6 +52,8 @@ for sk in sorted((RAIZ / ".claude" / "skills").glob("*/SKILL.md")):
     nome = sk.parent.name
     if "## Neste projeto" not in sk.read_text(encoding="utf-8"):
         fora.append(f"skill {nome}: falta a seção '## Neste projeto (X1-Plantas)' no SKILL.md")
+    if "Prompt de entrada" not in sk.read_text(encoding="utf-8"):
+        fora.append(f"skill {nome}: falta o 'Prompt de entrada' específico")
     if nome not in conselho:
         fora.append(f"skill {nome}: não está citada no CONSELHO.md")
     if f"`{nome}`" not in ecossistema:
@@ -61,6 +63,8 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
         fora.append(f"agente {ag.stem}: não está citado no CONSELHO.md")
     if f"`{ag.stem}`" not in ecossistema:
         fora.append(f"agente {ag.stem}: não está no inventário ECOSSISTEMA.md")
+    if "Seu prompt de entrada" not in ag.read_text(encoding="utf-8"):
+        fora.append(f"agente {ag.stem}: falta o 'Seu prompt de entrada'")
     if "CONTEXTO.md" not in ag.read_text(encoding="utf-8"):
         fora.append(f"agente {ag.stem}: não manda ler o CONTEXTO.md")
 if fora:

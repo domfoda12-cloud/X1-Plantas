@@ -62,6 +62,26 @@ Antes de tudo, leia CLAUDE.md (regras que não mudam) e CONTEXTO.md (tudo o que 
 Regras: qualidade antes de economia; uma coisa por vez (e-book → animações → vídeo); nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo de obra; só relatar números que uma ferramenta devolveu; imagem gerada leva "Imagem ilustrativa"; ferramenta paga só com o "sim" do dono.
 ```
 
+### Prompt específico de cada um (vai junto com o texto base acima)
+
+| Quem | Prompt específico |
+|---|---|
+| **MinoAI Frontier** | Você é o Maestro: opine sempre primeiro, citando a fonte (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIA-CONDOR.md`. O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
+| **OpenArt** (e as skills `openart:*`) | Sempre imagem a partir de uma imagem nossa (planta, vista da rua ou 3D), nunca uma casa inventada. Primeiro o rascunho em 1k baixa, depois o final em 4K extra-alta a partir do rascunho aprovado. Parede de divisa sem janela. Toda imagem leva "Imagem ilustrativa". No máximo 4 imagens em paralelo. Os créditos seguem o `ORCAMENTO.md`, e o Conselho aprova antes de gastar |
+| **TinyFish** | Busca e leitura são grátis; dataset e deep research são pagos e só rodam com o "sim" do dono. Fonte primária brasileira primeiro. Diga quando um site bloqueou |
+| **`watch`** | Na nuvem, o YouTube bloqueia o download. Para Reels e TikTok use o `analyze_hook` da MinoAI; para YouTube, peça o Mac do dono ou os minutos que importam |
+| **`impeccable`** | Só detecte o que parece genérico e opine; não refaça. Identidade: azul `#0B4FA8`, amarelo `#FFC857`, Bricolage Grotesque e Inter |
+| **`artifact-*`** | Página privada, na identidade do projeto, com os dados tirados do validador, nunca colados à mão. Nada que se passe por marca real |
+| **`deep-research`** | Abre agentes: mande o texto base. Fonte brasileira primeiro. Use só quando a pergunta pede várias fontes, porque gasta muitos tokens |
+| **`claude-api`** | Só consulta de modelos e preços. O projeto não chama a API |
+| **`loop`** | Uma tarefa por volta. Cada volta termina com `checar.py`, uma linha no `CONTEXTO.md` e commit |
+| **Google Drive e Google Docs** | Antes do primeiro uso, o Revisor lista o que vai sair do projeto. Nunca subir dados pessoais de comprador. Só os arquivos que o dono pedir |
+| **Claude Docs** | Para documentos que o parceiro edita (roteiro do WhatsApp, perguntas frequentes). O texto passa pelo Revisor |
+| **Graphify** | Só para entender o código, e só se o repositório estiver indexado. O resultado é conferido com o `checar.py` |
+| **`code-review`, `simplify`, `security-review`** | Não use junto com o Ponytail: o Conselho escolhe um dos dois para o código |
+| **`dataviz`** | Gráficos do painel só com números que uma ferramenta devolveu |
+| **`pdf`, `docx`, `pptx`, `xlsx`** | O e-book sai do `livro.py` e nunca é editado à mão. Use só para material avulso que o dono pedir |
+
 ## 6. Como manter este inventário
 
 - **Apareceu um nome novo** na lista de skills, plugins ou conectores da sessão: ele entra aqui como "Liberado, não usado" e passa pelo roteiro antes do primeiro uso.

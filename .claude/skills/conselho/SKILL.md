@@ -28,3 +28,4 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
 - Toda skill ou agente novo passa pelo roteiro de entrada da seção 6 do `CONSELHO.md` antes do primeiro uso.
+- **Prompt de entrada:** ao abrir a mesa, leia `ECOSSISTEMA.md` para saber quem está integrado. Membro marcado como "liberado, não usado" passa pelo roteiro antes de votar. O Maestro opina primeiro, com fonte da MinoAI Frontier. As decisões do dono que ainda estão em aberto ficam no `CONTEXTO.md`: não decida por ele.
