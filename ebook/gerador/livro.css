@@ -137,3 +137,10 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 
 .nq { white-space: nowrap; }
 .fachada.aperta svg { max-height: 32mm; }
+.vistas { display: flex; gap: 4mm; align-items: flex-start; }
+.vistas .v-rua { flex: 1 1 auto; min-width: 0; }
+.vistas .v-3d { flex: 0 0 auto; }
+.vistas .foto { width: 100%; }
+.vistas .v-3d .foto { aspect-ratio: 4 / 5; width: auto; }
+.vistas .rua-svg { display: flex; align-items: center; }
+.vistas .rua-svg svg { max-height: 100%; width: 100%; }

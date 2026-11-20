@@ -302,6 +302,8 @@ def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=Non
     from PIL import Image
     origem = (pasta or FOTOS) / f"{nome}.png"
     if not origem.exists():
+        origem = origem.with_suffix(".jpg")
+    if not origem.exists():
         return ""
     CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
     destino = CACHE_FOTOS / f"{(pasta.name + '-') if pasta else ''}{nome}.jpg"
@@ -314,19 +316,24 @@ def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=Non
 
 
 FACHADAS = EBOOK / "visual" / "openart" / "fachadas"
+VISTAS3D = EBOOK / "visual" / "3d"  # planta 3D mobiliada, do nosso motor (ferramentas/planta3d.py + video/render-planta.cjs)
 
 
 def fachada_bloco(p):
-    """Foto realista da fachada (OpenArt, a partir da nossa vista da rua) quando existir; senão, o desenho."""
+    """Vista da rua (foto ilustrativa do OpenArt, ou o desenho) ao lado da planta 3D mobiliada da casa."""
     n = len(avisos_juntos(p))
     corredor = any(c["id"] == "corr" for c in p["comodos"])
     aperto = n + (1 if corredor else 0) + (1 if p["_r"].metricas.get("area_coberta_aberta") else 0)
-    classe = "fachada" + (" aperta" if n else "")
+    alt = 62 if not n else (50 if aperto < 3 else 40)
     if (FACHADAS / f"{p['id']}.png").exists():
-        alt = 66 if not n else (48 if aperto < 3 else 32)
-        return (f'<div class="{classe}"><h4>Vista da rua</h4>'
-                f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}</div>')
-    return f'<div class="{classe}"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>'
+        rua = (f'<h4>Vista da rua</h4>'
+               f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}')
+    else:
+        rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg" style="height:{alt}mm">{svg_fachada(p)}</div>'
+    v3d = foto(p["id"], alt, "Imagem ilustrativa do modelo 3D, sem telhado.", "center", VISTAS3D)
+    if not v3d:
+        return f'<div class="fachada">{rua}</div>'
+    return f'<div class="fachada vistas"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'
 
 
 def capa_fundo():

@@ -219,7 +219,8 @@ def _livre_no_lado(c, lado, vaos, w, margem=0.05):
             canto = c["y0"] if lado == "frente" else c["y1"] if lado == "fundos" else c["x0"] if lado == "esq" else c["x1"]
             if min(abs(va - canto), abs(vb - canto)) < perto_canto:
                 ponta = c["x0"] if l == "esq" else c["x1"] if l == "dir" else c["y0"] if l == "frente" else c["y1"]
-                livres = subtrair(livres, ponta - 0.95, ponta + 0.95)
+                folga = 0.5 if vb - va > 1.2 else 0.95  # passagem aberta larga não tem folha de porta para abrir
+                livres = subtrair(livres, ponta - folga, ponta + folga)
     cabe = [(p, q) for (p, q) in livres if q - p >= w]
     if not cabe:
         return None
@@ -304,7 +305,11 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                     encostar("escrivaninha", 1.0, 0.5, [l for l in restantes])
         elif t in ("sala", "estar"):
             lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c, l) >= 2.6]
-            lado, pos = encostar("sofa", min(2.1, _comp(c, lados[0]) - 0.6 if lados else 2.1), 0.88, lados, cor="#8A9A86")
+            lado = pos = None
+            for larg in (2.1, 1.8, 1.5):  # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta
+                lado, pos = encostar("sofa", min(larg, _comp(c, lados[0]) - 0.6 if lados else larg), 0.88, lados, cor="#8A9A86")
+                if lado:
+                    break
             if lado:
                 op = OPOSTO[lado]
                 x, y = _no_lado(c, op, pos, 0.4)

@@ -70,7 +70,7 @@ ERROS = [
     ("Construir sem ver a casa pronta",
      "Mudar de ideia com a obra andando é o mais caro de tudo: quebrar, refazer e pagar o material duas vezes. "
      "E quase sempre acontece porque a pessoa só entendeu a casa quando viu as paredes de pé.",
-     "Veja a casa antes do primeiro tijolo, na <strong>planta com os móveis em escala</strong>: se a cama cabe, se o "
+     "Veja a casa antes do primeiro tijolo, na <strong>planta com os móveis em escala</strong> e na <strong>casa em 3D</strong>: se a cama cabe, se o "
      "sofá fica de frente para a TV, se a cozinha tem bancada. É o que cada planta deste e-book mostra."),
 ]
 
@@ -257,6 +257,7 @@ LEGENDA_LEITURA = [
     ("Nome e área do cômodo", "A área livre, por dentro das paredes, em m². Compare com o seu cômodo de hoje."),
     ("Móveis", "Desenhados em escala, para mostrar que a cama, o sofá e a mesa cabem."),
     ("Ficha", "Nome da planta, área total, quartos e banheiros."),
+    ("A casa em 3D", "A mesma planta com paredes e móveis, vista de cima e sem telhado, na página de cada casa."),
     ("Sol", "Em cada casa testamos as quatro posições da rua em relação ao sol, numa conta simples. A ficha diz o melhor e o pior lado; o arquiteto confere para o clima da sua cidade."),
 ]
 
