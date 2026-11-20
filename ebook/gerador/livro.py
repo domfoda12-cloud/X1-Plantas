@@ -300,20 +300,31 @@ FOTOS = EBOOK / "visual" / "openart" / "final"
 CACHE_FOTOS = EBOOK / ".cache" / "fotos"
 
 
-def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center"):
+def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None):
     """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
     from PIL import Image
-    origem = FOTOS / f"{nome}.png"
+    origem = (pasta or FOTOS) / f"{nome}.png"
     if not origem.exists():
         return ""
     CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
-    destino = CACHE_FOTOS / f"{nome}.jpg"
+    destino = CACHE_FOTOS / f"{(pasta.name + '-') if pasta else ''}{nome}.jpg"
     if not destino.exists() or destino.stat().st_mtime < origem.stat().st_mtime:
         im = Image.open(origem).convert("RGB")
         im.resize((1800, round(im.height * 1800 / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
     src = os.path.relpath(destino, SAIDA)
     return (f'<figure class="foto" style="height:{altura_mm}mm"><img src="{src}" alt="" style="object-position:{pos}">'
             f'<figcaption>{E(legenda)}</figcaption></figure>')
+
+
+FACHADAS = EBOOK / "visual" / "openart" / "fachadas"
+
+
+def fachada_bloco(p):
+    """Foto realista da fachada (OpenArt, a partir da nossa vista da rua) quando existir; senão, o desenho."""
+    if (FACHADAS / f"{p['id']}.png").exists():
+        return (f'<div class="fachada"><h4>Vista da rua</h4>'
+                f'{foto(p["id"], 48 if (p["_r"].avisos or p["_r"].info) else 66, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}</div>')
+    return f'<div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>'
 
 
 def capa_fundo():
@@ -469,7 +480,7 @@ def montar(plantas, config, numeros):
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
-    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 70, pos="center 60%")}')
+    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}')
 
     # próximos passos
     passos = [
@@ -493,6 +504,22 @@ def montar(plantas, config, numeros):
       {foto("05-familia-lote", 92, pos="center 22%")}
       {svg_fita(contagem)}""", "fim")
     return L
+
+
+def avisos_juntos(p):
+    """Junta avisos repetidos do validador ("Sala tem vão de 4.6 m...", "Quarto tem vão...") numa frase só."""
+    import re
+    grupos, outros = {}, []
+    for a in p["_r"].avisos + p["_r"].info:
+        m = re.match(r"(.+?) tem vão de ([\d.]+) m: (.+)", a)
+        if m:
+            grupos.setdefault((m.group(2), m.group(3)), []).append(m.group(1))
+        else:
+            outros.append(a)
+    for (vao, resto), nomes in grupos.items():
+        lista = nomes[0] if len(nomes) == 1 else ", ".join(nomes[:-1]) + " e " + nomes[-1]
+        outros.append(f"{lista} {'tem' if len(nomes) == 1 else 'têm'} vão de {vao.replace('.', ',')} m: {resto}")
+    return outros
 
 
 def dupla(L, p, por_id, numeros):
@@ -537,8 +564,8 @@ def dupla(L, p, por_id, numeros):
           {linha('Melhor frente', ORI[r['orientacao']['melhor']])}
           {linha('Pode espelhar', 'sim', 'troca o lado')}
           <div class="r-nota">Conferido pelo validador do X1-Plantas com recuos de referência. Confira os da sua cidade.</div></div></div>
-      {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in p['_r'].avisos + p['_r'].info) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}
-      <div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>
+      {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in avisos_juntos(p)) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}
+      {fachada_bloco(p)}
       <div><h4>Por que esta planta é assim</h4><div class="pensou">
         {''.join(f'<div>{icone(ic)}<p>{E(x)}</p></div>' for ic, x in zip(['sol', 'ar', 'agua', 'seta'], pens))}</div></div>
       <div class="duas">{nao_html}<div><h4>Leve ao seu engenheiro</h4><ul class="perg">{''.join(f'<li>{E(q)}</li>' for q in perg)}</ul></div></div>""",

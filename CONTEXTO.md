@@ -82,6 +82,8 @@
 
 | 20/11/2026 | "De vez em quando, sempre confira se tem erro no código" | `python3 ferramentas/checar.py` confere a sintaxe de todo .py/.cjs/.js, o validador das 24 plantas, o motor 3D e o painel; regra no `CLAUDE.md` (rodar de vez em quando e sempre antes de entregar). Primeira rodada: tudo certo |
 
+| 20/11/2026 | (e-book, tarefa 1) Fachadas realistas | C01, E07, F01 e C03 com foto realista da fachada (OpenArt, a partir da nossa vista da rua, 4K extra-alta) no lugar do desenho, com "Imagem ilustrativa gerada a partir da vista da rua desta planta"; as outras casas mantêm o desenho. Conferência de página estourada agora mede o miolo (achou e corrigiu 3 páginas); avisos repetidos do validador viram uma frase só |
+
 ## Em aberto (esperando o dono)
 
 - Informar quanto resta do limite semanal (claude.ai, Configurações → Uso) para fechar o orçamento em números.

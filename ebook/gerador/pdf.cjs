@@ -19,7 +19,14 @@ const { chromium } = require('playwright');
   // Confere se algum texto passou do limite da página (sinal de página estourada).
   const estouradas = await pagina.evaluate(() =>
     [...document.querySelectorAll('.pagina')]
-      .map((p, i) => ({ i: i + 1, estourou: p.scrollHeight > p.clientHeight + 1 }))
+      .map((p, i) => {
+        const m = p.querySelector('.miolo');
+        const fundo = m ? m.getBoundingClientRect().bottom : 0;
+        const rod = p.querySelector('.rodape');
+        const limite = rod ? rod.getBoundingClientRect().top : p.getBoundingClientRect().bottom;
+        const passou = m ? [...m.children].filter((c) => !c.classList.contains('fita-box')).some((c) => c.getBoundingClientRect().bottom > Math.min(fundo, limite) + 1) : false;
+        return { i: i + 1, estourou: p.scrollHeight > p.clientHeight + 1 || passou };
+      })
       .filter((p) => p.estourou)
       .map((p) => p.i));
   if (estouradas.length) console.warn('AVISO: conteúdo passou do limite nas páginas ' + estouradas.join(', '));
