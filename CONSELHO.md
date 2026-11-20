@@ -10,7 +10,7 @@ Temos muitas skills, conectores e scripts. Usar todos em toda tarefa gasta tempo
 
 | Membro | Pergunta que sempre faz | Skills e ferramentas que ele propõe | Agente |
 |---|---|---|---|
-| **Maestro: MinoAI Frontier** (**opina primeiro na área dele**: conteúdo, vídeo, anúncio, Instagram, gancho, imagem e funil; não preside o resto) | "Isso faz o comprador parar, comentar e mandar o Pix?" | Método da MinoAI (`search_mino_method`), ganchos virais (`search_viral_hooks`), análise de gancho (`analyze_hook`), números das contas (`get_account_stats`), edição no Mac | No Mac, é a própria sessão com a MinoAI. Em qualquer outra sessão, a opinião dele vem das ferramentas da MinoAI Frontier, citando a fonte ([`MAESTRO.md`](MAESTRO.md)) |
+| **Maestro: MinoAI Frontier** (preside e **opina sempre, em primeiro**) | "Isso faz o comprador parar, comentar e mandar o Pix?" | Método da MinoAI (`search_mino_method`), ganchos virais (`search_viral_hooks`), análise de gancho (`analyze_hook`), números das contas (`get_account_stats`), edição no Mac | No Mac, é a própria sessão com a MinoAI. Em qualquer outra sessão, a opinião dele vem das ferramentas da MinoAI Frontier, citando a fonte ([`MAESTRO.md`](MAESTRO.md)) |
 | **Redator** | "Que atributo faz o Marcos querer comprar?" | `/redacao-que-vende`, banco de [atributos](ebook/vendas/atributos-que-vendem.md), ganchos virais da MinoAI Frontier | [`redator`](.claude/agents/redator.md) |
 | **Estrategista** | "Quanto isso muda o custo por venda?" | Painel (seções 4 e 7), números das contas, preço da concorrência | [`estrategista`](.claude/agents/estrategista.md) |
 | **Arquiteto** | "Está tecnicamente certo e é verdade?" | `ferramentas/plantas.py` (validar, prévia, fichas), [regras](ebook/referencias/regras-do-arquiteto.md). No código das ferramentas: `/ponytail` (a menor mudança que resolve, sem cortar validação), `/ponytail-review` (revisão de uma mudança) e `/ponytail-audit` (auditoria do repositório inteiro) | [`arquiteto`](.claude/agents/arquiteto.md) |
@@ -29,8 +29,8 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 
 ## 4. Como se decide
 
-0. **O Maestro (MinoAI Frontier) opina primeiro nas tarefas da área dele** (conteúdo, vídeo, anúncio, Instagram, gancho, imagem e funil), de bolso ou completas, com base nas ferramentas da MinoAI e com a fonte; a opinião aparece para o dono junto com a entrega. **Ele não tem controle total** (decisão do dono, 20/11/2026): em planta, código, norma e organização do projeto, fala primeiro o membro daquela área (Arquiteto, Revisor, Pesquisador…), e o Maestro só entra se tiver algo a acrescentar.
-1. **Quem fala:** só quem tem a ver com a tarefa (texto → Redator, Revisor; planta → Arquiteto, Designer; anúncio → Redator, Estrategista, Editor, Revisor).
+0. **O Maestro (MinoAI Frontier) opina em toda tarefa, sem exceção**, de bolso ou completa, antes dos outros. A opinião dele é baseada nas ferramentas da MinoAI, com a fonte, e aparece para o dono junto com a entrega (decisão do dono, 20/11/2026).
+1. **Quem fala:** o Maestro chama só quem tem a ver com a tarefa (texto → Redator, Revisor; planta → Arquiteto, Designer; anúncio → Redator, Estrategista, Editor, Revisor).
 2. **Aprovado** quando a maioria dos chamados diz SIM e o Revisor de risco não vetou.
 3. **Empate:** vence o lado com o maior efeito em venda; se ainda empatar, o mais barato.
 4. **Veto do Revisor:** só por honestidade ou lei. Ele precisa dizer o que mudar para virar SIM.
@@ -50,7 +50,7 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Vale para skill do projeto (`.claude/skills/`), agente (`.claude/agents/`), plugin e conector. Nada é usado antes de passar por estes passos:
 
 1. **Ler o que ela roda.** Ganchos, acesso à rede, dados que saem do projeto, arquivos fora da pasta. O Revisor de risco confere e pode vetar uma parte (foi o que aconteceu com os ganchos do Ponytail).
-2. **Conselho de bolso** decide se entra, com o membro da área primeiro (o Maestro, se for conteúdo ou vídeo).
+2. **Conselho de bolso** decide se entra, com o Maestro primeiro.
 3. **Registrar** na tabela de membros (seção 2: quem usa e quando) e no registro de decisões (seção 7).
 4. **Ensinar o projeto.** Toda skill do projeto ganha a seção `## Neste projeto (X1-Plantas)` no `SKILL.md`; todo agente lê `CLAUDE.md` e o seu `contexto/<agente>.md` (não o histórico inteiro) e escreve um resumo de passagem em `contexto/entregas/` ao terminar. A seção diz o que ler antes, o idioma, as regras que não mudam, onde ela entra no fluxo e que ela nunca corta os avisos legais. Plugin e conector, que ficam fora do repositório, recebem o mesmo texto na mensagem do primeiro uso.
 5. **Rodada de alcance.** Rodar a skill uma vez sobre o que já existe onde ela se aplica (exemplo: auditoria no código já escrito, Redator nos textos já publicados). O resultado vai para o `CONTEXTO.md`, e o que precisar de "sim" vai para "Em aberto".
