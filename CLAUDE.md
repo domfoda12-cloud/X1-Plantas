@@ -1,0 +1,23 @@
+# X1-Plantas: instruções para toda sessão do Claude Code
+
+E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo), vendido por Instagram e Facebook Ads com funil no WhatsApp. Público: quem tem o lote e vai construir com pedreiro, por etapas, classe C, 25 a 50 anos ([persona](ebook/referencias/persona-e-mercado.md)). Tudo em português do Brasil, preços em R$.
+
+## O objetivo é vender
+
+Toda tarefa responde a uma pergunta antes de começar: **como isso aumenta a venda, baixa o custo ou reduz o risco?** Se a resposta for "não muda nada", a tarefa vai para o fim da fila. O número que manda é o **custo por venda** ([`PAINEL.md`](PAINEL.md), seção 4).
+
+## O Conselho decide quais skills e ferramentas usar
+
+Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
+
+- **Tarefa pequena** (um texto, um ajuste): conselho de bolso, uma linha de cada membro que importa, no máximo 3, sem abrir subagente.
+- **Entrega que vai ao público ou decisão que custa dinheiro**: conselho completo com os subagentes de `.claude/agents/`.
+- **Revisor de risco tem veto** em tudo que toca honestidade e lei. **O dono decide** preço, título, gasto com anúncio, publicação e contratação.
+
+## Regras que não mudam
+
+- Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
+- Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
+- Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
+- Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push na branch `planta-de-casas-anuncio`.
+- Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
