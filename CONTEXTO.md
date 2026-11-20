@@ -54,6 +54,8 @@
 
 | 20/11/2026 | "Continue procurando melhorias em loop" | Loop autônomo. Rodada 1: juntados os posts de `frente-instagram` e o roteiro do vídeo 2 de `frente-video`, com números corrigidos pelo validador; a E07 foi redesenhada e agora cabe em lote de 8 m (3 quartos, suíte, 72 m²), o que torna verdadeira a promessa do vídeo 2 |
 
+| 20/11/2026 | "Expanda a base de dados: procure animações 3D de plantas ganhando vida. Só pare quando os tokens acabarem" | [`animacoes-3d/REFERENCIAS-BLUEPRINT.md`](animacoes-3d/REFERENCIAS-BLUEPRINT.md): 11 referências com links, anatomia do efeito, 10 melhorias para o motor e roteiro de 12 s revisado. Loop continua |
+
 ## Em aberto (esperando o dono)
 
 - Decidir se o e-book promete as próximas casas de graça (o texto só aparece se `promessa_atualizacao` for preenchido em `ebook/config.json`, porque oferta escrita obriga).

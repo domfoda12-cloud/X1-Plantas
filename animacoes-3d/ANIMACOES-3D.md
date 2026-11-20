@@ -1,5 +1,7 @@
 # Animações 3D: as plantas que o e-book vai conter
 
+> **Banco de referências** de planta que ganha vida, com o que adotar no motor: [`REFERENCIAS-BLUEPRINT.md`](REFERENCIAS-BLUEPRINT.md).
+
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
 >
 > **Esta pasta guarda as imagens e animações de cada planta.** Elas vão para dentro do e-book ([`../ebook/`](../ebook/EBOOK.md)), para os posts do Instagram ([`../instagram/`](../instagram/INSTAGRAM.md)) e para o vídeo de anúncio ([`../video/`](../video/VIDEO.md)).
