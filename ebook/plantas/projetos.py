@@ -168,14 +168,14 @@ def todas():
                   "3 quartos (1 suíte)", 2))
 
     # ---------------------------------------------------------------- Especiais (S)
-    P.append(casa("S03", "Casa Acessível", 8.8, 8.5,
+    P.append(casa("S03", "Casa Acessível", 8.8, 8.9,
                   H((3.6, V((4.0, F("sala", "Sala", "sala")), (3.2, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
-                    (1.5, V((6.6, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro amplo", "banho")))),
+                    (1.9, V((5.6, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
                     (None, V((4.4, F("quarto1", "Quarto casal", "casal")), (None, F("quarto2", "Quarto", "dorm"))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("sala", "circ", "aberto"),
                    ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2")],
                   "2 quartos", 1, acessivel=True,
-                  destaque="Circulação e banheiro largos, pensados para cadeira de rodas (o engenheiro adapta à NBR 9050)"))
+                  destaque="Circulação larga e banheiro com espaço livre para o giro de 1,50 m da cadeira de rodas"))
     P.append(casa("S04", "Casa Home Office", 7.8, 10.8,
                   H((3.2, V((2.0, F("escritorio", "Escritório", "escritorio")), (None, F("varanda", "Varanda", "varanda")))),
                     (3.2, V((4.8, F("sala", "Sala", "sala")), (1.8, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),

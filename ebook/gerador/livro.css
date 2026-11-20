@@ -112,7 +112,7 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .passos li::before { content: counter(p); grid-row: span 2; font-family: var(--tit); font-weight: 800; font-size: 20pt; color: var(--azul); line-height: 1; }
 .passos b { font-size: 11pt; } .passos span { color: var(--cinza); font-size: 9.5pt; }
 .preencher { display: grid; gap: 4.5mm; }
-.preencher div { border-bottom: 0.3mm solid var(--tinta); padding-bottom: 6mm; font-size: 8.5pt; color: var(--cinza); }
+.preencher div { border-bottom: 0.3mm solid var(--tinta); padding-bottom: 4.6mm; font-size: 8.5pt; color: var(--cinza); }
 
 .galeria { margin-top: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(22mm, 1fr)); gap: 4mm; align-items: end; padding: 4mm; background: var(--azul-claro); border-radius: 2mm; background-image: linear-gradient(rgba(11,79,168,.07) 0.3mm, transparent 0.3mm), linear-gradient(90deg, rgba(11,79,168,.07) 0.3mm, transparent 0.3mm); background-size: 5mm 5mm; }
 .galeria figure { display: grid; gap: 1mm; justify-items: center; }
@@ -136,3 +136,4 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .fachada .foto { width: 72%; margin: 0 auto; }
 
 .nq { white-space: nowrap; }
+.fachada.aperta svg { max-height: 32mm; }

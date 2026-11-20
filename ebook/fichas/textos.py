@@ -83,7 +83,7 @@ TEXTOS = {
                 para_quem="Família que quer 3 quartos, cozinha integrada e um jardim nos fundos, no recorte do L, com a cozinha e os quartos em volta.",
                 nao_serve=("Quem tem lote de 12 m.", "F02"), erros=[1, 2, 4], perguntas=PADRAO),
     "S03": dict(gancho="11 m de frente. Circulação larga, pensada para cadeira de rodas.",
-                para_quem="Quem quer morar a vida toda na mesma casa: circulação e banheiro mais largos que o comum, pensados para cadeira de rodas. Adaptar para a norma de acessibilidade (NBR 9050) é trabalho do engenheiro, e pode pedir ajustes.",
+                para_quem="Quem quer morar a vida toda na mesma casa: circulação com mais de 1,70 m livres e banheiro com espaço para o giro de 1,50 m da cadeira de rodas. O resto da norma de acessibilidade (NBR 9050), como barras, portas e entrada sem degrau, o engenheiro confere.",
                 nao_serve=("Quem procura a casa mais compacta.", "C05"), erros=[2, 3, 4],
                 perguntas=["O que mais a norma de acessibilidade (NBR 9050) pede para esta casa ser acessível?", "Como fazer a entrada sem degrau e sem a água da chuva entrar?", PADRAO[1]]),
     "S04": dict(gancho="10 m de frente. Escritório com porta para a rua.",

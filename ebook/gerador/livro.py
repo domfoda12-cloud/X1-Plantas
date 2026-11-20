@@ -318,10 +318,15 @@ FACHADAS = EBOOK / "visual" / "openart" / "fachadas"
 
 def fachada_bloco(p):
     """Foto realista da fachada (OpenArt, a partir da nossa vista da rua) quando existir; senão, o desenho."""
+    n = len(avisos_juntos(p))
+    corredor = any(c["id"] == "corr" for c in p["comodos"])
+    aperto = n + (1 if corredor else 0) + (1 if p["_r"].metricas.get("area_coberta_aberta") else 0)
+    classe = "fachada" + (" aperta" if n else "")
     if (FACHADAS / f"{p['id']}.png").exists():
-        return (f'<div class="fachada"><h4>Vista da rua</h4>'
-                f'{foto(p["id"], 48 if (p["_r"].avisos or p["_r"].info) else 66, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}</div>')
-    return f'<div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>'
+        alt = 66 if not n else (48 if aperto < 3 else 32)
+        return (f'<div class="{classe}"><h4>Vista da rua</h4>'
+                f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}</div>')
+    return f'<div class="{classe}"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>'
 
 
 def capa_fundo():
@@ -415,7 +420,7 @@ def montar(plantas, config, numeros):
         ("Família de 4 ou mais", ["F01", "F02", "F03", "F04", "E07", "S09"]),
         ("Trabalha em casa", ["S04"]),
         ("Gosta de receber", ["S07", "E06", "F05"]),
-        ("Casa para a vida toda, sem degrau", ["S03"]),
+        ("Casa para a vida toda, pensada para ser sem degrau", ["S03"]),
         ("Casa de praia ou de fim de semana", ["S05", "C07"]),
     ]
     por_id = {p["id"]: p for p in plantas}
@@ -498,12 +503,12 @@ def montar(plantas, config, numeros):
     gerais = FICHAS.PADRAO + ["O meu lote tem matrícula e está regular na prefeitura?",
                               "Quanto custa o projeto completo e o que está incluído nele?"]
     L.pagina(f"""<span class="sobre">Fim (e começo da obra)</span><h2>Agora é com você</h2>
-      <p class="abertura">Você já tem o mais difícil: o lote e uma casa que cabe nele, com o porquê de cada parede. O próximo passo é a primeira conversa com o engenheiro ou o arquiteto.</p>
+      <p class="abertura">Você já tem o mais difícil: o lote e uma casa que deve caber nele (confirme os recuos na prefeitura), com o porquê de cada parede. O próximo passo é a primeira conversa com o engenheiro ou o arquiteto.</p>
       <div class="duas"><div><h3>Pergunte em qualquer casa</h3><ul class="lista">{''.join(f'<li>{E(q)}</li>' for q in gerais)}</ul>
           <p class="pequeno">Leve também a ficha do terreno preenchida e as perguntas da página da casa escolhida.</p></div>
         <div><h3>O que vem junto</h3>{'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
           {('<h3>Novas casas</h3><p>' + E(config['promessa_atualizacao']) + '</p>') if config.get('promessa_atualizacao') else ''}
-          <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote: {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
+          <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote e receba as casas que devem caber, como referência (não substitui o profissional): {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
       {foto("05-familia-lote", 78, pos="center 22%")}
       {svg_fita(contagem)}""", "fim")

@@ -487,6 +487,15 @@ def validar(planta):
                 if "cozinha" in g.get(c["id"], ()) or any(por_id[x]["tipo"] == "cozinha" for x in g.get(c["id"], ()) if x != "ext"):
                     r.erro(f"{c['nome']} abre direto para a cozinha")
 
+    # Casa acessível: banheiro e circulação com o giro de 1,50 m da cadeira de rodas (por dentro das paredes)
+    if planta.get("acessivel"):
+        for c in cs:
+            if c["tipo"] in ("banho", "circ"):
+                lx, ly, _ = util(planta, c)
+                if min(lx, ly) < 1.5 - 1e-6:
+                    r.erro(f"{c['nome']}: {min(lx, ly):.2f} m livres, não cabe o giro de 1,50 m da cadeira de rodas")
+        r.info.append("Casa acessível: o engenheiro confere o resto da NBR 9050 (barras, portas, área de transferência, entrada sem degrau)")
+
     # Varanda encostada numa divisa: a lateral dela fica fechada (Código Civil, art. 1.301)
     for c in cs:
         if c["tipo"] == "varanda" and c["id"] != "corr":

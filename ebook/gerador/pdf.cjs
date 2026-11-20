@@ -15,6 +15,8 @@ const { chromium } = require('playwright');
   const pagina = await navegador.newPage();
   await pagina.goto('file://' + path.resolve(entrada), { waitUntil: 'load' });
   await pagina.evaluate(() => document.fonts.ready);
+  await pagina.emulateMedia({ media: 'print' });
+  await pagina.setViewportSize({ width: 794, height: 1123 });
 
   // Confere se algum texto passou do limite da página (sinal de página estourada).
   const estouradas = await pagina.evaluate(() =>

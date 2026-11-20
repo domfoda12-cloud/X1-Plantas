@@ -114,7 +114,7 @@ de ocupação deixar.
 
                    F03       Casa Família                                                    78 m² · 3 quartos (1 suíte)     p. 42
   11 m             F04       Casa Família Suíte                                              80 m² · 3 quartos (1 suíte)     p. 44
-                   S03       Casa Acessível                                                           75 m² · 2 quartos      p. 48
+                   S03       Casa Acessível                                                           78 m² · 2 quartos      p. 48
                    S07       Casa Gourmet                                                    74 m² · 3 quartos (1 suíte)     p. 54
 
                    F02       Casa Integrada                                                  86 m² · 3 quartos (1 suíte)     p. 40
@@ -148,9 +148,9 @@ S04 Casa Home Office p. 50                                             S07 Casa 
                                                                        p. 34 · F05 Casa em L p. 46
 
 
-Casa para a vida toda, sem degrau                                      Casa de praia ou de fim de semana
-S03 Casa Acessível p. 48                                               S05 Casa de Praia p. 52 · C07 Casa Compacta
-                                                                       Varanda p. 22
+Casa para a vida toda, pensada para ser sem                            Casa de praia ou de fim de semana
+degrau                                                                 S05 Casa de Praia p. 52 · C07 Casa Compacta
+S03 Casa Acessível p. 48                                               Varanda p. 22
 
 
 
@@ -366,7 +366,7 @@ F02      Casa Integrada             86 m² 3 quartos (1 suíte)              2  
 F03      Casa Família               78 m² 3 quartos (1 suíte)              2        11 x 15      42
 F04      Casa Família Suíte         80 m² 3 quartos (1 suíte)              2        11 x 20      44
 F05      Casa em L                  91 m² 3 quartos (1 suíte)              2        13 x 15      46
-S03      Casa Acessível             75 m² 2 quartos                        1        11 x 15      48
+S03      Casa Acessível             78 m² 2 quartos                        1        11 x 15      48
 S04      Casa Home Office           66 m² 2 quartos + escritório           1        10 x 20      50
 S05      Casa de Praia              59 m² 2 quartos (1 suíte)              2         9 x 15      52
 S07      Casa Gourmet               74 m² 3 quartos (1 suíte)              2        11 x 15      54
@@ -738,36 +738,36 @@ C04 · A CASA NO SEU LOTE
  Cabe num lote de 8 x 15.
                                       7,50 m
                                                           N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 7,50 x 14,10 m · lote comercial 8 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                             48 m²
-                                                                                        Medidas por fora                 6,00 x 9,60 m
-                                    C04                                                 Varanda e garagem                        10 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 7,50 x 14,10 m · lote comercial 8 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                             48 m²
+                                                                                          Medidas por fora                 6,00 x 9,60 m
+                                    C04                                                   Varanda e garagem                        10 m²
                         m 01,41
 
 
 
 
-                                                                                        Área coberta total                       58 m²          conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                             2 quartos
-                                                                                        Banheiros                                   1
+                                                                                          Área coberta total                       58 m²          conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                             2 quartos
+                                                                                          Banheiros                                   1
                                     recuo 3,0 m
-                                                                                        Corredor                          10% da casa           bom: até
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                      RUA                                                                                                        do piso
+                                                                                          Corredor                          10% da casa           bom: até
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                      RUA                                                                                                          do piso
 
 
 
 
-                                                                                                                                                              m 8
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                                m 8
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -779,7 +779,8 @@ C04 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -787,13 +788,14 @@ C04 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem quer cozinha grande para receber. Veja a                                     As perguntas que valem para toda casa estão em
- S07 Casa Gourmet, p. 54.                                                          "Pergunte em qualquer casa", no fim do e-book.
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem quer cozinha grande para receber. Veja a                                      As perguntas que valem para toda casa estão em
+ S07 Casa Gourmet, p. 54.                                                           "Pergunte em qualquer casa", no fim do e-book.
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     17
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       17
 
 ===== PÁGINA 18 =====
 C05 · COMPACTAS · LOTE A PARTIR DE 8 x 15 M
@@ -844,34 +846,34 @@ C05 · A CASA NO SEU LOTE
  Cabe num lote de 8 x 15.
                                       7,50 m
                                                             N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 7,50 x 12,30 m · lote comercial 8 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                             47 m²
-                                                                                        Medidas por fora                 6,00 x 7,80 m
-                                   C05                                                  Varanda e garagem                            —
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 7,50 x 12,30 m · lote comercial 8 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                             47 m²
+                                                                                          Medidas por fora                 6,00 x 7,80 m
+                                   C05                                                    Varanda e garagem                            —
                       m 03,21
 
 
 
 
-                                                                                        Quartos                              2 quartos
-                                                                                        Banheiros                                    1
-                                                                                        Corredor                          10% da casa           bom: até
-                                                                                                                                                   14%
-                                    recuo 3,0 m                                         Janela nos quartos                               ✓      mín. 1/6
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                              sul
+                                                                                          Quartos                              2 quartos
+                                                                                          Banheiros                                    1
+                                                                                          Corredor                          10% da casa           bom: até
+                                                                                                                                                     14%
+                                    recuo 3,0 m                                           Janela nos quartos                               ✓      mín. 1/6
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                              sul
                                       RUA
-                                                                                        Pode espelhar                                  sim        troca o
+                                                                                          Pode espelhar                                  sim        troca o
 
 
 
 
-                                                                                                                                                              m 8
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                                m 8
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -882,7 +884,8 @@ C05 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -892,14 +895,14 @@ C05 · A CASA NO SEU LOTE
          referência; o código de obras da sua cidade pode pedir outro).
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem quer varanda. Veja a C04 Casa Duo, p. 16.                                    Esta casa se encaixa no programa habitacional da
-                                                                                   minha cidade?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem quer varanda. Veja a C04 Casa Duo, p. 16.                                     Esta casa se encaixa no programa habitacional da
+                                                                                    minha cidade?
 
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     19
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       19
 
 ===== PÁGINA 20 =====
 C06 · COMPACTAS · LOTE A PARTIR DE 9 x 15 M
@@ -1056,36 +1059,36 @@ C07 · A CASA NO SEU LOTE
  Cabe num lote de 8 x 15.
                                       8,00 m
                                                           N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 8,00 x 14,80 m · lote comercial 8 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            55 m²
-                                                                                        Medidas por fora               6,50 x 10,30 m
-                                    C07                                                 Varanda e garagem                       12 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 8,00 x 14,80 m · lote comercial 8 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            55 m²
+                                                                                          Medidas por fora               6,50 x 10,30 m
+                                    C07                                                   Varanda e garagem                       12 m²
                        m 08,41
 
 
 
 
-                                                                                        Área coberta total                      67 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                             2 quartos
-                                                                                        Banheiros                                   1
-                                                                                        Corredor                          10% da casa           bom: até
+                                                                                          Área coberta total                      67 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                             2 quartos
+                                                                                          Banheiros                                   1
+                                                                                          Corredor                          10% da casa           bom: até
                                     recuo 3,0 m
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                      RUA                                                                                                        do piso
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                      RUA                                                                                                          do piso
 
 
 
 
-                                                                                                                                                              m 8
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                                m 8
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -1096,7 +1099,8 @@ C07 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -1104,14 +1108,14 @@ C07 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem quer suíte. Veja a S05 Casa de Praia, p. 52.                                 As perguntas que valem para toda casa estão em
-                                                                                   "Pergunte em qualquer casa", no fim do e-book.
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem quer suíte. Veja a S05 Casa de Praia, p. 52.                                  As perguntas que valem para toda casa estão em
+                                                                                    "Pergunte em qualquer casa", no fim do e-book.
 
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     23
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       23
 
 ===== PÁGINA 24 =====
 E01 · TERRENO ESTREITO · LOTE A PARTIR DE 8 x 25 M
@@ -1175,41 +1179,41 @@ E01 · A CASA NO SEU LOTE
  Cabe num lote de 8 x 25.
                                         8,00 m
 
-                                                      N                                 INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 8,00 x 23,70 m · lote comercial 8 x 25 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            58 m²
-                                                                                        Medidas por fora               5,00 x 19,20 m
-                                          E01                                           Varanda e garagem                       28 m²
+                                                     N                                    INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 8,00 x 23,70 m · lote comercial 8 x 25 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            58 m²
+                                                                                          Medidas por fora               5,00 x 19,20 m
+                                          E01                                             Varanda e garagem                       28 m²
                              m 07,32
 
 
 
 
-                                                                                        Área coberta total                      87 m²          conta no
-                                                                                                                                             orçamento
-                                                                                        Quartos                    2 quartos (1 suíte)
-                                                                                        Banheiros                                    2
-                                                                                        Corredor                              externo           bom: até
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
+                                                                                          Área coberta total                      87 m²          conta no
+                                                                                                                                               orçamento
+                                                                                          Quartos                    2 quartos (1 suíte)
+                                                                                          Banheiros                                    2
+                                                                                          Corredor                              externo           bom: até
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
                                        recuo 3,0 m
 
 
 
 
                                          RUA
-                                                                                                                                                 do piso
+                                                                                                                                                   do piso
 
 
 
 
-                                                                                                                                                              m 8
-                                                                                        Melhor lado da rua                          norte
-                                                                                        Pode espelhar                                sim          troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                                m 8
+                                                                                          Melhor lado da rua                          norte
+                                                                                          Pode espelhar                                sim          troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -1220,7 +1224,8 @@ E01 · A CASA NO SEU LOTE
 
 
 
-                                                     vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
@@ -1230,12 +1235,14 @@ E01 · A CASA NO SEU LOTE
          O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem prefere quintal grande nos fundos. Veja a                                    O corredor lateral coberto precisa de calha e de que
- E05 Casa Estreita Suíte, p. 32.                                                   inclinação?
-                                                                                   Preciso rebaixar a guia (meio-fio) para a garagem?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem prefere quintal grande nos fundos. Veja a                                     O corredor lateral coberto precisa de calha e de que
+ E05 Casa Estreita Suíte, p. 32.                                                    inclinação?
+                                                                                    Preciso rebaixar a guia (meio-fio) para a garagem?
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     25
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       25
 
 ===== PÁGINA 26 =====
 E02 · TERRENO ESTREITO · LOTE A PARTIR DE 7 x 20 M
@@ -1295,37 +1302,37 @@ E02 · A CASA NO SEU LOTE
  Cabe num lote de 7 x 20.
                                          6,60 m
 
-                                                      N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 6,60 x 19,80 m · lote comercial 7 x 20 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            40 m²
-                                                                                        Medidas por fora               3,60 x 15,30 m
-                                         E02                                            Varanda e garagem                       15 m²
+                                                     N
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 6,60 x 19,80 m · lote comercial 7 x 20 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            40 m²
+                                                                                          Medidas por fora               3,60 x 15,30 m
+                                         E02                                              Varanda e garagem                       15 m²
                              m 08,91
 
 
 
 
-                                                                                        Área coberta total                      55 m²          conta no
-                                                                                                                                             orçamento
-                                                                                        Quartos                                2 quartos
+                                                                                          Área coberta total                      55 m²          conta no
+                                                                                                                                               orçamento
+                                                                                          Quartos                                2 quartos
 
 
 
 
-                                                                                                                                                              m 7
-                                                                                        Banheiros                                      1
-                                                                                        Corredor                                 externo        bom: até
+                                                                                                                                                                m 7
+                                                                                          Banheiros                                      1
+                                                                                          Corredor                                 externo        bom: até
                                        recuo 3,0 m
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                         RUA                                                                                                     do piso
-                                                                                        Melhor lado da rua                          norte
-                                                                                        Pode espelhar                                sim          troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                         RUA                                                                                                       do piso
+                                                                                          Melhor lado da rua                          norte
+                                                                                          Pode espelhar                                sim          troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -1337,7 +1344,8 @@ E02 · A CASA NO SEU LOTE
 
 
 
-                                                     vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
@@ -1347,11 +1355,14 @@ E02 · A CASA NO SEU LOTE
          O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem quer suíte. Veja a E05 Casa Estreita Suíte,                                  O corredor coberto conta como área construída na
- p. 32.                                                                            minha cidade?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem quer suíte. Veja a E05 Casa Estreita Suíte,                                   O corredor coberto conta como área construída na
+ p. 32.                                                                             minha cidade?
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     27
+
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       27
 
 ===== PÁGINA 28 =====
 E03 · TERRENO ESTREITO · LOTE A PARTIR DE 5 x 20 M
@@ -1416,37 +1427,37 @@ E03 · A CASA NO SEU LOTE
 
  Cabe num lote de 5 x 20.
                                            5,00 m
-                                                                                        INFORMAÇÃO DA CASA
+                                                                                           INFORMAÇÃO DA CASA
 
 
 
 
-                                                                                                                                                              m 5
+                                                                                                                                                                 m 5
                                                        N
 
-                                                                                        Cabe a partir de 5,00 x 17,70 m · lote comercial 5 x 20 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            34 m²
-                                                                                        Medidas por fora               3,50 x 13,20 m
-                                         E03                                            Varanda e garagem                       12 m²
+                                                                                           Cabe a partir de 5,00 x 17,70 m · lote comercial 5 x 20 m
+                                                                                                                                  nesta casa       referência
+                                                                                           Área fechada                            34 m²
+                                                                                           Medidas por fora               3,50 x 13,20 m
+                                         E03                                               Varanda e garagem                       12 m²
                                m 07,71
 
 
 
 
-                                                                                        Área coberta total                      46 m²          conta no
-                                                                                                                                             orçamento
-                                                                                        Quartos                                 1 quarto
-                                                                                        Banheiros                                      1
-                                                                                        Corredor                                 externo        bom: até
-                                         recuo 3,0 m                                                                                               14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                           RUA                                                                                                   do piso
-                                                                                        Melhor lado da rua                          norte
-                                                                                        Pode espelhar                                sim          troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                           Área coberta total                      46 m²          conta no
+                                                                                                                                                orçamento
+                                                                                           Quartos                                 1 quarto
+                                                                                           Banheiros                                      1
+                                                                                           Corredor                                 externo        bom: até
+                                         recuo 3,0 m                                                                                                  14%
+                                                                                           Janela nos quartos                               ✓      mín. 1/6
+                                           RUA                                                                                                      do piso
+                                                                                           Melhor lado da rua                          norte
+                                                                                           Pode espelhar                                sim          troca o
+                                                                                                                                                        lado
+                                                                                           Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                           referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -1458,7 +1469,8 @@ E03 · A CASA NO SEU LOTE
 
 
 
-                                                       vista da rua · pessoa de 1,70 m para escala
+                                                           vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -1468,11 +1480,13 @@ E03 · A CASA NO SEU LOTE
          O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
          Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para
          abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem precisa de 2 quartos (e tem lote de 7 m ou                                   Meu lote de 5 m tem recuo lateral obrigatório?
- mais). Veja a E02 Casa Corredor, p. 26.                                           A parede da esquerda pode ficar na divisa?
+ PARA QUEM NÃO SERVE                                                               LEVE AO SEU ENGENHEIRO
+ Quem precisa de 2 quartos (e tem lote de 7 m ou                                     Meu lote de 5 m tem recuo lateral obrigatório?
+ mais). Veja a E02 Casa Corredor, p. 26.                                             A parede da esquerda pode ficar na divisa?
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     29
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                        29
 
 ===== PÁGINA 30 =====
 E04 · TERRENO ESTREITO · LOTE A PARTIR DE 9 x 15 M
@@ -1635,36 +1649,36 @@ E05 · A CASA NO SEU LOTE
                                        7,90 m
 
                                                       N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 7,90 x 19,50 m · lote comercial 8 x 20 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            59 m²
-                                                                                        Medidas por fora               4,90 x 15,00 m
-                                       E05                                              Varanda e garagem                       15 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 7,90 x 19,50 m · lote comercial 8 x 20 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            59 m²
+                                                                                          Medidas por fora               4,90 x 15,00 m
+                                       E05                                                Varanda e garagem                       15 m²
                            m 05,91
 
 
 
 
-                                                                                        Área coberta total                      74 m²          conta no
-                                                                                                                                             orçamento
-                                                                                        Quartos                    2 quartos (1 suíte)
-                                                                                        Banheiros                                    2
-                                                                                        Corredor                              externo           bom: até
+                                                                                          Área coberta total                      74 m²          conta no
+                                                                                                                                               orçamento
+                                                                                          Quartos                    2 quartos (1 suíte)
+                                                                                          Banheiros                                    2
+                                                                                          Corredor                              externo           bom: até
                                      recuo 3,0 m
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                       RUA                                                                                                       do piso
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                       RUA                                                                                                         do piso
 
 
 
 
-                                                                                                                                                              m 8
-                                                                                        Melhor lado da rua                          norte
-                                                                                        Pode espelhar                                sim          troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                                m 8
+                                                                                          Melhor lado da rua                          norte
+                                                                                          Pode espelhar                                sim          troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -1675,7 +1689,8 @@ E05 · A CASA NO SEU LOTE
 
 
 
-                                                   vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
@@ -1685,12 +1700,14 @@ E05 · A CASA NO SEU LOTE
          O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem precisa de garagem. Veja a E01 Casa                                          As perguntas que valem para toda casa estão em
- Estreita, p. 24.                                                                  "Pergunte em qualquer casa", no fim do e-book.
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem precisa de garagem. Veja a E01 Casa                                           As perguntas que valem para toda casa estão em
+ Estreita, p. 24.                                                                   "Pergunte em qualquer casa", no fim do e-book.
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     33
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       33
 
 ===== PÁGINA 34 =====
 E06 · TERRENO ESTREITO · LOTE A PARTIR DE 9 x 25 M
@@ -1759,37 +1776,37 @@ E06 · A CASA NO SEU LOTE
                                        8,60 m
 
                                                       N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 8,60 x 22,50 m · lote comercial 9 x 25 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            68 m²
-                                                                                        Medidas por fora               5,60 x 18,00 m
-                                        E06                                             Varanda e garagem                       33 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 8,60 x 22,50 m · lote comercial 9 x 25 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            68 m²
+                                                                                          Medidas por fora               5,60 x 18,00 m
+                                        E06                                               Varanda e garagem                       33 m²
                             m 05,22
 
 
 
 
-                                                                                        Área coberta total                     101 m²          conta no
-                                                                                                                                             orçamento
-                                                                                        Quartos                    2 quartos (1 suíte)
-                                                                                        Banheiros                                    2
-                                                                                        Corredor                              externo           bom: até
-                                                                                                                                                   14%
+                                                                                          Área coberta total                     101 m²          conta no
+                                                                                                                                               orçamento
+                                                                                          Quartos                    2 quartos (1 suíte)
+                                                                                          Banheiros                                    2
+                                                                                          Corredor                              externo           bom: até
+                                                                                                                                                     14%
                                       recuo 3,0 m
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
                                         RUA
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                          norte
-                                                                                        Pode espelhar                                sim          troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                          norte
+                                                                                          Pode espelhar                                sim          troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
 
 
-                                                                                                                                                              m 9
+                                                                                                                                                                m 9
      ATENÇÃO: LEVE AO ENGENHEIRO
         A sala, a cozinha e o quarto têm vão livre (sem parede no meio) de 4,6 m: o engenheiro confere laje e vigas
 
@@ -1798,7 +1815,8 @@ E06 · A CASA NO SEU LOTE
 
 
 
-                                                    vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
@@ -1808,12 +1826,14 @@ E06 · A CASA NO SEU LOTE
          O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem prefere 3 quartos à área gourmet. Veja a                                     Qual o melhor lugar para a churrasqueira e a
- E07 Casa Estreita 3 Quartos, p. 36.                                               chaminé?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem prefere 3 quartos à área gourmet. Veja a                                      Qual o melhor lugar para a churrasqueira e a
+ E07 Casa Estreita 3 Quartos, p. 36.                                                chaminé?
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     35
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       35
 
 ===== PÁGINA 36 =====
 E07 · TERRENO ESTREITO · LOTE A PARTIR DE 8 x 25 M
@@ -1876,75 +1896,69 @@ E07 · A CASA NO SEU LOTE
 
 
  Cabe num lote de 8 x 25.
-                                     8,00 m
+                                         8,00 m
 
-                                                 N
-                                                                                INFORMAÇÃO DA CASA
-                                                                                Cabe a partir de 8,00 x 22,40 m · lote comercial 8 x 25 m
-                                                                                                                         nesta casa       referência
-                                                                                Área fechada                              72 m²
-                                                                                Medidas por fora                 5,00 x 17,90 m
-                                      E07                                       Varanda e garagem                         18 m²
-                         m 04,22
-
-
-
-
-                                                                                Área coberta total                        90 m²            conta no
-                                                                                                                                         orçamento
-                                                                                Quartos                     3 quartos (1 suíte)
-                                                                                Banheiros                                     2
-                                                                                Corredor                               externo            bom: até
-                                                                                                                                             14%
-                                   recuo 3,0 m
-                                                                                Janela nos quartos                                  ✓     mín. 1/6
-                                     RUA
-                                                                                                                                           do piso
+                                                     N
+                                                                                         INFORMAÇÃO DA CASA
+                                                                                         Cabe a partir de 8,00 x 22,40 m · lote comercial 8 x 25 m
+                                                                                                                                  nesta casa       referência
+                                                                                         Área fechada                              72 m²
+                                                                                         Medidas por fora                 5,00 x 17,90 m
+                                          E07                                            Varanda e garagem                         18 m²
+                             m 04,22
 
 
 
 
-                                                                                                                                                       m 8
-                                                                                Melhor lado da rua                               norte
-                                                                                Pode espelhar                                     sim       troca o
-                                                                                                                                               lado
-                                                                                Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                         Área coberta total                        90 m²            conta no
+                                                                                                                                                  orçamento
+                                                                                         Quartos                     3 quartos (1 suíte)
+                                                                                         Banheiros                                     2
+                                                                                         Corredor                               externo            bom: até
+                                                                                                                                                      14%
+                                       recuo 3,0 m
+                                                                                         Janela nos quartos                                  ✓     mín. 1/6
+                                         RUA
+                                                                                                                                                    do piso
 
 
-    ATENÇÃO: LEVE AO ENGENHEIRO
-       Suíte fica com 2,49 x 3,09 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília
-       Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para
-       esse banheiro (custa mais)
+
+
+                                                                                                                                                                m 8
+                                                                                         Melhor lado da rua                               norte
+                                                                                         Pode espelhar                                     sim       troca o
+                                                                                                                                                        lado
+                                                                                         Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                         referência. Não substitui o profissional: confira os da sua cidade.
+
+
+     ATENÇÃO: LEVE AO ENGENHEIRO
+        Suíte fica com 2,49 x 3,09 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília
+        Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para
+        esse banheiro (custa mais)
 
  VISTA DA RUA
 
 
 
 
-                                                              Imagem ilustrativa gerada a partir da vista da rua desta planta.
+                                                                       Imagem ilustrativa gerada a partir da vista da rua desta planta.
 
 
  POR QUE ESTA PLANTA É ASSIM
-        Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
-        espelhada ou as janelas mudadas.
-        Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote
-        estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão.
-        O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
-        Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao
-        engenheiro quanto isso pesa no orçamento.
- PARA QUEM NÃO SERVE                                                    LEVE AO SEU ENGENHEIRO
-  Quem tem lote largo e quer a casa mais                                        As perguntas que valem para toda casa estão em
-  compacta.
-Planta            Veja
-       de referência.    a F01paraCasa
-                      O projeto          Família
-                                   a prefeitura      Compacta,
-                                                é assinado                      "Pergunte
-                                                                      p.ou engenheiro
-                                                           por arquiteto                       em qualquer casa", no fim do e-book. 37
-                                                                                      habilitado.
-  38.
+         Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser
+         espelhada ou as janelas mudadas.
+         Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote
+         estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão.
+         O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+         Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao
+         engenheiro quanto isso pesa no orçamento.
+ PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
+ Quem tem lote largo e quer a casa mais                                            As perguntas que valem para toda casa estão em
+ compacta. Veja a F01 Casa Família Compacta, p.                                    "Pergunte em qualquer casa", no fim do e-book.
+ 38.
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       37
 
 ===== PÁGINA 38 =====
 F01 · FAMÍLIA · LOTE A PARTIR DE 10 x 15 M
@@ -2196,31 +2210,31 @@ F03 · A CASA NO SEU LOTE
  Cabe num lote de 11 x 15.
                                       10,90 m
                                                                 N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 10,90 x 14,60 m · lote comercial 11 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            78 m²
-                                                                                        Medidas por fora               9,40 x 10,10 m
-                                    F03                                                 Varanda e garagem                       17 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 10,90 x 14,60 m · lote comercial 11 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            78 m²
+                                                                                          Medidas por fora               9,40 x 10,10 m
+                                    F03                                                   Varanda e garagem                       17 m²
                   m 06,41
 
 
 
 
-                                                                                        Área coberta total                      95 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                    3 quartos (1 suíte)
-                                                                                        Banheiros                                    2
+                                                                                          Área coberta total                      95 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                    3 quartos (1 suíte)
+                                                                                          Banheiros                                    2
                                     recuo 3,0 m
-                                                                                        Corredor                        13% da casa             bom: até
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                      RUA                                                                                                        do piso
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                          Corredor                        13% da casa             bom: até
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                      RUA                                                                                                          do piso
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -2233,9 +2247,9 @@ F03 · A CASA NO SEU LOTE
 
 
 
-                                                                                                                                                              m 11
+                                                                                                                                                                m 11
+                                                          vista da rua · pessoa de 1,70 m para escala
 
-                                                  vista da rua · pessoa de 1,70 m para escala
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -2243,12 +2257,14 @@ F03 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao
          engenheiro quanto isso pesa no orçamento.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem precisa de garagem. Veja a F04 Casa                                          As perguntas que valem para toda casa estão em
- Família Suíte, p. 44.                                                             "Pergunte em qualquer casa", no fim do e-book.
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem precisa de garagem. Veja a F04 Casa                                           As perguntas que valem para toda casa estão em
+ Família Suíte, p. 44.                                                              "Pergunte em qualquer casa", no fim do e-book.
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     43
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       43
 
 ===== PÁGINA 44 =====
 F04 · FAMÍLIA · LOTE A PARTIR DE 11 x 20 M
@@ -2303,37 +2319,37 @@ F04 · A CASA NO SEU LOTE
 
  Cabe num lote de 11 x 20.
                                       10,90 m
-                                                                                        INFORMAÇÃO DA CASA
+                                                                                          INFORMAÇÃO DA CASA
                                                             N
 
 
 
-                                                                                        Cabe a partir de 10,90 x 18,00 m · lote comercial 11 x 20
-                                                                                        m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            80 m²
-                                                                                        Medidas por fora               9,40 x 13,50 m
+                                                                                          Cabe a partir de 10,90 x 18,00 m · lote comercial 11 x 20
+                                                                                          m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            80 m²
+                                                                                          Medidas por fora               9,40 x 13,50 m
                                      F04
                      m 00,81
 
 
 
 
-                                                                                        Varanda e garagem                       15 m²
-                                                                                        Área coberta total                      95 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                    3 quartos (1 suíte)
-                                                                                        Banheiros                                    2
+                                                                                          Varanda e garagem                       15 m²
+                                                                                          Área coberta total                      95 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                    3 quartos (1 suíte)
+                                                                                          Banheiros                                    2
                                      recuo 3,0 m
-                                                                                        Corredor                        13% da casa             bom: até
-                                                                                                                                                   14%
-                                       RUA                                              Janela nos quartos                               ✓      mín. 1/6
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                          Corredor                        13% da casa             bom: até
+                                                                                                                                                     14%
+                                       RUA                                                Janela nos quartos                               ✓      mín. 1/6
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -2345,9 +2361,9 @@ F04 · A CASA NO SEU LOTE
 
 
 
-                                                                                                                                                              m 11
+                                                                                                                                                                m 11
+                                                          vista da rua · pessoa de 1,70 m para escala
 
-                                                   vista da rua · pessoa de 1,70 m para escala
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -2357,10 +2373,12 @@ F04 · A CASA NO SEU LOTE
          referência; o código de obras da sua cidade pode pedir outro).
          Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao
          engenheiro quanto isso pesa no orçamento.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem tem lote curto. Veja a F03 Casa Família, p.                                  Preciso rebaixar a guia (meio-fio) para a garagem?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem tem lote curto. Veja a F03 Casa Família, p.                                   Preciso rebaixar a guia (meio-fio) para a garagem?
  42.
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     45
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       45
 
 ===== PÁGINA 46 =====
 F05 · FAMÍLIA · LOTE A PARTIR DE 13 x 15 M
@@ -2414,30 +2432,30 @@ F05 · A CASA NO SEU LOTE
 
  Cabe num lote de 13 x 15.
                                      12,90 m
-                                                                      N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 12,90 x 13,10 m · lote comercial 13 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                  91 m²
-                                                                                        Medidas por fora     11,40 x 8,60 m
-                                   F05                                                  Varanda e garagem                  —
+                                                                       N
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 12,90 x 13,10 m · lote comercial 13 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                  91 m²
+                                                                                          Medidas por fora     11,40 x 8,60 m
+                                   F05                                                    Varanda e garagem                  —
            m 01,31
 
 
 
 
-                                                                                        Quartos           3 quartos (1 suíte)
-                                                                                        Banheiros                           2
-                                                                                        Corredor               10% da casa                      bom: até
-                                                                                                                                                   14%
-                                    recuo 3,0 m                                         Janela nos quartos                               ✓      mín. 1/6
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                              sul
+                                                                                          Quartos           3 quartos (1 suíte)
+                                                                                          Banheiros                           2
+                                                                                          Corredor               10% da casa                      bom: até
+                                                                                                                                                     14%
+                                    recuo 3,0 m                                           Janela nos quartos                               ✓      mín. 1/6
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                              sul
                                       RUA
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -2448,29 +2466,30 @@ F05 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
          espelhada ou as janelas mudadas.
          Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e
          quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de
-                                                                                                                                                              m 31
-
-
-
-
          referência; o código de obras da sua cidade pode pedir outro).
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
+                                                                                                                                                                m 31
+
+
+
+
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem tem lote de 12 m. Veja a F02 Casa                                            As perguntas que valem para toda casa estão em
- Integrada, p. 40.                                                                 "Pergunte em qualquer casa", no fim do e-book.
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem tem lote de 12 m. Veja a F02 Casa                                             As perguntas que valem para toda casa estão em
+ Integrada, p. 40.                                                                  "Pergunte em qualquer casa", no fim do e-book.
 
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     47
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       47
 
 ===== PÁGINA 48 =====
 S03 · ESPECIAIS · LOTE A PARTIR DE 11 x 15 M
@@ -2484,13 +2503,17 @@ S03 · ESPECIAIS · LOTE A PARTIR DE 11 x 15 M
 
                                     QUARTO CASAL                                                              QUARTO
                                                  13,4 m²                                                          13,4 m²
-             m 05,8
 
 
 
 
-                                                                                                                       BANHEIRO AMPLO
-                                                                                                                          2,7 m²
+                                                                                                                      BANHEIRO
+             m 09,8
+
+
+
+
+                                                                                                                        5,3 m²
 
 
 
@@ -2501,7 +2524,7 @@ m 11
 
 
 
-                                              12,8 m²                                              10,4 m²                   4,7 m²
+                                              12,8 m²                                              10,4 m²                       4,7 m²
 
 
 
@@ -2509,13 +2532,13 @@ m 11
                                                                                 8,80 m
 
 
-
        PARA QUEM É                                                                    ERROS QUE ESTA CASA EVITA
        Quem quer morar a vida toda na mesma casa:                                       1   Ignorar o sol
-       circulação e banheiro mais largos que o comum,                                  3    Banheiro de frente para a sala
-       pensados para cadeira de rodas. Adaptar para a                                  4    Banheiro sem janela
-       norma de acessibilidade (NBR 9050) é trabalho
-       do engenheiro, e pode pedir ajustes.
+       circulação com mais de 1,70 m livres e banheiro                                 3    Banheiro de frente para a sala
+       com espaço para o giro de 1,50 m da cadeira de                                  4    Banheiro sem janela
+       rodas. O resto da norma de acessibilidade (NBR
+       9050), como barras, portas e entrada sem
+       degrau, o engenheiro confere.
 
         48     Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.
 
@@ -2526,42 +2549,44 @@ S03 · A CASA NO SEU LOTE
  Cabe num lote de 11 x 15.
                                      10,30 m
                                                                  N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 10,30 x 13,00 m · lote comercial 11 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                             75 m²
-                                                                                        Medidas por fora                 8,80 x 8,50 m
-                                   S03                                                  Varanda e garagem                            —
-                 m 00,31
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 10,30 x 13,40 m · lote comercial 11 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                             78 m²
+                                                                                          Medidas por fora                 8,80 x 8,90 m
+                                   S03                                                    Varanda e garagem                            —
+                 m 04,31
 
 
 
 
-                                                                                        Quartos                              2 quartos
-                                                                                        Banheiros                                    1
-                                                                                        Corredor                          13% da casa           bom: até
-                                                                                                                                                   14%
-                                    recuo 3,0 m                                         Janela nos quartos                               ✓      mín. 1/6
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                              sul
+                                                                                          Quartos                              2 quartos
+                                                                                          Banheiros                                    1
+                                                                                          Corredor                          14% da casa           bom: até
+                                                                                                                                                     14%
+                                    recuo 3,0 m                                           Janela nos quartos                               ✓      mín. 1/6
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                              sul
                                       RUA
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
+
+     ATENÇÃO: LEVE AO ENGENHEIRO
+        Casa acessível: o engenheiro confere o resto da NBR 9050 (barras, portas, área de transferência, entrada sem
+        degrau)
 
  VISTA DA RUA (SIMPLIFICADA)
 
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                                                                                                                                m 11
+                                                          vista da rua · pessoa de 1,70 m para escala
 
 
-
-
-                                                                                                                                                              m 11
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
          espelhada ou as janelas mudadas.
@@ -2570,16 +2595,15 @@ S03 · A CASA NO SEU LOTE
          referência; o código de obras da sua cidade pode pedir outro).
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem procura a casa mais compacta. Veja a C05                                     O que mais a norma de acessibilidade (NBR 9050)
- Casa Popular, p. 18.                                                              pede para esta casa ser acessível?
-                                                                                   Como fazer a entrada sem degrau e sem a água da
-                                                                                   chuva entrar?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem procura a casa mais compacta. Veja a C05                                      O que mais a norma de acessibilidade (NBR 9050)
+ Casa Popular, p. 18.                                                               pede para esta casa ser acessível?
+                                                                                    Como fazer a entrada sem degrau e sem a água da
+                                                                                    chuva entrar?
 
 
 
-
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     49
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       49
 
 ===== PÁGINA 50 =====
 S04 · ESPECIAIS · LOTE A PARTIR DE 10 x 20 M
@@ -2632,31 +2656,31 @@ S04 · A CASA NO SEU LOTE
  Cabe num lote de 10 x 20.
                                       9,30 m
                                                             N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 9,30 x 15,30 m · lote comercial 10 x 20 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            66 m²
-                                                                                        Medidas por fora               7,80 x 10,80 m
-                                    S04                                                 Varanda e garagem                       19 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 9,30 x 15,30 m · lote comercial 10 x 20 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            66 m²
+                                                                                          Medidas por fora               7,80 x 10,80 m
+                                    S04                                                   Varanda e garagem                       19 m²
                      m 03,51
 
 
 
 
-                                                                                        Área coberta total                      84 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                2 quartos + escritório
-                                                                                        Banheiros                                   1
-                                                                                        Corredor                       10% da casa              bom: até
+                                                                                          Área coberta total                      84 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                2 quartos + escritório
+                                                                                          Banheiros                                   1
+                                                                                          Corredor                       10% da casa              bom: até
                                      recuo 3,0 m
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                       RUA                                                                                                       do piso
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                       RUA                                                                                                         do piso
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -2665,13 +2689,14 @@ S04 · A CASA NO SEU LOTE
 
 
 
-                                                                                                                                                              m 01
+                                                                                                                                                                m 01
  VISTA DA RUA (SIMPLIFICADA)
 
 
 
 
-                                                   vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -2679,14 +2704,14 @@ S04 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem não trabalha em casa. Veja a C04 Casa                                        Posso ter atividade profissional nesta rua (a lei de
- Duo, p. 16.                                                                       zoneamento da cidade deixa)?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem não trabalha em casa. Veja a C04 Casa                                         Posso ter atividade profissional nesta rua (a lei de
+ Duo, p. 16.                                                                        zoneamento da cidade deixa)?
 
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     51
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       51
 
 ===== PÁGINA 52 =====
 S05 · ESPECIAIS · LOTE A PARTIR DE 9 x 15 M
@@ -2737,36 +2762,36 @@ S05 · A CASA NO SEU LOTE
  Cabe num lote de 9 x 15.
                                       8,90 m
                                                             N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 8,90 x 14,90 m · lote comercial 9 x 15 m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            59 m²
-                                                                                        Medidas por fora               7,40 x 10,40 m
-                                    S05                                                 Varanda e garagem                       18 m²
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 8,90 x 14,90 m · lote comercial 9 x 15 m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            59 m²
+                                                                                          Medidas por fora               7,40 x 10,40 m
+                                    S05                                                   Varanda e garagem                       18 m²
                       m 09,41
 
 
 
 
-                                                                                        Área coberta total                      77 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                    2 quartos (1 suíte)
-                                                                                        Banheiros                                    2
-                                                                                        Corredor                        10% da casa             bom: até
+                                                                                          Área coberta total                      77 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                    2 quartos (1 suíte)
+                                                                                          Banheiros                                    2
+                                                                                          Corredor                        10% da casa             bom: até
                                     recuo 3,0 m
-                                                                                                                                                   14%
-                                                                                        Janela nos quartos                               ✓      mín. 1/6
-                                      RUA                                                                                                        do piso
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                                                                                     14%
+                                                                                          Janela nos quartos                               ✓      mín. 1/6
+                                      RUA                                                                                                          do piso
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
 
 
-                                                                                                                                                              m 9
+                                                                                                                                                                m 9
      ATENÇÃO: LEVE AO ENGENHEIRO
         Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
 
@@ -2775,7 +2800,8 @@ S05 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -2783,13 +2809,14 @@ S05 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos
          parede para abrir. O traçado final é do engenheiro.
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem precisa de 3 quartos. Veja a F03 Casa                                        Que material aguenta a maresia (janelas, ferragens)?
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem precisa de 3 quartos. Veja a F03 Casa                                         Que material aguenta a maresia (janelas, ferragens)?
  Família, p. 42.
 
 
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     53
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       53
 
 ===== PÁGINA 54 =====
 S07 · ESPECIAIS · LOTE A PARTIR DE 11 x 15 M
@@ -2959,32 +2986,32 @@ S09 · A CASA NO SEU LOTE
  Cabe num lote de 14 x 15.
                                       13,90 m
                                                                       N
-                                                                                        INFORMAÇÃO DA CASA
-                                                                                        Cabe a partir de 13,90 x 14,60 m · lote comercial 14 x 15
-                                                                                        m
-                                                                                                                               nesta casa       referência
-                                                                                        Área fechada                            78 m²
-                                          S09                                           Medidas por fora               9,40 x 10,10 m
+                                                                                          INFORMAÇÃO DA CASA
+                                                                                          Cabe a partir de 13,90 x 14,60 m · lote comercial 14 x 15
+                                                                                          m
+                                                                                                                                 nesta casa       referência
+                                                                                          Área fechada                            78 m²
+                                          S09                                             Medidas por fora               9,40 x 10,10 m
             m 06,41
 
 
 
 
-                                                                                        Varanda e garagem                       17 m²
-                                                                                        Área coberta total                      95 m²           conta no
-                                                                                                                                              orçamento
-                                                                                        Quartos                    3 quartos (1 suíte)
-                                                                                        Banheiros                                    2
+                                                                                          Varanda e garagem                       17 m²
+                                                                                          Área coberta total                      95 m²           conta no
+                                                                                                                                                orçamento
+                                                                                          Quartos                    3 quartos (1 suíte)
+                                                                                          Banheiros                                    2
                                     recuo 3,0 m
-                                                                                        Corredor                        13% da casa             bom: até
-                                                                                                                                                   14%
-                                      RUA                                               Janela nos quartos                               ✓      mín. 1/6
-                                                                                                                                                 do piso
-                                                                                        Melhor lado da rua                              sul
-                                                                                        Pode espelhar                                  sim        troca o
-                                                                                                                                                     lado
-                                                                                        Conferido medida por medida pelo X1-Plantas, com recuos de
-                                                                                        referência. Não substitui o profissional: confira os da sua cidade.
+                                                                                          Corredor                        13% da casa             bom: até
+                                                                                                                                                     14%
+                                      RUA                                                 Janela nos quartos                               ✓      mín. 1/6
+                                                                                                                                                   do piso
+                                                                                          Melhor lado da rua                              sul
+                                                                                          Pode espelhar                                  sim        troca o
+                                                                                                                                                       lado
+                                                                                          Conferido medida por medida pelo X1-Plantas, com recuos de
+                                                                                          referência. Não substitui o profissional: confira os da sua cidade.
 
 
      ATENÇÃO: LEVE AO ENGENHEIRO
@@ -2996,7 +3023,8 @@ S09 · A CASA NO SEU LOTE
 
 
 
-                                                  vista da rua · pessoa de 1,70 m para escala
+                                                          vista da rua · pessoa de 1,70 m para escala
+
 
  POR QUE ESTA PLANTA É ASSIM
          Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser
@@ -3004,17 +3032,20 @@ S09 · A CASA NO SEU LOTE
          Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
          Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao
          engenheiro quanto isso pesa no orçamento.
-                                                                                                                                                              m 41
+ PARA QUEM NÃO SERVE                                                              LEVE AO SEU ENGENHEIRO
+ Quem não tem lote de esquina. Veja a F03 Casa                                      Quais são os recuos das duas ruas na esquina?
+                                                                                                                                                                m 41
 
 
 
 
- PARA QUEM NÃO SERVE                                                             LEVE AO SEU ENGENHEIRO
- Quem não tem lote de esquina. Veja a F03 Casa                                     Quais são os recuos das duas ruas na esquina?
- Família, p. 42.                                                                   Onde o muro pode ter altura cheia sem atrapalhar a
-                                                                                   visão dos carros?
+ Família, p. 42.                                                                    Onde o muro pode ter altura cheia sem atrapalhar a
+                                                                                    visão dos carros?
 
-Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                     57
+
+
+
+Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.                                                       57
 
 ===== PÁGINA 58 =====
 DEPOIS DE ESCOLHER
@@ -3139,8 +3170,11 @@ Casas que cabem (IDs)
 
 
 
-Que casa cabe no seu lote?                                                                          59
                                                                               Imagem ilustrativa.
+
+
+
+Que casa cabe no seu lote?                                                                          59
 
 ===== PÁGINA 60 =====
 DEPOIS DE ESCOLHER
@@ -3191,18 +3225,18 @@ F I M ( E C O M E Ç O DA O B R A )
 
 
    Agora é com você
-   Você já tem o mais difícil: o lote e uma casa que cabe nele, com o porquê de
-   cada parede. O próximo passo é a primeira conversa com o engenheiro ou o
-   arquiteto.
+   Você já tem o mais difícil: o lote e uma casa que deve caber nele (confirme os
+   recuos na prefeitura), com o porquê de cada parede. O próximo passo é a
+   primeira conversa com o engenheiro ou o arquiteto.
    Pergunte em qualquer casa                                     O que vem junto
          Qual é o recuo da minha rua e do meu lote?              [bônus: decisão do dono]
          Que fundação o meu solo pede?                           Ficou em dúvida sobre qual casa cabe?
-         Laje ou forro, e quanto isso muda no                    Mande a frente e o fundo do seu lote: [contato
-         orçamento?                                              do parceiro]
-         O meu lote tem matrícula e está regular na              Conhece alguém que vai construir?
-         prefeitura?                                             Mostre este e-book para quem também tem um
-         Quanto custa o projeto completo e o que está            lote esperando.
-         incluído nele?
+         Laje ou forro, e quanto isso muda no                    Mande a frente e o fundo do seu lote e receba as
+         orçamento?                                              casas que devem caber, como referência (não
+         O meu lote tem matrícula e está regular na              substitui o profissional): [contato do parceiro]
+         prefeitura?                                             Conhece alguém que vai construir?
+         Quanto custa o projeto completo e o que está            Mostre este e-book para quem também tem um
+         incluído nele?                                          lote esperando.
    Leve também a ficha do terreno preenchida e as perguntas da
    página da casa escolhida.
 
