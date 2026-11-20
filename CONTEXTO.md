@@ -79,6 +79,8 @@
 
 | 20/11/2026 | "Preste atenção no limite semanal e separe quanto gastar em cada uma das três partes que faltam: e-book, animações, vídeo" | [`ORCAMENTO.md`](ORCAMENTO.md): animações 45% (1.500 créditos do OpenArt), vídeo 30% (800), e-book 25% (450). A sessão não enxerga o limite semanal: o dono informa a porcentagem e a tabela vira número. Recomendação: uma sessão nova por parte |
 
+| 20/11/2026 | "De vez em quando, sempre confira se tem erro no código" | `python3 ferramentas/checar.py` confere a sintaxe de todo .py/.cjs/.js, o validador das 24 plantas, o motor 3D e o painel; regra no `CLAUDE.md` (rodar de vez em quando e sempre antes de entregar). Primeira rodada: tudo certo |
+
 ## Em aberto (esperando o dono)
 
 - Informar quanto resta do limite semanal (claude.ai, Configurações → Uso) para fechar o orçamento em números.
