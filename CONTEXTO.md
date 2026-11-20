@@ -70,6 +70,8 @@
 | 20/11/2026 | "OpenAI deve estar liberado" | Uma sessão nova procurou as ferramentas do OpenArt e também não achou: o plugin continua pedindo login. Sessão arquivada |
 | 20/11/2026 | "A qualidade da imagem está baixa: quero o mais perto possível de HD, Full HD, 4K" | Tudo em alta: prévias das 24 plantas e imagens 2D em 3200 x 4000, páginas do e-book em 2382 x 3372, mockups em 2160 x 2700, posts do Instagram em 2160 x 2700, B-roll em 2160 x 3840 (4K vertical). O PDF já era vetorial. Os carrosséis agora usam as plantas validadas, sem o 3D antigo |
 
+| 20/11/2026 | "OpenArt adicionado" e "aprenda a tirar o máximo de cada crédito com resultado muito bom" | Primeira rodada feita pela MinoAI com o OpenArt (GPT Image 2.5 Sunburst, não o primeiro modelo): 6 imagens finais em 2048 x 2560 com recortes 9:16 e 1:1 em `ebook/visual/openart/final/`, cerca de 200 créditos. Guia de preços e hábitos em [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md): rascunho a 5, final em 4K média a 20, alta (70) só na peça principal; casa só a partir da nossa vista da rua; vídeo começa no PixVerse V6 (50). A vista da rua de todas as casas foi corrigida (porta não fica mais sobre a janela) |
+
 ## Em aberto (esperando o dono)
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.
@@ -79,7 +81,6 @@
 
 - Decidir se o e-book promete as próximas casas de graça (o texto só aparece se `promessa_atualizacao` for preenchido em `ebook/config.json`, porque oferta escrita obriga).
 
-- Autorizar a conta do OpenArt nos conectores do claude.ai (o crédito já está liberado).
 
 - Aprovar o plano do e-book (formato A4 de cerca de 60 páginas, capa "Que casa cabe no seu lote?", começar os passos 1 a 6).
 - Título, preço, bônus, lançar com 12 ou 24 plantas, contato do parceiro.

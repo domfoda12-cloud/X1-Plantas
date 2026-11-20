@@ -169,7 +169,7 @@ def _movel(mv):
     return ""
 
 
-def svg_fachada(p):
+def svg_fachada(p, legenda=True):
     """Vista frontal simplificada: o que se vê da rua, com janelas, porta, platibanda e uma pessoa para escala."""
     cs = [c for c in p["comodos"] if c["tipo"] not in ("futuro",)]
     fechados = [c for c in cs if c["tipo"] not in ABERTOS]
@@ -202,32 +202,41 @@ def svg_fachada(p):
     s.append(f'<line x1="-1.6" y1="{H}" x2="{W + 1.6}" y2="{H}" stroke="#17202B" stroke-width=".05"/>')
     s.append(f'<rect x="0" y="0" width="{W}" height="{PLAT}" fill="#E3DED5"/>')
     # janelas e porta da frente
+    # Mesmas posições de porta e janela do motor 3D (ferramentas/planta3d.py): a janela nunca fica sobre a porta
     por_id = {c["id"]: c for c in cs}
-    for cid, lista in p["janelas"].items():
-        c = por_id.get(cid)
-        if not c or c["tipo"] in ABERTOS:
+    _, jan3d, portas3d, _ = P3.construir(p)
+    frontal = lambda c: all(not (o["tipo"] not in ABERTOS and o["y1"] <= c["y0"] + 1e-6 and o["x0"] < c["x1"] and o["x1"] > c["x0"]) for o in cs)
+    for j in jan3d:
+        c = por_id.get(j["id"])
+        x0s, y0s, x1s, y1s = j["seg"]
+        if not c or c["tipo"] in ABERTOS or abs(y0s - y1s) > 1e-6 or abs(y0s - c["y0"]) > 1e-6 or not frontal(c):
             continue
-        frontal = all(not (o["tipo"] not in ABERTOS and o["y1"] <= c["y0"] + 1e-6 and o["x0"] < c["x1"] and o["x1"] > c["x0"]) for o in cs)
-        for lado, larg in lista:
-            if lado != "frente" or not frontal:
-                continue
-            cx = (c["x0"] + c["x1"]) / 2
-            pe = 1.6 if c["tipo"] in ("banho", "lavabo") else 1.1 if c["tipo"] in ("cozinha", "servico") else 1.0
-            s.append(f'<rect x="{cx - larg / 2:.3f}" y="{Yv(2.2):.3f}" width="{larg:.3f}" height="{2.2 - pe:.3f}" fill="#9CCBE8" stroke="#2A3340" stroke-width=".04"/>')
-            s.append(f'<line x1="{cx:.3f}" y1="{Yv(2.2):.3f}" x2="{cx:.3f}" y2="{Yv(pe):.3f}" stroke="#2A3340" stroke-width=".03"/>')
-    for porta in p["portas"]:
-        if porta[0] == "ext" and porta[2] == "frente":
-            c = por_id[porta[1]]
-            cx = porta[3] if len(porta) > 3 else (c["x0"] + c["x1"]) / 2
-            s.append(f'<rect x="{cx - .45:.3f}" y="{Yv(2.1):.3f}" width=".9" height="2.1" fill="#B98A5E" stroke="#2A3340" stroke-width=".04"/>')
-            s.append(f'<circle cx="{cx + .3:.3f}" cy="{Yv(1.05):.3f}" r=".04" fill="#2A3340"/>')
+        a, b = min(x0s, x1s), max(x0s, x1s)
+        pe = j["peitoril"]
+        s.append(f'<rect x="{a:.3f}" y="{Yv(2.2):.3f}" width="{b - a:.3f}" height="{2.2 - pe:.3f}" fill="#9CCBE8" stroke="#2A3340" stroke-width=".04"/>')
+        s.append(f'<line x1="{(a + b) / 2:.3f}" y1="{Yv(2.2):.3f}" x2="{(a + b) / 2:.3f}" y2="{Yv(pe):.3f}" stroke="#2A3340" stroke-width=".03"/>')
+    for d in portas3d:
+        # porta de entrada: da rua (ext-*) ou de uma varanda/garagem para um cômodo fechado que se vê da rua
+        partes = str(d["id"]).split("-", 1)
+        if abs(math.sin(d["a0"])) > 1e-6 or len(partes) != 2:
+            continue
+        a_id, b_id = partes
+        alvo = por_id.get(b_id)
+        if not alvo or alvo["tipo"] in ABERTOS or abs(d["y"] - alvo["y0"]) > 1e-6 or not frontal(alvo):
+            continue
+        if a_id != "ext" and (a_id not in por_id or por_id[a_id]["tipo"] not in ABERTOS):
+            continue
+        a = d["x"] if abs(d["a0"]) < 1e-6 else d["x"] - d["r"]
+        s.append(f'<rect x="{a:.3f}" y="{Yv(2.1):.3f}" width="{d["r"]:.3f}" height="2.1" fill="#B98A5E" stroke="#2A3340" stroke-width=".04"/>')
+        s.append(f'<circle cx="{a + d["r"] - .15:.3f}" cy="{Yv(1.05):.3f}" r=".04" fill="#2A3340"/>')
     # enfeites: arbustos e pessoa de 1,70 m para escala
     for x in (-.9, W + .9):
         s.append(f'<circle cx="{x}" cy="{H - .35}" r=".45" fill="#8DB46C"/><circle cx="{x + .3}" cy="{H - .25}" r=".32" fill="#7AA25A"/>')
     px = W + 1.15
     s.append(f'<g fill="#5B6675"><circle cx="{px}" cy="{Yv(1.58):.3f}" r=".12"/><rect x="{px - .14}" y="{Yv(1.45):.3f}" width=".28" height=".65" rx=".1"/>'
              f'<rect x="{px - .12}" y="{Yv(.8):.3f}" width=".1" height=".8"/><rect x="{px + .02}" y="{Yv(.8):.3f}" width=".1" height=".8"/></g>')
-    s.append(f'<text x="{W / 2}" y="{H + .45}" text-anchor="middle" font-size=".26" class="mono" fill="#4F5B69">vista da rua · pessoa de 1,70 m para escala</text>')
+    if legenda:
+        s.append(f'<text x="{W / 2}" y="{H + .45}" text-anchor="middle" font-size=".26" class="mono" fill="#4F5B69">vista da rua · pessoa de 1,70 m para escala</text>')
     s.append("</svg>")
     return "".join(s)
 

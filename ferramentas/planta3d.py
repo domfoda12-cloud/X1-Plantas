@@ -133,7 +133,10 @@ def construir(planta):
             la, lb = trecho_livre(planta, c, lado)
             if lb - la < PORTA_ENTRADA:
                 la, lb = ia, ib
-            centro = porta[3] if len(porta) > 3 else (la + lb) / 2
+            # Com janela no mesmo lado, a porta vai para perto do canto (sobra parede para a janela), como se faz em obra
+            tem_janela = any(l == lado for (l, _) in planta.get("janelas", {}).get(b_id, []))
+            padrao = la + PORTA_ENTRADA / 2 + 0.15 if tem_janela and lb - la > 2.4 else (la + lb) / 2
+            centro = porta[3] if len(porta) > 3 else padrao
             centro = min(max(centro, la + PORTA_ENTRADA / 2 + 0.05), lb - PORTA_ENTRADA / 2 - 0.05)
             a, b = centro - PORTA_ENTRADA / 2, centro + PORTA_ENTRADA / 2
             if fechado(c):

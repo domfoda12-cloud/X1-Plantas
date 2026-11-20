@@ -89,3 +89,54 @@ DECISÃO: aprovado com as regras abaixo
 | 6 | Textura para enfeitar o e-book e os carrosséis | Papel de projeto azul com linhas de grade e manchas sutis, vista de cima, sem desenhos, sem texto |
 
 A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica para depois do 3D, que é o último passo.
+
+## Como tirar o máximo de cada crédito (preços medidos na conta em 20/11/2026)
+
+> Plano **Starter**, 4.000 créditos. **Limite de 4 imagens e 2 vídeos gerando ao mesmo tempo**: mande em lotes de até 4 imagens. Preços consultados com a ferramenta de custo do OpenArt, por imagem, na configuração indicada; outra configuração custa diferente e o preço final sai na hora de gerar.
+
+### Imagem: quanto custa cada nível
+
+| Modelo | Configuração | Créditos | Para quê |
+|---|---|---|---|
+| **GPT Image 2.5 Sunburst** | 1K, qualidade baixa | **5** | **Rascunho**: testar composição e prompt |
+| GPT Image 2.5 Sunburst | 2K, qualidade média | 10 | Rascunho bom (a 1ª rodada usou este) |
+| **GPT Image 2.5 Sunburst** | **4K, qualidade média** | **20** | **Final padrão**: post, anúncio, e-book |
+| GPT Image 2.5 Sunburst | 4K, qualidade alta | 70 | Só a peça principal (capa, imagem do anúncio campeão) |
+| **Kling 3 Omni** | **4K** | **20** | Alternativa no mesmo preço, boa para lotes e detalhe |
+| Nano Banana 2 | 4K | 50 | Pessoas realistas, quando o Sunburst falhar |
+| Nano Banana 2 Lite | padrão (1:1) | 15 | Rascunho rápido |
+| Kling Image 4 (o primeiro da lista) | 2K | 32 | Não usar: mais caro por resultado parecido |
+
+**A regra:** rascunho a 5 → escolhe → final em 4K média a 20 → qualidade alta (70) só para 1 ou 2 peças principais. A diferença entre 4K média e 4K alta é de 3,5 vezes no preço.
+
+### Vídeo: quanto custa um clipe (configuração padrão)
+
+| Modelo | Créditos | Quando |
+|---|---|---|
+| **PixVerse V6** | **50** | Movimento de câmera natural e estável: o mais barato para testar |
+| MiniMax H3 Swift / H3 Max Turbo | 75 | Prova de conceito rápida (480p a 768p) |
+| **Wan 3.0** | **100** | Até 30 s num clipe só, com o movimento consistente |
+| Veo 3.1 | 120 | Alta fidelidade e até 4K: a versão final |
+| Kling 3 Omni / Kling 3.0 | 175 | 4K, vários planos |
+| Seedance 2.5, Kling 4, Grok, FLUX 3 Video | 300 a 600 | Só se os outros falharem |
+
+**A regra:** imagem aprovada → vídeo **imagem para vídeo** de 4 a 5 s no PixVerse V6 (50) → se o movimento estiver certo, versão final no Veo 3.1 ou no Wan 3.0. Nunca vídeo direto do texto: sai uma casa que não é a nossa.
+
+### Sete hábitos que economizam
+
+1. **Prompt completo e específico** (cena, luz, câmera, materiais brasileiros, "sem texto, sem logotipo"). Prompt vago gasta crédito em tentativa. "Melhorar prompt automaticamente" desligado: a gente controla.
+2. **Uma imagem, vários formatos:** gerar em 4:5 com sobra e recortar para 9:16 e 1:1 no computador. Nunca gerar de novo por causa do formato.
+3. **Variações do mesmo prompt** com "quantidade de imagens" numa chamada só; prompts diferentes, no lote (até 4 por vez).
+4. **Partir da nossa imagem** (imagem para imagem, 2 créditos a mais) sempre que a cena mostrar a casa: a planta ou a vista da rua do e-book entram como referência, e a IA não inventa outra casa.
+5. **Conferir o rascunho antes de pagar o final:** Arquiteto (é a casa certa?) e Revisor (tem texto inventado? pessoa reconhecível?).
+6. **Guardar o prompt aprovado** neste arquivo, para refazer sem pagar tentativa.
+7. **Orçamento da conta (4.000):** cerca de 30 rascunhos (150) + 15 finais em 4K média (300) + 2 peças em 4K alta (140) + 6 testes de vídeo no PixVerse (300) + 3 vídeos finais no Veo 3.1 (360) = **cerca de 1.250**, sobrando reserva para a segunda rodada de anúncios.
+
+### O que a primeira rodada ensinou (20/11/2026)
+
+- **O "4K" do GPT Image 2.5 Sunburst em 4:5 entrega 2048 x 2560 px**, e o "1K" entrega 1024 x 1280. Para Instagram (1080 x 1350) e anúncio, 2048 x 2560 sobra. Para impressão grande, testar o Kling 3 Omni em 4K (20 créditos) e comparar os pixels.
+- **O rascunho de 5 créditos (1K, baixa) já sai quase com cara de final.** Vale fazer de 2 a 4 rascunhos por cena e escolher, em vez de 1 rascunho caro.
+- **Para subir a resolução sem perder a composição aprovada:** imagem para imagem com o próprio rascunho como referência e o prompt "recreate this exact photo at higher resolution and finer detail: same …" (descrevendo a cena de novo). As 3 finais ficaram idênticas aos rascunhos. Gerar de novo só pelo texto daria outra foto.
+- **Casa só a partir da nossa imagem.** O rascunho de texto da "casa que cresce" inventou uma casa que não existe no e-book: o Arquiteto vetou. Refeito com a **vista da rua da C03** como referência (subida sem texto: `ebook/visual/openart/referencias/c03-fachada.png`), saiu a mesma frente: porta no canto, janela de duas folhas, platibanda. É o caminho para todas as fachadas.
+- **Limite do plano:** mande no máximo 4 imagens por vez. O 5º item de um lote é recusado sem cobrança.
+- **Gasto da rodada:** 4 rascunhos a 10 + 3 rascunhos a 5 + 6 finais em 4K média a 20 a 22 = cerca de 180 créditos para 6 imagens finais.
