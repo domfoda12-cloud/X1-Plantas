@@ -12,6 +12,7 @@
 | "Não tem landing page" | Venda por anúncio (Facebook e Instagram) → comentário → WhatsApp. O parceiro cuida do funil, o dono cuida do material e do anúncio |
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
 | "Quero a opinião da MinoAI sempre, ele é o maestro" | Toda entrega traz a opinião do Maestro, tirada das ferramentas da MinoAI Frontier, com a fonte |
+| "Falo muito de eficiência, mas a prioridade é sempre a maior qualidade" | Peça final sempre na melhor configuração; economia só em rascunho e teste ([`CLAUDE.md`](CLAUDE.md)) |
 | "Ótimo ao máximo, TUDO" | Fazer completo e bem feito, sem atalho que prejudique a qualidade |
 | "Continue trabalhando sem pedir permissão" (para tarefas internas) | Avançar sozinho no que é interno; decisões de dinheiro, título, preço e publicação continuam com o dono |
 
@@ -71,6 +72,8 @@
 | 20/11/2026 | "A qualidade da imagem está baixa: quero o mais perto possível de HD, Full HD, 4K" | Tudo em alta: prévias das 24 plantas e imagens 2D em 3200 x 4000, páginas do e-book em 2382 x 3372, mockups em 2160 x 2700, posts do Instagram em 2160 x 2700, B-roll em 2160 x 3840 (4K vertical). O PDF já era vetorial. Os carrosséis agora usam as plantas validadas, sem o 3D antigo |
 
 | 20/11/2026 | "OpenArt adicionado" e "aprenda a tirar o máximo de cada crédito com resultado muito bom" | Primeira rodada feita pela MinoAI com o OpenArt (GPT Image 2.5 Sunburst, não o primeiro modelo): 6 imagens finais em 2048 x 2560 com recortes 9:16 e 1:1 em `ebook/visual/openart/final/`, cerca de 200 créditos. Guia de preços e hábitos em [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md): rascunho a 5, final em 4K média a 20, alta (70) só na peça principal; casa só a partir da nossa vista da rua; vídeo começa no PixVerse V6 (50). A vista da rua de todas as casas foi corrigida (porta não fica mais sobre a janela) |
+
+| 20/11/2026 | "A prioridade deve ser sempre a maior qualidade" | Regra no topo do `CLAUDE.md`. OpenArt: rascunho continua barato; final passa a ser na qualidade máxima útil, com teste lado a lado Sunburst extra-alta x Kling 3 Omni 4K para escolher o melhor |
 
 ## Em aberto (esperando o dono)
 

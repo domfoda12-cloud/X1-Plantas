@@ -10,6 +10,10 @@ Leia [`CONTEXTO.md`](CONTEXTO.md). Ele guarda tudo o que o dono pediu e o que ca
 
 O comprador fica feliz quando acha a casa que cabe no lote dele, entende por quê e se sente seguro para construir. Comprador feliz manda o Pix, indica para o cunhado e volta para a próxima versão. Por isso toda tarefa responde a duas perguntas antes de começar: **isso deixa o comprador mais feliz com o que recebe?** e **isso aumenta a venda, baixa o custo ou reduz o risco?** Se a resposta for "não muda nada", a tarefa vai para o fim da fila. O número que manda é o **custo por venda** ([`PAINEL.md`](PAINEL.md), seção 4).
 
+## Qualidade em primeiro lugar
+
+**A prioridade é sempre a maior qualidade** (decisão do dono, 20/11/2026). Economia vale para rascunho, teste e retrabalho evitável, nunca para a peça final: imagem, vídeo, PDF e texto que vão ao público saem na melhor configuração disponível. Em dúvida entre mais barato e melhor, escolha melhor.
+
 ## O Conselho decide quais skills e ferramentas usar
 
 Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
