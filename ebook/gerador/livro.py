@@ -24,6 +24,8 @@ sys.path.insert(0, str(RAIZ / "ferramentas"))
 sys.path.insert(0, str(AQUI))
 sys.path.insert(0, str(EBOOK / "fichas"))
 import plantas as PL  # noqa: E402
+import planta3d as P3  # noqa: E402
+import math  # noqa: E402
 import paginas as TX  # noqa: E402
 import textos as FICHAS  # noqa: E402
 
@@ -46,7 +48,7 @@ def m1(v):
 
 
 # ------------------------------------------------------------------ desenhos (SVG)
-def svg_planta(p, nomes=True, cotas=True, pad=0.5):
+def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
     """Planta com a frente da casa para baixo: o leitor entra por baixo, como chega da rua."""
     fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
     Dm = max([p["D"]] + [c["y1"] for c in fut])
@@ -55,6 +57,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5):
     pl = 1.1 if cotas else pad
     Y = lambda y: Dm - y
     s = [f'<svg viewBox="{-pl} {-pad} {Wm + pl + pad} {Dm + pad + pb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta da {E(p["nome"])}">']
+    rotulos = []
     for c in p["comodos"]:
         x0, y0, x1, y1, t = c["x0"], c["y0"], c["x1"], c["y1"], c["tipo"]
         w, h = x1 - x0, y1 - y0
@@ -69,9 +72,22 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5):
         if nomes and min(w, h) >= 1.15 and t not in ("circ", "externo"):
             nome = "PÁTIO" if t == "patio" else c["nome"].upper()
             fs = max(min(.34, (w - .2) / (len(nome) * .74)), .17)
-            s.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) - .04}" text-anchor="middle" font-size="{fs:.3f}" font-weight="700" fill="#1E2733">{E(nome)}</text>')
+            halo = 'stroke="#FBF8F2" stroke-width=".09" paint-order="stroke" stroke-linejoin="round"'
+            rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) - .04}" text-anchor="middle" font-size="{fs:.3f}" font-weight="700" fill="#1E2733" {halo}>{E(nome)}</text>')
             if t not in ABERTOS:
-                s.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .3}" text-anchor="middle" font-size=".22" class="mono" fill="#56616E">{m1(w * h)} m²</text>')
+                rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .3}" text-anchor="middle" font-size=".22" class="mono" fill="#56616E" {halo}>{m1(w * h)} m²</text>')
+    if moveis:
+        _, _, portas3d, mov = P3.construir(p)
+        for mv in mov:
+            rot = math.degrees(mv.get("rot", 0) or 0)
+            s.append(f'<g transform="translate({mv["x"]:.3f} {Y(mv["y"]):.3f}) scale(1 -1) rotate({-rot:.2f})">{_movel(mv)}</g>')
+        for d in portas3d:
+            hx, hy, r = d["x"], d["y"], d["r"]
+            ax, ay = hx + r * math.cos(d["a0"]), hy + r * math.sin(d["a0"])
+            bx, by = hx + r * math.cos(d["a1"]), hy + r * math.sin(d["a1"])
+            s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{ax:.3f}" y2="{Y(ay):.3f}" stroke="#FBF8F2" stroke-width=".16"/>')
+            s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 1 {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
+            s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{bx:.3f}" y2="{Y(by):.3f}" stroke="#C2683F" stroke-width=".04"/>')
     por_id = {c["id"]: c for c in p["comodos"]}
     for cid, lista in p["janelas"].items():
         c = por_id[cid]
@@ -89,6 +105,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5):
             if porta[2] == "frente":
                 cx = porta[3] if len(porta) > 3 else (c["x0"] + c["x1"]) / 2
                 s.append(f'<rect x="{cx - .45:.3f}" y="{Y(c["y0"]) - .1:.3f}" width=".9" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
+    s.extend(rotulos)
     if cotas:
         s.append(f'<g stroke="#0B4FA8" stroke-width=".03" fill="#0B4FA8" font-size=".3" class="mono">'
                  f'<line x1="0" y1="{Dm + .5}" x2="{p["W"]}" y2="{Dm + .5}"/>'
@@ -96,6 +113,121 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5):
                  f'<text x="{p["W"] / 2}" y="{Dm + .92}" text-anchor="middle" stroke="none">{m(p["W"])} m</text>'
                  f'<line x1="-.5" y1="{Dm - p["D"]}" x2="-.5" y2="{Dm}"/>'
                  f'<text x="-.62" y="{Dm - p["D"] / 2}" text-anchor="middle" stroke="none" transform="rotate(-90 -.62 {Dm - p["D"] / 2})">{m(p["D"])} m</text></g>')
+    s.append("</svg>")
+    return "".join(s)
+
+
+
+def _movel(mv):
+    """Símbolo de móvel visto de cima, em coordenadas locais (encosto/cabeceira no lado -y)."""
+    t, w, d = mv["tipo"], mv.get("w", .45), mv.get("d", .4)
+    L = '#5B6675'
+    R = lambda x, y, ww, hh, fill="#FFFFFF", sw=.025, rx=.04: f'<rect x="{x:.3f}" y="{y:.3f}" width="{ww:.3f}" height="{hh:.3f}" rx="{rx}" fill="{fill}" stroke="{L}" stroke-width="{sw}"/>'
+    C = lambda x, y, r, fill="#FFFFFF": f'<circle cx="{x:.3f}" cy="{y:.3f}" r="{r:.3f}" fill="{fill}" stroke="{L}" stroke-width=".025"/>'
+    if t in ("camaCasal", "camaSolteiro"):
+        n = 2 if t == "camaCasal" else 1
+        out = R(-w / 2, -d / 2, w, d)
+        out += R(-w / 2, -d / 2 + d * .38, w, d * .62, mv.get("manta", "#B9C7D6"), rx=.03)
+        lw = (w - .2) / n
+        out += "".join(R(-w / 2 + .1 + i * lw + .03, -d / 2 + .08, lw - .06, .3, "#FFFFFF", rx=.05) for i in range(n))
+        return out
+    if t == "sofa":
+        return R(-w / 2, -d / 2, w, d, "#C9D3C6") + R(-w / 2, -d / 2, w, .2, "#AEBDA9") + R(-w / 2, -d / 2, .18, d, "#AEBDA9") + R(w / 2 - .18, -d / 2, .18, d, "#AEBDA9")
+    if t == "tapete":
+        return f'<rect x="{-w / 2}" y="{-d / 2}" width="{w}" height="{d}" fill="#E8DCC8" stroke="#C9B59A" stroke-width=".03" stroke-dasharray=".12 .08"/>'
+    if t == "mesaCentro":
+        return R(-w / 2, -d / 2, w, d, "#D8C3A3")
+    if t == "mesaJantar":
+        cad = "".join(C(sx * (w / 2 + .2), sz, .16) for sx in (-1, 1) for sz in (-.3, .3))
+        return cad + R(-w / 2, -d / 2, w, d, "#D8C3A3")
+    if t == "bancada":
+        return R(-w / 2, -d / 2, w, d, "#EFEDE8") + f'<rect x="{-w / 2 + .3:.3f}" y="{-d / 2 + .1:.3f}" width=".5" height=".38" rx=".06" fill="#DDE6EC" stroke="{L}" stroke-width=".02"/>' + "".join(C(w / 2 - .45 + dx, dy, .08) for dx in (-.15, .15) for dy in (-.12, .12))
+    if t == "geladeira":
+        return R(-w / 2, -d / 2, w, d, "#EEF1F3") + f'<line x1="{-w / 2}" y1="{-d / 2}" x2="{w / 2}" y2="{d / 2}" stroke="{L}" stroke-width=".02"/>'
+    if t in ("tanque", "pia"):
+        return R(-w / 2, -d / 2, w, d, "#F4F4F2") + f'<ellipse cx="0" cy=".03" rx="{w * .32:.3f}" ry="{d * .3:.3f}" fill="#DDE6EC" stroke="{L}" stroke-width=".02"/>'
+    if t == "maquina":
+        return R(-w / 2, -d / 2, w, d, "#F4F4F2") + C(0, 0, min(w, d) * .32, "#DDE6EC")
+    if t == "vaso":
+        return R(-.18, -.32, .36, .14, "#FFFFFF") + f'<ellipse cx="0" cy=".05" rx=".17" ry=".24" fill="#FFFFFF" stroke="{L}" stroke-width=".025"/>'
+    if t == "box":
+        return R(-w / 2, -d / 2, w, d, "#E6F0F4") + f'<line x1="{-w / 2}" y1="{d / 2}" x2="{w / 2}" y2="{-d / 2}" stroke="{L}" stroke-width=".02"/>' + C(0, 0, .05)
+    if t == "armario":
+        n = max(2, round(w / .5))
+        return R(-w / 2, -d / 2, w, d, "#F2EEE7") + "".join(f'<line x1="{-w / 2 + w * i / n:.3f}" y1="{-d / 2}" x2="{-w / 2 + w * i / n:.3f}" y2="{d / 2}" stroke="{L}" stroke-width=".015"/>' for i in range(1, n))
+    if t == "escrivaninha":
+        return R(-w / 2, -d / 2, w, d, "#D8C3A3") + C(0, d / 2 + .25, .2, "#C9D3DC")
+    if t == "criado":
+        return R(-.22, -.2, .44, .4, "#D8C3A3")
+    if t == "planta":
+        r = .25 * mv.get("s", 1)
+        return f'<circle r="{r:.3f}" fill="#9BBF7A" stroke="#6E8F55" stroke-width=".025"/><circle r="{r * .45:.3f}" fill="#7FA862"/>'
+    if t == "carro":
+        return f'<rect x="{-w / 2}" y="{-d / 2}" width="{w}" height="{d}" rx=".35" fill="#E2B1A8" stroke="{L}" stroke-width=".03"/><rect x="{-w / 2 + .15}" y="{-d * .2:.3f}" width="{w - .3}" height="{d * .35:.3f}" rx=".15" fill="#B9C7D6" stroke="{L}" stroke-width=".02"/>'
+    if t == "poltrona":
+        return R(-w / 2, -d / 2, w, d, "#E3C9A6") + R(-w / 2, -d / 2, w, .16, "#CFAE85")
+    return ""
+
+
+def svg_fachada(p):
+    """Vista frontal simplificada: o que se vê da rua, com janelas, porta, platibanda e uma pessoa para escala."""
+    cs = [c for c in p["comodos"] if c["tipo"] not in ("futuro",)]
+    fechados = [c for c in cs if c["tipo"] not in ABERTOS]
+    PD, PLAT = 2.8, .6
+    W = p["W"]
+    H = PD + PLAT
+    s = [f'<svg viewBox="-1.6 -.6 {W + 3.2} {H + 1.2}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vista frontal simplificada">']
+    Yv = lambda z: H - z
+    # céu suave e chão
+    s.append(f'<rect x="-1.6" y="-.6" width="{W + 3.2}" height="{H + .6}" fill="#EEF4FB"/>')
+    s.append(f'<rect x="-1.6" y="{H}" width="{W + 3.2}" height=".6" fill="#D9D3C4"/>')
+    # para cada faixa de x, o cômodo fechado mais à frente
+    xs = sorted({round(v, 3) for c in cs for v in (c["x0"], c["x1"])})
+    for a, b in zip(xs, xs[1:]):
+        m = (a + b) / 2
+        frente = [c for c in fechados if c["x0"] - 1e-6 <= m <= c["x1"] + 1e-6]
+        cob = [c for c in cs if c["tipo"] in ("varanda", "garagem") and c["x0"] - 1e-6 <= m <= c["x1"] + 1e-6 and c["y0"] < .01]
+        if frente:
+            y0 = min(c["y0"] for c in frente)
+            tom = "#FBFAF7" if y0 < .01 else "#ECE8E1"
+            s.append(f'<rect x="{a:.3f}" y="{Yv(PD + PLAT):.3f}" width="{b - a:.3f}" height="{PD + PLAT:.3f}" fill="{tom}"/>')
+        if cob:
+            s.append(f'<rect x="{a:.3f}" y="{Yv(PD + .25):.3f}" width="{b - a:.3f}" height=".25" fill="#DCD6CB"/>')
+    # colunas das varandas e garagens
+    for c in cs:
+        if c["tipo"] in ("varanda", "garagem") and c["y0"] < .01:
+            for x in (c["x0"] + .08, c["x1"] - .08):
+                s.append(f'<rect x="{x - .08:.3f}" y="{Yv(PD):.3f}" width=".16" height="{PD:.3f}" fill="#CFC8BB"/>')
+    # contorno
+    s.append(f'<line x1="-1.6" y1="{H}" x2="{W + 1.6}" y2="{H}" stroke="#17202B" stroke-width=".05"/>')
+    s.append(f'<rect x="0" y="0" width="{W}" height="{PLAT}" fill="#E3DED5"/>')
+    # janelas e porta da frente
+    por_id = {c["id"]: c for c in cs}
+    for cid, lista in p["janelas"].items():
+        c = por_id.get(cid)
+        if not c or c["tipo"] in ABERTOS:
+            continue
+        frontal = all(not (o["tipo"] not in ABERTOS and o["y1"] <= c["y0"] + 1e-6 and o["x0"] < c["x1"] and o["x1"] > c["x0"]) for o in cs)
+        for lado, larg in lista:
+            if lado != "frente" or not frontal:
+                continue
+            cx = (c["x0"] + c["x1"]) / 2
+            pe = 1.6 if c["tipo"] in ("banho", "lavabo") else 1.1 if c["tipo"] in ("cozinha", "servico") else 1.0
+            s.append(f'<rect x="{cx - larg / 2:.3f}" y="{Yv(2.2):.3f}" width="{larg:.3f}" height="{2.2 - pe:.3f}" fill="#9CCBE8" stroke="#2A3340" stroke-width=".04"/>')
+            s.append(f'<line x1="{cx:.3f}" y1="{Yv(2.2):.3f}" x2="{cx:.3f}" y2="{Yv(pe):.3f}" stroke="#2A3340" stroke-width=".03"/>')
+    for porta in p["portas"]:
+        if porta[0] == "ext" and porta[2] == "frente":
+            c = por_id[porta[1]]
+            cx = porta[3] if len(porta) > 3 else (c["x0"] + c["x1"]) / 2
+            s.append(f'<rect x="{cx - .45:.3f}" y="{Yv(2.1):.3f}" width=".9" height="2.1" fill="#B98A5E" stroke="#2A3340" stroke-width=".04"/>')
+            s.append(f'<circle cx="{cx + .3:.3f}" cy="{Yv(1.05):.3f}" r=".04" fill="#2A3340"/>')
+    # enfeites: arbustos e pessoa de 1,70 m para escala
+    for x in (-.9, W + .9):
+        s.append(f'<circle cx="{x}" cy="{H - .35}" r=".45" fill="#8DB46C"/><circle cx="{x + .3}" cy="{H - .25}" r=".32" fill="#7AA25A"/>')
+    px = W + 1.15
+    s.append(f'<g fill="#5B6675"><circle cx="{px}" cy="{Yv(1.58):.3f}" r=".12"/><rect x="{px - .14}" y="{Yv(1.45):.3f}" width=".28" height=".65" rx=".1"/>'
+             f'<rect x="{px - .12}" y="{Yv(.8):.3f}" width=".1" height=".8"/><rect x="{px + .02}" y="{Yv(.8):.3f}" width=".1" height=".8"/></g>')
+    s.append(f'<text x="{W / 2}" y="{H + .45}" text-anchor="middle" font-size=".26" class="mono" fill="#4F5B69">vista da rua · pessoa de 1,70 m para escala</text>')
     s.append("</svg>")
     return "".join(s)
 
@@ -203,7 +335,7 @@ def montar(plantas, config, numeros):
       <div class="capa-topo"><span class="eti">{len(plantas)} PLANTAS DE CASAS TÉRREAS · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Mede o seu lote, acha a marca na fita, abre a página.</p></div>
-      <div class="capa-planta">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), nomes=True, cotas=False)}</div>
+      <div class="capa-planta">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), nomes=True, cotas=False, moveis=True)}</div>
       {svg_fita(contagem)}""", "capa", rodape=False)
 
     # 2. aviso e como usar
@@ -250,7 +382,7 @@ def montar(plantas, config, numeros):
     legenda = "".join(f"<li><b>{E(t)}.</b> {E(d)}</li>" for t, d in TX.LEGENDA_LEITURA)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
       <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis e a porta de entrada é amarela.</p>
-      <div class="leitura"><div class="leitura-fig">{svg_planta(c01)}</div><ul class="legenda">{legenda}</ul></div>
+      <div class="leitura"><div class="leitura-fig">{svg_planta(c01, moveis=True)}</div><ul class="legenda">{legenda}</ul></div>
       <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a casa coberta, sem varanda e garagem.</div>""")
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>As palavras da obra</h2>
@@ -335,7 +467,7 @@ def dupla(L, p, por_id, numeros):
     L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · LOTE A PARTIR DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
         <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {r["area_fechada"]:.0f} m².'))}</p></div>
-      <div class="planta-grande">{svg_planta(p)}</div>
+      <div class="planta-grande">{svg_planta(p, moveis=True)}</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
         <div><h4>Erros que esta casa evita</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
              "casa esq", orelha=f, aviso=True)
@@ -360,6 +492,7 @@ def dupla(L, p, por_id, numeros):
           {linha('Janela nos quartos', '✓', '1/6 do piso')}
           {linha('Melhor frente', ORI[r['orientacao']['melhor']])}
           <div class="r-nota">Conferido pelo validador do X1-Plantas com recuos de referência. Confira os da sua cidade.</div></div></div>
+      <div class="fachada"><h4>Vista da rua (simplificada)</h4>{svg_fachada(p)}</div>
       <div><h4>O que o arquiteto pensou</h4><div class="pensou">
         {''.join(f'<div>{icone(ic)}<p>{E(x)}</p></div>' for ic, x in zip(['sol', 'ar', 'agua', 'seta'], pens))}</div></div>
       <div class="duas">{nao_html}<div><h4>Leve ao seu engenheiro</h4><ul class="perg">{''.join(f'<li>{E(q)}</li>' for q in perg)}</ul></div></div>""",
