@@ -296,6 +296,35 @@ def svg_fita(contagem, alto=False):
     return f'<div class="fita-box">{"".join(s)}<div class="marcas">{marcas}</div></div>'
 
 
+FOTOS = EBOOK / "visual" / "openart" / "final"
+CACHE_FOTOS = EBOOK / ".cache" / "fotos"
+
+
+def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center"):
+    """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
+    from PIL import Image
+    origem = FOTOS / f"{nome}.png"
+    if not origem.exists():
+        return ""
+    CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
+    destino = CACHE_FOTOS / f"{nome}.jpg"
+    if not destino.exists() or destino.stat().st_mtime < origem.stat().st_mtime:
+        im = Image.open(origem).convert("RGB")
+        im.resize((1800, round(im.height * 1800 / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
+    src = os.path.relpath(destino, SAIDA)
+    return (f'<figure class="foto" style="height:{altura_mm}mm"><img src="{src}" alt="" style="object-position:{pos}">'
+            f'<figcaption>{E(legenda)}</figcaption></figure>')
+
+
+def capa_fundo():
+    """Fundo da capa: o papel azul de projeto (OpenArt), escurecido para o título ler bem."""
+    if not (FOTOS / "06-papel-azul.png").exists():
+        return ""
+    foto("06-papel-azul", 1)
+    src = os.path.relpath(CACHE_FOTOS / "06-papel-azul.jpg", SAIDA)
+    return f"background: linear-gradient(rgba(6,40,90,.55), rgba(6,40,90,.35)), url('{src}') center/cover"
+
+
 def galeria(plantas, ids, legenda=""):
     """Faixa decorativa de plantas em miniatura (sem nomes), para fechar páginas de texto."""
     por_id = {p["id"]: p for p in plantas}
@@ -311,7 +340,7 @@ class Livro:
         self.paginas = []
         self.inicio = {}
 
-    def pagina(self, conteudo, classe="", orelha=None, rodape=True, aviso=False):
+    def pagina(self, conteudo, classe="", orelha=None, rodape=True, aviso=False, estilo=""):
         n = len(self.paginas) + 1
         par = n % 2 == 0
         tab = ""
@@ -322,7 +351,7 @@ class Livro:
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
                    f'<span>{AVISO if aviso else E(self.config.get("titulo_curto", "Que casa cabe no seu lote?"))}</span></div>')
-        self.paginas.append(f'<section class="pagina {classe}">{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
+        self.paginas.append(f'<section class="pagina {classe}"{f' style="{estilo}"' if estilo else ""}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
         return n
 
 
@@ -345,7 +374,7 @@ def montar(plantas, config, numeros):
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Mede o seu lote, acha a marca na fita, abre a página.</p></div>
       <div class="capa-planta">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), nomes=True, cotas=False, moveis=True)}</div>
-      {svg_fita(contagem)}""", "capa", rodape=False)
+      {svg_fita(contagem)}""", "capa", rodape=False, estilo=capa_fundo())
 
     # 2. aviso e como usar
     L.pagina(f"""
@@ -355,6 +384,7 @@ def montar(plantas, config, numeros):
         <li><b>Ache as casas que cabem.</b><span>Na página {numeros['lote']}, cada largura de lote leva às casas que cabem nela. A aba amarela na borda das páginas faz o mesmo quando você folheia.</span></li>
         <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas para a primeira conversa.</span></li>
       </ol>
+      {foto("02-maos-medindo", 66, pos="center 72%")}
       <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""")
 
     # 3. ache pelo lote
@@ -439,7 +469,7 @@ def montar(plantas, config, numeros):
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
-    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>')
+    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 70, pos="center 60%")}')
 
     # próximos passos
     passos = [
@@ -451,7 +481,7 @@ def montar(plantas, config, numeros):
         ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
         ("Regularize a casa pronta", "Habite-se na prefeitura e averbação na matrícula, no cartório."),
     ]
-    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{galeria(plantas, ["C04", "E05", "F03", "S05"])}', "texto")
+    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto")
 
     # bônus e contato
     bonus = [b for b in config.get("bonus", []) if not b.startswith("[")]
@@ -460,6 +490,7 @@ def montar(plantas, config, numeros):
       {'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
       <h3>Novas casas</h3><p>Este e-book cresce em levas.{' ' + E(config['promessa_atualizacao']) if config.get('promessa_atualizacao') else ''}</p>
       <h3>Dúvidas</h3><p>{E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
+      {foto("05-familia-lote", 92, pos="center 22%")}
       {svg_fita(contagem)}""", "fim")
     return L
 

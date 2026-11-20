@@ -128,3 +128,8 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 
 .atencao { background: #FFF4DA; border-left: 1.2mm solid #E0A92E; padding: 2mm 3mm; border-radius: 1mm; font-size: 8.6pt; }
 .atencao ul { padding-left: 4mm; display: grid; gap: .6mm; }
+
+.foto { position: relative; border-radius: 2mm; overflow: hidden; margin: 0; flex: 0 0 auto; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto figcaption { position: absolute; right: 2mm; bottom: 1.5mm; font-size: 6.5pt; color: #fff; background: rgba(0,0,0,.45); padding: .4mm 1.6mm; border-radius: 1mm; }
+.fim .foto { margin-top: auto; }

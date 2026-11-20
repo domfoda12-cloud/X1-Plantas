@@ -75,6 +75,8 @@
 
 | 20/11/2026 | "A prioridade deve ser sempre a maior qualidade" | Regra no topo do `CLAUDE.md`. OpenArt: rascunho continua barato; final passa a ser na qualidade máxima útil, com teste lado a lado Sunburst extra-alta x Kling 3 Omni 4K para escolher o melhor |
 
+| 20/11/2026 | (loop) Rodada final do OpenArt em extra-alta | 6 finais em 2048 x 2560 (lote na qualidade máxima) com recortes 9:16 e 1:1; teste mostrou máxima quase igual à extra-alta, então extra-alta é o padrão. Saldo: 2.757 créditos. Fotos entraram no e-book com "Imagem ilustrativa": mãos medindo (como usar), lote com trena (ficha do terreno), planta no canteiro (próximos passos), família (página final) e papel azul no fundo da capa |
+
 ## Em aberto (esperando o dono)
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.
