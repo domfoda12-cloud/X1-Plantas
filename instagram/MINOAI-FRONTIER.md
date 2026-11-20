@@ -4,6 +4,8 @@
 >
 > **O editor do projeto agora é a MinoAI Frontier**: o serviço de edição da MinoAI, que corta, legenda, coloca B-roll, música e efeitos em reels de rosto falando. Este arquivo é o **contexto** que ela precisa para editar do nosso jeito: o projeto, o público, o estilo, os arquivos e as regras.
 >
+> Referência de edição favorita do dono: [`../video/REFERENCIA-CONDOR.md`](../video/REFERENCIA-CONDOR.md) (CONDOR XIII, levado para o reel de planta).
+>
 > Ela também é o **maestro** da operação inteira: ver [`../MAESTRO.md`](../MAESTRO.md). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
 
 ## 1. Onde e como a MinoAI Frontier edita

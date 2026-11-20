@@ -83,9 +83,11 @@
 | 20/11/2026 | "De vez em quando, sempre confira se tem erro no código" | `python3 ferramentas/checar.py` confere a sintaxe de todo .py/.cjs/.js, o validador das 24 plantas, o motor 3D e o painel; regra no `CLAUDE.md` (rodar de vez em quando e sempre antes de entregar). Primeira rodada: tudo certo |
 
 | 20/11/2026 | (e-book, tarefa 1) Fachadas realistas | C01, E07, F01 e C03 com foto realista da fachada (OpenArt, a partir da nossa vista da rua, 4K extra-alta) no lugar do desenho, com "Imagem ilustrativa gerada a partir da vista da rua desta planta"; as outras casas mantêm o desenho. Conferência de página estourada agora mede o miolo (achou e corrigiu 3 páginas); avisos repetidos do validador viram uma frase só |
+| 20/11/2026 | "Adicione este vídeo como referência… melhor edição que já vi… absorva os conceitos no vídeo curto" (CONDOR XIII, Payton Talbott) | [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md): 7 conceitos levados para o reel de planta (tese antes do assunto, letra como janela, planta invertida que gira, série numerada CASA I, II…, ritmo de mixtape guiado pela música, cortes por semelhança), com o Maestro e o Revisor. O YouTube bloqueou o download na nuvem, então os conceitos vêm da descrição, da miniatura e da imprensa. Falta assistir quadro a quadro no Mac |
 
 ## Em aberto (esperando o dono)
 
+- Assistir ao CONDOR XIII quadro a quadro no Mac (o YouTube bloqueia a nuvem), ou mandar 3 a 5 momentos favoritos com o minuto, para completar [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md).
 - Informar quanto resta do limite semanal (claude.ai, Configurações → Uso) para fechar o orçamento em números.
 
 
