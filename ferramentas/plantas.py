@@ -680,7 +680,7 @@ def cmd_resumo():
         r = p["_r"]
         m = r.metricas
         q = p["quartos_txt"]
-        print(f"| {p['id']} | {p['nome']} | {m['area_total']:.0f} m² | {q} | {p['banheiros']} | "
+        print(f"| {p['id']} | {p['nome']} | {m['area_fechada']:.0f} m² | {q} | {p['banheiros']} | "
               f"{m['lote_comercial'][0]} x {m['lote_comercial'][1]} | {m['orientacao']['melhor']} |")
 
 

@@ -1,7 +1,7 @@
 {
  "id": "E03",
  "nome": "Casa Fita",
- "W": 3.6,
+ "W": 3.5,
  "D": 13.2,
  "comodos": [
   {
@@ -55,7 +55,7 @@
    "tipo": "varanda",
    "x0": 2.6,
    "y0": 0.0,
-   "x1": 3.6,
+   "x1": 3.5,
    "y1": 13.2
   }
  ],
@@ -139,8 +139,8 @@
   "info": [],
   "metricas": {
    "area_fechada": 34.3,
-   "area_total": 47.5,
-   "area_coberta_aberta": 13.2,
+   "area_total": 46.2,
+   "area_coberta_aberta": 11.9,
    "luz": {
     "sala": 0.21,
     "cozinha": 0.15,
@@ -150,7 +150,7 @@
    },
    "circulacao": 0.0,
    "lote": [
-    5.1,
+    5.0,
     17.7
    ],
    "recuos": {
@@ -160,10 +160,10 @@
     "dir": 1.5
    },
    "lote_comercial": [
-    6,
+    5,
     20
    ],
-   "taxa_ocupacao": 0.53,
+   "taxa_ocupacao": 0.52,
    "orientacao": {
     "melhor": "norte",
     "segunda": "sul",

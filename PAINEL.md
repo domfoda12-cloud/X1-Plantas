@@ -9,12 +9,12 @@
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 19/11/2026. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 20/11/2026. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|
 | **1º lançamento do e-book** | 0 de 12 prontas · 1 com 3D |
-| Plantas no catálogo | 35 · ideia 34 · dados 0 · 3D 1 · pronta 0 |
+| Plantas no catálogo | 35 · ideia 11 · dados 23 · 3D 1 · pronta 0 |
 | Progresso do 1º lançamento | `░░░░░░░░░░░░░░░░░░░░` 0/12 |
 | Vídeo de anúncio | 5 de 5 versões renderizadas · apresentador não gravado |
 | Avisos de conferência | 0 |

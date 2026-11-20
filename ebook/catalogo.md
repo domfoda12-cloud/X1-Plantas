@@ -32,35 +32,35 @@
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| C01 | Casa Compacta | 55 m² | 2 | 1 | 10 x 20 | Sala e cozinha integradas, hall curto | 1 | `3D` |
-| C02 | Casa Studio | 32 m² | studio | 1 | 8 x 15 | Tudo em um ambiente; boa para aluguel | 2 | `ideia` |
-| C03 | Casa Inicial | 42 m² | 1 | 1 | 8 x 20 | Pronta para ganhar o 2º quarto depois | 1 | `ideia` |
-| C04 | Casa Duo | 48 m² | 2 | 1 | 8 x 20 | Dois quartos no menor espaço possível | 1 | `ideia` |
-| C05 | Casa Popular | 45 m² | 2 | 1 | 10 x 20 | Paredes alinhadas, construção econômica | 2 | `ideia` |
-| C06 | Casa Compacta Suíte | 62 m² | 2 (1 suíte) | 2 | 10 x 20 | Suíte do casal sem aumentar muito a área | 1 | `ideia` |
-| C07 | Casa Compacta Varanda | 58 m² | 2 | 1 | 10 x 25 | Varanda na frente integrada à sala | 2 | `ideia` |
+| C01 | Casa Compacta | 55 m² | 2 | 1 | 8 x 15 | A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto | 1 | `3D` |
+| C02 | Casa Studio | 32 m² | studio | 1 | 6 x 15 | Tudo em um ambiente; boa para aluguel | 2 | `dados` |
+| C03 | Casa Inicial | 41 m² | 1 (+1 depois) | 1 | 7 x 20 | Pronta para ganhar o 2º quarto depois | 1 | `dados` |
+| C04 | Casa Duo | 48 m² | 2 | 1 | 8 x 15 | Varanda na frente e dois quartos do mesmo tamanho | 1 | `dados` |
+| C05 | Casa Popular | 47 m² | 2 | 1 | 8 x 15 | Cabe no padrão de programa habitacional (40 m² ou mais) sem desperdiçar um metro | 2 | `dados` |
+| C06 | Casa Compacta Suíte | 57 m² | 2 (1 suíte) | 2 | 9 x 15 | Suíte do casal sem aumentar muito a área | 1 | `dados` |
+| C07 | Casa Compacta Varanda | 55 m² | 2 | 1 | 8 x 15 | Varanda larga para a rede, a cadeira e o carro parado na chuva | 2 | `dados` |
 
 ## E. Terreno estreito: frente de 5 a 8 m
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| E01 | Casa Estreita | 70 m² | 2 | 2 | 8 x 30 | Corredor lateral com luz natural em todos os cômodos | 1 | `ideia` |
-| E02 | Casa Corredor | 52 m² | 2 | 1 | 6 x 25 | Cômodos em fila, sem perder ventilação | 1 | `ideia` |
-| E03 | Casa Fita | 40 m² | 1 | 1 | 5 x 25 | Para o lote mais estreito | 1 | `ideia` |
-| E04 | Casa Pátio | 68 m² | 2 | 1 | 8 x 25 | Pátio interno que ilumina o meio da casa | 2 | `ideia` |
-| E05 | Casa Estreita Suíte | 60 m² | 2 (1 suíte) | 2 | 6 x 30 | Suíte nos fundos, longe da rua | 1 | `ideia` |
-| E06 | Casa Estreita Gourmet | 78 m² | 2 | 2 | 7 x 30 | Área gourmet nos fundos | 2 | `ideia` |
-| E07 | Casa Estreita 3 Quartos | 88 m² | 3 | 2 | 8 x 30 | Três quartos em 8 m de frente | 2 | `ideia` |
+| E01 | Casa Estreita | 58 m² | 2 (1 suíte) | 2 | 8 x 25 | Garagem na frente e todos os cômodos abrindo para o corredor | 1 | `dados` |
+| E02 | Casa Corredor | 40 m² | 2 | 1 | 7 x 20 | Cômodos em fila, sem perder ventilação | 1 | `dados` |
+| E03 | Casa Fita | 34 m² | 1 | 1 | 5 x 20 | Cabe em lote de 5 m de frente: todas as janelas dão para o corredor | 1 | `dados` |
+| E04 | Casa Pátio | 55 m² | 2 | 1 | 9 x 15 | Pátio de luz entre os quartos: ventilação cruzada e privacidade | 2 | `dados` |
+| E05 | Casa Estreita Suíte | 58 m² | 2 (1 suíte) | 2 | 8 x 20 | Suíte nos fundos, longe da rua | 1 | `dados` |
+| E06 | Casa Estreita Gourmet | 68 m² | 2 (1 suíte) | 2 | 9 x 25 | Área gourmet nos fundos, aberta para o corredor | 2 | `dados` |
+| E07 | Casa Estreita 3 Quartos | 77 m² | 3 (1 suíte) | 2 | 9 x 25 | Três quartos em 8 m de frente | 2 | `dados` |
 
 ## F. Família: 3 ou 4 quartos
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| F01 | Casa Família Compacta | 78 m² | 3 | 1 | 10 x 25 | Três quartos com um banheiro bem posicionado | 1 | `ideia` |
-| F02 | Casa Integrada | 90 m² | 3 | 2 | 12 x 25 | Sala, cozinha e varanda num ambiente só | 2 | `ideia` |
-| F03 | Casa Família | 95 m² | 3 | 2 | 12 x 25 | Dois quartos com acesso ao banheiro social, varanda nos fundos | 1 | `ideia` |
-| F04 | Casa Família Suíte | 105 m² | 3 (1 suíte) | 2 | 12 x 25 | Suíte do casal separada dos quartos das crianças | 1 | `ideia` |
-| F05 | Casa em L | 110 m² | 3 | 2 | 12 x 30 | Formato em L abraçando a varanda | 2 | `ideia` |
+| F01 | Casa Família Compacta | 68 m² | 3 | 1 | 10 x 15 | Três quartos com um banheiro bem posicionado | 1 | `dados` |
+| F02 | Casa Integrada | 86 m² | 3 (1 suíte) | 2 | 12 x 15 | Sala, cozinha e varanda num ambiente só | 2 | `dados` |
+| F03 | Casa Família | 78 m² | 3 (1 suíte) | 2 | 11 x 15 | Dois quartos com acesso ao banheiro social, varanda nos fundos | 1 | `dados` |
+| F04 | Casa Família Suíte | 80 m² | 3 (1 suíte) | 2 | 11 x 20 | Suíte do casal separada dos quartos das crianças | 1 | `dados` |
+| F05 | Casa em L | 90 m² | 3 (1 suíte) | 2 | 13 x 15 | Formato em L abraçando a varanda | 2 | `dados` |
 | F06 | Casa 4 Quartos | 130 m² | 4 (1 suíte) | 3 | 15 x 30 | Para família grande | 3 | `ideia` |
 | F07 | Casa Térrea Ampla | 150 m² | 4 (2 suítes) | 3 | 15 x 30 | Duas suítes, área social grande | 3 | `ideia` |
 
@@ -70,13 +70,13 @@
 |---|---|---|---|---|---|---|---|---|
 | S01 | Casa com Edícula | 85 + 25 m² | 2 + kitnet | 2 | 10 x 30 | Kitnet nos fundos para renda extra | 3 | `ideia` |
 | S02 | Casas Geminadas | 2 x 50 m² | 2 cada | 1 cada | 12 x 25 | Duas casas no mesmo lote | 3 | `ideia` |
-| S03 | Casa Acessível | 70 m² | 2 | 1 | 12 x 25 | Portas largas, banheiro adaptado, sem degraus | 2 | `ideia` |
-| S04 | Casa Home Office | 75 m² | 2 + escritório | 1 | 10 x 25 | Escritório com entrada separada | 1 | `ideia` |
-| S05 | Casa de Praia | 65 m² | 2 | 2 | 10 x 25 | Ducha externa e varanda | 2 | `ideia` |
+| S03 | Casa Acessível | 75 m² | 2 | 1 | 11 x 15 | Sem degrau, circulação de 1,50 m, banheiro com giro de cadeira de rodas e portas largas | 2 | `dados` |
+| S04 | Casa Home Office | 66 m² | 2 + escritório | 1 | 10 x 20 | Escritório com porta para a rua: cliente entra sem passar pela casa | 1 | `dados` |
+| S05 | Casa de Praia | 59 m² | 2 (1 suíte) | 2 | 9 x 15 | Varandão na frente e ventilação cruzada em todos os cômodos | 2 | `dados` |
 | S06 | Casa de Campo | 90 m² | 2 | 2 | 20 x 30 | Varanda em volta da casa | 3 | `ideia` |
-| S07 | Casa Gourmet | 100 m² | 3 | 2 | 12 x 30 | Área gourmet integrada à sala | 2 | `ideia` |
+| S07 | Casa Gourmet | 74 m² | 3 (1 suíte) | 2 | 11 x 15 | Cozinha aberta para a área gourmet, a casa que recebe | 2 | `dados` |
 | S08 | Casa Garagem Dupla | 95 m² | 2 | 2 | 12 x 25 | Garagem coberta para 2 carros | 3 | `ideia` |
-| S09 | Casa de Esquina | 85 m² | 3 | 2 | 12 x 25 | Duas fachadas, entrada por qualquer rua | 2 | `ideia` |
+| S09 | Casa de Esquina | 78 m² | 3 (1 suíte) | 2 | 14 x 15 | Duas fachadas, entrada por qualquer rua | 2 | `dados` |
 | S10 | Casa Multigeração | 120 m² | 3 + suíte térrea | 3 | 15 x 25 | Suíte acessível para os avós | 3 | `ideia` |
 
 ## O. Sobrados: dois pavimentos

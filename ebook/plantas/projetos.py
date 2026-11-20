@@ -114,7 +114,7 @@ def todas():
                         (3.4, F("quarto1", "Quarto casal", "casal"))],
                        [("ext", "corr", "frente"), ("corr", "sala"), ("sala", "cozinha", "aberto"), ("corr", "cozinha"),
                         ("cozinha", "servico"), ("corr", "servico"), ("corr", "banho"), ("corr", "quarto1")],
-                       "1 quarto", 1, recuos={"esq": 0.0},
+                       "1 quarto", 1, recuos={"esq": 0.0}, corr=0.9,
                        destaque="Cabe em lote de 5 m de frente: todas as janelas dão para o corredor"))
     P.append(casa("E04", "Casa Pátio", 7.5, 8.0,
                   H((3.4, V((4.0, F("sala", "Sala", "sala")), (2.3, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
