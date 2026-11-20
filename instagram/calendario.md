@@ -18,9 +18,9 @@
 
 | Dia | Publicação | Detalhe | Registro |
 |---|---|---|---|
-| **Seg 23/11** | **Post 5** e o reel do lote ("Me fala a frente do seu lote…", com o B-roll `video/broll/ebook-folheando.mp4`) | Posts 1, 3, 6, 8, 9 e reserva só entram depois de sair o blueprint e o 3D novos da C01 e de rodar `gerar-imagens.cjs` de novo. Fixe o reel do lote no perfil | — |
+| **Seg 23/11** | **Posts 5 e 3** e o reel do lote ("Me fala a frente do seu lote…", com o B-roll `video/broll/ebook-folheando.mp4`) | Os carrosséis já usam as plantas validadas em 2D. Fixe o reel do lote no perfil | — |
 | Ter 24/11 | Stories | Editor termina as 5 versões do anúncio: gravação na trilha de baixo, `camada-transparente.webm` por cima ([`../video/VIDEO.md`](../video/VIDEO.md), seção 5). Passe cada uma pela [lista de conferência](referencias-mino-lee.md#6-lista-de-conferência-para-cada-vídeo-novo) e pelo [checklist do anúncio](../video/anuncios/checklist-revisao.md) | — |
-| **Qua 25/11** | **5 reels de teste** (v1 a v5) | Reels de teste com intervalo de 1 h: v1 às 13h, v2 às 14h, v3 às 15h, v4 às 16h, v5 às 17h. Mesma legenda, mesma capa, mesma música: só o gancho muda | Anote o horário de cada um no [registro](INSTAGRAM.md#6-registro-dos-testes) |
+| **Qua 25/11** | **Post 8** (12h) + **5 reels de teste** (v1 a v5) | Reels de teste com intervalo de 1 h: v1 às 13h, v2 às 14h, v3 às 15h, v4 às 16h, v5 às 17h. Mesma legenda, mesma capa, mesma música: só o gancho muda | Anote o horário de cada um no [registro](INSTAGRAM.md#6-registro-dos-testes) |
 | Qui 26/11 | Stories | 24 h: primeira olhada nos números de cada versão. **Não** libere nenhuma ainda | Anote a leitura de 24 h |
 | **Sex 27/11** | **Versão vencedora para todos** | 48 h: compare o tempo médio assistido e quem chegou aos 27 s. A que ganhar nos dois vai para os seguidores (no próprio reel de teste, pela opção de compartilhar com os seguidores) | Preencha a leitura de 48 h e marque a vencedora. Mande para você decidir o gancho da semana seguinte |
 | Sáb e dom | Stories | Responder todos os comentários e DMs em até 24 h | — |

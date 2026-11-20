@@ -15,7 +15,8 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const RAIZ = path.resolve(__dirname, '..', '..');
-const PLANTAS = path.join(RAIZ, 'animacoes-3d', 'plantas');
+// Imagens 2D validadas (ferramentas/imagens2d.py). O 3D antigo não é usado: ele mostra outro desenho da C01.
+const PLANTAS = path.join(RAIZ, 'animacoes-3d', 'plantas-2d');
 const SAIDA = path.join(__dirname, 'imagens');
 
 const COR = { azul: '#0B4FA8', escuro: '#083B80', claro: '#BFD4F2', amarelo: '#FFC857', ok: '#7EE2A8', ruim: '#FF9C8A' };
@@ -30,13 +31,13 @@ const P = {
   estreita: { id: 'E01', nome: 'Casa Estreita', pasta: 'casa-estreita', area: '58 m²', quartos: '2 quartos (1 suíte)', banhos: '2 banheiros', lote: 'a partir de 8 x 25 m', para: 'Lote de 8 m de frente', destaque: 'Garagem na frente e todos os cômodos abrindo para o corredor coberto' },
   familia: { id: 'F03', nome: 'Casa Família', pasta: 'casa-familia', area: '78 m²', quartos: '3 quartos (1 suíte)', banhos: '2 banheiros', lote: 'a partir de 11 x 15 m', para: 'Família com filhos', destaque: 'Suíte para o casal e varanda na frente' },
 };
-const ARQ = { blueprint: '01-blueprint.png', humanizada: '02-planta-humanizada.png', perspectiva: '03-perspectiva.png', lateral: '04-perspectiva-lateral.png' };
+const ARQ = { blueprint: '01-blueprint.png', humanizada: '02-planta-humanizada.png', perspectiva: '03-fachada.png', lateral: '04-lote.png' };
 
 const faltando = new Set();
 function arquivo(pl, tipo) {
   const f = path.join(PLANTAS, pl.pasta, ARQ[tipo]);
   if (fs.existsSync(f)) return 'file://' + f;
-  faltando.add(`${pl.id} ${pl.nome}: animacoes-3d/plantas/${pl.pasta}/${ARQ[tipo]}`);
+  faltando.add(`${pl.id} ${pl.nome}: animacoes-3d/plantas-2d/${pl.pasta}/${ARQ[tipo]}`);
   return null;
 }
 
@@ -352,7 +353,7 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 (async () => {
   const filtro = process.argv[2] || '';
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
   const tmp = path.join(SAIDA, '.tmp.html');
   fs.mkdirSync(SAIDA, { recursive: true });
   for (const [nome, fazer] of Object.entries(posts)) {

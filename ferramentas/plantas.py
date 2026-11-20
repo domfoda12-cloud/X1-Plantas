@@ -716,7 +716,8 @@ def cmd_validar(ids):
 
 
 def cmd_previa(ids):
-    saida = PASTA / "previas"
+    """Rascunho rápido em ebook/plantas/rascunhos/. As prévias em alta saem de: python3 ferramentas/imagens2d.py --previas"""
+    saida = PASTA / "rascunhos"
     saida.mkdir(parents=True, exist_ok=True)
     plantas = [p for p in carregar() if not ids or p["id"] in ids]
     for p in plantas:

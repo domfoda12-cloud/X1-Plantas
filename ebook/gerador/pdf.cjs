@@ -29,9 +29,12 @@ const { chromium } = require('playwright');
   if (previa) {
     const fs = require('fs');
     fs.mkdirSync(previa, { recursive: true });
-    await pagina.setViewportSize({ width: 794, height: 1123 });
-    await pagina.emulateMedia({ media: 'print' });
-    const paginas = await pagina.$$('.pagina');
+    // Prévias em alta: 3x a página A4 a 96 dpi (2382 x 3369 px)
+    const alta = await navegador.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 3 });
+    await alta.goto('file://' + path.resolve(entrada), { waitUntil: 'load' });
+    await alta.evaluate(() => document.fonts.ready);
+    await alta.emulateMedia({ media: 'print' });
+    const paginas = await alta.$$('.pagina');
     for (let i = 0; i < paginas.length; i++) {
       await paginas[i].screenshot({ path: path.join(previa, `pagina-${String(i + 1).padStart(2, '0')}.png`) });
     }

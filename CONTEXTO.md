@@ -67,6 +67,9 @@
 | 20/11/2026 | "Procure referências de projetos similares; se for internacional, adapte aos termos do Brasil" | [`ebook/referencias/projetos-similares.md`](ebook/referencias/projetos-similares.md): Só Projetos, Planta Pronta, Projeto Pronto, Archshop, sites americanos de "terreno estreito" e Etsy. Corrigida a afirmação de que ninguém busca pelo terreno; ficha ganhou medidas da casa e "pode espelhar"; âncora de preço com fonte |
 | 20/11/2026 | "A operação está rodando no computador correto?" | Não é o computador do dono: a sessão roda num contêiner na nuvem, e tudo fica salvo no GitHub (branch `planta-de-casas-anuncio`). A edição de vídeo da MinoAI precisa do Mac do dono |
 
+| 20/11/2026 | "OpenAI deve estar liberado" | Uma sessão nova procurou as ferramentas do OpenArt e também não achou: o plugin continua pedindo login. Sessão arquivada |
+| 20/11/2026 | "A qualidade da imagem está baixa: quero o mais perto possível de HD, Full HD, 4K" | Tudo em alta: prévias das 24 plantas e imagens 2D em 3200 x 4000, páginas do e-book em 2382 x 3372, mockups em 2160 x 2700, posts do Instagram em 2160 x 2700, B-roll em 2160 x 3840 (4K vertical). O PDF já era vetorial. Os carrosséis agora usam as plantas validadas, sem o 3D antigo |
+
 ## Em aberto (esperando o dono)
 
 - Compartilhar a calculadora de lote com o parceiro (menu Share da página) para ele usar no WhatsApp.
@@ -83,4 +86,4 @@
 - Arquiteto registrado para revisar as 24 plantas.
 - Gravar o apresentador; criar o Instagram; configurar a MinoAI Frontier no Mac.
 - Atualizar o relatório jurídico com Caixa e Confea (pedido antes, sem resposta).
-- Posts antigos com o 3D da Casa Compacta (posts 1, 6, 9 e reserva) mostram o desenho antigo: esperar o 3D novo.
+- Reels 1 e 6 usam o vídeo 3D antigo da Casa Compacta: usar o B-roll do e-book ou esperar o 3D novo.
