@@ -15,7 +15,7 @@ const RODAPE = 'Planta de referência. O projeto para a prefeitura é assinado p
 const CLIPES = [
   { nome: 'v1-transicao', tempos: 3, de: 0, vel: 3.55, janela8: true,
     titulo: '<b>Cabe</b> em lote<br>8 x 25 m.', selo: true },
-  { nome: 'v2-voo', tempos: 2, de: 0.3, vel: 2.0, titulo: '72 m² · 3 quartos<br>(1 suíte) · 2 banheiros', pequeno: true, selo: true },
+  { nome: 'v2-voo', tempos: 2, de: 0.15, vel: 1.0, titulo: '72 m² · 3 quartos<br>(1 suíte) · 2 banheiros', pequeno: true, selo: true },
   { nome: 'v3-sala', tempos: 2, de: 1.6, vel: 1.0, selo: true },
   { nome: 'v4-cozinha', tempos: 2, de: 1.2, vel: 1.0, selo: true },
   { nome: 'v5-fachada', tempos: 3, de: 0, vel: 2.0, titulo: 'Casa Estreita<br><b>3 Quartos</b>', selo: true },
@@ -40,8 +40,13 @@ function sh(args) { execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args]
     await p.screenshot({ path: destino, omitBackground: true });
   };
   // máscara do "8": o último quadro do blueprint com um 8 gigante e estreito vazado (conceito 3 do CONDOR)
+  // (sem os textos: o título novo entra por cima, e o texto velho não pode crescer junto com a máscara)
   const q = path.join(TMP, 'q.png');
-  sh(['-sseof', '-0.04', '-i', path.join(AQUI, 'abertura.mp4'), '-frames:v', '1', q]);
+  await p.addInitScript(`window.E07 = ${fs.readFileSync(path.join(AQUI, 'e07.json'), 'utf8')};`);
+  await p.goto('file://' + path.join(AQUI, 'blueprint.html'));
+  await p.evaluate(() => window.pronto);
+  await p.evaluate(() => { window.renderAt(7.49, 'abertura'); document.getElementById('txt').style.display = 'none'; document.querySelector('.base').style.display = 'none'; });
+  await p.screenshot({ path: q });
   const q64 = fs.readFileSync(q).toString('base64');
   await p.setContent(`<canvas id="c" width="1080" height="1920"></canvas><style>body{margin:0;background:transparent}</style>`);
   await p.evaluate(async (src) => {
@@ -87,7 +92,7 @@ function sh(args) { execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args]
   const total = 15.0;
   sh(['-f', 'concat', '-safe', '0', '-i', lista, '-ss', String(8 * B), '-i', path.join(RAIZ, 'video/musica/big-big-128bpm.wav'),
     '-filter_complex', `[0:v]fps=${FPS},noise=alls=4:allf=t,format=yuv420p[v];[1:a]atrim=0:${total},afade=t=out:st=${total - 0.08}:d=0.08[a]`,
-    '-map', '[v]', '-map', '[a]', '-t', String(total), '-c:v', 'libx264', '-crf', '20', '-preset', 'slow', '-pix_fmt', 'yuv420p',
+    '-map', '[v]', '-map', '[a]', '-t', String(total), '-c:v', 'libx264', '-crf', '23', '-preset', 'slow', '-pix_fmt', 'yuv420p',
     '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', SAIDA]);
   console.log(SAIDA, (fs.statSync(SAIDA).size / 1e6).toFixed(1) + ' MB');
 })();
