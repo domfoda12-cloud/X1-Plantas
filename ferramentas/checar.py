@@ -113,7 +113,7 @@ rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "valid
 rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "exportar"])
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
-rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py"])
+rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
 print(f"\n{'Tudo certo.' if not falhas else str(len(falhas)) + ' problema(s): ' + ', '.join(falhas)}")

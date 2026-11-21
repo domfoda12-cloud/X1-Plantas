@@ -3,6 +3,7 @@
 Uso:
     python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf
     python3 ebook/gerador/livro.py --previa DIR    também salva um PNG de cada página em DIR
+    python3 ebook/gerador/livro.py --conferir      só confere, numa pasta temporária, sem mexer em ebook/saida
 
 Tudo sai dos dados: plantas e números de ebook/plantas/projetos.py (via ferramentas/plantas.py),
 textos de cada casa de ebook/fichas/textos.py, textos gerais de ebook/gerador/paginas.py
@@ -717,6 +718,10 @@ def atualizar_calculadora(plantas, numeros):
 
 if __name__ == "__main__":
     prev = None
+    if "--conferir" in sys.argv:
+        # só confere (página estourada, gancho, PDF): gera numa pasta temporária e não mexe em ebook/saida
+        import tempfile
+        SAIDA = Path(tempfile.mkdtemp(prefix="ebook-conferir-"))
     if "--previa" in sys.argv:
         prev = Path(sys.argv[sys.argv.index("--previa") + 1]).resolve()
     gerar(prev)

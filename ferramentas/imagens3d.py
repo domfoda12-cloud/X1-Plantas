@@ -46,6 +46,8 @@ def recortar(origem, destino, margem=18):
 def main(ids):
     ids = ids or sorted(p.stem for p in (VIDEO / "src" / "plantas").glob("*.js"))
     DESTINO.mkdir(parents=True, exist_ok=True)
+    if not (VIDEO / "node_modules" / "three").exists():  # cópia nova do projeto: as dependências do 3D não vão no git
+        subprocess.run(["npm", "install", "--silent"], cwd=VIDEO, check=True)
     for pid in ids:
         txt = (VIDEO / "src" / "plantas" / f"{pid}.js").read_text(encoding="utf-8")
         W, D = (float(re.search(rf"{n} = ([\d.]+)", txt).group(1)) for n in ("LARGURA", "PROFUNDIDADE"))
