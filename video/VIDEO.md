@@ -6,6 +6,20 @@
 > As regras de retenção e as referências de edição (Robert McKeaveney e Mino Lee) ficam em [`../instagram/INSTAGRAM.md`](../instagram/INSTAGRAM.md).
 > A casa em 3D que aparece no vídeo vem do mesmo motor das [`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md).
 
+## 0. Os dois vídeos de 21/11/2026 (sem apresentador)
+
+| Vídeo | Para quê | Arquivo | Roteiro |
+|---|---|---|---|
+| **Prévia do WhatsApp** | O parceiro manda na conversa, para o cliente ver o e-book por dentro antes do Pix | `saida/previa-whatsapp/x1-plantas-previa.mp4` (720x1280, leve) | `roteiros/previa-whatsapp.json` |
+| **Principal** | Reel e anúncio: "Todo lote é uma conta" | `saida/principal/x1-plantas-principal.mp4` (1080x1920) | `roteiros/principal.json` |
+
+- **Montar de novo:** `python3 video/montar.py video/roteiros/<nome>.json`. Mudou um texto? Mude no roteiro e monte de novo. O montador põe o texto, o aviso legal em todas as cenas e comprime.
+- **Cenas:** `broll/clipes/` (clipes do OpenArt, Kling 3.0, feitos a partir das nossas imagens, mais a animação 3D da C01 do motor novo) e `broll/paginas/` (páginas do e-book).
+- **Método (Maestro, MinoAI Frontier):** texto no primeiro quadro, uma ideia por cena, corte a cada 3 a 5 segundos, a casa aparece cedo, chamada única no fim.
+- **Sem música de propósito:** a faixa licenciada entra na edição final da MinoAI Frontier, no Mac do dono.
+- **Palavra da chamada:** o principal usa "PLANTA". Se o dono escolher "LOTE", troque no roteiro e monte de novo.
+- Toda cena de foto leva "Imagem ilustrativa"; o 3D leva "Ilustração do modelo 3D".
+
 ## Nesta pasta
 
 | Arquivo | Para que serve |
@@ -16,6 +30,7 @@
 | `anuncios/anuncio-facebook.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
 | `anuncios/brief-criativo.md` | Brief dos criativos (formatos, estilo, variações) |
 | `anuncios/checklist-revisao.md` | Revisão antes de publicar qualquer anúncio |
+| `montar.py`, `roteiros/`, `broll/` | Montador dos vídeos sem apresentador, os roteiros e as cenas |
 | `src/`, `render.cjs`, `carimbar.py` | Código que gera o vídeo |
 
 ## 1. Por que este vídeo prende quem quer construir

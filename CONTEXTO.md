@@ -23,6 +23,7 @@
 - **Arquiteto registrado:** revisar as 24 plantas, começando pelas apertadas (E02, E03, suítes da E01, E05 e E07); decidir os banheiros abaixo de 1,10 m livres (19 casas) e a nota de clima por zona bioclimática.
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.
 - **Toolkit de vídeo de demonstração:** a proteção automática bloqueou a instalação. Trocar o modo para "Accept edits" ou rodar `npx product-demo-agent-toolkit skills .claude/skills`.
+- **Vídeo principal e prévia do WhatsApp (feitos em 21/11):** assistir aos dois (`video/saida/principal/` e `video/saida/previa-whatsapp/`) e dizer o que muda; escolher a palavra da chamada (PLANTA ou LOTE); pôr a música licenciada na edição da MinoAI Frontier, no Mac. OpenArt ficou com 115 créditos.
 - **Vídeo (última frente):** os 5 anúncios e os reels 1 e 6 usam o 3D antigo da C01, refazer; assistir ao CONDOR XIII no Mac ou mandar 3 a 5 momentos com o minuto; gravar o apresentador, criar o Instagram e configurar a MinoAI Frontier no Mac; testar PLANTA contra LOTE como palavra do comentário.
 - **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09: refazer quando a frente de animação abrir.
 - Informar quanto resta do limite semanal (Configurações → Uso) para fechar o orçamento em números.

@@ -6,7 +6,7 @@
 
 - **Limite semanal do Claude:** esta sessão **não enxerga** quanto resta. Ele aparece para o dono em claude.ai, em Configurações → Uso. A divisão abaixo é em **porcentagem do que restar**.
 - **Esta sessão até agora:** cerca de 1 milhão de tokens escritos e 347 milhões lidos do cache, com o contexto em 84% (perto de ser resumido). A maior parte do gasto vem de reler a conversa longa a cada passo e de abrir imagens para conferir.
-- **OpenArt:** saldo de **2.757 créditos** (plano Starter), medido pela ferramenta da conta.
+- **OpenArt:** saldo de **115 créditos** em 21/11/2026 (plano Starter), medido pela ferramenta da conta. Os últimos 1.400 foram para 8 clipes de vídeo (Kling 3.0, 175 cada), a pedido do dono ("gaste o resto no vídeo"). Com 115 não dá para outro clipe; dá para rascunhos de imagem.
 
 ## A divisão (qualidade em primeiro lugar)
 
