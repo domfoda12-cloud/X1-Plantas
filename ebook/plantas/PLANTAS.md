@@ -56,7 +56,6 @@
 
 **Atenção**
 
-- Sala fica com 2,79 x 3,19 m livres (8,9 m²): funciona, mas é apertado; o engenheiro confere a mobília
 - Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
 
 ## C05 · Casa Popular
@@ -72,10 +71,6 @@
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
-
-**Atenção**
-
-- Sala fica com 2,79 x 3,19 m livres (8,9 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## C06 · Casa Compacta Suíte
 
@@ -139,7 +134,7 @@
 
 **Atenção**
 
-- Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília
 - Quarto casal fica com 2,30 x 3,18 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E03 · Casa Fita
@@ -158,28 +153,28 @@
 
 **Atenção**
 
-- Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília
+- Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília
 - Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E04 · Casa Pátio
 
 ![E04](previas/E04.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **leste**
+**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **norte**
 
-*Pátio de luz entre os quartos: os dois abrem janela para ele*
+*Pátio de luz entre os quartos: o quarto casal abre janela para ele*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua a leste; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Pátio de luz: o quarto casal abre janela para o pátio, com luz e ar sem dar para o vizinho.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 ## E05 · Casa Estreita Suíte
 
 ![E05](previas/E05.png)
 
-**58 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 20 m** · frente para o **norte**
+**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 20 m** · frente para o **norte**
 
 **Por que esta planta é assim**
 
@@ -289,7 +284,7 @@
 
 ![F05](previas/F05.png)
 
-**90 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **13 x 15 m** · frente para o **sul**
+**91 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **13 x 15 m** · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -303,15 +298,17 @@
 
 ![S03](previas/S03.png)
 
-**75 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
+**78 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
 
-*Circulação e banheiro largos, pensados para cadeira de rodas (o engenheiro adapta à NBR 9050)*
+*Circulação larga e banheiro com espaço livre para o giro de 1,50 m da cadeira de rodas*
 
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+- Casa acessível: o engenheiro confere o resto da NBR 9050 (barras, portas, área de transferência, entrada sem degrau)
 
 ## S04 · Casa Home Office
 

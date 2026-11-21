@@ -141,7 +141,7 @@
  "validacao": {
   "erros": [],
   "avisos": [
-   "Sala fica com 2,30 x 3,69 m livres (8,5 m²): funciona, mas é apertado; o engenheiro confere a mobília",
+   "Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília",
    "Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília"
   ],
   "info": [],
@@ -152,13 +152,13 @@
    "util": {
     "sala": [
      2.3,
-     3.69,
-     8.5
+     3.75,
+     8.6
     ],
     "cozinha": [
      2.3,
-     2.68,
-     6.2
+     2.74,
+     6.3
     ],
     "servico": [
      2.3,
@@ -182,11 +182,11 @@
     ]
    },
    "luz": {
-    "sala": 0.21,
-    "cozinha": 0.15,
-    "servico": 0.18,
-    "banho": 0.15,
-    "quarto1": 0.2
+    "sala": 0.2071,
+    "cozinha": 0.1511,
+    "servico": 0.1775,
+    "banho": 0.1538,
+    "quarto1": 0.2036
    },
    "circulacao": 0.0,
    "lote": [

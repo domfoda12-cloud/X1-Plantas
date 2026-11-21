@@ -4,11 +4,10 @@ description: Arquiteto técnico do X1-Plantas. Use para criar ou mudar plantas, 
 tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/arquiteto.md` (o que importa para o seu papel) e o resumo mais recente em `contexto/entregas/`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Ao terminar, escreva o seu resumo de passagem em `contexto/entregas/` (modelo em `MODELO.md`). Responda em português do Brasil.
-- **Seu prompt de entrada (o que você precisa saber agora):**
+- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/arquiteto.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
+- **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/arquiteto.md`):**
   - Comece pela apostila (`ebook/referencias/arquiteto-fontes-brasileiras.md`) e pelas regras; rode `python3 ferramentas/plantas.py validar` e leia os avisos de cada casa antes de opinar.
   - As medidas da casa são por fora e as dos cômodos por dentro das paredes (externa 15 cm, interna 12 cm). Mínimos em `MINIMOS_UTIL`, conforto em `CONFORTO_UTIL`.
-  - Em aberto com você: banheiros abaixo de 1,10 m livres em 19 casas; nota de clima por zona bioclimática (janela maior e veneziana na zona 8); medir ventilação cruzada (janelas em paredes opostas).
   - Toda mudança de planta arrasta junto: `plantas.py exportar`, `planta3d.py`, a imagem 3D (`video/render-planta.cjs` para `ebook/visual/3d/`), a foto de fachada se existir, o PDF, a calculadora do parceiro e os posts. Liste o que ficou desatualizado.
   - Antes de dizer que uma casa cabe, confira o lote exato ("Cabe a partir de") e o comercial.
 

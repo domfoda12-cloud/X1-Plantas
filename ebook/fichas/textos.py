@@ -52,7 +52,7 @@ TEXTOS = {
                 nao_serve=("Quem precisa de 2 quartos (e tem lote de 7 m ou mais).", "E02"), erros=[2, 3, 4],
                 perguntas=["Meu lote de 5 m tem recuo lateral obrigatório?", "A parede da esquerda pode ficar na divisa?", PADRAO[1]]),
     "E04": dict(gancho="9 m de frente. Um pátio de luz entre os quartos.",
-                para_quem="Quem quer quartos claros e ventilados sem abrir janela para o vizinho, e um cantinho de jardim dentro de casa.",
+                para_quem="Quem quer o quarto de casal claro, com janela para um pátio interno, e um cantinho de jardim dentro de casa.",
                 nao_serve=("Quem quer garagem.", "E01"), erros=[1, 2, 4],
                 perguntas=["Como drenar a água da chuva do pátio?", PADRAO[0], PADRAO[1]]),
     "E05": dict(gancho="8 m de frente. Suíte e 2 banheiros num lote estreito.",

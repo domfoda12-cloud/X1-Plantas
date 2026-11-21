@@ -120,10 +120,10 @@ def todas():
                   H((3.4, V((4.0, F("sala", "Sala", "sala")), (2.3, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
                     (1.2, V((5.5, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
                     (None, V((3.0, F("quarto1", "Quarto casal", "casal", pref=("dir", "fundos"))), (1.5, F("patio", "Pátio de luz", "patio")),
-                             (None, F("quarto2", "Quarto", "dorm", pref=("esq", "fundos")))))),
+                             (None, F("quarto2", "Quarto", "dorm"))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("sala", "circ", "aberto"),
                    ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2")],
-                  "2 quartos", 1, destaque="Pátio de luz entre os quartos: os dois abrem janela para ele"))
+                  "2 quartos", 1, destaque="Pátio de luz entre os quartos: o quarto casal abre janela para ele"))
     P.append(_estreita("E05", "Casa Estreita Suíte", 3.9,
                        _fila(3.9, 3.8, 2.8, 1.8, 0, 2.0, [suite(1.3, 2.6, 3.4), (3.0, F("quarto2", "Quarto", "dorm"))]),
                        PORTAS_FILA + [("corr", "quarto1"), ("quarto1", "bsuite"), ("corr", "quarto2")],
@@ -159,7 +159,7 @@ def todas():
     P.append(casa("F05", "Casa em L", 11.4, 8.6,
                   H((3.8, V((4.6, F("sala", "Sala", "sala")), (2.6, F("jantar", "Jantar", "jantar")),
                             (2.8, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
-                    (1.2, V((7.4, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
+                    (1.3, V((7.4, F("circ", "Circulação", "circ")), (None, F("banho", "Banheiro", "banho")))),
                     (None, V((2.6, F("quarto2", "Quarto", "dorm")), (2.6, F("quarto3", "Quarto", "dorm")),
                              (2.8, F("quarto1", "Suíte", "casal")), (1.3, F("bsuite", "Banho da suíte", "banho", privativo="quarto1")),
                              (None, F("jardim", "Jardim", "externo"))))),

@@ -215,19 +215,19 @@
    "area_coberta_aberta": 0,
    "util": {
     "sala": [
-     3.79,
-     3.59,
-     13.6
+     3.85,
+     3.65,
+     14.1
     ],
     "jantar": [
-     2.28,
+     2.4,
      3.59,
-     8.2
+     8.6
     ],
     "cozinha": [
-     2.28,
+     2.34,
      3.59,
-     8.2
+     8.4
     ],
     "servico": [
      0.99,
@@ -266,15 +266,15 @@
     ]
    },
    "luz": {
-    "sala": 0.2,
-    "jantar": 0.2,
-    "cozinha": 0.15,
-    "servico": 0.15,
-    "banho": 0.14,
-    "quarto3": 0.2,
-    "quarto2": 0.2,
-    "quarto1": 0.2,
-    "bsuite": 0.15
+    "sala": 0.2026,
+    "jantar": 0.1974,
+    "cozinha": 0.1535,
+    "servico": 0.1535,
+    "banho": 0.1406,
+    "quarto3": 0.2024,
+    "quarto2": 0.2024,
+    "quarto1": 0.2043,
+    "bsuite": 0.1538
    },
    "circulacao": 0.095,
    "lote": [

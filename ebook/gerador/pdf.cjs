@@ -31,7 +31,7 @@ const { chromium } = require('playwright');
       })
       .filter((p) => p.estourou)
       .map((p) => p.i));
-  if (estouradas.length) console.warn('AVISO: conteúdo passou do limite nas páginas ' + estouradas.join(', '));
+  if (estouradas.length) { console.warn('AVISO: conteúdo passou do limite nas páginas ' + estouradas.join(', ')); process.exitCode = 1; }
 
   await pagina.pdf({ path: saida, format: 'A4', printBackground: true, preferCSSPageSize: true });
 

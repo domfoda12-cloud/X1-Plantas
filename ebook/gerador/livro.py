@@ -36,7 +36,7 @@ CORES = {"sala": "#E9D8BD", "estar": "#E9D8BD", "jantar": "#E9D8BD", "cozinha": 
          "banho": "#CFE2E8", "lavabo": "#CFE2E8", "casal": "#EEDCC2", "dorm": "#F1E4CF", "circ": "#F4EFE6",
          "escritorio": "#E4DEF1", "varanda": "#E7E3DA", "garagem": "#DEDCD8", "patio": "#CFE3BB", "externo": "#CFE3BB"}
 ABERTOS = {"varanda", "garagem", "patio", "externo"}
-ORI = {"norte": "norte", "sul": "sul", "leste": "leste", "oeste": "oeste"}
+ORI = PL.ORI_NOME
 
 
 def m(v):
@@ -297,7 +297,7 @@ FOTOS = EBOOK / "visual" / "openart" / "final"
 CACHE_FOTOS = EBOOK / ".cache" / "fotos"
 
 
-def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None):
+def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800):
     """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
     from PIL import Image
     origem = (pasta or FOTOS) / f"{nome}.png"
@@ -306,10 +306,10 @@ def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=Non
     if not origem.exists():
         return ""
     CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
-    destino = CACHE_FOTOS / f"{(pasta.name + '-') if pasta else ''}{nome}.jpg"
+    destino = CACHE_FOTOS / f"{(pasta.name + '-') if pasta else ''}{nome}-{largura}.jpg"
     if not destino.exists() or destino.stat().st_mtime < origem.stat().st_mtime:
         im = Image.open(origem).convert("RGB")
-        im.resize((1800, round(im.height * 1800 / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
+        im.resize((min(largura, im.width), round(im.height * min(largura, im.width) / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
     src = os.path.relpath(destino, SAIDA)
     return (f'<figure class="foto" style="height:{altura_mm}mm"><img src="{src}" alt="" style="object-position:{pos}">'
             f'<figcaption>{E(legenda)}</figcaption></figure>')
@@ -330,7 +330,7 @@ def fachada_bloco(p):
                f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}')
     else:
         rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg" style="height:{alt}mm">{svg_fachada(p)}</div>'
-    v3d = foto(p["id"], alt, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D)
+    v3d = foto(p["id"], alt, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D, largura=900)
     if not v3d:
         return f'<div class="fachada">{rua}</div>'
     return f'<div class="fachada vistas"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'
@@ -522,10 +522,8 @@ def montar(plantas, config, numeros):
     return L
 
 
-def n0(x):
-    """Arredonda como na escola: 90,5 vira 91."""
-    import decimal
-    return str(decimal.Decimal(str(round(x, 6))).quantize(decimal.Decimal("1"), rounding=decimal.ROUND_HALF_UP))
+AVISOS = []  # o que impede a entrega: gancho que não bate com o validador
+n0 = PL.n0  # o mesmo arredondamento em todo número que vai ao público
 
 
 def melhor_lado(o):
@@ -563,14 +561,13 @@ def dupla(L, p, por_id, numeros):
     pens = PL.pensou(p)
     g = t.get("gancho", "")
     if g and (f"{f} m de frente" not in g or (f"{n0(r['area_fechada'])} m²" not in g and "m²" in g)):
+        AVISOS.append(p["id"])
         print(f"AVISO: gancho de {p['id']} não bate com o validador ({f} m, {n0(r['area_fechada'])} m²): {g}")
     erros = list(t.get("erros", [1, 2, 4]))
     # "corredor comprido" só conta como evitado se a casa não tiver corredor de fora a fora
     circs = [c for c in p["comodos"] if c["tipo"] == "circ"]
     if 2 in erros and (r["circulacao"] > 0.12 or any(max(c["x1"] - c["x0"], c["y1"] - c["y0"]) > 6.0 for c in circs)):
-        erros.remove(2)
-        erros.append(next(a for a in (1, 5, 7) if a not in erros))
-        erros.sort()
+        erros.remove(2)  # sem pôr outro no lugar: só entra o que foi conferido
     erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
     cat = CATEGORIAS[p["id"][0]]
     L.pagina(f"""
@@ -691,7 +688,9 @@ def gerar(previa=None):
     cmd = ["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / "ebook.pdf")] + ([str(previa)] if previa else [])
     r = subprocess.run(cmd, env=env, capture_output=True, text=True)
     print(r.stdout.strip(), r.stderr.strip())
+    falhou = r.returncode != 0
     print(f"{len(L.paginas)} páginas, {len(plantas)} casas")
+    atualizar_calculadora(plantas, numeros)
     gratis = config.get("plantas_gratis") or [config.get("planta_gratis", "C01")]
     for pid in gratis:
         G = montar_gratis(plantas, config, pid)
@@ -699,6 +698,21 @@ def gerar(previa=None):
         arq.write_text(sem_quebra(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>"), encoding="utf-8")
         r = subprocess.run(["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")], env=env, capture_output=True, text=True)
         print(r.stdout.strip(), r.stderr.strip())
+        falhou = falhou or r.returncode != 0
+    if falhou or AVISOS:
+        sys.exit("ERRO: página estourada, gancho que não bate com o validador ou falha ao gerar o PDF (veja os avisos acima)")
+
+
+def atualizar_calculadora(plantas, numeros):
+    """Reescreve a lista de casas da calculadora do parceiro a partir do validador (nunca à mão)."""
+    arq = EBOOK / "vendas" / "calculadora-lote.html"
+    casas = [{"id": p["id"], "nome": p["nome"], "area": int(n0(p["_r"].metricas["area_fechada"])), "q": p["quartos_txt"],
+              "b": p["banheiros"], "fr": p["_r"].metricas["lote"][0], "fu": p["_r"].metricas["lote"][1],
+              "pag": numeros[p["id"]], "dest": p.get("destaque", "")} for p in plantas]
+    txt = arq.read_text(encoding="utf-8")
+    ini = txt.index("const CASAS = ")
+    fim = txt.index("];", ini) + 2
+    arq.write_text(txt[:ini] + "const CASAS = " + json.dumps(casas, ensure_ascii=False) + ";" + txt[fim:], encoding="utf-8")
 
 
 if __name__ == "__main__":

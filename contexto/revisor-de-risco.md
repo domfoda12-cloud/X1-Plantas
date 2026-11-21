@@ -11,7 +11,7 @@
 ## Em aberto com você
 
 - Página 61 com bônus e contato como espaço reservado: o dono decide.
-- A calculadora do parceiro tem dados velhos e frases que você vetou (S03, E04, S05): revisar antes de qualquer uso.
+- A calculadora do parceiro agora sai do validador a cada geração do PDF; a página publicada no claude.ai precisa ser republicada para pegar os dados novos.
 - Revisar também fora do PDF: posts, roteiros e imagens (foto e 3D contra a planta).
 - Página estourada que cobre o aviso legal é veto.
 

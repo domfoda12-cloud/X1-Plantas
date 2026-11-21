@@ -13,7 +13,7 @@
 - Título, preço, bônus, lançar com 12 ou 24 plantas e contato do parceiro.
 - Decidir se o e-book promete as próximas casas de graça (oferta escrita obriga).
 - Informar quanto resta do limite semanal (Configurações → Uso) para fechar o orçamento em números.
-- Compartilhar a calculadora de lote com o parceiro; os dados dela estão velhos (auditoria de 20/11, item 1).
+- Compartilhar a calculadora de lote com o parceiro (os dados agora saem do validador).
 - Testar PLANTA contra LOTE como palavra do comentário.
 
 ## Onde olhar

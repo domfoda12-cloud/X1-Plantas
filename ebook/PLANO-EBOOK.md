@@ -60,7 +60,7 @@
 | # | Passo | Quem faz / quem opina | Sai | Como confere |
 |---|---|---|---|---|
 | 1 | **Juntar o gerador do PDF** que está na branch `frente-ebook` (já copiado, falta adaptar) | Claude · Designer | `ebook/gerador/` funcionando na branch principal | Gera o PDF da C01 sem erro |
-| 2 | **Fazer o gerador aceitar plantas em `dados`** (não só em `3D`), usando a planta 2D e as fichas automáticas | Claude · Arquiteto | As 24 casas entram no PDF | `gerar.py` lista 24 plantas, 0 avisos de imagem |
+| 2 | **Fazer o gerador aceitar plantas em `dados`** (não só em `3D`), usando a planta 2D e as fichas automáticas | Claude · Arquiteto | As 24 casas entram no PDF | `livro.py` lista 24 plantas, 0 avisos de imagem |
 | 3 | **Desenho 2D bonito** das plantas: cor por cômodo, nomes, m², cotas internas, portas e janelas, móveis em traço (estilo blueprint claro) | Claude · Designer (`impeccable` só para apontar o genérico) | 24 imagens novas em alta resolução | Designer SIM; Arquiteto confere que o desenho é igual ao dado |
 | 4 | **Texto de cada casa** (gancho, para quem é, para quem não serve, erros que evita, 3 perguntas ao engenheiro) | Redator (`/redacao-que-vende`) · Arquiteto confere números · Revisor de risco | `ebook/fichas/<ID>.md` para as 24 | Revisor SIM em todas |
 | 5 | **Páginas de abertura e fechamento:** capa, ache pelo lote, ache pelo número de pessoas, como ler, 7 erros, terreno, próximos passos, bônus | Redator · Designer · Revisor | Páginas no gerador | Leitura completa no celular |

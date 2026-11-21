@@ -103,12 +103,12 @@ Lists findings, changes no code.
 ## Neste projeto (X1-Plantas)
 
 Antes de usar esta skill aqui, alcance o projeto:
-- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o resumo mais recente em `contexto/entregas/`.
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o último resumo, `contexto/entregas/ULTIMO.md`.
 - Responda e escreva em português do Brasil, com palavras simples.
 - O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
 - Uma coisa por vez, na ordem e-book → animações → vídeo.
 - Ela é membro do Conselho (`CONSELHO.md`): a decisão de usá-la segue as regras de lá, e o Revisor de risco tem veto em tudo que toca honestidade e lei.
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
-- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
+- Esta skill só faz relatório: não mude arquivos nem faça commit. Quem chamou registra o resultado em `CONTEXTO-HISTORICO.md`.
 - Revise também as consequências no que é impresso: um número que muda no validador muda o PDF, a calculadora do parceiro, as imagens e os posts.
 - **Prompt de entrada:** comece pelo diff e depois siga quem usa o que mudou: `livro.py`, `planta3d.py`, a calculadora do parceiro, `imagens2d.py` e os posts.

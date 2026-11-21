@@ -1,6 +1,6 @@
 # O Conselho: quem opina, quem decide e quais skills cada um usa
 
-> Lido por toda sessão via [`CLAUDE.md`](CLAUDE.md). Para rodar: `/conselho <tarefa>`. Painel: [`PAINEL.md`](PAINEL.md).
+> Lido por toda sessão via [`CLAUDE.md`](CLAUDE.md). Para rodar: a skill `conselho` (`/conselho <tarefa>`). Painel: [`PAINEL.md`](PAINEL.md).
 
 ## 1. Por que existe
 

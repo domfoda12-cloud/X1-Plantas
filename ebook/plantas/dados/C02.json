@@ -110,8 +110,8 @@
     ],
     "cozinha": [
      2.49,
-     2.99,
-     7.4
+     3.05,
+     7.6
     ],
     "banho": [
      1.59,
@@ -125,10 +125,10 @@
     ]
    },
    "luz": {
-    "estar": 0.2,
-    "cozinha": 0.15,
-    "banho": 0.17,
-    "servico": 0.21
+    "estar": 0.2022,
+    "cozinha": 0.1505,
+    "banho": 0.1667,
+    "servico": 0.2083
    },
    "circulacao": 0.0,
    "lote": [

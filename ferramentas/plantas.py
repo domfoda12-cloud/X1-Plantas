@@ -125,7 +125,8 @@ def lados(c):
 
 def _desconto(planta, c, lado):
     """Quanto o cômodo perde de parede naquele lado: parede externa inteira, metade da interna."""
-    abertos = SEMIEXTERNOS | {"futuro"}
+    abertos = SEMIEXTERNOS | EXTERNOS  # varanda, garagem, pátio, jardim e ampliação: a parede para eles é externa
+    passagens = {frozenset(pt[:2]) for pt in planta.get("portas", []) if len(pt) > 2 and pt[2] == "aberto"}
     aberto = c["tipo"] in abertos
     borda = {"esq": abs(c["x0"]) < 1e-6, "dir": abs(c["x1"] - planta["W"]) < 1e-6,
              "frente": abs(c["y0"]) < 1e-6, "fundos": abs(c["y1"] - planta["D"]) < 1e-6}[lado]
@@ -137,6 +138,8 @@ def _desconto(planta, c, lado):
         pc = parede_comum(c, o)
         if not pc or pc[0] != eixo[0] or abs(pc[1] - eixo[1]) > 1e-6:
             continue
+        if frozenset((c["id"], o["id"])) in passagens:
+            continue  # passagem aberta: não há parede entre os dois
         o_aberto = o["tipo"] in abertos
         dd = 0.0 if aberto else (PAREDE_EXT if o_aberto else PAREDE_INT / 2)
         d = max(d, dd)
@@ -373,7 +376,6 @@ def validar(planta):
         r.metricas["util"][c["id"]] = [round(lx, 2), round(ly, 2), round(a, 1)]
         if t in MINIMOS_UTIL:
             amin, lmin = MINIMOS_UTIL[t]
-            lmin = max(lmin, c.get("min_lado", 0) - 2 * PAREDE_INT / 2)
             if a < amin - 1e-6:
                 r.erro(f"{c['nome']}: {a:.1f} m² livres (mínimo de referência {amin:.1f} m²)")
             if min(lx, ly) < lmin - 1e-6:
@@ -414,7 +416,7 @@ def validar(planta):
             else:
                 r.erro(f"{c['nome']}: janela de {razao * 100:.0f}% do piso "
                        f"(mínimo de referência {RAZAO_JANELA[t] * 100:.0f}%)")
-    r.metricas["luz"] = {k: round(v, 2) for k, v in soma_luz.items()}
+    r.metricas["luz"] = {k: round(v, 4) for k, v in soma_luz.items()}
 
     # Conexões e circulação
     g = {}
@@ -486,6 +488,18 @@ def validar(planta):
                 # o banheiro social não deve abrir direto para a cozinha
                 if "cozinha" in g.get(c["id"], ()) or any(por_id[x]["tipo"] == "cozinha" for x in g.get(c["id"], ()) if x != "ext"):
                     r.erro(f"{c['nome']} abre direto para a cozinha")
+
+    # Ampliação: não pode tapar janela nem ficar presa atrás de quarto sem saída para o quintal
+    for f in [c for c in cs if c["tipo"] == "futuro"]:
+        for b in cs:
+            pc = parede_comum(f, b) if b is not f and b["tipo"] != "futuro" else None
+            if not pc:
+                continue
+            lado_b = ("fundos" if abs(pc[1] - b["y1"]) < 1e-6 else "frente") if pc[0] == "h" else ("dir" if abs(pc[1] - b["x1"]) < 1e-6 else "esq")
+            if any(l == lado_b for (l, _) in janelas.get(b["id"], [])):
+                r.erro(f"ampliação {f['nome']} tapa a janela de {b['nome']}")
+        if not any(trecho_externo(planta, f, l) >= 0.9 for l in ("esq", "dir", "fundos", "frente")):
+            r.erro(f"ampliação {f['nome']} não tem parede livre para a porta")
 
     # Casa acessível: banheiro e circulação com o giro de 1,50 m da cadeira de rodas (por dentro das paredes)
     if planta.get("acessivel"):
@@ -669,10 +683,16 @@ def previa(planta, caminho, escala=80):
     d.text((X(0) - 70, (Y(0) + Y(D)) / 2 - 6), t, font=fp, fill="white")
     # rodapé
     mt = {}
-    fe = f"{planta['_r'].metricas['area_fechada']:.0f} m² fechados" if "_r" in planta else ""
+    fe = f"{n0(planta['_r'].metricas['area_fechada'])} m² fechados" if "_r" in planta else ""
     rod = f"{fe} · {planta['quartos_txt']} · lote ref. {_f(planta['_r'].metricas['lote'][0])} x {_f(planta['_r'].metricas['lote'][1])} m · frente para o {planta['_r'].metricas['orientacao']['melhor']}" if "_r" in planta else ""
     d.text((m, alt - 36), rod, font=fp, fill="white")
     im.save(caminho)
+
+
+def n0(x):
+    """Arredonda como na escola (90,5 vira 91). Use em todo número inteiro que vai ao público."""
+    import decimal
+    return str(decimal.Decimal(str(round(x, 6))).quantize(decimal.Decimal("1"), rounding=decimal.ROUND_HALF_UP))
 
 
 def _f(v):
@@ -707,7 +727,10 @@ def pensou(planta):
                "Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.")
     portas_ext = [pt[1] for pt in planta.get("portas", []) if pt[0] == "ext"]
     if any(t == "patio" for t in tipos):
-        out.append("Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.")
+        com = [c["nome"].lower() for c in cs for (l, _) in planta.get("janelas", {}).get(c["id"], [])
+               if any(o["tipo"] == "patio" and parede_comum(c, o) and parede_comum(c, o)[0] == ("h" if l in ("frente", "fundos") else "v") for o in cs)]
+        quem = " e ".join(dict.fromkeys(com)) if com else "a casa"
+        out.append(f"Pátio de luz: {'o ' + quem if com else quem} abre janela para o pátio, com luz e ar sem dar para o vizinho.")
     elif any(c["id"] == "corr" for c in cs):
         out.append("Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro "
                    "e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para "
@@ -732,17 +755,20 @@ def pensou(planta):
         out.append("Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.")
     else:
         viz = []
-        for b in (c for c in cs if c["tipo"] == "banho"):
+        for b in (c for c in cs if c["tipo"] == "banho" and not c.get("privativo")):
             for o2 in cs:
-                if o2["id"] != b["id"] and o2["tipo"] in MOLHADOS and parede_comum(b, o2) and o2["tipo"] not in [v for v in viz]:
+                if o2["id"] != b["id"] and o2["tipo"] in MOLHADOS and parede_comum(b, o2) and o2["tipo"] not in viz:
                     viz.append(o2["tipo"])
         nome_viz = {"cozinha": "na cozinha", "servico": "na área de serviço", "banho": "no outro banheiro", "lavabo": "no lavabo"}
         onde = " e ".join(nome_viz[v] for v in viz[:2]) if viz else "em outra área molhada"
         out.append(f"Banheiro colado {onde}: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.")
     if planta.get("servico_externo") or planta["id"] in ("C03",):
-        out.append("A casa cresce: o quarto 2 entra nos fundos, atrás da área de serviço, com porta para o quintal do lado. Não quebra nada do que foi construído e não tapa a janela do quarto casal.")
+        fut = [c for c in cs if c["tipo"] == "futuro"]
+        atras = [b["nome"].lower() for f in fut for b in cs if b["tipo"] != "futuro" and parede_comum(f, b)]
+        onde = f", atrás de: {', '.join(atras)}" if atras else ""
+        out.append(f"A casa cresce: o quarto 2 entra nos fundos{onde}, com porta para o quintal. Não quebra o que foi construído e não tapa nenhuma janela.")
     elif m["circulacao"]:
-        out.append(f"Circulação: só {int(m['circulacao'] * 100 + 0.5)}% da área é corredor. O resto é cômodo que você usa.")
+        out.append(f"Circulação: só {n0(m['circulacao'] * 100)}% da área é corredor. O resto é cômodo que você usa.")
     else:
         out.append("Corredor coberto: todos os cômodos abrem para ele, então não existe corredor interno comendo metro quadrado.")
     return out[:3] if len(out) > 3 else out
@@ -757,7 +783,7 @@ def cmd_fichas():
         m = p["_r"].metricas
         L += [f"## {p['id']} · {p['nome']}", "",
               f"![{p['id']}](previas/{p['id']}.png)", "",
-              f"**{m['area_fechada']:.0f} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · lote a partir de "
+              f"**{n0(m['area_fechada'])} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · lote a partir de "
               f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** · frente para o **{m['orientacao']['melhor']}**", ""]
         if p.get("destaque"):
             L += [f"*{p['destaque']}*", ""]
@@ -828,7 +854,7 @@ def cmd_resumo():
         r = p["_r"]
         m = r.metricas
         q = p["quartos_txt"]
-        print(f"| {p['id']} | {p['nome']} | {m['area_fechada']:.0f} m² | {q} | {p['banheiros']} | "
+        print(f"| {p['id']} | {p['nome']} | {n0(m['area_fechada'])} m² | {q} | {p['banheiros']} | "
               f"{m['lote_comercial'][0]} x {m['lote_comercial'][1]} | {m['orientacao']['melhor']} |")
 
 

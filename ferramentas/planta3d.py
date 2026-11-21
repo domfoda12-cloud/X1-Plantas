@@ -206,7 +206,7 @@ OPOSTO = {"frente": "fundos", "fundos": "frente", "esq": "dir", "dir": "esq"}
 ROT = {"frente": 0.0, "fundos": math.pi, "esq": math.pi / 2, "dir": -math.pi / 2}
 
 
-def _livre_no_lado(c, lado, vaos, w, margem=0.05):
+def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False):
     """Posição central (ao longo do lado) onde cabe uma peça de largura w sem bloquear porta."""
     _, o, fixo, a, b = next(x for x in arestas(c) if x[0] == lado)
     livres = [(a + margem, b - margem)]
@@ -219,7 +219,8 @@ def _livre_no_lado(c, lado, vaos, w, margem=0.05):
             canto = c["y0"] if lado == "frente" else c["y1"] if lado == "fundos" else c["x0"] if lado == "esq" else c["x1"]
             if min(abs(va - canto), abs(vb - canto)) < perto_canto:
                 ponta = c["x0"] if l == "esq" else c["x1"] if l == "dir" else c["y0"] if l == "frente" else c["y1"]
-                folga = 0.5 if vb - va > 1.2 else 0.95  # passagem aberta larga não tem folha de porta para abrir
+                # só o sofá pode chegar a 0,5 m de uma passagem aberta larga (ela não tem folha de porta)
+                folga = 0.5 if perto_passagem and vb - va > 1.2 else 0.95
                 livres = subtrair(livres, ponta - folga, ponta + folga)
     cabe = [(p, q) for (p, q) in livres if q - p >= w]
     if not cabe:
@@ -274,7 +275,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
                 if _prof(c, lado) < prof + frente:
                     continue
-                pos = _livre_no_lado(c, lado, vaos, larg)
+                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"))
                 if pos is None:
                     continue
                 x, y = _no_lado(c, lado, pos, prof, folga)
@@ -306,8 +307,12 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
         elif t in ("sala", "estar"):
             lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c, l) >= 2.6]
             lado = pos = None
-            for larg in (2.1, 1.8, 1.5):  # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta
-                lado, pos = encostar("sofa", min(larg, _comp(c, lados[0]) - 0.6 if lados else larg), 0.88, lados, cor="#8A9A86")
+            # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta, medido na parede em que encosta
+            for larg in (2.1, 1.8, 1.5):
+                for l in (lados or _lados_por_preferencia(c, vaos, jans)):
+                    lado, pos = encostar("sofa", min(larg, _comp(c, l) - 0.6), 0.88, [l], cor="#8A9A86")
+                    if lado:
+                        break
                 if lado:
                     break
             if lado:

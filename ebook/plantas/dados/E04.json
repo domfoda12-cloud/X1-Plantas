@@ -75,10 +75,6 @@
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
-   "pref": [
-    "esq",
-    "fundos"
-   ],
    "x0": 4.5,
    "y0": 4.6,
    "x1": 7.5,
@@ -153,15 +149,15 @@
   ],
   "quarto2": [
    [
-    "esq",
+    "fundos",
     1.7
    ]
   ]
  },
- "destaque": "Pátio de luz entre os quartos: os dois abrem janela para ele",
+ "destaque": "Pátio de luz entre os quartos: o quarto casal abre janela para ele",
  "pensou": [
-  "Sol: melhor com a rua a leste; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Pátio de luz: os quartos ganham janela para o pátio, com luz e ar sem abrir a casa para o vizinho.",
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Pátio de luz: o quarto casal abre janela para o pátio, com luz e ar sem dar para o vizinho.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
@@ -174,14 +170,14 @@
    "area_coberta_aberta": 0,
    "util": {
     "sala": [
-     3.79,
-     3.19,
-     12.1
+     3.85,
+     3.25,
+     12.5
     ],
     "cozinha": [
-     2.18,
+     2.24,
      3.19,
-     7.0
+     7.1
     ],
     "servico": [
      0.99,
@@ -190,8 +186,8 @@
     ],
     "circ": [
      5.29,
-     1.08,
-     5.7
+     0.99,
+     5.2
     ],
     "banho": [
      1.79,
@@ -199,25 +195,25 @@
      1.9
     ],
     "quarto1": [
-     2.79,
+     2.7,
      3.19,
-     8.9
+     8.6
     ],
     "patio": [
-     1.38,
-     3.19,
-     4.4
+     1.5,
+     3.4,
+     5.1
     ],
     "quarto2": [
-     2.79,
+     2.7,
      3.19,
-     8.9
+     8.6
     ]
    },
    "luz": {
-    "sala": 0.21,
-    "cozinha": 0.15,
-    "servico": 0.17,
+    "sala": 0.2059,
+    "cozinha": 0.1535,
+    "servico": 0.1716,
     "banho": 0.15,
     "quarto1": 0.2,
     "quarto2": 0.2
@@ -239,14 +235,14 @@
    ],
    "taxa_ocupacao": 0.53,
    "orientacao": {
-    "melhor": "leste",
-    "segunda": "norte",
-    "pior": "oeste",
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "leste",
     "pontos": {
-     "norte": 6.3,
-     "leste": 11.3,
-     "sul": 6.1,
-     "oeste": 3.4
+     "norte": 13.1,
+     "leste": 2.8,
+     "sul": 4.4,
+     "oeste": 6.8
     }
    }
   }

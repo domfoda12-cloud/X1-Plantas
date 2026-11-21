@@ -157,14 +157,14 @@
    "area_coberta_aberta": 0,
    "util": {
     "sala": [
-     3.09,
-     3.19,
-     9.9
+     3.15,
+     3.25,
+     10.2
     ],
     "cozinha": [
-     1.88,
+     1.94,
      3.19,
-     6.0
+     6.2
     ],
     "servico": [
      0.99,
@@ -193,12 +193,12 @@
     ]
    },
    "luz": {
-    "sala": 0.2,
-    "cozinha": 0.16,
-    "servico": 0.17,
-    "banho": 0.17,
-    "quarto1": 0.2,
-    "quarto2": 0.2
+    "sala": 0.1996,
+    "cozinha": 0.1618,
+    "servico": 0.1716,
+    "banho": 0.1667,
+    "quarto1": 0.1988,
+    "quarto2": 0.1988
    },
    "circulacao": 0.096,
    "lote": [

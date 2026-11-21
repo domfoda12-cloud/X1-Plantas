@@ -185,13 +185,13 @@
    "util": {
     "sala": [
      3.6,
-     3.59,
-     12.9
+     3.65,
+     13.1
     ],
     "cozinha": [
      3.6,
-     2.68,
-     9.6
+     2.74,
+     9.9
     ],
     "servico": [
      1.59,
@@ -225,13 +225,13 @@
     ]
    },
    "luz": {
-    "sala": 0.2,
-    "cozinha": 0.16,
-    "servico": 0.17,
-    "banho": 0.16,
-    "bsuite": 0.15,
-    "quarto1": 0.2,
-    "quarto2": 0.21
+    "sala": 0.1984,
+    "cozinha": 0.1557,
+    "servico": 0.1667,
+    "banho": 0.1571,
+    "bsuite": 0.1493,
+    "quarto1": 0.2036,
+    "quarto2": 0.2051
    },
    "circulacao": 0.0,
    "lote": [

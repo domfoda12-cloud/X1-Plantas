@@ -206,14 +206,14 @@
      18.6
     ],
     "sala": [
-     4.59,
-     2.99,
-     13.7
+     4.65,
+     3.05,
+     14.2
     ],
     "cozinha": [
-     1.68,
+     1.74,
      2.99,
-     5.0
+     5.2
     ],
     "servico": [
      0.99,
@@ -242,13 +242,13 @@
     ]
    },
    "luz": {
-    "escritorio": 0.21,
-    "sala": 0.2,
-    "cozinha": 0.16,
-    "servico": 0.16,
-    "banho": 0.15,
-    "quarto1": 0.2,
-    "quarto2": 0.2
+    "escritorio": 0.2062,
+    "sala": 0.2005,
+    "cozinha": 0.1562,
+    "servico": 0.1562,
+    "banho": 0.1538,
+    "quarto1": 0.2019,
+    "quarto2": 0.2019
    },
    "circulacao": 0.095,
    "lote": [

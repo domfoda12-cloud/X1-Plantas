@@ -20,12 +20,12 @@ Regras completas: `CONSELHO.md` na raiz do projeto. Siga estes passos.
 ## Neste projeto (X1-Plantas)
 
 Antes de usar esta skill aqui, alcance o projeto:
-- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o resumo mais recente em `contexto/entregas/`.
+- Leia `CLAUDE.md` (regras que não mudam) e `CONTEXTO.md` (o resumo: o que nunca muda e o que está em aberto) e o último resumo, `contexto/entregas/ULTIMO.md`.
 - Responda e escreva em português do Brasil, com palavras simples.
 - O objetivo é a alegria do comprador, que vira venda. Qualidade vem antes de economia.
 - Uma coisa por vez, na ordem e-book → animações → vídeo.
 - Ela é membro do Conselho (`CONSELHO.md`): a decisão de usá-la segue as regras de lá, e o Revisor de risco tem veto em tudo que toca honestidade e lei.
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
-- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no `CONTEXTO.md`, faça o commit e o push na branch `planta-de-casas-anuncio`.
+- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no fim de `CONTEXTO-HISTORICO.md` (não no `CONTEXTO.md`, que é resumo com limite de tamanho), faça o commit e o push na branch `planta-de-casas-anuncio`.
 - Toda skill ou agente novo passa pelo roteiro de entrada da seção 6 do `CONSELHO.md` antes do primeiro uso.
 - **Prompt de entrada:** ao abrir a mesa, leia `ECOSSISTEMA.md` para saber quem está integrado. Membro marcado como "liberado, não usado" passa pelo roteiro antes de votar. O Maestro opina primeiro, com fonte da MinoAI Frontier. As decisões do dono que ainda estão em aberto ficam no `CONTEXTO.md`: não decida por ele.
