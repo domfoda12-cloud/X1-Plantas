@@ -13,7 +13,7 @@ const RODAPE = 'Planta de referência. O projeto para a prefeitura é assinado p
 
 // cenas do drop (7,5 a 13,13 s): 12 tempos. "de" = início no clipe, "vel" = velocidade
 const CLIPES = [
-  { nome: 'v1-transicao', tempos: 3, de: 0, vel: 3.55, janela8: true,
+  { nome: 'v1-transicao', tempos: 3, de: 1.0, vel: 2.84, janela8: true,
     titulo: '<b>Cabe</b> em lote<br>8 x 25 m.', selo: true },
   { nome: 'v2-voo', tempos: 2, de: 0.15, vel: 1.0, titulo: '72 m² · 3 quartos<br>(1 suíte) · 2 banheiros', pequeno: true, selo: true },
   { nome: 'v3-sala', tempos: 2, de: 1.6, vel: 1.0, selo: true },
