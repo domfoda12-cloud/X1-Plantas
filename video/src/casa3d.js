@@ -1,4 +1,4 @@
-// Casa em 3D a partir de planta.js, em três estágios:
+// Casa em 3D a partir dos dados de uma planta (./plantas/<ID>.js), em três estágios:
 //   1. Blueprint: fundo azul quadriculado, paredes, portas, móveis e cotas desenhados em branco.
 //   2. Ganhando vida: paredes sobem, pisos de madeira/porcelanato aparecem cômodo por cômodo,
 //      móveis surgem e o jardim cresce em volta.
@@ -8,7 +8,9 @@
 // do lado dos fundos (+z) olhando para a frente, a imagem fica igual à planta 2D (frente no alto).
 import * as THREE from '../node_modules/three/build/three.module.js';
 import { RoundedBoxGeometry } from '../node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js';
-import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } from './planta.js';
+import C01 from './plantas/C01.js';
+
+const ESPESSURA = 0.15;
 
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const suave = (v) => { v = clamp(v); return v * v * (3 - 2 * v); };
@@ -31,7 +33,7 @@ export const CORES = {
 // ---------------------------------------------------------------------------
 // Paredes divididas em trechos (cheios e janelas)
 // ---------------------------------------------------------------------------
-function trechos() {
+function trechos(paredes, janelas) {
   const out = [];
   for (const [x0, y0, x1, y1] of paredes) {
     const h = y0 === y1;
@@ -55,58 +57,30 @@ function trechos() {
   }
   return out;
 }
-const TRECHOS = trechos();
-
-// ---------------------------------------------------------------------------
-// Móveis: posição em metros da planta, rotação em radianos (0 = frente do móvel para +z)
-// ---------------------------------------------------------------------------
-const MOVEIS = [
-  // Sala
-  { tipo: 'tapete', amb: 'sala', x: 1.45, y: 2.2, w: 2.0, d: 2.5, cor: '#D9CBB4', borda: '#B49D7C' },
-  { tipo: 'sofa', amb: 'sala', x: 2.78, y: 2.2, rot: -Math.PI / 2, w: 2.1, d: 0.88, cor: '#8A9A86' },
-  { tipo: 'rack', amb: 'sala', x: 0.3, y: 2.2, rot: Math.PI / 2, w: 1.7, d: 0.4 },
-  { tipo: 'mesaCentro', amb: 'sala', x: 1.55, y: 2.2, w: 0.6, d: 1.0 },
-  { tipo: 'planta', amb: 'sala', x: 0.45, y: 0.5, s: 1.0 },
-  { tipo: 'planta', amb: 'sala', x: 3.15, y: 3.85, s: 0.8 },
-  // Cozinha
-  { tipo: 'bancada', amb: 'cozinha', x: 6.12, y: 1.75, rot: -Math.PI / 2, w: 3.0, d: 0.62 },
-  { tipo: 'geladeira', amb: 'cozinha', x: 6.07, y: 3.72, rot: -Math.PI / 2, w: 0.72, d: 0.7 },
-  { tipo: 'mesaJantar', amb: 'cozinha', x: 4.55, y: 2.35, w: 0.85, d: 1.3 },
-  { tipo: 'planta', amb: 'cozinha', x: 3.85, y: 0.5, s: 0.8 },
-  // Quarto 1
-  { tipo: 'tapete', amb: 'quarto1', x: 1.6, y: 7.1, w: 2.3, d: 1.7, cor: '#E4D6C3', borda: '#C9B59A' },
-  { tipo: 'camaCasal', amb: 'quarto1', x: 1.6, y: 7.42, rot: Math.PI, w: 1.6, d: 2.0, manta: '#B9C7D6' },
-  { tipo: 'criado', amb: 'quarto1', x: 0.5, y: 8.17 },
-  { tipo: 'criado', amb: 'quarto1', x: 2.7, y: 8.17 },
-  { tipo: 'armario', amb: 'quarto1', x: 1.05, y: 4.58, w: 1.8, d: 0.6 },
-  { tipo: 'planta', amb: 'quarto1', x: 2.85, y: 5.95, s: 0.85 },
-  // Quarto 2
-  { tipo: 'camaSolteiro', amb: 'quarto2', x: 5.45, y: 7.55, rot: -Math.PI / 2, w: 0.95, d: 1.95, manta: '#E3B9A4' },
-  { tipo: 'criado', amb: 'quarto2', x: 6.17, y: 6.8 },
-  { tipo: 'escrivaninha', amb: 'quarto2', x: 3.95, y: 8.17, rot: Math.PI, w: 1.1, d: 0.5 },
-  { tipo: 'armario', amb: 'quarto2', x: 5.2, y: 6.17, w: 1.6, d: 0.55 },
-  // Banho
-  { tipo: 'box', amb: 'banho', x: 6.09, y: 4.64, w: 0.68, d: 0.74 },
-  { tipo: 'vaso', amb: 'banho', x: 6.17, y: 5.42, rot: -Math.PI / 2 },
-  { tipo: 'pia', amb: 'banho', x: 5.15, y: 5.52, rot: Math.PI, w: 0.6, d: 0.42 },
-];
-
-// Ordem em que os cômodos ganham vida
-const ORDEM = ['sala', 'cozinha', 'hall', 'banho', 'quarto1', 'quarto2'];
-
 // ---------------------------------------------------------------------------
 // Texturas desenhadas em canvas
 // ---------------------------------------------------------------------------
 const PXM = 128; // pixels por metro nas texturas de piso
 
-function texturaPiso(a) {
+function texturaPiso(a, MOVEIS) {
   const w = a.x1 - a.x0; const d = a.y1 - a.y0;
   const c = document.createElement('canvas'); c.width = Math.round(w * PXM); c.height = Math.round(d * PXM);
   const g = c.getContext('2d'); const rnd = aleatorio(a.id.length * 7919 + Math.round(w * 100));
-  const porcelanato = a.id === 'cozinha' || a.id === 'banho';
-  if (porcelanato) {
-    const base = a.id === 'banho' ? [226, 228, 226] : [222, 216, 205];
-    const lado = a.id === 'banho' ? 0.45 : 0.6;
+  const tipo = a.piso || 'madeira';
+  if (tipo === 'externo') {
+    // Piso externo (varanda, quintal coberto): placas de cimentado claro
+    const lado = 0.5;
+    for (let y = 0; y < d; y += lado) for (let x = 0; x < w; x += lado) {
+      const v = (rnd() - 0.5) * 12;
+      g.fillStyle = `rgb(${196 + v},${188 + v},${176 + v})`;
+      g.fillRect(x * PXM, y * PXM, lado * PXM, lado * PXM);
+    }
+    g.strokeStyle = 'rgba(120,110,95,0.5)'; g.lineWidth = 2;
+    for (let x = 0; x <= w; x += lado) { g.beginPath(); g.moveTo(x * PXM, 0); g.lineTo(x * PXM, c.height); g.stroke(); }
+    for (let y = 0; y <= d; y += lado) { g.beginPath(); g.moveTo(0, y * PXM); g.lineTo(c.width, y * PXM); g.stroke(); }
+  } else if (tipo === 'porcelanato' || tipo === 'ceramica') {
+    const base = tipo === 'ceramica' ? [226, 228, 226] : [222, 216, 205];
+    const lado = tipo === 'ceramica' ? 0.45 : 0.6;
     for (let y = 0; y < d; y += lado) for (let x = 0; x < w; x += lado) {
       const v = (rnd() - 0.5) * 10;
       g.fillStyle = `rgb(${base[0] + v},${base[1] + v},${base[2] + v})`;
@@ -193,18 +167,28 @@ function texturaGrade() {
 
 // Pegada (largura x profundidade) de cada móvel, para sombras e símbolos do blueprint
 function pegada(m) {
-  const tab = { criado: [0.45, 0.4], vaso: [0.4, 0.65], planta: [0.5 * (m.s || 1), 0.5 * (m.s || 1)] };
+  const tab = { criado: [0.45, 0.4], vaso: [0.4, 0.65], planta: [0.5 * (m.s || 1), 0.5 * (m.s || 1)], tanque: [0.6, 0.55], maquina: [0.6, 0.62], poltrona: [0.8, 0.8] };
   return tab[m.tipo] || [m.w, m.d];
 }
 
 // ---------------------------------------------------------------------------
 // Blueprint: desenho em canvas sobre um plano, com progresso de 0 a 1
 // ---------------------------------------------------------------------------
-const BP = { x0: -4.75, z0: -3.75, tam: 16, px: 2048 };
-const K = BP.px / BP.tam;
-const P = (x, z) => [(x - BP.x0) * K, (z - BP.z0) * K];
+// Área do desenho: quadrado centrado na casa, 16 m para a C01, maior para casas maiores.
+// A resolução cresce junto, para traços e letras terem o mesmo tamanho em metros.
+function areaBlueprint(L, D) {
+  const tam = Math.max(16, Math.ceil(Math.max(L, D) + 7.5));
+  const px = Math.min(4096, Math.round(2048 * tam / 16));
+  return { x0: L / 2 - tam / 2, z0: D / 2 - tam / 2, tam, px };
+}
+const metros = (v) => v.toFixed(2).replace('.', ',') + ' m';
 
-export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = true } = {}) {
+function desenharBlueprint(g, p, pl, { cotas = true, nomes = true, moveis = true } = {}) {
+  const { BP, TRECHOS, ambientes, portas, moveis: MOVEIS, largura: LARGURA, profundidade: PROFUNDIDADE } = pl;
+  const K = BP.px / BP.tam;
+  const P = (x, z) => [(x - BP.x0) * K, (z - BP.z0) * K];
+  const L = Math.pow(BP.tam / 16, 0.8); // letras um pouco maiores em casas grandes (1 na C01)
+  const px = (v) => Math.round(v * L);
   g.clearRect(0, 0, BP.px, BP.px);
   g.lineCap = 'round'; g.lineJoin = 'round';
   // Paredes: linhas duplas desenhadas em sequência
@@ -236,7 +220,7 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
     g.strokeStyle = `rgba(255,255,255,${0.9 * pp})`; g.lineWidth = 2;
     for (const d of portas) {
       const [cx, cy] = P(d.x, d.y); const r = d.r * K;
-      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp)); g.stroke();
+      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp), d.a1 < d.a0); g.stroke();
       g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(d.a1) * r * pp, cy + Math.sin(d.a1) * r * pp); g.stroke();
     }
   }
@@ -266,34 +250,60 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
   if (nomes && pn > 0) {
     g.fillStyle = `rgba(255,255,255,${pn})`; g.textAlign = 'center';
     for (const a of ambientes) {
-      if (a.id === 'hall') continue;
-      const [cx, cy] = P((a.x0 + a.x1) / 2, (a.y0 + a.y1) / 2);
-      g.font = '700 34px Inter, sans-serif'; g.fillText(a.nome.toUpperCase(), cx, cy - 6);
-      g.font = '500 28px Inter, sans-serif'; g.fillText(m2((a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30);
+      if (a.rotulo === false) continue;
+      const [rx, ry] = a.rotulo || [(a.x0 + a.x1) / 2, (a.y0 + a.y1) / 2];
+      const [cx, cy] = P(rx, ry);
+      const f = a.letra || 1; // letra menor em cômodos estreitos
+      g.font = `700 ${px(34 * f)}px Inter, sans-serif`; g.fillText(a.nome.toUpperCase(), cx, cy - 6 * f * L);
+      g.font = `500 ${px(28 * f)}px Inter, sans-serif`; g.fillText(m2(a.area ?? (a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30 * f * L);
     }
   }
   const pc = suave((p - 0.8) / 0.2);
   if (cotas && pc > 0) {
-    g.strokeStyle = `rgba(255,255,255,${0.9 * pc})`; g.fillStyle = `rgba(255,255,255,${pc})`; g.lineWidth = 2; g.font = '600 30px Inter, sans-serif';
+    g.strokeStyle = `rgba(255,255,255,${0.9 * pc})`; g.fillStyle = `rgba(255,255,255,${pc})`; g.lineWidth = 2; g.font = `600 ${px(30)}px Inter, sans-serif`;
     const cota = (xa, za, xb, zb, txt, vertical) => {
       const [a, b] = P(xa, za); const [c2, d2] = P(xb, zb);
       g.beginPath(); g.moveTo(a, b); g.lineTo(c2, d2); g.stroke();
       for (const [u, v] of [[a, b], [c2, d2]]) { g.beginPath(); g.moveTo(u - 10, v + 10); g.lineTo(u + 10, v - 10); g.stroke(); }
       g.save(); g.translate((a + c2) / 2, (b + d2) / 2); if (vertical) g.rotate(-Math.PI / 2);
-      g.textAlign = 'center'; g.fillText(txt, 0, -14); g.restore();
+      g.textAlign = 'center'; g.fillText(txt, 0, -14 * L); g.restore();
     };
-    cota(0, -0.8, LARGURA, -0.8, '6,50 m', false);
-    cota(-0.8, 0, -0.8, PROFUNDIDADE, '8,50 m', true);
-    g.font = '700 30px Inter, sans-serif'; g.textAlign = 'left';
+    cota(0, -0.8, LARGURA, -0.8, metros(LARGURA), false);
+    cota(-0.8, 0, -0.8, PROFUNDIDADE, metros(PROFUNDIDADE), true);
+    g.font = `700 ${px(30)}px Inter, sans-serif`; g.textAlign = 'left';
     const [tx, ty] = P(0, PROFUNDIDADE + 1.0);
-    g.fillText('CASA COMPACTA', tx, ty); g.font = '500 26px Inter, sans-serif'; g.fillText('55 m² · 2 quartos · 1 banho', tx, ty + 34);
+    g.fillText(pl.nome.toUpperCase(), tx, ty); g.font = `500 ${px(26)}px Inter, sans-serif`; g.fillText(pl.ficha, tx, ty + 34 * L);
   }
 }
 
 // ---------------------------------------------------------------------------
 // Construção da cena
 // ---------------------------------------------------------------------------
-export function criarCasa(renderer) {
+// Completa os dados da planta com valores padrão e o que o motor calcula.
+export function prepararPlanta(dados) {
+  const pl = { ...dados };
+  pl.moveis = dados.moveis || [];
+  pl.ordem = dados.ordem || dados.ambientes.map((a) => a.id);
+  pl.TRECHOS = trechos(dados.paredes, dados.janelas || []);
+  pl.BP = areaBlueprint(dados.largura, dados.profundidade);
+  pl.entradas = dados.entradas || [dados.largura / 2];
+  return pl;
+}
+
+// Árvores em volta do lote quando a planta não define as suas.
+function arvoresPadrao(L, D) {
+  const out = [[-2.6, -1.8, 1.5], [L + 2.7, -1.2, 1.7]];
+  for (let z = 4.5; z < D + 0.5; z += 5.5) { out.push([-2.8, z, 1.4 + (z % 3) * 0.1]); out.push([L + 2.9, z - 0.3, 1.5]); }
+  out.push([-2.5, D + 2.1, 1.8], [L + 2.6, D + 2.4, 1.6]);
+  for (let z = 8; z < D + 2; z += 7) { out.push([-4.6, z, 1.6]); out.push([L + 4.5, z - 0.4, 1.7]); }
+  for (let x = 0.6; x < L + 0.5; x += 3) out.push([x, D + 4.5 + (Math.round(x) % 2) * 0.6, 1.4 + (Math.round(x) % 3) * 0.2]);
+  return out;
+}
+
+export function criarCasa(renderer, dados = C01) {
+  const pl = prepararPlanta(dados);
+  const { ambientes, TRECHOS, BP, largura: LARGURA, profundidade: PROFUNDIDADE } = pl;
+  const MOVEIS = pl.moveis; const ORDEM = pl.ordem;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -308,7 +318,9 @@ export function criarCasa(renderer) {
   const sol = new THREE.DirectionalLight('#FFF3E2', 2.2);
   sol.position.set(centro.x - 4, 22, centro.z - 3.5); sol.target.position.copy(centro);
   sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
-  Object.assign(sol.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 40 });
+  const sc = Math.max(12, Math.max(LARGURA, PROFUNDIDADE) / 2 + 6);
+  Object.assign(sol.shadow.camera, { left: -sc, right: sc, top: sc, bottom: -sc, near: 1, far: sc > 12 ? 40 + sc : 40 });
+  if (sc > 12) sol.shadow.mapSize.set(4096, 4096);
   sol.shadow.bias = -0.0004; sol.shadow.radius = 9; sol.shadow.blurSamples = 16;
   cena.add(sol, sol.target);
 
@@ -328,9 +340,9 @@ export function criarCasa(renderer) {
   const reais = []; // objetos externos que surgem com o jardim
   const rua = new THREE.Mesh(new THREE.BoxGeometry(40, 0.04, 2.2), new THREE.MeshStandardMaterial({ color: '#C9C3B6', roughness: 1 }));
   rua.position.set(centro.x, 0, -3.6); rua.receiveShadow = true; cena.add(rua); reais.push({ obj: rua, t: 0.55 });
-  for (let i = 0; i < 5; i++) {
+  for (const ex of pl.entradas) for (let i = 0; i < 5; i++) {
     const placa = new THREE.Mesh(new RoundedBoxGeometry(0.75, 0.05, 0.42, 2, 0.03), new THREE.MeshStandardMaterial({ color: '#D8D1C3', roughness: 0.9 }));
-    placa.position.set(1.45, 0.02, -0.45 - i * 0.55); placa.receiveShadow = true; cena.add(placa); reais.push({ obj: placa, t: 0.5 + i * 0.03 });
+    placa.position.set(ex, 0.02, -0.45 - i * 0.55); placa.receiveShadow = true; cena.add(placa); reais.push({ obj: placa, t: 0.5 + i * 0.03 });
   }
 
   // Arbustos e árvores (copas de esferas), com semente fixa
@@ -349,11 +361,16 @@ export function criarCasa(renderer) {
   };
   const jardim = [];
   // cerca viva na frente e nas laterais
-  for (let x = 2.4; x < 6.3; x += 0.55) jardim.push({ obj: moita(x, -0.55, 0.32, 3, 0), t: 0.62 + rnd() * 0.15 });
-  for (let z = 0.5; z < 8.2; z += 0.6) { jardim.push({ obj: moita(-0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); jardim.push({ obj: moita(7.15, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); }
-  for (let x = 0.2; x < 6.4; x += 0.6) jardim.push({ obj: moita(x, 9.15, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 });
+  // trechos da frente sem os caminhos de entrada
+  let trechosFrente = [[0.2, LARGURA - 0.2]];
+  for (const ex of [...pl.entradas].sort((a, b) => a - b)) {
+    trechosFrente = trechosFrente.flatMap(([a, b]) => [[a, Math.min(b, ex - 0.95)], [Math.max(a, ex + 0.95), b]]);
+  }
+  for (const [a, b] of trechosFrente.filter(([a, b]) => b - a >= 0.6)) for (let x = a; x < b; x += 0.55) jardim.push({ obj: moita(x, -0.55, 0.32, 3, 0), t: 0.62 + rnd() * 0.15 });
+  for (let z = 0.5; z < PROFUNDIDADE - 0.3; z += 0.6) { jardim.push({ obj: moita(-0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); jardim.push({ obj: moita(LARGURA + 0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); }
+  for (let x = 0.2; x < LARGURA - 0.1; x += 0.6) jardim.push({ obj: moita(x, PROFUNDIDADE + 0.65, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 });
   // árvores em volta
-  for (const [x, z, r] of [[-2.6, -1.8, 1.5], [9.2, -1.2, 1.7], [-2.8, 4.5, 1.4], [9.4, 4.2, 1.5], [-2.5, 10.6, 1.8], [9.1, 10.9, 1.6], [3.4, 12.2, 1.9], [-4.6, 8.0, 1.6], [11.0, 7.6, 1.7], [0.6, 13.0, 1.4], [6.6, 13.6, 1.5]]) {
+  for (const [x, z, r] of pl.arvores || arvoresPadrao(LARGURA, PROFUNDIDADE)) {
     jardim.push({ obj: moita(x, z, r, 9, 0.6), t: 0.6 + rnd() * 0.25 });
   }
 
@@ -361,7 +378,7 @@ export function criarCasa(renderer) {
   const pisos = {};
   for (const a of ambientes) {
     const w = a.x1 - a.x0; const d = a.y1 - a.y0;
-    const mat = new THREE.MeshStandardMaterial({ map: texturaPiso(a), roughness: 0.75, transparent: true, opacity: 0 });
+    const mat = new THREE.MeshStandardMaterial({ map: texturaPiso(a, MOVEIS), roughness: 0.75, transparent: true, opacity: 0 });
     const m = new THREE.Mesh(new THREE.BoxGeometry(w, 0.04, d), mat);
     m.position.set(a.x0 + w / 2, 0.02, a.y0 + d / 2); m.receiveShadow = true; cena.add(m);
     pisos[a.id] = m;
@@ -404,7 +421,7 @@ export function criarCasa(renderer) {
   // -------------------------------------------------------------------------
   let ultimoDesenho = -1;
   function aplicar({ desenho: pd = 1, paredes: pp = 1, vida = 1, corte = 1.1 }) {
-    if (Math.abs(pd - ultimoDesenho) > 1e-4) { desenharBlueprint(gBP, pd); texBP.needsUpdate = true; ultimoDesenho = pd; }
+    if (Math.abs(pd - ultimoDesenho) > 1e-4) { desenharBlueprint(gBP, pd, pl); texBP.needsUpdate = true; ultimoDesenho = pd; }
     desenho.material.opacity = 1 - suave((vida - 0.55) / 0.3);
     desenho.visible = desenho.material.opacity > 0.01 && pd > 0;
 
@@ -429,8 +446,9 @@ export function criarCasa(renderer) {
     void altura;
 
     // Cômodos ganham vida em sequência
+    const passo = Math.min(0.075, 0.375 / Math.max(1, ORDEM.length - 1)); // 0,075 com 6 cômodos
     ORDEM.forEach((id, i) => {
-      const ini = 0.12 + i * 0.075; const v = suave((vida - ini) / 0.22);
+      const ini = 0.12 + i * passo; const v = suave((vida - ini) / 0.22);
       const piso = pisos[id]; piso.material.opacity = v; piso.visible = v > 0.005; piso.material.transparent = v < 0.99;
       for (const { m, obj } of moveis) {
         if (m.amb !== id) continue;
@@ -464,7 +482,7 @@ export function criarCasa(renderer) {
 
   function render() { renderer.render(cena, camera); }
   aplicar({ desenho: 0, paredes: 0, vida: 0 });
-  return { cena, camera, aplicar, enquadrar, render };
+  return { cena, camera, aplicar, enquadrar, render, planta: pl };
 }
 
 // ---------------------------------------------------------------------------
@@ -560,6 +578,33 @@ function construirMovel(m) {
     case 'vaso': {
       g.add(em(caixa(0.36, 0.38, 0.5, '#FFFFFF', 0.12, 0.3), 0, 0.19, 0.05));
       g.add(em(caixa(0.38, 0.32, 0.17, '#FFFFFF', 0.04, 0.3), 0, 0.5, -0.22));
+      break;
+    }
+    case 'tanque': g.add(em(caixa(0.6, 0.85, 0.55, '#ECEBE7', 0.03, 0.4), 0, 0.425, 0)); g.add(em(caixa(0.46, 0.04, 0.38, '#B9C0C4', 0.02, 0.3), 0, 0.86, 0.02)); break;
+    case 'maquina': {
+      g.add(em(caixa(0.6, 0.85, 0.62, '#F6F6F4', 0.04, 0.35), 0, 0.425, 0));
+      const porta = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.02, 24), new THREE.MeshStandardMaterial({ color: '#8FA3B0', roughness: 0.2 }));
+      g.add(em(porta, 0, 0.86, 0.04));
+      break;
+    }
+    case 'poltrona': {
+      const cor = m.cor || '#C9A27A';
+      g.add(em(caixa(0.8, 0.4, 0.8, cor, 0.06), 0, 0.2, 0));
+      g.add(em(caixa(0.8, 0.45, 0.18, cor, 0.06), 0, 0.5, -0.31));
+      for (const s of [-1, 1]) g.add(em(caixa(0.14, 0.55, 0.8, cor, 0.06), s * 0.33, 0.28, 0));
+      break;
+    }
+    case 'estante': {
+      // Estante baixa (1,2 m) com uma fileira de livros finos em cima
+      g.add(em(caixa(m.w, 1.2, m.d, madeira, 0.02), 0, 0.6, 0));
+      const cores = ['#C75D4A', '#E3B84F', '#4F7FA8', '#6E8F5A', '#EDE6DA', '#8A6FA0'];
+      const rl = aleatorio(Math.round(m.x * 31 + m.y * 17));
+      let bx = -m.w / 2 + 0.08;
+      while (bx < m.w / 2 - 0.12) {
+        const esp = 0.035 + rl() * 0.03; const alt = 0.18 + rl() * 0.08;
+        g.add(em(caixa(esp, alt, m.d * 0.75, cores[Math.floor(rl() * cores.length)], 0.005), bx + esp / 2, 1.2 + alt / 2, 0));
+        bx += esp + 0.005; if (rl() < 0.12) bx += 0.12;
+      }
       break;
     }
     case 'pia': g.add(em(caixa(m.w, 0.8, m.d, madeiraClara, 0.02), 0, 0.4, 0)); g.add(em(caixa(m.w - 0.12, 0.05, m.d - 0.12, '#FFFFFF', 0.04, 0.3), 0, 0.83, 0)); break;

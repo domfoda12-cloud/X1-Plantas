@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Casa Compacta: planta 3D</title>
+<title>Planta 3D</title>
 <style>
   html, body { margin: 0; overflow: hidden; background: #0B4FA8; }
   canvas { display: block; }
@@ -12,15 +12,19 @@
 <body>
 <canvas id="tela"></canvas>
 <script type="module">
-  // Página de quadro único: ?w=1080&h=1920&ss=1.5 define o tamanho e a superamostragem.
+  // Página de quadro único: ?planta=C01&w=1080&h=1920&ss=1.5 define a planta, o tamanho e a superamostragem.
   import * as THREE from '../node_modules/three/build/three.module.js';
   import { criarCasa } from './casa3d.js';
   const q = new URLSearchParams(location.search);
+  const id = (q.get('planta') || 'C01').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const dados = (await import(`./plantas/${id}.js`)).default;
+  document.title = `${dados.nome}: planta 3D`;
   const W = Number(q.get('w') || 1080); const H = Number(q.get('h') || 1920); const SS = Number(q.get('ss') || 1.5);
   const canvas = document.getElementById('tela');
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
   renderer.setPixelRatio(SS); renderer.setSize(W, H);
-  const casa = criarCasa(renderer);
+  const casa = criarCasa(renderer, dados);
+  window.info = { id: dados.id, nome: dados.nome, largura: dados.largura, profundidade: dados.profundidade, camera: dados.camera || {} };
   // estado: { desenho, paredes, vida, corte }; camera: { theta, inclinacao, distancia, fov, alvo }
   window.desenhar = (estado, camera) => { casa.aplicar(estado); casa.enquadrar({ ...camera, aspecto: W / H }); casa.render(); };
   document.fonts.ready.then(() => { window.pronto = true; });
