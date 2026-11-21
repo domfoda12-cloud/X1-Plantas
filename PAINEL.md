@@ -9,7 +9,7 @@
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 20/11/2026. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 21/11/2026. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|
