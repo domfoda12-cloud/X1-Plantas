@@ -1,0 +1,148 @@
+{
+ "saida": "video/saida/principal-condor/x1-plantas-principal-condor.mp4",
+ "tamanho": [
+  1080,
+  1920
+ ],
+ "crf": 23,
+ "grao": 5,
+ "batida": "Todos os cortes caem em múltiplos de 0,6 s (100 batidas por minuto), para a trilha licenciada encaixar na edição final.",
+ "rodape": "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.",
+ "cenas": [
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 2.4,
+   "inicio": 1.4,
+   "vel": 0.15,
+   "zoom": [1.2, 1.0],
+   "invertida": true,
+   "janela": "8×15",
+   "abre": 0.6,
+   "olho": "X1-Plantas",
+   "titulo": "Todo lote é uma <b>conta.</b>",
+   "sub": "Lote de 8 por 15 metros. Que casa deve caber?",
+   "selo": "Ilustração do modelo 3D"
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 2.4,
+   "inicio": 1.76,
+   "vel": 0.35,
+   "gira": 0.6,
+   "olho": "Casa I · Compacta C01",
+   "titulo": "A casa certa é a <b>resposta.</b>",
+   "selo": "Ilustração do modelo 3D"
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 1.2,
+   "inicio": 2.6,
+   "vel": 1.4,
+   "olho": "Casa I · Compacta C01",
+   "titulo": "<b>55 m².</b>",
+   "tam": 170,
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 1.2,
+   "inicio": 4.28,
+   "vel": 1.4,
+   "olho": "Casa I · Compacta C01",
+   "titulo": "<b>2 quartos.</b>",
+   "tam": 170,
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 2.4,
+   "inicio": 5.96,
+   "vel": [2, 1],
+   "olho": "Casa I · Compacta C01",
+   "titulo": "Lote a partir de <b>8 × 15 m</b>",
+   "sub": "com recuos de referência.",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/fachada.mp4",
+   "trocar": true,
+   "dur": 2.4,
+   "inicio": 0.4,
+   "vel": [2.5, 1],
+   "impacto": true,
+   "titulo": "Uma ideia de como ela pode ficar na rua.",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-10.jpg",
+   "dur": 2.4,
+   "caber": true,
+   "olho": "No e-book",
+   "titulo": "Leve ao seu engenheiro ou arquiteto."
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-10.jpg",
+   "dur": 2.4,
+   "zoom": [1.0, 1.1],
+   "impacto": true,
+   "titulo": "A planta é de referência.",
+   "sub": "O projeto é do profissional."
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-03.jpg",
+   "dur": 1.2,
+   "zoom": [1.0, 1.06],
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>"
+  },
+  {
+   "fonte": "ebook/visual/3d/C03.jpg",
+   "dur": 0.6,
+   "zoom": [1.0, 1.04],
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "ebook/visual/3d/E07.jpg",
+   "dur": 0.6,
+   "zoom": [1.0, 1.04],
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "ebook/visual/3d/F01.jpg",
+   "dur": 0.6,
+   "zoom": [1.0, 1.04],
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "ebook/visual/3d/S05.jpg",
+   "dur": 0.6,
+   "zoom": [1.0, 1.04],
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
+  },
+  {
+   "fonte": "ebook/visual/3d/C01.jpg",
+   "dur": 4.8,
+   "zoom": [1.0, 1.15],
+   "janela": "PLANTA",
+   "olho": "Todo lote é uma conta",
+   "titulo": "Comente",
+   "sub": "e receba uma planta de graça no WhatsApp.",
+   "selo": "Ilustração do modelo 3D"
+  }
+ ]
+}
