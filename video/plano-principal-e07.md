@@ -1,7 +1,7 @@
 # Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro
 
 > Pedido do dono (21/11/2026): vídeo curto, cada quadro pensado, começando do blueprint com efeito (o azul não fica parado), referências populares do Brasil dentro da casa, OpenArt com as ferramentas novas (plano Pro, 24.000 créditos), casa detalhada antes de gerar (serve depois para o e-book), Conselho aprova antes, "capricha", estilo CONDOR ([`REFERENCIA-CONDOR.md`](REFERENCIA-CONDOR.md)). Música: [`musica/`](musica/) (original, 128 BPM).
-> **Situação:** aprovado pelo Conselho em 21/11/2026, com as condições da seção 7. **Versão 1 pronta:** `video/saida/principal-e07/x1-plantas-e07.mp4` (15 s, 11,5 MB). Para montar de novo: `node video/principal-e07/render_blueprint.cjs` e `node video/principal-e07/montar_e07.cjs`.
+> **Situação:** aprovado pelo Conselho em 21/11/2026, com as condições da seção 7. **Versão 2 pronta e aprovada pelo Revisor (21/11/2026; a v1 levou veto por marcas na sala e na cozinha, corrigido):** `video/saida/principal-e07/x1-plantas-e07.mp4` (15 s, 11,5 MB). Para montar de novo: `node video/principal-e07/render_blueprint.cjs` e `node video/principal-e07/montar_e07.cjs`.
 
 ## 1. A casa que o vídeo segue (fonte única)
 
