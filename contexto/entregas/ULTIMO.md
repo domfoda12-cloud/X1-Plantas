@@ -1,9 +1,9 @@
-**Tarefa:** fazer o vídeo principal (reel e anúncio) e a prévia do e-book para o parceiro mandar no WhatsApp.
-**Feito:** `video/montar.py` (monta vídeo vertical de um roteiro em JSON: cenas, texto, aviso legal, compressão).
-`video/roteiros/principal.json` e `previa-whatsapp.json` (texto e ordem das cenas).
-`video/broll/clipes/` (8 clipes do OpenArt, Kling 3.0, e a animação 3D da C01 do motor novo) e `video/broll/paginas/` (4 páginas do e-book).
-Saídas: `video/saida/principal/x1-plantas-principal.mp4` (29 s, 14,2 MB) e `video/saida/previa-whatsapp/x1-plantas-previa.mp4` (19 s, 1,2 MB).
-**Como conferir:** `python3 video/montar.py video/roteiros/principal.json` monta de novo; assistir aos dois arquivos.
-**Não feito / ressalva:** sem música e sem locução (a faixa licenciada entra na edição da MinoAI Frontier, no Mac do dono). O Revisor de risco aprovou os roteiros; os vídeos prontos foram conferidos por quem montou, não por ele. Os 5 anúncios antigos (`saida/v1` a `v5`) continuam com o 3D velho.
-**Decisão do dono pendente:** aprovar os dois vídeos; palavra da chamada (PLANTA ou LOTE); publicar.
-**Próximo passo:** ouvir o dono sobre os vídeos. OpenArt tem 115 créditos: não dá para outro clipe.
+**Tarefa:** logo, música de 128 BPM e vídeo principal novo da E07 com OpenArt (liberado de novo pelo dono), mais o roteiro da versão 3 "Grupo da família".
+**Feito:** `marca/logo/` (6 logos; recomendada a de perfil, BIG + dois D formando a casa). `video/musica/` (trilha original "BIG BIG", 30 s, sintetizada).
+`video/plano-principal-e07.md` (plano quadro a quadro e decisão do Conselho). `video/principal-e07/` (blueprint animado, montador, imagens).
+`video/saida/principal-e07/x1-plantas-e07.mp4`: versão 2 (15 s, 11,4 MB), aprovada pelo Revisor depois de um veto por marcas na v1.
+Roteiro da v3 e prompt para o roteirista (WhatsApp e Instagram) num documento do dono: https://claude.ai/artifact/Lr8SvUJPmvcZ5JAZvzywNU
+**Como conferir:** `node video/principal-e07/render_blueprint.cjs` e `node video/principal-e07/montar_e07.cjs` montam de novo (precisam dos clipes em `principal-e07/openart/`, que não vão para o git; estão na pasta "X1 · Vídeo principal" do OpenArt).
+**Não feito / ressalva:** v3 parada por ordem do dono, esperando ele aprovar o roteiro. Já feitos para ela: abertura com o balão do Tio Zé (no `blueprint.html`) e 3 imagens (almoço de domingo, cozinha com onigiri, fachada com luz rosa de GTA). Falta animar 3 cenas (~525 créditos), montar e passar pelo Revisor (camisa do menino no almoço; nada de marca do jogo). A música não foi ouvida por ninguém ainda.
+**Decisão do dono pendente:** aprovar o roteiro da v3; escolher o logo; palavra da chamada (PLANTA ou LOTE); reel orgânico ou anúncio; publicar.
+**Próximo passo:** ler a resposta do dono no documento; se aprovado, animar as 3 cenas no Kling 3 Omni e trocar as cenas no `montar_e07.cjs`. OpenArt: 21.849 créditos no começo da v3.

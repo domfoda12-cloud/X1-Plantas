@@ -71,3 +71,13 @@ DECISÃO: aprovado com as condições. Nenhum veto.
 - **Interior:** luz lateral de fim de tarde (3.500–4.000 K), lente 24–28 mm a 1,5 m, piso cerâmico bege, parede branco-gelo, MDF amadeirado, janela de alumínio com grade, sinais de casa vivida; nada de catálogo.
 - **Cada imagem gerada** segue a lista de cômodos do Arquiteto (porta, janela e móveis no lugar da planta; suíte não aparece maior). Áudio dos clipes gerados é descartado; a trilha é a nossa.
 - **Logo no vídeo:** versão de perfil (sem os nomes). "DOMINIC & DAVI" só com autorização por escrito dos dois.
+
+## 8. Versão 3 "Grupo da família" (roteiro esperando o dono)
+
+Pedido do dono (21/11, noite): ironia com a família brasileira e referências o mais recentes possível. Roteiro completo, fontes e cuidados: [documento do dono](https://claude.ai/artifact/Lr8SvUJPmvcZ5JAZvzywNU).
+
+- **Abertura:** balão genérico "GRUPO DA FAMÍLIA · Tio Zé: 3 quartos em 8 m de frente? Não cabe nem a família no Natal kkkk" sobre o blueprint (já feito no `blueprint.html`).
+- **Cenas novas no drop:** almoço de domingo na cozinha (5 pessoas e o caramelo), onigiri na bancada (trend de novembro; sai o morango do amor, que é de 2025), fachada com luz rosa de GTA (sem nada do jogo).
+- **Fecho:** "Cabe. Print enviado no grupo", depois "Comenta PLANTA".
+- **Falta:** aprovação do dono, animar 3 cenas (~525 créditos), montar, Revisor.
+
