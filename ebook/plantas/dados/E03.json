@@ -1,0 +1,220 @@
+{
+ "id": "E03",
+ "nome": "Casa Fita",
+ "W": 3.5,
+ "D": 13.2,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 2.6,
+   "y1": 3.9
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 3.9,
+   "x1": 2.6,
+   "y1": 6.7
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 0.0,
+   "y0": 6.7,
+   "x1": 2.6,
+   "y1": 8.0
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 0.0,
+   "y0": 8.0,
+   "x1": 2.6,
+   "y1": 9.8
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 9.8,
+   "x1": 2.6,
+   "y1": 13.2
+  },
+  {
+   "id": "corr",
+   "nome": "Corredor coberto",
+   "tipo": "varanda",
+   "x0": 2.6,
+   "y0": 0.0,
+   "x1": 3.5,
+   "y1": 13.2
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "corr",
+   "frente"
+  ],
+  [
+   "corr",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "corr",
+   "cozinha"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "corr",
+   "servico"
+  ],
+  [
+   "corr",
+   "banho"
+  ],
+  [
+   "corr",
+   "quarto1"
+  ]
+ ],
+ "quartos_txt": "1 quarto",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.5
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.1
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.6
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    1.2
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.5
+   ]
+  ]
+ },
+ "recuos": {
+  "esq": 0.0
+ },
+ "destaque": "Cabe em lote de 5 m de frente: todas as janelas dão para o corredor",
+ "pensou": [
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
+  "Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [
+   "Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília",
+   "Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília"
+  ],
+  "info": [],
+  "metricas": {
+   "area_fechada": 34.3,
+   "area_total": 46.2,
+   "area_coberta_aberta": 11.9,
+   "util": {
+    "sala": [
+     2.3,
+     3.75,
+     8.6
+    ],
+    "cozinha": [
+     2.3,
+     2.74,
+     6.3
+    ],
+    "servico": [
+     2.3,
+     1.18,
+     2.7
+    ],
+    "banho": [
+     2.3,
+     1.68,
+     3.9
+    ],
+    "quarto1": [
+     2.3,
+     3.19,
+     7.3
+    ],
+    "corr": [
+     0.9,
+     13.2,
+     11.9
+    ]
+   },
+   "luz": {
+    "sala": 0.2071,
+    "cozinha": 0.1511,
+    "servico": 0.1775,
+    "banho": 0.1538,
+    "quarto1": 0.2036
+   },
+   "circulacao": 0.0,
+   "lote": [
+    5.0,
+    17.7
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    5,
+    20
+   ],
+   "taxa_ocupacao": 0.52,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "sul",
+    "pior": "leste",
+    "pontos": {
+     "norte": 7.7,
+     "leste": 1.9,
+     "sul": 6.3,
+     "oeste": 3.6
+    }
+   }
+  }
+ }
+}

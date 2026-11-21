@@ -1,0 +1,252 @@
+{
+ "id": "C04",
+ "nome": "Casa Duo",
+ "W": 6.0,
+ "D": 9.6,
+ "comodos": [
+  {
+   "id": "varanda",
+   "nome": "Varanda",
+   "tipo": "varanda",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 6.0,
+   "y1": 1.6
+  },
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 1.6,
+   "x1": 3.0,
+   "y1": 5.0
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.0,
+   "y0": 1.6,
+   "x1": 4.8,
+   "y1": 5.0
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 4.8,
+   "y0": 1.6,
+   "x1": 6.0,
+   "y1": 5.0
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 5.0,
+   "x1": 3.9,
+   "y1": 6.2
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 3.9,
+   "y0": 5.0,
+   "x1": 6.0,
+   "y1": 6.2
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 6.2,
+   "x1": 3.0,
+   "y1": 9.6
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 3.0,
+   "y0": 6.2,
+   "x1": 6.0,
+   "y1": 9.6
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "varanda",
+   "frente"
+  ],
+  [
+   "varanda",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.5
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.0
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.7
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.7
+   ]
+  ]
+ },
+ "destaque": "Varanda na frente e dois quartos do mesmo tamanho",
+ "pensou": [
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [
+   "Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho"
+  ],
+  "info": [],
+  "metricas": {
+   "area_fechada": 48.0,
+   "area_total": 57.6,
+   "area_coberta_aberta": 9.6,
+   "util": {
+    "varanda": [
+     6.0,
+     1.6,
+     9.6
+    ],
+    "sala": [
+     2.85,
+     3.25,
+     9.3
+    ],
+    "cozinha": [
+     1.74,
+     3.19,
+     5.6
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     3.69,
+     1.08,
+     4.0
+    ],
+    "banho": [
+     1.89,
+     1.08,
+     2.0
+    ],
+    "quarto1": [
+     2.79,
+     3.19,
+     8.9
+    ],
+    "quarto2": [
+     2.79,
+     3.19,
+     8.9
+    ]
+   },
+   "luz": {
+    "sala": 0.2059,
+    "cozinha": 0.1634,
+    "servico": 0.1716,
+    "banho": 0.1667,
+    "quarto1": 0.2,
+    "quarto2": 0.2
+   },
+   "circulacao": 0.098,
+   "lote": [
+    7.5,
+    14.1
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    8,
+    15
+   ],
+   "taxa_ocupacao": 0.54,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 8.2,
+     "leste": -5.1,
+     "sul": 12.1,
+     "oeste": 9.0
+    }
+   }
+  }
+ }
+}

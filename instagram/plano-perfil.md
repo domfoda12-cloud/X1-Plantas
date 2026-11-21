@@ -12,7 +12,7 @@
 **Nome de exibição:** Plantas de Casas | Arquitetura Residencial
 
 **Bio (até 150 caracteres):**
-> Plantas de casas prontas para construir 🏠 Veja a casa em 3D antes de decidir. Material gratuito 👇
+> As casas que cabem no seu lote 🏠 Veja em 3D antes de construir. Comenta PLANTA e ganhe uma 👇
 
 **Link na bio:** link do seu WhatsApp ou da página que seu parceiro montar.
 
@@ -20,12 +20,17 @@
 
 ## 2. Pilares de conteúdo
 
-| Pilar | Percentual | Exemplo |
-|---|---|---|
-| Plantas prontas | 30% | Carrossel com a planta baixa e medidas |
-| Passeio 3D | 30% | Vídeo de 15 a 20 s, casa por dentro |
-| Dicas para terreno e projeto | 25% | "Como aproveitar um lote de 8 x 30 m" |
-| Bastidores e processo | 15% | Modelagem 3D, revisão com o arquiteto |
+Os pilares seguem a [estratégia de marketing](../ESTRATEGIA.md): falar com quem tem um lote e vai construir, como quem já passou por obra.
+
+| Pilar | Percentual | Série fixa | Exemplo |
+|---|---|---|---|
+| **Cabe no seu lote** | 30% | "Tem um lote [medida]?" | Carrossel com 3 casas que cabem num 10 x 20 |
+| **Passeio 3D** | 25% | "Planta da semana" | Reel do blueprint ganhando vida |
+| **Erro que sai caro** | 20% | "Antes de bater a laje" | Um erro por reel, com a planta mostrando o certo |
+| **Casa que cresce** | 15% | "Hoje e depois" | A mesma casa com 2 e com 3 quartos |
+| **Bastidores e desafios** | 10% | "É possível…?" | "É possível caber 3 quartos em 8 m de frente?" |
+
+Cada post da série "Cabe no seu lote" usa um tamanho de lote diferente. O lote que mais gera comentários e mensagens vira anúncio.
 
 Sempre que possível, termine com uma chamada para o material gratuito.
 
@@ -34,10 +39,10 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 | # | Formato | Tema | Legenda (resumo) |
 |---|---|---|---|
 | 1 | Reel | Apresentação: passeio 3D da Casa Compacta | "Você consegue ver a casa antes de construir?" |
-| 2 | Carrossel | Três plantas, lado a lado | Compare área, quartos e terreno indicado |
+| 2 | Carrossel | "Tem um lote 10 x 20?" Três casas que cabem | Uma casa por tela, com área, quartos e o lote |
 | 3 | Imagem | Dica: como ler uma planta baixa | Uma dica por slide, com a seta de cota |
 | 4 | Reel | Passeio 3D da Casa Estreita | Mostrar como o corredor aproveita o lote |
-| 5 | Carrossel | Checklist antes de contratar pedreiro | Lista pronta para salvar |
+| 5 | Carrossel | "Mostra pro seu pedreiro": checklist antes de começar a obra | Lista pronta para salvar e mandar no WhatsApp |
 | 6 | Reel | Bastidor: modelando a planta em 3D | Mostrar o processo, em 15 s |
 | 7 | Imagem | Casa Família, fachada final | Legenda com área e quartos |
 | 8 | Carrossel | Erros comuns na planta da casa | Três erros, cada um com a solução |

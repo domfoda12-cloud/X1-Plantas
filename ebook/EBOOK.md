@@ -23,6 +23,8 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 - **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso.
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto", ligada ao gancho dos vídeos ("os R$ 1.000 que um arquiteto te economizaria").
 - **Grande variação:** compactas, terreno estreito, família, especiais (edícula, geminadas, acessível, home office, praia, campo, esquina) e sobrados. Ver [`catalogo.md`](catalogo.md).
+- **Plantas já desenhadas (24, lançamentos 1 e 2):** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam pelo validador de arquiteto ([`referencias/regras-do-arquiteto.md`](referencias/regras-do-arquiteto.md)). Público e persona: [`referencias/persona-e-mercado.md`](referencias/persona-e-mercado.md). Linguagem, visual e animação: [`referencias/linguagem-visual-e-animacao.md`](referencias/linguagem-visual-e-animacao.md). Análise dos catálogos de porcelanato: [`referencias/analise-catalogos-porcelanato.md`](referencias/analise-catalogos-porcelanato.md). Concorrentes: [`referencias/concorrentes.md`](referencias/concorrentes.md). Projetos similares, no Brasil e fora: [`referencias/projetos-similares.md`](referencias/projetos-similares.md).
+- **Gerador do PDF (novo, 20/11/2026):** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` (61 páginas, 24 casas) e `planta-gratis-<ID>.pdf`, no estilo do [plano](PLANO-EBOOK.md): capa fita métrica, ache pelo lote, casa no lote, "Informação da casa", orelhas, vista da rua e a casa em 3D (imagens em `ebook/visual/3d/`, do motor 3D: `node video/render-planta.cjs --planta ID --so-imagens`). Textos das casas em `fichas/textos.py`. O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
 - **Idioma e moeda:** português do Brasil, preços em R$.
 
 ## 2. Estrutura do e-book
@@ -30,7 +32,8 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 | # | Parte | Conteúdo |
 |---|---|---|
 | 1 | Capa | Título, quantidade de plantas, uma planta humanizada em destaque |
-| 2 | Como usar | Como escolher pelo tamanho do terreno, pelo número de pessoas e pelo orçamento |
+| 2 | **Ache pelo seu lote** | Uma tabela por tamanho de lote (5 x 25, 8 x 25, 10 x 20, 10 x 25, 12 x 25, 12 x 30…) com as casas que cabem em cada um. É a primeira pergunta do público ([estratégia](../ESTRATEGIA.md), seção 5) |
+| 2b | Como usar | Como escolher pelo número de pessoas, pelo orçamento e se vai construir por etapas |
 | 3 | Como ler uma planta | Blueprint, cotas, símbolos de porta e janela. Glossário: nascente, hall, peitoril, recuo, planta humanizada |
 | 4 | Os 7 erros que saem caro | Os mesmos do vídeo de anúncio ([`../video/VIDEO.md`](../video/VIDEO.md)), com a planta mostrando o certo |
 | 5 | Índice rápido | Tabela de todas as plantas por categoria, área, quartos e lote mínimo |
@@ -44,10 +47,11 @@ A pasta `vendas/` é o material do funil, que fica com o seu parceiro.
 | Página esquerda | Página direita |
 |---|---|
 | Nome e ID da planta (ex.: "C01 · Casa Compacta") | Blueprint com cotas (`01-blueprint.png`) |
-| Planta humanizada grande (`02-planta-humanizada.png`) | Duas perspectivas 3D (`03` e `04`) |
+| Planta humanizada grande (`02-planta-humanizada.png`) | Duas perspectivas 3D (`03` e `04`) e a fachada (`05`, quando existir) |
 | Ficha: área, quartos, banheiros, lote mínimo | "Por que essa planta funciona": 3 destaques |
 | Para quem é | "Cuidados": o que conferir antes de construir |
-| | QR code da animação (`animacao.mp4`) |
+| "Leve para o seu pedreiro e o seu engenheiro": medidas de cada cômodo e perguntas para fazer antes de começar | QR code da animação (`animacao.mp4`) |
+| Selo "Casa que cresce" e a imagem da ampliação (`06`), quando a planta tiver | |
 
 As imagens saem prontas das [`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md), em 2000 x 2500 pixels, que cabem numa página A4.
 
@@ -67,7 +71,8 @@ Atualize a coluna **Situação** do catálogo a cada passo. O andamento geral fi
 ## 5. Lançamentos e decisões
 
 - **Lançar em levas:** 12 plantas no 1º lançamento, 12 no 2º e 11 no 3º. Quem compra no 1º recebe os outros sem pagar de novo. A coluna **Lançamento** do [catálogo](catalogo.md) diz em qual leva cada planta entra.
-- **Título, preço, bônus e versão completa** são decididos no [painel](../PAINEL.md), seção 9, que tem as opções e a recomendação de cada um.
+- **Título, preço, bônus e versão completa** são decididos no [painel](../PAINEL.md), seção 9, que tem as opções e a recomendação de cada um. A oferta recomendada (preço, Pix e cartão, garantia, bônus, order bump) está na [estratégia](../ESTRATEGIA.md), seção 7.
+- **Linguagem:** o e-book é lido por quem constrói com pedreiro. Explique todo termo técnico na primeira vez que aparecer ([estratégia](../ESTRATEGIA.md), seção 9).
 - **Planta grátis do funil:** Casa Compacta (C01), a única com 3D pronto hoje.
 
 ## 6. Funil de vendas

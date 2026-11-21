@@ -6,7 +6,7 @@
 
 ## "É caro."
 
-Entendo. Pensa assim: são [nº] plantas, e você só precisa acertar uma. Escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
+Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente], e aqui são [nº], cada uma desenhada no lote. Dá para parcelar no cartão. E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
 
 ## "Não tenho terreno ainda."
 
@@ -36,7 +36,7 @@ Você tem 7 dias para pedir o dinheiro de volta. Sem complicação.
 
 ## "Posso ver antes de pagar?"
 
-Pode: a planta grátis que você recebeu é uma página igual às do e-book. Quer ver mais uma em 3D, das que cabem no seu terreno?
+Pode: a planta grátis que você recebeu é uma página igual às do e-book. Quer ver mais uma, das que cabem no seu terreno?
 
 ## Regras para as respostas
 

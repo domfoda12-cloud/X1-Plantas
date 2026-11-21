@@ -15,6 +15,7 @@ Sai com código 1 se houver aviso (link quebrado, arquivo faltando, situação i
 import re
 import sys
 import unicodedata
+from urllib.parse import unquote
 from datetime import date
 from pathlib import Path
 
@@ -46,8 +47,10 @@ def ler_catalogo():
         if not m:
             continue
         celulas = [c.strip() for c in linha.strip().strip("|").split("|")]
+        if len(celulas) < 9:  # outras tabelas que citam IDs (ex.: "Casas que crescem")
+            continue
         situacao = re.sub(r"[`\s]", "", celulas[-1])
-        lote_lancamento = celulas[-2] if len(celulas) >= 9 else ""
+        lote_lancamento = celulas[-2]
         plantas.append({"id": celulas[0], "nome": celulas[1], "situacao": situacao,
                         "lote_lancamento": lote_lancamento.strip()})
     return plantas
@@ -63,7 +66,7 @@ def conferir_links():
         for alvo in re.findall(r"\]\(([^)\s]+)\)", texto):
             if re.match(r"^(https?:|mailto:|#)", alvo):
                 continue
-            caminho = alvo.split("#")[0]
+            caminho = unquote(alvo.split("#")[0])
             if caminho and not (md.parent / caminho).exists():
                 quebrados.append(f"{md.relative_to(RAIZ)} → {alvo}")
     return quebrados

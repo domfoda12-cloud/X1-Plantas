@@ -8,7 +8,12 @@
 // do lado dos fundos (+z) olhando para a frente, a imagem fica igual à planta 2D (frente no alto).
 import * as THREE from '../node_modules/three/build/three.module.js';
 import { RoundedBoxGeometry } from '../node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js';
-import { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } from './planta.js';
+// Qual planta: ?planta=C01 carrega ./plantas/C01.js (gerado por ferramentas/planta3d.py); sem parâmetro, ./planta.js.
+const ID_PLANTA = new URLSearchParams(globalThis.location ? location.search : '').get('planta');
+const DADOS = await import(ID_PLANTA ? `./plantas/${ID_PLANTA}.js` : './planta.js');
+const { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } = DADOS;
+const META = DADOS.META || { nome: 'Casa Compacta', area: 55, quartos: '2 quartos', banheiros: 1 };
+const FUTUROS = DADOS.futuros || [];
 
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const suave = (v) => { v = clamp(v); return v * v * (3 - 2 * v); };
@@ -60,7 +65,7 @@ const TRECHOS = trechos();
 // ---------------------------------------------------------------------------
 // Móveis: posição em metros da planta, rotação em radianos (0 = frente do móvel para +z)
 // ---------------------------------------------------------------------------
-const MOVEIS = [
+const MOVEIS = DADOS.MOVEIS || [
   // Sala
   { tipo: 'tapete', amb: 'sala', x: 1.45, y: 2.2, w: 2.0, d: 2.5, cor: '#D9CBB4', borda: '#B49D7C' },
   { tipo: 'sofa', amb: 'sala', x: 2.78, y: 2.2, rot: -Math.PI / 2, w: 2.1, d: 0.88, cor: '#8A9A86' },
@@ -92,7 +97,7 @@ const MOVEIS = [
 ];
 
 // Ordem em que os cômodos ganham vida
-const ORDEM = ['sala', 'cozinha', 'hall', 'banho', 'quarto1', 'quarto2'];
+const ORDEM = DADOS.ORDEM || ['sala', 'cozinha', 'hall', 'banho', 'quarto1', 'quarto2'];
 
 // ---------------------------------------------------------------------------
 // Texturas desenhadas em canvas
@@ -103,10 +108,19 @@ function texturaPiso(a) {
   const w = a.x1 - a.x0; const d = a.y1 - a.y0;
   const c = document.createElement('canvas'); c.width = Math.round(w * PXM); c.height = Math.round(d * PXM);
   const g = c.getContext('2d'); const rnd = aleatorio(a.id.length * 7919 + Math.round(w * 100));
-  const porcelanato = a.id === 'cozinha' || a.id === 'banho';
-  if (porcelanato) {
-    const base = a.id === 'banho' ? [226, 228, 226] : [222, 216, 205];
-    const lado = a.id === 'banho' ? 0.45 : 0.6;
+  const tipoPiso = a.piso || (a.id === 'cozinha' || a.id === 'banho' ? 'porcelanato' : 'madeira');
+  if (tipoPiso === 'grama' || tipoPiso === 'cimento') {
+    const base = tipoPiso === 'grama' ? [112, 146, 82] : [196, 190, 180];
+    g.fillStyle = `rgb(${base})`; g.fillRect(0, 0, c.width, c.height);
+    for (let i = 0; i < w * d * 900; i++) {
+      const v = (rnd() - 0.5) * 40; g.fillStyle = `rgba(${base[0] + v},${base[1] + v},${base[2] + v},0.5)`;
+      g.fillRect(rnd() * c.width, rnd() * c.height, 2, tipoPiso === 'grama' ? 5 : 2);
+    }
+    if (tipoPiso === 'cimento') { g.strokeStyle = 'rgba(120,115,105,0.5)'; g.lineWidth = 1.5; for (let x = 0; x <= w; x += 1.0) { g.beginPath(); g.moveTo(x * PXM, 0); g.lineTo(x * PXM, c.height); g.stroke(); } }
+  } else if (tipoPiso === 'porcelanato') {
+    const molhado = a.id === 'banho' || a.tipo === 'banho' || a.tipo === 'lavabo';
+    const base = molhado ? [226, 228, 226] : [222, 216, 205];
+    const lado = molhado ? 0.45 : 0.6;
     for (let y = 0; y < d; y += lado) for (let x = 0; x < w; x += lado) {
       const v = (rnd() - 0.5) * 10;
       g.fillStyle = `rgb(${base[0] + v},${base[1] + v},${base[2] + v})`;
@@ -200,7 +214,9 @@ function pegada(m) {
 // ---------------------------------------------------------------------------
 // Blueprint: desenho em canvas sobre um plano, com progresso de 0 a 1
 // ---------------------------------------------------------------------------
-const BP = { x0: -4.75, z0: -3.75, tam: 16, px: 2048 };
+const BP_TAM = Math.max(16, Math.max(LARGURA, PROFUNDIDADE) + 8);
+const BP = { x0: LARGURA / 2 - BP_TAM / 2, z0: PROFUNDIDADE / 2 - BP_TAM / 2 + 0.25, tam: BP_TAM, px: Math.min(4096, Math.round(2048 * BP_TAM / 16)) };
+const m1 = (v) => v.toFixed(2).replace('.', ',') + ' m';
 const K = BP.px / BP.tam;
 const P = (x, z) => [(x - BP.x0) * K, (z - BP.z0) * K];
 
@@ -266,9 +282,12 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
   if (nomes && pn > 0) {
     g.fillStyle = `rgba(255,255,255,${pn})`; g.textAlign = 'center';
     for (const a of ambientes) {
-      if (a.id === 'hall') continue;
+      if (a.id === 'hall' || a.tipo === 'circ' || a.tipo === 'externo' || Math.min(a.x1 - a.x0, a.y1 - a.y0) < 1.15) continue;
+      if (a.tipo === 'patio') { const [px2, py2] = P((a.x0 + a.x1) / 2, (a.y0 + a.y1) / 2); g.font = '600 24px Inter, sans-serif'; g.fillText('PÁTIO', px2, py2); continue; }
       const [cx, cy] = P((a.x0 + a.x1) / 2, (a.y0 + a.y1) / 2);
-      g.font = '700 34px Inter, sans-serif'; g.fillText(a.nome.toUpperCase(), cx, cy - 6);
+      const larg = (a.x1 - a.x0) * K; let fs = 34; g.font = `700 ${fs}px Inter, sans-serif`;
+      while (g.measureText(a.nome.toUpperCase()).width > larg - 16 && fs > 18) { fs -= 2; g.font = `700 ${fs}px Inter, sans-serif`; }
+      g.fillText(a.nome.toUpperCase(), cx, cy - 6);
       g.font = '500 28px Inter, sans-serif'; g.fillText(m2((a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30);
     }
   }
@@ -282,11 +301,19 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
       g.save(); g.translate((a + c2) / 2, (b + d2) / 2); if (vertical) g.rotate(-Math.PI / 2);
       g.textAlign = 'center'; g.fillText(txt, 0, -14); g.restore();
     };
-    cota(0, -0.8, LARGURA, -0.8, '6,50 m', false);
-    cota(-0.8, 0, -0.8, PROFUNDIDADE, '8,50 m', true);
+    cota(0, -0.8, LARGURA, -0.8, m1(LARGURA), false);
+    cota(-0.8, 0, -0.8, PROFUNDIDADE, m1(PROFUNDIDADE), true);
     g.font = '700 30px Inter, sans-serif'; g.textAlign = 'left';
     const [tx, ty] = P(0, PROFUNDIDADE + 1.0);
-    g.fillText('CASA COMPACTA', tx, ty); g.font = '500 26px Inter, sans-serif'; g.fillText('55 m² · 2 quartos · 1 banho', tx, ty + 34);
+    g.fillText(META.nome.toUpperCase(), tx, ty); g.font = '500 26px Inter, sans-serif';
+    g.fillText(`${Math.round(META.area)} m² · ${META.quartos} · ${META.banheiros} banho${META.banheiros > 1 ? 's' : ''}`, tx, ty + 34);
+    // Ampliação prevista (casa que cresce): tracejado amarelo
+    g.strokeStyle = `rgba(255,200,87,${pc})`; g.fillStyle = `rgba(255,200,87,${pc})`; g.setLineDash([16, 12]); g.lineWidth = 4;
+    for (const f of FUTUROS) {
+      const [a, b] = P(f.x0, f.y0); const [c2, d2] = P(f.x1, f.y1); g.strokeRect(a, b, c2 - a, d2 - b);
+      g.textAlign = 'center'; g.font = '600 26px Inter, sans-serif'; g.fillText(f.nome.toUpperCase(), (a + c2) / 2, (b + d2) / 2);
+    }
+    g.setLineDash([]);
   }
 }
 
@@ -308,7 +335,8 @@ export function criarCasa(renderer) {
   const sol = new THREE.DirectionalLight('#FFF3E2', 2.2);
   sol.position.set(centro.x - 4, 22, centro.z - 3.5); sol.target.position.copy(centro);
   sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
-  Object.assign(sol.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 40 });
+  const RS = Math.max(12, Math.max(LARGURA, PROFUNDIDADE) * 0.8 + 4);
+  Object.assign(sol.shadow.camera, { left: -RS, right: RS, top: RS, bottom: -RS, near: 1, far: 60 });
   sol.shadow.bias = -0.0004; sol.shadow.radius = 9; sol.shadow.blurSamples = 16;
   cena.add(sol, sol.target);
 
@@ -326,11 +354,13 @@ export function criarCasa(renderer) {
   const grama = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), new THREE.MeshStandardMaterial({ map: texturaGrama(), roughness: 1, transparent: true, opacity: 0 }));
   grama.rotation.x = -Math.PI / 2; grama.position.set(centro.x, -0.02, centro.z); grama.receiveShadow = true; cena.add(grama);
   const reais = []; // objetos externos que surgem com o jardim
+  const portaEntrada = portas.find((d) => d.id === 'entrada' || (String(d.id).startsWith('ext-') && Math.abs(d.y) < 0.01));
+  const ENTRADA_X = portaEntrada ? (portaEntrada.a0 === Math.PI ? portaEntrada.x - portaEntrada.r / 2 : portaEntrada.x + portaEntrada.r / 2) : LARGURA / 2;
   const rua = new THREE.Mesh(new THREE.BoxGeometry(40, 0.04, 2.2), new THREE.MeshStandardMaterial({ color: '#C9C3B6', roughness: 1 }));
   rua.position.set(centro.x, 0, -3.6); rua.receiveShadow = true; cena.add(rua); reais.push({ obj: rua, t: 0.55 });
   for (let i = 0; i < 5; i++) {
     const placa = new THREE.Mesh(new RoundedBoxGeometry(0.75, 0.05, 0.42, 2, 0.03), new THREE.MeshStandardMaterial({ color: '#D8D1C3', roughness: 0.9 }));
-    placa.position.set(1.45, 0.02, -0.45 - i * 0.55); placa.receiveShadow = true; cena.add(placa); reais.push({ obj: placa, t: 0.5 + i * 0.03 });
+    placa.position.set(ENTRADA_X, 0.02, -0.45 - i * 0.55); placa.receiveShadow = true; cena.add(placa); reais.push({ obj: placa, t: 0.5 + i * 0.03 });
   }
 
   // Arbustos e árvores (copas de esferas), com semente fixa
@@ -349,11 +379,12 @@ export function criarCasa(renderer) {
   };
   const jardim = [];
   // cerca viva na frente e nas laterais
-  for (let x = 2.4; x < 6.3; x += 0.55) jardim.push({ obj: moita(x, -0.55, 0.32, 3, 0), t: 0.62 + rnd() * 0.15 });
-  for (let z = 0.5; z < 8.2; z += 0.6) { jardim.push({ obj: moita(-0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); jardim.push({ obj: moita(7.15, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); }
-  for (let x = 0.2; x < 6.4; x += 0.6) jardim.push({ obj: moita(x, 9.15, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 });
+  for (let x = 0.2; x < LARGURA - 0.1; x += 0.55) if (Math.abs(x - ENTRADA_X) > 0.8) jardim.push({ obj: moita(x, -0.55, 0.32, 3, 0), t: 0.62 + rnd() * 0.15 });
+  for (let z = 0.5; z < PROFUNDIDADE - 0.3; z += 0.6) { jardim.push({ obj: moita(-0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); jardim.push({ obj: moita(LARGURA + 0.65, z, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 }); }
+  for (let x = 0.2; x < LARGURA - 0.1; x += 0.6) jardim.push({ obj: moita(x, PROFUNDIDADE + 0.65, 0.32, 3, 0), t: 0.62 + rnd() * 0.2 });
   // árvores em volta
-  for (const [x, z, r] of [[-2.6, -1.8, 1.5], [9.2, -1.2, 1.7], [-2.8, 4.5, 1.4], [9.4, 4.2, 1.5], [-2.5, 10.6, 1.8], [9.1, 10.9, 1.6], [3.4, 12.2, 1.9], [-4.6, 8.0, 1.6], [11.0, 7.6, 1.7], [0.6, 13.0, 1.4], [6.6, 13.6, 1.5]]) {
+  for (const [x0a, z0a, r] of [[-2.6, -1.8, 1.5], [9.2, -1.2, 1.7], [-2.8, 4.5, 1.4], [9.4, 4.2, 1.5], [-2.5, 10.6, 1.8], [9.1, 10.9, 1.6], [3.4, 12.2, 1.9], [-4.6, 8.0, 1.6], [11.0, 7.6, 1.7], [0.6, 13.0, 1.4], [6.6, 13.6, 1.5]]) {
+    const x = x0a > 6.5 ? x0a + LARGURA - 6.5 : x0a; const z = z0a > 8.5 ? z0a + PROFUNDIDADE - 8.5 : z0a;
     jardim.push({ obj: moita(x, z, r, 9, 0.6), t: 0.6 + rnd() * 0.25 });
   }
 
@@ -431,7 +462,7 @@ export function criarCasa(renderer) {
     // Cômodos ganham vida em sequência
     ORDEM.forEach((id, i) => {
       const ini = 0.12 + i * 0.075; const v = suave((vida - ini) / 0.22);
-      const piso = pisos[id]; piso.material.opacity = v; piso.visible = v > 0.005; piso.material.transparent = v < 0.99;
+      const piso = pisos[id]; if (!piso) return; piso.material.opacity = v; piso.visible = v > 0.005; piso.material.transparent = v < 0.99;
       for (const { m, obj } of moveis) {
         if (m.amb !== id) continue;
         const atraso = MOVEIS.filter((mm) => mm.amb === id).indexOf(m) * 0.03;
@@ -571,6 +602,23 @@ function construirMovel(m) {
       for (let i = 0; i < 7; i++) {
         const f = new THREE.Mesh(new THREE.IcosahedronGeometry(0.16 * s, 1), new THREE.MeshStandardMaterial({ color: verde[i % 3], roughness: 0.9, flatShading: true }));
         g.add(em(f, (rr() - 0.5) * 0.3 * s, (0.45 + rr() * 0.4) * s, (rr() - 0.5) * 0.3 * s));
+      }
+      break;
+    }
+    case 'tanque': g.add(em(caixa(m.w, 0.85, m.d, '#F4F4F2', 0.03, 0.4), 0, 0.425, 0)); g.add(em(caixa(m.w - 0.1, 0.03, m.d - 0.12, '#C9CED1', 0.02), 0, 0.86, 0)); break;
+    case 'maquina': g.add(em(caixa(m.w, 0.9, m.d, '#ECEEF0', 0.04, 0.35), 0, 0.45, 0)); g.add(em(new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.02, 24), new THREE.MeshStandardMaterial({ color: '#9FB3C2', metalness: 0.3 })), 0, 0.91, 0)); break;
+    case 'poltrona': {
+      const cor = '#B9895E';
+      g.add(em(caixa(m.w, 0.38, m.d, cor, 0.06), 0, 0.19, 0)); g.add(em(caixa(m.w, 0.45, 0.14, cor, 0.06), 0, 0.55, -m.d / 2 + 0.07));
+      break;
+    }
+    case 'carro': {
+      const corCarro = '#B33A3A';
+      g.add(em(caixa(m.w, 0.6, m.d, corCarro, 0.12, 0.35), 0, 0.5, 0));
+      g.add(em(caixa(m.w - 0.15, 0.45, m.d * 0.5, '#2E3A44', 0.1, 0.2), 0, 1.0, -0.1));
+      for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
+        const roda = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.22, 20), new THREE.MeshStandardMaterial({ color: '#1C1C1C' }));
+        roda.rotation.z = Math.PI / 2; g.add(em(roda, sx * (m.w / 2 - 0.08), 0.3, sz * (m.d / 2 - 0.7)));
       }
       break;
     }

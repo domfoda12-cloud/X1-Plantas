@@ -1,0 +1,308 @@
+{
+ "id": "F02",
+ "nome": "Casa Integrada",
+ "W": 10.0,
+ "D": 8.6,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.0,
+   "y1": 3.8
+  },
+  {
+   "id": "jantar",
+   "nome": "Jantar",
+   "tipo": "jantar",
+   "x0": 4.0,
+   "y0": 0.0,
+   "x1": 6.4,
+   "y1": 3.8
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 6.4,
+   "y0": 0.0,
+   "x1": 8.8,
+   "y1": 3.8
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 8.8,
+   "y0": 0.0,
+   "x1": 10.0,
+   "y1": 3.8
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.8,
+   "x1": 6.8,
+   "y1": 5.0
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 6.8,
+   "y0": 3.8,
+   "x1": 10.0,
+   "y1": 5.0
+  },
+  {
+   "id": "quarto3",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 5.0,
+   "x1": 2.8,
+   "y1": 8.6
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 2.8,
+   "y0": 5.0,
+   "x1": 5.6,
+   "y1": 8.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 5.6,
+   "y0": 5.0,
+   "x1": 8.7,
+   "y1": 8.6
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 8.7,
+   "y0": 5.0,
+   "x1": 10.0,
+   "y1": 8.6
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "jantar",
+   "aberto"
+  ],
+  [
+   "jantar",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto3"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ]
+ ],
+ "quartos_txt": "3 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.2
+   ]
+  ],
+  "jantar": [
+   [
+    "frente",
+    1.5
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.4
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.9
+   ]
+  ],
+  "quarto3": [
+   [
+    "fundos",
+    1.7
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.9
+   ]
+  ],
+  "bsuite": [
+   [
+    "dir",
+    1.2
+   ]
+  ]
+ },
+ "pensou": [
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 86.0,
+   "area_total": 86.0,
+   "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.85,
+     3.65,
+     14.1
+    ],
+    "jantar": [
+     2.4,
+     3.59,
+     8.6
+    ],
+    "cozinha": [
+     2.34,
+     3.59,
+     8.4
+    ],
+    "servico": [
+     0.99,
+     3.59,
+     3.6
+    ],
+    "circ": [
+     6.59,
+     1.08,
+     7.1
+    ],
+    "banho": [
+     2.99,
+     1.08,
+     3.2
+    ],
+    "quarto3": [
+     2.59,
+     3.39,
+     8.8
+    ],
+    "quarto2": [
+     2.68,
+     3.39,
+     9.1
+    ],
+    "quarto1": [
+     2.98,
+     3.39,
+     10.1
+    ],
+    "bsuite": [
+     1.09,
+     3.39,
+     3.7
+    ]
+   },
+   "luz": {
+    "sala": 0.2026,
+    "jantar": 0.1974,
+    "cozinha": 0.1535,
+    "servico": 0.1535,
+    "banho": 0.1406,
+    "quarto3": 0.2024,
+    "quarto2": 0.2024,
+    "quarto1": 0.2043,
+    "bsuite": 0.1538
+   },
+   "circulacao": 0.095,
+   "lote": [
+    11.5,
+    13.1
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    12,
+    15
+   ],
+   "taxa_ocupacao": 0.57,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "norte",
+    "pior": "leste",
+    "pontos": {
+     "norte": 17.4,
+     "leste": -5.3,
+     "sul": 19.6,
+     "oeste": 13.2
+    }
+   }
+  }
+ }
+}

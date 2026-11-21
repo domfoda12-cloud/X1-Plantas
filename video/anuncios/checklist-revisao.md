@@ -6,7 +6,10 @@
 
 - [ ] Nenhuma promessa de prazo de obra
 - [ ] Nenhum valor exato de custo de construção
-- [ ] Nenhuma garantia de aprovação na prefeitura
+- [ ] Nenhuma garantia de aprovação na prefeitura ou no banco
+- [ ] Nada diz ou dá a entender que a planta dispensa pedreiro, engenheiro ou arquiteto
+- [ ] Preço de concorrente citado foi conferido nesta semana
+- [ ] Tom de voz da [estratégia](../../ESTRATEGIA.md), seção 9: simples, sem jargão de arquiteto
 - [ ] Área, quartos e banheiros batem com a planta final
 - [ ] Preço e forma de pagamento conferidos
 - [ ] Texto em português brasileiro, sem erros de digitação

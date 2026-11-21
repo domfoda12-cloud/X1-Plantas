@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+/* E-book "Que casa cabe no seu lote?": papel branco, azul de projeto, fita métrica amarela. */
+@page { size: A4; margin: 0; }
+:root { --azul: #0B4FA8; --azul-escuro: #08397A; --azul-claro: #E7EFFA; --fita: #FFC857; --fita-claro: #FFF4DA;
+  --tinta: #17202B; --cinza: #4F5B69; --fio: #DDE3EA; --papel: #FFFFFF;
+  --tit: "Bricolage Grotesque", "Inter", Arial, sans-serif; --mono: "JetBrains Mono", Menlo, monospace; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #8A94A3; }
+body { font-family: "Inter", Arial, sans-serif; color: var(--tinta); font-size: 10.2pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.pagina { width: 210mm; height: 297mm; background: var(--papel); position: relative; overflow: hidden; page-break-after: always; break-after: page; }
+.miolo { position: absolute; inset: 16mm 17mm 16mm 17mm; display: flex; flex-direction: column; gap: 4.5mm; }
+.mono, svg .mono { font-family: var(--mono); }
+svg { font-family: "Inter", Arial, sans-serif; }
+svg .tit { font-family: var(--tit); }
+h2 { font-family: var(--tit); font-weight: 800; font-size: 26pt; line-height: 1.02; letter-spacing: -0.02em; color: var(--azul); }
+h3 { font-size: 11pt; font-weight: 700; margin-bottom: 1mm; }
+h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: var(--azul); margin-bottom: 1.2mm; }
+.sobre { font-size: 8pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--cinza); }
+.abertura { font-size: 11.5pt; color: var(--cinza); max-width: 155mm; }
+.pequeno { font-size: 8pt; color: var(--cinza); }
+.pendente { background: var(--fita-claro); color: #8A5A00; padding: 0 1.5mm; }
+.caixa { border-radius: 2mm; padding: 4mm 5mm; display: grid; gap: 2mm; }
+.caixa p { margin: 0; }
+.caixa.amarela { background: var(--fita-claro); }
+.caixa.azul { background: var(--azul-claro); }
+.lista { padding-left: 4.5mm; display: grid; gap: 1.2mm; margin-bottom: 3mm; }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.rodape { position: absolute; bottom: 7mm; left: 17mm; right: 17mm; display: flex; gap: 4mm; font-size: 7pt; color: var(--cinza); border-top: 0.3mm solid var(--fio); padding-top: 1.5mm; }
+.rodape.par { flex-direction: row; } .rodape.impar { flex-direction: row-reverse; justify-content: space-between; }
+.rodape .num { font-family: var(--mono); font-weight: 700; color: var(--azul); }
+.orelha { position: absolute; width: 7mm; height: 20mm; background: var(--fita); color: #1D1A12; font-family: var(--mono); font-weight: 700; font-size: 7.5pt; writing-mode: vertical-rl; display: grid; place-items: center; }
+.orelha.dir { right: 0; border-radius: 1.5mm 0 0 1.5mm; } .orelha.esq { left: 0; border-radius: 0 1.5mm 1.5mm 0; transform: rotate(180deg); }
+
+/* capa */
+.capa { background: var(--azul-escuro); background-image: linear-gradient(rgba(255,255,255,.07) 0.3mm, transparent 0.3mm), linear-gradient(90deg, rgba(255,255,255,.07) 0.3mm, transparent 0.3mm); background-size: 7mm 7mm; color: #fff; }
+.capa .miolo { inset: 22mm 18mm 0 18mm; gap: 6mm; }
+.capa-topo { display: grid; gap: 5mm; }
+.eti { font-family: var(--mono); font-size: 8.5pt; letter-spacing: .1em; color: var(--fita); }
+.capa-titulo { font-family: var(--tit); font-weight: 800; font-size: 54pt; line-height: .93; letter-spacing: -0.035em; max-width: 150mm; }
+.capa-sub { font-size: 12.5pt; color: rgba(255,255,255,.85); max-width: 120mm; }
+.capa-planta { flex: 1 1 auto; min-height: 0; display: grid; place-items: center; background: #fff; border-radius: 2mm; padding: 6mm; margin-bottom: 4mm; box-shadow: 0 3mm 8mm rgba(0,0,0,.3); }
+.capa-planta svg { max-height: 100%; width: auto; max-width: 100%; height: 100%; }
+.fita-box { position: relative; height: 38mm; margin: 0 -18mm; }
+.fim .fita-box { margin: auto -17mm -16mm; }
+.fita { position: absolute; inset: 0; width: 100%; height: 100%; }
+.marcas { position: absolute; left: 0; right: 0; top: 14mm; }
+.marca { position: absolute; transform: translateX(-50%); display: grid; justify-items: center; color: #1D1A12; }
+.marca b { font-family: var(--mono); font-size: 13pt; } .marca small { font-size: 7pt; font-weight: 600; }
+
+/* como usar */
+.passos3 { list-style: none; display: grid; gap: 5mm; counter-reset: p; }
+.passos3 li { display: grid; grid-template-columns: 12mm 1fr; gap: 1mm 4mm; counter-increment: p; }
+.passos3 li::before { content: counter(p); grid-row: span 2; font-family: var(--tit); font-weight: 800; font-size: 24pt; color: var(--fita); -webkit-text-stroke: 0.4mm var(--tinta); line-height: 1; }
+.passos3 b { font-size: 12pt; } .passos3 span { color: var(--cinza); }
+
+/* ache pelo lote */
+.faixas { display: grid; gap: 2.4mm; }
+.faixa { display: grid; grid-template-columns: 24mm 1fr; border-top: 0.3mm solid var(--fio); padding-top: 2mm; }
+.faixa-m { font-family: var(--mono); font-weight: 700; font-size: 16pt; color: #1D1A12; background: var(--fita); border-radius: 1.5mm; align-self: start; text-align: center; padding: 1mm 0; margin-right: 4mm; }
+.faixa ul { list-style: none; display: grid; gap: .8mm; }
+.faixa li { display: grid; grid-template-columns: 11mm 1fr auto 13mm; gap: 2mm; align-items: baseline; font-size: 9.5pt; }
+.faixa li b { font-family: var(--mono); color: var(--azul); }
+.faixa li span { color: var(--cinza); font-size: 8.5pt; }
+.faixa li i { font-style: normal; font-family: var(--mono); text-align: right; color: var(--cinza); font-size: 8.5pt; }
+.grupos { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 7mm; }
+.grupo { border-top: 0.6mm solid var(--azul); padding-top: 2mm; }
+.grupo p { font-size: 9.5pt; } .grupo b { font-family: var(--mono); color: var(--azul); } .grupo i { font-style: normal; color: var(--cinza); font-size: 8.5pt; }
+
+/* como ler, glossário, erros */
+.leitura { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; align-items: start; }
+.leitura-fig svg { width: 100%; height: auto; }
+.legenda { padding-left: 4mm; display: grid; gap: 2mm; font-size: 9.5pt; }
+.glossario { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 7mm; }
+.glossario dt { font-weight: 700; color: var(--azul); } .glossario dd { font-size: 9pt; color: var(--cinza); }
+.erro { display: grid; grid-template-columns: 13mm 1fr; gap: 4mm; border-top: 0.3mm solid var(--fio); padding-top: 3mm; }
+.erro-n { font-family: var(--tit); font-weight: 800; font-size: 26pt; color: var(--azul); line-height: 1; }
+.erro p { font-size: 9.5pt; margin-bottom: 1.2mm; } .erro .certo { background: var(--azul-claro); padding: 1.5mm 2.5mm; border-radius: 1mm; }
+.indice { width: 100%; border-collapse: collapse; font-size: 9pt; }
+.indice th { text-align: left; font-size: 7.5pt; letter-spacing: .08em; text-transform: uppercase; color: var(--cinza); border-bottom: 0.5mm solid var(--tinta); padding: 1.5mm 1mm; }
+.indice td { border-bottom: 0.3mm solid var(--fio); padding: 1.6mm 1mm; } .indice .n { font-variant-numeric: tabular-nums; text-align: right; } .indice td.mono { color: var(--azul); font-weight: 700; }
+
+/* páginas das casas */
+.cab { display: grid; gap: 1mm; }
+.cab .id { font-size: 7.5pt; color: var(--cinza); letter-spacing: .05em; }
+.nome { font-size: 30pt; }
+.gancho { font-family: var(--tit); font-weight: 600; font-size: 14pt; }
+.casa .miolo { bottom: 17mm; }
+.casa.esq .miolo { left: 15mm; right: 19mm; } .casa.dir .miolo { left: 19mm; right: 15mm; }
+.planta-grande { flex: 1 1 auto; min-height: 0; display: grid; place-items: center; }
+.planta-grande svg { width: 100%; height: 100%; }
+.erros-mini { list-style: none; display: grid; gap: 1.2mm; font-size: 9.5pt; }
+.erro-mini { display: inline-grid; place-items: center; width: 4.5mm; height: 4.5mm; border-radius: 50%; background: var(--azul); color: #fff; font-size: 7pt; font-weight: 700; margin-right: 2mm; }
+.lado { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; }
+.lote-fig svg { width: 100%; height: auto; max-height: 78mm; }
+.casa.dir .lado { grid-template-columns: 1.15fr 1fr; }
+.casa.dir .pensou > div { font-size: 9.8pt; }
+.rotulo { border: 0.6mm solid var(--tinta); padding: 1.8mm 2.2mm; font-size: 8.4pt; line-height: 1.3; }
+.r-tit { font-weight: 800; font-size: 10pt; border-bottom: 0.3mm solid var(--tinta); padding-bottom: .6mm; }
+.r-por { font-size: 7.6pt; border-bottom: 1.6mm solid var(--tinta); padding: .6mm 0 1mm; }
+.r-cab, .r-l { display: grid; grid-template-columns: 1fr auto 15mm; gap: 2mm; padding: .7mm 0; border-bottom: 0.3mm solid var(--tinta); font-variant-numeric: tabular-nums; }
+.r-cab { font-size: 7pt; font-weight: 700; } .r-l span:last-child, .r-cab span:last-child { text-align: right; }
+.r-nota { font-size: 6.8pt; color: var(--cinza); padding-top: 1mm; }
+.pensou { display: grid; gap: 2.4mm; }
+.pensou > div { display: grid; grid-template-columns: 6.5mm 1fr; gap: 2.5mm; align-items: start; font-size: 9.3pt; }
+.ico { width: 6.5mm; height: 6.5mm; }
+.perg { list-style: none; display: grid; gap: 1.3mm; font-size: 9.3pt; }
+.perg li { border-left: 1mm solid var(--fita); padding-left: 2mm; }
+
+/* passos e ficha do terreno */
+.passos { list-style: none; counter-reset: p; display: grid; gap: 3.5mm; }
+.passos li { counter-increment: p; display: grid; grid-template-columns: 12mm 1fr; gap: .5mm 4mm; border-top: 0.3mm solid var(--fio); padding-top: 2.5mm; }
+.passos li::before { content: counter(p); grid-row: span 2; font-family: var(--tit); font-weight: 800; font-size: 20pt; color: var(--azul); line-height: 1; }
+.passos b { font-size: 11pt; } .passos span { color: var(--cinza); font-size: 9.5pt; }
+.preencher { display: grid; gap: 4.5mm; }
+.preencher div { border-bottom: 0.3mm solid var(--tinta); padding-bottom: 4.6mm; font-size: 8.5pt; color: var(--cinza); }
+
+.galeria { margin-top: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(22mm, 1fr)); gap: 4mm; align-items: end; padding: 4mm; background: var(--azul-claro); border-radius: 2mm; background-image: linear-gradient(rgba(11,79,168,.07) 0.3mm, transparent 0.3mm), linear-gradient(90deg, rgba(11,79,168,.07) 0.3mm, transparent 0.3mm); background-size: 5mm 5mm; }
+.galeria figure { display: grid; gap: 1mm; justify-items: center; }
+.galeria svg { width: 100%; height: auto; max-height: 40mm; }
+.galeria figcaption { font-family: var(--mono); font-size: 7pt; font-weight: 700; color: var(--azul); }
+.galeria-leg { font-size: 8pt; color: var(--cinza); text-align: center; margin-top: -2mm; }
+.lotes-ex { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; align-items: end; }
+.lotes-ex figure { display: grid; gap: 1mm; justify-items: center; }
+.lotes-ex svg { width: 100%; height: auto; max-height: 70mm; }
+.lotes-ex figcaption { font-size: 8pt; color: var(--cinza); }
+
+.fachada svg { width: 100%; height: auto; max-height: 44mm; display: block; }
+
+.atencao { background: #FFF4DA; border-left: 1.2mm solid #E0A92E; padding: 2mm 3mm; border-radius: 1mm; font-size: 8.6pt; }
+.atencao ul { padding-left: 4mm; display: grid; gap: .6mm; }
+
+.foto { position: relative; border-radius: 2mm; overflow: hidden; margin: 0; flex: 0 0 auto; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto figcaption { position: absolute; right: 2mm; bottom: 1.5mm; font-size: 6.5pt; color: #fff; background: rgba(0,0,0,.45); padding: .4mm 1.6mm; border-radius: 1mm; }
+.fim .foto { margin-top: auto; }
+.fachada .foto { width: 72%; margin: 0 auto; }
+
+.nq { white-space: nowrap; }
+.fachada.aperta svg { max-height: 32mm; }
+.vistas { display: flex; gap: 4mm; align-items: flex-start; }
+.vistas .v-rua { flex: 1 1 auto; min-width: 0; }
+.vistas .v-3d { flex: 0 0 auto; }
+.vistas .foto { width: 100%; }
+.vistas .v-3d { max-width: 52%; }
+.vistas .v-3d .foto { width: auto; }
+.vistas .v-3d .foto img { width: auto; max-width: 100%; height: 100%; object-fit: contain; }
+.vistas .rua-svg { display: flex; align-items: center; }
+.vistas .rua-svg svg { max-height: 100%; width: 100%; }
+.vistas .v-3d .foto figcaption { font-size: 5pt; right: 1mm; bottom: 1mm; padding: .2mm 1mm; }

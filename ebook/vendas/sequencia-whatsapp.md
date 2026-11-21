@@ -10,11 +10,13 @@
 
 Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 55 m², 2 quartos.
 
-[planta humanizada + blueprint + animação]
+[PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 
-Ela cabe num terreno de 10 x 20 m. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
+Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
 
 > Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
+>
+> **Para responder rápido:** abra a [calculadora de lote](calculadora-lote.html) (também publicada como página no claude.ai, a pedir ao dono), digite frente e fundo e copie a mensagem pronta com as casas que cabem.
 
 ## Dia 0, depois da resposta: as plantas que cabem no terreno
 
@@ -26,7 +28,7 @@ Com [frente] x [fundo] m, essas plantas cabem no seu terreno:
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver uma delas em 3D?
+Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
 > Use a coluna **Lote** do [catálogo](../catalogo.md) para escolher 2 ou 3 plantas com lote mínimo menor ou igual ao terreno. Ofereça só as que já estão no e-book (Lançamento 1 enquanto for o atual).
 
@@ -36,7 +38,7 @@ Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver u
 
 > Com a resposta, indique uma categoria do catálogo: até 2 pessoas, compactas; família, categoria F.
 
-## Dia 1: a planta em 3D
+## Dia 1: a planta mobiliada (o 3D entra quando for liberado)
 
 Oi, [nome]! Olha como fica a **[nome da planta]** por dentro:
 
@@ -58,7 +60,9 @@ E mais:
 - checklist de obra;
 - **as próximas plantas que eu lançar, sem pagar de novo.**
 
-Valor de lançamento: **R$ [preço]**, no [forma de pagamento]. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book são [nº] plantas, cada uma mobiliada e desenhada no lote.
+
+Valor de lançamento: **R$ [preço]** no Pix, ou parcelado no cartão. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
 
 Quer o link?
 
@@ -76,7 +80,7 @@ Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançam
 
 ## Depois da compra
 
-- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou.
+- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou e **"você vai construir agora, financiar ou construir para alugar?"**. A resposta diz qual perfil compra mais ([estratégia](../../ESTRATEGIA.md), seção 3) e vai para o painel.
 - **A cada lançamento novo:** envie as plantas novas. Peça para indicar alguém que está planejando construir.
 
 ## Regras do funil
@@ -85,4 +89,5 @@ Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançam
 - Respeite o "não" e pare quando a pessoa pedir.
 - Responda dúvidas em até 24 horas, mesmo de quem não comprou.
 - Nunca prometa prazo de obra, custo exato de construção ou aprovação na prefeitura.
-- Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.
+- Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno, **qual tamanho de lote mais apareceu** e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.
+- Fale como na [estratégia](../../ESTRATEGIA.md), seção 9: simples, como quem já passou por obra.

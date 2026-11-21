@@ -50,7 +50,7 @@ Todo vídeo precisa funcionar sem som: legenda na tela em todas as cenas.
 
 1. **Gancho do problema:** "Você ainda constrói sem ver a casa?"
 2. **Gancho do terreno:** "Terreno estreito? Veja como a casa cabe nele."
-3. **Gancho do preço:** "Planta pronta para construir, a partir de R$ [preço]."
+3. **Gancho do lote:** "Tem um lote 10 x 20? Essas casas cabem nele." (ver os ângulos na [estratégia](../../ESTRATEGIA.md), seção 8)
 
 Teste uma variação por vez, com o mesmo orçamento, e mantenha a que tiver mais cadastros.
 

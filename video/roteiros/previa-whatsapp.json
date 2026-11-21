@@ -1,0 +1,52 @@
+{
+ "saida": "video/saida/previa-whatsapp/x1-plantas-previa.mp4",
+ "tamanho": [
+  720,
+  1280
+ ],
+ "crf": 29,
+ "rodape": "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.",
+ "cenas": [
+  {
+   "fonte": "video/broll/paginas/pagina-01.jpg",
+   "dur": 2.6,
+   "caber": true,
+   "olho": "Prévia do e-book",
+   "titulo": "Que casa cabe no seu <b>lote?</b>"
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-03.jpg",
+   "dur": 2.8,
+   "caber": true,
+   "titulo": "Ache pela frente do lote."
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-10.jpg",
+   "dur": 2.8,
+   "caber": true,
+   "titulo": "A planta, com móveis e medidas."
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-11.jpg",
+   "dur": 2.8,
+   "caber": true,
+   "titulo": "A casa no lote e em 3D."
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 4.0,
+   "inicio": 2.5,
+   "vel": 2.2,
+   "titulo": "Veja a casa ganhar vida.",
+   "selo": "Ilustração do modelo 3D"
+  },
+  {
+   "fonte": "video/broll/clipes/familia.mp4",
+   "dur": 3.6,
+   "olho": "24 casas no e-book",
+   "titulo": "Me fala a frente e o fundo do seu <b>lote.</b>",
+   "sub": "Eu te digo quais casas devem caber nele.",
+   "selo": "Imagem ilustrativa"
+  }
+ ]
+}

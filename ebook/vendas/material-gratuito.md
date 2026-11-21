@@ -6,35 +6,48 @@
 
 ## 1. O que vai
 
-A página dupla da **Casa Compacta (C01)**, no mesmo formato do e-book ([`../EBOOK.md`](../EBOOK.md), seção 3):
+**Um PDF só:** [`../saida/planta-gratis-C01.pdf`](../saida/planta-gratis-C01.pdf) (3 páginas, gerado por `python3 ebook/gerador/livro.py`). Ele traz:
 
-| Item | Arquivo |
+| Página | O que tem |
 |---|---|
-| Planta humanizada | [`../../animacoes-3d/plantas/casa-compacta/02-planta-humanizada.png`](../../animacoes-3d/plantas/casa-compacta/02-planta-humanizada.png) |
-| Blueprint com cotas | [`../../animacoes-3d/plantas/casa-compacta/01-blueprint.png`](../../animacoes-3d/plantas/casa-compacta/01-blueprint.png) |
-| Perspectivas 3D | [`03-perspectiva.png`](../../animacoes-3d/plantas/casa-compacta/03-perspectiva.png) e [`04-perspectiva-lateral.png`](../../animacoes-3d/plantas/casa-compacta/04-perspectiva-lateral.png) |
-| Animação de 12 s | [`../../animacoes-3d/plantas/casa-compacta/animacao.mp4`](../../animacoes-3d/plantas/casa-compacta/animacao.mp4) |
-| Ficha | Abaixo |
+| 1 | A Casa Compacta (C01) mobiliada, com áreas e cotas, "para quem é" e "erros que evita" |
+| 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, "por que esta planta é assim" e as perguntas para o engenheiro |
+| 3 | "No seu lote cabem mais casas": as outras casas do e-book que cabem num lote de 8 x 15, a fita métrica e o convite para mandar a medida do lote |
 
-Enquanto o PDF da página não estiver pronto, mande as imagens e a animação direto no WhatsApp, com a ficha em texto.
+**Mande a casa que cabe no lote do cliente.** Há 6 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
 
-## 2. Ficha da Casa Compacta
+| Lote do cliente (frente) | Planta grátis |
+|---|---|
+| 5 m | `planta-gratis-E03.pdf` (Casa Fita) |
+| 7 m | `planta-gratis-E02.pdf` (Casa Corredor) |
+| 8 m, quer 2 quartos | `planta-gratis-C01.pdf` (Casa Compacta) |
+| 8 m, quer 3 quartos | `planta-gratis-E07.pdf` (Casa Estreita 3 Quartos) |
+| 9 m ou mais, quer suíte | `planta-gratis-C06.pdf` (Casa Compacta Suíte) |
+| 10 m ou mais, 3 quartos | `planta-gratis-F01.pdf` (Casa Família Compacta) |
 
-**C01 · Casa Compacta** · 55 m² · 2 quartos · 1 banheiro · lote mínimo 10 x 20 m
+Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calculadora-lote.html).
 
-**Para quem é:** casal ou família pequena construindo a primeira casa.
+**Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.): são do desenho antigo da C01, com outro layout. O 3D novo é o último passo.
 
-**Por que funciona:**
-- Sala e cozinha integradas: parece maior do que é.
-- Hall de 2,2 m² em vez de corredor: mais área para os cômodos.
-- Banheiro abre para o hall, não para a sala.
+Para acompanhar no WhatsApp, use o mockup [`../visual/mockups/casa-c01-celulares.png`](../visual/mockups/casa-c01-celulares.png).
+
+## 2. Ficha da Casa Compacta (para mandar em texto)
+
+**C01 · Casa Compacta** · 55 m² · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade)
+
+**Para quem é:** casal com 1 ou 2 filhos que quer dois quartos do mesmo tamanho e uma área de serviço coberta, com pouco corredor.
+
+**Por que esta planta é assim:**
+- Só 10% da área é circulação: o resto é cômodo que você usa.
+- O banheiro encosta na área de serviço, e a tubulação pode ficar concentrada (o traçado final é do engenheiro).
+- O banheiro abre para a circulação, não para a sala.
 
 **Cuidados antes de construir:**
 - Confira os recuos da sua prefeitura para o seu lote.
-- Veja de que lado nasce o sol no seu terreno: o ideal é o sol da manhã nos quartos.
+- Veja de que lado nasce o sol no seu terreno.
 - A obra precisa de um profissional habilitado (arquiteto ou engenheiro).
 
-> As medidas são provisórias até a validação por arquiteto. Os móveis são ilustrativos.
+> Planta de referência, não é projeto executivo. Os móveis são ilustrativos.
 
 ## 3. A última linha da página
 

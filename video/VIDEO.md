@@ -6,6 +6,20 @@
 > As regras de retenção e as referências de edição (Robert McKeaveney e Mino Lee) ficam em [`../instagram/INSTAGRAM.md`](../instagram/INSTAGRAM.md).
 > A casa em 3D que aparece no vídeo vem do mesmo motor das [`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md).
 
+## 0. Os dois vídeos de 21/11/2026 (sem apresentador)
+
+| Vídeo | Para quê | Arquivo | Roteiro |
+|---|---|---|---|
+| **Prévia do WhatsApp** | O parceiro manda na conversa, para o cliente ver o e-book por dentro antes do Pix | `saida/previa-whatsapp/x1-plantas-previa.mp4` (720x1280, leve) | `roteiros/previa-whatsapp.json` |
+| **Principal** | Reel e anúncio: "Todo lote é uma conta" | `saida/principal/x1-plantas-principal.mp4` (1080x1920) | `roteiros/principal.json` |
+
+- **Montar de novo:** `python3 video/montar.py video/roteiros/<nome>.json`. Mudou um texto? Mude no roteiro e monte de novo. O montador põe o texto, o aviso legal em todas as cenas e comprime.
+- **Cenas:** `broll/clipes/` (clipes do OpenArt, Kling 3.0, feitos a partir das nossas imagens, mais a animação 3D da C01 do motor novo) e `broll/paginas/` (páginas do e-book).
+- **Método (Maestro, MinoAI Frontier):** texto no primeiro quadro, uma ideia por cena, corte a cada 3 a 5 segundos, a casa aparece cedo, chamada única no fim.
+- **Sem música de propósito:** a faixa licenciada entra na edição final da MinoAI Frontier, no Mac do dono.
+- **Palavra da chamada:** o principal usa "PLANTA". Se o dono escolher "LOTE", troque no roteiro e monte de novo.
+- Toda cena de foto leva "Imagem ilustrativa"; o 3D leva "Ilustração do modelo 3D".
+
 ## Nesta pasta
 
 | Arquivo | Para que serve |
@@ -13,9 +27,11 @@
 | `VIDEO.md` | Este guia: estrutura, teleprompter, gravação, edição, teste |
 | `roteiro-2-tres-quartos.md` | Roteiro do vídeo 2: "É possível caber 3 quartos em 8 m de frente?" |
 | `saida/v1` a `saida/v5` | As 5 versões prontas (rascunho e camada para o editor) |
-| `anuncios/anuncio-facebook.md` | Três variações de texto de anúncio |
+| `roteiro-lancamento.md` | Vídeo de aquecimento do lançamento ("casas na mala"): roteiro, tela, B-roll, 5 ganchos e série até o lançamento |
+| `anuncios/anuncio-facebook.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
 | `anuncios/brief-criativo.md` | Brief dos criativos (formatos, estilo, variações) |
 | `anuncios/checklist-revisao.md` | Revisão antes de publicar qualquer anúncio |
+| `montar.py`, `roteiros/`, `broll/` | Montador dos vídeos sem apresentador, os roteiros e as cenas |
 | `src/`, `render.cjs`, `carimbar.py` | Código que gera o vídeo |
 
 ## 1. Por que este vídeo prende quem quer construir
@@ -43,7 +59,7 @@ Cada versão fica em `video/saida/v1` a `video/saida/v5`:
 - **`camada-transparente.webm`**: só os cartões e as legendas, com fundo transparente (VP9 com canal alfa). Coloque **por cima** da gravação do apresentador.
 - **`rascunho.mp4`**: o mesmo vídeo com um boneco no lugar do apresentador, para ver o resultado antes de gravar.
 
-As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Se o seu editor não abrir o `.webm` com transparência, peça para eu exportar em outro formato (sequência PNG ou ProRes 4444).
+As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Quem edita é a **MinoAI Frontier**: ela corta a fala do apresentador e coloca a camada por cima, sem legenda extra (ver [`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md), seção 3). Se a fala cortada não bater com os tempos da camada, mande a transcrição com os tempos para eu renderizar a camada de novo.
 
 ## 3. Roteiro de fala (teleprompter)
 

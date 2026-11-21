@@ -1,0 +1,292 @@
+{
+ "id": "E07",
+ "nome": "Casa Estreita 3 Quartos",
+ "W": 5.0,
+ "D": 17.9,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.0,
+   "y1": 3.8
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 3.8,
+   "x1": 4.0,
+   "y1": 6.6
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 0.0,
+   "y0": 6.6,
+   "x1": 1.8,
+   "y1": 8.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 1.8,
+   "y0": 6.6,
+   "x1": 4.0,
+   "y1": 8.6
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 8.6,
+   "x1": 4.0,
+   "y1": 11.6
+  },
+  {
+   "id": "quarto3",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 11.6,
+   "x1": 4.0,
+   "y1": 14.6
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 0.0,
+   "y0": 14.6,
+   "x1": 1.3,
+   "y1": 17.9
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 1.3,
+   "y0": 14.6,
+   "x1": 4.0,
+   "y1": 17.9
+  },
+  {
+   "id": "corr",
+   "nome": "Corredor coberto",
+   "tipo": "varanda",
+   "x0": 4.0,
+   "y0": 0.0,
+   "x1": 5.0,
+   "y1": 17.9
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "corr",
+   "frente"
+  ],
+  [
+   "corr",
+   "sala"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "corr",
+   "cozinha"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "corr",
+   "banho"
+  ],
+  [
+   "corr",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ],
+  [
+   "corr",
+   "quarto2"
+  ],
+  [
+   "corr",
+   "quarto3"
+  ]
+ ],
+ "quartos_txt": "3 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.2
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.7
+   ]
+  ],
+  "servico": [
+   [
+    "esq",
+    0.6
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    1.1
+   ]
+  ],
+  "quarto2": [
+   [
+    "dir",
+    2.0
+   ]
+  ],
+  "quarto3": [
+   [
+    "dir",
+    2.0
+   ]
+  ],
+  "bsuite": [
+   [
+    "esq",
+    1.1
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.5
+   ]
+  ]
+ },
+ "recuos": {
+  "esq": 1.5
+ },
+ "destaque": "3 quartos, um deles suíte, num lote de 8 m de frente",
+ "pensou": [
+  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
+  "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [
+   "Suíte fica com 2,49 x 3,09 m livres (7,7 m²): funciona, mas é apertado; o engenheiro confere a mobília",
+   "Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)"
+  ],
+  "info": [],
+  "metricas": {
+   "area_fechada": 71.6,
+   "area_total": 89.5,
+   "area_coberta_aberta": 17.9,
+   "util": {
+    "sala": [
+     3.7,
+     3.65,
+     13.5
+    ],
+    "cozinha": [
+     3.7,
+     2.74,
+     10.1
+    ],
+    "servico": [
+     1.59,
+     1.88,
+     3.0
+    ],
+    "banho": [
+     1.99,
+     1.88,
+     3.7
+    ],
+    "quarto2": [
+     3.7,
+     2.88,
+     10.7
+    ],
+    "quarto3": [
+     3.7,
+     2.88,
+     10.7
+    ],
+    "bsuite": [
+     1.09,
+     3.09,
+     3.4
+    ],
+    "quarto1": [
+     2.49,
+     3.09,
+     7.7
+    ],
+    "corr": [
+     1.0,
+     17.9,
+     17.9
+    ]
+   },
+   "luz": {
+    "sala": 0.2026,
+    "cozinha": 0.1518,
+    "servico": 0.1667,
+    "banho": 0.15,
+    "quarto2": 0.2,
+    "quarto3": 0.2,
+    "bsuite": 0.1538,
+    "quarto1": 0.202
+   },
+   "circulacao": 0.0,
+   "lote": [
+    8.0,
+    22.4
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 1.5,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    8,
+    25
+   ],
+   "taxa_ocupacao": 0.5,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "sul",
+    "pontos": {
+     "norte": 24.1,
+     "leste": 8.4,
+     "sul": -5.7,
+     "oeste": 12.0
+    }
+   }
+  }
+ }
+}

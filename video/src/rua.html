@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Casa vista da rua: render realista do motor próprio</title>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<style>html, body { margin: 0; overflow: hidden; background: #9CC3EA; } canvas { display: block; }</style>
+</head>
+<body>
+<canvas id="tela"></canvas>
+<script type="module">
+// A casa no lote, vista da rua, com céu, sol, sombra e materiais: tudo sai dos dados da planta
+// (src/plantas/<ID>.js). Porta e janelas ficam onde a planta manda. Não é foto: é ilustração do modelo 3D.
+// Página de quadro único: window.desenhar({obra}, {pos, alvo, fov}) desenha um quadro.
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+const q = new URLSearchParams(location.search);
+const W = Number(q.get('w') || 1080), H = Number(q.get('h') || 1920), SS = Number(q.get('ss') || 1.25);
+const D = await import(`./plantas/${q.get('planta') || 'C01'}.js`);
+const { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } = D;
+
+const clamp = (v) => Math.min(1, Math.max(0, v));
+const suave = (v) => { v = clamp(v); return v * v * (3 - 2 * v); };
+let semente = 7;
+const rnd = () => { semente = (semente * 16807) % 2147483647; return semente / 2147483647; };
+
+// ----- lote: a casa entra com 3 m de recuo de frente (referência) e centrada na largura -----
+const ABERTOS = ['varanda', 'garagem', 'patio', 'pátio', 'jardim', 'futuro', 'quintal'];
+const internos = ambientes.filter((a) => !ABERTOS.includes(a.tipo));
+const [LW, LD] = [Math.max(D.META.lote?.[0] || 0, LARGURA + 1.5), Math.max(D.META.lote?.[1] || 0, PROFUNDIDADE + 4.5)];
+const OX = (LW - LARGURA) / 2, OZ = 3;
+const dentro = (x, y) => internos.some((a) => x > a.x0 && x < a.x1 && y > a.y0 && y < a.y1);
+const ALT_INT = 2.9, ALT_EXT = 3.4, ALT_PORTA = 2.1;
+
+// ----- texturas feitas na hora (sem arquivo de imagem) -----
+function textura(tam, base, graos, rep = 1) {
+  const c = document.createElement('canvas'); c.width = c.height = tam; const g = c.getContext('2d');
+  g.fillStyle = base; g.fillRect(0, 0, tam, tam);
+  for (const [n, cores, r0, r1, a] of graos) {
+    for (let i = 0; i < n; i++) {
+      g.globalAlpha = a * (0.4 + rnd() * 0.6); g.fillStyle = cores[Math.floor(rnd() * cores.length)];
+      const r = r0 + rnd() * (r1 - r0); g.beginPath(); g.arc(rnd() * tam, rnd() * tam, r, 0, 7); g.fill();
+    }
+  }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep, rep);
+  t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+}
+const mat = (cor, o = {}) => new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9, ...o });
+const reboco = textura(512, '#ffffff', [[5000, ['#e6e6e6', '#f8f8f8'], 0.6, 2.2, 0.3], [40, ['#dcdcdc'], 10, 40, 0.05]], 1);
+const M = {
+  parede: mat('#EFE9DD', { map: reboco, bumpMap: reboco, bumpScale: 0.6 }),
+  faixa: mat('#B9AE9C', { map: reboco, bumpMap: reboco, bumpScale: 0.6 }),
+  muro: mat('#C9C7C1', { map: reboco, bumpMap: reboco, bumpScale: 0.8 }),
+  laje: mat('#9C9C98', { map: textura(256, '#ffffff', [[2500, ['#bbbbbb', '#eeeeee'], 0.6, 2, 0.4]], 3) }),
+  grama: mat('#ffffff', { map: textura(512, '#5E8C3A', [[9000, ['#4C7A2E', '#6FA046', '#7DAE50', '#56833A'], 0.8, 2.6, 0.7], [60, ['#8A7A4E'], 4, 14, 0.12], [14, ['#3F6E28', '#7FAE52'], 50, 120, 0.16]], 1.6), roughness: 1 }),
+  terra: mat('#ffffff', { map: textura(512, '#9A6B45', [[7000, ['#8A5C3A', '#AD7D55', '#7A5236'], 1, 4, 0.6]], 3), roughness: 1 }),
+  calcada: mat('#ffffff', { map: textura(512, '#BDBAB3', [[6000, ['#A9A69F', '#CFCcc5', '#9d9a94'], 0.6, 2.4, 0.45]], 3) }),
+  asfalto: mat('#ffffff', { map: textura(512, '#3A3B3E', [[9000, ['#2C2D30', '#4A4B4F', '#56575A'], 0.5, 1.8, 0.6]], 5), roughness: 0.95 }),
+  madeira: mat('#8A5A33', { roughness: 0.6 }),
+  aluminio: mat('#E6E8EA', { roughness: 0.35, metalness: 0.7 }),
+  vidro: new THREE.MeshPhysicalMaterial({ color: '#27384A', roughness: 0.06, metalness: 0.85, envMapIntensity: 1.6 }),
+  folha: mat('#ffffff', { map: textura(256, '#3F7A34', [[2500, ['#2F6628', '#4F8F3F', '#62A04C'], 2, 6, 0.7]], 2), roughness: 1 }),
+  folha2: mat('#ffffff', { map: textura(256, '#356B2C', [[2500, ['#27561F', '#44803A', '#5C9A48'], 2, 6, 0.7]], 2), roughness: 1 }),
+  tronco: mat('#5B4332'), telha: mat('#B5603C', { roughness: 0.8 }), vizinho: mat('#E4DDD0'),
+};
+
+// ----- cena, céu e luz -----
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('tela'), antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(SS); renderer.setSize(W, H);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.88;
+const cena = new THREE.Scene();
+const SOL = new THREE.Vector3(0.78, 0.55, -0.42).normalize(); // sol da tarde, vindo da rua pela esquerda
+const ceu = new THREE.Mesh(new THREE.SphereGeometry(400, 32, 16), new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false, uniforms: { sol: { value: SOL } },
+  vertexShader: 'varying vec3 d; void main(){ d = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  fragmentShader: `varying vec3 d; uniform vec3 sol;
+    void main(){ float h = clamp(d.y, 0.0, 1.0);
+      vec3 c = mix(vec3(0.60, 0.78, 1.0), vec3(0.07, 0.26, 0.72), pow(h, 0.6));
+      float s = max(dot(normalize(d), sol), 0.0);
+      c += vec3(1.0, 0.85, 0.6) * (pow(s, 600.0) * 3.0 + pow(s, 12.0) * 0.18);
+      gl_FragColor = vec4(c, 1.0); }`,
+}));
+cena.add(ceu);
+function nuvem(x, y, z, s) {
+  const c = document.createElement('canvas'); c.width = 256; c.height = 128; const g = c.getContext('2d');
+  for (let i = 0; i < 9; i++) {
+    const cx = 50 + rnd() * 156, cy = 60 + rnd() * 26, r = 26 + rnd() * 30;
+    const gr = g.createRadialGradient(cx, cy, 0, cx, cy, r); gr.addColorStop(0, 'rgba(255,255,255,.5)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, 256, 128);
+  }
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false, fog: false }));
+  sp.position.set(x, y, z); sp.scale.set(s * 2, s, 1); cena.add(sp);
+}
+nuvem(-70, 120, 300, 70); nuvem(90, 150, 320, 90); nuvem(20, 95, 340, 50); nuvem(-170, 110, 260, 60); nuvem(170, 90, 250, 55);
+// o reflexo dos vidros vem do próprio céu
+{
+  const pm = new THREE.PMREMGenerator(renderer); const so = new THREE.Scene(); so.add(ceu.clone());
+  const chao = new THREE.Mesh(new THREE.CircleGeometry(390, 24), new THREE.MeshBasicMaterial({ color: '#5a6b4a' })); chao.rotation.x = -Math.PI / 2; so.add(chao);
+  cena.environment = pm.fromScene(so, 0.02, 0.1, 1000).texture; cena.environmentIntensity = 0.8;
+}
+cena.fog = new THREE.Fog('#B9D2F0', 70, 360);
+cena.add(new THREE.HemisphereLight('#D6E6FF', '#9A8A6A', 0.85));
+const sol = new THREE.DirectionalLight('#FFEFD6', 3.0);
+sol.position.copy(SOL).multiplyScalar(60).add(new THREE.Vector3(LW / 2, 0, LD / 2)); sol.target.position.set(LW / 2, 0, LD / 2);
+sol.castShadow = true; sol.shadow.mapSize.set(4096, 4096); sol.shadow.bias = -0.0004; sol.shadow.normalBias = 0.03;
+Object.assign(sol.shadow.camera, { left: -26, right: 26, top: 26, bottom: -26, near: 1, far: 140 });
+cena.add(sol, sol.target);
+
+// ----- peças -----
+const grupo = new THREE.Group(); cena.add(grupo);
+function bloco(w, h, d, m, x, y, z, pai = grupo) {
+  const geo = new THREE.BoxGeometry(w, h, d); const uv = geo.attributes.uv;
+  [[d, h], [d, h], [w, d], [w, d], [w, h], [w, h]].forEach(([a, b], f) => { for (let i = f * 4; i < f * 4 + 4; i++) uv.setXY(i, uv.getX(i) * a / 2, uv.getY(i) * b / 2); });
+  const o = new THREE.Mesh(geo, m); o.position.set(x, y + h / 2, z);
+  o.castShadow = o.receiveShadow = true; pai.add(o); return o;
+}
+function plano(w, d, m, x, y, z, rx = 1, rz = 1) {
+  const mm = m.clone(); mm.map = m.map.clone(); mm.map.repeat.set(w / 4 * rx, d / 4 * rz); mm.map.needsUpdate = true;
+  const o = new THREE.Mesh(new THREE.PlaneGeometry(w, d), mm); o.rotation.x = -Math.PI / 2; o.position.set(x, y, z); o.receiveShadow = true; cena.add(o); return o;
+}
+
+// chão: rua, guia, calçada, lote e arredores
+plano(400, 400, M.grama, LW / 2, -0.02, 150, 3, 3);
+plano(400, 7.4, M.asfalto, LW / 2, 0.0, -5.7, 1, 1);
+plano(400, 60, M.grama, LW / 2, -0.01, -41, 2, 2);
+bloco(400, 0.14, 0.18, M.calcada, LW / 2, 0, -2.09, cena); bloco(400, 0.14, 0.18, M.calcada, LW / 2, 0, -9.31, cena);
+bloco(400, 0.12, 2.0, M.calcada, LW / 2, 0, -1.0, cena); bloco(400, 0.12, 2.0, M.calcada, LW / 2, 0, -10.4, cena);
+plano(LW, LD, M.grama, LW / 2, 0.005, LD / 2, 2, 2);
+// muros do lote (laterais e fundo altos, frente baixa com portão aberto para o caminho)
+const E = 0.14;
+bloco(E, 1.9, LD, M.muro, 0, 0, LD / 2, cena); bloco(E, 1.9, LD, M.muro, LW, 0, LD / 2, cena); bloco(LW, 1.9, E, M.muro, LW / 2, 0, LD, cena);
+const ext = portas.find((p) => p.id.startsWith('ext-')) || portas[0];
+const portaX = OX + LARGURA - (ext.x + Math.cos(ext.a0) * ext.r / 2);
+const vaoA = Math.max(0.2, portaX - 0.7), vaoB = Math.min(LW - 0.2, portaX + 0.7);
+bloco(vaoA, 0.6, E, M.faixa, vaoA / 2, 0, 0, cena); bloco(LW - vaoB, 0.6, E, M.faixa, (vaoB + LW) / 2, 0, 0, cena);
+bloco(1.1, 0.03, OZ + 0.1, M.calcada, portaX, 0, OZ / 2 - 0.05, cena); // caminho até a porta
+
+// vizinhos, árvores e arbustos (só cenário: nada disso é a casa)
+function vizinho(x, z, w, d, h) {
+  bloco(w, h, d, M.vizinho, x, 0, z, cena);
+  const t = new THREE.Mesh(new THREE.ConeGeometry(Math.hypot(w, d) / 2 + 0.5, 1.5, 4), M.telha); t.rotation.y = Math.PI / 4; t.scale.set(1, 1, d / w);
+  t.position.set(x, h + 0.75, z); t.castShadow = true; cena.add(t);
+}
+function arvore(x, z, s) {
+  bloco(0.28 * s, 2.6 * s, 0.28 * s, M.tronco, x, 0, z, cena);
+  for (let i = 0; i < 34; i++) { // copa: muitos tufos pequenos em volta de um miolo
+    const a = rnd() * 6.283, r = Math.sqrt(rnd()) * 1.9 * s, y = (3.0 + rnd() * 2.2) * s;
+    const g = new THREE.IcosahedronGeometry((0.5 + rnd() * 0.55) * s, 2); g.scale(1, 0.75 + rnd() * 0.3, 1);
+    const m = i % 3 ? M.folha : M.folha2; const c = new THREE.Mesh(g, m);
+    c.position.set(x + Math.cos(a) * r, y - Math.abs(r) * 0.25, z + Math.sin(a) * r); c.castShadow = c.receiveShadow = true; cena.add(c);
+  }
+}
+function arbusto(x, z, s) {
+  for (let i = 0; i < 4; i++) {
+    const c = new THREE.Mesh(new THREE.IcosahedronGeometry((0.26 + rnd() * 0.16) * s, 1), M.folha);
+    c.position.set(x + (rnd() - 0.5) * 0.4 * s, 0.25 * s + rnd() * 0.25 * s, z + (rnd() - 0.5) * 0.4 * s); c.castShadow = c.receiveShadow = true; cena.add(c);
+  }
+}
+vizinho(-7, 9, 8, 9, 3); vizinho(LW + 7, 10, 8, 10, 3.1); vizinho(LW / 2 - 6, LD + 9, 9, 8, 3); vizinho(LW / 2 + 8, LD + 10, 8, 8, 3.2);
+bloco(E, 1.9, 30, M.muro, -12, 0, 12, cena); bloco(E, 1.9, 30, M.muro, LW + 12, 0, 12, cena);
+arvore(-3.5, LD + 3, 1.25); arvore(LW + 4, LD + 2, 1.4); arvore(LW / 2 + 1, LD + 5, 1.6); arvore(-14, 4, 1.3); arvore(LW + 15, 6, 1.2); arvore(-22, -16, 1.5); arvore(LW + 20, -17, 1.4);
+arbusto(0.8, 0.9, 1.2); arbusto(LW - 0.8, 1.0, 1.4); arbusto(LW - 0.9, OZ + 1.2, 1.0);
+
+// ----- a casa, a partir da planta -----
+const pecas = []; // { o, ordem, tipo }  ordem 0..1 = quando a peça aparece na obra
+// quem olha da rua vê o x da planta crescer para a direita: a casa entra espelhada no eixo X do mundo
+const casa = new THREE.Group(); casa.position.set(OX + LARGURA, 0, OZ); casa.scale.x = -1; cena.add(casa);
+const cx = LARGURA / 2, cz = PROFUNDIDADE / 2;
+const ordemDe = (x, z) => (Math.atan2(z - cz, x - cx) + Math.PI) / (2 * Math.PI);
+const add = (o, tipo, ordem) => { pecas.push({ o, tipo, ordem }); return o; };
+// piso (contrapiso) sob os cômodos e terra batida em volta
+for (const a of ambientes) add(bloco(a.x1 - a.x0, 0.1, a.y1 - a.y0, M.laje, (a.x0 + a.x1) / 2, 0, (a.y0 + a.y1) / 2, casa), 'piso', 0);
+{ const t = plano(LARGURA + 1.2, PROFUNDIDADE + 1.2, M.terra, OX + cx, 0.012, OZ + cz, 1, 1); pecas.push({ o: t, tipo: 'terra', ordem: 0 }); }
+
+function trecho(horizontal, fixo, a, b, y0, y1, m, e = ESPESSURA) {
+  const comp = b - a; if (comp <= 0.001 || y1 - y0 <= 0.001) return null;
+  const o = horizontal ? bloco(comp + (y0 === 0 ? e : 0), y1 - y0, e, m, (a + b) / 2, y0, fixo, casa) : bloco(e, y1 - y0, comp + (y0 === 0 ? e : 0), m, fixo, y0, (a + b) / 2, casa);
+  return add(o, 'parede', horizontal ? ordemDe((a + b) / 2, fixo) : ordemDe(fixo, (a + b) / 2));
+}
+const linhas = {}; // para achar os vãos de porta e pôr a verga em cima
+for (const [x0, y0, x1, y1] of paredes) {
+  const hz = Math.abs(y0 - y1) < 1e-6; const fixo = hz ? y0 : x0; const [a, b] = hz ? [Math.min(x0, x1), Math.max(x0, x1)] : [Math.min(y0, y1), Math.max(y0, y1)];
+  const meio = (a + b) / 2;
+  const externa = hz ? dentro(meio, fixo - 0.2) !== dentro(meio, fixo + 0.2) : dentro(fixo - 0.2, meio) !== dentro(fixo + 0.2, meio);
+  const alt = externa ? ALT_EXT : ALT_INT;
+  (linhas[`${hz ? 'h' : 'v'}${fixo.toFixed(3)}`] ||= []).push([a, b, alt, hz, fixo]);
+  const js = janelas.filter((j) => { const [jx0, jy0, jx1, jy1] = j.seg; const jh = Math.abs(jy0 - jy1) < 1e-6;
+    return jh === hz && Math.abs((jh ? jy0 : jx0) - fixo) < 1e-6 && Math.min(jh ? jx0 : jy0, jh ? jx1 : jy1) >= a - 1e-6 && Math.max(jh ? jx0 : jy0, jh ? jx1 : jy1) <= b + 1e-6; })
+    .map((j) => ({ a: Math.min(hz ? j.seg[0] : j.seg[1], hz ? j.seg[2] : j.seg[3]), b: Math.max(hz ? j.seg[0] : j.seg[1], hz ? j.seg[2] : j.seg[3]), p: j.peitoril, v: j.verga }))
+    .sort((p, q2) => p.a - q2.a);
+  let cur = a;
+  for (const j of js) {
+    trecho(hz, fixo, cur, j.a, 0, alt, M.parede); trecho(hz, fixo, j.a, j.b, 0, j.p, M.parede); trecho(hz, fixo, j.a, j.b, j.v, alt, M.parede);
+    janela(hz, fixo, j); cur = j.b;
+  }
+  trecho(hz, fixo, cur, b, 0, alt, M.parede);
+  if (externa) { const f = trecho(hz, fixo, a, b, 2.95, ALT_EXT + 0.03, M.faixa, ESPESSURA + 0.05); if (f) f && (pecas[pecas.length - 1].tipo = 'faixa'); }
+}
+for (const l of Object.values(linhas)) { // verga sobre cada vão de porta
+  l.sort((p, q2) => p[0] - q2[0]);
+  for (let i = 0; i + 1 < l.length; i++) {
+    const [, b, alt, hz, fixo] = l[i]; const a2 = l[i + 1][0]; const h = Math.max(alt, l[i + 1][2]);
+    if (a2 - b > 0.3 && a2 - b < 2.6) { trecho(hz, fixo, b, a2, ALT_PORTA, h, M.parede); if (h === ALT_EXT) { trecho(hz, fixo, b, a2, 2.95, ALT_EXT + 0.03, M.faixa, ESPESSURA + 0.05); pecas[pecas.length - 1].tipo = 'faixa'; } }
+  }
+}
+function janela(hz, fixo, j) {
+  const g = new THREE.Group(); const comp = j.b - j.a, alt = j.v - j.p, q2 = 0.05;
+  const pc = (w, h, d, m, x, y, z) => { const o = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); o.position.set(x, y, z); o.castShadow = o.receiveShadow = true; g.add(o); };
+  pc(comp, alt, 0.02, M.vidro, 0, 0, 0);
+  pc(comp, q2, 0.07, M.aluminio, 0, alt / 2 - q2 / 2, 0); pc(comp, q2, 0.07, M.aluminio, 0, -alt / 2 + q2 / 2, 0);
+  pc(q2, alt, 0.07, M.aluminio, -comp / 2 + q2 / 2, 0, 0); pc(q2, alt, 0.07, M.aluminio, comp / 2 - q2 / 2, 0, 0);
+  if (comp > 0.9) pc(q2, alt, 0.08, M.aluminio, 0, 0, 0);
+  pc(comp + 0.1, 0.04, ESPESSURA + 0.08, M.calcada, 0, -alt / 2 - 0.02, 0); // peitoril de pedra
+  g.position.set(hz ? (j.a + j.b) / 2 : fixo, (j.p + j.v) / 2, hz ? fixo : (j.a + j.b) / 2); if (!hz) g.rotation.y = Math.PI / 2;
+  casa.add(g); add(g, 'esquadria', 0);
+}
+for (const p of portas.filter((d) => d.id.startsWith('ext-'))) { // porta de entrada: folha de madeira fechada, com maçaneta
+  const g = new THREE.Group(); const dx = Math.cos(p.a0), dz = Math.sin(p.a0);
+  const f = new THREE.Mesh(new THREE.BoxGeometry(p.r, ALT_PORTA - 0.1, 0.05), M.madeira); f.castShadow = f.receiveShadow = true; g.add(f);
+  for (const y of [-0.5, 0.3]) { const al = new THREE.Mesh(new THREE.BoxGeometry(p.r - 0.24, 0.5, 0.06), mat('#7A4E2B', { roughness: 0.6 })); al.position.y = y; g.add(al); }
+  const mc = new THREE.Mesh(new THREE.SphereGeometry(0.035, 12, 8), M.aluminio); mc.position.set(p.r / 2 - 0.1, -0.05, -0.05); g.add(mc);
+  const mc2 = mc.clone(); mc2.position.z = 0.05; g.add(mc2);
+  g.position.set(p.x + dx * p.r / 2, 0.1 + (ALT_PORTA - 0.1) / 2, p.y + dz * p.r / 2); g.rotation.y = -p.a0;
+  casa.add(g); add(g, 'esquadria', 0);
+}
+// laje de cobertura sobre os cômodos fechados (telhado embutido atrás da platibanda)
+for (const a of internos) add(bloco(a.x1 - a.x0 + 0.02, 0.1, a.y1 - a.y0 + 0.02, M.laje, (a.x0 + a.x1) / 2, ALT_INT, (a.y0 + a.y1) / 2, casa), 'laje', 0);
+
+{ // caixa d'água sobre a laje, no fundo
+  const a = internos.reduce((p, c) => (c.y1 > p.y1 ? c : p));
+  const cxa = new THREE.Mesh(new THREE.CylinderGeometry(0.62, 0.52, 0.85, 20), mat('#2F6FB5', { roughness: 0.5 })); cxa.castShadow = true;
+  const tampa = new THREE.Mesh(new THREE.CylinderGeometry(0.66, 0.66, 0.07, 20), mat('#2A64A5', { roughness: 0.5 })); tampa.position.y = 0.45; cxa.add(tampa);
+  cxa.position.set((a.x0 + a.x1) / 2, ALT_INT + 0.1 + 0.43, a.y1 - 1.0); casa.add(cxa); add(cxa, 'esquadria', 0);
+}
+{ // poste e fios na calçada (cenário)
+  const px = -0.9; bloco(0.22, 8.2, 0.22, mat('#8E8B85'), px, 0, -1.7, cena); bloco(1.8, 0.1, 0.1, M.tronco, px, 7.5, -1.7, cena);
+  for (const dz of [-0.7, 0, 0.7]) { const f = new THREE.Mesh(new THREE.BoxGeometry(400, 0.015, 0.015), mat('#222')); f.position.set(px, 7.62, -1.7 + dz * 1.1); cena.add(f); }
+}
+// ----- obra: 0 = lote vazio, 1 = casa pronta. Piso, paredes subindo em volta, laje, esquadrias. -----
+function aplicar({ obra = 1 }) {
+  for (const p of pecas) {
+    let v;
+    if (p.tipo === 'terra') { p.o.visible = obra > 0.001 && obra < 0.999; continue; }
+    if (p.tipo === 'piso') v = suave((obra - 0.02) / 0.1);
+    else if (p.tipo === 'parede') v = suave((obra - 0.12 - p.ordem * 0.4) / 0.2);
+    else if (p.tipo === 'faixa') v = suave((obra - 0.74) / 0.08);
+    else if (p.tipo === 'laje') v = suave((obra - 0.7) / 0.1);
+    else v = suave((obra - 0.84) / 0.12);
+    p.o.visible = v > 0.001;
+    if (p.tipo === 'esquadria' || p.tipo === 'faixa' || p.tipo === 'laje') p.o.scale.setScalar(Math.max(v, 0.001));
+    else { const h = p.o.geometry.parameters.height; p.o.scale.y = Math.max(v, 0.001); p.o.position.y = (p.o.userData.y0 ??= p.o.position.y - h / 2) + h * Math.max(v, 0.001) / 2; }
+  }
+}
+const camera = new THREE.PerspectiveCamera(50, W / H, 0.1, 900);
+const comp = new EffectComposer(renderer); comp.setPixelRatio(SS); comp.setSize(W, H);
+comp.addPass(new RenderPass(cena, camera));
+const ao = new GTAOPass(cena, camera, W * SS, H * SS); ao.updateGtaoMaterial({ radius: 0.9, distanceExponent: 1.4, thickness: 1.2, scale: 1.25, samples: 16 }); comp.addPass(ao);
+comp.addPass(new OutputPass());
+// pos e alvo em metros, com origem no meio da frente do lote: x para a direita, y para cima, z para o fundo (rua = z negativo)
+window.desenhar = (estado, cam) => {
+  aplicar(estado);
+  camera.fov = cam.fov || 50; camera.updateProjectionMatrix();
+  camera.position.set(LW / 2 - cam.pos[0], cam.pos[1], cam.pos[2]); camera.lookAt(LW / 2 - cam.alvo[0], cam.alvo[1], cam.alvo[2]);
+  comp.render();
+};
+window.medidas = { LW, LD, OX, OZ, LARGURA, PROFUNDIDADE };
+window.pronto = true;
+</script>
+</body>
+</html>

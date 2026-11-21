@@ -2,17 +2,19 @@
 
 > **Comece por aqui.** Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que fase estamos, o que fazer esta semana e o que decidir.
 >
+> **Quem rege é a MinoAI Frontier**, o maestro: no seu computador, ela conduz a semana por este painel, faz o que é vídeo e rede social e manda fazer o resto. Ver [`MAESTRO.md`](MAESTRO.md).
+>
 > A seção 1 se atualiza sozinha. Rode `python3 ferramentas/atualizar-painel.py` na raiz do projeto sempre que algo mudar (ver seção 11).
 
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 21/11/2026. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|
 | **1º lançamento do e-book** | 0 de 12 prontas · 1 com 3D |
-| Plantas no catálogo | 35 · ideia 34 · dados 0 · 3D 1 · pronta 0 |
+| Plantas no catálogo | 35 · ideia 11 · dados 23 · 3D 1 · pronta 0 |
 | Progresso do 1º lançamento | `░░░░░░░░░░░░░░░░░░░░` 0/12 |
 | Vídeo de anúncio | 5 de 5 versões renderizadas · apresentador não gravado |
 | Avisos de conferência | 0 |
@@ -21,8 +23,8 @@ _Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão.
 
 | Categoria | Plantas | No 1º lançamento | Com 3D | Prontas |
 |---|---|---|---|---|
-| Compactas | 7 | 5 | 1 | 0 |
-| Terreno estreito | 7 | 3 | 0 | 0 |
+| Compactas | 7 | 4 | 1 | 0 |
+| Terreno estreito | 7 | 4 | 0 | 0 |
 | Família | 7 | 3 | 0 | 0 |
 | Especiais | 10 | 1 | 0 | 0 |
 | Sobrados | 4 | 0 | 0 | 0 |
@@ -52,13 +54,19 @@ _Gerado por `ferramentas/atualizar-painel.py` em 18/11/2026. Não edite à mão.
 
 **Uma planta trabalha três vezes:** vira página do e-book, post no Instagram e cena de vídeo. Por isso o gargalo do projeto é **produzir plantas** (fase 2).
 
+**Para quem vendemos** (detalhes, dados e fontes em [`ESTRATEGIA.md`](ESTRATEGIA.md)):
+- **Quem:** quem tem um lote e vai construir, quase sempre **com pedreiro e sem arquiteto** (85% das obras no Brasil são feitas assim, segundo CAU/BR e Datafolha), muitas vezes **por etapas**.
+- **A primeira pergunta dessa pessoa:** "que casa cabe no meu lote?".
+- **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **casa que cresce**.
+- **O que fica dos dois lados:** os pacotes baratos de "1.500 plantas" sem curadoria e as plantas avulsas que custam centenas de reais cada.
+
 ## 3. Estratégia do e-book: lançar cedo e crescer em levas
 
 As 35 plantas do [catálogo](ebook/catalogo.md) levariam semanas para ficar prontas e validadas. A recomendação é **não esperar todas**:
 
 | Lançamento | Plantas | Conteúdo | Por quê |
 |---|---|---|---|
-| **1º** | 12 | Térreas que o motor 3D já faz: 5 compactas, 3 estreitas, 3 família, 1 home office | Cobre quem mais procura (primeira casa e terreno pequeno) e dá para fazer agora |
+| **1º** | 12 | Térreas que o motor 3D já faz: 4 compactas, 4 estreitas, 3 família, 1 home office | Cobre os lotes mais comuns do público (5 x 25 a 12 x 25) e dá para fazer agora |
 | **2º** | 12 | As outras térreas | Cada planta nova vira um post "planta da semana" |
 | **3º** | 11 | Sobrados, edícula, geminadas, casas grandes | Exigem ajuste no motor 3D |
 
@@ -116,7 +124,9 @@ Cada fase tem um **critério para passar para a próxima**. Não pule o critéri
 | 4 | Desenhar em dados as 11 plantas que faltam do 1º lançamento | Claude | Tarefa 3 | Situação `dados` no catálogo |
 | 5 | Criar o perfil do Instagram | Você | Nada | Conta criada com o [`plano-perfil.md`](instagram/plano-perfil.md) |
 | 6 | Revisar os textos do funil para o e-book e preencher preço | Parceiro | Tarefa 2 | Textos de [`ebook/vendas/`](ebook/vendas/) sem campos em branco |
-| 7 | Montar e publicar os 5 reels de teste | Editor | Tarefas 1 e 5 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
+| 7 | Configurar a MinoAI Frontier: pasta, estilo salvo com os 3 reels do Mino Lee, Instagram conectado | Você | Nada | Os 4 passos de [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md), seção 2 |
+| 7b | Editar e publicar os 5 reels de teste | MinoAI Frontier e você | Tarefas 1, 5 e 7 | Linha preenchida no [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) |
+| 8 | Subir o anúncio "Tem um lote 10 x 20?" com a Casa Compacta | Você | Tarefa 5 | Anúncio rodando com orçamento pequeno ([textos](video/anuncios/anuncio-facebook.md)) |
 
 ## 7. Números para acompanhar
 
@@ -128,6 +138,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | Vídeo | Custo por contato | Gerenciador de Anúncios | Subindo 3 semanas seguidas: trocar o gancho |
 | Instagram | Comentários "PLANTA" por reel; seguidores novos | Instagram | 3 reels fracos seguidos diminuem o alcance do próximo |
 | Funil | Contatos → compras (taxa de conversão) | Parceiro | Abaixo da semana anterior: revisar a planta grátis e a oferta |
+| Funil | % que manda o tamanho do lote; **lote mais pedido** | Parceiro | Pouca gente manda o lote: mudar a primeira mensagem. O lote mais pedido define as próximas plantas e anúncios |
 | E-book | Vendas; pedidos de reembolso | Plataforma de pagamento | Reembolsos: o e-book não entregou o que o anúncio prometeu |
 | 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
 
@@ -146,19 +157,25 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Visual: **blueprint azul que ganha vida** e vira **planta humanizada** em 3D |
 | 16/11 | Edição no estilo do **Mino Lee**; retenção pelas regras do **Robert McKeaveney** ([`instagram/`](instagram/INSTAGRAM.md)) |
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
+| 19/11 | Editor: **MinoAI Frontier**, no seu computador ([contexto](instagram/MINOAI-FRONTIER.md)) |
+| 19/11 | Maestro da operação: **MinoAI Frontier** ([`MAESTRO.md`](MAESTRO.md)) |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Lançar com **12 plantas** e crescer em levas (proposta da seção 3; confirme na seção 9) |
+| 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas** ([estratégia](ESTRATEGIA.md)) |
 
 ## 9. Decisões pendentes
 
 | Decisão | Opções | Recomendação |
 |---|---|---|
-| **Título** | "Planta Certa", "Plantas de Casas Prontas para Construir", "Casa Certa para o Seu Terreno" | Um título **sem número**, para não precisar mudar a cada lançamento. Ex.: "Planta Certa: casas prontas para todo terreno" |
-| **Preço** | Um preço só; ou preço de lançamento que sobe a cada leva | **Preço de lançamento** que sobe no 2º e no 3º lançamento. Use a conta da seção 4 para escolher o valor |
+| **Título** | "Planta Certa", "Casa Certa para o Seu Lote", "Cabe no Meu Lote" | Um título **sem número** e **com a palavra lote**, que é como o público fala. Ex.: **"Planta Certa: as casas que cabem no seu lote"**. Evite "prontas para construir": as plantas são de referência |
+| **Preço** | R$ 47, R$ 67 ou R$ 97; preço único ou de lançamento | **R$ 67 de lançamento**, subindo no 2º e no 3º. Fica abaixo de uma planta avulsa (a partir de ~R$ 98 nos catálogos) e na faixa de compra por impulso. Confirme com a conta da seção 4 |
+| **Pagamento e plataforma** | Pix direto; Kiwify; Hotmart | **Kiwify ou Hotmart**, com **Pix e cartão parcelado** e garantia de 7 dias. Já entregam checkout, área de membros e reembolso |
+| **Order bump** | Nenhum; planilha de orçamento por etapa | **Planilha de orçamento por etapa**, a R$ 17–27, quando existir. Fala com quem constrói aos poucos |
 | **Bônus** | Atualizações grátis; checklist de obra; os 7 erros; animações por QR code | Os quatro. As **atualizações grátis** são o mais forte |
 | **Versão completa** (pranchas para obra) | Agora; depois; nunca | **Depois.** Exige projeto validado e assinado por arquiteto |
 | **Planta grátis do funil** | Casa Compacta; outra | **Casa Compacta**: já tem 3D e aparece no vídeo |
-| **Confirmar os 3 lançamentos** | Como na seção 3; ou outra divisão | Como na seção 3 |
+| **Confirmar os 3 lançamentos** | Como na seção 3; ou outra divisão | Como na seção 3. Se os anúncios de **renda extra** (kitnet, edícula) forem bem, antecipe as especiais |
+| **Ângulo do próximo anúncio** | Os 8 da [estratégia](ESTRATEGIA.md), seção 8 | **"Tem um lote 10 x 20?"**: concreto, a pessoa se reconhece na hora, e cada lote vira um anúncio |
 
 Quando decidir, mova a linha para a seção 8 com a data.
 
@@ -166,6 +183,7 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 | Risco | O que fazer |
 |---|---|
+| **Quem assina o desenho.** A Lei 5.194/1966 (art. 13) diz que plantas e projetos só têm valor jurídico diante das autoridades quando feitos por profissional habilitado; o art. 6º trata do exercício da profissão sem registro. As plantas do e-book são feitas por quem não é arquiteto nem engenheiro. ([pesquisa](reports/Arquiteto%20e%20engenheiro%20na%20constru%C3%A7%C3%A3o%20residencial.md)) | Apresentar o e-book como **referência**, nunca como projeto. Ter um **arquiteto registrado** revisando e assinando as plantas, e confirmar com ele e com um advogado como isso aparece no produto. Não é parecer jurídico |
 | **Responsabilidade técnica.** Para construir e aprovar na prefeitura, a obra precisa de projeto com profissional habilitado | Escrever no e-book (capa interna e cada página) que as plantas são **de referência**, não projeto executivo, e que a obra precisa de responsável técnico. Confirmar o texto com um arquiteto |
 | **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Combinar com o parceiro como devolver o dinheiro; deixar a política escrita na oferta |
 | **Direitos autorais** | Só plantas originais ou com licença escrita de venda. Nada de imagem de terceiros no e-book |
@@ -177,10 +195,10 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 | Quando | O quê | Quem |
 |---|---|---|
-| **Segunda** | Rodar `python3 ferramentas/atualizar-painel.py`, preencher os números da seção 7 e escolher as tarefas da semana (seção 6) | Você |
-| **Terça a quinta** | Produção: plantas (Claude), gravação (apresentador), edição e publicação (editor) | Todos |
+| **Segunda** | O maestro puxa os números, roda `python3 ferramentas/atualizar-painel.py`, preenche a seção 7 e propõe as tarefas e os ganchos da semana; você aprova | MinoAI Frontier e você |
+| **Terça a quinta** | Produção conduzida pelo maestro: roteiros, edição e plantas novas (MinoAI Frontier), gravação (apresentador), aprovação e publicação (você) | Todos |
 | **Quarta** | Conversa com o parceiro: o que as pessoas perguntam no WhatsApp vira gancho de vídeo e resposta no [FAQ](ebook/vendas/faq-compradores.md) | Você e parceiro |
-| **Sexta** | Editor preenche o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes); você decide o gancho da semana seguinte | Editor e você |
+| **Sexta** | O maestro preenche o [registro de testes](instagram/INSTAGRAM.md#6-registro-dos-testes) com os números de cada reel e aponta a vencedora; você decide o gancho da semana seguinte | MinoAI Frontier e você |
 
 **Para manter o painel em dia:**
 - **Situação das plantas:** mude só a coluna **Situação** do [catálogo](ebook/catalogo.md). A seção 1 conta sozinha quando você roda o script.
@@ -191,17 +209,20 @@ Quando decidir, mova a linha para a seção 8 com a data.
 
 | Pessoa | Responsabilidade | Onde trabalha |
 |---|---|---|
-| Você | Decisões, plantas (ideia e revisão) e anúncios | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
+| **Maestro: MinoAI Frontier** | Conduz a semana pelo painel; ganchos, roteiros, edição, publicação (com o seu "sim") e números; roda os scripts de 3D e e-book | [`MAESTRO.md`](MAESTRO.md) |
+| Você | Decisões, aprovação de cada publicação, plantas (ideia e revisão) e gravação | Este painel, [`ebook/`](ebook/EBOOK.md), [`video/`](video/VIDEO.md) |
 | Parceiro | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |
-| Editor | Edição e publicação dos vídeos do perfil | [`instagram/`](instagram/INSTAGRAM.md) |
+| Editor: **MinoAI Frontier** | Edição dos vídeos do perfil e do anúncio, no seu computador (app do Claude, aba Code) | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 | Apresentador | Gravação dos vídeos | [`video/VIDEO.md`](video/VIDEO.md), seção 3 (teleprompter) |
 | Arquiteto | Validação das plantas e do texto de responsabilidade técnica | [`ebook/catalogo.md`](ebook/catalogo.md) |
-| Claude | Dados das plantas, 3D, vídeos, páginas do e-book e textos | Todas as pastas |
+| Chats na nuvem (Claude) | Trabalho pesado quando o maestro pedir: dados das plantas, 3D, páginas do e-book e textos | Todas as pastas |
 
 ## 13. Mapa do projeto
 
 ```
 PAINEL.md                     ← este painel (centro de controle)
+MAESTRO.md                    o maestro (MinoAI Frontier): papel, mensagem de abertura, rotina
+ESTRATEGIA.md                 público, posicionamento, oferta, ângulos e tom de voz
 ferramentas/
   atualizar-painel.py           atualiza a seção 1 e confere arquivos e links
 video/                        Vídeo de anúncio
@@ -213,6 +234,7 @@ animacoes-3d/                 Animações 3D das plantas
   ANIMACOES-3D.md               guia: motor, estilo, entregas
   plantas/<nome>/               imagens e animação de cada planta
 instagram/                    Espaço do editor
+  MINOAI-FRONTIER.md            o editor: contexto, mensagem de abertura, B-roll
   INSTAGRAM.md                  guia: rotina, retenção, estilo, formatos, testes
   plano-perfil.md               identidade, pilares, primeiros posts
   referencias-mino-lee.md       análise completa das referências
