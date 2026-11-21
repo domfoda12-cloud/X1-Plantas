@@ -15,6 +15,9 @@ const amostras = args.includes('--amostras') ? args[args.indexOf('--amostras') +
   await p.goto('file://' + path.join(AQUI, 'blueprint.html'));
   await p.evaluate(() => window.pronto);
   await p.waitForTimeout(300);
+  // LIMPO=1: sem textos nem degradê (para a edição da MinoAI pôr a locução e as legendas por cima)
+  const LIMPO = !!process.env.LIMPO;
+  if (LIMPO) await p.addStyleTag({ content: '#txt,.base{display:none!important}' });
   if (amostras) {
     for (const t of amostras) {
       const modo = t < 0 ? 'fim' : 'abertura', tt = Math.abs(t);
@@ -23,7 +26,7 @@ const amostras = args.includes('--amostras') ? args[args.indexOf('--amostras') +
     }
     await b.close(); return;
   }
-  for (const [nome, modo, dur] of [['abertura', 'abertura', 7.5], ['fim', 'fim', 1.875]]) {
+  for (const [nome, modo, dur] of (LIMPO ? [['blueprint-limpo', 'abertura', 7.5]] : [['abertura', 'abertura', 7.5], ['fim', 'fim', 1.875]])) {
     const out = path.join(AQUI, `${nome}.mp4`);
     const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-',
       '-c:v', 'libx264', '-crf', '14', '-preset', 'medium', '-pix_fmt', 'yuv420p', out]);
