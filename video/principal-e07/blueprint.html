@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<!-- Blueprint animado do vídeo principal da E07 (abertura de 0 a 7,5 s e cartão final).
+     window.renderAt(t, modo): modo "abertura" (t de 0 a 7,5) ou "fim" (t de 0 a 1,875).
+     Cada efeito segue o plano aprovado pelo Conselho: video/plano-principal-e07.md, seção 7. -->
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0B4FA8}
+canvas{position:absolute;inset:0}
+#txt{position:absolute;inset:0;pointer-events:none;color:#F5F1E6;font-family:"Inter Display",Inter,sans-serif}
+.perg{position:absolute;left:70px;right:70px;top:120px;font-weight:900;letter-spacing:-.025em;line-height:1.0;
+  text-shadow:0 3px 18px rgba(3,20,50,.55);transform-origin:0 0}
+.perg b{color:#FFC857;font-weight:900}
+.diz{position:absolute;left:70px;font-weight:900;font-size:84px;letter-spacing:-.03em;color:#FFC857;text-shadow:0 3px 18px rgba(3,20,50,.55)}
+.rodape{position:absolute;left:70px;right:70px;bottom:360px;font:500 27px/1.3 Inter,sans-serif;color:rgba(255,255,255,.92)}
+.base{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(rgba(6,26,58,0),rgba(6,26,58,.78) 60%)}
+.cta{position:absolute;left:70px;right:70px;top:120px;font-weight:900;font-size:92px;letter-spacing:-.03em;line-height:1}
+.cta b{display:inline-block;background:#FFC857;color:#0A2E66;padding:4px 22px 10px;border-radius:14px;margin-top:14px}
+.logo{position:absolute;right:56px;top:1080px;width:250px;height:250px;border-radius:50%;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.logo img{width:100%;height:100%}
+.carimbo{position:absolute;left:60px;top:1130px;width:250px;padding:16px 10px;border:5px solid #FFC857;color:#FFC857;
+  font:800 26px/1.15 "JetBrains Mono",monospace;text-align:center;letter-spacing:.06em;transform:rotate(-8deg)}
+.carimbo big{display:block;font:900 64px/1 "Inter Display",sans-serif;letter-spacing:-.01em}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="base"></div>
+<div id="txt">
+  <div class="perg" id="perg"><span>3 quartos em <b>8 m</b> de frente?</span></div>
+  <div class="diz" id="d1" style="top:330px">3 quartos.</div>
+  <div class="diz" id="d2" style="top:330px;left:560px">8 metros.</div>
+  <div class="cta" id="cta">Quer essa planta?<br><b>Comenta PLANTA</b></div>
+  <div class="carimbo" id="carimbo">X1 PLANTAS<big>CASA VII</big>E07 · 72 m²</div>
+  <div class="logo" id="logo"><img src="logo.svg"></div>
+  <div class="rodape">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</div>
+</div>
+<script>
+const D = window.E07;                      // dados da planta (e07.json), injetados pelo renderizador
+const W = 1080, H = 1920, BEAT = 60 / 128;
+const S = 52;                              // pixels por metro: a grade de 1 m é informação, não enfeite
+const LOTE = { w: 8, d: 25, frente: 3, esq: 1.5 };
+const LX = (W - LOTE.w * S) / 2, LY = 410;  // canto esquerdo da frente do lote
+const HX = LX + LOTE.esq * S, HY = LY + LOTE.frente * S;  // canto da casa
+const GIZ = 'rgba(245,241,230,.88)', AMARELO = '#FFC857';
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+const $ = (id) => document.getElementById(id);
+
+// ---------- utilidades
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const ease = (v) => { v = clamp(v); return v * v * (3 - 2 * v); };
+const out3 = (v) => 1 - Math.pow(1 - clamp(v), 3);
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const n0 = (v) => (Math.floor(v * 10 + 0.5) / 10).toFixed(1).replace('.', ',');  // 0,5 sobe (PL.n0)
+
+// ---------- papel heliográfico: fibra, manchas, dobra em cruz e grão animado (pré-calculados)
+const papel = document.createElement('canvas'); papel.width = W; papel.height = H;
+(() => {
+  const p = papel.getContext('2d');
+  const rg = p.createRadialGradient(W / 2, H * .45, 200, W / 2, H / 2, 1250);
+  rg.addColorStop(0, '#0D56B5'); rg.addColorStop(.55, '#0B4FA8'); rg.addColorStop(1, '#06306A');
+  p.fillStyle = rg; p.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9; i++) {                      // manchas leves de cópia heliográfica
+    const x = rnd() * W, y = rnd() * H, r = 120 + rnd() * 320, claro = rnd() > .5;
+    const m = p.createRadialGradient(x, y, 0, x, y, r);
+    m.addColorStop(0, claro ? 'rgba(120,170,235,.07)' : 'rgba(3,25,70,.10)'); m.addColorStop(1, 'rgba(0,0,0,0)');
+    p.fillStyle = m; p.fillRect(0, 0, W, H);
+  }
+  p.lineWidth = 1;
+  for (let i = 0; i < 2600; i++) {                   // fibra do papel
+    const x = rnd() * W, y = rnd() * H, a = rnd() * Math.PI, l = 4 + rnd() * 14;
+    p.strokeStyle = `rgba(220,235,255,${.02 + rnd() * .035})`;
+    p.beginPath(); p.moveTo(x, y); p.lineTo(x + Math.cos(a) * l, y + Math.sin(a) * l); p.stroke();
+  }
+})();
+const graos = [...Array(6)].map(() => {
+  const c = document.createElement('canvas'); c.width = W / 2; c.height = H / 2;
+  const p = c.getContext('2d'), im = p.createImageData(c.width, c.height);
+  for (let i = 0; i < im.data.length; i += 4) {
+    const v = rnd() * 255; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 16;
+  }
+  p.putImageData(im, 0, 0); return c;
+});
+
+// ---------- paredes em grupos, da frente para os fundos (cada grupo entra num tempo)
+const paredes = D.paredes.map((w) => ({ w, y: (w[1] + w[3]) / 2, len: Math.hypot(w[2] - w[0], w[3] - w[1]) }))
+  .sort((a, b) => a.y - b.y);
+const CORTES = [3.81, 6.61, 8.61, 11.61, 14.61, 99];   // faixas: sala, cozinha, banho/serviço, quarto, quarto, suíte
+paredes.forEach((p) => { p.grupo = CORTES.findIndex((c) => p.y <= c); });
+const T_PAREDE = (k) => 0.94 + k * BEAT;                 // 0,94 · 1,41 · 1,88 · 2,34 · 2,81 · 3,28
+
+// cômodos: quando o nome entra (um por tempo, de 3,75 s em diante) e se acende como quarto
+const ROTULO = { sala: 3.75, cozinha: 4.22, corr: 4.22, servico: 4.69, banho: 4.69, quarto2: 5.16, quarto3: 5.63, quarto1: 6.09, bsuite: 6.09 };
+const QUARTOS = { quarto2: 5.16, quarto3: 5.63, quarto1: 6.09 };
+
+const P = (x, y) => [HX + x * S, HY + y * S];
+
+function grade(t, curva) {
+  // grade de 1 m alinhada ao lote; na subida (6,56 a 7,5 s) ela se curva para fora do centro
+  const passo = S, x0 = LX % passo, y0 = LY % passo;
+  g.lineWidth = 1;
+  for (let k = 0; k * passo + x0 < W + passo; k++) {
+    const x = x0 + k * passo, m = Math.round((x - LX) / passo) % 5 === 0;
+    g.strokeStyle = m ? 'rgba(235,242,255,.14)' : 'rgba(235,242,255,.07)';
+    g.beginPath(); g.moveTo(x, 0);
+    g.quadraticCurveTo(x + (x - W / 2) * curva, H / 2, x, H); g.stroke();
+  }
+  for (let k = 0; k * passo + y0 < H + passo; k++) {
+    const y = y0 + k * passo, m = Math.round((y - LY) / passo) % 5 === 0;
+    g.strokeStyle = m ? 'rgba(235,242,255,.14)' : 'rgba(235,242,255,.07)';
+    g.beginPath(); g.moveTo(0, y);
+    g.quadraticCurveTo(W / 2, y + (y - H / 2) * curva * .6, W, y); g.stroke();
+  }
+}
+
+function luzRasante(t) {
+  // luz de prancheta que anda devagar na diagonal; revela o relevo da dobra em cruz
+  const a = clamp((t - 0.47) / 0.6);
+  if (a <= 0) return { k: 0 };
+  const k = clamp((t - 0.47) / 7.0);              // 0 → 1 ao longo da abertura
+  const cx = -300 + k * 1700, cy = -200 + k * 2300;
+  const gr = g.createLinearGradient(cx - 420, cy - 420, cx + 420, cy + 420);
+  gr.addColorStop(0, 'rgba(255,255,255,0)'); gr.addColorStop(.5, `rgba(225,238,255,${.10 * a})`); gr.addColorStop(1, 'rgba(255,255,255,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, W, H);
+  return { k, a, cx, cy };
+}
+
+function dobra(luz) {
+  // dobra vertical e horizontal: um lado com luz, o outro com sombra; mais forte quando a luz passa perto
+  const perto = (d) => .35 + .65 * Math.exp(-d * d / (2 * 380 * 380));
+  const fv = luz.a ? perto(luz.cx - W / 2) : .35, fh = luz.a ? perto(luz.cy - H / 2) : .35;
+  let gr = g.createLinearGradient(W / 2 - 26, 0, W / 2 + 26, 0);
+  gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(.48, `rgba(2,18,50,${.20 * fv})`);
+  gr.addColorStop(.52, `rgba(220,235,255,${.13 * fv})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = gr; g.fillRect(W / 2 - 26, 0, 52, H);
+  gr = g.createLinearGradient(0, H / 2 - 26, 0, H / 2 + 26);
+  gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(.48, `rgba(2,18,50,${.18 * fh})`);
+  gr.addColorStop(.52, `rgba(220,235,255,${.11 * fh})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = gr; g.fillRect(0, H / 2 - 26, W, 52);
+}
+
+function tinta(x1, y1, x2, y2, prog, idade, largura = 6) {
+  // traço que entra como tinta molhada: brilha e engrossa ao entrar, depois seca no tom de giz
+  if (prog <= 0) return null;
+  const ex = x1 + (x2 - x1) * prog, ey = y1 + (y2 - y1) * prog;
+  const molhado = clamp(1 - idade / 0.55);
+  g.save();
+  g.strokeStyle = GIZ; g.lineCap = 'square';
+  g.lineWidth = largura + 2.5 * molhado;
+  if (molhado > 0) { g.shadowColor = `rgba(255,236,190,${.9 * molhado})`; g.shadowBlur = 22 * molhado; }
+  g.beginPath(); g.moveTo(x1, y1); g.lineTo(ex, ey); g.stroke();
+  g.restore();
+  return prog < 1 ? [ex, ey] : null;
+}
+
+function faisca(x, y, t) {
+  // ponta da caneta: um ponto quente e poucas faíscas curtas (contidas, para não pesar)
+  g.save();
+  const r = g.createRadialGradient(x, y, 0, x, y, 26);
+  r.addColorStop(0, 'rgba(255,250,235,.95)'); r.addColorStop(.3, 'rgba(255,214,140,.55)'); r.addColorStop(1, 'rgba(255,200,87,0)');
+  g.fillStyle = r; g.fillRect(x - 26, y - 26, 52, 52);
+  for (let i = 0; i < 4; i++) {
+    const a = (i * 1.9 + t * 37) % (Math.PI * 2), d = 8 + ((t * 90 + i * 13) % 18);
+    g.fillStyle = `rgba(255,220,150,${.8 - d / 30})`;
+    g.fillRect(x + Math.cos(a) * d, y + Math.sin(a) * d, 2, 2);
+  }
+  g.restore();
+}
+
+function cota(x1, x2, y, texto, prog, cor, tam = 30) {
+  if (prog <= 0) return;
+  const c = (x1 + x2) / 2, meia = (x2 - x1) / 2 * out3(prog);
+  g.save(); g.strokeStyle = cor; g.fillStyle = cor; g.lineWidth = 2.5;
+  g.beginPath(); g.moveTo(c - meia, y); g.lineTo(c + meia, y);
+  g.moveTo(c - meia, y - 10); g.lineTo(c - meia, y + 10); g.moveTo(c + meia, y - 10); g.lineTo(c + meia, y + 10); g.stroke();
+  g.globalAlpha = clamp((prog - .4) / .4);
+  g.font = `800 ${tam}px "JetBrains Mono",monospace`; g.textAlign = 'center';
+  g.fillText(texto, c, y - 14); g.restore();
+}
+
+function planta(t, fim) {
+  // lote: contorno tracejado (entra em 0,47 s) e recuos
+  const aLote = fim ? 1 : clamp((t - 0.47) / 0.5);
+  if (aLote > 0) {
+    g.save(); g.globalAlpha = .55 * aLote; g.strokeStyle = GIZ; g.lineWidth = 2; g.setLineDash([14, 10]);
+    g.strokeRect(LX, LY, LOTE.w * S, LOTE.d * S); g.restore();
+    g.save(); g.globalAlpha = .7 * aLote; g.fillStyle = GIZ; g.font = '600 20px "JetBrains Mono",monospace'; g.textAlign = 'center';
+    g.textAlign = 'right'; g.fillText('RUA ↑', LX - 16, LY + 6); g.restore();
+  }
+  // quartos acesos em amarelo, um por tempo
+  for (const a of D.ambientes) {
+    const tq = QUARTOS[a.id];
+    if (tq !== undefined && (fim || t >= tq)) {
+      const v = fim ? 1 : clamp((t - tq) / 0.18), [x, y] = P(a.x0, a.y0);
+      g.fillStyle = `rgba(255,200,87,${.24 * v})`; g.fillRect(x, y, (a.x1 - a.x0) * S, (a.y1 - a.y0) * S);
+    }
+  }
+  // corredor coberto: hachura leve (é a passagem, dentro dos 5 m)
+  const corr = D.ambientes.find((a) => a.id === 'corr');
+  if (fim || t > 3.28) {
+    const [x, y] = P(corr.x0, corr.y0), w = (corr.x1 - corr.x0) * S, h = (corr.y1 - corr.y0) * S;
+    g.save(); g.globalAlpha = fim ? .5 : .5 * clamp((t - 3.28) / .4); g.strokeStyle = GIZ; g.lineWidth = 1;
+    g.beginPath(); g.rect(x, y, w, h); g.clip();
+    for (let k = -h; k < w + h; k += 14) { g.moveTo(x + k, y); g.lineTo(x + k - h, y + h); }
+    g.stroke(); g.restore();
+  }
+  // paredes
+  let ponta = null;
+  for (const p of paredes) {
+    const t0 = T_PAREDE(p.grupo) + (p.len < 1 ? .05 : 0);
+    const prog = fim ? 1 : clamp((t - t0) / 0.28);
+    const [x1, y1] = P(p.w[0], p.w[1]), [x2, y2] = P(p.w[2], p.w[3]);
+    const e = tinta(x1, y1, x2, y2, prog, fim ? 9 : t - t0 - .28);
+    if (e && p.len > 1.5) ponta = e;
+  }
+  if (ponta && !fim && t >= 0.94) faisca(ponta[0], ponta[1], t);
+  // janelas: duas linhas finas; brilham em amarelo ao entrar e assentam no giz
+  D.janelas.forEach((j, i) => {
+    const t0 = 2.81 + i * 0.06, v = fim ? 1 : clamp((t - t0) / 0.2);
+    if (v <= 0) return;
+    const [x1, y1] = P(j.seg[0], j.seg[1]), [x2, y2] = P(j.seg[2], j.seg[3]);
+    const vert = Math.abs(x2 - x1) < 1, brilho = fim ? 0 : clamp(1 - (t - t0) / .45);
+    g.save(); g.globalAlpha = v; g.lineWidth = 2;
+    g.strokeStyle = brilho > 0 ? `rgba(255,${200 + 41 * (1 - brilho)},${87 + 143 * (1 - brilho)},1)` : GIZ;
+    if (brilho > 0) { g.shadowColor = AMARELO; g.shadowBlur = 16 * brilho; }
+    g.fillStyle = '#0B4FA8';
+    if (vert) { g.fillRect(x1 - 5, y1, 10, y2 - y1); g.strokeRect(x1 - 5, y1, 10, y2 - y1); g.beginPath(); g.moveTo(x1, y1); g.lineTo(x1, y2); g.stroke(); }
+    else { g.fillRect(x1, y1 - 5, x2 - x1, 10); g.strokeRect(x1, y1 - 5, x2 - x1, 10); g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y1); g.stroke(); }
+    g.restore();
+  });
+  // portas: a folha gira e desenha o arco
+  D.portas.forEach((p, i) => {
+    const t0 = 2.81 + i * 0.07, v = fim ? 1 : out3((t - t0) / 0.35);
+    if (v <= 0) return;
+    const [x, y] = P(p.x, p.y), r = p.r * S, a = p.a0 + (p.a1 - p.a0) * v;
+    g.save(); g.strokeStyle = GIZ; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.stroke();
+    g.setLineDash([5, 6]); g.globalAlpha = .7;
+    g.beginPath(); g.arc(x, y, r, p.a0, a); g.stroke(); g.restore();
+  });
+  // cotas: 8 m do lote (amarelo, pulsa) e 5 m de construção
+  const pulso = (tp) => (fim ? 0 : Math.exp(-Math.max(0, t - tp) * 5) * (t >= tp ? 1 : 0));
+  const p8 = fim ? 1 : clamp((t - 1.41) / .35);
+  g.save(); const s8 = 1 + .18 * (pulso(1.41) + pulso(6.56));
+  g.translate(W / 2, LY - 18); g.scale(s8, s8); g.translate(-W / 2, -(LY - 18));
+  cota(LX, LX + LOTE.w * S, LY - 18, '8 m', p8, AMARELO, 34); g.restore();
+  cota(HX, HX + D.LARGURA * S, HY - 26, '5 m de construção', fim ? 1 : clamp((t - 2.34) / .45), GIZ, 22);
+  // profundidade da casa, na lateral esquerda
+  const pd = fim ? 1 : clamp((t - 2.81) / .5);
+  if (pd > 0) {
+    const x = LX - 34, y1 = HY, y2 = HY + D.PROFUNDIDADE * S * out3(pd);
+    g.save(); g.strokeStyle = GIZ; g.fillStyle = GIZ; g.lineWidth = 2; g.globalAlpha = .8;
+    g.beginPath(); g.moveTo(x, y1); g.lineTo(x, y2); g.moveTo(x - 9, y1); g.lineTo(x + 9, y1); g.moveTo(x - 9, y2); g.lineTo(x + 9, y2); g.stroke();
+    g.globalAlpha = .8 * clamp((pd - .5) / .5); g.translate(x - 12, (y1 + HY + D.PROFUNDIDADE * S) / 2); g.rotate(-Math.PI / 2);
+    g.font = '700 20px "JetBrains Mono",monospace'; g.textAlign = 'center'; g.fillText(n0(D.PROFUNDIDADE).replace(',9', ',90') + ' m', 0, 0); g.restore();
+  }
+  // nomes dos cômodos, um por tempo, com um pulo leve
+  for (const a of D.ambientes) {
+    const tr = ROTULO[a.id]; if (tr === undefined) continue;
+    const v = fim ? 1 : clamp((t - tr) / 0.16); if (v <= 0) continue;
+    const [x0, y0] = P(a.x0, a.y0), [x1, y1] = P(a.x1, a.y1), cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+    const esc = fim ? 1 : 1 + .3 * (1 - out3(v));
+    g.save(); g.translate(cx, cy); g.scale(esc, esc); g.globalAlpha = clamp(v * 1.5);
+    g.fillStyle = QUARTOS[a.id] !== undefined ? '#FFE7AE' : '#F5F1E6'; g.textAlign = 'center';
+    if (a.id === 'corr') {
+      g.rotate(-Math.PI / 2); g.font = '700 15px "JetBrains Mono",monospace'; g.globalAlpha *= .8;
+      g.fillText('CORREDOR COBERTO · 1 m', 0, 5);
+    } else {
+      const estreito = (x1 - x0) < 110, nome = a.id === 'bsuite' ? 'BANHO' : a.nome.toUpperCase();
+      g.font = `800 ${estreito ? 15 : 22}px "Inter Display",sans-serif`; g.fillText(nome, 0, -2);
+      g.font = `700 ${estreito ? 13 : 17}px "JetBrains Mono",monospace`; g.globalAlpha *= .85;
+      g.fillText(n0((a.x1 - a.x0) * (a.y1 - a.y0)) + ' m²', 0, 20);
+    }
+    g.restore();
+  }
+}
+
+window.renderAt = function (t, modo = 'abertura') {
+  const fim = modo === 'fim';
+  const tt = fim ? 7.5 : t;                         // o cartão final usa a luz e a dobra do fim da abertura
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  // respiração do papel e, a partir de 1,88 s, paralaxe: a planta anda mais que a grade
+  const resp = 1 + .004 * Math.sin(t * 2.2);
+  const par = fim ? 0 : ease((t - 1.88) / 5.6);
+  // tremor só no rufo da caixa (6,56 a 7,5 s), crescendo
+  const tre = fim ? 0 : clamp((t - 6.56) / .94), tq = Math.floor(t * 30);
+  const jx = tre ? Math.sin(tq * 12.9898) * 7 * tre : 0, jy = tre ? Math.cos(tq * 78.233) * 7 * tre : 0;
+  g.save();
+  g.translate(W / 2 + jx, H / 2 + jy); g.scale(resp, resp); g.translate(-W / 2, -H / 2 - par * 18);
+  g.drawImage(papel, 0, 0);
+  grade(tt, fim ? 0 : .07 * ease((t - 6.56) / .94));
+  const luz = luzRasante(tt); dobra(luz);
+  g.translate(0, -par * 22);                       // a planta se move um pouco mais que o papel
+  planta(t, fim);
+  g.restore();
+  // a luz esquenta na subida, para emendar no fim de tarde da casa
+  const quente = fim ? 0 : .2 * ease((t - 5.63) / 1.87);
+  if (quente) {
+    const r = g.createRadialGradient(W * .85, H * .1, 50, W * .85, H * .1, 1500);
+    r.addColorStop(0, `rgba(255,176,90,${quente})`); r.addColorStop(1, 'rgba(255,176,90,0)');
+    g.fillStyle = r; g.fillRect(0, 0, W, H);
+  }
+  g.globalAlpha = 1; g.drawImage(graos[Math.floor(t * 24) % 6], 0, 0, W, H);   // grão a 24 qps
+
+  // ---------- textos
+  const perg = $('perg'), d1 = $('d1'), d2 = $('d2'), cta = $('cta'), car = $('carimbo'), logo = $('logo');
+  if (!fim) {
+    // 0 a 3,75: pergunta grande; depois encolhe e fica; "3 quartos." e "8 metros." entram embaixo
+    const enc = out3((t - 3.75) / .3);
+    perg.style.opacity = 1; perg.style.fontSize = (96 - 40 * enc) + 'px'; perg.style.transform = 'none';
+    const pop = (el, tp) => { const v = clamp((t - tp) / .14); el.style.opacity = v; el.style.transform = `scale(${1 + .35 * (1 - out3(v))})`; };
+    pop(d1, 6.09); pop(d2, 6.56);
+    d1.style.top = d2.style.top = (330 - 130 * enc) + 'px';
+    cta.style.opacity = car.style.opacity = logo.style.opacity = 0;
+  } else {
+    // cartão final (1,875 s): chamada, carimbo CASA VII e logo; nos últimos 0,47 s volta ao quadro 0
+    const volta = ease((t - 1.40) / .47);
+    cta.style.opacity = 1 - volta; car.style.opacity = logo.style.opacity = 1 - volta;
+    const ent = out3(t / .2);
+    cta.style.transform = `scale(${1 + .2 * (1 - ent)})`;
+    car.style.transform = `rotate(-8deg) scale(${1 + .6 * (1 - out3((t - .23) / .18))})`;
+    car.style.opacity = Math.min(1 - volta, clamp((t - .23) / .1));
+    d1.style.opacity = d2.style.opacity = 0;
+    perg.style.fontSize = '96px'; perg.style.transform = 'none'; perg.style.opacity = volta;
+    if (volta > 0) {                                  // a planta se apaga e sobra o papel com a pergunta
+      g.fillStyle = 'rgba(0,0,0,0)';
+      g.globalAlpha = volta; g.drawImage(papel, 0, 0); grade(0, 0); dobra(luzRasante(0));
+      g.drawImage(graos[Math.floor(t * 24) % 6], 0, 0, W, H); g.globalAlpha = 1;
+    }
+  }
+};
+window.pronto = document.fonts.ready;
+</script>
+</body></html>

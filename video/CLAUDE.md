@@ -7,5 +7,5 @@
 - **3D a partir da planta:** `node render-planta.cjs --planta ID --so-imagens` (imagens) ou sem `--so-imagens` (animação). Os módulos `src/plantas/*.js` saem de `python3 ferramentas/planta3d.py`. Não edite à mão.
 - **Vídeo sem apresentador** (principal e prévia do WhatsApp): `python3 video/montar.py video/roteiros/<nome>.json`. Texto e cenas ficam no roteiro; o aviso legal sai em todas as cenas. Clipe novo entra comprimido em `broll/clipes/`.
 - **Os 5 anúncios em `saida/v1` a `v5` usam o 3D velho da C01:** refazer antes de usar.
-- **Música:** anúncio pago só com faixa licenciada. A trilha "lofi" do toolkit de demonstração foi feita no ElevenLabs Music, e a licença para anúncio não foi conferida: não use em anúncio.
+- **Música:** anúncio pago só com faixa licenciada ou com a trilha original nossa (`musica/gerar_trilha.py`, 128 BPM, feita por síntese, sem samples; aprovada pelo Revisor em 21/11/2026). Áudio gerado pelos modelos de vídeo é descartado. A trilha "lofi" do toolkit de demonstração foi feita no ElevenLabs Music, e a licença para anúncio não foi conferida: não use em anúncio.
 - **Edição final** é da MinoAI Frontier, no Mac do dono. **Gravação de páginas web** (calculadora, leitor do e-book): skill `product-demo`.
