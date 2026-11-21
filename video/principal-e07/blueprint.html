@@ -11,7 +11,12 @@ canvas{position:absolute;inset:0}
 .perg{position:absolute;left:70px;right:70px;top:120px;font-weight:900;letter-spacing:-.025em;line-height:1.0;
   text-shadow:0 3px 18px rgba(3,20,50,.55);transform-origin:0 0}
 .perg b{color:#FFC857;font-weight:900}
-.diz{position:absolute;left:70px;font-weight:900;font-size:84px;letter-spacing:-.03em;color:#FFC857;text-shadow:0 3px 18px rgba(3,20,50,.55)}
+.grupo{font:800 .26em "JetBrains Mono",monospace;letter-spacing:.12em;color:#FFC857;margin:0 0 .25em .2em}
+.balao{display:inline-block;max-width:940px;background:#F5F1E6;color:#10233F;font:700 .52em/1.18 Inter,sans-serif;letter-spacing:-.01em;
+  padding:.5em .7em .45em;border-radius:.45em .45em .45em .08em;box-shadow:0 10px 30px rgba(3,20,50,.45)}
+.quem{font:800 .62em Inter,sans-serif;color:#0B4FA8;margin-bottom:.2em}
+.hora{font:600 .5em Inter,sans-serif;color:#6B7A90;margin-left:.6em;white-space:nowrap}
+.diz{position:absolute;left:70px;font-weight:900;font-size:66px;letter-spacing:-.03em;color:#FFC857;text-shadow:0 3px 18px rgba(3,20,50,.55)}
 .rodape{position:absolute;left:70px;right:70px;bottom:360px;font:500 27px/1.3 Inter,sans-serif;color:rgba(255,255,255,.92)}
 .base{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(rgba(6,26,58,0),rgba(6,26,58,.78) 60%)}
 .cta{position:absolute;left:70px;right:70px;top:120px;font-weight:900;font-size:92px;letter-spacing:-.03em;line-height:1}
@@ -26,9 +31,9 @@ canvas{position:absolute;inset:0}
 <canvas id="c" width="1080" height="1920"></canvas>
 <div class="base"></div>
 <div id="txt">
-  <div class="perg" id="perg"><span>3 quartos em <b>8 m</b> de frente?</span></div>
+  <div class="perg" id="perg"><div class="grupo">GRUPO DA FAMÍLIA</div><div class="balao"><div class="quem">Tio Zé</div>3 quartos em 8 m de frente? Não cabe nem a família no Natal kkkk<span class="hora">19:42</span></div></div>
   <div class="diz" id="d1" style="top:330px">3 quartos.</div>
-  <div class="diz" id="d2" style="top:330px;left:560px">8 metros.</div>
+  <div class="diz" id="d2" style="top:330px;left:450px">8 metros.</div>
   <div class="cta" id="cta">Quer essa planta?<br><b>Comenta PLANTA</b></div>
   <div class="carimbo" id="carimbo">X1 PLANTAS<big>CASA VII</big>E07 · 72 m²</div>
   <div class="logo" id="logo"><img src="logo.svg"></div>
@@ -306,10 +311,10 @@ window.renderAt = function (t, modo = 'abertura') {
   if (!fim) {
     // 0 a 3,75: pergunta grande; depois encolhe e fica; "3 quartos." e "8 metros." entram embaixo
     const enc = out3((t - 3.75) / .3);
-    perg.style.opacity = 1; perg.style.fontSize = (96 - 40 * enc) + 'px'; perg.style.transform = 'none';
+    perg.style.opacity = 1; perg.style.fontSize = (96 - 36 * enc) + 'px'; perg.style.top = (120 - 60 * enc) + 'px'; perg.style.transform = 'none';
     const pop = (el, tp) => { const v = clamp((t - tp) / .14); el.style.opacity = v; el.style.transform = `scale(${1 + .35 * (1 - out3(v))})`; };
     pop(d1, 6.09); pop(d2, 6.56);
-    d1.style.top = d2.style.top = (330 - 130 * enc) + 'px';
+    d1.style.top = d2.style.top = '222px';
     cta.style.opacity = car.style.opacity = logo.style.opacity = 0;
   } else {
     // cartão final (1,875 s): chamada, carimbo CASA VII e logo; nos últimos 0,47 s volta ao quadro 0
@@ -320,7 +325,7 @@ window.renderAt = function (t, modo = 'abertura') {
     car.style.transform = `rotate(-8deg) scale(${1 + .6 * (1 - out3((t - .23) / .18))})`;
     car.style.opacity = Math.min(1 - volta, clamp((t - .23) / .1));
     d1.style.opacity = d2.style.opacity = 0;
-    perg.style.fontSize = '96px'; perg.style.transform = 'none'; perg.style.opacity = volta;
+    perg.style.fontSize = '96px'; perg.style.top = '120px'; perg.style.transform = 'none'; perg.style.opacity = volta;
     if (volta > 0) {                                  // a planta se apaga e sobra o papel com a pergunta
       g.fillStyle = 'rgba(0,0,0,0)';
       g.globalAlpha = volta; g.drawImage(papel, 0, 0); grade(0, 0); dobra(luzRasante(0));
