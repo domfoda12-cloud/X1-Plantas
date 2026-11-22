@@ -271,9 +271,8 @@ function planta(t, fim) {
       g.fillText('CORREDOR COBERTO · 1 m', 0, 5);
     } else {
       const estreito = (x1 - x0) < 110, nome = a.id === 'bsuite' ? 'BANHO' : a.nome.toUpperCase();
-      g.font = `800 ${estreito ? 15 : 22}px "Inter Display",sans-serif`; g.fillText(nome, 0, -2);
-      g.font = `700 ${estreito ? 13 : 17}px "JetBrains Mono",monospace`; g.globalAlpha *= .85;
-      g.fillText(n0((a.x1 - a.x0) * (a.y1 - a.y0)) + ' m²', 0, 20);
+      // só o nome: a área por cômodo saiu (veto do Revisor, 22/11: o eixo das paredes dá a área bruta, maior que a área livre da planta)
+      g.font = `800 ${estreito ? 15 : 22}px "Inter Display",sans-serif`; g.fillText(nome, 0, 7);
     }
     g.restore();
   }

@@ -1,4 +1,4 @@
-"""Monta o anúncio do e-book com a locução do dono (E07, 26,25 s = 14 compassos a 128 BPM).
+"""Monta o anúncio do e-book com a locução do dono (E07, 25,3 s a 128 BPM).
 
 Uso: python3 video/principal-e07/montar_locucao.py
 Entradas: voz/gravacao-dono.m4a e voz/palavras.json (transcrição com o tempo de cada palavra),
@@ -21,12 +21,14 @@ AQUI = Path(__file__).resolve().parent
 RAIZ = AQUI.parent.parent
 SAIDA = RAIZ / "video/saida/principal-e07"
 FPS, B = 30, 60 / 128          # B = um tempo (0,469 s)
-DUR = 56 * B                   # 14 compassos = 26,25 s
+DUR = 54 * B                   # 54 tempos = 25,3 s
 
-# --- corte da voz: sai "Eu nem respondi, só mandei construir. Olha aqui o resultado." (a casa não foi construída)
-CORTE = (6.00, 9.85)           # os dois pontos caem em silêncio medido (5,87–6,47 e 9,58–9,88); 10,20 comia o "se" de "setenta"
+# --- cortes da voz, todos em silêncio medido (veto do Revisor de risco):
+#  1. "Eu nem respondi, só mandei construir. Olha aqui o resultado." (a casa não foi construída); 10,20 comia o "se" de "setenta"
+#  2. "até provar que dava certo." (nenhum arquiteto registrado revisou a planta)
+CORTES = [(6.00, 9.85), (21.77, 23.30)]   # 21,77: depois de "obce… cados" (ele pausa no meio da palavra)
 FIM_VOZ = 28.15
-novo = lambda t: t if t <= CORTE[0] else t - (CORTE[1] - CORTE[0])
+novo = lambda t: t - sum(b - a for a, b in CORTES if t >= b) - sum(t - a for a, b in CORTES if a < t < b)
 
 O = "openart/"
 # (nome, fonte, início na fonte, velocidade, fim no vídeo em tempos, sem selo? = desenho ou página nossa, não imagem gerada)
@@ -36,16 +38,15 @@ CENAS = [
     ("blueprint", "blueprint-limpo.mp4", 0.9, 2.0, 20, True),             # "72 m², 3 quartos" (os quartos acendem na fala)
     ("vira-casa", O + "v1-transicao.mp4", 1.0, 2.133, 24, False),         # "sendo 1 suíte e 2 banheiros"
     ("vista-de-cima", O + "v2-voo.mp4", 0.1, 1.0, 26, False),             # drop: "Tudo dentro dos 8 metros"
-    ("almoco-2", O + "v8-almoco.mp4", 3.55, 1.0, 29, False),              # "que ele jurou que não ia caber"
+    ("sala", O + "v3-sala.mp4", 1.6, 1.0, 29, False),                     # "que ele jurou que não ia caber" (o caramelo no sofá)
     ("cozinha", O + "v6-onigiri.mp4", 0.5, 1.0, 33, False),               # "A gente não é arquiteto nem engenheiro"
-    ("blueprint-2", "blueprint-limpo.mp4", 0.94, 1.5, 37, True),          # "só ficamos obcecado" (a caneta desenhando)
-    ("sala", O + "v3-sala.mp4", 1.6, 1.0, 41, False),                     # "até provar que dava certo"
-    ("fachada", O + "v5-fachada.mp4", 0.3, 1.0, 44, False),               # "Eu volto para o Brasil" (bandeirinhas)
-    ("ebook", "../broll/ebook-folheando.mp4", 0.0, 2.0, 48, True),        # "com um e-book cheio de plantas assim"
-    ("fachada-rosa-2", O + "v7-fachada-rosa.mp4", 1.2, 1.0, 56, False),   # "Comenta PLANTA…" e o fim em dois tempos
+    ("blueprint-2", "blueprint-limpo.mp4", 0.94, 1.5, 38, True),          # "só ficamos obcecado" (a caneta desenhando)
+    ("fachada", O + "v5-fachada.mp4", 0.3, 1.0, 41, False),               # "Eu volto para o Brasil" (bandeirinhas)
+    ("ebook", "../broll/ebook-folheando.mp4", 0.0, 2.0, 45, True),        # "com um e-book cheio de plantas assim"
+    ("fachada-rosa-2", O + "v7-fachada-rosa.mp4", 0.8, 1.0, 54, False),   # "Comenta PLANTA…" e o fim em dois tempos
 ]
 BALAO = (5 * B, 13 * B)
-FIM = {"balao": 52 * B, "resposta": 53 * B, "cta": 54 * B}
+FIM = {"balao": 49 * B, "resposta": 50 * B, "cta": 51.5 * B}
 
 # palavras como foram ditas (a transcrição automática erra algumas); a chave é o índice em palavras.json
 CORRIGE = {0: "Meu tio viu", 22: "Natal.", 81: "e-book", 82: "", 88: "", 89: "PLANTA"}
@@ -69,11 +70,13 @@ def lufs(arq, ini=None, fim=None):
 def audio(tmp):
     voz = AQUI / "voz/gravacao-dono.m4a"
     cortada = tmp / "voz.wav"
-    a, b = CORTE
-    sh("ffmpeg", "-y", "-loglevel", "error", "-i", voz, "-filter_complex",
-       f"[0:a]asplit[p][q];[p]atrim=0:{a},asetpts=N/SR/TB,afade=t=out:st={a - .012:.3f}:d=0.012[x];"
-       f"[q]atrim={b}:{FIM_VOZ},asetpts=N/SR/TB,afade=t=in:d=0.012[y];[x][y]concat=n=2:v=0:a=1,aresample=48000[o]",
-       "-map", "[o]", "-ac", "2", cortada)
+    trechos = list(zip([0] + [b for _, b in CORTES], [a for a, _ in CORTES] + [FIM_VOZ]))   # o que fica
+    n = len(trechos)
+    f = f"[0:a]asplit={n}" + "".join(f"[s{i}]" for i in range(n)) + ";"
+    for i, (a, b) in enumerate(trechos):       # 12 ms de fade em cada emenda, para não estalar
+        f += (f"[s{i}]atrim={a}:{b},asetpts=N/SR/TB,afade=t=in:d=0.012,afade=t=out:st={b - a - .012:.3f}:d=0.012[t{i}];")
+    f += "".join(f"[t{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,aresample=48000[o]"
+    sh("ffmpeg", "-y", "-loglevel", "error", "-i", voz, "-filter_complex", f, "-map", "[o]", "-ac", "2", cortada)
     nivel, _ = lufs(cortada)
     ganho_voz = -11.4 - nivel
     musica = RAIZ / "video/musica/big-big-128bpm.wav"
@@ -100,7 +103,7 @@ def legendas():
     palavras = json.loads((AQUI / "voz/palavras.json").read_text(encoding="utf-8"))
     itens = []
     for i, (ini, fim, txt) in enumerate(palavras):
-        if CORTE[0] <= ini < CORTE[1]:
+        if any(a <= ini < b for a, b in CORTES):
             continue
         txt = CORRIGE.get(i, txt)
         if txt:
@@ -201,7 +204,7 @@ def main():
         frases = [(0.0, 2.07, "Meu tio viu a planta no grupo da família e mandou isso"), (2.34, 5.87, "3 quartos em 8 metros de frente, cabe nem a família no Natal"),
                   (9.95, 11.9, "72 metros quadrados"), (11.98, 12.9, "3 quartos"), (12.94, 14.84, "sendo 1 suíte e 2 banheiros"),
                   (14.98, 16.2, "Tudo dentro dos 8 metros"), (16.2, 17.04, "que ele jurou que não ia caber"),
-                  (17.62, 19.5, "A gente não é arquiteto nem engenheiro"), (19.6, 20.9, "só ficamos obcecado"), (21.5, 22.97, "até provar que dava certo"),
+                  (17.62, 19.5, "A gente não é arquiteto nem engenheiro"), (19.6, 20.9, "só ficamos obcecado"),
                   (23.38, 24.6, "Eu volto para o Brasil em algumas semanas"), (24.7, 26.5, "com um e-book cheio de plantas assim"),
                   (26.68, 28.04, "Comenta PLANTA que eu te mando"), (FIM["resposta"] + .2, None, "(silêncio) balão e resposta"), (DUR - .2, None, "(silêncio) Comenta PLANTA")]
         quadros = []
@@ -214,7 +217,7 @@ def main():
                f"drawtext=text='{txt[34:68]}':x=6:y=512:fontsize=13:fontcolor=black", q)
             quadros.append(q)
         entradas = [x for q in quadros for x in ("-i", q)]
-        sh("ffmpeg", "-y", "-loglevel", "error", *entradas, "-filter_complex", f"xstack=inputs={len(quadros)}:grid=5x3", "-update", "1",
+        sh("ffmpeg", "-y", "-loglevel", "error", *entradas, "-filter_complex", f"xstack=inputs={len(quadros)}:grid=7x2", "-update", "1",
            SAIDA / "conferencia-locucao.png")
         for f in (final, zap):
             print(f"{f.relative_to(RAIZ)}: {f.stat().st_size / 1e6:.1f} MB")
