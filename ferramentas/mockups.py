@@ -2,7 +2,7 @@
 
 Uso: python3 ebook/gerador/livro.py --previa DIR   (gera as páginas em 2382 x 3372)
      python3 ferramentas/mockups.py DIR
-Saída: ebook/visual/mockups/*.png (2160 x 2700 e 2700 x 2160) e video/broll/ebook-folheando.mp4 (2160 x 3840, 30 fps)
+Saída: ebook/visual/mockups/*.png (2160 x 2700 e 2700 x 2160) e video/broll/clipes/ebook-folheando.mp4 (2160 x 3840, 30 fps)
 """
 import shutil
 import subprocess
@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 RAIZ = Path(__file__).resolve().parent.parent
 MOCK = RAIZ / "ebook" / "visual" / "mockups"
-BROLL = RAIZ / "video" / "broll"
+BROLL = RAIZ / "video" / "broll" / "clipes"
 
 
 def pagina(dir_previa, n):

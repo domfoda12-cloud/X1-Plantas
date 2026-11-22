@@ -42,7 +42,7 @@ CENAS = [
     ("cozinha", O + "v6-onigiri.mp4", 0.5, 1.0, 33, False),               # "A gente não é arquiteto nem engenheiro"
     ("blueprint-2", "blueprint-limpo.mp4", 0.94, 1.5, 38, True),          # "só ficamos obcecado" (a caneta desenhando)
     ("fachada", O + "v5-fachada.mp4", 0.3, 1.0, 41, False),               # "Eu volto para o Brasil" (bandeirinhas)
-    ("ebook", "../broll/ebook-folheando.mp4", 0.0, 2.0, 45, True),        # "com um e-book cheio de plantas assim"
+    ("ebook", "../broll/clipes/ebook-folheando.mp4", 0.0, 2.0, 45, True),        # "com um e-book cheio de plantas assim"
     ("fachada-rosa-2", O + "v7-fachada-rosa.mp4", 0.8, 1.0, 54, False),   # "Comenta PLANTA…" e o fim em dois tempos
 ]
 BALAO = (5 * B, 13 * B)

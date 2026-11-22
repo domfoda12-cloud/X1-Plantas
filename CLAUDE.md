@@ -40,6 +40,7 @@ Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
 - Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
+- **Arquivo vai para onde está o que tem a mesma função** (decisão do dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe de apoio em `video/broll/clipes/`, e assim por diante. Agrupe pelo contexto, nunca pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (sintaxe de todo o código, validador das plantas, motor 3D e painel). Erro achado é corrigido antes de seguir.
 - Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push na branch `planta-de-casas-anuncio`.
 - Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
