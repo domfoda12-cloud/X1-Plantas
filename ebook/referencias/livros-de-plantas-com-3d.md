@@ -45,7 +45,7 @@ Vem do resumo das avaliações na Amazon:
 ## 4. O que deve ficar mais parecido com eles
 
 1. **A planta 3D mobiliada (instrução 3).** É o maior ganho: aplicada agora, em todas as 24 casas.
-2. **"Trazer a planta para a vida no celular".** É o recurso que diferencia o Ultimate Book. O nosso equivalente é o QR que abre a animação 3D da casa. Entra quando a frente de animação abrir; enquanto o 3D não existir, o QR não vai para o livro.
+2. **"Trazer a planta para a vida no celular".** É o recurso que diferencia o Ultimate Book. O nosso equivalente é o QR que abre a animação 3D da casa. Entra quando a frente de animação abrir; a imagem 3D já está nas 24, mas enquanto a animação não existir, o QR não vai para o livro.
 3. **Fotos de casas construídas.** O Ultimate Book mostra "casas de verdade construídas a partir das plantas". A gente não tem nenhuma, e não vai fingir que tem: as imagens seguem com "Imagem ilustrativa". Quando um comprador construir e mandar foto, com autorização, ela entra.
 
 ## 5. O que não copiar

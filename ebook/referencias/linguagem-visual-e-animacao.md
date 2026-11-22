@@ -17,13 +17,13 @@
 
 **Estrutura de cada página de casa** (cada frase abaixo deve caber em uma linha de celular):
 
-1. **Gancho:** "8 m de frente. 2 quartos. 55 m²."
+1. **Gancho:** "8 m de frente. 2 quartos, varanda e banheiro largo. 50 m²." (C01; os ganchos de todas estão em [`../fichas/textos.py`](../fichas/textos.py), e o gerador recusa gancho que não bate com o validador)
 2. **Promessa honesta:** "A casa que cabe no lote que você tem."
 3. **Por que esta planta é assim** (3 pontos, de [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md)).
-4. **Para quem serve** e **para quem não serve** (honestidade vende: "Se você pretende subir um 2º andar, escolha a F03").
+4. **Para quem serve** e **para quem não serve** (honestidade vende: na C01, "Para quem não serve: quem quer suíte. Veja a C06").
 5. **Leve ao seu engenheiro:** o que perguntar a ele (laje, fundação, recuo da sua cidade).
 
-**Capa:** "Que casa cabe no seu lote?" (título). Subtítulo: "24 plantas de casas térreas, organizadas pela largura do terreno." Aviso fixo no rodapé: "Plantas de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
+**Capa (como está no PDF):** "Que casa cabe no seu lote?" (provisório: o título é decisão do dono), "24 plantas de casas térreas" e "Casas organizadas pela frente do terreno". Aviso fixo no rodapé de cada casa: "Plantas de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
 
 **Ganchos de anúncio** (para testar, um por vídeo):
 - "Tem um lote de 8 x 25? Essa casa cabe."
@@ -34,13 +34,13 @@
 
 ## 2. Visual
 
-Identidade: azul de projeto `#0B4FA8`, amarelo `#FFC857`, fundo quadriculado, títulos em Bricolage Grotesque, texto em Inter. Detalhes já testados no gerador do e-book (branch `frente-ebook`).
+Identidade: azul de projeto `#0B4FA8`, amarelo `#FFC857`, fundo quadriculado, títulos em Bricolage Grotesque, texto em Inter. É a que o gerador usa hoje (`../gerador/livro.css`).
 
 | Elemento | Regra |
 |---|---|
 | **Planta de dados** (as prévias de [`../plantas/previas/`](../plantas/previas/)) | Base da página: cada cômodo com nome e m², cotas externas, portas em amarelo, janelas em azul claro |
-| **Planta humanizada** | Mesmo desenho com móveis e piso; vem da primeira rodada de 3D (C01) e se repete nas outras pela mesma engrenagem |
-| **Fachada e perspectiva** | Imagem 3D gerada do mesmo dado. Nunca renderização com texto dentro |
+| **Planta mobiliada** | Mesmo desenho com móveis em escala, feito pelo gerador (`livro.py`) a partir do dado, nas 24 |
+| **Vista da rua e casa em 3D** | Vista da rua: foto ilustrativa em 4 casas, desenho nas outras 20. Casa em 3D: imagem do nosso motor (`../visual/3d/`), do mesmo dado, nas 24. Nunca imagem com texto dentro |
 | **Cotas** | Todas as medidas em metros, na própria imagem (como nos catálogos de porcelanato) |
 | **Ícones** | Um sol, uma gota, uma seta de vento, na margem de cada ponto de "por que esta planta é assim" |
 | **Cor por cômodo** | Mesma em todas as plantas (sala bege, cozinha verde, banheiro azul, quarto areia). O leitor aprende uma vez |
@@ -51,17 +51,17 @@ Um PDF não toca vídeo. Opções, da mais simples para a mais completa:
 
 | Opção | O que é | Esforço | Quando |
 |---|---|---|---|
-| **QR code por página** | Em cada casa, um QR que abre a animação de 12 s (blueprint que ganha vida) numa página simples | Baixo. O vídeo já existe para a C01 | Lançamento 1 |
+| **QR code por página** | Em cada casa, um QR que abre a animação de 12 s (blueprint que ganha vida) numa página simples | Médio. Nenhuma casa tem animação hoje: o vídeo antigo da C01 é do desenho de antes de 22/11/2026 | Frente de animações, depois do e-book |
 | **Edição web** | O mesmo e-book em HTML (páginas que viram), com a animação tocando no lugar da imagem | Médio | Depois do 1º mês, se o QR funcionar |
 | **GIF ou WebP curto** | O blueprint se desenhando em 3 s, para Instagram e anúncio | Baixo | Já, para anúncio |
 | **Passeio 3D da casa** | Câmera dentro dos cômodos, para o anúncio | Alto | Só para a casa mais pedida |
 
-**Como o motor 3D gera cada casa:** o dado de cada planta já está em `ebook/plantas/dados/ID.json` (cômodos, janelas, portas). O próximo passo técnico é ligar esse dado ao `video/src/casa3d.js`, que hoje só conhece a C01. Ver [`../../animacoes-3d/ANIMACOES-3D.md`](../../animacoes-3d/ANIMACOES-3D.md).
+**Como o motor 3D gera cada casa:** o dado de cada planta está em `ebook/plantas/dados/ID.json` (cômodos, janelas, portas). A imagem 3D parada já sai para qualquer casa (`python3 ferramentas/imagens3d.py ID`); a animação é da frente de animações. Ver [`../../animacoes-3d/ANIMACOES-3D.md`](../../animacoes-3d/ANIMACOES-3D.md).
 
-**Roteiro de 12 s para cada casa** (já provado na C01): 0–3 s o blueprint se desenha com as cotas; 3–7 s as paredes sobem; 7–10 s os móveis entram; 10–12 s a planta humanizada com o nome e a área.
+**Roteiro de 12 s para cada casa** (testado na C01 antiga): 0–3 s o blueprint se desenha com as cotas; 3–7 s as paredes sobem; 7–10 s os móveis entram; 10–12 s a planta humanizada com o nome e a área.
 
 ## 4. O que ainda é decisão sua
 
-- Título e preço (R$ 67 é hipótese da [estratégia](../../ESTRATEGIA.md)).
-- Se o 1º lançamento sai com as 12 que combinamos ou com as 24 prontas em dados.
+- Título e preço (R$ 67 é recomendação da [estratégia](../../ESTRATEGIA.md), não decisão).
+- Se o 1º lançamento sai com 12 ou com as 24 que já estão no PDF.
 - Quem é o arquiteto que revisa e assina a declaração de revisão.

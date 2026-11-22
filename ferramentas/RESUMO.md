@@ -6,17 +6,18 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - Mudou `plantas.py` ou `ebook/plantas/projetos.py`: `python3 ferramentas/plantas.py validar` (0 erros), depois `python3 ferramentas/checar.py` (ferramentas/CLAUDE.md).
-- `checar.py` confere sintaxe, skills e agentes, tamanho dos contextos e a regra das paredes. Depois roda `validar`, `exportar`, `fichas`, `planta3d.py`, `livro.py --conferir` e `atualizar-painel.py` (checar.py).
-- Gerado, não edite à mão: `ebook/plantas/dados/*.json`, `ebook/plantas/PLANTAS.md`, `video/src/plantas/<ID>.js`, a lista `CASAS` de `ebook/vendas/calculadora-lote.html`, `ebook/saida/` e a "Situação agora" do `PAINEL.md` (código).
-- PDF de verdade: `python3 ebook/gerador/livro.py` grava `ebook/saida/ebook.pdf` e as plantas grátis; `--previa <pasta>` salva um PNG por página (livro.py).
+- `checar.py` confere sintaxe, skills e agentes, tamanho dos contextos, índice e resumos e a regra das paredes, e **regrava** dados, fichas, módulos 3D, a calculadora do parceiro e a "Situação agora" do painel. O PDF ele só confere, numa pasta temporária (checar.py).
+- Gerado, não edite à mão: `ebook/plantas/dados/*.json`, `ebook/plantas/PLANTAS.md` (`plantas.py fichas`), `video/src/plantas/<ID>.js`, a lista `CASAS` de `ebook/vendas/calculadora-lote.html`, `ebook/saida/` e a "Situação agora" do `PAINEL.md` (código).
+- PDF de verdade: `python3 ebook/gerador/livro.py` grava `ebook/saida/ebook.pdf`, as plantas grátis e a calculadora; `--previa <pasta>` salva um PNG por página; `--conferir` não mexe em `ebook/saida`, mas regrava a calculadora (livro.py).
+- "Situação agora" do painel conta pela coluna Situação do `ebook/catalogo.md` e pelos 5 arquivos em `animacoes-3d/plantas/<nome>/`, não pelas 24 casas validadas: por isso diz "0 de 12 prontas" (atualizar-painel.py).
 - Mudou a geometria: `python3 ferramentas/imagens3d.py ID` refaz `ebook/visual/3d/<ID>.jpg`. Lê `video/src/plantas/<ID>.js`: rode `planta3d.py` antes (imagens3d.py).
 - Medidas: casa por fora, cômodo por dentro. Parede externa tira 15 cm; interna, 6 cm por lado; passagem aberta, nada (plantas.py, `_desconto`).
 - Mínimos em `MINIMOS_UTIL`; conforto em `CONFORTO_UTIL` (vira aviso). `MINIMOS` só serve às janelas automáticas. A regra da cidade manda (plantas.py).
+- As regras são as de projeto do X1-Plantas, não revisão de arquiteto; nenhuma docstring pode dizer o contrário (plantas.py, projetos.py).
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
-- Antes de entregar: `checar.py` sem erro e `atualizar-painel.py` com zero avisos (ferramentas/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 13 programas
+## Os 15 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -30,13 +31,11 @@ Funções: `m`, `m1`, `svg_planta`, `svg_fachada`, `svg_lote`, `icone`, `svg_fit
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 
-Textos e modelos de cada página do e-book. Cada função devolve uma lista de páginas em HTML.
-
-Funções: `ph`, `md`, `pagina`, `pg`, `numero_quartos`, `capa`, `capa_interna`, `como_usar`, `como_ler`, `sete_erros`, `indice`, `pagina_dupla`, `enchimento`, `terreno`, `proximos_passos`, `bonus`.
+Textos fixos do e-book que o gerador (livro.py) usa: o aviso completo, os 7 erros, o glossário e a legenda de leitura.
 
 ### [`ebook/plantas/projetos.py`](../ebook/plantas/projetos.py)
 
-As 24 plantas do 1º e do 2º lançamento, desenhadas como um arquiteto organiza a casa.
+As 24 plantas do 1º e do 2º lançamento, desenhadas pelas regras de projeto do X1-Plantas (não são projeto de arquiteto).
 
 Funções: `todas`.
 
@@ -51,6 +50,10 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `conferir_links`, `barra`, `montar
 Confere se o código do projeto tem erro, de uma vez só.
 
 Funções: `rodar`.
+
+### [`ferramentas/guardar-pedido.py`](guardar-pedido.py)
+
+Guarda cada prompt do dono, palavra por palavra, em pedidos/entrada/ (um arquivo por prompt).
 
 ### [`ferramentas/imagens2d.py`](imagens2d.py)
 
@@ -70,6 +73,12 @@ Mockups do e-book no celular e B-roll do e-book folheado, em alta resolução.
 
 Funções: `pagina`, `celular`, `fundo`, `colar`, `mockups`, `broll`.
 
+### [`ferramentas/pedido.py`](pedido.py)
+
+Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
+
+Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `fechar`, `indice`, `conferir`.
+
 ### [`ferramentas/planta3d.py`](planta3d.py)
 
 Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
@@ -78,7 +87,7 @@ Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`
 
 ### [`ferramentas/plantas.py`](plantas.py)
 
-Biblioteca e validador de plantas: o ponto de vista do arquiteto, em código.
+Biblioteca e validador de plantas: as regras de projeto do X1-Plantas, em código.
 
 Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`, `melhor_orientacao`.
 

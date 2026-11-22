@@ -1,5 +1,7 @@
 # OpenArt + MinoAI Frontier: imagens e animações a partir das nossas plantas
 
+> **Regra que vale (dono, 22/11/2026):** o OpenArt é permitido, mas **cada uso pede o "sim" do dono**, com o resumo da produção e o custo antes ([`../video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md)). A liberação "sem limite" de 20/11 não vale mais. Conta: **plano Pro, 21.137 créditos** (medido em 22/11/2026).
+
 > Exemplo do [Conselho](../CONSELHO.md) em ação. Guia da frente: [`ANIMACOES-3D.md`](ANIMACOES-3D.md). Editor: [MinoAI Frontier](../instagram/MINOAI-FRONTIER.md).
 
 ## A mesa (conselho completo, 20/11/2026)
@@ -17,10 +19,10 @@ DECISÃO: aprovado com as condições. Gasto de créditos: decisão do dono.
 ## Situação das ferramentas
 
 - **Quem faz (decisão do dono, 20/11/2026):** a **MinoAI Frontier é a responsável pela edição de vídeo e pela criação de imagem**, e cria as imagens **usando o OpenArt**.
-- **OpenArt agora é um plugin do Claude** (`openart`), com skills prontas: `openart:performance-ads` (anúncio de feed), `openart:hook-variants` (o mesmo anúncio com ganchos diferentes), `openart:ugc`, `openart:tvc`, `openart:talking-head`, `openart:ad-variation`. **Ainda falta autorizar a conta do OpenArt** nas configurações de conectores do claude.ai; até lá as ferramentas não funcionam. A busca de 20/11/2026 que dizia "sem conector" ficou desatualizada.
-- **Créditos do OpenArt:** liberados pelo dono sem limite (20/11/2026). Pode gerar assim que a conta estiver autorizada.
+- **OpenArt agora é um plugin do Claude** (`openart`), com skills prontas: `openart:performance-ads` (anúncio de feed), `openart:hook-variants` (o mesmo anúncio com ganchos diferentes), `openart:ugc`, `openart:tvc`, `openart:talking-head`, `openart:ad-variation`. A conta já está conectada e em uso (plano Pro desde 21/11/2026).
+- **Créditos do OpenArt:** 21.137 no plano Pro (medido em 22/11/2026). **Cada geração pede o "sim" do dono antes**, com o resumo e o custo (22/11/2026; a liberação "sem limite" de 20/11 caiu).
 - **MinoAI Frontier** edita no Mac ou PC do dono.
-- **Nossa base** sai daqui: prévias em `ebook/plantas/previas/`, 3D e animação da C01 em `animacoes-3d/plantas/casa-compacta/`.
+- **Nossa base** sai daqui: prévias em `ebook/plantas/previas/`, 3D das 24 plantas em `ebook/visual/3d/` e o motor (`node video/render-planta.cjs --planta ID`). A pasta `animacoes-3d/plantas/casa-compacta/` é da C01 antiga: não use como referência.
 
 ## O fluxo
 
@@ -56,7 +58,7 @@ Imagem → vídeo: "movimento lento de câmera se aproximando da porta, 4 segund
 ## Regras
 
 - Começar pelas 3 casas mais pedidas no WhatsApp (o parceiro informa; hoje a aposta é C01, E02 e F01).
-- Na legenda: "imagem ilustrativa gerada a partir da planta".
+- Em imagem parada (post, e-book), na legenda: "imagem ilustrativa gerada a partir da planta". Em vídeo, sem o selo: aviso legal pequeno, no canto, parado (dono, 22/11/2026).
 - Guardar tudo em `Filmes/X1-Plantas/broll/ID/` no Mac, com o nome da planta.
 
 ## Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo")
@@ -71,11 +73,11 @@ Imagem → vídeo: "movimento lento de câmera se aproximando da porta, 4 segund
 DECISÃO: aprovado com as regras abaixo
 ```
 
-1. **Não usar o primeiro modelo (o padrão do plugin, Seedance 2.5, que é de vídeo).** Escolher um **modelo de imagem** na lista viva do OpenArt quando a conta for autorizada: o mais barato que aceite imagem de referência, comparando o custo que a própria ferramenta mostrar. Nada de vídeo gerado agora: o movimento vem do nosso 3D e da edição da MinoAI (zoom lento, recorte, transição).
+1. **Não usar o primeiro modelo (o padrão do plugin, Seedance 2.5, que é de vídeo).** Escolher um **modelo de imagem** na lista viva do OpenArt: o mais barato que aceite imagem de referência, comparando o custo que a própria ferramenta mostrar. Nada de vídeo gerado agora: o movimento vem do nosso 3D e da edição da MinoAI (zoom lento, recorte, transição).
 2. **Rascunho primeiro, qualidade final só no aprovado.** Gerar em resolução de rascunho, escolher, e só então gerar a final daquela uma.
 3. **Uma imagem, vários formatos.** Gerar em 4:5 com sobra nas bordas e recortar para 9:16 (reel e story), 1:1 (WhatsApp) e capa. Nunca gerar a mesma cena duas vezes por causa do formato.
 4. **O que é grátis não vai para o OpenArt.** Plantas, páginas, fita, mockups do e-book no celular e o 3D saem dos nossos scripts (`ebook/visual/mockups/` já tem 3).
-5. **Sem teto de crédito** (o dono liberou em 20/11/2026). As regras 1 a 4 continuam, para render mais por crédito.
+5. **Cada uso com o "sim" do dono**, com o resumo e o custo antes (22/11/2026; substitui o "sem teto" de 20/11). As regras 1 a 4 continuam, para render mais por crédito.
 
 **A primeira rodada (6 imagens de ambientação, sem mostrar planta)**
 
@@ -92,7 +94,7 @@ A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica pa
 
 ## Como tirar o máximo de cada crédito (preços medidos na conta em 20/11/2026)
 
-> Plano **Starter**, 4.000 créditos. **Limite de 4 imagens e 2 vídeos gerando ao mesmo tempo**: mande em lotes de até 4 imagens. Preços consultados com a ferramenta de custo do OpenArt, por imagem, na configuração indicada; outra configuração custa diferente e o preço final sai na hora de gerar.
+> Medido em 20/11/2026, quando a conta era do plano Starter (4.000 créditos). **Hoje é plano Pro, 21.137 créditos (22/11/2026).** O limite de 4 imagens e 2 vídeos gerando ao mesmo tempo era do Starter: confira o do Pro com a ferramenta de plano do OpenArt antes de mandar um lote. Preços consultados com a ferramenta de custo do OpenArt, por imagem, na configuração indicada; outra configuração custa diferente e o preço final sai na hora de gerar.
 
 ### Imagem: quanto custa cada nível
 
@@ -138,7 +140,7 @@ A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica pa
 - **O rascunho de 5 créditos (1K, baixa) já sai quase com cara de final.** Vale fazer de 2 a 4 rascunhos por cena e escolher, em vez de 1 rascunho caro.
 - **Para subir a resolução sem perder a composição aprovada:** imagem para imagem com o próprio rascunho como referência e o prompt "recreate this exact photo at higher resolution and finer detail: same …" (descrevendo a cena de novo). As 3 finais ficaram idênticas aos rascunhos. Gerar de novo só pelo texto daria outra foto.
 - **Casa só a partir da nossa imagem.** O rascunho de texto da "casa que cresce" inventou uma casa que não existe no e-book: o Arquiteto vetou. Refeito com a **vista da rua da C03** como referência (subida sem texto: `ebook/visual/openart/referencias/c03-fachada.png`), saiu a mesma frente: porta no canto, janela de duas folhas, platibanda. É o caminho para todas as fachadas.
-- **Limite do plano:** mande no máximo 4 imagens por vez. O 5º item de um lote é recusado sem cobrança.
+- **Limite do plano (Starter, 20/11):** no máximo 4 imagens por vez; o 5º item de um lote foi recusado sem cobrança. No Pro, conferir.
 - **Gasto da rodada:** 4 rascunhos a 10 + 3 rascunhos a 5 + 6 finais em 4K média a 20 a 22 = cerca de 180 créditos para 6 imagens finais.
 
 ### Teste de qualidade lado a lado (20/11/2026) e a configuração da peça final

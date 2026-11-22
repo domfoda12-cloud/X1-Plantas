@@ -1,6 +1,6 @@
 # Contexto do Redator
 
-> Só o que importa para este papel. O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
 
@@ -11,6 +11,7 @@
 ## Em aberto com você
 
 - Título, bônus e contato do e-book são espaço reservado na página 61.
+- Preço, garantia de 7 dias e número de plantas do lançamento estão em aberto com o dono: não escreva como fato (R$ 67 é recomendação, `ESTRATEGIA.md`, seção 7).
 - A promessa de atualização só entra se o dono preencher `promessa_atualizacao` em `ebook/config.json`.
 - Testar PLANTA contra LOTE como palavra do comentário.
 
@@ -20,4 +21,4 @@
 
 ## Leia barato
 
-Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

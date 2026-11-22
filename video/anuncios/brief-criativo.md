@@ -6,7 +6,7 @@
 
 Fazer a pessoa que quer construir (ou reformar) parar de rolar o feed e deixar o contato para receber o material gratuito.
 
-- **Público:** Brasil, adultos de 25 a 55 anos, interesse em construção, reforma e imóveis.
+- **Público:** Brasil, adultos de 25 a 50 anos (`CLAUDE.md` da raiz), interesse em construção, reforma e imóveis.
 - **Ação desejada:** clicar e receber o material pelo WhatsApp.
 - **Tom:** direto, prático e confiante. Sem jargão técnico sem explicação.
 
@@ -22,7 +22,7 @@ Apoio:
 
 | Formato | Duração | Proporção | Uso |
 |---|---|---|---|
-| Vídeo vertical | 15 a 25 s | 9:16 | Reels, Stories, Feed do Facebook |
+| Vídeo vertical | 15 a 25 s | 9:16 (WhatsApp) e 4:5 (feed do Facebook) | WhatsApp e Facebook Ads (destino do anúncio com locução, dono, 22/11/2026). Formato a confirmar com o dono: [`../PEDIDO-anuncio-locucao.md`](../PEDIDO-anuncio-locucao.md), seção 2 |
 | Vídeo quadrado | 15 s | 1:1 | Feed |
 | Imagem única | — | 4:5 | Teste de imagem (planta baixa ou fachada) |
 
@@ -56,12 +56,12 @@ Teste uma variação por vez, com o mesmo orçamento, e mantenha a que tiver mai
 
 ### Regras de retenção (do reel de referência)
 
-O vídeo "Os R$ 1.000 do arquiteto" ([`../VIDEO.md`](../VIDEO.md)) segue estas regras, e os anúncios devem seguir também:
+O vídeo antigo "Os R$ 1.000 do arquiteto" seguia estas regras, e os anúncios devem seguir também:
 
 - **Tempo assistido é o que importa.** Cada segundo precisa dar um motivo para ver o próximo.
 - **O gancho faz uma pergunta e o final responde.** A resposta só aparece no desfecho.
-- **A planta aparece desde o primeiro segundo**, para segurar quem tem interesse em construir.
-- **Cinco versões do gancho por vídeo**, testadas como reels de teste antes de publicar para todos.
+- **A casa aparece desde o primeiro segundo**, para segurar quem tem interesse em construir. No anúncio com locução o vídeo abre na casa pronta e o blueprint entra no meio, como prova (dono, 22/11/2026).
+- **Mais de um gancho por vídeo**, testados no Gerenciador de Anúncios do Facebook com o mesmo orçamento; fica o de menor custo por contato. (Os reels de teste do Instagram não servem: o anúncio com locução não vai para o Instagram.)
 
 ## 7. Checklist antes de publicar
 

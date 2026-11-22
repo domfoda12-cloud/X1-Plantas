@@ -2,8 +2,8 @@
 
 O que ele confere:
   - quantas plantas há no catálogo (ebook/catalogo.md) em cada situação e por lançamento;
-  - se cada planta marcada como `3D` ou `pronta` tem os 5 arquivos em animacoes-3d/plantas/<nome>/;
-  - se as 5 versões do vídeo de anúncio existem em video/saida/v1 ... v5;
+  - quantas casas estão desenhadas (ebook/plantas/dados), com imagem 3D e com foto, e se o PDF existe;
+  - quais vídeos existem em video/saida/;
   - se os links relativos de todos os arquivos .md apontam para arquivos que existem.
 
 Uso (na raiz do projeto):
@@ -78,63 +78,47 @@ def barra(feitos, total, largura=20):
 
 
 def montar_situacao():
+    """Conta pelo que existe de verdade (dados, imagens, PDF, vídeos), não pelo que o catálogo diz."""
     avisos = []
     plantas = ler_catalogo()
-    total = len(plantas)
-    contagem = {s: sum(1 for p in plantas if p["situacao"] == s) for s in SITUACOES}
-    for p in plantas:
-        if p["situacao"] not in SITUACOES:
-            avisos.append(f"Situação desconhecida no catálogo: {p['id']} = '{p['situacao']}'")
-
-    # Plantas com 3D: os 5 arquivos precisam existir
-    for p in plantas:
-        if p["situacao"] in ("3D", "pronta"):
-            pasta = PLANTAS_3D / pasta_da_planta(p["nome"])
-            faltam = [a for a in ARQUIVOS_3D if not (pasta / a).exists()]
-            if faltam:
-                avisos.append(f"{p['id']} está como `{p['situacao']}`, mas faltam em "
-                              f"{pasta.relative_to(RAIZ)}/: {', '.join(faltam)}")
-    # Pastas 3D sem planta correspondente no catálogo
-    if PLANTAS_3D.exists():
-        nomes = {pasta_da_planta(p["nome"]) for p in plantas}
-        for pasta in sorted(PLANTAS_3D.iterdir()):
-            if pasta.is_dir() and pasta.name not in nomes:
-                avisos.append(f"Pasta 3D sem planta no catálogo: {pasta.relative_to(RAIZ)}")
-
-    # Vídeo de anúncio
-    versoes = [v for v in range(1, 6)
-               if (VIDEO_SAIDA / f"v{v}" / "rascunho.mp4").exists()
-               and (VIDEO_SAIDA / f"v{v}" / "camada-transparente.webm").exists()]
-    if len(versoes) < 5:
-        avisos.append(f"Vídeo de anúncio: só {len(versoes)} de 5 versões em video/saida/")
+    desenhadas = sorted(p.stem for p in (RAIZ / "ebook" / "plantas" / "dados").glob("*.json") if re.fullmatch(r"[A-Z]\d\d", p.stem))
+    com_3d = [i for i in desenhadas if (RAIZ / "ebook" / "visual" / "3d" / f"{i}.jpg").exists()]
+    com_foto = [i for i in desenhadas if any((RAIZ / "ebook" / "visual" / "openart" / "fachadas" / f"{i}.{e}").exists() for e in ("jpg", "png"))]
+    gratis = sorted((RAIZ / "ebook" / "saida").glob("planta-gratis-*.pdf"))
+    pdf = RAIZ / "ebook" / "saida" / "ebook.pdf"
+    videos = sorted(p.parent.name for p in VIDEO_SAIDA.glob("*/*.mp4") if not re.fullmatch(r"v\d", p.parent.name))
+    antigos = [v for v in range(1, 6) if (VIDEO_SAIDA / f"v{v}" / "rascunho.mp4").exists()]
+    for i in desenhadas:
+        if i not in com_3d:
+            avisos.append(f"Casa desenhada sem imagem 3D: {i} (rode python3 ferramentas/imagens3d.py {i})")
+    if not pdf.exists():
+        avisos.append("Falta o PDF do e-book: rode python3 ebook/gerador/livro.py")
+    fora = [p["id"] for p in plantas if p["id"] not in desenhadas]
 
     avisos += [f"Link quebrado: {l}" for l in conferir_links()]
 
-    lote1 = [p for p in plantas if p["lote_lancamento"] == "1"]
-    lote1_prontas = sum(1 for p in lote1 if p["situacao"] == "pronta")
-    lote1_com_3d = sum(1 for p in lote1 if p["situacao"] in ("3D", "pronta"))
-
     linhas = [INICIO,
-              f"_Gerado por `ferramentas/atualizar-painel.py` em {date.today():%d/%m/%Y}. Não edite à mão._",
+              f"_Gerado por `ferramentas/atualizar-painel.py` em {date.today():%d/%m/%Y}, a partir dos arquivos que existem. Não edite à mão._",
               "",
               "| Indicador | Situação |",
               "|---|---|",
-              f"| **1º lançamento do e-book** | {lote1_prontas} de {len(lote1)} prontas · {lote1_com_3d} com 3D |",
-              f"| Plantas no catálogo | {total} · ideia {contagem['ideia']} · dados {contagem['dados']} · "
-              f"3D {contagem['3D']} · pronta {contagem['pronta']} |",
-              f"| Progresso do 1º lançamento | `{barra(lote1_prontas, len(lote1))}` {lote1_prontas}/{len(lote1)} |",
-              f"| Vídeo de anúncio | {len(versoes)} de 5 versões renderizadas · apresentador não gravado |",
+              f"| **Casas desenhadas e validadas** | {len(desenhadas)} de {len(plantas)} no catálogo |",
+              f"| Progresso do catálogo | `{barra(len(desenhadas), len(plantas))}` {len(desenhadas)}/{len(plantas)} |",
+              f"| Casas com imagem 3D | {len(com_3d)} de {len(desenhadas)} |",
+              f"| Casas com foto de fachada | {len(com_foto)} ({', '.join(com_foto) or 'nenhuma'}) |",
+              f"| PDF do e-book | {'gerado, ' + format(pdf.stat().st_size / 1e6, '.0f') + ' MB' if pdf.exists() else 'não gerado'} · {len(gratis)} plantas grátis |",
+              f"| Vídeos em `video/saida/` | {len(set(videos))} pastas ({', '.join(sorted(set(videos))) or 'nenhuma'}) · {len(antigos)} versões antigas (`v1` a `v5`, com a C01 velha) |",
               f"| Avisos de conferência | {len(avisos)} |",
               "",
               "**Por categoria:**",
               "",
-              "| Categoria | Plantas | No 1º lançamento | Com 3D | Prontas |",
-              "|---|---|---|---|---|"]
+              "| Categoria | No catálogo | Desenhadas | Com 3D |",
+              "|---|---|---|---|"]
     for letra, nome in CATEGORIAS.items():
-        cat = [p for p in plantas if p["id"].startswith(letra)]
-        linhas.append(f"| {nome} | {len(cat)} | {sum(1 for p in cat if p['lote_lancamento'] == '1')} | "
-                      f"{sum(1 for p in cat if p['situacao'] in ('3D', 'pronta'))} | "
-                      f"{sum(1 for p in cat if p['situacao'] == 'pronta')} |")
+        linhas.append(f"| {nome} | {sum(1 for p in plantas if p['id'].startswith(letra))} | "
+                      f"{sum(1 for i in desenhadas if i.startswith(letra))} | {sum(1 for i in com_3d if i.startswith(letra))} |")
+    if fora:
+        linhas += ["", f"Ainda só no catálogo (ideia): {', '.join(fora)}."]
     if avisos:
         linhas += ["", "**Avisos:**", ""] + [f"- {a}" for a in avisos]
     linhas.append(FIM)

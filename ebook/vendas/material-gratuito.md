@@ -11,7 +11,7 @@
 | Página | O que tem |
 |---|---|
 | 1 | A Casa Compacta (C01) mobiliada, com áreas e cotas, "para quem é" e "erros que evita" |
-| 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, "por que esta planta é assim" e as perguntas para o engenheiro |
+| 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, a casa em 3D, "por que esta planta é assim" e as perguntas para o engenheiro |
 | 3 | "No seu lote cabem mais casas": as outras casas do e-book que cabem num lote de 8 x 15, a fita métrica e o convite para mandar a medida do lote |
 
 **Mande a casa que cabe no lote do cliente.** Há 6 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
@@ -27,20 +27,20 @@
 
 Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calculadora-lote.html).
 
-**Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.): são do desenho antigo da C01, com outro layout. O 3D novo é o último passo.
+**Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.) nem o mockup `../visual/mockups/casa-c01-celulares.png`: são do desenho antigo da C01, de antes do redesenho de 22/11/2026. A imagem 3D atual de cada casa está em `../visual/3d/<ID>.jpg` e já sai dentro do PDF. Animação ainda não existe para nenhuma casa.
 
-Para acompanhar no WhatsApp, use o mockup [`../visual/mockups/casa-c01-celulares.png`](../visual/mockups/casa-c01-celulares.png).
+> A vista da rua da C01 é o desenho simplificado da planta atual. A foto antiga foi retirada.
 
 ## 2. Ficha da Casa Compacta (para mandar em texto)
 
-**C01 · Casa Compacta** · 50 m² · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade)
+**C01 · Casa Compacta** · 50 m² fechados · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
 
-**Para quem é:** casal com 1 ou 2 filhos que quer dois quartos do mesmo tamanho e uma área de serviço coberta, com pouco corredor.
+**Para quem é:** casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.
 
 **Por que esta planta é assim:**
-- Só 10% da área é circulação: o resto é cômodo que você usa.
-- O banheiro encosta na área de serviço, e a tubulação pode ficar concentrada (o traçado final é do engenheiro).
-- O banheiro abre para a circulação, não para a sala.
+- Sem corredor comprido: a sala distribui, e a circulação é só 4% da casa.
+- A varanda cobre a porta da sala, protegida da chuva e do sol direto.
+- O banheiro passa de 1,50 m de largura. Ele não encosta na cozinha nem no serviço: pede uma tubulação própria, que custa mais. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Cuidados antes de construir:**
 - Confira os recuos da sua prefeitura para o seu lote.
@@ -49,8 +49,10 @@ Para acompanhar no WhatsApp, use o mockup [`../visual/mockups/casa-c01-celulares
 
 > Planta de referência, não é projeto executivo. Os móveis são ilustrativos.
 
-## 3. A última linha da página
+## 3. O convite no fim da planta grátis
 
-> **Essa é 1 das [nº] plantas do e-book [título].** Me conta o tamanho do seu terreno que eu te mostro quais cabem nele.
+A página 3 do PDF abre com **"Essa foi 1 de [nº de casas do e-book]"** (hoje 24; o número sai do PDF) e fecha com o convite:
 
-Essa frase leva para a pergunta do terreno, que é o centro da [sequência do WhatsApp](sequencia-whatsapp.md).
+> **Me fala a frente do seu lote.** Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.
+
+Esse convite leva para a pergunta do terreno, que é o centro da [sequência do WhatsApp](sequencia-whatsapp.md). Fonte do texto: `gerador/livro.py`, função `montar_gratis`.

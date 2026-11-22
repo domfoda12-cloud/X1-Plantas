@@ -96,7 +96,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 |---|---|
 | B-roll de **significado**, não literal | Mão calejada de pedreiro, café na marmita ao amanhecer, criança desenhando casa com giz no chão, chave na fechadura, a família medindo o terreno com trena. É o sentido de "a nossa casa", não uma obra genérica |
 | **Ritual em close** (atadura, máquina de cabelo) | O ritual da obra: amarrar ferragem, bater a colher na massa, esticar a linha de nível, lápis riscando a planta, o clique da trena travando |
-| **Terreno de terra filmado como revista** | É *exatamente* o lote do nosso comprador: terreno de terra, muro de bloco, estaca. Filmar o lote vazio ao pôr do sol, com enquadramento de capa, e depois a casa da planta aparecendo nele (fachada realista, "Imagem ilustrativa") |
+| **Terreno de terra filmado como revista** | É *exatamente* o lote do nosso comprador: terreno de terra, muro de bloco, estaca. Filmar o lote vazio ao pôr do sol, com enquadramento de capa, e depois a casa da planta aparecendo nele (fachada realista; em vídeo, sem o selo "Imagem ilustrativa": o dono tirou em 22/11/2026) |
 | **Natureza como metáfora** (gansos, montanha) | Sol nascendo e se pondo atrás do lote (orientação solar, que já está na ficha), passarinho fazendo ninho (fazer a casa por etapas), semente brotando no canto do terreno |
 | **Mídia misturada** | A planta 2D, o 3D, a fachada realista e o vídeo real do lote no mesmo reel, unidos pela música e por uma cor só |
 | **Contraste** música × imagem | Imagem dura (canteiro, concreto, poeira) com música calma e afetiva. A obra é pesada; o que se sonha é a casa da família |
@@ -109,12 +109,12 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 ### Cuidados (Revisor de risco e Estrategista)
 
 - **Direito autoral:**
-  - **Anúncio pago** só pode usar música com licença comercial (biblioteca de sons da Meta ou trilha livre de direitos). Música de artista, como Eartheater ou Crystal Castles, **não** entra em anúncio.
+  - **Anúncio pago** só pode usar música com licença comercial (biblioteca de sons da Meta ou trilha livre de direitos) ou a trilha nossa de 128 BPM, aprovada pelo Revisor em 21/11 (`CLAUDE.md` desta pasta). Música de artista, como Eartheater ou Crystal Castles, **não** entra em anúncio.
   - No **reel orgânico**, conta comercial também só tem acesso à biblioteca comercial do Instagram.
   - O que vale copiar do Payton é o **princípio** (contraste, assinatura, nostalgia), e não as faixas.
 - **Nostalgia certa para o nosso público:** o comprador é brasileiro, classe C, de 25 a 50 anos. A nostalgia dele não é shoegaze americano. Qual estilo instrumental evoca a infância dele é pergunta para o Pesquisador, com fonte, antes de escolher. Nada de chute.
 - **B-roll que não engana:**
-  - Casa pronta gerada por IA leva "Imagem ilustrativa".
+  - Casa pronta gerada por IA nunca passa por casa construída nem por prova de cliente. Em vídeo vai **sem** o selo "Imagem ilustrativa" (o dono tirou em 22/11/2026); o aviso legal fica pequeno, no canto, parado. Em imagem parada (post, e-book) a legenda "imagem ilustrativa" continua.
   - Obra filmada não pode dar a entender que foi feita com a nossa planta, se não foi.
   - Mão de pedreiro aparece como respeito ao profissional, nunca como "dispensa o pedreiro".
 - **Biblioteca a montar** (frente vídeo): pasta `video/broll/` com os planos acima, gravados ou gerados (OpenArt na frente de vídeo, com o orçamento de [`ORCAMENTO.md`](../ORCAMENTO.md)). Hoje ela só tem `ebook-folheando.mp4`.
@@ -138,13 +138,11 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
   - Trocar de imagem a cada 0,75 s é coisa de Shorts para público jovem. Com público de 25 anos para cima, isso pode parecer infantil (coaching call "Mastering Superhooks", [link](https://www.loom.com/share/991211e6490344b283941f4204a7b8df)). O ritmo do CONDOR, guiado pela música, serve melhor à nossa persona (25 a 50 anos).
   - Fazer a "quebra do vídeo" das referências: medir quanto tempo cada plano fica na tela e contar os cortes por minuto (Content Academy SOP). É isso que falta fazer com o CONDOR no Mac.
 - **Editor de vídeo:** o estilo serve como **embalagem** (abertura, transição, capa). A planta precisa ficar parada e legível por pelo menos 1,5 s. Arte que esconde a planta derruba a venda.
-- **Revisor de risco:** fachada e 3D gerados levam "Imagem ilustrativa". A frase-tese não pode prometer que a casa cabe em qualquer lote, por isso fica "a casa certa", e não "sua casa cabe".
+- **Revisor de risco:** fachada e 3D gerados levam "Imagem ilustrativa" (em vídeo, o dono tirou o selo em 22/11/2026; em imagem parada continua). A frase-tese não pode prometer que a casa cabe em qualquer lote, por isso fica "a casa certa", e não "sua casa cabe".
 
 ## 4. Próximo uso
 
-Quando a frente **vídeo** abrir (depois do e-book e das animações):
+A frente vídeo já está produzindo (22/11/2026). Os conceitos 1 e 3 entraram nos rascunhos `roteiros/principal-condor.json` e `roteiros/convite.json` (gancho "Todo lote é uma conta", medida do lote em letra-janela; ver [`PEDIDOS-DO-DONO.md`](PEDIDOS-DO-DONO.md)). Falta:
 
-1. Testar os conceitos 1, 3 e 4 no anúncio refeito da Casa Compacta.
-2. Usar o conceito 5 na série semanal.
-
-Até lá, este arquivo só guarda a referência. Nada é produzido agora, para não misturar frentes.
+1. Testar o conceito 4 no anúncio com locução ([`plano-anuncio-locucao.md`](plano-anuncio-locucao.md)), que vai para WhatsApp e Facebook Ads.
+2. Usar o conceito 5 na série semanal do perfil.

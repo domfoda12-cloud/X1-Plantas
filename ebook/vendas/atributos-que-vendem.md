@@ -9,27 +9,27 @@
 | Atributo | Escada até o dinheiro | D | P | E | Frase pronta |
 |---|---|---|---|---|---|
 | **Achar pelo lote** | índice por largura do terreno → acha em 1 minuto → não compra casa que não cabe → não joga fora projeto nem fundação | 5 | 5 | 3 (a Só Projetos também filtra por frente x fundo; o nosso diferencial é a casa desenhada no lote) | "Mede a frente do seu lote. A página certa é essa." |
-| **Casas conferidas** | cada planta passa por um validador de medidas → quarto com cama e circulação, cozinha com 1,50 m livres → não descobre o erro depois da laje | 5 | 5 | 5 | "Cada uma das 24 foi conferida contra as medidas mínimas de quarto, cozinha e banheiro." |
-| **Constrói por etapas** | plantas que crescem → começa com o que dá → sai do aluguel antes | 5 | 4 | 4 | "Comece com 1 quarto. Termine com 2 sem quebrar nada." |
+| **Casas conferidas** | cada planta passa por um validador de medidas → quarto com cama e circulação, cozinha com 1,50 m livres → não descobre o erro depois da laje | 5 | 5 | 5 | "Cada uma das [nº] passou no nosso validador, com medidas mínimas de referência para quarto, cozinha e banheiro. Não substitui o profissional." |
+| **Constrói por etapas** | plantas que crescem → começa com o que dá → sai do aluguel antes | 5 | 4 | 4 | "Comece com 1 quarto. O lugar do 2º já fica desenhado." |
 | **O porquê de cada decisão** | "por que esta planta é assim" em 3 pontos → entende a casa → conversa de igual com o pedreiro | 4 | 5 | 5 | "Não é só o desenho. É o porquê de cada parede." |
 | **Leve ao engenheiro** | chega com a casa escolhida → menos horas de projeto → orçamento mais rápido | 4 | 3 | 4 | "Chegue no seu engenheiro sabendo exatamente que casa você quer." |
-| **Ver antes de construir** | planta humanizada e 3D → a família enxerga a casa → decide sem briga | 5 | 4 (as 24 já saem mobiliadas, com a vista da rua; o 3D é o último passo) | 3 | "Veja a casa mobiliada antes de comprar o primeiro tijolo." |
-| **Preço de um saco de cimento a mais** | R$ 67 contra planta avulsa de R$ 98 (só a planta baixa em PDF) a R$ 899 (projeto arquitetônico no Projeto Pronto, 20/11/2026) → 24 casas pelo preço de um detalhe | 4 | 4 (preços de anúncio, mudam) | 3 | "24 casas pelo preço de uma ida a mais no depósito." *(confirmar o preço do saco na época)* |
-| **Garantia de 7 dias** | sem risco → compra por impulso | 3 | 5 | 2 | "Abriu e não serviu? Devolvemos em 7 dias." |
+| **Ver antes de construir** | planta humanizada e 3D → a família enxerga a casa → decide sem briga | 5 | 5 (as 24 saem mobiliadas, com a vista da rua e a casa em 3D de `visual/3d/`; animação ainda não existe) | 3 | "Veja a casa mobiliada antes de comprar o primeiro tijolo." |
+| **Preço de um saco de cimento a mais** | R$ [preço: a definir pelo dono; R$ 67 é a recomendação da estratégia, não decisão] contra a planta avulsa dos concorrentes (faixas, fontes e datas em [`../referencias/projetos-similares.md`](../referencias/projetos-similares.md), seção 4) → 24 casas pelo preço de uma planta | 4 | 4 (preços de anúncio, mudam) | 3 | "[nº] casas pelo preço de uma ida a mais no depósito." *(só depois de o dono decidir o preço; confirmar o preço do saco na época)* |
+| **Garantia** | sem risco → compra por impulso | 3 | ? | 2 | [garantia: a definir pelo dono]. A estratégia recomenda 7 dias; não use em peça até ele decidir |
 
 ## 2. Atributos que aparecem nas plantas (use a ficha da casa)
 
 | Atributo técnico | Como dizer | Plantas |
 |---|---|---|
-| Núcleo molhado (cozinha, serviço e banho juntos) | "Uma tubulação só: menos dia de encanador" | todas, menos a suíte de E07, F03, F04 e S09 |
-| Corredor curto (até 14% da área) | "Só 10% da casa é corredor. O resto você usa" | C01, C04, C05, C06, C07, F02, F05, S04, S05, S07 |
+| Núcleo molhado (cozinha, serviço e banho juntos) | "Uma tubulação só: menos dia de encanador" | as que a ficha diz "Banheiro colado na cozinha e na área de serviço" em [`PLANTAS.md`](../plantas/PLANTAS.md). Não vale para a C01 (banheiro com prumada própria) nem para a suíte de E07, F03, F04 e S09 |
+| Corredor curto (até 11% da área) | "Só [X]% da casa é corredor. O resto você usa" (o X é o "Corredor" da Informação da casa; na C01, 4%) | C01, C03, C04, C05, C06, C07, F02, F05, S04, S05, S07 (todas com até 11%; números em `plantas/dados/`) |
 | Corredor coberto lateral | "Nenhum corredor dentro de casa: todo cômodo abre para a lateral" | E01, E02, E03, E05, E06, E07 |
-| Lote de 5 m | "Cabe no lote mais estreito que a lei permite" | E03 |
+| Lote de 5 m | "Cabe num lote de 5 m de frente" (não diga "o mais estreito que a lei permite": o piso de 5 m da Lei 6.766/1979 vale para loteamento novo, tem exceções e não vale para lote que já existe; ver [`persona-e-mercado.md`](../referencias/persona-e-mercado.md)) | E03 |
 | Casa que cresce | "O quarto 2 já tem lugar marcado" | C03 |
-| Pátio de luz | "Luz e vento entre os quartos, sem janela para o vizinho" | E04 |
-| Sem degrau, giro de cadeira | "Para morar a vida inteira" | S03 |
+| Pátio de luz | "Luz entre os quartos, sem janela para o vizinho" (vento só depois de o arquiteto conferir: o validador não mede ventilação cruzada) | E04 |
+| Banheiro e circulação com 1,50 m livres para o giro da cadeira de rodas | "Espaço para girar a cadeira no banheiro e no corredor. O resto da NBR 9050, o engenheiro confere." | S03 |
 | Escritório com porta para a rua | "O cliente entra sem passar pela sua casa" | S04 |
-| Cozinha aberta para a área gourmet | "Faz o churrasco sem sair da conversa" | S07, E06 |
+| Cozinha aberta para a área gourmet | "Faz o churrasco sem sair da conversa" | S07 |
 
 ## 3. Atributos proibidos (o Revisor veta)
 
@@ -37,7 +37,7 @@
 
 ## 4. Combinações campeãs para testar primeiro
 
-1. **Lote + conferida:** "Tem um lote de 8 x 25? Essas 6 casas cabem, e cada uma foi conferida medida por medida."
+1. **Lote + conferida:** "Tem um lote de 8 x 25? Essas [11, número da calculadora] casas cabem, com os recuos de referência, e cada uma foi conferida medida por medida. Não substitui o profissional: o seu engenheiro confere o seu lote."
 2. **Etapas + ver antes:** "Comece com 1 quarto, termine com 2. Olha como fica pronta."
 3. **O porquê + engenheiro:** "Por que o banheiro fica do lado da cozinha? Leva essa resposta pro seu engenheiro."
 

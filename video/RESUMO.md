@@ -8,16 +8,16 @@
 - Antes de mexer em vídeo, leia `PEDIDOS-DO-DONO.md` inteiro; ordem nova do dono entra lá na hora (22/11/2026). (`CLAUDE.md`)
 - Antes de montar vídeo ou gastar crédito do OpenArt: mande o resumo e a lista de instruções e espere o dono confirmar. OpenArt não é proibido; pede o "sim" dele a cada uso (22/11/2026). (`PEDIDOS-DO-DONO.md`)
 - Destino do anúncio com locução: WhatsApp e Facebook Ads, não Instagram nem TikTok (22/11/2026). (`PEDIDO-anuncio-locucao.md`)
-- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa": o dono tirou (22/11/2026). (`CLAUDE.md`)
-- Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. (`CLAUDE.md`)
-- Prontos em `saida/`: `previa-whatsapp/`, `principal/`, `principal-condor/`, `convite/`, `principal-e07/`. Clipes em `broll/clipes/`. `v1` a `v5` usam o 3D velho da C01. (`VIDEO.md`, `PEDIDOS-DO-DONO.md`)
+- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa" no vídeo: o dono tirou (22/11/2026). Os roteiros `.json` antigos ainda trazem o selo; sai na próxima montagem. (`CLAUDE.md`, `VIDEO.md`)
+- Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. 3D: `node render-planta.cjs --planta ID`. (`CLAUDE.md`)
+- `saida/` hoje: `previa-whatsapp/` e `principal/` são de 21/11, com a C01 antiga (remontar); `principal-condor/` e `convite/` são rascunhos; `principal-e07/` tem a versão antiga e a montagem com a voz do dono sobre a E07 em fila; `v1` a `v5` (R$ 1.000 do arquiteto) são antigos, não publicar. (`VIDEO.md`)
 - Todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md` e parte de imagem nossa. (`principal-e07/PROMPTS.md`)
-- Edição final: MinoAI Frontier, no Mac do dono. Anúncio pago: só música licenciada ou a trilha nossa. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `plano-anuncio-locucao.md`)
-- Em aberto: o plano do anúncio com locução espera o dono; nada foi gerado. (`plano-anuncio-locucao.md`)
-- Rascunhos: `principal-condor` (não publicar; E07 na fila do redesenho) e `convite`. (`PEDIDOS-DO-DONO.md`)
+- Edição final: MinoAI Frontier, no Mac do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `plano-anuncio-locucao.md`)
+- Em aberto: o plano do anúncio com locução espera o dono aprovar a planta nova da E07 (na fila do redesenho) e o plano; nada foi gerado. (`plano-anuncio-locucao.md`)
+- `plano-principal-e07.md` é registro da versão de 21/11, substituído por `plano-anuncio-locucao.md`. (`plano-principal-e07.md`)
 <!-- /essencial -->
 
-## Os 15 documentos
+## Os 14 documentos
 
 ### [Vídeo: regras desta pasta](CLAUDE.md)
 
@@ -39,7 +39,7 @@ Regra do dono (22/11/2026): "Para todo vídeo, quando eu acrescentar uma informa
 
 Seções: Ordens gerais (valem para todo vídeo); Prompt base para tomadas realistas (22/11/2026); Próximo vídeo: o convite (22/11/2026); Vídeo principal.
 
-Tamanho: 2304 palavras.
+Tamanho: 2379 palavras.
 
 ### [Referência de edição: CONDOR XIII (Payton Talbott)](REFERENCIA-CONDOR.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (20/11/2026): "melhor edição que já vi, meu vídeo favorito do
 
 Seções: 1. O que deu para ver (e o que não deu); 1b. O que o `analyze_hook` da MinoAI Frontier viu (reels da mesma dupla de edição); 1c. B-roll e música: o coração do estilo (pedido do dono: "preste muita atenção"); 2. Os conceitos, levados para o reel de planta (30 a 60 s, vertical); 3. Conselho de bolso; 4. Próximo uso.
 
-Tamanho: 3039 palavras.
+Tamanho: 3125 palavras.
 
 ### [Referência: como um formato viraliza (oferta e demanda)](REFERENCIA-VIRAL.md)
 
@@ -57,21 +57,21 @@ Seções: Core thesis: going viral is not luck, it is supply and demand; Three w
 
 Tamanho: 1132 palavras.
 
-### [Vídeo de anúncio: "Os R$ 1.000 do arquiteto"](VIDEO.md)
+### [Vídeo: o que existe hoje](VIDEO.md)
 
-Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o vídeo de anúncio (Facebook Ads e reels): roteiro, teleprompter, arquivos para o editor e textos de anúncio. As regras de retenção e as referências de edição (Robert McKeaveney e Mino Lee) ficam em `../instagram/INSTAGRAM.md`.…
+Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Regras desta pasta: `CLAUDE.md`. Antes de mexer em vídeo, leia `PEDIDOS-DO-DONO.md` inteiro. Reorganizado em 22/11/2026 para dizer a verdade de hoje. O guia antigo do vídeo "Os R$ 1.000 do arquiteto" (teleprompter, gravação do apresentador,…
 
-Seções: 0. Os dois vídeos de 21/11/2026 (sem apresentador); Nesta pasta; 1. Por que este vídeo prende quem quer construir; 1.1. Estrutura visual; 2. Arquivos; 3. Roteiro de fala (teleprompter); 4. Como gravar; 5. Edição; 6. Como testar; 7. Antes de publicar; 8. Como alterar o vídeo; 9. Vídeo 2: plantas que precisam de 3D; 10. Chamada final quando o e-book tiver título.
+Seções: 1. As regras que valem (dono, 22/11/2026); 2. O que está em `saida/` (conferido em 22/11/2026); 3. Nesta pasta; 4. Como montar e gerar; 5. Decisões que ficam com o dono.
 
-Tamanho: 2559 palavras.
+Tamanho: 1021 palavras.
 
-### [Anúncios para o Facebook e o Instagram](anuncios/anuncio-facebook.md)
+### [Anúncios para o Facebook Ads](anuncios/anuncio-facebook.md)
 
 Parte da pasta Vídeo: `../VIDEO.md`. Antes de escrever ou mudar um anúncio, leia a estratégia de marketing (público, ângulos e tom de voz). Fluxo: anúncio → pessoa comenta "PLANTA" ou chama no WhatsApp → recebe a planta grátis → o parceiro pergunta o tamanho do lote → oferta do e-book. Campos entre…
 
-Seções: Regras para todos os anúncios; Ângulo 1: pelo lote (o mais promissor); Ângulo 2: erro caro; Ângulo 3: casa que cresce; Ângulo 4: pedreiro; Ângulo 5: economia com arquiteto (o do vídeo atual); Ângulo 6: oferta direta (só para quem já interagiu); Como testar.
+Seções: Regras para todos os anúncios; Ângulo 1: pelo lote (o mais promissor); Ângulo 2: erro caro; Ângulo 3: casa que cresce; Ângulo 4: pedreiro; Ângulo 5: economia com arquiteto (vídeo antigo, não subir); Ângulo 6: oferta direta (só para quem já interagiu); Como testar.
 
-Tamanho: 792 palavras.
+Tamanho: 998 palavras.
 
 ### [Brief criativo: anúncios de plantas de casas](anuncios/brief-criativo.md)
 
@@ -79,7 +79,7 @@ Rascunho para revisão. Os trechos entre [colchetes] dependem do vídeo de refer
 
 Seções: 1. Objetivo; 2. Mensagem central; 3. Formatos; 4. Estrutura do vídeo (roteiro de 20 segundos); 5. Estilo visual; 6. Variações para testar; 7. Checklist antes de publicar; 8. Perguntas para você responder.
 
-Tamanho: 678 palavras.
+Tamanho: 747 palavras.
 
 ### [Checklist de revisão antes de subir o anúncio](anuncios/checklist-revisao.md)
 
@@ -87,7 +87,7 @@ Use antes de publicar. Confira as regras atuais da Meta para anúncios de imóve
 
 Seções: Conteúdo; Imagem ou vídeo; Público e oferta; Depois de publicar.
 
-Tamanho: 255 palavras.
+Tamanho: 300 palavras.
 
 ### [Plano de criação: anúncio do e-book com locução, com a planta nova](plano-anuncio-locucao.md)
 
@@ -99,40 +99,32 @@ Tamanho: 1862 palavras.
 
 ### [Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro](plano-principal-e07.md)
 
-Pedido do dono (21/11/2026): vídeo curto, cada quadro pensado, começando do blueprint com efeito (o azul não fica parado), referências populares do Brasil dentro da casa, OpenArt com as ferramentas novas (plano Pro, 24.000 créditos), casa detalhada antes de gerar (serve depois para o e-book),…
+E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026). Registro da versão de 21/11, substituído. O plano que vale é `plano-anuncio-locucao.md`, com a ficha `PEDIDO-anuncio-locucao.md`. Depois deste plano o dono mudou: o vídeo abre na casa pronta e o blueprint vai para o…
 
 Seções: 1. A casa que o vídeo segue (fonte única); 2. Ritmo; 3. Quadro a quadro; 4. Referências brasileiras (sem marca, sem personagem de terceiros); 5. Passos e custo; 6. Decisões que ficam com o dono; 7. Decisão do Conselho (21/11/2026); 8. Versão 3 "Grupo da família" (roteiro esperando o dono).
 
-Tamanho: 1594 palavras.
+Tamanho: 1718 palavras.
 
 ### [Prompts do vídeo da E07 (OpenArt)](principal-e07/PROMPTS.md)
 
-Parte da frente Vídeo. Plano: `../plano-principal-e07.md`. Guardados para repetir o mesmo movimento em outra casa: troque só a imagem de partida. Regra: toda imagem parte de uma imagem nossa (blueprint, 3D ou prévia da planta). Todo clipe é imagem → vídeo no Kling 3 Omni, resolução `pro`, 5 s, sem…
+E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026); as imagens de partida da E07 mudam com a planta nova. Os prompts de câmera continuam valendo. Parte da frente Vídeo. Plano que vale agora: `../plano-anuncio-locucao.md` (o antigo: `../plano-principal-e07.md`).…
 
 Seções: 1. Movimento de câmera da casa (imagem → vídeo); 2. Imagens (Nano Banana 2.1, imagem → imagem, 9:16, 2K); 3. Peso dos arquivos.
 
-Tamanho: 965 palavras.
+Tamanho: 1006 palavras.
 
 ### [Pacote para a edição da MinoAI Frontier: anúncio do e-book (E07)](principal-e07/kit-minoai/LEIA-ME.md)
 
-Parte da frente Vídeo. Plano: `../../plano-principal-e07.md`. Prompts das cenas: `../PROMPTS.md`. A edição final roda no Mac ou PC do dono, na aba Code do app do Claude, com a MinoAI Frontier ligada. Este pacote tem tudo, menos a gravação da voz do dono.
+E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026); os clipes deste pacote mostram a planta antiga e serão refeitos pelo plano novo, `../../plano-anuncio-locucao.md`. Parte da frente Vídeo. Plano desta versão: `../../plano-principal-e07.md`; plano que vale agora:…
 
 Seções: 1. O que tem aqui (20 MB); 2. Roteiro para gravar (aprovado pelo Revisor de risco); 3. Plano de corte (128 BPM: 1 compasso = 1,875 s); 4. Regras da edição; 5. O que dizer para a MinoAI no Mac.
 
-Tamanho: 1216 palavras.
-
-### [Vídeo 2: "É possível caber 3 quartos em 8 m de frente?"](roteiro-2-tres-quartos.md)
-
-Parte da pasta Vídeo. Guia da frente: `VIDEO.md`. Painel geral: `../PAINEL.md`. Situação: roteiro escrito. Falta a frente Animações 3D gerar as plantas da seção 5. Depois disso eu monto os cartões e renderizo as 5 versões. Formato: desafio "É possível…?" do Mino Lee…
-
-Seções: 1. A ideia em uma linha; 2. Estrutura visual; 3. Teleprompter; 4. Conferência (lista do Mino Lee); 5. Plantas que a frente Animações 3D precisa gerar; 6. Antes de gravar e publicar.
-
-Tamanho: 1695 palavras.
+Tamanho: 1346 palavras.
 
 ### [Roteiro: vídeo de aquecimento do lançamento ("casas na mala")](roteiro-lancamento.md)
 
-Parte da pasta Vídeo: `VIDEO.md`. Estratégia: `../ESTRATEGIA.md` (fase de aquecimento, seção 10). Editor: MinoAI Frontier. Objetivo: apresentar quem está por trás do e-book, anunciar a data e encher a lista do WhatsApp antes de abrir as vendas. Quem comenta PLANTA recebe uma planta grátis agora e o…
+Parte da pasta Vídeo: `VIDEO.md`. Estratégia: `../ESTRATEGIA.md` (fase de aquecimento, seção 10). Editor: MinoAI Frontier. Canal: vídeo do perfil do Instagram (orgânico). Não confundir com o anúncio com locução, que vai para WhatsApp e Facebook Ads (`PEDIDO-anuncio-locucao.md`). Objetivo:…
 
 Seções: 1. O roteiro original; 2. Versão recomendada (cerca de 38 s); 3. Cinco ganchos para os reels de teste; 4. Como gravar; 5. Edição com a MinoAI Frontier; 6. Série até o lançamento.
 
-Tamanho: 1205 palavras.
+Tamanho: 1265 palavras.

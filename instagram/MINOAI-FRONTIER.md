@@ -28,7 +28,7 @@
 Cole esta mensagem na aba **Code**, com a pasta **Filmes/X1-Plantas** aberta, toda vez que for editar. Troque só a primeira linha.
 
 ```text
-Edite este vídeo no estilo MinoAI Frontier: [nome do arquivo] — tipo: [ANÚNCIO versão vN | PLANTA DA SEMANA | É POSSÍVEL | ERRO QUE SAI CARO | CABE NO SEU LOTE].
+Edite este vídeo no estilo MinoAI Frontier: [nome do arquivo] — tipo: [ANÚNCIO COM LOCUÇÃO | PLANTA DA SEMANA | É POSSÍVEL | ERRO QUE SAI CARO | CABE NO SEU LOTE].
 
 CONTEXTO DO PROJETO
 - Perfil brasileiro de plantas de casas. O produto é um e-book com dezenas de plantas originais em blueprint, planta humanizada e 3D.
@@ -37,7 +37,7 @@ CONTEXTO DO PROJETO
 
 IDIOMA
 - Tudo em português do Brasil. Legendas com acentos (ç, ã, õ, é); confira que a fonte mostra todos.
-- Dinheiro sempre com a unidade: "R$ 1.000", "mil reais". Medidas como "10 x 20", "55 m²".
+- Dinheiro sempre com a unidade: "R$ 1.000", "mil reais". Medidas como "10 x 20", "50 m²".
 
 ESTILO (vale onde o meu estilo salvo não disser outra coisa)
 - Zero espaço morto: sem pausa entre frases. Só fica a pausa marcada como proposital no roteiro.
@@ -50,11 +50,10 @@ ESTILO (vale onde o meu estilo salvo não disser outra coisa)
 - Paleta: azul blueprint #0B4FA8, amarelo #FFC857, branco.
 - Música baixa, sem letra, por baixo da voz.
 
-SE FOR ANÚNCIO (versão v1 a v5)
-- A camada broll/anuncio/vN/camada-transparente.webm já tem gancho, legenda, cartões, glossário e barra de progresso.
-- NÃO coloque outra legenda nem outro texto. Faça o corte da fala (zero espaço morto), coloque a camada por cima, começando no 0:00, e faça o áudio.
-- Os tempos de cada item estão no teleprompter (video/VIDEO.md, seção 3). Se a fala cortada não bater com os tempos da camada, me mande a transcrição com os tempos de cada frase, em vez de esticar ou cortar fala.
-- Nos trechos de tela cheia da camada (0:00 a 0:03 e 0:27 a 0:34) o apresentador some de propósito; a voz continua.
+SE FOR O ANÚNCIO COM LOCUÇÃO
+- Destino: WhatsApp e Facebook Ads, não Instagram nem TikTok. Siga o plano de corte e as regras de video/principal-e07/kit-minoai/LEIA-ME.md e a ficha video/PEDIDO-anuncio-locucao.md.
+- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa".
+- As 5 versões antigas (v1 a v5, "R$ 1.000 do arquiteto") não se editam mais: usam o 3D velho da C01.
 
 REGRAS QUE NUNCA MUDAM
 - Nunca dizer nem dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto.
@@ -126,7 +125,7 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 | Quando | O quê | Quem |
 |---|---|---|
-| Segunda | Escolher os vídeos da semana no [plano do perfil](plano-perfil.md) e no [painel](../PAINEL.md), seção 6 | Você |
+| Segunda | Escolher os vídeos da semana no [plano do perfil](plano-perfil.md) e em "Em aberto" do [`CONTEXTO.md`](../CONTEXTO.md) | Você |
 | Terça | Gravar e colocar as gravações em **brutos/** | Apresentador |
 | Terça a quinta | Editar cada vídeo com a mensagem da seção 3; aprovar o plano de edição quando ela mostrar | MinoAI Frontier e você |
 | Quinta | Publicar as versões como reels de teste | Você |

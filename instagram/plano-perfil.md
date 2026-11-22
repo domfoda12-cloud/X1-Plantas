@@ -1,6 +1,8 @@
 # Plano de conteúdo: perfil de arquitetura no Instagram
 
 > Rascunho para você criar a conta pessoalmente. Trechos entre [colchetes] precisam de dados seus.
+>
+> **Revisto em 22/11/2026.** Números das casas: sempre os de [`../ebook/plantas/PLANTAS.md`](../ebook/plantas/PLANTAS.md) (a C01 Casa Compacta tem 50 m² desde 22/11). Os posts prontos estão em [`posts/POSTS.md`](posts/POSTS.md). O anúncio com locução não é deste perfil: vai para WhatsApp e Facebook Ads.
 
 ## 1. Identidade
 
@@ -41,7 +43,7 @@ Sempre que possível, termine com uma chamada para o material gratuito.
 | 1 | Reel | Apresentação: passeio 3D da Casa Compacta | "Você consegue ver a casa antes de construir?" |
 | 2 | Carrossel | "Tem um lote 10 x 20?" Três casas que cabem | Uma casa por tela, com área, quartos e o lote |
 | 3 | Imagem | Dica: como ler uma planta baixa | Uma dica por slide, com a seta de cota |
-| 4 | Reel | Passeio 3D da Casa Estreita | Mostrar como o corredor aproveita o lote |
+| 4 | Reel | Passeio 3D da Casa Estreita (E01) | Mostrar como o corredor coberto lateral dá janela a todos os cômodos |
 | 5 | Carrossel | "Mostra pro seu pedreiro": checklist antes de começar a obra | Lista pronta para salvar e mandar no WhatsApp |
 | 6 | Reel | Bastidor: modelando a planta em 3D | Mostrar o processo, em 15 s |
 | 7 | Imagem | Casa Família, fachada final | Legenda com área e quartos |

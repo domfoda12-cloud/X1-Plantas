@@ -19,7 +19,8 @@
 - [ ] A casa 3D corresponde à planta vendida
 - [ ] Sem acabamento que o projeto não tem
 - [ ] Legenda na tela, para funcionar sem som
-- [ ] Proporção certa para o formato (9:16 ou 1:1)
+- [ ] Proporção certa para o destino: 4:5 no feed do Facebook, 9:16 leve (até 5 MB) no WhatsApp (proposta a confirmar com o dono, [`../PEDIDO-anuncio-locucao.md`](../PEDIDO-anuncio-locucao.md), seção 2)
+- [ ] Vídeo: aviso legal pequeno, no canto, parado; sem o selo "Imagem ilustrativa" (dono, 22/11/2026). Imagem parada (post, e-book) continua com a legenda "imagem ilustrativa"
 
 ## Público e oferta
 

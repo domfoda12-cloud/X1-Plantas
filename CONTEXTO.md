@@ -1,6 +1,6 @@
 # Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer
 
-> **Resumo que todo mundo lê.** Cada pedido do dono tem um motivo e continua valendo até ele dizer o contrário. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md): abra só se precisar de um detalhe antigo. Cada agente lê também o seu arquivo em [`contexto/`](contexto/). Regra em [`CLAUDE.md`](CLAUDE.md).
+> **Resumo que todo mundo lê.** Cada pedido do dono tem um motivo e continua valendo até ele dizer o contrário. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md): abra só se precisar de um detalhe antigo. Antes de trabalhar, todos leem o [quadro](contexto/QUADRO.md) e o seu arquivo em [`contexto/`](contexto/). Regra em [`CLAUDE.md`](CLAUDE.md).
 
 ## O que nunca muda
 
@@ -8,7 +8,7 @@
 |---|---|
 | "O objetivo é a alegria do consumidor, e a alegria dele me mandar o Pix" | Toda entrega é julgada por duas coisas: o comprador fica feliz com o que recebe? Ele paga? |
 | "Pensa como um marketeiro, público brasileiro" | Português do Brasil, R$, Pix, WhatsApp, quem constrói com pedreiro por etapas. Ver [persona](ebook/referencias/persona-e-mercado.md) |
-| "Sempre do ponto de vista de um arquiteto profissional" | Toda planta passa pelo validador e explica o porquê de cada decisão |
+| "Sempre do ponto de vista de um arquiteto profissional" | Toda planta passa pelo validador e explica o porquê de cada decisão; as plantas não são de arquiteto, são de referência ([jurídico](reports/RESUMO.md)) |
 | "Não tem landing page" | Venda por anúncio (Facebook e Instagram) → comentário → WhatsApp. O parceiro cuida do funil, o dono cuida do material e do anúncio |
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
 | "Quero a opinião da MinoAI sempre, ele é o maestro" | Toda entrega traz a opinião do Maestro, tirada das ferramentas da MinoAI Frontier, com a fonte |
@@ -21,32 +21,32 @@
 
 ## Em aberto (esperando o dono)
 
-- **E-book (para publicar):** preencher em `ebook/config.json` o título, o preço, os bônus, o WhatsApp do parceiro e, se quiser, `promessa_atualizacao` (prometer as próximas casas de graça é oferta que obriga). Decidir se lança com 12 ou 24 plantas.
-- **Arranjo das plantas (22/11):** o dono reprovou o layout. O Arquiteto estudou projetos reais (prefeitura de SP, governo da Bahia, UFRGS) e tem método novo ([apostila 2](ebook/referencias/arquiteto-sites-de-profissionais.md)). Falta o dono dizer quais casas refazer e quando; sugestão: série E, depois compactas, depois F02. Mexe no e-book, que estava fechado no rascunho 1. A [pesquisa de 22/11](ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md) traz a régua federal (22 casas com banheiro estreito) e 5 ideias para o dono escolher (seção 5).
-- **Arquiteto registrado:** revisar as 24 plantas, começando pelas apertadas (E02, E03, suítes da E01, E05 e E07); decidir os banheiros abaixo de 1,10 m livres (19 casas) e a nota de clima por zona bioclimática.
+- **E-book (para publicar):** preencher em `ebook/config.json` o título, o preço, os bônus, o WhatsApp do parceiro e, se quiser, `promessa_atualizacao` (prometer as próximas casas de graça é oferta que obriga). Decidir se lança com 12 ou 24 plantas (o PDF tem 24), o preço e a garantia: R$ 67 e 7 dias são só recomendação ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 7).
+- **Arranjo das plantas (22/11):** o dono reprovou o layout. O Arquiteto estudou projetos reais (prefeitura de SP, governo da Bahia, UFRGS) e tem método novo ([apostila 2](ebook/referencias/arquiteto-sites-de-profissionais.md)). Falta o dono dizer quais casas refazer e quando; sugestão: série E, depois compactas, depois F02. Mexe no e-book, que estava fechado no rascunho 1. A [pesquisa de 22/11](ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md) traz a régua federal (22 casas com banheiro estreito, contagem de antes da C01 nova) e 5 ideias para o dono escolher (seção 5).
+- **Arquiteto registrado:** revisar as 24 plantas, começando pelas apertadas (E02, E03, suítes da E01, E05 e E07); decidir os banheiros abaixo de 1,10 m livres (19 casas antes da C01 nova) e a nota de clima por zona bioclimática.
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.
-- **Toolkit de vídeo de demonstração:** a proteção automática bloqueou a instalação. Trocar o modo para "Accept edits" ou rodar `npx product-demo-agent-toolkit skills .claude/skills`.
-- **OpenArt: só com o "sim" do dono a cada uso (22/11). Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
+- **OpenArt: só com o "sim" do dono a cada uso (22/11);** saldo em [`ORCAMENTO.md`](ORCAMENTO.md). O selo "Imagem ilustrativa" saiu dos vídeos (dono, 22/11) e continua em imagem parada. **Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
 - **Vídeos de 22/11:** assistir ao convite (`video/saida/convite/`, passeio pela F03) e ao principal com escaneamento (`video/saida/principal-condor/`, rascunho com a E07); dizer o que é "pagar por mais" e se libera o OpenArt para a versão realista.
 - **Vídeos de 21/11** (principal e prévia do WhatsApp, em `video/saida/`): dizer o que muda; PLANTA ou LOTE.
-- **Vídeo (última frente):** os 5 anúncios e os reels 1 e 6 usam o 3D antigo da C01; criar o Instagram e configurar a MinoAI Frontier no Mac.
-- **Skill `make-pdf`:** falta o "sim" para instalar o gstack.
-- **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09: refazer quando a frente de animação abrir.
-- Informar quanto resta do limite semanal (Configurações → Uso) para fechar o orçamento em números.
+- **Vídeo (aberto pelo dono em 21/11):** os 5 anúncios e os reels 1 e 6 usam o 3D antigo da C01; criar o Instagram e configurar a MinoAI Frontier no Mac.
+- **Skill `make-pdf`:** em teste; o binário fica fora do repositório (`~/.cache/gstack`) e some quando a máquina é trocada ([`ECOSSISTEMA.md`](ECOSSISTEMA.md)).
+- **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a C01 redesenhada: refazer quando a frente de animação abrir.
+- Informar quanto resta do limite semanal (Configurações → Uso) para fechar o [orçamento](ORCAMENTO.md) em números.
 - Atualizar o relatório jurídico com Caixa e Confea (pedido antes, sem resposta).
 
 ## Ferramentas: o que cada uma é (e o que não é)
 
 - **Skills do Ponytail** (`/ponytail`, `/ponytail-review`, `/ponytail-audit`): só para o código das ferramentas. O texto que vai ao público é do Redator e do Revisor.
-- **AgentScope:** não é skill do Claude Code. É uma biblioteca em Python para construir agentes próprios num servidor, pagos por token na API. Não foi instalado; só as ideias dele entraram (Conselho, roteiro, modelo por tarefa). Pode servir um dia para um agente de WhatsApp num servidor do dono.
-- **product-demo-agent-toolkit:** grava vídeo de **página web** (calculadora do parceiro, leitor do e-book) com cursor humano, roteiro e locução. É da frente de vídeo. **Não instalado:** a proteção automática do Claude Code bloqueia pacote de terceiros que traz skills para o agente. Não contorne; o dono libera trocando o modo da sessão para "Accept edits" ou instalando ele mesmo.
-- **Onde roda:** esta sessão roda na nuvem da Anthropic; servidor próprio não economiza token. O que economiza é ler pouco (o seu `contexto/<papel>.md` e o último resumo em `contexto/entregas/`) e usar o modelo certo (Opus para decidir e revisar, Sonnet para o rotineiro, Fable para o que é muito difícil).
+- **AgentScope** (ideias, não instalado) e **product-demo-agent-toolkit** (vídeo de página web; a proteção automática bloqueou: o dono libera com o modo "Accept edits"; não contorne): [`ECOSSISTEMA.md`](ECOSSISTEMA.md), seção 6.
+- **Onde roda:** esta sessão roda na nuvem da Anthropic; servidor próprio não economiza token. O que economiza é ler pouco (o seu `contexto/<papel>.md` e o último resumo em `contexto/entregas/`) e usar o modelo certo para cada pedido ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 
 ## Mapa: onde está cada coisa
 
 | Quero saber… | Abra |
 |---|---|
 | As regras que não mudam, o objetivo e o jeito de trabalhar | [`CLAUDE.md`](CLAUDE.md) |
+| O que o dono acabou de pedir; onde está cada documento | [`contexto/QUADRO.md`](contexto/QUADRO.md), [`INDICE.md`](INDICE.md) |
+| Como um pedido do dono vira trabalho, e qual modelo faz | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
 | Tudo o que o dono já pediu, pedido por pedido | [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
 | Quem decide o quê (Conselho, Maestro, vetos) e como uma skill nova entra | [`CONSELHO.md`](CONSELHO.md), [`MAESTRO.md`](MAESTRO.md) |
 | Tudo o que a operação pode usar (skills, plugins, conectores) e o prompt de cada um | [`ECOSSISTEMA.md`](ECOSSISTEMA.md) |
@@ -58,8 +58,6 @@
 | Animações 3D e OpenArt | [`animacoes-3d/ANIMACOES-3D.md`](animacoes-3d/ANIMACOES-3D.md), [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md) |
 | Vídeo e referência de edição | [`video/VIDEO.md`](video/VIDEO.md), [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md) |
 | Instagram e a edição pela MinoAI Frontier | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md), [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
-
-Nada foi apagado do histórico: o `CONTEXTO.md` antigo está inteiro em `CONTEXTO-HISTORICO.md` e no git.
 
 ## Passagem entre tarefas
 

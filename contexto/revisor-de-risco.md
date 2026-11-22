@@ -1,6 +1,6 @@
 # Contexto do Revisor de risco
 
-> Só o que importa para este papel. O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
 
@@ -14,10 +14,11 @@
 - A calculadora do parceiro agora sai do validador a cada geração do PDF; a página publicada no claude.ai precisa ser republicada para pegar os dados novos.
 - Revisar também fora do PDF: posts, roteiros e imagens (foto e 3D contra a planta).
 - Página estourada que cobre o aviso legal é veto.
+- Garantia de 7 dias, preço (R$ 67) e "12 ou 24 plantas" estão em aberto com o dono: texto ao cliente que os dá como fato não passa.
 
 ## Decisão do dono (22/11/2026)
 
-- **O selo "Imagem ilustrativa" nos vídeos deixou de ser condição.** O dono tirou. Não vete um vídeo pela falta dele. O aviso "Planta de referência…" continua obrigatório, agora pequeno, num canto da tela, parado. Continuam valendo: nada que diga ou dê a entender que a casa foi construída, nada de "prova de cliente" em imagem gerada, sem marcas.
+- **O selo "Imagem ilustrativa" nos vídeos deixou de ser condição.** O dono tirou. Não vete um vídeo pela falta dele. **Em imagem parada (e-book, post), o selo continua.** O aviso "Planta de referência…" continua obrigatório, agora pequeno, num canto da tela, parado. Continuam valendo: nada que diga ou dê a entender que a casa foi construída, nada de "prova de cliente" em imagem gerada, sem marcas.
 
 ## Onde olhar
 

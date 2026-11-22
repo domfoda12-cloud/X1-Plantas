@@ -8,7 +8,7 @@
 |---|---|---|---|
 | [Só Projetos](https://soprojetos.com.br) | **Busca por "tamanho do terreno, frente x fundo, em metros"**; 153 plantas de térreas e sobrados | Projeto-Modelo ou "Projeto Adaptado ao Terreno" pelos arquitetos deles, **com RRT**, e "garantia de aprovação na prefeitura ou devolvemos 100%", com regras claras do que não vale | Eles também começam pelo terreno. **O nosso diferencial não é o filtro**: é ver a casa desenhada no lote, o lote mínimo calculado com recuos e o porquê de cada escolha, num e-book barato. A garantia deles só existe porque um arquiteto assina: nós **não** podemos prometer aprovação |
 | [Planta Pronta](https://www.plantapronta.com.br/) | Cada planta tem **versão A e B (espelhada)**; nomes pela situação do lote ("casa para terreno de 7x20", "sobrado com 5 metros de frente", "casa no fundo do terreno", "terreno com declive") | Planta e projetos adicionais (elétrico, hidráulico, orçamento quantitativo), com suporte | **Espelhar a planta** resolve o lado do sol e o lado da garagem sem desenhar outra casa. Dar nome pela situação do terreno |
-| [Projeto Pronto](https://projetopronto.com) | Catálogo por tipo (térrea, quartos, suíte) | Projeto arquitetônico **de R$ 420 a R$ 899** por casa, em 10x sem juros | Âncora de preço: uma planta avulsa custa de R$ 420 a R$ 899; o e-book traz 24 casas |
+| [Projeto Pronto](https://projetopronto.com) | Catálogo por tipo (térrea, quartos, suíte) | Projeto arquitetônico **de R$ 420 a R$ 899** por casa, em 10x sem juros | Âncora de preço: ver a seção 4 |
 | [Archshop](https://archshop.com.br/plantas-de-casas) | Centenas de plantas, "para todos os terrenos" | Projeto arquitetônico completo **com ART** e adequação à prefeitura; complementares à parte | Mostra a escada que o comprador sobe: referência (nós) → projeto pronto com ART → projeto adaptado |
 | Plantas de Casas, Planta Online, Martin Projetos | Galerias por número de quartos | Projetos prontos para construir | O mercado fala em "pronta para construir"; nós **não podemos** usar essa frase (Revisor de risco) |
 | Hotmart "500 plantas baixas" | Quantidade | E-book de inspiração, bônus sem relação (receitas caipiras) | Ver [`concorrentes.md`](concorrentes.md) |
@@ -34,5 +34,16 @@
 1. **Corrigir uma afirmação nossa:** "nenhum catálogo começa pelo terreno" é falsa (a Só Projetos filtra por frente x fundo). Feito na prévia e no banco de atributos.
 2. **Mostrar as medidas da casa** (largura x profundidade) na ficha, como os sites de fora.
 3. **Planta espelhada** como recurso de cada casa: "dá para espelhar" para casar o sol e a entrada com o seu lote.
-4. **Âncora de preço** nos anúncios e no WhatsApp: "uma planta avulsa custa de R$ 98 (só a planta baixa em PDF) a R$ 899 (projeto arquitetônico), conforme catálogos de novembro de 2026; o e-book traz 24".
+4. **Âncora de preço** nos anúncios e no WhatsApp: as faixas, com fonte e data, estão na seção 4 abaixo. Não misture as duas numa frase só ("R$ 98 a R$ 899" mistura produtos diferentes).
 5. **O próximo passo do comprador** fica explícito no fim do e-book: depois de escolher, ele procura um projeto adaptado com responsável técnico (ART ou RRT). É a escada do mercado, e nós somos o primeiro degrau, o mais barato.
+
+## 4. Âncora de preço: o único lugar com o preço dos concorrentes
+
+Todo documento que cita preço de concorrente aponta para cá. Duas faixas, cada uma com a sua fonte; elas medem coisas diferentes:
+
+| Faixa | O que é | Fonte e data |
+|---|---|---|
+| **R$ 98 a cerca de R$ 2.000** por casa | De só a planta baixa em PDF (a partir de R$ 98) até o pacote completo (perto de R$ 2.000) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/); pesquisa de 20/11/2026 (TinyFish), registrada em `../../ESTRATEGIA.md` e em [`concorrentes.md`](concorrentes.md) |
+| **R$ 420 a R$ 899** por casa | Projeto arquitetônico, em 10x sem juros | [Projeto Pronto](https://projetopronto.com), 20/11/2026 (TinyFish) |
+
+**Como usar:** a frase pública cita uma faixa só, com o que ela compra: "uma planta baixa avulsa custa a partir de R$ 98 nos catálogos (novembro de 2026)". Confira o preço no site na semana do anúncio; se mudou, atualize esta tabela com a data nova. O Revisor de risco veta preço de concorrente sem fonte e data.

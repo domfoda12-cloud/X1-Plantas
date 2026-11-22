@@ -4,7 +4,7 @@
 >
 > **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
 >
-> Campos entre [colchetes]: preencha depois de decidir preço e título ([painel](../../PAINEL.md), seção 9).
+> Campos entre [colchetes]: preencha depois de o dono decidir preço, título, garantia, bônus e atualizações ([painel](../../PAINEL.md), seção 9). Até lá, não mande o campo como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
 
 ## Dia 0: entrega da planta grátis (logo após o comentário "PLANTA")
 
@@ -12,7 +12,7 @@ Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 50 m², 2 q
 
 [PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 
-Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
+Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa com os recuos de referência.
 
 > Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
 >
@@ -22,15 +22,15 @@ Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qua
 
 **Se a pessoa mandou as medidas:**
 
-Com [frente] x [fundo] m, essas plantas cabem no seu terreno:
+Com [frente] x [fundo] m, essas plantas cabem no seu terreno com os recuos de referência (os da sua cidade, você confirma na prefeitura):
 
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
+Todas estão no e-book **[título]**, que tem [nº] casas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
-> Use a coluna **Lote** do [catálogo](../catalogo.md) para escolher 2 ou 3 plantas com lote mínimo menor ou igual ao terreno. Ofereça só as que já estão no e-book (Lançamento 1 enquanto for o atual).
+> Use a [calculadora de lote](calculadora-lote.html) (ou a coluna **Lote** do [catálogo](../catalogo.md)) para escolher 2 ou 3 casas com lote mínimo menor ou igual ao terreno. Ofereça só casas que estão no PDF que a pessoa vai receber: hoje são as 24 (nota para o parceiro, não vai ao cliente). **[lançamento: sair com 12 ou com 24, a definir pelo dono]**; se sair com 12, ofereça só as da leva 1.
 
 **Se a pessoa ainda não tem terreno:**
 
@@ -38,31 +38,37 @@ Todas estão no e-book **[título]**, junto com outras [nº] plantas. Quer ver u
 
 > Com a resposta, indique uma categoria do catálogo: até 2 pessoas, compactas; família, categoria F.
 
-## Dia 1: a planta mobiliada (o 3D entra quando for liberado)
+## Dia 1: a casa em 3D
 
-Oi, [nome]! Olha como fica a **[nome da planta]** por dentro:
+Oi, [nome]! Olha como fica a **[nome da planta]** por dentro, mobiliada e vista de cima:
 
-[animação de 12 s da planta]
+[imagem 3D da casa: `ebook/visual/3d/<ID>.jpg`]
 
-No e-book ela vem com blueprint com cotas, planta humanizada, duas perspectivas e os cuidados antes de construir.
+(imagem ilustrativa: móveis e acabamentos não vêm junto. Planta de referência.)
+
+No e-book ela vem com a planta mobiliada e as medidas, a casa desenhada no lote, a vista da rua e as perguntas para levar ao engenheiro.
+
+> Não existe animação de nenhuma casa ainda. A imagem 3D é ilustrativa: móveis e acabamentos não vêm junto.
 
 ## Dia 3: a oferta
 
 Oi, [nome]! O e-book **[título]** tem [nº] plantas de casas, para terreno estreito, primeira casa e família.
 
-Cada planta vem com:
-- planta humanizada e blueprint com medidas;
-- duas perspectivas 3D e animação;
-- ficha com lote mínimo, para quem é e os cuidados.
+Cada casa vem com:
+- a planta mobiliada, com as medidas;
+- a casa desenhada no lote mínimo e a ficha com área, quartos, banheiros e o melhor lado da rua;
+- a vista da rua e a casa em 3D;
+- para quem é, para quem não serve e as perguntas para levar ao engenheiro.
 
 E mais:
+- "ache pelo seu lote": cada frente de lote com as casas que cabem;
 - os 7 erros de planta que saem caro, com o jeito certo;
-- checklist de obra;
-- **as próximas plantas que eu lançar, sem pagar de novo.**
+- a ficha do seu terreno e os passos do e-book até a chave na mão;
+- [bônus e promessa de atualização: a definir pelo dono].
 
-Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book são [nº] plantas, cada uma mobiliada e desenhada no lote.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/projetos-similares.md`, seção 4] nos catálogos. No e-book são [nº] casas, cada uma mobiliada e desenhada no lote.
 
-Valor de lançamento: **R$ [preço]** no Pix, ou parcelado no cartão. Se não gostar, você tem 7 dias para pedir o dinheiro de volta.
+Valor de lançamento: **R$ [preço]** no Pix[, ou parcelado no cartão: a definir pelo dono]. [garantia: a definir pelo dono]
 
 Quer o link?
 
@@ -74,14 +80,14 @@ Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode p
 
 ## Dia 7: última mensagem
 
-Oi, [nome]! O preço de lançamento vale até [data]. Depois do próximo lançamento o e-book fica maior e o preço sobe. Qualquer dúvida sobre o seu terreno, me chama.
+Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O preço de lançamento vale até [data]. [Só se o dono decidir e for verdade: depois do próximo lançamento o e-book fica maior e o preço sobe.] Qualquer dúvida sobre o seu terreno, me chama.
 
 > Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Só diga que o preço sobe se isso for verdade.
 
 ## Depois da compra
 
 - **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou e **"você vai construir agora, financiar ou construir para alugar?"**. A resposta diz qual perfil compra mais ([estratégia](../../ESTRATEGIA.md), seção 3) e vai para o painel.
-- **A cada lançamento novo:** envie as plantas novas. Peça para indicar alguém que está planejando construir.
+- **A cada lançamento novo:** [se o dono decidir que quem comprou recebe as novas sem pagar] envie as plantas novas. Peça para indicar alguém que está planejando construir.
 
 ## Regras do funil
 

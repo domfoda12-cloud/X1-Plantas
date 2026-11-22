@@ -21,7 +21,7 @@ INI, FIM = "<!-- essencial: escrito à mão, o gerador não apaga -->", "<!-- /e
 PASTAS = {
     ".": ("Comando e contexto", "As regras, as decisões do dono e quem decide o quê", [".", "ferramentas"],
           ["todos"]),
-    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono"],
+    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono", "contexto/dono/intencoes"],
                  ["todos"]),
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),
@@ -38,11 +38,13 @@ PASTAS = {
                      ["animacoes-3d"], ["arquiteto", "designer", "editor-video"]),
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
                 ["reports", "research_notes"], ["revisor-de-risco", "pesquisador", "estrategista"]),
+    "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
+                ["pedidos"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
                     ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer"]),
 }
-FORA = ("contexto/entregas/", ".claude/", "node_modules/")  # têm leitor próprio (ULTIMO.md, a skill, o agente)
-GERADOS = ("RESUMO.md", "INDICE.md")
+FORA = ("contexto/entregas/", ".claude/", "node_modules/", "pedidos/2")  # pedidos/2…: as fichas, uma por pedido  # têm leitor próprio (ULTIMO.md, a skill, o agente)
+GERADOS = ("RESUMO.md", "INDICE.md", "FILA.md")
 
 
 def rastreados(padrao):

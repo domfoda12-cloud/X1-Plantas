@@ -1,4 +1,4 @@
-"""As 24 plantas do 1º e do 2º lançamento, desenhadas como um arquiteto organiza a casa.
+"""As 24 plantas do 1º e do 2º lançamento, desenhadas pelas regras de projeto do X1-Plantas (não são projeto de arquiteto).
 
 Convenção: x cresce para a direita, y cresce da rua (frente, y=0) para os fundos.
 A parede da esquerda é a divisa (sem janela) salvo quando a planta diz o contrário.

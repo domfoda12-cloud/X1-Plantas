@@ -1,15 +1,17 @@
 # Contexto do Editor de vídeo
 
-> Só o que importa para este papel. O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
 
 - **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `PEDIDOS-DO-DONO.md`.
 - **OpenArt: só com o "sim" do dono a cada uso** (22/11: "eu NÃO proibi, apenas necessita permissão"), com resumo e custo antes. A C01 foi redesenhada: o material antigo dela não vale. Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
-- Vídeo é a última frente (e-book → animações → vídeo). Até abrir, só planejar.
+- A frente de vídeo foi **aberta pelo dono em 21/11** (pediu o principal e a prévia do WhatsApp). A ordem geral continua e-book → animações → vídeo; o que ele pedir de vídeo, você faz.
 - A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.
+- Sem o selo "Imagem ilustrativa" nos vídeos (dono, 22/11); o aviso "Planta de referência…" continua, pequeno e parado.
+- Destino do vídeo: WhatsApp e Facebook Ads (`video/PEDIDO-anuncio-locucao.md`).
 
 ## Em aberto com você
 
@@ -25,4 +27,4 @@
 
 ## Leia barato
 
-Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Antes de qualquer vídeo, leia a seção "O que isso exige dos vídeos" de [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

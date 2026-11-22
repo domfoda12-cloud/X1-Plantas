@@ -4,14 +4,17 @@
 
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
 >
-> **Esta pasta guarda as imagens e animações de cada planta.** Elas vão para dentro do e-book ([`../ebook/`](../ebook/EBOOK.md)), para os posts do Instagram ([`../instagram/`](../instagram/INSTAGRAM.md)) e para o vídeo de anúncio ([`../video/`](../video/VIDEO.md)).
+> **Esta pasta guarda as imagens e animações de cada planta.** Elas vão para dentro do e-book ([`../ebook/`](../ebook/EBOOK.md)), para os posts do Instagram ([`../instagram/`](../instagram/INSTAGRAM.md)) e para os vídeos ([`../video/`](../video/VIDEO.md)).
+>
+> **Estado em 22/11/2026:** o motor já lê as 24 plantas (`node render-planta.cjs --planta ID`, dados em `video/src/plantas/<ID>.js`, que saem de `python3 ferramentas/planta3d.py`). A C01 foi redesenhada em 22/11 (50 m²; ver [`../ebook/plantas/PLANTAS.md`](../ebook/plantas/PLANTAS.md)): o que está em `plantas/casa-compacta/` é do desenho antigo e precisa ser gerado de novo. A E07 está na fila do redesenho (o dono chamou de erro os 3 quartos em fila).
 
 ## Nesta pasta
 
 | Arquivo | Para que serve |
 |---|---|
 | `ANIMACOES-3D.md` | Este guia: motor 3D, estilo, entregas por planta e como gerar |
-| `plantas/<nome-da-planta>/` | Imagens e animação de cada planta (hoje: `casa-compacta/`) |
+| `plantas/<nome-da-planta>/` | Imagens e animação de cada planta gerada pelo motor (hoje: `casa-compacta/`, do desenho antigo da C01) |
+| `plantas-2d/` | Imagens 2D das plantas para os carrosséis (as da C01 são de 20/11, antes do redesenho) |
 
 O código do motor fica em [`../video/src/`](../video/src/), porque o vídeo de anúncio usa o mesmo motor. Ver seção 5.
 
@@ -29,7 +32,7 @@ Uma pasta por planta, com cinco arquivos gerados a partir dos mesmos dados:
 
 As imagens têm 2000 x 2500 pixels (proporção 4:5): cabem numa página A4 do e-book e no feed do Instagram.
 
-**Pronta hoje:** só a Casa Compacta (`plantas/casa-compacta/`).
+**Pasta pronta hoje:** só `plantas/casa-compacta/`, e ela é da C01 antiga (55 m², antes de 22/11): gerar de novo com `node render-planta.cjs --planta C01`. As imagens 3D das 24 plantas para o e-book estão em `ebook/visual/3d/<ID>.jpg`.
 
 ## 2. Os três estágios da animação
 
@@ -58,28 +61,23 @@ As imagens têm 2000 x 2500 pixels (proporção 4:5): cabem numa página A4 do e
 
 | Arquivo | O que faz |
 |---|---|
-| [`../video/src/planta.js`](../video/src/planta.js) | **Dados da planta:** medidas, cômodos, paredes, janelas e portas, em metros |
+| [`../video/src/plantas/`](../video/src/plantas/) | **Dados de cada planta** (`<ID>.js`, um por planta, as 24): medidas, cômodos, paredes, janelas, portas e a ficha (`META`). Saem de `python3 ferramentas/planta3d.py`; não edite à mão |
+| [`../video/src/planta.js`](../video/src/planta.js) | Dados da C01 **antiga** (55 m²): é o que o motor usa quando roda sem `--planta`. Não use |
 | [`../video/src/casa3d.js`](../video/src/casa3d.js) | **Motor 3D:** monta a casa a partir dos dados nos três estágios. Também tem a lista de móveis e a ordem em que os cômodos ganham vida |
 | [`../video/src/casa.html`](../video/src/casa.html) | Página que mostra um quadro da casa, usada pelo render |
 | [`../video/render-planta.cjs`](../video/render-planta.cjs) | Gera as 4 imagens e a animação de uma planta |
 
-Para gerar de novo a Casa Compacta, dentro da pasta `video`, com Node.js, ffmpeg e Playwright instalados (ver [`../video/VIDEO.md`](../video/VIDEO.md), seção 8):
+Para gerar uma planta, dentro da pasta `video`, com Node.js, ffmpeg e Playwright instalados (ver [`../video/VIDEO.md`](../video/VIDEO.md), seção 4):
 
 ```bash
-node render-planta.cjs
+node render-planta.cjs --planta C01
 ```
 
-Os arquivos saem em `animacoes-3d/plantas/casa-compacta/`. Leva cerca de 10 minutos.
+Com `--so-imagens`, só as imagens. Os arquivos saem em `animacoes-3d/plantas/<nome-da-planta>/` (ex.: `casa-compacta/`); a câmera afasta sozinha conforme o tamanho da casa. **Sempre passe `--planta`:** sem ela, o motor usa a C01 antiga.
 
-## 6. O que falta para gerar dezenas de plantas
+## 6. O que falta
 
-Hoje o motor foi feito para uma planta só. Para o e-book, o código precisa mudar em três pontos:
-
-1. **Um arquivo de dados por planta.** Hoje `planta.js` tem só a Casa Compacta, e os móveis e a ordem dos cômodos estão dentro de `casa3d.js`. Cada planta precisa do seu arquivo com cômodos, paredes, janelas, portas e móveis.
-2. **Nome e ficha automáticos.** O título "CASA COMPACTA · 55 m² · 2 quartos · 1 banho" está escrito direto no blueprint e no vídeo. Precisa vir dos dados de cada planta.
-3. **Render em lote.** `render-planta.cjs` precisa receber o nome da planta (ou gerar todas) e salvar cada uma em `plantas/<nome>/`. Plantas maiores também precisam de câmera mais afastada.
-
-Com isso pronto, cada planta nova é só um arquivo de dados. O render roda sozinho, cerca de 10 minutos por planta.
+Feito: um arquivo de dados por planta (as 24 em `video/src/plantas/`), nome e ficha do blueprint lidos do `META` de cada planta, e `render-planta.cjs --planta ID` salvando em `plantas/<nome>/` com a câmera afastada conforme o tamanho. Falta **rodar** o motor para as plantas que o Instagram e o vídeo pedem (a C01 nova primeiro) e um jeito de gerar todas de uma vez.
 
 **O público pede mais três coisas** ([estratégia](../ESTRATEGIA.md), seção 6):
 
@@ -87,7 +85,7 @@ Com isso pronto, cada planta nova é só um arquivo de dados. O render roda sozi
 5. **Medidas de cada cômodo** escritas no blueprint (ex.: "QUARTO 1 · 3,20 x 4,30 m"). É o que a pessoa leva para o pedreiro.
 6. **Como cresce.** Nas [casas que crescem](../ebook/catalogo.md#casas-que-crescem), uma imagem a mais com a ampliação tracejada em amarelo: `06-como-cresce.png`.
 
-Ordem recomendada: 1, 2 e 3 (várias plantas), depois 5 (é só texto no blueprint), depois 4 e 6.
+Ordem recomendada: 5 (é só texto no blueprint), depois 4 e 6.
 
 ## 7. Cuidados
 

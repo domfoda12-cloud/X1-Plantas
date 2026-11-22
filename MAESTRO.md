@@ -11,7 +11,7 @@
 | **Painel** | Abre a semana: puxa os números das redes, atualiza o painel, propõe as tarefas e os ganchos da semana | Números das contas conectadas + `ferramentas/atualizar-painel.py` |
 | **Vídeo** | **Responsável pela edição de todos os vídeos.** Escolhe ganchos, revisa roteiros, analisa ganchos de referência, edita | Biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier |
 | **Instagram** | Prepara a publicação, acompanha os reels de teste, anota o registro de testes, decide a vencedora com você | Publicação nas contas conectadas (só depois do seu "sim") + números de cada vídeo |
-| **Imagens** | **Cria todas as imagens geradas** (fachada realista, ambientes, capas de reel, B-roll) usando o OpenArt, sempre a partir da planta ou do 3D nosso | Plugin OpenArt (skills `openart:*`), [fluxo](animacoes-3d/OPENART-MINOAI.md) |
+| **Imagens** | **Cria todas as imagens geradas** (fachada realista, ambientes, capas de reel, B-roll) usando o OpenArt, sempre a partir da planta ou do 3D nosso e **só com o "sim" do dono a cada uso**, com resumo e custo antes | Plugin OpenArt (skills `openart:*`), [fluxo](animacoes-3d/OPENART-MINOAI.md) |
 | **Animações 3D** | Gera as imagens e animações das plantas (render no seu computador) ou pede a um chat na nuvem | `video/render-planta.cjs` |
 | **E-book** | Gera o PDF quando há plantas novas e confere as páginas | Gerador do e-book |
 | **Funil** | Passa ao parceiro as dúvidas e o lote mais pedido; traz de volta os números dele para o painel | Painel, seção 7 |
@@ -40,14 +40,15 @@ O PROJETO
 - Repositório: https://github.com/domfoda12-cloud/X1-Plantas, branch main, em Filmes/X1-Plantas/projeto/ (se não existir, clone; se existir, atualize com git pull).
 
 LEIA ANTES DE QUALQUER COISA (em projeto/)
-- PAINEL.md (situação, fases, tarefas, decisões), MAESTRO.md (o seu papel), ESTRATEGIA.md (público, oferta, ângulos, tom de voz), instagram/MINOAI-FRONTIER.md (como editar), e o guia da frente de cada tarefa.
+- CLAUDE.md (regras que não mudam), contexto/QUADRO.md (o que o dono acabou de pedir) e contexto/maestro.md (o seu papel agora).
+- INDICE.md e o RESUMO.md da pasta da tarefa; o documento inteiro só quando a tarefa pedir. Para vídeo: video/PEDIDOS-DO-DONO.md e instagram/MINOAI-FRONTIER.md.
 
 O SEU PAPEL
 - Conduzir a semana pela rotina de MAESTRO.md, seção 4.
 - Vídeo e redes: você faz. Ganchos pela biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier, publicação e números das contas conectadas.
 - 3D e e-book: rode os scripts do projeto, seguindo animacoes-3d/ANIMACOES-3D.md e ebook/EBOOK.md.
 - Painel: depois de qualquer mudança, rode python3 ferramentas/atualizar-painel.py e deixe zero avisos. Números novos vão para PAINEL.md, seção 7; decisões, para a seção 8 com data.
-- Commit e push na branch main, com mensagens em português.
+- Commit e push na branch main (git pull --rebase antes), com mensagens em português. A main é a única branch de trabalho.
 
 REGRAS
 - Tudo em português do Brasil, no tom de ESTRATEGIA.md, seção 9.
@@ -57,7 +58,7 @@ REGRAS
 - Decisões (título, preço, versões, gasto com anúncio) são minhas: traga as opções e a sua recomendação.
 
 COMECE ASSIM
-1. Atualize o projeto e me diga em 5 linhas em que pé está cada frente (PAINEL.md, seção 1).
+1. Atualize o projeto e me diga em 5 linhas em que pé está cada frente (contexto/QUADRO.md e CONTEXTO.md, "Em aberto").
 2. Puxe os números das minhas contas conectadas (se nenhuma estiver conectada, me diga como conectar).
 3. Me proponha as tarefas desta semana e os 3 ganchos da semana, com a fonte de cada um.
 ```
@@ -74,12 +75,4 @@ COMECE ASSIM
 
 ## 5. Primeira tarefa do maestro
 
-Há trabalho dos chats da nuvem que ainda não está na branch principal, feito antes da estratégia e da troca do editor:
-
-| Branch | O que tem | O que ajustar ao juntar |
-|---|---|---|
-| `frente-instagram` | 9 primeiros posts, calendário de 2 semanas, 34 imagens de carrossel e capas de reel | Pilares e posts novos do [plano do perfil](instagram/plano-perfil.md) (ex.: "Tem um lote 10 x 20?"), tom da [estratégia](ESTRATEGIA.md) |
-| `frente-ebook` | Gerador do PDF, página dupla da C01, PDFs gerados | Índice pelo lote e página "Leve para o seu pedreiro e o seu engenheiro" ([`ebook/EBOOK.md`](ebook/EBOOK.md), seção 2) |
-| `frente-video` | Roteiro do vídeo 2 ("3 quartos em 8 m de frente") | Tom e regras da [estratégia](ESTRATEGIA.md) |
-
-Juntar uma de cada vez, mostrar o que mudou e conferir com `ferramentas/atualizar-painel.py`.
+Atualizar o projeto (`git pull --rebase` na `main`), ler o [quadro](contexto/QUADRO.md) e o seu [contexto](contexto/maestro.md) e seguir a seção 3. Todo o trabalho dos chats da nuvem já está na `main`, a única branch (as `frente-*` e a `planta-de-casas-anuncio` acabaram em 22/11/2026): não há nada para juntar.
