@@ -16,6 +16,10 @@ Durante a procura de referencias procure memes brasileiros atemporais como esse
 
 *Recado de 22/11 21:09:* a previa é o wpp a divulgacao é insta/ads
 
+*Recado de 22/11 21:12:* uma crianca igual a do meme, é o caramelo também, interligando os 2 videos, 3 Se a previa te ajudar bastante sim, se for so pra ter o apoio do conselho, mande o conselho pensar melhor antes de enviar o pedido final
+
+*Recado de 22/11 21:13:* So just make it looking ressembling
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -108,9 +112,24 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 
 **Gancho de 0 a 3 s (proposta do Editor, veto de ramo, 22/11):** um plano só, sem corte: fachada da casa aprovada, câmera parada na altura do olho, a criança e o cachorro já dançando, texto no primeiro quadro (frase do Redator); de 2,4 a 3,0 s a câmera chega um pouco mais perto e o corte seco cai na batida. Em 3,0 s entra o escaneamento **da mesma casa**; o tempo 4 volta à **mesma fachada, no mesmo ângulo, agora vazia**: o público entende que a casa onde eles dançam é aquela planta. Áudio: faixa licenciada no andamento da dança, latido e risada de ambiente. **Rota recomendada: OpenArt a partir do nosso render da fachada** (a casa só existe em 3D; filmar no celular põe a dança na frente de outra casa). Plano B: filmagem do dono no lote, o que muda o pedido.
 
+**Respostas do dono (22/11):** a criança "igual à do meme": fica **igual na cena, não na pessoa** (veto do Revisor; o mais perto possível é R6c, criança gerada por IA com a idade, a energia e a dança da cena, sem o rosto, o corpo nem a roupa do menino); o **caramelo dança no principal e faz o POV na prévia**, ligando os dois vídeos. Teste no OpenArt: "se a prévia te ajudar bastante sim; se for só para ter o apoio do conselho, mande o conselho pensar melhor antes de enviar o pedido final".
+
 **R7 · PLANTA ou LOTE**: R7a PLANTA **(padrão, é o que os textos já usam)**; R7b LOTE (troca a chamada nos dois vídeos e no funil do parceiro).
 
 **Rotas de produção (vale para todos os ramos):** filmagem do dono com o celular (realista, custo zero, espera ele filmar) ou OpenArt (realista, crédito, só com o "sim"). Motor 3D só para rascunho e guia de câmera.
+
+## Teste no OpenArt: resumo da produção e instruções (para o "sim" do dono)
+
+**Por que testar:** responde à dúvida que mais pesa: sem o rosto do menino e sem o áudio original, a cena (criança dançando com um caramelo na frente da casa) ainda é reconhecida como o meme? Se não for, o gancho cai, e é melhor saber com uma imagem barata. Teste de vídeo só depois da casa aprovada (ficha `1616`), para não gastar com a casa que vai mudar.
+
+| Item | Valor |
+|---|---|
+| O quê | **1 imagem** (image2image), quadro do gancho |
+| Base | nosso render 3D da fachada da casa (hoje a E07; troca quando a nova for aprovada) |
+| Modelo | Nano Banana Pro, 1K, 1 imagem: **40 créditos** (preço da ferramenta `openart_model_cost`, configuração padrão; outra configuração custa diferente). Saldo: 21.137 |
+| Prompt (rascunho) | "Brazilian child about 8 years old, generic features, colorful t-shirt and shorts, dancing joyfully in front of this exact house facade, a caramel-colored mixed-breed street dog (vira-lata caramelo) beside the child, also bouncing, watching; sunny afternoon, real photo look, vertical 9:16; keep the house exactly as in the reference image: same doors, windows, roof and colors; no text, no flag, no logos" |
+| Não pode | rosto, corpo ou roupa do menino do meme; cachorrinho branco; bandeira; marca; texto |
+| Depois | o Diretor e o Revisor olham; se a cena for reconhecida, vira o quadro inicial do gancho; se não, o plano volta ao time |
 
 ## Qualidade do veto (régua de 5 pontos, nota do Maestro)
 
