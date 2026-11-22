@@ -2,6 +2,14 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas
+
+- **O dono pediu:** resolver as contradições dos documentos; guardar cada prompt; Fable interpreta e supervisiona, Opus executa, Sonnet e Opus pesquisam, Haiku faz o simples e pessoal; reler todos os prompts com "por que ele pediu?".
+- **Todos:** antes de trabalhar num pedido, leia a ficha em `pedidos/` e os nove fios de [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Regras: [`pedidos/LEIA-ME.md`](../pedidos/LEIA-ME.md).
+- **Todos:** documentos superados foram apagados e os outros corrigidos; o que ainda depende do dono, do Revisor ou de refazer imagem está em `dono/TEXTOS-DESATUALIZADOS.md`.
+- **Editor de vídeo e Maestro:** o que o vídeo tem de ter, com o que é firme e o que é leitura nossa, está em `dono/IDEIAS-GERAIS.md`. Prévia e principal usam a C01 antiga: remontar antes de usar.
+- **Redator e Revisor:** preço, garantia, bônus e "12 ou 24" estão entre colchetes nos textos de venda até o dono decidir.
+
 ## 22/11 · Índice, resumos por pasta e os prompts do dono
 
 - **O dono pediu:** separar os documentos em categorias, ligar cada agente às suas pastas e criar resumos baratos; incluir os prompts dele.
@@ -23,12 +31,3 @@
 - **O dono pediu:** adicionar a skill `make-pdf` (gstack) e ter o Editor como conversa de verdade.
 - **Todos:** `make-pdf` está registrada sem o preâmbulo (telemetria), mas **não funciona**: instalar o gstack espera o "sim" do dono. Não é para o e-book.
 - **Editor de vídeo:** há outra conversa na mesma branch: `git pull --rebase` antes de enviar.
-
-## 22/11 · C01 redesenhada; OpenArt só com permissão
-
-- **O dono pediu:** refazer por enquanto só 1 planta do vídeo e usar o OpenArt: "eu NÃO proibi, apenas necessita permissão".
-- **O que mudou:** **C01** nova: varanda de entrada, sala e jantar, cozinha nos fundos, hall curto (circulação 4%), banheiro de 1,69 m livres, serviço com porta para o quintal; 50 m². Dados, 3D, PDF, planta grátis e calculadora regenerados.
-- **OpenArt (todos):** não é proibido; **cada uso pede o "sim" do dono**, com resumo e custo antes. Conta: 21.137 créditos.
-- **Editor de vídeo:** clipes e imagens antigos da C01 mostram a casa velha; use `ebook/visual/3d/C01.jpg`. A E07 do escaneamento continua com o arranjo antigo.
-- **Redator e Revisor:** gancho e "para quem é" da C01 mudaram (`ebook/fichas/textos.py`): revisar. `instagram/posts/POSTS.md` ainda diz 55 m².
-- **Designer:** imagem 2D da C01 desatualizada; a sala ainda não desenha a mesa.

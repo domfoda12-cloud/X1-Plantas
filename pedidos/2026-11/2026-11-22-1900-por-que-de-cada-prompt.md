@@ -1,6 +1,6 @@
 # O porquê de cada prompt, do primeiro ao último
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** Para a pesquisa na verdade use uma mistura do sonnet com OPUS. Bom trabalho analisando o prompt, sinto que esta faltando uma conexao das ideias gerais do projeto por mais que voce sempre entenda o que estou pedindo. Gostaria se possivel que procurasse todos os prompts que eu enviei antes e que agora ele passasse por prompt: Porque essa mudanca foi pedida ou o que o usuario quer descobrir com esse pedido e qual o objetivo dele. Rode esse prompt retrospectivamente para tudo que eu mandei, nesse prompt, quero que para os prompts enviados recentemente eles tenham uma maior prioridade para a parte criativa da producao, como o video no whatsapp e video do instagram, mas toda informacao é bem vinda
 
@@ -23,6 +23,7 @@
 
 **Quem executa:** dois agentes no Opus releem os prompts (16 a 20/11; 21 e 22/11 com prioridade criativa). O Fable escreve as ideias gerais, que é a parte de interpretar.
 
-**Conferência do Fable:** (a preencher)
+**Conferência do Fable:** Li os relatórios dos dois agentes e abri os dois arquivos: 71 blocos (16 a 20/11) e 40 blocos (21 e 22/11), sem dado pessoal (busca por cartão, e-mail e assinatura: nada). Conferi por amostra três blocos de vídeo contra os prompts originais: as citações batem. Não conferi bloco por bloco os 111. Os prompts de outras conversas entraram pelo que está escrito em `video/PEDIDOS-DO-DONO.md`, `video/PEDIDO-anuncio-locucao.md` e no histórico, não pelas conversas inteiras. As ideias gerais eu mesmo escrevi.
 
-**Resultado:** (a preencher)
+**Resultado:** Todos os prompts do dono foram relidos com a pergunta do porquê: `contexto/dono/intencoes/` (16 a 20/11, 71 blocos; 21 e 22/11, 40 blocos, com as exigências dos vídeos). As ideias que ligam os pedidos estão em `contexto/dono/IDEIAS-GERAIS.md` (nove fios, o que o vídeo tem de ter e seis perguntas para o dono). Pesquisa passa a ser em dois passos, Sonnet e Opus. Toda ficha nova responde por quê, objetivo e ligação.
+

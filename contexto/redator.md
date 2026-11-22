@@ -21,4 +21,4 @@
 
 ## Leia barato
 
-Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

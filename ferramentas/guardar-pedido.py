@@ -14,7 +14,10 @@ ENTRADA = Path(__file__).resolve().parent.parent / "pedidos" / "entrada"
 try:
     dados = json.load(sys.stdin)
     texto = (dados.get("prompt") or "").strip()
-    if texto:
+    # só o que o dono escreveu: relatório de agente, aviso do sistema e gancho de parada não são pedido dele
+    NAO_E_DO_DONO = ("Another Claude session", "<agent-message", "<task-notification", "[SYSTEM NOTIFICATION", "Stop hook feedback",
+                     "<system-reminder", "[Request interrupted", "This session is being continued", "<local-command")
+    if texto and not texto.startswith(NAO_E_DO_DONO):
         ENTRADA.mkdir(parents=True, exist_ok=True)
         agora = datetime.now()
         arq = ENTRADA / f"{agora:%Y-%m-%d-%H%M%S}.md"
