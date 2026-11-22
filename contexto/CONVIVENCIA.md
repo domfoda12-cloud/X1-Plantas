@@ -16,3 +16,4 @@
 | 10 | 22/11 | Um agente afirmou fato sem fonte e outro o usou para decidir | Fato sem fonte entra marcado "suposição"; quem recebe não decide em cima dele sem conferir | todos |
 | 11 | 22/11 | O Maestro marcou "confirmado" no caderno um ano tirado do resumo de um repost | Achado de ferramenta sobre repost ou resumo é "secundaria"; "confirmado" só com a fonte original lida | Maestro, todos |
 | 12 | 22/11 | Resumo nosso dizia uma coisa e a fala do dono, na mesma página, outra | Vale a fala do dono; quem achar a diferença corrige o resumo e avisa | todos |
+| 13 | 22/11 | O Maestro instalou uma ferramenta antes de ler a licença, contra o pedido do Revisor | Pedido do Revisor que diz "antes de" é condição: só segue depois de cumprido | Maestro |

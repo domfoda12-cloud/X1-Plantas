@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-22 | [Integrar o cass (busca nas conversas dos agentes) ao sistema](2026-11/2026-11-22-2151-integrar-o-cass-busca-nas-conversas-dos-agentes-ao-sistema.md) | fechada em 22/11/2026 | Maestro (Opus): plano e código. Veto: `revisor-de-risco` (privacidade), `estrategista` (va |
 | 2026-11-22 | [Qualidade do veto: inputs relevantes e repreensão](2026-11/2026-11-22-2102-qualidade-do-veto-inputs-relevantes-e-repreensao.md) | fechada em 22/11/2026 | Maestro (Opus). O Fable confere a régua na próxima auditoria. |
 | 2026-11-22 | [Vídeo: reel de referência no lugar do cachorro caramelo, POV do caramelo no WhatsApp, zoom out, memes brasileiros](2026-11/2026-11-22-2055-video-reel-de-referencia-no-lugar-do-cachorro-caramelo-pov-d.md) | aberta | Maestro (Opus): plano e conferência. Diretor (MinoAI): ideia principal e o zoom out do kit |
 | 2026-11-22 | [Tempo livre: deixar a equipe mais inteligente](2026-11/2026-11-22-2041-tempo-livre-deixar-a-equipe-mais-inteligente.md) | fechada em 22/11/2026 | Maestro (Opus): rotina e listas de ferramentas. Agentes de cada papel nos testes; `supervi |
