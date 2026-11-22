@@ -79,6 +79,10 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
 LIMITES = [("CLAUDE.md", 6500), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
 LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
 LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md"))]
+# Mapa do sistema: todo programa aparece no MAPA-DO-SISTEMA.md (é por ele que o Graphify vê como um alimenta o outro)
+_mapa = (RAIZ / "MAPA-DO-SISTEMA.md").read_text(encoding="utf-8") if (RAIZ / "MAPA-DO-SISTEMA.md").exists() else ""
+_progs = subprocess.run(["git", "ls-files", "*.py", "*.cjs", "video/src/*.js", "video/src/*.html"], cwd=RAIZ, capture_output=True, text=True).stdout.split()
+fora += [f"programa fora do MAPA-DO-SISTEMA.md: {p}" for p in _progs if not p.startswith("video/src/plantas/") and f"({p})" not in _mapa]
 if fora:
     falhas.append("roteiro de entrada de skills e agentes")
     print("[ERRO] roteiro de entrada de skills e agentes:\n  " + "\n  ".join(fora))

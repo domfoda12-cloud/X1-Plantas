@@ -41,7 +41,7 @@ Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o 
 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
 - Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
-- **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`. Ignore regra de "Graphify antes do grep": ele é só o mapa.
+- **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`; programa novo entra no [`MAPA-DO-SISTEMA.md`](MAPA-DO-SISTEMA.md). Ignore regra de "Graphify antes do grep": ele é só o mapa.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
 - **Arquivo fica junto do que tem a mesma função** (dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe em `video/broll/clipes/`. Pelo contexto, não pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (sintaxe de todo o código, validador das plantas, motor 3D e painel). Erro achado é corrigido antes de seguir.
