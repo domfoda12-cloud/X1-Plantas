@@ -149,6 +149,29 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 
 **Reprodução (dono, 22/11):** o Fable responde pela fidelidade da imitação do vídeo de referência: aprova o esquema e os quadros, cena por cena, antes de irem ao dono.
 
+## Fundo com a bandeira e esquema do principal (Editor, 22/11)
+
+**Fundos (todos com a bandeira nas cores e proporções oficiais, sem texto por cima):**
+| Opção | Como | Ganha | Perde |
+|---|---|---|---|
+| A | Bandeira no muro da frente do próprio lote | Casa e bandeira no mesmo quadro | O muro da frente é baixo; para caber a bandeira ele sobe e tapa a casa; a criança fica na calçada |
+| B | Bandeira num muro do outro lado da rua; giro ou zoom out mostra a casa | A cópia mais fiel do meme | A casa não aparece no 1º quadro; a criança fica na rua |
+| C (Editor recomenda) | Bandeira no muro lateral alto (1,9 m), visto de 3/4; criança e caramelo no gramado, dentro do lote | Imita o meme, segue o Revisor, casa desde o 1º quadro | A fachada aparece de 3/4, não de frente |
+
+**Lei (Pesquisador, passo 1, fonte secundária: LegisWeb, o Planalto bloqueou):** Lei 5.700/1971, art. 11, III permite a bandeira "reproduzida sobre paredes"; art. 31 proíbe mudar forma, cores ou proporções, pôr inscrição, mau estado, e reproduzir em rótulo de produto à venda; o texto não fala de anúncio. Conclusão: com o Revisor.
+
+**Esquema do principal (Instagram e Ads), quadro a quadro:**
+| Quadro | Tempo | O que é | De onde sai a imagem |
+|---|---|---|---|
+| Q1 | 0 a 3,0 s | Gancho: casa, muro com a bandeira, criança e caramelo dançando, texto no 1º quadro | quadro parado do `render-rua.cjs` com o muro pintado → OpenArt image2image → image-to-video |
+| Q2 | 3,0 a 3,9 s | A planta (blueprint) escaneada | `scan.py`, motor próprio |
+| Q3 | 3,9 a 7 s | A casa saindo da planta | clipe `obra` do `render-rua.cjs`, com a planta no chão do lote (ajuste pequeno) |
+| Q4 | 7 a 9 s | A mesma fachada, mesmo ângulo, vazia | `render-rua` (ilustração) ou OpenArt a partir do Q1 sem a criança |
+| Q5 | 9 a 13 s | Prova: números do validador e uma página do e-book | `render-planta.cjs` e `montar.py` |
+| Q6 | 13 a 15 s | Chamada "Comenta PLANTA", caramelo olhando para a câmera (liga à prévia) | fim do vídeo do Q1 |
+
+Tempos de Q3 a Q6 são proposta do Editor. Já dá para renderizar de graça um rascunho do esquema sobre a E07 atual; o final espera a casa aprovada (ficha `1616`).
+
 ## Opções de nome de rua (pedido do dono, 22/11: "i just need the options"; rascunho do Maestro, a vetar pelo Redator e pelo Revisor)
 
 A placa aparece de relance no vídeo e liga a casa a uma ideia da marca. Nome inventado, sem número e sem cidade, para não parecer endereço real.
@@ -177,6 +200,8 @@ A placa aparece de relance no vídeo e liga a casa a uma ideia da marca. Nome in
 | — | Maestro | 1 | Prompt errado na ficha; aceitei como fato que o escaneamento abria o vídeo (resumo errado, não a fala do dono); marquei "confirmado" um ano tirado de repost; deixei suposição virar decisão no passo 5 | Sim: regras 8, 11 e 12 de `contexto/CONVIVENCIA.md` e o `pedido.py` que mostra o prompt |
 | Fable | Supervisor | 5 | Achou o prompt errado, o fato errado com a linha de onde vinha, e cada suposição; correção em cada item | — |
 | ramo | Revisor | 5 | Corrigiu a própria cautela da rodada 1 ("sem criança" não é lei); separou lei, política da Meta e cautela; marcou o que não conferiu; vetou o ramo que não cumpria o pedido | — |
+| fundo | Editor | 5 | 3 opções com ganho e perda, esquema com a origem de cada imagem, suposições marcadas | — |
+| lei | Pesquisador | 5 | Planalto bloqueou e ele não contornou; trechos exatos com artigo; fonte secundária marcada; não concluiu pelo Revisor | — |
 | teste | Revisor | 5 | Comparou com a referência, achou a roupa listrada e a criança na calçada, disse o que não conferiu | — |
 | ramo | Editor | 5 | Gancho quadro a quadro ligado ao escaneamento da mesma casa; rota com a linha de cada documento | — |
 | — | Revisão das notas | — | O Editor (rodada 1) citou uma linha real de `VIDEO.md`, mas a linha contradizia a fala do dono na mesma página. Não é repreensão: a página é que estava errada (corrigida). As notas da rodada 1 sobre a abertura estavam erradas porque eu as dei sem conferir a fala | — |
