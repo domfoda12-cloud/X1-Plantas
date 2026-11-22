@@ -9,6 +9,8 @@
 Main seems like a huge mess i dont know what to do with it
 3 i dont know what that means
 
+*Recado de 22/11 20:00:* start it
+
 **O que ele pediu, parte por parte:** "Para a próxima sessão": planejar agora, fazer depois. "Organizar os arquivos melhor": a estrutura de pastas e documentos. "Milhares de códigos e arquivos conectados aos agentes": o Graphify mostra 2.013 círculos e 2.231 ligações; os agentes leem muita coisa. "Conexão mais clean e com números menores": menos círculos, menos ligações, e as que ficarem fazendo sentido.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele abriu o Graphify e viu um emaranhado (o print de 22/11 mostra 2.177 círculos e a lista "mais conectados" com o `cena.js`, que já foi apagado). Quer enxergar o sistema e ter certeza de que os agentes não se perdem em arquivo demais.
