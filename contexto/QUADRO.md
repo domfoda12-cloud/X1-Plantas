@@ -2,6 +2,13 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 22/11 · Skill `make-pdf`, conversa do Editor e página de chat
+
+- **O dono pediu:** adicionar a skill `make-pdf` (gstack); uma página para falar com o Editor; o Editor como conversa de verdade do Claude.
+- **O que mudou:** `make-pdf` registrada em `.claude/skills/`, **sem o preâmbulo** (telemetria, sincronização de memória). **Não funciona ainda:** falta instalar o gstack, o que espera o "sim" do dono.
+- **Todos:** `make-pdf` é para documento em markdown (guia do parceiro, relatório jurídico). O e-book continua saindo de `ebook/gerador/livro.py`.
+- **Editor de vídeo:** existe a conversa "Editor de vídeo · MinoAI Frontier (X1-Plantas)" e a página de chat (`video/conversa-com-o-editor.html`). As duas conversas mexem na mesma branch: `git pull --rebase` antes de enviar.
+
 ## 22/11 · C01 redesenhada; OpenArt só com permissão
 
 - **O dono pediu:** refazer por enquanto só 1 planta do vídeo e usar o OpenArt: "eu NÃO proibi, apenas necessita permissão".
