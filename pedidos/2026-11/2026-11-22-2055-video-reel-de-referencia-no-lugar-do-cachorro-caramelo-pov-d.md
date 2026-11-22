@@ -12,6 +12,8 @@ Durante a procura de referencias procure memes brasileiros atemporais como esse
 
 *Recado de 22/11 21:07:* 1. Sim, a crianca e o cachorro dancando na frente da casa
 
+*Recado de 22/11 21:08:* Sao 2 videos, 1 mostrando uma previa do que eles vao ver no ebook, outro fazendo a divulgacao do produto, o principal é a divulgacao mas a previa também é bem importante
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -67,7 +69,7 @@ Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se fa
 **R2 · Qual é o "vídeo do WhatsApp"**
 | Ramo | O que muda |
 |---|---|
-| R2a · a prévia **(padrão)** | Passo 6 como está: e-book por dentro + POV do caramelo + pedir a medida do lote; até 5 MB |
+| R2a · a prévia **(escolhido pelo dono, 22/11: "1 mostrando uma prévia do que eles vão ver no e-book, outro fazendo a divulgação"; o principal é a divulgação, a prévia também é bem importante)** | Passo 6 como está: e-book por dentro + POV do caramelo + pedir a medida do lote; até 5 MB |
 | R2b · o convite (F03) | Passo 6 parte do convite ("extremamente convidativo", uma casa só); POV entra no passeio; F03 só se o dono aceitar a F03, senão a casa aprovada |
 | R2c · o anúncio com locução | O POV entra no anúncio com a voz do dono; o roteiro dele (`ANUNCIO-LOCUCAO.md`) muda; precisa da gravação |
 
