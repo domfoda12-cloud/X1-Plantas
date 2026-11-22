@@ -44,7 +44,7 @@ PASTAS = {
                     ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer"]),
 }
 FORA = ("contexto/entregas/", ".claude/", "node_modules/", "pedidos/2")  # pedidos/2…: as fichas, uma por pedido  # têm leitor próprio (ULTIMO.md, a skill, o agente)
-GERADOS = ("RESUMO.md", "INDICE.md")
+GERADOS = ("RESUMO.md", "INDICE.md", "FILA.md")
 
 
 def rastreados(padrao):

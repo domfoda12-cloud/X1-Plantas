@@ -6,12 +6,13 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - O Fable roda o sistema e é o supervisor principal: divide, confere e responde; nas partes importantes pode fazer ele mesmo (`LEIA-ME.md`).
-- Todo prompt do dono é gravado sozinho em `pedidos/entrada/` pelo gancho `UserPromptSubmit`; a pasta fica fora do git (`LEIA-ME.md`).
-- O Fable (a conversa principal) interpreta o prompt e escreve a ficha em `pedidos/AAAA-MM/`; depois confere o resultado e responde ao dono (`LEIA-ME.md`).
-- Trabalho do projeto vai para o agente do papel, no Opus; pesquisa a fundo vai para o `pesquisador`, no Sonnet; tarefa simples e pessoal do dono vai para o `ajudante`, no Haiku (`LEIA-ME.md`).
-- Pergunta curta que o Fable já sabe responder e tarefa de uma linha ele faz direto: delegar custaria mais (`LEIA-ME.md`).
-- Assunto pessoal do dono não vira ficha no repositório (`LEIA-ME.md`).
-- A ficha tem: prompt palavra por palavra, o que ele pediu, pronto quando, suposições, quem executa e resultado (`LEIA-ME.md`).
+- Todo prompt do dono é gravado sozinho em `pedidos/entrada/` (fora do git) pelo gancho, que também devolve o lembrete da regra (`LEIA-ME.md`).
+- Trabalho novo: `python3 ferramentas/pedido.py nova "assunto"` cria a ficha com o prompt copiado; recado de pedido aberto: `pedido.py recado <ficha>`; fechar: `pedido.py fechar <ficha> "o que virou"`, que também escreve o histórico (`LEIA-ME.md`).
+- A ficha responde: por que ele pediu, qual o objetivo e qual a ligação com `contexto/dono/IDEIAS-GERAIS.md`, antes de qualquer delegação (`LEIA-ME.md`).
+- Modelos: Opus executa o trabalho do projeto; pesquisa em dois passos (Sonnet busca, Opus confere e conclui); Haiku (`ajudante`) faz a tarefa simples e pessoal do dono (`LEIA-ME.md`).
+- Todo pedido a agente leva o pacote do executor: ficha, o que ler, o que já está decidido, pronto quando e o que devolver (`LEIA-ME.md`).
+- Relatório de agente é afirmação, não prova: o Fable confere e escreve em "Conferência do Fable" (`LEIA-ME.md`).
+- O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
 ## Os 1 documentos

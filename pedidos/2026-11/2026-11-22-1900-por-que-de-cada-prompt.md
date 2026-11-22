@@ -1,5 +1,7 @@
 # O porquê de cada prompt, do primeiro ao último
 
+**Estado:** aberta
+
 **Prompt (palavra por palavra):** Para a pesquisa na verdade use uma mistura do sonnet com OPUS. Bom trabalho analisando o prompt, sinto que esta faltando uma conexao das ideias gerais do projeto por mais que voce sempre entenda o que estou pedindo. Gostaria se possivel que procurasse todos os prompts que eu enviei antes e que agora ele passasse por prompt: Porque essa mudanca foi pedida ou o que o usuario quer descobrir com esse pedido e qual o objetivo dele. Rode esse prompt retrospectivamente para tudo que eu mandei, nesse prompt, quero que para os prompts enviados recentemente eles tenham uma maior prioridade para a parte criativa da producao, como o video no whatsapp e video do instagram, mas toda informacao é bem vinda
 
 **O que ele pediu, parte por parte:**
@@ -21,4 +23,6 @@
 
 **Quem executa:** dois agentes no Opus releem os prompts (16 a 20/11; 21 e 22/11 com prioridade criativa). O Fable escreve as ideias gerais, que é a parte de interpretar.
 
-**Resultado:** (preenchido no fim)
+**Conferência do Fable:** (a preencher)
+
+**Resultado:** (a preencher)

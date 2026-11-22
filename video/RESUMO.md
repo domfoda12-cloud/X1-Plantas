@@ -8,13 +8,13 @@
 - Antes de mexer em vídeo, leia `PEDIDOS-DO-DONO.md` inteiro; ordem nova do dono entra lá na hora (22/11/2026). (`CLAUDE.md`)
 - Antes de montar vídeo ou gastar crédito do OpenArt: mande o resumo e a lista de instruções e espere o dono confirmar. OpenArt não é proibido; pede o "sim" dele a cada uso (22/11/2026). (`PEDIDOS-DO-DONO.md`)
 - Destino do anúncio com locução: WhatsApp e Facebook Ads, não Instagram nem TikTok (22/11/2026). (`PEDIDO-anuncio-locucao.md`)
-- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa": o dono tirou (22/11/2026). (`CLAUDE.md`)
-- Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. (`CLAUDE.md`)
-- Prontos em `saida/`: `previa-whatsapp/`, `principal/`, `principal-condor/`, `convite/`, `principal-e07/`. Clipes em `broll/clipes/`. `v1` a `v5` usam o 3D velho da C01. (`VIDEO.md`, `PEDIDOS-DO-DONO.md`)
+- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa" no vídeo: o dono tirou (22/11/2026). Os roteiros `.json` antigos ainda trazem o selo; sai na próxima montagem. (`CLAUDE.md`, `VIDEO.md`)
+- Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. 3D: `node render-planta.cjs --planta ID`. (`CLAUDE.md`)
+- `saida/` hoje: `previa-whatsapp/` e `principal/` são de 21/11, com a C01 antiga (remontar); `principal-condor/` e `convite/` são rascunhos; `principal-e07/` tem a versão antiga e a montagem com a voz do dono sobre a E07 em fila; `v1` a `v5` (R$ 1.000 do arquiteto) são antigos, não publicar. (`VIDEO.md`)
 - Todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md` e parte de imagem nossa. (`principal-e07/PROMPTS.md`)
-- Edição final: MinoAI Frontier, no Mac do dono. Anúncio pago: só música licenciada ou a trilha nossa. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `plano-anuncio-locucao.md`)
-- Em aberto: o plano do anúncio com locução espera o dono; nada foi gerado. (`plano-anuncio-locucao.md`)
-- Rascunhos: `principal-condor` (não publicar; E07 na fila do redesenho) e `convite`. (`PEDIDOS-DO-DONO.md`)
+- Edição final: MinoAI Frontier, no Mac do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `plano-anuncio-locucao.md`)
+- Em aberto: o plano do anúncio com locução espera o dono aprovar a planta nova da E07 (na fila do redesenho) e o plano; nada foi gerado. (`plano-anuncio-locucao.md`)
+- `plano-principal-e07.md` é registro da versão de 21/11, substituído por `plano-anuncio-locucao.md`. (`plano-principal-e07.md`)
 <!-- /essencial -->
 
 ## Os 15 documentos

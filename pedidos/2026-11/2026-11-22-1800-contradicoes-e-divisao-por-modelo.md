@@ -1,5 +1,7 @@
 # Resolver as contradições e dividir o trabalho por modelo
 
+**Estado:** aberta
+
 **Prompt (palavra por palavra):** Veja o que esta contradizendo nos documentos, e crie uma solucao pras contradicoes baseado nos objetivos previamente dados, se a solucao for inutil para o projeto apenas delete. Agora quero que crie algo um pouco especial, eu gostaria que cada prompt meu fosse guardado em uma pasta do projeto, nessa pasta a partir de agora o fable ficara responsavel por ler o prompt e interpretalo, depois disso passa o trabalho para o opus. Tarefas mais chatas que seria um desperdicio de tokens, coloque o haiku para fazer, como organizar um evento, responder uma pergunta ou pesquisar algo que EU pedi para MIM nao para os outros agentes, para pesquisas mais afundas use o sonnet, por exemplo para o arquiteto adquirir conhecimento na web
 
 **O que ele pediu, parte por parte:**
@@ -11,10 +13,18 @@
 6. *"tarefas chatas… Haiku… que EU pedi para MIM"*: tarefa simples e pessoal do dono vai para um agente no Haiku; não é para trabalho do projeto.
 7. *"pesquisas mais a fundo use o Sonnet"*: o agente `pesquisador` roda no Sonnet.
 
+**Por que ele pediu, ou o que quer descobrir:** os documentos diziam coisas diferentes entre si, e os agentes repetiam a versão errada; e o modelo mais caro fazia trabalho que um mais barato faria.
+
+**Objetivo dele:** um projeto que diz uma coisa só, e gastar o modelo caro em pensar, não em executar.
+
+**Ligação com as ideias gerais do projeto:** continua o "os agentes esquecem": depois do índice e dos resumos, falta os documentos concordarem e o trabalho ter dono certo.
+
 **Pronto quando:** `pedidos/LEIA-ME.md` explica o caminho; o gancho grava; cada agente tem modelo; as contradições estão resolvidas ou apagadas e a lista de desatualizados está vazia ou só com o que depende do dono; `checar.py` passa.
 
 **Suposições (o dono não disse):** garantia de 7 dias e "12 ou 24 plantas" são decisão dele: os textos passam a dizer só o que existe e deixam o campo em aberto. A retirada do selo "Imagem ilustrativa" vale para vídeo; imagem parada do e-book mantém a legenda. Assunto pessoal não vira ficha no repositório.
 
 **Quem executa:** montagem do sistema: Fable (é configuração, uma vez só). Contradições: quatro agentes no Opus, por área, e o `revisor-de-risco` (Opus) nos textos de venda.
 
-**Resultado:** (preenchido no fim)
+**Conferência do Fable:** (a preencher)
+
+**Resultado:** (a preencher)

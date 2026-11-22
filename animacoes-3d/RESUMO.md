@@ -5,15 +5,16 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- O 3D é o último passo (decisão do dono). (`REFERENCIAS-BLUEPRINT.md`)
-- Cada planta recebe 5 arquivos em `plantas/<nome>/`: `01-blueprint.png`, `02-planta-humanizada.png`, `03-perspectiva.png`, `04-perspectiva-lateral.png` e `animacao.mp4` (12 s, vertical). Pronta: só `casa-compacta/`. (`ANIMACOES-3D.md`)
-- O motor fica em `video/src/` e já lê as 24 plantas via `ferramentas/planta3d.py`. Gerar, dentro de `video`: `node render-planta.cjs --planta ID`. (`REFERENCIAS-BLUEPRINT.md`, `video/CLAUDE.md`)
+- Ordem das frentes: e-book → animações → vídeo; o motor 3D já está em uso pelo e-book e pelos vídeos (o "3D é o último passo" de 20/11 ficou para trás). (`CLAUDE.md` da raiz, `ANIMACOES-3D.md`)
+- Cada planta recebe 5 arquivos em `plantas/<nome>/`: `01-blueprint.png`, `02-planta-humanizada.png`, `03-perspectiva.png`, `04-perspectiva-lateral.png` e `animacao.mp4` (12 s, vertical). Só existe `casa-compacta/`, e é da C01 antiga (55 m²): gerar de novo. (`ANIMACOES-3D.md`)
+- C01 redesenhada em 22/11/2026: 50 m², 2 quartos, 1 banheiro, lote a partir de 8 x 15 m. E07 na fila do redesenho (3 quartos em fila). (`ebook/plantas/PLANTAS.md`)
+- O motor fica em `video/src/` e já lê as 24 plantas (`video/src/plantas/<ID>.js`, de `ferramentas/planta3d.py`). Gerar, dentro de `video`: `node render-planta.cjs --planta ID`; sem `--planta` ele usa a C01 antiga. (`ANIMACOES-3D.md`, `video/CLAUDE.md`)
 - Estilo: azul `#0B4FA8`, amarelo `#FFC857`, câmera lenta e contínua, frente da casa no alto, paredes cortadas a 1,1 m. (`ANIMACOES-3D.md`)
 - A casa animada ou gerada é a mesma do e-book. No OpenArt, casa só a partir de imagem nossa: o Arquiteto vetou uma casa inventada por texto. (`OPENART-MINOAI.md`)
-- A legenda diz "imagem ilustrativa da planta de referência". A ordem "da obra" é efeito visual: não diga "é assim que se constrói". (`REFERENCIAS-BLUEPRINT.md`)
-- OpenArt: em 20/11/2026 o dono liberou os créditos sem limite; a regra mais recente (22/11/2026) é o "sim" dele a cada uso, com resumo e custo antes. (`video/PEDIDOS-DO-DONO.md`)
+- Imagem parada leva a legenda "imagem ilustrativa da planta de referência"; em vídeo, sem o selo (dono, 22/11/2026), aviso legal pequeno no canto. A ordem "da obra" é efeito visual: não diga "é assim que se constrói". (`REFERENCIAS-BLUEPRINT.md`, `video/CLAUDE.md`)
+- OpenArt: permitido, mas cada uso pede o "sim" do dono, com resumo e custo antes (22/11/2026). Conta: plano Pro, 21.137 créditos (medido em 22/11/2026). (`OPENART-MINOAI.md`, `video/PEDIDOS-DO-DONO.md`)
 - Imagem final: GPT Image 2.5 Sunburst, imagem para imagem a partir do rascunho aprovado, 4K extra-alta, 4:5; recortes com `python3 ferramentas/recortes.py`. (`OPENART-MINOAI.md`)
-- Falta no motor: fachada (`05-fachada.png`), medidas de cada cômodo no blueprint e `06-como-cresce.png`. (`ANIMACOES-3D.md`)
+- Falta: gerar a C01 nova no motor; fachada (`05-fachada.png`), medidas de cada cômodo no blueprint e `06-como-cresce.png`. (`ANIMACOES-3D.md`)
 <!-- /essencial -->
 
 ## Os 3 documentos
