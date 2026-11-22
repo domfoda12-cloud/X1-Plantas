@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<!-- Camadas por cima do anúncio com locução (fundo transparente). window.renderAt(t) desenha o quadro do tempo t.
+     O aviso legal e o selo ficam PARADOS: mesma posição e tamanho o vídeo inteiro (pedido do dono).
+     Dados (legendas e tempos) vêm de window.DADOS, injetado pelo montar_locucao.py. -->
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:"Inter Display",Inter,sans-serif;color:#fff}
+.topo{position:absolute;left:0;right:0;top:0;height:560px;background:linear-gradient(rgba(6,20,45,.62),rgba(6,20,45,0))}
+.base{position:absolute;left:0;right:0;bottom:0;height:640px;background:linear-gradient(rgba(6,20,45,0),rgba(6,20,45,.74) 55%)}
+#aviso{position:absolute;left:70px;right:70px;bottom:360px;font:500 27px/1.3 Inter,sans-serif;color:rgba(255,255,255,.95);text-shadow:0 1px 6px rgba(0,0,0,.85)}
+#selo{position:absolute;left:70px;bottom:450px;font:600 22px Inter,sans-serif;background:rgba(0,0,0,.5);padding:6px 14px;border-radius:6px}
+#titulo{position:absolute;left:70px;right:70px;top:150px;font-weight:900;font-size:98px;line-height:1;letter-spacing:-.03em;text-shadow:0 4px 24px rgba(3,20,50,.7);transform-origin:0 0}
+#titulo b{color:#FFC857}
+#legenda{position:absolute;left:60px;right:60px;top:1290px;text-align:center;font:900 76px/1.05 "Inter Display",sans-serif;letter-spacing:-.02em;
+  -webkit-text-stroke:10px #0A1830;paint-order:stroke fill;transform-origin:50% 50%}
+#legenda b{color:#FFC857}
+.conversa{position:absolute;left:70px;right:70px;top:150px;transform-origin:0 0}
+.grupo{font:800 26px "JetBrains Mono",monospace;letter-spacing:.12em;color:#FFC857;margin:0 0 12px 10px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.balao{display:inline-block;max-width:900px;background:#F5F1E6;color:#10233F;font:700 50px/1.18 Inter,sans-serif;padding:26px 34px 22px;border-radius:24px 24px 24px 4px;box-shadow:0 10px 30px rgba(3,20,50,.45)}
+.quem{font:800 30px Inter,sans-serif;color:#0B4FA8;margin-bottom:8px}
+.hora{font:600 24px Inter,sans-serif;color:#6B7A90;white-space:nowrap}
+#resposta{position:absolute;right:70px;top:470px;background:#FFC857;color:#10233F;font:800 42px/1.2 Inter,sans-serif;padding:20px 30px;border-radius:24px 24px 4px 24px;box-shadow:0 10px 30px rgba(3,20,50,.45);transform-origin:100% 0}
+#cta{position:absolute;left:70px;right:70px;top:760px;text-align:center;font-weight:900;font-size:104px;letter-spacing:-.03em;line-height:1;text-shadow:0 4px 24px rgba(3,20,50,.7)}
+#cta b{display:inline-block;background:#FFC857;color:#0A2E66;padding:6px 26px 12px;border-radius:16px;margin-top:14px;text-shadow:none}
+#logo{position:absolute;left:440px;top:1040px;width:200px;height:200px;border-radius:50%;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+#logo img{width:100%;height:100%}
+</style></head>
+<body>
+<div class="topo"></div><div class="base"></div>
+<div id="titulo"></div>
+<div class="conversa" id="conversa"><div class="grupo">GRUPO DA FAMÍLIA</div>
+  <div class="balao"><div class="quem">Tio</div>3 quartos em 8 metros de frente? Não cabe nem a família no Natal kkkk <span class="hora">19:42</span></div></div>
+<div id="resposta">Cabe em lote 8 x 25 m.<br>Print enviado no grupo ✅</div>
+<div id="legenda"></div>
+<div id="cta">Quer essa planta?<br><b>Comenta PLANTA</b></div>
+<div id="logo"><img src="logo.svg"></div>
+<div id="selo">Imagem ilustrativa</div>
+<div id="aviso">Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.</div>
+<script>
+const D = window.DADOS;   // {legendas:[{ini,fim,html}], titulos:[{ini,fim,html,tam}], sem_selo:[[a,b]], balao:[a,b], fim:{balao,resposta,cta}}
+const $ = (id) => document.getElementById(id);
+const clamp = (v) => Math.min(1, Math.max(0, v));
+const out3 = (v) => 1 - Math.pow(1 - clamp(v), 3);
+const pop = (el, t, t0, forca = .3) => { const v = clamp((t - t0) / .13); el.style.opacity = v; el.style.transform = `scale(${1 + forca * (1 - out3(v))})`; };
+
+window.renderAt = function (t) {
+  // selo: some só nos trechos de blueprint (desenho nosso, não é imagem gerada)
+  $('selo').style.visibility = D.sem_selo.some(([a, b]) => t >= a && t < b) ? 'hidden' : 'visible';
+  // título do alto (gancho, números, "cabe em lote")
+  const ti = D.titulos.find((x) => t >= x.ini && t < x.fim), el = $('titulo');
+  if (ti) { el.innerHTML = ti.html; el.style.fontSize = (ti.tam || 98) + 'px'; pop(el, t, ti.ini, .18); } else el.style.opacity = 0;
+  // balão do tio: na fala dele e, pequeno, no fim
+  const c = $('conversa');
+  if (t >= D.balao[0] && t < D.balao[1]) { pop(c, t, D.balao[0], .25); }
+  else if (t >= D.fim.balao) { const v = clamp((t - D.fim.balao) / .13); c.style.opacity = v; c.style.transform = `scale(${.72 + .2 * (1 - out3(v))})`; }
+  else c.style.opacity = 0;
+  const r = $('resposta'); if (t >= D.fim.resposta) pop(r, t, D.fim.resposta, .35); else r.style.opacity = 0;
+  const cta = $('cta'), lg = $('logo');
+  if (t >= D.fim.cta) { pop(cta, t, D.fim.cta, .22); lg.style.opacity = clamp((t - D.fim.cta - .1) / .15); } else { cta.style.opacity = 0; lg.style.opacity = 0; }
+  // legenda da fala
+  const l = D.legendas.find((x) => t >= x.ini && t < x.fim), le = $('legenda');
+  if (l) { le.innerHTML = l.html; const v = clamp((t - l.ini) / .09); le.style.opacity = 1; le.style.transform = `scale(${1 + .12 * (1 - out3(v))})`; } else le.style.opacity = 0;
+};
+window.pronto = document.fonts.ready;
+</script>
+</body></html>
