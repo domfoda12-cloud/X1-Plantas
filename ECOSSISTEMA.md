@@ -20,7 +20,7 @@
 
 | Nome | Tipo | Status |
 |---|---|---|
-| `conselho`, `redacao-que-vende`, `ponytail`, `ponytail-review`, `ponytail-audit` | Skills | Integrado: seção "Neste projeto" em cada uma |
+| `conselho`, `redacao-que-vende`, `ponytail`, `ponytail-review`, `ponytail-audit`, `make-pdf` | Skills | Integrado: seção "Neste projeto" em cada uma |
 | `arquiteto`, `designer`, `editor-video`, `estrategista`, `pesquisador`, `redator`, `revisor-de-risco` | Agentes | Integrado: cada um manda ler `CLAUDE.md` e `CONTEXTO.md` |
 
 ## 3. Conectores (serviços externos)
@@ -47,6 +47,7 @@
 | `claude-api` | Integrado | Consulta | Referência de modelos e preços (resposta de 20/11) |
 | `loop` | Integrado | Sessão | Já usado nos ciclos de melhoria |
 | `ponytail`, `ponytail-review`, `ponytail-audit` | Integrado (skill do projeto) | Arquiteto (código) | Auditoria de 20/11 foi a rodada de alcance |
+| `make-pdf` (do gstack) | Em teste: skill registrada, **binário do gstack não instalado** | Designer (documentos) | Markdown para PDF (guia do parceiro, relatório jurídico). Entrou sem o preâmbulo (telemetria, sincronização de memória, mudanças no `CLAUDE.md`). Falta o "sim" do dono para instalar o gstack e a rodada de alcance. Não serve para o e-book |
 | `code-review`, `simplify`, `security-review` | Liberado, não usado | Arquiteto (código) | Fazem o mesmo papel do Ponytail. Antes de usar, o Conselho decide qual dos dois fica, para não ter duas regras de código |
 | `dataviz` | Liberado, não usado | Estrategista (painel) | Para gráficos do painel de custo por venda |
 | `anthropic-skills:pdf`, `docx`, `pptx`, `xlsx`, `docs`, `google-workspace` | Liberado, não usado | (a decidir) | O PDF do e-book já sai do nosso gerador; estas servem para material avulso |
