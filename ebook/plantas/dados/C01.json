@@ -1,0 +1,232 @@
+{
+ "id": "C01",
+ "nome": "Casa Compacta",
+ "W": 6.5,
+ "D": 8.5,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.3,
+   "y1": 3.4
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.3,
+   "y0": 0.0,
+   "x1": 5.3,
+   "y1": 3.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 5.3,
+   "y0": 0.0,
+   "x1": 6.5,
+   "y1": 3.4
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.4,
+   "x1": 4.4,
+   "y1": 4.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 4.4,
+   "y0": 3.4,
+   "x1": 6.5,
+   "y1": 4.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 3.25,
+   "y1": 8.5
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 3.25,
+   "y0": 4.6,
+   "x1": 6.5,
+   "y1": 8.5
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.6
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.1
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    2.1
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    2.1
+   ]
+  ]
+ },
+ "destaque": "A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto",
+ "pensou": [
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 55.2,
+   "area_total": 55.2,
+   "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.15,
+     3.25,
+     10.2
+    ],
+    "cozinha": [
+     1.94,
+     3.19,
+     6.2
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     4.19,
+     1.08,
+     4.5
+    ],
+    "banho": [
+     1.89,
+     1.08,
+     2.0
+    ],
+    "quarto1": [
+     3.04,
+     3.69,
+     11.2
+    ],
+    "quarto2": [
+     3.04,
+     3.69,
+     11.2
+    ]
+   },
+   "luz": {
+    "sala": 0.1996,
+    "cozinha": 0.1618,
+    "servico": 0.1716,
+    "banho": 0.1667,
+    "quarto1": 0.1988,
+    "quarto2": 0.1988
+   },
+   "circulacao": 0.096,
+   "lote": [
+    8.0,
+    13.0
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    8,
+    15
+   ],
+   "taxa_ocupacao": 0.53,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 9.3,
+     "leste": -7.3,
+     "sul": 13.9,
+     "oeste": 11.4
+    }
+   }
+  }
+ }
+}

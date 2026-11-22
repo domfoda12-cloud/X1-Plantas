@@ -1,0 +1,257 @@
+{
+ "id": "C06",
+ "nome": "Casa Compacta Suíte",
+ "W": 7.5,
+ "D": 7.6,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.8,
+   "y1": 3.4
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.8,
+   "y0": 0.0,
+   "x1": 6.1,
+   "y1": 3.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 6.1,
+   "y0": 0.0,
+   "x1": 7.5,
+   "y1": 3.4
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.4,
+   "x1": 5.0,
+   "y1": 4.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 5.0,
+   "y0": 3.4,
+   "x1": 7.5,
+   "y1": 4.6
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 2.8,
+   "y1": 7.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Suíte",
+   "tipo": "casal",
+   "x0": 2.8,
+   "y0": 4.6,
+   "x1": 5.8,
+   "y1": 7.6
+  },
+  {
+   "id": "bsuite",
+   "nome": "Banho da suíte",
+   "tipo": "banho",
+   "privativo": "quarto1",
+   "x0": 5.8,
+   "y0": 4.6,
+   "x1": 7.5,
+   "y1": 7.6
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "quarto1",
+   "bsuite"
+  ]
+ ],
+ "quartos_txt": "2 quartos (1 suíte)",
+ "banheiros": 2,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.9
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.2
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.8
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.8
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.4
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.5
+   ]
+  ],
+  "bsuite": [
+   [
+    "dir",
+    1.3
+   ]
+  ]
+ },
+ "pensou": [
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 57.0,
+   "area_total": 57.0,
+   "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.65,
+     3.25,
+     11.9
+    ],
+    "cozinha": [
+     2.24,
+     3.19,
+     7.1
+    ],
+    "servico": [
+     1.19,
+     3.19,
+     3.8
+    ],
+    "circ": [
+     4.79,
+     1.08,
+     5.2
+    ],
+    "banho": [
+     2.29,
+     1.08,
+     2.5
+    ],
+    "quarto2": [
+     2.59,
+     2.79,
+     7.2
+    ],
+    "quarto1": [
+     2.88,
+     2.79,
+     8.0
+    ],
+    "bsuite": [
+     1.49,
+     2.79,
+     4.2
+    ]
+   },
+   "luz": {
+    "sala": 0.2059,
+    "cozinha": 0.1535,
+    "servico": 0.1681,
+    "banho": 0.16,
+    "quarto2": 0.2,
+    "quarto1": 0.2,
+    "bsuite": 0.1529
+   },
+   "circulacao": 0.105,
+   "lote": [
+    9.0,
+    12.1
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    9,
+    15
+   ],
+   "taxa_ocupacao": 0.52,
+   "orientacao": {
+    "melhor": "sul",
+    "segunda": "norte",
+    "pior": "leste",
+    "pontos": {
+     "norte": 9.7,
+     "leste": -1.8,
+     "sul": 12.8,
+     "oeste": 7.8
+    }
+   }
+  }
+ }
+}

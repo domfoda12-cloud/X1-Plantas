@@ -1,0 +1,250 @@
+{
+ "id": "E04",
+ "nome": "Casa Pátio",
+ "W": 7.5,
+ "D": 8.0,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.0,
+   "y1": 3.4
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 4.0,
+   "y0": 0.0,
+   "x1": 6.3,
+   "y1": 3.4
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 6.3,
+   "y0": 0.0,
+   "x1": 7.5,
+   "y1": 3.4
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.4,
+   "x1": 5.5,
+   "y1": 4.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 5.5,
+   "y0": 3.4,
+   "x1": 7.5,
+   "y1": 4.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "pref": [
+    "dir",
+    "fundos"
+   ],
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 3.0,
+   "y1": 8.0
+  },
+  {
+   "id": "patio",
+   "nome": "Pátio de luz",
+   "tipo": "patio",
+   "x0": 3.0,
+   "y0": 4.6,
+   "x1": 4.5,
+   "y1": 8.0
+  },
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "x0": 4.5,
+   "y0": 4.6,
+   "x1": 7.5,
+   "y1": 8.0
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "circ",
+   "quarto2"
+  ]
+ ],
+ "quartos_txt": "2 quartos",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    2.0
+   ]
+  ],
+  "cozinha": [
+   [
+    "frente",
+    1.2
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.6
+   ]
+  ],
+  "quarto1": [
+   [
+    "dir",
+    1.7
+   ]
+  ],
+  "quarto2": [
+   [
+    "fundos",
+    1.7
+   ]
+  ]
+ },
+ "destaque": "Pátio de luz entre os quartos: o quarto casal abre janela para ele",
+ "pensou": [
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Pátio de luz: o quarto casal abre janela para o pátio, com luz e ar sem dar para o vizinho.",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 54.9,
+   "area_total": 60.0,
+   "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.85,
+     3.25,
+     12.5
+    ],
+    "cozinha": [
+     2.24,
+     3.19,
+     7.1
+    ],
+    "servico": [
+     0.99,
+     3.19,
+     3.2
+    ],
+    "circ": [
+     5.29,
+     0.99,
+     5.2
+    ],
+    "banho": [
+     1.79,
+     1.08,
+     1.9
+    ],
+    "quarto1": [
+     2.7,
+     3.19,
+     8.6
+    ],
+    "patio": [
+     1.5,
+     3.4,
+     5.1
+    ],
+    "quarto2": [
+     2.7,
+     3.19,
+     8.6
+    ]
+   },
+   "luz": {
+    "sala": 0.2059,
+    "cozinha": 0.1535,
+    "servico": 0.1716,
+    "banho": 0.15,
+    "quarto1": 0.2,
+    "quarto2": 0.2
+   },
+   "circulacao": 0.12,
+   "lote": [
+    9.0,
+    12.5
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    9,
+    15
+   ],
+   "taxa_ocupacao": 0.53,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "oeste",
+    "pior": "leste",
+    "pontos": {
+     "norte": 13.1,
+     "leste": 2.8,
+     "sul": 4.4,
+     "oeste": 6.8
+    }
+   }
+  }
+ }
+}

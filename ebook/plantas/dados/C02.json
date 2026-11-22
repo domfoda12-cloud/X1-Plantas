@@ -1,0 +1,162 @@
+{
+ "id": "C02",
+ "nome": "Casa Studio",
+ "W": 4.5,
+ "D": 7.2,
+ "comodos": [
+  {
+   "id": "estar",
+   "nome": "Sala e cama",
+   "tipo": "estar",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 4.5,
+   "y1": 4.0
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 0.0,
+   "y0": 4.0,
+   "x1": 2.7,
+   "y1": 7.2
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 2.7,
+   "y0": 4.0,
+   "x1": 4.5,
+   "y1": 5.6
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 2.7,
+   "y0": 5.6,
+   "x1": 4.5,
+   "y1": 7.2
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "estar",
+   "frente"
+  ],
+  [
+   "estar",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "estar",
+   "banho"
+  ],
+  [
+   "cozinha",
+   "servico"
+  ]
+ ],
+ "quartos_txt": "studio",
+ "banheiros": 1,
+ "janelas": {
+  "estar": [
+   [
+    "frente",
+    2.6
+   ]
+  ],
+  "cozinha": [
+   [
+    "fundos",
+    1.3
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.8
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    0.6
+   ]
+  ]
+ },
+ "pensou": [
+  "Sol: melhor com a rua ao norte; evite a rua a oeste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala e cozinha têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 32.4,
+   "area_total": 32.4,
+   "area_coberta_aberta": 0,
+   "util": {
+    "estar": [
+     4.2,
+     3.79,
+     15.9
+    ],
+    "cozinha": [
+     2.49,
+     3.05,
+     7.6
+    ],
+    "banho": [
+     1.59,
+     1.48,
+     2.4
+    ],
+    "servico": [
+     1.59,
+     1.39,
+     2.2
+    ]
+   },
+   "luz": {
+    "estar": 0.2022,
+    "cozinha": 0.1505,
+    "banho": 0.1667,
+    "servico": 0.2083
+   },
+   "circulacao": 0.0,
+   "lote": [
+    6.0,
+    11.7
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    6,
+    15
+   ],
+   "taxa_ocupacao": 0.46,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "leste",
+    "pior": "oeste",
+    "pontos": {
+     "norte": 10.8,
+     "leste": 6.2,
+     "sul": 4.2,
+     "oeste": -0.9
+    }
+   }
+  }
+ }
+}

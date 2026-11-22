@@ -1,0 +1,208 @@
+# Vídeo de anúncio: "Os R$ 1.000 do arquiteto"
+
+> Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
+>
+> **Esta pasta é o vídeo de anúncio** (Facebook Ads e reels): roteiro, teleprompter, arquivos para o editor e textos de anúncio.
+> As regras de retenção e as referências de edição (Robert McKeaveney e Mino Lee) ficam em [`../instagram/INSTAGRAM.md`](../instagram/INSTAGRAM.md).
+> A casa em 3D que aparece no vídeo vem do mesmo motor das [`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md).
+
+## 0. Os dois vídeos de 21/11/2026 (sem apresentador)
+
+| Vídeo | Para quê | Arquivo | Roteiro |
+|---|---|---|---|
+| **Prévia do WhatsApp** | O parceiro manda na conversa, para o cliente ver o e-book por dentro antes do Pix | `saida/previa-whatsapp/x1-plantas-previa.mp4` (720x1280, leve) | `roteiros/previa-whatsapp.json` |
+| **Principal** | Reel e anúncio: "Todo lote é uma conta" | `saida/principal/x1-plantas-principal.mp4` (1080x1920) | `roteiros/principal.json` |
+
+- **Montar de novo:** `python3 video/montar.py video/roteiros/<nome>.json`. Mudou um texto? Mude no roteiro e monte de novo. O montador põe o texto, o aviso legal em todas as cenas e comprime.
+- **Cenas:** `broll/clipes/` (clipes do OpenArt, Kling 3.0, feitos a partir das nossas imagens, mais a animação 3D da C01 do motor novo) e `broll/paginas/` (páginas do e-book).
+- **Método (Maestro, MinoAI Frontier):** texto no primeiro quadro, uma ideia por cena, corte a cada 3 a 5 segundos, a casa aparece cedo, chamada única no fim.
+- **Sem música de propósito:** a faixa licenciada entra na edição final da MinoAI Frontier, no Mac do dono.
+- **Palavra da chamada:** o principal usa "PLANTA". Se o dono escolher "LOTE", troque no roteiro e monte de novo.
+- Toda cena de foto leva "Imagem ilustrativa"; o 3D leva "Ilustração do modelo 3D".
+
+## Nesta pasta
+
+| Arquivo | Para que serve |
+|---|---|
+| `VIDEO.md` | Este guia: estrutura, teleprompter, gravação, edição, teste |
+| `roteiro-2-tres-quartos.md` | Roteiro do vídeo 2: "É possível caber 3 quartos em 8 m de frente?" |
+| `saida/v1` a `saida/v5` | As 5 versões prontas (rascunho e camada para o editor) |
+| `roteiro-lancamento.md` | Vídeo de aquecimento do lançamento ("casas na mala"): roteiro, tela, B-roll, 5 ganchos e série até o lançamento |
+| `anuncios/anuncio-facebook.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
+| `anuncios/brief-criativo.md` | Brief dos criativos (formatos, estilo, variações) |
+| `anuncios/checklist-revisao.md` | Revisão antes de publicar qualquer anúncio |
+| `montar.py`, `roteiros/`, `broll/` | Montador dos vídeos sem apresentador, os roteiros e as cenas |
+| `src/`, `render.cjs`, `carimbar.py` | Código que gera o vídeo |
+
+## 1. Por que este vídeo prende quem quer construir
+
+- **A planta aparece desde o primeiro quadro.** O gancho mostra, em tela cheia, a planta azul se desenhando e a casa ganhando vida.
+- **Todos os itens usam a mesma casa.** A pessoa vai montando a casa na cabeça: sala, cozinha, quartos, banheiro, terreno. No fim, ela conhece a planta e quer recebê-la.
+- **A resposta só vem no item 7**, em tela cheia: o blueprint vira a planta humanizada, com móveis, piso e jardim. É a parte mais bonita do vídeo.
+- **A chamada mostra a planta que a pessoa vai receber** (foto da planta humanizada), grátis, pelo WhatsApp.
+
+## 1.1. Estrutura visual
+
+| Tempo | Tela | O que aparece |
+|---|---|---|
+| 0:00 a 0:03 | **Tela cheia** | Blueprint azul se desenha, paredes sobem, cômodos começam a ganhar vida |
+| 0:03 a 0:27 | Apresentador + cartão | Cartões blueprint (planta azul) com o erro destacado em amarelo |
+| 0:27 a 0:34 | **Tela cheia** | Casa ganha vida por completo: planta humanizada com câmera deslizando |
+| 0:34 a 0:38 | Apresentador + cartão | Foto da planta humanizada e "Comente PLANTA" |
+
+Nos trechos de **tela cheia**, a camada cobre a tela inteira: o apresentador não aparece, mas **a voz dele continua** por cima (como imagem de apoio).
+
+## 2. Arquivos
+
+Cada versão fica em `video/saida/v1` a `video/saida/v5`:
+
+- **`camada-transparente.webm`**: só os cartões e as legendas, com fundo transparente (VP9 com canal alfa). Coloque **por cima** da gravação do apresentador.
+- **`rascunho.mp4`**: o mesmo vídeo com um boneco no lugar do apresentador, para ver o resultado antes de gravar.
+
+As 5 versões são iguais depois dos 3 primeiros segundos. Nos trechos de tela cheia a camada não é transparente (cobre a gravação de propósito). Quem edita é a **MinoAI Frontier**: ela corta a fala do apresentador e coloca a camada por cima, sem legenda extra (ver [`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md), seção 3). Se a fala cortada não bater com os tempos da camada, mande a transcrição com os tempos para eu renderizar a camada de novo.
+
+## 3. Roteiro de fala (teleprompter)
+
+### Gancho (0:00 a 0:03), um por versão
+
+O texto na tela e a fala são diferentes de propósito, como nas referências: o texto promete, a voz puxa para o final.
+
+| Versão | Texto na tela (fica no alto o vídeo todo) | Fala |
+|---|---|---|
+| v1 | Vou te economizar os R$ 1.000 que um arquiteto te economizaria | "Sete erros de planta que saem caro na obra. O último é o pior." |
+| v2 | Os R$ 1.000 que um arquiteto te faria economizar, de graça | "Olha o que um arquiteto ia te cobrar pra te mostrar." |
+| v3 | Antes de pagar R$ 1.000 a um arquiteto, veja isso | "São sete erros. Quase todo mundo comete o último." |
+| v4 | 7 erros que um arquiteto te cobraria R$ 1.000 pra achar | "Confere a sua planta comigo. O último é o pior." |
+| v5 | Um arquiteto cobraria R$ 1.000 pra te mostrar isso | "Fica até o final, que o último é o mais caro." |
+
+### Corpo (igual em todas as versões)
+
+| Tempo | Item na tela | Fala |
+|---|---|---|
+| 0:03 a 0:07 | 1. Ignorar o sol | "Um: ignorar o sol. Quarto virado pro nascente fica fresco à tarde." |
+| 0:07 a 0:11 | 2. Corredor comprido | "Dois: corredor comprido. Corredor custa por metro, e ninguém mora nele." |
+| 0:11 a 0:15 | 3. Banheiro de frente pra sala | "Três: banheiro de frente pra sala. A porta tem que abrir pro hall." |
+| 0:15 a 0:19 | 4. Banheiro sem janela | "Quatro: banheiro sem janela. Sem ventilação natural, o mofo aparece rápido." |
+| 0:19 a 0:23 | 5. Esquecer os recuos | "Cinco: esquecer os recuos. Cada prefeitura tem a sua regra, confira antes." |
+| 0:23 a 0:27 | 6. Não prever ampliação | "Seis: não prever ampliação. Deixe pronto por onde a casa vai crescer." |
+| 0:27 a 0:34 | 7. O mais caro: não ver a casa em 3D | "E o mais caro de todos: construir sem ver a casa pronta. *(pausa curta)* Olha só: cada cômodo, cada móvel, antes do primeiro tijolo." |
+| 0:34 a 0:38 | Comente PLANTA | "Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp." |
+
+### Regras da fala
+
+- **O narrador nunca para.** O fim de cada frase emenda no número do item seguinte ("…fresco à tarde. Dois: …"). Corte qualquer respiração, "é…" ou silêncio na edição.
+- **Só uma pausa, de propósito:** depois de "construir sem ver a casa pronta", por cerca de meio segundo, enquanto a casa ganha vida na tela. É o momento da revelação.
+- **Glossário na tela:** quando a fala usa um termo técnico (nascente, hall, peitoril, recuo, planta humanizada), a explicação aparece em letra miúda abaixo da legenda.
+- **A legenda é a própria fala**, em blocos de 2 a 3 palavras, com a palavra-chave em amarelo. Se mudar o texto falado, me avise que eu ajusto a legenda e renderizo de novo.
+- O ritmo é de 3 a 4 palavras por segundo, como na referência. Se uma frase não couber, encurte a frase; não estique o item.
+
+### O que prende o olho em cada momento
+
+| Tempo | Movimento na tela |
+|---|---|
+| 0:00 a 0:03 | Blueprint se desenhando, paredes subindo, cômodos ganhando vida (tela cheia) |
+| 0:03 a 0:27 | Planta do cartão se desenhando, destaque amarelo pulsando, zoom lento contínuo, blocos da legenda entrando com um "pulo" leve |
+| 0:03 a 0:38 | Gancho dos R$ 1.000 fixo no alto, lembrando a promessa |
+| Sempre | Barra de progresso no alto, enchendo item a item (mostra quantos faltam) |
+| 0:27 a 0:34 | Casa ganhando vida e câmera deslizando (tela cheia) |
+| 0:34 a 0:38 | Foto da planta humanizada e botão PLANTA pulsando |
+
+## 4. Como gravar
+
+- Celular na vertical, 1080 x 1920, 30 fps.
+- Rosto entre 45% e 75% da altura da tela: o terço de cima fica livre para o cartão e a legenda fica na altura do peito.
+- Microfone de lapela ou fone com microfone, como na referência.
+- Grave o corpo uma vez e os 5 ganchos separados. Assim as 5 versões saem da mesma gravação.
+
+## 5. Edição
+
+1. Gravação do apresentador na trilha de baixo, `camada-transparente.webm` na trilha de cima, começando no mesmo ponto.
+2. Corte a gravação para que cada fala caiba no tempo do item (tabela acima). Sem pausas entre os itens.
+3. Música de fundo baixa, sem letra.
+4. Exporte em 1080 x 1920.
+
+## 6. Como testar
+
+O método de teste vem das referências (ver [`../instagram/INSTAGRAM.md`](../instagram/INSTAGRAM.md)).
+
+1. Publique as 5 versões como **reels de teste** (só para quem não segue).
+2. Depois de 24 a 48 horas, compare o **tempo médio assistido** e quantas pessoas chegaram aos 27 s (o desfecho).
+3. Publique para todos só a melhor versão.
+4. Se ela for bem, repita o formato daqui a um mês com outra planta (Casa Família ou Casa Estreita).
+
+## 7. Antes de publicar
+
+Passe pelo [`anuncios/checklist-revisao.md`](anuncios/checklist-revisao.md). As medidas da Casa Compacta são provisórias até o arquiteto validar a planta.
+
+## 8. Como alterar o vídeo
+
+Os ganchos, textos, tempos e cartões estão em `video/src/cena.js` (listas `GANCHOS` e `cenas` no início). A planta está em `video/src/planta.js`.
+
+Para renderizar de novo, o computador precisa de Node.js, ffmpeg e do Playwright com o Chromium. Dentro da pasta `video`:
+
+```bash
+npm install
+```
+
+```bash
+npm install --no-save playwright
+```
+
+```bash
+npx playwright install chromium
+```
+
+```bash
+node render.cjs
+```
+
+Para conferir só alguns quadros: `node render.cjs --amostras 1,5,30 --versao 2`.
+
+## 9. Vídeo 2: plantas que precisam de 3D
+
+Roteiro em [`roteiro-2-tres-quartos.md`](roteiro-2-tres-quartos.md). **Quem gera:** a frente Animações 3D, com o motor de [`../animacoes-3d/ANIMACOES-3D.md`](../animacoes-3d/ANIMACOES-3D.md). Eu monto os cartões e o vídeo com o que ela entregar.
+
+| Prioridade | Planta | O que o vídeo precisa | Onde aparece |
+|---|---|---|---|
+| **1** | **E07 Casa Estreita 3 Quartos** (catálogo: 88 m², 3 quartos, 2 banheiros, lote 8 x 30) | **Os 5 arquivos** (blueprint, planta humanizada, 2 perspectivas, animação) e os **dados** em metros, para eu destacar o hall e os quartos no cartão | Tentativa 3, desfecho em tela cheia e chamada |
+| **2** | **E07, variante com corredor** (só para o vídeo; não entra no e-book) | **Só o blueprint** e os dados | Tentativa 2 |
+| **3** | **F01 Casa Família Compacta** (já está no 1º lançamento) | **Só o blueprint** e os dados (o resto ela já vai gerar para o e-book) | Tentativa 1 |
+| — | C01 Casa Compacta | Nada: já está pronta | Não aparece |
+
+**O que a E07 precisa ter para a fala ser verdade:**
+- Lote 8 x 30. Casa **encostada na divisa da esquerda**, com essa parede **sem janela**; **1,5 m** livre na direita.
+- Largura da casa: **6,5 m**. Área perto de **88 m²**.
+- **3 quartos e 2 banheiros, todos com janela** (para a direita, para a frente ou para os fundos). Nada de banheiro sem janela: é o erro 4 do vídeo 1.
+- **Dois quartos lado a lado nos fundos.** O terceiro onde couber melhor.
+- **Circulação curta:** um hall de cerca de **2 m**, sem corredor comprido.
+- Sala e cozinha integradas na frente.
+
+**O que a variante com corredor precisa ter:**
+- Mesma área e programa (3 quartos, 2 banheiros), mas com **5 m de largura** (1,5 m livre dos dois lados).
+- Quartos **em fila**, um atrás do outro, e um **corredor de cerca de 10 m** por 0,9 m (9 m², o tamanho de um quarto).
+
+**O que vale para as três:**
+- **Mesma escala** (mesmos pixels por metro) e a **frente da casa no alto**, para eu colocar uma por cima do mesmo lote.
+- Sem o lote nem os recuos desenhados: o lote 8 x 30 e as faixas de 1,5 m eu desenho no cartão.
+- A E07 é **mais funda** que a Casa Compacta: a câmera da animação precisa afastar mais (ver [`../animacoes-3d/ANIMACOES-3D.md`](../animacoes-3d/ANIMACOES-3D.md), seção 6).
+
+**Decisão pendente (sua):** a E07 está no **2º lançamento** do catálogo, mas o vídeo 2 promete "essa planta de graça". Se a pessoa receber outra planta, ou não encontrar a E07 no e-book, a promessa fica maior que o produto. Opções:
+1. **Passar a E07 para o 1º lançamento** (no lugar de outra, ou como 13ª planta) e mandá-la como planta grátis de quem vier por este vídeo. **Recomendado:** é a planta que o vídeo vende. Quem muda o catálogo é o chat do E-book; quem muda o funil é o parceiro.
+2. Manter a E07 no 2º lançamento e só publicar o vídeo 2 quando ela estiver no e-book.
+3. Trocar a chamada para "uma planta grátis" (a Casa Compacta). Não recomendo: a pessoa viu uma casa estreita e recebe outra.
+
+## 10. Chamada final quando o e-book tiver título
+
+Hoje a chamada fala só da planta grátis, o que está certo para o funil: a pessoa comenta para ganhar a planta, e o e-book é oferecido depois, no WhatsApp. **Quando você decidir o título** ([`../PAINEL.md`](../PAINEL.md), seção 9), a chamada passa a citar o e-book, sem virar duas frases:
+
+| Vídeo | Hoje | Com o título |
+|---|---|---|
+| Vídeo 1 (fala) | "Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp." | "Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]." |
+| Vídeo 1 (cartão) | "Comente PLANTA" · "pelo WhatsApp" | "Comente PLANTA" · "planta grátis do e-book [Título]" |
+| Vídeo 2 (fala) | "Comenta PLANTA que eu te mando essa planta de graça no WhatsApp." | "Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]." |
+| Vídeo 2 (cartão) | "Comente PLANTA" · "pelo WhatsApp" | "Comente PLANTA" · "planta grátis do e-book [Título]" |
+
+**Dica para a gravação:** se o título sair antes de o apresentador gravar, grave já a chamada nova. Se não, grave **as duas** chamadas (a de hoje e a nova com o título falado como "[Título]" depois), para não precisar chamar o apresentador de novo só por uma frase.
+
+**Quando o título sair, o que eu faço:** troco a fala e o cartão da cena `cta` em `src/cena.js`, renderizo as 5 versões de novo (`node render.cjs`) e confiro a legenda. A planta grátis continua a mesma; só a frase muda. Os textos de anúncio em [`anuncios/anuncio-facebook.md`](anuncios/anuncio-facebook.md) passam pela mesma troca.
+

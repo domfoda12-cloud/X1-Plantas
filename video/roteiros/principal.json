@@ -1,0 +1,81 @@
+{
+ "saida": "video/saida/principal/x1-plantas-principal.mp4",
+ "tamanho": [
+  1080,
+  1920
+ ],
+ "crf": 23,
+ "rodape": "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.",
+ "cenas": [
+  {
+   "fonte": "video/broll/clipes/lote.mp4",
+   "dur": 3.2,
+   "olho": "X1-Plantas",
+   "titulo": "Todo lote é uma <b>conta.</b>",
+   "sub": "8 m de frente. Que casa cabe?",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/clipes/maos.mp4",
+   "dur": 2.6,
+   "titulo": "Meça a frente e o fundo.",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "dur": 6.6,
+   "vel": 1.8,
+   "olho": "Casa Compacta · C01",
+   "titulo": "A casa certa é a <b>resposta.</b>",
+   "sub": "55 m² · 2 quartos · lote a partir de 8 x 15 m, com recuos de referência",
+   "selo": "Ilustração do modelo 3D"
+  },
+  {
+   "fonte": "video/broll/clipes/fachada.mp4",
+   "dur": 4.0,
+   "titulo": "Uma ideia de como ela pode ficar na rua.",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/clipes/canteiro.mp4",
+   "dur": 3.6,
+   "titulo": "Leve ao seu engenheiro ou arquiteto.",
+   "sub": "A planta é de referência. O projeto é do profissional.",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/clipes/fachada-c03.mp4",
+   "dur": 1.4,
+   "inicio": 1.0,
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Imagem ilustrativa"
+  },
+  {
+   "fonte": "video/broll/clipes/fachada-e07.mp4",
+   "dur": 1.4,
+   "inicio": 1.0,
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Imagem ilustrativa",
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/fachada-f01.mp4",
+   "dur": 1.4,
+   "inicio": 1.0,
+   "olho": "24 casas no e-book",
+   "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
+   "selo": "Imagem ilustrativa",
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/familia.mp4",
+   "dur": 5.0,
+   "olho": "24 casas, pela frente do lote",
+   "titulo": "Comente <b>PLANTA</b>",
+   "sub": "e receba uma planta de graça no WhatsApp.",
+   "selo": "Imagem ilustrativa"
+  }
+ ]
+}

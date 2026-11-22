@@ -1,0 +1,222 @@
+{
+ "id": "C03",
+ "nome": "Casa Inicial",
+ "W": 5.5,
+ "D": 7.5,
+ "comodos": [
+  {
+   "id": "sala",
+   "nome": "Sala",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.2,
+   "y1": 3.4
+  },
+  {
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 3.2,
+   "y0": 0.0,
+   "x1": 5.5,
+   "y1": 3.4
+  },
+  {
+   "id": "circ",
+   "nome": "Circulação",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 3.4,
+   "x1": 3.2,
+   "y1": 4.6
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 3.2,
+   "y0": 3.4,
+   "x1": 5.5,
+   "y1": 4.6
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 0.0,
+   "y0": 4.6,
+   "x1": 3.2,
+   "y1": 7.5
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 3.2,
+   "y0": 4.6,
+   "x1": 5.5,
+   "y1": 7.5
+  },
+  {
+   "id": "futuro1",
+   "nome": "Quarto 2 (ampliação)",
+   "tipo": "futuro",
+   "x0": 3.2,
+   "y0": 7.5,
+   "x1": 5.5,
+   "y1": 10.9
+  }
+ ],
+ "portas": [
+  [
+   "ext",
+   "sala",
+   "frente"
+  ],
+  [
+   "sala",
+   "cozinha",
+   "aberto"
+  ],
+  [
+   "sala",
+   "circ",
+   "aberto"
+  ],
+  [
+   "circ",
+   "banho"
+  ],
+  [
+   "circ",
+   "quarto1"
+  ],
+  [
+   "ext",
+   "servico",
+   "dir"
+  ]
+ ],
+ "quartos_txt": "1 quarto (+1 depois)",
+ "banheiros": 1,
+ "janelas": {
+  "sala": [
+   [
+    "frente",
+    1.6
+   ]
+  ],
+  "cozinha": [
+   [
+    "dir",
+    1.2
+   ]
+  ],
+  "banho": [
+   [
+    "dir",
+    0.7
+   ]
+  ],
+  "quarto1": [
+   [
+    "fundos",
+    1.6
+   ]
+  ],
+  "servico": [
+   [
+    "dir",
+    1.0
+   ]
+  ]
+ },
+ "servico_externo": true,
+ "pensou": [
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quarto têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
+  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+ ],
+ "validacao": {
+  "erros": [],
+  "avisos": [],
+  "info": [],
+  "metricas": {
+   "area_fechada": 41.2,
+   "area_total": 41.2,
+   "area_coberta_aberta": 0,
+   "util": {
+    "sala": [
+     3.05,
+     3.25,
+     9.9
+    ],
+    "cozinha": [
+     2.15,
+     3.19,
+     6.9
+    ],
+    "circ": [
+     2.99,
+     1.14,
+     3.4
+    ],
+    "banho": [
+     2.09,
+     1.08,
+     2.3
+    ],
+    "quarto1": [
+     2.99,
+     2.69,
+     8.0
+    ],
+    "servico": [
+     2.09,
+     2.69,
+     5.6
+    ],
+    "futuro1": [
+     2.3,
+     3.4,
+     7.8
+    ]
+   },
+   "luz": {
+    "sala": 0.2059,
+    "cozinha": 0.1535,
+    "banho": 0.1522,
+    "quarto1": 0.2069,
+    "servico": 0.1499
+   },
+   "circulacao": 0.093,
+   "lote": [
+    7.0,
+    15.4
+   ],
+   "recuos": {
+    "frente": 3.0,
+    "fundos": 1.5,
+    "esq": 0.0,
+    "dir": 1.5
+   },
+   "lote_comercial": [
+    7,
+    20
+   ],
+   "taxa_ocupacao": 0.38,
+   "orientacao": {
+    "melhor": "norte",
+    "segunda": "sul",
+    "pior": "leste",
+    "pontos": {
+     "norte": 8.0,
+     "leste": 2.1,
+     "sul": 7.2,
+     "oeste": 3.6
+    }
+   }
+  }
+ }
+}
