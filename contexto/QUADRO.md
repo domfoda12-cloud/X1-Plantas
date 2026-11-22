@@ -2,12 +2,11 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
-## 22/11 · Vídeo: sequência de escaneamento e pedidos que não se perdem
+## 22/11 · Vídeo: escaneamento e pedidos que não se perdem
 
-- **O dono pediu:** uma sequência de "escaneamento" de 1,2 s no vídeo principal (cotas → malha 3D → etiquetas → casa pronta, só corte seco) e que toda informação que ele der sobre vídeo fique guardada. Vai filmar com o celular daqui a alguns dias.
-- **O que mudou:** [`video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md) guarda toda ordem de vídeo com as palavras dele; `video/scan.py` gera a sequência; `video/saida/principal-condor/` tem o vídeo de 21 s, sem OpenArt.
-- **Atenção, é rascunho:** a sequência usa a **E07** (única casa que bate com os números do dono: 72 m², 3 quartos, 1 suíte, 2 banheiros, 8 m de frente), e a série E está na fila do redesenho. Não publicar antes de o dono decidir: esperar o redesenho ou trocar de casa.
-- **Editor de vídeo:** leia `video/PEDIDOS-DO-DONO.md` antes de qualquer edição. **Arquiteto:** se a E07 mudar, rode `python3 video/scan.py E07` e monte de novo. **Revisor de risco:** ainda não viu este vídeo.
+- **O dono pediu:** sequência de "escaneamento" de 1,2 s no vídeo principal e que toda ordem dele sobre vídeo fique guardada. Vai filmar com o celular em alguns dias.
+- **O que mudou:** [`video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md) (leitura obrigatória do Editor), `video/scan.py`, vídeo de 21 s em `video/saida/principal-condor/`, sem OpenArt.
+- **É rascunho:** usa a E07 (bate com os números do dono), que está na fila do redesenho. Não publicar; se a E07 mudar, gerar de novo. O Revisor de risco ainda não viu.
 
 ## 22/11 · Todo pedido vira aviso para todos
 
