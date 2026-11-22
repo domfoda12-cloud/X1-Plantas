@@ -23,7 +23,7 @@
 
 Na dúvida sobre o tamanho, trate como o maior. Pensar inclui as perguntas da seção abaixo.
 
-
+## Perguntar sempre (dono, 22/11/2026)
 
 "Faça o sistema todo ser bem questionativo, sempre se fazendo perguntas para entender melhor a situação, e sinta-se à vontade de me perguntar coisas que queira saber."
 

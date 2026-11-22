@@ -10,7 +10,7 @@
 
 ## Em aberto com você
 
-- A primeira auditoria: as fichas fechadas em 22/11/2026.
+- Auditorias 1 e 2 feitas em 22/11/2026 (`pedidos/AUDITORIAS.md`). Próxima: a cada 3 fichas fechadas.
 
 ## Leia barato
 

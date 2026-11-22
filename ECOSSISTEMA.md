@@ -27,6 +27,7 @@
 | `make-pdf` (do gstack) | Skill | **Em teste.** Registrada sem o preâmbulo (telemetria, sincronização de memória, mudanças no `CLAUDE.md`). O binário é compilado **fora do repositório**, em `~/.cache/gstack`, e some quando a máquina é trocada. Serve para documento em markdown (guia do parceiro, relatório jurídico); não para o e-book, que sai do `livro.py` |
 | `arquiteto`, `designer`, `editor-video`, `estrategista`, `redator`, `revisor-de-risco` | Agentes, **Opus** | Integrado: lê `CLAUDE.md`, `contexto/QUADRO.md` e o seu `contexto/<papel>.md` |
 | `pesquisador` | Agente, **Sonnet** | Integrado: passo 1 da pesquisa (busca e lê as fontes); um agente no Opus confere e conclui |
+| Ambiente de nuvem "x1-plantas" | Ambiente pessoal | Criado em 22/11: o script de preparação instala o motor 3D (`npm install` em `video/`) em toda conversa nova. Rede limitada: fontes do Google, OpenArt e instaladores de pacote. Para usar, escolher "x1-plantas" no menu de ambiente |
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
 | `ajudante` | Agente, **Haiku** | Integrado em 22/11: tarefa simples e pessoal do dono, não dos agentes. Não toca o público nem arquivo do projeto |
 

@@ -21,12 +21,12 @@
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Tamanho: 211 palavras.
+Tamanho: 459 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
 Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples. Fila de pedidos: `FILA.md`.
 
-Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
+Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
 
-Tamanho: 1878 palavras.
+Tamanho: 1883 palavras.

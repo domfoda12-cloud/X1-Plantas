@@ -14,7 +14,7 @@
 | 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, a casa em 3D, "por que esta planta é assim" e as perguntas para o engenheiro |
 | 3 | "No seu lote cabem mais casas": as outras casas do e-book que cabem num lote de 8 x 15, a fita métrica e o convite para mandar a medida do lote |
 
-**Mande a casa que cabe no lote do cliente.** Há 6 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
+**Mande a casa que cabe no lote do cliente.** Há 5 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
 
 | Lote do cliente (frente) | Planta grátis |
 |---|---|

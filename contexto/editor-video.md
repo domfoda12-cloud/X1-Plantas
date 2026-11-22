@@ -15,8 +15,7 @@
 
 ## Em aberto com você
 
-- Os 5 anúncios (`video/saida/v1` a `v5`) usam o 3D antigo da C01: refazer.
-- Reels 1 e 6 usam o vídeo 3D antigo: usar o B-roll do e-book ou esperar o 3D novo.
+- Vídeos, clipes e renders antigos foram apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Ficaram o convite, o principal de 21/11, a voz do dono e a trilha. Refazer pelo plano de `dono/RETROSPECTIVA.md`.
 - Assistir ao CONDOR XIII quadro a quadro no Mac, ou receber 3 a 5 momentos favoritos com o minuto.
 - Gravar o apresentador; criar o Instagram; configurar a MinoAI Frontier no Mac.
 - Testar a palavra do comentário PLANTA contra LOTE.

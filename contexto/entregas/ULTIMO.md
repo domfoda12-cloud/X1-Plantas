@@ -1,10 +1,8 @@
-**Tarefa:** resolver as contradições entre documentos, montar o sistema de pedidos por modelo e reler todos os prompts do dono com "por que ele pediu?".
-**Feito:** `pedidos/` (regras em `LEIA-ME.md`, fila em `FILA.md`, fichas em `2026-11/`); `ferramentas/pedido.py` e `guardar-pedido.py`; gancho em `.claude/settings.json`.
-Agentes com modelo no cabeçalho (Opus; `pesquisador` no Sonnet; `ajudante` novo, no Haiku).
-`contexto/dono/IDEIAS-GERAIS.md` (nove fios e o que o vídeo tem de ter) e `contexto/dono/intencoes/` (o porquê de cada prompt).
-Documentos corrigidos em todas as pastas; apagados `ebook/PLANO-EBOOK.md`, `ebook/fichas/C01.md`, `video/roteiro-2-tres-quartos.md` e a nota `exigencias_legais.md`.
-`ferramentas/atualizar-painel.py` conta pelos arquivos; `ebook/gerador/paginas.py` sem código morto; foto antiga de fachada da C01 fora do e-book (PDF gerado de novo).
-**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/pedido.py listar`; abrir `contexto/dono/IDEIAS-GERAIS.md`.
-**Não feito / ressalva:** imagens e vídeos ainda com a C01 antiga (lista em `contexto/dono/TEXTOS-DESATUALIZADOS.md`). O Revisor não leu os textos de cada casa, a calculadora, os posts nem os roteiros. A divisão por modelo ainda não foi provada com o Haiku.
-**Decisão do dono pendente:** as seis perguntas no fim de `IDEIAS-GERAIS.md`; preço, garantia, bônus, 12 ou 24 plantas.
-**Próximo passo:** com as respostas do dono, remontar a prévia do WhatsApp e o anúncio pelas exigências de `IDEIAS-GERAIS.md`.
+**Tarefa:** papéis dos modelos (Opus conduz, Fable socorre e audita), limpeza de mídias, retrospectiva, regras "pense antes" e "pergunte sempre", erro do Python 3.11 e as auditorias 1 e 2.
+**Feito:** `.claude/settings.json` (Opus, esforço high); agente `supervisor`; `pedidos/AUDITORIAS.md`; `ferramentas/pedido.py` avisa a hora da auditoria.
+Mídias e o vídeo antigo apagados (voltam com `git checkout 079dae7 -- <caminho>`); `contexto/dono/RETROSPECTIVA.md` com o plano para refazer.
+`ebook/gerador/livro.py` abre no 3.11; a E07 saiu das plantas grátis (5); o `checar.py` avisa campo pendente no PDF.
+**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/pedido.py listar --fechadas`; `pedidos/AUDITORIAS.md`.
+**Não feito / ressalva:** as branches velhas seguem no GitHub (apagar não é permitido daqui). Vários documentos ainda citam arquivo apagado pelo nome, sem link: entram na organização (ficha aberta). Os roteiros de vídeo apontam clipes que não existem mais.
+**Decisão do dono pendente:** qual era "o último vídeo"; se as imagens dos posts entravam no "apague"; qual limite ("5 horas" ou semanal); a casa para "8 m, 3 quartos"; as 8 perguntas da retrospectiva.
+**Próximo passo:** a organização dos arquivos (ficha aberta em `pedidos/`), depois refazer pelo plano da retrospectiva.

@@ -23,7 +23,7 @@
 - **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso. Persona: [`referencias/persona-e-mercado.md`](referencias/persona-e-mercado.md).
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto". A planta é de referência: o projeto da obra é de um arquiteto ou engenheiro.
 - **As 24 casas:** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam no validador (`python3 ferramentas/plantas.py validar`; regras em [`referencias/regras-do-arquiteto.md`](referencias/regras-do-arquiteto.md)). Nenhuma foi revisada ainda por um arquiteto registrado.
-- **Gerar:** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` e as 6 plantas grátis (`planta-gratis-<ID>.pdf`). Imagem 3D de uma casa: `python3 ferramentas/imagens3d.py ID` (sai em `visual/3d/ID.jpg`). O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
+- **Gerar:** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` e as 5 plantas grátis (`planta-gratis-<ID>.pdf`). Imagem 3D de uma casa: `python3 ferramentas/imagens3d.py ID` (sai em `visual/3d/ID.jpg`). O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
 - **Direção visual:** azul de projeto `#0B4FA8`, amarelo `#FFC857`, títulos em Bricolage Grotesque, texto em Inter. Prévia aprovada como direção em 20/11: [`visual/plano-visual.html`](visual/plano-visual.html).
 - **Idioma e moeda:** português do Brasil, preços em R$.
 
@@ -103,4 +103,4 @@ Faltam os campos entre [colchetes]: título, preço, forma de pagamento, datas, 
 - **Revisão de um arquiteto registrado** nas 24 casas, nas regras e no texto do aviso legal.
 - **Animação e QR por casa:** ficam para a frente de animações, por último (decisão do dono, 20/11/2026). Só entram no PDF quando existirem de verdade.
 - **Imagens da C01 antiga:** a foto de fachada `visual/openart/fachadas/C01.jpg` e o mockup `visual/mockups/casa-c01-celulares.png` eram de antes do redesenho de 22/11/2026. A foto saiu do e-book em 22/11 (a C01 usa a vista da rua simplificada); o mockup continua antigo.
-- **Peso do arquivo:** a meta do plano de 20/11 era abaixo de 15 MB, para mandar pelo WhatsApp; o `ebook.pdf` de hoje tem 23 MB.
+- **Peso do arquivo:** a meta do plano de 20/11 era abaixo de 15 MB, para mandar pelo WhatsApp; o `ebook.pdf` de hoje tem 22 MB.

@@ -8,7 +8,7 @@
 - **Referências:** `REFERENCIA-CONDOR.md` (edição) e `REFERENCIA-VIRAL.md` (formato). Sempre texto no primeiro quadro.
 - **3D a partir da planta:** `node render-planta.cjs --planta ID --so-imagens` (imagens) ou sem `--so-imagens` (animação). Os módulos `src/plantas/*.js` saem de `python3 ferramentas/planta3d.py`. Não edite à mão.
 - **Vídeo sem apresentador** (principal e prévia do WhatsApp): `python3 video/montar.py video/roteiros/<nome>.json`. Texto e cenas ficam no roteiro; o aviso legal sai em todas as cenas. Clipe novo entra comprimido em `broll/clipes/`.
-- **`saida/v1` a `v5`** usam o 3D velho da C01.
+- **Vídeos antigos:** apagados em 22/11 (git, commit 079dae7).
 - **Música:** anúncio pago só com faixa licenciada ou a trilha nossa (`musica/gerar_trilha.py`, aprovada pelo Revisor em 21/11). Áudio dos modelos de vídeo é descartado. A trilha "lofi" do toolkit (ElevenLabs, licença não conferida) não vai em anúncio.
 - **Edição final** é da MinoAI Frontier, no Mac do dono. **Gravação de páginas web** (calculadora, leitor do e-book): skill `product-demo`.
 - **Condições do dono para todo vídeo (22/11/2026):**

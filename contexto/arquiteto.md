@@ -18,7 +18,7 @@
 - Banheiros abaixo de 1,10 m livres em 18 casas (contagem de 22/11): decidir com o arquiteto registrado se passam a 1,10 m ou mais.
 - Nota de clima por zona bioclimática no e-book (janela maior, veneziana e beiral na zona 8): decisão do dono.
 - Medir ventilação cruzada no validador (ainda não mede).
-- Imagens 2D dos posts (`animacoes-3d/plantas-2d`) estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a da C01 redesenhada: refazer quando a frente de animação abrir. As imagens 3D do e-book estão em dia.
+- Imagens 2D dos posts e as imagens dos carrosséis: apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Refazer com as plantas atuais quando a frente de imagens abrir.
 - Arquiteto registrado ainda não revisou as 24 plantas; ele confere as casas apertadas (E02, E03, suítes da E01, E05 e E07).
 
 ## Onde olhar

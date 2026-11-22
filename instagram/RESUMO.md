@@ -41,7 +41,7 @@ Parte da pasta Instagram. Guia da frente: `INSTAGRAM.md`. Posts prontos: `posts/
 
 Seções: Antes do dia 1 (até domingo, 22/11); Semana 1 (23 a 29/11): abrir o perfil; Semana 2 (30/11 a 06/12): ritmo normal; Horários; Se algo der errado.
 
-Tamanho: 825 palavras.
+Tamanho: 847 palavras.
 
 ### [Plano de conteúdo: perfil de arquitetura no Instagram](plano-perfil.md)
 

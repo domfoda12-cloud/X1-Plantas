@@ -22,7 +22,7 @@ Em 22/11 o dono mandou apagar os vídeos, clipes e renders para refazer do zero,
 | `convite/` | `x1-plantas-convite.mp4` | Passeio pela F03 (motor próprio, ilustração), o último feito; roteiro `roteiros/convite.json` |
 | `principal/` | `x1-plantas-principal.mp4` | Principal de 21/11, com clipes do OpenArt e a C01 antiga; o último mostrado ao dono nesta conversa |
 
-O resto (prévia do WhatsApp, principal com escaneamento, anúncio da E07 com locução, passeios da C06 e as versões `v1` a `v5`) volta pelo histórico do git se for preciso. A gravação da voz do dono está em `principal-e07/voz/`. O que refazer e em que ordem: [`../contexto/dono/RETROSPECTIVA.md`](../contexto/dono/RETROSPECTIVA.md).
+O resto (prévia do WhatsApp, principal com escaneamento, anúncio da E07 com locução, passeios da C06 e as versões `v1` a `v5`) volta pelo histórico do git se for preciso (`git checkout 079dae7 -- <caminho>`). Os roteiros em `roteiros/` apontam para clipes apagados: `montar.py` só monta de novo depois de gerar os clipes. A gravação da voz do dono está em `principal-e07/voz/`. O que refazer e em que ordem: [`../contexto/dono/RETROSPECTIVA.md`](../contexto/dono/RETROSPECTIVA.md).
 
 ## 3. Nesta pasta
 
@@ -38,7 +38,6 @@ O resto (prévia do WhatsApp, principal com escaneamento, anúncio da E07 com lo
 | `anuncios/checklist-revisao.md` | Revisão antes de subir qualquer anúncio |
 | `montar.py`, `roteiros/`, `broll/` | Montador dos vídeos sem apresentador, os roteiros e as cenas |
 | `scan.py`, `render-planta.cjs`, `render-passeio.cjs`, `render-rua.cjs`, `src/` | Escaneamento, 3D, passeio por dentro e vista da rua (esta foi recusada pelo dono: não é realista) |
-| `render.cjs`, `carimbar.py` | Código do vídeo antigo dos R$ 1.000 |
 | `musica/` | Trilha nossa de 128 BPM |
 
 ## 4. Como montar e gerar

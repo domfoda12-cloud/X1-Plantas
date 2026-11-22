@@ -10,8 +10,8 @@
 
 ## Em aberto com você
 
-- Foto realista de fachada existe em 4 casas (C01, C03, E07, F01); as outras 20 usam o desenho. Fazer as 20 gasta créditos do OpenArt: decisão do dono.
-- Imagens 2D dos posts (`animacoes-3d/plantas-2d`) estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a da C01 redesenhada (a sala ainda não desenha a mesa).
+- Foto realista de fachada existe em 3 casas (C03, E07, F01); as outras 21 usam o desenho (a da C01 saiu em 22/11, era a casa antiga). Fazer as 20 gasta créditos do OpenArt: decisão do dono.
+- Imagens 2D dos posts e as imagens dos carrosséis: apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Refazer com as plantas atuais quando a frente de imagens abrir.
 - Título, bônus e contato do e-book ainda são espaço reservado na página 61.
 
 ## Onde olhar

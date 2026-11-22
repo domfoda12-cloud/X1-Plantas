@@ -23,7 +23,7 @@
 
 O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerais estão no `CLAUDE.md` da raiz.
 
-Tamanho: 365 palavras.
+Tamanho: 364 palavras.
 
 ### [Pedido do dono: anúncio do e-book com locução (ficha única)](PEDIDO-anuncio-locucao.md)
 
@@ -63,7 +63,7 @@ Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Regras desta pasta: `
 
 Seções: 1. As regras que valem (dono, 22/11/2026); 2. O que está em `saida/` (22/11/2026); 3. Nesta pasta; 4. Como montar e gerar; 5. Decisões que ficam com o dono.
 
-Tamanho: 790 palavras.
+Tamanho: 801 palavras.
 
 ### [Anúncios para o Facebook Ads](anuncios/anuncio-facebook.md)
 

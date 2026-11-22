@@ -19,7 +19,7 @@
 
 | Dia | Publicação | Detalhe | Registro |
 |---|---|---|---|
-| **Seg 23/11** | **Post 5** e o reel do lote ("Me fala a frente do seu lote…", com o B-roll `video/broll/clipes/ebook-folheando.mp4`) | O post 3 espera as imagens novas da C01 (refazer: C01 redesenhada). Fixe o reel do lote no perfil | — |
+| **Seg 23/11** | **Post 5** e o reel do lote ("Me fala a frente do seu lote…"). **Parado:** as imagens do post e o B-roll `ebook-folheando.mp4` foram apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7); refazer antes de publicar | O post 3 espera as imagens novas da C01 (refazer: C01 redesenhada). Fixe o reel do lote no perfil | — |
 | Ter 24/11 | Stories | — | — |
 | Qua 25/11 | Stories (o reel do lote nos stories) | O post 8 espera as imagens novas da C01. Sem reels de teste do anúncio (ver o aviso no topo) | — |
 | Qui 26/11 | Stories | — | — |

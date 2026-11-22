@@ -27,9 +27,9 @@
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre; 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas; 22/11 · Índice, resumos por pasta e os prompts do dono.
+Seções: 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre; 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas.
 
-Tamanho: 474 palavras.
+Tamanho: 466 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -45,7 +45,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 410 palavras.
+Tamanho: 407 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -53,7 +53,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 240 palavras.
+Tamanho: 254 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -109,7 +109,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 382 palavras.
+Tamanho: 386 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -157,4 +157,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
 
-Tamanho: 127 palavras.
+Tamanho: 133 palavras.
