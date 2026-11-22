@@ -11,6 +11,7 @@
 ## Em aberto com você
 
 - **Arranjo das plantas reprovado pelo dono (22/11):** as 24 saem de 3 fôrmas, têm corredor de fora a fora, falta mesa, e na série E (menos a E04) o banheiro só se alcança por fora. Diagnóstico e método novo na apostila 2 (`ebook/referencias/arquiteto-sites-de-profissionais.md`). Refazer espera o dono dizer quais e quando.
+- **Régua federal (Portaria MCID 725):** banheiro 1,50 m de largura (22 casas abaixo), cozinha 1,80 m (C04, C05, S04), quarto de duas camas 2,60 m (6 casas), mesa para 4, porta de serviço. Ver `ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md`. Entra no redesenho.
 - Ensinar o validador a apontar arranjo ruim (apostila 2, seção 7) e ler as fontes que faltam (seção 5).
 
 - Banheiros abaixo de 1,10 m livres em 19 casas: decidir com o arquiteto registrado se passam a 1,10 m ou mais.

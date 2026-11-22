@@ -1,8 +1,8 @@
-**Tarefa:** fazer o Arquiteto estudar arranjo de planta em fontes que arquitetos usam (o dono reprovou o último layout).
-**Feito:** `ebook/referencias/arquiteto-sites-de-profissionais.md` (apostila 2: diagnóstico das 24 plantas, o que ensinam a SEHAB-SP, a casa de referência da CAR-BA e a pesquisa da UFRGS, método de 10 passos).
-`.claude/agents/arquiteto.md` e `contexto/arquiteto.md` (arranjo antes da medida; ler a apostila 2 e olhar a prévia antes de opinar).
-`CONTEXTO.md` e `CONTEXTO-HISTORICO.md` (pedido registrado).
-**Como conferir:** abrir a apostila 2; comparar `ebook/plantas/previas/E01.png` e `C01.png` com a seção 1.
-**Não feito / ressalva:** nenhuma planta mudou. Não lidos: manual da CDHU (site fora do ar), ArchDaily, concursosdeprojeto.org, Vitruvius. O validador ainda não aponta arranjo ruim.
-**Decisão do dono pendente:** quais casas refazer e quando (sugestão: série E, compactas, F02). Refazer reabre o e-book: dados, 3D, PDF, calculadora e posts.
-**Próximo passo:** com o "sim" do dono, redesenhar a E01 pelo método da seção 6 e mostrar a prévia antes de seguir para as outras.
+**Tarefa:** pesquisar layouts de casa popular no Brasil e os grandes passos para construir (pedido do dono, 22/11).
+**Feito:** `ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md` (régua federal da Portaria MCID 725, nossas 24 plantas contra ela, 18 passos da obra com parte do custo, dado CAU/Datafolha, 5 ideias de uso).
+`contexto/QUADRO.md` (aviso para todos), `contexto/arquiteto.md`, `CONTEXTO.md`, `CONTEXTO-HISTORICO.md`.
+No mesmo dia: apostila 2 do Arquiteto (`ebook/referencias/arquiteto-sites-de-profissionais.md`), com o diagnóstico do arranjo e o método de 10 passos.
+**Como conferir:** abrir a pesquisa; a tabela "nossas plantas contra a régua" sai dos dados em `ebook/plantas/dados/` (lado menor menos 12 cm).
+**Não feito / ressalva:** nenhuma planta mudou e nada foi ao público. Percentuais de custo são de blog. Não lidos: guia Reforma Casa Brasil, manual da CDHU, concursos, plantas do ArchDaily.
+**Decisão do dono pendente:** quais casas refazer e quando; quais das 5 ideias da seção 5 seguem.
+**Próximo passo:** com o "sim" do dono, redesenhar a E01 (método da apostila 2 + régua federal) e mostrar a prévia.
