@@ -27,9 +27,9 @@
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas; 22/11 · Índice, resumos por pasta e os prompts do dono; 22/11 · A `main` é a única branch; arquivos comprimidos; 22/11 · Skill `make-pdf` e conversa própria do Editor.
+Seções: 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre; 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas; 22/11 · Índice, resumos por pasta e os prompts do dono.
 
-Tamanho: 534 palavras.
+Tamanho: 474 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
