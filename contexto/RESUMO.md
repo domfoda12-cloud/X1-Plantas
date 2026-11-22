@@ -45,7 +45,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 414 palavras.
+Tamanho: 410 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -83,9 +83,9 @@ Tamanho: 4550 palavras.
 
 Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 contradições. Três agentes no Opus resolveram as que dependiam só de texto (a regra mais recente do dono vence; texto de venda só promete o que existe; documento superado foi apagado). Aqui ficou só o que depende do dono,…
 
-Seções: Decisões do dono (os textos estão com o campo entre colchetes, esperando); Revisor de risco; Já revisado em 22/11 (apagar quando conferir que ficou certo); Imagem e vídeo que ainda mostram a casa velha (texto já corrigido); Ainda não conferido.
+Seções: Decisões do dono (os textos estão com o campo entre colchetes, esperando); Revisor de risco; Já revisado em 22/11 (apagar quando conferir que ficou certo); Imagem e vídeo que ainda mostram a casa velha (texto já corrigido); Para o Revisor e o dono (achados da auditoria de 22/11, sem veredito); Ainda não conferido.
 
-Tamanho: 498 palavras.
+Tamanho: 640 palavras.
 
 ### [O porquê dos prompts de 16 a 20/11/2026](dono/intencoes/2026-11-16-a-20.md)
 

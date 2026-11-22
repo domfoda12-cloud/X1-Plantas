@@ -46,6 +46,8 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 
 
 
+## O caminho de um prompt
+
 1. **Entrada (automática).** O gancho `UserPromptSubmit` (`.claude/settings.json`) chama `ferramentas/guardar-pedido.py`: grava o prompt, palavra por palavra, em `pedidos/entrada/` (fora do git) e devolve a quem atende um lembrete desta regra e quantas fichas estão abertas.
 2. **Triagem (Opus).** Uma de quatro saídas:
    - **Trabalho novo:** `python3 ferramentas/pedido.py nova "assunto"` cria a ficha já com o prompt copiado pelo programa (ninguém redigita as palavras do dono).

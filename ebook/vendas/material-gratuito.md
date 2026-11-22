@@ -21,7 +21,7 @@
 | 5 m | `planta-gratis-E03.pdf` (Casa Fita) |
 | 7 m | `planta-gratis-E02.pdf` (Casa Corredor) |
 | 8 m, quer 2 quartos | `planta-gratis-C01.pdf` (Casa Compacta) |
-| 8 m, quer 3 quartos | `planta-gratis-E07.pdf` (Casa Estreita 3 Quartos) |
+| 8 m, quer 3 quartos | **[a definir pelo dono]**: a E07 saiu da lista em 22/11, porque o arranjo dela (3 quartos em fila) está na fila do redesenho. Até lá, mande a C01 e pergunte se 2 quartos servem |
 | 9 m ou mais, quer suíte | `planta-gratis-C06.pdf` (Casa Compacta Suíte) |
 | 10 m ou mais, 3 quartos | `planta-gratis-F01.pdf` (Casa Família Compacta) |
 

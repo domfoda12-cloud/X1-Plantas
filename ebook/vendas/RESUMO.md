@@ -6,7 +6,7 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - Funil: comentário "PLANTA", planta grátis, pergunta "qual é o tamanho do seu terreno?" (a mais importante), casas que cabem, oferta no dia 3, fim no dia 7 (`sequencia-whatsapp.md`).
-- Há 6 plantas grátis em `ebook/saida/` (E03, E02, C01, E07, C06, F01), pela frente do lote; sem a medida, mande a C01 (50 m², 2 quartos, lote 8 x 15). Não mande as imagens de `animacoes-3d/plantas/casa-compacta/` nem o mockup da C01 antiga (`material-gratuito.md`).
+- Há 5 plantas grátis em `ebook/saida/` (E03, E02, C01, C06, F01; a E07 saiu em 22/11, na fila do redesenho), pela frente do lote; sem a medida, mande a C01 (50 m², 2 quartos, lote 8 x 15). Não mande as imagens de `animacoes-3d/plantas/casa-compacta/` nem o mockup da C01 antiga (`material-gratuito.md`).
 - O que se promete é só o que o PDF tem: 24 casas com planta mobiliada, casa no lote, ficha, vista da rua e casa em 3D. Animação, perspectivas e checklist de obra não existem (`faq-compradores.md`, `sequencia-whatsapp.md`, `../EBOOK.md`).
 - Regra fixa: nunca dizer que a planta dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra. Vetados: "aprovado na prefeitura", "construa por R$ X", "pronto para construir", "garantia de que cabe no seu lote", "o lote mais estreito que a lei permite" (`atributos-que-vendem.md`, `respostas-objecoes.md`).
 - Testar primeiro: lote + conferida, etapas + ver antes, o porquê + engenheiro. Notas são hipóteses; tabela de testes vazia (`atributos-que-vendem.md`).
@@ -38,7 +38,7 @@ Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel
 
 Seções: 1. O que vai; 2. Ficha da Casa Compacta (para mandar em texto); 3. O convite no fim da planta grátis.
 
-Tamanho: 628 palavras.
+Tamanho: 658 palavras.
 
 ### [Respostas para objeções comuns](respostas-objecoes.md)
 

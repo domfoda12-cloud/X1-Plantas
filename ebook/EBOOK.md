@@ -54,7 +54,7 @@ Fonte: `gerador/livro.py`, função `montar`.
 | ID, categoria e lote mínimo; nome da casa | "Cabe num lote de X x Y": a casa desenhada no lote, com os recuos |
 | Gancho (`fichas/textos.py`): frente, quartos e área | **Informação da casa:** área fechada, medidas por fora, varanda e garagem, área coberta total, quartos, banheiros, corredor, janela, melhor lado da rua, se pode espelhar |
 | Planta grande mobiliada, com nome e área de cada cômodo e as cotas | **Atenção: leve ao engenheiro:** os avisos do validador, quando houver |
-| Para quem é | **Vista da rua:** foto ilustrativa em 4 casas (C01, C03, E07 e F01, de `visual/openart/fachadas/`), desenho simplificado nas outras 20 |
+| Para quem é | **Vista da rua:** foto ilustrativa em 3 casas (C03, E07 e F01, de `visual/openart/fachadas/`), desenho simplificado nas outras 21 |
 | Erros que esta casa evita (dos 7) | **A casa em 3D:** imagem do nosso motor, sem telhado, nas 24 (`visual/3d/`) |
 | | Por que esta planta é assim (do validador), para quem não serve e perguntas para o engenheiro |
 
@@ -81,7 +81,7 @@ Ao terminar, mude a coluna **Situação** do catálogo. O andamento geral fica n
 - **Levas (proposta):** o catálogo divide as 35 casas em 3 levas: 12, 12 e 11. O PDF de hoje já tem as 24 das levas 1 e 2. **[lançamento: sair com 12 ou com 24, a definir pelo dono]** (`PAINEL.md`, seção 9).
 - **Título, preço, bônus, contato e promessa de atualização** são campos do dono em `config.json`; as opções estão no [painel](../PAINEL.md), seção 9, e a oferta recomendada na [estratégia](../ESTRATEGIA.md), seção 7. **[garantia: a definir pelo dono]**.
 - **Linguagem:** o e-book é lido por quem constrói com pedreiro. Explique todo termo técnico na primeira vez que aparecer ([estratégia](../ESTRATEGIA.md), seção 9).
-- **Plantas grátis do funil:** 6 casas (C01, E03, E02, E07, F01 e C06; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/material-gratuito.md`](vendas/material-gratuito.md).
+- **Plantas grátis do funil:** 5 casas (C01, E03, E02, F01 e C06; a E07 saiu em 22/11, porque está na fila do redesenho; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/material-gratuito.md`](vendas/material-gratuito.md).
 
 ## 6. Funil de vendas
 
@@ -100,7 +100,7 @@ Faltam os campos entre [colchetes]: título, preço, forma de pagamento, datas, 
 ## 8. O que falta
 
 - **Decisões do dono:** título, preço, bônus, contato do parceiro, promessa de atualização, garantia, e se o 1º lançamento sai com 12 ou 24 casas.
-- **Revisão de um arquiteto registrado** nas 24 casas, nas regras e no texto do aviso legal (o PDF marca "[Texto a confirmar com um arquiteto antes do lançamento.]").
+- **Revisão de um arquiteto registrado** nas 24 casas, nas regras e no texto do aviso legal.
 - **Animação e QR por casa:** ficam para a frente de animações, por último (decisão do dono, 20/11/2026). Só entram no PDF quando existirem de verdade.
-- **Imagens da C01 antiga:** a foto de fachada `visual/openart/fachadas/C01.jpg` e o mockup `visual/mockups/casa-c01-celulares.png` são de antes do redesenho de 22/11/2026. A foto ainda sai na página da C01.
+- **Imagens da C01 antiga:** a foto de fachada `visual/openart/fachadas/C01.jpg` e o mockup `visual/mockups/casa-c01-celulares.png` eram de antes do redesenho de 22/11/2026. A foto saiu do e-book em 22/11 (a C01 usa a vista da rua simplificada); o mockup continua antigo.
 - **Peso do arquivo:** a meta do plano de 20/11 era abaixo de 15 MB, para mandar pelo WhatsApp; o `ebook.pdf` de hoje tem 23 MB.

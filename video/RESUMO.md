@@ -61,9 +61,9 @@ Tamanho: 1132 palavras.
 
 Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Regras desta pasta: `CLAUDE.md`. Antes de mexer em vídeo, leia `PEDIDOS-DO-DONO.md` inteiro. Reorganizado em 22/11/2026 para dizer a verdade de hoje. O guia antigo do vídeo "Os R$ 1.000 do arquiteto" (teleprompter, gravação do apresentador,…
 
-Seções: 1. As regras que valem (dono, 22/11/2026); 2. O que está em `saida/` (conferido em 22/11/2026); 3. Nesta pasta; 4. Como montar e gerar; 5. Decisões que ficam com o dono.
+Seções: 1. As regras que valem (dono, 22/11/2026); 2. O que está em `saida/` (22/11/2026); 3. Nesta pasta; 4. Como montar e gerar; 5. Decisões que ficam com o dono.
 
-Tamanho: 1021 palavras.
+Tamanho: 790 palavras.
 
 ### [Anúncios para o Facebook Ads](anuncios/anuncio-facebook.md)
 
@@ -75,11 +75,11 @@ Tamanho: 998 palavras.
 
 ### [Brief criativo: anúncios de plantas de casas](anuncios/brief-criativo.md)
 
-Rascunho para revisão. Os trechos entre [colchetes] dependem do vídeo de referência que você vai enviar.
+22/11/2026: as seções 4, 5 e 8 estão superadas. O que o vídeo tem de ter hoje (abrir na casa pronta, curto e rápido, escaneamento no meio, sem planta se desenhando no começo) está em `../../contexto/dono/IDEIAS-GERAIS.md`; o plano da peça atual, em `../plano-anuncio-locucao.md`. Este arquivo entra…
 
 Seções: 1. Objetivo; 2. Mensagem central; 3. Formatos; 4. Estrutura do vídeo (roteiro de 20 segundos); 5. Estilo visual; 6. Variações para testar; 7. Checklist antes de publicar; 8. Perguntas para você responder.
 
-Tamanho: 747 palavras.
+Tamanho: 800 palavras.
 
 ### [Checklist de revisão antes de subir o anúncio](anuncios/checklist-revisao.md)
 

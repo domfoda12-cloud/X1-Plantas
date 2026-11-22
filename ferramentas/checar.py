@@ -11,6 +11,7 @@ Atenção: não só confere, também REGRAVA arquivos do repositório: os dados 
 (ebook/vendas/calculadora-lote.html) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
 Sai com código 1 se algo falhar.
 """
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -128,5 +129,10 @@ rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
+# Campo do dono ainda vazio: não é erro de código, mas o PDF não pode ir ao cliente assim (auditoria de 22/11)
+_cfg = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))
+_pend = [k for k, v in _cfg.items() if (isinstance(v, str) and v.startswith("[")) or (isinstance(v, list) and any(str(x).startswith("[") for x in v))]
+if _pend:
+    print(f"[AVISO] o PDF sai com campo pendente ({', '.join(_pend)}): rascunho, não mande ao cliente até o dono decidir")
 print(f"\n{'Tudo certo.' if not falhas else str(len(falhas)) + ' problema(s): ' + ', '.join(falhas)}")
 sys.exit(1 if falhas else 0)

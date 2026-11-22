@@ -1,5 +1,7 @@
 # Brief criativo: anúncios de plantas de casas
 
+> **22/11/2026: as seções 4, 5 e 8 estão superadas.** O que o vídeo tem de ter hoje (abrir na casa pronta, curto e rápido, escaneamento no meio, sem planta se desenhando no começo) está em [`../../contexto/dono/IDEIAS-GERAIS.md`](../../contexto/dono/IDEIAS-GERAIS.md); o plano da peça atual, em [`../plano-anuncio-locucao.md`](../plano-anuncio-locucao.md). Este arquivo entra na organização da próxima sessão.
+>
 > Rascunho para revisão. Os trechos entre [colchetes] dependem do vídeo de referência que você vai enviar.
 
 ## 1. Objetivo

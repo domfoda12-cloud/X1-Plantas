@@ -13,20 +13,16 @@
 - **Edição final:** MinoAI Frontier, no Mac do dono. Até 12 MB; versão do WhatsApp até 5 MB.
 - **Continuam do método antigo:** texto no primeiro quadro; o narrador nunca para (só a pausa marcada no roteiro); uma ideia por cena; a imagem mostra o que a voz diz; chamada única no fim ("Comenta PLANTA").
 
-## 2. O que está em `saida/` (conferido em 22/11/2026)
+## 2. O que está em `saida/` (22/11/2026)
 
-| Pasta | Arquivo | O que é | Situação |
-|---|---|---|---|
-| `previa-whatsapp/` | `x1-plantas-previa.mp4` (720 x 1280) | Prévia que o parceiro manda no WhatsApp antes do Pix. Roteiro `roteiros/previa-whatsapp.json` | Feita em 21/11, **antes do redesenho da C01**: a cena `broll/clipes/c01-3d.mp4` mostra a casa antiga e o roteiro ainda põe selo. Remontar antes de mandar |
-| `principal/` | `x1-plantas-principal.mp4` (1080 x 1920) | "Todo lote é uma conta". Roteiro `roteiros/principal.json` | Rascunho de 21/11: usa a C01 antiga e o selo em toda cena. Não publicar assim |
-| `principal-condor/` | `x1-plantas-principal-condor.mp4` (21 s) | Estilo CONDOR com a sequência de escaneamento da E07. Roteiro `roteiros/principal-condor.json` | **Rascunho, não publicar:** a E07 está na fila do redesenho ([`PEDIDOS-DO-DONO.md`](PEDIDOS-DO-DONO.md), "Vídeo principal") |
-| `convite/` | `x1-plantas-convite.mp4` (26 s) | Vídeo-convite da F03, com o passeio por dentro. Roteiro `roteiros/convite.json` | **Rascunho:** falta o dono dizer o que é "pagar por mais"; Revisor ainda não viu ([`PEDIDOS-DO-DONO.md`](PEDIDOS-DO-DONO.md), "Próximo vídeo: o convite") |
-| `principal-e07/` | `x1-plantas-e07.mp4` | Versão 2 de 21/11, "3 quartos em 8 m" ([`plano-principal-e07.md`](plano-principal-e07.md)) | **Antigo:** abre no blueprint, tem o selo e a E07 com os quartos em fila |
-| `principal-e07/` | `x1-plantas-e07-locucao.mp4` e `x1-plantas-e07-locucao-whatsapp.mp4` | Montagem com a voz do dono sobre a E07 em fila | **Base que o plano novo refaz** ([`plano-anuncio-locucao.md`](plano-anuncio-locucao.md)): a planta muda, o selo sai, o aviso vai para o canto |
-| `tour-c06/` | `tour-c06-casa-compacta-suite-v1.mp4` e `-v2.mp4` | Passeios da C06 Casa Compacta Suíte, vindos da antiga frente 3D | Sem plano nesta pasta; ilustração do motor 3D, não foto |
-| `v1/` a `v5/`, `quadros/` | `rascunho.mp4`, `camada-transparente.webm` | "Os R$ 1.000 do arquiteto": camada para pôr sobre a gravação de um apresentador | **Antigo, não publicar:** 3D velho da C01 e nenhuma gravação do apresentador. O gancho dos R$ 1.000 fica guardado como opção ([`../ESTRATEGIA.md`](../ESTRATEGIA.md)); o código é `render.cjs`, `src/cena.js` e `src/planta.js` |
+Em 22/11 o dono mandou apagar os vídeos, clipes e renders para refazer do zero, guardando a informação e o último vídeo. Ficaram:
 
-**Em andamento:** o anúncio com locução, para WhatsApp e Facebook Ads. Plano [`plano-anuncio-locucao.md`](plano-anuncio-locucao.md) e ficha [`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md). Espera o dono aprovar a planta nova da E07 e o plano; nada foi gerado.
+| Pasta | Arquivo | O que é |
+|---|---|---|
+| `convite/` | `x1-plantas-convite.mp4` | Passeio pela F03 (motor próprio, ilustração), o último feito; roteiro `roteiros/convite.json` |
+| `principal/` | `x1-plantas-principal.mp4` | Principal de 21/11, com clipes do OpenArt e a C01 antiga; o último mostrado ao dono nesta conversa |
+
+O resto (prévia do WhatsApp, principal com escaneamento, anúncio da E07 com locução, passeios da C06 e as versões `v1` a `v5`) volta pelo histórico do git se for preciso. A gravação da voz do dono está em `principal-e07/voz/`. O que refazer e em que ordem: [`../contexto/dono/RETROSPECTIVA.md`](../contexto/dono/RETROSPECTIVA.md).
 
 ## 3. Nesta pasta
 

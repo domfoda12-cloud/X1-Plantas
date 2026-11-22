@@ -25,7 +25,7 @@
 
 **Suposições (o dono não disse):** garantia de 7 dias e "12 ou 24 plantas" são decisão dele: os textos passam a dizer só o que existe e deixam o campo em aberto. A retirada do selo "Imagem ilustrativa" vale para vídeo; imagem parada do e-book mantém a legenda. Assunto pessoal não vira ficha no repositório.
 
-**Quem executa:** montagem do sistema: Fable (é configuração, uma vez só). Contradições: quatro agentes no Opus, por área, e o `revisor-de-risco` (Opus) nos textos de venda.
+**Quem executa:** montagem do sistema: Fable (é configuração, uma vez só). Contradições: três agentes no Opus, por área, e o `revisor-de-risco` (Opus) nos textos de venda.
 
 **Conferência:** Rodei o `checar.py` depois de cada etapa (passa). Abri a página 2 da planta grátis da C01 gerada de novo: a vista da rua é a simplificada e a frase do banheiro está certa. Conferi o painel gerado contra os arquivos (24 de 35, 24 com 3D, 4 com foto antes de tirar a da C01). O Revisor de risco (Opus) leu os 7 textos de venda: vetou trechos em 5; o Redator (Opus) aplicou as 30 correções e eu conferi por busca que os trechos vetados sumiram e corrigi 5 trechos iguais que ficaram fora da lista. Testei o gancho com entrada falsa e ele já devolveu o lembrete nesta conversa; achei e corrigi a falha de guardar relatório de agente como prompt. Não conferi: cada edição dos três agentes de contradições, linha por linha (confiei nos relatórios e no `checar.py`); os textos de cada casa em `fichas/textos.py`; se o agente `ajudante` (Haiku) e o `model:` dos agentes são respeitados na prática, porque ainda não houve tarefa para eles depois da mudança.
 

@@ -1,6 +1,6 @@
 # Organizar as conexões do Graphify
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** Estou vendo MUITAS conexoes disorganizadas no graphify, como ajeito isso?
 
@@ -20,7 +20,7 @@
 
 **Quem executa:** Fable/Opus na conversa principal (é peça do sistema, uma vez só; o supervisor pode fazer).
 
-**Conferência:** Medi com graph_stats antes e depois. Antes: 2.121 círculos, 2.322 ligações, 330 grupos. Depois do mapa: 2.177, 2.353, 348. **O mapa não ligou os programas**: o Graphify transformou cada nome do mapa num círculo novo (mapa_checar, mapa_livro...), sem ligação com o arquivo de verdade (graphify_file_neighbors do MAPA: 0 vizinhos). Ou seja, link em documento não liga código no Graphify; só import e chamada de função ligam. O mapa fica, porque serve aos agentes, mas não resolve o grafo.
+**Conferência:** Medi com graph_stats antes e depois. Antes: 2.121 círculos, 2.322 ligações, 330 grupos. Depois do mapa: 2.177, 2.353, 348. **O mapa não ligou os programas**: o Graphify transformou cada nome do mapa num círculo novo (mapa_checar, mapa_livro...), sem ligação com o arquivo de verdade (graphify_file_neighbors do MAPA: 0 vizinhos). Ou seja, link em documento não liga código no Graphify; só import e chamada de função ligam. O mapa fica, porque serve aos agentes, mas não resolve o grafo. Depois de apagar o sistema antigo de vídeo e as mídias (22/11, commit 3f775da): 2.013 círculos, 2.231 ligações, 292 grupos (antes da limpeza: 2.177, 2.355, 348). Medido de novo: o grosso vem dos 126 documentos, não do código.
 
-**Resultado:** (a preencher)
+**Resultado:** O Graphify só liga código por import e chamada; link em documento não liga (o mapa do sistema criou 21 círculos soltos, medido). O que baixou os números foi apagar o sistema antigo de vídeo e as mídias: 2.177 → 2.013 círculos, 348 → 292 grupos. O grosso que resta vem dos 126 documentos: a organização da próxima sessão (ficha própria) junta documentos e tira código repetido. `MAPA-DO-SISTEMA.md` fica, para os agentes.
 

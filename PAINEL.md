@@ -19,7 +19,7 @@ _Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026, a partir dos arquiv
 | Progresso do catálogo | `██████████████░░░░░░` 24/35 |
 | Casas com imagem 3D | 24 de 24 |
 | Casas com foto de fachada | 3 (C03, E07, F01) |
-| PDF do e-book | gerado, 22 MB · 6 plantas grátis |
+| PDF do e-book | gerado, 22 MB · 5 plantas grátis |
 | Vídeos em `video/saida/` | 2 pastas (convite, principal) · 0 versões antigas (`v1` a `v5`, com a C01 velha) |
 | Avisos de conferência | 0 |
 
@@ -38,8 +38,8 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 
 ## 2. Em que pé está (escrito à mão, 22/11/2026)
 
-- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). Há **6 plantas grátis** para o funil (C01, E03, E02, E07, F01, C06). O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
-- **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Rascunhos esperando ele assistir: convite (F03) e principal com escaneamento (E07). Os 5 anúncios antigos (`video/saida/v1` a `v5`) mostram a C01 velha. Toda instrução dele sobre vídeo: [`video/PEDIDOS-DO-DONO.md`](video/PEDIDOS-DO-DONO.md).
+- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). Há **5 plantas grátis** para o funil (C01, E03, E02, F01, C06; a E07 saiu, na fila do redesenho). O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
+- **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Ficaram em `video/saida/` só o convite (F03, o último feito) e o principal de 21/11; o resto foi apagado em 22/11 para refazer do zero. Toda instrução dele sobre vídeo: [`video/PEDIDOS-DO-DONO.md`](video/PEDIDOS-DO-DONO.md).
 - **Animações 3D completas:** ainda não começaram (as imagens 3D paradas já estão no e-book).
 - **Organização:** tudo na `main`, a única branch. Cada pedido do dono vira ficha em [`pedidos/`](pedidos/LEIA-ME.md) e é executado pelo modelo certo. Índice e resumos por pasta: [`INDICE.md`](INDICE.md).
 - **Não há venda nem anúncio rodando.** Custo por venda ainda não medido.

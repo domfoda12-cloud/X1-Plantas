@@ -28,7 +28,7 @@ Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o produ
 
 Seções: Nesta pasta; 1. O produto; 2. O PDF, página por página; 3. As duas páginas de cada casa; 4. Como uma casa entra no e-book; 5. Lançamentos e decisões; 6. Funil de vendas; 7. Cuidados; 8. O que falta.
 
-Tamanho: 1526 palavras.
+Tamanho: 1534 palavras.
 
 ### [Catálogo de plantas do e-book](catalogo.md)
 

@@ -1,6 +1,6 @@
 # Opus responde, Fable supervisiona; limpeza de mídias; releitura para refazer
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** Put Opus as the main question answerer, and make him summon Fable when he starts to struggle or detect that he made an error, Ocasionnaly Fable should check up on the work that OPUS did and point out the errors
 1, 2  4 faca isso,
@@ -23,7 +23,7 @@ OVERRULE, the last video should be saved
 
 **Quem executa:** Opus na conversa principal: troca de modelos, limpeza, itens 1, 2 e 4. Opus (agente geral): retrospectiva e plano. Fable (`supervisor`): primeira auditoria, nas fichas de 22/11.
 
-**Conferência:** (a preencher)
+**Conferência:** Opus como modelo padrão: `.claude/settings.json` tem `"model": "opus"`. Agente `supervisor` com `model: fable`: a primeira auditoria rodou nele (prova). Mídias: `git ls-files` mostra só o convite e o principal em `video/saida/`; mídia rastreada caiu de 314 para 72 MB; a voz do dono e a trilha ficaram. Conversas antigas: as 5 voltaram como "ARCHIVED". Branches: NÃO apagadas: o acesso ao GitHub desta máquina bloqueia apagar branch ("Write access to this GitHub API path is not permitted through this proxy"); o dono apaga em github.com/domfoda12-cloud/X1-Plantas/branches. Ambiente: "x1-plantas" criado com o script de preparação, testado a partir da pasta acima do repositório; não testei uma conversa nova nele. Retrospectiva: lida por amostra (o que se repete e o plano). Graphify depois da limpeza: 2.177 → 2.013 círculos. Auditoria do Fable apontou que três documentos ainda pediam para assistir vídeos apagados: corrigidos.
 
-**Resultado:** (a preencher)
+**Resultado:** Opus é o modelo padrão (`.claude/settings.json`) e o Fable virou o agente `supervisor` (socorro e auditoria a cada 3 fichas; a primeira já rodou). Vídeos, clipes e renders antigos apagados (ficam no git); guardados o convite, o principal de 21/11, a voz do dono e a trilha. Uma ficha só, em `pedidos/`. Conversas antigas arquivadas; branches velhas não puderam ser apagadas daqui (o dono apaga no GitHub). Ambiente "x1-plantas" com o motor 3D na preparação. Retrospectiva e plano para refazer em `contexto/dono/RETROSPECTIVA.md`; retomada agendada para 13h15 (Brasília).
 

@@ -25,8 +25,16 @@
 ## Imagem e vídeo que ainda mostram a casa velha (texto já corrigido)
 
 - **C01 antiga:** o mockup `ebook/visual/mockups/casa-c01-celulares.png`, o clipe `video/broll/clipes/c01-3d.mp4`, a pasta `animacoes-3d/plantas/casa-compacta/` e as imagens dos posts em `instagram/posts/imagens/` (os textos dentro de `instagram/posts/gerar-imagens.cjs` também).
+- **Roteiros de vídeo** (`video/roteiros/*.json`): `principal.json` diz "55 m² · 2 quartos" (C01 antiga); `principal.json`, `principal-condor.json` e `previa-whatsapp.json` dizem "24 casas no e-book" (o número está em aberto); o `convite.json` põe 8 selos "Ilustração do modelo 3D" (é selo com outro nome). Acertar ao refazer.
 - **Vídeos a remontar antes de usar:** `previa-whatsapp` e `principal` usam o clipe da C01 antiga; os quatro roteiros em `video/roteiros/*.json` ainda põem "Ilustração do modelo 3D" ou "Imagem ilustrativa" na tela; `saida/v1` a `v5` são da C01 velha.
 - **E07:** está na fila do redesenho (3 quartos em fila); os vídeos `principal-condor` e `principal-e07` são rascunho.
+
+## Para o Revisor e o dono (achados da auditoria de 22/11, sem veredito)
+
+- `ebook/fichas/textos.py`: a E02 é vendida com "2 quartos em fila, como na casa de vila", o mesmo arranjo que o dono reprovou na E07.
+- A caixa "Informação da casa" do PDF diz "Conferido medida por medida pelo X1-Plantas": quem conferiu foi o validador, não um profissional.
+- A planta grátis diz "Essa foi 1 de 24" com "12 ou 24" ainda em aberto.
+- Qual casa a planta grátis oferece para "8 m, quer 3 quartos" enquanto a E07 é redesenhada.
 
 ## Ainda não conferido
 
