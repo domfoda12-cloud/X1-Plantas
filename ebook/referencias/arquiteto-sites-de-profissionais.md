@@ -10,7 +10,7 @@ As 24 plantas passam no validador, mas o validador só confere medida, janela e 
 
 | Problema | Onde | Por que não faz sentido |
 |---|---|---|
-| **Todas as casas saem da mesma fôrma** | `_compacta`, `_familia` e `_estreita` em [`projetos.py`](../plantas/projetos.py): C01, C04 a C07, E04, F01 a F04 são a mesma casa esticada | Sala e cozinha na frente, uma faixa de corredor de fora a fora, quartos em fila atrás. O comprador que folheia vê uma planta só, 24 vezes |
+| **Todas as casas saem da mesma fôrma** | `_compacta`, `_familia` e `_estreita` em [`projetos.py`](../plantas/projetos.py): C01, C04 a C07, E04, F01 a F04 eram a mesma casa esticada (diagnóstico de 22/11/2026; a C01 já foi redesenhada e saiu dessa fôrma) | Sala e cozinha na frente, uma faixa de corredor de fora a fora, quartos em fila atrás. O comprador que folheia vê uma planta só, 24 vezes |
 | **Corredor que atravessa a casa inteira** | Compactas e família: 10% a 14% da área | A casa de referência do governo da Bahia (seção 3) tem 3 quartos e **zero** corredor. Numa casa de 55 m², 5 m² de corredor é meio quarto jogado fora |
 | **Para ir do quarto ao banheiro, a pessoa sai da casa** | Toda a série E, menos a E04 (E01 a E03, E05 a E07): todo cômodo abre para o corredor lateral coberto | De noite, com chuva ou com criança pequena, isso não funciona. O validador marca "circulação 0%" porque o corredor é externo, e conta isso como vantagem |
 | **Porta da rua abre em cima do sofá** | Quase todas | Quem entra cruza a sala na diagonal. O estudo da UFRGS (seção 4) mostra que linha de passagem cortando a sala é causa de insatisfação com o tamanho dela |

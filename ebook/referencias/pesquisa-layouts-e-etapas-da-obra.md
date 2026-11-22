@@ -31,14 +31,14 @@ Conta feita sobre os dados das plantas (`ebook/plantas/dados/`), descontando 12 
 
 | Régua federal | Casas nossas abaixo dela |
 |---|---|
-| Banheiro com 1,50 m de largura | **22 de 24.** A maioria tem perto de 1,08 m. Só E03 e S03 passam |
+| Banheiro com 1,50 m de largura | **21 de 24** têm ao menos um banheiro abaixo. A maioria tem perto de 1,08 m. Só C01, E03 e S03 passam (conta refeita em 22/11/2026, depois do redesenho da C01, com as medidas livres de `plantas/dados/*.json`) |
 | Cozinha com 1,80 m de largura | 3: C04, C05 e S04 (perto de 1,68 m) |
 | Quarto para duas camas (0,90 + 0,80 + 0,90 = 2,60 m) | 6: E02, F03, F04, F05, S07 e S09 (perto de 2,48 m) |
 | Sala com 2,40 m de largura | Nenhuma |
 | Mesa para 4 na sala ou na cozinha | Não medido; nas compactas não cabe (ver a apostila 2) |
 | Porta de serviço além da porta da sala | Não medido |
 
-**Leitura:** o banheiro é o ponto mais fraco das nossas plantas. O item que já estava aberto ("banheiros abaixo de 1,10 m em 19 casas") é maior do que parecia: a régua federal atual é 1,50 m.
+**Leitura:** o banheiro é o ponto mais fraco das nossas plantas. O item que já estava aberto ("banheiros abaixo de 1,10 m": hoje 18 casas, depois do redesenho da C01) é maior do que parecia: a régua federal atual é 1,50 m.
 
 ## 2. Como é a casa popular que arquiteto projeta
 
@@ -87,7 +87,7 @@ A ordem abaixo junta o que as fontes repetem. Prazo, taxa e documento mudam por 
 | 17 | Habite-se | A prefeitura vistoria e certifica que a casa pode ser ocupada |
 | 18 | Averbação | Levar o habite-se ao cartório para a matrícula passar a dizer "casa", e não só "lote". Sem isso o imóvel fica irregular no papel e é difícil financiar ou vender ([QuintoAndar](https://www.quintoandar.com.br/guias/?p=2467042)) |
 
-O e-book já tem a página "Próximos passos" com 6 passos resumidos (`gerador/paginas.py`). Esta lista é mais completa e traz a parte do custo de cada etapa.
+O e-book já tem a página "Do e-book até a chave na mão" com 7 passos resumidos (página 60, `gerador/livro.py`). Esta lista é mais completa e traz a parte do custo de cada etapa.
 
 ## 4. Um dado de mercado para o anúncio (com cuidado)
 

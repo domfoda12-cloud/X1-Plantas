@@ -11,7 +11,7 @@
 | Brasileiros que moram em **casa** | **84,8%** (87,2% contando casa de vila ou condomínio). Apartamento: 12,5% | IBGE, Censo 2022 |
 | Domicílios particulares ocupados | 72,4 milhões | IBGE, Censo 2022 |
 | Moradores por domicílio | **2,79** (eram 3,31 em 2010 e 3,76 em 2000). Quase 1 em cada 5 mora sozinho | IBGE, Censo 2022 |
-| Quem constrói ou reforma **sem arquiteto nem engenheiro** | **85,4%** | Datafolha, 2015 (dado antigo, serve de ordem de grandeza) |
+| Quem fez a obra **sem arquiteto nem engenheiro** | **85,4%**, entre os brasileiros economicamente ativos que já construíram ou reformaram | Pesquisa CAU/BR-Datafolha, 2015, citada em reportagem (dado antigo, só para uso interno: não vai em texto público; ver [`pesquisa-layouts-e-etapas-da-obra.md`](pesquisa-layouts-e-etapas-da-obra.md), seção 4) |
 | Lote mínimo em loteamento novo | 125 m² e 5 m de frente (há exceções para habitação de interesse social). Lote que já existe não segue esse piso | Lei 6.766/1979, art. 4º, II |
 | Tamanho mínimo da casa no programa federal | 40 m² para casa, com sala, 2 quartos, cozinha e banheiro | Portaria MCID 725/2023 |
 
@@ -43,7 +43,7 @@
 2. "Quantos quartos?"
 3. "Quanto custa construir?" (a gente **não promete valor de obra**; mostra a área e diz que o orçamento é do engenheiro e do material da cidade dele)
 4. "Dá pra fazer por etapas?"
-5. "Vale a pena? E se não servir?" (garantia de 7 dias)
+5. "Vale a pena? E se não servir?" (a planta grátis mostra uma casa inteira; [garantia: a definir pelo dono])
 
 ## 3. Os outros perfis (da estratégia)
 
@@ -63,8 +63,8 @@ Lote mínimo calculado com recuo de frente de 3 m, de fundos de 1,5 m e lateral 
 |---|---|
 | **5 a 6 m** | C02 Studio, E03 Casa Fita |
 | **7 m** | C03 Inicial, E02 Casa Corredor |
-| **8 m** | C01, C04, C05, C07, E01, E05 |
-| **9 m** | C06, E04 Pátio, E06, E07, S05 |
+| **8 m** | C01, C04, C05, C07, E01, E05, E07 |
+| **9 m** | C06, E04 Pátio, E06, S05 |
 | **10 a 11 m** | F01, F03, F04, S03, S04, S07 |
 | **12 m ou mais** | F02, F05, S09 Esquina |
 

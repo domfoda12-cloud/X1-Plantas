@@ -1,16 +1,18 @@
-# Anúncios para o Facebook e o Instagram
+# Anúncios para o Facebook Ads
 
 > Parte da pasta Vídeo: [`../VIDEO.md`](../VIDEO.md). Antes de escrever ou mudar um anúncio, leia a [estratégia de marketing](../../ESTRATEGIA.md) (público, ângulos e tom de voz).
 >
 > **Fluxo:** anúncio → pessoa comenta "PLANTA" ou chama no WhatsApp → recebe a planta grátis → o parceiro pergunta o tamanho do lote → oferta do e-book.
 > Campos entre [colchetes]: preencha antes de publicar.
+>
+> **Destino (dono, 22/11/2026):** o anúncio em vídeo com locução vai para **WhatsApp e Facebook Ads**, não para Instagram nem TikTok ([`../PEDIDO-anuncio-locucao.md`](../PEDIDO-anuncio-locucao.md), pedido 27). Números das casas: [`PLANTAS.md`](../../ebook/plantas/PLANTAS.md).
 
 ## Regras para todos os anúncios
 
 - Falar com quem **tem um lote e vai construir**, como quem já passou por obra.
 - **Nunca** dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo exato de obra.
 - Toda imagem ou vídeo mostra **uma casa do e-book** (blueprint, planta humanizada ou 3D). Nada de banco de imagens.
-- Chamada sempre igual: **"Comenta PLANTA"** (reels) ou **"Chama no WhatsApp"** (anúncio com botão).
+- Chamada sempre igual: **"Comenta PLANTA"** (comentário no anúncio) ou **"Chama no WhatsApp"** (anúncio com botão).
 
 ## Ângulo 1: pelo lote (o mais promissor)
 
@@ -21,7 +23,7 @@ Um anúncio para cada tamanho de lote. A pessoa se reconhece na hora.
 **Texto principal:**
 14 casas do e-book cabem num lote 10 x 20, com os recuos de referência. Três delas:
 
-🏠 Casa Compacta · 55 m² · 2 quartos
+🏠 Casa Compacta · 50 m² · 2 quartos
 🏠 Casa Compacta Suíte · 57 m² · 2 quartos (1 suíte)
 🏠 Casa Família Compacta · 68 m² · 3 quartos
 
@@ -48,12 +50,14 @@ Quer ver? Comenta PLANTA que eu te mando de graça.
 
 ## Ângulo 3: casa que cresce
 
-**Texto na imagem:** Comece com 2 quartos. Chegue a 3 sem quebrar parede.
+**Texto na imagem:** Comece com 1 quarto. O 2º já está desenhado.
 
 **Texto principal:**
 Vai construir aos poucos? Então a planta precisa já nascer pronta para crescer.
 
-Essa casa de 55 m² começa com 2 quartos e já tem o lugar do 3º previsto, sem derrubar nada.
+A Casa Inicial tem 41 m², 1 quarto e 1 banheiro, num lote a partir de 7 x 20 m, e já vem com o lugar do 2º quarto desenhado para a ampliação.
+
+> Reescrito em 22/11/2026: a versão antiga falava de uma casa de 55 m² com 2 quartos e o 3º previsto, que não existe no e-book. Hoje só a C03 Casa Inicial tem ampliação desenhada ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Imagem: a prévia da C03.
 
 Te mando uma planta mobiliada de graça. É só chamar no WhatsApp.
 
@@ -72,9 +76,9 @@ Comenta PLANTA que eu te mando uma de graça.
 
 **Botão:** Saiba mais
 
-## Ângulo 5: economia com arquiteto (o do vídeo atual)
+## Ângulo 5: economia com arquiteto (vídeo antigo, não subir)
 
-As 5 versões do vídeo em [`../saida/`](../saida/) são deste ângulo. Texto para acompanhar o vídeo:
+As 5 versões `../saida/v1` a `v5` são deste ângulo, mas usam o 3D velho da C01 e nunca receberam a gravação do apresentador: não suba nenhuma ([`../VIDEO.md`](../VIDEO.md)). O gancho dos R$ 1.000 fica guardado como opção ([`../../ESTRATEGIA.md`](../../ESTRATEGIA.md)), e o Revisor de risco confere antes de usar. Texto, se o ângulo voltar com um vídeo novo:
 
 **Texto principal:**
 Os 7 erros de planta que um arquiteto te faria evitar, explicados em 38 segundos, com a planta na tela.
@@ -91,7 +95,7 @@ Use em **remarketing**: pessoas que assistiram ao vídeo, comentaram ou chamaram
 Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book [título] são [nº] plantas, organizadas pelo tamanho do lote, cada uma mobiliada e desenhada no lote.
 
 ✅ Pix ou cartão parcelado
-✅ 7 dias de garantia
+✅ [garantia: o dono ainda não decidiu se oferece 7 dias; sem a decisão, tire esta linha]
 ✅ As próximas plantas sem pagar de novo
 
 **Botão:** Comprar

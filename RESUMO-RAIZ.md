@@ -6,14 +6,15 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - Antes de trabalhar, leia `contexto/QUADRO.md` e o seu `contexto/<papel>.md`. Pedido do dono vira linha no `CONTEXTO-HISTORICO.md` e aviso no quadro (`CLAUDE.md`).
-- Frentes, uma por vez: e-book → animações → vídeo. Peça final sempre na maior qualidade (`CLAUDE.md`).
-- O Maestro (MinoAI Frontier) opina sempre e primeiro. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
+- Cada pedido do dono vira ficha em `pedidos/`; a conversa principal interpreta e confere, Opus executa, Sonnet pesquisa (`pesquisador`), Haiku faz a tarefa pessoal do dono (`ajudante`) (`pedidos/LEIA-ME.md`, `ECOSSISTEMA.md`).
+- Frentes, uma por vez: e-book → animações → vídeo; a de vídeo foi aberta pelo dono em 21/11. Peça final sempre na maior qualidade (`CLAUDE.md`, `PAINEL.md`).
+- O Maestro (MinoAI Frontier) opina sempre e primeiro, em toda tarefa. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
 - Nunca dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo de obra (`CLAUDE.md`).
-- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`).
-- Toda entrega tem ficha `PEDIDO-<entrega>.md`; suposição não decide etapa (`CONSELHO.md`).
-- Em aberto com o dono: título, preço, bônus, 12 ou 24 plantas, quais casas refazer (`CONTEXTO.md`). R$ 67 é recomendação, não decisão (`ESTRATEGIA.md`).
-- Contradição: OpenArt tem 115 créditos em 21/11/2026 (`ORCAMENTO.md`) e 21.137 (`contexto/QUADRO.md`).
-- Contradição: 0 de 12 plantas prontas, 1 com 3D (`PAINEL.md`); e-book "quase pronto", 61 páginas e 24 casas (`ORCAMENTO.md`).
+- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `MAESTRO.md`).
+- 24 casas desenhadas e no PDF (rascunho 1), cada uma com imagem 3D; a C01 foi redesenhada. A "Situação agora" do painel conta pelo catálogo, que está atrasado: vale a seção 2 (`PAINEL.md`).
+- Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, quais casas refazer. R$ 67 e 7 dias são recomendação, não decisão (`CONTEXTO.md`, `ESTRATEGIA.md`, seção 7).
+- OpenArt: 21.137 créditos em 22/11/2026, plano Pro; cada uso pede o "sim" do dono (`ORCAMENTO.md`). Selo "Imagem ilustrativa": saiu dos vídeos, continua em imagem parada (`ECOSSISTEMA.md`).
+- Público: 25 a 50 anos, quem constrói com pedreiro, por etapas (`CLAUDE.md`, `ESTRATEGIA.md`).
 <!-- /essencial -->
 
 ## Os 12 documentos

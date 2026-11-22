@@ -2,6 +2,8 @@
 
 > Parte da pasta Vídeo: [`VIDEO.md`](VIDEO.md). Estratégia: [`../ESTRATEGIA.md`](../ESTRATEGIA.md) (fase de aquecimento, seção 10). Editor: [MinoAI Frontier](../instagram/MINOAI-FRONTIER.md).
 >
+> **Canal:** vídeo do perfil do Instagram (orgânico). Não confundir com o anúncio com locução, que vai para WhatsApp e Facebook Ads ([`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md)).
+>
 > **Objetivo:** apresentar quem está por trás do e-book, anunciar a data e encher a lista do WhatsApp antes de abrir as vendas. Quem comenta PLANTA recebe uma planta grátis agora e o aviso no dia do lançamento.
 
 ## 1. O roteiro original
@@ -25,16 +27,16 @@
 | Tempo | Fala | Texto e imagem na tela |
 |---|---|---|
 | 0:00 a 0:04 | "Daqui a [X] semanas eu volto pro Brasil, e dessa vez eu levo [NÚMERO] casas na mala." | **Gancho fixo no alto** (seção 3). B-roll: mala aberta ou aeroporto, e o blueprint azul se desenhando |
-| 0:04 a 0:10 | "Meu amigo tá lá agora. A gente passou [TEMPO] desenhando plantas de casa pra quem tem um lote e quer construir sem errar." | Foto ou vídeo do amigo (com autorização dele) → planta humanizada da Casa Compacta |
+| 0:04 a 0:10 | "Meu amigo tá lá agora. A gente passou [TEMPO] desenhando plantas de casa pra quem tem um lote e quer construir sem errar." | Foto ou vídeo do amigo (com autorização dele) → planta humanizada de uma casa do e-book (a da C01 só depois de refeita: a casa foi redesenhada em 22/11) |
 | 0:10 a 0:18 | "A gente não é arquiteto nem engenheiro. A gente só ficou obcecado com uma pergunta: que casa cabe num lote 10 x 20? Num 8 x 25? Num 5 x 25?" | Três blueprints com a cota do lote em amarelo, um para cada medida |
-| 0:18 a 0:25 | "Ele ficou com [PARTE DELE], eu fiquei com [MINHA PARTE]. E no final deu [NÚMERO] plantas em 3D, organizadas pelo tamanho do lote." | Animação de uma planta ganhando vida (`animacao.mp4`) |
+| 0:18 a 0:25 | "Ele ficou com [PARTE DELE], eu fiquei com [MINHA PARTE]. E no final deu [NÚMERO] plantas em 3D, organizadas pelo tamanho do lote." | Animação de uma planta ganhando vida (3D do motor próprio, `node render-planta.cjs --planta ID`) |
 | 0:25 a 0:31 | "Não é pra substituir o seu engenheiro. É pra você chegar nele, e no seu pedreiro, sabendo exatamente que casa você quer." | Perspectiva 3D com zoom lento num cômodo |
 | 0:31 a 0:38 | "Lança dia [DATA]. Comenta PLANTA que eu te aviso no dia, e já te mando uma de graça." | Botão "Comenta PLANTA" em amarelo + a data |
 
 **Campos para preencher:**
 - **[X] semanas** e **[DATA]:** a data real de abertura.
 - **[TEMPO]:** quanto tempo vocês passaram montando (ex.: "seis meses").
-- **[NÚMERO]:** o número de plantas do 1º lançamento. A recomendação é **12**, dizendo "e vai ter mais" ([painel](../PAINEL.md), seção 3). Não fale 35 se o e-book abrir com 12.
+- **[NÚMERO]:** o número de plantas com que o e-book abre. **Lançar com 12 ou com 24 é decisão do dono, em aberto** ([`../CONTEXTO.md`](../CONTEXTO.md)); hoje o PDF tem 24 desenhadas. Fale só o número que a pessoa vai receber, nunca os 35 do catálogo.
 - **[PARTE DELE] e [MINHA PARTE]:** algo concreto e visual, que dê para mostrar na tela (ex.: "ele foi atrás dos lotes e conversou com quem tá construindo; eu fiquei com os desenhos e o 3D"). Só use o que for verdade.
 - **Se um arquiteto revisar as plantas**, acrescente depois de "não é arquiteto nem engenheiro": "por isso um arquiteto revisou cada uma". Só se for verdade.
 

@@ -1,5 +1,9 @@
 # Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro
 
+> **E07 na fila do redesenho:** o dono chamou de erro os 3 quartos em fila (22/11/2026).
+>
+> **Registro da versão de 21/11, substituído.** O plano que vale é [`plano-anuncio-locucao.md`](plano-anuncio-locucao.md), com a ficha [`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md). Depois deste plano o dono mudou: o vídeo **abre na casa pronta** e o blueprint vai para o meio, como prova; **sem o selo "Imagem ilustrativa"** (aviso legal pequeno, no canto, parado); **nada de morango do amor**; destino **WhatsApp e Facebook Ads**. Fica aqui porque documenta o vídeo `saida/principal-e07/x1-plantas-e07.mp4` e a decisão do Conselho que o código (`principal-e07/montar_e07.cjs`, `blueprint.html`) segue.
+
 > Pedido do dono (21/11/2026): vídeo curto, cada quadro pensado, começando do blueprint com efeito (o azul não fica parado), referências populares do Brasil dentro da casa, OpenArt com as ferramentas novas (plano Pro, 24.000 créditos), casa detalhada antes de gerar (serve depois para o e-book), Conselho aprova antes, "capricha", estilo CONDOR ([`REFERENCIA-CONDOR.md`](REFERENCIA-CONDOR.md)). Música: [`musica/`](musica/) (original, 128 BPM).
 > **Situação:** aprovado pelo Conselho em 21/11/2026, com as condições da seção 7. **Versão 2 pronta e aprovada pelo Revisor (21/11/2026; a v1 levou veto por marcas na sala e na cozinha, corrigido):** `video/saida/principal-e07/x1-plantas-e07.mp4` (15 s, 11,5 MB). Para montar de novo: `node video/principal-e07/render_blueprint.cjs` e `node video/principal-e07/montar_e07.cjs`.
 
@@ -23,15 +27,15 @@ Tudo o que aparece no vídeo sai dessa planta: a prévia `ebook/plantas/previas/
 | 3,75–7,50 | subida | Nomes dos cômodos **pulam um por tempo**: SALA, COZINHA, BANHO, QUARTO, QUARTO, SUÍTE. Na caixa acelerando, os três quartos acendem em amarelo em sequência; a folha começa a tremer e a grade se curva | "3 quartos." *(batida)* "8 metros." *(batida)* | Nosso |
 | 7,50 | **drop** | **A folha levanta:** o blueprint vira a casa em 3D, paredes sobem, a luz azul vira luz de fim de tarde | "Cabe em lote 8 x 25 m." | OpenArt vídeo (quadro inicial = blueprint nosso, final = humanizada) |
 | 7,50–9,38 | drop | Voo de cima pela casa mobiliada (planta humanizada realista), da sala à suíte | "72 m² · 3 quartos · 2 banheiros" | OpenArt imagem→imagem + vídeo |
-| 9,38–11,25 | drop | **2 detalhes de 2 tempos** (mudança do Editor: 0,94 s cada, para o público de 25 a 50 anos): (1) vira-lata caramelo deitado no sofá da sala; (2) filtro de barro, garrafa térmica de café, air fryer e morango do amor na bancada da cozinha | sem texto (respiro) | OpenArt |
+| 9,38–11,25 | drop | **2 detalhes de 2 tempos** (mudança do Editor: 0,94 s cada, para o público de 25 a 50 anos): (1) vira-lata caramelo deitado no sofá da sala; (2) filtro de barro, garrafa térmica de café e air fryer na bancada da cozinha (o morango do amor que estava aqui foi vetado pelo dono em 21/11) | sem texto (respiro) | OpenArt |
 | 11,25–13,13 | drop | Fachada ao entardecer no lote de 8 m, com rede e bandeirinhas verde e amarelo no recuo (nunca no corredor de 1 m, que é a passagem), câmera recua até mostrar o lote inteiro | "Lote a partir de 8 x 25 m" | OpenArt (a partir do 3D nosso) |
 | 13,13–15,00 | drop | Corte seco para o blueprint de novo, agora com a logo (versão de perfil, sem os nomes) e o carimbo "CASA VII" no canto; igual ao quadro 0 para o vídeo repetir sem salto (emenda o fim no começo, para o vídeo repetir) | **"Comenta PLANTA"** | Nosso |
 
-**Em todas as cenas:** selo "Imagem ilustrativa" nas imagens geradas e rodapé "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado." (já sai do `montar.py`).
+**Em todas as cenas (versão de 21/11):** selo "Imagem ilustrativa" nas imagens geradas (o dono tirou o selo em 22/11; não repetir) e rodapé "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado." (já sai do `montar.py`).
 
 ## 4. Referências brasileiras (sem marca, sem personagem de terceiros)
 
-Vira-lata caramelo, air fryer, morango do amor, filtro de barro, garrafa térmica, rede, bandeirinhas verde e amarelo, futebol na TV (sem logo de time nem de canal), espada-de-são-jorge no vaso. Nada de marca, logo de clube ou personagem licenciado. O Pesquisador confere se ainda estão em alta.
+Vira-lata caramelo, air fryer, filtro de barro, garrafa térmica, rede, bandeirinhas verde e amarelo, futebol na TV (sem logo de time nem de canal), espada-de-são-jorge no vaso. Nada de marca, logo de clube ou personagem licenciado. Nada de morango do amor nem de batata (dono, 21/11). O Pesquisador confere se ainda estão em alta.
 
 ## 5. Passos e custo
 

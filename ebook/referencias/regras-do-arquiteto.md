@@ -36,7 +36,7 @@ Desde o rascunho 1, as medidas da casa são **por fora** e cada cômodo perde a 
 
 ## 4. Áreas molhadas juntas
 
-Cozinha, serviço e banheiros ficam **encostados**, para uma prumada só (o encanamento mais barato). Quando a suíte fica longe do núcleo molhado, o validador avisa; hoje é o caso de E07, F03, F04 e S09, e a gente aceita porque a suíte pede privacidade (custa um pouco mais de tubulação).
+Cozinha, serviço e banheiros ficam **encostados**, para uma prumada só (o encanamento mais barato). Quando um banheiro fica longe do núcleo molhado, o validador avisa. Hoje é o caso da suíte de E07, F03, F04 e S09, que a gente aceita porque a suíte pede privacidade, e do banheiro da C01 (redesenhada em 22/11/2026), que não encosta em cozinha, serviço nem outro banheiro e pede prumada própria. Nos dois casos custa mais tubulação: a ficha manda perguntar ao engenheiro quanto.
 
 ## 5. Vãos e estrutura
 

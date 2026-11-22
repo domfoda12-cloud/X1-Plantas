@@ -4,7 +4,7 @@ E-book com dezenas de plantas de casas para quem vai construir no Brasil, com v�
 
 **Quem rege a operação é a MinoAI Frontier:** veja [`MAESTRO.md`](MAESTRO.md).
 
-**Comece pelo [`PAINEL.md`](PAINEL.md):** situação, estratégia, a conta do anúncio, fases, tarefas da semana e decisões.
+**Comece pelo [`PAINEL.md`](PAINEL.md):** em que pé está, a conta do anúncio, as frentes e as decisões. Regras de trabalho: [`CLAUDE.md`](CLAUDE.md); o que o dono acabou de pedir: [`contexto/QUADRO.md`](contexto/QUADRO.md); onde está cada documento: [`INDICE.md`](INDICE.md). Tudo fica na branch `main`.
 
 Para atualizar a situação do painel e conferir arquivos e links:
 

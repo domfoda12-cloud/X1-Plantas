@@ -2,7 +2,7 @@
 
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
 >
-> **Esta pasta é o espaço do editor.** Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para todo vídeo do perfil, inclusive o de anúncio.
+> **Esta pasta é o espaço do editor.** Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para os vídeos do perfil. **O anúncio com locução não vai para o Instagram:** o destino dele é WhatsApp e Facebook Ads (dono, 22/11/2026; [`../video/PEDIDO-anuncio-locucao.md`](../video/PEDIDO-anuncio-locucao.md)), e não entra na rotina de reels de teste abaixo.
 >
 > **O editor é a MinoAI Frontier.** O contexto que ela precisa (configuração, mensagem de abertura, pasta de B-roll, regras) está em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md).
 
@@ -19,8 +19,8 @@
 
 | Onde | O quê |
 |---|---|
-| [`../video/VIDEO.md`](../video/VIDEO.md) | Vídeo de anúncio pronto: roteiro, teleprompter e camadas para editar |
-| [`../video/saida/`](../video/saida/) | As 5 versões do anúncio (`rascunho.mp4` e `camada-transparente.webm`) |
+| [`../video/VIDEO.md`](../video/VIDEO.md) | O que existe de vídeo hoje, o que é rascunho e o que é antigo |
+| [`../video/saida/`](../video/saida/) | Vídeos montados. As 5 versões antigas (`v1` a `v5`) usam o 3D velho da C01: não publicar |
 | [`../animacoes-3d/plantas/`](../animacoes-3d/plantas/) | Animações e imagens 3D de cada planta, para posts e reels |
 | [`../ebook/catalogo.md`](../ebook/catalogo.md) | Lista de plantas do e-book: cada uma rende pelo menos um post |
 
@@ -44,11 +44,11 @@ Cada formato vira uma série. O e-book tem dezenas de plantas, então nunca falt
 
 | Formato | Gancho modelo | De onde vem | Material |
 |---|---|---|---|
-| **Erros na planta** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria" | Vídeo de anúncio | [`../video/`](../video/VIDEO.md) |
+| **Erros na planta** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria" (o Revisor de risco confere antes de usar) | Vídeo antigo dos R$ 1.000 | Refazer: o vídeo antigo usa a C01 velha ([`../video/VIDEO.md`](../video/VIDEO.md)) |
 | **É possível…?** | "É possível caber 3 quartos num terreno de 8 m de frente?" | Mino Lee, reel 1 | Planta do catálogo que resolve o desafio |
 | **Lista com prova** | "Eu ia pagar R$ X num projeto. Olha o que consegui por R$ Y" | Mino Lee, reel 2 | Imagens das plantas |
 | **POV bastidor** | "POV: fazendo a planta 3D da casa de um seguidor em 10 min" | Mino Lee, reel 3 | Tela do processo + animação 3D |
-| **Planta da semana** | "Casa de 55 m² com 2 quartos num lote de 10 x 20" | E-book | Animação 3D da planta ([`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md)) |
+| **Planta da semana** | "Casa de 50 m² com 2 quartos num lote de 8 x 15" | E-book | Animação 3D da planta ([`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md)) |
 
 ## 3. Regras de retenção: reel de Robert McKeaveney
 
@@ -56,7 +56,7 @@ Referência: "10/10 content strategies (niche edition)", 52 s. https://www.insta
 
 Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 
-| Tempo | O que ele diz (resumo) | Como usamos no vídeo de anúncio |
+| Tempo | O que ele diz (resumo) | Como usamos (exemplo: o vídeo antigo dos R$ 1.000) |
 |---|---|---|
 | 0:00 | São 10 estratégias, cada uma mais específica que a anterior | Os itens vão do mais geral (sol) ao mais específico (ampliação) |
 | 0:03 | **Tempo assistido** é o principal fator para viralizar; sem ele, não viraliza | Tudo foi pensado para a pessoa ficar até o fim |

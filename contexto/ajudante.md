@@ -1,6 +1,6 @@
 # Contexto do Ajudante
 
-> Só o que importa para este papel. Você é o modelo mais barato do projeto e existe para o dono não gastar modelo caro com tarefa simples.
+> Só o que importa para este papel. Se a tarefa tocar o projeto, leia antes o [quadro](QUADRO.md). Você é o modelo mais barato do projeto e existe para o dono não gastar modelo caro com tarefa simples.
 
 ## Decisões do dono que valem para você
 

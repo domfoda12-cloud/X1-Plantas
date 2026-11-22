@@ -6,7 +6,7 @@
 
 ## "É caro."
 
-Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente], e aqui são [nº], cada uma desenhada no lote. Dá para parcelar no cartão. E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
+Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/projetos-similares.md`, seção 4], e aqui são 24, cada uma desenhada no lote. [pagamento: parcelar no cartão, se o dono decidir.] E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
 
 ## "Não tenho terreno ainda."
 
@@ -32,7 +32,7 @@ Não direto: as plantas são de referência. Um profissional faz o projeto compl
 
 ## "E se eu não gostar?"
 
-Você tem 7 dias para pedir o dinheiro de volta. Sem complicação.
+[garantia: a definir pelo dono. Até lá, use a resposta de "Posso ver antes de pagar?".]
 
 ## "Posso ver antes de pagar?"
 

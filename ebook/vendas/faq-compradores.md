@@ -2,15 +2,17 @@
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
 >
-> Campos entre [colchetes]: preencha depois de decidir preço, título e pagamento ([painel](../../PAINEL.md), seção 9). Toda pergunta nova que aparecer no WhatsApp entra aqui.
+> Campos entre [colchetes]: preencha depois de o dono decidir preço, título, pagamento, garantia e atualizações ([painel](../../PAINEL.md), seção 9). Até lá, não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
+>
+> O que o e-book tem de verdade está em [`../EBOOK.md`](../EBOOK.md), seções 2 e 3. Não prometa nada que não esteja lá.
 
 ## Sobre o e-book
 
 **O que vem no e-book?**
-[nº] plantas de casas. Cada uma com planta humanizada, blueprint com medidas, duas perspectivas 3D, animação e uma ficha com lote mínimo, para quem é e os cuidados antes de construir. Também vêm os 7 erros de planta que saem caro e um checklist de obra.
+24 casas térreas, num PDF de 61 páginas. Cada casa tem duas páginas: a planta mobiliada com as medidas, a casa desenhada no lote mínimo, a ficha com área, quartos, banheiros e o melhor lado da rua, a vista da rua, a casa em 3D, para quem é e para quem não serve, e as perguntas para levar ao engenheiro. Também vêm o "ache pelo seu lote", os 7 erros de planta que saem caro, como ler uma planta, a ficha do seu terreno e os passos do e-book até a chave na mão. [bônus: a definir pelo dono]
 
 **Vou receber as plantas novas?**
-Sim. Quem compra agora recebe as próximas plantas que lançarmos, sem pagar de novo.
+[promessa de atualização: a definir pelo dono. Até lá, responda: "Hoje o e-book tem 24 casas. Se sair versão nova, te aviso aqui."]
 
 **Como recebo?**
 Em PDF, pelo WhatsApp [ou e-mail], logo depois da confirmação do pagamento.
@@ -19,7 +21,7 @@ Em PDF, pelo WhatsApp [ou e-mail], logo depois da confirmação do pagamento.
 [Preencher: PIX, cartão, boleto.]
 
 **E se eu não gostar?**
-Você tem 7 dias depois da compra para pedir o dinheiro de volta.
+[garantia: a definir pelo dono. Até lá, não prometa devolução: mostre a planta grátis, que é igual às páginas do e-book.]
 
 ## Sobre as plantas
 

@@ -1,6 +1,6 @@
 # Contexto do Designer
 
-> Só o que importa para este papel. O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
 
@@ -11,7 +11,7 @@
 ## Em aberto com você
 
 - Foto realista de fachada existe em 4 casas (C01, C03, E07, F01); as outras 20 usam o desenho. Fazer as 20 gasta créditos do OpenArt: decisão do dono.
-- Imagens 2D dos posts (`animacoes-3d/plantas-2d`) estão desatualizadas para C03, E04, F02, S03 e S09.
+- Imagens 2D dos posts (`animacoes-3d/plantas-2d`) estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a da C01 redesenhada (a sala ainda não desenha a mesa).
 - Título, bônus e contato do e-book ainda são espaço reservado na página 61.
 
 ## Onde olhar

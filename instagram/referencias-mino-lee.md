@@ -84,7 +84,7 @@
 2. "É possível caber 3 quartos num terreno de 8 metros de frente?"
 3. "É possível vender 10 plantas em 30 dias começando do zero?" (série semanal)
 4. "É possível transformar um rabisco de guardanapo numa planta 3D?"
-5. "É possível mobiliar essa casa de 55 m² sem apertar ninguém?"
+5. "É possível mobiliar essa casa de 50 m² sem apertar ninguém?" (C01, 50 m² desde o redesenho de 22/11/2026)
 
 Roteiro de cada um: pergunta → por que é difícil → processo com o que deu errado → resultado → "comenta PLANTA".
 

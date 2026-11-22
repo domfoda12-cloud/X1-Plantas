@@ -19,6 +19,8 @@ Temos muitas skills, conectores e scripts. Usar todos em toda tarefa gasta tempo
 | **Pesquisador** | "Temos fonte para isso?" | TinyFish (busca e leitura; recursos pagos só com o "sim"), `deep-research`, `watch` para vídeos | [`pesquisador`](.claude/agents/pesquisador.md) |
 | **Editor de vídeo e imagem: MinoAI Frontier** | "Segura a atenção nos 3 primeiros segundos? A imagem faz querer a casa?" | **Edição de vídeo:** MinoAI Frontier (no Mac/PC do dono). **Criação de imagem e vídeo gerado:** MinoAI usando o OpenArt (plugin `openart:*`: `performance-ads`, `hook-variants`, `ugc`, `tvc`…). Base 3D/2D: `video/render*.cjs` | [`editor-video`](.claude/agents/editor-video.md) |
 
+Que modelo roda cada agente (Opus no trabalho do projeto, Sonnet no `pesquisador`, Haiku no `ajudante`): [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md).
+
 ## 3. Como uma opinião é dada
 
 Cada membro responde em **uma linha**, sempre no mesmo formato:
@@ -52,7 +54,7 @@ Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Val
 1. **Ler o que ela roda.** Ganchos, acesso à rede, dados que saem do projeto, arquivos fora da pasta. O Revisor de risco confere e pode vetar uma parte (foi o que aconteceu com os ganchos do Ponytail).
 2. **Conselho de bolso** decide se entra, com o Maestro primeiro.
 3. **Registrar** na tabela de membros (seção 2: quem usa e quando) e no registro de decisões (seção 7).
-4. **Ensinar o projeto.** Toda skill do projeto ganha a seção `## Neste projeto (X1-Plantas)` no `SKILL.md`; todo agente lê `CLAUDE.md` e o seu `contexto/<agente>.md` (não o histórico inteiro) e escreve um resumo de passagem em `contexto/entregas/` ao terminar. A seção diz o que ler antes, o idioma, as regras que não mudam, onde ela entra no fluxo e que ela nunca corta os avisos legais. Plugin e conector, que ficam fora do repositório, recebem o mesmo texto na mensagem do primeiro uso.
+4. **Ensinar o projeto.** Toda skill do projeto ganha a seção `## Neste projeto (X1-Plantas)` no `SKILL.md`; todo agente lê `CLAUDE.md`, o `contexto/QUADRO.md` e o seu `contexto/<agente>.md` (não o histórico inteiro); o resumo de passagem em `contexto/entregas/` é um só por tarefa, escrito por quem a conduziu (`CLAUDE.md`). A seção diz o que ler antes, o idioma, as regras que não mudam, onde ela entra no fluxo e que ela nunca corta os avisos legais. Plugin e conector, que ficam fora do repositório, recebem o mesmo texto na mensagem do primeiro uso.
 5. **Rodada de alcance.** Rodar a skill uma vez sobre o que já existe onde ela se aplica (exemplo: auditoria no código já escrito, Redator nos textos já publicados). O resultado vai para o `CONTEXTO.md`, e o que precisar de "sim" vai para "Em aberto".
 6. **Inventário:** todo nome entra em [`ECOSSISTEMA.md`](ECOSSISTEMA.md) com status (integrado, liberado não usado, ferramenta do Claude Code). Plugin e conector que abrem sessão ou agente próprio recebem o texto de entrada de lá.
 7. **Conferência automática.** O `python3 ferramentas/checar.py` dá erro se alguma skill de `.claude/skills/` não tiver a seção "Neste projeto" ou não estiver citada aqui, ou se algum agente de `.claude/agents/` não estiver citado aqui.

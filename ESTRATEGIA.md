@@ -15,7 +15,7 @@
 
 | Fato | Fonte | O que significa para nós |
 |---|---|---|
-| **85% de quem construiu ou reformou fez isso sem arquiteto ou engenheiro** (autoconstrução). O custo é visto como a barreira | Pesquisa CAU/BR e Datafolha, 2015 ([Gazeta do Povo](https://www.gazetadopovo.com.br/imoveis/maioria-das-obras-e-feita-sem-acompanhamento-tecnico-brrq8cjo6sdxlhrzc8xvvq8rk), [AECweb](https://www.aecweb.com.br/revista/noticias/o-caubr-e-o-datafolha-realizaram-pesquisa/12302)) | O público é enorme, sensível a preço e decide com o pedreiro. Falar como arquiteto afasta; falar como quem já passou por obra aproxima |
+| **A maioria das obras particulares é feita sem arquiteto ou engenheiro** (autoconstrução). O custo é visto como a barreira. O número citado, 85,4%, é de 2015 e só de quem é economicamente ativo e já construiu ou reformou; as fontes dão 82%, "menos de 15% com profissional" e 9%, sem conciliar. **Em texto público, sem percentual** ([relatório jurídico](reports/Arquiteto%20e%20engenheiro%20na%20constru%C3%A7%C3%A3o%20residencial.md)) | Pesquisa CAU/BR e Datafolha, 2015 ([Gazeta do Povo](https://www.gazetadopovo.com.br/imoveis/maioria-das-obras-e-feita-sem-acompanhamento-tecnico-brrq8cjo6sdxlhrzc8xvvq8rk), [AECweb](https://www.aecweb.com.br/revista/noticias/o-caubr-e-o-datafolha-realizaram-pesquisa/12302)) | O público é enorme, sensível a preço e decide com o pedreiro. Falar como arquiteto afasta; falar como quem já passou por obra aproxima |
 | Pacotes com "milhares de plantas" em PDF são vendidos por poucos reais | [Mercado Livre](https://lista.mercadolivre.com.br/projetos-de-casas-1500-plantas) | Quantidade sozinha não vende: o comprador não sabe escolher no meio de 1.500. **Curadoria e busca pelo lote** são o diferencial |
 | Uma planta pronta avulsa custa de cerca de R$ 98 (só a planta baixa em PDF) a perto de R$ 2.000 (pacote completo) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/) | Âncora de preço: o e-book traz dezenas de plantas pelo preço de menos de uma planta avulsa |
 | Quem financia a construção pela Caixa precisa de projeto aprovado na prefeitura, alvará e ART ou RRT de um profissional | [Serasa](https://www.serasa.com.br/credito/blog/financiamento-construcao/), [Sienge](https://sienge.com.br/blog/proposta-de-construcao-individual/) | Para quem vai financiar, o e-book é o passo **antes** de pagar o profissional: escolher a casa e chegar sabendo o que quer |
@@ -25,7 +25,7 @@
 ## 3. Quem compra: três perfis
 
 ### Perfil 1: "Tenho o lote, vou construir aos poucos"
-- **Quem:** casal de 25 a 45 anos, renda familiar de classe C, comprou um lote em loteamento (muitas vezes parcelado), mora de aluguel ou com a família.
+- **Quem:** casal de 25 a 50 anos, renda familiar de classe C, comprou um lote em loteamento (muitas vezes parcelado), mora de aluguel ou com a família.
 - **Lote típico:** 10 x 20, 10 x 25, 8 x 25, às vezes 5 x 25 em cidade grande.
 - **Como constrói:** com um pedreiro de confiança, por etapas, conforme entra dinheiro. Começa com 2 quartos e quer aumentar depois.
 - **O que quer:** sair do aluguel; a casa própria bonita, "com fachada moderna", que caiba no lote e no bolso.
@@ -53,7 +53,7 @@
 |---|---|---|
 | Pacote com "milhares de plantas" | Poucos reais | Sem curadoria, sem 3D, ninguém ajuda a escolher |
 | Planta pronta avulsa em catálogo | De ~R$ 98 a ~R$ 2.000 cada | Uma planta por vez; o cliente não sabe qual comprar |
-| Arquiteto sob medida | Muito mais | O custo é justamente a barreira para 85% das obras |
+| Arquiteto sob medida | Muito mais | O custo é justamente a barreira para a maioria das obras |
 | **Nós** | **Uma fração de uma planta avulsa** | **Dezenas de plantas originais, escolhidas pelo lote, em 3D, com ajuda no WhatsApp** |
 
 **Frase de posicionamento:** _Para quem tem um lote e quer construir sem errar, o [título] mostra, em 3D, as casas que cabem no seu terreno, antes de você gastar com projeto._
@@ -76,6 +76,8 @@
 | **Linguagem simples:** nada de "projeto executivo", "memorial descritivo" sem explicar | Quem constrói com pedreiro não usa esses termos | Todas |
 
 ## 7. A oferta
+
+> **Tudo nesta tabela é recomendação, não decisão.** Preço, garantia, bônus e lançar com 12 ou 24 casas são do dono e estão **em aberto** ([`CONTEXTO.md`](CONTEXTO.md), "Em aberto"). Nenhum texto ao cliente afirma preço, garantia ou bônus antes de ele decidir.
 
 | Item | Recomendação | Por quê |
 |---|---|---|

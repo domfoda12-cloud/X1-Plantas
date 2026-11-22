@@ -1,8 +1,8 @@
-"""Biblioteca e validador de plantas: o ponto de vista do arquiteto, em código.
+"""Biblioteca e validador de plantas: as regras de projeto do X1-Plantas, em código.
 
 Cada planta é um conjunto de cômodos retangulares em metros (x para a direita, y da frente
-da casa, na rua, para os fundos), mais portas e janelas. O validador confere o que um
-arquiteto confere antes de entregar uma planta:
+da casa, na rua, para os fundos), mais portas e janelas. O validador confere, pelas regras de
+projeto do X1-Plantas (não é revisão de arquiteto), antes de uma planta entrar no e-book:
 
   Geometria       cômodos dentro da casa, sem sobreposição e sem vãos soltos
   Dimensões       área e lado mínimos de cada tipo de cômodo (acima do mínimo legal)
@@ -23,6 +23,7 @@ Uso:
     python3 ferramentas/plantas.py validar          confere todas as plantas
     python3 ferramentas/plantas.py previa [ID ...]  desenha as plantas em ebook/plantas/previas/
     python3 ferramentas/plantas.py exportar         grava um JSON por planta em ebook/plantas/dados/
+    python3 ferramentas/plantas.py fichas           regrava ebook/plantas/PLANTAS.md (a ficha de cada planta)
     python3 ferramentas/plantas.py resumo           mostra a tabela com os números calculados
 """
 import json
@@ -289,7 +290,7 @@ PREFERENCIA = {"sala": ("frente", "dir", "esq", "fundos"), "estar": ("frente", "
 
 
 def auto_janelas(planta):
-    """Põe janelas onde a parede dá para fora, na ordem de preferência do arquiteto."""
+    """Põe janelas onde a parede dá para fora, na ordem de preferência das regras de projeto do X1-Plantas."""
     planta["janelas"] = {}
     for c in planta["comodos"]:
         t = c["tipo"]

@@ -8,13 +8,14 @@
 - Leia o quadro antes de trabalhar. Quem atende um pedido do dono escreve no topo e apaga o mais antigo: ficam os 5 últimos (`QUADRO.md`).
 - Trabalhe e envie na `main`, com `git pull --rebase` antes; a `planta-de-casas-anuncio` acabou (`QUADRO.md`).
 - Regra do dono: confira todo número contra a fonte antes de repassar (`QUADRO.md`).
-- OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`).
+- OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`, `maestro.md`).
+- O Maestro opina sempre e primeiro, em toda tarefa, não só na entrega ao público (`maestro.md`).
 - A C01 foi redesenhada (50 m²) e é o modelo; o material antigo dela não vale, use `ebook/visual/3d/C01.jpg`. As outras 23 esperam o dono (`QUADRO.md`, `arquiteto.md`).
 - O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/arquiteto-sites-de-profissionais.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
-- Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`, `QUADRO.md`).
-- O selo "Imagem ilustrativa" nos vídeos deixou de ser condição; o aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
-- Em aberto com o dono: título, preço, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário (`estrategista.md`).
-- Contradição: imagens 2D desatualizadas incluem a F05 (`arquiteto.md`) e não incluem (`designer.md`).
+- Imagens 2D dos posts desatualizadas: C03, E04, F02, F05, S03, S09 e a C01 redesenhada (`designer.md`, `arquiteto.md`).
+- A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
+- O selo "Imagem ilustrativa" saiu dos vídeos; continua em imagem parada. O aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
+- Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário. R$ 67 e 7 dias não são fato (`estrategista.md`, `redator.md`).
 - O que o dono escreveu, palavra por palavra, está em `dono/PROMPTS.md`; na dúvida sobre um pedido, leia o trecho da data (`dono/PROMPTS.md`).
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->

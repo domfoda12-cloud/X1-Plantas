@@ -5,14 +5,13 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- PDF A4 de 61 páginas com 24 casas térreas, 2 páginas por casa; o catálogo propõe 35 plantas em 3 levas: 12, 12 e 11 (`EBOOK.md`, `catalogo.md`).
+- PDF A4 de 61 páginas com 24 casas térreas, 2 páginas por casa (páginas 10 a 57); o catálogo propõe 35 plantas em 3 levas: 12, 12 e 11 (`EBOOK.md`, `catalogo.md`, `gerador/livro.py`).
 - Gerar: `python3 ebook/gerador/livro.py` cria `ebook/saida/ebook.pdf` e 6 plantas grátis; `--previa <pasta>` salva um PNG por página. Página estourada é erro; o aviso legal nunca fica coberto (`CLAUDE.md`).
-- Números vêm do validador, nunca digitados. Textos das casas: `fichas/textos.py`. Mudança de texto passa pelo Revisor de risco (`CLAUDE.md`).
-- Regra fixa: a planta é de referência. Nunca dizer que dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra (`EBOOK.md`, `PLANO-EBOOK.md`).
-- Em aberto: título, preço, bônus, WhatsApp e promessa de atualização em `config.json`; revisão das 24 por arquiteto registrado; capa proposta "Que casa cabe no seu lote?" (`CLAUDE.md`, `PLANO-EBOOK.md`).
-- Contradição: a C01 tem 50 m² e frente norte em `plantas/PLANTAS.md`; 55 m² em `catalogo.md` e 55 m², frente sul, em `PLANO-EBOOK.md`. O catálogo também difere em E05 (58 e 59), F05 (90 e 91) e S03 (75 e 78).
-- Contradição: `fichas/C01.md` fala em hall e 10% de circulação; `plantas/PLANTAS.md` diz que a sala distribui e que o banheiro pede prumada própria.
-- Contradição: `EBOOK.md` diz que só a C01 tem 3D; `CLAUDE.md` cita casas em 3D em `visual/3d/`; `PLANO-EBOOK.md` deixa o 3D para o último passo.
+- Números vêm do validador, nunca digitados: em caso de dúvida vale `plantas/PLANTAS.md` (C01: 50 m², frente norte, lote 8 x 15). Textos das casas: `fichas/textos.py`. Mudança de texto passa pelo Revisor de risco (`CLAUDE.md`).
+- Cada casa tem planta mobiliada, casa no lote, "Informação da casa", vista da rua (foto ilustrativa em C01, C03, E07 e F01; desenho nas outras) e a casa em 3D nas 24 (`visual/3d/`). Não tem blueprint separado, perspectivas, animação, QR nem checklist de obra (`EBOOK.md`, seção 3).
+- Regra fixa: a planta é de referência. Nunca dizer que dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra (`EBOOK.md`).
+- Em aberto (dono): título, preço, bônus, contato, promessa de atualização, garantia e se o 1º lançamento sai com 12 ou 24; revisão das 24 por arquiteto registrado (`EBOOK.md`, seção 8).
+- A foto de fachada da C01 e o mockup `casa-c01-celulares.png` ainda mostram a C01 antiga (`EBOOK.md`, seção 8).
 <!-- /essencial -->
 
 ## Os 6 documentos

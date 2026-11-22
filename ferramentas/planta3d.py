@@ -2,7 +2,7 @@
 
 Para cada planta gera video/src/plantas/<ID>.js com o mesmo formato de video/src/planta.js
 (LARGURA, PROFUNDIDADE, ambientes, paredes com vãos de porta, janelas, portas) e mais
-MOVEIS (posicionados por regra de arquiteto), ORDEM (sequência em que os cômodos ganham vida)
+MOVEIS (posicionados pelas regras de projeto do X1-Plantas), ORDEM (sequência em que os cômodos ganham vida)
 e META (nome, área, quartos, cotas).
 
 Uso:

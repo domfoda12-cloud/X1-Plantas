@@ -2,8 +2,14 @@
 
 Uso: python3 ferramentas/checar.py
 Confere: sintaxe de todo .py, .cjs e .js (fora de node_modules), as 24 plantas no validador,
-os dados, as fichas, os módulos do motor 3D, o PDF do e-book (sem página estourada), a calculadora do parceiro, o painel e se toda skill e todo agente passaram pelo roteiro de entrada
-(CONSELHO.md, seção 6). Sai com código 1 se algo falhar.
+a regra das paredes, o tamanho dos contextos, o índice e os resumos, o PDF do e-book (sem página
+estourada, numa pasta temporária) e se toda skill e todo agente passaram pelo roteiro de entrada
+(CONSELHO.md, seção 6).
+Atenção: não só confere, também REGRAVA arquivos do repositório: os dados das plantas
+(ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), os módulos do motor 3D
+(video/src/plantas/<ID>.js), a lista de casas da calculadora do parceiro
+(ebook/vendas/calculadora-lote.html) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
+Sai com código 1 se algo falhar.
 """
 import subprocess
 import sys

@@ -19,7 +19,7 @@
 |---|---|---|
 | Ler o prompt, interpretar, dividir, conferir e responder ao dono | **Fable** | a conversa principal |
 | Trabalho do projeto: planta, texto, vídeo, código, design, revisão de risco | **Opus** | o agente do papel (`arquiteto`, `redator`, `designer`, `editor-video`, `estrategista`, `revisor-de-risco`); sem papel certo, agente geral com `model: opus` |
-| Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Sonnet** | `pesquisador` |
+| Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Sonnet + Opus** | o `pesquisador` (Sonnet) busca e lê as fontes; depois um agente no Opus confere, cruza e conclui (dono, 22/11) |
 | Tarefa simples **para o dono** (não para os agentes): organizar um evento, responder uma pergunta, uma busca rápida, um lembrete | **Haiku** | `ajudante` |
 
 - Na dúvida entre dois modelos, vale a regra do projeto: **qualidade primeiro** para o que vai ao público; o mais barato para o que é simples e pessoal.
@@ -32,13 +32,19 @@
 ```
 # <assunto>
 **Prompt (palavra por palavra):** …
-**O que ele pediu:** …
-**O que isso quer dizer para o projeto:** …
+**O que ele pediu, parte por parte:** …
+**Por que ele pediu, ou o que quer descobrir:** …
+**Objetivo dele:** …
+**Ligação com as ideias gerais do projeto:** … (ver `contexto/dono/IDEIAS-GERAIS.md`)
 **Pronto quando:** …
 **Suposições (o dono não disse):** …
 **Quem executa:** <agente> (<modelo>)
 **Resultado:** … (preenchido no fim, com os arquivos)
 ```
+
+## A pergunta que todo prompt passa
+
+Regra do dono (22/11/2026). Antes de dividir o trabalho, o Fable responde na ficha: **por que essa mudança foi pedida, ou o que o dono quer descobrir com esse pedido, e qual é o objetivo dele?** E liga a resposta às ideias gerais do projeto, em [`contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md). A mesma pergunta foi passada em todos os prompts antigos: [`contexto/dono/intencoes/`](../contexto/dono/intencoes/).
 
 ## Limites honestos
 

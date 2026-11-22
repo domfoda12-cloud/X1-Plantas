@@ -1,14 +1,18 @@
 """Gera o e-book "Que casa cabe no seu lote?" (PDF A4) a partir das 24 plantas validadas.
 
 Uso:
-    python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf
+    python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf, as plantas grátis
+                                                   (ebook/saida/planta-gratis-<ID>.pdf, as de config.json)
+                                                   e a lista de casas da calculadora do parceiro
+                                                   (ebook/vendas/calculadora-lote.html)
     python3 ebook/gerador/livro.py --previa DIR    também salva um PNG de cada página em DIR
-    python3 ebook/gerador/livro.py --conferir      só confere, numa pasta temporária, sem mexer em ebook/saida
+    python3 ebook/gerador/livro.py --conferir      confere numa pasta temporária, sem mexer em ebook/saida
+                                                   (a calculadora do parceiro é regravada mesmo assim)
 
 Tudo sai dos dados: plantas e números de ebook/plantas/projetos.py (via ferramentas/plantas.py),
 textos de cada casa de ebook/fichas/textos.py, textos gerais de ebook/gerador/paginas.py
 (7 erros, glossário, terreno, próximos passos) e ebook/config.json (título, preço, bônus, contato).
-Direção visual: ebook/PLANO-EBOOK.md e a prévia em ebook/visual/plano-visual.html.
+Direção visual: a prévia em ebook/visual/plano-visual.html (resumo em ebook/EBOOK.md).
 """
 import html
 import json
