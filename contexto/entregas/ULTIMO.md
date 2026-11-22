@@ -7,3 +7,4 @@
 **Não feito / ressalva:** é ilustração 3D, não foto, e 1080 × 1920, não 4K. Sem música (Mac). Revisor de risco não viu. O principal com a E07 segue rascunho.
 **Decisão do dono pendente:** o que é "pagar por mais"; se "motor art" era o motor próprio ou o OpenArt; E07 ou outra casa no principal; quando filma.
 **Próximo passo:** ouvir o dono; mandar a lista de planos para a filmagem com o celular.
+**Outra entrega do mesmo dia (anúncio com a E07 e locução, da frente de vídeo):** `contexto/entregas/2026-11-22-0010-anuncio-ebook-locucao.md`.

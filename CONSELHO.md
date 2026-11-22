@@ -57,10 +57,21 @@ Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Val
 6. **Inventário:** todo nome entra em [`ECOSSISTEMA.md`](ECOSSISTEMA.md) com status (integrado, liberado não usado, ferramenta do Claude Code). Plugin e conector que abrem sessão ou agente próprio recebem o texto de entrada de lá.
 7. **Conferência automática.** O `python3 ferramentas/checar.py` dá erro se alguma skill de `.claude/skills/` não tiver a seção "Neste projeto" ou não estiver citada aqui, ou se algum agente de `.claude/agents/` não estiver citado aqui.
 
+## 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026)
+
+Nasceu de um erro: um agente recebeu "área segura para Reels e TikTok" num pedido, e o dono nunca tinha dito onde o vídeo ia passar. Vale para **todo agente e toda sessão**.
+
+1. **Uma ficha por entrega** (`PEDIDO-<entrega>.md`, na pasta da frente), com três partes: o que o dono pediu, o que foi suposto sem ele dizer, e o que foi pedido a cada agente e o que voltou. Modelo: [`video/PEDIDO-anuncio-locucao.md`](video/PEDIDO-anuncio-locucao.md).
+2. **Todo pedido a agente leva a ficha inteira** e separa pedido do dono de suposição.
+3. **Reconferência antes de cada etapa** (fechar plano, gerar, montar, entregar): reler os pedidos um por um; nenhuma suposição em aberto decide a etapa; recado novo do dono entra na ficha antes de entrar no plano.
+4. **No fim de cada etapa**, quem conduz diz ao dono o que foi reconferido e o que ficou em aberto.
+
 ## 7. Registro de decisões do Conselho
 
 | Data | Tarefa | Votos | Decisão | Resultado medido |
 |---|---|---|---|---|
 | 20/11/2026 | Criar o Conselho e o Redator | Maestro SIM, Estrategista SIM (menos retrabalho), Revisor SIM, SE o veto valer para todo texto público | Criado | A medir: tempo até a primeira peça aprovada |
 | 20/11/2026 | Adicionar o Ponytail (skills de código) | Maestro: neutro (é código, não toca venda nem vídeo; o método da MinoAI não fala de ferramenta de código). Estrategista SIM (menos código e retrabalho nas ferramentas). Revisor SIM, só as skills: os ganchos do plugin gravam fora do projeto e podem mandar dados para um webhook | Entraram só as 3 skills em `.claude/skills/` (ponytail, ponytail-review, ponytail-audit), sem ganchos | A medir: erros achados pelo `checar.py` depois de cada mudança de código |
+| 21/11/2026 | Vídeo principal E07 com OpenArt, trilha original de 128 BPM e logo | Maestro SIM, SE (1º segundo contido); Editor SIM, SE; Arquiteto SIM, SE (textos e rede); Revisor SIM, SE (selos, lote junto do "Cabe", sem marcas); Designer SIM, SE (sem ciano, papel real) | Aprovado com condições ([plano](video/plano-principal-e07.md), seção 7) | A medir: tempo médio assistido e % que chega ao drop (7,5 s) |
+| 22/11/2026 | Selo "Imagem ilustrativa" nos vídeos | Revisor exigia; **o dono tirou a condição** | Sai o selo; o aviso legal fica pequeno, num canto, parado. Registrado em `video/CLAUDE.md` e `contexto/revisor-de-risco.md` | A medir: nenhuma reclamação de "achei que a casa existia" no WhatsApp |
 | 22/11/2026 | Adicionar a skill `make-pdf` (gstack) | Conselho de bolso. Maestro: neutro (não toca gancho nem vídeo). Designer SIM para documentos em markdown, não para o e-book (que tem gerador próprio). Revisor SIM só sem o preâmbulo: ele liga telemetria, sincroniza memória da sessão com um repositório e escreve no `CLAUDE.md`. Decisão: skill registrada sem o preâmbulo; instalar o binário do gstack espera o "sim" do dono |

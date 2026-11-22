@@ -25,6 +25,7 @@
 | Arquivo | Para que serve |
 |---|---|
 | `VIDEO.md` | Este guia: estrutura, teleprompter, gravação, edição, teste |
+| `roteiro-2-tres-quartos.md` | Roteiro do vídeo 2: "É possível caber 3 quartos em 8 m de frente?" |
 | `saida/v1` a `saida/v5` | As 5 versões prontas (rascunho e camada para o editor) |
 | `roteiro-lancamento.md` | Vídeo de aquecimento do lançamento ("casas na mala"): roteiro, tela, B-roll, 5 ganchos e série até o lançamento |
 | `anuncios/anuncio-facebook.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
@@ -156,3 +157,52 @@ node render.cjs
 ```
 
 Para conferir só alguns quadros: `node render.cjs --amostras 1,5,30 --versao 2`.
+
+## 9. Vídeo 2: plantas que precisam de 3D
+
+Roteiro em [`roteiro-2-tres-quartos.md`](roteiro-2-tres-quartos.md). **Quem gera:** a frente Animações 3D, com o motor de [`../animacoes-3d/ANIMACOES-3D.md`](../animacoes-3d/ANIMACOES-3D.md). Eu monto os cartões e o vídeo com o que ela entregar.
+
+| Prioridade | Planta | O que o vídeo precisa | Onde aparece |
+|---|---|---|---|
+| **1** | **E07 Casa Estreita 3 Quartos** (catálogo: 88 m², 3 quartos, 2 banheiros, lote 8 x 30) | **Os 5 arquivos** (blueprint, planta humanizada, 2 perspectivas, animação) e os **dados** em metros, para eu destacar o hall e os quartos no cartão | Tentativa 3, desfecho em tela cheia e chamada |
+| **2** | **E07, variante com corredor** (só para o vídeo; não entra no e-book) | **Só o blueprint** e os dados | Tentativa 2 |
+| **3** | **F01 Casa Família Compacta** (já está no 1º lançamento) | **Só o blueprint** e os dados (o resto ela já vai gerar para o e-book) | Tentativa 1 |
+| — | C01 Casa Compacta | Nada: já está pronta | Não aparece |
+
+**O que a E07 precisa ter para a fala ser verdade:**
+- Lote 8 x 30. Casa **encostada na divisa da esquerda**, com essa parede **sem janela**; **1,5 m** livre na direita.
+- Largura da casa: **6,5 m**. Área perto de **88 m²**.
+- **3 quartos e 2 banheiros, todos com janela** (para a direita, para a frente ou para os fundos). Nada de banheiro sem janela: é o erro 4 do vídeo 1.
+- **Dois quartos lado a lado nos fundos.** O terceiro onde couber melhor.
+- **Circulação curta:** um hall de cerca de **2 m**, sem corredor comprido.
+- Sala e cozinha integradas na frente.
+
+**O que a variante com corredor precisa ter:**
+- Mesma área e programa (3 quartos, 2 banheiros), mas com **5 m de largura** (1,5 m livre dos dois lados).
+- Quartos **em fila**, um atrás do outro, e um **corredor de cerca de 10 m** por 0,9 m (9 m², o tamanho de um quarto).
+
+**O que vale para as três:**
+- **Mesma escala** (mesmos pixels por metro) e a **frente da casa no alto**, para eu colocar uma por cima do mesmo lote.
+- Sem o lote nem os recuos desenhados: o lote 8 x 30 e as faixas de 1,5 m eu desenho no cartão.
+- A E07 é **mais funda** que a Casa Compacta: a câmera da animação precisa afastar mais (ver [`../animacoes-3d/ANIMACOES-3D.md`](../animacoes-3d/ANIMACOES-3D.md), seção 6).
+
+**Decisão pendente (sua):** a E07 está no **2º lançamento** do catálogo, mas o vídeo 2 promete "essa planta de graça". Se a pessoa receber outra planta, ou não encontrar a E07 no e-book, a promessa fica maior que o produto. Opções:
+1. **Passar a E07 para o 1º lançamento** (no lugar de outra, ou como 13ª planta) e mandá-la como planta grátis de quem vier por este vídeo. **Recomendado:** é a planta que o vídeo vende. Quem muda o catálogo é o chat do E-book; quem muda o funil é o parceiro.
+2. Manter a E07 no 2º lançamento e só publicar o vídeo 2 quando ela estiver no e-book.
+3. Trocar a chamada para "uma planta grátis" (a Casa Compacta). Não recomendo: a pessoa viu uma casa estreita e recebe outra.
+
+## 10. Chamada final quando o e-book tiver título
+
+Hoje a chamada fala só da planta grátis, o que está certo para o funil: a pessoa comenta para ganhar a planta, e o e-book é oferecido depois, no WhatsApp. **Quando você decidir o título** ([`../PAINEL.md`](../PAINEL.md), seção 9), a chamada passa a citar o e-book, sem virar duas frases:
+
+| Vídeo | Hoje | Com o título |
+|---|---|---|
+| Vídeo 1 (fala) | "Comenta PLANTA que eu te mando essa planta humanizada de graça no WhatsApp." | "Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]." |
+| Vídeo 1 (cartão) | "Comente PLANTA" · "pelo WhatsApp" | "Comente PLANTA" · "planta grátis do e-book [Título]" |
+| Vídeo 2 (fala) | "Comenta PLANTA que eu te mando essa planta de graça no WhatsApp." | "Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]." |
+| Vídeo 2 (cartão) | "Comente PLANTA" · "pelo WhatsApp" | "Comente PLANTA" · "planta grátis do e-book [Título]" |
+
+**Dica para a gravação:** se o título sair antes de o apresentador gravar, grave já a chamada nova. Se não, grave **as duas** chamadas (a de hoje e a nova com o título falado como "[Título]" depois), para não precisar chamar o apresentador de novo só por uma frase.
+
+**Quando o título sair, o que eu faço:** troco a fala e o cartão da cena `cta` em `src/cena.js`, renderizo as 5 versões de novo (`node render.cjs`) e confiro a legenda. A planta grátis continua a mesma; só a frase muda. Os textos de anúncio em [`anuncios/anuncio-facebook.md`](anuncios/anuncio-facebook.md) passam pela mesma troca.
+

@@ -31,6 +31,10 @@ Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselh
 - **Entrega que vai ao público ou decisão que custa dinheiro**: conselho completo com os subagentes de `.claude/agents/`.
 - **Revisor de risco tem veto** em tudo que toca honestidade e lei. **O dono decide** preço, título, gasto com anúncio, publicação e contratação.
 
+## Ficha do pedido e reconferência
+
+Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o que é suposição e o que foi pedido a cada agente. Todo agente recebe a ficha; suposição nunca decide nada sem o dono confirmar; antes de cada etapa, reconfira os pedidos um por um ([`CONSELHO.md`](CONSELHO.md), seção 6b; decisão do dono, 22/11/2026).
+
 ## Regras que não mudam
 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).

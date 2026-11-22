@@ -21,4 +21,4 @@
 
 ## Onde olhar
 
-`video/PEDIDOS-DO-DONO.md`, `video/REFERENCIA-CONDOR.md`, `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
+`video/PEDIDOS-DO-DONO.md`, `video/REFERENCIA-CONDOR.md`, `video/REFERENCIA-VIRAL.md` (oferta e demanda de formatos), `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.

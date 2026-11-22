@@ -15,6 +15,8 @@
 | "Falo muito de eficiência, mas a prioridade é sempre a maior qualidade" | Peça final sempre na melhor configuração; economia só em rascunho e teste ([`CLAUDE.md`](CLAUDE.md)) |
 | "Foque em uma coisa por vez, não misture tudo ao mesmo tempo" | Uma frente por vez, do começo ao fim, antes de abrir outra. Ordem atual: e-book → animações → vídeo |
 | "Ótimo ao máximo, TUDO" | Fazer completo e bem feito, sem atalho que prejudique a qualidade |
+| "Quando eu paro para acrescentar informação, junte tudo" | Recados no meio do trabalho entram todos na mesma entrega |
+| "Antes de qualquer vídeo ou gasto no OpenArt, me dê o resumo da produção e as instruções que segue; confirmo os dois" | Nada é montado nem gasto sem as duas confirmações do dono ([`video/CLAUDE.md`](video/CLAUDE.md)) |
 | "Continue trabalhando sem pedir permissão" (para tarefas internas) | Avançar sozinho no que é interno; decisões de dinheiro, título, preço e publicação continuam com o dono |
 
 ## Em aberto (esperando o dono)
@@ -26,8 +28,8 @@
 - **Toolkit de vídeo de demonstração:** a proteção automática bloqueou a instalação. Trocar o modo para "Accept edits" ou rodar `npx product-demo-agent-toolkit skills .claude/skills`.
 - **OpenArt: só com o "sim" do dono a cada uso (22/11). Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
 - **Vídeos de 22/11:** assistir ao convite (`video/saida/convite/`, passeio pela F03) e ao principal com escaneamento (`video/saida/principal-condor/`, rascunho com a E07); dizer o que é "pagar por mais" e se libera o OpenArt para a versão realista.
-- **Vídeo principal e prévia do WhatsApp (feitos em 21/11):** assistir aos dois (em `video/saida/`) e dizer o que muda; escolher a palavra da chamada (PLANTA ou LOTE); pôr a música licenciada na edição da MinoAI Frontier, no Mac. **OpenArt: não usar** (ordem do dono, 21/11); clipes novos só com o motor 3D e as páginas do e-book.
-- **Vídeo (última frente):** os 5 anúncios e os reels 1 e 6 usam o 3D antigo da C01, refazer; assistir ao CONDOR XIII no Mac ou mandar 3 a 5 momentos com o minuto; gravar o apresentador, criar o Instagram e configurar a MinoAI Frontier no Mac; testar PLANTA contra LOTE como palavra do comentário.
+- **Vídeos de 21/11** (principal e prévia do WhatsApp, em `video/saida/`): dizer o que muda; PLANTA ou LOTE.
+- **Vídeo (última frente):** os 5 anúncios e os reels 1 e 6 usam o 3D antigo da C01; criar o Instagram e configurar a MinoAI Frontier no Mac.
 - **Skill `make-pdf`:** falta o "sim" para instalar o gstack.
 - **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09: refazer quando a frente de animação abrir.
 - Informar quanto resta do limite semanal (Configurações → Uso) para fechar o orçamento em números.
