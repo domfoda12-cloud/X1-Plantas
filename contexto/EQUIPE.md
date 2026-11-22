@@ -27,6 +27,9 @@
 
 ## Fronteiras
 
+Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md`](CONVIVENCIA.md).
+
+
 - Designer e Editor usam o Diretor; geração no OpenArt só com o "sim" do dono.
 - Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` acha; conclui o Arquiteto, o Estrategista ou um geral no Opus.
 - Revisor de risco: Opus no rascunho, **Fable na peça final**.

@@ -100,6 +100,10 @@ Revisão de 22/11/2026, a pedido do dono ("reveja toda a nossa conversa, procure
 | 22/11 | "Para todo vídeo, quando eu acrescentar uma informação, garanta que ela fique lá e não se perca na conversa" | Vale. É este arquivo |
 | 22/11 | Prompt base para tomadas realistas, com umas 10 variáveis | Feito: seção "Prompt base" abaixo |
 | 22/11 | "Reveja toda a nossa conversa, procure informação de criação de vídeo e ponha no arquivo de vídeo" | Feito nesta revisão |
+| 22/11 | "Ao inves de um cachorro caramelo adicione esse video a lista de referencia, use o video para o video princiapl do ads/instagram" (reel https://www.instagram.com/reel/DTw4bqHE5zj/) | Vale. O reel entra em `REFERENCIAS.md` e substitui o caramelo no **principal (anúncio e Instagram)**. Ficha `2055-video-reel` |
+| 22/11 | "no video do whatsapp mostre a casa pela perspectiva de um caramelo" | Vale. O vídeo do WhatsApp mostra a casa do ponto de vista de um vira-lata caramelo (câmera na altura do cachorro) |
+| 22/11 | "em algum momento a camera diminua o zoom dando um efeito especial no video (you can look for one to use in the editor references)" | Vale. Um zoom out com efeito, tirado das referências de edição (kit da MinoAI e `REFERENCIAS.md`) |
+| 22/11 | "Durante a procura de referencias procure memes brasileiros atemporais como esse" | Vale. Toda busca de referência inclui memes brasileiros atemporais; os achados vão ao caderno `pesquisas/video.md` |
 
 **Em aberto, citado pelo dono e que não chegou ao Editor:** "o beat de prova que discutimos antes" (conversa anterior, provavelmente na página de chat). Se tinha mais detalhe, falta o dono repetir.
 

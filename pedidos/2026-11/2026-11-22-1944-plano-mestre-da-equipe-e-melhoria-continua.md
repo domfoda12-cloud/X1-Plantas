@@ -11,6 +11,8 @@ Give a main plan, function and objective for the team and make them come out wit
 
 *Recado de 22/11 20:36:* Keep working on the problem, always give the team an objective, did you make the detailed step by step plan, separated in bigger and smaller tasks across the agents?
 
+*Recado de 22/11 20:56:* Talvez no futura talvez queira entender melhor como melhorar as conexaos que os agentes tem, lembre antes de fazer as coisas de criar o plano detalhado(grande small steps...) que deve ser vetado pelo time varias vezes e o fable 1
+
 **O que ele pediu, parte por parte:** Na fila, não agora. 1) Um plano principal, a função e o objetivo da equipe. 2) A equipe chega sozinha ao plano que deveria ser óbvio por todo o contexto da branch principal. 3) Pensar juntos por um tempo. 4) Continuar achando melhorias no sistema, no projeto, no plano e no código.
 
 **Por que ele pediu, ou o que quer descobrir:** Com a equipe organizada (fichas 1924 e 1935), ele quer saber se ela entendeu o projeto sem ele explicar: se o plano que sai dela bate com o que ele tem na cabeça, o contexto está bom. E quer que a melhoria vire rotina, não pedido.

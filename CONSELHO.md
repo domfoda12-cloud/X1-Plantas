@@ -64,7 +64,7 @@ Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Val
 
 Nasceu de um erro: um agente recebeu "área segura para Reels e TikTok" num pedido, e o dono nunca tinha dito onde o vídeo ia passar. Vale para **todo agente e toda sessão**.
 
-1. **Uma ficha por entrega** (`PEDIDO-<entrega>.md`, na pasta da frente), com três partes: o que o dono pediu, o que foi suposto sem ele dizer, e o que foi pedido a cada agente e o que voltou. Modelo: [`video/ANUNCIO-LOCUCAO.md`](video/ANUNCIO-LOCUCAO.md).
+1. **Uma ficha por entrega, em `pedidos/`** (entrega longa ganha também uma seção "Pedido do dono" no documento da peça), com três partes: o que o dono pediu, o que foi suposto sem ele dizer, e o que foi pedido a cada agente e o que voltou. Modelo: [`video/ANUNCIO-LOCUCAO.md`](video/ANUNCIO-LOCUCAO.md).
 2. **Todo pedido a agente leva a ficha inteira** e separa pedido do dono de suposição.
 3. **Reconferência antes de cada etapa** (fechar plano, gerar, montar, entregar): reler os pedidos um por um; nenhuma suposição em aberto decide a etapa; recado novo do dono entra na ficha antes de entrar no plano.
 4. **No fim de cada etapa**, quem conduz diz ao dono o que foi reconferido e o que ficou em aberto.

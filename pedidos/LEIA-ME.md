@@ -46,6 +46,20 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 
 
 
+## Plano vetado antes de fazer (dono, 22/11/2026)
+
+"Antes de fazer as coisas, crie o plano detalhado (passos grandes e pequenos), que deve ser vetado pelo time várias vezes e pelo Fable uma." Vale para todo trabalho que não seja de uma linha:
+
+1. O Maestro escreve na ficha o plano em passos **G** (grandes) e **P** (pequenos), cada um com quem faz, o objetivo e o "pronto quando".
+2. **Rodada de veto 1:** os agentes do assunto leem o plano e dizem SIM, NÃO ou SIM, SE, com o motivo. O Maestro corrige.
+3. **Rodada de veto 2:** os mesmos releem o plano corrigido. Repete até não haver NÃO (no máximo 3 rodadas; o que sobrar vai ao dono).
+4. **Fable** (`supervisor`) veta uma vez, por último.
+5. Só então se executa. Gasto e publicação continuam esperando o "sim" do dono.
+
+## Erro de sintonia entre agentes (dono, 22/11/2026)
+
+Quando dois papéis se atrapalham (fazem o mesmo, deixam um buraco, se contradizem), o Maestro cria na hora uma regra em [`contexto/CONVIVENCIA.md`](../contexto/CONVIVENCIA.md) e conta ao dono no fim, num relatório curto: o erro, a regra, quem muda.
+
 ## Consertar de vez (dono, 22/11/2026: "não só conserte, remende")
 
 Erro achado não é só corrigido: a causa vira **regra escrita ou conferência automática** no `checar.py`, para não voltar. Exemplos de 22/11: link quebrado depois de juntar arquivo (o `checar.py` confere todos os links); contexto apontando resumo demais (confere no máximo 3); quadro passando do tamanho (`pedido.py quadro` tira o aviso mais antigo); fato que muda dentro do arquivo do agente (fica só no `contexto/<papel>.md`). Na ficha, em "Conferência", diga o que impede o erro de voltar.
