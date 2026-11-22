@@ -1,11 +1,16 @@
-# Referência de edição: CONDOR XIII (Payton Talbott)
+# Referências de vídeo
+
+> A referência de edição favorita do dono (CONDOR) e a oferta e demanda de formatos virais. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
+
+<!-- era: video/REFERENCIAS.md -->
+## Referência de edição: CONDOR XIII (Payton Talbott)
 
 > Pedido do dono (20/11/2026): "melhor edição que já vi, meu vídeo favorito do YouTube; absorva os conceitos e aplique no vídeo curto". Parte da frente **vídeo** (a última da fila: e-book → animações → vídeo). Guia do editor: [`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md).
 
 - **Vídeo:** [CONDOR XIII](https://youtu.be/skqwOI5YKco), canal Payton Talbott (lutador do UFC). Episódio de William Alan Harris, editado por William Alan Harris e Payton Talbott.
 - **Série:** episódios numerados em algarismo romano (Tumult VI, Renascor X, Crucible XI, CONDOR XIII).
 
-## 1. O que deu para ver (e o que não deu)
+### 1. O que deu para ver (e o que não deu)
 
 **Ainda não assisti ao vídeo.** O YouTube bloqueia download a partir do servidor na nuvem ("Sign in to confirm you're not a bot"), então não saíram quadros nem legenda. O `analyze_hook` da MinoAI Frontier só aceita TikTok e Reels; ver a seção 1b, onde ele foi usado nos reels da mesma dupla de edição. A tabela abaixo vem do que as ferramentas devolveram:
 
@@ -19,7 +24,7 @@
 
 **Para completar** (fica em aberto): assistir quadro a quadro no Mac do dono, onde o `/watch` usa o navegador logado. Outra saída é o dono mandar 3 a 5 momentos favoritos com o minuto de cada um. Aí este arquivo ganha a seção "momento a momento".
 
-## 1b. O que o `analyze_hook` da MinoAI Frontier viu (reels da mesma dupla de edição)
+### 1b. O que o `analyze_hook` da MinoAI Frontier viu (reels da mesma dupla de edição)
 
 O `analyze_hook` não aceita YouTube ("Provide a public HTTPS TikTok or Instagram link"). Por isso foi usado nos reels do Instagram do Payton (@paytontalbott), que têm a mesma edição de William Alan Harris e Payton. Nenhum dos 7 analisados é trecho do CONDOR XIII. O mais próximo é o trecho do **ECDYSIS XII**, o episódio anterior. Números: só os que a ferramenta devolveu.
 
@@ -42,7 +47,7 @@ O `analyze_hook` não aceita YouTube ("Provide a public HTTPS TikTok or Instagra
 
 **O que a MinoAI Frontier critica em todos:** nenhum tem **texto de gancho no primeiro quadro**. Para o Payton isso funciona, porque o público já o conhece. Para o nosso anúncio, que fala com quem nunca ouviu falar da gente, o texto no primeiro quadro é obrigatório.
 
-### Mais conceitos para o reel de planta (vindos da análise)
+#### Mais conceitos para o reel de planta (vindos da análise)
 
 | # | Conceito | Como vira reel de planta |
 |---|---|---|
@@ -53,9 +58,9 @@ O `analyze_hook` não aceita YouTube ("Provide a public HTTPS TikTok or Instagra
 | 12 | **Fim numa imagem forte, sem silêncio** | Terminar na fachada iluminada ao entardecer e cortar seco. Nada de 5 s de preto, porque o fim precisa emendar com o começo para o vídeo repetir |
 | 13 | **Evitar os erros que a análise apontou** | Nada de clarão que lava a planta, plano repetido, efeito solto no fim nem ordem fora do tempo |
 
-## 1c. B-roll e música: o coração do estilo (pedido do dono: "preste muita atenção")
+### 1c. B-roll e música: o coração do estilo (pedido do dono: "preste muita atenção")
 
-### O B-roll dele
+#### O B-roll dele
 
 Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-chave do CONDOR:
 
@@ -71,7 +76,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 
 **A regra por trás:** quase nunca o B-roll mostra literalmente o que acontece. Ele mostra **o que a cena significa**: o cavalo é o trabalho, o DNA é a máquina. Para isso ele junta material de origens diferentes (luta, natureza, animação, arquivo) e une tudo pela música e pela cor.
 
-### A música dele
+#### A música dele
 
 | Onde | Música (o que a fonte mostrou) |
 |---|---|
@@ -90,7 +95,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 5. **Letra que vira legenda.** "i rejected that culture, do you blame me?" é a letra e também a legenda. O golpe e o mortal caem na batida e na nota alta (0:01–0:08).
 6. **Remix em vez da original.** Na playlist aparecem versões misturadas e refeitas: "Leni (Crystal Castles vs GoodBooks)", "Sadeness, Part 2" (Tranceparence), "Pride x New Magic Wand" (Infinity092), "stay - but it's even more heart wrenching". A música é conhecida, mas soa diferente, e o público pergunta qual é.
 
-### Como isso vira o B-roll e a música dos reels de planta
+#### Como isso vira o B-roll e a música dos reels de planta
 
 | Conceito do Payton | No X1-Plantas |
 |---|---|
@@ -106,7 +111,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 | **Remix** | Pegar uma faixa licenciada e mudar o clima dela: mais lenta, com eco, ou cortada só no trecho que importa. Antes, conferir se a licença deixa editar |
 | **B-roll por frase** (MinoAI: um clipe por frase, 2 a 4 clipes nos primeiros 5 s, movimento dinâmico; "primeiro o clima, depois a música") | Lista de planos frase a frase em todo roteiro, antes de editar |
 
-### Cuidados (Revisor de risco e Estrategista)
+#### Cuidados (Revisor de risco e Estrategista)
 
 - **Direito autoral:**
   - **Anúncio pago** só pode usar música com licença comercial (biblioteca de sons da Meta ou trilha livre de direitos) ou a trilha nossa de 128 BPM, aprovada pelo Revisor em 21/11 (`CLAUDE.md` desta pasta). Música de artista, como Eartheater ou Crystal Castles, **não** entra em anúncio.
@@ -119,7 +124,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
   - Mão de pedreiro aparece como respeito ao profissional, nunca como "dispensa o pedreiro".
 - **Biblioteca a montar** (frente vídeo): pasta `video/broll/` com os planos acima, gravados ou gerados (OpenArt na frente de vídeo, com o orçamento de [`ORCAMENTO.md`](../ORCAMENTO.md)). Hoje ela só tem `ebook-folheando.mp4`.
 
-## 2. Os conceitos, levados para o reel de planta (30 a 60 s, vertical)
+### 2. Os conceitos, levados para o reel de planta (30 a 60 s, vertical)
 
 | # | Conceito do CONDOR | Como vira reel de planta | Onde entra |
 |---|---|---|---|
@@ -131,7 +136,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 | 6 | **Energia de mixtape em VHS** (montagem guiada pela música, textura, cortes no tempo) | Textura de papel e granulado leve, cortes no tempo da batida, música no comando quando não há fala. A planta continua nítida | Reels sem fala (montagem de plantas) |
 | 7 | **Natureza e geometria** (gansos em formação, proporções) | Cortes por semelhança: a linha do lote vira a parede da planta, a grade da obra vira a grade do desenho, o sol na janela vira a seta do norte | Transições entre cenas |
 
-## 3. Conselho de bolso
+### 3. Conselho de bolso
 
 - **Diretor (MinoAI Frontier), primeiro.** A biblioteca dela apoia três pontos:
   - Montar o sentido a cada dois planos (efeito Kuleshov) e deixar cada plano "só o tempo de passar a ideia" (Content Academy SOP).
@@ -140,9 +145,81 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 - **Editor de vídeo:** o estilo serve como **embalagem** (abertura, transição, capa). A planta precisa ficar parada e legível por pelo menos 1,5 s. Arte que esconde a planta derruba a venda.
 - **Revisor de risco:** fachada e 3D gerados levam "Imagem ilustrativa" (em vídeo, o dono tirou o selo em 22/11/2026; em imagem parada continua). A frase-tese não pode prometer que a casa cabe em qualquer lote, por isso fica "a casa certa", e não "sua casa cabe".
 
-## 4. Próximo uso
+### 4. Próximo uso
 
-A frente vídeo já está produzindo (22/11/2026). Os conceitos 1 e 3 entraram nos rascunhos `roteiros/principal-condor.json` e `roteiros/convite.json` (gancho "Todo lote é uma conta", medida do lote em letra-janela; ver [`PEDIDOS-DO-DONO.md`](PEDIDOS-DO-DONO.md)). Falta:
+A frente vídeo já está produzindo (22/11/2026). Os conceitos 1 e 3 entraram nos rascunhos `roteiros/principal-condor.json` e `roteiros/convite.json` (gancho "Todo lote é uma conta", medida do lote em letra-janela; ver [`VIDEO.md`](VIDEO.md)). Falta:
 
-1. Testar o conceito 4 no anúncio com locução ([`plano-anuncio-locucao.md`](plano-anuncio-locucao.md)), que vai para WhatsApp e Facebook Ads.
+1. Testar o conceito 4 no anúncio com locução ([`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md)), que vai para WhatsApp e Facebook Ads.
 2. Usar o conceito 5 na série semanal do perfil.
+
+<!-- era: video/REFERENCIAS.md -->
+## Referência: como um formato viraliza (oferta e demanda)
+
+> Era o agente `editor` da `main` (16/11/2026). Virou referência do Editor de vídeo (`.claude/agents/editor-video.md`) para não haver dois editores. O texto abaixo é o original; o público dele é rede social em geral, e o nosso anúncio vai para WhatsApp e Facebook Ads (ver `video/CLAUDE.md`).
+
+You are **Editor**, a content strategist and video editor focused on short-form social media (TikTok, Instagram Reels, YouTube Shorts, X). You help the user decide **what content is worth making** and **how to make it win**.
+
+Your core knowledge comes from a talk by Victor (19, growth at Composio, a Series A AI startup in San Francisco; claims 2.33B+ views across creators, influencers and tech companies such as a16z-backed startups). Source: https://x.com/victorgu0/status/2117693795076854052 ("i've gotten 2 billion views for startups, influencers, and myself", 8:53). Figures below are his own claims, not independently verified.
+
+### Core thesis: going viral is not luck, it is supply and demand
+
+Social media is its own economy.
+
+- **Supply** = the creators/companies making videos.
+- **Demand** = the people watching them.
+- **Price (y-axis)** = average views per video. **Quantity (x-axis)** = number of videos that exist.
+- Where supply and demand intersect gives the average views per video and how many videos get made in that market.
+
+#### Niches vs formats
+
+- A **niche is an industry** (e.g. AI, sports). A **format is a market** inside it (e.g. AI tutorials, AI news, AI launches).
+- Formats in the same niche fight for similar audiences, but you compete **head-to-head with others making the same format**.
+- **Niche size sets the ceiling.** A good sports video may get millions of views; a good AI B2B SaaS video may get ~10,000. Performance is relative — always judge results against the niche.
+- Job of the creator: know your niche, then find the best format for what you are trying to show.
+
+#### Finding the arbitrage
+
+- Look for formats with **high demand and low supply** → higher average views per video.
+- Spot them through **outliers**: videos with very high views relative to the account's follower count.
+  - 1M views on a 10M-follower account → the audience did it.
+  - 1M views on a 1K-follower account → the video/format did it.
+- Rule: **look for formats where small accounts keep going viral.**
+
+### Three ways to win a format
+
+#### 1. Supply the best videos
+- "Best" ≠ highest production. It means **whatever that audience prefers**: simpler, more complex, more emotional, funnier, more edited — decide per format and goal.
+- Case: PKE, a basketball channel with a recurring format (cameraman asks a question; two people alternate shooting threes; a made shot earns a chance to answer; first correct answer wins). Frequent outliers (100Ks–millions of views) but average quality. Victor's team (building an AI sports site, "PlayCreate") copied the format and made it better: more interesting questions, more polish, better editing and pacing. First 10 videos on fresh accounts: **70M+ views**, first video **16M**, channel monetized. PKE has 760+ videos; those 10 videos out-viewed PKE's top 10 combined.
+
+#### 2. Take a proven format into a new niche
+- A format's past success proves its fundamentals; you just need good execution in a niche where it hasn't been done well.
+- Case: the "$1 vs $X" challenge format (MrBeast "$1 vs $10,000 Cake", ~195–200M views), done hundreds of times in other niches but not well in AI/tech. Victor made "**$1 vs $1,000,000 Engineer**" (software from an inexperienced vs an experienced engineer, featuring the Composio team) → **4M+ views** across platforms on fresh accounts: millions on Instagram, 1M+ on TikTok, strong on YouTube, a few hundred thousand on X (despite short-form not being native to X).
+- Applies to all content, not only video: if you don't know what to make, see what works in other niches and bring the concept over.
+
+#### 3. Dominate through scale
+- One-off viral videos are capped by your own output (the $1 vs $1M video took a full day to film, edit and post).
+- Solution: **find what works and scale it with creators.** Composio's creator program: find a format, write a script, send it with notes to **100+ creators** → **14,000+ videos, 280M+ views** in a couple of months on short-form platforms (e.g. "things you didn't know Claude could do", "ChatGPT Plus is now free" style videos).
+- Trade-off: hit rate per video drops (creators add a variable you can't fully control). A "hit" = a video that goes viral.
+- Math: you alone, 1 video × 90% hit rate = **0.9 hits**; 100 creators × 10% = **10 hits** → ~11× more hits on the same format. Cost is usually negligible for a fast-growing startup or with good creator deals.
+- Expected distribution: power law — top ~10% of videos get most views; the long tail still adds up.
+- Operating loop: keep finding new formats, send them to creators, kill formats that stop working, scale winners, take over the niche.
+
+### Arbitrage decays
+- Once a format gets popular, others copy it → supply rises → average views fall. **Speed matters**: spot trends before the window closes.
+- Exception: very high-quality formats few creators can execute — a market with a **high barrier to entry**.
+
+### Summary
+Social media is an economy. Find markets where demand outruns supply, then either (1) make the best video there, (2) bring in a proven format from elsewhere, and/or (3) scale it through creators. To go viral consistently, deeply understand your niche and execute at an exceptional level every time.
+
+### How to work
+
+When the user brings you an idea, script, video, account or niche:
+
+1. **Identify niche and format.** Name both explicitly; estimate the niche ceiling so expectations are realistic.
+2. **Check supply vs demand.** Ask for (or reason about) examples of the format: are small accounts getting outlier views? Is the format saturated? Is the window closing?
+3. **Pick the winning lever(s):** better execution, format transplant from another niche, and/or scale via creators. Say which and why.
+4. **Give concrete edits.** For scripts and cuts: hook in the first seconds, pacing, question/premise strength, clarity, payoff, polish level that fits the audience (not maximum production by default). Rewrite lines or propose a shot list when useful.
+5. **Plan for scale if relevant:** a reusable script template plus creator notes, the expected hit rate, and which metrics decide whether to kill or scale a format.
+6. Judge results relative to the niche and to the account's follower count, never in absolute views alone.
+
+Be direct and specific. Prefer actionable recommendations, rewrites and examples over general advice. When a claim depends on data you don't have (view counts, competitor accounts), say so and tell the user what to look up.

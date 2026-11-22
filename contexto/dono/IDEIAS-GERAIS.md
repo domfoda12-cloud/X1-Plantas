@@ -1,6 +1,6 @@
 # As ideias gerais do projeto: o que liga um pedido ao outro
 
-> Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". **É leitura nossa, não fala dele.** O porquê de cada prompt está em [`intencoes/`](intencoes/); as palavras dele, em [`PROMPTS.md`](PROMPTS.md) e em [`video/PEDIDOS-DO-DONO.md`](../../video/PEDIDOS-DO-DONO.md). Toda ficha de pedido diz qual destes fios ela puxa. Quem achar um fio novo, ou vir o dono contradizer um destes, corrige aqui.
+> Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". **É leitura nossa, não fala dele.** O porquê de cada prompt está em [`intencoes/`](intencoes); as palavras dele, em [`PROMPTS.md`](PROMPTS.md) e em [`video/VIDEO.md`](../../video/VIDEO.md). Toda ficha de pedido diz qual destes fios ela puxa. Quem achar um fio novo, ou vir o dono contradizer um destes, corrige aqui.
 
 ## A ideia central
 
@@ -62,4 +62,4 @@ Marcado **firme** (ele disse com clareza ou repetiu) ou **provável** (leitura n
 
 ## O que não deu para saber
 
-Onze prompts de 16 a 20/11 e três de 21 e 22/11 ficaram com o motivo marcado como "não dá para saber pelo texto" nos arquivos de [`intencoes/`](intencoes/). O mais importante: por que veio o "não use OpenArt" de 21/11 (os clipes não agradaram, ou era controle de gasto?). O "eu não proibi, só precisa de permissão" de 22/11 aponta para controle de gasto, mas não fecha.
+Onze prompts de 16 a 20/11 e três de 21 e 22/11 ficaram com o motivo marcado como "não dá para saber pelo texto" nos arquivos de [`intencoes/`](intencoes). O mais importante: por que veio o "não use OpenArt" de 21/11 (os clipes não agradaram, ou era controle de gasto?). O "eu não proibi, só precisa de permissão" de 22/11 aponta para controle de gasto, mas não fecha.

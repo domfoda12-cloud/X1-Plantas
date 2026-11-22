@@ -2,7 +2,7 @@
 
 E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
 
-**Quem rege é o Maestro (a conversa principal do Claude, que decide); a MinoAI Frontier é o Diretor do conteúdo:** veja [`MAESTRO.md`](MAESTRO.md) e [`contexto/EQUIPE.md`](contexto/EQUIPE.md).
+**Quem rege é o Maestro (a conversa principal do Claude, que decide); a MinoAI Frontier é o Diretor do conteúdo:** veja [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) e [`contexto/EQUIPE.md`](contexto/EQUIPE.md).
 
 **Comece pelo [`PAINEL.md`](PAINEL.md):** em que pé está, a conta do anúncio, as frentes e as decisões. Regras de trabalho: [`CLAUDE.md`](CLAUDE.md); o que o dono acabou de pedir: [`contexto/QUADRO.md`](contexto/QUADRO.md); onde está cada documento: [`INDICE.md`](INDICE.md). Tudo fica na branch `main`.
 

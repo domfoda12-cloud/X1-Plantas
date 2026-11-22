@@ -19,7 +19,7 @@
 
 ## Onde olhar
 
-sistema visual `ebook/referencias/linguagem-visual-e-animacao.md`, gerador `ebook/gerador/livro.py`, referência `ebook/referencias/livros-de-plantas-com-3d.md`.
+sistema visual `ebook/referencias/VISUAL.md`, gerador `ebook/gerador/livro.py`, referência `ebook/referencias/VISUAL.md`.
 
 ## Leia barato
 

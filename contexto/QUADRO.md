@@ -4,7 +4,13 @@
 
 ## Agora
 
-- Equipe fechada e testada (ficha `1935-equipe-final`). Próximo: ficha aberta "Organizar os arquivos", depois a E07. Mudanças nos agentes valem a partir da próxima conversa.
+- Organizando os arquivos (ficha `1529-organizar-os-arquivos`), etapa 1 feita: documentos juntados. Próximo: código repetido; depois o plano mestre da equipe (ficha `1944`).
+
+## 22/11 · Documentos juntados; main em dia
+
+- **O dono pediu:** juntar os arquivos lidos pelos mesmos agentes; levar o trabalho para a `main`.
+- **Todos:** 50 documentos viraram 12, cada antigo inteiro como seção. Nomes novos: `video/VIDEO.md` (com os pedidos do dono), `ANUNCIO-LOCUCAO.md`, `PRINCIPAL-E07.md`, `REFERENCIAS.md`; `instagram/INSTAGRAM.md`, `MINOAI-FRONTIER.md` (com o antigo `MAESTRO.md`); `ebook/referencias/ARQUITETO.md`, `MERCADO.md`, `VISUAL.md`; `ebook/vendas/WHATSAPP.md`; `reports/NOTAS-DA-PESQUISA.md`. Links já corrigidos.
+- **Quem conduz:** resumo de passagem agora vai no fim de `contexto/entregas/REGISTRO.md` e no `ULTIMO.md`.
 
 ## 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable
 
@@ -25,10 +31,3 @@
 - **O dono pediu:** pensar antes de qualquer trabalho, mais quanto maior ele for; corrigir o erro do gerador no Python 3.11 (revisão do PR #3).
 - **Todos:** regra "pense antes, na medida do trabalho" em `pedidos/LEIA-ME.md`; esforço padrão "high". `ebook/gerador/livro.py` abre no Python 3.11.
 - **Redator e parceiro:** a E07 saiu das plantas grátis (5 agora); o PDF ainda tem campo pendente e não vai ao cliente (o `checar.py` avisa).
-
-## 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre
-
-- **O dono pediu:** Opus na conversa e Fable de socorro e auditoria; apagar vídeos e renders (guardar o último vídeo e a informação); reler tudo para refazer do zero; perguntar sempre; organizar os arquivos na próxima sessão.
-- **Todos:** chame o `supervisor` (Fable) quando travar ou errar. Pergunte a si mesmo o que foi pedido, o que supõe e o que não sabe; ao dono, no fim, sem travar ([`pedidos/LEIA-ME.md`](../pedidos/LEIA-ME.md)).
-- **Editor de vídeo e Designer:** saíram vídeos, clipes, renders 3D e 2D, as imagens dos carrosséis e o código do vídeo antigo (voltam com `git checkout 079dae7 -- <caminho>`); ficaram o convite, o principal de 21/11, a voz do dono e a trilha. O `calendario.md` tem o post 5 parado por isso. Antes de refazer, leia [`dono/RETROSPECTIVA.md`](dono/RETROSPECTIVA.md).
-- **Todos:** a próxima sessão começa organizando os arquivos (ficha em `pedidos/`); depois, refazer do zero.

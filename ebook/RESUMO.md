@@ -40,7 +40,7 @@ Tamanho: 1957 palavras.
 
 ### [As 24 plantas: ficha de cada uma](plantas/PLANTAS.md)
 
-Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book (`../EBOOK.md`). Regras: `../referencias/regras-do-arquiteto.md`. Plantas de referência: o projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.
+Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book (`../EBOOK.md`). Regras: `../referencias/ARQUITETO.md`. Plantas de referência: o projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.
 
 Seções: C01 · Casa Compacta; C02 · Casa Studio; C03 · Casa Inicial; C04 · Casa Duo; C05 · Casa Popular; C06 · Casa Compacta Suíte; C07 · Casa Compacta Varanda; E01 · Casa Estreita; E02 · Casa Corredor; E03 · Casa Fita; E04 · Casa Pátio; E05 · Casa Estreita Suíte; E06 · Casa Estreita Gourmet; E07 · Casa Estreita 3 Quartos; ….
 

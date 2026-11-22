@@ -24,7 +24,7 @@
 
 ## Onde olhar
 
-`ESTRATEGIA.md` (seção 9), `reports/`, `ebook/vendas/faq-compradores.md`, `CONSELHO.md`.
+`ESTRATEGIA.md` (seção 9), `reports/`, `ebook/vendas/WHATSAPP.md`, `CONSELHO.md`.
 
 ## Leia barato
 

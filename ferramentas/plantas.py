@@ -779,7 +779,7 @@ def pensou(planta):
 def cmd_fichas():
     L = ["# As 24 plantas: ficha de cada uma", "",
          "> Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). "
-         "Regras: [`../referencias/regras-do-arquiteto.md`](../referencias/regras-do-arquiteto.md). "
+         "Regras: [`../referencias/ARQUITETO.md`](../referencias/ARQUITETO.md). "
          "**Plantas de referência**: o projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.", ""]
     for p in carregar():
         m = p["_r"].metricas

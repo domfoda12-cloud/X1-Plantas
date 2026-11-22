@@ -1,6 +1,6 @@
 # X1-Plantas: instruções para toda sessão do Claude Code
 
-E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo), vendido por Instagram e Facebook Ads com funil no WhatsApp. Público: quem tem o lote e vai construir com pedreiro, por etapas, classe C, 25 a 50 anos ([persona](ebook/referencias/persona-e-mercado.md)). Tudo em português do Brasil, preços em R$.
+E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo), vendido por Instagram e Facebook Ads com funil no WhatsApp. Público: quem tem o lote e vai construir com pedreiro, por etapas, classe C, 25 a 50 anos ([persona](ebook/referencias/MERCADO.md)). Tudo em português do Brasil, preços em R$.
 
 ## Antes de tudo: o contexto
 
@@ -8,7 +8,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Depois de cada pedido do dono, todos ficam sabendo** (regra do dono, 22/11/2026): quem atendeu escreve o aviso no topo de [`contexto/QUADRO.md`](contexto/QUADRO.md) (o que ele pediu, o que mudou, o que muda para cada papel) e atualiza o `contexto/<agente>.md` de quem foi afetado. **Todo agente e toda conversa lê o quadro antes de trabalhar.**
 
-**Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro; a web vai ao caderno `pesquisas/` (`ferramentas/pesquisa.py`). **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** em `contexto/entregas/` (modelo em `MODELO.md`, no máximo 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
+**Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro; a web vai ao caderno `pesquisas/` (`ferramentas/pesquisa.py`). **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** no fim de `contexto/entregas/REGISTRO.md` (modelo: `MODELO.md`, até 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
 
 **Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
 

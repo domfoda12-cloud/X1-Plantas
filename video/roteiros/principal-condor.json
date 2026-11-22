@@ -38,7 +38,7 @@
    "selo": "Ilustração do modelo 3D"
   },
   {
-   "nota": "Escaneamento, pedido do dono de 22/11 (video/PEDIDOS-DO-DONO.md): 3 tempos de 0,3 s, corte seco. Gerado por video/scan.py.",
+   "nota": "Escaneamento, pedido do dono de 22/11 (video/VIDEO.md): 3 tempos de 0,3 s, corte seco. Gerado por video/scan.py.",
    "fonte": "video/broll/clipes/scan-e07.mp4",
    "dur": 0.9,
    "continua": true
@@ -141,5 +141,5 @@
    "selo": "Ilustração do modelo 3D"
   }
  ],
- "nota": "Ordens do dono para este vídeo: video/PEDIDOS-DO-DONO.md. Leia antes de mexer."
+ "nota": "Ordens do dono para este vídeo: video/VIDEO.md. Leia antes de mexer."
 }

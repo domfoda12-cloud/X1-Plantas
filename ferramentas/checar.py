@@ -30,7 +30,7 @@ def rodar(nome, cmd):
     return r
 
 
-ignorar = ("node_modules", ".git", "saida", "research_notes")
+ignorar = ("node_modules", ".git", "saida")
 for f in sorted(RAIZ.rglob("*.py")):
     if any(p in f.parts for p in ignorar):
         continue
@@ -79,7 +79,7 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
 # Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
 LIMITES = [("CLAUDE.md", 6500), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
 LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
-LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md"))]
+LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md")) if p.name != "REGISTRO.md"]
 # Mapa do sistema: todo programa aparece no MAPA-DO-SISTEMA.md (é por ele que o Graphify vê como um alimenta o outro)
 _mapa = (RAIZ / "MAPA-DO-SISTEMA.md").read_text(encoding="utf-8") if (RAIZ / "MAPA-DO-SISTEMA.md").exists() else ""
 _progs = subprocess.run(["git", "ls-files", "*.py", "*.cjs", "video/src/*.js", "video/src/*.html"], cwd=RAIZ, capture_output=True, text=True).stdout.split()

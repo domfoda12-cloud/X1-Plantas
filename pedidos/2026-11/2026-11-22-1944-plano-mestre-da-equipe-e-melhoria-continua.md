@@ -7,6 +7,8 @@ Give a main plan, function and objective for the team and make them come out wit
 
 *Recado de 22/11 19:44:* i want to give them a lot of liberty of thought...
 
+*Recado de 22/11 20:02:* Ive seen really advance llms built with claude, i kinda wish to have the same but have no prior technical knowledge
+
 **O que ele pediu, parte por parte:** Na fila, não agora. 1) Um plano principal, a função e o objetivo da equipe. 2) A equipe chega sozinha ao plano que deveria ser óbvio por todo o contexto da branch principal. 3) Pensar juntos por um tempo. 4) Continuar achando melhorias no sistema, no projeto, no plano e no código.
 
 **Por que ele pediu, ou o que quer descobrir:** Com a equipe organizada (fichas 1924 e 1935), ele quer saber se ela entendeu o projeto sem ele explicar: se o plano que sai dela bate com o que ele tem na cabeça, o contexto está bom. E quer que a melhoria vire rotina, não pedido.

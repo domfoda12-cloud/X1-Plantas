@@ -1,6 +1,6 @@
 // Monta o vídeo principal da E07 (15 s, 128 BPM): blueprint nosso + clipes do OpenArt + trilha original.
 // Uso: node video/principal-e07/montar_e07.cjs   (antes: node render_blueprint.cjs, e os clipes em openart/)
-// Plano quadro a quadro e decisão do Conselho: video/plano-principal-e07.md
+// Plano quadro a quadro e decisão do Conselho: video/PRINCIPAL-E07.md
 const { chromium } = require('playwright');
 const { execFileSync } = require('child_process');
 const fs = require('fs'), path = require('path');

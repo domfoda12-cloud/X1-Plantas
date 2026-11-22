@@ -27,7 +27,7 @@ Main seems like a huge mess i dont know what to do with it
 
 **Quem executa:** Plano: Opus. Juntar documentos: agentes no Opus, um por pasta, cada um com a lista do que junta e para onde. Código comum: Opus. Conferência e medida antes e depois: Opus; auditoria do Fable no fim.
 
-**Conferência:** (a preencher)
+**Conferência:** etapa 1 (documentos), 22/11: 50 documentos viraram 12, cada antigo inteiro como seção (marcado `<!-- era: ... -->`); de 138 para 100 documentos .md. Todos os links do repositório abrem (conferido por script: 0 quebrados); as citações do dono em `video/VIDEO.md` conferidas uma a uma; `checar.py` sem erro. Ficaram separados de propósito os planos de peças diferentes e os arquivos junto de material (`video/principal-e07/`), para o agente não ler mais do que precisa. Falta: etapa 2 (código repetido em `ferramentas/comum.py`), etapa 3 (cada contexto com no máximo 3 resumos) e medir o Graphify depois do push na `main`.
 
 **Resultado:** (a preencher)
 
@@ -36,7 +36,7 @@ Main seems like a huge mess i dont know what to do with it
 1. **Medir antes** (`graph_stats`): 2.013 círculos, 2.231 ligações, 292 grupos (22/11, depois da limpeza).
 2. **Documentos, de 126 para uns 40** (o que mais pesa):
    - `contexto/entregas/`: 18 resumos de passagem viram um registro só, mais o `ULTIMO.md`.
-   - `video/`: `VIDEO.md`, `PEDIDOS-DO-DONO.md`, `PEDIDO-anuncio-locucao.md`, os planos e as referências viram 3 (regras e pedidos; plano da peça atual; referências).
+   - `video/`: `VIDEO.md`, `VIDEO.md`, `ANUNCIO-LOCUCAO.md`, os planos e as referências viram 3 (regras e pedidos; plano da peça atual; referências).
    - `instagram/`: 6 viram 2 (plano do perfil; posts).
    - `ebook/referencias/`: 10 viram 4 (público e mercado; regras do Arquiteto; pesquisas; concorrentes).
    - Raiz: `PAINEL.md`, `ORCAMENTO.md`, `ESTRATEGIA.md` e `ECOSSISTEMA.md` revistos; o que repete o `CONTEXTO.md` sai.
@@ -60,4 +60,4 @@ Medido com um script: para cada documento, quais agentes o leem (arquivo do agen
 | `research_notes/` (ninguém lê, 34 mil caracteres) | 2 | 0: vão para `reports/`, junto do relatório que os usa |
 | Raiz | 13 | 9: `ORCAMENTO` entra no `PAINEL`; `README` e `RESUMO-RAIZ` viram um; `MAESTRO` vai para `instagram/` |
 
-Total: **de 138 para uns 75 documentos.** As palavras do dono (`PROMPTS.md`, `PEDIDOS-DO-DONO.md`) continuam palavra por palavra, só mudam de lugar. Espera o "sim" do dono.
+Total: **de 138 para uns 75 documentos.** As palavras do dono (`PROMPTS.md`, `VIDEO.md`) continuam palavra por palavra, só mudam de lugar. Espera o "sim" do dono.

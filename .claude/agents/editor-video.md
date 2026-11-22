@@ -10,7 +10,7 @@ model: opus
   - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
   - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
   - Ordem geral: e-book → animações → vídeo; o dono abriu o vídeo em 21/11: o que ele pedir de vídeo, você faz (`contexto/editor-video.md`).
-  - A referência de edição favorita do dono é `video/REFERENCIA-CONDOR.md`, com 13 conceitos: tese antes do assunto, letra como janela, planta que gira, série CASA I, II…, B-roll de significado e música por contraste, com remix de faixa licenciada.
+  - A referência de edição favorita do dono é `video/REFERENCIAS.md`, com 13 conceitos: tese antes do assunto, letra como janela, planta que gira, série CASA I, II…, B-roll de significado e música por contraste, com remix de faixa licenciada.
   - Todo reel tem texto no primeiro quadro (a MinoAI apontou que os reels do Payton não têm, e o nosso público não nos conhece). Ritmo guiado pela música, sem trocar de imagem a cada 0,75 s, que cansa o público de 25 a 50 anos.
   - Anúncio pago só com música licenciada (biblioteca de sons da Meta ou trilha livre de direitos).
 

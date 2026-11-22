@@ -18,7 +18,7 @@
 | `plantas/<nome-da-planta>/` | Imagens e animação de cada planta gerada pelo motor (hoje: `casa-compacta/`, do desenho antigo da C01) |
 | `plantas-2d/` | Imagens 2D das plantas para os carrosséis (as da C01 são de 20/11, antes do redesenho) |
 
-O código do motor fica em [`../video/src/`](../video/src/), porque o vídeo de anúncio usa o mesmo motor. Ver seção 5.
+O código do motor fica em [`../video/src/`](../video/src), porque o vídeo de anúncio usa o mesmo motor. Ver seção 5.
 
 ## 1. O que cada planta recebe
 
@@ -63,7 +63,7 @@ As imagens têm 2000 x 2500 pixels (proporção 4:5): cabem numa página A4 do e
 
 | Arquivo | O que faz |
 |---|---|
-| [`../video/src/plantas/`](../video/src/plantas/) | **Dados de cada planta** (`<ID>.js`, um por planta, as 24): medidas, cômodos, paredes, janelas, portas e a ficha (`META`). Saem de `python3 ferramentas/planta3d.py`; não edite à mão |
+| [`../video/src/plantas/`](../video/src/plantas) | **Dados de cada planta** (`<ID>.js`, um por planta, as 24): medidas, cômodos, paredes, janelas, portas e a ficha (`META`). Saem de `python3 ferramentas/planta3d.py`; não edite à mão |
 | `../video/src/planta.js` | Dados da C01 **antiga** (55 m²): é o que o motor usa quando roda sem `--planta`. Não use |
 | [`../video/src/casa3d.js`](../video/src/casa3d.js) | **Motor 3D:** monta a casa a partir dos dados nos três estágios. Também tem a lista de móveis e a ordem em que os cômodos ganham vida |
 | [`../video/src/casa.html`](../video/src/casa.html) | Página que mostra um quadro da casa, usada pelo render |

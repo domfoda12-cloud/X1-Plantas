@@ -16,7 +16,7 @@
 - O relatório inteiro foi harmonizado com a atualização de 19/11/2026 em 22/11/2026; a nota exigencias_legais, anterior, foi apagada (relatório).
 <!-- /essencial -->
 
-## Os 3 documentos
+## Os 2 documentos
 
 ### [Planta pronta reduz custo, mas não dispensa profissional](Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)
 
@@ -26,18 +26,10 @@ Seções: Atualização de 19/11/2026: o que passou a ser verificado em fonte pr
 
 Tamanho: 3672 palavras.
 
-### [Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/publico_e_criterios.md)
+### [Notas da pesquisa jurídica](NOTAS-DA-PESQUISA.md)
 
-Método e limites: pesquisa feita com buscas na web (dados até nov/2026). Só uma parte dos links foi aberta; os domínios gazetadopovo.com.br, caubr.gov.br e diariodonordeste.verdesmares.com.br não resolveram nesta sessão, então os dados atribuídos a eles vêm dos trechos de busca e não foram…
+As notas de apoio do relatório sobre arquiteto e engenheiro (antes em `research_notes/`). Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-Seções: 1. Qual a proporção de obras sem profissional e por quê?; 2. Quais são as barreiras declaradas para contratar arquiteto?; 3. Quais erros de projeto aparecem em obras de casa pequena, e a planta pronta evita ou não?; 4. Quando uma planta pronta basta (terreno padrão, casa térrea, sem recuo especial, sem declividade)?; 5. Quando é indispensável projeto sob medida (terreno irregular, declive, muitas restrições, sobrado, construção por etapas)?; Próximos passos sugeridos (fora do escopo desta nota).
+Seções: Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida; Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026).
 
-Tamanho: 2332 palavras.
-
-### [Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026)](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/servicos_e_precos.md)
-
-Data de consulta: 2026-11-19. Os preços abaixo vêm de trechos de resultados de busca, não de páginas abertas, porque a maioria dos sites de origem não resolveu nesta sessão (ver Gaps). Quase todos são sites comerciais, sem data de publicação visível; quando a fonte diz "2026", isso está indicado.…
-
-Seções: Quais são as etapas de um projeto residencial e o que cada uma entrega?; Quanto custa, em faixas, um projeto residencial por m² ou por projeto?; Quanto custa uma planta pronta ou catálogo de projetos, e o que costuma vir incluído?; Quais serviços um arquiteto faz que uma planta pronta não faz?; Quanto de uma obra costuma ser projeto? Há referência de proporção do custo total?; Limitações desta pesquisa e fontes inacessíveis; Itens que faltaram.
-
-Tamanho: 2537 palavras.
+Tamanho: 4911 palavras.

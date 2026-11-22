@@ -1,6 +1,6 @@
 # OpenArt + MinoAI Frontier: imagens e animações a partir das nossas plantas
 
-> **Regra que vale (dono, 22/11/2026):** o OpenArt é permitido, mas **cada uso pede o "sim" do dono**, com o resumo da produção e o custo antes ([`../video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md)). A liberação "sem limite" de 20/11 não vale mais. Conta: **plano Pro, 21.137 créditos** (medido em 22/11/2026).
+> **Regra que vale (dono, 22/11/2026):** o OpenArt é permitido, mas **cada uso pede o "sim" do dono**, com o resumo da produção e o custo antes ([`../video/VIDEO.md`](../video/VIDEO.md)). A liberação "sem limite" de 20/11 não vale mais. Conta: **plano Pro, 21.137 créditos** (medido em 22/11/2026).
 
 > Exemplo do [Conselho](../CONSELHO.md) em ação. Guia da frente: [`ANIMACOES-3D.md`](ANIMACOES-3D.md). Editor: [MinoAI Frontier](../instagram/MINOAI-FRONTIER.md).
 

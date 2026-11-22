@@ -10,14 +10,14 @@
 - Frentes, uma por vez: e-book → animações → vídeo; a de vídeo foi aberta pelo dono em 21/11. Peça final sempre na maior qualidade (`CLAUDE.md`, `PAINEL.md`).
 - O Maestro é a conversa principal (Opus): decide e rege a equipe. O Diretor, MinoAI Frontier, dá a ideia principal de todo conteúdo e opina primeiro nele. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
 - Nunca dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo de obra (`CLAUDE.md`).
-- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `MAESTRO.md`).
+- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `instagram/MINOAI-FRONTIER.md`).
 - 24 casas desenhadas e no PDF (rascunho 1), cada uma com imagem 3D; a C01 foi redesenhada. A "Situação agora" do painel conta pelo catálogo, que está atrasado: vale a seção 2 (`PAINEL.md`).
 - Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, quais casas refazer. R$ 67 e 7 dias são recomendação, não decisão (`CONTEXTO.md`, `ESTRATEGIA.md`, seção 7).
 - OpenArt: 21.137 créditos em 22/11/2026, plano Pro; cada uso pede o "sim" do dono (`ORCAMENTO.md`). Selo "Imagem ilustrativa": saiu dos vídeos, continua em imagem parada (`ECOSSISTEMA.md`).
 - Público: 25 a 50 anos, quem constrói com pedreiro, por etapas (`CLAUDE.md`, `ESTRATEGIA.md`).
 <!-- /essencial -->
 
-## Os 13 documentos
+## Os 12 documentos
 
 ### [X1-Plantas: instruções para toda sessão do Claude Code](CLAUDE.md)
 
@@ -67,14 +67,6 @@ Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três per
 
 Tamanho: 2076 palavras.
 
-### [Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier](MAESTRO.md)
-
-Quem rege é o Maestro (dono, 22/11/2026): a sessão do Claude no seu computador, no app (aba Code), com este repositório aberto. Ele decide, conduz a semana pelo painel e chama a equipe (`contexto/EQUIPE.md`). A MinoAI Frontier é o Diretor, ligado nessa sessão: dá a ideia principal de todo conteúdo,…
-
-Seções: 1. O que o Maestro e o Diretor fazem; 2. Configuração (uma vez só); 3. A mensagem de abertura do maestro; 4. Rotina da semana; 5. Primeira tarefa do maestro.
-
-Tamanho: 1147 palavras.
-
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 
 Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer do zero (ficam no histórico do git); as pastas de saída abaixo voltam a encher quando os programas rodarem. Uma página para ver o projeto como um sistema: a planta entra, vira dados, e dos dados saem o PDF, o 3D, as…
@@ -109,9 +101,9 @@ Tamanho: 157 palavras.
 
 As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro; abra um documento inteiro só quando a tarefa pedir. Índice geral: `INDICE.md`. Quem lê: todos.
 
-Seções: O essencial; Os 13 documentos.
+Seções: O essencial; Os 12 documentos.
 
-Tamanho: 1383 palavras.
+Tamanho: 1284 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

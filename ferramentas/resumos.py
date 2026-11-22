@@ -32,14 +32,14 @@ PASTAS = {
     "ebook/vendas": ("Venda e WhatsApp", "O funil: planta grátis, mensagens, objeções e atributos que vendem",
                      ["ebook/vendas"], ["redator", "estrategista", "revisor-de-risco"]),
     "video": ("Vídeo e anúncio", "Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio",
-              ["video", "video/anuncios", "video/principal-e07", "video/principal-e07/kit-minoai"],
+              ["video", "video/principal-e07", "video/principal-e07/kit-minoai"],
               ["editor-video", "diretor", "redator", "revisor-de-risco"]),
     "instagram": ("Instagram", "Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier",
                   ["instagram", "instagram/posts"], ["editor-video", "diretor", "redator", "designer", "estrategista"]),
     "animacoes-3d": ("Animações 3D e imagens", "O motor 3D, o OpenArt e as referências de planta que ganha vida",
                      ["animacoes-3d"], ["arquiteto", "designer", "editor-video"]),
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
-                ["reports", "research_notes"], ["revisor-de-risco", "pesquisador", "estrategista"]),
+                ["reports"], ["revisor-de-risco", "pesquisador", "estrategista"]),
     "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
                 ["pedidos"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
@@ -110,7 +110,7 @@ def docs_da(chave):
     if chave == "ferramentas":
         return [a for a in rastreados("*.py") if a.parent.as_posix() in cobre]
     return [a for a in rastreados("*.md") if a.parent.as_posix() in cobre and a.name not in GERADOS
-            or (chave == "reports" and a.parts[0] in ("reports", "research_notes") and a.name not in GERADOS)]
+            or (chave == "reports" and a.parts[0] == "reports" and a.name not in GERADOS)]
 
 
 def gerar():

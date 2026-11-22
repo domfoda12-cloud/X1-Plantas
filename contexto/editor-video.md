@@ -6,14 +6,14 @@
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
-- **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
-- **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `PEDIDOS-DO-DONO.md`.
+- **Toda instrução do dono sobre vídeo fica em `video/VIDEO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
+- **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `VIDEO.md`.
 - **OpenArt: só com o "sim" do dono a cada uso** (22/11: "eu NÃO proibi, apenas necessita permissão"), com resumo e custo antes. A C01 foi redesenhada: o material antigo dela não vale. Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - A frente de vídeo foi **aberta pelo dono em 21/11** (pediu o principal e a prévia do WhatsApp). A ordem geral continua e-book → animações → vídeo; o que ele pedir de vídeo, você faz.
 - A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.
 - Sem o selo "Imagem ilustrativa" nos vídeos (dono, 22/11); o aviso "Planta de referência…" continua, pequeno e parado.
-- Destino do vídeo: WhatsApp e Facebook Ads (`video/PEDIDO-anuncio-locucao.md`).
+- Destino do vídeo: WhatsApp e Facebook Ads (`video/ANUNCIO-LOCUCAO.md`).
 
 ## Em aberto com você
 
@@ -24,7 +24,7 @@
 
 ## Onde olhar
 
-`video/PEDIDOS-DO-DONO.md`, `video/REFERENCIA-CONDOR.md`, `video/REFERENCIA-VIRAL.md` (oferta e demanda de formatos), `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
+`video/VIDEO.md`, `video/REFERENCIAS.md`, `video/REFERENCIAS.md` (oferta e demanda de formatos), `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
 
 ## Leia barato
 

@@ -1,4 +1,4 @@
-"""Sequência de "escaneamento" da planta (pedido do dono, 22/11/2026; ver video/PEDIDOS-DO-DONO.md).
+"""Sequência de "escaneamento" da planta (pedido do dono, 22/11/2026; ver video/VIDEO.md).
 
 Uso: python3 video/scan.py E07   ->  video/broll/clipes/scan-e07.mp4 (0,9 s, 1080x1920, 30 qps)
 Três tempos de 0,3 s sobre a mesma planta 2D, só com corte seco:

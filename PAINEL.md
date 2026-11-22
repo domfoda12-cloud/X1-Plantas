@@ -2,7 +2,7 @@
 
 > **Comece por aqui.** Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que frente estamos, o que fazer esta semana e o que decidir.
 >
-> **Quem rege é o Maestro**, a sessão do Claude no seu computador: conduz a semana por este painel e decide; a **MinoAI Frontier**, o Diretor, dá a ideia principal do conteúdo, edita o vídeo e gera a imagem. Ver [`MAESTRO.md`](MAESTRO.md).
+> **Quem rege é o Maestro**, a sessão do Claude no seu computador: conduz a semana por este painel e decide; a **MinoAI Frontier**, o Diretor, dá a ideia principal do conteúdo, edita o vídeo e gera a imagem. Ver [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md).
 >
 > A seção 1 se atualiza sozinha: rode `python3 ferramentas/atualizar-painel.py` na raiz do projeto sempre que algo mudar. **Atenção:** ela conta pela coluna "Situação" do [catálogo](ebook/catalogo.md), que está atrasada; a verdade de hoje está na seção 2.
 >
@@ -39,7 +39,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 ## 2. Em que pé está (escrito à mão, 22/11/2026)
 
 - **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). Há **5 plantas grátis** para o funil (C01, E03, E02, F01, C06; a E07 saiu, na fila do redesenho). O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
-- **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Ficaram em `video/saida/` só o convite (F03, o último feito) e o principal de 21/11; o resto foi apagado em 22/11 para refazer do zero. Toda instrução dele sobre vídeo: [`video/PEDIDOS-DO-DONO.md`](video/PEDIDOS-DO-DONO.md).
+- **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Ficaram em `video/saida/` só o convite (F03, o último feito) e o principal de 21/11; o resto foi apagado em 22/11 para refazer do zero. Toda instrução dele sobre vídeo: [`video/VIDEO.md`](video/VIDEO.md).
 - **Animações 3D completas:** ainda não começaram (as imagens 3D paradas já estão no e-book).
 - **Organização:** tudo na `main`, a única branch. Cada pedido do dono vira ficha em [`pedidos/`](pedidos/LEIA-ME.md) e é executado pelo modelo certo. Índice e resumos por pasta: [`INDICE.md`](INDICE.md).
 - **Não há venda nem anúncio rodando.** Custo por venda ainda não medido.
@@ -143,7 +143,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas**, 25 a 50 anos ([`CLAUDE.md`](CLAUDE.md)) |
-| 19/11 | Maestro e editor: **MinoAI Frontier** (desde 22/11: Diretor; o Maestro é a conversa principal) ([`MAESTRO.md`](MAESTRO.md)) |
+| 19/11 | Maestro e editor: **MinoAI Frontier** (desde 22/11: Diretor; o Maestro é a conversa principal) ([`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md)) |
 | 20/11 | **Qualidade primeiro** e **uma frente por vez** ([`CLAUDE.md`](CLAUDE.md)) |
 | 21/11 | Frente de **vídeo aberta** pelo dono |
 | 22/11 | **OpenArt só com o "sim" do dono a cada uso**, com resumo e custo antes |
@@ -160,7 +160,7 @@ Ficam num lugar só: [`CONTEXTO.md`](CONTEXTO.md), "Em aberto". As opções e a 
 
 | Risco | O que fazer |
 |---|---|
-| **Quem assina o desenho.** A Lei 5.194/1966 (art. 13) diz que plantas e projetos só têm valor jurídico diante das autoridades quando feitos por profissional habilitado; o art. 6º trata do exercício da profissão sem registro. As plantas do e-book são feitas por quem não é arquiteto nem engenheiro. ([pesquisa](reports/Arquiteto%20e%20engenheiro%20na%20constru%C3%A7%C3%A3o%20residencial.md)) | Apresentar o e-book como **referência**, nunca como projeto. Ter um **arquiteto registrado** revisando e assinando as plantas, e confirmar com ele e com um advogado como isso aparece no produto. Não é parecer jurídico |
+| **Quem assina o desenho.** A Lei 5.194/1966 (art. 13) diz que plantas e projetos só têm valor jurídico diante das autoridades quando feitos por profissional habilitado; o art. 6º trata do exercício da profissão sem registro. As plantas do e-book são feitas por quem não é arquiteto nem engenheiro. ([pesquisa](reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)) | Apresentar o e-book como **referência**, nunca como projeto. Ter um **arquiteto registrado** revisando e assinando as plantas, e confirmar com ele e com um advogado como isso aparece no produto. Não é parecer jurídico |
 | **Responsabilidade técnica.** Para construir e aprovar na prefeitura, a obra precisa de projeto com profissional habilitado | Escrever no e-book (capa interna e cada página) que as plantas são **de referência**, não projeto executivo, e que a obra precisa de responsável técnico. Confirmar o texto com um arquiteto |
 | **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Combinar com o parceiro como devolver o dinheiro; deixar a política escrita na oferta |
 | **Direitos autorais** | Só plantas originais ou com licença escrita de venda. Nada de imagem de terceiros no e-book |
@@ -170,17 +170,17 @@ Ficam num lugar só: [`CONTEXTO.md`](CONTEXTO.md), "Em aberto". As opções e a 
 
 ## 11. Rotina
 
-A rotina da semana está em [`MAESTRO.md`](MAESTRO.md), seção 4. Para manter este painel em dia: mude só a coluna **Situação** do [catálogo](ebook/catalogo.md) e rode `python3 ferramentas/atualizar-painel.py` (ele também avisa link quebrado em qualquer guia).
+A rotina da semana está em [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md), seção 4. Para manter este painel em dia: mude só a coluna **Situação** do [catálogo](ebook/catalogo.md) e rode `python3 ferramentas/atualizar-painel.py` (ele também avisa link quebrado em qualquer guia).
 
 ## 12. Quem faz o quê
 
 | Quem | Faz | Onde |
 |---|---|---|
 | **Dono** | Decide preço, título, bônus, gasto, publicação e contratação; diz "sim" a cada uso do OpenArt e a cada post | Este painel e [`CONTEXTO.md`](CONTEXTO.md) |
-| **Maestro: a conversa principal (Opus)** e **Diretor: MinoAI Frontier** | O Maestro decide e rege; o Diretor dá a ideia do conteúdo e opina primeiro nele, com a fonte, e edita no computador do dono | [`MAESTRO.md`](MAESTRO.md) |
+| **Maestro: a conversa principal (Opus)** e **Diretor: MinoAI Frontier** | O Maestro decide e rege; o Diretor dá a ideia do conteúdo e opina primeiro nele, com a fonte, e edita no computador do dono | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 | **Conselho** (Redator, Estrategista, Arquiteto, Designer, Editor de vídeo, Pesquisador; Revisor de risco com veto) | Opina e executa só o que foi aprovado | [`CONSELHO.md`](CONSELHO.md), `contexto/<papel>.md` |
 | **Modelos** | A conversa principal interpreta e confere; Opus executa o trabalho do projeto; Sonnet pesquisa a fundo; Haiku faz a tarefa simples e pessoal do dono | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
-| **Parceiro** | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |
+| **Parceiro** | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas) |
 | **Arquiteto registrado** (a contratar, decisão do dono) | Revisar as plantas e o texto de responsabilidade técnica | [`reports/`](reports/RESUMO.md) |
 
 Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos ([`CLAUDE.md`](CLAUDE.md)).

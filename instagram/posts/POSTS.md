@@ -2,7 +2,7 @@
 
 > **22/11/2026:** as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
 
-> Parte da pasta Instagram. Guia da frente: [`../INSTAGRAM.md`](../INSTAGRAM.md). Plano do perfil: [`../plano-perfil.md`](../plano-perfil.md). Calendário: [`../calendario.md`](../calendario.md).
+> Parte da pasta Instagram. Guia da frente: [`../INSTAGRAM.md`](../INSTAGRAM.md). Plano do perfil: [`../INSTAGRAM.md`](../INSTAGRAM.md). Calendário: [`../INSTAGRAM.md`](../INSTAGRAM.md).
 >
 > Para cada post: legenda final (copiar e colar), texto de cada tela, imagens e, nos reels, o roteiro.
 > As imagens dos carrosséis já estão geradas em `imagens/`. Onde falta a planta em 3D, a tela sai com um aviso amarelo **FALTA O 3D**.
@@ -18,7 +18,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
 - **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 50 m² em lote a partir de 8 x 15 (desde 22/11); Casa Estreita 58 m², 2 quartos (1 suíte), lote a partir de 8 x 25; Casa Família 78 m², 3 quartos (1 suíte), lote a partir de 11 x 15. Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
 - **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
-- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups/) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
+- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
 - **Post novo sugerido pelo maestro (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
 - **Imagens geradas (fachada realista, ambientes):** feitas pela MinoAI com o OpenArt ([`../../animacoes-3d/OPENART-MINOAI.md`](../../animacoes-3d/OPENART-MINOAI.md)).
@@ -61,7 +61,7 @@ Telas de 1080 x 1350 (4:5, o tamanho máximo do feed). Capas de reel com 1080 x 
 - Nada de prazo de obra, economia exata ou aprovação na prefeitura.
 - Até 5 hashtags. Base: `#plantadecasa #plantabaixa #casapropria #construcao #arquitetura`.
 - Todo post com planta leva a linha: *Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.* (as telas já trazem essa linha em letra miúda).
-- Chamada final sempre igual: **Comente PLANTA**. Quem responde no WhatsApp é o parceiro ([`../../ebook/vendas/sequencia-whatsapp.md`](../../ebook/vendas/sequencia-whatsapp.md)). Combine com ele a resposta automática ao comentário antes de publicar o primeiro post.
+- Chamada final sempre igual: **Comente PLANTA**. Quem responde no WhatsApp é o parceiro ([`../../ebook/vendas/WHATSAPP.md`](../../ebook/vendas/WHATSAPP.md)). Combine com ele a resposta automática ao comentário antes de publicar o primeiro post.
 
 ---
 
@@ -180,7 +180,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 **Falta 3D:** E01 Casa Estreita (`animacao.mp4` e `03-perspectiva.png` em `animacoes-3d/plantas/casa-estreita/`). Capa já desenhada: `imagens/capas-reels/post-04-reel-casa-estreita.png` (sai com aviso até a planta existir).
 
-**Formato:** "É possível…?" ([`../referencias-mino-lee.md`](../referencias-mino-lee.md), reel 1).
+**Formato:** "É possível…?" ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md), reel 1).
 
 **Texto fixo no alto:** É possível 2 quartos e 2 banheiros em 8 m de frente?
 
@@ -255,7 +255,7 @@ Ainda não tem a planta? Comente PLANTA que eu te mando uma planta humanizada de
 
 **Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta em `../../animacoes-3d/plantas/casa-compacta/` (do desenho antigo: gere de novo com `node render-planta.cjs --planta C01`). Opcional: gravação de tela do arquivo de dados `../../video/src/planta.js` aberto no editor de código (10 s rolando a tela bastam). Capa: `imagens/capas-reels/post-06-reel-bastidor.png`.
 
-**Formato:** POV bastidor ([`../referencias-mino-lee.md`](../referencias-mino-lee.md), reel 3).
+**Formato:** POV bastidor ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md), reel 3).
 
 **Texto fixo no alto:** POV: transformando uma planta em casa 3D
 
@@ -351,7 +351,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 9 · Reel · O material gratuito
 
-**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: `imagens/capas-reels/post-09-reel-material-gratis.png`. O que a pessoa recebe está em [`../../ebook/vendas/material-gratuito.md`](../../ebook/vendas/material-gratuito.md): o reel mostra exatamente isso, nada a mais.
+**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: `imagens/capas-reels/post-09-reel-material-gratis.png`. O que a pessoa recebe está em [`../../ebook/vendas/WHATSAPP.md`](../../ebook/vendas/WHATSAPP.md): o reel mostra exatamente isso, nada a mais.
 
 **Texto fixo no alto:** Comente PLANTA e receba isto de graça
 

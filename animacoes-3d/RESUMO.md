@@ -12,7 +12,7 @@
 - Estilo: azul `#0B4FA8`, amarelo `#FFC857`, câmera lenta e contínua, frente da casa no alto, paredes cortadas a 1,1 m. (`ANIMACOES-3D.md`)
 - A casa animada ou gerada é a mesma do e-book. No OpenArt, casa só a partir de imagem nossa: o Arquiteto vetou uma casa inventada por texto. (`OPENART-MINOAI.md`)
 - Imagem parada leva a legenda "imagem ilustrativa da planta de referência"; em vídeo, sem o selo (dono, 22/11/2026), aviso legal pequeno no canto. A ordem "da obra" é efeito visual: não diga "é assim que se constrói". (`REFERENCIAS-BLUEPRINT.md`, `video/CLAUDE.md`)
-- OpenArt: permitido, mas cada uso pede o "sim" do dono, com resumo e custo antes (22/11/2026). Conta: plano Pro, 21.137 créditos (medido em 22/11/2026). (`OPENART-MINOAI.md`, `video/PEDIDOS-DO-DONO.md`)
+- OpenArt: permitido, mas cada uso pede o "sim" do dono, com resumo e custo antes (22/11/2026). Conta: plano Pro, 21.137 créditos (medido em 22/11/2026). (`OPENART-MINOAI.md`, `video/VIDEO.md`)
 - Imagem final: GPT Image 2.5 Sunburst, imagem para imagem a partir do rascunho aprovado, 4K extra-alta, 4:5; recortes com `python3 ferramentas/recortes.py`. (`OPENART-MINOAI.md`)
 - Falta: gerar a C01 nova no motor; fachada (`05-fachada.png`), medidas de cada cômodo no blueprint e `06-como-cresce.png`. (`ANIMACOES-3D.md`)
 <!-- /essencial -->
@@ -29,7 +29,7 @@ Tamanho: 1156 palavras.
 
 ### [OpenArt + MinoAI Frontier: imagens e animações a partir das nossas plantas](OPENART-MINOAI.md)
 
-Regra que vale (dono, 22/11/2026): o OpenArt é permitido, mas cada uso pede o "sim" do dono, com o resumo da produção e o custo antes (`../video/PEDIDOS-DO-DONO.md`). A liberação "sem limite" de 20/11 não vale mais. Conta: plano Pro, 21.137 créditos (medido em 22/11/2026).
+Regra que vale (dono, 22/11/2026): o OpenArt é permitido, mas cada uso pede o "sim" do dono, com o resumo da produção e o custo antes (`../video/VIDEO.md`). A liberação "sem limite" de 20/11 não vale mais. Conta: plano Pro, 21.137 créditos (medido em 22/11/2026).
 
 Seções: A mesa (conselho completo, 20/11/2026); Situação das ferramentas; O fluxo; Prompts para o OpenArt (imagem → imagem); Regras; Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo"); Como tirar o máximo de cada crédito (preços medidos na conta em 20/11/2026).
 

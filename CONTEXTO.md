@@ -1,13 +1,13 @@
 # Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer
 
-> **Resumo que todo mundo lê.** Cada pedido do dono tem um motivo e continua valendo até ele dizer o contrário. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md): abra só se precisar de um detalhe antigo. Antes de trabalhar, todos leem o [quadro](contexto/QUADRO.md) e o seu arquivo em [`contexto/`](contexto/). Regra em [`CLAUDE.md`](CLAUDE.md).
+> **Resumo que todo mundo lê.** Cada pedido do dono tem um motivo e continua valendo até ele dizer o contrário. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md): abra só se precisar de um detalhe antigo. Antes de trabalhar, todos leem o [quadro](contexto/QUADRO.md) e o seu arquivo em [`contexto/`](contexto). Regra em [`CLAUDE.md`](CLAUDE.md).
 
 ## O que nunca muda
 
 | O dono disse | O que isso quer dizer |
 |---|---|
 | "O objetivo é a alegria do consumidor, e a alegria dele me mandar o Pix" | Toda entrega é julgada por duas coisas: o comprador fica feliz com o que recebe? Ele paga? |
-| "Pensa como um marketeiro, público brasileiro" | Português do Brasil, R$, Pix, WhatsApp, quem constrói com pedreiro por etapas. Ver [persona](ebook/referencias/persona-e-mercado.md) |
+| "Pensa como um marketeiro, público brasileiro" | Português do Brasil, R$, Pix, WhatsApp, quem constrói com pedreiro por etapas. Ver [persona](ebook/referencias/MERCADO.md) |
 | "Sempre do ponto de vista de um arquiteto profissional" | Toda planta passa pelo validador e explica o porquê de cada decisão; as plantas não são de arquiteto, são de referência ([jurídico](reports/RESUMO.md)) |
 | "Não tem landing page" | Venda por anúncio (Facebook e Instagram) → comentário → WhatsApp. O parceiro cuida do funil, o dono cuida do material e do anúncio |
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
@@ -22,7 +22,7 @@
 ## Em aberto (esperando o dono)
 
 - **E-book (para publicar):** preencher em `ebook/config.json` o título, o preço, os bônus, o WhatsApp do parceiro e, se quiser, `promessa_atualizacao` (prometer as próximas casas de graça é oferta que obriga). Decidir se lança com 12 ou 24 plantas (o PDF tem 24), o preço e a garantia: R$ 67 e 7 dias são só recomendação ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 7).
-- **Arranjo das plantas (22/11):** o dono reprovou o layout. O Arquiteto estudou projetos reais (prefeitura de SP, governo da Bahia, UFRGS) e tem método novo ([apostila 2](ebook/referencias/arquiteto-sites-de-profissionais.md)). Falta o dono dizer quais casas refazer e quando; sugestão: série E, depois compactas, depois F02. Mexe no e-book, que estava fechado no rascunho 1. A [pesquisa de 22/11](ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md) traz a régua federal (22 casas com banheiro estreito, contagem de antes da C01 nova) e 5 ideias para o dono escolher (seção 5).
+- **Arranjo das plantas (22/11):** o dono reprovou o layout. O Arquiteto estudou projetos reais (prefeitura de SP, governo da Bahia, UFRGS) e tem método novo ([apostila 2](ebook/referencias/ARQUITETO.md)). Falta o dono dizer quais casas refazer e quando; sugestão: série E, depois compactas, depois F02. Mexe no e-book, que estava fechado no rascunho 1. A [pesquisa de 22/11](ebook/referencias/ARQUITETO.md) traz a régua federal (22 casas com banheiro estreito, contagem de antes da C01 nova) e 5 ideias para o dono escolher (seção 5).
 - **Arquiteto registrado:** revisar as 24 plantas, começando pelas apertadas (E02, E03, suítes da E01, E05 e E07); decidir os banheiros abaixo de 1,10 m livres (18 casas, contagem de 22/11) e a nota de clima por zona bioclimática.
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.
 - **OpenArt: só com o "sim" do dono a cada uso (22/11);** saldo em [`ORCAMENTO.md`](ORCAMENTO.md). O selo "Imagem ilustrativa" saiu dos vídeos (dono, 22/11) e continua em imagem parada. **Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
@@ -47,17 +47,17 @@
 | O que o dono acabou de pedir; onde está cada documento | [`contexto/QUADRO.md`](contexto/QUADRO.md), [`INDICE.md`](INDICE.md) |
 | Como um pedido do dono vira trabalho, e qual modelo faz | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
 | Tudo o que o dono já pediu, pedido por pedido | [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
-| Quem decide o quê (Conselho, Maestro, Diretor, vetos) e como uma skill nova entra | [`CONSELHO.md`](CONSELHO.md), [`MAESTRO.md`](MAESTRO.md) |
+| Quem decide o quê (Conselho, Maestro, Diretor, vetos) e como uma skill nova entra | [`CONSELHO.md`](CONSELHO.md), [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 | Tudo o que a operação pode usar (skills, plugins, conectores) e o prompt de cada um | [`ECOSSISTEMA.md`](ECOSSISTEMA.md) |
-| O que cada agente precisa saber agora | [`contexto/`](contexto/) (um arquivo por papel, inclusive o Diretor) |
-| O que a última tarefa deixou pronto e pendente | [`contexto/entregas/`](contexto/entregas/) |
+| O que cada agente precisa saber agora | [`contexto/`](contexto) (um arquivo por papel, inclusive o Diretor) |
+| O que a última tarefa deixou pronto e pendente | [`contexto/entregas/`](contexto/entregas) |
 | Estratégia, preço, funil, o que não prometer | [`ESTRATEGIA.md`](ESTRATEGIA.md) (seção 9: honestidade) |
 | Custo por venda e números | [`PAINEL.md`](PAINEL.md), [`ORCAMENTO.md`](ORCAMENTO.md) |
 | E-book: plano, gerador, 24 plantas, regras do arquiteto | [`ebook/EBOOK.md`](ebook/EBOOK.md), `ebook/plantas/`, `ebook/referencias/` |
 | Animações 3D e OpenArt | [`animacoes-3d/ANIMACOES-3D.md`](animacoes-3d/ANIMACOES-3D.md), [`animacoes-3d/OPENART-MINOAI.md`](animacoes-3d/OPENART-MINOAI.md) |
-| Vídeo e referência de edição | [`video/VIDEO.md`](video/VIDEO.md), [`video/REFERENCIA-CONDOR.md`](video/REFERENCIA-CONDOR.md) |
+| Vídeo e referência de edição | [`video/VIDEO.md`](video/VIDEO.md), [`video/REFERENCIAS.md`](video/REFERENCIAS.md) |
 | Instagram e a edição pela MinoAI Frontier | [`instagram/INSTAGRAM.md`](instagram/INSTAGRAM.md), [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md) |
 
 ## Passagem entre tarefas
 
-Quando uma tarefa termina, quem fez escreve um resumo curto em [`contexto/entregas/`](contexto/entregas/) (modelo em `MODELO.md`). Quem pega a tarefa seguinte lê o resumo, não a conversa. O mais recente é o ponto de partida.
+Quando uma tarefa termina, quem fez escreve um resumo curto em [`contexto/entregas/`](contexto/entregas) (modelo em `MODELO.md`). Quem pega a tarefa seguinte lê o resumo, não a conversa. O mais recente é o ponto de partida.

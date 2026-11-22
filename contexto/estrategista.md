@@ -20,7 +20,7 @@
 
 ## Onde olhar
 
-`ESTRATEGIA.md`, `PAINEL.md`, `ebook/referencias/persona-e-mercado.md`, `ebook/referencias/concorrentes.md`.
+`ESTRATEGIA.md`, `PAINEL.md`, `ebook/referencias/MERCADO.md`, `ebook/referencias/MERCADO.md`.
 
 ## Leia barato
 

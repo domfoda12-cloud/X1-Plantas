@@ -20,9 +20,9 @@
 ## 1. O produto
 
 - **O que é:** um e-book em PDF com 24 casas térreas (`ebook/saida/ebook.pdf`, 61 páginas). Mais 11 casas estão propostas no [catálogo](catalogo.md).
-- **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso. Persona: [`referencias/persona-e-mercado.md`](referencias/persona-e-mercado.md).
+- **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso. Persona: [`referencias/MERCADO.md`](referencias/MERCADO.md).
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto". A planta é de referência: o projeto da obra é de um arquiteto ou engenheiro.
-- **As 24 casas:** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam no validador (`python3 ferramentas/plantas.py validar`; regras em [`referencias/regras-do-arquiteto.md`](referencias/regras-do-arquiteto.md)). Nenhuma foi revisada ainda por um arquiteto registrado.
+- **As 24 casas:** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam no validador (`python3 ferramentas/plantas.py validar`; regras em [`referencias/ARQUITETO.md`](referencias/ARQUITETO.md)). Nenhuma foi revisada ainda por um arquiteto registrado.
 - **Gerar:** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` e as 5 plantas grátis (`planta-gratis-<ID>.pdf`). Imagem 3D de uma casa: `python3 ferramentas/imagens3d.py ID` (sai em `visual/3d/ID.jpg`). O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
 - **Direção visual:** azul de projeto `#0B4FA8`, amarelo `#FFC857`, títulos em Bricolage Grotesque, texto em Inter. Prévia aprovada como direção em 20/11: [`visual/plano-visual.html`](visual/plano-visual.html).
 - **Idioma e moeda:** português do Brasil, preços em R$.
@@ -81,13 +81,13 @@ Ao terminar, mude a coluna **Situação** do catálogo. O andamento geral fica n
 - **Levas (proposta):** o catálogo divide as 35 casas em 3 levas: 12, 12 e 11. O PDF de hoje já tem as 24 das levas 1 e 2. **[lançamento: sair com 12 ou com 24, a definir pelo dono]** (`PAINEL.md`, seção 9).
 - **Título, preço, bônus, contato e promessa de atualização** são campos do dono em `config.json`; as opções estão no [painel](../PAINEL.md), seção 9, e a oferta recomendada na [estratégia](../ESTRATEGIA.md), seção 7. **[garantia: a definir pelo dono]**.
 - **Linguagem:** o e-book é lido por quem constrói com pedreiro. Explique todo termo técnico na primeira vez que aparecer ([estratégia](../ESTRATEGIA.md), seção 9).
-- **Plantas grátis do funil:** 5 casas (C01, E03, E02, F01 e C06; a E07 saiu em 22/11, porque está na fila do redesenho; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/material-gratuito.md`](vendas/material-gratuito.md).
+- **Plantas grátis do funil:** 5 casas (C01, E03, E02, F01 e C06; a E07 saiu em 22/11, porque está na fila do redesenho; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/WHATSAPP.md`](vendas/WHATSAPP.md).
 
 ## 6. Funil de vendas
 
-1. A **planta grátis** são as duas páginas de uma casa do e-book e uma página que mostra as outras que cabem no mesmo lote ([`vendas/material-gratuito.md`](vendas/material-gratuito.md)).
+1. A **planta grátis** são as duas páginas de uma casa do e-book e uma página que mostra as outras que cabem no mesmo lote ([`vendas/WHATSAPP.md`](vendas/WHATSAPP.md)).
 2. A primeira mensagem pergunta o **tamanho do terreno**.
-3. A resposta mostra as casas do e-book que cabem nele ([`vendas/sequencia-whatsapp.md`](vendas/sequencia-whatsapp.md)).
+3. A resposta mostra as casas do e-book que cabem nele ([`vendas/WHATSAPP.md`](vendas/WHATSAPP.md)).
 
 Faltam os campos entre [colchetes]: título, preço, forma de pagamento, datas, garantia e bônus, que dependem do dono.
 

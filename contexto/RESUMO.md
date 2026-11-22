@@ -11,9 +11,9 @@
 - OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`, `diretor.md`).
 - O Diretor (MinoAI Frontier) dá a ideia principal de todo conteúdo e opina primeiro nele; o Maestro é a conversa principal, que decide (`diretor.md`, `EQUIPE.md`).
 - A C01 foi redesenhada (50 m²) e é o modelo; o material antigo dela não vale, use `ebook/visual/3d/C01.jpg`. As outras 23 esperam o dono (`QUADRO.md`, `arquiteto.md`).
-- O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/arquiteto-sites-de-profissionais.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
+- O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/ARQUITETO.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
 - Imagens 2D dos posts desatualizadas: C03, E04, F02, F05, S03, S09 e a C01 redesenhada (`designer.md`, `arquiteto.md`).
-- A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
+- A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/VIDEO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
 - O selo "Imagem ilustrativa" saiu dos vídeos; continua em imagem parada. O aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
 - Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário. R$ 67 e 7 dias não são fato (`estrategista.md`, `redator.md`).
 - O que liga um pedido ao outro (nove fios) e o que o dono exige dos vídeos, com o que é firme e o que é leitura nossa: `dono/IDEIAS-GERAIS.md`; o porquê de cada prompt: `dono/intencoes/` (`dono/IDEIAS-GERAIS.md`).
@@ -35,9 +35,9 @@ Tamanho: 446 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre.
+Seções: Agora; 22/11 · Documentos juntados; main em dia; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2.
 
-Tamanho: 570 palavras.
+Tamanho: 486 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -73,7 +73,7 @@ Tamanho: 296 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
-Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". É leitura nossa, não fala dele. O porquê de cada prompt está em `intencoes/`; as palavras dele, em `PROMPTS.md` e em `video/PEDIDOS-DO-DONO.md`. Toda ficha de pedido…
+Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". É leitura nossa, não fala dele. O porquê de cada prompt está em `intencoes/`; as palavras dele, em `PROMPTS.md` e em `video/VIDEO.md`. Toda ficha de pedido diz qual…
 
 Seções: A ideia central; Os nove fios; O que isso exige dos vídeos (prioridade dele agora); Perguntas que só o dono responde; O que não deu para saber.
 
@@ -113,7 +113,7 @@ Tamanho: 5945 palavras.
 
 ### [O porquê dos prompts de 21 e 22/11/2026](dono/intencoes/2026-11-21-a-22.md)
 
-Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/PEDIDOS-DO-DONO.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
+Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/VIDEO.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
 
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
