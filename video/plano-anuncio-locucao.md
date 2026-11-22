@@ -2,7 +2,7 @@
 
 > Parte da frente Vídeo. Guia: [`VIDEO.md`](VIDEO.md). Regras da pasta: [`CLAUDE.md`](CLAUDE.md). Prompts: [`principal-e07/PROMPTS.md`](principal-e07/PROMPTS.md).
 >
-> **Situação (22/11/2026): em espera. O dono avisou que o vídeo não é para Instagram nem TikTok; a seção 4 (área segura e legenda) e o tamanho do quadro partiam dessa suposição e estão suspensos até ele dizer o destino. Ficha com todos os pedidos: [`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md). Nada foi gerado.** Já tem o parecer do Editor de vídeo, feito com as ferramentas da MinoAI Frontier (rulebook v1.22: estilos, regras gerais, legendas e B-roll; ganchos virais; biblioteca de aulas). Falta o desenho da planta nova, que o Arquiteto está fazendo.
+> **Situação (22/11/2026): para o dono mudar e aprovar. Nada foi gerado.** Destino confirmado por ele: WhatsApp e Facebook Ads. Ficha com todos os pedidos e suposições: [`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md). Falta o desenho da planta nova, que o Arquiteto está fazendo.
 
 ## 1. O que muda em relação ao vídeo que o dono já viu
 
@@ -11,7 +11,7 @@
 | Planta da casa | E07 em fila: 3 quartos um atrás do outro, corredor por fora | **Planta nova**, sem os quartos em fila e com circulação por dentro. O dono aprova o desenho antes de qualquer imagem |
 | Selo "Imagem ilustrativa" | Em toda cena gerada | **Sai** (decisão do dono) |
 | Aviso legal | Duas linhas largas, embaixo | **Pequeno, no canto de baixo à esquerda**, parado o vídeo inteiro |
-| Textos na tela | Gancho e balão colados no alto; aviso muito embaixo | **Tudo dentro da área que os botões do Instagram e do TikTok não cobrem** (ver seção 4) |
+| Formato do quadro | Só vertical 9:16 | **4:5 para o Facebook e 9:16 leve para o WhatsApp**, do mesmo material (ver seção 4) |
 | Ordem das cenas do meio | Três cenas não mostravam o que a voz dizia | **Cada imagem mostra a frase** (ver seção 3) |
 | Voz, cortes, música, duração | Voz do dono, 2 cortes, trilha de 128 BPM, 25 s | **Igual.** A planta nova mira os mesmos 72 m², 3 quartos, 1 suíte e 2 banheiros, para a gravação continuar valendo |
 
@@ -45,18 +45,18 @@ Nenhuma etapa começa sem o "sim" da anterior.
 
 **Uma ideia de antes que ficou apertada:** a sala com o caramelo perdeu a cena própria. O cachorro continua no almoço. Se o dono quiser a sala de volta, ela entra no lugar de uma das plantas em "só ficamos obcecados".
 
-## 4. Legendas, aviso e área segura (regras da MinoAI)
+## 4. Formato, legendas e aviso (destino: WhatsApp e Facebook Ads)
 
-Num quadro de 1080 x 1920, os aplicativos cobrem o alto (até 220 px), a parte de baixo (de 1536 px para baixo) e a coluna de botões à direita. Hoje o gancho, o balão e o aviso estão em cima dessas faixas.
+O dono disse em 22/11 que o vídeo é para **WhatsApp e Facebook Ads**, não para Instagram nem TikTok. As regras de área segura de Reels e TikTok que o Editor trouxe **não valem** aqui.
 
-| Elemento | Hoje | No plano |
+| Item | Proposta | De onde vem |
 |---|---|---|
-| Gancho e balão | Começam em 150 px do alto | Começam em **220 px ou mais** |
-| Aviso legal | Base em 1.560 px, duas linhas largas | **Canto de baixo à esquerda**, caixa de 500 px de largura com a base em 1.526 px, letra pequena |
-| Legenda da fala | 76 px, várias palavras em amarelo, perto da base | **52 px, branca com borda preta, uma linha de até 3 palavras, no meio da tela** (1.055 px). Só "PLANTA" em amarelo |
-| Rostos | A legenda passava perto dos rostos no almoço | A imagem do almoço é pedida com os rostos acima da linha da legenda |
-
-O rulebook pede rótulos com 36 px ou mais; o aviso pequeno é decisão do dono e vale. Só a área segura não se move.
+| Quadro para o Facebook (feed) | **4:5, 1080 x 1350** | Guias de terceiros dizem que 4:5 ocupa mais tela no feed do celular e que 1:1 é o formato seguro ([Buffer](https://buffer.com/library/facebook-ad-specs/), [Hootsuite](https://blog.hootsuite.com/facebook-ad-sizes/)). Não achei a página oficial da Meta: conferir no Gerenciador de Anúncios ao subir |
+| Quadro para o WhatsApp | **9:16, 720 x 1280, até 5 MB** | Enche a tela do celular quando a pessoa abre o vídeo na conversa. Os limites de tamanho que achei são antigos e se contradizem; 5 MB fica abaixo de todos |
+| Como servir aos dois sem gerar duas vezes | Imagens e clipes em 9:16, com **tudo o que importa dentro da faixa central 4:5**. A versão do Facebook é o recorte dessa faixa | Regra do projeto: uma imagem, vários formatos |
+| Textos | Margem de 60 px das bordas da faixa 4:5. Sem faixa proibida de aplicativo | Decorre do destino |
+| Aviso legal | **Pequeno, no canto de baixo à esquerda**, parado | Pedido do dono |
+| Legenda da fala | A atual: grande, com a palavra-chave em amarelo | Fica como está, a menos que o dono queira mudar |
 
 ## 5. Gancho do primeiro quadro: três versões para testar
 
@@ -110,7 +110,7 @@ O saldo estava em torno de 21 mil créditos; eu confirmo o número antes de gera
 7. Ironia do tio no grupo da família; almoço de domingo, caramelo, onigiri, fachada rosa. Nada de batata nem de morango do amor.
 8. Sem marcas, sem logo de terceiros, sem nada do jogo.
 9. Cada imagem mostra o que a voz diz, conferido quadro a quadro; o áudio final é transcrito de volta.
-10. Textos dentro da área segura dos aplicativos.
+10. Destino: WhatsApp e Facebook Ads. Tudo o que importa fica na faixa central 4:5.
 11. Vídeo leve: até 12 MB; versão para WhatsApp até 5 MB.
 12. Áudio e edição pelas regras da MinoAI Frontier; trilha original de 128 BPM.
 13. Recados do dono no meio do trabalho entram todos juntos.
@@ -118,6 +118,6 @@ O saldo estava em torno de 21 mil créditos; eu confirmo o número antes de gera
 ## 9. O que falta o dono responder
 
 - Aprovar a planta nova, quando o desenho chegar.
-- Aprovar ou mudar este plano, em especial: a ordem nova das cenas do meio, a legenda menor e branca, e o gancho (A, B ou C).
+- Aprovar ou mudar este plano, em especial: o formato (4:5 para o Facebook, 9:16 para o WhatsApp), a ordem nova das cenas do meio, o fim ("Comenta PLANTA" na hora da fala ou só depois do balão) e o gancho (A, B ou C).
 - O tio e a mensagem existem? Se for piada, a abertura é regravada.
 - "Volto pro Brasil em algumas semanas" é literal?

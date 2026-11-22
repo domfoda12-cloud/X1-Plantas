@@ -34,8 +34,8 @@
 | 24 | Antes de qualquer vídeo ou gasto no OpenArt: resumo da produção e lista de instruções, com a confirmação dos dois | 22/11 | Vale |
 | 25 | Recados no meio do trabalho entram todos juntos | 22/11 | Vale |
 | 26 | O Editor usa as ferramentas dele antes de eu fechar o plano | 22/11 | Feito |
-| 27 | **O vídeo não é para TikTok nem para Instagram** | 22/11 | **Em aberto: falta o dono dizer onde ele vai passar** |
-| 28 | Ciclo de reconferência e ficha única com tudo o que foi pedido | 22/11 | Este arquivo |
+| 27 | **O vídeo não é para TikTok nem para Instagram. É para WhatsApp e Facebook Ads** (respondido em 22/11) | 22/11 | Vale |
+| 28 | Ciclo de reconferência e ficha única com tudo o que foi pedido, **aplicados a todo agente** | 22/11 | Feito: este arquivo, a regra nos 7 agentes, `CONSELHO.md` 6b e `CLAUDE.md` |
 
 ## 2. O que eu supus sem o dono dizer
 
@@ -44,9 +44,9 @@ Suposição não é pedido. Cada uma fica aqui até ele confirmar ou derrubar.
 | Suposição | De onde veio | Situação |
 |---|---|---|
 | O vídeo é para Reels e TikTok | Eu escrevi isso no pedido ao Editor. O guia antigo da pasta falava em Facebook Ads e Instagram | **Errada.** O dono derrubou em 22/11 |
-| Formato vertical, 1080 x 1920 | Vinha dos vídeos anteriores | **A confirmar**: depende de onde o vídeo passa |
-| Área segura dos aplicativos (alto, base e botões à direita) | Regras da MinoAI para Reels e TikTok | **Suspensa** até saber o destino |
-| Legenda de 52 px, branca, no meio da tela | Regras da MinoAI para Reels e TikTok | **Suspensa** |
+| Formato do quadro: **4:5 (1080 x 1350) para o Facebook** e 9:16 (720 x 1280) para o WhatsApp | Guias de terceiros sobre anúncio no feed do Facebook (4:5 ocupa mais tela no celular; 1:1 é o seguro). Não achei a página oficial da Meta | **Proposta, a confirmar com o dono.** As imagens são geradas em 9:16 com o assunto dentro da faixa central 4:5, para servir aos dois |
+| Área segura dos aplicativos (alto, base e botões à direita) | Regras da MinoAI para Reels e TikTok | **Não vale** para o feed do Facebook nem para o WhatsApp. Margem simples de 60 px nas bordas; conferir no Gerenciador de Anúncios na hora de subir |
+| Legenda de 52 px, branca, no meio da tela | Regras da MinoAI para Reels e TikTok | **Não vale como regra.** Fica a legenda atual (grande, palavra-chave em amarelo), a menos que o dono queira mudar |
 | Duração de 25 s | A gravação do dono, com os dois cortes | A confirmar |
 | A planta nova mantém 72 m², 1 suíte e 2 banheiros | Para a gravação continuar valendo | A confirmar com o desenho |
 | "Meu tio" é piada, não fato | O tio foi ideia minha, na versão 3 | A confirmar: só o dono sabe |
@@ -73,7 +73,7 @@ Roda **antes de cada uma destas etapas**: fechar o plano, gerar imagens, gerar c
 
 ## 5. Reconferência de 22/11, antes de fechar o plano
 
-- **Para a etapa:** o destino do vídeo (pedido 27). Sem ele não dá para fechar tamanho, área segura nem legenda.
+- **Resolvido:** o destino é WhatsApp e Facebook Ads (pedido 27). Falta o dono confirmar o formato proposto (4:5 para o Facebook, 9:16 para o WhatsApp).
 - **Para a etapa:** a planta nova (pedido 21) ainda não foi aprovada.
 - **Decisão do dono:** o fim em dois tempos (pedido 18) contra a proposta do Editor.
 - **Cumprem:** 3, 4, 10, 11, 12, 13, 14, 15, 17, 19, 20, 22, 23, 24, 25, 26.

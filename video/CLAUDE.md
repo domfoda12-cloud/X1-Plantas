@@ -11,7 +11,7 @@
 - **Edição final** é da MinoAI Frontier, no Mac do dono. **Gravação de páginas web** (calculadora, leitor do e-book): skill `product-demo`.
 - **Condições do dono para todo vídeo (22/11/2026):**
   - **Antes de montar vídeo ou gastar crédito do OpenArt:** mandar o resumo da produção e a lista de instruções, e esperar o dono confirmar os dois.
-  - **Ficha do pedido** (`PEDIDO-anuncio-locucao.md`): vai inteira em todo pedido a agente; a reconferência dela roda antes de cada etapa. **O destino do vídeo não é Instagram nem TikTok**; até o dono dizer qual é, tamanho, área segura e legenda ficam em aberto.
+  - **Ficha do pedido** (`PEDIDO-anuncio-locucao.md`): vai inteira em todo pedido a agente; a reconferência dela roda antes de cada etapa. **O destino do anúncio com locução é WhatsApp e Facebook Ads, não Instagram nem TikTok.**
   - **Prompt cinematográfico:** todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md`; prompt novo que der certo entra lá.
   - **Aviso legal pequeno, no canto da tela, parado. Sem o selo "Imagem ilustrativa"** (o dono tirou essa condição do Revisor).
   - **Recados no meio do trabalho entram todos juntos.**
