@@ -21,7 +21,7 @@ Depois da primeira versão, o texto original das leis foi aberto no site do Plan
 
 - **A "dispensa para casas de até 70 m²" não existe como dispensa.** O limite de 70 m² aparece na Resolução CAU/BR 17/2012 como **"RRT Mínimo"**: um tipo de registro simplificado "quando se referir a edificação com área de construção total de até 70 m², destinada ao uso residencial". O RRT continua sendo feito. Essa resolução foi revogada pela Resolução 91/2014 ([Legisweb](https://www.legisweb.com.br/legislacao/?id=239850)), e o texto da 91 não pôde ser lido. No CREA-SC, o limite de 70 m² (alvenaria) define "Moradia Econômica" de um só pavimento, e o ato exige a ART com taxa própria ([Ato Normativo 5/2013](https://portal.crea-sc.org.br/leis/atos/conceito-programa-moradia-economica/)). Nos dois casos, **o registro de responsabilidade técnica continua obrigatório, só com condição mais simples ou mais barata.** O e-book não deve citar 70 m² como dispensa.
 - **Lei 5.194/1966 para "qualquer construção":** o texto não diz isso de forma geral. O que está verificado é o art. 13: projetos e plantas só têm valor jurídico diante das autoridades quando feitos por profissional habilitado.
-- **Art. 618 do Código Civil:** confirmado, e se aplica ao empreiteiro (quem executa a obra por contrato de empreitada), não ao vendedor de planta.
+- **Art. 618 do Código Civil:** confirmado, e trata do empreiteiro (quem executa a obra por contrato de empreitada); quem responde por erro em planta vendida continua em aberto.
 
 **O que continua sem confirmação:** a Resolução CAU/BR 91/2014 (casos de RRT obrigatório e se o RRT Mínimo continua), as resoluções do Confea sobre a ART, qualquer código de obras municipal e a página oficial da Caixa. A lista completa do que falta ler está no fim deste relatório.
 
@@ -84,7 +84,7 @@ A base empírica é mais fraca do que parece. As leis federais foram lidas, mas 
 - Quem financia pela Caixa deve perguntar ao banco quais documentos e qual responsável técnico são exigidos; blogs indicam projeto aprovado e ART ou RRT, sem confirmação oficial.
 - Estrutura de sobrado, terreno em declive e construção por etapas pedem engenheiro e projeto adequado; a planta, sozinha, não cobre isso (inferência, formulada como orientação de cautela).
 - Erros graves em obra sem acompanhamento costumam ser de execução, como impermeabilização, instalações e estrutura, segundo estudos de caso locais; uma planta bem desenhada não evita erro de execução.
-- "A maioria das obras particulares é feita sem arquiteto ou engenheiro" é defensável como afirmação geral, citando a pesquisa CAU/BR-Datafolha de 2015, sem usar percentual preciso.
+- "A maioria das obras particulares é feita sem arquiteto ou engenheiro" é defensável como afirmação geral, citando a pesquisa CAU/BR-Datafolha de 2015 (fonte não aberta; dado de trecho de busca), sem usar percentual preciso.
 - Um projeto arquitetônico sob medida é anunciado, em sites comerciais, em faixas amplas de dezenas de reais por m², variando com escopo, cidade e padrão; o preço é negociado e as tabelas do CAU/BR são só referência.
 - O e-book não deve prometer que a planta dispensa profissional, nem que a obra será aprovada, nem que o projeto é adequado a qualquer terreno.
 
@@ -94,7 +94,7 @@ A base empírica é mais fraca do que parece. As leis federais foram lidas, mas 
 - **Respondido na atualização:** o limite de 70 m² não é dispensa, é um registro mínimo ou mais barato. Falta ler a Resolução CAU/BR 91/2014 para saber se o RRT Mínimo continua; o e-book não deve citar 70 m² como dispensa.
 - **Se um arquiteto registrado pode revisar e assinar as plantas do e-book**, e como isso deve aparecer no produto (autoria, revisão, RRT), diante dos arts. 6º e 13 da Lei 5.194/1966.
 - Se o proprietário pode assinar o próprio projeto e em quais municípios, e como a prefeitura trata uma planta de terceiros (autoria, adaptação, quem assina).
-- Responsabilidade por erro em planta vendida: do vendedor, do profissional que assina a obra e do construtor. O art. 618 do Código Civil foi lido e trata do empreiteiro, não do vendedor de planta; redigir isenções e avisos do e-book com orientação jurídica.
+- Responsabilidade por erro em planta vendida: do vendedor, do profissional que assina a obra e do construtor. O art. 618 do Código Civil foi lido e trata do empreiteiro; ele não resolve quem responde por erro em planta vendida.
 - Exigências atuais da Caixa para financiamento de construção em terreno próprio (documentos, PCI, ART ou RRT), na página oficial ou com o gerente.
 - Se uma planta pronta pode ser vendida com RRT de projeto e de obra incluídos, como no kit do Asaas, e quais obrigações isso cria para o e-book.
 - Percentuais de obras sem profissional: abrir os relatórios CAU/BR-Datafolha de 2015 e 2022 e decidir qual dado e qual formulação citar; os valores de 85,4%, 82%, "menos de 15%" e 9% não foram reconciliados.

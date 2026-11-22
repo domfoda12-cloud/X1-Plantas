@@ -71,7 +71,7 @@ Parte da pasta Vídeo: `../VIDEO.md`. Antes de escrever ou mudar um anúncio, le
 
 Seções: Regras para todos os anúncios; Ângulo 1: pelo lote (o mais promissor); Ângulo 2: erro caro; Ângulo 3: casa que cresce; Ângulo 4: pedreiro; Ângulo 5: economia com arquiteto (vídeo antigo, não subir); Ângulo 6: oferta direta (só para quem já interagiu); Como testar.
 
-Tamanho: 926 palavras.
+Tamanho: 998 palavras.
 
 ### [Brief criativo: anúncios de plantas de casas](anuncios/brief-criativo.md)
 

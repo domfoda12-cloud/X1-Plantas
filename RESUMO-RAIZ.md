@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 7160 palavras.
+Tamanho: 7302 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -89,7 +89,7 @@ Comece por aqui. Este é o centro de controle do projeto: o que estamos construi
 
 Seções: 1. Situação agora; 2. Em que pé está (escrito à mão, 22/11/2026); 3. O negócio em uma frase; 4. A conta que diz se o anúncio paga; 5. Frentes, uma por vez; 6. Esta semana; 7. Números para acompanhar; 8. Decisões tomadas; 9. Decisões pendentes; 10. Riscos e cuidados; 11. Rotina; 12. Quem faz o quê; 13. Mapa do projeto.
 
-Tamanho: 2158 palavras.
+Tamanho: 2157 palavras.
 
 ### [X1-Plantas](README.md)
 

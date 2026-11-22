@@ -22,7 +22,7 @@ Banco do Redator. Persona: `../referencias/persona-e-mercado.md`. Números das p
 
 Seções: 1. Atributos do produto (o e-book); 2. Atributos que aparecem nas plantas (use a ficha da casa); 3. Atributos proibidos (o Revisor veta); 4. Combinações campeãs para testar primeiro; 5. O que os testes ensinaram.
 
-Tamanho: 932 palavras.
+Tamanho: 980 palavras.
 
 ### [Perguntas frequentes dos compradores](faq-compradores.md)
 
@@ -30,7 +30,7 @@ Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel
 
 Seções: Sobre o e-book; Sobre as plantas; Sobre a construção.
 
-Tamanho: 519 palavras.
+Tamanho: 553 palavras.
 
 ### [Planta grátis: o que a pessoa recebe depois do comentário "PLANTA"](material-gratuito.md)
 
@@ -38,7 +38,7 @@ Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel
 
 Seções: 1. O que vai; 2. Ficha da Casa Compacta (para mandar em texto); 3. O convite no fim da planta grátis.
 
-Tamanho: 640 palavras.
+Tamanho: 628 palavras.
 
 ### [Respostas para objeções comuns](respostas-objecoes.md)
 
@@ -54,4 +54,4 @@ Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel
 
 Seções: Dia 0: entrega da planta grátis (logo após o comentário "PLANTA"); Dia 0, depois da resposta: as plantas que cabem no terreno; Dia 1: a casa em 3D; Dia 3: a oferta; Dia 5: a dúvida que trava; Dia 7: última mensagem; Depois da compra; Regras do funil.
 
-Tamanho: 941 palavras.
+Tamanho: 990 palavras.

@@ -30,7 +30,7 @@ Com [frente] x [fundo] m, essas plantas cabem no seu terreno com os recuos de re
 
 Todas estão no e-book **[título]**, que tem [nº] casas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
-> Use a [calculadora de lote](calculadora-lote.html) (ou a coluna **Lote** do [catálogo](../catalogo.md)) para escolher 2 ou 3 casas com lote mínimo menor ou igual ao terreno. Ofereça só casas que estão no PDF que a pessoa vai receber: hoje são as 24. **[lançamento: sair com 12 ou com 24, a definir pelo dono]**; se sair com 12, ofereça só as da leva 1.
+> Use a [calculadora de lote](calculadora-lote.html) (ou a coluna **Lote** do [catálogo](../catalogo.md)) para escolher 2 ou 3 casas com lote mínimo menor ou igual ao terreno. Ofereça só casas que estão no PDF que a pessoa vai receber: hoje são as 24 (nota para o parceiro, não vai ao cliente). **[lançamento: sair com 12 ou com 24, a definir pelo dono]**; se sair com 12, ofereça só as da leva 1.
 
 **Se a pessoa ainda não tem terreno:**
 

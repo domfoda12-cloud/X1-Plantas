@@ -1,6 +1,6 @@
 # Resolver as contradições e dividir o trabalho por modelo
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** Veja o que esta contradizendo nos documentos, e crie uma solucao pras contradicoes baseado nos objetivos previamente dados, se a solucao for inutil para o projeto apenas delete. Agora quero que crie algo um pouco especial, eu gostaria que cada prompt meu fosse guardado em uma pasta do projeto, nessa pasta a partir de agora o fable ficara responsavel por ler o prompt e interpretalo, depois disso passa o trabalho para o opus. Tarefas mais chatas que seria um desperdicio de tokens, coloque o haiku para fazer, como organizar um evento, responder uma pergunta ou pesquisar algo que EU pedi para MIM nao para os outros agentes, para pesquisas mais afundas use o sonnet, por exemplo para o arquiteto adquirir conhecimento na web
 
@@ -25,6 +25,7 @@
 
 **Quem executa:** montagem do sistema: Fable (é configuração, uma vez só). Contradições: quatro agentes no Opus, por área, e o `revisor-de-risco` (Opus) nos textos de venda.
 
-**Conferência do Fable:** (a preencher)
+**Conferência do Fable:** Rodei o `checar.py` depois de cada etapa (passa). Abri a página 2 da planta grátis da C01 gerada de novo: a vista da rua é a simplificada e a frase do banheiro está certa. Conferi o painel gerado contra os arquivos (24 de 35, 24 com 3D, 4 com foto antes de tirar a da C01). O Revisor de risco (Opus) leu os 7 textos de venda: vetou trechos em 5; o Redator (Opus) aplicou as 30 correções e eu conferi por busca que os trechos vetados sumiram e corrigi 5 trechos iguais que ficaram fora da lista. Testei o gancho com entrada falsa e ele já devolveu o lembrete nesta conversa; achei e corrigi a falha de guardar relatório de agente como prompt. Não conferi: cada edição dos três agentes de contradições, linha por linha (confiei nos relatórios e no `checar.py`); os textos de cada casa em `fichas/textos.py`; se o agente `ajudante` (Haiku) e o `model:` dos agentes são respeitados na prática, porque ainda não houve tarefa para eles depois da mudança.
 
-**Resultado:** (a preencher)
+**Resultado:** Contradições resolvidas por três agentes no Opus (e-book, vídeo/Instagram/3D, raiz/contexto/jurídico): textos pela regra mais recente, só prometem o que existe; decisões do dono em colchetes; apagados quatro documentos superados e 500 linhas de código morto; painel conta pelo que existe; foto antiga da C01 fora do e-book. Revisor vetou trechos em 5 de 7 textos de venda, corrigidos. Sistema de pedidos: gancho que guarda cada prompt, fichas com `ferramentas/pedido.py`, fila, pacote do executor, Fable como supervisor, Opus executa, Sonnet e Opus pesquisam, Haiku (`ajudante`) faz o simples e pessoal. O que sobrou: `contexto/dono/TEXTOS-DESATUALIZADOS.md`.
+

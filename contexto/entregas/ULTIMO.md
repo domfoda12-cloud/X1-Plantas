@@ -1,9 +1,10 @@
-**Tarefa:** fazer os agentes pararem de esquecer: índice, resumo barato por pasta e os prompts do dono ao alcance de todos.
-**Feito:** `ferramentas/resumos.py` gera o `INDICE.md` e um `RESUMO.md` por pasta (10 categorias). "O essencial" de cada resumo é escrito à mão e o gerador não apaga.
-`contexto/<agente>.md`: seção "Leia barato" com os resumos das pastas de cada papel.
-`contexto/dono/PROMPTS.md`: 166 prompts do dono, palavra por palavra. `contexto/dono/TEXTOS-DESATUALIZADOS.md`: cerca de 60 contradições entre documentos.
-`ferramentas/checar.py`: falha se um documento ficar fora do índice ou um resumo ficar sem "O essencial"; limite do `CLAUDE.md` subiu para 6.500.
-**Como conferir:** `python3 ferramentas/resumos.py --conferir`; abrir o `INDICE.md`.
-**Não feito / ressalva:** as contradições estão listadas, não corrigidas (só 3 mecânicas). Os prompts de outras conversas não entraram palavra por palavra: estão resumidos no histórico.
-**Decisão do dono pendente:** garantia de 7 dias; 12 ou 24 plantas; se a retirada do selo "Imagem ilustrativa" vale para todo vídeo e para imagem parada.
-**Próximo passo:** corrigir os textos que vão ao cliente (primeira seção do `TEXTOS-DESATUALIZADOS.md`), com o Revisor de risco.
+**Tarefa:** resolver as contradições entre documentos, montar o sistema de pedidos por modelo e reler todos os prompts do dono com "por que ele pediu?".
+**Feito:** `pedidos/` (regras em `LEIA-ME.md`, fila em `FILA.md`, fichas em `2026-11/`); `ferramentas/pedido.py` e `guardar-pedido.py`; gancho em `.claude/settings.json`.
+Agentes com modelo no cabeçalho (Opus; `pesquisador` no Sonnet; `ajudante` novo, no Haiku).
+`contexto/dono/IDEIAS-GERAIS.md` (nove fios e o que o vídeo tem de ter) e `contexto/dono/intencoes/` (o porquê de cada prompt).
+Documentos corrigidos em todas as pastas; apagados `ebook/PLANO-EBOOK.md`, `ebook/fichas/C01.md`, `video/roteiro-2-tres-quartos.md` e a nota `exigencias_legais.md`.
+`ferramentas/atualizar-painel.py` conta pelos arquivos; `ebook/gerador/paginas.py` sem código morto; foto antiga de fachada da C01 fora do e-book (PDF gerado de novo).
+**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/pedido.py listar`; abrir `contexto/dono/IDEIAS-GERAIS.md`.
+**Não feito / ressalva:** imagens e vídeos ainda com a C01 antiga (lista em `contexto/dono/TEXTOS-DESATUALIZADOS.md`). O Revisor não leu os textos de cada casa, a calculadora, os posts nem os roteiros. A divisão por modelo ainda não foi provada com o Haiku.
+**Decisão do dono pendente:** as seis perguntas no fim de `IDEIAS-GERAIS.md`; preço, garantia, bônus, 12 ou 24 plantas.
+**Próximo passo:** com as respostas do dono, remontar a prévia do WhatsApp e o anúncio pelas exigências de `IDEIAS-GERAIS.md`.
