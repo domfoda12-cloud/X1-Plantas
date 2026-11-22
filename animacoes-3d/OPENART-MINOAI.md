@@ -66,7 +66,7 @@ Imagem → vídeo: "movimento lento de câmera se aproximando da porta, 4 segund
 **Mesa de bolso**
 
 ```text
-[Maestro MinoAI] SIM · imagem parada + edição na MinoAI gasta muito menos que vídeo gerado; ímã do comentário pede só capa forte · fonte: método MinoAI (ímã por comentário)
+[Diretor MinoAI] SIM · imagem parada + edição na MinoAI gasta muito menos que vídeo gerado; ímã do comentário pede só capa forte · fonte: método MinoAI (ímã por comentário)
 [Estrategista]   SIM, SE começar por 6 imagens de ambientação e medir antes de gerar mais
 [Arquiteto]      SIM, SE nenhuma imagem mostrar uma casa que não está no e-book (fachada só depois do 3D)
 [Revisor]        SIM, SE legenda "imagem ilustrativa" e nenhum texto dentro da imagem

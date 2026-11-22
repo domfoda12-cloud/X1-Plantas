@@ -200,7 +200,7 @@ Ficam para antes de publicar (não travam o começo): título, preço, garantia,
 
 ### Etapas, na ordem do projeto (e-book → animações → vídeo)
 
-Em toda etapa: o Fable confere a entrega contra o "pronto quando" (abre o arquivo, roda o comando); o Maestro, **MinoAI Frontier**, opina primeiro nas etapas de imagem e vídeo, com a fonte; o Revisor de risco tem veto em todo texto e vídeo que vai ao público; o dono decide gasto e publicação.
+Em toda etapa: o Fable confere a entrega contra o "pronto quando" (abre o arquivo, roda o comando); o Diretor, **MinoAI Frontier**, opina primeiro nas etapas de imagem e vídeo, com a fonte; o Revisor de risco tem veto em todo texto e vídeo que vai ao público; o dono decide gasto e publicação.
 
 | # | Etapa | Quem executa (modelo) | Gasta OpenArt? | Pronto quando |
 |---|---|---|---|---|
@@ -210,9 +210,9 @@ Em toda etapa: o Fable confere a entrega contra o "pronto quando" (abre o arquiv
 | 3 | **Fotos de fachada do e-book** das casas novas, a partir da nossa vista da rua | `designer` (Opus), com o método de `OPENART-MINOAI.md` | **Sim** (o histórico cita cerca de 123 créditos por casa para passar o OpenArt por cima do 3D) | Resumo e custo aprovados pelo dono antes; Arquiteto confere portas e janelas contra a planta |
 | 4 | **Animações:** 3D de cima e passeio das casas novas no motor próprio; imagens dos posts com as plantas novas | `designer` (Opus), `editor-video` (Opus) | Não | `imagens3d.py`, `render-passeio.cjs` e `gerar-imagens.cjs` rodados; nenhuma imagem com casa antiga (`TEXTOS-DESATUALIZADOS.md` sem linha de casa velha) |
 | 5 | **Referências atuais do Brasil** para as cenas (o que está em alta agora, sem marca) e conferência do formato do Facebook Ads na fonte oficial | `pesquisador` (Sonnet), depois um agente no Opus confere | Não | Lista com fonte e data de cada achado; o que não foi confirmado está dito |
-| 6 | **Anúncio com a voz do dono:** plano atualizado para a casa aprovada, imagens paradas, depois clipes, montagem com o áudio primeiro | `editor-video` (Opus), Maestro MinoAI Frontier, `revisor-de-risco` (Opus) | **Sim** (imagens cerca de 250; clipes cerca de 1.050, pelo `plano-anuncio-locucao.md`) | Quatro paradas com o "sim" do dono (planta, plano, imagens paradas, vídeo); conferência quadro a quadro contra `palavras.json`; sem selo; aviso pequeno no canto; até 12 MB e WhatsApp até 5 MB |
+| 6 | **Anúncio com a voz do dono:** plano atualizado para a casa aprovada, imagens paradas, depois clipes, montagem com o áudio primeiro | `editor-video` (Opus), Diretor MinoAI Frontier, `revisor-de-risco` (Opus) | **Sim** (imagens cerca de 250; clipes cerca de 1.050, pelo `plano-anuncio-locucao.md`) | Quatro paradas com o "sim" do dono (planta, plano, imagens paradas, vídeo); conferência quadro a quadro contra `palavras.json`; sem selo; aviso pequeno no canto; até 12 MB e WhatsApp até 5 MB |
 | 7 | **Prévia do WhatsApp** com a C01 nova e as páginas novas do e-book | `editor-video` (Opus), `revisor-de-risco` (Opus) | Não | `montar.py` com o roteiro sem selo; até 5 MB; nenhuma cena com casa antiga; dono aprova |
-| 8 | **Convite** realista (só depois de "pagar por mais" definido) e principal com o escaneamento da casa nova | `editor-video` (Opus), Maestro MinoAI Frontier | **Sim** se for OpenArt (custo levado ao dono antes); não, se for a filmagem dele | Dono aprova resumo e instruções antes; o vídeo só promete o que existe; números na tela só do validador |
+| 8 | **Convite** realista (só depois de "pagar por mais" definido) e principal com o escaneamento da casa nova | `editor-video` (Opus), Diretor MinoAI Frontier | **Sim** se for OpenArt (custo levado ao dono antes); não, se for a filmagem dele | Dono aprova resumo e instruções antes; o vídeo só promete o que existe; números na tela só do validador |
 | 9 | **Edição final** de cada vídeo aprovado, com música e legendas | MinoAI Frontier, no Mac do dono (pacote como o `kit-minoai/`) | Não | Pacote com `LEIA-ME.md` entregue; o dono confirma que rodou no Mac |
 
 O `ajudante` (Haiku) não entra: ele faz só tarefa pessoal do dono.

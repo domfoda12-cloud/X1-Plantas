@@ -20,7 +20,7 @@ O dono quer **vender uma planta em que o comprador confie, com um vídeo que par
 
 **6. Qualidade primeiro; economia onde ninguém vê.** Peça que vai ao público sai na melhor configuração. Economia é para rascunho, teste e trabalho de máquina. É o mesmo raciocínio da divisão por modelo: o caro pensa e confere, o barato faz o que é simples.
 
-**7. A MinoAI Frontier na frente, e referência real como direção.** Ela é o editor e o Maestro, e a opinião dela tem de aparecer. Ele dirige o vídeo mandando referências (CONDOR XIII, Mino Lee) e quer tudo tirado delas com o fato certo.
+**7. A MinoAI Frontier na frente, e referência real como direção.** Ela é o editor e o Diretor (dá a ideia principal do conteúdo; quem decide é o Maestro, a conversa principal: dono, 22/11), e a opinião dela tem de aparecer. Ele dirige o vídeo mandando referências (CONDOR XIII, Mino Lee) e quer tudo tirado delas com o fato certo.
 
 **8. Ele confere.** Pergunta "está pronto?", "me mostre", "está usando mesmo?". Resposta que faz vale mais que resposta que explica. Por isso: mostrar a peça, dizer o que foi conferido e o que não foi, e nunca dar por feito o que um agente só afirmou.
 

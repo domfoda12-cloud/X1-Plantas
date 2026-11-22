@@ -1,6 +1,6 @@
 # Resumo: Instagram
 
-> Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: editor-video, maestro, redator, designer, estrategista.
+> Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: editor-video, diretor, redator, designer, estrategista.
 
 ## O essencial
 
@@ -33,7 +33,7 @@ Parte da pasta Instagram: `INSTAGRAM.md`. Painel: `../PAINEL.md`. O editor do pr
 
 Seções: 1. Onde e como a MinoAI Frontier edita; 2. Configuração (uma vez só); 3. A mensagem de abertura; 4. A pasta `broll/` no seu computador; 5. Como cada tipo de vídeo deve ficar; 6. Ganchos de referência da biblioteca da MinoAI Frontier; 7. Do método do Mino (biblioteca de aulas da MinoAI Frontier); 8. Rotina semanal com a MinoAI Frontier.
 
-Tamanho: 1665 palavras.
+Tamanho: 1673 palavras.
 
 ### [Calendário: as 2 primeiras semanas do perfil](calendario.md)
 

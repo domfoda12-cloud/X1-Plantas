@@ -25,7 +25,7 @@
 ## 3. O que muda no nosso produto (decisões do Conselho, de bolso)
 
 ```text
-[Maestro MinoAI] SIM · âncora de preço e "espelhada" viram ganchos ("24 casas pelo preço de uma planta avulsa") · fonte: método MinoAI (dar valor antes de vender)
+[Diretor MinoAI] SIM · âncora de preço e "espelhada" viram ganchos ("24 casas pelo preço de uma planta avulsa") · fonte: método MinoAI (dar valor antes de vender)
 [Estrategista]   SIM · âncora R$ 420 a R$ 899 por planta avulsa (Projeto Pronto, 20/11/2026) contra o preço do e-book
 [Arquiteto]      SIM · espelhar é seguro: a planta espelhada passa no mesmo validador
 [Revisor]        SIM, SE não usarmos "pronta para construir", "aprovada" nem "garantia de aprovação", e o preço do concorrente vier com fonte e data

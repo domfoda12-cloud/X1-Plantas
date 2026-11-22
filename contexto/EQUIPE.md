@@ -1,41 +1,42 @@
 # A equipe: quem faz o quê e o que cada um acrescenta
 
-> Dono, 22/11/2026: cada agente sabe a sua função e, a cada prompt, o que acrescentar para o resultado que ele quer; tudo resumido junto; um dia, ajuda em qualquer coisa, gastando o mínimo de token e tempo. Cada agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Modelos e ficha: [`pedidos/LEIA-ME.md`](../pedidos/LEIA-ME.md).
+> Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada prompt; todos com o mesmo entendimento; tudo junto e organizado; gastando o mínimo de token e tempo. Agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Skills de cada um: [`ECOSSISTEMA.md`](../ECOSSISTEMA.md), seção 2b.
 
 ## A cada prompt
 
-1. O Opus abre a ficha e chama **só** quem tem a ver (tabela). Tarefa de uma linha, ele faz.
-2. Na ficha, em "Quem executa", uma linha por agente: o que ele acrescenta.
+1. O **Maestro** (a conversa principal, Opus) abre a ficha e atualiza o "Agora" do [quadro](QUADRO.md): **todos leem o mesmo**, chamados ou não.
+2. Chama **só** quem importa; na ficha, uma linha por agente: o que ele acrescenta. Tarefa de uma linha, ele faz.
 3. O agente lê o quadro, o seu contexto e a ficha; devolve o que não é dele dizendo de quem é. Agente não chama agente.
-4. O Opus junta, confere e responde, com o Maestro primeiro.
+4. O Maestro junta, confere e decide; em conteúdo, o Diretor opina primeiro.
 
 ## Os papéis
 
-| Agente (modelo) | Faz | Acrescenta a cada prompt |
+| Quem (modelo) | Faz | Acrescenta a cada prompt |
 |---|---|---|
-| Maestro, MinoAI Frontier | Preside; edita vídeo e gera imagem | Para, comenta, manda o Pix? Com a fonte |
-| `redator` (Opus) | Texto público | O atributo que faz o Marcos pagar |
-| `estrategista` (Opus) | Oferta, preço, ângulo | Efeito no custo por venda; teste mais barato |
-| `arquiteto` (Opus) | Plantas, verdade técnica | Validador e o que o profissional confere |
+| **Maestro** (Opus) | Decide e rege | Quem chamar; a decisão final |
+| **Diretor**, MinoAI | Ideia principal do conteúdo | Para, comenta, paga? Com a fonte |
+| `redator` (Opus) | Texto público | O atributo que faz pagar |
+| `estrategista` (Opus) | Oferta, preço | Efeito no custo por venda |
+| `arquiteto` (Opus) | Planta, técnica | Validador; o que o profissional confere |
 | `designer` (Opus) | Imagem parada | Genérico? Bate com a planta? |
-| `editor-video` (Opus) | O que se move | Segura os 3 primeiros segundos? |
-| `pesquisador` (Sonnet) | Acha a fonte | Achado, fonte, data, o que não confirmou |
-| `revisor-de-risco` (Opus, veto) | Honestidade e lei | Promete o que não cumpre? A correção |
+| `editor-video` (Opus) | O que se move | Segura 3 segundos? |
+| `pesquisador` (Sonnet) | Pesquisa a fundo | Achado, fonte, data, dúvida |
+| `revisor-de-risco` (veto) | Honestidade, lei | Promessa sem lastro? A correção |
 | `supervisor` (Fable) | Socorro, auditoria | A causa e o primeiro passo |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
 
 ## Fronteiras
 
-- Imagem parada: Designer. O que se move: Editor. Geração pela MinoAI (OpenArt), com o "sim" do dono.
-- Pesquisa: o `pesquisador` acha; conclui o Arquiteto (norma, planta), o Estrategista (mercado, preço) ou um geral no Opus.
+- Designer e Editor usam o Diretor; geração no OpenArt só com o "sim" do dono.
+- Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` acha; conclui o Arquiteto, o Estrategista ou um geral no Opus.
+- Revisor de risco: Opus no rascunho, **Fable na peça final**.
 - Peça pública: Redator, Arquiteto e Revisor. Preço, título, gasto e publicação: o dono.
 
-## Economia (dono, 22/11)
+## Economia
 
-- Chamar o menor número de agentes; o modelo mais barato que dá a qualidade da peça.
-- Ler o resumo, não o documento; passar a ficha, não a conversa.
-- O `CLAUDE.md` já chega a todo agente: ninguém abre de novo. O `ULTIMO.md` só quando a tarefa continua a anterior.
+- Menos agentes, o modelo mais barato que dá a qualidade; resumo, não documento; ficha, não conversa.
+- O `CLAUDE.md` já chega a todos. `ULTIMO.md` só se a tarefa continua. Antes da web, `pesquisa.py buscar`.
 
 ## Prompt sem papel
 
-Geral no Opus (pessoal: `ajudante`). Tipo que volta em 2 ou 3 fichas vira proposta de papel novo ao dono ([`CONSELHO.md`](../CONSELHO.md), seção 6); papel parado, proposta de juntar.
+Geral no Opus (pessoal: `ajudante`). Tipo que volta em 2 ou 3 fichas vira proposta de papel novo ([`CONSELHO.md`](../CONSELHO.md), seção 6); papel parado, proposta de juntar.

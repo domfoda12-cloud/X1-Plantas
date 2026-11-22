@@ -8,8 +8,8 @@
 - Leia o quadro antes de trabalhar. Quem atende um pedido do dono escreve no topo e apaga o mais antigo: ficam os 5 últimos (`QUADRO.md`).
 - Trabalhe e envie na `main`, com `git pull --rebase` antes; a `planta-de-casas-anuncio` acabou (`QUADRO.md`).
 - Regra do dono: confira todo número contra a fonte antes de repassar (`QUADRO.md`).
-- OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`, `maestro.md`).
-- O Maestro opina sempre e primeiro, em toda tarefa, não só na entrega ao público (`maestro.md`).
+- OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`, `diretor.md`).
+- O Diretor (MinoAI Frontier) dá a ideia principal de todo conteúdo e opina primeiro nele; o Maestro é a conversa principal, que decide (`diretor.md`, `EQUIPE.md`).
 - A C01 foi redesenhada (50 m²) e é o modelo; o material antigo dela não vale, use `ebook/visual/3d/C01.jpg`. As outras 23 esperam o dono (`QUADRO.md`, `arquiteto.md`).
 - O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/arquiteto-sites-de-profissionais.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
 - Imagens 2D dos posts desatualizadas: C03, E04, F02, F05, S03, S09 e a C01 redesenhada (`designer.md`, `arquiteto.md`).
@@ -21,15 +21,23 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 17 documentos
+## Os 18 documentos
+
+### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
+
+Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada prompt; todos com o mesmo entendimento; tudo junto e organizado; gastando o mínimo de token e tempo. Agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
+
+Seções: A cada prompt; Os papéis; Fronteiras; Economia; Prompt sem papel.
+
+Tamanho: 446 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre.
+Seções: Agora; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre.
 
-Tamanho: 442 palavras.
+Tamanho: 556 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -53,7 +61,15 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 294 palavras.
+Tamanho: 313 palavras.
+
+### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral em `CONTEXTO.md`; histórico em `CONTEXTO-HISTORICO.md`. O Diretor não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte, chamadas pelo Maestro, pelo Designer ou pelo Editor…
+
+Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
+
+Tamanho: 296 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -61,7 +77,7 @@ Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a
 
 Seções: A ideia central; Os nove fios; O que isso exige dos vídeos (prioridade dele agora); Perguntas que só o dono responde; O que não deu para saber.
 
-Tamanho: 1102 palavras.
+Tamanho: 1118 palavras.
 
 ### [Os prompts do dono, palavra por palavra](dono/PROMPTS.md)
 
@@ -119,14 +135,6 @@ Seções: Decisões do dono que valem para você; Em aberto com você; Onde olha
 
 Tamanho: 297 palavras.
 
-### [Contexto do Maestro (MinoAI Frontier)](maestro.md)
-
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral em `CONTEXTO.md`; histórico em `CONTEXTO-HISTORICO.md`. O Maestro não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte (`MAESTRO.md`).
-
-Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
-
-Tamanho: 264 palavras.
-
 ### [Contexto do Pesquisador](pesquisador.md)
 
 Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
@@ -149,7 +157,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
-Tamanho: 348 palavras.
+Tamanho: 368 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

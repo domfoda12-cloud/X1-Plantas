@@ -6,7 +6,7 @@
 >
 > Referência de edição favorita do dono: [`../video/REFERENCIA-CONDOR.md`](../video/REFERENCIA-CONDOR.md) (CONDOR XIII, levado para o reel de planta).
 >
-> Ela também é o **maestro** da operação inteira: ver [`../MAESTRO.md`](../MAESTRO.md). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
+> Ela também é o **Diretor** do conteúdo (quem decide é o Maestro, a sessão do Claude): ver [`../MAESTRO.md`](../MAESTRO.md). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
 
 ## 1. Onde e como a MinoAI Frontier edita
 

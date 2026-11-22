@@ -1,6 +1,6 @@
 ---
 name: conselho
-description: Reúne o Conselho do X1-Plantas (Maestro, Redator, Estrategista, Arquiteto, Revisor de risco, Designer, Pesquisador, Editor de vídeo) para decidir quais skills, agentes e ferramentas usar numa tarefa, e depois executa só o que foi aprovado. Use no começo de qualquer entrega que vai ao público ou que custa dinheiro, ou quando o dono digitar /conselho.
+description: Reúne o Conselho do X1-Plantas (Maestro, Diretor MinoAI, Redator, Estrategista, Arquiteto, Revisor de risco, Designer, Pesquisador, Editor de vídeo) para decidir quais skills, agentes e ferramentas usar numa tarefa, e depois executa só o que foi aprovado. Use no começo de qualquer entrega que vai ao público ou que custa dinheiro, ou quando o dono digitar /conselho.
 ---
 
 # Conselho
@@ -28,4 +28,4 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no fim de `CONTEXTO-HISTORICO.md` (não no `CONTEXTO.md`, que é resumo com limite de tamanho), faça o commit e o push na branch `main`.
 - Toda skill ou agente novo passa pelo roteiro de entrada da seção 6 do `CONSELHO.md` antes do primeiro uso.
-- **Prompt de entrada:** ao abrir a mesa, leia `ECOSSISTEMA.md` para saber quem está integrado. Membro marcado como "liberado, não usado" passa pelo roteiro antes de votar. O Maestro opina primeiro, com fonte da MinoAI Frontier. As decisões do dono que ainda estão em aberto ficam no `CONTEXTO.md`: não decida por ele.
+- **Prompt de entrada:** ao abrir a mesa, leia `ECOSSISTEMA.md` para saber quem está integrado. Membro marcado como "liberado, não usado" passa pelo roteiro antes de votar. O Maestro (esta conversa) decide; em conteúdo, o Diretor (MinoAI Frontier) opina primeiro, com a fonte. As decisões do dono que ainda estão em aberto ficam no `CONTEXTO.md`: não decida por ele.

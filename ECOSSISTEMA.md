@@ -16,7 +16,7 @@
 |---|---|
 | **Qualquer modelo** (Fable, Opus, Sonnet, Haiku) na sessão principal | Automático: o Claude Code carrega o `CLAUDE.md` em toda sessão, seja qual for o modelo escolhido no `/model` |
 | **Skill do projeto** (`.claude/skills/`) | Seção "Neste projeto (X1-Plantas)" no próprio `SKILL.md`. O `checar.py` confere |
-| **Agente do projeto** (`.claude/agents/`) | Linha "Alcance o projeto": lê `CLAUDE.md`, `contexto/QUADRO.md` e o seu `contexto/<agente>.md`. O `checar.py` confere o contexto e o tamanho. O modelo de cada um está na seção 2 |
+| **Agente do projeto** (`.claude/agents/`) | Linha "Alcance o projeto": o `CLAUDE.md` já chega carregado; lê `contexto/QUADRO.md` e o seu `contexto/<agente>.md`. O `checar.py` confere o contexto e o tamanho. O modelo de cada um está na seção 2 |
 | **Plugin e conector** (ficam fora do repositório) | Rodam dentro da sessão, que já tem o `CLAUDE.md`. Quando um deles abre um agente ou uma sessão própria, essa sessão nova não leva o contexto: na mensagem de abertura vai o **texto de entrada** da seção 5 |
 
 ## 2. Do projeto (no repositório)
@@ -33,11 +33,29 @@
 
 Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). A conversa principal interpreta e confere; os agentes executam.
 
+## 2b. Que skill e ferramenta está ligada a cada agente
+
+Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. Todos usam o caderno de pesquisa (`ferramentas/pesquisa.py`), menos o `ajudante`.
+
+| Quem (modelo) | Skills e ferramentas | Só com o "sim" do dono |
+|---|---|---|
+| **Maestro**, a conversa principal (Opus) | `conselho`, `ponytail`, `ponytail-review`, `ponytail-audit`, `artifact-*`, `dataviz`, `make-pdf`, `loop`, Graphify, `pedido.py`, `checar.py` | publicar, gastar, contratar |
+| **Diretor**, MinoAI Frontier | `search_mino_method`, `search_viral_hooks`, `analyze_hook`, `get_account_stats`, kit e estilo de edição | OpenArt, `publish_post` |
+| `redator` (Opus) | `redacao-que-vende`, ganchos da MinoAI | |
+| `estrategista` (Opus) | painel, `dataviz`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
+| `arquiteto` (Opus) | `plantas.py`, `planta3d.py`, `imagens3d.py`, Graphify, `ponytail`, web | |
+| `designer` (Opus) | Diretor MinoAI, `impeccable` (só detectar), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
+| `editor-video` (Opus) | Diretor MinoAI, `watch`, `video/render*.cjs`, `montar.py` | `openart:*` (`performance-ads`, `hook-variants`, `ugc`, `tvc`, `talking-head`...) |
+| `pesquisador` (Sonnet) | busca e leitura do TinyFish, web, `deep-research`, `watch`, `analyze_hook` | TinyFish dataset e deep research |
+| `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
+| `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
+| `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
+
 ## 3. Conectores (serviços externos)
 
 | Conector | Status | Quem usa | O que faz por fora | Alcance |
 |---|---|---|---|---|
-| **MinoAI Frontier** | Integrado | Maestro, Editor de vídeo | Lê as redes conectadas; a edição roda no Mac do dono | Feito: método, ganchos e `analyze_hook` usados (`instagram/MINOAI-FRONTIER.md`, `video/REFERENCIA-CONDOR.md`) |
+| **MinoAI Frontier** | Integrado | Diretor do conteúdo; usada pelo Designer e pelo Editor de vídeo | Lê as redes conectadas; a edição roda no Mac do dono | Feito: método, ganchos e `analyze_hook` usados (`instagram/MINOAI-FRONTIER.md`, `video/REFERENCIA-CONDOR.md`) |
 | **OpenArt** | Integrado | MinoAI (imagens e vídeos) | Gasta créditos; manda as imagens de referência para o OpenArt | Plano Pro, 21.137 créditos em 22/11/2026. **Cada uso pede o "sim" do dono**, com resumo e custo antes. Guia: `animacoes-3d/OPENART-MINOAI.md`; saldo: `ORCAMENTO.md` |
 | **TinyFish** | Integrado | Pesquisador | Busca e leitura grátis; dataset e deep research são **pagos** (só com o "sim" do dono) | Feito: pesquisas de mercado, referências, normas |
 | **Google Drive / Google Docs** | Liberado, não usado | (a decidir) | Lê e escreve arquivos na conta Google do dono | Pendente. Antes do primeiro uso, o Revisor confere o que sai |
@@ -75,7 +93,7 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 
 | Quem | Prompt específico |
 |---|---|
-| **MinoAI Frontier** | Você é o Maestro: opine sempre primeiro, citando a fonte (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIA-CONDOR.md`. O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
+| **MinoAI Frontier** | Você é o Diretor: dê a ideia principal de todo conteúdo e opine primeiro nele, citando a fonte; quem decide é o Maestro (a conversa principal) (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIA-CONDOR.md`. O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
 | **OpenArt** (e as skills `openart:*`) | Sempre imagem a partir de uma imagem nossa (planta, vista da rua ou 3D), nunca uma casa inventada. Primeiro o rascunho em 1k baixa, depois o final em 4K extra-alta a partir do rascunho aprovado. Parede de divisa sem janela. Imagem parada leva "Imagem ilustrativa"; vídeo não leva o selo (ordem do dono, 22/11), mas leva o aviso "Planta de referência…". No máximo 4 imagens em paralelo. Cada uso pede o "sim" do dono, com resumo e custo antes |
 | **TinyFish** | Busca e leitura são grátis; dataset e deep research são pagos e só rodam com o "sim" do dono. Fonte primária brasileira primeiro. Diga quando um site bloqueou |
 | **`watch`** | Na nuvem, o YouTube bloqueia o download. Para Reels e TikTok use o `analyze_hook` da MinoAI; para YouTube, peça o Mac do dono ou os minutos que importam |

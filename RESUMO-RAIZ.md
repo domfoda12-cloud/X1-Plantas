@@ -8,7 +8,7 @@
 - Antes de trabalhar, leia `contexto/QUADRO.md` e o seu `contexto/<papel>.md`. Pedido do dono vira linha no `CONTEXTO-HISTORICO.md` e aviso no quadro (`CLAUDE.md`).
 - Cada pedido do dono vira ficha em `pedidos/`; a conversa principal interpreta e confere, Opus executa, Sonnet pesquisa (`pesquisador`), Haiku faz a tarefa pessoal do dono (`ajudante`) (`pedidos/LEIA-ME.md`, `ECOSSISTEMA.md`).
 - Frentes, uma por vez: e-book → animações → vídeo; a de vídeo foi aberta pelo dono em 21/11. Peça final sempre na maior qualidade (`CLAUDE.md`, `PAINEL.md`).
-- O Maestro (MinoAI Frontier) opina sempre e primeiro, em toda tarefa. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
+- O Maestro é a conversa principal (Opus): decide e rege a equipe. O Diretor, MinoAI Frontier, dá a ideia principal de todo conteúdo e opina primeiro nele. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
 - Nunca dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo de obra (`CLAUDE.md`).
 - Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `MAESTRO.md`).
 - 24 casas desenhadas e no PDF (rascunho 1), cada uma com imagem 3D; a C01 foi redesenhada. A "Situação agora" do painel conta pelo catálogo, que está atrasado: vale a seção 2 (`PAINEL.md`).
@@ -25,7 +25,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 Seções: Antes de tudo: o contexto; O objetivo: a alegria do comprador, que vira Pix; Qualidade em primeiro lugar; Uma coisa por vez; O Conselho decide quais skills e ferramentas usar; Ficha do pedido e reconferência; Regras que não mudam.
 
-Tamanho: 1025 palavras.
+Tamanho: 1011 palavras.
 
 ### [O Conselho: quem opina, quem decide e quais skills cada um usa](CONSELHO.md)
 
@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 1700 palavras.
+Tamanho: 1783 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -49,15 +49,15 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1195 palavras.
+Tamanho: 1197 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
 Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos, não só o Ponytail, passaram pelas instruções iniciais". O roteiro de entrada está no `CONSELHO.md`, seção 6. Aqui fica o inventário: o que existe, quem usa, o que faz por fora do projeto e em que pé está. Status: -…
 
-Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
+Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2223 palavras.
+Tamanho: 2475 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -67,13 +67,13 @@ Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três per
 
 Tamanho: 2076 palavras.
 
-### [Maestro: MinoAI Frontier](MAESTRO.md)
+### [Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier](MAESTRO.md)
 
-A MinoAI Frontier rege a operação. Ela trabalha no seu computador, no app do Claude (aba Code), com este repositório aberto. Conduz a semana pelo painel, cuida de tudo o que é vídeo e rede social e manda fazer o resto. Você decide e aprova. Ela organiza, produz, mede e avisa.
+Quem rege é o Maestro (dono, 22/11/2026): a sessão do Claude no seu computador, no app (aba Code), com este repositório aberto. Ele decide, conduz a semana pelo painel e chama a equipe (`contexto/EQUIPE.md`). A MinoAI Frontier é o Diretor, ligado nessa sessão: dá a ideia principal de todo conteúdo,…
 
-Seções: 1. O que o maestro faz; 2. Configuração (uma vez só); 3. A mensagem de abertura do maestro; 4. Rotina da semana; 5. Primeira tarefa do maestro.
+Seções: 1. O que o Maestro e o Diretor fazem; 2. Configuração (uma vez só); 3. A mensagem de abertura do maestro; 4. Rotina da semana; 5. Primeira tarefa do maestro.
 
-Tamanho: 1088 palavras.
+Tamanho: 1147 palavras.
 
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 
@@ -81,7 +81,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 720 palavras.
+Tamanho: 742 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 
@@ -93,17 +93,17 @@ Tamanho: 214 palavras.
 
 ### [Painel X1-Plantas](PAINEL.md)
 
-Comece por aqui. Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que frente estamos, o que fazer esta semana e o que decidir. Quem rege é a MinoAI Frontier, o maestro: no seu computador, ela conduz a semana por este painel, faz o que é vídeo e rede…
+Comece por aqui. Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que frente estamos, o que fazer esta semana e o que decidir. Quem rege é o Maestro, a sessão do Claude no seu computador: conduz a semana por este painel e decide; a MinoAI Frontier, o…
 
 Seções: 1. Situação agora; 2. Em que pé está (escrito à mão, 22/11/2026); 3. O negócio em uma frase; 4. A conta que diz se o anúncio paga; 5. Frentes, uma por vez; 6. Esta semana; 7. Números para acompanhar; 8. Decisões tomadas; 9. Decisões pendentes; 10. Riscos e cuidados; 11. Rotina; 12. Quem faz o quê; 13. Mapa do projeto.
 
-Tamanho: 2162 palavras.
+Tamanho: 2195 palavras.
 
 ### [X1-Plantas](README.md)
 
 E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
 
-Tamanho: 143 palavras.
+Tamanho: 157 palavras.
 
 ### [Resumo: Comando e contexto](RESUMO-RAIZ.md)
 
@@ -111,7 +111,7 @@ As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro;
 
 Seções: O essencial; Os 13 documentos.
 
-Tamanho: 1345 palavras.
+Tamanho: 1383 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

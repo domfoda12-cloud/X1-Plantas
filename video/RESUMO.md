@@ -1,6 +1,6 @@
 # Resumo: Vídeo e anúncio
 
-> Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: editor-video, maestro, redator, revisor-de-risco.
+> Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: editor-video, diretor, redator, revisor-de-risco.
 
 ## O essencial
 

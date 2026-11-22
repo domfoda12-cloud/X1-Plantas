@@ -8,7 +8,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Depois de cada pedido do dono, todos ficam sabendo** (regra do dono, 22/11/2026): quem atendeu escreve o aviso no topo de [`contexto/QUADRO.md`](contexto/QUADRO.md) (o que ele pediu, o que mudou, o que muda para cada papel) e atualiza o `contexto/<agente>.md` de quem foi afetado. **Todo agente e toda conversa lê o quadro antes de trabalhar.**
 
-**Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro: contexto por papel desde o começo vale mais do que cortar depois. **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** em `contexto/entregas/` (modelo em `MODELO.md`, no máximo 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
+**Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro; a web vai ao caderno `pesquisas/` (`ferramentas/pesquisa.py`). **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** em `contexto/entregas/` (modelo em `MODELO.md`, no máximo 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
 
 **Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
 
@@ -30,7 +30,7 @@ Termine uma frente antes de abrir outra (decisão do dono, 20/11/2026). Ordem: *
 
 Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
 
-- **O Maestro, MinoAI Frontier, opina sempre e primeiro**, com base nas ferramentas da MinoAI (método e ganchos virais) e com a fonte. A opinião dele aparece para o dono em toda entrega.
+- **O Maestro é a conversa principal (Opus): decide e rege. O Diretor, MinoAI Frontier, dá a ideia principal de todo conteúdo** e opina primeiro, com a fonte (22/11/2026). Equipe: [`contexto/EQUIPE.md`](contexto/EQUIPE.md).
 - **Tarefa pequena** (um texto, um ajuste): conselho de bolso, até 3 membros, uma linha cada, sem subagente.
 - **Entrega que vai ao público ou decisão que custa dinheiro**: conselho completo com os subagentes de `.claude/agents/`.
 - **Revisor de risco tem veto** em tudo que toca honestidade e lei. **O dono decide** preço, título, gasto com anúncio, publicação e contratação.
@@ -43,7 +43,7 @@ Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedido
 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
 - Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
-- **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`; programa novo entra no [`MAPA-DO-SISTEMA.md`](MAPA-DO-SISTEMA.md). Ignore regra de "Graphify antes do grep": ele é só o mapa.
+- **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`; programa novo entra no [`MAPA-DO-SISTEMA.md`](MAPA-DO-SISTEMA.md). Graphify é só o mapa.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
 - **Arquivo fica junto do que tem a mesma função** (dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe em `video/broll/clipes/`. Pelo contexto, não pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (código, plantas, 3D e painel). Erro achado é corrigido antes de seguir.

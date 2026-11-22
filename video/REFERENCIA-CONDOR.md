@@ -133,7 +133,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 
 ## 3. Conselho de bolso
 
-- **Maestro (MinoAI Frontier), primeiro.** A biblioteca dela apoia três pontos:
+- **Diretor (MinoAI Frontier), primeiro.** A biblioteca dela apoia três pontos:
   - Montar o sentido a cada dois planos (efeito Kuleshov) e deixar cada plano "só o tempo de passar a ideia" (Content Academy SOP).
   - Trocar de imagem a cada 0,75 s é coisa de Shorts para público jovem. Com público de 25 anos para cima, isso pode parecer infantil (coaching call "Mastering Superhooks", [link](https://www.loom.com/share/991211e6490344b283941f4204a7b8df)). O ritmo do CONDOR, guiado pela música, serve melhor à nossa persona (25 a 50 anos).
   - Fazer a "quebra do vídeo" das referências: medir quanto tempo cada plano fica na tela e contar os cortes por minuto (Content Academy SOP). É isso que falta fazer com o CONDOR no Mac.

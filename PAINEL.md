@@ -2,7 +2,7 @@
 
 > **Comece por aqui.** Este é o centro de controle do projeto: o que estamos construindo, como o dinheiro entra, em que frente estamos, o que fazer esta semana e o que decidir.
 >
-> **Quem rege é a MinoAI Frontier**, o maestro: no seu computador, ela conduz a semana por este painel, faz o que é vídeo e rede social e manda fazer o resto. Ver [`MAESTRO.md`](MAESTRO.md).
+> **Quem rege é o Maestro**, a sessão do Claude no seu computador: conduz a semana por este painel e decide; a **MinoAI Frontier**, o Diretor, dá a ideia principal do conteúdo, edita o vídeo e gera a imagem. Ver [`MAESTRO.md`](MAESTRO.md).
 >
 > A seção 1 se atualiza sozinha: rode `python3 ferramentas/atualizar-painel.py` na raiz do projeto sempre que algo mudar. **Atenção:** ela conta pela coluna "Situação" do [catálogo](ebook/catalogo.md), que está atrasada; a verdade de hoje está na seção 2.
 >
@@ -143,7 +143,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | 16/11 | Plantas **originais**; nada copiado de outros escritórios |
 | 18/11 | Produto: **e-book com dezenas de plantas**, em vez de uma planta por vez |
 | 18/11 | Público principal: **quem tem um lote e vai construir com pedreiro, por etapas**, 25 a 50 anos ([`CLAUDE.md`](CLAUDE.md)) |
-| 19/11 | Maestro e editor: **MinoAI Frontier** ([`MAESTRO.md`](MAESTRO.md)) |
+| 19/11 | Maestro e editor: **MinoAI Frontier** (desde 22/11: Diretor; o Maestro é a conversa principal) ([`MAESTRO.md`](MAESTRO.md)) |
 | 20/11 | **Qualidade primeiro** e **uma frente por vez** ([`CLAUDE.md`](CLAUDE.md)) |
 | 21/11 | Frente de **vídeo aberta** pelo dono |
 | 22/11 | **OpenArt só com o "sim" do dono a cada uso**, com resumo e custo antes |
@@ -177,7 +177,7 @@ A rotina da semana está em [`MAESTRO.md`](MAESTRO.md), seção 4. Para manter e
 | Quem | Faz | Onde |
 |---|---|---|
 | **Dono** | Decide preço, título, bônus, gasto, publicação e contratação; diz "sim" a cada uso do OpenArt e a cada post | Este painel e [`CONTEXTO.md`](CONTEXTO.md) |
-| **Maestro: MinoAI Frontier** | Opina sempre e primeiro, com a fonte; edita os vídeos no computador do dono | [`MAESTRO.md`](MAESTRO.md) |
+| **Maestro: a conversa principal (Opus)** e **Diretor: MinoAI Frontier** | O Maestro decide e rege; o Diretor dá a ideia do conteúdo e opina primeiro nele, com a fonte, e edita no computador do dono | [`MAESTRO.md`](MAESTRO.md) |
 | **Conselho** (Redator, Estrategista, Arquiteto, Designer, Editor de vídeo, Pesquisador; Revisor de risco com veto) | Opina e executa só o que foi aprovado | [`CONSELHO.md`](CONSELHO.md), `contexto/<papel>.md` |
 | **Modelos** | A conversa principal interpreta e confere; Opus executa o trabalho do projeto; Sonnet pesquisa a fundo; Haiku faz a tarefa simples e pessoal do dono | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
 | **Parceiro** | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas/) |

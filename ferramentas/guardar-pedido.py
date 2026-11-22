@@ -25,12 +25,7 @@ try:
         abertas = sum(1 for f in ENTRADA.parent.glob("20*/*.md") if "**Estado:** aberta" in f.read_text(encoding="utf-8"))
         # lembrete curto para quem atende: o gancho guarda, mas a ficha é escrita por quem interpreta
         print(json.dumps({"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": (
-            "Prompt do dono guardado em pedidos/entrada/. Regra (pedidos/LEIA-ME.md): trabalho novo = "
-            "`python3 ferramentas/pedido.py nova \"assunto\"` e preencha a ficha (por quê, objetivo, ligação com "
-            "contexto/dono/IDEIAS-GERAIS.md, quem executa por modelo) antes de delegar; recado de pedido aberto = "
-            "`pedido.py recado <ficha>`; pergunta curta ou assunto pessoal = responda sem ficha. Travou, errou ou levou correção do dono? "
-            "Chame o agente `supervisor` (Fable) antes de tentar de novo. Pense antes, mais quanto maior o trabalho. Pergunte-se o que ele pediu e não pediu, o que você supõe e o que não sabe; "
-            "pergunte a ele o que só ele sabe, no fim, sem parar o resto. "
+            "Prompt guardado. Ficha nova ou recado (pedidos/LEIA-ME.md); travou ou levou correção: supervisor. "
             f"Fichas abertas agora: {abertas}.")}}, ensure_ascii=False))
 except Exception:
     pass

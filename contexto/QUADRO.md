@@ -2,6 +2,17 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## Agora
+
+- Equipe final e teste com a equipe · ficha `2026-11-22-1935-equipe-final` · o Maestro.
+
+## 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable
+
+- **O dono pediu:** todos com o mesmo entendimento; web para todos, organizada; MinoAI no Designer e no Editor; ele é o Maestro e decide, a MinoAI é o Diretor e dá a ideia do conteúdo; Revisor no Fable; lembrete do gancho curto.
+- **Todos:** leia o "Agora" acima. Antes da web, `python3 ferramentas/pesquisa.py buscar`; achado novo, `nova` (`pesquisas/`). Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
+- **Designer e Editor:** puxe a ideia do Diretor (MinoAI) antes de propor.
+- **Revisor:** peça final é no Fable.
+
 ## 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta
 
 - **O dono pediu:** organizar os agentes: cada um sabe a sua função e, a cada prompt, o que acrescentar para o resultado dele; tudo resumido junto; com o tempo, um sistema que ajude em qualquer coisa.

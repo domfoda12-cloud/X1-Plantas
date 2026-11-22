@@ -23,6 +23,8 @@ PASTAS = {
           ["todos"]),
     "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono", "contexto/dono/intencoes"],
                  ["todos"]),
+    "pesquisas": ("Caderno de pesquisa", "Tudo o que a equipe achou na web, por tema, com fonte, data e certeza",
+                  ["pesquisas"], ["todos"]),
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),
     "ebook/referencias": ("Pesquisa e técnica", "Público, concorrentes, regras de projeto e apostilas do Arquiteto",
@@ -31,9 +33,9 @@ PASTAS = {
                      ["ebook/vendas"], ["redator", "estrategista", "revisor-de-risco"]),
     "video": ("Vídeo e anúncio", "Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio",
               ["video", "video/anuncios", "video/principal-e07", "video/principal-e07/kit-minoai"],
-              ["editor-video", "maestro", "redator", "revisor-de-risco"]),
+              ["editor-video", "diretor", "redator", "revisor-de-risco"]),
     "instagram": ("Instagram", "Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier",
-                  ["instagram", "instagram/posts"], ["editor-video", "maestro", "redator", "designer", "estrategista"]),
+                  ["instagram", "instagram/posts"], ["editor-video", "diretor", "redator", "designer", "estrategista"]),
     "animacoes-3d": ("Animações 3D e imagens", "O motor 3D, o OpenArt e as referências de planta que ganha vida",
                      ["animacoes-3d"], ["arquiteto", "designer", "editor-video"]),
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
@@ -131,7 +133,7 @@ def gerar():
     indice += ("\n## Por agente\n\n" + "".join(
         f"- **{ag}:** " + ", ".join(f"[{PASTAS[c][0]}]({(Path(c) / ('RESUMO-RAIZ.md' if c == '.' else 'RESUMO.md')).as_posix()})"
                                     for c in PASTAS if ag in PASTAS[c][3] or "todos" in PASTAS[c][3]) + "\n"
-        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "maestro", "pesquisador", "redator", "revisor-de-risco", "supervisor"]))
+        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "diretor", "pesquisador", "redator", "revisor-de-risco", "supervisor"]))
     (RAIZ / "INDICE.md").write_text(indice, encoding="utf-8")
 
 

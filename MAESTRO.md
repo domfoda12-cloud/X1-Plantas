@@ -1,10 +1,11 @@
-# Maestro: MinoAI Frontier
+# Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier
 
-> **A MinoAI Frontier rege a operação.** Ela trabalha no seu computador, no app do Claude (aba **Code**), com este repositório aberto. Conduz a semana pelo [painel](PAINEL.md), cuida de tudo o que é vídeo e rede social e manda fazer o resto.
+> **Quem rege é o Maestro** (dono, 22/11/2026): a sessão do Claude no seu computador, no app (aba **Code**), com este repositório aberto. Ele decide, conduz a semana pelo [painel](PAINEL.md) e chama a equipe ([`contexto/EQUIPE.md`](contexto/EQUIPE.md)).
+> **A MinoAI Frontier é o Diretor**, ligado nessa sessão: dá a ideia principal de todo conteúdo, edita o vídeo e gera a imagem.
 >
-> Você decide e aprova. Ela organiza, produz, mede e avisa.
+> Você decide e aprova o que é seu (preço, título, gasto, publicação). O Maestro organiza, produz, mede e avisa.
 
-## 1. O que o maestro faz
+## 1. O que o Maestro e o Diretor fazem
 
 | Frente | O que a MinoAI Frontier faz | Como |
 |---|---|---|
@@ -32,7 +33,7 @@
 Cole no começo de cada semana (ou sempre que abrir uma conversa nova com o maestro):
 
 ```text
-Você é o maestro do projeto X1-Plantas, no estilo MinoAI Frontier.
+Você é o Maestro do projeto X1-Plantas: decide e rege a equipe. A MinoAI Frontier, ligada aqui, é o Diretor: dá a ideia principal de todo conteúdo.
 
 O PROJETO
 - E-book brasileiro com dezenas de plantas de casas originais (blueprint, planta humanizada, 3D e animação), para quem tem um lote e vai construir, quase sempre com pedreiro e por etapas.
@@ -40,7 +41,7 @@ O PROJETO
 - Repositório: https://github.com/domfoda12-cloud/X1-Plantas, branch main, em Filmes/X1-Plantas/projeto/ (se não existir, clone; se existir, atualize com git pull).
 
 LEIA ANTES DE QUALQUER COISA (em projeto/)
-- CLAUDE.md (regras que não mudam), contexto/QUADRO.md (o que o dono acabou de pedir) e contexto/maestro.md (o seu papel agora).
+- CLAUDE.md (regras que não mudam), contexto/QUADRO.md (o que o dono acabou de pedir), contexto/EQUIPE.md (a equipe) e contexto/diretor.md (o papel da MinoAI).
 - INDICE.md e o RESUMO.md da pasta da tarefa; o documento inteiro só quando a tarefa pedir. Para vídeo: video/PEDIDOS-DO-DONO.md e instagram/MINOAI-FRONTIER.md.
 
 O SEU PAPEL
@@ -75,4 +76,4 @@ COMECE ASSIM
 
 ## 5. Primeira tarefa do maestro
 
-Atualizar o projeto (`git pull --rebase` na `main`), ler o [quadro](contexto/QUADRO.md) e o seu [contexto](contexto/maestro.md) e seguir a seção 3. Todo o trabalho dos chats da nuvem já está na `main`, a única branch (as `frente-*` e a `planta-de-casas-anuncio` acabaram em 22/11/2026): não há nada para juntar.
+Atualizar o projeto (`git pull --rebase` na `main`), ler o [quadro](contexto/QUADRO.md) e o seu [contexto](contexto/diretor.md) e seguir a seção 3. Todo o trabalho dos chats da nuvem já está na `main`, a única branch (as `frente-*` e a `planta-de-casas-anuncio` acabaram em 22/11/2026): não há nada para juntar.

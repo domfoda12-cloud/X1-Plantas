@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-22 | [Equipe final: entendimento comum, pesquisa compartilhada, MinoAI diretor, testes](2026-11/2026-11-22-1935-equipe-final-entendimento-comum-pesquisa-compartilhada-minoa.md) | aberta | Maestro (Opus, conversa principal): mudanças. Teste: redator, arquiteto, designer, editor- |
 | 2026-11-22 | [Organizar os agentes: mapa, sobreposições e modelos](2026-11/2026-11-22-1924-organizar-os-agentes-mapa-sobreposicoes-e-modelos.md) | fechada em 22/11/2026 | Opus na conversa principal (é configuração do sistema, curta). Conselho de bolso: Maestro  |
 | 2026-11-22 | [O porquê de cada prompt, do primeiro ao último](2026-11/2026-11-22-1900-por-que-de-cada-prompt.md) | fechada em 22/11/2026 | dois agentes no Opus releem os prompts (16 a 20/11; 21 e 22/11 com prioridade criativa). O |
 | 2026-11-22 | [Resolver as contradições e dividir o trabalho por modelo](2026-11/2026-11-22-1800-contradicoes-e-divisao-por-modelo.md) | fechada em 22/11/2026 | montagem do sistema: Fable (é configuração, uma vez só). Contradições: três agentes no Opu |

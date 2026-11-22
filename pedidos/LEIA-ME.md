@@ -4,7 +4,7 @@
 
 ## Quem manda no sistema
 
-**O Opus responde e conduz** (dono, 22/11/2026): é o modelo da conversa principal (definido em `.claude/settings.json`). Ele lê o prompt, escreve a ficha, divide o trabalho, confere e responde. Nas partes importantes pode fazer ele mesmo, em vez de delegar.
+**O Opus responde e conduz: é o Maestro** (dono, 22/11/2026; a MinoAI Frontier é o Diretor do conteúdo, [`contexto/EQUIPE.md`](../contexto/EQUIPE.md)): é o modelo da conversa principal (definido em `.claude/settings.json`). Ele lê o prompt, escreve a ficha, divide o trabalho, confere e responde. Nas partes importantes pode fazer ele mesmo, em vez de delegar.
 
 **O Fable socorre e audita**, pelo agente `supervisor`:
 
@@ -55,6 +55,7 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
    - **Pergunta curta** que o Opus já sabe responder: responde direto, sem ficha.
    - **Assunto pessoal do dono:** vai para o `ajudante` (Haiku) e não vira arquivo no repositório.
 3. **Interpretação (Opus).** Preenche a ficha antes de delegar. A pergunta obrigatória: **por que essa mudança foi pedida, ou o que o dono quer descobrir, e qual é o objetivo dele?** E a ligação com as ideias gerais do projeto ([`contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md)). Onde o prompt não diz, o Opus escreve a suposição em "Suposições", em vez de decidir calado.
+   Atualize o "Agora" do topo do `contexto/QUADRO.md` (3 linhas: o pedido, a ficha, quem está nele): é assim que todos os agentes ficam com o mesmo entendimento, mesmo os que não foram chamados.
    Em "Quem executa", uma linha por agente chamado: **o que ele acrescenta** para chegar ao resultado que o dono quer (coluna "Acrescenta" de [`contexto/EQUIPE.md`](../contexto/EQUIPE.md)).
 4. **Execução.** O Opus passa o trabalho com o **pacote do executor** (abaixo).
 5. **Conferência (Opus).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência". Relatório de agente é afirmação, não prova: o Opus abre o arquivo, roda o comando ou olha o quadro.
@@ -72,7 +73,7 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 
 - Na dúvida entre dois modelos: **qualidade primeiro** para o que vai ao público; o mais barato para o que é simples e pessoal.
 - Tarefa de uma linha (trocar uma palavra, rodar a conferência) o Opus faz: delegar custa mais que fazer.
-- O Revisor de risco continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
+- O Revisor de risco roda no Opus no rascunho e **no Fable na peça final** (chamada com `model: fable`; dono, 22/11/2026). Continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
 
 ### Pesquisa em dois passos
 

@@ -8,6 +8,7 @@ model: opus
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/estrategista.md`):**
   - **Pense antes, na medida do trabalho** (mais para o que é grande, público ou caro; `pedidos/LEIA-ME.md`).
   - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
+  - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
   - O número que manda é o custo por venda (`PAINEL.md`, seção 4). Sem número medido, proponha o teste mais barato que gere o primeiro.
   - Créditos do OpenArt e limite semanal: `ORCAMENTO.md`.
 

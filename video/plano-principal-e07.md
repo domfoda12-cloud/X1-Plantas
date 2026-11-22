@@ -58,7 +58,7 @@ Publicar; palavra da chamada (PLANTA ou LOTE). A E07 é planta do e-book (rascun
 ## 7. Decisão do Conselho (21/11/2026)
 
 ```text
-[Maestro MinoAI] SIM, SE o 1º segundo for contido e a pergunta ficar 5 s ou mais · fonte: "Mastering Viral Text Hooks" (texto de 5 a 10 s); coaching call 21/07/2026 (carga cognitiva no começo); call 18/03/2025 (montagem curta, som forte na transição)
+[Diretor MinoAI] SIM, SE o 1º segundo for contido e a pergunta ficar 5 s ou mais · fonte: "Mastering Viral Text Hooks" (texto de 5 a 10 s); coaching call 21/07/2026 (carga cognitiva no começo); call 18/03/2025 (montagem curta, som forte na transição)
 [Editor]         SIM, SE a planta ficar parada e legível 1,5 s antes do drop e nenhum detalhe durar menos de 0,94 s · Kling (quadro inicial e final)
 [Arquiteto]      SIM, SE corrigir "5 m de casa", "corredor externo" e a rede, e as imagens seguirem a lista de cômodos
 [Revisor]        SIM, SE "Cabe" vier com o lote, selo em toda imagem gerada (inclusive vídeo), rodapé nunca coberto, sem marca/escudo/jogador, áudio dos modelos de vídeo removido

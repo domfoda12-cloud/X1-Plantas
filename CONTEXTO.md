@@ -11,7 +11,7 @@
 | "Sempre do ponto de vista de um arquiteto profissional" | Toda planta passa pelo validador e explica o porquê de cada decisão; as plantas não são de arquiteto, são de referência ([jurídico](reports/RESUMO.md)) |
 | "Não tem landing page" | Venda por anúncio (Facebook e Instagram) → comentário → WhatsApp. O parceiro cuida do funil, o dono cuida do material e do anúncio |
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
-| "Quero a opinião da MinoAI sempre, ele é o maestro" | Toda entrega traz a opinião do Maestro, tirada das ferramentas da MinoAI Frontier, com a fonte |
+| "Você é o maestro, a MinoAI o diretor" (22/11) | O Maestro (Opus) decide; o Diretor (MinoAI) dá a ideia do conteúdo e opina primeiro, com fonte ([equipe](contexto/EQUIPE.md)) |
 | "Falo muito de eficiência, mas a prioridade é sempre a maior qualidade" | Peça final sempre na melhor configuração; economia só em rascunho e teste ([`CLAUDE.md`](CLAUDE.md)) |
 | "Foque em uma coisa por vez, não misture tudo ao mesmo tempo" | Uma frente por vez, do começo ao fim, antes de abrir outra. Ordem atual: e-book → animações → vídeo |
 | "Ótimo ao máximo, TUDO" | Fazer completo e bem feito, sem atalho que prejudique a qualidade |
@@ -47,9 +47,9 @@
 | O que o dono acabou de pedir; onde está cada documento | [`contexto/QUADRO.md`](contexto/QUADRO.md), [`INDICE.md`](INDICE.md) |
 | Como um pedido do dono vira trabalho, e qual modelo faz | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
 | Tudo o que o dono já pediu, pedido por pedido | [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
-| Quem decide o quê (Conselho, Maestro, vetos) e como uma skill nova entra | [`CONSELHO.md`](CONSELHO.md), [`MAESTRO.md`](MAESTRO.md) |
+| Quem decide o quê (Conselho, Maestro, Diretor, vetos) e como uma skill nova entra | [`CONSELHO.md`](CONSELHO.md), [`MAESTRO.md`](MAESTRO.md) |
 | Tudo o que a operação pode usar (skills, plugins, conectores) e o prompt de cada um | [`ECOSSISTEMA.md`](ECOSSISTEMA.md) |
-| O que cada agente precisa saber agora | [`contexto/`](contexto/) (um arquivo por papel, inclusive o Maestro) |
+| O que cada agente precisa saber agora | [`contexto/`](contexto/) (um arquivo por papel, inclusive o Diretor) |
 | O que a última tarefa deixou pronto e pendente | [`contexto/entregas/`](contexto/entregas/) |
 | Estratégia, preço, funil, o que não prometer | [`ESTRATEGIA.md`](ESTRATEGIA.md) (seção 9: honestidade) |
 | Custo por venda e números | [`PAINEL.md`](PAINEL.md), [`ORCAMENTO.md`](ORCAMENTO.md) |
