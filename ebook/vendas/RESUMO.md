@@ -5,7 +5,14 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Funil: comentário "PLANTA", planta grátis, pergunta "qual é o tamanho do seu terreno?" (a mais importante), casas que cabem, oferta no dia 3, fim no dia 7 (`sequencia-whatsapp.md`).
+- Há 6 plantas grátis em `ebook/saida/` (E03, E02, C01, E07, C06, F01), pela frente do lote; sem a medida, mande a C01. Não mande as imagens de `animacoes-3d/plantas/casa-compacta/` (`material-gratuito.md`).
+- Regra fixa: nunca dizer que a planta dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra. Vetados: "aprovado na prefeitura", "construa por R$ X", "pronto para construir", "garantia de que cabe no seu lote" (`atributos-que-vendem.md`, `respostas-objecoes.md`).
+- Testar primeiro: lote + conferida, etapas + ver antes, o porquê + engenheiro. Notas são hipóteses; tabela de testes vazia (`atributos-que-vendem.md`).
+- Conversa: uma mensagem por dia no máximo, parar depois de dois "não", terminar com pergunta; prazo e alta de preço só se forem verdade (`sequencia-whatsapp.md`, `respostas-objecoes.md`).
+- Em aberto: campos entre [colchetes]: título, preço, pagamento, data (`faq-compradores.md`).
+- Contradição: C01 com 50 m² em `material-gratuito.md` e 55 m² na mensagem do dia 0 de `sequencia-whatsapp.md`.
+- Contradição: `faq-compradores.md` e a oferta do dia 3 citam 3D e animação; `material-gratuito.md` diz que o 3D novo é o último passo.
 <!-- /essencial -->
 
 ## Os 5 documentos

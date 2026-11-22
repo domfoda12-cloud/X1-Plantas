@@ -5,7 +5,15 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Validar: `python3 ferramentas/plantas.py validar` (24 plantas, 0 erros). Confere medida, janela, circulação até 14%, lote e sol; não calcula estrutura nem sabe o recuo local (`regras-do-arquiteto.md`).
+- Mínimos livres: sala 8 m² e lado 2,30 m; quarto de casal 7 m² e 2,30 m; cozinha 4 m² e 1,50 m; banheiro 1,8 m² e 1,00 m. Janela: 1/6 do piso em sala e quarto (`regras-do-arquiteto.md`).
+- Recuos de referência: frente 3 m, fundos 1,5 m, lateral direita 1,5 m, esquerda 0; lote com 5 m de frente no mínimo (`regras-do-arquiteto.md`).
+- Método do Arquiteto: partir de referência real, tentar sem corredor, pôr a mesa, cada casa diferente. Validador é o mínimo (`arquiteto-sites-de-profissionais.md`).
+- Em aberto, decisão do dono: refazer plantas (série E, compactas, F02). A régua federal pede banheiro de 1,50 m; 22 de 24 ficam abaixo, em conta aproximada (`pesquisa-layouts-e-etapas-da-obra.md`).
+- Norma não é lei: NBR 15220-3 é orientativa; quem obriga é o código de obras (`arquiteto-fontes-brasileiras.md`).
+- Persona: Seu Marcos, fictício, lote 8 x 25, constrói por etapas; pergunta primeiro "cabe no meu lote?" (`persona-e-mercado.md`).
+- Proibido "pronta para construir" e "garantia de aprovação"; preço de concorrente só com fonte e data (`projetos-similares.md`).
+- Contradição: planta avulsa de R$ 98 a R$ 2.000 (`concorrentes.md`) ou de R$ 98 a R$ 899 (`projetos-similares.md`).
 <!-- /essencial -->
 
 ## Os 10 documentos

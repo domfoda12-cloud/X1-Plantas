@@ -5,7 +5,16 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Antes de mexer em vídeo, leia `PEDIDOS-DO-DONO.md` inteiro; ordem nova do dono entra lá na hora (22/11/2026). (`CLAUDE.md`)
+- Antes de montar vídeo ou gastar crédito do OpenArt: mande o resumo e a lista de instruções e espere o dono confirmar. OpenArt não é proibido; pede o "sim" dele a cada uso (22/11/2026). (`PEDIDOS-DO-DONO.md`)
+- Destino do anúncio com locução: WhatsApp e Facebook Ads, não Instagram nem TikTok (22/11/2026). (`PEDIDO-anuncio-locucao.md`)
+- Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa": o dono tirou (22/11/2026). (`CLAUDE.md`)
+- Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. (`CLAUDE.md`)
+- Prontos em `saida/`: `previa-whatsapp/`, `principal/`, `principal-condor/`, `convite/`, `principal-e07/`. Clipes em `broll/clipes/`. `v1` a `v5` usam o 3D velho da C01. (`VIDEO.md`, `PEDIDOS-DO-DONO.md`)
+- Todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md` e parte de imagem nossa. (`principal-e07/PROMPTS.md`)
+- Edição final: MinoAI Frontier, no Mac do dono. Anúncio pago: só música licenciada ou a trilha nossa. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `plano-anuncio-locucao.md`)
+- Em aberto: o plano do anúncio com locução espera o dono; nada foi gerado. (`plano-anuncio-locucao.md`)
+- Rascunhos: `principal-condor` (não publicar; E07 na fila do redesenho) e `convite`. (`PEDIDOS-DO-DONO.md`)
 <!-- /essencial -->
 
 ## Os 15 documentos

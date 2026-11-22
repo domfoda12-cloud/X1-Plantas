@@ -5,7 +5,15 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Engenheiro registra ART no Crea; arquiteto, RRT no CAU. Contrato de obra ou serviço fica sujeito à ART; sem RRT o trabalho para (Leis 6.496/1977 e 12.378/2010; relatório, atualização de 19/11/2026).
+- Planta só tem valor diante das autoridades se o autor for profissional habilitado. Prestar serviço reservado sem registro é exercício ilegal (Lei 5.194/1966, arts. 13 e 6º; relatório).
+- Nossas plantas não são de arquiteto nem engenheiro: o e-book é referência, não projeto. O relatório recomenda revisão e assinatura de arquiteto do CAU; não é parecer jurídico (relatório).
+- Não dizer que a planta dispensa profissional, que a obra será aprovada ou que serve a todo terreno. 70 m² não é dispensa: é registro mais simples (relatório).
+- Sem percentual: só "a maioria das obras particulares" é feita sem profissional (CAU/BR-Datafolha 2015). 85,4%, 82% e 9% conflitam (relatório).
+- Preços de sites comerciais, consulta de 19/11/2026, sem conferência: projeto de R$ 20 a R$ 180 por m²; planta simples de R$ 1.500 a R$ 3.000; kit com RRT a R$ 1.997 (nota servicos_e_precos).
+- Aprovação e alvará são regra de cada prefeitura; nenhum código municipal foi lido. O leitor pergunta na prefeitura e, se financiar, na Caixa (relatório).
+- Em aberto: Resolução CAU/BR 91/2014, resoluções do Confea, página da Caixa, quem responde por erro em planta vendida (relatório).
+- A nota exigencias_legais e o fim do relatório são de antes da leitura das leis: vale a atualização (relatório).
 <!-- /essencial -->
 
 ## Os 4 documentos
