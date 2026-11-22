@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Exportar casa para o Blender</title>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
+</head>
+<body>
+<script type="module">
+  // Monta a casa pronta (paredes cortadas a 1,1 m, móveis e jardim) com o mesmo motor
+  // do render (src/casa3d.js) e exporta em GLB, com as câmeras das imagens 02, 03 e 04.
+  // Uso: exportar.html?planta=C01 → window.glb (base64) quando window.pronto = true.
+  import * as THREE from 'three';
+  import { GLTFExporter } from '/node_modules/three/examples/jsm/exporters/GLTFExporter.js';
+  import { criarCasa } from '/src/casa3d.js';
+  const q = new URLSearchParams(location.search);
+  const id = (q.get('planta') || 'C01').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const dados = (await import(`/src/plantas/${id}.js`)).default;
+  const renderer = new THREE.WebGLRenderer({ preserveDrawingBuffer: true });
+  renderer.setSize(64, 64);
+  const casa = criarCasa(renderer, dados);
+  casa.aplicar({ desenho: 1, paredes: 1, vida: 1 });
+
+  // Só o mundo real: sai o desenho do blueprint, a grade azul e as arestas brancas.
+  const fora = [];
+  casa.cena.traverse((o) => {
+    if (o.isLineSegments || o.isLine) fora.push(o);
+    else if (o.isMesh && o.material && o.material.isMeshBasicMaterial) fora.push(o);
+    else if (o.isMesh && !o.visible) fora.push(o);
+  });
+  fora.forEach((o) => o.parent.remove(o));
+  casa.cena.traverse((o) => {
+    if (o.isMesh && o.material) {
+      const ms = Array.isArray(o.material) ? o.material : [o.material];
+      ms.forEach((m) => { if (m.opacity >= 0.99) { m.transparent = false; } });
+    }
+  });
+
+  // Câmeras (mesmos parâmetros de render-planta.cjs, já com a escala da planta)
+  const cams = JSON.parse(q.get('cameras') || '[]');
+  const grupoCams = new THREE.Group(); grupoCams.name = 'cameras';
+  const escala = (dados.camera && dados.camera.escala) || Math.max(0.8, dados.largura / 6.5, dados.profundidade / 8.5);
+  for (const c of cams) {
+    const cc = { ...c.camera, distancia: c.camera.distancia * escala, alvo: c.camera.alvo.map((v) => v * escala) };
+    casa.enquadrar({ ...cc, aspecto: 2000 / 2500 });
+    const cam = casa.camera.clone(); cam.name = c.nome;
+    cam.position.copy(casa.camera.position); cam.quaternion.copy(casa.camera.quaternion);
+    grupoCams.add(cam);
+  }
+  casa.cena.add(grupoCams);
+  window.info = { largura: dados.largura, profundidade: dados.profundidade, nome: dados.nome, camera: dados.camera || {} };
+
+  const exp = new GLTFExporter();
+  const buf = await exp.parseAsync(casa.cena, { binary: true, onlyVisible: true, maxTextureSize: 4096 });
+  let s = ''; const b = new Uint8Array(buf);
+  for (let i = 0; i < b.length; i += 0x8000) s += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000));
+  window.glb = btoa(s);
+  window.pronto = true;
+</script>
+</body>
+</html>
