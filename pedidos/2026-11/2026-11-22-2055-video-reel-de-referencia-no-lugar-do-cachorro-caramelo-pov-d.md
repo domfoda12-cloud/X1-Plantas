@@ -172,6 +172,22 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 
 Tempos de Q3 a Q6 são proposta do Editor. Já dá para renderizar de graça um rascunho do esquema sobre a E07 atual; o final espera a casa aprovada (ficha `1616`).
 
+## Ficha da referência (pedido do Fable, que responde pela reprodução; 22/11)
+
+**Parecer do Fable (5/5):** fundo C como base, mas com a câmera quase de frente para o muro com a bandeira (no máximo 15 a 20 graus), o muro enchendo o fundo atrás da criança e a casa na borda do quadro ou entrando no movimento de 2,4 a 3,0 s; de 3/4, a bandeira fica torta, que é o defeito que o dono apontou. A bandeira é pintada no render-base (desenho oficial), nunca inventada pela IA. O prompt do teste dizia "no flag": trocado. Ele confere quadro a quadro no rascunho: bandeira (posição, tamanho, inteira e correta), câmera, muro, cachorro, ritmo, criança dentro do lote, nada do menino real, corte 4:5, Q4 no mesmo ângulo.
+
+**O que a análise quadro a quadro da MinoAI diz** (`analyze_hook`, modo edit_help, sobre um repost; certeza secundária):
+| Item | Na referência |
+|---|---|
+| Fundo | muro pintado com a bandeira do Brasil, na rua, de dia |
+| Câmera | tomada única, celular, sem cortes |
+| Dança | o menino "desce" no ritmo das palmas ("desce um pouquinho"), passinho rápido; o ritmo acelera |
+| Cachorro | pequeno, ao lado, **parado olhando para cima**, cabeça inclinada, sério: o contraste com o menino é a graça |
+| Áudio | **palmas e gente fora do quadro cantando "desce um pouquinho"**, risadas, aplauso no fim (não é música) |
+| Melhor momento | 0:02 a 0:06: o olhar do cachorro acompanhando o ritmo |
+
+**O que isso muda:** o caramelo **olha, parado, cabeça inclinada** (não pula); o áudio é **gravação nossa** de palmas e do coro "desce um pouquinho" (nunca o áudio original); a câmera imita o celular na mão. Falta medir, com prints do dono se a MinoAI não der: a altura da câmera, a distância e quanto do quadro a bandeira ocupa.
+
 ## Opções de nome de rua (pedido do dono, 22/11: "i just need the options")
 
 **Veto:** Revisor SIM nos 5. Redator: a preferida dele é nova, **Rua da Casa que Cabe** (o atributo campeão no singular; "Casas que Cabem" lembra a frase vetada "todas as casas cabem"); reserva: Rua da Primeira Casa; outra nova: Rua do Meu Lote. Notas dele (desejo/clareza/promessa): Casas que Cabem 3/3/5, Primeira Casa 5/5/2, Pedreiro 2/4/2, Tô de Boa 3/4/1, Lote Certo 3/4/4.
