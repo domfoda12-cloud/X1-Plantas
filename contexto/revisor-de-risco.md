@@ -28,4 +28,4 @@
 
 ## Leia barato
 
-Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

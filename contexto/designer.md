@@ -23,4 +23,4 @@ sistema visual `ebook/referencias/VISUAL.md`, gerador `ebook/gerador/livro.py`, 
 
 ## Leia barato
 
-Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md), [Código](../ferramentas/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

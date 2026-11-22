@@ -35,9 +35,9 @@ Tamanho: 446 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 22/11 · Documentos juntados; main em dia; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2.
+Seções: Agora; 22/11 · Plano de trabalho; consertar de vez; 22/11 · Documentos juntados; main em dia; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta.
 
-Tamanho: 486 palavras.
+Tamanho: 477 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -53,7 +53,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 452 palavras.
+Tamanho: 448 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -61,7 +61,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 317 palavras.
+Tamanho: 316 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 
@@ -133,7 +133,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 301 palavras.
+Tamanho: 298 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -149,7 +149,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 262 palavras.
+Tamanho: 259 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
@@ -157,7 +157,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
-Tamanho: 372 palavras.
+Tamanho: 369 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 1783 palavras.
+Tamanho: 1816 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 7857 palavras.
+Tamanho: 7932 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 

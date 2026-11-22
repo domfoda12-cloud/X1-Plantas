@@ -13,6 +13,7 @@ Sai com código 1 se algo falhar.
 """
 import json
 import subprocess
+import re
 import sys
 from pathlib import Path
 
@@ -99,6 +100,11 @@ for nome, limite in LIMITES:
         grandes.append(f"{nome}: {n} caracteres, passa do limite de {limite}. Mova o excesso para CONTEXTO-HISTORICO.md ou divida")
 if not (RAIZ / "contexto" / "entregas" / "ULTIMO.md").exists():
     grandes.append("contexto/entregas/ULTIMO.md: falta o último resumo de passagem")
+# Cada papel aponta no máximo 3 resumos (dono, 22/11/2026: ler pouco); o conserto vira conferência, para não voltar
+for p in sorted((RAIZ / "contexto").glob("*.md")):
+    n = p.read_text(encoding="utf-8").count("RESUMO.md)")
+    if p.name not in ("RESUMO.md", "QUADRO.md", "EQUIPE.md") and n > 3:
+        grandes.append(f"contexto/{p.name}: aponta {n} resumos; o máximo é 3")
 if grandes:
     falhas.append("orçamento de contexto")
     print("[ERRO] orçamento de contexto:\n  " + "\n  ".join(grandes))
@@ -125,6 +131,21 @@ rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "ex
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
+# Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio)
+import urllib.parse
+quebrados = []
+for p in RAIZ.rglob("*.md"):
+    if {".git", "node_modules", "entrada"} & set(p.parts):
+        continue
+    for m in re.finditer(r"\]\(([^)\s#]+)(?:#[^)\s]*)?\)", p.read_text(encoding="utf-8", errors="ignore")):
+        alvo = m.group(1)
+        if not re.match(r"^[a-z]+:", alvo) and not (p.parent / urllib.parse.unquote(alvo)).exists():
+            quebrados.append(f"{p.relative_to(RAIZ)}: {alvo}")
+if quebrados:
+    falhas.append("links entre documentos")
+    print("[ERRO] links quebrados:\n  " + "\n  ".join(quebrados[:20]))
+else:
+    print("[OK ] links entre documentos")
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])

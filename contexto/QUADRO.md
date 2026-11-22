@@ -4,7 +4,13 @@
 
 ## Agora
 
-- Organizando os arquivos (ficha `1529-organizar-os-arquivos`), etapa 1 feita: documentos juntados. Próximo: código repetido; depois o plano mestre da equipe (ficha `1944`).
+- Arquivos organizados (ficha `1529` fechada). Agora: auditoria do Fable; depois o plano mestre (ficha `1944`). O plano de tudo, fase por fase: `pedidos/PLANO.md`.
+
+## 22/11 · Plano de trabalho; consertar de vez
+
+- **O dono pediu:** um plano passo a passo, em tarefas grandes e pequenas, com objetivo para a equipe; e "não só conserte, remende".
+- **Todos:** o plano está em [`../pedidos/PLANO.md`](../pedidos/PLANO.md) (5 fases, quem faz cada tarefa). Erro achado vira regra ou conferência no `checar.py` (`pedidos/LEIA-ME.md`).
+- **Todos:** o `checar.py` agora confere todos os links e no máximo 3 resumos por contexto.
 
 ## 22/11 · Documentos juntados; main em dia
 
@@ -25,9 +31,3 @@
 - **Todos:** o mapa está em [`EQUIPE.md`](EQUIPE.md). A ficha passa a ter, em "Quem executa", uma linha por agente: o que ele acrescenta. O que não é seu, devolva dizendo de quem é; agente não chama agente.
 - **Designer e Editor:** imagem parada é do Designer; o que se move é do Editor.
 - **Arquiteto, Estrategista e Pesquisador:** o Pesquisador acha a fonte; o Arquiteto (norma, planta) ou o Estrategista (mercado, preço) conclui. O Estrategista não usa mais Sonnet.
-
-## 22/11 · Pense antes; Python 3.11; auditorias 1 e 2
-
-- **O dono pediu:** pensar antes de qualquer trabalho, mais quanto maior ele for; corrigir o erro do gerador no Python 3.11 (revisão do PR #3).
-- **Todos:** regra "pense antes, na medida do trabalho" em `pedidos/LEIA-ME.md`; esforço padrão "high". `ebook/gerador/livro.py` abre no Python 3.11.
-- **Redator e parceiro:** a E07 saiu das plantas grátis (5 agora); o PDF ainda tem campo pendente e não vai ao cliente (o `checar.py` avisa).

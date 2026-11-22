@@ -78,6 +78,18 @@ def listar(mostrar=True, estado="aberta"):
     return linhas
 
 
+def quadro():
+    """Deixa no quadro o bloco "Agora" e os 5 avisos mais novos, dentro de 3.500 caracteres (o mais antigo sai: já está no histórico)."""
+    q = RAIZ / "contexto" / "QUADRO.md"
+    t = q.read_text(encoding="utf-8")
+    while True:
+        avisos = [m.start() for m in re.finditer(r"^## \d", t, re.M)]
+        if len(avisos) <= 1 or (len(avisos) <= 5 and len(t) <= 3500):
+            break
+        t = t[:avisos[-1]].rstrip() + "\n"
+    q.write_text(t, encoding="utf-8")
+
+
 def fechar(nome, virou):
     arq = achar(nome)
     txt = arq.read_text(encoding="utf-8")
@@ -92,7 +104,8 @@ def fechar(nome, virou):
     with open(RAIZ / "CONTEXTO-HISTORICO.md", "a", encoding="utf-8") as h:
         h.write(f"| {hoje:%d/%m/%Y} | \"{prompt.replace('|', '/')}\" | {virou.replace('|', '/')} Ficha: `{arq.relative_to(RAIZ)}` |\n")
     indice()
-    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md.")
+    quadro()
+    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md (depois rode `pedido.py quadro`, que tira o mais antigo se passar do limite).")
     auditadas = len(re.findall(r"^\| \d", (PEDIDOS / "AUDITORIAS.md").read_text(encoding="utf-8"), re.M)) if (PEDIDOS / "AUDITORIAS.md").exists() else 0
     fechadas = sum(1 for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada"))
     if fechadas >= 3 * (auditadas + 1):
@@ -137,6 +150,8 @@ if __name__ == "__main__":
         listar(estado="fechada" if "--fechadas" in a else "aberta")
     elif cmd == "fechar" and len(a) == 3:
         fechar(a[1], a[2])
+    elif cmd == "quadro":
+        quadro()
     elif cmd == "indice":
         indice()
     elif cmd == "conferir":

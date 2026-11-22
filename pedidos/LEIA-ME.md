@@ -46,6 +46,10 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 
 
 
+## Consertar de vez (dono, 22/11/2026: "não só conserte, remende")
+
+Erro achado não é só corrigido: a causa vira **regra escrita ou conferência automática** no `checar.py`, para não voltar. Exemplos de 22/11: link quebrado depois de juntar arquivo (o `checar.py` confere todos os links); contexto apontando resumo demais (confere no máximo 3); quadro passando do tamanho (`pedido.py quadro` tira o aviso mais antigo); fato que muda dentro do arquivo do agente (fica só no `contexto/<papel>.md`). Na ficha, em "Conferência", diga o que impede o erro de voltar.
+
 ## O caminho de um prompt
 
 1. **Entrada (automática).** O gancho `UserPromptSubmit` (`.claude/settings.json`) chama `ferramentas/guardar-pedido.py`: grava o prompt, palavra por palavra, em `pedidos/entrada/` (fora do git) e devolve a quem atende um lembrete desta regra e quantas fichas estão abertas.

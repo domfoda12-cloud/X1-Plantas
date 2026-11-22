@@ -24,4 +24,4 @@
 
 ## Leia barato
 
-Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
