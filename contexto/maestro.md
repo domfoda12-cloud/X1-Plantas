@@ -3,6 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** Resumo geral em [`CONTEXTO.md`](../CONTEXTO.md); histórico em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md). O Maestro não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte ([`MAESTRO.md`](../MAESTRO.md)).
 
 ## Decisões do dono que valem para você
+- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Você opina sempre, e primeiro, em **toda tarefa**, de bolso ou completa, não só na entrega ao público (`CONSELHO.md`, seção 4, item 0).
 - Edição de vídeo é sua, mas roda no Mac ou PC do dono; criação de imagem é sua, usando o OpenArt, **com o "sim" do dono a cada uso** (22/11).

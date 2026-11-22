@@ -3,6 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
+- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Veto só por honestidade ou lei, sempre com a correção que vira SIM.
 - Lição de 20/11: a S03 prometia banheiro para cadeira de rodas que a planta não tinha e passou na primeira leitura. Confira os dados, não só o texto.

@@ -1,8 +1,9 @@
-**Tarefa:** papéis dos modelos (Opus conduz, Fable socorre e audita), limpeza de mídias, retrospectiva, regras "pense antes" e "pergunte sempre", erro do Python 3.11 e as auditorias 1 e 2.
-**Feito:** `.claude/settings.json` (Opus, esforço high); agente `supervisor`; `pedidos/AUDITORIAS.md`; `ferramentas/pedido.py` avisa a hora da auditoria.
-Mídias e o vídeo antigo apagados (voltam com `git checkout 079dae7 -- <caminho>`); `contexto/dono/RETROSPECTIVA.md` com o plano para refazer.
-`ebook/gerador/livro.py` abre no 3.11; a E07 saiu das plantas grátis (5); o `checar.py` avisa campo pendente no PDF.
-**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/pedido.py listar --fechadas`; `pedidos/AUDITORIAS.md`.
-**Não feito / ressalva:** as branches velhas seguem no GitHub (apagar não é permitido daqui). Vários documentos ainda citam arquivo apagado pelo nome, sem link: entram na organização (ficha aberta). Os roteiros de vídeo apontam clipes que não existem mais.
-**Decisão do dono pendente:** qual era "o último vídeo"; se as imagens dos posts entravam no "apague"; qual limite ("5 horas" ou semanal); a casa para "8 m, 3 quartos"; as 8 perguntas da retrospectiva.
-**Próximo passo:** a organização dos arquivos (ficha aberta em `pedidos/`), depois refazer pelo plano da retrospectiva.
+**Tarefa:** organizar os agentes: cada um sabe a função e o que acrescenta a cada prompt, tudo junto, com economia de token.
+**Feito:** `contexto/EQUIPE.md` (mapa numa página, fronteiras, economia, prompt sem papel).
+**Feito:** 7 agentes: ficha em `pedidos/`, "devolva o que não é seu", formato de devolução; não releem o `CLAUDE.md`; `ULTIMO.md` só se a tarefa continua.
+**Feito:** imagem parada = Designer, o que se move = Editor; Arquiteto pede web ao Pesquisador; passo 2 da pesquisa nomeado; Estrategista sem "Sonnet".
+**Feito:** `pedidos/LEIA-ME.md` (linha "acrescenta" na ficha), `CONSELHO.md`, 10 contextos e o quadro.
+**Como conferir:** `python3 ferramentas/checar.py`; abrir `contexto/EQUIPE.md`.
+**Não feito / ressalva:** modelos mantidos (escolha do dono); agente do Maestro não criado; nenhum prompt real rodou ainda pelo fluxo novo.
+**Decisão do dono pendente:** criar agente `maestro`? Revisor de risco no Fable para peça final? Encurtar o lembrete do gancho?
+**Próximo passo:** ficha "Organizar os arquivos" (aberta), depois a E07.

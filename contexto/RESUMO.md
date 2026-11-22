@@ -27,9 +27,9 @@
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre; 22/11 · Pedidos em ficha, modelos por tarefa, ideias gerais e contradições resolvidas.
+Seções: 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre.
 
-Tamanho: 466 palavras.
+Tamanho: 442 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -37,7 +37,7 @@ Só o que importa para este papel. Se a tarefa tocar o projeto, leia antes o qua
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
 
-Tamanho: 129 palavras.
+Tamanho: 147 palavras.
 
 ### [Contexto do Arquiteto](arquiteto.md)
 
@@ -45,7 +45,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 407 palavras.
+Tamanho: 448 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -53,7 +53,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 254 palavras.
+Tamanho: 294 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -109,7 +109,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 386 palavras.
+Tamanho: 425 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -117,7 +117,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 257 palavras.
+Tamanho: 297 palavras.
 
 ### [Contexto do Maestro (MinoAI Frontier)](maestro.md)
 
@@ -125,7 +125,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 246 palavras.
+Tamanho: 264 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -133,7 +133,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 192 palavras.
+Tamanho: 231 palavras.
 
 ### [Contexto do Redator](redator.md)
 
@@ -141,7 +141,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 240 palavras.
+Tamanho: 258 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
@@ -149,7 +149,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
-Tamanho: 330 palavras.
+Tamanho: 348 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 
@@ -157,4 +157,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
 
-Tamanho: 133 palavras.
+Tamanho: 151 palavras.

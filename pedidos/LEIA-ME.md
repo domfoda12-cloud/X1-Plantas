@@ -55,6 +55,7 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
    - **Pergunta curta** que o Opus já sabe responder: responde direto, sem ficha.
    - **Assunto pessoal do dono:** vai para o `ajudante` (Haiku) e não vira arquivo no repositório.
 3. **Interpretação (Opus).** Preenche a ficha antes de delegar. A pergunta obrigatória: **por que essa mudança foi pedida, ou o que o dono quer descobrir, e qual é o objetivo dele?** E a ligação com as ideias gerais do projeto ([`contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md)). Onde o prompt não diz, o Opus escreve a suposição em "Suposições", em vez de decidir calado.
+   Em "Quem executa", uma linha por agente chamado: **o que ele acrescenta** para chegar ao resultado que o dono quer (coluna "Acrescenta" de [`contexto/EQUIPE.md`](../contexto/EQUIPE.md)).
 4. **Execução.** O Opus passa o trabalho com o **pacote do executor** (abaixo).
 5. **Conferência (Opus).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência". Relatório de agente é afirmação, não prova: o Opus abre o arquivo, roda o comando ou olha o quadro.
 6. **Fechamento.** `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
@@ -76,7 +77,7 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 ### Pesquisa em dois passos
 
 1. **`pesquisador` (Sonnet)** busca e lê as fontes e devolve uma lista: cada achado com a fonte, a data, o trecho que o sustenta e o que ele NÃO conseguiu confirmar.
-2. **Um agente no Opus** recebe essa lista e as fontes: confere se cada achado está mesmo na fonte, cruza os que se contradizem, separa fato de opinião e conclui o que isso muda no projeto. Só o resultado do passo 2 entra em documento.
+2. **O agente do assunto, no Opus** (o `arquiteto` para norma e planta, o `estrategista` para mercado, preço e concorrente; fora disso, agente geral no Opus) recebe essa lista e as fontes: confere se cada achado está mesmo na fonte, cruza os que se contradizem, separa fato de opinião e conclui o que isso muda no projeto. Só o resultado do passo 2 entra em documento.
 
 ## O pacote do executor
 

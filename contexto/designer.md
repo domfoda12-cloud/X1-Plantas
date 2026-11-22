@@ -3,6 +3,8 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
+- Imagem parada (capa, página, carrossel, post, capa do reel) é sua; o que se move é do Editor de vídeo (22/11/2026).
+- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Qualidade máxima na peça final: imagem final em 4K extra-alta a partir do rascunho aprovado; "max" só na imagem principal.
 - O dono quer o e-book "mais inovador": capa com fita métrica, a casa dentro do lote, ficha no estilo da tabela nutricional.

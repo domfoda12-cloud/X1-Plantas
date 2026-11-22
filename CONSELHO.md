@@ -17,9 +17,9 @@ Temos muitas skills, conectores e scripts. Usar todos em toda tarefa gasta tempo
 | **Revisor de risco** (veto) | "Isso promete algo que não podemos cumprir?" | [Relatório jurídico](reports/Arquiteto%20e%20engenheiro%20na%20constru%C3%A7%C3%A3o%20residencial.md), [FAQ](ebook/vendas/faq-compradores.md), tom de voz | [`revisor-de-risco`](.claude/agents/revisor-de-risco.md) |
 | **Designer** | "Parece profissional ou parece genérico?" | `impeccable` (só para detectar o genérico e opinar), gerador do e-book, `artifact-design`. Pede imagens à MinoAI (OpenArt), não gera | [`designer`](.claude/agents/designer.md) |
 | **Pesquisador** | "Temos fonte para isso?" | TinyFish (busca e leitura; recursos pagos só com o "sim"), `deep-research`, `watch` para vídeos | [`pesquisador`](.claude/agents/pesquisador.md) |
-| **Editor de vídeo e imagem: MinoAI Frontier** | "Segura a atenção nos 3 primeiros segundos? A imagem faz querer a casa?" | **Edição de vídeo:** MinoAI Frontier (no Mac/PC do dono). **Criação de imagem e vídeo gerado:** MinoAI usando o OpenArt (plugin `openart:*`: `performance-ads`, `hook-variants`, `ugc`, `tvc`…). Base 3D/2D: `video/render*.cjs` | [`editor-video`](.claude/agents/editor-video.md) |
+| **Editor de vídeo** (tudo o que se move; imagem parada é do Designer; quem gera e edita é a MinoAI Frontier) | "Segura a atenção nos 3 primeiros segundos? A imagem faz querer a casa?" | **Edição de vídeo:** MinoAI Frontier (no Mac/PC do dono). **Criação de imagem e vídeo gerado:** MinoAI usando o OpenArt (plugin `openart:*`: `performance-ads`, `hook-variants`, `ugc`, `tvc`…). Base 3D/2D: `video/render*.cjs` | [`editor-video`](.claude/agents/editor-video.md) |
 
-Que modelo roda cada agente (Opus no trabalho do projeto, Sonnet no `pesquisador`, Haiku no `ajudante`): [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md).
+Que modelo roda cada agente (Opus no trabalho do projeto, Sonnet no `pesquisador`, Haiku no `ajudante`, Fable no `supervisor`): [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). Mapa da equipe numa página: [`contexto/EQUIPE.md`](contexto/EQUIPE.md).
 
 ## 3. Como uma opinião é dada
 

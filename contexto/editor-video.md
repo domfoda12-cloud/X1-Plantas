@@ -3,6 +3,8 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
 
 ## Decisões do dono que valem para você
+- O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
+- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `PEDIDOS-DO-DONO.md`.
