@@ -158,7 +158,7 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 | B | Bandeira num muro do outro lado da rua; giro ou zoom out mostra a casa | A cópia mais fiel do meme | A casa não aparece no 1º quadro; a criança fica na rua |
 | C (Editor recomenda) | Bandeira no muro lateral alto (1,9 m), visto de 3/4; criança e caramelo no gramado, dentro do lote | Imita o meme, segue o Revisor, casa desde o 1º quadro | A fachada aparece de 3/4, não de frente |
 
-**Lei (Pesquisador, passo 1, fonte secundária: LegisWeb, o Planalto bloqueou):** Lei 5.700/1971, art. 11, III permite a bandeira "reproduzida sobre paredes"; art. 31 proíbe mudar forma, cores ou proporções, pôr inscrição, mau estado, e reproduzir em rótulo de produto à venda; o texto não fala de anúncio. Conclusão: com o Revisor.
+**Lei (Pesquisador, passo 1, fonte secundária: LegisWeb, o Planalto bloqueou):** Lei 5.700/1971, art. 11, III permite a bandeira "reproduzida sobre paredes"; art. 31 proíbe mudar forma, cores ou proporções, pôr inscrição, mau estado, e reproduzir em rótulo de produto à venda; o texto não fala de anúncio. **Conclusão do Revisor (22/11):** pode, como fundo, com as condições de lei: cores e proporções do Anexo, "ORDEM E PROGRESSO" e estrelas certas, nada escrito ou colado em cima (texto do vídeo e placa fora dela), pintura inteira. A IA erra letra e estrela: a bandeira entra pelo **desenho oficial** aplicado no muro do `render-rua` antes do image2image, e é conferida quadro a quadro. Cautela: nunca como logo ou selo, nada que ligue o e-book a governo ou partido. **A confirmar:** o texto no Planalto e a política da Meta (pode tratar a bandeira como tema político). Fundos: A SE (vira C), B SE (criança longe da pista, sem carro), **C SIM** (a altura de 1,9 m do muro lateral: o Arquiteto confirma).
 
 **Esquema do principal (Instagram e Ads), quadro a quadro:**
 | Quadro | Tempo | O que é | De onde sai a imagem |
@@ -172,7 +172,9 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 
 Tempos de Q3 a Q6 são proposta do Editor. Já dá para renderizar de graça um rascunho do esquema sobre a E07 atual; o final espera a casa aprovada (ficha `1616`).
 
-## Opções de nome de rua (pedido do dono, 22/11: "i just need the options"; rascunho do Maestro, a vetar pelo Redator e pelo Revisor)
+## Opções de nome de rua (pedido do dono, 22/11: "i just need the options")
+
+**Veto:** Revisor SIM nos 5. Redator: a preferida dele é nova, **Rua da Casa que Cabe** (o atributo campeão no singular; "Casas que Cabem" lembra a frase vetada "todas as casas cabem"); reserva: Rua da Primeira Casa; outra nova: Rua do Meu Lote. Notas dele (desejo/clareza/promessa): Casas que Cabem 3/3/5, Primeira Casa 5/5/2, Pedreiro 2/4/2, Tô de Boa 3/4/1, Lote Certo 3/4/4.
 
 A placa aparece de relance no vídeo e liga a casa a uma ideia da marca. Nome inventado, sem número e sem cidade, para não parecer endereço real.
 
@@ -200,6 +202,8 @@ A placa aparece de relance no vídeo e liga a casa a uma ideia da marca. Nome in
 | — | Maestro | 1 | Prompt errado na ficha; aceitei como fato que o escaneamento abria o vídeo (resumo errado, não a fala do dono); marquei "confirmado" um ano tirado de repost; deixei suposição virar decisão no passo 5 | Sim: regras 8, 11 e 12 de `contexto/CONVIVENCIA.md` e o `pedido.py` que mostra o prompt |
 | Fable | Supervisor | 5 | Achou o prompt errado, o fato errado com a linha de onde vinha, e cada suposição; correção em cada item | — |
 | ramo | Revisor | 5 | Corrigiu a própria cautela da rodada 1 ("sem criança" não é lei); separou lei, política da Meta e cautela; marcou o que não conferiu; vetou o ramo que não cumpria o pedido | — |
+| nomes | Redator | 5 | Achou o eco da frase vetada no meu nome preferido e trouxe um melhor | — |
+| lei e fundos | Revisor | 5 | Separou lei (artigos), cautela e a confirmar; achou o risco da IA errar o dístico e o da Meta | — |
 | fundo | Editor | 5 | 3 opções com ganho e perda, esquema com a origem de cada imagem, suposições marcadas | — |
 | lei | Pesquisador | 5 | Planalto bloqueou e ele não contornou; trechos exatos com artigo; fonte secundária marcada; não concluiu pelo Revisor | — |
 | teste | Revisor | 5 | Comparou com a referência, achou a roupa listrada e a criança na calçada, disse o que não conferiu | — |
