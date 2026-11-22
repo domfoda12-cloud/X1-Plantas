@@ -142,6 +142,15 @@ if quebrados:
     print("[ERRO] links quebrados:\n  " + "\n  ".join(quebrados[:20]))
 else:
     print("[OK ] links entre documentos")
+# Fechar ficha não pode apagar as seções depois do Resultado (auditoria 4: o plano da 2151 sumiu assim)
+import importlib.util as _iu
+_e = _iu.spec_from_file_location("pedido", RAIZ / "ferramentas" / "pedido.py"); _p = _iu.module_from_spec(_e); _e.loader.exec_module(_p)
+_ficha = "**Estado:** aberta\n\n**Resultado:** (a preencher)\n\n## Plano\n\nnão some\n"
+_fechada = _p.trocar(_ficha, "Resultado", "virou")
+if "## Plano" in _fechada and "não some" in _fechada and _p.campo(_fechada, "Resultado") == "virou":
+    print("[OK ] fechar ficha guarda as seções de depois")
+else:
+    falhas.append("fechar ficha apaga seções"); print("[ERRO] fechar ficha apaga as seções depois do Resultado")
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])

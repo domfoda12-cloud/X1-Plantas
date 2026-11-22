@@ -26,3 +26,4 @@
 
 **Resultado:** Rotina de tempo livre (L1 a L6) em pedidos/PLANO.md; seção Lições em cada contexto; ferramentas enxutas em 5 agentes (cerca de 80 mil para 25 mil tokens por chamada, a confirmar na próxima conversa)
 
+**Medido depois (auditoria 4, 22/11; números dos avisos de cada chamada):** Estrategista 35.496 a 37.833 tokens (lista curta; antes, com tudo, ~80 mil); Redator 32.072; Pesquisador 61.064 (com 10 usos de ferramenta); Editor (lista completa) 78 a 94 mil. Ou seja: a lista curta cortou para menos da metade, não para um terço; os 25 mil eram do Arquiteto e do Revisor.

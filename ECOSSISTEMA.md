@@ -35,7 +35,7 @@ Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/
 
 ## 2b. Que skill e ferramenta está ligada a cada agente
 
-Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. Todos usam o caderno de pesquisa (`ferramentas/pesquisa.py`), menos o `ajudante` (é pessoal); o Revisor lê o caderno e devolve o achado novo para o Maestro registrar (não roda comando).
+Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que vale de fato é a linha `tools:` de cada `.claude/agents/<nome>.md` (sem ela, o agente tem todas). O que é pago (TinyFish dataset e deep research, OpenArt) só roda com o "sim" do dono, e quem roda é o Maestro, não o agente. Todos usam o caderno de pesquisa (`ferramentas/pesquisa.py`), menos o `ajudante` (é pessoal); o Revisor lê o caderno e devolve o achado novo para o Maestro registrar (não roda comando).
 
 | Quem (modelo) | Skills e ferramentas | Só com o "sim" do dono |
 |---|---|---|
@@ -43,13 +43,15 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. Todos usam o
 | **Diretor**, MinoAI Frontier | `search_mino_method`, `search_viral_hooks`, `analyze_hook`, `get_account_stats`, kit e estilo de edição | OpenArt, `publish_post` |
 | `redator` (Opus) | `redacao-que-vende`, ganchos da MinoAI | |
 | `estrategista` (Opus) | painel, `dataviz`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
-| `arquiteto` (Opus) | `plantas.py`, `planta3d.py`, `imagens3d.py`, Graphify, `ponytail`, web | |
+| `arquiteto` (Opus) | `plantas.py`, `planta3d.py`, `imagens3d.py`, `ponytail`, web (Graphify fica com o Maestro) | |
 | `designer` (Opus) | Diretor MinoAI, `impeccable` (só detectar), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
 | `editor-video` (Opus) | Diretor MinoAI, `watch`, `video/render*.cjs`, `montar.py` | `openart:*` (`performance-ads`, `hook-variants`, `ugc`, `tvc`, `talking-head`...) |
 | `pesquisador` (Sonnet) | busca e leitura do TinyFish, web, `deep-research`, `watch`, `analyze_hook` | TinyFish dataset e deep research |
 | `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
 | `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
+
+**Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no Mac, dúvida, não usamos; o dono à mão, no Mac, pode. Ficha `2151-integrar-o-cass`.
 
 ## 3. Conectores (serviços externos)
 
@@ -116,7 +118,6 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 | **product-demo-agent-toolkit** ([chapter-dev-pty-ltd/product-demo-agent-toolkit](https://github.com/chapter-dev-pty-ltd/product-demo-agent-toolkit), MIT, versão 0.2.1, Node 22.18 ou mais) | **Aguarda o "sim" do dono para instalar** (a proteção automática do Claude Code bloqueou a instalação e a cópia das skills em 20/11) | Grava vídeo de demonstração de **página web** com Playwright: cursor que se move como uma mão, digitação no ritmo de uma pessoa, espera até a página carregar sem tempo morto, roteiro escrito depois de explorar a página, locução sincronizada com cada clique, 1080p a 60 quadros, 22 fundos, molduras, sons de clique e um estúdio de edição no navegador. Duas skills: `product-demo` (filmar) e `product-demo-review` (revisar o vídeo). **Uso no X1-Plantas:** filmar a calculadora do parceiro ("digite o seu lote e veja as casas que cabem") e o leitor do e-book folheando as páginas, como B-roll e anúncio. É da frente de **vídeo** (a última). **Cuidados do Revisor:** a locução usa o ElevenLabs, com chave paga (só com o "sim" do dono); a música "lofi" foi feita no ElevenLabs Music, e a licença para anúncio não foi conferida (não usar em anúncio pago); os sons são CC0 e os fundos são MIT ou Apache-2.0. O `setup` instala as skills na pasta global de todos os agentes do computador: preferir `product-demo-agent-toolkit skills .claude/skills`, que fica só no projeto |
 | **AgentScope 2.0** ([agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope), Apache-2.0, Python 3.11 ou mais) | Liberado, não usado: só ideias | Framework para **construir** agentes em Python que chamam modelos pela API (cobrada por token, à parte da assinatura). Não roda o Claude Code. Li o README e a lista de módulos; **não instalei nem rodei**. Ideias que já usamos ou passamos a usar: compactação automática do contexto e descarte de resultado de ferramenta grande (nosso resumo de passagem e o `CONTEXTO-HISTORICO.md`), escolha do modelo por resposta (nossa regra de Opus para decidir e Sonnet para o rotineiro), equipe com líder que delega (o Conselho) e procedimentos padrão em etapas (o roteiro de entrada). Só valeria instalar se um dia houvesse um agente próprio, por exemplo o que responde no WhatsApp |
 
-**Vetado:** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026: a licença (MIT com adendo) nega direitos à Anthropic e à OpenAI e a quem age por elas, e proíbe hospedar ou executar para elas; os agentes do projeto são Claude. O dono pode usá-lo à mão no Mac dele. Ficha `2151-integrar-o-cass`.
 
 ## 7. Como manter este inventário
 

@@ -1,7 +1,7 @@
 ---
 name: supervisor
 description: Supervisor do X1-Plantas, no Fable. Use em dois casos. Socorro: quando a conversa principal (Opus) travar, errar duas vezes a mesma coisa, levar uma correção do dono ou perceber que errou. Auditoria: de tempos em tempos (a cada 3 fichas fechadas), para conferir o trabalho recente do Opus e apontar os erros. Ele aponta e explica; quem corrige é quem fez.
-tools: Read, Grep, Glob, Bash, Edit, Write
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch
 model: fable
 ---
 

@@ -4,7 +4,13 @@
 
 ## Agora
 
-- Vídeo do meme e do POV do caramelo (ficha `2055-video-reel`): plano versão 4, vetado pelo time (3 rodadas) e pelo Fable; esperando as respostas do dono. Plano de tudo: `pedidos/PLANO.md`.
+- Auditoria 4 corrigida. Vídeo do meme (ficha `2055`) esperando as escolhas do dono; memória das conversas (ficha `2151`): pergunta ao dono.
+
+## 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro
+
+- **O dono pediu:** integrar o cass (busca nas conversas dos agentes). **Vetado pela licença** (nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar para elas): não usar. O dono pode usá-lo à mão no Mac.
+- **Todos:** ferramenta nova: nada se baixa, instala ou roda antes da ficha e do veto, e a licença é lida inteira (`CONSELHO.md`, seção 6; convivência 13). Arquivo de agente mudado vale já; `CLAUDE.md`, na próxima conversa.
+- **Maestro:** `pedido.py fechar` apagava o que vinha depois do "Resultado" (consertado e testado no `checar.py`); as lições dele estão em [`maestro.md`](maestro.md).
 
 ## 22/11 · Veto com régua; memes atemporais; convivência
 
@@ -29,10 +35,3 @@
 - **O dono pediu:** juntar os arquivos lidos pelos mesmos agentes; levar o trabalho para a `main`.
 - **Todos:** 50 documentos viraram 12, cada antigo inteiro como seção. Nomes novos: `video/VIDEO.md` (com os pedidos do dono), `ANUNCIO-LOCUCAO.md`, `PRINCIPAL-E07.md`, `REFERENCIAS.md`; `instagram/INSTAGRAM.md`, `MINOAI-FRONTIER.md` (com o antigo `MAESTRO.md`); `ebook/referencias/ARQUITETO.md`, `MERCADO.md`, `VISUAL.md`; `ebook/vendas/WHATSAPP.md`; `reports/NOTAS-DA-PESQUISA.md`. Links já corrigidos.
 - **Quem conduz:** resumo de passagem agora vai no fim de `contexto/entregas/REGISTRO.md` e no `ULTIMO.md`.
-
-## 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable
-
-- **O dono pediu:** todos com o mesmo entendimento; web para todos, organizada; MinoAI no Designer e no Editor; a conversa principal (Opus) é o Maestro e decide; a MinoAI é o Diretor e dá a ideia do conteúdo; Revisor no Fable; lembrete do gancho curto.
-- **Todos:** leia o "Agora" acima. Antes da web, `python3 ferramentas/pesquisa.py buscar`; achado novo, `nova` (`pesquisas/`). Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
-- **Designer e Editor:** puxe a ideia do Diretor (MinoAI) antes de propor.
-- **Revisor:** peça final é no Fable.

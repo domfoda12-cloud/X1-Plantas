@@ -71,7 +71,7 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 | Correção | todo NÃO ou VETO traz a correção que vira SIM |
 | Novo e do papel | não repete o que já entrou e fica no papel dele |
 
-O Maestro dá a nota na ficha (tabela "Qualidade do veto"). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** uma linha em "Lições" do `contexto/<papel>.md` do agente (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
+Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto"), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** uma linha em "Lições" do `contexto/<papel>.md` do agente (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
 
 ## Erro de sintonia entre agentes (dono, 22/11/2026)
 
@@ -166,7 +166,7 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 
 ## Limites honestos
 
-- **Agente e `CLAUDE.md` mudados só valem na próxima conversa** (teste da equipe, 22/11/2026): o Claude Code lê os dois quando a conversa começa.
+- **`CLAUDE.md` mudado só vale na próxima conversa** (o Claude Code o lê quando a conversa começa). **Arquivo de agente mudado vale já nas próximas chamadas** (visto na auditoria 4, 22/11/2026: as listas de ferramentas valeram 12 minutos depois); no teste da equipe, mais cedo, ele ainda não tinha sido relido.
 
 - O modelo padrão da conversa é o Opus (`.claude/settings.json`); o dono pode trocar com `/model`. Se a conversa estiver em outro modelo, as regras valem igual.
 - O gancho só roda em conversa aberta **neste repositório** e depois que a conversa carrega o `.claude/settings.json` (conversa já aberta pode precisar ser reaberta). Prompts antigos: `contexto/dono/PROMPTS.md`.

@@ -31,12 +31,12 @@ def fichas():
 
 
 def campo(txt, nome):
-    m = re.search(rf"^\*\*{re.escape(nome)}:\*\*[ \t]*(.*?)(?=^\*\*[^*\n]+:\*\*|\Z)", txt, re.S | re.M)
+    m = re.search(rf"^\*\*{re.escape(nome)}:\*\*[ \t]*(.*?)(?=^\*\*[^*\n]+:\*\*|^## |\Z)", txt, re.S | re.M)
     return m.group(1).strip() if m else None
 
 
 def trocar(txt, nome, valor):
-    return re.sub(rf"(^\*\*{re.escape(nome)}:\*\*)[ \t]*.*?(?=^\*\*[^*\n]+:\*\*|\Z)", lambda m: f"{m.group(1)} {valor}\n\n", txt, flags=re.S | re.M)
+    return re.sub(rf"(^\*\*{re.escape(nome)}:\*\*)[ \t]*.*?(?=^\*\*[^*\n]+:\*\*|^## |\Z)", lambda m: f"{m.group(1)} {valor}\n\n", txt, flags=re.S | re.M)
 
 
 DE = None

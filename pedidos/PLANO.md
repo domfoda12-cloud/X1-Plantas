@@ -91,7 +91,7 @@ A lista de planos para o dono filmar (5.1) pode sair antes, se ele quiser filmar
 
 | # | Tarefa | O que deixa mais inteligente | Pronto quando |
 |---|---|---|---|
-| L1 | **Próxima conversa, primeiro:** cada agente confirma que vê as suas ferramentas (web, MinoAI, caderno) | sem isso, os outros passos não valem | uma linha por agente na ficha `2041-tempo-livre` |
+| L1 | Cada agente confirma que vê as suas ferramentas (web, MinoAI, caderno); vale já, não espera a próxima conversa | sem isso, os outros passos não valem | uma linha por agente na ficha `2041-tempo-livre` |
 | L2 | Lições: cada erro de auditoria e cada correção do dono vira uma linha em "Lições" do `contexto/<papel>.md` e, se der, uma conferência no `checar.py` | errar menos: o agente lembra do erro de ontem | lições em dia com `AUDITORIAS.md` |
 | L3 | Teste da equipe com o pedido da próxima fase (ex.: "refaça a E07"), 3 ou 4 agentes; corrigir o que sair confuso | entender melhor | contradições achadas e corrigidas |
 | L4 | Afiar o método de um papel por vez: o `pesquisador` busca a melhor prática (com fonte, no caderno), o papel propõe, o Maestro decide; em conteúdo, o Diretor (MinoAI) opina primeiro | saber mais | uma regra nova no agente, com fonte |

@@ -33,3 +33,34 @@ Main seems like a huge mess i dont know what to do with it
 
 **Resultado:** 138 para 100 documentos (50 viraram 12), links e resumos conferidos pelo checar.py; Graphify 10% menor, metade fica para cortar conteúdo repetido (PLANO 2.5b)
 
+
+## Plano (rascunho para a próxima sessão)
+
+1. **Medir antes** (`graph_stats`): 2.013 círculos, 2.231 ligações, 292 grupos (22/11, depois da limpeza).
+2. **Documentos, de 126 para uns 40** (o que mais pesa):
+   - `contexto/entregas/`: 18 resumos de passagem viram um registro só, mais o `ULTIMO.md`.
+   - `video/`: `VIDEO.md`, `VIDEO.md`, `ANUNCIO-LOCUCAO.md`, os planos e as referências viram 3 (regras e pedidos; plano da peça atual; referências).
+   - `instagram/`: 6 viram 2 (plano do perfil; posts).
+   - `ebook/referencias/`: 10 viram 4 (público e mercado; regras do Arquiteto; pesquisas; concorrentes).
+   - Raiz: `PAINEL.md`, `ORCAMENTO.md`, `ESTRATEGIA.md` e `ECOSSISTEMA.md` revistos; o que repete o `CONTEXTO.md` sai.
+   - `RESUMO.md`: só "O essencial" e a lista de nomes, sem repetir a descrição de cada documento.
+3. **Código repetido num lugar só:** `RAIZ` e o caminho das pastas (14 cópias) num `ferramentas/comum.py`; o servidor e o Chromium dos 3 `render-*.cjs` num módulo só.
+4. **Agentes leem menos:** cada `contexto/<papel>.md` aponta no máximo 3 resumos.
+5. **Medir depois** e comparar; auditoria do Fable.
+
+
+## Mapa de conexões (medido em 22/11, depois do recado)
+
+Medido com um script: para cada documento, quais agentes o leem (arquivo do agente, `contexto/<agente>.md` e as listas do `ferramentas/resumos.py`). Hoje: **138 documentos .md**, 383 arquivos no total. Documentos que têm os mesmos leitores e a mesma função viram um só (o conteúdo vai junto; nada se perde):
+
+| Grupo (quem lê) | Hoje | Proposta |
+|---|---|---|
+| `video/` (Diretor, Editor, Redator, Revisor) | 12 | 3: regras e pedidos do dono; a peça atual (plano, roteiro, prompts, anúncio); referências |
+| `instagram/` (Designer, Diretor, Editor, Estrategista, Redator) | 6 | 2: o perfil (plano, calendário, MinoAI, Mino Lee); os posts |
+| `ebook/referencias/` (Arquiteto, Estrategista, Pesquisador, Designer) | 9 | 3: apostila do Arquiteto; mercado e concorrentes; referência visual |
+| `ebook/vendas/` (Estrategista, Redator, Revisor) | 5 | 2: atributos que vendem; WhatsApp (sequência, objeções, perguntas, material grátis) |
+| `contexto/entregas/` | 19 | 3: um registro só, o `ULTIMO.md` e o modelo |
+| `research_notes/` (ninguém lê, 34 mil caracteres) | 2 | 0: vão para `reports/`, junto do relatório que os usa |
+| Raiz | 13 | 9: `ORCAMENTO` entra no `PAINEL`; `README` e `RESUMO-RAIZ` viram um; `MAESTRO` vai para `instagram/` |
+
+Total: **de 138 para uns 75 documentos.** As palavras do dono (`PROMPTS.md`, `VIDEO.md`) continuam palavra por palavra, só mudam de lugar. Espera o "sim" do dono.

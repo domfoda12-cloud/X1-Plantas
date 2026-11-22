@@ -12,7 +12,7 @@
 
 ## Em aberto com você
 
-- Auditorias 1 e 2 feitas em 22/11/2026 (`pedidos/AUDITORIAS.md`). Próxima: a cada 3 fichas fechadas.
+- Auditorias 1 a 4 feitas em 22/11/2026 (`pedidos/AUDITORIAS.md`). Próxima: a cada 3 fichas fechadas.
 
 ## Leia barato
 
