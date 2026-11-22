@@ -8,6 +8,10 @@ Durante a procura de referencias procure memes brasileiros atemporais como esse
 
 *Recado de 22/11 20:54 (vinha no lugar do prompt, corrigido pela auditoria do Fable):* Ill be out for a while, go full potent back in the project if youre done fixing all systematical error, or improvements
 
+*Recado de 22/11 21:07:* Crie branches e planos diferente para cada passo
+
+*Recado de 22/11 21:07:* 1. Sim, a crianca e o cachorro dancando na frente da casa
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -48,6 +52,56 @@ Objetivo de todos: o brasileiro reconhece na hora, para o dedo, e quer a casa.
 | 9 | G | Produzir **o principal**; edição final na MinoAI, no Mac; Revisor no Fable | `editor-video` | principal aprovado pelo dono |
 | 10 | G | Depois, produzir **a prévia**, com a casa aprovada no redesenho (ficha `1616`), sem rascunho na F03 | `editor-video` | prévia aprovada pelo dono |
 | 11 | P | Medir, se o dono quiser teste: o que muda entre as versões e o número do parceiro | `estrategista` | proposta ao dono |
+
+## Ramos do plano: um caminho para cada resposta do dono (pedido de 22/11, "crie branches e planos diferentes para cada passo")
+
+Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se faz se o dono não responder. Os passos citados são os da versão 4.
+
+**R1 · Onde entra o meme**
+| Ramo | O que muda | Custo e risco | Para quem |
+|---|---|---|---|
+| R1a · gancho, 0 a 3 s **(escolhido pelo dono, 22/11: "a criança e o cachorro dançando na frente da casa")** | Passo 5 abre com a recriação; o escaneamento vem logo depois, como manda a fala do dono | Mais reconhecimento nos 3 s; se o meme não for reconhecido sem o áudio, o gancho cai | quem não conhece a marca |
+| R1b · no meio (antes da chamada) | Abertura fica com a casa pronta e o gancho de texto; o meme vira o respiro antes do "comenta PLANTA" | Menos risco no gancho; o meme pesa menos | quem já parou |
+| R1c · nos dois vídeos | Gancho no principal e de novo na prévia | Reforça a marca; dobra a produção da recriação | — |
+
+**R2 · Qual é o "vídeo do WhatsApp"**
+| Ramo | O que muda |
+|---|---|
+| R2a · a prévia **(padrão)** | Passo 6 como está: e-book por dentro + POV do caramelo + pedir a medida do lote; até 5 MB |
+| R2b · o convite (F03) | Passo 6 parte do convite ("extremamente convidativo", uma casa só); POV entra no passeio; F03 só se o dono aceitar a F03, senão a casa aprovada |
+| R2c · o anúncio com locução | O POV entra no anúncio com a voz do dono; o roteiro dele (`ANUNCIO-LOCUCAO.md`) muda; precisa da gravação |
+
+**R3 · Instagram**
+| Ramo | O que muda |
+|---|---|
+| R3a · o principal vai ao Facebook Ads e ao Instagram **(padrão: perguntar antes, porque mexe numa ordem dele)** | Duas saídas do mesmo vídeo: 4:5 (feed) e 9:16 (Reels), até 12 MB |
+| R3b · Instagram só orgânico, Facebook Ads só o anúncio com locução | Fica a ordem de hoje; o principal com meme vira Reel do perfil |
+
+**R4 · Teste A/B**
+| Ramo | O que muda |
+|---|---|
+| R4a · sem teste **(padrão)** | Passo 11 sai; produz-se uma versão |
+| R4b · teste com verba pequena | Passo 9 produz também a versão B (sem o meme, ou com o gancho antigo); o Estrategista mede retenção depois do trecho que muda, comentários, custo por contato e conversão do parceiro |
+| R4c · teste orgânico | As duas versões no perfil do Instagram, sem gasto; só depois que o perfil existir |
+
+**R5 · Zoom out**
+| Ramo | O que muda |
+|---|---|
+| R5a · fim da prévia **(padrão)** | A câmera do caramelo sobe e abre para a casa no lote do "Cabe a partir de" |
+| R5b · no principal | O zoom out fecha o escaneamento: da planta para a casa no lote |
+| R5c · nos dois | O mesmo efeito vira assinatura da marca |
+
+**R6 · Quem dança na recriação** (o dono quer **uma criança e um cachorro**, na frente da casa: ramos refeitos abaixo, em veto)
+| Ramo | O que muda | Custo e risco |
+|---|---|---|
+| R6a · o dono | Ele filma junto com os planos do celular | Zero; autorização dele mesmo; mais autêntico |
+| R6b · família | Autorização escrita guardada antes | Zero; mais um passo |
+| R6c · ator | Contratar (decisão do dono) | Pago; mais controle |
+| R6d · sem pessoa: só o cachorro reagindo e a frase na tela **(padrão)** | Nenhuma autorização | Zero; o meme fica mais fraco |
+
+**R7 · PLANTA ou LOTE**: R7a PLANTA **(padrão, é o que os textos já usam)**; R7b LOTE (troca a chamada nos dois vídeos e no funil do parceiro).
+
+**Rotas de produção (vale para todos os ramos):** filmagem do dono com o celular (realista, custo zero, espera ele filmar) ou OpenArt (realista, crédito, só com o "sim"). Motor 3D só para rascunho e guia de câmera.
 
 ## Qualidade do veto (régua de 5 pontos, nota do Maestro)
 
