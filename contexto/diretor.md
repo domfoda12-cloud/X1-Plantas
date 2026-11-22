@@ -1,6 +1,6 @@
 # Contexto do Diretor (MinoAI Frontier)
 
-> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** Resumo geral em [`CONTEXTO.md`](../CONTEXTO.md); histórico em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md). O Diretor não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte, chamadas pelo Maestro, pelo Designer ou pelo Editor ([`instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md)).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** Resumo geral em [`CONTEXTO.md`](../CONTEXTO.md); histórico em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md). O Diretor não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte, chamadas pelo Maestro, pelo Designer ou pelo Editor ([`instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier)).
 
 ## Decisões do dono que valem para você
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
@@ -19,7 +19,7 @@
 
 ## Onde olhar
 
-`instagram/MINOAI-FRONTIER.md`, `video/REFERENCIAS.md`, `instagram/MINOAI-FRONTIER.md`, `animacoes-3d/OPENART-MINOAI.md`.
+`instagram/MINOAI-FRONTIER.md` (seção "Editor: MinoAI Frontier"), `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"), `instagram/MINOAI-FRONTIER.md` (seção "Referências de vídeo: Mino Lee (@minolee.mp4)"), `animacoes-3d/OPENART-MINOAI.md`.
 
 ## Leia barato
 

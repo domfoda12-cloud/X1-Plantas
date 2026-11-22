@@ -114,7 +114,7 @@ Criada pelo programa; os campos são obrigatórios (o `checar.py` confere):
 | Conferência | o que foi conferido, como, e o que não foi |
 | Resultado | o que virou, com os arquivos |
 
-**Uma ficha só** (22/11/2026): a ficha daqui é a ficha do pedido que o `CLAUDE.md` exige. Entrega longa que junta muitos pedidos da mesma peça (ex.: `video/ANUNCIO-LOCUCAO.md`) continua existindo como **anexo**: a ficha aponta para ela em "Quem executa", e a reconferência dos pedidos um por um, antes de cada etapa, é feita com as duas.
+**Uma ficha só** (22/11/2026): a ficha daqui é a ficha do pedido que o `CLAUDE.md` exige. Entrega longa que junta muitos pedidos da mesma peça (ex.: `video/ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)")) continua existindo como **anexo**: a ficha aponta para ela em "Quem executa", e a reconferência dos pedidos um por um, antes de cada etapa, é feita com as duas.
 
 ## O que a análise do sistema mudou (22/11/2026)
 

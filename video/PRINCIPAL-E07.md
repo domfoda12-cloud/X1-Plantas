@@ -2,12 +2,12 @@
 
 > O plano do vídeo principal e o roteiro de lançamento. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: video/PRINCIPAL-E07.md -->
+<!-- era: video/plano-principal-e07.md -->
 ## Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro
 
 > **E07 na fila do redesenho:** o dono chamou de erro os 3 quartos em fila (22/11/2026).
 >
-> **Registro da versão de 21/11, substituído.** O plano que vale é [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md), com a ficha [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md). Depois deste plano o dono mudou: o vídeo **abre na casa pronta** e o blueprint vai para o meio, como prova; **sem o selo "Imagem ilustrativa"** (aviso legal pequeno, no canto, parado); **nada de morango do amor**; destino **WhatsApp e Facebook Ads**. Fica aqui porque documenta o vídeo `saida/principal-e07/x1-plantas-e07.mp4` e a decisão do Conselho que o código (`principal-e07/montar_e07.cjs`, `blueprint.html`) segue.
+> **Registro da versão de 21/11, substituído.** O plano que vale é [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova), com a ficha [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md). Depois deste plano o dono mudou: o vídeo **abre na casa pronta** e o blueprint vai para o meio, como prova; **sem o selo "Imagem ilustrativa"** (aviso legal pequeno, no canto, parado); **nada de morango do amor**; destino **WhatsApp e Facebook Ads**. Fica aqui porque documenta o vídeo `saida/principal-e07/x1-plantas-e07.mp4` e a decisão do Conselho que o código (`principal-e07/montar_e07.cjs`, `blueprint.html`) segue.
 
 > Pedido do dono (21/11/2026): vídeo curto, cada quadro pensado, começando do blueprint com efeito (o azul não fica parado), referências populares do Brasil dentro da casa, OpenArt com as ferramentas novas (plano Pro, 24.000 créditos), casa detalhada antes de gerar (serve depois para o e-book), Conselho aprova antes, "capricha", estilo CONDOR ([`REFERENCIAS.md`](REFERENCIAS.md)). Música: [`musica/`](musica) (original, 128 BPM).
 > **Situação:** aprovado pelo Conselho em 21/11/2026, com as condições da seção 7. **Versão 2 pronta e aprovada pelo Revisor (21/11/2026; a v1 levou veto por marcas na sala e na cozinha, corrigido):** `video/saida/principal-e07/x1-plantas-e07.mp4` (15 s, 11,5 MB). Para montar de novo: `node video/principal-e07/render_blueprint.cjs` e `node video/principal-e07/montar_e07.cjs`.
@@ -90,7 +90,7 @@ Pedido do dono (21/11, noite): ironia com a família brasileira e referências o
 - **Fecho:** "Cabe. Print enviado no grupo", depois "Comenta PLANTA".
 - **Falta:** aprovação do dono, animar 3 cenas (~525 créditos), montar, Revisor.
 
-<!-- era: video/PRINCIPAL-E07.md -->
+<!-- era: video/roteiro-lancamento.md -->
 ## Roteiro: vídeo de aquecimento do lançamento ("casas na mala")
 
 > Parte da pasta Vídeo: [`VIDEO.md`](VIDEO.md). Estratégia: [`../ESTRATEGIA.md`](../ESTRATEGIA.md) (fase de aquecimento, seção 10). Editor: [MinoAI Frontier](../instagram/MINOAI-FRONTIER.md).
@@ -147,7 +147,7 @@ Mesmo corpo, só os 3 primeiros segundos mudam ([`../instagram/INSTAGRAM.md`](..
 
 ### 4. Como gravar
 
-- Celular na vertical, luz de janela, roupa comum. Parece conversa, não anúncio ([`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md)).
+- Celular na vertical, luz de janela, roupa comum. Parece conversa, não anúncio ([`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4)).
 - Se der, grave a primeira frase **com uma mala de verdade** na cena, e o amigo gravando a parte dele no Brasil (vira uma conversa entre os dois).
 - Grave o corpo uma vez e os 5 ganchos separados.
 

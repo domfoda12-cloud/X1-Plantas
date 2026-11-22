@@ -2,7 +2,7 @@
 
 > A peça do anúncio com a voz do dono: o pedido (ficha anexa), o plano, o brief e o texto do Facebook. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: video/ANUNCIO-LOCUCAO.md -->
+<!-- era: video/PEDIDO-anuncio-locucao.md -->
 ## Pedido do dono: anúncio do e-book com locução (ficha única)
 
 > Parte da frente Vídeo. Plano: [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md). Regras da pasta: [`CLAUDE.md`](CLAUDE.md).
@@ -84,7 +84,7 @@ Roda **antes de cada uma destas etapas**: fechar o plano, gerar imagens, gerar c
 - **Cumprem:** 3, 4, 10, 11, 12, 13, 14, 15, 17, 19, 20, 22, 23, 24, 25, 26.
 - **Falta a opinião do dono:** 8 (logo), 9 (música).
 
-<!-- era: video/ANUNCIO-LOCUCAO.md -->
+<!-- era: video/plano-anuncio-locucao.md -->
 ## Plano de criação: anúncio do e-book com locução, com a planta nova
 
 > Parte da frente Vídeo. Guia: [`VIDEO.md`](VIDEO.md). Regras da pasta: [`CLAUDE.md`](CLAUDE.md). Prompts: [`principal-e07/PROMPTS.md`](principal-e07/PROMPTS.md).
@@ -209,10 +209,10 @@ O saldo estava em torno de 21 mil créditos; eu confirmo o número antes de gera
 - O tio e a mensagem existem? Se for piada, a abertura é regravada.
 - "Volto pro Brasil em algumas semanas" é literal?
 
-<!-- era: video/ANUNCIO-LOCUCAO.md -->
+<!-- era: video/anuncios/brief-criativo.md -->
 ## Brief criativo: anúncios de plantas de casas
 
-> **22/11/2026: as seções 4, 5 e 8 estão superadas.** O que o vídeo tem de ter hoje (abrir na casa pronta, curto e rápido, escaneamento no meio, sem planta se desenhando no começo) está em [`../../contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md); o plano da peça atual, em [`../ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md). Este arquivo entra na organização da próxima sessão.
+> **22/11/2026: as seções 4, 5 e 8 estão superadas.** O que o vídeo tem de ter hoje (abrir na casa pronta, curto e rápido, escaneamento no meio, sem planta se desenhando no começo) está em [`../../contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md); o plano da peça atual, em [`../ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova). Este arquivo entra na organização da próxima sessão.
 >
 > Rascunho para revisão. Os trechos entre [colchetes] dependem do vídeo de referência que você vai enviar.
 
@@ -291,7 +291,7 @@ O vídeo antigo "Os R$ 1.000 do arquiteto" seguia estas regras, e os anúncios d
 2. Qual é a faixa de preço e o nome das plantas?
 3. Você quer o material gratuito com qual planta?
 
-<!-- era: video/ANUNCIO-LOCUCAO.md -->
+<!-- era: video/anuncios/anuncio-facebook.md -->
 ## Anúncios para o Facebook Ads
 
 > Parte da pasta Vídeo: [`../VIDEO.md`](VIDEO.md). Antes de escrever ou mudar um anúncio, leia a [estratégia de marketing](../ESTRATEGIA.md) (público, ângulos e tom de voz).
@@ -405,4 +405,4 @@ Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catál
 - **Público:** Brasil, 25 a 50 anos, interesses ligados a construção, reforma, casa própria e loteamentos. Comece amplo e deixe o algoritmo achar o público.
 - **Um ângulo por vez**, com o mesmo orçamento, por pelo menos 3 a 4 dias. Compare o **custo por contato** (ver [painel](../PAINEL.md), seção 4).
 - **Anote no painel** qual ângulo e qual lote trouxeram o contato mais barato. O lote que mais aparece no WhatsApp define as próximas plantas.
-- Antes de subir, passe pelo [checklist de revisão](VIDEO.md).
+- Antes de subir, passe pelo [checklist de revisão](VIDEO.md#checklist-de-revisão-antes-de-subir-o-anúncio).

@@ -2,7 +2,7 @@
 
 > A referência de edição favorita do dono (CONDOR) e a oferta e demanda de formatos virais. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: video/REFERENCIAS.md -->
+<!-- era: video/REFERENCIA-CONDOR.md -->
 ## Referência de edição: CONDOR XIII (Payton Talbott)
 
 > Pedido do dono (20/11/2026): "melhor edição que já vi, meu vídeo favorito do YouTube; absorva os conceitos e aplique no vídeo curto". Parte da frente **vídeo** (a última da fila: e-book → animações → vídeo). Guia do editor: [`../instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md).
@@ -147,12 +147,12 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 
 ### 4. Próximo uso
 
-A frente vídeo já está produzindo (22/11/2026). Os conceitos 1 e 3 entraram nos rascunhos `roteiros/principal-condor.json` e `roteiros/convite.json` (gancho "Todo lote é uma conta", medida do lote em letra-janela; ver [`VIDEO.md`](VIDEO.md)). Falta:
+A frente vídeo já está produzindo (22/11/2026). Os conceitos 1 e 3 entraram nos rascunhos `roteiros/principal-condor.json` e `roteiros/convite.json` (gancho "Todo lote é uma conta", medida do lote em letra-janela; ver [`VIDEO.md`](VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde)). Falta:
 
-1. Testar o conceito 4 no anúncio com locução ([`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md)), que vai para WhatsApp e Facebook Ads.
+1. Testar o conceito 4 no anúncio com locução ([`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova)), que vai para WhatsApp e Facebook Ads.
 2. Usar o conceito 5 na série semanal do perfil.
 
-<!-- era: video/REFERENCIAS.md -->
+<!-- era: video/REFERENCIA-VIRAL.md -->
 ## Referência: como um formato viraliza (oferta e demanda)
 
 > Era o agente `editor` da `main` (16/11/2026). Virou referência do Editor de vídeo (`.claude/agents/editor-video.md`) para não haver dois editores. O texto abaixo é o original; o público dele é rede social em geral, e o nosso anúncio vai para WhatsApp e Facebook Ads (ver `video/CLAUDE.md`).

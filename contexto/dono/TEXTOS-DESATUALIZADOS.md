@@ -4,8 +4,8 @@
 
 ## Decisões do dono (os textos estão com o campo entre colchetes, esperando)
 
-- **Preço, garantia de 7 dias, bônus, parcelamento, promessa de atualização e título** do e-book: `ebook/vendas/WHATSAPP.md`, `WHATSAPP.md`, `WHATSAPP.md`, `atributos-que-vendem.md`, `ebook/EBOOK.md` seção 5, `video/ANUNCIO-LOCUCAO.md` (ângulo 6).
-- **Lançar com 12 ou 24 plantas:** o PDF tem 24; `ebook/catalogo.md` e `video/PRINCIPAL-E07.md` deixam o número em aberto.
+- **Preço, garantia de 7 dias, bônus, parcelamento, promessa de atualização e título** do e-book: `ebook/vendas/WHATSAPP.md` (seção "Perguntas frequentes dos compradores"), `WHATSAPP.md` (seção "Sequência de mensagens no WhatsApp"), `WHATSAPP.md` (seção "Respostas para objeções comuns"), `atributos-que-vendem.md`, `ebook/EBOOK.md` seção 5, `video/ANUNCIO-LOCUCAO.md` (seção "Anúncios para o Facebook Ads") (ângulo 6).
+- **Lançar com 12 ou 24 plantas:** o PDF tem 24; `ebook/catalogo.md` e `video/PRINCIPAL-E07.md` (seção "Roteiro: vídeo de aquecimento do lançamento ("casas na mala")") deixam o número em aberto.
 - **Selo "Imagem ilustrativa":** aplicamos a leitura "saiu dos vídeos, continua em imagem parada (post e e-book)". Falta o dono confirmar.
 - **Vídeo:** o que é "pagar por mais" no vídeo-convite; formato 4:5 ou 9:16 do anúncio com locução; qual planta a chamada promete (`video/VIDEO.md`).
 - **PDF de 23 MB:** precisa ficar mais leve para mandar no WhatsApp?
@@ -17,9 +17,9 @@
 
 ## Já revisado em 22/11 (apagar quando conferir que ficou certo)
 
-- `ebook/vendas/WHATSAPP.md`: ficha nova da C01.
-- `ebook/vendas/WHATSAPP.md`: dias 1 e 3; `ebook/vendas/WHATSAPP.md`: "O que vem no e-book?".
-- `video/ANUNCIO-LOCUCAO.md`: ângulo 3, reescrito com a C03 (41 m², "o lugar do 2º quarto desenhado").
+- `ebook/vendas/WHATSAPP.md` (seção "Planta grátis: o que a pessoa recebe depois do comentário "PLANTA""): ficha nova da C01.
+- `ebook/vendas/WHATSAPP.md` (seção "Sequência de mensagens no WhatsApp"): dias 1 e 3; `ebook/vendas/WHATSAPP.md` (seção "Perguntas frequentes dos compradores"): "O que vem no e-book?".
+- `video/ANUNCIO-LOCUCAO.md` (seção "Anúncios para o Facebook Ads"): ângulo 3, reescrito com a C03 (41 m², "o lugar do 2º quarto desenhado").
 - `reports/`: a frase "a separação de quem emite o quê é consistente em todas as fontes".
 
 ## Imagem e vídeo que ainda mostram a casa velha (texto já corrigido)

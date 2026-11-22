@@ -1,6 +1,6 @@
 # As ideias gerais do projeto: o que liga um pedido ao outro
 
-> Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". **É leitura nossa, não fala dele.** O porquê de cada prompt está em [`intencoes/`](intencoes); as palavras dele, em [`PROMPTS.md`](PROMPTS.md) e em [`video/VIDEO.md`](../../video/VIDEO.md). Toda ficha de pedido diz qual destes fios ela puxa. Quem achar um fio novo, ou vir o dono contradizer um destes, corrige aqui.
+> Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a pergunta "por que ele pediu, e qual o objetivo?". **É leitura nossa, não fala dele.** O porquê de cada prompt está em [`intencoes/`](intencoes); as palavras dele, em [`PROMPTS.md`](PROMPTS.md) e em [`video/VIDEO.md`](../../video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde). Toda ficha de pedido diz qual destes fios ela puxa. Quem achar um fio novo, ou vir o dono contradizer um destes, corrige aqui.
 
 ## A ideia central
 

@@ -2,7 +2,7 @@
 
 > A linguagem visual e de animação, os livros de plantas com 3D e a análise de catálogos. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: ebook/referencias/VISUAL.md -->
+<!-- era: ebook/referencias/linguagem-visual-e-animacao.md -->
 ## Linguagem, visual e animação do e-book
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Público e tom: [`MERCADO.md`](MERCADO.md) e [`../../ESTRATEGIA.md`](../../ESTRATEGIA.md). Formato de referência: [`VISUAL.md`](VISUAL.md).
@@ -71,7 +71,7 @@ Um PDF não toca vídeo. Opções, da mais simples para a mais completa:
 - Se o 1º lançamento sai com 12 ou com as 24 que já estão no PDF.
 - Quem é o arquiteto que revisa e assina a declaração de revisão.
 
-<!-- era: ebook/referencias/VISUAL.md -->
+<!-- era: ebook/referencias/livros-de-plantas-com-3d.md -->
 ## Referência: livros de plantas com 3D e um guia de apresentação
 
 > Pedido do dono (20/11/2026): "use a referência de um e-book famoso de qualidade, com animações 3D, como o que eu quero fazer; anote o que funciona, o que não funciona e o que deve ficar mais parecido. Se não for um e-book, um conjunto de instruções que você possa seguir." Última tarefa da frente **e-book**.
@@ -128,7 +128,7 @@ Vem do resumo das avaliações na Amazon:
 - **Planta pequena para caber muita casa por página.** É a crítica nº 1 dos leitores.
 - **Venda de arquivo CAD para o leitor construir direto.** Contraria a nossa regra: a planta é de referência e o projeto é do profissional.
 
-<!-- era: ebook/referencias/VISUAL.md -->
+<!-- era: ebook/referencias/analise-catalogos-porcelanato.md -->
 ## Análise dos catálogos de porcelanato (referência de formato)
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Cinco PDFs: cozinhas modernas, painéis e detalhes decorativos, nichos embutidos, ilhas e bancadas, áreas gourmet.

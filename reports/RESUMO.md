@@ -32,4 +32,4 @@ As notas de apoio do relatório sobre arquiteto e engenheiro (antes em `research
 
 Seções: Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida; Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026).
 
-Tamanho: 4911 palavras.
+Tamanho: 4921 palavras.

@@ -56,6 +56,20 @@ def ler_catalogo():
     return plantas
 
 
+def ancoras(md):
+    """Âncoras dos títulos de um .md, como o GitHub gera (minúsculas, sem pontuação, espaço vira hífen)."""
+    vistas, saida = {}, set()
+    fora = True
+    for l in md.read_text(encoding="utf-8").splitlines():
+        if l.lstrip().startswith("```"):
+            fora = not fora
+        if fora and re.match(r"^#{1,6} ", l):
+            s = re.sub(r"[^\w\- ]", "", l.lstrip("#").strip().lower()).replace(" ", "-")
+            n = vistas.get(s, 0); vistas[s] = n + 1
+            saida.add(s if n == 0 else f"{s}-{n}")
+    return saida
+
+
 def conferir_links():
     """Links relativos [texto](caminho) que não existem no disco."""
     quebrados = []
@@ -67,9 +81,12 @@ def conferir_links():
         for alvo in re.findall(r"\]\(([^)\s]+)\)", texto):
             if re.match(r"^(https?:|mailto:|#)", alvo):
                 continue
-            caminho = unquote(alvo.split("#")[0])
-            if caminho and not (md.parent / caminho).exists():
+            caminho, _, ancora = unquote(alvo).partition("#")
+            destino = (md.parent / caminho) if caminho else md
+            if caminho and not destino.exists():
                 quebrados.append(f"{md.relative_to(RAIZ)} → {alvo}")
+            elif ancora and destino.suffix == ".md" and ancora not in ancoras(destino):
+                quebrados.append(f"{md.relative_to(RAIZ)} → {alvo} (seção não existe)")
     return quebrados
 
 

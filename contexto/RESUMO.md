@@ -11,9 +11,9 @@
 - OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`, `diretor.md`).
 - O Diretor (MinoAI Frontier) dá a ideia principal de todo conteúdo e opina primeiro nele; o Maestro é a conversa principal, que decide (`diretor.md`, `EQUIPE.md`).
 - A C01 foi redesenhada (50 m²) e é o modelo; o material antigo dela não vale, use `ebook/visual/3d/C01.jpg`. As outras 23 esperam o dono (`QUADRO.md`, `arquiteto.md`).
-- O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/ARQUITETO.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
+- O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/ARQUITETO.md` (seção "Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta"); refazer espera ele dizer quais e quando (`arquiteto.md`).
 - Imagens 2D dos posts desatualizadas: C03, E04, F02, F05, S03, S09 e a C01 redesenhada (`designer.md`, `arquiteto.md`).
-- A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/VIDEO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
+- A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"). O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
 - O selo "Imagem ilustrativa" saiu dos vídeos; continua em imagem parada. O aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
 - Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário. R$ 67 e 7 dias não são fato (`estrategista.md`, `redator.md`).
 - O que liga um pedido ao outro (nove fios) e o que o dono exige dos vídeos, com o que é firme e o que é leitura nossa: `dono/IDEIAS-GERAIS.md`; o porquê de cada prompt: `dono/intencoes/` (`dono/IDEIAS-GERAIS.md`).
@@ -53,7 +53,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 471 palavras.
+Tamanho: 529 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -61,7 +61,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 339 palavras.
+Tamanho: 358 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 
@@ -69,7 +69,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 319 palavras.
+Tamanho: 338 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -93,7 +93,7 @@ Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada tra
 
 Seções: E-book; Vídeos; Imagens e 3D; O que se repete; Plano para refazer do zero; O que esta leitura não conseguiu avaliar.
 
-Tamanho: 4550 palavras.
+Tamanho: 4677 palavras.
 
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
@@ -101,7 +101,7 @@ Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 con
 
 Seções: Decisões do dono (os textos estão com o campo entre colchetes, esperando); Revisor de risco; Já revisado em 22/11 (apagar quando conferir que ficou certo); Imagem e vídeo que ainda mostram a casa velha (texto já corrigido); Para o Revisor e o dono (achados da auditoria de 22/11, sem veredito); Ainda não conferido.
 
-Tamanho: 640 palavras.
+Tamanho: 701 palavras.
 
 ### [O porquê dos prompts de 16 a 20/11/2026](dono/intencoes/2026-11-16-a-20.md)
 
@@ -113,11 +113,11 @@ Tamanho: 5945 palavras.
 
 ### [O porquê dos prompts de 21 e 22/11/2026](dono/intencoes/2026-11-21-a-22.md)
 
-Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/VIDEO.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
+Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"). Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
 
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
-Tamanho: 6687 palavras.
+Tamanho: 6827 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
@@ -125,7 +125,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 452 palavras.
+Tamanho: 523 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -133,7 +133,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 321 palavras.
+Tamanho: 339 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -157,7 +157,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 392 palavras.
+Tamanho: 397 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

@@ -19,8 +19,8 @@
 |---|---|
 | `INSTAGRAM.md` | Este guia: rotina do editor, regras, estilo, formatos e testes |
 | `MINOAI-FRONTIER.md` | **O editor:** configuração da MinoAI Frontier, mensagem de abertura, pasta de B-roll e rotina |
-| `INSTAGRAM.md` | Identidade do perfil, bio, pilares, primeiros 9 posts e ritmo |
-| `MINOAI-FRONTIER.md` | Análise completa dos 3 reels do Mino Lee e lista de conferência |
+| `INSTAGRAM.md` (seção "Plano de conteúdo: perfil de arquitetura no Instagram") | Identidade do perfil, bio, pilares, primeiros 9 posts e ritmo |
+| `MINOAI-FRONTIER.md` (seção "Referências de vídeo: Mino Lee (@minolee.mp4)") | Análise completa dos 3 reels do Mino Lee e lista de conferência |
 
 **Material que o editor usa, de outras pastas:**
 
@@ -43,7 +43,7 @@
 6. **Publicar para todos** só a vencedora. Anotar o resultado na seção 6.
 7. **Repostar** a vencedora daqui a um mês, mudando 1 ou 2 partes (outra planta, outro gancho).
 
-**Antes de publicar qualquer vídeo**, passar pela [lista de conferência](MINOAI-FRONTIER.md#6-lista-de-conferência-para-cada-vídeo-novo) e pelo [checklist de anúncio](../video/VIDEO.md).
+**Antes de publicar qualquer vídeo**, passar pela [lista de conferência](MINOAI-FRONTIER.md#6-lista-de-conferência-para-cada-vídeo-novo) e pelo [checklist de anúncio](../video/VIDEO.md#checklist-de-revisão-antes-de-subir-o-anúncio).
 
 ### 2. Formatos do perfil
 
@@ -80,7 +80,7 @@ Transcrevi o áudio do reel. Em resumo, com o tempo de cada trecho:
 
 Assisti e transcrevi três reels dele. Esta é a referência de **como editar**.
 
-> A análise completa, com roteiro, gravação, edição, modelos para plantas e lista de conferência, está em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md). Abaixo fica o resumo.
+> A análise completa, com roteiro, gravação, edição, modelos para plantas e lista de conferência, está em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4). Abaixo fica o resumo.
 
 #### 4.1. Estilo de edição (vale para os três)
 
@@ -131,7 +131,7 @@ Link: https://www.instagram.com/reel/De9dwH9yDB9/ (91 s)
 
 ### 5. Plano do perfil
 
-Identidade, bio, pilares de conteúdo, os primeiros 9 posts, ritmo de publicação e regras de legenda estão em [`INSTAGRAM.md`](INSTAGRAM.md).
+Identidade, bio, pilares de conteúdo, os primeiros 9 posts, ritmo de publicação e regras de legenda estão em [`INSTAGRAM.md`](INSTAGRAM.md#plano-de-conteúdo-perfil-de-arquitetura-no-instagram).
 
 ### 6. Registro dos testes
 
@@ -141,7 +141,7 @@ Anote aqui cada teste para saber o que funciona.
 |---|---|---|---|---|---|
 | | | | | | |
 
-<!-- era: instagram/INSTAGRAM.md -->
+<!-- era: instagram/plano-perfil.md -->
 ## Plano de conteúdo: perfil de arquitetura no Instagram
 
 > Rascunho para você criar a conta pessoalmente. Trechos entre [colchetes] precisam de dados seus.
@@ -238,7 +238,7 @@ Do reel do Mino Lee (@minolee.mp4). O gancho "É possível [resultado extremo]?"
 - [ ] Primeiros 3 posts prontos antes de ativar o perfil
 - [ ] Medidas e preços conferidos com a planta final
 
-<!-- era: instagram/INSTAGRAM.md -->
+<!-- era: instagram/calendario.md -->
 ## Calendário: as 2 primeiras semanas do perfil
 
 > Parte da pasta Instagram. Guia da frente: [`INSTAGRAM.md`](INSTAGRAM.md). Posts prontos: [`posts/POSTS.md`](posts/POSTS.md). Painel geral: [`../PAINEL.md`](../PAINEL.md).

@@ -10,7 +10,7 @@
 - Frentes, uma por vez: e-book → animações → vídeo; a de vídeo foi aberta pelo dono em 21/11. Peça final sempre na maior qualidade (`CLAUDE.md`, `PAINEL.md`).
 - O Maestro é a conversa principal (Opus): decide e rege a equipe. O Diretor, MinoAI Frontier, dá a ideia principal de todo conteúdo e opina primeiro nele. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
 - Nunca dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo de obra (`CLAUDE.md`).
-- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `instagram/MINOAI-FRONTIER.md`).
+- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`, `instagram/MINOAI-FRONTIER.md` (seção "Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier")).
 - 24 casas desenhadas e no PDF (rascunho 1), cada uma com imagem 3D; a C01 foi redesenhada. A "Situação agora" do painel conta pelo catálogo, que está atrasado: vale a seção 2 (`PAINEL.md`).
 - Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, quais casas refazer. R$ 67 e 7 dias são recomendação, não decisão (`CONTEXTO.md`, `ESTRATEGIA.md`, seção 7).
 - OpenArt: 21.137 créditos em 22/11/2026, plano Pro; cada uso pede o "sim" do dono (`ORCAMENTO.md`). Selo "Imagem ilustrativa": saiu dos vídeos, continua em imagem parada (`ECOSSISTEMA.md`).
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2475 palavras.
+Tamanho: 2495 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -103,7 +103,7 @@ As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro;
 
 Seções: O essencial; Os 12 documentos.
 
-Tamanho: 1284 palavras.
+Tamanho: 1299 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

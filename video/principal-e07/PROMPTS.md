@@ -2,7 +2,7 @@
 
 > **E07 na fila do redesenho:** o dono chamou de erro os 3 quartos em fila (22/11/2026); as imagens de partida da E07 mudam com a planta nova. Os prompts de câmera continuam valendo.
 >
-> Parte da frente Vídeo. Plano que vale agora: [`../ANUNCIO-LOCUCAO.md`](../ANUNCIO-LOCUCAO.md) (o antigo: [`../PRINCIPAL-E07.md`](../PRINCIPAL-E07.md)). Guardados para repetir o mesmo movimento em outra casa: troque só a imagem de partida.
+> Parte da frente Vídeo. Plano que vale agora: [`../ANUNCIO-LOCUCAO.md`](../ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova) (o antigo: [`../PRINCIPAL-E07.md`](../PRINCIPAL-E07.md)). Guardados para repetir o mesmo movimento em outra casa: troque só a imagem de partida.
 >
 > **Regra:** toda imagem parte de uma imagem nossa (blueprint, 3D ou prévia da planta). Todo clipe é imagem → vídeo no **Kling 3 Omni**, resolução `pro`, 5 s, **sem som** (`generateSound: false`). Em todos: nada de texto, logo, marca nem gente que não estava na imagem.
 

@@ -13,8 +13,8 @@
 ## Em aberto com você
 
 - **C01 redesenhada (22/11)**: é o modelo para as próximas. Falta desenhar a mesa de 4 na sala. As outras 23 esperam o dono.
-- **Arranjo das plantas reprovado pelo dono (22/11):** as 24 saem de 3 fôrmas, têm corredor de fora a fora, falta mesa, e na série E (menos a E04) o banheiro só se alcança por fora. Diagnóstico e método novo na apostila 2 (`ebook/referencias/ARQUITETO.md`). Refazer espera o dono dizer quais e quando.
-- **Régua federal (Portaria MCID 725):** banheiro 1,50 m de largura (21 casas abaixo, contagem de 22/11), cozinha 1,80 m (C04, C05, S04), quarto de duas camas 2,60 m (6 casas), mesa para 4, porta de serviço. Ver `ebook/referencias/ARQUITETO.md`. Entra no redesenho.
+- **Arranjo das plantas reprovado pelo dono (22/11):** as 24 saem de 3 fôrmas, têm corredor de fora a fora, falta mesa, e na série E (menos a E04) o banheiro só se alcança por fora. Diagnóstico e método novo na apostila 2 (`ebook/referencias/ARQUITETO.md` (seção "Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta")). Refazer espera o dono dizer quais e quando.
+- **Régua federal (Portaria MCID 725):** banheiro 1,50 m de largura (21 casas abaixo, contagem de 22/11), cozinha 1,80 m (C04, C05, S04), quarto de duas camas 2,60 m (6 casas), mesa para 4, porta de serviço. Ver `ebook/referencias/ARQUITETO.md` (seção "Pesquisa: como é a casa popular brasileira e os grandes passos para construir"). Entra no redesenho.
 - Ensinar o validador a apontar arranjo ruim (apostila 2, seção 7) e ler as fontes que faltam (seção 5).
 
 - Banheiros abaixo de 1,10 m livres em 18 casas (contagem de 22/11): decidir com o arquiteto registrado se passam a 1,10 m ou mais.
@@ -25,7 +25,7 @@
 
 ## Onde olhar
 
-apostila 2 (arranjo) `ebook/referencias/ARQUITETO.md`, apostila 1 (clima e móveis) `ebook/referencias/ARQUITETO.md`, regras `ebook/referencias/ARQUITETO.md`, validador `python3 ferramentas/plantas.py validar`.
+apostila 2 (arranjo) `ebook/referencias/ARQUITETO.md` (seção "Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta"), apostila 1 (clima e móveis) `ebook/referencias/ARQUITETO.md` (seção "Apostila do Arquiteto: o que as fontes brasileiras ensinam"), regras `ebook/referencias/ARQUITETO.md` (seção "Regras de projeto: como o arquiteto decide cada planta"), validador `python3 ferramentas/plantas.py validar`.
 
 ## Leia barato
 

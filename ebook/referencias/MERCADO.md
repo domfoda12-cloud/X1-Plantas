@@ -2,7 +2,7 @@
 
 > A persona, os concorrentes e os projetos parecidos. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: ebook/referencias/MERCADO.md -->
+<!-- era: ebook/referencias/persona-e-mercado.md -->
 ## Quem compra: o público e o "Seu Marcos"
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Estratégia: [`../../ESTRATEGIA.md`](../../ESTRATEGIA.md). Regras de projeto que seguem esta persona: [`ARQUITETO.md`](ARQUITETO.md).
@@ -16,7 +16,7 @@
 | Brasileiros que moram em **casa** | **84,8%** (87,2% contando casa de vila ou condomínio). Apartamento: 12,5% | IBGE, Censo 2022 |
 | Domicílios particulares ocupados | 72,4 milhões | IBGE, Censo 2022 |
 | Moradores por domicílio | **2,79** (eram 3,31 em 2010 e 3,76 em 2000). Quase 1 em cada 5 mora sozinho | IBGE, Censo 2022 |
-| Quem fez a obra **sem arquiteto nem engenheiro** | **85,4%**, entre os brasileiros economicamente ativos que já construíram ou reformaram | Pesquisa CAU/BR-Datafolha, 2015, citada em reportagem (dado antigo, só para uso interno: não vai em texto público; ver [`ARQUITETO.md`](ARQUITETO.md), seção 4) |
+| Quem fez a obra **sem arquiteto nem engenheiro** | **85,4%**, entre os brasileiros economicamente ativos que já construíram ou reformaram | Pesquisa CAU/BR-Datafolha, 2015, citada em reportagem (dado antigo, só para uso interno: não vai em texto público; ver [`ARQUITETO.md`](ARQUITETO.md#pesquisa-como-é-a-casa-popular-brasileira-e-os-grandes-passos-para-construir), seção 4) |
 | Lote mínimo em loteamento novo | 125 m² e 5 m de frente (há exceções para habitação de interesse social). Lote que já existe não segue esse piso | Lei 6.766/1979, art. 4º, II |
 | Tamanho mínimo da casa no programa federal | 40 m² para casa, com sala, 2 quartos, cozinha e banheiro | Portaria MCID 725/2023 |
 
@@ -75,7 +75,7 @@ Lote mínimo calculado com recuo de frente de 3 m, de fundos de 1,5 m e lateral 
 
 ### 5. O que o Marcos precisa saber (e a gente precisa dizer)
 
-A planta do e-book **não é projeto legal**. Ela é um ponto de partida para conversar com o engenheiro. Quem assina o projeto que vai à prefeitura é arquiteto ou engenheiro com registro, e a Caixa exige responsável técnico para financiar. Isso já está no [relatório](../../reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md) e em [`../vendas/WHATSAPP.md`](../vendas/WHATSAPP.md). Texto a usar em toda página: "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
+A planta do e-book **não é projeto legal**. Ela é um ponto de partida para conversar com o engenheiro. Quem assina o projeto que vai à prefeitura é arquiteto ou engenheiro com registro, e a Caixa exige responsável técnico para financiar. Isso já está no [relatório](../../reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md) e em [`../vendas/WHATSAPP.md`](../vendas/WHATSAPP.md#perguntas-frequentes-dos-compradores). Texto a usar em toda página: "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
 
 ### 6. Hipóteses para testar
 
@@ -89,7 +89,7 @@ A planta do e-book **não é projeto legal**. Ela é um ponto de partida para co
 
 IBGE, Censo 2022 (domicílios e moradores); IBGE Educa (tipos de moradia); Datafolha 2015 sobre quem constrói sem profissional; Lei 6.766/1979; Portaria MCID 725/2023 (Minha Casa Minha Vida); COE São Paulo 2017 e NBR 15575 para dimensões; cálculo de ambientes mínimos de um fabricante de móveis (uso aproximado). Números de mercado e de concorrentes mudam; revisar antes de usar em anúncio.
 
-<!-- era: ebook/referencias/MERCADO.md -->
+<!-- era: ebook/referencias/concorrentes.md -->
 ## Concorrentes e o que o mercado já viu
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Pesquisa de 20/11/2026 (TinyFish). Preços e textos de terceiros mudam: confira antes de citar.
@@ -100,8 +100,8 @@ IBGE, Censo 2022 (domicílios e moradores); IBGE Educa (tipos de moradia); Dataf
 |---|---|---|
 | [Hotmart: "500 plantas baixas de casas para você se inspirar"](https://hotmart.com/pt-br/marketplace/produtos/500-plantas-baixas-de-casas-para-voce-se-inspirar-na-sua-construcao-bonus/B87641576R) | Mais de 500 plantas "para se inspirar"; bônus de pergolados de madeira e 40 receitas caipiras | Quantidade sem filtro: o comprador não sabe qual cabe no lote dele. **Nosso contra-argumento: 24 casas, cada uma com o lote mínimo calculado e conferida medida por medida** |
 | [Hotmart: "guia de planta de casa"](https://hotmart.com/pt-br/marketplace/produtos/guia-de-planta-de-casa/B105011830R) | Conceitos básicos e tipos de plantas | Texto genérico, sem casas para escolher |
-| Plantas prontas avulsas (Aquiprojetos, Projeto Pronto, Modices) | Projeto por casa, de cerca de R$ 98 (só a planta baixa em PDF) a R$ 2.000 (pacote completo). Faixas, fontes e datas: [`MERCADO.md`](MERCADO.md), seção 4 | Uma casa por compra. **Nosso: 24 casas pelo preço de uma** |
-| Catálogos de porcelanato ("200 projetos") | Material profissional para quem vende serviço | Público diferente ([análise](VISUAL.md)) |
+| Plantas prontas avulsas (Aquiprojetos, Projeto Pronto, Modices) | Projeto por casa, de cerca de R$ 98 (só a planta baixa em PDF) a R$ 2.000 (pacote completo). Faixas, fontes e datas: [`MERCADO.md`](MERCADO.md#projetos-similares-quem-vende-plantas-de-casas-e-o-que-aprender), seção 4 | Uma casa por compra. **Nosso: 24 casas pelo preço de uma** |
+| Catálogos de porcelanato ("200 projetos") | Material profissional para quem vende serviço | Público diferente ([análise](VISUAL.md#análise-dos-catálogos-de-porcelanato-referência-de-formato)) |
 
 **Posicionamento:** os outros vendem quantidade ou inspiração. Nós vendemos **certeza**: "essa cabe no seu lote, e você sabe por quê".
 
@@ -114,7 +114,7 @@ A busca por "comenta PLANTA" traz criadores de **plantas de jardim** (ex.: um Ti
 
 **Hipótese para testar** (registro em [`../../PAINEL.md`](../../PAINEL.md), seção 7): "PLANTA" contra **"LOTE"** (que já é o nosso atributo campeão: "me fala a frente do seu lote"). Mesmo vídeo, só a palavra muda. Decisão do dono, com a recomendação do Estrategista.
 
-<!-- era: ebook/referencias/MERCADO.md -->
+<!-- era: ebook/referencias/projetos-similares.md -->
 ## Projetos similares: quem vende plantas de casas e o que aprender
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Pesquisa de 20/11/2026 (TinyFish). Referências de fora foram **adaptadas aos termos do Brasil** (pés → metros, *setbacks* → recuos, *stories* → pavimentos, *elevation* → fachada ou vista). Preços e promessas de terceiros mudam: confira antes de citar.
@@ -128,7 +128,7 @@ A busca por "comenta PLANTA" traz criadores de **plantas de jardim** (ex.: um Ti
 | [Projeto Pronto](https://projetopronto.com) | Catálogo por tipo (térrea, quartos, suíte) | Projeto arquitetônico **de R$ 420 a R$ 899** por casa, em 10x sem juros | Âncora de preço: ver a seção 4 |
 | [Archshop](https://archshop.com.br/plantas-de-casas) | Centenas de plantas, "para todos os terrenos" | Projeto arquitetônico completo **com ART** e adequação à prefeitura; complementares à parte | Mostra a escada que o comprador sobe: referência (nós) → projeto pronto com ART → projeto adaptado |
 | Plantas de Casas, Planta Online, Martin Projetos | Galerias por número de quartos | Projetos prontos para construir | O mercado fala em "pronta para construir"; nós **não podemos** usar essa frase (Revisor de risco) |
-| Hotmart "500 plantas baixas" | Quantidade | E-book de inspiração, bônus sem relação (receitas caipiras) | Ver [`MERCADO.md`](MERCADO.md) |
+| Hotmart "500 plantas baixas" | Quantidade | E-book de inspiração, bônus sem relação (receitas caipiras) | Ver [`MERCADO.md`](MERCADO.md#concorrentes-e-o-que-o-mercado-já-viu) |
 
 ### 2. Fora do Brasil (adaptado)
 
@@ -160,7 +160,7 @@ Todo documento que cita preço de concorrente aponta para cá. Duas faixas, cada
 
 | Faixa | O que é | Fonte e data |
 |---|---|---|
-| **R$ 98 a cerca de R$ 2.000** por casa | De só a planta baixa em PDF (a partir de R$ 98) até o pacote completo (perto de R$ 2.000) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/); pesquisa de 20/11/2026 (TinyFish), registrada em `../../ESTRATEGIA.md` e em [`MERCADO.md`](MERCADO.md) |
+| **R$ 98 a cerca de R$ 2.000** por casa | De só a planta baixa em PDF (a partir de R$ 98) até o pacote completo (perto de R$ 2.000) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/); pesquisa de 20/11/2026 (TinyFish), registrada em `../../ESTRATEGIA.md` e em [`MERCADO.md`](MERCADO.md#concorrentes-e-o-que-o-mercado-já-viu) |
 | **R$ 420 a R$ 899** por casa | Projeto arquitetônico, em 10x sem juros | [Projeto Pronto](https://projetopronto.com), 20/11/2026 (TinyFish) |
 
 **Como usar:** a frase pública cita uma faixa só, com o que ela compra: "uma planta baixa avulsa custa a partir de R$ 98 nos catálogos (novembro de 2026)". Confira o preço no site na semana do anúncio; se mudou, atualize esta tabela com a data nova. O Revisor de risco veta preço de concorrente sem fonte e data.

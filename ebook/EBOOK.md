@@ -81,11 +81,11 @@ Ao terminar, mude a coluna **Situação** do catálogo. O andamento geral fica n
 - **Levas (proposta):** o catálogo divide as 35 casas em 3 levas: 12, 12 e 11. O PDF de hoje já tem as 24 das levas 1 e 2. **[lançamento: sair com 12 ou com 24, a definir pelo dono]** (`PAINEL.md`, seção 9).
 - **Título, preço, bônus, contato e promessa de atualização** são campos do dono em `config.json`; as opções estão no [painel](../PAINEL.md), seção 9, e a oferta recomendada na [estratégia](../ESTRATEGIA.md), seção 7. **[garantia: a definir pelo dono]**.
 - **Linguagem:** o e-book é lido por quem constrói com pedreiro. Explique todo termo técnico na primeira vez que aparecer ([estratégia](../ESTRATEGIA.md), seção 9).
-- **Plantas grátis do funil:** 5 casas (C01, E03, E02, F01 e C06; a E07 saiu em 22/11, porque está na fila do redesenho; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/WHATSAPP.md`](vendas/WHATSAPP.md).
+- **Plantas grátis do funil:** 5 casas (C01, E03, E02, F01 e C06; a E07 saiu em 22/11, porque está na fila do redesenho; lista em `config.json`, chave `plantas_gratis`). Qual mandar para cada lote: [`vendas/WHATSAPP.md`](vendas/WHATSAPP.md#planta-grátis-o-que-a-pessoa-recebe-depois-do-comentário-planta).
 
 ## 6. Funil de vendas
 
-1. A **planta grátis** são as duas páginas de uma casa do e-book e uma página que mostra as outras que cabem no mesmo lote ([`vendas/WHATSAPP.md`](vendas/WHATSAPP.md)).
+1. A **planta grátis** são as duas páginas de uma casa do e-book e uma página que mostra as outras que cabem no mesmo lote ([`vendas/WHATSAPP.md`](vendas/WHATSAPP.md#planta-grátis-o-que-a-pessoa-recebe-depois-do-comentário-planta)).
 2. A primeira mensagem pergunta o **tamanho do terreno**.
 3. A resposta mostra as casas do e-book que cabem nele ([`vendas/WHATSAPP.md`](vendas/WHATSAPP.md)).
 

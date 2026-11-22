@@ -20,7 +20,7 @@
 
 ## Onde olhar
 
-`ESTRATEGIA.md`, `PAINEL.md`, `ebook/referencias/MERCADO.md`, `ebook/referencias/MERCADO.md`.
+`ESTRATEGIA.md`, `PAINEL.md`, `ebook/referencias/MERCADO.md` (seção "Quem compra: o público e o "Seu Marcos""), `ebook/referencias/MERCADO.md` (seção "Concorrentes e o que o mercado já viu").
 
 ## Leia barato
 

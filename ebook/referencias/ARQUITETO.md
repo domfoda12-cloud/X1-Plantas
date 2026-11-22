@@ -2,7 +2,7 @@
 
 > As regras, as fontes brasileiras, os sites de profissionais e a pesquisa de layouts e etapas da obra. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: ebook/referencias/ARQUITETO.md -->
+<!-- era: ebook/referencias/regras-do-arquiteto.md -->
 ## Regras de projeto: como o arquiteto decide cada planta
 
 > Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). As regras estão em código em [`../../ferramentas/plantas.py`](../../ferramentas/plantas.py): cada planta só vira `dados` se passar pelo validador (`python3 ferramentas/plantas.py validar`).
@@ -19,7 +19,7 @@ Desde o rascunho 1, as medidas da casa são **por fora** e cada cômodo perde a 
 | Quarto de casal | 7 m², lado 2,30 m | 8 m², lado **2,40 m** | Cama 1,40 + 0,50 + 0,50 de passagem (Anexo G) |
 | Quarto | 6 m², lado 2,00 m | | Cama 0,80 x 1,90, guarda-roupa 1,50 x 0,50 |
 | Cozinha | 4 m², lado 1,50 m | | 0,85 m livres na frente de pia, fogão e geladeira (Anexo G) |
-| Banheiro | 1,8 m², lado 1,00 m | (estudo cita 1,10 m fora o box: ver a [apostila](ARQUITETO.md), seção 3) | Vaso 0,60 x 0,60, lavatório |
+| Banheiro | 1,8 m², lado 1,00 m | (estudo cita 1,10 m fora o box: ver a [apostila](ARQUITETO.md#apostila-do-arquiteto-o-que-as-fontes-brasileiras-ensinam), seção 3) | Vaso 0,60 x 0,60, lavatório |
 | Serviço | 1,5 m², lado 0,95 m | | Tanque 0,52 x 0,53 e máquina 0,60 x 0,65 |
 | Circulação | 0,80 m livres; **no máximo 14%** da área | | Corredor não pode virar a casa |
 | Casa acessível (S03) | Banheiro e circulação com **1,50 m livres** | | Giro de cadeira de rodas (NBR 9050); o resto da norma é do engenheiro |
@@ -30,7 +30,7 @@ Desde o rascunho 1, as medidas da casa são **por fora** e cada cômodo perde a 
 - Janela de **1/6 do piso** em sala, quarto e escritório; **1/8** em cozinha, serviço e banheiro (valores típicos de códigos de obras).
 - Janela só em parede que dá para fora **e** que não seja a divisa. A parede da esquerda das plantas é divisa (sem janela), salvo as que declaram recuo dos dois lados.
 - Banheiro sem janela só com exaustão mecânica (aparece como aviso, e nenhuma das 24 depende disso).
-- **O clima manda na janela** (NBR 15220-3, orientativa): abertura **efetiva** de ventilação de 15% a 25% do piso nas zonas 1 a 6, pequena (10% a 15%) na zona 7 e grande (mais de 40%) na zona 8 (Rio, Salvador, Recife, Fortaleza, Manaus, Belém). Nossa janela de 1/6 do piso, de correr, dá perto de 8% de abertura efetiva: o arquiteto da obra aumenta a janela, usa veneziana e beiral onde o clima pede. Detalhes na [apostila](ARQUITETO.md), seção 2.
+- **O clima manda na janela** (NBR 15220-3, orientativa): abertura **efetiva** de ventilação de 15% a 25% do piso nas zonas 1 a 6, pequena (10% a 15%) na zona 7 e grande (mais de 40%) na zona 8 (Rio, Salvador, Recife, Fortaleza, Manaus, Belém). Nossa janela de 1/6 do piso, de correr, dá perto de 8% de abertura efetiva: o arquiteto da obra aumenta a janela, usa veneziana e beiral onde o clima pede. Detalhes na [apostila](ARQUITETO.md#apostila-do-arquiteto-o-que-as-fontes-brasileiras-ensinam), seção 2.
 
 ### 3. Circulação e privacidade
 
@@ -73,9 +73,9 @@ Não calcula estrutura, instalações, conforto térmico detalhado, taxa de ocup
 
 ### Fontes
 
-Apostila com as fontes brasileiras lidas (NBR 15220-3, nota técnica do LabEEE/UFSC, Anexo G da NBR 15575, Lelé): [`ARQUITETO.md`](ARQUITETO.md). IBGE (Censo 2022); Lei 6.766/1979; Portaria MCID 725/2023; COE São Paulo 2017 e NBR 15575 (dimensões, pelo resumo de um arquiteto); Gelker Ribeiro, arquiteto, sobre orientação solar; NBR 15220 (zonas bioclimáticas). Confira os textos oficiais antes de afirmar em anúncio.
+Apostila com as fontes brasileiras lidas (NBR 15220-3, nota técnica do LabEEE/UFSC, Anexo G da NBR 15575, Lelé): [`ARQUITETO.md`](ARQUITETO.md#apostila-do-arquiteto-o-que-as-fontes-brasileiras-ensinam). IBGE (Censo 2022); Lei 6.766/1979; Portaria MCID 725/2023; COE São Paulo 2017 e NBR 15575 (dimensões, pelo resumo de um arquiteto); Gelker Ribeiro, arquiteto, sobre orientação solar; NBR 15220 (zonas bioclimáticas). Confira os textos oficiais antes de afirmar em anúncio.
 
-<!-- era: ebook/referencias/ARQUITETO.md -->
+<!-- era: ebook/referencias/arquiteto-fontes-brasileiras.md -->
 ## Apostila do Arquiteto: o que as fontes brasileiras ensinam
 
 > Pedido do dono (20/11/2026): "ensine mais ao arquiteto, use fontes brasileiras famosas para estudar". Esta apostila é leitura obrigatória do agente [`arquiteto`](../../.claude/agents/arquiteto.md) antes de criar ou mudar planta. As regras em uso estão em [`ARQUITETO.md`](ARQUITETO.md).
@@ -177,10 +177,10 @@ Segundo o artigo, ele também orientava as aberturas pelos ventos dominantes, pa
 - Joana Perén Montero, *Ventilação e iluminação naturais na obra de João Filgueiras Lima, Lelé* (tese, USP, 2006) ([registro](https://repositorio.usp.br/item/001577631)).
 - O texto oficial da NBR 15575-1 (Anexo G) e da NBR 9050, para conferir os números acima na fonte original.
 
-<!-- era: ebook/referencias/ARQUITETO.md -->
+<!-- era: ebook/referencias/arquiteto-sites-de-profissionais.md -->
 ## Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta
 
-> Pedido do dono (22/11/2026): "faça o Arquiteto estudar mais, o último layout não fazia sentido; mande ele procurar os sites que arquitetos de verdade usam no trabalho". Leitura obrigatória do agente [`arquiteto`](../../.claude/agents/arquiteto.md) antes de criar ou mudar planta, junto com a [apostila 1](ARQUITETO.md) (clima e móveis) e as [regras](ARQUITETO.md).
+> Pedido do dono (22/11/2026): "faça o Arquiteto estudar mais, o último layout não fazia sentido; mande ele procurar os sites que arquitetos de verdade usam no trabalho". Leitura obrigatória do agente [`arquiteto`](../../.claude/agents/arquiteto.md) antes de criar ou mudar planta, junto com a [apostila 1](ARQUITETO.md#apostila-do-arquiteto-o-que-as-fontes-brasileiras-ensinam) (clima e móveis) e as [regras](ARQUITETO.md).
 >
 > A apostila 1 ensinou **medida**. Esta ensina **arranjo**: como os cômodos se ligam. Só entrou aqui o que foi lido ou visto na fonte em 22/11/2026. Onde a fonte não foi lida, isso está dito.
 
@@ -284,10 +284,10 @@ Antes de escrever uma planta em `projetos.py`, o Arquiteto faz, nesta ordem:
 - **Ensinar o validador** a apontar: banheiro ou quarto que só se alcança por fora, corredor acima de 6% em casa de até 60 m², falta de mesa, duas casas com o mesmo arranjo.
 - **Ler** o manual da CDHU, as pranchas de concurso e 5 projetos do ArchDaily com a planta aberta.
 
-<!-- era: ebook/referencias/ARQUITETO.md -->
+<!-- era: ebook/referencias/pesquisa-layouts-e-etapas-da-obra.md -->
 ## Pesquisa: como é a casa popular brasileira e os grandes passos para construir
 
-> Pedido do dono (22/11/2026): "procure coisas relevantes para o projeto, como layouts de casas no Brasil e os grandes passos necessários para construir a casa". Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Continua a [apostila 2 do Arquiteto](ARQUITETO.md).
+> Pedido do dono (22/11/2026): "procure coisas relevantes para o projeto, como layouts de casas no Brasil e os grandes passos necessários para construir a casa". Parte da pasta E-book ([`../EBOOK.md`](../EBOOK.md)). Continua a [apostila 2 do Arquiteto](ARQUITETO.md#apostila-2-do-arquiteto-como-arquiteto-de-verdade-arma-uma-planta).
 >
 > Busca feita em 22/11/2026 (busca na web comum, sem ferramenta paga). Cada número traz a fonte. Onde a fonte é blog comercial e não documento oficial, isso está dito. **Nada daqui vai ao público sem passar pelo Redator e pelo Revisor de risco.**
 
@@ -329,7 +329,7 @@ Conta feita sobre os dados das plantas (`ebook/plantas/dados/`), descontando 12 
 
 ### 2. Como é a casa popular que arquiteto projeta
 
-- **Casa de referência do governo da Bahia** (CAR, 2024): sala no centro, sem corredor, varanda de entrada, cozinha nos fundos aberta para a sala, serviço coberto do lado de fora. Detalhes na [apostila 2](ARQUITETO.md), seção 3.
+- **Casa de referência do governo da Bahia** (CAR, 2024): sala no centro, sem corredor, varanda de entrada, cozinha nos fundos aberta para a sala, serviço coberto do lado de fora. Detalhes na [apostila 2](ARQUITETO.md#apostila-2-do-arquiteto-como-arquiteto-de-verdade-arma-uma-planta), seção 3.
 - **Casas Populares Paudalho**, NEBR Arquitetura (PE, 2021): 58 m², em lotes de 8 x 20 m, obra de 120 dias com mão de obra local, segundo a [Dwell](https://www.dwell.com/home/paudalho-popular-houses-ca1b6f36) e o [ArchDaily](https://www.archdaily.com/971192/paudalho-popular-houses-nebr-arquitetura). A planta não foi lida (é imagem).
 - **O que os moradores mudam depois** (UFRGS, 374 moradias): ampliam primeiro serviço, garagem e sala. Apostila 2, seção 4.
 

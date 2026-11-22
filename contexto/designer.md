@@ -19,7 +19,7 @@
 
 ## Onde olhar
 
-sistema visual `ebook/referencias/VISUAL.md`, gerador `ebook/gerador/livro.py`, referência `ebook/referencias/VISUAL.md`.
+sistema visual `ebook/referencias/VISUAL.md` (seção "Linguagem, visual e animação do e-book"), gerador `ebook/gerador/livro.py`, referência `ebook/referencias/VISUAL.md` (seção "Referência: livros de plantas com 3D e um guia de apresentação").
 
 ## Leia barato
 

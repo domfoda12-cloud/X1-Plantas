@@ -33,14 +33,14 @@ O resto (prévia do WhatsApp, principal com escaneamento, anúncio da E07 com lo
 
 | Arquivo | Para que serve |
 |---|---|
-| `VIDEO.md` | Tudo o que o dono pediu sobre vídeo, com as palavras dele |
-| `ANUNCIO-LOCUCAO.md`, `ANUNCIO-LOCUCAO.md` | Ficha e plano do anúncio com locução (o que vale agora) |
-| `PRINCIPAL-E07.md`, `principal-e07/` | Registro da versão de 21/11 da E07, prompts de câmera (`PROMPTS.md`) e o pacote para a MinoAI (`kit-minoai/`) |
-| `PRINCIPAL-E07.md` | Vídeo de aquecimento do lançamento ("casas na mala"), com o roteiro original do dono |
-| `REFERENCIAS.md`, `REFERENCIAS.md` | Referências de edição e de formato |
-| `anuncios/ANUNCIO-LOCUCAO.md` | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
-| `anuncios/ANUNCIO-LOCUCAO.md` | Brief dos criativos (formatos, estilo, variações) |
-| `anuncios/VIDEO.md` | Revisão antes de subir qualquer anúncio |
+| `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)") | Tudo o que o dono pediu sobre vídeo, com as palavras dele |
+| `ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)"), `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova") | Ficha e plano do anúncio com locução (o que vale agora) |
+| `PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro"), `principal-e07/` | Registro da versão de 21/11 da E07, prompts de câmera (`PROMPTS.md`) e o pacote para a MinoAI (`kit-minoai/`) |
+| `PRINCIPAL-E07.md` (seção "Roteiro: vídeo de aquecimento do lançamento ("casas na mala")") | Vídeo de aquecimento do lançamento ("casas na mala"), com o roteiro original do dono |
+| `REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"), `REFERENCIAS.md` (seção "Referência: como um formato viraliza (oferta e demanda)") | Referências de edição e de formato |
+| `ANUNCIO-LOCUCAO.md` (seção "Anúncios para o Facebook Ads") | Textos de anúncio por ângulo (pelo lote, erro caro, casa que cresce, pedreiro…) |
+| `ANUNCIO-LOCUCAO.md` (seção "Brief criativo: anúncios de plantas de casas") | Brief dos criativos (formatos, estilo, variações) |
+| `VIDEO.md` (seção "Checklist de revisão antes de subir o anúncio") | Revisão antes de subir qualquer anúncio |
 | `montar.py`, `roteiros/`, `broll/` | Montador dos vídeos sem apresentador, os roteiros e as cenas |
 | `scan.py`, `render-planta.cjs`, `render-passeio.cjs`, `render-rua.cjs`, `src/` | Escaneamento, 3D, passeio por dentro e vista da rua (esta foi recusada pelo dono: não é realista) |
 | `musica/` | Trilha nossa de 128 BPM |
@@ -67,9 +67,9 @@ npx playwright install chromium
 
 - **Publicar** qualquer vídeo, e a **palavra da chamada** (PLANTA ou LOTE). Se for LOTE, troque no roteiro e monte de novo.
 - **A planta prometida na chamada.** Quando o vídeo mostra uma casa e diz "essa planta", a pessoa tem de recebê-la; se a casa ainda não está no material gratuito, a chamada diz "uma planta de graça". A decisão segue em aberto no [`../CONTEXTO.md`](../CONTEXTO.md).
-- **Quando o e-book tiver título** ([`../PAINEL.md`](../PAINEL.md), seção 9): a chamada passa a citar o e-book numa frase só ("Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]"). Troque no roteiro e nos textos de [`anuncios/ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md).
+- **Quando o e-book tiver título** ([`../PAINEL.md`](../PAINEL.md), seção 9): a chamada passa a citar o e-book numa frase só ("Comenta PLANTA que eu te mando de graça essa planta do e-book [Título]"). Troque no roteiro e nos textos de [`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md#anúncios-para-o-facebook-ads).
 
-<!-- era: video/VIDEO.md -->
+<!-- era: video/PEDIDOS-DO-DONO.md -->
 ## Vídeo: tudo o que o dono pediu (não se perde)
 
 > **Regra do dono (22/11/2026):** "Para todo vídeo, quando eu acrescentar uma informação, garanta que ela fique lá e não se perca na conversa."
@@ -191,7 +191,7 @@ Como foi feito: ver a seção "Estado" abaixo.
 |---|---|---|
 | 22/11 | Sequência de escaneamento feita com a planta **E07** (os números do dono batem com ela: 72 m², 3 quartos, 1 suíte, 2 banheiros, lote de 8 m de frente; todos saem do validador). `video/scan.py` gera os 3 primeiros tempos (`broll/clipes/scan-e07.mp4`, 0,9 s); o 4º tempo é a cena seguinte do roteiro (3D próprio da E07, limpo, 2,1 s). Encaixada em `roteiros/principal-condor.json` depois do gancho (4,8 s) e antes da chamada; a planta se desenhando saiu. O gancho passou da C01 (8×15) para a E07 (8×25), para o vídeo falar de uma casa só. O vídeo ficou sem nenhum clipe do OpenArt: 21 s, `saida/principal-condor/`. Conferido quadro a quadro | **É rascunho:** a E07 está na fila do redesenho das plantas (`contexto/QUADRO.md`); não publicar antes de o dono decidir entre esperar o redesenho ou trocar de casa. O dono assistir. Trocar o 4º tempo e o 3D por filmagem real quando ele filmar. Música licenciada (no Mac). O aviso legal e o selo "Ilustração do modelo 3D" ficam no 4º tempo, então ele não é 100% "limpo". **Pela ordem de 22/11 (sem selo; aviso legal pequeno, no canto, parado), o selo sai na próxima montagem**: o roteiro `roteiros/principal-condor.json` ainda o traz |
 
-<!-- era: video/VIDEO.md -->
+<!-- era: video/anuncios/checklist-revisao.md -->
 ## Checklist de revisão antes de subir o anúncio
 
 > Use antes de publicar. Confira as regras atuais da Meta para anúncios de imóveis e construção no Gerenciador de Anúncios, porque elas mudam.

@@ -12,7 +12,7 @@
 - Estilo: azul `#0B4FA8`, amarelo `#FFC857`, câmera lenta e contínua, frente da casa no alto, paredes cortadas a 1,1 m. (`ANIMACOES-3D.md`)
 - A casa animada ou gerada é a mesma do e-book. No OpenArt, casa só a partir de imagem nossa: o Arquiteto vetou uma casa inventada por texto. (`OPENART-MINOAI.md`)
 - Imagem parada leva a legenda "imagem ilustrativa da planta de referência"; em vídeo, sem o selo (dono, 22/11/2026), aviso legal pequeno no canto. A ordem "da obra" é efeito visual: não diga "é assim que se constrói". (`REFERENCIAS-BLUEPRINT.md`, `video/CLAUDE.md`)
-- OpenArt: permitido, mas cada uso pede o "sim" do dono, com resumo e custo antes (22/11/2026). Conta: plano Pro, 21.137 créditos (medido em 22/11/2026). (`OPENART-MINOAI.md`, `video/VIDEO.md`)
+- OpenArt: permitido, mas cada uso pede o "sim" do dono, com resumo e custo antes (22/11/2026). Conta: plano Pro, 21.137 créditos (medido em 22/11/2026). (`OPENART-MINOAI.md`, `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"))
 - Imagem final: GPT Image 2.5 Sunburst, imagem para imagem a partir do rascunho aprovado, 4K extra-alta, 4:5; recortes com `python3 ferramentas/recortes.py`. (`OPENART-MINOAI.md`)
 - Falta: gerar a C01 nova no motor; fachada (`05-fachada.png`), medidas de cada cômodo no blueprint e `06-como-cresce.png`. (`ANIMACOES-3D.md`)
 <!-- /essencial -->

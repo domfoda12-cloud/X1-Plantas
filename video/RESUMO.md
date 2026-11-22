@@ -5,16 +5,16 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- Antes de mexer em vídeo, leia `VIDEO.md` inteiro; ordem nova do dono entra lá na hora (22/11/2026). (`CLAUDE.md`)
-- Antes de montar vídeo ou gastar crédito do OpenArt: mande o resumo e a lista de instruções e espere o dono confirmar. OpenArt não é proibido; pede o "sim" dele a cada uso (22/11/2026). (`VIDEO.md`)
-- Destino do anúncio com locução: WhatsApp e Facebook Ads, não Instagram nem TikTok (22/11/2026). (`ANUNCIO-LOCUCAO.md`)
+- Antes de mexer em vídeo, leia `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)") inteiro; ordem nova do dono entra lá na hora (22/11/2026). (`CLAUDE.md`)
+- Antes de montar vídeo ou gastar crédito do OpenArt: mande o resumo e a lista de instruções e espere o dono confirmar. OpenArt não é proibido; pede o "sim" dele a cada uso (22/11/2026). (`VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"))
+- Destino do anúncio com locução: WhatsApp e Facebook Ads, não Instagram nem TikTok (22/11/2026). (`ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)"))
 - Aviso legal pequeno, no canto, parado. Sem o selo "Imagem ilustrativa" no vídeo: o dono tirou (22/11/2026). Os roteiros `.json` antigos ainda trazem o selo; sai na próxima montagem. (`CLAUDE.md`, `VIDEO.md`)
 - Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. 3D: `node render-planta.cjs --planta ID`. (`CLAUDE.md`)
 - `saida/` hoje: `previa-whatsapp/` e `principal/` são de 21/11, com a C01 antiga (remontar); `principal-condor/` e `convite/` são rascunhos; `principal-e07/` tem a versão antiga e a montagem com a voz do dono sobre a E07 em fila; `v1` a `v5` (R$ 1.000 do arquiteto) são antigos, não publicar. (`VIDEO.md`)
 - Todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md` e parte de imagem nossa. (`principal-e07/PROMPTS.md`)
-- Edição final: MinoAI Frontier, no Mac do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `ANUNCIO-LOCUCAO.md`)
-- Em aberto: o plano do anúncio com locução espera o dono aprovar a planta nova da E07 (na fila do redesenho) e o plano; nada foi gerado. (`ANUNCIO-LOCUCAO.md`)
-- `PRINCIPAL-E07.md` é registro da versão de 21/11, substituído por `ANUNCIO-LOCUCAO.md`. (`PRINCIPAL-E07.md`)
+- Edição final: MinoAI Frontier, no Mac do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"))
+- Em aberto: o plano do anúncio com locução espera o dono aprovar a planta nova da E07 (na fila do redesenho) e o plano; nada foi gerado. (`ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"))
+- `PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro") é registro da versão de 21/11, substituído por `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"). (`PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro"))
 <!-- /essencial -->
 
 ## Os 7 documentos
@@ -31,7 +31,7 @@ Tamanho: 5233 palavras.
 
 O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerais estão no `CLAUDE.md` da raiz.
 
-Tamanho: 364 palavras.
+Tamanho: 377 palavras.
 
 ### [Vídeo principal da E07 e roteiro de lançamento](PRINCIPAL-E07.md)
 
@@ -55,7 +55,7 @@ Tudo o que vale para qualquer vídeo: o guia, as instruções do dono (palavra p
 
 Seções: Vídeo: o que existe hoje; Vídeo: tudo o que o dono pediu (não se perde); Checklist de revisão antes de subir o anúncio.
 
-Tamanho: 3540 palavras.
+Tamanho: 3638 palavras.
 
 ### [Prompts do vídeo da E07 (OpenArt)](principal-e07/PROMPTS.md)
 

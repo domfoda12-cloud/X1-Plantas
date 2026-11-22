@@ -1,8 +1,8 @@
 # Pacote para a edição da MinoAI Frontier: anúncio do e-book (E07)
 
-> **E07 na fila do redesenho:** o dono chamou de erro os 3 quartos em fila (22/11/2026); os clipes deste pacote mostram a planta antiga e serão refeitos pelo plano novo, [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md).
+> **E07 na fila do redesenho:** o dono chamou de erro os 3 quartos em fila (22/11/2026); os clipes deste pacote mostram a planta antiga e serão refeitos pelo plano novo, [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova).
 >
-> Parte da frente Vídeo. Plano desta versão: [`../../PRINCIPAL-E07.md`](../../PRINCIPAL-E07.md); plano que vale agora: [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md). Ficha do pedido: [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md). Prompts das cenas: [`../PROMPTS.md`](../PROMPTS.md).
+> Parte da frente Vídeo. Plano desta versão: [`../../PRINCIPAL-E07.md`](../../PRINCIPAL-E07.md); plano que vale agora: [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova). Ficha do pedido: [`../../ANUNCIO-LOCUCAO.md`](../../ANUNCIO-LOCUCAO.md). Prompts das cenas: [`../PROMPTS.md`](../PROMPTS.md).
 >
 > **Destino (dono, 22/11/2026): WhatsApp e Facebook Ads**, não Instagram nem TikTok. **Sem o selo "Imagem ilustrativa"** no vídeo (o dono tirou); o aviso legal fica pequeno, no canto, parado.
 >

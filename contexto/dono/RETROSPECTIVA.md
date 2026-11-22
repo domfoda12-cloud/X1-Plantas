@@ -2,7 +2,7 @@
 
 > Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha: [`pedidos/2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md`](../../pedidos/2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md).
 >
-> **Como foi lido:** só documentos, nenhuma mídia (os vídeos e renders antigos estavam sendo apagados ao mesmo tempo). Fontes: [`PROMPTS.md`](PROMPTS.md) (palavras dele), [`intencoes/`](intencoes), [`IDEIAS-GERAIS.md`](IDEIAS-GERAIS.md), [`video/VIDEO.md`](../../video/VIDEO.md), [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md), [`CONTEXTO-HISTORICO.md`](../../CONTEXTO-HISTORICO.md), [`contexto/entregas/`](../entregas), [`ebook/EBOOK.md`](../../ebook/EBOOK.md), [`video/VIDEO.md`](../../video/VIDEO.md), [`TEXTOS-DESATUALIZADOS.md`](TEXTOS-DESATUALIZADOS.md).
+> **Como foi lido:** só documentos, nenhuma mídia (os vídeos e renders antigos estavam sendo apagados ao mesmo tempo). Fontes: [`PROMPTS.md`](PROMPTS.md) (palavras dele), [`intencoes/`](intencoes), [`IDEIAS-GERAIS.md`](IDEIAS-GERAIS.md), [`video/VIDEO.md`](../../video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde), [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md), [`CONTEXTO-HISTORICO.md`](../../CONTEXTO-HISTORICO.md), [`contexto/entregas/`](../entregas), [`ebook/EBOOK.md`](../../ebook/EBOOK.md), [`video/VIDEO.md`](../../video/VIDEO.md), [`TEXTOS-DESATUALIZADOS.md`](TEXTOS-DESATUALIZADOS.md).
 >
 > **Como ler cada "O que funcionou":** **aprovou** = ele disse que sim ou escolheu; **manteve** = mandou seguir em cima dela; **não reclamou** = ele viu ou recebeu e não há queixa registrada (é dedução nossa, não opinião dele); **não viu** = não há registro de que ele tenha visto. Citação entre aspas é dele; quando vem do histórico (outra conversa) e não de `PROMPTS.md`, está marcado "(histórico)".
 
@@ -77,7 +77,7 @@
 - **O que ensinou:** vídeo que depende de uma gravação que não existe não chega ao público.
 
 **V3 · Roteiro do lançamento "casas na mala" (19/11)**
-- **O que era:** o roteiro escrito por ele ("Eu morei no Brasil, e em algumas semanas eu tô voltando…"), guardado em `video/PRINCIPAL-E07.md`.
+- **O que era:** o roteiro escrito por ele ("Eu morei no Brasil, e em algumas semanas eu tô voltando…"), guardado em `video/PRINCIPAL-E07.md` (seção "Roteiro: vídeo de aquecimento do lançamento ("casas na mala")").
 - **O que o dono reclamou:** sem comentário dele; não foi produzido.
 - **O que funcionou:** a frase dele voltou na locução de 22/11 ("Eu volto pro Brasil em algumas semanas").
 - **O que ensinou:** ele escreve com a própria voz e espera o texto dele respeitado.
@@ -109,10 +109,10 @@
 **V8 · Anúncio com a voz do dono (22/11)** · [`entregas/2026-11-22-0010-anuncio-ebook-locucao.md`](../entregas/REGISTRO.md)
 - **O que era:** a gravação dele (29 s), áudio editado primeiro pelas regras da MinoAI Frontier, dois cortes por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); `x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e versão do WhatsApp (2,3 MB); pacote `kit-minoai/` para o Mac.
 - **O que o dono reclamou:** "Tire o imagem ilustrativa"; "Como podem os 3 quartos estar um seguido do outro? Isso é um erro gigante no layout"; "antes de qualquer vídeo ou gasto no OpenArt, quero um resumo… com a minha confirmação nos dois"; "O vídeo não é para TikTok nem Instagram" (22/11, histórico).
-- **O que funcionou:** a voz, o texto dele e o método "áudio primeiro, imagem obedece": **manteve** (o plano novo, `ANUNCIO-LOCUCAO.md`, guarda voz, cortes, trilha e 25 s). Os dois cortes do Revisor: **não reclamou**. O peso (8,1 e 2,3 MB): **não reclamou**.
+- **O que funcionou:** a voz, o texto dele e o método "áudio primeiro, imagem obedece": **manteve** (o plano novo, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"), guarda voz, cortes, trilha e 25 s). Os dois cortes do Revisor: **não reclamou**. O peso (8,1 e 2,3 MB): **não reclamou**.
 - **O que ensinou:** a planta errada e o selo na tela estragaram a peça que ele mais construiu. A abertura saiu "engolida" ("Meu tio" em 0,2 s, segundo a entrega). O destino Reels/TikTok era suposição nossa passada ao Editor como ordem.
 
-**V9 · Plano do anúncio com locução, planta nova (22/11)** · [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md)
+**V9 · Plano do anúncio com locução, planta nova (22/11)** · [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md#plano-de-criação-anúncio-do-e-book-com-locução-com-a-planta-nova)
 - **O que era:** plano cena a cena para refazer o V8 com a E07 redesenhada, 4:5 para o Facebook e 9:16 para o WhatsApp, três ganchos (A, B, C), cerca de 1.300 créditos.
 - **O que o dono reclamou:** sem comentário dele; foi pedido por ele ("faça o plano do vídeo para eu mudar e aprovar"; "espere o Editor usar as coisas dele").
 - **O que funcionou:** **não viu** a versão final do plano. A planta nova da E07, que o plano espera, não chegou: não há desenho no repositório.
@@ -162,13 +162,13 @@
 2. **Mudar uma planta invalida tudo o que foi gerado dela.** O que sai do código (PDF, 3D, `scan.py`, `montar.py`) se refaz com um comando; foto e clipe do OpenArt, não. (E3, E8, V4, V8; `TEXTOS-DESATUALIZADOS.md`)
 3. **Ilustração não passa por real.** Para o vídeo final ele quer casa de verdade; o 3D próprio é guia e rascunho. (V5, V11, I1; o prompt base de passeio de 22/11)
 4. **Ele aprova antes, e funciona melhor assim.** O que ele aprovou antes de produzir (ironia A, roteiro falado, plano quadro a quadro) sobreviveu; o que ele viu pronto voltou com correção. (V6, V7, V8, V9; a regra de 22/11 do resumo e das instruções)
-5. **Suposição passada como ordem vira erro.** Destino Reels/TikTok, "não use OpenArt" lido como proibição, OpenArt esperado onde entrou o motor próprio. (V8, V9, E5; ficha `ANUNCIO-LOCUCAO.md`, seção 2)
+5. **Suposição passada como ordem vira erro.** Destino Reels/TikTok, "não use OpenArt" lido como proibição, OpenArt esperado onde entrou o motor próprio. (V8, V9, E5; ficha `ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)"), seção 2)
 6. **O começo do vídeo é onde ele mais corrige.** Blueprint no começo → casa pronta; planta se desenhando → escaneamento no meio; texto no primeiro quadro sempre. (V1, V6, V8, V10)
 7. **Correto e sem estilo não basta.** Ele mandou refazer o principal pela referência CONDOR; referência brasileira tem de ser de agora. (V4, V6)
 8. **A voz e o texto dele são a espinha.** O roteiro dele e o método "áudio primeiro, imagem obedece" foram mantidos em todas as revisões. (V3, V7, V8, V9)
 9. **Tela limpa e arquivo leve.** Selo fora, aviso legal pequeno e parado; até 12 MB, WhatsApp até 5 MB. O que passou do peso ou pôs selo voltou. (V4, V8, V10)
 10. **Peça sem resposta dele fica parada.** Logo, trilha, escaneamento, convite e C01 nova esperam porque ele não viu ou não respondeu: mostrar a peça e fazer a pergunta curta, com as opções. (I2, I3, V10, V11, E8)
-11. **Ordem que fica só numa conversa se perde.** "The mid-video proof beat we discussed earlier", "as I said before", "lembre do prompt". O que ele diz entra no registro na hora. (V8, V10; `VIDEO.md`)
+11. **Ordem que fica só numa conversa se perde.** "The mid-video proof beat we discussed earlier", "as I said before", "lembre do prompt". O que ele diz entra no registro na hora. (V8, V10; `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"))
 
 ## Plano para refazer do zero
 
@@ -180,8 +180,8 @@
 | A trilha de 128 BPM | `video/musica/` (`gerar_trilha.py` refaz) | Pedida por ele; falta ele ouvir e aprovar |
 | Código: validador, gerador do PDF, 3D, escaneamento, passeio, montadores | `ferramentas/plantas.py`, `ebook/gerador/livro.py`, `ferramentas/imagens3d.py`, `video/scan.py`, `video/render-passeio.cjs`, `video/montar.py`, `video/principal-e07/montar_locucao.py` | Refazem qualquer peça a partir da planta, sem crédito |
 | Textos aprovados | estrutura do e-book (`EBOOK.md`, seções 2 e 3); textos de venda revisados em 22/11; roteiro falado de 96 palavras; o tio no grupo (ironia A) | Aprovados por ele ou pelo Revisor, ou nunca reclamados |
-| Regras e prompts | `video/VIDEO.md` (prompt base com 12 variáveis), `principal-e07/PROMPTS.md`, `ANUNCIO-LOCUCAO.md`, `REFERENCIAS.md`, `IDEIAS-GERAIS.md` | São as ordens dele já escritas |
-| Estudo do Arquiteto | `ebook/referencias/ARQUITETO.md`, `ARQUITETO.md` | Método de 10 passos e a régua federal para o redesenho |
+| Regras e prompts | `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)") (prompt base com 12 variáveis), `principal-e07/PROMPTS.md`, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"), `REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"), `IDEIAS-GERAIS.md` | São as ordens dele já escritas |
+| Estudo do Arquiteto | `ebook/referencias/ARQUITETO.md` (seção "Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta"), `ARQUITETO.md` (seção "Pesquisa: como é a casa popular brasileira e os grandes passos para construir") | Método de 10 passos e a régua federal para o redesenho |
 | A C01 nova | `ebook/plantas/projetos.py` | Já refeita pelo método novo; falta o "sim" dele |
 | O vídeo que ficou salvo | `video/saida/convite/x1-plantas-convite.mp4` | Ordem dele ("the last video should be saved"); serve de base de comparação |
 
@@ -204,13 +204,13 @@ Em toda etapa: o Fable confere a entrega contra o "pronto quando" (abre o arquiv
 
 | # | Etapa | Quem executa (modelo) | Gasta OpenArt? | Pronto quando |
 |---|---|---|---|---|
-| 0 | Respostas às 8 perguntas, gravadas na ficha e no `VIDEO.md` | Fable | Não | As respostas estão escritas com a data; nenhuma suposição decide nada |
+| 0 | Respostas às 8 perguntas, gravadas na ficha e no `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)") | Fable | Não | As respostas estão escritas com a data; nenhuma suposição decide nada |
 | 1 | **Plantas:** redesenhar as casas escolhidas pelo método da apostila 2 e pela régua federal, começando pela casa do anúncio | `arquiteto` (Opus) | Não | `python3 ferramentas/plantas.py validar` com 0 erros; prévia mobiliada mostrada; **o dono aprova cada desenho** antes da próxima casa |
 | 2 | **E-book:** textos de cada casa nova, páginas, PDF, plantas grátis, calculadora | `redator` (Opus), `designer` (Opus), `revisor-de-risco` (Opus) | Não | `python3 ebook/gerador/livro.py` sem página estourada; Revisor sem veto aberto; `checar.py` ok; PDF mostrado ao dono |
 | 3 | **Fotos de fachada do e-book** das casas novas, a partir da nossa vista da rua | `designer` (Opus), com o método de `OPENART-MINOAI.md` | **Sim** (o histórico cita cerca de 123 créditos por casa para passar o OpenArt por cima do 3D) | Resumo e custo aprovados pelo dono antes; Arquiteto confere portas e janelas contra a planta |
 | 4 | **Animações:** 3D de cima e passeio das casas novas no motor próprio; imagens dos posts com as plantas novas | `designer` (Opus), `editor-video` (Opus) | Não | `imagens3d.py`, `render-passeio.cjs` e `gerar-imagens.cjs` rodados; nenhuma imagem com casa antiga (`TEXTOS-DESATUALIZADOS.md` sem linha de casa velha) |
 | 5 | **Referências atuais do Brasil** para as cenas (o que está em alta agora, sem marca) e conferência do formato do Facebook Ads na fonte oficial | `pesquisador` (Sonnet), depois um agente no Opus confere | Não | Lista com fonte e data de cada achado; o que não foi confirmado está dito |
-| 6 | **Anúncio com a voz do dono:** plano atualizado para a casa aprovada, imagens paradas, depois clipes, montagem com o áudio primeiro | `editor-video` (Opus), Diretor MinoAI Frontier, `revisor-de-risco` (Opus) | **Sim** (imagens cerca de 250; clipes cerca de 1.050, pelo `ANUNCIO-LOCUCAO.md`) | Quatro paradas com o "sim" do dono (planta, plano, imagens paradas, vídeo); conferência quadro a quadro contra `palavras.json`; sem selo; aviso pequeno no canto; até 12 MB e WhatsApp até 5 MB |
+| 6 | **Anúncio com a voz do dono:** plano atualizado para a casa aprovada, imagens paradas, depois clipes, montagem com o áudio primeiro | `editor-video` (Opus), Diretor MinoAI Frontier, `revisor-de-risco` (Opus) | **Sim** (imagens cerca de 250; clipes cerca de 1.050, pelo `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova")) | Quatro paradas com o "sim" do dono (planta, plano, imagens paradas, vídeo); conferência quadro a quadro contra `palavras.json`; sem selo; aviso pequeno no canto; até 12 MB e WhatsApp até 5 MB |
 | 7 | **Prévia do WhatsApp** com a C01 nova e as páginas novas do e-book | `editor-video` (Opus), `revisor-de-risco` (Opus) | Não | `montar.py` com o roteiro sem selo; até 5 MB; nenhuma cena com casa antiga; dono aprova |
 | 8 | **Convite** realista (só depois de "pagar por mais" definido) e principal com o escaneamento da casa nova | `editor-video` (Opus), Diretor MinoAI Frontier | **Sim** se for OpenArt (custo levado ao dono antes); não, se for a filmagem dele | Dono aprova resumo e instruções antes; o vídeo só promete o que existe; números na tela só do validador |
 | 9 | **Edição final** de cada vídeo aprovado, com música e legendas | MinoAI Frontier, no Mac do dono (pacote como o `kit-minoai/`) | Não | Pacote com `LEIA-ME.md` entregue; o dono confirma que rodou no Mac |

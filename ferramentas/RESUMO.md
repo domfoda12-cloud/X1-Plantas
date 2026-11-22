@@ -43,7 +43,7 @@ Funções: `todas`.
 
 Atualiza a seção "Situação agora" do PAINEL.md a partir dos arquivos do projeto.
 
-Funções: `pasta_da_planta`, `ler_catalogo`, `conferir_links`, `barra`, `montar_situacao`, `main`.
+Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barra`, `montar_situacao`, `main`.
 
 ### [`ferramentas/checar.py`](checar.py)
 

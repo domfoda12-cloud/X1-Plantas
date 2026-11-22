@@ -2,7 +2,7 @@
 
 > **22/11/2026:** as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
 
-> Parte da pasta Instagram. Guia da frente: [`../INSTAGRAM.md`](../INSTAGRAM.md). Plano do perfil: [`../INSTAGRAM.md`](../INSTAGRAM.md). Calendário: [`../INSTAGRAM.md`](../INSTAGRAM.md).
+> Parte da pasta Instagram. Guia da frente: [`../INSTAGRAM.md`](../INSTAGRAM.md). Plano do perfil: [`../INSTAGRAM.md`](../INSTAGRAM.md#plano-de-conteúdo-perfil-de-arquitetura-no-instagram). Calendário: [`../INSTAGRAM.md`](../INSTAGRAM.md#calendário-as-2-primeiras-semanas-do-perfil).
 >
 > Para cada post: legenda final (copiar e colar), texto de cada tela, imagens e, nos reels, o roteiro.
 > As imagens dos carrosséis já estão geradas em `imagens/`. Onde falta a planta em 3D, a tela sai com um aviso amarelo **FALTA O 3D**.
@@ -180,7 +180,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 **Falta 3D:** E01 Casa Estreita (`animacao.mp4` e `03-perspectiva.png` em `animacoes-3d/plantas/casa-estreita/`). Capa já desenhada: `imagens/capas-reels/post-04-reel-casa-estreita.png` (sai com aviso até a planta existir).
 
-**Formato:** "É possível…?" ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md), reel 1).
+**Formato:** "É possível…?" ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4), reel 1).
 
 **Texto fixo no alto:** É possível 2 quartos e 2 banheiros em 8 m de frente?
 
@@ -255,7 +255,7 @@ Ainda não tem a planta? Comente PLANTA que eu te mando uma planta humanizada de
 
 **Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta em `../../animacoes-3d/plantas/casa-compacta/` (do desenho antigo: gere de novo com `node render-planta.cjs --planta C01`). Opcional: gravação de tela do arquivo de dados `../../video/src/planta.js` aberto no editor de código (10 s rolando a tela bastam). Capa: `imagens/capas-reels/post-06-reel-bastidor.png`.
 
-**Formato:** POV bastidor ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md), reel 3).
+**Formato:** POV bastidor ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4), reel 3).
 
 **Texto fixo no alto:** POV: transformando uma planta em casa 3D
 
@@ -351,7 +351,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 9 · Reel · O material gratuito
 
-**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: `imagens/capas-reels/post-09-reel-material-gratis.png`. O que a pessoa recebe está em [`../../ebook/vendas/WHATSAPP.md`](../../ebook/vendas/WHATSAPP.md): o reel mostra exatamente isso, nada a mais.
+**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: `imagens/capas-reels/post-09-reel-material-gratis.png`. O que a pessoa recebe está em [`../../ebook/vendas/WHATSAPP.md`](../../ebook/vendas/WHATSAPP.md#planta-grátis-o-que-a-pessoa-recebe-depois-do-comentário-planta): o reel mostra exatamente isso, nada a mais.
 
 **Texto fixo no alto:** Comente PLANTA e receba isto de graça
 

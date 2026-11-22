@@ -2,7 +2,7 @@
 
 > As notas de apoio do relatório sobre arquiteto e engenheiro (antes em `research_notes/`). Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: reports/NOTAS-DA-PESQUISA.md -->
+<!-- era: research_notes/Arquiteto e engenheiro na construção residencial/publico_e_criterios.md -->
 ## Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida
 
 > Método e limites: pesquisa feita com buscas na web (dados até nov/2026). Só uma parte dos links foi aberta; os domínios gazetadopovo.com.br, caubr.gov.br e diariodonordeste.verdesmares.com.br não resolveram nesta sessão, então os dados atribuídos a eles vêm dos trechos de busca e não foram conferidos no texto original. Não foi localizado o relatório completo CAU/BR-Datafolha de 2015 nem o de 2022. Os números abaixo devem ser checados na fonte primária antes de citação oficial.
@@ -125,7 +125,7 @@ Com base nas fontes acima e em raciocínio próprio (não há fonte brasileira q
 3. Checar com a prefeitura de uma cidade-alvo as exigências de alvará e de RRT/ART.
 4. Buscar fonte brasileira sobre planta pronta (ex.: entidades de projeto e assistência técnica como a FNA) com critérios por tipo de terreno.
 
-<!-- era: reports/NOTAS-DA-PESQUISA.md -->
+<!-- era: research_notes/Arquiteto e engenheiro na construção residencial/servicos_e_precos.md -->
 ## Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026)
 
 Data de consulta: 2026-11-19. Os preços abaixo vêm de trechos de resultados de busca, não de páginas abertas, porque a maioria dos sites de origem não resolveu nesta sessão (ver Gaps). Quase todos são sites comerciais, sem data de publicação visível; quando a fonte diz "2026", isso está indicado. Tratar como faixas de mercado indicativas, não como tabela oficial.

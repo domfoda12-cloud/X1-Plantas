@@ -1,6 +1,6 @@
 # MinoAI Frontier: o Diretor, a sessão do Mac e o estilo de edição
 
-> Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes instagram/MINOAI-FRONTIER.md, na raiz) e as referências do Mino Lee. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
+> Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes `MAESTRO.md`, na raiz) e as referências do Mino Lee. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
 <!-- era: instagram/MINOAI-FRONTIER.md -->
 ## Editor: MinoAI Frontier
@@ -11,7 +11,7 @@
 >
 > Referência de edição favorita do dono: [`../video/REFERENCIAS.md`](../video/REFERENCIAS.md) (CONDOR XIII, levado para o reel de planta).
 >
-> Ela também é o **Diretor** do conteúdo (quem decide é o Maestro, a sessão do Claude): ver [`../instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
+> Ela também é o **Diretor** do conteúdo (quem decide é o Maestro, a sessão do Claude): ver [`../instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
 
 ### 1. Onde e como a MinoAI Frontier edita
 
@@ -24,7 +24,7 @@
 | # | O que fazer | Por quê |
 |---|---|---|
 | 1 | No Mac, criar a pasta **Filmes/X1-Plantas** (no Windows, **Vídeos/X1-Plantas**) e copiar para ela a pasta **`broll/`** descrita na seção 4 | É onde a MinoAI Frontier procura os vídeos e o B-roll |
-| 2 | Criar o seu **estilo de edição** no [Edit Style Generator](https://app.contentacademy.io/ai-editing/studio), com os 3 reels de referência do Mino Lee: [reel 1](https://www.instagram.com/reel/DflcLspiT9H/), [reel 2](https://www.instagram.com/reel/DfbA-o1u4FI/), [reel 3](https://www.instagram.com/reel/De9dwH9yDB9/) | Hoje a sua conta **não tem estilo salvo**: ela editaria com o padrão dela. Com o estilo salvo, ela segue o mesmo estilo que analisamos em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md) |
+| 2 | Criar o seu **estilo de edição** no [Edit Style Generator](https://app.contentacademy.io/ai-editing/studio), com os 3 reels de referência do Mino Lee: [reel 1](https://www.instagram.com/reel/DflcLspiT9H/), [reel 2](https://www.instagram.com/reel/DfbA-o1u4FI/), [reel 3](https://www.instagram.com/reel/De9dwH9yDB9/) | Hoje a sua conta **não tem estilo salvo**: ela editaria com o padrão dela. Com o estilo salvo, ela segue o mesmo estilo que analisamos em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4) |
 | 3 | Conectar o **Instagram** em app.contentacademy.io/mcp/connect-socials?platform=instagram (TikTok e YouTube Shorts, se quiser postar lá também) | Hoje **nenhuma rede está conectada**. Conectada, ela pode preparar a publicação. Os reels de teste você confere no app do Instagram |
 | 4 | Na primeira edição, quando ela pedir, **permitir os comandos do editor** uma vez | Para não aparecerem pedidos de aprovação a cada passo |
 
@@ -130,15 +130,15 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 | Quando | O quê | Quem |
 |---|---|---|
-| Segunda | Escolher os vídeos da semana no [plano do perfil](INSTAGRAM.md) e em "Em aberto" do [`CONTEXTO.md`](../CONTEXTO.md) | Você |
+| Segunda | Escolher os vídeos da semana no [plano do perfil](INSTAGRAM.md#plano-de-conteúdo-perfil-de-arquitetura-no-instagram) e em "Em aberto" do [`CONTEXTO.md`](../CONTEXTO.md) | Você |
 | Terça | Gravar e colocar as gravações em **brutos/** | Apresentador |
 | Terça a quinta | Editar cada vídeo com a mensagem da seção 3; aprovar o plano de edição quando ela mostrar | MinoAI Frontier e você |
 | Quinta | Publicar as versões como reels de teste | Você |
 | Sexta | Anotar os resultados no [registro de testes](INSTAGRAM.md#6-registro-dos-testes) | Você |
 
-**Antes de publicar**, confira o vídeo pronto com a [lista de conferência](MINOAI-FRONTIER.md#6-lista-de-conferência-para-cada-vídeo-novo) e o [checklist de anúncio](../video/VIDEO.md).
+**Antes de publicar**, confira o vídeo pronto com a [lista de conferência](MINOAI-FRONTIER.md#6-lista-de-conferência-para-cada-vídeo-novo) e o [checklist de anúncio](../video/VIDEO.md#checklist-de-revisão-antes-de-subir-o-anúncio).
 
-<!-- era: instagram/MINOAI-FRONTIER.md -->
+<!-- era: MAESTRO.md -->
 ## Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier
 
 > **Quem rege é o Maestro** (dono, 22/11/2026): a sessão do Claude no seu computador, no app (aba **Code**), com este repositório aberto. Ele decide, conduz a semana pelo [painel](../PAINEL.md) e chama a equipe ([`contexto/EQUIPE.md`](../contexto/EQUIPE.md)).
@@ -219,7 +219,7 @@ COMECE ASSIM
 
 Atualizar o projeto (`git pull --rebase` na `main`), ler o [quadro](../contexto/QUADRO.md) e o seu [contexto](../contexto/diretor.md) e seguir a seção 3. Todo o trabalho dos chats da nuvem já está na `main`, a única branch (as `frente-*` e a `planta-de-casas-anuncio` acabaram em 22/11/2026): não há nada para juntar.
 
-<!-- era: instagram/MINOAI-FRONTIER.md -->
+<!-- era: instagram/referencias-mino-lee.md -->
 ## Referências de vídeo: Mino Lee (@minolee.mp4)
 
 > Parte da pasta Instagram. Guia da frente: [`INSTAGRAM.md`](INSTAGRAM.md). Painel geral: [`../PAINEL.md`](../PAINEL.md).

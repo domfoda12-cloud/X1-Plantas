@@ -2,7 +2,7 @@
 
 > Tudo o que o parceiro usa na conversa com o comprador. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
-<!-- era: ebook/vendas/WHATSAPP.md -->
+<!-- era: ebook/vendas/sequencia-whatsapp.md -->
 ## Sequência de mensagens no WhatsApp
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
@@ -71,7 +71,7 @@ E mais:
 - a ficha do seu terreno e os passos do e-book até a chave na mão;
 - [bônus e promessa de atualização: a definir pelo dono].
 
-Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md`, seção 4] nos catálogos. No e-book são [nº] casas, cada uma mobiliada e desenhada no lote.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4] nos catálogos. No e-book são [nº] casas, cada uma mobiliada e desenhada no lote.
 
 Valor de lançamento: **R$ [preço]** no Pix[, ou parcelado no cartão: a definir pelo dono]. [garantia: a definir pelo dono]
 
@@ -81,7 +81,7 @@ Quer o link?
 
 Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode perguntar, mesmo que não vá comprar agora.
 
-> Responda com o [FAQ](WHATSAPP.md) ou as [respostas a objeções](WHATSAPP.md). Anote a dúvida: ela vira gancho de vídeo (combinado na conversa de quarta, no [painel](../../PAINEL.md), seção 11).
+> Responda com o [FAQ](WHATSAPP.md#perguntas-frequentes-dos-compradores) ou as [respostas a objeções](WHATSAPP.md#respostas-para-objeções-comuns). Anote a dúvida: ela vira gancho de vídeo (combinado na conversa de quarta, no [painel](../../PAINEL.md), seção 11).
 
 ### Dia 7: última mensagem
 
@@ -103,7 +103,7 @@ Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O pre
 - Anote, por semana: quantas pessoas chamaram, quantas mandaram o terreno, **qual tamanho de lote mais apareceu** e quantas compraram. Esses números vão para o [painel](../../PAINEL.md), seção 7.
 - Fale como na [estratégia](../../ESTRATEGIA.md), seção 9: simples, como quem já passou por obra.
 
-<!-- era: ebook/vendas/WHATSAPP.md -->
+<!-- era: ebook/vendas/respostas-objecoes.md -->
 ## Respostas para objeções comuns
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
@@ -112,7 +112,7 @@ Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O pre
 
 ### "É caro."
 
-Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md`, seção 4], e aqui são [nº], cada uma desenhada no lote. [pagamento: parcelar no cartão, se o dono decidir.] E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
+Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4], e aqui são [nº], cada uma desenhada no lote. [pagamento: parcelar no cartão, se o dono decidir.] E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
 
 ### "Não tenho terreno ainda."
 
@@ -151,7 +151,7 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 - Não prometa prazo de obra, custo exato ou aprovação na prefeitura.
 - Anote cada objeção nova aqui. As que mais se repetem viram gancho de vídeo.
 
-<!-- era: ebook/vendas/WHATSAPP.md -->
+<!-- era: ebook/vendas/faq-compradores.md -->
 ## Perguntas frequentes dos compradores
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
@@ -208,7 +208,7 @@ Depende do construtor, do clima e da aprovação na prefeitura. Não damos prazo
 **Posso compartilhar o e-book?**
 [Definir: uso pessoal, sem revenda nem distribuição do arquivo.]
 
-<!-- era: ebook/vendas/WHATSAPP.md -->
+<!-- era: ebook/vendas/material-gratuito.md -->
 ## Planta grátis: o que a pessoa recebe depois do comentário "PLANTA"
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
