@@ -2,6 +2,10 @@
 
 > Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples.
 
+## Quem manda no sistema
+
+**O Fable roda o sistema e é o supervisor principal** (dono, 22/11/2026). Ele decide a divisão do trabalho, confere tudo o que os outros entregam e responde pelo resultado. Nas partes importantes do projeto ele pode pôr a mão e fazer ele mesmo, em vez de delegar.
+
 ## O caminho de um prompt
 
 1. **Entrada (automática).** O gancho `UserPromptSubmit` (em `.claude/settings.json`) chama `ferramentas/guardar-pedido.py`, que grava o prompt, palavra por palavra, em `pedidos/entrada/`. Essa pasta fica fora do git: é a caixa de entrada.

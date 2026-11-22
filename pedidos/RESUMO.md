@@ -5,6 +5,7 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
+- O Fable roda o sistema e é o supervisor principal: divide, confere e responde; nas partes importantes pode fazer ele mesmo (`LEIA-ME.md`).
 - Todo prompt do dono é gravado sozinho em `pedidos/entrada/` pelo gancho `UserPromptSubmit`; a pasta fica fora do git (`LEIA-ME.md`).
 - O Fable (a conversa principal) interpreta o prompt e escreve a ficha em `pedidos/AAAA-MM/`; depois confere o resultado e responde ao dono (`LEIA-ME.md`).
 - Trabalho do projeto vai para o agente do papel, no Opus; pesquisa a fundo vai para o `pesquisador`, no Sonnet; tarefa simples e pessoal do dono vai para o `ajudante`, no Haiku (`LEIA-ME.md`).
