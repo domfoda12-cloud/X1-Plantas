@@ -25,6 +25,10 @@
 | `supervisor` (Fable) | Socorro, auditoria | A causa e o primeiro passo |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
 
+## Veto
+
+Toda resposta de veto passa pela régua de 5 pontos (objetivo, lugar, prova, correção, novo e do papel; `pedidos/LEIA-ME.md`). Nota abaixo de 4 ou afirmação sem fonte vira repreensão em "Lições".
+
 ## Fronteiras
 
 Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md`](CONVIVENCIA.md).

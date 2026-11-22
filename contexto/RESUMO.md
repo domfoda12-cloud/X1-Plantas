@@ -27,15 +27,15 @@
 
 Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
 
-Tamanho: 396 palavras.
+Tamanho: 472 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
 Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada prompt; todos com o mesmo entendimento; tudo junto e organizado; gastando o mínimo de token e tempo. Agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
 
-Seções: A cada prompt; Os papéis; Fronteiras; Economia; Tempo livre; Prompt sem papel.
+Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 482 palavras.
+Tamanho: 515 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -139,7 +139,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 339 palavras.
+Tamanho: 379 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 

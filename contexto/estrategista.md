@@ -29,3 +29,5 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+
+- **22/11, repreensão (veto do vídeo, rodada 1):** você afirmou que "Tô de boa" é frase de música, sem fonte, e o Revisor quase usou isso para vetar. Fato sem fonte vem marcado "suposição" ou vai antes ao `pesquisa.py buscar`.

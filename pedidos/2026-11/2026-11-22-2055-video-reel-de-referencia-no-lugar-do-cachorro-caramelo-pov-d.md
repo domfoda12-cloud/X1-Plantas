@@ -47,3 +47,18 @@ Objetivo de todos: o brasileiro reconhece na hora, para o dedo, e quer a casa.
 | 10 | P | Revisão: autorização de imagem guardada antes da filmagem, licença do áudio para anúncio pago, casa igual ao JSON da planta aprovada | `revisor-de-risco` (Fable na peça final) | SIM |
 | 11 | G | Produzir (só depois do 5), edição final na MinoAI, no Mac; para o teste, também a **versão B** do principal, igual à A fora do trecho do drop. Se a POV usar a F03 de rascunho, o mapa é refeito quando a casa virar a aprovada | `editor-video` | vídeos aprovados pelo dono |
 | 12 | P | Medir: principal com meme (A) contra B, **iguais até 9,38 s e depois de 11,25 s**; só o drop muda (B: o caramelo ou o trecho cortado, escolha do dono). Medidas: retenção logo depois do drop (uns 12 s) e até o fim, comentários, custo por contato e conversão contada pelo parceiro. Prévia: com POV contra sem POV, por semana | `estrategista` | teste proposto ao dono (verba e o que é o B são dele) |
+
+## Qualidade do veto (régua de 5 pontos, nota do Maestro)
+
+| Rodada | Agente | Nota | Por quê | Repreensão |
+|---|---|---|---|---|
+| 1 | Editor | 5 | Achou que o meme na abertura contrariava uma ordem do dono, com a linha de `VIDEO.md`; a música do meme; quem dança; suposição "5 anos" | — |
+| 1 | Revisor | 5 | Veto com correção; criança, repost, bandeira (marcado "o jurídico confirma") | — |
+| 1 | Arquiteto | 5 | Caminho da câmera sai da planta; FOV, peitoril, quintal; lote conferido no validador | — |
+| 1 | Estrategista | 3 | Bom no custo e na medida, mas afirmou "Tô de boa é frase de música" sem fonte | Sim: linha em `contexto/estrategista.md`, "Lições" |
+| 2 | Editor | 5 | Duas falhas reais (áudio suposto, falta a versão B) | — |
+| 2 | Revisor | 4 | SIM correto, apontou o que fica em aberto; nada novo a acrescentar | — |
+| 2 | Arquiteto | 5 | Lote fixo ia envelhecer com o redesenho | — |
+| 2 | Estrategista | 5 | Achou o erro do teste: media os 3 s, iguais nas duas versões | — |
+| 3 | Editor, Estrategista | 4 | SIM com uma melhoria de ordem cada | — |
+| — | Maestro | 2 | Plano 1 contrariou ordem do dono (meme na abertura) e eu marquei "confirmado" no caderno um ano tirado de repost | Sim: regras 8 e 11 de `contexto/CONVIVENCIA.md` |

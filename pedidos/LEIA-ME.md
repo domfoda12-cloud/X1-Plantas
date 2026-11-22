@@ -60,6 +60,18 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 4. **Fable** (`supervisor`) veta uma vez, por último.
 5. Só então se executa. Gasto e publicação continuam esperando o "sim" do dono.
 
+**A régua do veto** (dono, 22/11/2026: "tenha certeza que os agentes estejam dando inputs relevantes e repreenda-os quando não"). Toda resposta de veto é medida em 5 pontos:
+
+| Ponto | A resposta… |
+|---|---|
+| Objetivo | diz o que muda para o comprador, a venda ou o risco |
+| Lugar | aponta o passo e o trecho |
+| Prova | cita fonte, arquivo, regra ou número conferido; palpite vem marcado como suposição |
+| Correção | todo NÃO ou VETO traz a correção que vira SIM |
+| Novo e do papel | não repete o que já entrou e fica no papel dele |
+
+O Maestro dá a nota na ficha (tabela "Qualidade do veto"). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** uma linha em "Lições" do `contexto/<papel>.md` do agente (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
+
 ## Erro de sintonia entre agentes (dono, 22/11/2026)
 
 Quando dois papéis se atrapalham (fazem o mesmo, deixam um buraco, se contradizem), o Maestro cria na hora uma regra em [`contexto/CONVIVENCIA.md`](../contexto/CONVIVENCIA.md) e conta ao dono no fim, num relatório curto: o erro, a regra, quem muda.
