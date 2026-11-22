@@ -20,6 +20,10 @@ Durante a procura de referencias procure memes brasileiros atemporais como esse
 
 *Recado de 22/11 21:13:* So just make it looking ressembling
 
+*Recado de 22/11 21:36:* So just make it looking ressembling
+make the test
+im going now any last permissions?
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -88,14 +92,14 @@ Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se fa
 **R4 · Teste A/B**
 | Ramo | O que muda |
 |---|---|
-| R4a · sem teste **(padrão)** | Passo 11 sai; produz-se uma versão |
+| R4a · sem teste **(aceito pelo dono, 22/11)** | Passo 11 sai; produz-se uma versão |
 | R4b · teste com verba pequena | Passo 9 produz também a versão B (sem o meme, ou com o gancho antigo); o Estrategista mede retenção depois do trecho que muda, comentários, custo por contato e conversão do parceiro |
 | R4c · teste orgânico | As duas versões no perfil do Instagram, sem gasto; só depois que o perfil existir |
 
 **R5 · Zoom out**
 | Ramo | O que muda |
 |---|---|
-| R5a · fim da prévia **(padrão)** | A câmera do caramelo sobe e abre para a casa no lote do "Cabe a partir de" |
+| R5a · fim da prévia **(aceito pelo dono, 22/11)** | A câmera do caramelo sobe e abre para a casa no lote do "Cabe a partir de" |
 | R5b · no principal | O zoom out fecha o escaneamento: da planta para a casa no lote |
 | R5c · nos dois | O mesmo efeito vira assinatura da marca |
 
@@ -114,7 +118,7 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 
 **Respostas do dono (22/11):** a criança "igual à do meme": fica **igual na cena, não na pessoa** (veto do Revisor; o mais perto possível é R6c, criança gerada por IA com a idade, a energia e a dança da cena, sem o rosto, o corpo nem a roupa do menino); o **caramelo dança no principal e faz o POV na prévia**, ligando os dois vídeos. Teste no OpenArt: "se a prévia te ajudar bastante sim; se for só para ter o apoio do conselho, mande o conselho pensar melhor antes de enviar o pedido final".
 
-**R7 · PLANTA ou LOTE**: R7a PLANTA **(padrão, é o que os textos já usam)**; R7b LOTE (troca a chamada nos dois vídeos e no funil do parceiro).
+**R7 · PLANTA ou LOTE**: R7a PLANTA **(aceito pelo dono, 22/11)**; R7b LOTE (troca a chamada nos dois vídeos e no funil do parceiro).
 
 **Rotas de produção (vale para todos os ramos):** filmagem do dono com o celular (realista, custo zero, espera ele filmar) ou OpenArt (realista, crédito, só com o "sim"). Motor 3D só para rascunho e guia de câmera.
 
@@ -130,6 +134,14 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 | Prompt (rascunho) | "Brazilian child about 8 years old, generic features, colorful t-shirt and shorts, dancing joyfully in front of this exact house facade, a caramel-colored mixed-breed street dog (vira-lata caramelo) beside the child, also bouncing, watching; sunny afternoon, real photo look, vertical 9:16; keep the house exactly as in the reference image: same doors, windows, roof and colors; no text, no flag, no logos" |
 | Não pode | rosto, corpo ou roupa do menino do meme; cachorrinho branco; bandeira; marca; texto |
 | Depois | o Diretor e o Revisor olham; se a cena for reconhecida, vira o quadro inicial do gancho; se não, o plano volta ao time |
+
+### Resultado do teste (22/11, 40 créditos, Nano Banana Pro, image2image da fachada E07)
+
+- **A casa saiu fiel** à referência (mesmo bloco com platibanda, mesma janela de correr, corredor lateral com pilar, muro baixo; sem cômodo nem abertura a mais). Só mudou a luz e o reflexo no vidro.
+- **A criança é genérica** e vestida; o **caramelo** saiu certo.
+- **Aprendizado principal:** **parada, a cena não lembra o meme**; lê-se "criança brincando com cachorro". O que faz reconhecer é o **movimento** (a dança de "descer um pouquinho", com o cachorro olhando) e a **frase na tela**. Logo: o gancho só funciona em **vídeo**, com esse movimento e o texto; não vale gastar com outra imagem parada.
+- **Revisor (SIM, 5/5):** no vídeo final, roupa lisa ou de duas cores (listras de várias cores lembram o meme ou bandeira); criança e cachorro **dentro do lote** (gramado ou corredor), não na calçada junto à rua; acrescentar "plain shoes without logos" e "same lighting as the reference"; com a casa nova, conferir de novo contra a nova referência.
+- Pasta "X1 · Teste de imagem" e a imagem **apagadas** depois de anotar isto, como o dono mandou.
 
 ## Qualidade do veto (régua de 5 pontos, nota do Maestro)
 
@@ -147,5 +159,6 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 | — | Maestro | 1 | Prompt errado na ficha; aceitei como fato que o escaneamento abria o vídeo (resumo errado, não a fala do dono); marquei "confirmado" um ano tirado de repost; deixei suposição virar decisão no passo 5 | Sim: regras 8, 11 e 12 de `contexto/CONVIVENCIA.md` e o `pedido.py` que mostra o prompt |
 | Fable | Supervisor | 5 | Achou o prompt errado, o fato errado com a linha de onde vinha, e cada suposição; correção em cada item | — |
 | ramo | Revisor | 5 | Corrigiu a própria cautela da rodada 1 ("sem criança" não é lei); separou lei, política da Meta e cautela; marcou o que não conferiu; vetou o ramo que não cumpria o pedido | — |
+| teste | Revisor | 5 | Comparou com a referência, achou a roupa listrada e a criança na calçada, disse o que não conferiu | — |
 | ramo | Editor | 5 | Gancho quadro a quadro ligado ao escaneamento da mesma casa; rota com a linha de cada documento | — |
 | — | Revisão das notas | — | O Editor (rodada 1) citou uma linha real de `VIDEO.md`, mas a linha contradizia a fala do dono na mesma página. Não é repreensão: a página é que estava errada (corrigida). As notas da rodada 1 sobre a abertura estavam erradas porque eu as dei sem conferir a fala | — |
