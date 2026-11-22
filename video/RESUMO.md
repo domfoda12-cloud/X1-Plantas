@@ -55,7 +55,7 @@ Tudo o que vale para qualquer vídeo: o guia, as instruções do dono (palavra p
 
 Seções: Vídeo: o que existe hoje; Vídeo: tudo o que o dono pediu (não se perde); Checklist de revisão antes de subir o anúncio.
 
-Tamanho: 3799 palavras.
+Tamanho: 3818 palavras.
 
 ### [Prompts do vídeo da E07 (OpenArt)](principal-e07/PROMPTS.md)
 

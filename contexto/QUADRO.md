@@ -4,7 +4,13 @@
 
 ## Agora
 
-- Arquivos organizados (ficha `1529` fechada). Agora: auditoria do Fable; depois o plano mestre (ficha `1944`). O plano de tudo, fase por fase: `pedidos/PLANO.md`.
+- Vídeo do meme e do POV do caramelo (ficha `2055-video-reel`): plano versão 4, vetado pelo time (3 rodadas) e pelo Fable; esperando as respostas do dono. Plano de tudo: `pedidos/PLANO.md`.
+
+## 22/11 · Veto com régua; memes atemporais; convivência
+
+- **O dono pediu:** plano vetado pelo time várias vezes e pelo Fable uma; nota em cada veto e repreensão quando não for relevante; regras de convivência quando houver erro de sintonia; memes brasileiros atemporais em toda busca de referência.
+- **Todos:** régua do veto em `pedidos/LEIA-ME.md`; regras em [`CONVIVENCIA.md`](CONVIVENCIA.md) (12 até agora). Nota abaixo de 4 vira lição no seu contexto.
+- **Pesquisador, Diretor, Editor:** memes brasileiros atemporais em toda busca, com a coluna "dá para recriar em anúncio?".
 
 ## 22/11 · Tempo livre deixa a equipe mais inteligente
 

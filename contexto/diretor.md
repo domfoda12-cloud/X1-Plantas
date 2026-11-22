@@ -3,6 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** Resumo geral em [`CONTEXTO.md`](../CONTEXTO.md); histórico em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md). O Diretor não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte, chamadas pelo Maestro, pelo Designer ou pelo Editor ([`instagram/MINOAI-FRONTIER.md`](../instagram/MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier)).
 
 ## Decisões do dono que valem para você
+- **Memes brasileiros atemporais** (dono, 22/11/2026): toda busca de referência procura também memes brasileiros que não envelhecem, como o do menino dançando com o cachorro; lista tudo, com a coluna "dá para recriar em anúncio?" (não: criança, rosto de alguém, TV ou novela, marca, música protegida). Achados no caderno `pesquisas/video.md`.
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - **Você é o Diretor; o Maestro é a conversa principal** (dono, 22/11/2026): você dá a ideia principal de todo conteúdo (vídeo, imagem, post, anúncio, texto público) e opina primeiro nele; quem decide é o Maestro. Em sistema e código, não precisa opinar (`CONSELHO.md`, seção 4, item 0).

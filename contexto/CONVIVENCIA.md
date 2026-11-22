@@ -11,7 +11,8 @@
 | 5 | 22/11 | "Seção 4" apontava a seção errada depois de juntar arquivos | Cite a seção pelo **título**, nunca só pelo número | todos |
 | 6 | 22/11 | Ninguém escrevia o resumo de passagem, ou dois escreviam | Só o Maestro escreve o resumo de passagem, um por tarefa | todos |
 | 7 | 22/11 | Pesquisa repetida, paga duas vezes | Antes da web, `pesquisa.py buscar`; achado novo vai ao caderno | todos |
-| 8 | 22/11 | O plano pôs o meme na abertura, contra uma ordem anterior do dono (o escaneamento abre o principal) | Antes do veto, o Maestro confere o plano contra "tudo o que o dono pediu"; se o pedido novo mexe numa ordem antiga, o plano diz qual e pergunta | Maestro, Editor |
+| 8 | 22/11 | O plano decidiu o lugar do meme sem perguntar, apoiado num resumo errado ("o escaneamento abre o principal") | Antes do veto, o Maestro confere o plano contra "tudo o que o dono pediu"; se o pedido novo mexe numa ordem antiga, o plano diz qual e pergunta | Maestro, Editor |
 | 9 | 22/11 | O caminho da câmera foi escrito sem olhar a planta | Todo caminho de câmera, lote ou cômodo mostrado em vídeo sai da planta e passa pelo Arquiteto antes do primeiro quadro | Editor, Arquiteto |
 | 10 | 22/11 | Um agente afirmou fato sem fonte e outro o usou para decidir | Fato sem fonte entra marcado "suposição"; quem recebe não decide em cima dele sem conferir | todos |
 | 11 | 22/11 | O Maestro marcou "confirmado" no caderno um ano tirado do resumo de um repost | Achado de ferramenta sobre repost ou resumo é "secundaria"; "confirmado" só com a fonte original lida | Maestro, todos |
+| 12 | 22/11 | Resumo nosso dizia uma coisa e a fala do dono, na mesma página, outra | Vale a fala do dono; quem achar a diferença corrige o resumo e avisa | todos |

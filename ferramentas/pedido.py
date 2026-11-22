@@ -3,6 +3,7 @@
 Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o último prompt da caixa de entrada, palavra por palavra
      python3 ferramentas/pedido.py nova "assunto" --juntar 3   junta os 3 últimos prompts (recados seguidos sobre o mesmo pedido)
      python3 ferramentas/pedido.py recado <ficha>          acrescenta o último prompt da entrada como recado numa ficha aberta
+     (nova e recado aceitam --de AAAA-MM-DD-HHMMSS para escolher o prompt pela hora; os dois mostram o que copiaram)
      python3 ferramentas/pedido.py listar [--fechadas]     mostra as fichas abertas (ou as fechadas)
      python3 ferramentas/pedido.py fechar <ficha> "o que virou"   fecha a ficha e escreve a linha no CONTEXTO-HISTORICO.md
      python3 ferramentas/pedido.py quadro                  tira do contexto/QUADRO.md o aviso mais antigo se passar de 5 ou do tamanho
@@ -38,11 +39,21 @@ def trocar(txt, nome, valor):
     return re.sub(rf"(^\*\*{re.escape(nome)}:\*\*)[ \t]*.*?(?=^\*\*[^*\n]+:\*\*|\Z)", lambda m: f"{m.group(1)} {valor}\n\n", txt, flags=re.S | re.M)
 
 
+DE = None
+
+
 def ultimos_prompts(n=1):
-    arqs = sorted(ENTRADA.glob("*.md"))[-n:] if ENTRADA.exists() else []
+    arqs = sorted(ENTRADA.glob("*.md")) if ENTRADA.exists() else []
+    if DE:  # prompt escolhido pela hora (auditoria do Fable, 22/11: o último nem sempre é o do pedido)
+        arqs = [a for a in arqs if a.stem.startswith(DE)][:1]
+    else:
+        arqs = arqs[-n:]
     if not arqs:
-        sys.exit("A caixa de entrada (pedidos/entrada/) está vazia: escreva o prompt na ficha à mão.")
-    return "\n\n".join(re.sub(r"^<!--.*?-->\n", "", a.read_text(encoding="utf-8")).strip() for a in arqs)
+        sys.exit("A caixa de entrada (pedidos/entrada/) está vazia ou sem esse prompt: escreva o prompt na ficha à mão.")
+    texto = "\n\n".join(re.sub(r"^<!--.*?-->\n", "", a.read_text(encoding="utf-8")).strip() for a in arqs)
+    # mostra o que foi copiado: quem atende confere que é o prompt certo
+    print(f"prompt copiado ({', '.join(a.stem for a in arqs)}): {texto[:120]}{'…' if len(texto) > 120 else ''}")
+    return texto
 
 
 def achar(nome):
@@ -143,6 +154,8 @@ def conferir():
 
 if __name__ == "__main__":
     a = sys.argv[1:]
+    if "--de" in a:  # --de 2026-11-22-205428: usa esse prompt da entrada, não o último
+        i = a.index("--de"); DE = a[i + 1]; del a[i:i + 2]
     cmd = a[0] if a else ""
     if cmd == "nova" and len(a) >= 2:
         nova(a[1], int(a[a.index("--juntar") + 1]) if "--juntar" in a else 1)

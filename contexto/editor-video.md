@@ -3,6 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
+- **Memes brasileiros atemporais** (dono, 22/11/2026): toda busca de referência procura também memes brasileiros que não envelhecem, como o do menino dançando com o cachorro; lista tudo, com a coluna "dá para recriar em anúncio?" (não: criança, rosto de alguém, TV ou novela, marca, música protegida). Achados no caderno `pesquisas/video.md`.
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
@@ -10,10 +11,10 @@
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)").
 - **OpenArt: só com o "sim" do dono a cada uso** (22/11: "eu NÃO proibi, apenas necessita permissão"), com resumo e custo antes. A C01 foi redesenhada: o material antigo dela não vale. Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - A frente de vídeo foi **aberta pelo dono em 21/11** (pediu o principal e a prévia do WhatsApp). A ordem geral continua e-book → animações → vídeo; o que ele pedir de vídeo, você faz.
-- A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.
+- A MinoAI Frontier (o Diretor) dá a ideia, edita no Mac do dono e gera imagem pelo OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.
 - Sem o selo "Imagem ilustrativa" nos vídeos (dono, 22/11); o aviso "Planta de referência…" continua, pequeno e parado.
-- Destino do vídeo: WhatsApp e Facebook Ads (`video/ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)")).
+- Destino do anúncio com locução: WhatsApp e Facebook Ads (`video/ANUNCIO-LOCUCAO.md`, seção "Pedido do dono").
 
 ## Em aberto com você
 
@@ -24,7 +25,7 @@
 
 ## Onde olhar
 
-`video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"), `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"), `video/REFERENCIAS.md` (seção "Referência: como um formato viraliza (oferta e demanda)") (oferta e demanda de formatos), `instagram/MINOAI-FRONTIER.md` (seção "Editor: MinoAI Frontier"), `video/VIDEO.md` (seção "Vídeo: o que existe hoje"), `animacoes-3d/OPENART-MINOAI.md`.
+`video/VIDEO.md`, `video/REFERENCIAS.md` (CONDOR XIII e formatos virais), `instagram/MINOAI-FRONTIER.md`, `animacoes-3d/OPENART-MINOAI.md`.
 
 ## Leia barato
 

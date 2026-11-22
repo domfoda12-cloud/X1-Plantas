@@ -82,7 +82,7 @@ Revisão de 22/11/2026, a pedido do dono ("reveja toda a nossa conversa, procure
 | Data | O dono disse | Estado |
 |---|---|---|
 | Início | Seguir o reel de referência; atenção na retenção; "o cliente precisa se interessar pelas plantas" | Vale. `instagram/MINOAI-FRONTIER.md`, `instagram/MINOAI-FRONTIER.md` |
-| Início | Clipes menos travados: o blueprint azul ganhando vida | Vale como estilo do 3D próprio. Como **abertura** do principal foi trocado pelo escaneamento (22/11) |
+| Início | Clipes menos travados: o blueprint azul ganhando vida | Vale como estilo do 3D próprio. O escaneamento **substitui a planta se desenhando**, mas entra depois do gancho e antes da chamada (fala do dono, seção "Sequência de escaneamento"); a abertura é o gancho |
 | Início | Gancho "vou te salvar os R$ 1.000 que um arquiteto te salvaria" | Guardado como opção de gancho (`ESTRATEGIA.md`). O Revisor de risco confere antes de usar |
 | Início | Narrador sempre falando, sem pausa; sempre um visual prendendo a atenção | Vale. `VIDEO.md` |
 | Início | Roteiro "volto pro Brasil com casas na mala" | Guardado em `PRINCIPAL-E07.md` |
