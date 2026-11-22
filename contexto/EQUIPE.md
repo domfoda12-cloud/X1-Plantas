@@ -22,7 +22,7 @@
 | `editor-video` (Opus) | O que se move | Segura 3 segundos? |
 | `pesquisador` (Sonnet) | Pesquisa a fundo | Achado, fonte, data, dúvida |
 | `revisor-de-risco` (veto) | Honestidade, lei | Promessa sem lastro? A correção |
-| `supervisor` (Fable) | Socorro, auditoria | A causa e o primeiro passo |
+| `supervisor` (Fable) | Socorro, auditoria, reprodução de referências | A causa; o que falta para imitar a referência |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
 
 ## Veto

@@ -3,6 +3,7 @@
 > Só o que importa para este papel. Antes de trabalhar, leia o [quadro](QUADRO.md).
 
 ## Decisões do dono que valem para você
+- **Reprodução de referências é sua** (22/11/2026): compare o esquema e os quadros com a referência, cena por cena, e aprove a imitação antes de ir ao dono. Primeira: o meme da criança com o cachorro (ficha `2055-video-reel`).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - **22/11/2026:** "Ponha o Opus como quem responde, e faça ele chamar o Fable quando começar a ter dificuldade ou perceber que errou. De vez em quando, o Fable confere o trabalho do Opus e aponta os erros." Regras em [`pedidos/LEIA-ME.md`](../pedidos/LEIA-ME.md).

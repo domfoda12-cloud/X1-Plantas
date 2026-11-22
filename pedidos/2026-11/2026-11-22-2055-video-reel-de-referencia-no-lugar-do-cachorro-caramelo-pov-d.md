@@ -26,6 +26,8 @@ im going now any last permissions?
 
 *Recado de 22/11 21:42:* Remember to put the Brazilian flag and the background doesn't look similar at all, I want it to really imitaste that vídeo. Have all the images rendered beforehand, once again(maybe would be nice to have a rule) have the schematic of it before doing, idk how it works but maybe things like the blenders. More specificslly in this case, the blueprint of the house, and the house that it's gonna come out of the blueprint, if you want to give a referencial name for the street that can also be a good idea, i just need the options
 
+*Recado de 22/11 21:43:* Also make sure that fable is responsible for the reproduction of things
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -144,6 +146,8 @@ Em todos: nada do menino original (rosto, roupa, áudio, música; direito autora
 - **Aprendizado principal:** **parada, a cena não lembra o meme**; lê-se "criança brincando com cachorro". O que faz reconhecer é o **movimento** (a dança de "descer um pouquinho", com o cachorro olhando) e a **frase na tela**. Logo: o gancho só funciona em **vídeo**, com esse movimento e o texto; não vale gastar com outra imagem parada.
 - **Revisor (SIM, 5/5):** no vídeo final, roupa lisa ou de duas cores (listras de várias cores lembram o meme ou bandeira); criança e cachorro **dentro do lote** (gramado ou corredor), não na calçada junto à rua; acrescentar "plain shoes without logos" e "same lighting as the reference"; com a casa nova, conferir de novo contra a nova referência.
 - Pasta "X1 · Teste de imagem" e a imagem **apagadas** depois de anotar isto, como o dono mandou.
+
+**Reprodução (dono, 22/11):** o Fable responde pela fidelidade da imitação do vídeo de referência: aprova o esquema e os quadros, cena por cena, antes de irem ao dono.
 
 ## Opções de nome de rua (pedido do dono, 22/11: "i just need the options"; rascunho do Maestro, a vetar pelo Redator e pelo Revisor)
 
