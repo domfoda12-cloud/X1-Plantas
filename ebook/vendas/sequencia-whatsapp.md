@@ -12,7 +12,7 @@ Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 50 m², 2 q
 
 [PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 
-Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa.
+Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa com os recuos de referência.
 
 > Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
 >
@@ -22,13 +22,13 @@ Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qua
 
 **Se a pessoa mandou as medidas:**
 
-Com [frente] x [fundo] m, essas plantas cabem no seu terreno:
+Com [frente] x [fundo] m, essas plantas cabem no seu terreno com os recuos de referência (os da sua cidade, você confirma na prefeitura):
 
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-Todas estão no e-book **[título]**, que tem 24 casas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
+Todas estão no e-book **[título]**, que tem [nº] casas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
 > Use a [calculadora de lote](calculadora-lote.html) (ou a coluna **Lote** do [catálogo](../catalogo.md)) para escolher 2 ou 3 casas com lote mínimo menor ou igual ao terreno. Ofereça só casas que estão no PDF que a pessoa vai receber: hoje são as 24. **[lançamento: sair com 12 ou com 24, a definir pelo dono]**; se sair com 12, ofereça só as da leva 1.
 
@@ -43,6 +43,8 @@ Todas estão no e-book **[título]**, que tem 24 casas. Quer ver uma delas intei
 Oi, [nome]! Olha como fica a **[nome da planta]** por dentro, mobiliada e vista de cima:
 
 [imagem 3D da casa: `ebook/visual/3d/<ID>.jpg`]
+
+(imagem ilustrativa: móveis e acabamentos não vêm junto. Planta de referência.)
 
 No e-book ela vem com a planta mobiliada e as medidas, a casa desenhada no lote, a vista da rua e as perguntas para levar ao engenheiro.
 
@@ -64,7 +66,7 @@ E mais:
 - a ficha do seu terreno e os passos do e-book até a chave na mão;
 - [bônus e promessa de atualização: a definir pelo dono].
 
-Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/projetos-similares.md`, seção 4] nos catálogos. No e-book são 24 casas, cada uma mobiliada e desenhada no lote.
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/projetos-similares.md`, seção 4] nos catálogos. No e-book são [nº] casas, cada uma mobiliada e desenhada no lote.
 
 Valor de lançamento: **R$ [preço]** no Pix[, ou parcelado no cartão: a definir pelo dono]. [garantia: a definir pelo dono]
 
@@ -78,7 +80,7 @@ Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode p
 
 ## Dia 7: última mensagem
 
-Oi, [nome]! O preço de lançamento vale até [data]. [Só se o dono decidir e for verdade: depois do próximo lançamento o e-book fica maior e o preço sobe.] Qualquer dúvida sobre o seu terreno, me chama.
+Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O preço de lançamento vale até [data]. [Só se o dono decidir e for verdade: depois do próximo lançamento o e-book fica maior e o preço sobe.] Qualquer dúvida sobre o seu terreno, me chama.
 
 > Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Só diga que o preço sobe se isso for verdade.
 

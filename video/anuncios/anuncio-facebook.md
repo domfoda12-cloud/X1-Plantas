@@ -7,6 +7,8 @@
 >
 > **Destino (dono, 22/11/2026):** o anúncio em vídeo com locução vai para **WhatsApp e Facebook Ads**, não para Instagram nem TikTok ([`../PEDIDO-anuncio-locucao.md`](../PEDIDO-anuncio-locucao.md), pedido 27). Números das casas: [`PLANTAS.md`](../../ebook/plantas/PLANTAS.md).
 
+> **Imagem parada:** todo anúncio leva o aviso "Planta de referência…" e, se a imagem for 3D ou foto gerada, "Imagem ilustrativa". A Casa Compacta só aparece com `ebook/visual/3d/C01.jpg`, nunca com a foto antiga.
+
 ## Regras para todos os anúncios
 
 - Falar com quem **tem um lote e vai construir**, como quem já passou por obra.
@@ -33,7 +35,7 @@ Quer receber uma de graça no WhatsApp? Me chama.
 
 **Botão:** Enviar mensagem
 
-> Repita para os outros lotes. Contagem conferida pelo validador em 20/11/2026 (frente e fundo, recuos de referência): **8 x 25: 11 casas** (ex.: Casa Estreita 3 Quartos · 72 m² · 3 quartos (1 suíte)), **10 x 25: 17**, **12 x 25: 22**, **5 x 25: 1** (Casa Fita). Só cite plantas que já estão no e-book; recalcule se o catálogo mudar.
+> Repita para os outros lotes. Contagem conferida pelo validador em 20/11/2026 (frente e fundo, recuos de referência): **8 x 25: 11 casas** (ex.: Casa Estreita 3 Quartos · 72 m² · 3 quartos (1 suíte)), **10 x 25: 17**, **12 x 25: 22**, **5 x 25: 1** (Casa Fita). Só cite plantas que já estão no e-book; recalcule se o catálogo mudar; se o lançamento sair com 12 casas, recontar.
 
 ## Ângulo 2: erro caro
 
@@ -44,7 +46,7 @@ Corredor comprido, banheiro de frente pra sala, quarto que pega sol da tarde… 
 
 Separei os 7 erros de planta que mais saem caro na obra, com a planta mostrando o jeito certo.
 
-Quer ver? Comenta PLANTA que eu te mando de graça.
+Quer ver uma planta mostrando o jeito certo? Comenta PLANTA que eu te mando uma de graça.
 
 **Botão:** Saiba mais
 
@@ -72,6 +74,8 @@ O pedreiro sabe levantar parede. Mas ele não te mostra como a casa vai ficar an
 
 Com a planta mobiliada e desenhada no lote, você vê cada cômodo, cada móvel e as medidas principais, e chega na obra sabendo o que quer.
 
+Planta de referência: o projeto da obra é de um engenheiro ou arquiteto.
+
 Comenta PLANTA que eu te mando uma de graça.
 
 **Botão:** Saiba mais
@@ -94,9 +98,9 @@ Use em **remarketing**: pessoas que assistiram ao vídeo, comentaram ou chamaram
 **Texto principal:**
 Uma planta pronta avulsa custa a partir de R$ [preço do concorrente] nos catálogos. No e-book [título] são [nº] plantas, organizadas pelo tamanho do lote, cada uma mobiliada e desenhada no lote.
 
-✅ Pix ou cartão parcelado
+✅ Pix[, ou cartão parcelado: a definir pelo dono]
 ✅ [garantia: o dono ainda não decidiu se oferece 7 dias; sem a decisão, tire esta linha]
-✅ As próximas plantas sem pagar de novo
+✅ [promessa de atualização: a definir pelo dono; sem a decisão, tire esta linha]
 
 **Botão:** Comprar
 

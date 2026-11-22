@@ -29,7 +29,7 @@ Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calc
 
 **Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.) nem o mockup `../visual/mockups/casa-c01-celulares.png`: são do desenho antigo da C01, de antes do redesenho de 22/11/2026. A imagem 3D atual de cada casa está em `../visual/3d/<ID>.jpg` e já sai dentro do PDF. Animação ainda não existe para nenhuma casa.
 
-> A foto de fachada da C01 que sai na página 2 do PDF (`../visual/openart/fachadas/C01.jpg`) também é da casa antiga. Enquanto não for refeita, prefira mandar outra planta grátis quando o lote permitir, ou avise que a vista da rua é ilustrativa.
+> A vista da rua da C01 é o desenho simplificado da planta atual. A foto antiga foi retirada.
 
 ## 2. Ficha da Casa Compacta (para mandar em texto)
 
@@ -51,7 +51,7 @@ Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calc
 
 ## 3. O convite no fim da planta grátis
 
-A página 3 do PDF abre com **"Essa foi 1 de 24"** e fecha com o convite:
+A página 3 do PDF abre com **"Essa foi 1 de [nº de casas do e-book]"** (hoje 24; o número sai do PDF) e fecha com o convite:
 
 > **Me fala a frente do seu lote.** Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.
 
