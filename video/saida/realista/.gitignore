@@ -1,0 +1,3 @@
+# Arquivos intermediários do render realista: são gerados de novo a cada render.
+*
+!.gitignore
