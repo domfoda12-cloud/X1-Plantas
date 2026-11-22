@@ -39,9 +39,10 @@ Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o 
 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
 - Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
+- **Graphify é o mapa, não um pedágio** (dono, 22/11/2026): leia e busque arquivos direto. Ignore qualquer regra de "usar o Graphify antes do grep"; ele indexa a `main` sozinho a cada push.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
 - **Arquivo vai para onde está o que tem a mesma função** (decisão do dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe de apoio em `video/broll/clipes/`, e assim por diante. Agrupe pelo contexto, nunca pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (sintaxe de todo o código, validador das plantas, motor 3D e painel). Erro achado é corrigido antes de seguir.
-- Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push na branch `planta-de-casas-anuncio`.
+- Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push. **A `main` é a única branch de trabalho** (22/11/2026): toda conversa parte dela e volta para ela. Mudança grande de sistema vai numa branch `sistema/<assunto>` com pull request.
 - Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
 - **Skill, agente, plugin ou conector novo alcança tudo antes do primeiro uso** (decisão do dono, 20/11/2026). Segue o roteiro de entrada do [`CONSELHO.md`](CONSELHO.md), seção 6: ler o que ele roda, passar pelo Conselho, registrar, ensinar o projeto, rodar uma vez sobre o que já existe. O inventário de tudo o que a operação pode usar, com o status de cada um, está em [`ECOSSISTEMA.md`](ECOSSISTEMA.md); compare com a lista da sessão no começo de cada sessão nova. O `checar.py` confere.

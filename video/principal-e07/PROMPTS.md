@@ -26,7 +26,7 @@
 
 - **Vista de cima realista:** referências = blueprint limpo + 3D + prévia da planta. Pedir "EXACTLY the same house: same position, same size and same framing", paredes cortadas a 1,1 m, móveis no lugar da planta, luz de fim de tarde.
 - **Interior:** "Realistic smartphone photo", câmera no canto a 1,5 m, lente 24–28 mm, luz lateral 3.500–4.000 K, "lived-in, not a catalog photo". Porta, janela e móveis onde a planta manda (lista do Arquiteto no plano, seção 7).
-- **Fachada:** partir da fachada do e-book (`ebook/visual/openart/fachadas/E07.png`) e pedir "Change only" a luz e os enfeites.
+- **Fachada:** partir da fachada do e-book (`ebook/visual/openart/fachadas/E07.jpg`) e pedir "Change only" a luz e os enfeites.
 - **Limpeza de marca** (o Revisor veta): pedir "Edit this exact photo and keep everything else identical. Change only: …" para tirar logo, placar, rótulo, relevo de chinelo, listras de camisa.
 
 ## 3. Peso dos arquivos

@@ -14,12 +14,12 @@ def main(pasta):
     for sub in ("9x16", "1x1"):
         (p / sub).mkdir(exist_ok=True)
     n = 0
-    for f in sorted(p.glob("*.png")):
+    for f in sorted([*p.glob("*.jpg"), *p.glob("*.png")]):
         im = Image.open(f).convert("RGB")
         w, h = im.size
         cw = round(h * 9 / 16)
-        im.crop(((w - cw) // 2, 0, (w - cw) // 2 + cw, h)).save(p / "9x16" / f.name, optimize=True)
-        im.crop((0, (h - w) // 2, w, (h - w) // 2 + w)).save(p / "1x1" / f.name, optimize=True)
+        im.crop(((w - cw) // 2, 0, (w - cw) // 2 + cw, h)).save(p / "9x16" / f.name, quality=92, subsampling=0, optimize=True)
+        im.crop((0, (h - w) // 2, w, (h - w) // 2 + w)).save(p / "1x1" / f.name, quality=92, subsampling=0, optimize=True)
         n += 1
     print(f"{n} imagens recortadas em 9:16 e 1:1")
 

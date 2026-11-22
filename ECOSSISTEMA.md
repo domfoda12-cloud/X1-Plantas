@@ -32,7 +32,7 @@
 | **TinyFish** | Integrado | Pesquisador | Busca e leitura grátis; dataset e deep research são **pagos** (só com o "sim" do dono) | Feito: pesquisas de mercado, referências, normas |
 | **Google Drive / Google Docs** | Liberado, não usado | (a decidir) | Lê e escreve arquivos na conta Google do dono | Pendente. Antes do primeiro uso, o Revisor confere o que sai |
 | **Claude Docs** | Liberado, não usado | (a decidir: roteiros para o parceiro?) | Documentos compartilháveis no claude.ai | Pendente |
-| **Graphify** | Liberado, não usado | Arquiteto (código) | Grafo de código de repositórios indexados | Pendente; só serve se este repositório for indexado |
+| **Graphify** | Integrado: indexa a `main` a cada push | Arquiteto (código) | Grafo de código de repositórios indexados | Pendente; só serve se este repositório for indexado |
 | **claude-code-remote** | Ferramenta do Claude Code | Sessão | Ambiente, sessões e tarefas agendadas | Não se aplica |
 
 ## 4. Skills de plugin e do Claude Code

@@ -2,11 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
-## 22/11 · Uma branch só e arquivos agrupados por função
+## 22/11 · A `main` é a única branch; arquivos comprimidos
 
-- **O dono pediu:** resolver as branches sem complicação e agrupar o que tem a mesma função.
-- **Todos:** a branch principal vai para a `main` pelo PR #2. Regra nova no `CLAUDE.md`: arquivo fica junto do que tem a mesma função.
-- **Editor de vídeo:** tours da C06 em `video/saida/tour-c06/`; `ebook-folheando.mp4` em `video/broll/clipes/`; o antigo agente `editor` é `video/REFERENCIA-VIRAL.md`.
+- **O dono pediu:** destravar o projeto: juntar tudo, comprimir, manter arrumado e ver o sistema no Graphify.
+- **Todos:** o projeto inteiro está na `main`. **Trabalhe e envie na `main`** (`git pull --rebase` antes); a `planta-de-casas-anuncio` acabou. Mudança de sistema: branch `sistema/<assunto>` com pull request.
+- **Todos:** leia e busque arquivos direto; o Graphify é mapa, não etapa obrigatória. Arquivo fica junto do que tem a mesma função.
+- **Designer e Editor de vídeo:** as fotos do OpenArt agora são `.jpg` (`ebook/visual/openart/`); vídeos reencodados; tours da C06 em `video/saida/tour-c06/`.
 
 ## 22/11 · Skill `make-pdf` e conversa própria do Editor
 
