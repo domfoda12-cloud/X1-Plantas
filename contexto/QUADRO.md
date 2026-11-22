@@ -5,7 +5,7 @@
 ## 22/11 · Skill `make-pdf` e conversa própria do Editor
 
 - **O dono pediu:** adicionar a skill `make-pdf` (gstack) e ter o Editor como conversa de verdade.
-- **Todos:** `make-pdf` está registrada sem o preâmbulo (telemetria), mas **não funciona**: instalar o gstack espera o "sim" do dono. É para markdown, não para o e-book.
+- **Todos:** `make-pdf` está registrada sem o preâmbulo (telemetria), mas **não funciona**: instalar o gstack espera o "sim" do dono. Não é para o e-book.
 - **Editor de vídeo:** há outra conversa na mesma branch: `git pull --rebase` antes de enviar.
 
 ## 22/11 · C01 redesenhada; OpenArt só com permissão
