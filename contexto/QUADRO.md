@@ -6,6 +6,12 @@
 
 - Arquivos organizados (ficha `1529` fechada). Agora: auditoria do Fable; depois o plano mestre (ficha `1944`). O plano de tudo, fase por fase: `pedidos/PLANO.md`.
 
+## 22/11 · Tempo livre deixa a equipe mais inteligente
+
+- **O dono pediu:** sem projeto concreto, deixar os agentes e a equipe mais inteligentes.
+- **Todos:** rotina L1 a L6 em `pedidos/PLANO.md` ("Tempo livre"). Cada contexto ganhou a seção "Lições": erro de auditoria ou correção do dono entra lá.
+- **Redator, Estrategista, Pesquisador, Supervisor, Ajudante:** lista curta de ferramentas (custa um terço por chamada). Na próxima conversa, confirme que vê as suas.
+
 ## 22/11 · Plano de trabalho; consertar de vez
 
 - **O dono pediu:** um plano passo a passo, em tarefas grandes e pequenas, com objetivo para a equipe; e "não só conserte, remende".
@@ -24,10 +30,3 @@
 - **Todos:** leia o "Agora" acima. Antes da web, `python3 ferramentas/pesquisa.py buscar`; achado novo, `nova` (`pesquisas/`). Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
 - **Designer e Editor:** puxe a ideia do Diretor (MinoAI) antes de propor.
 - **Revisor:** peça final é no Fable.
-
-## 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta
-
-- **O dono pediu:** organizar os agentes: cada um sabe a sua função e, a cada prompt, o que acrescentar para o resultado dele; tudo resumido junto; com o tempo, um sistema que ajude em qualquer coisa.
-- **Todos:** o mapa está em [`EQUIPE.md`](EQUIPE.md). A ficha passa a ter, em "Quem executa", uma linha por agente: o que ele acrescenta. O que não é seu, devolva dizendo de quem é; agente não chama agente.
-- **Designer e Editor:** imagem parada é do Designer; o que se move é do Editor.
-- **Arquiteto, Estrategista e Pesquisador:** o Pesquisador acha a fonte; o Arquiteto (norma, planta) ou o Estrategista (mercado, preço) conclui. O Estrategista não usa mais Sonnet.

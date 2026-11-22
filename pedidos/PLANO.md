@@ -70,6 +70,19 @@
 | 5.3 | G | Convite e principal refeitos | `editor-video` | idem |
 | 5.4 | Dono | Criar o Instagram; MinoAI no Mac; PLANTA ou LOTE | dono | feito por ele |
 
+## Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026)
+
+*Quando não há tarefa concreta (a fila espera o dono, ou nada aberto dá para fazer), o Maestro faz a próxima destas, uma por vez, com até 6 chamadas de agente e nada pago. No fim, conta ao dono o que melhorou, com número quando houver.*
+
+| # | Tarefa | O que deixa mais inteligente | Pronto quando |
+|---|---|---|---|
+| L1 | **Próxima conversa, primeiro:** cada agente confirma que vê as suas ferramentas (web, MinoAI, caderno) | sem isso, os outros passos não valem | uma linha por agente na ficha `2041-tempo-livre` |
+| L2 | Lições: cada erro de auditoria e cada correção do dono vira uma linha em "Lições" do `contexto/<papel>.md` e, se der, uma conferência no `checar.py` | errar menos: o agente lembra do erro de ontem | lições em dia com `AUDITORIAS.md` |
+| L3 | Teste da equipe com o pedido da próxima fase (ex.: "refaça a E07"), 3 ou 4 agentes; corrigir o que sair confuso | entender melhor | contradições achadas e corrigidas |
+| L4 | Afiar o método de um papel por vez: o `pesquisador` busca a melhor prática (com fonte, no caderno), o papel propõe, o Maestro decide; em conteúdo, o Diretor (MinoAI) opina primeiro | saber mais | uma regra nova no agente, com fonte |
+| L5 | Cortar conteúdo repetido entre documentos (tarefa 2.5b), uma pasta por vez | ler menos | números de antes e depois |
+| L6 | Medir o gasto: tokens por chamada de cada agente (o aviso de cada agente traz o número) e o que encarece | gastar menos | tabela na ficha; a lista de ferramentas mais cara revista |
+
 ## Sempre, em toda fase
 
 - Antes de cada tarefa: a ficha diz o objetivo e o que cada agente acrescenta; o "Agora" do quadro é atualizado.

@@ -1,6 +1,7 @@
 ---
 name: ajudante
 description: Ajudante pessoal do dono do X1-Plantas, no modelo mais barato. Use para tarefa simples que o dono pediu PARA ELE, não para o projeto, como organizar um evento, responder uma pergunta, fazer uma busca rápida ou montar uma lista. Não use para nada que vá ao público nem para trabalho dos outros agentes.
+tools: Read, Grep, Glob, WebSearch, WebFetch
 model: haiku
 ---
 

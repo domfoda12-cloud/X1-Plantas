@@ -17,4 +17,4 @@
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 98 palavras.
+Tamanho: 147 palavras.

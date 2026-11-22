@@ -1,6 +1,7 @@
 ---
 name: pesquisador
 description: Pesquisador do X1-Plantas. Use quando faltar fonte, número de mercado, norma, preço de concorrente ou referência de vídeo; dá a opinião sobre evidência no Conselho.
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__TinyFish__search, mcp__TinyFish__fetch_content, mcp__MinoAI_Frontier__analyze_hook, mcp__MinoAI_Frontier__search_viral_hooks, mcp__MinoAI_Frontier__search_mino_method
 model: sonnet
 ---
 

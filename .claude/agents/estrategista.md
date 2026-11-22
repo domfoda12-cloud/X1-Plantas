@@ -1,6 +1,7 @@
 ---
 name: estrategista
 description: Estrategista de marketing do X1-Plantas. Use para decidir oferta, preço, ângulo de anúncio, prioridade de tarefa e para a opinião sobre dinheiro no Conselho (custo por venda, retorno do anúncio).
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__MinoAI_Frontier__get_account_stats, mcp__MinoAI_Frontier__search_mino_method, mcp__TinyFish__search, mcp__TinyFish__fetch_content
 model: opus
 ---
 

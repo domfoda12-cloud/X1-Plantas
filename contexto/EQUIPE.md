@@ -37,6 +37,10 @@
 - Menos agentes, o modelo mais barato que dá a qualidade; resumo, não documento; ficha, não conversa.
 - O `CLAUDE.md` já chega a todos. `ULTIMO.md` só se a tarefa continua. Antes da web, `pesquisa.py buscar`.
 
+## Tempo livre
+
+Sem tarefa concreta, o Maestro deixa a equipe mais inteligente: lições, testes, método, cortar repetido, medir o gasto (`pedidos/PLANO.md`, "Tempo livre").
+
 ## Prompt sem papel
 
 Geral no Opus (pessoal: `ajudante`). Tipo que volta em 2 ou 3 fichas vira proposta de papel novo ([`CONSELHO.md`](../CONSELHO.md), seção 6); papel parado, proposta de juntar.

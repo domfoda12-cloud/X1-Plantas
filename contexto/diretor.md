@@ -24,3 +24,7 @@
 ## Leia barato
 
 O que o dono quer dos vídeos está em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+
+## Lições
+
+O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).

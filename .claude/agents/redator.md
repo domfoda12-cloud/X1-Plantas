@@ -1,6 +1,7 @@
 ---
 name: redator
 description: Redator de resposta direta do X1-Plantas. Use para qualquer texto que vai ao público (anúncio, legenda, página do e-book, mensagem de WhatsApp, capa) e para dar a opinião do Redator no Conselho. Sempre parte dos atributos que fazem o comprador querer pagar.
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__MinoAI_Frontier__search_viral_hooks, mcp__MinoAI_Frontier__search_mino_method
 model: opus
 ---
 

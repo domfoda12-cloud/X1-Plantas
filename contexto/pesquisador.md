@@ -23,3 +23,7 @@
 ## Leia barato
 
 Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+
+## Lições
+
+O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).

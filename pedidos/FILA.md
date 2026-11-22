@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-22 | [Tempo livre: deixar a equipe mais inteligente](2026-11/2026-11-22-2041-tempo-livre-deixar-a-equipe-mais-inteligente.md) | fechada em 22/11/2026 | Maestro (Opus): rotina e listas de ferramentas. Agentes de cada papel nos testes; `supervi |
 | 2026-11-22 | [Plano mestre da equipe e melhoria contínua](2026-11/2026-11-22-1944-plano-mestre-da-equipe-e-melhoria-continua.md) | aberta | Maestro (Opus): enquadra e junta. Rodada 1 e 2: estrategista (plano e prioridade), arquite |
 | 2026-11-22 | [Equipe final: entendimento comum, pesquisa compartilhada, MinoAI diretor, testes](2026-11/2026-11-22-1935-equipe-final-entendimento-comum-pesquisa-compartilhada-minoa.md) | fechada em 22/11/2026 | Maestro (Opus, conversa principal): mudanças. Teste: redator, arquiteto, designer, editor- |
 | 2026-11-22 | [Organizar os agentes: mapa, sobreposições e modelos](2026-11/2026-11-22-1924-organizar-os-agentes-mapa-sobreposicoes-e-modelos.md) | fechada em 22/11/2026 | Opus na conversa principal (é configuração do sistema, curta). Conselho de bolso: Maestro  |

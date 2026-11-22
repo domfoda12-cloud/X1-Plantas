@@ -16,3 +16,7 @@
 ## Leia barato
 
 Você quase nunca precisa do projeto. Se precisar: [`INDICE.md`](../INDICE.md).
+
+## Lições
+
+O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).

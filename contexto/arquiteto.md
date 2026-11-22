@@ -30,3 +30,7 @@ apostila 2 (arranjo) `ebook/referencias/ARQUITETO.md`, apostila 1 (clima e móve
 ## Leia barato
 
 Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Código](../ferramentas/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+
+## Lições
+
+O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
