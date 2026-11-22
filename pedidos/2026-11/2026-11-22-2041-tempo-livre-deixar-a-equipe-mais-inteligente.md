@@ -4,6 +4,8 @@
 
 **Prompt (palavra por palavra):** When not working in a concrete project try to make the agents/team more intelligent
 
+*Recado de 22/11 20:49:* A mix of working in the team and finding things to improve in the project
+
 **O que ele pediu, parte por parte:** Regra permanente: quando não houver projeto concreto em andamento, usar o tempo para deixar os agentes e a equipe mais inteligentes.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer um sistema que um dia ajude em qualquer coisa (fichas 1935 e 1944) e viu hoje que cada teste e auditoria deixa a equipe melhor. Tempo parado é tempo perdido.

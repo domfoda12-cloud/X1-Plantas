@@ -21,7 +21,7 @@
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Tamanho: 459 palavras.
+Tamanho: 1108 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
@@ -37,4 +37,4 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Fase 1 · Organizar a base (ficha `1529-organizar-os-arquivos`); Fase 2 · O plano mestre da equipe (ficha `1944-plano-mestre`); Fase 3 · E-book: as casas refeitas (frente atual); Fase 4 · Animações e imagens (abre só quando a fase 3 fechar); Fase 5 · Vídeo; Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 1435 palavras.
+Tamanho: 1653 palavras.

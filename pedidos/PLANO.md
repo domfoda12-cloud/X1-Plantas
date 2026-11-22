@@ -72,7 +72,7 @@
 
 ## Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026)
 
-*Quando não há tarefa concreta (a fila espera o dono, ou nada aberto dá para fazer), o Maestro faz a próxima destas, uma por vez, com até 6 chamadas de agente e nada pago. No fim, conta ao dono o que melhorou, com número quando houver.*
+*Quando não há tarefa concreta (a fila espera o dono, ou nada aberto dá para fazer), o Maestro **alterna** (dono, 22/11/2026: "uma mistura"): uma tarefa da equipe (L), depois uma do projeto (M), e assim por diante. Uma por vez, até 6 chamadas de agente, nada pago, nada publicado. No fim, conta ao dono o que melhorou, com número quando houver. Melhoria do projeto que muda planta, texto público ou preço vira **proposta** para o dono, não mudança.*
 
 | # | Tarefa | O que deixa mais inteligente | Pronto quando |
 |---|---|---|---|
@@ -82,6 +82,17 @@
 | L4 | Afiar o método de um papel por vez: o `pesquisador` busca a melhor prática (com fonte, no caderno), o papel propõe, o Maestro decide; em conteúdo, o Diretor (MinoAI) opina primeiro | saber mais | uma regra nova no agente, com fonte |
 | L5 | Cortar conteúdo repetido entre documentos (tarefa 2.5b), uma pasta por vez | ler menos | números de antes e depois |
 | L6 | Medir o gasto: tokens por chamada de cada agente (o aviso de cada agente traz o número) e o que encarece | gastar menos | tabela na ficha; a lista de ferramentas mais cara revista |
+
+**Do projeto (M)**
+
+| # | Tarefa | O que melhora | Pronto quando |
+|---|---|---|---|
+| M1 | `plantas.py validar` nas 24: a casa com mais avisos ganha proposta do `arquiteto` | a casa que o comprador recebe | proposta na ficha; o dono decide |
+| M2 | `/ponytail-audit` no código das ferramentas (só relatório) | menos erro e menos código | achados por gravidade; os altos viram ficha |
+| M3 | `revisor-de-risco` relê os textos que já estão prontos para o público (`contexto/dono/TEXTOS-DESATUALIZADOS.md`, posts, WhatsApp) | menos risco | promessas sem lastro listadas, com a correção |
+| M4 | `redator` e `estrategista` conferem o funil (anúncio, comentário, WhatsApp) contra as decisões mais novas | mais venda | o que está velho, com a proposta |
+| M5 | `designer` olha as páginas do PDF de rascunho (`livro.py --previa`) em busca do que parece genérico | o comprador confia no que vê | páginas apontadas, com o porquê |
+| M6 | Conferir o `PAINEL.md`: todo número tem fonte e data | decisões com número certo | número sem fonte apontado |
 
 ## Sempre, em toda fase
 
