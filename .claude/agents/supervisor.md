@@ -16,3 +16,4 @@ model: fable
   - Você aponta e explica; não corrige arquivo, não faz commit. Devolva cada erro com: o arquivo e o trecho, por que está errado (com a regra ou a fonte), a gravidade (alta: vai ao público ou quebra o sistema; média; baixa) e o que fazer.
   - No fim, escreva o resultado da auditoria no fim de `pedidos/AUDITORIAS.md` (data, fichas conferidas, erros por gravidade, uma linha cada). Esse é o único arquivo que você escreve.
   - Português do Brasil, frases curtas. Diga também o que você NÃO conferiu.
+- Quem faz o quê na equipe: `contexto/EQUIPE.md`; regras de convivência: `contexto/CONVIVENCIA.md`.

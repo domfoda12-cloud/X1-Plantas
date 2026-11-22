@@ -46,6 +46,10 @@ A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta
 
 
 
+## O plano de tudo
+
+O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz cada uma: [`PLANO.md`](PLANO.md). Ficha fechada? Marque "Feito" na tarefa de lá.
+
 ## Plano vetado antes de fazer (dono, 22/11/2026)
 
 "Antes de fazer as coisas, crie o plano detalhado (passos grandes e pequenos), que deve ser vetado pelo time várias vezes e pelo Fable uma." Vale para todo trabalho que não seja de uma linha:

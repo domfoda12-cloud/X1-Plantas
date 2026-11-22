@@ -25,20 +25,25 @@
 **Resultado:** (a preencher)
 
 
-## Plano detalhado (para o veto do time e do Fable)
+## Plano detalhado, versão 3 (depois das rodadas de veto 1 e 2)
+
+**Rodada 1 (22/11):** Editor SIM, SE; Revisor SIM, SE com 1 VETO (passo 4: não dizia quem dança); Arquiteto SIM, SE; Estrategista SIM, SE. O que mudou: o meme entra **onde estava o caramelo**, não na abertura (o escaneamento é a abertura por ordem do dono); o custo e a rota sobem para antes dos roteiros; quem dança e o áudio ficam definidos; o caminho do POV sai da planta; 3 memes, não 10; um vídeo de cada vez.
+
+**Rodada 2 (22/11):** Revisor SIM; Arquiteto SIM, SE (lote lido da ficha no dia, não número fixo); Editor NÃO (áudio do kit é suposição; falta produzir a versão B); Estrategista NÃO (o teste media os 3 primeiros segundos, que são iguais nas duas versões). Corrigido nos passos 6, 8, 11 e 12. **Rodada 3:** Editor SIM, Estrategista SIM (a escolha do B subiu para o passo 5). Falta o veto do Fable.
 
 Objetivo de todos: o brasileiro reconhece na hora, para o dedo, e quer a casa.
 
 | # | Tipo | Passo | Quem | Pronto quando |
 |---|---|---|---|---|
-| 1 | P | Reel na lista de referências (`video/REFERENCIAS.md`), com a análise do Diretor e a regra: recriar, nunca usar o clipe | Maestro | seção nova no arquivo |
-| 2 | G | Memes brasileiros atemporais: 10 candidatos com fonte e ano (meme com 5 anos ou mais e ainda reconhecido), sem pessoa real identificável usada como propaganda | `pesquisador` (Sonnet) acha; `editor-video` conclui | lista no caderno `pesquisas/video.md` |
-| 3 | P | Ideia principal de cada vídeo, com a fonte da MinoAI | Diretor (MinoAI) pelo Maestro | uma linha por vídeo, com fonte |
-| 4 | G | **Principal (anúncio e Instagram):** onde o meme entra (de preferência nos 3 primeiros segundos, recriado: a dança e o "desce um pouquinho" na casa nova) e o que sai (a cena do caramelo) | `editor-video` | roteiro com tempo de cada quadro |
-| 5 | G | **Prévia do WhatsApp:** passeio pela casa do ponto de vista do caramelo (câmera baixa, uns 40 cm), entrando pela porta, cozinha, sala, quintal | `editor-video`; `arquiteto` confere o caminho na planta | roteiro e caminho da câmera |
-| 6 | P | Zoom out com efeito: escolher no kit (`make_zoom2.py`) e marcar o momento (sugestão: o fim do POV, quando a câmera sobe e abre e mostra a casa inteira no lote) | `editor-video` com o Diretor | momento e efeito no roteiro |
-| 7 | P | Texto na tela de cada vídeo (primeiro quadro sempre com texto) | `redator` | frases com atributo e número da ficha |
-| 8 | P | Direito de imagem e honestidade: meme recriado, sem a criança, sem marca; casa igual à planta; aviso "Planta de referência" | `revisor-de-risco` | SIM ou VETO com a correção |
-| 9 | P | Resumo da produção e custo (motor próprio, filmagem do dono ou OpenArt) | Maestro | resumo pronto para o dono |
-| 10 | Dono | "Sim" ao resumo e ao custo; qual casa | dono | resposta na ficha |
-| 11 | G | Produzir (só depois do 10) | `editor-video`; edição final na MinoAI, no Mac | vídeos aprovados pelo dono |
+| 1 | P | Reel em `video/REFERENCIAS.md`: **só o link e a análise** (nada baixado nem copiado); é um repost (quem repostou não tem os direitos); o ano "2016" fica "a confirmar"; regra: recriar a situação, nunca o menino, o rosto, o áudio ou a música | Maestro | seção nova |
+| 2 | G | 3 memes brasileiros atemporais (critério "atemporal" é nosso: ainda reconhecido anos depois). **Fora:** criança, meme que depende do rosto de alguém, cena de TV ou novela, personagem de marca, graça que depende de música protegida. Cada um com a origem (link) e "o que se reconhece sem a pessoa". Confirmar também a origem da frase "Tô de boa, desce um pouquinho" | `pesquisador` acha; `editor-video` conclui; `revisor-de-risco` corta | 3 linhas no caderno `pesquisas/video.md` |
+| 3 | P | Ideia principal de cada vídeo (Diretor, com fonte) e **o Revisor olha a ideia do meme recriado já aqui** | Maestro com o Diretor; `revisor-de-risco` | ideia + SIM do Revisor |
+| 4 | P | Rota e custo de cada vídeo: motor 3D próprio (ilustração, custo zero), filmagem do dono com o celular (realista, custo zero) ou OpenArt (realista, gasta crédito, só com o "sim") | Maestro | resumo de produção para o dono |
+| 5 | Dono | Escolhe a rota, a casa (a E07 só depois do redesenho aprovado; a F03 serve de rascunho) quem dança (ele, alguém da família com autorização escrita, ator, ou boneco 3D) e o que é a versão B do teste (recomendado: o caramelo, para as duas terem o mesmo tamanho) | dono | respostas na ficha |
+| 6 | G | **Principal (anúncio e Instagram), primeiro:** o meme recriado no lugar do caramelo (o detalhe do drop, 9,38 a 11,25 s): um adulto dança na casa nova, um cachorro genérico assiste (diferente do cachorrinho branco), a frase na tela; sem muro com bandeira; áudio da biblioteca de sons da Meta, trilha livre ou gravação própria da frase (faixa do kit da MinoAI só se a licença cobrir anúncio pago: o Revisor confirma no passo 10, antes de produzir); legenda sem nome do menino e sem marcar contas | `editor-video` | roteiro com tempo de cada quadro |
+| 7 | G | **Prévia do WhatsApp, depois:** POV do caramelo pelo **caminho que a planta manda** (mapa do passeio, conferido pelo Arquiteto antes de qualquer quadro); câmera a 40 cm, FOV de uns 60°, a 1 m das paredes, passando pelo vão das portas; janela mostra só céu e isso não vira "casa clara"; quintal, muro e serviço como estão na planta | `editor-video`; `arquiteto` confere o mapa e um quadro de teste (`--quadro`) | roteiro + mapa aprovado |
+| 8 | P | Zoom out com efeito do kit (`make_zoom2.py`, confirmar no Mac que existe): sugestão no fim do POV, a câmera sobe por fora e mostra a casa no lote do "Cabe a partir de" da ficha da **planta aprovada**, lido do validador ou do JSON no dia do roteiro, com recuos e orientação certos (o Arquiteto confere de novo depois do redesenho). **Em qual vídeo vai: pergunta ao dono** | `editor-video` com o Diretor; `arquiteto` confere o lote | momento e efeito no roteiro |
+| 9 | P | Texto na tela (primeiro quadro sempre com texto), duração, chamada (PLANTA ou LOTE, decisão do dono), aviso "Planta de referência" pequeno e parado, ritmo sem troca a cada 0,75 s | `redator` | frases com atributo e número da ficha |
+| 10 | P | Revisão: autorização de imagem guardada antes da filmagem, licença do áudio para anúncio pago, casa igual ao JSON da planta aprovada | `revisor-de-risco` (Fable na peça final) | SIM |
+| 11 | G | Produzir (só depois do 5), edição final na MinoAI, no Mac; para o teste, também a **versão B** do principal, igual à A fora do trecho do drop. Se a POV usar a F03 de rascunho, o mapa é refeito quando a casa virar a aprovada | `editor-video` | vídeos aprovados pelo dono |
+| 12 | P | Medir: principal com meme (A) contra B, **iguais até 9,38 s e depois de 11,25 s**; só o drop muda (B: o caramelo ou o trecho cortado, escolha do dono). Medidas: retenção logo depois do drop (uns 12 s) e até o fim, comentários, custo por contato e conversão contada pelo parceiro. Prévia: com POV contra sem POV, por semana | `estrategista` | teste proposto ao dono (verba e o que é o B são dele) |

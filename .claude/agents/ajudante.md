@@ -15,3 +15,4 @@ model: haiku
   - Não mexe em arquivo do projeto, não faz commit, não gasta dinheiro, não envia nada em nome do dono e não usa ferramenta paga.
   - Dado pessoal do dono (cartão, conta, endereço, e-mail) não entra em arquivo do repositório nem em pedido a serviço de fora.
   - Se a tarefa for do projeto (planta, texto de venda, vídeo, código) ou pedir pesquisa a fundo, devolva dizendo que é de outro agente: você não executa.
+- Quem faz o quê na equipe: `contexto/EQUIPE.md`; regras de convivência: `contexto/CONVIVENCIA.md`.

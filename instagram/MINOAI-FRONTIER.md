@@ -11,7 +11,7 @@
 >
 > Referência de edição favorita do dono: [`../video/REFERENCIAS.md`](../video/REFERENCIAS.md) (CONDOR XIII, levado para o reel de planta).
 >
-> Ela também é o **Diretor** do conteúdo (quem decide é o Maestro, a sessão do Claude): ver [`../instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
+> Ela também é o **Diretor** do conteúdo; quem decide é o Maestro, a sessão do Claude (seção "Maestro e Diretor", mais abaixo nesta página). Quando a edição faz parte da semana do maestro, use a mensagem de abertura de lá; a desta página é para editar um vídeo avulso.
 
 ### 1. Onde e como a MinoAI Frontier edita
 
@@ -148,15 +148,15 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 ### 1. O que o Maestro e o Diretor fazem
 
-| Frente | O que a MinoAI Frontier faz | Como |
+| Frente | Quem faz: **Maestro** (a sessão do Claude, que decide) ou **Diretor** (MinoAI, que dá a ideia e edita) | Como |
 |---|---|---|
-| **Painel** | Abre a semana: puxa os números das redes, atualiza o painel, propõe as tarefas e os ganchos da semana | Números das contas conectadas + `ferramentas/atualizar-painel.py` |
-| **Vídeo** | **Responsável pela edição de todos os vídeos.** Escolhe ganchos, revisa roteiros, analisa ganchos de referência, edita | Biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier |
-| **Instagram** | Prepara a publicação, acompanha os reels de teste, anota o registro de testes, decide a vencedora com você | Publicação nas contas conectadas (só depois do seu "sim") + números de cada vídeo |
-| **Imagens** | **Cria todas as imagens geradas** (fachada realista, ambientes, capas de reel, B-roll) usando o OpenArt, sempre a partir da planta ou do 3D nosso e **só com o "sim" do dono a cada uso**, com resumo e custo antes | Plugin OpenArt (skills `openart:*`), [fluxo](../animacoes-3d/OPENART-MINOAI.md) |
-| **Animações 3D** | Gera as imagens e animações das plantas (render no seu computador) ou pede a um chat na nuvem | `video/render-planta.cjs` |
-| **E-book** | Gera o PDF quando há plantas novas e confere as páginas | Gerador do e-book |
-| **Funil** | Passa ao parceiro as dúvidas e o lote mais pedido; traz de volta os números dele para o painel | Painel, seção 7 |
+| **Painel** | Maestro. Abre a semana: puxa os números das redes, atualiza o painel, propõe as tarefas e os ganchos da semana | Números das contas conectadas + `ferramentas/atualizar-painel.py` |
+| **Vídeo** | Diretor. **Responsável pela edição de todos os vídeos.** Escolhe ganchos, revisa roteiros, analisa ganchos de referência, edita | Biblioteca de ganchos virais, análise de gancho, método do Mino, edição no estilo MinoAI Frontier |
+| **Instagram** | Maestro, com a ideia do Diretor. Prepara a publicação, acompanha os reels de teste, anota o registro de testes; a vencedora quem decide é você | Publicação nas contas conectadas (só depois do seu "sim") + números de cada vídeo |
+| **Imagens** | Diretor, pelo OpenArt. **Cria todas as imagens geradas** (fachada realista, ambientes, capas de reel, B-roll) usando o OpenArt, sempre a partir da planta ou do 3D nosso e **só com o "sim" do dono a cada uso**, com resumo e custo antes | Plugin OpenArt (skills `openart:*`), [fluxo](../animacoes-3d/OPENART-MINOAI.md) |
+| **Animações 3D** | Maestro. Gera as imagens e animações das plantas (render no seu computador) ou pede a um chat na nuvem | `video/render-planta.cjs` |
+| **E-book** | Maestro. Gera o PDF quando há plantas novas e confere as páginas | Gerador do e-book |
+| **Funil** | Maestro. Passa ao parceiro as dúvidas e o lote mais pedido; traz de volta os números dele para o painel | Painel, seção 7 |
 
 **O que continua com você:** decisões (título, preço, versões), aprovar cada publicação, publicar os reels de teste no app do Instagram, gravar (com o apresentador) e criar contas.
 
@@ -166,12 +166,12 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 1. **Pasta de trabalho:** no Mac, `Filmes/X1-Plantas` (no Windows, `Vídeos/X1-Plantas`), com quatro subpastas: `projeto/`, `broll/`, `brutos/` e `editados/`. Ver [`instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md), seção 4.
 2. **App do Claude**, aba **Code**, pasta `Filmes/X1-Plantas` aberta e o conector **MinoAI Frontier** ligado.
-3. Colar a mensagem da seção 3. Na primeira vez, o maestro baixa este repositório para `projeto/`, monta o `broll/` e instala o que faltar. Você só aprova quando ele pedir.
+3. Colar a mensagem da seção 3. Na primeira vez, o Maestro baixa este repositório para `projeto/`, monta o `broll/` e instala o que faltar. Você só aprova quando ele pedir.
 4. Fazer os passos de [`instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md), seção 2: estilo de edição salvo com os 3 reels do Mino Lee e Instagram conectado.
 
-### 3. A mensagem de abertura do maestro
+### 3. A mensagem de abertura do Maestro
 
-Cole no começo de cada semana (ou sempre que abrir uma conversa nova com o maestro):
+Cole no começo de cada semana (ou sempre que abrir uma conversa nova com o Maestro):
 
 ```text
 Você é o Maestro do projeto X1-Plantas: decide e rege a equipe. A MinoAI Frontier, ligada aqui, é o Diretor: dá a ideia principal de todo conteúdo.
@@ -207,7 +207,7 @@ COMECE ASSIM
 
 ### 4. Rotina da semana
 
-| Quando | O maestro faz | Você faz |
+| Quando | O Maestro faz (com a ideia do Diretor no conteúdo) | Você faz |
 |---|---|---|
 | **Segunda** | Puxa os números das redes e do parceiro, atualiza o painel (seções 1 e 7), propõe tarefas e 3 ganchos da semana com a fonte | Aprova as tarefas e escolhe os ganchos |
 | **Terça** | Prepara os roteiros e o teleprompter dos vídeos escolhidos | Grava com o apresentador e põe em `brutos/` |
@@ -215,7 +215,7 @@ COMECE ASSIM
 | **Quinta** | Prepara cada publicação com legenda e horário | Diz "sim" a cada post; publica os reels de teste no app do Instagram |
 | **Sexta** | Lê os números de cada reel, preenche o [registro de testes](INSTAGRAM.md#6-registro-dos-testes), aponta a versão vencedora e o que mudar | Decide o que vai para todos e o gancho da semana seguinte |
 
-### 5. Primeira tarefa do maestro
+### 5. Primeira tarefa do Maestro
 
 Atualizar o projeto (`git pull --rebase` na `main`), ler o [quadro](../contexto/QUADRO.md) e o seu [contexto](../contexto/diretor.md) e seguir a seção 3. Todo o trabalho dos chats da nuvem já está na `main`, a única branch (as `frente-*` e a `planta-de-casas-anuncio` acabaram em 22/11/2026): não há nada para juntar.
 

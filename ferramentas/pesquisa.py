@@ -3,7 +3,7 @@
 Pedido do dono (22/11/2026): todos os agentes podem pesquisar na web, num lugar só, organizado.
 Regra de economia: antes de buscar na web, `buscar`; se já tem achado com fonte, use e não busque de novo.
 
-  python3 ferramentas/pesquisa.py buscar banheiro largura      # o que a equipe já achou
+  python3 ferramentas/pesquisa.py buscar banheiro largura      # o que a equipe já achou (caderno + apostilas e relatórios)
   python3 ferramentas/pesquisa.py nova --tema normas --quem arquiteto --pergunta "..." \
       --achado "..." --fonte https://... --certeza confirmado        # registra um achado
   python3 ferramentas/pesquisa.py conferir                     # formato (roda no checar.py)
@@ -76,10 +76,12 @@ def main():
             sys.exit("confirmado só com link do texto oficial lido; arquivo do projeto é 'secundaria'")
         if a.tema == "normas" and not a.tipo:
             sys.exit("no tema normas, diga --tipo (lei, norma-obrigatoria, norma-orientativa, informativa): norma orientativa nunca vira lei")
-        if any(PESSOAL.search(x) for x in (a.achado, a.pergunta, a.fonte)):
+        if any(PESSOAL.search(x) for x in (a.achado, a.pergunta)):  # no link, número longo é normal (DOU, id)
             sys.exit("parece ter e-mail ou telefone: o caderno vai para o git, tire o dado pessoal")
-        if "?" in a.fonte.split("#")[0] and "utm_" in a.fonte:
-            a.fonte = a.fonte.split("?")[0]
+        if "utm_" in a.fonte:  # tira só o rastreio, guarda o resto da consulta
+            base, _, q = a.fonte.partition("?")
+            q = "&".join(x for x in q.split("&") if not x.startswith("utm_"))
+            a.fonte = base + ("?" + q if q else "")
         if a.tipo:
             a.achado = f"[{a.tipo}] {a.achado}"
         arq = arquivo(a.tema)
@@ -87,12 +89,20 @@ def main():
             f.write(f"| {date.today()} | {limpo(a.quem)} | {limpo(a.pergunta)} | {limpo(a.achado)} | {limpo(a.fonte)} | {a.certeza} |\n")
         print(f"registrado em {arq.relative_to(PASTA.parent)}")
     elif a.cmd == "buscar":
-        termos = [t.lower() for t in a.termos]
+        import unicodedata
+        sem = lambda s: unicodedata.normalize("NFKD", s.lower()).encode("ascii", "ignore").decode()
+        termos = [sem(t) for t in a.termos]
         achou = 0
         for arq in sorted(PASTA.glob("*.md")):
             for l in arq.read_text(encoding="utf-8").splitlines():
-                if LINHA.match(l) and all(t in l.lower() for t in termos):
+                if LINHA.match(l) and all(t in sem(l) for t in termos):
                     print(f"{arq.stem}: {l}"); achou += 1
+        # o que já foi pesquisado antes do caderno existir (auditoria 3): apostilas e relatórios
+        for pasta in ("ebook/referencias", "reports"):
+            for arq in sorted((PASTA.parent / pasta).glob("*.md")):
+                for i, l in enumerate(arq.read_text(encoding="utf-8").splitlines(), 1):
+                    if l.strip() and all(t in sem(l) for t in termos) and achou < 40:
+                        print(f"{pasta}/{arq.name}:{i}: {l.strip()[:200]}"); achou += 1
         print(f"{achou} achado(s)." + ("" if achou else " Nada registrado: pode buscar na web e depois registre com `nova`."))
     else:
         erros = []

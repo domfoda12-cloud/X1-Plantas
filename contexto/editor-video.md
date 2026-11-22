@@ -6,7 +6,7 @@
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
-- **Toda instrução do dono sobre vídeo fica em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)")** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
+- **Toda instrução do dono sobre vídeo fica na tabela "Ordens gerais" da seção "tudo o que o dono pediu" de `video/VIDEO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)").
 - **OpenArt: só com o "sim" do dono a cada uso** (22/11: "eu NÃO proibi, apenas necessita permissão"), com resumo e custo antes. A C01 foi redesenhada: o material antigo dela não vale. Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - A frente de vídeo foi **aberta pelo dono em 21/11** (pediu o principal e a prévia do WhatsApp). A ordem geral continua e-book → animações → vídeo; o que ele pedir de vídeo, você faz.

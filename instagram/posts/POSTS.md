@@ -20,7 +20,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 - **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
 - **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
-- **Post novo sugerido pelo maestro (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
+- **Post novo sugerido pelo Diretor (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
 - **Imagens geradas (fachada realista, ambientes):** feitas pela MinoAI com o OpenArt ([`../../animacoes-3d/OPENART-MINOAI.md`](../../animacoes-3d/OPENART-MINOAI.md)).
 
 ## Resumo

@@ -35,7 +35,7 @@ Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/
 
 ## 2b. Que skill e ferramenta está ligada a cada agente
 
-Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. Todos usam o caderno de pesquisa (`ferramentas/pesquisa.py`), menos o `ajudante`.
+Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. Todos usam o caderno de pesquisa (`ferramentas/pesquisa.py`), menos o `ajudante` (é pessoal); o Revisor lê o caderno e devolve o achado novo para o Maestro registrar (não roda comando).
 
 | Quem (modelo) | Skills e ferramentas | Só com o "sim" do dono |
 |---|---|---|

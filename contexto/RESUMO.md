@@ -21,7 +21,13 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 18 documentos
+## Os 19 documentos
+
+### [Regras de convivência da equipe](CONVIVENCIA.md)
+
+Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
+
+Tamanho: 396 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
@@ -125,7 +131,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 523 palavras.
+Tamanho: 524 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 

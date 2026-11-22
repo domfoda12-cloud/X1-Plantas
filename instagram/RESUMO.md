@@ -33,7 +33,7 @@ Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes
 
 Seções: Editor: MinoAI Frontier; Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier; Referências de vídeo: Mino Lee (@minolee.mp4).
 
-Tamanho: 4736 palavras.
+Tamanho: 4776 palavras.
 
 ### [Os 9 primeiros posts, prontos para o editor](posts/POSTS.md)
 

@@ -5,6 +5,7 @@ Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o úl
      python3 ferramentas/pedido.py recado <ficha>          acrescenta o último prompt da entrada como recado numa ficha aberta
      python3 ferramentas/pedido.py listar [--fechadas]     mostra as fichas abertas (ou as fechadas)
      python3 ferramentas/pedido.py fechar <ficha> "o que virou"   fecha a ficha e escreve a linha no CONTEXTO-HISTORICO.md
+     python3 ferramentas/pedido.py quadro                  tira do contexto/QUADRO.md o aviso mais antigo se passar de 5 ou do tamanho
      python3 ferramentas/pedido.py indice                  regenera pedidos/FILA.md
      python3 ferramentas/pedido.py conferir                falha se alguma ficha estiver sem campo obrigatório
 
@@ -86,6 +87,7 @@ def quadro():
         avisos = [m.start() for m in re.finditer(r"^## \d", t, re.M)]
         if len(avisos) <= 1 or (len(avisos) <= 5 and len(t) <= 3500):
             break
+        print("saiu do quadro (já está no histórico):", t[avisos[-1]:].split("\n", 1)[0])
         t = t[:avisos[-1]].rstrip() + "\n"
     q.write_text(t, encoding="utf-8")
 
@@ -105,7 +107,7 @@ def fechar(nome, virou):
         h.write(f"| {hoje:%d/%m/%Y} | \"{prompt.replace('|', '/')}\" | {virou.replace('|', '/')} Ficha: `{arq.relative_to(RAIZ)}` |\n")
     indice()
     quadro()
-    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md (depois rode `pedido.py quadro`, que tira o mais antigo se passar do limite).")
+    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md (depois rode `pedido.py quadro`, que tira o mais antigo se passar do limite) e marque \"Feito\" em pedidos/PLANO.md.")
     auditadas = len(re.findall(r"^\| \d", (PEDIDOS / "AUDITORIAS.md").read_text(encoding="utf-8"), re.M)) if (PEDIDOS / "AUDITORIAS.md").exists() else 0
     fechadas = sum(1 for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada"))
     if fechadas >= 3 * (auditadas + 1):

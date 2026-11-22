@@ -27,14 +27,14 @@ Tamanho: 1108 palavras.
 
 Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples. Fila de pedidos: `FILA.md`.
 
-Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); Plano vetado antes de fazer (dono, 22/11/2026); Erro de sintonia entre agentes (dono, 22/11/2026); Consertar de vez (dono, 22/11/2026: "não só conserte, remende"); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
+Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); O plano de tudo; Plano vetado antes de fazer (dono, 22/11/2026); Erro de sintonia entre agentes (dono, 22/11/2026); Consertar de vez (dono, 22/11/2026: "não só conserte, remende"); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
 
-Tamanho: 2299 palavras.
+Tamanho: 2330 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
 Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém: o Maestro (a conversa principal). Toda tarefa daqui vira ou já é ficha em `pedidos/`; ao terminar uma, marque feito e atualize o "Agora" do…
 
-Seções: O objetivo da equipe; Fase 1 · Organizar a base (ficha `1529-organizar-os-arquivos`); Fase 2 · O plano mestre da equipe (ficha `1944-plano-mestre`); Fase 3 · E-book: as casas refeitas (frente atual); Fase 4 · Animações e imagens (abre só quando a fase 3 fechar); Fase 5 · Vídeo; Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
+Seções: O objetivo da equipe; Fase 1 · Organizar a base (ficha `1529-organizar-os-arquivos`); Fase 2 · O plano mestre da equipe (ficha `1944-plano-mestre`); Fase 3 · E-book: as casas refeitas (frente atual); Fase 4 · Animações e imagens (abre só quando a fase 3 fechar); Fase 5 · Vídeo; Fase 6 · Vender e medir (o objetivo é o Pix); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 1653 palavras.
+Tamanho: 1916 palavras.
