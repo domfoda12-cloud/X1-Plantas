@@ -43,7 +43,7 @@ Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md
 
 - Menos agentes, o modelo mais barato que dá a qualidade; resumo, não documento; ficha, não conversa.
 - O `CLAUDE.md` já chega a todos. `ULTIMO.md` só se a tarefa continua. Antes da web, `pesquisa.py buscar`; antes de perguntar ao dono, `conversas.py buscar`.
-- Faltou decisão do dono? Sugira um padrão e siga com o que não gasta (`pedidos/LEIA-ME.md`).
+- Faltou decisão do dono? Pesquise referências e leve opções com recomendação; **nada se usa sem o "sim" dele** (`pedidos/LEIA-ME.md`).
 
 ## Tempo livre
 

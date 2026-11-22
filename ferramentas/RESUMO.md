@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 16 programas
+## Os 17 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -50,6 +50,12 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 Confere se o código do projeto tem erro, de uma vez só.
 
 Funções: `rodar`.
+
+### [`ferramentas/conversas.py`](conversas.py)
+
+Escrito do zero; não usa nem contém código do cass (vetado pela licença, ficha 2151).
+
+Funções: `sem_acento`, `mascarar`, `pasta_do_projeto`, `falas`, `buscar`, `testar`.
 
 ### [`ferramentas/guardar-pedido.py`](guardar-pedido.py)
 

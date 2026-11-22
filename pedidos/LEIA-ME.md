@@ -83,7 +83,7 @@ Antes de perguntar ao dono algo que ele pode já ter dito, busque: `python3 ferr
 
 ## Faltou informação do dono? Sugira, não espere (dono, 22/11/2026)
 
-"Quando faltar uma informação minha, não apenas espere minha resposta, procure por sugestões." Quando uma decisão dele trava o trabalho: (1) busque o que ele já disse (acima); (2) procure sugestões (caderno, referência, o time, a web); (3) escolha a melhor como **padrão** e diga por quê; (4) siga com o que não gasta nem publica, usando o padrão; (5) pergunte no fim, com as opções e o padrão já em andamento. Gasto, publicação e preço continuam esperando o "sim".
+"Quando faltar uma informação minha, não apenas espere minha resposta, procure por sugestões." E a correção dele, logo depois: "Mas não use a sugestão sem minha permissão; não apenas me pergunte, procure referências." Quando uma decisão dele trava o trabalho: (1) busque o que ele já disse (acima); (2) **pesquise referências de verdade** (caderno, web, reportagem, memes, o time), com fonte; (3) leve a ele as opções, com a sua recomendação e o porquê; (4) **não use nenhuma sugestão sem o "sim" dele**; (5) siga só com o trabalho que não depende daquela decisão.
 
 ## Consertar de vez (dono, 22/11/2026: "não só conserte, remende")
 
