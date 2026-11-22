@@ -59,6 +59,7 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 3. **Rodada de veto 2:** os mesmos releem o plano corrigido. Repete até não haver NÃO (no máximo 3 rodadas; o que sobrar vai ao dono).
 4. **Fable** (`supervisor`) veta uma vez, por último.
 5. Só então se executa. Gasto e publicação continuam esperando o "sim" do dono.
+6. **Esquema antes de gerar** (dono, 22/11/2026): em imagem e vídeo, o plano inclui o quadro a quadro com **todas as imagens renderizadas antes** (a planta, a casa saindo da planta, os quadros-chave, do nosso motor 3D ou de rascunho), como num storyboard; o dono aprova o esquema antes de qualquer geração paga.
 
 **A régua do veto** (dono, 22/11/2026: "tenha certeza que os agentes estejam dando inputs relevantes e repreenda-os quando não"). Toda resposta de veto é medida em 5 pontos:
 
