@@ -1,9 +1,8 @@
-**Tarefa:** fazer o vídeo principal (reel e anúncio) e a prévia do e-book para o parceiro mandar no WhatsApp.
-**Feito:** `video/montar.py` (monta vídeo vertical de um roteiro em JSON: cenas, texto, aviso legal, compressão).
-`video/roteiros/principal.json` e `previa-whatsapp.json` (texto e ordem das cenas).
-`video/broll/clipes/` (8 clipes do OpenArt, Kling 3.0, e a animação 3D da C01 do motor novo) e `video/broll/paginas/` (4 páginas do e-book).
-Saídas: `video/saida/principal/x1-plantas-principal.mp4` (29 s, 14,2 MB) e `video/saida/previa-whatsapp/x1-plantas-previa.mp4` (19 s, 1,2 MB).
-**Como conferir:** `python3 video/montar.py video/roteiros/principal.json` monta de novo; assistir aos dois arquivos.
-**Não feito / ressalva:** sem música e sem locução (a faixa licenciada entra na edição da MinoAI Frontier, no Mac do dono). O Revisor de risco aprovou os roteiros; os vídeos prontos foram conferidos por quem montou, não por ele. Os 5 anúncios antigos (`saida/v1` a `v5`) continuam com o 3D velho.
-**Decisão do dono pendente:** aprovar os dois vídeos; palavra da chamada (PLANTA ou LOTE); publicar.
-**Próximo passo:** ouvir o dono sobre os vídeos. OpenArt tem 115 créditos: não dá para outro clipe.
+**Tarefa:** fazer o Arquiteto estudar arranjo de planta em fontes que arquitetos usam (o dono reprovou o último layout).
+**Feito:** `ebook/referencias/arquiteto-sites-de-profissionais.md` (apostila 2: diagnóstico das 24 plantas, o que ensinam a SEHAB-SP, a casa de referência da CAR-BA e a pesquisa da UFRGS, método de 10 passos).
+`.claude/agents/arquiteto.md` e `contexto/arquiteto.md` (arranjo antes da medida; ler a apostila 2 e olhar a prévia antes de opinar).
+`CONTEXTO.md` e `CONTEXTO-HISTORICO.md` (pedido registrado).
+**Como conferir:** abrir a apostila 2; comparar `ebook/plantas/previas/E01.png` e `C01.png` com a seção 1.
+**Não feito / ressalva:** nenhuma planta mudou. Não lidos: manual da CDHU (site fora do ar), ArchDaily, concursosdeprojeto.org, Vitruvius. O validador ainda não aponta arranjo ruim.
+**Decisão do dono pendente:** quais casas refazer e quando (sugestão: série E, compactas, F02). Refazer reabre o e-book: dados, 3D, PDF, calculadora e posts.
+**Próximo passo:** com o "sim" do dono, redesenhar a E01 pelo método da seção 6 e mostrar a prévia antes de seguir para as outras.
