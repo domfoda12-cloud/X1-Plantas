@@ -16,23 +16,15 @@
 - O relatório inteiro foi harmonizado com a atualização de 19/11/2026 em 22/11/2026; a nota exigencias_legais, anterior, foi apagada (relatório).
 <!-- /essencial -->
 
-## Os 4 documentos
+## Os 3 documentos
 
 ### [Planta pronta reduz custo, mas não dispensa profissional](Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)
 
-A planta pronta barateia o projeto, mas não substitui o responsável técnico da obra. A lógica legal encontrada é que alguém precisa assinar a responsabilidade técnica: engenheiro emite ART no Crea, arquiteto emite RRT no CAU, e a Lei 6.496/1977 e a Lei 12.378/2010 (arts. 45 a 50) são as bases…
+A planta pronta barateia o projeto, mas não substitui o responsável técnico da obra. Alguém precisa assinar a responsabilidade técnica: engenheiro emite ART no Crea, arquiteto emite RRT no CAU. As leis foram lidas no texto do Planalto em 19/11/2026 (Lei 6.496/1977, Lei 12.378/2010, arts. 45 a 50,…
 
-Seções: Atualização de 19/11/2026: o que passou a ser verificado em fonte primária; A lei aponta para ART ou RRT, mas nenhum texto oficial foi lido; Prefeitura e Caixa pedem responsável técnico, mas as regras são locais e vieram de blogs; O arquiteto faz o diagnóstico do terreno e cobra, em faixas comerciais, de R$ 20 a R$ 180 por m²; Planta pronta custa menos, mas o kit típico já embute um responsável técnico; O público constrói sem profissional por custo percebido, e os números conflitam; Quando a planta pronta basta e quando não basta: critérios são inferências; Conclusão; O que o e-book pode dizer com segurança; O que confirmar com um arquiteto ou advogado antes de publicar.
+Seções: Atualização de 19/11/2026: o que passou a ser verificado em fonte primária; A lei exige ART ou RRT; os detalhes estão nas resoluções, que não foram lidas; Prefeitura e Caixa pedem responsável técnico, mas as regras são locais e vieram de blogs; O arquiteto faz o diagnóstico do terreno; o preço é de mercado e negociado; Planta pronta custa menos, mas o kit típico já embute um responsável técnico; O público constrói sem profissional por custo percebido, e os números conflitam; Quando a planta pronta basta e quando não basta: critérios são inferências; Conclusão; O que o e-book pode dizer com segurança; O que confirmar com um arquiteto ou advogado antes de publicar; Em aberto: o que foi citado e não foi lido.
 
-Tamanho: 3710 palavras.
-
-### [Exigências legais para construir casa residencial unifamiliar no Brasil (situação 2026)](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/exigencias_legais.md)
-
-Aviso de limitação da pesquisa: nesta sessão, os sites oficiais (planalto.gov.br, caixa.gov.br, normasbrasil.com.br, legjur.com, orcafascio.com) não puderam ser acessados (falha de DNS: fora da lista de domínios permitidos). Por isso, nenhum texto de lei foi lido na íntegra. Os achados abaixo vêm…
-
-Seções: 1. Quais documentos a prefeitura exige para aprovar um projeto residencial unifamiliar e quem pode assinar?; 2. Quando a ART ou RRT é obrigatória, e quem emite cada uma?; 3. Existe dispensa de responsável técnico para casas pequenas ou autoconstrução? Em quais municípios e com quais limites de área?; 4. O que a lei diz sobre planta pronta comprada de terceiros? Quem responde por erro de projeto?; 5. Como a Caixa exige projeto e responsável técnico para financiar construção em terreno próprio?; Resumo de fontes e status; Próximos passos sugeridos (para quem for verificar).
-
-Tamanho: 1866 palavras.
+Tamanho: 3645 palavras.
 
 ### [Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/publico_e_criterios.md)
 

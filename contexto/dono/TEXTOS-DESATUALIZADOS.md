@@ -1,46 +1,29 @@
-# Textos desatualizados e contradições entre documentos
+# O que ainda não bate: pendências depois da limpeza de 22/11/2026
 
-> Levantamento de 22/11/2026: quatro agentes leram todos os documentos por inteiro para escrever os resumos e anotaram onde um documento contradiz outro. **Enquanto um item estiver aqui, vale a regra mais recente, citada no item.** Quem corrigir um documento apaga a linha. Itens marcados **(dono)** dependem de decisão dele.
+> Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 contradições. Três agentes no Opus resolveram as que dependiam só de texto (a regra mais recente do dono vence; texto de venda só promete o que existe; documento superado foi apagado). **Aqui ficou só o que depende do dono, do Revisor de risco ou de refazer imagem e vídeo.** Quem resolver um item apaga a linha.
 
-## Vai direto ao cliente (corrigir primeiro)
+## Decisões do dono (os textos estão com o campo entre colchetes, esperando)
 
-- **Promessa sem lastro:** `ebook/vendas/faq-compradores.md` e o dia 3 da `sequencia-whatsapp.md` prometem "duas perspectivas 3D", "animação" e "checklist de obra"; o dia 1 manda "[animação de 12 s]". O 3D novo ainda não existe para todas. Revisor de risco antes de o parceiro usar.
-- **Garantia de 7 dias (dono):** FAQ, objeções e sequência afirmam como fato; só aparece como "oferta recomendada" na estratégia.
-- **Lançar com 12 ou 24 (dono):** a `sequencia-whatsapp.md` manda oferecer "só Lançamento 1"; o PDF tem 24; `PAINEL.md` seção 8 dá "12" como decidido; `CONTEXTO.md` deixa em aberto.
-- **Preço:** `ebook/vendas/atributos-que-vendem.md` usa R$ 67 como dado; é recomendação, não decisão (`ESTRATEGIA.md`).
-- **E03:** "cabe no lote mais estreito que a lei permite" (`atributos-que-vendem.md`); o piso de 5 m vale para loteamento novo, com exceções (`persona-e-mercado.md`).
+- **Preço, garantia de 7 dias, bônus, parcelamento, promessa de atualização e título** do e-book: `ebook/vendas/faq-compradores.md`, `sequencia-whatsapp.md`, `respostas-objecoes.md`, `atributos-que-vendem.md`, `ebook/EBOOK.md` seção 5, `video/anuncios/anuncio-facebook.md` (ângulo 6).
+- **Lançar com 12 ou 24 plantas:** o PDF tem 24; `ebook/catalogo.md` e `video/roteiro-lancamento.md` deixam o número em aberto.
+- **Selo "Imagem ilustrativa":** aplicamos a leitura "saiu dos vídeos, continua em imagem parada (post e e-book)". Falta o dono confirmar.
+- **Vídeo:** o que é "pagar por mais" no vídeo-convite; formato 4:5 ou 9:16 do anúncio com locução; qual planta a chamada promete (`video/VIDEO.md`).
+- **PDF de 23 MB:** precisa ficar mais leve para mandar no WhatsApp?
 
-## C01 redesenhada em 22/11 (50 m², frente norte, sem hall, banheiro com prumada própria)
+## Revisor de risco (texto novo que ainda não passou por ele)
 
-- Ainda dizem **55 m²**: `ebook/catalogo.md`, `ebook/PLANO-EBOOK.md`, `ebook/referencias/linguagem-visual-e-animacao.md`, `instagram/posts/POSTS.md` (posts 1, 2, 3, 6, 8, 9 e reserva; também "10% de circulação" e "quarto de 3,25 x 3,90 m"), `video/anuncios/anuncio-facebook.md`, `animacoes-3d/ANIMACOES-3D.md`, `instagram/INSTAGRAM.md`, `instagram/referencias-mino-lee.md`.
-- **Arranjo antigo** (hall, 10% de circulação, banheiro encostado no serviço): `ebook/fichas/C01.md` (parece obsoleta), `ebook/vendas/material-gratuito.md` seção 2, `ebook/vendas/atributos-que-vendem.md`, `ebook/referencias/regras-do-arquiteto.md` seção 4.
-- `ebook/plantas/PLANTAS.md` (gerado) diz na C01 "o banheiro da suíte", mas ela não tem suíte: frase do gerador na casa errada.
-- Contagens de banheiro estreito (22 de 24; 19 abaixo de 1,10 m) são de antes do redesenho.
-- A foto de fachada da C01 no e-book e os clipes antigos mostram a casa velha.
+- `ebook/vendas/material-gratuito.md`: ficha nova da C01.
+- `ebook/vendas/sequencia-whatsapp.md`: dias 1 e 3; `ebook/vendas/faq-compradores.md`: "O que vem no e-book?".
+- `video/anuncios/anuncio-facebook.md`: ângulo 3, reescrito com a C03 (41 m², "o lugar do 2º quarto desenhado").
+- `reports/`: a frase "a separação de quem emite o quê é consistente em todas as fontes".
 
-## Vídeo: regras de 22/11 que os documentos antigos contradizem
+## Imagem e vídeo que ainda mostram a casa velha (texto já corrigido)
 
-- **Destino é WhatsApp e Facebook Ads** (`video/PEDIDO-anuncio-locucao.md`). Falam em reel, Instagram ou TikTok: `video/VIDEO.md`, `video/principal-e07/kit-minoai/LEIA-ME.md`, `video/anuncios/*`, `instagram/INSTAGRAM.md` (cabeçalho), `instagram/calendario.md` (25/11).
-- **Sem o selo "Imagem ilustrativa" (dono):** ainda mandam usar `video/VIDEO.md`, `video/plano-principal-e07.md`, o `LEIA-ME.md` do pacote, `video/REFERENCIA-CONDOR.md`, `ECOSSISTEMA.md` seção 5 e o próprio `video/PEDIDOS-DO-DONO.md` ("Como usar hoje"). Falta o dono dizer se a retirada vale para todo vídeo e para imagem parada.
-- **OpenArt só com o "sim" a cada uso:** `animacoes-3d/OPENART-MINOAI.md` diz "créditos liberados sem limite" e "plano Starter, 4.000 créditos".
-- **E07:** `video/VIDEO.md` seção 9 diz 88 m² e lote 8 x 30; os planos dizem 72 m² e 8 x 25. A planta tem os quartos em fila, que o dono chamou de erro; está na fila do redesenho.
-- `video/plano-principal-e07.md` ainda abre no blueprint e cita "morango do amor" (vetado).
-- **Música:** `video/PEDIDOS-DO-DONO.md` (20/11) proíbe música composta; `video/CLAUDE.md` (21/11) aceita a trilha nossa de 128 BPM.
+- **C01 antiga:** a foto de fachada no PDF (`ebook/visual/openart/fachadas/C01.jpg`), o mockup `ebook/visual/mockups/casa-c01-celulares.png`, o clipe `video/broll/clipes/c01-3d.mp4`, a pasta `animacoes-3d/plantas/casa-compacta/` e as imagens dos posts em `instagram/posts/imagens/` (os textos dentro de `instagram/posts/gerar-imagens.cjs` também).
+- **Vídeos a remontar antes de usar:** `previa-whatsapp` e `principal` usam o clipe da C01 antiga; os quatro roteiros em `video/roteiros/*.json` ainda põem "Ilustração do modelo 3D" ou "Imagem ilustrativa" na tela; `saida/v1` a `v5` são da C01 velha.
+- **E07:** está na fila do redesenho (3 quartos em fila); os vídeos `principal-condor` e `principal-e07` são rascunho.
 
-## Estado do projeto
+## Ainda não conferido
 
-- **3D:** `ebook/EBOOK.md` e `ebook/catalogo.md` dizem que só a C01 tem 3D; `ebook/CLAUDE.md` e `livros-de-plantas-com-3d.md` dizem que as 24 têm imagem 3D; `animacoes-3d/ANIMACOES-3D.md` diz que o motor é de uma planta só.
-- **`PAINEL.md`:** "0 de 12 plantas prontas" e "desenhar as 11 que faltam", com 24 já desenhadas; seções 12 e 13 não citam `CLAUDE.md`, `contexto/` nem o `checar.py`; marca "Testar o anúncio" como fase atual.
-- **`ebook/EBOOK.md`:** planta grátis "só a C01" (são 6); estrutura de 9 partes que não bate com as 61 páginas.
-- **`ebook/catalogo.md`:** áreas diferentes das fichas (E05, F05, S03) e faixas do resumo que não batem com as linhas; promete "ventilação cruzada" na E04 e na S05, que o validador não mede.
-- **`MAESTRO.md`:** seção 5 fala em juntar as branches `frente-*`; a abertura não manda ler `CLAUDE.md` nem o quadro.
-- **Imagens 2D desatualizadas:** `contexto/designer.md` não lista a F05; `contexto/arquiteto.md` lista.
-- **Quando o Maestro opina:** "em toda tarefa" (`CONSELHO.md`) ou "em toda entrega ao público" (`contexto/maestro.md`).
-- **Público:** 25 a 50 anos (`CLAUDE.md`) ou 25 a 45 (`ESTRATEGIA.md`).
-
-## Jurídico
-
-- O relatório em `reports/` abre com "nenhum texto de lei foi lido" e "70 m² sem confirmação"; a **atualização de 19/11/2026**, logo abaixo, diz que as leis foram lidas e que 70 m² não é dispensa. Vale a atualização. A nota `exigencias_legais.md` é toda anterior.
-- Faixas de preço de projeto diferem entre o relatório e a nota `servicos_e_precos.md`; âncora de planta avulsa: R$ 98 a R$ 2.000 (`concorrentes.md`) ou R$ 98 a R$ 899 (`projetos-similares.md`).
-- Docstrings internas dizem "como um arquiteto organiza a casa" (`ebook/plantas/projetos.py`, `ferramentas/plantas.py`); o relatório diz que as plantas não são de arquiteto. Não pode vazar para texto público.
-- Dado Datafolha de 85,4%: é de 2015 e só dos economicamente ativos que já construíram ou reformaram; sem percentual em texto público.
+- `ebook/catalogo.md`: a seção "Ache pelo jeito da família" e os destaques das séries C, F e S não foram conferidos casa por casa contra os dados.
+- Contagens de banheiro: 21 de 24 casas com algum banheiro abaixo de 1,50 m e 18 abaixo de 1,10 m (recalculadas em 22/11 pelos dados; mudam quando mais casas forem redesenhadas).

@@ -125,7 +125,7 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 | Quando | O quê | Quem |
 |---|---|---|
-| Segunda | Escolher os vídeos da semana no [plano do perfil](plano-perfil.md) e no [painel](../PAINEL.md), seção 6 | Você |
+| Segunda | Escolher os vídeos da semana no [plano do perfil](plano-perfil.md) e em "Em aberto" do [`CONTEXTO.md`](../CONTEXTO.md) | Você |
 | Terça | Gravar e colocar as gravações em **brutos/** | Apresentador |
 | Terça a quinta | Editar cada vídeo com a mensagem da seção 3; aprovar o plano de edição quando ela mostrar | MinoAI Frontier e você |
 | Quinta | Publicar as versões como reels de teste | Você |

@@ -21,11 +21,11 @@
 
 ### [Instagram: onde o editor trabalha](INSTAGRAM.md)
 
-Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o espaço do editor. Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para todo vídeo do perfil, inclusive o de anúncio. O editor é a MinoAI…
+Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o espaço do editor. Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para os vídeos do perfil. O anúncio com locução não vai para o Instagram:…
 
 Seções: Nesta pasta; 1. Rotina do editor; 2. Formatos do perfil; 3. Regras de retenção: reel de Robert McKeaveney; 4. Estilo de edição: Mino Lee (@minolee.mp4); 5. Plano do perfil; 6. Registro dos testes.
 
-Tamanho: 1665 palavras.
+Tamanho: 1726 palavras.
 
 ### [Editor: MinoAI Frontier](MINOAI-FRONTIER.md)
 
@@ -33,31 +33,31 @@ Parte da pasta Instagram: `INSTAGRAM.md`. Painel: `../PAINEL.md`. O editor do pr
 
 Seções: 1. Onde e como a MinoAI Frontier edita; 2. Configuração (uma vez só); 3. A mensagem de abertura; 4. A pasta `broll/` no seu computador; 5. Como cada tipo de vídeo deve ficar; 6. Ganchos de referência da biblioteca da MinoAI Frontier; 7. Do método do Mino (biblioteca de aulas da MinoAI Frontier); 8. Rotina semanal com a MinoAI Frontier.
 
-Tamanho: 1712 palavras.
+Tamanho: 1665 palavras.
 
 ### [Calendário: as 2 primeiras semanas do perfil](calendario.md)
 
-Parte da pasta Instagram. Guia da frente: `INSTAGRAM.md`. Posts prontos: `posts/POSTS.md`. Painel geral: `../PAINEL.md`. As datas partem de segunda, 23/11/2026 como o dia em que o perfil começa. Se a conta ou a gravação atrasarem, empurre o calendário inteiro: a ordem importa mais que a data.
+Parte da pasta Instagram. Guia da frente: `INSTAGRAM.md`. Posts prontos: `posts/POSTS.md`. Painel geral: `../PAINEL.md`. Mudou em 22/11/2026: os 5 reels de teste do anúncio (v1 a v5, "R$ 1.000 do arquiteto") saíram do calendário: usam o 3D velho da C01 e o apresentador não gravou. O anúncio com…
 
-Seções: Antes do dia 1 (até domingo, 22/11); Semana 1 (23 a 29/11): abrir o perfil e testar o anúncio; Semana 2 (30/11 a 06/12): ritmo normal; Horários; Se algo der errado.
+Seções: Antes do dia 1 (até domingo, 22/11); Semana 1 (23 a 29/11): abrir o perfil; Semana 2 (30/11 a 06/12): ritmo normal; Horários; Se algo der errado.
 
-Tamanho: 931 palavras.
+Tamanho: 825 palavras.
 
 ### [Plano de conteúdo: perfil de arquitetura no Instagram](plano-perfil.md)
 
-Rascunho para você criar a conta pessoalmente. Trechos entre [colchetes] precisam de dados seus.
+Rascunho para você criar a conta pessoalmente. Trechos entre [colchetes] precisam de dados seus. Revisto em 22/11/2026. Números das casas: sempre os de `../ebook/plantas/PLANTAS.md` (a C01 Casa Compacta tem 50 m² desde 22/11). Os posts prontos estão em `posts/POSTS.md`. O anúncio com locução não é…
 
 Seções: 1. Identidade; 2. Pilares de conteúdo; 3. Primeiros 9 posts; 4. Regras de legenda; 5. Ritmo; 6. Estratégias tiradas do reel de referência; 7. Antes de publicar.
 
-Tamanho: 972 palavras.
+Tamanho: 1019 palavras.
 
 ### [Os 9 primeiros posts, prontos para o editor](posts/POSTS.md)
 
 Parte da pasta Instagram. Guia da frente: `../INSTAGRAM.md`. Plano do perfil: `../plano-perfil.md`. Calendário: `../calendario.md`. Para cada post: legenda final (copiar e colar), texto de cada tela, imagens e, nos reels, o roteiro. As imagens dos carrosséis já estão geradas em `imagens/`. Onde…
 
-Seções: Ajustes depois da estratégia (20/11/2026); Resumo; Como gerar as imagens de novo; Regras que valem para todas as legendas; Post 1 · Reel · Passeio 3D da Casa Compacta; Post 2 · Carrossel · Três plantas lado a lado; Post 3 · Carrossel · Como ler uma planta baixa; Post 4 · Reel · Passeio 3D da Casa Estreita; Post 5 · Carrossel · Checklist antes de contratar o pedreiro; Post 6 · Reel · Bastidor: a planta virando 3D; Post 7 · Imagem · Casa Família; Post 8 · Carrossel · 3 erros comuns na planta; Post 9 · Reel · O material gratuito; Reserva · Carrossel · Casa Compacta completa.
+Seções: C01 redesenhada em 22/11/2026: o que vale agora; Ajustes depois da estratégia (20/11/2026); Resumo; Como gerar as imagens de novo; Regras que valem para todas as legendas; Post 1 · Reel · Passeio 3D da Casa Compacta; Post 2 · Carrossel · Três plantas lado a lado; Post 3 · Carrossel · Como ler uma planta baixa; Post 4 · Reel · Passeio 3D da Casa Estreita; Post 5 · Carrossel · Checklist antes de contratar o pedreiro; Post 6 · Reel · Bastidor: a planta virando 3D; Post 7 · Imagem · Casa Família; Post 8 · Carrossel · 3 erros comuns na planta; Post 9 · Reel · O material gratuito; ….
 
-Tamanho: 3734 palavras.
+Tamanho: 3945 palavras.
 
 ### [Referências de vídeo: Mino Lee (@minolee.mp4)](referencias-mino-lee.md)
 
@@ -65,4 +65,4 @@ Parte da pasta Instagram. Guia da frente: `INSTAGRAM.md`. Painel geral: `../PAIN
 
 Seções: 1. Regras que valem para os três; 2. Reel 1: o gancho "É possível…?"; 3. Reel 2: lista com prova e valor crescente; 4. Reel 3: bastidor de um desafio com prazo; 5. O que já está no nosso vídeo e o que falta; 6. Lista de conferência para cada vídeo novo.
 
-Tamanho: 1843 palavras.
+Tamanho: 1851 palavras.

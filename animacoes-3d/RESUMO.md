@@ -23,17 +23,17 @@
 
 Banco de referências de planta que ganha vida, com o que adotar no motor: `REFERENCIAS-BLUEPRINT.md`.
 
-Seções: Nesta pasta; 1. O que cada planta recebe; 2. Os três estágios da animação; 3. Regras de estilo; 4. Referências; 5. Como o motor funciona; 6. O que falta para gerar dezenas de plantas; 7. Cuidados.
+Seções: Nesta pasta; 1. O que cada planta recebe; 2. Os três estágios da animação; 3. Regras de estilo; 4. Referências; 5. Como o motor funciona; 6. O que falta; 7. Cuidados.
 
-Tamanho: 1032 palavras.
+Tamanho: 1122 palavras.
 
 ### [OpenArt + MinoAI Frontier: imagens e animações a partir das nossas plantas](OPENART-MINOAI.md)
 
-Exemplo do Conselho em ação. Guia da frente: `ANIMACOES-3D.md`. Editor: MinoAI Frontier.
+Regra que vale (dono, 22/11/2026): o OpenArt é permitido, mas cada uso pede o "sim" do dono, com o resumo da produção e o custo antes (`../video/PEDIDOS-DO-DONO.md`). A liberação "sem limite" de 20/11 não vale mais. Conta: plano Pro, 21.137 créditos (medido em 22/11/2026).
 
 Seções: A mesa (conselho completo, 20/11/2026); Situação das ferramentas; O fluxo; Prompts para o OpenArt (imagem → imagem); Regras; Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo"); Como tirar o máximo de cada crédito (preços medidos na conta em 20/11/2026).
 
-Tamanho: 2348 palavras.
+Tamanho: 2465 palavras.
 
 ### [Banco de referências: planta que ganha vida em 3D](REFERENCIAS-BLUEPRINT.md)
 

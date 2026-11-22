@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 14 programas
+## Os 15 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -31,13 +31,11 @@ Funções: `m`, `m1`, `svg_planta`, `svg_fachada`, `svg_lote`, `icone`, `svg_fit
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 
-Textos e modelos de cada página do e-book. Cada função devolve uma lista de páginas em HTML.
-
-Funções: `ph`, `md`, `pagina`, `pg`, `numero_quartos`, `capa`, `capa_interna`, `como_usar`, `como_ler`, `sete_erros`, `indice`, `pagina_dupla`, `enchimento`, `terreno`, `proximos_passos`, `bonus`.
+Textos fixos do e-book que o gerador (livro.py) usa: o aviso completo, os 7 erros, o glossário e a legenda de leitura.
 
 ### [`ebook/plantas/projetos.py`](../ebook/plantas/projetos.py)
 
-As 24 plantas do 1º e do 2º lançamento, desenhadas como um arquiteto organiza a casa.
+As 24 plantas do 1º e do 2º lançamento, desenhadas pelas regras de projeto do X1-Plantas (não são projeto de arquiteto).
 
 Funções: `todas`.
 
@@ -75,6 +73,12 @@ Mockups do e-book no celular e B-roll do e-book folheado, em alta resolução.
 
 Funções: `pagina`, `celular`, `fundo`, `colar`, `mockups`, `broll`.
 
+### [`ferramentas/pedido.py`](pedido.py)
+
+Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
+
+Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `fechar`, `indice`, `conferir`.
+
 ### [`ferramentas/planta3d.py`](planta3d.py)
 
 Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
@@ -83,7 +87,7 @@ Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`
 
 ### [`ferramentas/plantas.py`](plantas.py)
 
-Biblioteca e validador de plantas: o ponto de vista do arquiteto, em código.
+Biblioteca e validador de plantas: as regras de projeto do X1-Plantas, em código.
 
 Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`, `melhor_orientacao`.
 

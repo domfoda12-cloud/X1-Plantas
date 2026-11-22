@@ -19,8 +19,8 @@
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
-Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples.
+Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples. Fila de pedidos: `FILA.md`.
 
-Seções: O caminho de um prompt; Quem faz o quê; Modelo da ficha; Limites honestos.
+Seções: Quem manda no sistema; O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
 
-Tamanho: 465 palavras.
+Tamanho: 1281 palavras.

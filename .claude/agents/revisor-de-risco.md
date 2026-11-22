@@ -5,7 +5,7 @@ tools: Read, Grep, Glob
 model: opus
 ---
 
-- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/revisor-de-risco.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
+- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/revisor-de-risco.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/revisor-de-risco.md`):**
   - Lição de 20/11: na primeira leitura você deixou passar a S03 prometendo um banheiro para cadeira de rodas que a planta não tinha. Confira afirmação técnica contra os dados (`ebook/plantas/dados/*.json` e `ebook/plantas/PLANTAS.md`, que o `checar.py` mantém em dia; você só tem ferramentas de leitura, então não rode comandos), não só o texto.
   - Revise também fora do PDF: a calculadora do parceiro (`ebook/vendas/calculadora-lote.html`), os posts, os roteiros e as imagens (foto e 3D contra a planta).

@@ -21,7 +21,7 @@ INI, FIM = "<!-- essencial: escrito à mão, o gerador não apaga -->", "<!-- /e
 PASTAS = {
     ".": ("Comando e contexto", "As regras, as decisões do dono e quem decide o quê", [".", "ferramentas"],
           ["todos"]),
-    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono"],
+    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono", "contexto/dono/intencoes"],
                  ["todos"]),
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),

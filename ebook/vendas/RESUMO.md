@@ -22,23 +22,23 @@ Banco do Redator. Persona: `../referencias/persona-e-mercado.md`. Números das p
 
 Seções: 1. Atributos do produto (o e-book); 2. Atributos que aparecem nas plantas (use a ficha da casa); 3. Atributos proibidos (o Revisor veta); 4. Combinações campeãs para testar primeiro; 5. O que os testes ensinaram.
 
-Tamanho: 820 palavras.
+Tamanho: 932 palavras.
 
 ### [Perguntas frequentes dos compradores](faq-compradores.md)
 
-Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel: `../../PAINEL.md`. Campos entre [colchetes]: preencha depois de decidir preço, título e pagamento (painel, seção 9). Toda pergunta nova que aparecer no WhatsApp entra aqui.
+Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel: `../../PAINEL.md`. Campos entre [colchetes]: preencha depois de o dono decidir preço, título, pagamento, garantia e atualizações (painel, seção 9). Até lá, não responda esses pontos como fato. Toda pergunta nova que…
 
 Seções: Sobre o e-book; Sobre as plantas; Sobre a construção.
 
-Tamanho: 414 palavras.
+Tamanho: 519 palavras.
 
 ### [Planta grátis: o que a pessoa recebe depois do comentário "PLANTA"](material-gratuito.md)
 
 Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel: `../../PAINEL.md`. A planta grátis é uma página do e-book, igual às que a pessoa vai comprar. Assim ela vê exatamente o que o e-book entrega.
 
-Seções: 1. O que vai; 2. Ficha da Casa Compacta (para mandar em texto); 3. A última linha da página.
+Seções: 1. O que vai; 2. Ficha da Casa Compacta (para mandar em texto); 3. O convite no fim da planta grátis.
 
-Tamanho: 520 palavras.
+Tamanho: 640 palavras.
 
 ### [Respostas para objeções comuns](respostas-objecoes.md)
 
@@ -46,12 +46,12 @@ Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel
 
 Seções: "É caro."; "Não tenho terreno ainda."; "Vou pensar."; "Preciso de um arquiteto mesmo assim."; "Já tenho um projeto."; "Dá para construir direto com isso?"; "E se eu não gostar?"; "Posso ver antes de pagar?"; Regras para as respostas.
 
-Tamanho: 384 palavras.
+Tamanho: 399 palavras.
 
 ### [Sequência de mensagens no WhatsApp](sequencia-whatsapp.md)
 
 Material do funil, para o parceiro. Parte da pasta E-book: `../EBOOK.md`. Painel: `../../PAINEL.md`. Objetivo: entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é sobre o terreno dela, não porque insistimos.…
 
-Seções: Dia 0: entrega da planta grátis (logo após o comentário "PLANTA"); Dia 0, depois da resposta: as plantas que cabem no terreno; Dia 1: a planta mobiliada (o 3D entra quando for liberado); Dia 3: a oferta; Dia 5: a dúvida que trava; Dia 7: última mensagem; Depois da compra; Regras do funil.
+Seções: Dia 0: entrega da planta grátis (logo após o comentário "PLANTA"); Dia 0, depois da resposta: as plantas que cabem no terreno; Dia 1: a casa em 3D; Dia 3: a oferta; Dia 5: a dúvida que trava; Dia 7: última mensagem; Depois da compra; Regras do funil.
 
-Tamanho: 785 palavras.
+Tamanho: 941 palavras.

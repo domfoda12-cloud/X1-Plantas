@@ -23,7 +23,7 @@ Parte da pasta E-book (`../EBOOK.md`). Cinco PDFs: cozinhas modernas, painéis e
 
 Seções: O que eles são; O que adotar; O que NÃO copiar; O diferencial que eles não têm.
 
-Tamanho: 473 palavras.
+Tamanho: 487 palavras.
 
 ### [Apostila do Arquiteto: o que as fontes brasileiras ensinam](arquiteto-fontes-brasileiras.md)
 
@@ -31,7 +31,7 @@ Pedido do dono (20/11/2026): "ensine mais ao arquiteto, use fontes brasileiras f
 
 Seções: 1. As fontes; 2. NBR 15220-3: o clima manda na janela; 3. NBR 15575-1, Anexo G: o que tem que caber em cada cômodo; 4. Lelé: luz, sombra e ar antes de máquina; 5. O que o Arquiteto passa a fazer; 6. Próximas leituras.
 
-Tamanho: 1904 palavras.
+Tamanho: 1922 palavras.
 
 ### [Apostila 2 do Arquiteto: como arquiteto de verdade arma uma planta](arquiteto-sites-de-profissionais.md)
 
@@ -39,7 +39,7 @@ Pedido do dono (22/11/2026): "faça o Arquiteto estudar mais, o último layout n
 
 Seções: 1. O que está errado hoje (diagnóstico); 2. Prefeitura de São Paulo: Diretrizes de Projeto de HIS (SEHAB, abril de 2021); 3. Governo da Bahia: projeto de referência de casa térrea (CAR, maio de 2024); 4. UFRGS: o que os moradores fazem com a planta depois (Reis e Lay, 2002); 5. Os sites que arquiteto usa (para as próximas leituras); 6. O método, a partir de agora; 7. O que falta decidir e fazer.
 
-Tamanho: 1890 palavras.
+Tamanho: 1902 palavras.
 
 ### [Concorrentes e o que o mercado já viu](concorrentes.md)
 
@@ -47,7 +47,7 @@ Parte da pasta E-book (`../EBOOK.md`). Pesquisa de 20/11/2026 (TinyFish). Preço
 
 Seções: E-books de plantas no Brasil; A palavra do comentário: "PLANTA" divide espaço com jardinagem.
 
-Tamanho: 319 palavras.
+Tamanho: 334 palavras.
 
 ### [Linguagem, visual e animação do e-book](linguagem-visual-e-animacao.md)
 
@@ -55,7 +55,7 @@ Parte da pasta E-book (`../EBOOK.md`). Público e tom: `persona-e-mercado.md` e 
 
 Seções: 1. Linguagem que convence sem enrolar; 2. Visual; 3. Animação: como incluir; 4. O que ainda é decisão sua.
 
-Tamanho: 820 palavras.
+Tamanho: 893 palavras.
 
 ### [Referência: livros de plantas com 3D e um guia de apresentação](livros-de-plantas-com-3d.md)
 
@@ -63,7 +63,7 @@ Pedido do dono (20/11/2026): "use a referência de um e-book famoso de qualidade
 
 Seções: 1. As referências (só o que as fontes mostraram); 2. O que os leitores do Ultimate Book elogiam e criticam; 3. O conjunto de instruções (Cedreo e SMAARCHVIZ) e como o e-book cumpre cada uma; 4. O que deve ficar mais parecido com eles; 5. O que não copiar.
 
-Tamanho: 915 palavras.
+Tamanho: 923 palavras.
 
 ### [Quem compra: o público e o "Seu Marcos"](persona-e-mercado.md)
 
@@ -71,7 +71,7 @@ Parte da pasta E-book (`../EBOOK.md`). Estratégia: `../../ESTRATEGIA.md`. Regra
 
 Seções: 1. Como a casa brasileira é de verdade; 2. O Marcos; 3. Os outros perfis (da estratégia); 4. O que cada lote aceita (dados das 24 plantas); 5. O que o Marcos precisa saber (e a gente precisa dizer); 6. Hipóteses para testar; Fontes.
 
-Tamanho: 1193 palavras.
+Tamanho: 1223 palavras.
 
 ### [Pesquisa: como é a casa popular brasileira e os grandes passos para construir](pesquisa-layouts-e-etapas-da-obra.md)
 
@@ -79,15 +79,15 @@ Pedido do dono (22/11/2026): "procure coisas relevantes para o projeto, como lay
 
 Seções: 1. O layout mínimo que o governo federal exige (fonte oficial); 2. Como é a casa popular que arquiteto projeta; 3. Os grandes passos para construir a casa; 4. Um dado de mercado para o anúncio (com cuidado); 5. O que dá para fazer com isso (para o dono decidir); 6. O que não foi achado ou lido.
 
-Tamanho: 1610 palavras.
+Tamanho: 1644 palavras.
 
 ### [Projetos similares: quem vende plantas de casas e o que aprender](projetos-similares.md)
 
 Parte da pasta E-book (`../EBOOK.md`). Pesquisa de 20/11/2026 (TinyFish). Referências de fora foram adaptadas aos termos do Brasil (pés → metros, *setbacks* → recuos, *stories* → pavimentos, *elevation* → fachada ou vista). Preços e promessas de terceiros mudam: confira antes de citar.
 
-Seções: 1. No Brasil; 2. Fora do Brasil (adaptado); 3. O que muda no nosso produto (decisões do Conselho, de bolso).
+Seções: 1. No Brasil; 2. Fora do Brasil (adaptado); 3. O que muda no nosso produto (decisões do Conselho, de bolso); 4. Âncora de preço: o único lugar com o preço dos concorrentes.
 
-Tamanho: 840 palavras.
+Tamanho: 1001 palavras.
 
 ### [Regras de projeto: como o arquiteto decide cada planta](regras-do-arquiteto.md)
 
@@ -95,4 +95,4 @@ Parte da pasta E-book (`../EBOOK.md`). As regras estão em código em `../../fer
 
 Seções: 1. Dimensões (medidas por dentro das paredes); 2. Luz e ventilação; 3. Circulação e privacidade; 4. Áreas molhadas juntas; 5. Vãos e estrutura; 6. O lote; 7. Orientação do sol (hemisfério sul); 8. O que o validador confere (24 plantas, 0 erros); 9. O que o validador NÃO faz; Fontes.
 
-Tamanho: 1051 palavras.
+Tamanho: 1081 palavras.

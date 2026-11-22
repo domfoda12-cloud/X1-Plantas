@@ -753,7 +753,8 @@ def pensou(planta):
             out.append(f"Luz e ar: {lista} {'tem' if len(grupo) == 1 else 'têm'} janela para fora (o tamanho de cada uma o código de obras da sua cidade confere).")
     prumada = any("prumada própria" in a for a in r.avisos)
     if prumada:
-        out.append("Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.")
+        qual = "o banheiro da suíte" if any(c.get("privativo") for c in cs if c["tipo"] == "banho") else "o banheiro"
+        out.append(f"Áreas molhadas: {qual} fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.")
     else:
         viz = []
         for b in (c for c in cs if c["tipo"] == "banho" and not c.get("privativo")):

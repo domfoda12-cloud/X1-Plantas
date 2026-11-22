@@ -25,7 +25,7 @@
 | 20/11/2026 | Um ecossistema de skills que se entendem, dão opinião e só usam a skill quando concordam | [Conselho](CONSELHO.md), skill `/conselho`, 7 agentes em `.claude/agents/` |
 | 20/11/2026 | Depois disso, começar o e-book; exemplo de skills juntas: MinoAI + OpenArt para imagens e animações | [Fluxo OpenArt + MinoAI](animacoes-3d/OPENART-MINOAI.md) (OpenArt sem conector; usado no navegador ou por API com chave) |
 | 20/11/2026 | Segurar as animações 3D, deixar por último | Motor preparado para as 24, render parado; passo 9 do plano |
-| 20/11/2026 | Primeiro o roteiro passo a passo e como o e-book vai ficar; "visualize it" | [`ebook/PLANO-EBOOK.md`](ebook/PLANO-EBOOK.md) e a prévia visual (página privada no claude.ai, fonte em [`ebook/visual/plano-visual.html`](ebook/visual/plano-visual.html)) |
+| 20/11/2026 | Primeiro o roteiro passo a passo e como o e-book vai ficar; "visualize it" | `ebook/PLANO-EBOOK.md` (apagado em 22/11/2026; o que valia foi para `ebook/EBOOK.md`) e a prévia visual (página privada no claude.ai, fonte em [`ebook/visual/plano-visual.html`](ebook/visual/plano-visual.html)) |
 | 20/11/2026 | O objetivo é a alegria do consumidor, que vira Pix | Primeira regra do [`CLAUDE.md`](CLAUDE.md) e do Redator |
 | 20/11/2026 | Manter todo o contexto | Este arquivo |
 | 20/11/2026 | "Quero que pareça mais inovador" | Prévia nova: capa fita métrica, vitrine pelo lote, casa desenhada no lote com recuos e bússola, ficha "Informação da casa" no formato da tabela nutricional, orelhas por largura de lote, e-book vivo por QR |

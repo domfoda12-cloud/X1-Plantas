@@ -4,7 +4,7 @@ description: Redator de resposta direta do X1-Plantas. Use para qualquer texto q
 model: opus
 ---
 
-- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/redator.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
+- **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/redator.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/redator.md`):**
   - Os textos revisados do e-book estão em `ebook/fichas/textos.py` e `ebook/gerador/paginas.py`. Toda mudança passa pelo Revisor de risco.
   - Frases que já foram vetadas e não voltam: 3D prometido onde não há, "banheiro com giro" sem conferência, "ventilação cruzada" onde não existe, "recebe as próximas plantas" sem o "sim" do dono, "todas as casas cabem".

@@ -20,7 +20,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 12 documentos
+## Os 13 documentos
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -32,27 +32,27 @@ Tamanho: 528 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
-Só o que importa para este papel. Você é o modelo mais barato do projeto e existe para o dono não gastar modelo caro com tarefa simples.
+Só o que importa para este papel. Se a tarefa tocar o projeto, leia antes o quadro. Você é o modelo mais barato do projeto e existe para o dono não gastar modelo caro com tarefa simples.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
 
-Tamanho: 119 palavras.
+Tamanho: 129 palavras.
 
 ### [Contexto do Arquiteto](arquiteto.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 393 palavras.
+Tamanho: 414 palavras.
 
 ### [Contexto do Designer](designer.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 210 palavras.
+Tamanho: 229 palavras.
 
 ### [Os prompts do dono, palavra por palavra](dono/PROMPTS.md)
 
@@ -62,58 +62,66 @@ Seções: 16/11/2026; 18/11/2026; 19/11/2026; 20/11/2026; 21/11/2026; 22/11/2026
 
 Tamanho: 3509 palavras.
 
-### [Textos desatualizados e contradições entre documentos](dono/TEXTOS-DESATUALIZADOS.md)
+### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
-Levantamento de 22/11/2026: quatro agentes leram todos os documentos por inteiro para escrever os resumos e anotaram onde um documento contradiz outro. Enquanto um item estiver aqui, vale a regra mais recente, citada no item. Quem corrigir um documento apaga a linha. Itens marcados (dono) dependem…
+Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 contradições. Três agentes no Opus resolveram as que dependiam só de texto (a regra mais recente do dono vence; texto de venda só promete o que existe; documento superado foi apagado). Aqui ficou só o que depende do dono,…
 
-Seções: Vai direto ao cliente (corrigir primeiro); C01 redesenhada em 22/11 (50 m², frente norte, sem hall, banheiro com prumada própria); Vídeo: regras de 22/11 que os documentos antigos contradizem; Estado do projeto; Jurídico.
+Seções: Decisões do dono (os textos estão com o campo entre colchetes, esperando); Revisor de risco (texto novo que ainda não passou por ele); Imagem e vídeo que ainda mostram a casa velha (texto já corrigido); Ainda não conferido.
 
-Tamanho: 791 palavras.
+Tamanho: 425 palavras.
+
+### [O porquê dos prompts de 16 a 20/11/2026](dono/intencoes/2026-11-16-a-20.md)
+
+Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
+
+Seções: 16/11 · Começo do produto, ferramentas de vídeo e as primeiras referências; 18/11 · O produto vira catálogo e o projeto ganha pastas; 19/11 · MinoAI no comando, roteiro do lançamento e ferramentas de pesquisa; 20/11 · E-book do rascunho 1, Conselho, OpenArt, qualidade e contexto; Padrões deste período.
+
+Tamanho: 5945 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 312 palavras.
+Tamanho: 367 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 204 palavras.
+Tamanho: 246 palavras.
 
 ### [Contexto do Maestro (MinoAI Frontier)](maestro.md)
 
-Só o que importa para este papel. Resumo geral em `CONTEXTO.md`; histórico em `CONTEXTO-HISTORICO.md`. O Maestro não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte (`MAESTRO.md`).
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral em `CONTEXTO.md`; histórico em `CONTEXTO-HISTORICO.md`. O Maestro não tem arquivo de agente: a opinião dele sai das ferramentas da MinoAI Frontier, citando a fonte (`MAESTRO.md`).
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 208 palavras.
+Tamanho: 236 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 186 palavras.
+Tamanho: 192 palavras.
 
 ### [Contexto do Redator](redator.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 194 palavras.
+Tamanho: 229 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
-Só o que importa para este papel. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
-Tamanho: 287 palavras.
+Tamanho: 330 palavras.

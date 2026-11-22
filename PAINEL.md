@@ -11,25 +11,33 @@
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026, a partir dos arquivos que existem. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|
-| **1º lançamento do e-book** | 0 de 12 prontas · 1 com 3D |
-| Plantas no catálogo | 35 · ideia 11 · dados 23 · 3D 1 · pronta 0 |
-| Progresso do 1º lançamento | `░░░░░░░░░░░░░░░░░░░░` 0/12 |
-| Vídeo de anúncio | 5 de 5 versões renderizadas · apresentador não gravado |
-| Avisos de conferência | 0 |
+| **Casas desenhadas e validadas** | 24 de 35 no catálogo |
+| Progresso do catálogo | `██████████████░░░░░░` 24/35 |
+| Casas com imagem 3D | 24 de 24 |
+| Casas com foto de fachada | 4 (C01, C03, E07, F01) |
+| PDF do e-book | gerado, 23 MB · 6 plantas grátis |
+| Vídeos em `video/saida/` | 6 pastas (convite, previa-whatsapp, principal, principal-condor, principal-e07, tour-c06) · 5 versões antigas (`v1` a `v5`, com a C01 velha) |
+| Avisos de conferência | 1 |
 
 **Por categoria:**
 
-| Categoria | Plantas | No 1º lançamento | Com 3D | Prontas |
-|---|---|---|---|---|
-| Compactas | 7 | 4 | 1 | 0 |
-| Terreno estreito | 7 | 4 | 0 | 0 |
-| Família | 7 | 3 | 0 | 0 |
-| Especiais | 10 | 1 | 0 | 0 |
-| Sobrados | 4 | 0 | 0 | 0 |
+| Categoria | No catálogo | Desenhadas | Com 3D |
+|---|---|---|---|
+| Compactas | 7 | 7 | 7 |
+| Terreno estreito | 7 | 7 | 7 |
+| Família | 7 | 5 | 5 |
+| Especiais | 10 | 5 | 5 |
+| Sobrados | 4 | 0 | 0 |
+
+Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03, O04.
+
+**Avisos:**
+
+- Link quebrado: pedidos/LEIA-ME.md → ../contexto/dono/IDEIAS-GERAIS.md
 <!-- situacao:fim -->
 
 ## 2. Em que pé está (escrito à mão, 22/11/2026)

@@ -14,7 +14,7 @@
 - A foto de fachada da C01 e o mockup `casa-c01-celulares.png` ainda mostram a C01 antiga (`EBOOK.md`, seção 8).
 <!-- /essencial -->
 
-## Os 6 documentos
+## Os 4 documentos
 
 ### [E-book: regras desta pasta](CLAUDE.md)
 
@@ -22,37 +22,21 @@ O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerai
 
 Tamanho: 197 palavras.
 
-### [E-book: dezenas de plantas de casas](EBOOK.md)
+### [E-book: plantas de casas térreas](EBOOK.md)
 
-Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o produto. Um e-book com dezenas de plantas de casas, com grande variação de tamanho, terreno e uso, cada uma em blueprint, planta humanizada, 3D e animação.
+Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o produto. Hoje: um PDF A4 de 61 páginas com 24 casas térreas, cada uma com a planta mobiliada, a casa desenhada no lote, a ficha com os números do validador, a vista da rua e a casa em 3D. O catálogo propõe 35 casas no total;…
 
-Seções: Nesta pasta; 1. O produto; 2. Estrutura do e-book; 3. Página dupla de cada planta; 4. Fluxo de produção de cada planta; 5. Lançamentos e decisões; 6. Funil de vendas; 7. Cuidados.
+Seções: Nesta pasta; 1. O produto; 2. O PDF, página por página; 3. As duas páginas de cada casa; 4. Como uma casa entra no e-book; 5. Lançamentos e decisões; 6. Funil de vendas; 7. Cuidados; 8. O que falta.
 
-Tamanho: 1129 palavras.
-
-### [Plano do e-book: como ele vai ficar e o passo a passo para fazer](PLANO-EBOOK.md)
-
-Para o dono aprovar antes de começar. Depois de aprovado, cada passo vira tarefa no painel. Quem opina em cada passo segue o Conselho. As animações 3D ficam para o fim (decisão do dono, 20/11/2026).
-
-Seções: Parte 1. Como o e-book vai ficar; Parte 2. Passo a passo para fazer; Parte 3. O que preciso de você para aprovar este plano.
-
-Tamanho: 1323 palavras.
+Tamanho: 1526 palavras.
 
 ### [Catálogo de plantas do e-book](catalogo.md)
 
-Parte da pasta E-book. Guia da frente: `EBOOK.md`. Painel geral: `../PAINEL.md`. Proposta de variação: 35 plantas em 5 categorias, para cobrir os terrenos, famílias e usos mais comuns. Nomes, áreas e lotes são provisórios até um arquiteto validar. Atualize a coluna Situação conforme cada planta…
+Parte da pasta E-book. Guia da frente: `EBOOK.md`. Painel geral: `../PAINEL.md`. Proposta de variação: 35 plantas em 5 categorias, para cobrir os terrenos, famílias e usos mais comuns. 24 já estão no PDF; as outras 11 são ideia. Nas 24, área, quartos, banheiros e lote são os do validador…
 
-Seções: Resumo; C. Compactas: primeira casa, orçamento curto; E. Terreno estreito: frente de 5 a 8 m; F. Família: 3 ou 4 quartos; S. Especiais: um uso ou terreno específico; O. Sobrados: dois pavimentos; Casas que crescem; O que vem em cada planta do e-book.
+Seções: Resumo; C. Compactas: primeira casa, orçamento curto; E. Terreno estreito: frente de 5 a 8 m; F. Família: 3 ou 4 quartos; S. Especiais: um uso ou terreno específico; O. Sobrados: dois pavimentos; Casas que crescem; O que vem em cada planta do e-book (hoje).
 
-Tamanho: 1796 palavras.
-
-### [C01 · Casa Compacta](fichas/C01.md)
-
-Ficha da página do e-book. O que não estiver aqui (área, quartos, banheiros, lote) vem do catálogo. Mesmo texto da planta grátis: ver ../vendas/material-gratuito.md.
-
-Seções: Para quem é; Por que funciona; Cuidados antes de construir; Erros que evita.
-
-Tamanho: 167 palavras.
+Tamanho: 1957 palavras.
 
 ### [As 24 plantas: ficha de cada uma](plantas/PLANTAS.md)
 
@@ -60,4 +44,4 @@ Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book (`../E
 
 Seções: C01 · Casa Compacta; C02 · Casa Studio; C03 · Casa Inicial; C04 · Casa Duo; C05 · Casa Popular; C06 · Casa Compacta Suíte; C07 · Casa Compacta Varanda; E01 · Casa Estreita; E02 · Casa Corredor; E03 · Casa Fita; E04 · Casa Pátio; E05 · Casa Estreita Suíte; E06 · Casa Estreita Gourmet; E07 · Casa Estreita 3 Quartos; ….
 
-Tamanho: 3757 palavras.
+Tamanho: 3755 palavras.
