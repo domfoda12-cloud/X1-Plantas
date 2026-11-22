@@ -4,6 +4,11 @@
 
 **Prompt (palavra por palavra):** Para a proxima sesssao pretendo organizar os arquivos melhor, atualmente tem milhares de codigos e arquivos conectados aos agentes, quero fazer essa conexao mais clean e com numeros menores
 
+*Recado de 22/11 19:58:* 1 yes
+2 im not sure, but id also like for you to check every connection that there is in main that you can sum up, fx 10 files are connected to the same 5 agents, they 10 files can all be together
+Main seems like a huge mess i dont know what to do with it
+3 i dont know what that means
+
 **O que ele pediu, parte por parte:** "Para a próxima sessão": planejar agora, fazer depois. "Organizar os arquivos melhor": a estrutura de pastas e documentos. "Milhares de códigos e arquivos conectados aos agentes": o Graphify mostra 2.013 círculos e 2.231 ligações; os agentes leem muita coisa. "Conexão mais clean e com números menores": menos círculos, menos ligações, e as que ficarem fazendo sentido.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele abriu o Graphify e viu um emaranhado (o print de 22/11 mostra 2.177 círculos e a lista "mais conectados" com o `cena.js`, que já foi apagado). Quer enxergar o sistema e ter certeza de que os agentes não se perdem em arquivo demais.
@@ -38,3 +43,19 @@
 4. **Agentes leem menos:** cada `contexto/<papel>.md` aponta no máximo 3 resumos.
 5. **Medir depois** e comparar; auditoria do Fable.
 
+
+## Mapa de conexões (medido em 22/11, depois do recado)
+
+Medido com um script: para cada documento, quais agentes o leem (arquivo do agente, `contexto/<agente>.md` e as listas do `ferramentas/resumos.py`). Hoje: **138 documentos .md**, 383 arquivos no total. Documentos que têm os mesmos leitores e a mesma função viram um só (o conteúdo vai junto; nada se perde):
+
+| Grupo (quem lê) | Hoje | Proposta |
+|---|---|---|
+| `video/` (Diretor, Editor, Redator, Revisor) | 12 | 3: regras e pedidos do dono; a peça atual (plano, roteiro, prompts, anúncio); referências |
+| `instagram/` (Designer, Diretor, Editor, Estrategista, Redator) | 6 | 2: o perfil (plano, calendário, MinoAI, Mino Lee); os posts |
+| `ebook/referencias/` (Arquiteto, Estrategista, Pesquisador, Designer) | 9 | 3: apostila do Arquiteto; mercado e concorrentes; referência visual |
+| `ebook/vendas/` (Estrategista, Redator, Revisor) | 5 | 2: atributos que vendem; WhatsApp (sequência, objeções, perguntas, material grátis) |
+| `contexto/entregas/` | 19 | 3: um registro só, o `ULTIMO.md` e o modelo |
+| `research_notes/` (ninguém lê, 34 mil caracteres) | 2 | 0: vão para `reports/`, junto do relatório que os usa |
+| Raiz | 13 | 9: `ORCAMENTO` entra no `PAINEL`; `README` e `RESUMO-RAIZ` viram um; `MAESTRO` vai para `instagram/` |
+
+Total: **de 138 para uns 75 documentos.** As palavras do dono (`PROMPTS.md`, `PEDIDOS-DO-DONO.md`) continuam palavra por palavra, só mudam de lugar. Espera o "sim" do dono.
