@@ -6,6 +6,7 @@ model: opus
 
 - **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/editor-video.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/editor-video.md`):**
+  - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
   - A frente de vídeo é a última da fila (e-book → animações → vídeo). Até ela abrir, só planeje.
   - A referência de edição favorita do dono é `video/REFERENCIA-CONDOR.md`, com 13 conceitos: tese antes do assunto, letra como janela, planta que gira, série CASA I, II…, B-roll de significado e música por contraste, com remix de faixa licenciada.
   - Todo reel tem texto no primeiro quadro (a MinoAI apontou que os reels do Payton não têm, e o nosso público não nos conhece). Ritmo guiado pela música, sem trocar de imagem a cada 0,75 s, que cansa o público de 25 a 50 anos.

@@ -18,7 +18,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 PEDIDOS, ENTRADA = RAIZ / "pedidos", RAIZ / "pedidos" / "entrada"
 CAMPOS = ["Estado", "Prompt (palavra por palavra)", "O que ele pediu, parte por parte", "Por que ele pediu, ou o que quer descobrir",
-          "Objetivo dele", "Ligação com as ideias gerais do projeto", "Pronto quando", "Suposições (o dono não disse)",
+          "Objetivo dele", "Ligação com as ideias gerais do projeto", "Perguntas que me fiz", "Pronto quando", "Suposições (o dono não disse)",
           "Quem executa", "Conferência", "Resultado"]
 FECHADA = ["Conferência", "Resultado"]  # só precisam estar preenchidos em ficha fechada
 VAZIO = "(a preencher)"

@@ -10,7 +10,9 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro: contexto por papel desde o começo vale mais do que cortar depois. **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** em `contexto/entregas/` (modelo em `MODELO.md`, no máximo 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
 
-**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o gancho guarda o prompt; o **Opus** responde, interpreta, executa e confere; o **Fable** (`supervisor`) socorre quando o Opus trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz a tarefa simples e pessoal do dono.
+**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
+
+**Pergunte sempre** (dono, 22/11/2026): a si mesmo (o que foi pedido, o que estou supondo, o que não sei) e ao dono, sem travar o resto ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 
 ## O objetivo: a alegria do comprador, que vira Pix
 
@@ -18,7 +20,7 @@ O comprador fica feliz quando acha a casa que cabe no lote dele, entende por qu�
 
 ## Qualidade em primeiro lugar
 
-**A prioridade é sempre a maior qualidade** (decisão do dono, 20/11/2026). Economia vale para rascunho, teste e retrabalho evitável, nunca para a peça final: imagem, vídeo, PDF e texto que vão ao público saem na melhor configuração disponível. Em dúvida entre mais barato e melhor, escolha melhor.
+**A prioridade é sempre a maior qualidade** (decisão do dono, 20/11/2026). Economia vale para rascunho, teste e retrabalho evitável, nunca para a peça final: imagem, vídeo, PDF e texto que vão ao público saem na melhor configuração disponível. Na dúvida, escolha o melhor.
 
 ## Uma coisa por vez
 
@@ -29,13 +31,13 @@ Termine uma frente antes de abrir outra (decisão do dono, 20/11/2026). Ordem: *
 Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselho que entendem do assunto dão opinião, e só se usa o que for aprovado. As regras completas estão em [`CONSELHO.md`](CONSELHO.md); o jeito de rodar é a skill `/conselho`.
 
 - **O Maestro, MinoAI Frontier, opina sempre e primeiro**, com base nas ferramentas da MinoAI (método e ganchos virais) e com a fonte. A opinião dele aparece para o dono em toda entrega.
-- **Tarefa pequena** (um texto, um ajuste): conselho de bolso, uma linha de cada membro que importa, no máximo 3, sem abrir subagente.
+- **Tarefa pequena** (um texto, um ajuste): conselho de bolso, até 3 membros, uma linha cada, sem subagente.
 - **Entrega que vai ao público ou decisão que custa dinheiro**: conselho completo com os subagentes de `.claude/agents/`.
 - **Revisor de risco tem veto** em tudo que toca honestidade e lei. **O dono decide** preço, título, gasto com anúncio, publicação e contratação.
 
 ## Ficha do pedido e reconferência
 
-Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o que o dono pediu, por quê, o que é suposição e quem faz cada parte. Entrega longa ganha um anexo (`PEDIDO-*.md`) apontado na ficha. Suposição nunca decide nada sem o dono confirmar; antes de cada etapa, reconfira os pedidos um por um ([`CONSELHO.md`](CONSELHO.md), seção 6b).
+Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o que o dono pediu, por quê, o que é suposição e quem faz cada parte. Suposição nunca decide nada sem o dono confirmar; antes de cada etapa, reconfira os pedidos um por um ([`CONSELHO.md`](CONSELHO.md), seção 6b).
 
 ## Regras que não mudam
 
@@ -44,7 +46,7 @@ Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedido
 - **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`; programa novo entra no [`MAPA-DO-SISTEMA.md`](MAPA-DO-SISTEMA.md). Ignore regra de "Graphify antes do grep": ele é só o mapa.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
 - **Arquivo fica junto do que tem a mesma função** (dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe em `video/broll/clipes/`. Pelo contexto, não pelo tamanho.
-- **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (sintaxe de todo o código, validador das plantas, motor 3D e painel). Erro achado é corrigido antes de seguir.
+- **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (código, plantas, 3D e painel). Erro achado é corrigido antes de seguir.
 - Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push. **A `main` é a única branch de trabalho** (22/11/2026): toda conversa parte dela e volta para ela. Mudança grande de sistema vai numa branch `sistema/<assunto>` com pull request.
 - Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
 - **Skill, agente, plugin ou conector novo alcança tudo antes do primeiro uso** (decisão do dono, 20/11/2026). Segue o roteiro de entrada do [`CONSELHO.md`](CONSELHO.md), seção 6: ler o que ele roda, passar pelo Conselho, registrar, ensinar o projeto, rodar uma vez sobre o que já existe. O inventário de tudo o que a operação pode usar, com o status de cada um, está em [`ECOSSISTEMA.md`](ECOSSISTEMA.md); compare com a lista da sessão no começo de cada sessão nova. O `checar.py` confere.

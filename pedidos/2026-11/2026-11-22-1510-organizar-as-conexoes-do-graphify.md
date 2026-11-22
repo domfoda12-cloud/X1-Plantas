@@ -12,6 +12,8 @@
 
 **Ligação com as ideias gerais do projeto:** Fio 3 (nada se perde: um mapa que liga tudo) e fio 8 (ele confere: quer ver, não só ouvir que está organizado).
 
+**Perguntas que me fiz:** (ficha anterior à regra de 22/11/2026)
+
 **Pronto quando:** Existe um mapa do sistema com cada programa e cada dado ligado na ordem em que um alimenta o outro; o checar.py falha se aparecer programa fora do mapa; depois do push, o Graphify reindexa e o número de grupos soltos cai (medido com graph_stats, antes 330).
 
 **Suposições (o dono não disse):** Não vejo a tela do Graphify: trabalho pelos números que a ferramenta devolve. Não apago o sistema antigo de vídeo (v1 a v5, render.cjs, cena.js) sem o "sim" dele, porque são entregas e o fio 3 pede não perder nada.

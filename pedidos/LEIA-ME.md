@@ -11,7 +11,28 @@
 - **Socorro.** O Opus chama o Fable antes de tentar de novo quando: a mesma coisa falhou duas vezes; o dono corrigiu ou reclamou do resultado; ele percebeu que errou ou que contrariou uma regra; não tem certeza do que o dono quis dizer; ou vai entregar ao público algo em que tem dúvida. O Fable diz a causa e o caminho; quem corrige é o Opus.
 - **Auditoria.** A cada 3 fichas fechadas, `pedido.py fechar` avisa "HORA DA AUDITORIA". O Opus chama o `supervisor` com as fichas fechadas desde a última; ele confere contra o que existe de verdade, aponta os erros por gravidade e registra em [`AUDITORIAS.md`](AUDITORIAS.md). Erro de gravidade alta é corrigido antes do próximo pedido.
 
-## O caminho de um prompt
+## Perguntar sempre (dono, 22/11/2026)
+
+"Faça o sistema todo ser bem questionativo, sempre se fazendo perguntas para entender melhor a situação, e sinta-se à vontade de me perguntar coisas que queira saber."
+
+**A si mesmo, antes e durante o trabalho.** Todo agente se pergunta, e escreve na ficha em "Perguntas que me fiz", com a resposta ao lado:
+- O que exatamente ele pediu, e o que ele NÃO pediu? Por que agora, e o que veio antes?
+- O que eu estou supondo? Isso está escrito em algum lugar, ou é palpite meu?
+- O que eu não sei? Dá para descobrir sozinho (nos documentos, nos dados, rodando um comando)?
+- Isso bate com a regra mais nova, com as ideias gerais e com o que ele já recusou?
+- Como eu provo que ficou pronto? O que eu não conferi?
+- Ao terminar: o que me surpreendeu? O que eu faria diferente?
+
+A resposta que dá para achar sozinho, ache. A que só o dono sabe vira pergunta para ele.
+
+**Ao dono, sem travar o trabalho.** Perguntar a ele é bem-vindo. Para não virar gargalo (ele não quer ser):
+- juntas, no fim da resposta, as mais importantes primeiro, no máximo umas 5 por vez;
+- curtas, com as opções e com o que será feito se ele não responder;
+- o trabalho que não depende da resposta continua; o que depende espera, e a ficha diz o quê;
+- pergunta já respondida não se repete: a resposta vai para a ficha e para o histórico;
+- vale perguntar o que ajuda a entender o projeto e ele (o prazo, o parceiro, o que ele gostou), não só o que trava a tarefa.
+
+
 
 1. **Entrada (automática).** O gancho `UserPromptSubmit` (`.claude/settings.json`) chama `ferramentas/guardar-pedido.py`: grava o prompt, palavra por palavra, em `pedidos/entrada/` (fora do git) e devolve a quem atende um lembrete desta regra e quantas fichas estão abertas.
 2. **Triagem (Opus).** Uma de quatro saídas:

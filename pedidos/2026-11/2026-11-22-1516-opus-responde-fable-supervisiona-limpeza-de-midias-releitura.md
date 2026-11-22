@@ -15,6 +15,8 @@ OVERRULE, the last video should be saved
 
 **Ligação com as ideias gerais do projeto:** Fio 6 (qualidade onde importa, economia onde ninguém vê), fio 8 (ele confere: agora o sistema confere antes dele), fio 3 (nada se perde: apaga a mídia, guarda a informação e o último vídeo) e fio 1 (parece de verdade: recomeçar com a C01 certa).
 
+**Perguntas que me fiz:** (ficha anterior à regra de 22/11/2026)
+
 **Pronto quando:** Opus como modelo padrão e o agente `supervisor` (Fable) registrado, com socorro e auditoria escritos e o aviso de auditoria no `pedido.py`; uma ficha só no `CLAUDE.md`; conversas antigas arquivadas e branches velhas apagadas; script de preparação proposto; vídeos e renders antigos apagados, com o último vídeo guardado; `contexto/dono/RETROSPECTIVA.md` com o que foi reclamado, o que funcionou e o plano para refazer; `checar.py` passando.
 
 **Suposições (o dono não disse):** "O último vídeo": guardei o último feito (convite da F03, 22/11) e também o último que mostrei a ele nesta conversa (principal de 21/11), porque a frase serve aos dois; o resto volta pelo git se ele quiser. Guardei também a gravação da voz dele (é informação dele, não render) e a trilha. Não apaguei as imagens do e-book (3D, fotos, mockups): são o produto, não render de vídeo. "Blenders" li como renders 3D e 2D. "Assim que o limite reiniciar": não sei quando reinicia; o plano fica pronto e espera o sinal dele.

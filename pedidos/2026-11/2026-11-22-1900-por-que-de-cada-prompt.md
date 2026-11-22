@@ -17,6 +17,8 @@
 
 **Ligação com as ideias gerais do projeto:** é a continuação direta do "os agentes esquecem" (índice, resumos, quadro): agora o que falta lembrar não é o fato, é a intenção.
 
+**Perguntas que me fiz:** (ficha anterior à regra de 22/11/2026)
+
 **Pronto quando:** `contexto/dono/intencoes/` tem o porquê e o objetivo de cada prompt; `contexto/dono/IDEIAS-GERAIS.md` liga os pedidos em poucos fios, com a parte criativa dos vídeos em destaque; a ficha de todo pedido novo responde à mesma pergunta; os agentes de vídeo leem isso.
 
 **Suposições (o dono não disse):** os prompts escritos em outras conversas entram pelo que está guardado palavra por palavra em `video/PEDIDOS-DO-DONO.md`, `video/PEDIDO-anuncio-locucao.md` e nas citações do histórico; reler as outras conversas inteiras custaria caro demais. O porquê é interpretação: fica marcado como leitura nossa, não como fala dele.

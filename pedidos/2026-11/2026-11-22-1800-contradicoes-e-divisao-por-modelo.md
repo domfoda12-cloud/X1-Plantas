@@ -19,6 +19,8 @@
 
 **Ligação com as ideias gerais do projeto:** continua o "os agentes esquecem": depois do índice e dos resumos, falta os documentos concordarem e o trabalho ter dono certo.
 
+**Perguntas que me fiz:** (ficha anterior à regra de 22/11/2026)
+
 **Pronto quando:** `pedidos/LEIA-ME.md` explica o caminho; o gancho grava; cada agente tem modelo; as contradições estão resolvidas ou apagadas e a lista de desatualizados está vazia ou só com o que depende do dono; `checar.py` passa.
 
 **Suposições (o dono não disse):** garantia de 7 dias e "12 ou 24 plantas" são decisão dele: os textos passam a dizer só o que existe e deixam o campo em aberto. A retirada do selo "Imagem ilustrativa" vale para vídeo; imagem parada do e-book mantém a legenda. Assunto pessoal não vira ficha no repositório.
