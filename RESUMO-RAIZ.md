@@ -5,7 +5,15 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Antes de trabalhar, leia `contexto/QUADRO.md` e o seu `contexto/<papel>.md`. Pedido do dono vira linha no `CONTEXTO-HISTORICO.md` e aviso no quadro (`CLAUDE.md`).
+- Frentes, uma por vez: e-book → animações → vídeo. Peça final sempre na maior qualidade (`CLAUDE.md`).
+- O Maestro (MinoAI Frontier) opina sempre e primeiro. O Revisor de risco veta por honestidade ou lei. O dono decide preço, título, bônus, anúncio, publicação e ferramenta paga (`CONSELHO.md`).
+- Nunca dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo de obra (`CLAUDE.md`).
+- Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos. A `main` é a única branch; mudança de sistema vai em `sistema/<assunto>` (`CLAUDE.md`).
+- Toda entrega tem ficha `PEDIDO-<entrega>.md`; suposição não decide etapa (`CONSELHO.md`).
+- Em aberto com o dono: título, preço, bônus, 12 ou 24 plantas, quais casas refazer (`CONTEXTO.md`). R$ 67 é recomendação, não decisão (`ESTRATEGIA.md`).
+- Contradição: OpenArt tem 115 créditos em 21/11/2026 (`ORCAMENTO.md`) e 21.137 (`contexto/QUADRO.md`).
+- Contradição: 0 de 12 plantas prontas, 1 com 3D (`PAINEL.md`); e-book "quase pronto", 61 páginas e 24 casas (`ORCAMENTO.md`).
 <!-- /essencial -->
 
 ## Os 11 documentos

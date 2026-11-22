@@ -5,7 +5,16 @@
 ## O essencial
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
-- (falta escrever: os 5 a 10 fatos desta pasta que todo agente precisa saber)
+- Leia o quadro antes de trabalhar. Quem atende um pedido do dono escreve no topo e apaga o mais antigo: ficam os 5 últimos (`QUADRO.md`).
+- Trabalhe e envie na `main`, com `git pull --rebase` antes; a `planta-de-casas-anuncio` acabou (`QUADRO.md`).
+- Regra do dono: confira todo número contra a fonte antes de repassar (`QUADRO.md`).
+- OpenArt não é proibido: cada uso pede o "sim" do dono, com resumo e custo antes (`QUADRO.md`).
+- A C01 foi redesenhada (50 m²) e é o modelo; o material antigo dela não vale, use `ebook/visual/3d/C01.jpg`. As outras 23 esperam o dono (`QUADRO.md`, `arquiteto.md`).
+- O dono reprovou o arranjo das 24 plantas. O método novo está em `ebook/referencias/arquiteto-sites-de-profissionais.md`; refazer espera ele dizer quais e quando (`arquiteto.md`).
+- Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`. O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`, `QUADRO.md`).
+- O selo "Imagem ilustrativa" nos vídeos deixou de ser condição; o aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
+- Em aberto com o dono: título, preço, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário (`estrategista.md`).
+- Contradição: imagens 2D desatualizadas incluem a F05 (`arquiteto.md`) e não incluem (`designer.md`).
 <!-- /essencial -->
 
 ## Os 9 documentos
