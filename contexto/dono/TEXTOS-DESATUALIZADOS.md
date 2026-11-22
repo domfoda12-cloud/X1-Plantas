@@ -10,7 +10,12 @@
 - **Vídeo:** o que é "pagar por mais" no vídeo-convite; formato 4:5 ou 9:16 do anúncio com locução; qual planta a chamada promete (`video/VIDEO.md`).
 - **PDF de 23 MB:** precisa ficar mais leve para mandar no WhatsApp?
 
-## Revisor de risco (texto novo que ainda não passou por ele)
+## Revisor de risco
+
+- Em 22/11 ele leu os textos de venda e vetou trechos em 5 de 7 arquivos; as frases aceitas foram aplicadas. A foto antiga de fachada da C01 saiu do e-book: a casa usa a vista da rua simplificada até a foto ser refeita (OpenArt, com o "sim" do dono).
+- Ainda sem a leitura dele: os textos de cada casa em `ebook/fichas/textos.py` (fora C01 e C03), a calculadora, os posts e os roteiros de vídeo.
+
+## Já revisado em 22/11 (apagar quando conferir que ficou certo)
 
 - `ebook/vendas/material-gratuito.md`: ficha nova da C01.
 - `ebook/vendas/sequencia-whatsapp.md`: dias 1 e 3; `ebook/vendas/faq-compradores.md`: "O que vem no e-book?".
@@ -19,7 +24,7 @@
 
 ## Imagem e vídeo que ainda mostram a casa velha (texto já corrigido)
 
-- **C01 antiga:** a foto de fachada no PDF (`ebook/visual/openart/fachadas/C01.jpg`), o mockup `ebook/visual/mockups/casa-c01-celulares.png`, o clipe `video/broll/clipes/c01-3d.mp4`, a pasta `animacoes-3d/plantas/casa-compacta/` e as imagens dos posts em `instagram/posts/imagens/` (os textos dentro de `instagram/posts/gerar-imagens.cjs` também).
+- **C01 antiga:** o mockup `ebook/visual/mockups/casa-c01-celulares.png`, o clipe `video/broll/clipes/c01-3d.mp4`, a pasta `animacoes-3d/plantas/casa-compacta/` e as imagens dos posts em `instagram/posts/imagens/` (os textos dentro de `instagram/posts/gerar-imagens.cjs` também).
 - **Vídeos a remontar antes de usar:** `previa-whatsapp` e `principal` usam o clipe da C01 antiga; os quatro roteiros em `video/roteiros/*.json` ainda põem "Ilustração do modelo 3D" ou "Imagem ilustrativa" na tela; `saida/v1` a `v5` são da C01 velha.
 - **E07:** está na fila do redesenho (3 quartos em fila); os vídeos `principal-condor` e `principal-e07` são rascunho.
 
