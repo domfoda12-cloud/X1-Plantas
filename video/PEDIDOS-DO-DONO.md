@@ -9,7 +9,8 @@
 |---|---|---|
 | 20/11 | Referência de edição: CONDOR XIII; "preste muita atenção" no B-roll e na música | Vale. Ver `REFERENCIA-CONDOR.md` |
 | 21/11 | "O vídeo também deve ficar comprimido" | Vale |
-| 21/11 | "Não use OpenArt" | Vale. Nenhum clipe do OpenArt em vídeo novo |
+| 21/11 | "Não use OpenArt" | Corrigido pelo dono em 22/11 (linha abaixo) |
+| 22/11 | "Use o OPENART, que eu NÃO proibi, apenas necessita permissão para ser usado" | Vale. OpenArt pode, **com o "sim" do dono a cada uso** (resumo e custo antes) |
 | 21/11 | "Quero REALISTA", "parece vida real" | Vale. O motor 3D próprio é ilustração, não foto |
 | 22/11 | Vai filmar com o celular "daqui a alguns dias, mas não por enquanto" | Aguardando. Até lá, vídeo com planta, 3D próprio e páginas do e-book |
 | 22/11 | "Quando eu acrescentar uma informação, garanta que ela fique lá" | Vale. É este arquivo |
