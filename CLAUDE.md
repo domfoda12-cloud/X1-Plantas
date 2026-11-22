@@ -12,7 +12,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
 
-**Pense antes e pergunte sempre** (dono, 22/11/2026): mais quanto maior o trabalho; pergunte a si mesmo (pedido, suposição, o que não sabe) e ao dono, sem travar ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
+**Pense antes e pergunte sempre** (dono, 22/11): mais quanto maior o trabalho; pergunte a si mesmo (pedido, suposição, o que não sabe) e ao dono, sem travar ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 
 ## O objetivo: a alegria do comprador, que vira Pix
 
