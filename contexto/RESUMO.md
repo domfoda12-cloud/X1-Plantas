@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 16 documentos
+## Os 17 documentos
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -70,6 +70,14 @@ O que o dono escreveu na conversa principal do projeto, na ordem e sem correçã
 Seções: 16/11/2026; 18/11/2026; 19/11/2026; 20/11/2026; 21/11/2026; 22/11/2026.
 
 Tamanho: 3509 palavras.
+
+### [Retrospectiva: o que foi feito no e-book e nos vídeos, o que o dono reclamou, o que funcionou](dono/RETROSPECTIVA.md)
+
+Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha:…
+
+Seções: E-book; Vídeos; Imagens e 3D; O que se repete; Plano para refazer do zero; O que esta leitura não conseguiu avaliar.
+
+Tamanho: 4550 palavras.
 
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 

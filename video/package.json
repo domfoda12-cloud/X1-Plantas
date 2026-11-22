@@ -1,10 +1,11 @@
 {
   "name": "x1-plantas-video",
   "private": true,
-  "description": "Vídeo 9:16 das plantas de casas, renderizado quadro a quadro.",
+  "description": "Motor 3D das plantas (three.js): imagens, animação, passeio e vista da rua.",
   "scripts": {
-    "render": "node render.cjs",
-    "amostras": "node render.cjs --amostras 1,6,11,16,21,26,31,36,42,47"
+    "planta": "node render-planta.cjs",
+    "passeio": "node render-passeio.cjs",
+    "rua": "node render-rua.cjs"
   },
   "dependencies": {
     "three": "0.170.0"
