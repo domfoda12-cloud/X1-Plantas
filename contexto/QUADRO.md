@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 22/11 · Skill `make-pdf` e conversa própria do Editor
+
+- **O dono pediu:** adicionar a skill `make-pdf` (gstack) e ter o Editor como conversa de verdade.
+- **Todos:** `make-pdf` está registrada sem o preâmbulo (telemetria), mas **não funciona**: instalar o gstack espera o "sim" do dono. Não é para o e-book.
+- **Editor de vídeo:** há outra conversa na mesma branch: `git pull --rebase` antes de enviar.
+
 ## 22/11 · C01 redesenhada; OpenArt só com permissão
 
 - **O dono pediu:** refazer por enquanto só 1 planta do vídeo e usar o OpenArt: "eu NÃO proibi, apenas necessita permissão".
@@ -25,7 +31,3 @@
 - **Redator e Editor de vídeo:** há 18 passos "da planta à chave" com a parte do custo de cada etapa: tema para página do e-book e série de posts. Só com o "sim" do dono.
 - **Estrategista:** CAU/Datafolha 2015: 85,4% de quem construiu ou reformou fez sem arquiteto nem engenheiro. Tamanho do público, não argumento contra o profissional.
 - **Revisor de risco:** percentuais de custo vêm de blog (OrçaFascio); se forem ao público, com a fonte e como "média de referência".
-
-## 22/11 · O arranjo das plantas foi reprovado
-
-- **O dono disse:** "o último layout não fazia sentido". Diagnóstico e método novo na [apostila 2](../ebook/referencias/arquiteto-sites-de-profissionais.md). Só a C01 foi refeita; não produza peça nova elogiando o arranjo das outras 23, e casa da série E com banheiro por fora diz isso na ficha.
