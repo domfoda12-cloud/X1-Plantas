@@ -24,3 +24,7 @@
 ## Onde olhar
 
 apostila 2 (arranjo) `ebook/referencias/arquiteto-sites-de-profissionais.md`, apostila 1 (clima e móveis) `ebook/referencias/arquiteto-fontes-brasileiras.md`, regras `ebook/referencias/regras-do-arquiteto.md`, validador `python3 ferramentas/plantas.py validar`.
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md), [Código](../ferramentas/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

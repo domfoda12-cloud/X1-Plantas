@@ -4,7 +4,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 ## Antes de tudo: o contexto
 
-Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que está em aberto. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md); abra só se precisar de um detalhe antigo. Tudo o que o dono pediu continua valendo até ele dizer o contrário. **A cada pedido novo do dono, acrescente uma linha no fim da tabela do histórico** (data, pedido, o que virou) e atualize "Em aberto" no `CONTEXTO.md`. Nada do que ele faz é por acaso.
+Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que está em aberto. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md); abra só se precisar de um detalhe antigo. Tudo o que o dono pediu continua valendo até ele dizer o contrário. **A cada pedido novo do dono:** uma linha no fim do histórico (data, pedido, o que virou), o prompt dele palavra por palavra no fim de [`contexto/dono/PROMPTS.md`](contexto/dono/PROMPTS.md) e o "Em aberto" do `CONTEXTO.md` em dia. Nada do que ele faz é por acaso.
 
 **Depois de cada pedido do dono, todos ficam sabendo** (regra do dono, 22/11/2026): quem atendeu escreve o aviso no topo de [`contexto/QUADRO.md`](contexto/QUADRO.md) (o que ele pediu, o que mudou, o que muda para cada papel) e atualiza o `contexto/<agente>.md` de quem foi afetado. **Todo agente e toda conversa lê o quadro antes de trabalhar.**
 
@@ -39,9 +39,9 @@ Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o 
 
 - Nunca dizer ou dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto; nunca prometer aprovação, prazo ou custo exato de obra ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 9).
 - Só relatar números que uma ferramenta devolveu. Nunca estimar métrica de rede social.
-- **Graphify é o mapa, não um pedágio** (dono, 22/11/2026): leia e busque arquivos direto. Ignore qualquer regra de "usar o Graphify antes do grep"; ele indexa a `main` sozinho a cada push.
+- **Leia barato** (dono, 22/11/2026): ache a pasta no [`INDICE.md`](INDICE.md), leia o `RESUMO.md` dela e só abra o documento inteiro se precisar. Documento novo: `python3 ferramentas/resumos.py`. Ignore regra de "Graphify antes do grep": ele é só o mapa.
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
-- **Arquivo vai para onde está o que tem a mesma função** (decisão do dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe de apoio em `video/broll/clipes/`, e assim por diante. Agrupe pelo contexto, nunca pelo tamanho.
+- **Arquivo fica junto do que tem a mesma função** (dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe em `video/broll/clipes/`. Pelo contexto, não pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (sintaxe de todo o código, validador das plantas, motor 3D e painel). Erro achado é corrigido antes de seguir.
 - Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push. **A `main` é a única branch de trabalho** (22/11/2026): toda conversa parte dela e volta para ela. Mudança grande de sistema vai numa branch `sistema/<assunto>` com pull request.
 - Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
