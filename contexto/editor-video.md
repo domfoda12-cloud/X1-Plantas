@@ -6,7 +6,7 @@
 
 - **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `PEDIDOS-DO-DONO.md`.
-- **OpenArt: não usar** (21/11). Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
+- **OpenArt: só com o "sim" do dono a cada uso** (22/11: "eu NÃO proibi, apenas necessita permissão"), com resumo e custo antes. A C01 foi redesenhada: o material antigo dela não vale. Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - Vídeo é a última frente (e-book → animações → vídeo). Até abrir, só planejar.
 - A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.

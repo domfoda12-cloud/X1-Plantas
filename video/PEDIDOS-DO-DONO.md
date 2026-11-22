@@ -21,7 +21,8 @@ Revisão de 22/11/2026, a pedido do dono ("reveja toda a nossa conversa, procure
 | 21/11 | A prévia "vai para o cliente no WhatsApp, não é o principal, mas faça os dois" | Feitos: `saida/previa-whatsapp/` e `saida/principal/` |
 | 21/11 | "O vídeo também deve ficar comprimido" | Vale |
 | 21/11 | "Mande o Editor fazer o vídeo com estes vídeos de referência" (escolheu o estilo CONDOR) | Vale. `roteiros/principal-condor.json` |
-| 21/11 | "Não use OpenArt" | Vale. Nenhum clipe do OpenArt em vídeo novo |
+| 21/11 | "Não use OpenArt" | Corrigido pelo dono em 22/11 (linha abaixo) |
+| 22/11 | "Use o OPENART, que eu NÃO proibi, apenas necessita permissão para ser usado" | Vale. OpenArt pode, **com o "sim" do dono a cada uso** (resumo e custo antes) |
 | 21/11 | "Quero o vídeo realista feito pelo motor Claude, não OpenArt"; "quero REALISTA"; "parece vida real" | Vale. O motor 3D próprio é ilustração, não foto; a vista da rua (`render-rua.cjs`) foi recusada por isso |
 | 22/11 | Vai filmar com o celular: "consigo filmar daqui a alguns dias, mas não por enquanto" | Aguardando. O Editor recomendou filmar e deve mandar a lista de uns 8 planos de 5 s. Até lá: planta, 3D próprio e páginas do e-book |
 | 22/11 | "Para todo vídeo, quando eu acrescentar uma informação, garanta que ela fique lá e não se perca na conversa" | Vale. É este arquivo |
@@ -57,12 +58,12 @@ Texto do dono, sem mudar:
 | 11 | `{PESSOAS}` | "No people" | "a family of four in the living room, seen from behind" | Pessoa só com cuidado: nada de rosto inventado passando por cliente real |
 | 12 | `{FOCO}` | (vazio) | "linger on the kitchen counter"; "end on the bedroom window with sunlight" | Quando o roteiro fala de um detalhe: a imagem ilustra a frase |
 
-**Como usar hoje, com o OpenArt proibido:**
+**Como usar hoje (OpenArt só com o "sim" do dono a cada uso):**
 
 - **No motor 3D próprio** (ilustração, não foto): `cd video && node render-passeio.cjs --planta F03`. As variáveis viram opções: percurso = lista `CAMINHOS` (ou `--caminho`), velocidade = `--vel`, luz e céu = `sol`, `ceu` e `exp` na página `src/passeio.html`, lente = `fov`, altura dos olhos = `olho`. O borrão e a cor quente entram no fim, pelo ffmpeg.
 - **Na filmagem do dono com o celular:** o mesmo prompt vira instrução de filmagem (andar devagar e reto, celular na altura do peito, luz de fim de tarde, atravessar as portas sem parar).
-- **Em gerador de vídeo por IA** (OpenArt ou outro): só com o "sim" do dono; hoje a ordem é não usar. O prompt fica pronto para esse dia. Imagem gerada leva "Imagem ilustrativa".
-- **Dúvida registrada:** "motor art integration" foi entendido como o **motor 3D próprio** (o dono proibiu o OpenArt em 21/11). Se ele quis dizer OpenArt, falta ele liberar.
+- **No OpenArt** (o caminho que chega perto de "vida real"): só com o "sim" do dono a cada uso, com resumo e custo antes. Tomada gerada parte da nossa imagem 3D da casa (para não inventar cômodo) e leva "Imagem ilustrativa".
+- **Dúvida registrada:** "motor art integration" foi entendido primeiro como o motor 3D próprio, porque o Editor ainda não sabia da correção do dono sobre o OpenArt. É provável que ele tenha dito **OpenArt**. O passeio do motor próprio fica como rascunho e como guia de câmera; a versão realista no OpenArt espera o "sim" dele com o custo na mão.
 
 ## Próximo vídeo: o convite (22/11/2026)
 
