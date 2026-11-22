@@ -33,7 +33,7 @@ Para acompanhar no WhatsApp, use o mockup [`../visual/mockups/casa-c01-celulares
 
 ## 2. Ficha da Casa Compacta (para mandar em texto)
 
-**C01 · Casa Compacta** · 55 m² · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade)
+**C01 · Casa Compacta** · 50 m² · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade)
 
 **Para quem é:** casal com 1 ou 2 filhos que quer dois quartos do mesmo tamanho e uma área de serviço coberta, com pouco corredor.
 

@@ -99,7 +99,7 @@ sys.path.insert(0, str(RAIZ / "ferramentas"))
 import plantas as PL  # noqa: E402
 _ps = {p["id"]: p for p in PL.carregar()}
 _c = lambda pid, cid: next(c for c in _ps[pid]["comodos"] if c["id"] == cid)
-_casos = [("sala da C01: 3,30 de eixo, parede externa de um lado e passagem aberta do outro", PL.util(_ps["C01"], _c("C01", "sala"))[0], 3.15),
+_casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aberta do outro", PL.util(_ps["C05"], _c("C05", "sala"))[0], 2.85),
           ("quarto casal da E04: 3,00 de eixo entre a divisa e o pátio, duas paredes externas", PL.util(_ps["E04"], _c("E04", "quarto1"))[0], 2.70),
           ("banheiro da S03: giro de 1,50 m", min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
 _ruins = [f"{n}: deu {v}, esperado {e}" for n, v, e in _casos if (abs(v - e) > 1e-6 if not isinstance(e, bool) else v != e)]

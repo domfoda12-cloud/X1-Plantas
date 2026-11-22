@@ -5,65 +5,74 @@
  "D": 8.5,
  "comodos": [
   {
-   "id": "sala",
-   "nome": "Sala",
-   "tipo": "sala",
+   "id": "varanda",
+   "nome": "Varanda",
+   "tipo": "varanda",
    "x0": 0.0,
    "y0": 0.0,
-   "x1": 3.3,
-   "y1": 3.4
+   "x1": 3.5,
+   "y1": 1.4
   },
   {
-   "id": "cozinha",
-   "nome": "Cozinha",
-   "tipo": "cozinha",
-   "x0": 3.3,
-   "y0": 0.0,
-   "x1": 5.3,
-   "y1": 3.4
+   "id": "sala",
+   "nome": "Sala e jantar",
+   "tipo": "sala",
+   "x0": 0.0,
+   "y0": 1.4,
+   "x1": 3.5,
+   "y1": 5.4
   },
   {
    "id": "servico",
    "nome": "Serviço",
    "tipo": "servico",
-   "x0": 5.3,
-   "y0": 0.0,
-   "x1": 6.5,
-   "y1": 3.4
-  },
-  {
-   "id": "circ",
-   "nome": "Circulação",
-   "tipo": "circ",
    "x0": 0.0,
-   "y0": 3.4,
-   "x1": 4.4,
-   "y1": 4.6
+   "y0": 5.4,
+   "x1": 1.2,
+   "y1": 8.5
   },
   {
-   "id": "banho",
-   "nome": "Banheiro",
-   "tipo": "banho",
-   "x0": 4.4,
-   "y0": 3.4,
-   "x1": 6.5,
-   "y1": 4.6
-  },
-  {
-   "id": "quarto1",
-   "nome": "Quarto casal",
-   "tipo": "casal",
-   "x0": 0.0,
-   "y0": 4.6,
-   "x1": 3.25,
+   "id": "cozinha",
+   "nome": "Cozinha",
+   "tipo": "cozinha",
+   "x0": 1.2,
+   "y0": 5.4,
+   "x1": 3.5,
    "y1": 8.5
   },
   {
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
-   "x0": 3.25,
-   "y0": 4.6,
+   "x0": 3.5,
+   "y0": 0.0,
+   "x1": 6.5,
+   "y1": 3.3
+  },
+  {
+   "id": "circ",
+   "nome": "Hall",
+   "tipo": "circ",
+   "x0": 3.5,
+   "y0": 3.3,
+   "x1": 4.6,
+   "y1": 5.1
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 4.6,
+   "y0": 3.3,
+   "x1": 6.5,
+   "y1": 5.1
+  },
+  {
+   "id": "quarto1",
+   "nome": "Quarto casal",
+   "tipo": "casal",
+   "x0": 3.5,
+   "y0": 5.1,
    "x1": 6.5,
    "y1": 8.5
   }
@@ -71,22 +80,26 @@
  "portas": [
   [
    "ext",
-   "sala",
+   "varanda",
    "frente"
+  ],
+  [
+   "varanda",
+   "sala"
   ],
   [
    "sala",
    "cozinha",
    "aberto"
-  ],
-  [
-   "cozinha",
-   "servico"
   ],
   [
    "sala",
    "circ",
    "aberto"
+  ],
+  [
+   "circ",
+   "quarto2"
   ],
   [
    "circ",
@@ -97,8 +110,13 @@
    "quarto1"
   ],
   [
-   "circ",
-   "quarto2"
+   "cozinha",
+   "servico"
+  ],
+  [
+   "ext",
+   "servico",
+   "fundos"
   ]
  ],
  "quartos_txt": "2 quartos",
@@ -107,100 +125,108 @@
   "sala": [
    [
     "frente",
-    1.6
-   ]
-  ],
-  "cozinha": [
-   [
-    "frente",
-    1.1
+    2.0
    ]
   ],
   "servico": [
    [
+    "fundos",
+    0.6
+   ]
+  ],
+  "cozinha": [
+   [
+    "fundos",
+    1.1
+   ]
+  ],
+  "quarto2": [
+   [
     "dir",
-    0.7
+    1.7
    ]
   ],
   "banho": [
    [
     "dir",
-    0.7
+    0.9
    ]
   ],
   "quarto1": [
    [
     "fundos",
-    2.1
-   ]
-  ],
-  "quarto2": [
-   [
-    "fundos",
-    2.1
+    1.7
    ]
   ]
  },
- "destaque": "A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto",
+ "destaque": "Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura",
  "pensou": [
-  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
-  "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
+  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
+  "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
  "validacao": {
   "erros": [],
-  "avisos": [],
+  "avisos": [
+   "Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho",
+   "Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)"
+  ],
   "info": [],
   "metricas": {
-   "area_fechada": 55.2,
+   "area_fechada": 50.3,
    "area_total": 55.2,
-   "area_coberta_aberta": 0,
+   "area_coberta_aberta": 4.9,
    "util": {
-    "sala": [
-     3.15,
-     3.25,
-     10.2
+    "varanda": [
+     3.5,
+     1.4,
+     4.9
     ],
-    "cozinha": [
-     1.94,
-     3.19,
-     6.2
+    "sala": [
+     3.29,
+     3.79,
+     12.5
     ],
     "servico": [
      0.99,
-     3.19,
-     3.2
+     2.89,
+     2.9
     ],
-    "circ": [
-     4.19,
-     1.08,
-     4.5
-    ],
-    "banho": [
-     1.89,
-     1.08,
-     2.0
-    ],
-    "quarto1": [
-     3.04,
-     3.69,
-     11.2
+    "cozinha": [
+     2.18,
+     2.95,
+     6.4
     ],
     "quarto2": [
-     3.04,
-     3.69,
-     11.2
+     2.7,
+     3.09,
+     8.3
+    ],
+    "circ": [
+     1.04,
+     1.68,
+     1.7
+    ],
+    "banho": [
+     1.69,
+     1.68,
+     2.8
+    ],
+    "quarto1": [
+     2.79,
+     3.19,
+     8.9
     ]
    },
    "luz": {
-    "sala": 0.1996,
-    "cozinha": 0.1618,
-    "servico": 0.1716,
-    "banho": 0.1667,
-    "quarto1": 0.1988,
-    "quarto2": 0.1988
+    "sala": 0.2,
+    "servico": 0.1613,
+    "cozinha": 0.1543,
+    "quarto2": 0.2061,
+    "banho": 0.1579,
+    "quarto1": 0.2
    },
-   "circulacao": 0.096,
+   "circulacao": 0.039,
    "lote": [
     8.0,
     13.0
@@ -217,14 +243,14 @@
    ],
    "taxa_ocupacao": 0.53,
    "orientacao": {
-    "melhor": "sul",
+    "melhor": "norte",
     "segunda": "oeste",
-    "pior": "leste",
+    "pior": "sul",
     "pontos": {
-     "norte": 9.3,
-     "leste": -7.3,
-     "sul": 13.9,
-     "oeste": 11.4
+     "norte": 16.1,
+     "leste": 2.3,
+     "sul": 0.8,
+     "oeste": 8.1
     }
    }
   }
