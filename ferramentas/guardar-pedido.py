@@ -29,7 +29,7 @@ try:
             "`python3 ferramentas/pedido.py nova \"assunto\"` e preencha a ficha (por quê, objetivo, ligação com "
             "contexto/dono/IDEIAS-GERAIS.md, quem executa por modelo) antes de delegar; recado de pedido aberto = "
             "`pedido.py recado <ficha>`; pergunta curta ou assunto pessoal = responda sem ficha. Travou, errou ou levou correção do dono? "
-            "Chame o agente `supervisor` (Fable) antes de tentar de novo. Pergunte-se o que ele pediu e não pediu, o que você supõe e o que não sabe; "
+            "Chame o agente `supervisor` (Fable) antes de tentar de novo. Pense antes, mais quanto maior o trabalho. Pergunte-se o que ele pediu e não pediu, o que você supõe e o que não sabe; "
             "pergunte a ele o que só ele sabe, no fim, sem parar o resto. "
             f"Fichas abertas agora: {abertas}.")}}, ensure_ascii=False))
 except Exception:

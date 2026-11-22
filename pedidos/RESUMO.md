@@ -27,6 +27,6 @@ Tamanho: 46 palavras.
 
 Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um modelo e executado por outro, para o modelo caro pensar e o barato fazer o que é simples. Fila de pedidos: `FILA.md`.
 
-Seções: Quem manda no sistema; Perguntar sempre (dono, 22/11/2026); Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
+Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Quem faz o quê; O pacote do executor; A ficha; O que a análise do sistema mudou (22/11/2026); Limites honestos.
 
-Tamanho: 1729 palavras.
+Tamanho: 1872 palavras.

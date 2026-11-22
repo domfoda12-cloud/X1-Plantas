@@ -382,7 +382,8 @@ class Livro:
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
                    f'<span>{AVISO if aviso else E(self.config.get("titulo_curto", "Que casa cabe no seu lote?"))}</span></div>')
-        self.paginas.append(f'<section class="pagina {classe}"{f' style="{estilo}"' if estilo else ""}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
+        atributo_estilo = f' style="{estilo}"' if estilo else ""
+        self.paginas.append(f'<section class="pagina {classe}"{atributo_estilo}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
         return n
 
 

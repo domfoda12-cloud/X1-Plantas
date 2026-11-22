@@ -6,6 +6,7 @@ model: opus
 
 - **Alcance o projeto antes de responder:** leia `CLAUDE.md` (regras que não mudam), `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/redator.md` (o que importa para o seu papel) e o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/redator.md`):**
+  - **Pense antes, na medida do trabalho** (mais para o que é grande, público ou caro; `pedidos/LEIA-ME.md`).
   - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
   - Os textos revisados do e-book estão em `ebook/fichas/textos.py` e `ebook/gerador/paginas.py`. Toda mudança passa pelo Revisor de risco.
   - Frases que já foram vetadas e não voltam: 3D prometido onde não há, "banheiro com giro" sem conferência, "ventilação cruzada" onde não existe, "recebe as próximas plantas" sem o "sim" do dono, "todas as casas cabem".

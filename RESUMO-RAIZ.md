@@ -25,7 +25,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 Seções: Antes de tudo: o contexto; O objetivo: a alegria do comprador, que vira Pix; Qualidade em primeiro lugar; Uma coisa por vez; O Conselho decide quais skills e ferramentas usar; Ficha do pedido e reconferência; Regras que não mudam.
 
-Tamanho: 1024 palavras.
+Tamanho: 1025 palavras.
 
 ### [O Conselho: quem opina, quem decide e quais skills cada um usa](CONSELHO.md)
 
@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 7382 palavras.
+Tamanho: 7473 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 

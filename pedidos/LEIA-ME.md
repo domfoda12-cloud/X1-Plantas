@@ -11,7 +11,19 @@
 - **Socorro.** O Opus chama o Fable antes de tentar de novo quando: a mesma coisa falhou duas vezes; o dono corrigiu ou reclamou do resultado; ele percebeu que errou ou que contrariou uma regra; não tem certeza do que o dono quis dizer; ou vai entregar ao público algo em que tem dúvida. O Fable diz a causa e o caminho; quem corrige é o Opus.
 - **Auditoria.** A cada 3 fichas fechadas, `pedido.py fechar` avisa "HORA DA AUDITORIA". O Opus chama o `supervisor` com as fichas fechadas desde a última; ele confere contra o que existe de verdade, aponta os erros por gravidade e registra em [`AUDITORIAS.md`](AUDITORIAS.md). Erro de gravidade alta é corrigido antes do próximo pedido.
 
-## Perguntar sempre (dono, 22/11/2026)
+## Pensar antes de fazer (dono, 22/11/2026)
+
+"Antes de fazer qualquer trabalho, gaste tempo pensando; dependendo do trabalho, gaste mais ou menos tempo pensando."
+
+| Tamanho do trabalho | Quanto pensar antes |
+|---|---|
+| Pergunta curta, ajuste de uma linha | o bastante para responder certo: o que ele perguntou de fato, e se a resposta está conferida |
+| Tarefa pequena (um texto, um arquivo, um conserto) | o plano em poucas linhas: o que muda, o que pode quebrar, como provar que funcionou |
+| Trabalho grande, que vai ao público ou que custa dinheiro | o plano escrito na ficha antes de começar: duas ou três formas de fazer e por que a escolhida, riscos, o que reaproveitar, o que perguntar ao dono, como medir o resultado |
+
+Na dúvida sobre o tamanho, trate como o maior. Pensar inclui as perguntas da seção abaixo.
+
+
 
 "Faça o sistema todo ser bem questionativo, sempre se fazendo perguntas para entender melhor a situação, e sinta-se à vontade de me perguntar coisas que queira saber."
 
