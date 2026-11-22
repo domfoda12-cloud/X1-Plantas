@@ -21,7 +21,7 @@
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Tamanho: 46 palavras.
+Tamanho: 211 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
