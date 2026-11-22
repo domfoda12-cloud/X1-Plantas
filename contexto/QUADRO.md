@@ -2,12 +2,11 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
-## 22/11 · Skill `make-pdf`, conversa do Editor e página de chat
+## 22/11 · Skill `make-pdf` e conversa própria do Editor
 
-- **O dono pediu:** adicionar a skill `make-pdf` (gstack); uma página para falar com o Editor; o Editor como conversa de verdade do Claude.
-- **O que mudou:** `make-pdf` registrada em `.claude/skills/`, **sem o preâmbulo** (telemetria, sincronização de memória). **Não funciona ainda:** falta instalar o gstack, o que espera o "sim" do dono.
-- **Todos:** `make-pdf` é para documento em markdown (guia do parceiro, relatório jurídico). O e-book continua saindo de `ebook/gerador/livro.py`.
-- **Editor de vídeo:** existe a conversa "Editor de vídeo · MinoAI Frontier (X1-Plantas)" e a página de chat (`video/conversa-com-o-editor.html`). As duas conversas mexem na mesma branch: `git pull --rebase` antes de enviar.
+- **O dono pediu:** adicionar a skill `make-pdf` (gstack) e ter o Editor como conversa de verdade.
+- **Todos:** `make-pdf` está registrada sem o preâmbulo (telemetria), mas **não funciona**: instalar o gstack espera o "sim" do dono. É para markdown, não para o e-book.
+- **Editor de vídeo:** há outra conversa na mesma branch: `git pull --rebase` antes de enviar.
 
 ## 22/11 · C01 redesenhada; OpenArt só com permissão
 
@@ -32,7 +31,3 @@
 - **Redator e Editor de vídeo:** há 18 passos "da planta à chave" com a parte do custo de cada etapa: tema para página do e-book e série de posts. Só com o "sim" do dono.
 - **Estrategista:** CAU/Datafolha 2015: 85,4% de quem construiu ou reformou fez sem arquiteto nem engenheiro. Tamanho do público, não argumento contra o profissional.
 - **Revisor de risco:** percentuais de custo vêm de blog (OrçaFascio); se forem ao público, com a fonte e como "média de referência".
-
-## 22/11 · O arranjo das plantas foi reprovado
-
-- **O dono disse:** "o último layout não fazia sentido". Diagnóstico e método novo na [apostila 2](../ebook/referencias/arquiteto-sites-de-profissionais.md). Só a C01 foi refeita; não produza peça nova elogiando o arranjo das outras 23, e casa da série E com banheiro por fora diz isso na ficha.
