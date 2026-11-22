@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 19 documentos
+## Os 20 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -140,6 +140,14 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
 Tamanho: 379 palavras.
+
+### [Contexto do Maestro (a conversa principal)](maestro.md)
+
+O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fichas e o resumo de passagem (dono, 22/11/2026). Antes de trabalhar, o quadro; a equipe, `EQUIPE.md`; as regras de pedido, `../pedidos/LEIA-ME.md`.
+
+Seções: Decisões do dono que valem para você; Lições.
+
+Tamanho: 264 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
