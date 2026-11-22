@@ -62,8 +62,22 @@ def todas():
     P = []
 
     # ---------------------------------------------------------------- Casas compactas (C)
-    P.append(_compacta("C01", "Casa Compacta", 6.5, 0, 3.3, 2.0, h1=3.4, h3=3.9,
-                       destaque="A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto"))
+    # C01 redesenhada em 22/11/2026 (apostila 2 + Portaria MCID 725): parte da casa de referência da CAR-BA.
+    # Varanda de entrada, sala e jantar, cozinha nos fundos aberta para a sala, hall curto no lugar do corredor,
+    # banheiro de 1,50 m livres entre os dois quartos e serviço ao lado da cozinha, com porta para o quintal.
+    P.append(casa("C01", "Casa Compacta", 6.5, 8.5,
+                  V((3.5, H((1.4, F("varanda", "Varanda", "varanda")),
+                            (4.0, F("sala", "Sala e jantar", "sala")),
+                            (None, V((1.2, F("servico", "Serviço", "servico")),
+                                     (None, F("cozinha", "Cozinha", "cozinha")))))),
+                    (None, H((3.3, F("quarto2", "Quarto", "dorm")),
+                             (1.8, V((1.1, F("circ", "Hall", "circ")), (None, F("banho", "Banheiro", "banho")))),
+                             (None, F("quarto1", "Quarto casal", "casal"))))),
+                  [("ext", "varanda", "frente"), ("varanda", "sala"), ("sala", "cozinha", "aberto"),
+                   ("sala", "circ", "aberto"), ("circ", "quarto2"), ("circ", "banho"), ("circ", "quarto1"),
+                   ("cozinha", "servico"), ("ext", "servico", "fundos")],
+                  "2 quartos", 1,
+                  destaque="Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura"))
     P.append(casa("C02", "Casa Studio", 4.5, 7.2,
                   H((4.0, F("estar", "Sala e cama", "estar")),
                     (None, V((2.7, F("cozinha", "Cozinha", "cozinha")),

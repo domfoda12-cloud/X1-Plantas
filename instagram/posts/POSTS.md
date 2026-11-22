@@ -11,7 +11,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
 - **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 55 m² em lote a partir de 8 x 15; Casa Estreita 58 m², 2 quartos (1 suíte), lote a partir de 8 x 25; Casa Família 78 m², 3 quartos (1 suíte), lote a partir de 11 x 15. Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
 - **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
-- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups/) e o B-roll [`../../video/broll/ebook-folheando.mp4`](../../video/broll/ebook-folheando.mp4).
+- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups/) e o B-roll [`../../video/broll/clipes/ebook-folheando.mp4`](../../video/broll/clipes/ebook-folheando.mp4).
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
 - **Post novo sugerido pelo maestro (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
 - **Imagens geradas (fachada realista, ambientes):** feitas pela MinoAI com o OpenArt ([`../../animacoes-3d/OPENART-MINOAI.md`](../../animacoes-3d/OPENART-MINOAI.md)).
@@ -20,7 +20,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
 | # | Formato | Tema | Imagens | Situação |
 |---|---|---|---|---|
-| 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Espera o vídeo:** use o B-roll `video/broll/ebook-folheando.mp4` ou espere o 3D novo |
+| 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Espera o vídeo:** use o B-roll `video/broll/clipes/ebook-folheando.mp4` ou espere o 3D novo |
 | 2 | Carrossel (6) | Três plantas lado a lado | [`imagens/post-02-tres-plantas/`](imagens/post-02-tres-plantas/) | **Pronto** (imagens 2D validadas) |
 | 3 | Carrossel (7) | Como ler uma planta baixa | [`imagens/post-03-como-ler-planta/`](imagens/post-03-como-ler-planta/) | **Pronto** (imagens 2D validadas) |
 | 4 | Reel | Passeio 3D da Casa Estreita | capa em [`imagens/capas-reels/`](imagens/capas-reels/) | **Espera o vídeo:** idem |

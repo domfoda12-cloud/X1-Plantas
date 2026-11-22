@@ -6,15 +6,20 @@
 
 ![C01](previas/C01.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **sul**
+**50 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **norte**
 
-*A casa mais enxuta que ainda tem 2 quartos separados e serviço coberto*
+*Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
-- Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
+
+**Atenção**
+
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## C02 · Casa Studio
 

@@ -1,0 +1,173 @@
+<title>Conversa com o Editor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: uma mesa de edição. Cabeçalho azul de projeto, conversa no meio, caixa de texto presa embaixo. */
+:root {
+  --fundo: #F3F5F9; --papel: #FFFFFF; --tinta: #10233F; --suave: #5A6B85; --linha: #D5DCE8;
+  --azul: #08397A; --azul-claro: #E3ECFA; --amarelo: #FFC857; --sobre-azul: #FFFFFF; --erro: #A8321F;
+  --titulo: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --texto: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --fundo: #0A1526; --papel: #12213A; --tinta: #E8EEF8; --suave: #9DB0CC; --linha: #263A5C;
+  --azul: #0B3F86; --azul-claro: #1B3157; --amarelo: #FFC857; --sobre-azul: #FFFFFF; --erro: #FF9C8A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --fundo: #0A1526; --papel: #12213A; --tinta: #E8EEF8; --suave: #9DB0CC; --linha: #263A5C;
+  --azul: #0B3F86; --azul-claro: #1B3157; --amarelo: #FFC857; --sobre-azul: #FFFFFF; --erro: #FF9C8A; color-scheme: dark }
+* { box-sizing: border-box }
+html, body { height: 100% }
+body { background: var(--fundo); color: var(--tinta); font-family: var(--texto); font-size: 16px; line-height: 1.5; display: flex; flex-direction: column }
+.dentro { width: 100%; max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+header { background: var(--azul); color: var(--sobre-azul); margin-top: calc(-1 * env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px) }
+header .dentro { padding-block: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
+.olho { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--amarelo) }
+h1 { font-family: var(--titulo); font-weight: 800; font-size: 26px; line-height: 1.05; margin: 2px 0 0; text-wrap: balance }
+.cab { flex: 1; min-width: 200px }
+.acoes { display: flex; gap: 8px }
+button { font: inherit; cursor: pointer; border-radius: 8px }
+button:focus-visible, textarea:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px }
+.leve { background: transparent; color: var(--sobre-azul); border: 1px solid rgba(255,255,255,.45); padding: 7px 12px; font-size: 14px; font-weight: 500 }
+main { flex: 1; min-height: 0; overflow-y: auto }
+main .dentro { padding-block: 20px; display: grid; gap: 14px }
+.nota { font-size: 14px; color: var(--suave); border-left: 3px solid var(--amarelo); padding-left: 12px }
+.msg { max-width: 88%; padding: 12px 15px; border-radius: 14px; white-space: pre-wrap; overflow-wrap: anywhere }
+.msg .quem { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); margin-bottom: 4px }
+.editor { background: var(--papel); border: 1px solid var(--linha); justify-self: start; border-top-left-radius: 4px }
+.dono { background: var(--azul-claro); justify-self: end; border-top-right-radius: 4px }
+.erro { color: var(--erro); font-size: 14px }
+.ideias { display: flex; flex-wrap: wrap; gap: 8px }
+.ideias button { background: var(--papel); color: var(--tinta); border: 1px solid var(--linha); padding: 8px 12px; font-size: 14px; text-align: left }
+footer { background: var(--papel); border-top: 1px solid var(--linha) }
+footer .dentro { padding-block: 12px; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); display: flex; gap: 10px; align-items: flex-end }
+textarea { flex: 1; min-width: 0; font: inherit; color: var(--tinta); background: var(--fundo); border: 1px solid var(--linha); border-radius: 10px; padding: 10px 12px; resize: none; max-height: 160px }
+.enviar { background: var(--amarelo); color: #10233F; border: 0; padding: 11px 18px; font-weight: 600 }
+.enviar:disabled { opacity: .5; cursor: default }
+</style>
+
+<header><div class="dentro">
+  <div class="cab">
+    <div class="olho">X1-Plantas · vídeo</div>
+    <h1>Conversa com o Editor</h1>
+  </div>
+  <div class="acoes">
+    <button class="leve" id="copiar" type="button">Copiar conversa</button>
+    <button class="leve" id="limpar" type="button">Começar de novo</button>
+  </div>
+</div></header>
+
+<main id="rolagem"><div class="dentro" id="conversa">
+  <p class="nota" id="nota">Aqui você fala com o Editor de vídeo do projeto, que trabalha pelo método da MinoAI Frontier e conhece os vídeos, os clipes e as regras do X1-Plantas. Ele planeja, critica e escreve roteiro. Ele não monta nem gera vídeo por esta página: a edição de verdade roda na MinoAI Frontier, no seu Mac. Quando fechar uma decisão, toque em “Copiar conversa” e cole na sessão do Claude Code.</p>
+  <div class="ideias" id="ideias">
+    <button type="button">Quero o vídeo com cara de vida real. Qual o melhor caminho sem OpenArt?</button>
+    <button type="button">Me dê a lista de 6 cenas para eu filmar com o celular.</button>
+    <button type="button">Critique o vídeo principal de 29 s, cena por cena.</button>
+    <button type="button">Reescreva o gancho dos 3 primeiros segundos, 5 opções.</button>
+  </div>
+</div></main>
+
+<footer><form class="dentro" id="form">
+  <textarea id="texto" rows="1" placeholder="Escreva para o Editor…" aria-label="Mensagem para o Editor"></textarea>
+  <button class="enviar" id="enviar" type="submit">Enviar</button>
+</form></footer>
+
+<script>
+const BRIEFING = `Você é o Editor de vídeo do projeto X1-Plantas e conversa com o DONO do projeto. Você trabalha pelo método da MinoAI Frontier (sempre com esse nome completo). Responda em português do Brasil, simples e direto, em texto puro (sem markdown, sem asteriscos; use listas com hífen ou números). Respostas curtas: no máximo uns 12 linhas, a não ser que ele peça um roteiro inteiro. Dê recomendação, não cardápio. Quando faltar uma informação que só o dono tem, faça uma pergunta só.
+
+O QUE VOCÊ PODE E NÃO PODE
+- Você planeja, critica, escreve roteiro, lista de cenas, texto de tela e instrução de edição.
+- Você NÃO monta, não gera e não assiste vídeo por esta página. A edição final roda na MinoAI Frontier, no Mac do dono (Claude Code, aba Code, conector MinoAI Frontier ligado). A montagem automática roda na sessão do Claude Code do projeto (python3 video/montar.py video/roteiros/<nome>.json).
+- Nunca invente número de visualização, custo ou resultado. Se não sabe, diga que não sabe.
+- Quando o dono fechar uma decisão, termine com uma linha "PARA O CLAUDE CODE:" com a instrução pronta para ele colar lá.
+
+O PRODUTO
+E-book brasileiro com 24 plantas de casas térreas, organizado pela frente do lote (5 m a 14 m). Vende por Instagram e Facebook Ads, com funil no WhatsApp tocado por um parceiro. Público: quem já tem o lote e vai construir com pedreiro, por etapas, classe C, 25 a 50 anos. Casa de exemplo: C01 Casa Compacta, 55 m², 2 quartos, lote a partir de 8 x 15 m com recuos de referência.
+
+REGRAS QUE NÃO MUDAM (o Revisor de risco tem veto)
+- Nunca dizer nem sugerir que a planta dispensa pedreiro, engenheiro ou arquiteto. Nunca prometer aprovação na prefeitura, prazo ou custo de obra.
+- "Cabe no lote" sempre com ressalva: "com recuos de referência", "devem caber".
+- Todo vídeo leva o rodapé: "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
+- Imagem que não é a casa real leva "Imagem ilustrativa"; 3D leva "Ilustração do modelo 3D".
+- Anúncio pago só com música licenciada. Texto no primeiro quadro, sempre.
+- O dono decide preço, título, gasto, publicação e a palavra da chamada (PLANTA ou LOTE, ainda em aberto).
+
+ESTADO DOS VÍDEOS (22/11/2026)
+- Prévia do WhatsApp: pronta, 19 s, 720x1280, 1,2 MB. Mostra páginas do e-book e a C01 em 3D. Fecha com "Me fala a frente e o fundo do seu lote."
+- Vídeo principal: pronto, 29 s, 1080x1920. Cenas: 1) lote vazio, "Todo lote é uma conta." 2) trena no muro, "Meça a frente e o fundo." 3) C01 em 3D, "A casa certa é a resposta." 4) fachada, "Uma ideia de como ela pode ficar na rua." 5) canteiro com a planta, "Leve ao seu engenheiro ou arquiteto." 6) três fachadas, "Da frente de 5 m à de 14 m." 7) família no lote, "Comente PLANTA". Sem música e sem locução.
+- As cenas de foto desse vídeo são 8 clipes de 5 s feitos no OpenArt (Kling 3.0). O dono mandou NÃO usar mais o OpenArt (saldo: 31 créditos).
+- O dono quer agora um vídeo REALISTA, "que parece vida real", sem OpenArt. O motor 3D próprio do projeto foi testado (casa no lote vista da rua, com céu e sombra): saiu como ilustração 3D limpa, não como foto, e o dono recusou.
+- Caminhos reais para o realismo sem OpenArt: (a) o dono filma com o celular; (b) vídeos reais de banco gratuito com licença comercial; (c) Blender, que precisa o dono liberar a instalação e leva horas, sem pessoas. Seja honesto sobre o limite de cada um.
+- Uma reedição no estilo CONDOR ficou pela metade (roteiro de 14 cenas, 25 s, não conferido).
+- Material próprio disponível: animação 3D "blueprint que vira casa" de 12 s das casas C01, C03, E07 e F01; páginas do e-book; imagem 3D das 24 casas.
+
+MÉTODO (MinoAI Frontier, consultado no projeto)
+- Texto de gancho no primeiro quadro: quem não conhece a marca precisa saber em 1 segundo do que se trata.
+- Uma ideia por cena, corte a cada 2 a 5 segundos, a casa aparece cedo, uma chamada só no fim.
+- O fim emenda com o começo para o vídeo repetir; nada de silêncio ou tela preta no fim.
+
+REFERÊNCIA DE EDIÇÃO DO DONO: CONDOR XIII (Payton Talbott e William Alan Harris)
+O que as análises mostraram do estilo: música e corte andam juntos (ele usa remix, não música autoral); a imagem ilustra a frase ao pé da letra; corte por metáfora (dois planos criam um terceiro sentido, como cavalo na esteira + chute = trabalho); legenda irônica que muda o sentido; sequência rápida de detalhes na batida; B-roll de natureza, de ritual de preparação em close e de textura; lugar comum filmado como capa de revista; fim numa imagem forte com corte seco. Erros a evitar: clarão que lava o quadro, plano repetido, efeito solto no fim, ordem fora do tempo.
+Ideias já anotadas para planta: a trena esticada no lote vira a cota na planta; o pedreiro assentando tijolo vira a linha da parede sendo desenhada; "8 metros de frente" e o número 8 se estica e vira a fachada; 4 detalhes em 2 s (porta abrindo, janela com sol, chave na mão); terminar na fachada ao entardecer.`;
+
+const CHAVE = 'x1-editor-conversa-v1';
+const conversa = document.getElementById('conversa'), rolagem = document.getElementById('rolagem');
+const form = document.getElementById('form'), texto = document.getElementById('texto'), enviar = document.getElementById('enviar');
+const ideias = document.getElementById('ideias');
+let turnos = [];
+try { turnos = JSON.parse(localStorage.getItem(CHAVE) || '[]'); } catch (e) { turnos = []; }
+const guardar = () => { try { localStorage.setItem(CHAVE, JSON.stringify(turnos.slice(-40))); } catch (e) {} };
+
+function bolha(papel, conteudo) {
+  const d = document.createElement('div'); d.className = 'msg ' + (papel === 'user' ? 'dono' : 'editor');
+  const q = document.createElement('span'); q.className = 'quem'; q.textContent = papel === 'user' ? 'Você' : 'Editor';
+  const t = document.createElement('span'); t.textContent = conteudo;
+  d.append(q, t); conversa.append(d); rolagem.scrollTop = rolagem.scrollHeight; return t;
+}
+function aviso(msg) { const p = document.createElement('p'); p.className = 'erro'; p.textContent = msg; conversa.append(p); rolagem.scrollTop = rolagem.scrollHeight; }
+function redesenhar() {
+  conversa.querySelectorAll('.msg, .erro').forEach((e) => e.remove());
+  ideias.hidden = turnos.length > 0;
+  for (const t of turnos) bolha(t.role, t.content);
+}
+redesenhar();
+
+let sample = null, ocupado = false;
+(async () => {
+  sample = window.claude ? await window.claude.use('sample') : null;
+  if (!sample) { aviso('O Editor não está disponível nesta visualização. Abra a página dentro do Claude, com a sua conta.'); enviar.disabled = true; }
+})();
+
+async function mandar(pergunta) {
+  if (ocupado || !sample || !pergunta.trim()) return;
+  ocupado = true; enviar.disabled = true; ideias.hidden = true;
+  turnos.push({ role: 'user', content: pergunta.trim() }); guardar(); bolha('user', pergunta.trim());
+  const saida = bolha('assistant', 'Pensando…');
+  // Cada chamada não tem memória: vai o briefing do projeto e os últimos turnos.
+  let recentes = turnos.slice(-16); while (recentes.length && recentes[0].role !== 'user') recentes = recentes.slice(1);
+  const entrada = recentes.map((t, i) => (i === 0 ? { role: 'user', content: BRIEFING + '\n\n---\nMENSAGEM DO DONO:\n' + t.content } : t));
+  try {
+    const r = await sample(entrada, { cache: false, modelTier: 'complex', onText: ({ text }) => { if (text) { saida.textContent = text; rolagem.scrollTop = rolagem.scrollHeight; } } });
+    saida.textContent = r.text; turnos.push({ role: 'assistant', content: r.text }); guardar();
+  } catch (e) {
+    saida.parentElement.remove(); turnos.pop(); guardar();
+    aviso(e && e.code === 'not_granted' ? 'Você não liberou o uso do Claude nesta página. Recarregue e toque em permitir para conversar com o Editor.'
+      : e && e.code === 'rate_limited' ? 'Muitas mensagens seguidas. Espere um minuto e mande de novo.'
+      : 'Não consegui a resposta agora. Mande de novo em instantes.');
+    texto.value = pergunta;
+  }
+  ocupado = false; enviar.disabled = false; texto.focus();
+}
+
+form.addEventListener('submit', (e) => { e.preventDefault(); const v = texto.value; texto.value = ''; texto.style.height = 'auto'; mandar(v); });
+texto.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
+texto.addEventListener('input', () => { texto.style.height = 'auto'; texto.style.height = Math.min(texto.scrollHeight, 160) + 'px'; });
+ideias.addEventListener('click', (e) => { if (e.target.tagName === 'BUTTON') mandar(e.target.textContent); });
+document.getElementById('limpar').addEventListener('click', () => { if (ocupado) return; turnos = []; guardar(); redesenhar(); });
+document.getElementById('copiar').addEventListener('click', async (e) => {
+  const tudo = turnos.map((t) => (t.role === 'user' ? 'DONO: ' : 'EDITOR: ') + t.content).join('\n\n') || 'Conversa vazia.';
+  try { await navigator.clipboard.writeText(tudo); e.target.textContent = 'Copiada'; }
+  catch (err) { const r = document.createRange(); r.selectNodeContents(conversa); const s = getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent = 'Selecionada: copie'; }
+  setTimeout(() => { e.target.textContent = 'Copiar conversa'; }, 2500);
+});
+</script>

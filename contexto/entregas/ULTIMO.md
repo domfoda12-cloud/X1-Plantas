@@ -1,11 +1,10 @@
-**Tarefa:** anúncio do e-book com a casa E07, agora com locução do dono (26 s), para a MinoAI Frontier editar no Mac.
-**Feito:** `video/principal-e07/kit-minoai/` (20 MB): 9 clipes comprimidos, balão do tio, aviso legal e selo como camadas paradas, logo, música e `LEIA-ME.md` com o roteiro aprovado, o plano de corte e a frase para dizer à MinoAI.
-`video/principal-e07/PROMPTS.md`: prompts de movimento de câmera (Kling 3 Omni) e de imagem, para repetir em outra casa.
-Documento do dono (roteiro, prompt do roteirista, registro, prompts): https://claude.ai/artifact/Lr8SvUJPmvcZ5JAZvzywNU
-Antes: logo em `marca/logo/`, trilha em `video/musica/`, vídeo sem voz versão 2 em `video/saida/principal-e07/` (aprovado pelo Revisor).
-**Como conferir:** abrir o `LEIA-ME.md` do pacote; os clipes tocam direto. `python3 ferramentas/checar.py`.
-**Atualização 22/11:** o dono mandou a voz (texto original dele). Vídeo com locução montado aqui por `video/principal-e07/montar_locucao.py`: `video/saida/principal-e07/x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e `-whatsapp.mp4` (2,3 MB). Dois cortes no áudio por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); blueprint sem áreas por cômodo.
-**Não feito / ressalva:** o Revisor só libera se o dono confirmar que o tio e a mensagem existem e que "volto pro Brasil em algumas semanas" é verdade; senão, regravar a abertura ("Todo grupo de família tem um tio que manda isso:") e a frase do Brasil. A abertura da gravação parece engolida ("Meu tio" em 0,2 s). A edição fina da MinoAI no Mac continua opcional, com o pacote. Ele não abriu o PDF da planta grátis da E07 (conferir se não sai com "[título]" e "[preço]"). Ninguém ouviu a trilha ainda.
-**Decisão do dono pendente:** "o tio" ou "meu tio" (só se for verdade); confirmar "tô voltando pro Brasil"; PLANTA ou LOTE; logo; publicar (o Instagram ainda não existe, e o envio da planta precisa funcionar antes).
-**Próximo passo:** receber a gravação da voz ou o vídeo editado e passar pelo Revisor. Regra nova do dono: recados no meio do trabalho entram todos juntos na mesma entrega.
-**Parado em 22/11 por ordem do dono:** ele quer tirar o selo "Imagem ilustrativa" e considera erro a E07 ter os 3 quartos em fila. Regra nova: antes de qualquer vídeo ou crédito do OpenArt, mandar o resumo da produção e a lista de instruções, e esperar a confirmação dos dois. Não gerar nada antes disso.
+**Tarefa:** guardar o prompt base de tomada realista com variáveis e fazer o vídeo-convite (passeio por dentro de uma casa, misturado com o estilo do principal).
+**Feito:** `video/PEDIDOS-DO-DONO.md` (revisão de tudo o que o dono disse sobre vídeo, prompt base com 12 variáveis, regras do convite).
+`video/render-passeio.cjs` e `video/src/passeio.html` (passeio na altura dos olhos, motor próprio; caminho por casa em `CAMINHOS`).
+`video/scan.py` (escaneamento; a planta agora ocupa a tela em qualquer lote). `video/montar.py` ganhou `"leve": true`.
+`video/roteiros/convite.json` → `video/saida/convite/x1-plantas-convite.mp4` (26 s, F03 Casa Família, sem OpenArt).
+**Como conferir:** `cd video && node render-passeio.cjs --planta F03 --vel 1.3 && cd .. && python3 video/montar.py video/roteiros/convite.json`; assistir.
+**Não feito / ressalva:** é ilustração 3D, não foto, e 1080 × 1920, não 4K. Sem música (Mac). Revisor de risco não viu. O principal com a E07 segue rascunho.
+**Decisão do dono pendente:** o que é "pagar por mais"; se "motor art" era o motor próprio ou o OpenArt; E07 ou outra casa no principal; quando filma.
+**Próximo passo:** ouvir o dono; mandar a lista de planos para a filmagem com o celular.
+**Outra entrega do mesmo dia (anúncio com a E07 e locução, da frente de vídeo):** `contexto/entregas/2026-11-22-0010-anuncio-ebook-locucao.md`.
