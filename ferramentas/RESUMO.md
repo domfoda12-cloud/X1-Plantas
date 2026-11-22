@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 15 programas
+## Os 16 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -78,6 +78,12 @@ Funções: `pagina`, `celular`, `fundo`, `colar`, `mockups`, `broll`.
 Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
 
 Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `fechar`, `indice`, `conferir`.
+
+### [`ferramentas/pesquisa.py`](pesquisa.py)
+
+Caderno de pesquisa compartilhado: toda busca na web de qualquer agente fica em pesquisas/<tema>.md.
+
+Funções: `arquivo`, `limpo`, `main`.
 
 ### [`ferramentas/planta3d.py`](planta3d.py)
 

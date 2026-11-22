@@ -1,9 +1,9 @@
 # Contexto do Pesquisador
 
-> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
-- Quem conclui a sua pesquisa é o agente do assunto: o Arquiteto (norma, planta) ou o Estrategista (mercado, preço) (22/11/2026).
+- Quem conclui a sua pesquisa é o agente do assunto: o Arquiteto (norma, planta), o Estrategista (mercado, preço) ou um geral no Opus (22/11/2026).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Nada entra no projeto sem fonte; fonte primária brasileira primeiro.

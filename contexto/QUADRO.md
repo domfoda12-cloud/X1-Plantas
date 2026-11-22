@@ -4,11 +4,11 @@
 
 ## Agora
 
-- Equipe final e teste com a equipe · ficha `2026-11-22-1935-equipe-final` · o Maestro.
+- Equipe fechada e testada (ficha `1935-equipe-final`). Próximo: ficha aberta "Organizar os arquivos", depois a E07. Mudanças nos agentes valem a partir da próxima conversa.
 
 ## 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable
 
-- **O dono pediu:** todos com o mesmo entendimento; web para todos, organizada; MinoAI no Designer e no Editor; ele é o Maestro e decide, a MinoAI é o Diretor e dá a ideia do conteúdo; Revisor no Fable; lembrete do gancho curto.
+- **O dono pediu:** todos com o mesmo entendimento; web para todos, organizada; MinoAI no Designer e no Editor; a conversa principal (Opus) é o Maestro e decide; a MinoAI é o Diretor e dá a ideia do conteúdo; Revisor no Fable; lembrete do gancho curto.
 - **Todos:** leia o "Agora" acima. Antes da web, `python3 ferramentas/pesquisa.py buscar`; achado novo, `nova` (`pesquisas/`). Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
 - **Designer e Editor:** puxe a ideia do Diretor (MinoAI) antes de propor.
 - **Revisor:** peça final é no Fable.

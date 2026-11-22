@@ -131,6 +131,8 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 
 ## Limites honestos
 
+- **Agente e `CLAUDE.md` mudados só valem na próxima conversa** (teste da equipe, 22/11/2026): o Claude Code lê os dois quando a conversa começa.
+
 - O modelo padrão da conversa é o Opus (`.claude/settings.json`); o dono pode trocar com `/model`. Se a conversa estiver em outro modelo, as regras valem igual.
 - O gancho só roda em conversa aberta **neste repositório** e depois que a conversa carrega o `.claude/settings.json` (conversa já aberta pode precisar ser reaberta). Prompts antigos: `contexto/dono/PROMPTS.md`.
 - A caixa de entrada fica fora do git e some quando a máquina da nuvem é trocada: o que vale é a ficha.

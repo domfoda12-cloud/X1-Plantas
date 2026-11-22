@@ -1,6 +1,6 @@
 # Equipe final: entendimento comum, pesquisa compartilhada, MinoAI diretor, testes
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** For each prompt: I call only the agents that matter. On the ticket I write one line per agent saying what it adds. An agent that gets work outside its role hands it back and says whose it is.
 Even though you only call the ones that matter, i want them all to come to the same understanding of whats happening does that makes sense?
@@ -25,7 +25,7 @@ You are the main maestro, MinoAI the director, you take the decisions he gives t
 
 **Quem executa:** Maestro (Opus, conversa principal): mudanças. Teste: redator, arquiteto, designer, editor-video, revisor-de-risco e pesquisador, cada um com o mesmo prompt de teste, resposta curta. Supervisor (Fable): auditoria das fichas fechadas, se for a hora. Conselho de bolso: Diretor neutro (é sistema); Estrategista SIM (menos busca repetida); Revisor SIM (o caderno exige fonte).
 
-**Conferência:** (a preencher)
+**Conferência:** teste com 6 agentes (Designer, Editor, Redator, Arquiteto, Revisor, Pesquisador), mesmo prompt de exemplo ('carrossel da C01'). Todos leram o 'Agora' igual e souberam a sua parte e a quem devolver. Acharam: agente e CLAUDE.md mudados só valem na próxima conversa (Arquiteto e Revisor sem web nesta); fatos repetidos entre agente e contexto (fotos do Designer, frases vetadas do Redator); vídeo 'só planeje' contra 'aberto em 21/11'; quem escreve o resumo de passagem; deep-research grátis x TinyFish pago; caderno sem ajuda nos campos, sem tipo de norma, sem filtro de dado pessoal. Tudo corrigido; guardas do caderno testadas uma a uma. `checar.py` e painel sem erro. Não conferido: as ferramentas de web do Arquiteto e do Revisor, que só aparecem na próxima conversa.
 
-**Resultado:** (a preencher)
+**Resultado:** Equipe final: Maestro e Diretor, Agora no quadro, caderno de pesquisa, skills por agente, Revisor no Fable, testada com 6 agentes
 

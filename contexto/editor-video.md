@@ -1,6 +1,6 @@
 # Contexto do Editor de vídeo
 
-> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
@@ -17,7 +17,7 @@
 
 ## Em aberto com você
 
-- Vídeos, clipes e renders antigos foram apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Ficaram o convite, o principal de 21/11, a voz do dono e a trilha. Refazer pelo plano de `dono/RETROSPECTIVA.md`.
+- Vídeos, clipes e renders antigos foram apagados em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Ficaram o convite, o principal de 21/11, a voz do dono e a trilha. Refazer pelo plano de `dono/RETROSPECTIVA.md`.
 - Assistir ao CONDOR XIII quadro a quadro no Mac, ou receber 3 a 5 momentos favoritos com o minuto.
 - Gravar o apresentador; criar o Instagram; configurar a MinoAI Frontier no Mac.
 - Testar a palavra do comentário PLANTA contra LOTE.

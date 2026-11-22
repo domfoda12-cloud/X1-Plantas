@@ -37,7 +37,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 22/11 · Maestro e Diretor; caderno de pesquisa; Revisor no Fable; 22/11 · A equipe organizada: quem faz o quê e o que cada um acrescenta; 22/11 · Pense antes; Python 3.11; auditorias 1 e 2; 22/11 · Opus responde, Fable audita; mídias antigas apagadas; pergunte sempre.
 
-Tamanho: 556 palavras.
+Tamanho: 570 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -49,19 +49,19 @@ Tamanho: 147 palavras.
 
 ### [Contexto do Arquiteto](arquiteto.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 448 palavras.
+Tamanho: 452 palavras.
 
 ### [Contexto do Designer](designer.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 313 palavras.
+Tamanho: 317 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 
@@ -121,43 +121,43 @@ Tamanho: 6687 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 425 palavras.
+Tamanho: 429 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 297 palavras.
+Tamanho: 301 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 231 palavras.
+Tamanho: 239 palavras.
 
 ### [Contexto do Redator](redator.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato.
 
-Tamanho: 258 palavras.
+Tamanho: 262 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de `entregas/`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
-Tamanho: 368 palavras.
+Tamanho: 372 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

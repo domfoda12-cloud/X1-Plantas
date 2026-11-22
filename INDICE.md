@@ -6,7 +6,7 @@
 |---|---|---|---|
 | **Comando e contexto** | As regras, as decisões do dono e quem decide o quê | [`RESUMO-RAIZ.md`](RESUMO-RAIZ.md) (13) | todos |
 | **Contexto por papel** | O que cada agente precisa saber, o quadro de avisos e os prompts do dono | [`contexto/RESUMO.md`](contexto/RESUMO.md) (18) | todos |
-| **Caderno de pesquisa** | Tudo o que a equipe achou na web, por tema, com fonte, data e certeza | [`pesquisas/RESUMO.md`](pesquisas/RESUMO.md) (0) | todos |
+| **Caderno de pesquisa** | Tudo o que a equipe achou na web, por tema, com fonte, data e certeza | [`pesquisas/RESUMO.md`](pesquisas/RESUMO.md) (1) | todos |
 | **Produto: o e-book** | O que o e-book é, o plano, o catálogo e as 24 plantas | [`ebook/RESUMO.md`](ebook/RESUMO.md) (4) | arquiteto, designer, redator, revisor-de-risco |
 | **Pesquisa e técnica** | Público, concorrentes, regras de projeto e apostilas do Arquiteto | [`ebook/referencias/RESUMO.md`](ebook/referencias/RESUMO.md) (10) | arquiteto, pesquisador, estrategista |
 | **Venda e WhatsApp** | O funil: planta grátis, mensagens, objeções e atributos que vendem | [`ebook/vendas/RESUMO.md`](ebook/vendas/RESUMO.md) (5) | redator, estrategista, revisor-de-risco |
@@ -15,7 +15,7 @@
 | **Animações 3D e imagens** | O motor 3D, o OpenArt e as referências de planta que ganha vida | [`animacoes-3d/RESUMO.md`](animacoes-3d/RESUMO.md) (3) | arquiteto, designer, editor-video |
 | **Jurídico** | O que a lei exige de arquiteto e engenheiro, preços e critérios | [`reports/RESUMO.md`](reports/RESUMO.md) (3) | revisor-de-risco, pesquisador, estrategista |
 | **Pedidos do dono** | Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos | [`pedidos/RESUMO.md`](pedidos/RESUMO.md) (2) | todos |
-| **Código** | Os programas que validam as plantas e geram PDF, 3D, fichas e painel | [`ferramentas/RESUMO.md`](ferramentas/RESUMO.md) (15) | arquiteto, designer |
+| **Código** | Os programas que validam as plantas e geram PDF, 3D, fichas e painel | [`ferramentas/RESUMO.md`](ferramentas/RESUMO.md) (16) | arquiteto, designer |
 
 ## Por agente
 

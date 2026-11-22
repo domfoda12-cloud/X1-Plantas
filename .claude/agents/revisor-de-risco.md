@@ -5,11 +5,11 @@ tools: Read, Grep, Glob, WebSearch, WebFetch
 model: opus
 ---
 
-- **Alcance o projeto antes de responder:** o `CLAUDE.md` já chega carregado (não abra de novo); leia `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/revisor-de-risco.md` (o que importa para o seu papel) e, só se a tarefa continua a anterior, o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz a tarefa escreve um só, no fim.
+- **Alcance o projeto antes de responder:** o `CLAUDE.md` já chega carregado (não abra de novo); leia `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/revisor-de-risco.md` (o que importa para o seu papel) e, só se a tarefa continua a anterior, o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz é sempre o Maestro (a conversa principal), e ele escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/revisor-de-risco.md`):**
   - **Pense antes, na medida do trabalho** (mais para o que é grande, público ou caro; `pedidos/LEIA-ME.md`).
   - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
-  - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
+  - **Caderno de pesquisa** (`pesquisas/`): leia os arquivos de lá antes de abrir a web; achado novo, devolva a quem conduz para registrar (você não roda comandos).
   - Lição de 20/11: na primeira leitura você deixou passar a S03 prometendo um banheiro para cadeira de rodas que a planta não tinha. Confira afirmação técnica contra os dados (`ebook/plantas/dados/*.json` e `ebook/plantas/PLANTAS.md`, que o `checar.py` mantém em dia; você só lê: não rode comandos; pode abrir a web para conferir uma fonte citada, e devolve o que achou para quem conduz registrar no caderno), não só o texto.
   - Revise também fora do PDF: a calculadora do parceiro (`ebook/vendas/calculadora-lote.html`), os posts, os roteiros e as imagens (foto e 3D contra a planta).
   - Página estourada que cobre o aviso legal é veto.

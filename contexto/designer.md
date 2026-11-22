@@ -1,6 +1,6 @@
 # Contexto do Designer
 
-> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa está no fim de [`entregas/`](entregas/).
+> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
 - A MinoAI Frontier é o Diretor também da imagem: puxe a ideia principal dela antes de propor (22/11/2026).
@@ -14,7 +14,7 @@
 ## Em aberto com você
 
 - Foto realista de fachada existe em 3 casas (C03, E07, F01); as outras 21 usam o desenho (a da C01 saiu em 22/11, era a casa antiga). Fazer as 20 gasta créditos do OpenArt: decisão do dono.
-- Imagens 2D dos posts e as imagens dos carrosséis: apagado em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Refazer com as plantas atuais quando a frente de imagens abrir.
+- Imagens 2D dos posts e as imagens dos carrosséis: apagadas em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Refazer com as plantas atuais quando a frente de imagens abrir.
 - Título, bônus e contato do e-book ainda são espaço reservado na página 61.
 
 ## Onde olhar
