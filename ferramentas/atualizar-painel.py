@@ -60,9 +60,10 @@ def conferir_links():
     """Links relativos [texto](caminho) que não existem no disco."""
     quebrados = []
     for md in RAIZ.rglob("*.md"):
-        if "node_modules" in md.parts or ".git" in md.parts:
+        if {"node_modules", ".git", "entrada"} & set(md.parts):
             continue
-        texto = md.read_text(encoding="utf-8")
+        texto = re.sub(r"```.*?```", "", md.read_text(encoding="utf-8"), flags=re.S)
+        texto = re.sub(r"`[^`\n]*`", "", texto)  # exemplo entre crases não é link
         for alvo in re.findall(r"\]\(([^)\s]+)\)", texto):
             if re.match(r"^(https?:|mailto:|#)", alvo):
                 continue

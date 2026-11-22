@@ -21,7 +21,7 @@ _Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026, a partir dos arquiv
 | Casas com foto de fachada | 3 (C03, E07, F01) |
 | PDF do e-book | gerado, 22 MB · 5 plantas grátis |
 | Vídeos em `video/saida/` | 2 pastas (convite, principal) · 0 versões antigas (`v1` a `v5`, com a C01 velha) |
-| Avisos de conferência | 1 |
+| Avisos de conferência | 0 |
 
 **Por categoria:**
 
@@ -34,10 +34,6 @@ _Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026, a partir dos arquiv
 | Sobrados | 4 | 0 | 0 |
 
 Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03, O04.
-
-**Avisos:**
-
-- Link quebrado: pedidos/AUDITORIAS.md → ...
 <!-- situacao:fim -->
 
 ## 2. Em que pé está (escrito à mão, 22/11/2026)

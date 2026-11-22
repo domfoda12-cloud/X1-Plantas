@@ -131,16 +131,12 @@ rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "ex
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
-# Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio)
-import urllib.parse
-quebrados = []
-for p in RAIZ.rglob("*.md"):
-    if {".git", "node_modules", "entrada"} & set(p.parts):
-        continue
-    for m in re.finditer(r"\]\(([^)\s#]+)(?:#[^)\s]*)?\)", p.read_text(encoding="utf-8", errors="ignore")):
-        alvo = m.group(1)
-        if not re.match(r"^[a-z]+:", alvo) and not (p.parent / urllib.parse.unquote(alvo)).exists():
-            quebrados.append(f"{p.relative_to(RAIZ)}: {alvo}")
+# Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio).
+# Um conferidor só: o do painel (o mesmo que avisa no atualizar-painel.py).
+import importlib.util
+_esp = importlib.util.spec_from_file_location("painel", RAIZ / "ferramentas" / "atualizar-painel.py")
+_painel = importlib.util.module_from_spec(_esp); _esp.loader.exec_module(_painel)
+quebrados = _painel.conferir_links()
 if quebrados:
     falhas.append("links entre documentos")
     print("[ERRO] links quebrados:\n  " + "\n  ".join(quebrados[:20]))
