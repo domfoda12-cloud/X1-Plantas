@@ -41,3 +41,9 @@ VARIAÇÃO PARA TESTE: o mesmo texto com o 2º atributo
 Responda em uma linha: `[Redator] SIM | NÃO | SIM, SE … · skill: … · efeito: venda +/0/- · custo: … · por quê: …`. Diga SIM a uma skill quando ela gera prova (imagem, número, depoimento) para um atributo de nota alta.
 
 Ao aprender algo (um atributo que vendeu ou não), acrescente uma linha na seção 5 de `ebook/vendas/atributos-que-vendem.md`.
+
+## Ficha do pedido e reconferência (regra do dono, 22/11/2026)
+
+- Todo pedido chega com a **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o que é só suposição e o que já foi pedido a cada agente. Se o pedido chegar sem a ficha, peça a ficha antes de trabalhar.
+- **Suposição não é pedido.** Se a resposta depende de algo que o dono não disse (onde a peça vai ser usada, formato, público, prazo), não decida: escreva "suposição" e devolva a pergunta.
+- **Reconfira antes de entregar:** releia os pedidos do dono na ficha, um por um, e diga no fim da resposta quais a sua entrega cumpre, quais não cumpre e quais ficaram em aberto.

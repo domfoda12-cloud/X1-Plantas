@@ -2,7 +2,7 @@
 
 > Parte da frente Vídeo. Guia: [`VIDEO.md`](VIDEO.md). Regras da pasta: [`CLAUDE.md`](CLAUDE.md). Prompts: [`principal-e07/PROMPTS.md`](principal-e07/PROMPTS.md).
 >
-> **Situação (22/11/2026): para o dono mudar e aprovar. Nada foi gerado.** Já tem o parecer do Editor de vídeo, feito com as ferramentas da MinoAI Frontier (rulebook v1.22: estilos, regras gerais, legendas e B-roll; ganchos virais; biblioteca de aulas). Falta o desenho da planta nova, que o Arquiteto está fazendo.
+> **Situação (22/11/2026): em espera. O dono avisou que o vídeo não é para Instagram nem TikTok; a seção 4 (área segura e legenda) e o tamanho do quadro partiam dessa suposição e estão suspensos até ele dizer o destino. Ficha com todos os pedidos: [`PEDIDO-anuncio-locucao.md`](PEDIDO-anuncio-locucao.md). Nada foi gerado.** Já tem o parecer do Editor de vídeo, feito com as ferramentas da MinoAI Frontier (rulebook v1.22: estilos, regras gerais, legendas e B-roll; ganchos virais; biblioteca de aulas). Falta o desenho da planta nova, que o Arquiteto está fazendo.
 
 ## 1. O que muda em relação ao vídeo que o dono já viu
 
