@@ -19,7 +19,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 11 documentos
+## Os 12 documentos
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -28,6 +28,14 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 Seções: 22/11 · Índice, resumos por pasta e os prompts do dono; 22/11 · A `main` é a única branch; arquivos comprimidos; 22/11 · Skill `make-pdf` e conversa própria do Editor; 22/11 · C01 redesenhada; OpenArt só com permissão.
 
 Tamanho: 528 palavras.
+
+### [Contexto do Ajudante](ajudante.md)
+
+Só o que importa para este papel. Você é o modelo mais barato do projeto e existe para o dono não gastar modelo caro com tarefa simples.
+
+Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
+
+Tamanho: 119 palavras.
 
 ### [Contexto do Arquiteto](arquiteto.md)
 

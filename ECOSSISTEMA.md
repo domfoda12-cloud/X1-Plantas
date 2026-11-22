@@ -47,6 +47,7 @@
 | `claude-api` | Integrado | Consulta | Referência de modelos e preços (resposta de 20/11) |
 | `loop` | Integrado | Sessão | Já usado nos ciclos de melhoria |
 | `ponytail`, `ponytail-review`, `ponytail-audit` | Integrado (skill do projeto) | Arquiteto (código) | Auditoria de 20/11 foi a rodada de alcance |
+| `ajudante` (agente, Haiku) | Integrado | Dono (tarefa pessoal e simples) | Criado em 22/11 com a divisão por modelo (`pedidos/LEIA-ME.md`). Não toca o público nem arquivo do projeto |
 | `make-pdf` (do gstack) | Em teste: skill registrada, **binário do gstack não instalado** | Designer (documentos) | Markdown para PDF (guia do parceiro, relatório jurídico). Entrou sem o preâmbulo (telemetria, sincronização de memória, mudanças no `CLAUDE.md`). Falta o "sim" do dono para instalar o gstack e a rodada de alcance. Não serve para o e-book |
 | `code-review`, `simplify`, `security-review` | Liberado, não usado | Arquiteto (código) | Fazem o mesmo papel do Ponytail. Antes de usar, o Conselho decide qual dos dois fica, para não ter duas regras de código |
 | `dataviz` | Liberado, não usado | Estrategista (painel) | Para gráficos do painel de custo por venda |

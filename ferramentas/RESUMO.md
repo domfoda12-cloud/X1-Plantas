@@ -16,7 +16,7 @@
 - Antes de entregar: `checar.py` sem erro e `atualizar-painel.py` com zero avisos (ferramentas/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 13 programas
+## Os 14 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -51,6 +51,10 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `conferir_links`, `barra`, `montar
 Confere se o código do projeto tem erro, de uma vez só.
 
 Funções: `rodar`.
+
+### [`ferramentas/guardar-pedido.py`](guardar-pedido.py)
+
+Guarda cada prompt do dono, palavra por palavra, em pedidos/entrada/ (um arquivo por prompt).
 
 ### [`ferramentas/imagens2d.py`](imagens2d.py)
 

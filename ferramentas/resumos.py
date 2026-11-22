@@ -38,10 +38,12 @@ PASTAS = {
                      ["animacoes-3d"], ["arquiteto", "designer", "editor-video"]),
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
                 ["reports", "research_notes"], ["revisor-de-risco", "pesquisador", "estrategista"]),
+    "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
+                ["pedidos"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
                     ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer"]),
 }
-FORA = ("contexto/entregas/", ".claude/", "node_modules/")  # têm leitor próprio (ULTIMO.md, a skill, o agente)
+FORA = ("contexto/entregas/", ".claude/", "node_modules/", "pedidos/2")  # pedidos/2…: as fichas, uma por pedido  # têm leitor próprio (ULTIMO.md, a skill, o agente)
 GERADOS = ("RESUMO.md", "INDICE.md")
 
 
