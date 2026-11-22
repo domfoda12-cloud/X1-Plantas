@@ -10,71 +10,46 @@
  "rodape": "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.",
  "cenas": [
   {
-   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "fonte": "video/broll/clipes/e07-3d.mp4",
    "dur": 2.4,
-   "inicio": 1.4,
+   "inicio": 8.0,
    "vel": 0.15,
-   "zoom": [1.2, 1.0],
+   "zoom": [
+    1.2,
+    1.0
+   ],
    "invertida": true,
-   "janela": "8×15",
+   "janela": "8×25",
    "abre": 0.6,
    "olho": "X1-Plantas",
    "titulo": "Todo lote é uma <b>conta.</b>",
-   "sub": "Lote de 8 por 15 metros. Que casa deve caber?",
-   "selo": "Ilustração do modelo 3D"
+   "sub": "Lote de 8 por 25 metros. Que casa deve caber?",
+   "selo": "Ilustração do modelo 3D",
+   "continua": true
   },
   {
-   "fonte": "video/broll/clipes/c01-3d.mp4",
+   "fonte": "video/broll/clipes/e07-3d.mp4",
    "dur": 2.4,
-   "inicio": 1.76,
-   "vel": 0.35,
+   "inicio": 3.2,
+   "vel": 0.1,
    "gira": 0.6,
-   "olho": "Casa I · Compacta C01",
+   "olho": "Casa Estreita 3 Quartos · E07",
    "titulo": "A casa certa é a <b>resposta.</b>",
    "selo": "Ilustração do modelo 3D"
   },
   {
-   "fonte": "video/broll/clipes/c01-3d.mp4",
-   "dur": 1.2,
-   "inicio": 2.6,
-   "vel": 1.4,
-   "olho": "Casa I · Compacta C01",
-   "titulo": "<b>55 m².</b>",
-   "tam": 170,
-   "selo": "Ilustração do modelo 3D",
+   "nota": "Escaneamento, pedido do dono de 22/11 (video/PEDIDOS-DO-DONO.md): 3 tempos de 0,3 s, corte seco. Gerado por video/scan.py.",
+   "fonte": "video/broll/clipes/scan-e07.mp4",
+   "dur": 0.9,
    "continua": true
   },
   {
-   "fonte": "video/broll/clipes/c01-3d.mp4",
-   "dur": 1.2,
-   "inicio": 4.28,
-   "vel": 1.4,
-   "olho": "Casa I · Compacta C01",
-   "titulo": "<b>2 quartos.</b>",
-   "tam": 170,
+   "nota": "Tempo 4 do escaneamento: a casa pronta, limpa, corte seco. Trocar por filmagem real quando o dono filmar.",
+   "fonte": "video/broll/clipes/e07-3d.mp4",
+   "dur": 2.1,
+   "inicio": 6.5,
    "selo": "Ilustração do modelo 3D",
    "continua": true
-  },
-  {
-   "fonte": "video/broll/clipes/c01-3d.mp4",
-   "dur": 2.4,
-   "inicio": 5.96,
-   "vel": [2, 1],
-   "olho": "Casa I · Compacta C01",
-   "titulo": "Lote a partir de <b>8 × 15 m</b>",
-   "sub": "com recuos de referência.",
-   "selo": "Ilustração do modelo 3D",
-   "continua": true
-  },
-  {
-   "fonte": "video/broll/clipes/fachada.mp4",
-   "trocar": true,
-   "dur": 2.4,
-   "inicio": 0.4,
-   "vel": [2.5, 1],
-   "impacto": true,
-   "titulo": "Uma ideia de como ela pode ficar na rua.",
-   "selo": "Imagem ilustrativa"
   },
   {
    "fonte": "video/broll/paginas/pagina-10.jpg",
@@ -86,7 +61,10 @@
   {
    "fonte": "video/broll/paginas/pagina-10.jpg",
    "dur": 2.4,
-   "zoom": [1.0, 1.1],
+   "zoom": [
+    1.0,
+    1.1
+   ],
    "impacto": true,
    "titulo": "A planta é de referência.",
    "sub": "O projeto é do profissional."
@@ -94,14 +72,20 @@
   {
    "fonte": "video/broll/paginas/pagina-03.jpg",
    "dur": 1.2,
-   "zoom": [1.0, 1.06],
+   "zoom": [
+    1.0,
+    1.06
+   ],
    "olho": "24 casas no e-book",
    "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>"
   },
   {
    "fonte": "ebook/visual/3d/C03.jpg",
    "dur": 0.6,
-   "zoom": [1.0, 1.04],
+   "zoom": [
+    1.0,
+    1.04
+   ],
    "olho": "24 casas no e-book",
    "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
    "selo": "Ilustração do modelo 3D",
@@ -110,7 +94,10 @@
   {
    "fonte": "ebook/visual/3d/E07.jpg",
    "dur": 0.6,
-   "zoom": [1.0, 1.04],
+   "zoom": [
+    1.0,
+    1.04
+   ],
    "olho": "24 casas no e-book",
    "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
    "selo": "Ilustração do modelo 3D",
@@ -119,7 +106,10 @@
   {
    "fonte": "ebook/visual/3d/F01.jpg",
    "dur": 0.6,
-   "zoom": [1.0, 1.04],
+   "zoom": [
+    1.0,
+    1.04
+   ],
    "olho": "24 casas no e-book",
    "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
    "selo": "Ilustração do modelo 3D",
@@ -128,7 +118,10 @@
   {
    "fonte": "ebook/visual/3d/S05.jpg",
    "dur": 0.6,
-   "zoom": [1.0, 1.04],
+   "zoom": [
+    1.0,
+    1.04
+   ],
    "olho": "24 casas no e-book",
    "titulo": "Da frente de <b>5 m</b> à de <b>14 m.</b>",
    "selo": "Ilustração do modelo 3D",
@@ -137,12 +130,16 @@
   {
    "fonte": "ebook/visual/3d/C01.jpg",
    "dur": 4.8,
-   "zoom": [1.0, 1.15],
+   "zoom": [
+    1.0,
+    1.15
+   ],
    "janela": "PLANTA",
    "olho": "Todo lote é uma conta",
    "titulo": "Comente",
    "sub": "e receba uma planta de graça no WhatsApp.",
    "selo": "Ilustração do modelo 3D"
   }
- ]
+ ],
+ "nota": "Ordens do dono para este vídeo: video/PEDIDOS-DO-DONO.md. Leia antes de mexer."
 }

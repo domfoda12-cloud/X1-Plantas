@@ -2,6 +2,8 @@
 
 > O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerais estão no `CLAUDE.md` da raiz.
 
+- **Antes de mexer em qualquer vídeo, leia `PEDIDOS-DO-DONO.md` inteiro.** Toda instrução nova do dono sobre vídeo entra lá na hora, com as palavras dele, e nunca sai sem ele mandar (ordem de 22/11/2026).
+- **Sequência de escaneamento:** `python3 video/scan.py ID` gera `broll/clipes/scan-<id>.mp4` com os números do validador.
 - **É a última frente** (e-book → animações → vídeo). O dono abriu em 21/11/2026 (principal e prévia).
 - **Referência de edição do dono:** `REFERENCIA-CONDOR.md` (13 conceitos). Sempre texto no primeiro quadro.
 - **3D a partir da planta:** `node render-planta.cjs --planta ID --so-imagens` (imagens) ou sem `--so-imagens` (animação). Os módulos `src/plantas/*.js` saem de `python3 ferramentas/planta3d.py`. Não edite à mão.

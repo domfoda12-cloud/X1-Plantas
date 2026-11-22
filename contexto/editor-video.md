@@ -4,6 +4,8 @@
 
 ## Decisões do dono que valem para você
 
+- **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
+- **OpenArt: não usar** (21/11). Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - Vídeo é a última frente (e-book → animações → vídeo). Até abrir, só planejar.
 - A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.
@@ -18,4 +20,4 @@
 
 ## Onde olhar
 
-`video/REFERENCIA-CONDOR.md`, `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
+`video/PEDIDOS-DO-DONO.md`, `video/REFERENCIA-CONDOR.md`, `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
