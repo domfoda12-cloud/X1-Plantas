@@ -6,6 +6,7 @@
 
 - **O dono pediu:** destravar o projeto: juntar tudo, comprimir, manter arrumado e ver o sistema no Graphify.
 - **Todos:** o projeto inteiro está na `main`. **Trabalhe e envie na `main`** (`git pull --rebase` antes); a `planta-de-casas-anuncio` acabou. Mudança de sistema: branch `sistema/<assunto>` com pull request.
+- **Todos (regra do dono):** analise todo dado e código que recebe, lê ou cria; confira o número contra a fonte antes de repassar.
 - **Todos:** leia e busque arquivos direto; o Graphify é mapa, não etapa obrigatória. Arquivo fica junto do que tem a mesma função.
 - **Designer e Editor de vídeo:** as fotos do OpenArt agora são `.jpg` (`ebook/visual/openart/`); vídeos reencodados; tours da C06 em `video/saida/tour-c06/`.
 
