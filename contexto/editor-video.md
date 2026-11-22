@@ -5,6 +5,7 @@
 ## Decisões do dono que valem para você
 
 - **Toda instrução do dono sobre vídeo fica em `video/PEDIDOS-DO-DONO.md`** (ordem de 22/11: nada se perde na conversa). Leia inteiro antes de editar; acrescente na hora.
+- **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `PEDIDOS-DO-DONO.md`.
 - **OpenArt: não usar** (21/11). Vídeo realista: o dono vai filmar com o celular daqui a alguns dias.
 - Vídeo é a última frente (e-book → animações → vídeo). Até abrir, só planejar.
 - A MinoAI Frontier edita (no Mac do dono) e cria imagem com o OpenArt.

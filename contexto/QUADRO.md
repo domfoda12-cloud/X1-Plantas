@@ -2,11 +2,11 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
-## 22/11 · Vídeo: escaneamento e pedidos que não se perdem
+## 22/11 · Vídeo: convite (passeio por dentro), prompt base e escaneamento
 
-- **O dono pediu:** sequência de "escaneamento" de 1,2 s no vídeo principal e que toda ordem dele sobre vídeo fique guardada. Vai filmar com o celular em alguns dias.
-- **O que mudou:** [`video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md) (leitura obrigatória do Editor), `video/scan.py`, vídeo de 21 s em `video/saida/principal-condor/`, sem OpenArt.
-- **É rascunho:** usa a E07 (bate com os números do dono), que está na fila do redesenho. Não publicar; se a E07 mudar, gerar de novo. O Revisor de risco ainda não viu.
+- **O dono pediu:** prompt base de passeio realista com variáveis; vídeo inicial convidativo com uma casa só; sequência de "escaneamento"; guardar toda ordem de vídeo.
+- **O que mudou:** tudo em [`video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md). Novo: vídeo-convite da F03 em `video/saida/convite/` (26 s), ilustração 3D do motor próprio, sem OpenArt.
+- **Rascunhos:** o principal com escaneamento usa a E07 (fila do redesenho). Nenhum dos dois passou pelo Revisor de risco. **Estrategista e Redator:** o dono falou em "o que o cliente recebe se pagar por mais"; falta ele definir.
 
 ## 22/11 · Pesquisa: layout de casa popular e os passos da obra
 

@@ -13,6 +13,7 @@ Recursos de edição (estilo CONDOR, todos opcionais; sem eles a cena sai como a
   "janela": "8×15"    letra gigante e estreita como janela: a tela fica azul e a imagem só aparece dentro das letras.
   "abre": 0.6         nos últimos 0,6 s a janela se abre (zoom para dentro da letra) e a imagem toma a tela; "abre_em": [x, y] é o ponto do zoom.
   "tam": 170          tamanho do título em px (palavra única no tempo da batida).
+  "leve": true       faixas mais claras atrás do texto (cena clara, como o passeio por dentro da casa).
   "trocar": true      só um aviso para quem edita: a fonte desta cena vai ser trocada. O montador ignora.
 No roteiro: "grao": 6 põe um granulado leve no vídeo todo (0 ou ausente = sem).
 """
@@ -41,6 +42,8 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 .rodape{position:absolute;left:70px;right:70px;bottom:360px;font-size:27px;font-weight:500;line-height:1.3;color:rgba(255,255,255,.92)}
 /* página inteira do e-book: nada por cima dela, o aviso fica embaixo */
 .caber .topo,.caber .base{display:none!important}.caber .bloco{top:130px}.caber .titulo{font-size:92px}.caber .rodape{bottom:90px}
+/* "leve": faixas mais claras atrás do texto, para cena clara (passeio por dentro da casa) */
+.leve .topo{height:560px;background:linear-gradient(rgba(6,26,58,.62),rgba(6,26,58,.34) 55%,rgba(6,26,58,0))}.leve .base{height:420px;background:linear-gradient(rgba(6,26,58,0),rgba(6,26,58,.6) 55%)}
 /* letra como janela: o subtítulo desce para baixo das letras */
 .janela .sub{position:absolute;left:0;right:0;top:1000px}
 </style></head><body class="%(classe)s">
@@ -87,7 +90,7 @@ def texto_png(cena, rodape, destino, tmp):
     html = HTML
     for chave, valor in dict(olho=tag("olho", "olho"), titulo=titulo, sub=tag("sub", "sub"),
                              selo=tag("selo", "selo"), rodape=rodape,
-                             classe="caber" if cena.get("caber") else "janela" if cena.get("janela") else "",
+                             classe="caber" if cena.get("caber") else "janela" if cena.get("janela") else "leve" if cena.get("leve") else "",
                              tem_topo="block" if any(cena.get(k) for k in ("olho", "titulo", "sub")) else "none").items():
         html = html.replace("%(" + chave + ")s", valor)
     html_png(html, destino, tmp)

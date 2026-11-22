@@ -15,7 +15,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 FPS, QUADROS = 30, 27
-E = 54          # pixels por metro
+E = 54          # pixels por metro (recalculado para cada lote)
 ALT = 2.7       # altura da parede na malha de arame, em metros
 
 
@@ -36,6 +36,8 @@ def etiquetas(p):
 def html(p):
     m = p["validacao"]["metricas"]
     lw, ld = m["lote"]
+    global E
+    E = min(90, 780 / lw, 1230 / ld)          # o lote ocupa a tela: casa larga ou comprida, tanto faz
     rec = m["recuos"]
     x0 = 150                                  # canto do lote na tela; a rua fica embaixo
     y0 = 130 + ld * E                         # em cima, para a cota da frente ficar longe do aviso legal

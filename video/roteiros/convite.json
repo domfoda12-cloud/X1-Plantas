@@ -1,0 +1,114 @@
+{
+ "nota": "Ordens do dono para este vídeo: video/PEDIDOS-DO-DONO.md, seção 'Próximo vídeo: o convite'. Leia antes de mexer. As cenas do passeio são um clipe só, cortado em sequência: a imagem não pula, só o texto troca.",
+ "saida": "video/saida/convite/x1-plantas-convite.mp4",
+ "tamanho": [
+  1080,
+  1920
+ ],
+ "crf": 21,
+ "rodape": "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.",
+ "cenas": [
+  {
+   "fonte": "ebook/visual/3d/F03.jpg",
+   "dur": 2.4,
+   "zoom": [
+    1.25,
+    1.05
+   ],
+   "janela": "11×15",
+   "abre": 0.6,
+   "continua": true,
+   "olho": "X1-Plantas",
+   "titulo": "Todo lote é uma <b>conta.</b>",
+   "sub": "Lote de 11 por 15 metros. Que casa deve caber?",
+   "selo": "Ilustração do modelo 3D"
+  },
+  {
+   "nota": "Escaneamento (pedido de 22/11): 3 tempos de 0,3 s, corte seco. video/scan.py F03",
+   "fonte": "video/broll/clipes/scan-f03.mp4",
+   "dur": 0.9,
+   "continua": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 0,
+   "dur": 3.6,
+   "olho": "Casa Família · F03",
+   "titulo": "A casa certa é a <b>resposta.</b>",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "Entre e veja por dentro.",
+   "continua": true,
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 3.6,
+   "dur": 3.0,
+   "olho": "Casa Família · F03",
+   "titulo": "<b>Varanda</b> na frente",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "16,9 m²",
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 6.6,
+   "dur": 2.0,
+   "olho": "Casa Família · F03",
+   "titulo": "<b>Sala</b>",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "15,5 m² · 4,25 × 3,65 m livres",
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 8.6,
+   "dur": 2.0,
+   "olho": "Casa Família · F03",
+   "titulo": "<b>Cozinha</b>",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "9,8 m² · aberta para a sala",
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 10.6,
+   "dur": 3.0,
+   "olho": "Casa Família · F03",
+   "titulo": "<b>3 quartos</b>",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "2 quartos e 1 suíte",
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/clipes/passeio-f03.mp4",
+   "inicio": 13.6,
+   "dur": 1.7,
+   "olho": "Casa Família · F03",
+   "titulo": "<b>Suíte</b>",
+   "selo": "Ilustração do modelo 3D",
+   "sub": "8,9 m², com banheiro",
+   "leve": true
+  },
+  {
+   "fonte": "video/broll/paginas/pagina-10.jpg",
+   "dur": 2.4,
+   "caber": true,
+   "olho": "No e-book",
+   "titulo": "Leve ao seu engenheiro ou arquiteto."
+  },
+  {
+   "fonte": "ebook/visual/3d/F03.jpg",
+   "dur": 4.8,
+   "zoom": [
+    1.0,
+    1.15
+   ],
+   "janela": "PLANTA",
+   "olho": "Todo lote é uma conta",
+   "titulo": "Comente",
+   "sub": "e receba uma planta de graça no WhatsApp.",
+   "selo": "Ilustração do modelo 3D"
+  }
+ ]
+}
