@@ -77,6 +77,14 @@ Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a not
 
 Quando dois papéis se atrapalham (fazem o mesmo, deixam um buraco, se contradizem), o Maestro cria na hora uma regra em [`contexto/CONVIVENCIA.md`](../contexto/CONVIVENCIA.md) e conta ao dono no fim, num relatório curto: o erro, a regra, quem muda.
 
+## Buscar o que o dono já disse (22/11/2026)
+
+Antes de perguntar ao dono algo que ele pode já ter dito, busque: `python3 ferramentas/pesquisa.py buscar <palavras>` (caderno e apostilas) e `python3 ferramentas/conversas.py buscar <palavras>` (as falas dele nas conversas do Claude Code deste projeto, nesta máquina: no Mac, todas; na nuvem, só a atual). A busca nas conversas serve para **lembrar**, não para copiar: ao repositório só vai a decisão, reescrita em uma linha, com a data e "conversa anterior"; nunca trecho literal, dado de pessoa, senha, chave, assunto pessoal ou caminho de arquivo (regra do Revisor, ficha `2151`).
+
+## Faltou informação do dono? Sugira, não espere (dono, 22/11/2026)
+
+"Quando faltar uma informação minha, não apenas espere minha resposta, procure por sugestões." Quando uma decisão dele trava o trabalho: (1) busque o que ele já disse (acima); (2) procure sugestões (caderno, referência, o time, a web); (3) escolha a melhor como **padrão** e diga por quê; (4) siga com o que não gasta nem publica, usando o padrão; (5) pergunte no fim, com as opções e o padrão já em andamento. Gasto, publicação e preço continuam esperando o "sim".
+
 ## Consertar de vez (dono, 22/11/2026: "não só conserte, remende")
 
 Erro achado não é só corrigido: a causa vira **regra escrita ou conferência automática** no `checar.py`, para não voltar. Exemplos de 22/11: link quebrado depois de juntar arquivo (o `checar.py` confere todos os links); contexto apontando resumo demais (confere no máximo 3); quadro passando do tamanho (`pedido.py quadro` tira o aviso mais antigo); fato que muda dentro do arquivo do agente (fica só no `contexto/<papel>.md`). Na ficha, em "Conferência", diga o que impede o erro de voltar.

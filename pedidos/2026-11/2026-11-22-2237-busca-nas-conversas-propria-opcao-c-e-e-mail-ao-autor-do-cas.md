@@ -1,6 +1,6 @@
 # Busca nas conversas própria (opção C) e e-mail ao autor do cass
 
-**Estado:** aberta
+**Estado:** fechada em 22/11/2026
 
 **Prompt (palavra por palavra):** Send an e-mail and do it ourselves, send him our version
 
@@ -20,10 +20,9 @@
 
 **Quem executa:** Maestro (Opus): plano, código e rascunho. Veto: `revisor-de-risco` (privacidade e licença), depois o Fable.
 
-**Conferência:** (no fim)
+**Conferência:** Revisor SIM, SE (5/5) e Fable VETO (5/5) com 7 correções, todas aplicadas: e-mail com a verdade inteira (o dono pediu; download do código-fonte começou e foi parado; fórmula do Homebrew lida; trechos ficam no registro), suposições do dono entre colchetes; cópia limpa procura a pasta de onde roda (testada da raiz: acha as falas); máscara com 33 casos falsos no teste (telefone com espaço e ponto, RG, agência e conta, JSON, API_KEY, sk_live_, APP_USR-, ghs_, glpat-, hf_, ya29., Basic...); fala mais nova primeiro e só depois o corte em 20; linhas de sistema (isMeta) fora; erro sem o nome da pasta. `ferramentas/conversas.py` no `checar.py` (teste da máscara) e no mapa; regra de uso no `pedidos/LEIA-ME.md`. Não conferido: o script no Mac com muitas conversas; nome de pessoa nas falas (nenhuma máscara pega nome).
 
-**Resultado:** (a preencher)
-
+**Resultado:** ferramentas/conversas.py (busca só leitura nas falas do dono, com máscara testada); e-mail ao autor do cass e cópia limpa do script em pedidos/anexos/, para o dono mandar
 
 ## Plano (para o veto)
 
@@ -35,3 +34,11 @@ Objetivo de todos: nenhum agente pergunta de novo o que o dono já disse.
 | 2 | P | No `checar.py`: teste da máscara; no `MAPA-DO-SISTEMA.md` | Maestro | `checar.py` sem erro |
 | 3 | P | Regra de uso (a do Revisor da ficha 2151): ao repositório só vai a decisão em uma linha, com a data e "conversa anterior" | Maestro | `pedidos/LEIA-ME.md` e `contexto/EQUIPE.md` |
 | 4 | P | Rascunho do e-mail ao autor (inglês): quem escreve, o que é o uso, pedido de permissão escrita, e a nossa versão como mostra do que fizemos sem o cass | Maestro; Revisor confere | rascunho em `pedidos/`, para o dono mandar |
+
+## Qualidade do veto
+
+| Agente | Nota | Por quê |
+|---|---|---|
+| Revisor | 5 | Obra derivada, máscara, pasta só deste projeto, e a exigência de contar a verdade sobre a instalação |
+| Fable | 5 | Conferiu no registro e rodando os scripts: e-mail incompleto, cópia limpa quebrada, 20 formatos que vazavam, ordem por data |
+| Maestro | 2 | Mandei ao veto um e-mail com verdade incompleta e uma cópia que eu não tinha rodado da pasta certa |

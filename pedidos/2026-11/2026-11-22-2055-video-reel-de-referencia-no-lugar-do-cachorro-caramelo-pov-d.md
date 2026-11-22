@@ -188,6 +188,16 @@ Tempos de Q3 a Q6 são proposta do Editor. Já dá para renderizar de graça um 
 
 **O que isso muda:** o caramelo **olha, parado, cabeça inclinada** (não pula); o áudio é **gravação nossa** de palmas e do coro "desce um pouquinho" (nunca o áudio original); a câmera imita o celular na mão. Falta medir, com prints do dono se a MinoAI não der: a altura da câmera, a distância e quanto do quadro a bandeira ocupa.
 
+## Padrões em andamento (regra do dono, 22/11: "não apenas espere, procure por sugestões")
+
+Enquanto ele não responde, o trabalho segue com estes padrões (ele pode trocar a qualquer hora):
+- **Primeiro quadro:** (a) muro com a bandeira enchendo o fundo, câmera quase de frente, a casa na borda (padrão do Fable).
+- **Nome da rua:** **Rua da Casa que Cabe** (preferida do Redator, SIM do Revisor).
+- **Palmas e coro "desce um pouquinho":** no rascunho, marcação de tempo sem som; a gravação de verdade fica para o dono e a família (é de graça e mais autêntica), e a pergunta segue aberta.
+- **Medidas da referência (altura da câmera, tamanho da bandeira):** estimadas pelo Fable a partir da análise da MinoAI; os prints do dono, se vierem, corrigem.
+- **Teste de vídeo de 5 s (OpenArt):** espera o "sim" (gasta crédito).
+- **Agora, sem gasto:** o Editor renderiza o rascunho do esquema com o nosso motor, sobre a E07 atual.
+
 ## Opções de nome de rua (pedido do dono, 22/11: "i just need the options")
 
 **Veto:** Revisor SIM nos 5. Redator: a preferida dele é nova, **Rua da Casa que Cabe** (o atributo campeão no singular; "Casas que Cabem" lembra a frase vetada "todas as casas cabem"); reserva: Rua da Primeira Casa; outra nova: Rua do Meu Lote. Notas dele (desejo/clareza/promessa): Casas que Cabem 3/3/5, Primeira Casa 5/5/2, Pedreiro 2/4/2, Tô de Boa 3/4/1, Lote Certo 3/4/4.

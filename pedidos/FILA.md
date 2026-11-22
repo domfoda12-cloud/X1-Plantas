@@ -4,8 +4,9 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-22 | [Faltou informação do dono: sugerir e seguir, não só esperar](2026-11/2026-11-22-2245-faltou-informacao-do-dono-sugerir-e-seguir-nao-so-esperar.md) | fechada em 22/11/2026 | Maestro (Opus): a regra. Editor: o rascunho do esquema com os padrões. |
 | 2026-11-22 | [Escanear vídeos virais brasileiros atemporais, mais antigos, para o público adulto](2026-11/2026-11-22-2241-escanear-videos-virais-brasileiros-atemporais-mais-antigos-p.md) | aberta | `pesquisador` (Sonnet) acha; `editor-video` (Opus) conclui, com o Diretor (MinoAI) quando  |
-| 2026-11-22 | [Busca nas conversas própria (opção C) e e-mail ao autor do cass](2026-11/2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md) | aberta | Maestro (Opus): plano, código e rascunho. Veto: `revisor-de-risco` (privacidade e licença) |
+| 2026-11-22 | [Busca nas conversas própria (opção C) e e-mail ao autor do cass](2026-11/2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md) | fechada em 22/11/2026 | Maestro (Opus): plano, código e rascunho. Veto: `revisor-de-risco` (privacidade e licença) |
 | 2026-11-22 | [Integrar o cass (busca nas conversas dos agentes) ao sistema](2026-11/2026-11-22-2151-integrar-o-cass-busca-nas-conversas-dos-agentes-ao-sistema.md) | fechada em 22/11/2026 | Maestro (Opus): plano e código. Veto: `revisor-de-risco` (privacidade), `estrategista` (va |
 | 2026-11-22 | [Qualidade do veto: inputs relevantes e repreensão](2026-11/2026-11-22-2102-qualidade-do-veto-inputs-relevantes-e-repreensao.md) | fechada em 22/11/2026 | Maestro (Opus). O Fable confere a régua na próxima auditoria. |
 | 2026-11-22 | [Vídeo: reel de referência no lugar do cachorro caramelo, POV do caramelo no WhatsApp, zoom out, memes brasileiros](2026-11/2026-11-22-2055-video-reel-de-referencia-no-lugar-do-cachorro-caramelo-pov-d.md) | aberta | Maestro (Opus): plano e conferência. Diretor (MinoAI): ideia principal e o zoom out do kit |

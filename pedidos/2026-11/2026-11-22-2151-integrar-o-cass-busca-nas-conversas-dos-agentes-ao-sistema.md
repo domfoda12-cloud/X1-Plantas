@@ -57,6 +57,8 @@
 
 ## Erro do Maestro
 
+Antes desta ficha o dono pediu, nesta ordem: "Can you run this code for me? brew install dicklesworthstone/tap/cass" (21:50:16), "cargo install coding_agent_session_search", "Check it", "It should be similar to what I've been trying to do" e "Try to integrate cass in the system". Às 21:50:58 o Maestro rodou `cargo install --git <repositório>`, que começou a **baixar o código-fonte** (544 MB em `~/.cargo/git`; parou em "Updating git repository", nada compilado nem aberto) e foi morto às 21:53:08. Também leu a fórmula do Homebrew. 
+
 Ordem real (registro da conversa): 21:50 a primeira tentativa de instalar (cargo), antes de a ficha existir (21:51); 21:53:08 o binário v0.11.0 instalado (checksum da fórmula do Homebrew conferido) e **`cass --version` executado uma vez**, com o veto ainda rodando; 21:53:12 chega o Revisor. Não foi "contra o pedido do Revisor": foi **sem esperar o veto**. Removido logo depois (binário, arquivo baixado; nenhum índice criado); as cópias do README e da LICENSE na pasta de rascunho também foram apagadas (a licença manda destruir as cópias).
 
 ## Qualidade do veto

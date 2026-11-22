@@ -17,3 +17,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **22/11:** marquei "confirmado" no caderno um fato tirado do resumo de um repost; só é confirmado com a fonte original lida.
 - **22/11:** com o cass, comecei a instalar antes de a ficha existir e rodei o programa antes de o veto voltar (regra 13). Ferramenta nova: nada se baixa, instala ou roda antes do veto.
 - **22/11:** o `pedido.py fechar` apagava as seções depois do "Resultado"; fechei fichas sem conferir o que sobrou. Depois de fechar, confira que o plano continua na ficha (o `checar.py` agora testa isso).
+- **22/11:** o e-mail ao autor do cass omitia o download do código-fonte e que o dono pediu; a cópia limpa não tinha sido rodada como o usuário a rodaria. Antes de mandar ao veto: confira o fato no registro e rode o que entrega do jeito que o outro vai rodar.
