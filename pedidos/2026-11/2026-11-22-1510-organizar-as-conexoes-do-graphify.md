@@ -18,7 +18,7 @@
 
 **Quem executa:** Fable/Opus na conversa principal (é peça do sistema, uma vez só; o supervisor pode fazer).
 
-**Conferência do Fable:** (a preencher)
+**Conferência:** Medi com graph_stats antes e depois. Antes: 2.121 círculos, 2.322 ligações, 330 grupos. Depois do mapa: 2.177, 2.353, 348. **O mapa não ligou os programas**: o Graphify transformou cada nome do mapa num círculo novo (mapa_checar, mapa_livro...), sem ligação com o arquivo de verdade (graphify_file_neighbors do MAPA: 0 vizinhos). Ou seja, link em documento não liga código no Graphify; só import e chamada de função ligam. O mapa fica, porque serve aos agentes, mas não resolve o grafo.
 
 **Resultado:** (a preencher)
 

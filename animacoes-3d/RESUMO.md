@@ -21,11 +21,11 @@
 
 ### [Animações 3D: as plantas que o e-book vai conter](ANIMACOES-3D.md)
 
-Banco de referências de planta que ganha vida, com o que adotar no motor: `REFERENCIAS-BLUEPRINT.md`.
+22/11/2026: as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
 
 Seções: Nesta pasta; 1. O que cada planta recebe; 2. Os três estágios da animação; 3. Regras de estilo; 4. Referências; 5. Como o motor funciona; 6. O que falta; 7. Cuidados.
 
-Tamanho: 1122 palavras.
+Tamanho: 1156 palavras.
 
 ### [OpenArt + MinoAI Frontier: imagens e animações a partir das nossas plantas](OPENART-MINOAI.md)
 

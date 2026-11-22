@@ -28,7 +28,8 @@ try:
             "Prompt do dono guardado em pedidos/entrada/. Regra (pedidos/LEIA-ME.md): trabalho novo = "
             "`python3 ferramentas/pedido.py nova \"assunto\"` e preencha a ficha (por quê, objetivo, ligação com "
             "contexto/dono/IDEIAS-GERAIS.md, quem executa por modelo) antes de delegar; recado de pedido aberto = "
-            "`pedido.py recado <ficha>`; pergunta curta ou assunto pessoal = responda sem ficha. "
+            "`pedido.py recado <ficha>`; pergunta curta ou assunto pessoal = responda sem ficha. Travou, errou ou levou correção do dono? "
+            "Chame o agente `supervisor` (Fable) antes de tentar de novo. "
             f"Fichas abertas agora: {abertas}.")}}, ensure_ascii=False))
 except Exception:
     pass

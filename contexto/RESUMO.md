@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 15 documentos
+## Os 16 documentos
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -142,3 +142,11 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato.
 
 Tamanho: 330 palavras.
+
+### [Contexto do Supervisor (Fable)](supervisor.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro.
+
+Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato.
+
+Tamanho: 127 palavras.

@@ -4,32 +4,38 @@
 
 ## Quem manda no sistema
 
-**O Fable roda o sistema e é o supervisor principal.** Ele decide a divisão do trabalho, confere tudo o que os outros entregam e responde pelo resultado. Nas partes importantes do projeto ele pode pôr a mão e fazer ele mesmo, em vez de delegar.
+**O Opus responde e conduz** (dono, 22/11/2026): é o modelo da conversa principal (definido em `.claude/settings.json`). Ele lê o prompt, escreve a ficha, divide o trabalho, confere e responde. Nas partes importantes pode fazer ele mesmo, em vez de delegar.
+
+**O Fable socorre e audita**, pelo agente `supervisor`:
+
+- **Socorro.** O Opus chama o Fable antes de tentar de novo quando: a mesma coisa falhou duas vezes; o dono corrigiu ou reclamou do resultado; ele percebeu que errou ou que contrariou uma regra; não tem certeza do que o dono quis dizer; ou vai entregar ao público algo em que tem dúvida. O Fable diz a causa e o caminho; quem corrige é o Opus.
+- **Auditoria.** A cada 3 fichas fechadas, `pedido.py fechar` avisa "HORA DA AUDITORIA". O Opus chama o `supervisor` com as fichas fechadas desde a última; ele confere contra o que existe de verdade, aponta os erros por gravidade e registra em [`AUDITORIAS.md`](AUDITORIAS.md). Erro de gravidade alta é corrigido antes do próximo pedido.
 
 ## O caminho de um prompt
 
 1. **Entrada (automática).** O gancho `UserPromptSubmit` (`.claude/settings.json`) chama `ferramentas/guardar-pedido.py`: grava o prompt, palavra por palavra, em `pedidos/entrada/` (fora do git) e devolve a quem atende um lembrete desta regra e quantas fichas estão abertas.
-2. **Triagem (Fable).** Uma de quatro saídas:
+2. **Triagem (Opus).** Uma de quatro saídas:
    - **Trabalho novo:** `python3 ferramentas/pedido.py nova "assunto"` cria a ficha já com o prompt copiado pelo programa (ninguém redigita as palavras do dono).
    - **Recado de um pedido aberto** (correção, "também quero…", insistência): `python3 ferramentas/pedido.py recado <ficha>`. Os recados entram todos na mesma ficha, e ela é relida antes de entregar.
-   - **Pergunta curta** que o Fable já sabe responder: responde direto, sem ficha.
+   - **Pergunta curta** que o Opus já sabe responder: responde direto, sem ficha.
    - **Assunto pessoal do dono:** vai para o `ajudante` (Haiku) e não vira arquivo no repositório.
-3. **Interpretação (Fable).** Preenche a ficha antes de delegar. A pergunta obrigatória: **por que essa mudança foi pedida, ou o que o dono quer descobrir, e qual é o objetivo dele?** E a ligação com as ideias gerais do projeto ([`contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md)). Onde o prompt não diz, o Fable escreve a suposição em "Suposições", em vez de decidir calado.
-4. **Execução (outro modelo).** O Fable passa o trabalho com o **pacote do executor** (abaixo).
-5. **Conferência (Fable).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência do Fable". Relatório de agente é afirmação, não prova: o Fable abre o arquivo, roda o comando ou olha o quadro.
+3. **Interpretação (Opus).** Preenche a ficha antes de delegar. A pergunta obrigatória: **por que essa mudança foi pedida, ou o que o dono quer descobrir, e qual é o objetivo dele?** E a ligação com as ideias gerais do projeto ([`contexto/dono/IDEIAS-GERAIS.md`](../contexto/dono/IDEIAS-GERAIS.md)). Onde o prompt não diz, o Opus escreve a suposição em "Suposições", em vez de decidir calado.
+4. **Execução.** O Opus passa o trabalho com o **pacote do executor** (abaixo).
+5. **Conferência (Opus).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência". Relatório de agente é afirmação, não prova: o Opus abre o arquivo, roda o comando ou olha o quadro.
 6. **Fechamento.** `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
 
 ## Quem faz o quê
 
 | Tipo de pedido | Modelo | Como chamar |
 |---|---|---|
-| Ler o prompt, interpretar, dividir, conferir e responder ao dono | **Fable** | a conversa principal |
+| Ler o prompt, interpretar, dividir, conferir e responder ao dono | **Opus** | a conversa principal |
+| Socorro quando o Opus trava ou erra; auditoria a cada 3 fichas | **Fable** | `supervisor` |
 | Trabalho do projeto: planta, texto, vídeo, código, design, revisão de risco | **Opus** | o agente do papel (`arquiteto`, `redator`, `designer`, `editor-video`, `estrategista`, `revisor-de-risco`); sem papel certo, agente geral com `model: opus` |
 | Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Sonnet + Opus** | em dois passos (abaixo) |
 | Tarefa simples **para o dono** (não para os agentes): organizar um evento, responder uma pergunta, uma busca rápida, um lembrete | **Haiku** | `ajudante` |
 
 - Na dúvida entre dois modelos: **qualidade primeiro** para o que vai ao público; o mais barato para o que é simples e pessoal.
-- Tarefa de uma linha (trocar uma palavra, rodar a conferência) o Fable faz: delegar custa mais que fazer.
+- Tarefa de uma linha (trocar uma palavra, rodar a conferência) o Opus faz: delegar custa mais que fazer.
 - O Revisor de risco continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
 
 ### Pesquisa em dois passos
@@ -64,10 +70,10 @@ Criada pelo programa; os campos são obrigatórios (o `checar.py` confere):
 | Pronto quando | o que se confere para dizer que acabou |
 | Suposições (o dono não disse) | o que foi decidido sem ele; ele pode corrigir |
 | Quem executa | agente e modelo de cada parte |
-| Conferência do Fable | o que foi conferido, como, e o que não foi |
+| Conferência | o que foi conferido, como, e o que não foi |
 | Resultado | o que virou, com os arquivos |
 
-A ficha de entrega longa de vídeo (`video/PEDIDO-<entrega>.md`, que junta muitos pedidos da mesma peça) continua existindo: a ficha daqui aponta para ela.
+**Uma ficha só** (22/11/2026): a ficha daqui é a ficha do pedido que o `CLAUDE.md` exige. Entrega longa que junta muitos pedidos da mesma peça (ex.: `video/PEDIDO-anuncio-locucao.md`) continua existindo como **anexo**: a ficha aponta para ela em "Quem executa", e a reconferência dos pedidos um por um, antes de cada etapa, é feita com as duas.
 
 ## O que a análise do sistema mudou (22/11/2026)
 
@@ -82,13 +88,13 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 | Não havia como ver o que está aberto | `FILA.md`, gerada |
 | Ficha podia ficar pela metade | `pedido.py conferir` roda dentro do `checar.py` |
 | Agente recebia "leia o projeto" ou um pedido solto | pacote do executor, com a ficha e os resumos |
-| O relatório do agente era aceito como verdade | campo "Conferência do Fable" e a regra "afirmação não é prova" |
+| O relatório do agente era aceito como verdade | campo "Conferência", a regra "afirmação não é prova" e a auditoria do Fable |
 | "Sonnet com Opus" na pesquisa não dizia quem faz o quê | pesquisa em dois passos |
 | Ninguém ligava um pedido ao outro | campo "Ligação com as ideias gerais" e `IDEIAS-GERAIS.md` |
 
 ## Limites honestos
 
-- A conversa principal só é o Fable se o dono a deixar nesse modelo (`/model`). A regra de delegar vale com qualquer modelo na conversa principal.
+- O modelo padrão da conversa é o Opus (`.claude/settings.json`); o dono pode trocar com `/model`. Se a conversa estiver em outro modelo, as regras valem igual.
 - O gancho só roda em conversa aberta **neste repositório** e depois que a conversa carrega o `.claude/settings.json` (conversa já aberta pode precisar ser reaberta). Prompts antigos: `contexto/dono/PROMPTS.md`.
 - A caixa de entrada fica fora do git e some quando a máquina da nuvem é trocada: o que vale é a ficha.
 - O lembrete do gancho custa algumas dezenas de tokens por prompt. É o preço de a regra não depender de memória.

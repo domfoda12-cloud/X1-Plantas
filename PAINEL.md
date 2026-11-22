@@ -20,7 +20,7 @@ _Gerado por `ferramentas/atualizar-painel.py` em 22/11/2026, a partir dos arquiv
 | Casas com imagem 3D | 24 de 24 |
 | Casas com foto de fachada | 3 (C03, E07, F01) |
 | PDF do e-book | gerado, 22 MB · 6 plantas grátis |
-| Vídeos em `video/saida/` | 6 pastas (convite, previa-whatsapp, principal, principal-condor, principal-e07, tour-c06) · 5 versões antigas (`v1` a `v5`, com a C01 velha) |
+| Vídeos em `video/saida/` | 2 pastas (convite, principal) · 0 versões antigas (`v1` a `v5`, com a C01 velha) |
 | Avisos de conferência | 0 |
 
 **Por categoria:**

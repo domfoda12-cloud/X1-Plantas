@@ -21,11 +21,11 @@
 
 ### [Instagram: onde o editor trabalha](INSTAGRAM.md)
 
-Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o espaço do editor. Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para os vídeos do perfil. O anúncio com locução não vai para o Instagram:…
+22/11/2026: as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
 
 Seções: Nesta pasta; 1. Rotina do editor; 2. Formatos do perfil; 3. Regras de retenção: reel de Robert McKeaveney; 4. Estilo de edição: Mino Lee (@minolee.mp4); 5. Plano do perfil; 6. Registro dos testes.
 
-Tamanho: 1726 palavras.
+Tamanho: 1760 palavras.
 
 ### [Editor: MinoAI Frontier](MINOAI-FRONTIER.md)
 
@@ -53,11 +53,11 @@ Tamanho: 1019 palavras.
 
 ### [Os 9 primeiros posts, prontos para o editor](posts/POSTS.md)
 
-Parte da pasta Instagram. Guia da frente: `../INSTAGRAM.md`. Plano do perfil: `../plano-perfil.md`. Calendário: `../calendario.md`. Para cada post: legenda final (copiar e colar), texto de cada tela, imagens e, nos reels, o roteiro. As imagens dos carrosséis já estão geradas em `imagens/`. Onde…
+22/11/2026: as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
 
 Seções: C01 redesenhada em 22/11/2026: o que vale agora; Ajustes depois da estratégia (20/11/2026); Resumo; Como gerar as imagens de novo; Regras que valem para todas as legendas; Post 1 · Reel · Passeio 3D da Casa Compacta; Post 2 · Carrossel · Três plantas lado a lado; Post 3 · Carrossel · Como ler uma planta baixa; Post 4 · Reel · Passeio 3D da Casa Estreita; Post 5 · Carrossel · Checklist antes de contratar o pedreiro; Post 6 · Reel · Bastidor: a planta virando 3D; Post 7 · Imagem · Casa Família; Post 8 · Carrossel · 3 erros comuns na planta; Post 9 · Reel · O material gratuito; ….
 
-Tamanho: 3945 palavras.
+Tamanho: 3979 palavras.
 
 ### [Referências de vídeo: Mino Lee (@minolee.mp4)](referencias-mino-lee.md)
 

@@ -1,9 +1,11 @@
 # Os 9 primeiros posts, prontos para o editor
 
+> **22/11/2026:** as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
+
 > Parte da pasta Instagram. Guia da frente: [`../INSTAGRAM.md`](../INSTAGRAM.md). Plano do perfil: [`../plano-perfil.md`](../plano-perfil.md). Calendário: [`../calendario.md`](../calendario.md).
 >
 > Para cada post: legenda final (copiar e colar), texto de cada tela, imagens e, nos reels, o roteiro.
-> As imagens dos carrosséis já estão geradas em [`imagens/`](imagens/). Onde falta a planta em 3D, a tela sai com um aviso amarelo **FALTA O 3D**.
+> As imagens dos carrosséis já estão geradas em `imagens/`. Onde falta a planta em 3D, a tela sai com um aviso amarelo **FALTA O 3D**.
 
 ## C01 redesenhada em 22/11/2026: o que vale agora
 
@@ -16,7 +18,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
 - **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 50 m² em lote a partir de 8 x 15 (desde 22/11); Casa Estreita 58 m², 2 quartos (1 suíte), lote a partir de 8 x 25; Casa Família 78 m², 3 quartos (1 suíte), lote a partir de 11 x 15. Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
 - **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
-- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups/) e o B-roll [`../../video/broll/clipes/ebook-folheando.mp4`](../../video/broll/clipes/ebook-folheando.mp4).
+- **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups/) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
 - **Post novo sugerido pelo maestro (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
 - **Imagens geradas (fachada realista, ambientes):** feitas pela MinoAI com o OpenArt ([`../../animacoes-3d/OPENART-MINOAI.md`](../../animacoes-3d/OPENART-MINOAI.md)).
@@ -26,15 +28,15 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 | # | Formato | Tema | Imagens | Situação |
 |---|---|---|---|---|
 | 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Espera o vídeo:** use o B-roll `video/broll/clipes/ebook-folheando.mp4` ou espere o 3D novo |
-| 2 | Carrossel (6) | Três plantas lado a lado | [`imagens/post-02-tres-plantas/`](imagens/post-02-tres-plantas/) | **Refazer a tela 2: C01 redesenhada** |
-| 3 | Carrossel (7) | Como ler uma planta baixa | [`imagens/post-03-como-ler-planta/`](imagens/post-03-como-ler-planta/) | **Refazer: C01 redesenhada** (as 7 telas usam a planta antiga) |
-| 4 | Reel | Passeio 3D da Casa Estreita | capa em [`imagens/capas-reels/`](imagens/capas-reels/) | **Espera o vídeo:** idem |
-| 5 | Carrossel (5) | Checklist antes de contratar o pedreiro | [`imagens/post-05-checklist-pedreiro/`](imagens/post-05-checklist-pedreiro/) | **Pronto** |
+| 2 | Carrossel (6) | Três plantas lado a lado | `imagens/post-02-tres-plantas/` | **Refazer a tela 2: C01 redesenhada** |
+| 3 | Carrossel (7) | Como ler uma planta baixa | `imagens/post-03-como-ler-planta/` | **Refazer: C01 redesenhada** (as 7 telas usam a planta antiga) |
+| 4 | Reel | Passeio 3D da Casa Estreita | capa em `imagens/capas-reels/` | **Espera o vídeo:** idem |
+| 5 | Carrossel (5) | Checklist antes de contratar o pedreiro | `imagens/post-05-checklist-pedreiro/` | **Pronto** |
 | 6 | Reel | Bastidor: a planta virando 3D | imagens da Casa Compacta + capa | **Espera o 3D novo** (é um reel de bastidor do 3D) |
-| 7 | Imagem | Casa Família, vista 3D | [`imagens/post-07-casa-familia/`](imagens/post-07-casa-familia/) | **Pronto** (vista da rua 2D) |
-| 8 | Carrossel (5) | 3 erros comuns na planta | [`imagens/post-08-erros-comuns/`](imagens/post-08-erros-comuns/) | **Refazer: C01 redesenhada** (recortes da planta antiga) |
+| 7 | Imagem | Casa Família, vista 3D | `imagens/post-07-casa-familia/` | **Pronto** (vista da rua 2D) |
+| 8 | Carrossel (5) | 3 erros comuns na planta | `imagens/post-08-erros-comuns/` | **Refazer: C01 redesenhada** (recortes da planta antiga) |
 | 9 | Reel | O material gratuito | imagens da Casa Compacta + capa | **Refazer: C01 redesenhada** (as imagens e a animação são da casa antiga) |
-| R | Carrossel (6) | Reserva: Casa Compacta completa | [`imagens/reserva-casa-compacta/`](imagens/reserva-casa-compacta/) | **Refazer: C01 redesenhada** |
+| R | Carrossel (6) | Reserva: Casa Compacta completa | `imagens/reserva-casa-compacta/` | **Refazer: C01 redesenhada** |
 
 **O que falta de outra frente** (pedir ao chat de **Animações 3D**): gerar as plantas **E01 Casa Estreita** e **F03 Casa Família** em `animacoes-3d/plantas/casa-estreita/` e `animacoes-3d/plantas/casa-familia/`, com os 5 arquivos de sempre. Quando existirem, rode o gerador de novo (abaixo) e as telas saem com as imagens no lugar do aviso.
 
@@ -65,7 +67,7 @@ Telas de 1080 x 1350 (4:5, o tamanho máximo do feed). Capas de reel com 1080 x 
 
 ## Post 1 · Reel · Passeio 3D da Casa Compacta
 
-**Material:** [`animacao.mp4`](../../animacoes-3d/plantas/casa-compacta/animacao.mp4) (12 s, vertical) e [`03-perspectiva.png`](../../animacoes-3d/plantas/casa-compacta/03-perspectiva.png). Capa: [`imagens/capas-reels/post-01-reel-passeio-compacta.png`](imagens/capas-reels/post-01-reel-passeio-compacta.png).
+**Material:** `animacao.mp4` (12 s, vertical) e `03-perspectiva.png`. Capa: `imagens/capas-reels/post-01-reel-passeio-compacta.png`.
 
 **Texto fixo no alto (o vídeo todo):** Você consegue ver a casa antes de construir?
 
@@ -104,7 +106,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 2 · Carrossel · Três plantas lado a lado
 
-**Imagens:** [`imagens/post-02-tres-plantas/`](imagens/post-02-tres-plantas/) (01 a 06). **Falta 3D:** E01 Casa Estreita e F03 Casa Família (telas 1, 3 e 4).
+**Imagens:** `imagens/post-02-tres-plantas/` (01 a 06). **Falta 3D:** E01 Casa Estreita e F03 Casa Família (telas 1, 3 e 4).
 
 | Tela | Texto |
 |---|---|
@@ -139,7 +141,7 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 
 ## Post 3 · Carrossel · Como ler uma planta baixa
 
-**Imagens:** [`imagens/post-03-como-ler-planta/`](imagens/post-03-como-ler-planta/) (01 a 07). Todas com o blueprint e a planta humanizada da Casa Compacta. **Refazer: C01 redesenhada** (as telas mostram a planta antiga).
+**Imagens:** `imagens/post-03-como-ler-planta/` (01 a 07). Todas com o blueprint e a planta humanizada da Casa Compacta. **Refazer: C01 redesenhada** (as telas mostram a planta antiga).
 
 | Tela | Texto | Imagem |
 |---|---|---|
@@ -176,7 +178,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 4 · Reel · Passeio 3D da Casa Estreita
 
-**Falta 3D:** E01 Casa Estreita (`animacao.mp4` e `03-perspectiva.png` em `animacoes-3d/plantas/casa-estreita/`). Capa já desenhada: [`imagens/capas-reels/post-04-reel-casa-estreita.png`](imagens/capas-reels/post-04-reel-casa-estreita.png) (sai com aviso até a planta existir).
+**Falta 3D:** E01 Casa Estreita (`animacao.mp4` e `03-perspectiva.png` em `animacoes-3d/plantas/casa-estreita/`). Capa já desenhada: `imagens/capas-reels/post-04-reel-casa-estreita.png` (sai com aviso até a planta existir).
 
 **Formato:** "É possível…?" ([`../referencias-mino-lee.md`](../referencias-mino-lee.md), reel 1).
 
@@ -216,7 +218,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 5 · Carrossel · Checklist antes de contratar o pedreiro
 
-**Imagens:** [`imagens/post-05-checklist-pedreiro/`](imagens/post-05-checklist-pedreiro/) (01 a 05). Só texto, não depende de planta.
+**Imagens:** `imagens/post-05-checklist-pedreiro/` (01 a 05). Só texto, não depende de planta.
 
 | Tela | Texto |
 |---|---|
@@ -251,7 +253,7 @@ Ainda não tem a planta? Comente PLANTA que eu te mando uma planta humanizada de
 
 ## Post 6 · Reel · Bastidor: a planta virando 3D
 
-**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta em [`../../animacoes-3d/plantas/casa-compacta/`](../../animacoes-3d/plantas/casa-compacta/) (do desenho antigo: gere de novo com `node render-planta.cjs --planta C01`). Opcional: gravação de tela do arquivo de dados [`../../video/src/planta.js`](../../video/src/planta.js) aberto no editor de código (10 s rolando a tela bastam). Capa: [`imagens/capas-reels/post-06-reel-bastidor.png`](imagens/capas-reels/post-06-reel-bastidor.png).
+**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta em `../../animacoes-3d/plantas/casa-compacta/` (do desenho antigo: gere de novo com `node render-planta.cjs --planta C01`). Opcional: gravação de tela do arquivo de dados `../../video/src/planta.js` aberto no editor de código (10 s rolando a tela bastam). Capa: `imagens/capas-reels/post-06-reel-bastidor.png`.
 
 **Formato:** POV bastidor ([`../referencias-mino-lee.md`](../referencias-mino-lee.md), reel 3).
 
@@ -287,7 +289,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 7 · Imagem · Casa Família
 
-**Imagem:** [`imagens/post-07-casa-familia/01.png`](imagens/post-07-casa-familia/01.png). **Falta 3D:** F03 Casa Família (`03-perspectiva.png`). Até lá, a tela sai com aviso.
+**Imagem:** `imagens/post-07-casa-familia/01.png`. **Falta 3D:** F03 Casa Família (`03-perspectiva.png`). Até lá, a tela sai com aviso.
 
 | Tela | Texto |
 |---|---|
@@ -317,7 +319,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 8 · Carrossel · 3 erros comuns na planta
 
-**Imagens:** [`imagens/post-08-erros-comuns/`](imagens/post-08-erros-comuns/) (01 a 05). Recortes do blueprint da Casa Compacta, com a solução em amarelo. **Refazer: C01 redesenhada** (os recortes são da planta antiga; o texto abaixo já segue a nova).
+**Imagens:** `imagens/post-08-erros-comuns/` (01 a 05). Recortes do blueprint da Casa Compacta, com a solução em amarelo. **Refazer: C01 redesenhada** (os recortes são da planta antiga; o texto abaixo já segue a nova).
 
 | Tela | Texto | Imagem |
 |---|---|---|
@@ -349,7 +351,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 9 · Reel · O material gratuito
 
-**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: [`imagens/capas-reels/post-09-reel-material-gratis.png`](imagens/capas-reels/post-09-reel-material-gratis.png). O que a pessoa recebe está em [`../../ebook/vendas/material-gratuito.md`](../../ebook/vendas/material-gratuito.md): o reel mostra exatamente isso, nada a mais.
+**Refazer: C01 redesenhada.** **Material:** as 4 imagens e a animação da Casa Compacta (gerar de novo: as atuais são do desenho antigo). Capa: `imagens/capas-reels/post-09-reel-material-gratis.png`. O que a pessoa recebe está em [`../../ebook/vendas/material-gratuito.md`](../../ebook/vendas/material-gratuito.md): o reel mostra exatamente isso, nada a mais.
 
 **Texto fixo no alto:** Comente PLANTA e receba isto de graça
 
@@ -386,7 +388,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Reserva · Carrossel · Casa Compacta completa
 
-**Imagens:** [`imagens/reserva-casa-compacta/`](imagens/reserva-casa-compacta/) (01 a 06). **Refazer: C01 redesenhada** (as 6 telas são da planta antiga). Use no lugar do post 2 ou do 7 se o 3D da Casa Estreita ou da Casa Família não chegar a tempo.
+**Imagens:** `imagens/reserva-casa-compacta/` (01 a 06). **Refazer: C01 redesenhada** (as 6 telas são da planta antiga). Use no lugar do post 2 ou do 7 se o 3D da Casa Estreita ou da Casa Família não chegar a tempo.
 
 | Tela | Texto |
 |---|---|

@@ -1,5 +1,7 @@
 # Animações 3D: as plantas que o e-book vai conter
 
+> **22/11/2026:** as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
+
 > **Banco de referências** de planta que ganha vida, com o que adotar no motor: [`REFERENCIAS-BLUEPRINT.md`](REFERENCIAS-BLUEPRINT.md).
 
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
@@ -62,7 +64,7 @@ As imagens têm 2000 x 2500 pixels (proporção 4:5): cabem numa página A4 do e
 | Arquivo | O que faz |
 |---|---|
 | [`../video/src/plantas/`](../video/src/plantas/) | **Dados de cada planta** (`<ID>.js`, um por planta, as 24): medidas, cômodos, paredes, janelas, portas e a ficha (`META`). Saem de `python3 ferramentas/planta3d.py`; não edite à mão |
-| [`../video/src/planta.js`](../video/src/planta.js) | Dados da C01 **antiga** (55 m²): é o que o motor usa quando roda sem `--planta`. Não use |
+| `../video/src/planta.js` | Dados da C01 **antiga** (55 m²): é o que o motor usa quando roda sem `--planta`. Não use |
 | [`../video/src/casa3d.js`](../video/src/casa3d.js) | **Motor 3D:** monta a casa a partir dos dados nos três estágios. Também tem a lista de móveis e a ordem em que os cômodos ganham vida |
 | [`../video/src/casa.html`](../video/src/casa.html) | Página que mostra um quadro da casa, usada pelo render |
 | [`../video/render-planta.cjs`](../video/render-planta.cjs) | Gera as 4 imagens e a animação de uma planta |

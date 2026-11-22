@@ -1,4 +1,4 @@
-// Casa em 3D a partir de planta.js, em três estágios:
+// Casa em 3D a partir dos dados de uma planta (src/plantas/<ID>.js), em três estágios:
 //   1. Blueprint: fundo azul quadriculado, paredes, portas, móveis e cotas desenhados em branco.
 //   2. Ganhando vida: paredes sobem, pisos de madeira/porcelanato aparecem cômodo por cômodo,
 //      móveis surgem e o jardim cresce em volta.
@@ -8,9 +8,9 @@
 // do lado dos fundos (+z) olhando para a frente, a imagem fica igual à planta 2D (frente no alto).
 import * as THREE from '../node_modules/three/build/three.module.js';
 import { RoundedBoxGeometry } from '../node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js';
-// Qual planta: ?planta=C01 carrega ./plantas/C01.js (gerado por ferramentas/planta3d.py); sem parâmetro, ./planta.js.
+// Qual planta: ?planta=C01 carrega ./plantas/C01.js (gerado por ferramentas/planta3d.py); sem parâmetro, a C01.
 const ID_PLANTA = new URLSearchParams(globalThis.location ? location.search : '').get('planta');
-const DADOS = await import(ID_PLANTA ? `./plantas/${ID_PLANTA}.js` : './planta.js');
+const DADOS = await import(`./plantas/${ID_PLANTA || 'C01'}.js`);
 const { ambientes, paredes, janelas, portas, LARGURA, PROFUNDIDADE, ESPESSURA } = DADOS;
 const META = DADOS.META || { nome: 'Casa Compacta', area: 55, quartos: '2 quartos', banheiros: 1 };
 const FUTUROS = DADOS.futuros || [];

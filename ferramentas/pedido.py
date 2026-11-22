@@ -3,7 +3,7 @@
 Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o último prompt da caixa de entrada, palavra por palavra
      python3 ferramentas/pedido.py nova "assunto" --juntar 3   junta os 3 últimos prompts (recados seguidos sobre o mesmo pedido)
      python3 ferramentas/pedido.py recado <ficha>          acrescenta o último prompt da entrada como recado numa ficha aberta
-     python3 ferramentas/pedido.py listar                  mostra as fichas abertas
+     python3 ferramentas/pedido.py listar [--fechadas]     mostra as fichas abertas (ou as fechadas)
      python3 ferramentas/pedido.py fechar <ficha> "o que virou"   fecha a ficha e escreve a linha no CONTEXTO-HISTORICO.md
      python3 ferramentas/pedido.py indice                  regenera pedidos/FILA.md
      python3 ferramentas/pedido.py conferir                falha se alguma ficha estiver sem campo obrigatório
@@ -19,8 +19,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 PEDIDOS, ENTRADA = RAIZ / "pedidos", RAIZ / "pedidos" / "entrada"
 CAMPOS = ["Estado", "Prompt (palavra por palavra)", "O que ele pediu, parte por parte", "Por que ele pediu, ou o que quer descobrir",
           "Objetivo dele", "Ligação com as ideias gerais do projeto", "Pronto quando", "Suposições (o dono não disse)",
-          "Quem executa", "Conferência do Fable", "Resultado"]
-FECHADA = ["Conferência do Fable", "Resultado"]  # só precisam estar preenchidos em ficha fechada
+          "Quem executa", "Conferência", "Resultado"]
+FECHADA = ["Conferência", "Resultado"]  # só precisam estar preenchidos em ficha fechada
 VAZIO = "(a preencher)"
 
 
@@ -70,11 +70,11 @@ def recado(nome):
     print("recado acrescentado em", arq.relative_to(RAIZ))
 
 
-def listar(mostrar=True):
+def listar(mostrar=True, estado="aberta"):
     linhas = [f"{f.relative_to(RAIZ)} · {f.read_text(encoding='utf-8').splitlines()[0][2:]}"
-              for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("aberta")]
+              for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith(estado)]
     if mostrar:
-        print("\n".join(linhas) or "nenhuma ficha aberta")
+        print("\n".join(linhas) or f"nenhuma ficha {estado}")
     return linhas
 
 
@@ -93,6 +93,11 @@ def fechar(nome, virou):
         h.write(f"| {hoje:%d/%m/%Y} | \"{prompt.replace('|', '/')}\" | {virou.replace('|', '/')} Ficha: `{arq.relative_to(RAIZ)}` |\n")
     indice()
     print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md.")
+    auditadas = len(re.findall(r"^\| \d", (PEDIDOS / "AUDITORIAS.md").read_text(encoding="utf-8"), re.M)) if (PEDIDOS / "AUDITORIAS.md").exists() else 0
+    fechadas = sum(1 for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada"))
+    if fechadas >= 3 * (auditadas + 1):
+        print(f"HORA DA AUDITORIA: {fechadas} fichas fechadas e {auditadas} auditorias. Chame o agente `supervisor` (Fable) "
+              "com as fichas fechadas desde a última (`python3 ferramentas/pedido.py listar --fechadas`).")
 
 
 def indice():
@@ -129,7 +134,7 @@ if __name__ == "__main__":
     elif cmd == "recado" and len(a) == 2:
         recado(a[1])
     elif cmd == "listar":
-        listar()
+        listar(estado="fechada" if "--fechadas" in a else "aberta")
     elif cmd == "fechar" and len(a) == 3:
         fechar(a[1], a[2])
     elif cmd == "indice":

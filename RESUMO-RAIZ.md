@@ -17,7 +17,7 @@
 - Público: 25 a 50 anos, quem constrói com pedreiro, por etapas (`CLAUDE.md`, `ESTRATEGIA.md`).
 <!-- /essencial -->
 
-## Os 12 documentos
+## Os 13 documentos
 
 ### [X1-Plantas: instruções para toda sessão do Claude Code](CLAUDE.md)
 
@@ -25,7 +25,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 Seções: Antes de tudo: o contexto; O objetivo: a alegria do comprador, que vira Pix; Qualidade em primeiro lugar; Uma coisa por vez; O Conselho decide quais skills e ferramentas usar; Ficha do pedido e reconferência; Regras que não mudam.
 
-Tamanho: 1018 palavras.
+Tamanho: 1030 palavras.
 
 ### [O Conselho: quem opina, quem decide e quais skills cada um usa](CONSELHO.md)
 
@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 1603 palavras.
+Tamanho: 1677 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2139 palavras.
+Tamanho: 2176 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -75,6 +75,14 @@ Seções: 1. O que o maestro faz; 2. Configuração (uma vez só); 3. A mensagem
 
 Tamanho: 1088 palavras.
 
+### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
+
+Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer do zero (ficam no histórico do git); as pastas de saída abaixo voltam a encher quando os programas rodarem. Uma página para ver o projeto como um sistema: a planta entra, vira dados, e dos dados saem o PDF, o 3D, as…
+
+Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
+
+Tamanho: 720 palavras.
+
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 
 Pedido do dono (20/11/2026): dividir o que resta entre as três partes que faltam: e-book, animações e vídeo. O que espera o dono está em `CONTEXTO.md`, "Em aberto".
@@ -89,7 +97,7 @@ Comece por aqui. Este é o centro de controle do projeto: o que estamos construi
 
 Seções: 1. Situação agora; 2. Em que pé está (escrito à mão, 22/11/2026); 3. O negócio em uma frase; 4. A conta que diz se o anúncio paga; 5. Frentes, uma por vez; 6. Esta semana; 7. Números para acompanhar; 8. Decisões tomadas; 9. Decisões pendentes; 10. Riscos e cuidados; 11. Rotina; 12. Quem faz o quê; 13. Mapa do projeto.
 
-Tamanho: 2157 palavras.
+Tamanho: 2153 palavras.
 
 ### [X1-Plantas](README.md)
 
@@ -101,9 +109,9 @@ Tamanho: 143 palavras.
 
 As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro; abra um documento inteiro só quando a tarefa pedir. Índice geral: `INDICE.md`. Quem lê: todos.
 
-Seções: O essencial; Os 12 documentos.
+Seções: O essencial; Os 13 documentos.
 
-Tamanho: 1244 palavras.
+Tamanho: 1345 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

@@ -131,7 +131,7 @@ def gerar():
     indice += ("\n## Por agente\n\n" + "".join(
         f"- **{ag}:** " + ", ".join(f"[{PASTAS[c][0]}]({(Path(c) / ('RESUMO-RAIZ.md' if c == '.' else 'RESUMO.md')).as_posix()})"
                                     for c in PASTAS if ag in PASTAS[c][3] or "todos" in PASTAS[c][3]) + "\n"
-        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "maestro", "pesquisador", "redator", "revisor-de-risco"]))
+        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "maestro", "pesquisador", "redator", "revisor-de-risco", "supervisor"]))
     (RAIZ / "INDICE.md").write_text(indice, encoding="utf-8")
 
 

@@ -10,7 +10,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro: contexto por papel desde o começo vale mais do que cortar depois. **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** em `contexto/entregas/` (modelo em `MODELO.md`, no máximo 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
 
-**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o gancho guarda o prompt, o **Fable** interpreta e confere, o **Opus** executa o trabalho do projeto, o **Sonnet** pesquisa a fundo (`pesquisador`) e o **Haiku** faz a tarefa simples e pessoal do dono (`ajudante`).
+**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o gancho guarda o prompt; o **Opus** responde, interpreta, executa e confere; o **Fable** (`supervisor`) socorre quando o Opus trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz a tarefa simples e pessoal do dono.
 
 ## O objetivo: a alegria do comprador, que vira Pix
 
@@ -35,7 +35,7 @@ Antes de usar uma skill, um agente ou uma ferramenta paga, os membros do Conselh
 
 ## Ficha do pedido e reconferência
 
-Toda entrega tem uma **ficha do pedido** (`PEDIDO-*.md`): o que o dono pediu, o que é suposição e o que foi pedido a cada agente. Todo agente recebe a ficha; suposição nunca decide nada sem o dono confirmar; antes de cada etapa, reconfira os pedidos um por um ([`CONSELHO.md`](CONSELHO.md), seção 6b; decisão do dono, 22/11/2026).
+Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o que o dono pediu, por quê, o que é suposição e quem faz cada parte. Entrega longa ganha um anexo (`PEDIDO-*.md`) apontado na ficha. Suposição nunca decide nada sem o dono confirmar; antes de cada etapa, reconfira os pedidos um por um ([`CONSELHO.md`](CONSELHO.md), seção 6b).
 
 ## Regras que não mudam
 

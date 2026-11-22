@@ -1,5 +1,7 @@
 # Instagram: onde o editor trabalha
 
+> **22/11/2026:** as imagens, clipes e renders citados aqui foram apagados para refazer do zero com a C01 nova (ficam no histórico do git). Os nomes de arquivo abaixo ficaram como referência, sem link.
+
 > Parte do projeto X1-Plantas. Painel geral: [`../PAINEL.md`](../PAINEL.md).
 >
 > **Esta pasta é o espaço do editor.** Aqui ficam as regras de retenção, o estilo de edição, os formatos de vídeo do perfil, o plano de publicação e o método de teste. Vale para os vídeos do perfil. **O anúncio com locução não vai para o Instagram:** o destino dele é WhatsApp e Facebook Ads (dono, 22/11/2026; [`../video/PEDIDO-anuncio-locucao.md`](../video/PEDIDO-anuncio-locucao.md)), e não entra na rotina de reels de teste abaixo.
@@ -21,7 +23,7 @@
 |---|---|
 | [`../video/VIDEO.md`](../video/VIDEO.md) | O que existe de vídeo hoje, o que é rascunho e o que é antigo |
 | [`../video/saida/`](../video/saida/) | Vídeos montados. As 5 versões antigas (`v1` a `v5`) usam o 3D velho da C01: não publicar |
-| [`../animacoes-3d/plantas/`](../animacoes-3d/plantas/) | Animações e imagens 3D de cada planta, para posts e reels |
+| `../animacoes-3d/plantas/` | Animações e imagens 3D de cada planta, para posts e reels |
 | [`../ebook/catalogo.md`](../ebook/catalogo.md) | Lista de plantas do e-book: cada uma rende pelo menos um post |
 
 ## 1. Rotina do editor
