@@ -298,10 +298,16 @@ FOTOS = EBOOK / "visual" / "openart" / "final"
 CACHE_FOTOS = EBOOK / ".cache" / "fotos"
 
 
+def arquivo_foto(pasta, nome):
+    """A foto em JPEG (o padrão, mais leve) ou em PNG, o que existir."""
+    jpg = pasta / f"{nome}.jpg"
+    return jpg if jpg.exists() else pasta / f"{nome}.png"
+
+
 def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800):
     """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
     from PIL import Image
-    origem = (pasta or FOTOS) / f"{nome}.png"
+    origem = arquivo_foto(pasta or FOTOS, nome)
     if not origem.exists():
         origem = origem.with_suffix(".jpg")
     if not origem.exists():
@@ -326,7 +332,7 @@ def fachada_bloco(p):
     corredor = any(c["id"] == "corr" for c in p["comodos"])
     aperto = n + (1 if corredor else 0) + (1 if p["_r"].metricas.get("area_coberta_aberta") else 0)
     alt = 62 if not n else (36 if aperto < 3 else 30)
-    if (FACHADAS / f"{p['id']}.png").exists():
+    if arquivo_foto(FACHADAS, p['id']).exists():
         rua = (f'<h4>Vista da rua</h4>'
                f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}')
     else:
@@ -339,7 +345,7 @@ def fachada_bloco(p):
 
 def capa_fundo():
     """Fundo da capa: o papel azul de projeto (OpenArt), escurecido para o título ler bem."""
-    if not (FOTOS / "06-papel-azul.png").exists():
+    if not arquivo_foto(FOTOS, "06-papel-azul").exists():
         return ""
     foto("06-papel-azul", 1)
     src = os.path.relpath(CACHE_FOTOS / "06-papel-azul.jpg", SAIDA)

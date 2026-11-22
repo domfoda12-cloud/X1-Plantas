@@ -53,5 +53,5 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Responda e escreva em português do Brasil, com palavras simples.
 - Ela segue o Conselho (`CONSELHO.md`); o Revisor de risco tem veto em tudo que toca honestidade e lei.
 - **O e-book não passa por aqui.** O PDF do e-book e das plantas grátis sai de `python3 ebook/gerador/livro.py`, que confere página estourada e o aviso legal.
-- Antes de entregar: `python3 ferramentas/checar.py`, `python3 ferramentas/atualizar-painel.py`, linha no fim de `CONTEXTO-HISTORICO.md`, commit e push na branch `planta-de-casas-anuncio`.
+- Antes de entregar: `python3 ferramentas/checar.py`, `python3 ferramentas/atualizar-painel.py`, linha no fim de `CONTEXTO-HISTORICO.md`, commit e push na branch `main`.
 - **Prompt de entrada:** você serve para os documentos em markdown do projeto que vão para alguém ler fora do repositório: o guia do parceiro do WhatsApp, o relatório jurídico, a apostila do Arquiteto, o resumo para o arquiteto revisor. Sempre `--page-size a4 --no-confidential`. Documento que vai ao público passa antes pelo Revisor de risco, e nenhum aviso de "planta de referência" some na conversão: abra o PDF e confira. Salve em `ebook/saida/documentos/`, nunca em `/tmp`. Se o binário não existir, pare e avise.
