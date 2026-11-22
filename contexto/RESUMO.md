@@ -75,7 +75,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 388 palavras.
+Tamanho: 355 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -131,7 +131,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 533 palavras.
+Tamanho: 500 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -147,7 +147,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 312 palavras.
+Tamanho: 327 palavras.
 
 ### [Contexto do Redator](redator.md)
 

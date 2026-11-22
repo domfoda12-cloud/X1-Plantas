@@ -3,7 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
-- **Memes brasileiros atemporais** (dono, 22/11/2026): toda busca de referência procura também memes brasileiros que não envelhecem, como o do menino dançando com o cachorro; lista tudo, com a coluna "dá para recriar em anúncio?" (não: criança, rosto de alguém, TV ou novela, marca, música protegida). Achados no caderno `pesquisas/video.md`.
+- **Memes brasileiros atemporais** em toda busca de referência (dono, 22/11/2026); a regra completa está em `pesquisador.md`.
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 

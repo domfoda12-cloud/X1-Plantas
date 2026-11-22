@@ -14,6 +14,8 @@ Durante a procura de referencias procure memes brasileiros atemporais como esse
 
 *Recado de 22/11 21:08:* Sao 2 videos, 1 mostrando uma previa do que eles vao ver no ebook, outro fazendo a divulgacao do produto, o principal é a divulgacao mas a previa também é bem importante
 
+*Recado de 22/11 21:09:* a previa é o wpp a divulgacao é insta/ads
+
 **O que ele pediu, parte por parte:** 1) O reel DTw4bqHE5zj (menino dançando 'Tô de boa, desce um pouquinho' ao lado do cachorrinho, 2016) entra na lista de referências e toma o lugar do cachorro caramelo no **vídeo principal** (anúncio e Instagram). 2) No **vídeo do WhatsApp** (a prévia que vai ao cliente), a casa aparece do ponto de vista de um vira-lata caramelo. 3) Em algum momento, a câmera faz um zoom out com efeito especial, tirado das referências de edição. 4) Em toda busca de referência, procurar memes brasileiros atemporais como esse.
 
 **Por que ele pediu, ou o que quer descobrir:** Ele quer referência brasileira que todo mundo reconhece e que não envelhece (antes recusou o 'morango do amor' por ser de 2025). O meme dá o reconhecimento instantâneo nos 3 primeiros segundos; o caramelo, que é afeto brasileiro, vira o olhar do vídeo do WhatsApp. O zoom out é o momento de 'uau' da edição.
@@ -44,7 +46,7 @@ Objetivo de todos: o brasileiro reconhece na hora, para o dedo, e quer a casa.
 | # | Tipo | Passo | Quem | Pronto quando |
 |---|---|---|---|---|
 | 1 | P | Reel em `video/REFERENCIAS.md`: só o link e a análise; repost (sem direitos); ano "a confirmar"; regra: recriar a situação, nunca o menino, o rosto, o áudio ou a música | Maestro | seção nova |
-| 2 | P | **Regra permanente:** toda busca de referência procura também memes brasileiros atemporais; lista tudo, com a coluna "dá para recriar em anúncio?" (não: criança, rosto de alguém, cena de TV ou novela, marca, música protegida). Primeira busca: 3 candidatos e a origem da frase "Tô de boa, desce um pouquinho" | `pesquisador` acha; `editor-video` conclui; `revisor-de-risco` marca a coluna | regra nos contextos do Pesquisador, do Diretor e do Editor; 3 linhas no caderno |
+| 2 | P | **Regra permanente:** toda busca de referência procura também memes brasileiros atemporais; lista tudo, com a coluna "dá para recriar em anúncio?" (criança só com autorização escrita dos responsáveis ou gerada por IA sem lembrar a pessoa real; não: rosto de alguém, cena de TV ou novela, marca, música protegida). Primeira busca: 3 candidatos e a origem da frase "Tô de boa, desce um pouquinho" | `pesquisador` acha; `editor-video` conclui; `revisor-de-risco` marca a coluna | regra nos contextos do Pesquisador, do Diretor e do Editor; 3 linhas no caderno |
 | 3 | Dono | **Perguntas ao dono** (com o padrão se não responder): (a) onde entra o meme: **como gancho, nos primeiros segundos** (padrão, já que a abertura está livre) ou no meio; (b) qual é o "vídeo do WhatsApp": a **prévia** (padrão), o convite ou o anúncio com locução; (c) "ads/instagram": o principal vai ao Facebook Ads e ao Instagram? (hoje a ordem é: o anúncio com locução vai a WhatsApp e Facebook Ads, não ao Instagram); (d) quer teste A/B? (padrão: não, ele não pediu; a versão B recolocaria o caramelo que ele mandou tirar); (e) em qual vídeo vai o zoom out (padrão: no fim da prévia, abrindo para a casa no lote); (f) quem dança na recriação (ele, família com autorização escrita, ator); (g) PLANTA ou LOTE; aviso junto: o clipe original não pode ser usado, só recriado | Maestro pergunta | respostas na ficha |
 | 4 | P | Ideia principal de cada vídeo (Diretor, com fonte), qual é o principal-base, e o efeito de zoom out com a fonte (o `make_zoom2.py` do kit só existe no Mac: o Diretor confirma lá) | Maestro com o Diretor; `revisor-de-risco` olha a ideia do meme | ideia + efeito + SIM do Revisor |
 | 5 | G | **Roteiro do principal** com o meme no lugar que o dono escolher, o zoom out se for nele, o texto no primeiro quadro; tempo de cada quadro saído do roteiro novo (nada de segundos herdados) | `editor-video`; `redator` (texto); `arquiteto` (casa e lote) | roteiro |
@@ -76,7 +78,7 @@ Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se fa
 **R3 · Instagram**
 | Ramo | O que muda |
 |---|---|
-| R3a · o principal vai ao Facebook Ads e ao Instagram **(padrão: perguntar antes, porque mexe numa ordem dele)** | Duas saídas do mesmo vídeo: 4:5 (feed) e 9:16 (Reels), até 12 MB |
+| R3a · o principal vai ao Facebook Ads e ao Instagram **(escolhido pelo dono, 22/11: "a prévia é o wpp, a divulgação é insta/ads")** | Duas saídas do mesmo vídeo: 4:5 (feed) e 9:16 (Reels), até 12 MB |
 | R3b · Instagram só orgânico, Facebook Ads só o anúncio com locução | Fica a ordem de hoje; o principal com meme vira Reel do perfil |
 
 **R4 · Teste A/B**
@@ -93,13 +95,18 @@ Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se fa
 | R5b · no principal | O zoom out fecha o escaneamento: da planta para a casa no lote |
 | R5c · nos dois | O mesmo efeito vira assinatura da marca |
 
-**R6 · Quem dança na recriação** (o dono quer **uma criança e um cachorro**, na frente da casa: ramos refeitos abaixo, em veto)
-| Ramo | O que muda | Custo e risco |
+**R6 · Quem é a criança** (o dono quer "a criança e o cachorro dançando na frente da casa"; ramos refeitos pelo Revisor, 22/11)
+| Ramo | O que exige | Veto do Revisor |
 |---|---|---|
-| R6a · o dono | Ele filma junto com os planos do celular | Zero; autorização dele mesmo; mais autêntico |
-| R6b · família | Autorização escrita guardada antes | Zero; mais um passo |
-| R6c · ator | Contratar (decisão do dono) | Pago; mais controle |
-| R6d · sem pessoa: só o cachorro reagindo e a frase na tela **(padrão)** | Nenhuma autorização | Zero; o meme fica mais fraco |
+| R6a · criança real, da família | autorização escrita dos dois responsáveis antes de filmar (uso: anúncio no Facebook e no Instagram e WhatsApp; prazo; como revogar). Lei: CF art. 5º, X; Código Civil art. 20; LGPD art. 14 | SIM, SE |
+| R6b · criança contratada (atriz) | o mesmo + alvará do juiz da infância por ser trabalho artístico infantil (ECA, Lei 8.069/1990; artigo a confirmar); contratar é decisão do dono | SIM, SE |
+| R6c · criança gerada por IA (OpenArt) | que não lembre o menino do meme (outro biotipo, outra roupa, outro cachorro); a Meta pode exigir o rótulo de IA (a confirmar); crédito só com o "sim" | SIM, SE |
+| R6d · criança de costas, desfocada ou em silhueta | se real, a mesma autorização; se IA, as condições de R6c; gancho mais fraco (decide o Diretor) | SIM, SE |
+| R6e · só o cachorro | não cumpre o pedido: só se o dono disser que aceita | VETO como padrão |
+
+Em todos: nada do menino original (rosto, roupa, áudio, música; direito autoral, Lei 9.610/1998); nada que dê a entender que a família mora numa casa construída; aviso "Planta de referência" num canto, parado. A conferir pelo jurídico antes da peça final: o artigo do ECA e o alvará, a política da Meta sobre IA e sobre criança em anúncio.
+
+**Gancho de 0 a 3 s (proposta do Editor, veto de ramo, 22/11):** um plano só, sem corte: fachada da casa aprovada, câmera parada na altura do olho, a criança e o cachorro já dançando, texto no primeiro quadro (frase do Redator); de 2,4 a 3,0 s a câmera chega um pouco mais perto e o corte seco cai na batida. Em 3,0 s entra o escaneamento **da mesma casa**; o tempo 4 volta à **mesma fachada, no mesmo ângulo, agora vazia**: o público entende que a casa onde eles dançam é aquela planta. Áudio: faixa licenciada no andamento da dança, latido e risada de ambiente. **Rota recomendada: OpenArt a partir do nosso render da fachada** (a casa só existe em 3D; filmar no celular põe a dança na frente de outra casa). Plano B: filmagem do dono no lote, o que muda o pedido.
 
 **R7 · PLANTA ou LOTE**: R7a PLANTA **(padrão, é o que os textos já usam)**; R7b LOTE (troca a chamada nos dois vídeos e no funil do parceiro).
 
@@ -120,4 +127,6 @@ Cada pergunta do passo 3 abre ramos. O ramo marcado **(padrão)** é o que se fa
 | 3 | Editor, Estrategista | 4 | SIM com uma melhoria de ordem cada | — |
 | — | Maestro | 1 | Prompt errado na ficha; aceitei como fato que o escaneamento abria o vídeo (resumo errado, não a fala do dono); marquei "confirmado" um ano tirado de repost; deixei suposição virar decisão no passo 5 | Sim: regras 8, 11 e 12 de `contexto/CONVIVENCIA.md` e o `pedido.py` que mostra o prompt |
 | Fable | Supervisor | 5 | Achou o prompt errado, o fato errado com a linha de onde vinha, e cada suposição; correção em cada item | — |
+| ramo | Revisor | 5 | Corrigiu a própria cautela da rodada 1 ("sem criança" não é lei); separou lei, política da Meta e cautela; marcou o que não conferiu; vetou o ramo que não cumpria o pedido | — |
+| ramo | Editor | 5 | Gancho quadro a quadro ligado ao escaneamento da mesma casa; rota com a linha de cada documento | — |
 | — | Revisão das notas | — | O Editor (rodada 1) citou uma linha real de `VIDEO.md`, mas a linha contradizia a fala do dono na mesma página. Não é repreensão: a página é que estava errada (corrigida). As notas da rodada 1 sobre a abertura estavam erradas porque eu as dei sem conferir a fala | — |
