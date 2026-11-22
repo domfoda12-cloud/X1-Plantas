@@ -15,6 +15,10 @@
 - Revisar também fora do PDF: posts, roteiros e imagens (foto e 3D contra a planta).
 - Página estourada que cobre o aviso legal é veto.
 
+## Decisão do dono (22/11/2026)
+
+- **O selo "Imagem ilustrativa" nos vídeos deixou de ser condição.** O dono tirou. Não vete um vídeo pela falta dele. O aviso "Planta de referência…" continua obrigatório, agora pequeno, num canto da tela, parado. Continuam valendo: nada que diga ou dê a entender que a casa foi construída, nada de "prova de cliente" em imagem gerada, sem marcas.
+
 ## Onde olhar
 
 `ESTRATEGIA.md` (seção 9), `reports/`, `ebook/vendas/faq-compradores.md`, `CONSELHO.md`.
