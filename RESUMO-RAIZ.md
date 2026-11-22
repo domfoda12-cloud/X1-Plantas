@@ -16,7 +16,7 @@
 - Contradição: 0 de 12 plantas prontas, 1 com 3D (`PAINEL.md`); e-book "quase pronto", 61 páginas e 24 casas (`ORCAMENTO.md`).
 <!-- /essencial -->
 
-## Os 11 documentos
+## Os 12 documentos
 
 ### [X1-Plantas: instruções para toda sessão do Claude Code](CLAUDE.md)
 
@@ -24,7 +24,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 Seções: Antes de tudo: o contexto; O objetivo: a alegria do comprador, que vira Pix; Qualidade em primeiro lugar; Uma coisa por vez; O Conselho decide quais skills e ferramentas usar; Ficha do pedido e reconferência; Regras que não mudam.
 
-Tamanho: 971 palavras.
+Tamanho: 974 palavras.
 
 ### [O Conselho: quem opina, quem decide e quais skills cada um usa](CONSELHO.md)
 
@@ -40,7 +40,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 6887 palavras.
+Tamanho: 7029 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -56,7 +56,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 1953 palavras.
+Tamanho: 1956 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -80,7 +80,7 @@ Pedido do dono (20/11/2026): dividir o que resta entre as três partes que falta
 
 Seções: O que dá para medir daqui; A divisão (qualidade em primeiro lugar); Como gastar menos sem perder qualidade; Para fechar a conta em números.
 
-Tamanho: 582 palavras.
+Tamanho: 560 palavras.
 
 ### [Painel X1-Plantas](PAINEL.md)
 
@@ -95,6 +95,14 @@ Tamanho: 2914 palavras.
 E-book com dezenas de plantas de casas para quem vai construir no Brasil, com vídeos de anúncio, perfil no Instagram e plantas em 3D.
 
 Tamanho: 120 palavras.
+
+### [Resumo: Comando e contexto](RESUMO-RAIZ.md)
+
+As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro; abra um documento inteiro só quando a tarefa pedir. Índice geral: `INDICE.md`. Quem lê: todos.
+
+Seções: O essencial; Os 12 documentos.
+
+Tamanho: 1173 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

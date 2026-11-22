@@ -8,6 +8,7 @@ dos documentos da pasta (gerada: título, do que trata, seções e tamanho). O a
 e só abre o documento inteiro quando a tarefa pede.
 """
 import ast
+import os
 import re
 import subprocess
 import sys
@@ -20,7 +21,7 @@ INI, FIM = "<!-- essencial: escrito à mão, o gerador não apaga -->", "<!-- /e
 PASTAS = {
     ".": ("Comando e contexto", "As regras, as decisões do dono e quem decide o quê", [".", "ferramentas"],
           ["todos"]),
-    "contexto": ("Contexto por papel", "O que cada agente precisa saber e o quadro de avisos", ["contexto"],
+    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono"],
                  ["todos"]),
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),
@@ -76,8 +77,8 @@ def ficha_md(arq, base):
     titulo = next((limpar(x[2:]) for x in linhas if x.startswith("# ")), arq.name)
     secoes = [limpar(x[3:]) for x in linhas if x.startswith("## ")]
     palavras = sum(len(x.split()) for x in linhas)
-    rel = Path(*arq.parts[len(base.parts):]) if base != Path(".") else arq
-    txt = f"### [{titulo}]({rel.as_posix().replace(' ', '%20')})\n\n"
+    rel = os.path.relpath(arq, base).replace(os.sep, "/")
+    txt = f"### [{titulo}]({rel.replace(' ', '%20')})\n\n"
     if trata := do_que_trata(linhas):
         txt += f"{trata}\n\n"
     if secoes:

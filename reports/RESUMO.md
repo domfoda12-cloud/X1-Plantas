@@ -26,7 +26,7 @@ Seções: Atualização de 19/11/2026: o que passou a ser verificado em fonte pr
 
 Tamanho: 3710 palavras.
 
-### [Exigências legais para construir casa residencial unifamiliar no Brasil (situação 2026)](Arquiteto%20e%20engenheiro%20na%20construção%20residencial/exigencias_legais.md)
+### [Exigências legais para construir casa residencial unifamiliar no Brasil (situação 2026)](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/exigencias_legais.md)
 
 Aviso de limitação da pesquisa: nesta sessão, os sites oficiais (planalto.gov.br, caixa.gov.br, normasbrasil.com.br, legjur.com, orcafascio.com) não puderam ser acessados (falha de DNS: fora da lista de domínios permitidos). Por isso, nenhum texto de lei foi lido na íntegra. Os achados abaixo vêm…
 
@@ -34,7 +34,7 @@ Seções: 1. Quais documentos a prefeitura exige para aprovar um projeto residen
 
 Tamanho: 1866 palavras.
 
-### [Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida](Arquiteto%20e%20engenheiro%20na%20construção%20residencial/publico_e_criterios.md)
+### [Público que constrói casa no Brasil: barreiras, motivações e critérios para planta pronta ou projeto sob medida](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/publico_e_criterios.md)
 
 Método e limites: pesquisa feita com buscas na web (dados até nov/2026). Só uma parte dos links foi aberta; os domínios gazetadopovo.com.br, caubr.gov.br e diariodonordeste.verdesmares.com.br não resolveram nesta sessão, então os dados atribuídos a eles vêm dos trechos de busca e não foram…
 
@@ -42,7 +42,7 @@ Seções: 1. Qual a proporção de obras sem profissional e por quê?; 2. Quais 
 
 Tamanho: 2332 palavras.
 
-### [Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026)](Arquiteto%20e%20engenheiro%20na%20construção%20residencial/servicos_e_precos.md)
+### [Serviços e preços de um arquiteto em projeto residencial (Brasil, 2026)](../research_notes/Arquiteto%20e%20engenheiro%20na%20construção%20residencial/servicos_e_precos.md)
 
 Data de consulta: 2026-11-19. Os preços abaixo vêm de trechos de resultados de busca, não de páginas abertas, porque a maioria dos sites de origem não resolveu nesta sessão (ver Gaps). Quase todos são sites comerciais, sem data de publicação visível; quando a fonte diz "2026", isso está indicado.…
 

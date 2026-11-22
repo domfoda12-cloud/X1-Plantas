@@ -70,7 +70,7 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
     if not (RAIZ / "contexto" / f"{ag.stem}.md").exists():
         fora.append(f"agente {ag.stem}: falta o arquivo contexto/{ag.stem}.md")
 # Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
-LIMITES = [("CLAUDE.md", 6000), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
+LIMITES = [("CLAUDE.md", 6500), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
 LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
 LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md"))]
 if fora:

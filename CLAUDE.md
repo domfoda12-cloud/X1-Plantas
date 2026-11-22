@@ -4,7 +4,7 @@ E-book brasileiro de plantas de casas térreas (24 desenhadas, 35 no catálogo),
 
 ## Antes de tudo: o contexto
 
-Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que está em aberto. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md); abra só se precisar de um detalhe antigo. Tudo o que o dono pediu continua valendo até ele dizer o contrário. **A cada pedido novo do dono, acrescente uma linha no fim da tabela do histórico** (data, pedido, o que virou) e atualize "Em aberto" no `CONTEXTO.md`. Nada do que ele faz é por acaso.
+Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que está em aberto. O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md); abra só se precisar de um detalhe antigo. Tudo o que o dono pediu continua valendo até ele dizer o contrário. **A cada pedido novo do dono:** uma linha no fim do histórico (data, pedido, o que virou), o prompt dele palavra por palavra no fim de [`contexto/dono/PROMPTS.md`](contexto/dono/PROMPTS.md) e o "Em aberto" do `CONTEXTO.md` em dia. Nada do que ele faz é por acaso.
 
 **Depois de cada pedido do dono, todos ficam sabendo** (regra do dono, 22/11/2026): quem atendeu escreve o aviso no topo de [`contexto/QUADRO.md`](contexto/QUADRO.md) (o que ele pediu, o que mudou, o que muda para cada papel) e atualiza o `contexto/<agente>.md` de quem foi afetado. **Todo agente e toda conversa lê o quadro antes de trabalhar.**
 

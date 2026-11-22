@@ -8,7 +8,7 @@
 
 ## Dia 0: entrega da planta grátis (logo após o comentário "PLANTA")
 
-Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 55 m², 2 quartos.
+Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 50 m², 2 quartos.
 
 [PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 

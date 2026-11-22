@@ -2,6 +2,14 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 22/11 · Índice, resumos por pasta e os prompts do dono
+
+- **O dono pediu:** separar os documentos em categorias, ligar cada agente às suas pastas e criar resumos baratos; incluir os prompts dele.
+- **Todos:** comece pelo [`INDICE.md`](../INDICE.md) e pelo `RESUMO.md` da pasta; documento inteiro só se precisar. Documento novo: `python3 ferramentas/resumos.py`.
+- **Todos:** os prompts do dono, palavra por palavra, estão em `contexto/dono/PROMPTS.md`; acrescente cada pedido novo no fim.
+- **Todos:** há cerca de 60 contradições entre documentos em `contexto/dono/TEXTOS-DESATUALIZADOS.md`. Vale a regra mais recente; quem corrigir apaga a linha.
+- **Redator e Revisor:** o FAQ e a sequência do WhatsApp prometem 3D, animação e garantia que ainda não estão confirmados.
+
 ## 22/11 · A `main` é a única branch; arquivos comprimidos
 
 - **O dono pediu:** destravar o projeto: juntar tudo, comprimir, manter arrumado e ver o sistema no Graphify.
@@ -24,9 +32,3 @@
 - **Editor de vídeo:** clipes e imagens antigos da C01 mostram a casa velha; use `ebook/visual/3d/C01.jpg`. A E07 do escaneamento continua com o arranjo antigo.
 - **Redator e Revisor:** gancho e "para quem é" da C01 mudaram (`ebook/fichas/textos.py`): revisar. `instagram/posts/POSTS.md` ainda diz 55 m².
 - **Designer:** imagem 2D da C01 desatualizada; a sala ainda não desenha a mesa.
-
-## 22/11 · Vídeo: convite (passeio por dentro), prompt base e escaneamento
-
-- **O dono pediu:** prompt base de passeio realista com variáveis; vídeo inicial convidativo com uma casa só; sequência de "escaneamento"; guardar toda ordem de vídeo.
-- **O que mudou:** tudo em [`video/PEDIDOS-DO-DONO.md`](../video/PEDIDOS-DO-DONO.md). Novo: vídeo-convite da F03 em `video/saida/convite/` (26 s), ilustração 3D do motor próprio; a versão realista no OpenArt espera o "sim" do dono.
-- **Rascunhos:** o principal com escaneamento usa a E07 (fila do redesenho). Nenhum dos dois passou pelo Revisor de risco. **Estrategista e Redator:** o dono falou em "o que o cliente recebe se pagar por mais"; falta ele definir.

@@ -16,7 +16,7 @@
 - Antes de entregar: `checar.py` sem erro e `atualizar-painel.py` com zero avisos (ferramentas/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 12 programas
+## Os 13 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -87,3 +87,9 @@ Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `tre
 Recorta cada imagem final 4:5 em 9:16 (reel e story, 1080 x 1920 ou maior) e 1:1 (WhatsApp e feed), sem gerar de novo.
 
 Funções: `main`.
+
+### [`ferramentas/resumos.py`](resumos.py)
+
+Gera o índice do projeto e o resumo de cada pasta de documentos, para os agentes lerem barato.
+
+Funções: `rastreados`, `limpar`, `do_que_trata`, `ficha_md`, `ficha_py`, `essencial`, `docs_da`, `gerar`, `conferir`.
