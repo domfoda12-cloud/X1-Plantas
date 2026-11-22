@@ -17,3 +17,7 @@
 ## Onde olhar
 
 `ebook/vendas/atributos-que-vendem.md`, `ebook/fichas/textos.py`, `ebook/gerador/paginas.py`, `ESTRATEGIA.md` (seção 9).
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

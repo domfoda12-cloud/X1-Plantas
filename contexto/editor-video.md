@@ -22,3 +22,7 @@
 ## Onde olhar
 
 `video/PEDIDOS-DO-DONO.md`, `video/REFERENCIA-CONDOR.md`, `video/REFERENCIA-VIRAL.md` (oferta e demanda de formatos), `instagram/MINOAI-FRONTIER.md`, `video/VIDEO.md`, `animacoes-3d/OPENART-MINOAI.md`.
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

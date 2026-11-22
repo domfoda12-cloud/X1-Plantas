@@ -19,3 +19,7 @@
 ## Onde olhar
 
 `instagram/MINOAI-FRONTIER.md`, `video/REFERENCIA-CONDOR.md`, `instagram/referencias-mino-lee.md`, `animacoes-3d/OPENART-MINOAI.md`.
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Vídeo e anúncio](../video/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

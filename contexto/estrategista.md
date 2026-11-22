@@ -19,3 +19,7 @@
 ## Onde olhar
 
 `ESTRATEGIA.md`, `PAINEL.md`, `ebook/referencias/persona-e-mercado.md`, `ebook/referencias/concorrentes.md`.
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

@@ -71,7 +71,7 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
         fora.append(f"agente {ag.stem}: falta o arquivo contexto/{ag.stem}.md")
 # Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
 LIMITES = [("CLAUDE.md", 6000), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
-LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md"))]
+LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
 LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md"))]
 if fora:
     falhas.append("roteiro de entrada de skills e agentes")
@@ -112,6 +112,7 @@ else:
 rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "validar"])
 rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "exportar"])
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
+rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])

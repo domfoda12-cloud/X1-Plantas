@@ -17,3 +17,7 @@
 ## Onde olhar
 
 `ebook/referencias/`, `reports/`, `ECOSSISTEMA.md` (o que cada ferramenta faz por fora do projeto).
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Pesquisa e técnica](../ebook/referencias/RESUMO.md), [Jurídico](../reports/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).

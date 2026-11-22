@@ -17,3 +17,7 @@
 ## Onde olhar
 
 sistema visual `ebook/referencias/linguagem-visual-e-animacao.md`, gerador `ebook/gerador/livro.py`, referência `ebook/referencias/livros-de-plantas-com-3d.md`.
+
+## Leia barato
+
+Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Instagram](../instagram/RESUMO.md), [Animações 3D e imagens](../animacoes-3d/RESUMO.md), [Código](../ferramentas/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
