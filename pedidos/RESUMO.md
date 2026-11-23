@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 21 documentos
+## Os 22 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -73,7 +73,7 @@ Tamanho: 913 palavras.
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
-Tamanho: 1763 palavras.
+Tamanho: 2063 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 
@@ -136,6 +136,14 @@ O que mudou da v5 para a v6
 Seções: 1. O estado verdadeiro; 2. Página de decisões (pode responder só esta); 3. Uma linha por ferramenta.
 
 Tamanho: 880 palavras.
+
+### [Júri: as próximas melhorias (23/11/2026, Supervisor)](anexos/juri-proximas-melhorias.md)
+
+Pedido do dono: "continuar melhorando o júri é essencial". Ficha de origem do júri: `pedidos/2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md` (abaixo, "ficha 0156"). Regras em vigor: `CONSELHO.md`, seção 5b. Este documento é proposta. Nada aqui foi rodado,…
+
+Seções: Em 7 linhas; 1. A régua (cole inteira em toda rodada); 2. Modelos de pedido, prontos para copiar; 3. As 5 próximas melhorias, em ordem de ganho; 4. Prova 3: a primeira prova do júri com erro plantado; 5. O que a pesquisa pública diz sobre júri de modelos; 6. Perguntas ao dono; 7. O que eu não conferi.
+
+Tamanho: 5431 palavras.
 
 ### [Júri: síntese dos presidentes, rodadas 3 a 5 (23/11/2026)](anexos/juri-rodadas-3-a-5.md)
 

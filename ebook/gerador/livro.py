@@ -145,8 +145,14 @@ PISO = {"sala": "pMadeira", "estar": "pMadeira", "jantar": "pMadeira", "casal": 
 
 
 def _etiqueta_pilula(fundo, texto, sub):
-    def f(cx, cy, lw, lh, nome, m2, fs, cor):
+    def f(cx, cy, lw, lh, nome, m2, fs, cor, linha=False):
         x, y = cx - lw / 2, cy - lh / 2
+        if linha:  # uma linha só: nome à esquerda, área à direita (cômodo apertado)
+            return (f'<rect x="{f3(x + .03)}" y="{f3(y + .05)}" width="{f3(lw)}" height="{f3(lh)}" rx=".12" fill="#000" opacity=".12"/>'
+                    f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(lw)}" height="{f3(lh)}" rx=".12" fill="{fundo}"/>'
+                    f'<rect x="{f3(x)}" y="{f3(y)}" width=".07" height="{f3(lh)}" rx=".035" fill="{cor}" stroke="#00000022" stroke-width=".005"/>'
+                    f'<text x="{f3(x + .17)}" y="{f3(cy + fs * .36)}" font-size="{fs:.3f}" font-weight="800" letter-spacing=".01" fill="{texto}">{E(nome)}</text>'
+                    f'<text x="{f3(x + lw - .1)}" y="{f3(cy + fs * .36)}" text-anchor="end" font-size=".16" class="mono" font-weight="700" fill="{sub}">{E(m2)}</text>')
         return (f'<rect x="{f3(x + .03)}" y="{f3(y + .05)}" width="{f3(lw)}" height="{f3(lh)}" rx=".14" fill="#000" opacity=".12"/>'
                 f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(lw)}" height="{f3(lh)}" rx=".14" fill="{fundo}"/>'
                 f'<rect x="{f3(x)}" y="{f3(y)}" width=".07" height="{f3(lh)}" rx=".035" fill="{cor}" stroke="#00000022" stroke-width=".005"/>'
@@ -401,13 +407,13 @@ def svg_humanizada(p, estilo="revista"):
     obst = [_bbox_movel(mv) for mv in mov if mv["tipo"] != "tapete"]
     for d, H, A, B in portas_h:  # o giro da porta também não recebe etiqueta
         xs, ys = (H[0], A[0], B[0]), (H[1], A[1], B[1])
-        obst.append((min(xs), min(ys), max(xs), max(ys)))
+        obst.append((min(xs), min(ys), max(xs), max(ys), .25))  # giro de porta pesa menos que móvel: melhor que encostar na cama
 
     pl, pr, pt, pb = 1.25, .95, 1.3, 2.15  # margens: cota à esquerda, cota em cima, jardim e rua embaixo
     vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
     # letra mínima: na página da casa a planta ocupa uns 171 x 165 mm; casa estreita e comprida sai em escala menor,
-    # então etiquetas e cotas crescem (k) para ficarem do tamanho das casas largas (nome do cômodo com ~3,6 mm)
-    k = max(1.0, 13.85 / min(171 / vb[2], 165 / vb[3]))
+    # então etiquetas e cotas crescem (kl) para ficarem do tamanho das casas largas (nome do cômodo com ~3,6 mm)
+    kl = min(1.7, max(1.0, 13.85 / min(171 / vb[2], 165 / vb[3])))
     s = [f'<svg viewBox="{f3(vb[0])} {f3(vb[1])} {f3(vb[2])} {f3(vb[3])}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta humanizada da {E(p["nome"])}">',
          ]
     K = S["piso"]
@@ -515,29 +521,44 @@ def svg_humanizada(p, estilo="revista"):
         nome = "PÁTIO" if t == "patio" else c["nome"].upper()
         area = m1(MET["util"][c["id"]][2]) + " m²"
         m2 = area + (" · coberta" if t in ("varanda", "garagem") else "")
-        fs0 = max(min(.26, (w / k - .3) / (len(nome) * .68)), .15)
-        for fs in (fs0, fs0 * .88, fs0 * .78, fs0 * .7):  # diminui até não cobrir móvel nem porta
-            lw = (max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26) * k
-            lh = (fs + .4) * k
-            x0, y0, x1, y1 = c["x0"] + .1, c["y0"] + .1, c["x1"] - .1, c["y1"] - .1
-            cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
+        fs0 = max(min(.26, (w - .3) / (len(nome) * .68)), .15)
+        # tamanhos a tentar: pílula de 2 linhas (nome em cima, área embaixo), cada vez menor; se nenhuma couber sem
+        # encostar em móvel ou porta, a pílula de 1 linha ("NOME  7,3 m²"), mais baixa, para cômodo apertado
+        dois = lambda fs, kmax: (fs, False, max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26, fs + .4, kmax)
+        tentativas = [dois(fs0 * q, kl) for q in (1, .88, .78, .7)] + ([dois(fs0 * q, 1.0) for q in (.88, .78, .7)] if kl > 1 else [])
+        tentativas += [(fs, True, len(nome) * fs * .68 + len(m2) * .16 * .62 + .45, fs + .2, kl) for fs in (.22, .19, .16)]
+        cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
+        escolha = None
+        for fs, linha, lw, lh, kmax in tentativas:
+            kr = max(1.0, min(kmax, (w - .16) / lw, (h - .16) / lh))  # cresce só até caber no cômodo
+            folga, parede = (.09, .18) if linha else (.09, .1)  # folga do móvel (com a sombra) e da parede
+            if linha and lw > w - 2 * parede:
+                continue
+            lw, lh = lw * kr, lh * kr
+            x0, y0, x1, y1 = c["x0"] + parede, c["y0"] + parede, c["x1"] - parede, c["y1"] - parede
             melhor = None
             for i in range(25):
                 for k in range(25):
                     cx = x0 + lw / 2 + max(0, x1 - x0 - lw) * i / 24
                     cy = y0 + lh / 2 + max(0, y1 - y0 - lh) * k / 24
-                    bb = (cx - lw / 2 - .07, cy - lh / 2 - .07, cx + lw / 2 + .07, cy + lh / 2 + .07)  # folga: não encosta no móvel
-                    sc = sum(_inter(bb, o) for o in obst) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
+                    bb = (cx - lw / 2 - folga, cy - lh / 2 - folga, cx + lw / 2 + folga, cy + lh / 2 + folga)
+                    sc = sum(_inter(bb, o[:4]) * (o[4] if len(o) > 4 else 1) for o in obst) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
                     if melhor is None or sc < melhor[0]:
                         melhor = (sc, cx, cy, bb)
-            if sum(_inter(melhor[3], o) for o in obst) < .01:
+            sobra = sum(_inter(melhor[3], o[:4]) for o in obst)
+            if escolha is None or (sobra < .01 and escolha[0] >= .01):
+                escolha = (sobra, melhor, fs, linha, lw, lh, kr)
+            if sobra < .01:
                 break
+            if not linha:
+                escolha = (sobra, melhor, fs, linha, lw, lh, kr)  # sem lugar livre: fica a menor de 2 linhas (como antes)
+        _, melhor, fs, linha, lw, lh, kr = escolha
         cx, cy = melhor[1], Y(melhor[2])
-        s.append(f'<g transform="translate({f3(cx)} {f3(cy)}) scale({k:.3f}) translate({f3(-cx)} {f3(-cy)})">'
-                 + S["etiqueta"](cx, cy, lw / k, lh / k, nome, m2, fs, CORES.get(t, "#EEE")) + "</g>")
+        s.append(f'<g transform="translate({f3(cx)} {f3(cy)}) scale({kr:.3f}) translate({f3(-cx)} {f3(-cy)})">'
+                 + S["etiqueta"](cx, cy, lw / kr, lh / kr, nome, m2, fs, CORES.get(t, "#EEE"), linha) + "</g>")
     # cotas (do validador) e escala gráfica
     cz = S["cota"]
-    s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(k, 1.35):.3f}" class="mono">'
+    s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(kl, 1.35):.3f}" class="mono">'
              f'<line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
              f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">{m(W)} m</text>'
              f'<line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
@@ -738,13 +759,15 @@ def fachada_bloco(p):
     As duas molduras têm o mesmo tamanho e crescem até o fim da página (CSS .vistas); a foto e o 3D aparecem inteiros."""
     if arquivo_foto(FACHADAS, p['id']).exists():
         rua = (f'<h4>Vista da rua</h4>'
-               f'{foto(p["id"], None, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center", FACHADAS, fundo=True)}')
+               f'{foto(p["id"], None, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 22%", FACHADAS)}')
+        tipo = " com-foto"  # foto em pé (4:5): moldura com altura mínima para a fachada aparecer inteira (CSS)
     else:
         rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg">{svg_fachada(p)}</div>'
+        tipo = ""
     v3d = foto(p["id"], None, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D, largura=900, fundo=True)
     if not v3d:
         return f'<div class="fachada">{rua}</div>'
-    return f'<div class="fachada vistas"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'
+    return f'<div class="fachada vistas{tipo}"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'
 
 
 def capa_fundo():
@@ -886,6 +909,10 @@ def montar(plantas, config, numeros):
         dupla(L, p, por_id, numeros)
 
     # terreno
+    # cada coluna com a largura do desenho do lote: os 3 saem na mesma escala (o de 5 m parece mesmo mais estreito)
+    import re
+    largura_vb = lambda svg: float(re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2])
+    colunas_lotes = " ".join(f"{largura_vb(svg_lote(por_id[i])):.2f}fr" for i in ["E03", "C01", "F02"])
     L.pagina(f"""<span class="sobre">Depois de escolher</span><h2>Terreno e recuos</h2>
       <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
       <div class="duas">
@@ -902,7 +929,7 @@ def montar(plantas, config, numeros):
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
-      <div class="lotes-ex">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
+      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes}">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
