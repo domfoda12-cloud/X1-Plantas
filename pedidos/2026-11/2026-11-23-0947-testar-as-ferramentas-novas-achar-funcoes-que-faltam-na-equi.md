@@ -7,6 +7,8 @@ As always, better the functionality of the agents make them smarter, idk how to 
 
 *Recado de 23/11 09:52:* Also críticize my way of prompting, the project in general, and look for ways to improve
 
+*Recado de 23/11 10:47:* Agora é a hora que você tem para me mandar todas as perguntas pendentes
+
 **O que ele pediu, parte por parte:** (1) Fazer os três testes de funcionamento real das ferramentas novas que propus (marketing-psychology num texto real; everything-claude-code na cópia separada; como se encaixam). (2) Achar funções que a equipe não cobre (ele deu o exemplo "ensinar") e pôr no sistema. (3) Deixar os agentes mais inteligentes; ele não sabe como e confia no Maestro.
 
 **Por que ele pediu, ou o que quer descobrir:** Voltou, achou pouco o trabalho da noite e perguntou se as ferramentas de ontem foram testadas de verdade (não foram).
