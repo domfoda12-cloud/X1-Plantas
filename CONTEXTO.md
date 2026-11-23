@@ -21,7 +21,7 @@
 
 ## Em aberto (esperando o dono)
 
-- **E-book (para publicar):** preencher em `ebook/config.json` o título, o preço, os bônus, o WhatsApp do parceiro e, se quiser, `promessa_atualizacao` (prometer as próximas casas de graça é oferta que obriga). Decidir se lança com 12 ou 24 plantas (o PDF tem 24), o preço e a garantia: R$ 67 e 7 dias são só recomendação ([`ESTRATEGIA.md`](ESTRATEGIA.md), seção 7).
+- **E-book (para publicar), numa página de 9 perguntas com opções e recomendação ([v6](pedidos/anexos/integracao-novos-v6.md), seção 2):** título, casas do lançamento, preço, garantia, WhatsApp, plantas grátis, arquiteto, teste de procura; e as 6 ferramentas novas (seção 3). Prometer as próximas casas de graça é oferta que obriga.
 - **Arranjo das plantas (22/11):** o dono reprovou o layout. O Arquiteto estudou projetos reais (prefeitura de SP, governo da Bahia, UFRGS) e tem método novo ([apostila 2](ebook/referencias/ARQUITETO.md)). Falta o dono dizer quais casas refazer e quando; sugestão: série E, depois compactas, depois F02. Mexe no e-book, que estava fechado no rascunho 1. A [pesquisa de 22/11](ebook/referencias/ARQUITETO.md) traz a régua federal (22 casas com banheiro estreito, contagem de antes da C01 nova) e 5 ideias para o dono escolher (seção 5).
 - **Arquiteto registrado:** revisar as 24 plantas, começando pelas apertadas (E02, E03, suítes da E01, E05 e E07); decidir os banheiros abaixo de 1,10 m livres (18 casas, contagem de 22/11) e a nota de clima por zona bioclimática.
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.

@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1197 palavras.
+Tamanho: 1184 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
