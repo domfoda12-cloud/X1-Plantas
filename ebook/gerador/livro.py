@@ -1151,7 +1151,7 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
     casas = sorted(plantas, key=lambda p: (lote_frente(p), p["id"]))
     filas = [casas] if len(casas) <= 3 else [casas[:(len(casas) + 1) // 2], casas[(len(casas) + 1) // 2:]]
     lote = lambda p: p["_r"].metricas["lote_comercial"]
-    gap, alto = 9.0, (144.0 if len(filas) == 1 else 56.0)  # mm; "alto" = lote mais fundo de cada fila
+    gap, alto = 9.0, (144.0 if len(filas) == 1 else 46.0)  # mm; "alto" = lote mais fundo de cada fila
     col_min = min(49.0, (176.0 - gap * (max(len(fl) for fl in filas) - 1)) / max(len(fl) for fl in filas))  # o texto cabe
     k = min(alto / max(lote(p)[1] for p in casas),
             *[(176.0 - 12 - gap * (len(fila) - 1)) / sum(lote(p)[0] + .1 for p in fila) for fila in filas])
@@ -1167,7 +1167,7 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
             + (f'<p class="ac-jeito">{E(jeito[p["id"]])}</p>' if p["id"] in jeito else "")
             + '</div>' for p in fila)
         pags = "".join(f'<b class="ac-pag">p. {numeros[p["id"]]}</b>' for p in fila)  # fileira própria: as páginas alinhadas
-        html.append(f'<div class="ac-fila" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
+        html.append(f'<div class="ac-fila{" duas" if len(filas) > 1 else ""}" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
                     f'<div class="ac-rua">RUA</div>{fitas}{txt}{pags}</div>')
     return (f'<span class="sobre">Comece aqui</span><h2>Ache a sua casa</h2>'
             f'<p class="abertura">A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>'

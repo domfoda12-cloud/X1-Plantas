@@ -171,3 +171,6 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .ac-pag { font-family: var(--mono); font-size: 14pt; color: var(--azul); justify-self: center; margin-top: 2mm; }
 .ac-recuos { margin-top: auto; }
 .fita-box.pequena .marcas { top: 11mm; } .fita-box.pequena .marca b { font-size: 15pt; } .fita-box.pequena .marca small { font-size: 8pt; font-family: var(--mono); }
+.ac-fila.duas .ac-fita { height: 8mm; padding-top: 2.2mm; font-size: 12pt; }
+.ac-fila.duas .ac-txt { padding-top: 2mm; gap: .4mm; } .ac-fila.duas .ac-txt h3 { font-size: 12pt; } .ac-fila.duas .ac-txt p { font-size: 8.8pt; }
+.ac-fila.duas .ac-pag { font-size: 12pt; margin-top: 1mm; }
