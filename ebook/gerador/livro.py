@@ -267,7 +267,8 @@ def _movel(mv, S=None, sombra=False):
         if sombra:
             return ""
         return (f'<rect x="{f3(-w / 2)}" y="{f3(-d / 2)}" width="{f3(w)}" height="{f3(d)}" fill="{K["box"]}" opacity=".8"/>'
-                + ln(-w / 2, d / 2, w / 2, d / 2, K["vidro"], .03) + C(0, 0, .05, K["inox"]) + C(-w / 2 + .14, -d / 2 + .14, .07, K["inox"]))
+                + ln(-w / 2, d / 2, w / 2, d / 2, K["vidro"], .03)
+                + ("" if mv.get("sem_ralo") else C(0, 0, .05, K["inox"]) + C(-w / 2 + .14, -d / 2 + .14, .07, K["inox"])))
     if t == "armario":
         n = max(2, round(w / .5))
         o = R(-w / 2, -d / 2, w, d, K["armario"], .02)
@@ -305,6 +306,13 @@ def _bbox_movel(mv):
     c, s = abs(math.cos(r)), abs(math.sin(r))
     hw, hd = c * w / 2 + s * d / 2, s * w / 2 + c * d / 2
     return (mv["x"] - hw, mv["y"] - hd, mv["x"] + hw, mv["y"] + hd)
+
+
+def _ralos(mv):
+    """Ralo e chuveiro do box, no desenho do validador (y para cima): os mesmos dois círculos que _movel desenha."""
+    th = mv.get("rot", 0) or 0
+    return [(mv["x"] + lx * math.cos(th) + ly * math.sin(th), mv["y"] - lx * math.sin(th) + ly * math.cos(th))
+            for lx, ly in ((0, 0), (-mv.get("w", .45) / 2 + .14, -mv.get("d", .4) / 2 + .14))]
 
 
 def _inter(a, b):
@@ -411,12 +419,9 @@ def svg_humanizada(p, estilo="revista"):
     # e o giro da porta, medido no quarto de círculo de verdade (o canto do quadrado fora do arco fica livre)
     LOUCA = {"vaso": 2, "pia": 2, "tanque": 2, "maquina": 2, "box": .4}
     obst = [(*_bbox_movel(mv), LOUCA.get(mv["tipo"], 1)) for mv in mov if mv["tipo"] != "tapete"]
-    for mv in mov:  # o ralo e o chuveiro do box: a etiqueta pode pisar no piso do box, nunca neles nem encostada
+    for mv in mov:  # o ralo e o chuveiro do box pesam como louça
         if mv["tipo"] == "box":
-            th = mv.get("rot", 0) or 0
-            for lx, ly in ((0, 0), (-mv.get("w", .45) / 2 + .14, -mv.get("d", .4) / 2 + .14)):
-                px, py = mv["x"] + lx * math.cos(th) + ly * math.sin(th), mv["y"] - lx * math.sin(th) + ly * math.cos(th)
-                obst.append((px - .12, py - .12, px + .12, py + .12, 2))
+            obst += [(px - .12, py - .12, px + .12, py + .12, 2) for px, py in _ralos(mv)]
     giros = []
     for d, H, A, B in portas_h:
         xs, ys = (H[0], A[0], B[0]), (H[1], A[1], B[1])
@@ -495,7 +500,8 @@ def svg_humanizada(p, estilo="revista"):
         return f'translate({mv["x"] + dx:.3f} {Y(mv["y"]) + dy:.3f}) scale(1 -1) rotate({-math.degrees(mv.get("rot", 0) or 0):.2f})'
     s += [f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] == "tapete"]
     s.append(f'<g fill="{S["sombra"]}">' + "".join(f'<g transform="{tr(mv, .045, .06)}">{_movel(mv, S, sombra=True)}</g>' for mv in mov if mv["tipo"] != "tapete") + "</g>")
-    s += [f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] != "tapete"]
+    i_moveis = len(s)  # os móveis entram aqui depois das etiquetas (o ralo encostado numa etiqueta não é desenhado)
+    s.append("")
     # paredes, com os vãos das portas (externa 15 cm, interna 12 cm, como nas contas do e-book)
     def esp(a, b, c, d):
         ext = (abs(a - c) < 1e-6 and (abs(a) < 1e-6 or abs(a - W) < 1e-6)) or (abs(b - d) < 1e-6 and (abs(b) < 1e-6 or abs(b - D) < 1e-6))
@@ -538,6 +544,7 @@ def svg_humanizada(p, estilo="revista"):
     if ex is not None:
         s.append(_entrada_seta(ex, Dm + .62))
     # etiquetas dos cômodos, no ponto com menos móvel e porta por baixo
+    etiquetas = []
     for c in p["comodos"]:
         t = c["tipo"]
         w, h = c["x1"] - c["x0"], c["y1"] - c["y0"]
@@ -587,6 +594,11 @@ def svg_humanizada(p, estilo="revista"):
         cx, cy = melhor[1], Y(melhor[2])
         s.append(f'<g transform="translate({f3(cx)} {f3(cy)}) scale({kr:.3f}) translate({f3(-cx)} {f3(-cy)})">'
                  + S["etiqueta"](cx, cy, lw / kr, lh / kr, nome, m2, fs, CORES.get(t, "#EEE"), linha) + "</g>")
+        etiquetas.append((melhor[1] - lw / 2 - .12, melhor[2] - lh / 2 - .12, melhor[1] + lw / 2 + .12, melhor[2] + lh / 2 + .12))
+    # ralo e chuveiro do box: se uma etiqueta encosta neles, saem (o círculo colado no nome parecia uma letra a mais)
+    encosta = lambda mv: any(e[0] <= px <= e[2] and e[1] <= py <= e[3] for px, py in _ralos(mv) for e in etiquetas)
+    mov = [{**mv, "sem_ralo": True} if mv["tipo"] == "box" and encosta(mv) else mv for mv in mov]
+    s[i_moveis] = "".join(f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] != "tapete")
     # cotas (do validador) e escala gráfica
     cz = S["cota"]
     s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(kl, 1.35):.3f}" class="mono">'
@@ -779,23 +791,49 @@ def arquivo_foto(pasta, nome):
     return jpg if jpg.exists() else pasta / f"{nome}.png"
 
 
-def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800, fundo=False):
-    """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
+def _jpeg(origem, largura, recorte=None, pos_y=.5, pos_x=.5, nome=None):
+    """A foto em JPEG no cache (ebook/.cache/fotos), com no máximo `largura` px de largura.
+    recorte = largura/altura da moldura: corta antes de embutir só o que aparece na página (object-fit: cover com
+    object-position pos_x/pos_y), na mesma resolução de antes. O PDF não carrega a parte escondida da foto."""
     from PIL import Image
+    CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
+    marca = f"-r{recorte:.3f}-{pos_x:.2f}-{pos_y:.2f}" if recorte else ""
+    destino = CACHE_FOTOS / f"{nome or origem.stem}-{largura}{marca}.jpg"
+    if not destino.exists() or destino.stat().st_mtime < origem.stat().st_mtime:
+        im = Image.open(origem).convert("RGB")
+        if recorte:
+            if im.width / im.height > recorte:  # foto mais larga que a moldura: corta os lados
+                w = round(im.height * recorte)
+                x = round((im.width - w) * pos_x)
+                im = im.crop((x, 0, x + w, im.height))
+            else:  # mais alta: corta em cima e embaixo
+                h = round(im.width / recorte)
+                y = round((im.height - h) * pos_y)
+                im = im.crop((0, y, im.width, y + h))
+        lw = min(largura, im.width)
+        im.resize((lw, round(im.height * lw / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=88, optimize=True, progressive=True)
+    return destino
+
+
+MIOLO_MM = 176  # largura do miolo da página (livro.css, .miolo): a foto de largura inteira ocupa isso
+
+
+def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800, fundo=False):
+    """Foto final do OpenArt em JPEG de alta qualidade (até 1800 px, uns 260 dpi na largura do miolo).
+    Com altura_mm, a foto ocupa a largura do miolo e é cortada antes, só com o que aparece na moldura."""
     origem = arquivo_foto(pasta or FOTOS, nome)
     if not origem.exists():
         origem = origem.with_suffix(".jpg")
     if not origem.exists():
         return ""
-    CACHE_FOTOS.mkdir(parents=True, exist_ok=True)
-    destino = CACHE_FOTOS / f"{(pasta.name + '-') if pasta else ''}{nome}-{largura}.jpg"
-    if not destino.exists() or destino.stat().st_mtime < origem.stat().st_mtime:
-        im = Image.open(origem).convert("RGB")
-        im.resize((min(largura, im.width), round(im.height * min(largura, im.width) / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
+    py = pos.split()[-1] if pos != "center" else "50%"
+    pos_y = float(py.rstrip("%")) / 100 if py.endswith("%") else .5
+    destino = _jpeg(origem, largura, MIOLO_MM / altura_mm if altura_mm else None, pos_y,
+                    nome=f"{(pasta.name + '-') if pasta else ''}{nome}")
     src = os.path.relpath(destino, SAIDA)
     estilo = f"height:{altura_mm}mm" if altura_mm else ""  # sem altura: quem manda é o CSS (ex.: .vistas)
     if fundo:  # a imagem inteira na moldura (object-fit: contain); a sobra mostra a própria imagem desfocada
-        from PIL import ImageFilter, ImageEnhance
+        from PIL import Image, ImageFilter, ImageEnhance
         borrada = destino.with_name(destino.stem + "-fundo.jpg")
         if not borrada.exists() or borrada.stat().st_mtime < destino.stat().st_mtime:
             im = Image.open(destino).convert("RGB")
@@ -827,11 +865,13 @@ def fachada_bloco(p):
 
 
 def capa_fundo():
-    """Fundo da capa: o papel azul de projeto (OpenArt), escurecido para o título ler bem."""
-    if not arquivo_foto(FOTOS, "06-papel-azul").exists():
+    """Fundo da capa: o papel azul de projeto (OpenArt), escurecido para o título ler bem.
+    Cortado na proporção da página A4 (o que o "cover" mostrava) e com 1600 px de largura: uns 190 dpi
+    debaixo do véu azul, sem diferença visível e bem mais leve."""
+    origem = arquivo_foto(FOTOS, "06-papel-azul")
+    if not origem.exists():
         return ""
-    foto("06-papel-azul", 1)
-    src = os.path.relpath(CACHE_FOTOS / "06-papel-azul-1800.jpg", SAIDA)  # o nome que foto() grava no cache
+    src = os.path.relpath(_jpeg(origem, 1600, 210 / 297), SAIDA)
     return f"background: linear-gradient(rgba(6,40,90,.45), rgba(6,40,90,.25)), url('{src}') center/cover, var(--azul-escuro)"
 
 

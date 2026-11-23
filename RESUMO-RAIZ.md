@@ -65,7 +65,7 @@ Para quem vamos vender, o que essa pessoa quer, como ela fala e o que oferecer. 
 
 Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três perfis; 4. Posicionamento; 5. Os três diferenciais (repetir em tudo); 6. O que isso muda no produto; 7. A oferta; 8. Ângulos de anúncio; 9. Tom de voz; 10. Calendário do lançamento; 11. O que medir para saber se a estratégia está certa.
 
-Tamanho: 2498 palavras.
+Tamanho: 2725 palavras.
 
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 
@@ -89,7 +89,7 @@ Comece por aqui. Este é o centro de controle do projeto: o que estamos construi
 
 Seções: 1. Situação agora; 2. Em que pé está (escrito à mão, 22/11/2026); 3. O negócio em uma frase; 4. A conta que diz se o anúncio paga; 5. Frentes, uma por vez; 6. Esta semana; 7. Números para acompanhar; 8. Decisões tomadas; 9. Decisões pendentes; 10. Riscos e cuidados; 11. Rotina; 12. Quem faz o quê; 13. Mapa do projeto.
 
-Tamanho: 2443 palavras.
+Tamanho: 2618 palavras.
 
 ### [X1-Plantas](README.md)
 
