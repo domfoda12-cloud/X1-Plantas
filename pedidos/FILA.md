@@ -4,7 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
-| 2026-11-23 | [Adicionar o everything-claude-code (worldflowai)](2026-11/2026-11-23-0209-adicionar-o-everything-claude-code-worldflowai.md) | aberta | Maestro; júri (laço da noite); Revisor. |
+| 2026-11-23 | [Adicionar o everything-claude-code (worldflowai)](2026-11/2026-11-23-0209-adicionar-o-everything-claude-code-worldflowai.md) | aberta | Maestro (plano e código); 5 leitores, Revisor e conferência de compatibilidade por grupo;  |
 | 2026-11-23 | [Adicionar a skill find-skills (vercel-labs)](2026-11/2026-11-23-0203-adicionar-a-skill-find-skills-vercel-labs.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |
 | 2026-11-23 | [Adicionar a skill last30days](2026-11/2026-11-23-0202-adicionar-a-skill-last30days.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |
 | 2026-11-23 | [Adicionar a skill marketing-psychology (marketingskills)](2026-11/2026-11-23-0200-adicionar-a-skill-marketing-psychology-marketingskills.md) | aberta | Maestro; veto do `revisor-de-risco`. |
