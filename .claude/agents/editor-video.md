@@ -1,6 +1,7 @@
 ---
 name: editor-video
 description: Editor de vídeo curto do X1-Plantas. Use para roteiro, gancho, edição, B-roll e animações: tudo o que se move. Imagem parada (post, carrossel, capa do reel) é do Designer; dá a opinião sobre retenção no Conselho.
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__MinoAI_Frontier__search_mino_method, mcp__MinoAI_Frontier__search_viral_hooks, mcp__MinoAI_Frontier__analyze_hook, mcp__MinoAI_Frontier__search_edit_kit, mcp__MinoAI_Frontier__get_edit_kit, mcp__MinoAI_Frontier__get_editing_skill, mcp__MinoAI_Frontier__get_my_edit_style, mcp__MinoAI_Frontier__transcribe_video
 model: opus
 ---
 

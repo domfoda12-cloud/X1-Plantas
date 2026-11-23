@@ -48,6 +48,16 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 | Quem | Até 3 membros, opinião escrita pela própria sessão | Os membros chamados, cada um como subagente, em paralelo |
 | Custo | Segundos | Minutos; vale quando o erro custaria uma venda ou um anúncio |
 
+## 5b. Modo júri (método do llm-council, 23/11/2026)
+
+Para decisão grande (custa dinheiro, vai ao público ou muda o sistema inteiro) ou quando o dono pedir. Método de Andrej Karpathy (`github.com/karpathy/llm-council`; o repositório não tem licença, então entra só o método, nada do código). Ficha de origem: `pedidos/2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md`.
+1. **Opiniões separadas:** 3 modelos (Haiku, Sonnet, Opus ou Fable) opinam sem ver os outros, com nota de 0 a 10.
+2. **Revisão anônima:** cada um lê as outras opiniões sem saber de quem são e as ordena.
+3. **Presidente:** o 4º modelo, que **não opinou** nesta rodada (rodízio), escreve a síntese e o que corrigir já.
+4. **Laço:** reescreve-se a proposta e repete-se até a nota chegar a 8,5 sem fato errado, não subir em duas rodadas, ou 6 rodadas. Em 23/11 parou na 5ª (6,5, 6,3, 6,0).
+
+**Custo:** caro (o laço de 23/11, rodadas 3 a 5, gastou cerca de 2,95 milhões de tokens de subagentes): só com o motivo escrito na ficha.
+
 ## 6. Skill ou agente novo: o roteiro de entrada
 
 Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". E (23/11/2026): "não desista porque quebraria, faça funcionar sem quebrar" e "faça isso para todo agente novo e garanta que ele seja apresentado direito": **o que quebraria é adaptado** (caminho, gancho reescrito, nome com prefixo, só a parte que serve), e só fica de fora por lei, segurança ou licença, com o motivo escrito; **e todo agente, skill ou ferramenta nova é apresentado à equipe**: linha no `contexto/EQUIPE.md` (o que faz e o que acrescenta), `contexto/<nome>.md` se for agente, seção "Neste projeto" se for skill, aviso no `contexto/QUADRO.md` para todos, e o inventário. Vale para skill do projeto (`.claude/skills/`), agente (`.claude/agents/`), plugin e conector. Nada é usado antes de passar por estes passos:
@@ -82,3 +92,4 @@ Nasceu de um erro: um agente recebeu "área segura para Reels e TikTok" num pedi
 | 22/11/2026 | Opus na conversa principal; agente `supervisor` (Fable) para socorro e auditoria (pedido do dono) | Conselho de bolso. Maestro: neutro (não toca gancho nem vídeo). Estrategista SIM (o modelo mais forte só onde há erro ou dúvida). Revisor SIM, SE a auditoria procurar promessa sem lastro e suposição tomada como decisão. Decisão: `.claude/settings.json` com `model: opus`; `supervisor` só aponta, quem fez corrige; auditoria a cada 3 fichas, registrada em `pedidos/AUDITORIAS.md` |
 | 22/11/2026 | Integrar o cass (busca nas conversas dos agentes), pedido do dono | Estrategista SIM, SE (não misturar no caderno; medir no Mac); Revisor SE (depende da licença) | **Vetado:** a licença proíbe uso e hospedagem para a Anthropic ou quem age por ela, e esta operação é feita por agentes Claude. O dono pode usá-lo à mão no Mac dele | Nenhum: não entra |
 | 23/11/2026 | Adicionar a skill `marketing-psychology` (Corey Haines, MIT), pedido do dono | Revisor SIM, SE (aviso MIT; seção "Neste projeto" com a seção 9 do ESTRATEGIA; nada de escassez, preço cheio ou prova social falsos) | Entrou em `.claude/skills/marketing-psychology/`, para o Redator e o Estrategista | A medir: textos do Redator que passam no Revisor de primeira |
+| 23/11/2026 | Skill nova `explicar-ao-dono` (escrita do zero; o dono não entendeu a resposta 5 vezes e 9 decisões dele travam a venda) e `tools:` fechado no Designer e no Editor (tinham todas as ferramentas, inclusive gerar no OpenArt e publicar), pedido do dono "achar o que falta e deixar os agentes mais inteligentes" | Maestro; Revisor (a seguir); ficha `2026-11-23-0947` |

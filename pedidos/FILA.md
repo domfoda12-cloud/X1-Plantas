@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [Testar as ferramentas novas, achar funções que faltam na equipe (ex.: ensinar) e deixar os agentes mais inteligentes](2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md) | aberta | Maestro (testes 2 e 3, código, skill); `redator` (teste da marketing-psychology); geral no |
 | 2026-11-23 | [Adicionar o everything-claude-code (worldflowai)](2026-11/2026-11-23-0209-adicionar-o-everything-claude-code-worldflowai.md) | aberta | Maestro (plano e código); 5 leitores, Revisor e conferência de compatibilidade por grupo;  |
 | 2026-11-23 | [Adicionar a skill find-skills (vercel-labs)](2026-11/2026-11-23-0203-adicionar-a-skill-find-skills-vercel-labs.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |
 | 2026-11-23 | [Adicionar a skill last30days](2026-11/2026-11-23-0202-adicionar-a-skill-last30days.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |

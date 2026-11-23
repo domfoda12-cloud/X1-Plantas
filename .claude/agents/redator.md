@@ -54,3 +54,4 @@ Ao aprender algo (um atributo que vendeu ou não), acrescente uma linha na seç�
 - **Suposição não é pedido.** Se a resposta depende de algo que o dono não disse (onde a peça vai ser usada, formato, público, prazo), não decida: escreva "suposição" e devolva a pergunta.
 - **Reconfira antes de entregar:** releia os pedidos do dono na ficha, um por um, e diga no fim da resposta quais a sua entrega cumpre, quais não cumpre e quais ficaram em aberto.
 - **Devolva** (pacote do executor, `pedidos/LEIA-ME.md`): o que mudou por arquivo, o que não resolveu e de quem depende, e o que você não conferiu. Agente não faz commit.
+- **Skill `marketing-psychology`** (23/11), depois da `redacao-que-vende`: passe cada mensagem por vontade, facilidade e um pedido claro (no teste de 23/11 achou o Dia 1 do WhatsApp sem pergunta); siga a seção "Neste projeto" dela, com os vetos.

@@ -31,9 +31,9 @@ Tamanho: 1011 palavras.
 
 Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselho <tarefa>`). Painel: `PAINEL.md`.
 
-Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
+Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 5b. Modo júri (método do llm-council, 23/11/2026); 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 2112 palavras.
+Tamanho: 2338 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2633 palavras.
+Tamanho: 2648 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -103,7 +103,7 @@ As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro;
 
 Seções: O essencial; Os 12 documentos.
 
-Tamanho: 1299 palavras.
+Tamanho: 1306 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 
