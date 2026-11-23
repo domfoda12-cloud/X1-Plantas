@@ -122,11 +122,11 @@ _casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aber
           ("banheiro da S03: giro de 1,50 m", min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
 # Régua das 51 plantas de referência (aviso; dono, 23/11/2026): cada regra tem uma casa que falha e uma que passa
 _tem = lambda pid, regra: any(x[0] == regra for x in _ps[pid]["_r"].referencias)
-_e03 = __import__("copy").deepcopy(_ps["E03"])
-_e03["recuos"] = {"esq": 0.0, "dir": 1.0}  # lote de 4,5 m de frente: o corredor lateral vira exceção dita
+_e03 = __import__("copy").deepcopy(_ps["E02"])  # a E03 deixou de ter corredor lateral em 23/11/2026; a E02 ainda tem
+_e03["recuos"] = {"esq": 0.9, "dir": 0.0}  # lote de 4,5 m de frente: o corredor lateral vira exceção dita
 _r03 = PL.validar(_e03)
 _casos += [("referência 1, circulação: C03 (9%) fora", _tem("C03", "1"), True), ("referência 1: C01 (4%) dentro", _tem("C01", "1"), False),
-           ("referência 1: E03 em lote de 4,5 m vira exceção dita", (any(x[0] == "1" for x in _r03.referencias), any("exceção" in a for a in _r03.ref_info)), (False, True)),
+           ("referência 1: E02 em lote de 4,5 m vira exceção dita", (any(x[0] == "1" for x in _r03.referencias), any("exceção" in a for a in _r03.ref_info)), (False, True)),
            ("referência 2, banheiro: C04 (1,08) fora", _tem("C04", "2"), True), ("referência 2: S03 (1,50 de giro) dentro", _tem("S03", "2"), False),
            ("referência 3, quarto: E02 (2,30) fora", _tem("E02", "3"), True), ("referência 3: C07 (3,04) dentro", _tem("C07", "3"), False),
            ("referência 4, serviço: C04 (0,99, sem saída) fora", _tem("C04", "4"), True), ("referência 4: C03 (2,09, porta para fora) dentro", _tem("C03", "4"), False),
