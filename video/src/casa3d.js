@@ -209,7 +209,7 @@ function texturaGrade() {
 
 // Pegada (largura x profundidade) de cada móvel, para sombras e símbolos do blueprint
 function pegada(m) {
-  const tab = { criado: [0.45, 0.4], vaso: [0.4, 0.65], planta: [0.5 * (m.s || 1), 0.5 * (m.s || 1)] };
+  const tab = { criado: [0.45, 0.4], vaso: [0.4, 0.65], cadeira: [0.45, 0.5], planta: [0.5 * (m.s || 1), 0.5 * (m.s || 1)] };
   return tab[m.tipo] || [m.w, m.d];
 }
 
@@ -548,7 +548,7 @@ function construirMovel(m) {
     }
     case 'bancada': {
       g.add(em(caixa(m.w, 0.86, m.d, '#F2EEE7', 0.01), 0, 0.43, 0));
-      g.add(em(caixa(m.w + 0.02, 0.04, m.d + 0.02, '#3B3936', 0.01, 0.4), 0, 0.88, 0));
+      g.add(em(caixa(m.w, 0.04, m.d, '#3B3936', 0.01, 0.4), 0, 0.88, 0));
       g.add(em(caixa(0.55, 0.02, 0.4, '#9EA3A6', 0.02, 0.3), -0.5, 0.905, 0.02)); // cuba
       g.add(em(caixa(0.6, 0.015, 0.5, '#141414', 0.01, 0.2), 0.8, 0.905, 0.0)); // cooktop
       for (const [dx, dz] of [[-0.14, -0.12], [0.14, -0.12], [-0.14, 0.12], [0.14, 0.12]]) {
@@ -559,12 +559,13 @@ function construirMovel(m) {
     }
     case 'geladeira': g.add(em(caixa(m.w, 1.3, m.d, '#D9DCDF', 0.04, 0.35), 0, 0.65, 0)); break;
     case 'camaCasal': case 'camaSolteiro': {
-      g.add(em(caixa(m.w + 0.06, 0.3, m.d + 0.04, madeira, 0.03), 0, 0.15, 0));
-      g.add(em(caixa(m.w, 0.22, m.d, branco, 0.08), 0, 0.4, 0));
-      g.add(em(caixa(m.w + 0.08, 0.06, m.d * 0.6, m.manta, 0.05), 0, 0.53, m.d * 0.2));
-      g.add(em(caixa(m.w + 0.06, 0.9, 0.08, madeira, 0.03), 0, 0.45, -m.d / 2 - 0.03));
+      // tudo dentro de w x d (a pegada de ferramentas/planta3d.py): a cabeceira não entra mais na parede (23/11/2026)
+      g.add(em(caixa(m.w, 0.3, m.d - 0.08, madeira, 0.03), 0, 0.15, 0.04));
+      g.add(em(caixa(m.w - 0.06, 0.22, m.d - 0.12, branco, 0.08), 0, 0.4, 0.05));
+      g.add(em(caixa(m.w, 0.06, m.d * 0.55, m.manta, 0.05), 0, 0.53, m.d * 0.2));
+      g.add(em(caixa(m.w, 0.9, 0.08, madeira, 0.03), 0, 0.45, -m.d / 2 + 0.04));
       const n = m.tipo === 'camaCasal' ? 2 : 1; const lw = (m.w - 0.2) / n;
-      for (let i = 0; i < n; i++) g.add(em(caixa(lw - 0.06, 0.12, 0.36, '#FFFFFF', 0.06), -m.w / 2 + 0.1 + lw * (i + 0.5), 0.56, -m.d / 2 + 0.28));
+      for (let i = 0; i < n; i++) g.add(em(caixa(lw - 0.06, 0.12, 0.36, '#FFFFFF', 0.06), -m.w / 2 + 0.1 + lw * (i + 0.5), 0.56, -m.d / 2 + 0.32));
       break;
     }
     case 'criado': g.add(em(caixa(0.45, 0.5, 0.4, madeiraClara, 0.02), 0, 0.25, 0)); g.add(em(new THREE.Mesh(new THREE.SphereGeometry(0.1, 16, 12), new THREE.MeshStandardMaterial({ color: '#F6E7C8', emissive: '#6B5530', roughness: 0.6 })), 0, 0.6, 0)); break;
@@ -578,8 +579,10 @@ function construirMovel(m) {
       g.add(em(caixa(m.w, 0.04, m.d, madeiraClara, 0.015), 0, 0.74, 0));
       for (const s of [-1, 1]) g.add(em(caixa(0.04, 0.72, m.d - 0.04, '#EFEAE2', 0.01), s * (m.w / 2 - 0.03), 0.36, 0));
       g.add(em(caixa(0.5, 0.3, 0.03, '#2A2A2A', 0.01, 0.3), 0, 0.92, -0.12));
-      const cadeira = new THREE.Group(); cadeira.add(em(caixa(0.45, 0.06, 0.45, '#3E4A57', 0.04), 0, 0.46, 0)); cadeira.add(em(caixa(0.45, 0.45, 0.06, '#3E4A57', 0.04), 0, 0.7, 0.2)); cadeira.add(em(caixa(0.06, 0.43, 0.06, '#555555', 0.02), 0, 0.22, 0));
-      cadeira.position.set(0, 0, 0.5); g.add(cadeira);
+      break; // a cadeira é um móvel próprio ('cadeira'), posto por ferramentas/planta3d.py só onde cabe
+    }
+    case 'cadeira': {
+      g.add(em(caixa(0.45, 0.06, 0.45, '#3E4A57', 0.04), 0, 0.46, 0)); g.add(em(caixa(0.45, 0.45, 0.06, '#3E4A57', 0.04), 0, 0.7, 0.19)); g.add(em(caixa(0.06, 0.43, 0.06, '#555555', 0.02), 0, 0.22, 0));
       break;
     }
     case 'box': {

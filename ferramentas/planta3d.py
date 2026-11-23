@@ -329,6 +329,39 @@ def sobrepostos(moveis):
     return out
 
 
+def moveis_na_parede(planta, tol=0.02):
+    """Móveis que entram numa parede do motor 3D (15 cm sobre o eixo) mais que tol: [(amb, tipo, 'externa'|'interna', cm)].
+
+    tol de 2 cm: o arranjo à mão (PL.movel) encosta a 6 cm do eixo da parede interna, que no 3D tem 7,5 cm de cada lado."""
+    paredes, _, _, moveis = construir(planta)
+    out = []
+    for p in paredes:
+        h = p[1] == p[3]
+        a, b = (min(p[0], p[2]), max(p[0], p[2])) if h else (min(p[1], p[3]), max(p[1], p[3]))
+        fixo = p[1] if h else p[0]
+        caixa = (a - FACE, fixo - FACE, b + FACE, fixo + FACE) if h else (fixo - FACE, a - FACE, fixo + FACE, b + FACE)
+        meio = (a + b) / 2
+        lados = [(meio, fixo - 0.1), (meio, fixo + 0.1)] if h else [(fixo - 0.1, meio), (fixo + 0.1, meio)]
+        externa = any((v := PL._dentro(planta, x, y)) is None or not fechado(v) for x, y in lados)
+        for m in moveis:
+            r = pegada(m)
+            dx, dy = min(r[2], caixa[2]) - max(r[0], caixa[0]), min(r[3], caixa[3]) - max(r[1], caixa[1])
+            if dx > tol and dy > tol:
+                out.append((m["amb"], m["tipo"], "externa" if externa else "interna", round(100 * min(dx, dy))))
+    return out
+
+
+def cadeiras_sem_lugar(planta):
+    """Cadeira de escrivaninha em cima de cama ou de outro móvel: [(amb, tipo de baixo)]. Lista vazia = tudo certo."""
+    moveis = construir(planta)[3]
+    out = []
+    for c in (m for m in moveis if m["tipo"] == "cadeira"):
+        for o in moveis:
+            if o is not c and o["amb"] == c["amb"] and o["tipo"] not in NAO_COLIDE + ("escrivaninha",) and sobrepoe(pegada(c), pegada(o)):
+                out.append((c["amb"], o["tipo"]))
+    return out
+
+
 def janelas_sobre_portas(planta):
     """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois)."""
     _, janelas, portas, _ = construir(planta)

@@ -176,8 +176,8 @@ def todas():
                        "2 quartos (1 suíte)", 2, recuos={"esq": 1.5}))
     P.append(_estreita("E06", "Casa Estreita Gourmet", 4.6,
                        _fila(4.6, 3.8, 2.8, 2.0, 0, 2.0, [suite(1.4, 3.2, 3.2), (3.0, F("quarto2", "Quarto", "dorm"))]),
-                       PORTAS_FILA + [("corr", "quarto1"), ("quarto1", "bsuite"), ("corr", "quarto2"), ("corr", "gourmet", "aberto"),
-                                      ("quarto2", "gourmet", "aberto")],
+                       # quarto2 x gourmet: parede com a janela do quarto (até 23/11/2026 estava 'aberto', quarto sem parede)
+                       PORTAS_FILA + [("corr", "quarto1"), ("quarto1", "bsuite"), ("corr", "quarto2"), ("corr", "gourmet", "aberto")],
                        "2 quartos (1 suíte)", 2, recuos={"esq": 1.5},
                        fundos=(3.2, F("gourmet", "Área gourmet", "varanda")),
                        destaque="Área gourmet nos fundos, aberta para o corredor"))
