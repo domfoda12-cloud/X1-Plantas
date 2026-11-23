@@ -41,8 +41,8 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 |---|---|---|
 | **Maestro**, a conversa principal (Opus) | `conselho`, `ponytail`, `ponytail-review`, `ponytail-audit`, `artifact-*`, `dataviz`, `make-pdf`, `loop`, Graphify, `pedido.py`, `checar.py` | publicar, gastar, contratar |
 | **Diretor**, MinoAI Frontier | `search_mino_method`, `search_viral_hooks`, `analyze_hook`, `get_account_stats`, kit e estilo de edição | OpenArt, `publish_post` |
-| `redator` (Opus) | `redacao-que-vende`, ganchos da MinoAI | |
-| `estrategista` (Opus) | painel, `dataviz`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
+| `redator` (Opus) | `redacao-que-vende`, `marketing-psychology`, ganchos da MinoAI | |
+| `estrategista` (Opus) | painel, `dataviz`, `marketing-psychology`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
 | `arquiteto` (Opus) | `plantas.py`, `planta3d.py`, `imagens3d.py`, `ponytail`, web (Graphify fica com o Maestro) | |
 | `designer` (Opus) | Diretor MinoAI, `impeccable` (só detectar), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
 | `editor-video` (Opus) | Diretor MinoAI, `watch`, `video/render*.cjs`, `montar.py` | `openart:*` (`performance-ads`, `hook-variants`, `ugc`, `tvc`, `talking-head`...) |

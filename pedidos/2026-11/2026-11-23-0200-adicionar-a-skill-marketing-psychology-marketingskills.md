@@ -22,7 +22,7 @@
 
 **Quem executa:** Maestro; veto do `revisor-de-risco`.
 
-**Conferência:** (no fim)
+**Conferência:** Revisor SIM, SE (5/5): aviso MIT mantido (`LICENSE` na pasta), seção "Neste projeto" com a frase obrigatória, leitura trocada para MERCADO e ESTRATEGIA; registrada no CONSELHO (Redator e seção 7) e no ECOSSISTEMA 2b; `checar.py` sem erro.
 
 **Resultado:** (a preencher)
 
