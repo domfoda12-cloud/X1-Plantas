@@ -2,6 +2,8 @@
 
 > Pacote pronto para colar no celular do negócio. Parte da pasta de venda ([`WHATSAPP.md`](WHATSAPP.md): sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das [decisões do dono de 23/11](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md). **Revisor de risco: SIM SE em 23/11 (noite); as condições foram aplicadas (dados do vendedor e ausência sem prazo). Antes de colar, preencha os [colchetes] e só envie o /oferta quando as 3 casas tiverem 3D refeito.**
 >
+> **VETO do Revisor (23/11, noite): não envie o `/oferta` a quem só cabe a Casa Compacta** (lote de 8 m de frente com menos de 20,6 m de fundo, ou menos de 10 m de frente): essa pessoa já recebeu a casa dela de graça, e a mensagem ainda não diz o que vem a mais. Espera a decisão do dono sobre o que vai de graça.
+
 > **Como usar:** no chat, digite `/` e o atalho (ex.: `/pix`), escolha a mensagem, troque o que está entre [colchetes] e envie. Nenhuma mensagem sai com colchete.
 >
 > **Os [colchetes] que só o dono preenche:** [chave Pix], [nome de quem recebe], [link do Drive], [seu nome] (quem assina o atendimento), [CPF/CNPJ] e [horário] (Decreto 7.962/2013, art. 2º: nome, CPF ou CNPJ, endereço e e-mail também no perfil comercial do WhatsApp Business). O **[preço]** é o da semana do teste: R$ 47 ou R$ 67, em semanas alternadas, começando pelo R$ 47; cada pessoa fica com o preço que recebeu primeiro, do começo ao fim (anote qual foi). Os outros colchetes ([nome], [frente], [fundo], a casa que cabe) saem da conversa e da [calculadora de lote](calculadora-lote.html).

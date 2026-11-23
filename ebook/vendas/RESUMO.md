@@ -22,7 +22,7 @@ Pacote pronto para colar no celular do negócio. Parte da pasta de venda (`WHATS
 
 Seções: 1. Lista dos atalhos; 2. As mensagens; 3. Passo a passo no celular (WhatsApp Business).
 
-Tamanho: 2246 palavras.
+Tamanho: 2314 palavras.
 
 ### [WhatsApp: sequência, objeções, perguntas e material grátis](WHATSAPP.md)
 

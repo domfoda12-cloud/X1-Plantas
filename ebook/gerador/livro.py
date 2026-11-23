@@ -1169,8 +1169,10 @@ def montar_gratis(plantas, config, pid):
         else:
             # a casa grátis é a de frente maior: mostra as outras do e-book
             mesmas = [q for q in plantas if q["id"] != pid][:6]
-            titulo_ima = "As outras casas do e-book"
-            frase_ima = f"O e-book tem mais {casas_txt(len(plantas) - 1)}, cada uma com o lote mínimo calculado."
+            outras = len(plantas) - 1
+            titulo_ima = "As outras casas do e-book" if outras > 1 else "A outra casa do e-book" if outras else "A casa no seu lote"
+            frase_ima = (f"O e-book tem mais {casas_txt(outras)}, cada uma com o lote mínimo calculado." if outras > 1
+                         else f"O e-book tem mais {casas_txt(outras)}, também com o lote mínimo calculado." if outras else "")
             legenda_ima = ""
     L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>
       <p class="abertura">A {E(p['nome'])} cabe num lote de {f} m de frente. {E(frase_ima)}</p>
