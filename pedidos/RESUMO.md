@@ -65,7 +65,7 @@ Tamanho: 1717 palavras.
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
-Tamanho: 818 palavras.
+Tamanho: 849 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 
@@ -75,11 +75,11 @@ Seções: Entra (adaptado); Não entra; Ganchos; Passos; Testes; Veto do Fable: 
 
 Tamanho: 8430 palavras.
 
-### [Rascunho: e-mail ao autor do cass (para o dono mandar)](anexos/email-autor-cass.md)
+### [E-mail ao autor do cass: ENVIADO em 23/11/2026 do Gmail do dono, com o sim dele, assinado "Dominic de Lima, a solo founder"](anexos/email-autor-cass.md)
 
 Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md`. O dono troca os campos entre colchetes e manda do e-mail dele, em particular (não como issue pública). Esta sessão não manda e-mail. O endereço do autor não está aqui: pegue no perfil dele no GitHub…
 
-Tamanho: 499 palavras.
+Tamanho: 517 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 1, 23/11/2026)](anexos/integracao-novos-v1.md)
 

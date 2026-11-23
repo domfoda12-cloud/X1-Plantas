@@ -41,10 +41,10 @@ Seções: Linguagem, visual e animação do e-book; Referência: livros de plant
 
 Tamanho: 2351 palavras.
 
-### [Plantas de referência: 30 casas térreas pequenas, de fontes públicas](plantas-ref/REFERENCIAS.md)
+### [Plantas de referência: 51 casas térreas pequenas, de fontes públicas (30 do piloto + 21 da rodada 2)](plantas-ref/REFERENCIAS.md)
 
-Piloto da base de plantas do Arquiteto (decisão do dono, 23/11/2026: "pesquise antes de revisar a casa"). Levantado em 23/11/2026 com busca e leitura grátis (TinyFish e download direto; nada pago). Só guardamos medidas e padrão, com a fonte; nunca a imagem da planta (direito autoral: as pranchas…
+Piloto da base de plantas do Arquiteto (decisão do dono, 23/11/2026: "pesquise antes de revisar a casa"). Levantado em 23/11/2026 com busca e leitura grátis (TinyFish e download direto; nada pago). Rodada 2 (23/11/2026, mesma data): linhas 31 a 51, foco em variedade e em lote estreito. Só guardamos…
 
-Seções: Como ler a tabela; Fontes (lidas em 23/11/2026); As 30 plantas; Aviso de diversidade (importante para o Arquiteto); Três padrões que já aparecem; O que ficou incerto ou não foi conferido.
+Seções: Como ler a tabela; Fontes (lidas em 23/11/2026); As 51 plantas (30 do piloto, 21 da rodada 2); Aviso de diversidade (importante para o Arquiteto); Quatro padrões (três do piloto, revistos com a rodada 2); O que ficou incerto ou não foi conferido.
 
-Tamanho: 4087 palavras.
+Tamanho: 8010 palavras.
