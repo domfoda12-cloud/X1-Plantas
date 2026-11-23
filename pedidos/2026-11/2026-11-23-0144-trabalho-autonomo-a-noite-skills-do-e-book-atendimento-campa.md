@@ -30,6 +30,8 @@
 
 *Recado de 23/11 07:11:* I hit my usage limit while you were working, but it has reset now. Please continue from where you left off.
 
+*Recado de 23/11 09:44:* With all due respect but that doesn't look like a lot of work done
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
