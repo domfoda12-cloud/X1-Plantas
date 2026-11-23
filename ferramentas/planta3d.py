@@ -209,7 +209,7 @@ OPOSTO = {"frente": "fundos", "fundos": "frente", "esq": "dir", "dir": "esq"}
 ROT = {"frente": 0.0, "fundos": math.pi, "esq": math.pi / 2, "dir": -math.pi / 2}
 
 
-def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados=(), prof=None):
+def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados=(), prof=None, no_canto=False):
     """Posição central (ao longo do lado) onde cabe uma peça de largura w sem bloquear porta nem outro móvel.
 
     Com prof (profundidade da peça), a porta de um lado perpendicular só tira lugar se o vão dela
@@ -239,7 +239,7 @@ def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados
     if not cabe:
         return None
     p, q = max(cabe, key=lambda t: t[1] - t[0])
-    return (p + q) / 2
+    return p + w / 2 if no_canto else (p + q) / 2  # no canto: sobra o resto da parede para a peça seguinte
 
 
 def _no_lado(c, lado, pos, d, folga=0.0):
@@ -337,11 +337,12 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             faixa = (c["x0"], c["y0"], c["x0"] + prof, c["y1"]) if lado == "esq" else (c["x1"] - prof, c["y0"], c["x1"], c["y1"])
             return [(r[1], r[3]) for r in (pegada(o) for o in aqui if o["tipo"] not in NAO_COLIDE) if sobrepoe(r, faixa)]
 
-        def encostar(tipo, larg, prof, lados=None, folga=0.0, frente=0.5, **extra):
+        def encostar(tipo, larg, prof, lados=None, folga=0.0, frente=0.5, no_canto=False, **extra):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
                 if _prof(c, lado) < prof + frente:
                     continue
-                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga), prof=prof + folga)
+                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga),
+                                     prof=prof + folga, no_canto=no_canto)
                 if pos is None:
                     continue
                 x, y = _no_lado(c, lado, pos, prof, folga)
@@ -502,7 +503,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                 while len(aqui) > antes:
                     out.remove(aqui.pop())
         elif t == "servico":
-            encostar("tanque", 0.6, 0.5, None, frente=0.4)
+            encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)  # tanque no canto, máquina ao lado
             encostar("maquina", 0.6, 0.6, None, frente=0.4) or encostar("maquina", 0.6, 0.6, None, frente=0.3)
         elif t == "escritorio":
             encostar("escrivaninha", 1.2, 0.6, None)

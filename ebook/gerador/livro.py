@@ -120,55 +120,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
 
 
 
-def _movel(mv):
-    """Símbolo de móvel visto de cima, em coordenadas locais (encosto/cabeceira no lado -y)."""
-    t, w, d = mv["tipo"], mv.get("w", .45), mv.get("d", .4)
-    L = '#5B6675'
-    R = lambda x, y, ww, hh, fill="#FFFFFF", sw=.025, rx=.04: f'<rect x="{x:.3f}" y="{y:.3f}" width="{ww:.3f}" height="{hh:.3f}" rx="{rx}" fill="{fill}" stroke="{L}" stroke-width="{sw}"/>'
-    C = lambda x, y, r, fill="#FFFFFF": f'<circle cx="{x:.3f}" cy="{y:.3f}" r="{r:.3f}" fill="{fill}" stroke="{L}" stroke-width=".025"/>'
-    if t in ("camaCasal", "camaSolteiro"):
-        n = 2 if t == "camaCasal" else 1
-        out = R(-w / 2, -d / 2, w, d)
-        out += R(-w / 2, -d / 2 + d * .38, w, d * .62, mv.get("manta", "#B9C7D6"), rx=.03)
-        lw = (w - .2) / n
-        out += "".join(R(-w / 2 + .1 + i * lw + .03, -d / 2 + .08, lw - .06, .3, "#FFFFFF", rx=.05) for i in range(n))
-        return out
-    if t == "sofa":
-        return R(-w / 2, -d / 2, w, d, "#C9D3C6") + R(-w / 2, -d / 2, w, .2, "#AEBDA9") + R(-w / 2, -d / 2, .18, d, "#AEBDA9") + R(w / 2 - .18, -d / 2, .18, d, "#AEBDA9")
-    if t == "tapete":
-        return f'<rect x="{-w / 2}" y="{-d / 2}" width="{w}" height="{d}" fill="#E8DCC8" stroke="#C9B59A" stroke-width=".03" stroke-dasharray=".12 .08"/>'
-    if t == "mesaCentro":
-        return R(-w / 2, -d / 2, w, d, "#D8C3A3")
-    if t == "mesaJantar":
-        cad = "".join(C(sx * (w / 2 + .2), sz, .16) for sx in (-1, 1) for sz in (-.3, .3))
-        return cad + R(-w / 2, -d / 2, w, d, "#D8C3A3")
-    if t == "bancada":
-        return R(-w / 2, -d / 2, w, d, "#EFEDE8") + f'<rect x="{-w / 2 + .3:.3f}" y="{-d / 2 + .1:.3f}" width=".5" height=".38" rx=".06" fill="#DDE6EC" stroke="{L}" stroke-width=".02"/>' + "".join(C(w / 2 - .45 + dx, dy, .08) for dx in (-.15, .15) for dy in (-.12, .12))
-    if t == "geladeira":
-        return R(-w / 2, -d / 2, w, d, "#EEF1F3") + f'<line x1="{-w / 2}" y1="{-d / 2}" x2="{w / 2}" y2="{d / 2}" stroke="{L}" stroke-width=".02"/>'
-    if t in ("tanque", "pia"):
-        return R(-w / 2, -d / 2, w, d, "#F4F4F2") + f'<ellipse cx="0" cy=".03" rx="{w * .32:.3f}" ry="{d * .3:.3f}" fill="#DDE6EC" stroke="{L}" stroke-width=".02"/>'
-    if t == "maquina":
-        return R(-w / 2, -d / 2, w, d, "#F4F4F2") + C(0, 0, min(w, d) * .32, "#DDE6EC")
-    if t == "vaso":
-        return R(-.18, -.32, .36, .14, "#FFFFFF") + f'<ellipse cx="0" cy=".05" rx=".17" ry=".24" fill="#FFFFFF" stroke="{L}" stroke-width=".025"/>'
-    if t == "box":
-        return R(-w / 2, -d / 2, w, d, "#E6F0F4") + f'<line x1="{-w / 2}" y1="{d / 2}" x2="{w / 2}" y2="{-d / 2}" stroke="{L}" stroke-width=".02"/>' + C(0, 0, .05)
-    if t == "armario":
-        n = max(2, round(w / .5))
-        return R(-w / 2, -d / 2, w, d, "#F2EEE7") + "".join(f'<line x1="{-w / 2 + w * i / n:.3f}" y1="{-d / 2}" x2="{-w / 2 + w * i / n:.3f}" y2="{d / 2}" stroke="{L}" stroke-width=".015"/>' for i in range(1, n))
-    if t == "escrivaninha":
-        return R(-w / 2, -d / 2, w, d, "#D8C3A3") + C(0, d / 2 + .25, .2, "#C9D3DC")
-    if t == "criado":
-        return R(-.22, -.2, .44, .4, "#D8C3A3")
-    if t == "planta":
-        r = .25 * mv.get("s", 1)
-        return f'<circle r="{r:.3f}" fill="#9BBF7A" stroke="#6E8F55" stroke-width=".025"/><circle r="{r * .45:.3f}" fill="#7FA862"/>'
-    if t == "carro":
-        return f'<rect x="{-w / 2}" y="{-d / 2}" width="{w}" height="{d}" rx=".35" fill="#E2B1A8" stroke="{L}" stroke-width=".03"/><rect x="{-w / 2 + .15}" y="{-d * .2:.3f}" width="{w - .3}" height="{d * .35:.3f}" rx=".15" fill="#B9C7D6" stroke="{L}" stroke-width=".02"/>'
-    if t == "poltrona":
-        return R(-w / 2, -d / 2, w, d, "#E3C9A6") + R(-w / 2, -d / 2, w, .16, "#CFAE85")
-    return ""
+@@HUMANIZADA@@
 
 
 def svg_fachada(p, legenda=True):

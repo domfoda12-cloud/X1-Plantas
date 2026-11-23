@@ -1,0 +1,10 @@
+# Pesquisa: Concorrentes e o que eles vendem
+
+> Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
+
+| Data | Quem | Pergunta | Achado | Fonte | Certeza |
+|---|---|---|---|---|---|
+| 2026-11-23 | pesquisador | Concorrentes prometem aprovação na prefeitura? | Só Projetos anuncia 'Aprovado na sua prefeitura, ou devolvemos 100%' (vale só para o Projeto Adaptado, com RRT e 12 meses de prazo); Planta Pronta lista 'Garantia de aprovação em todo território nacional' e 'Suporte técnico gratuito durante a obra' | https://soprojetos.com.br | confirmado |
+| 2026-11-23 | pesquisador | Qual o preço e o formato do projeto pronto avulso hoje? | Projeto Pronto lista projeto arquitetônico de R$ 420 a R$ 899 em 10x sem juros; Montesuacasa vende casa térrea de 111,02 m² por R$ 555 com 'Entrega em até 24h'; Cabana Lar vende Projeto Básico a R$ 49,99 e Kit Premium a R$ 119,90 (leitura de 23/11/2026) | https://projetopronto.com | confirmado |
+| 2026-11-23 | pesquisador | Que gancho e chamada final os perfis de planta usam no Instagram? | Perfis de planta usam o gancho pelo lote ('Planta de casa térrea 6x30, 3 quartos') e a chamada 'Comenta PLANTA que eu te mando os detalhes' (casapequenaexpress, 16/09/2026); outros mandam para o WhatsApp com preço no legenda (AeD Studio: projeto completo PDF+DWG por R$ 599, terreno a partir de 6,60 m de frente) | https://www.instagram.com/reel/DdXiBVdsx3f/ | confirmado |
+| 2026-11-23 | pesquisador | Como e-books e cursos de obra no Hotmart prometem para o leigo? | 'Minha Casa do Zero' promete construir 'mesmo sem ser pedreiro ou engenheiro' e entrega curso, projeto arquitetônico, hidrossanitário e elétrico 'prontos' por R$ 69; 'Projeto Eu Construtor' promete construir 'sem ser enganado'; 'Projetos de Casas Populares' avisa que toda construção precisa de responsável técnico | https://hotmart.com/pt-br/marketplace/produtos/minhacasadozero/S80999854U | confirmado |

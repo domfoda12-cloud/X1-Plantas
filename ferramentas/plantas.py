@@ -673,6 +673,38 @@ def melhor_orientacao(planta):
 # --------------------------------------------------------------------------------------
 # Previa (desenho 2D)
 # --------------------------------------------------------------------------------------
+def porta_dobradica(planta, d):
+    """Dobradiça, ponta da folha fechada e ponta da folha aberta de uma porta do motor 3D (coordenadas da planta).
+
+    O arco() do motor gira sempre no mesmo sentido, então metade das portas saía com a dobradiça no lado
+    errado (a folha abria para o meio do cômodo, espelhada). Aqui a dobradiça vai para a ponta do vão mais
+    perto do canto da parede, onde a folha aberta encosta, e a folha continua abrindo para o mesmo cômodo.
+    Decide pela geometria (não inverte nada), então continua certo se o motor for corrigido."""
+    hx, hy, r = d["x"], d["y"], d["r"]
+    px, py = hx + r * math.cos(d["a0"]), hy + r * math.sin(d["a0"])
+    ux, uy = math.cos(d["a1"]), math.sin(d["a1"])
+    horiz = abs(math.sin(d["a0"])) < 1e-6
+    por_id = {c["id"]: c for c in planta["comodos"]}
+    ids = str(d["id"])
+    ponta = None
+    if ids.startswith("ext-") and ids[4:] in por_id:
+        c = por_id[ids[4:]]
+        ponta = (c["x0"], c["x1"]) if horiz else (c["y0"], c["y1"])
+    else:
+        for porta in planta.get("portas", []):
+            if f"{porta[0]}-{porta[1]}" == ids and porta[0] in por_id and porta[1] in por_id:
+                pc = parede_comum(por_id[porta[0]], por_id[porta[1]])
+                if pc:
+                    ponta = (pc[2], pc[3])
+                break
+    if ponta:
+        dist = lambda v: min(abs(v - ponta[0]), abs(v - ponta[1]))
+        e0, e1 = (hx, px) if horiz else (hy, py)
+        if dist(e1) < dist(e0) - 1e-6:
+            hx, hy, px, py = px, py, hx, hy
+    return (hx, hy), (px, py), (hx + r * ux, hy + r * uy)
+
+
 CORES = {"sala": "#E8D7BC", "estar": "#E8D7BC", "jantar": "#E8D7BC", "cozinha": "#D5E0CF",
          "dorm": "#EADCC6", "casal": "#E6D0B0", "banho": "#CFE0E6", "lavabo": "#CFE0E6",
          "servico": "#D8E4D0", "circ": "#F1EBE0", "escritorio": "#E3DDF0", "varanda": "#EDEFE2",
@@ -727,6 +759,12 @@ def previa(planta, caminho, escala=80):
     # contorno externo
     d.rectangle([X(0), Y(0), X(W), Y(D)], outline="#111", width=5) if all(c["tipo"] not in EXTERNOS for c in planta["comodos"] if c["tipo"] != "futuro") else None
     por_id = {c["id"]: c for c in planta["comodos"]}
+    # portas: vão e giro nas mesmas posições do motor 3D (o mesmo do e-book), com a dobradiça no canto
+    try:
+        import planta3d as P3
+        portas3d = {str(q["id"]): q for q in P3.construir(planta)[2]}
+    except Exception:  # sem o motor (ex.: import circular), fica o desenho simples de antes
+        portas3d = {}
     # portas e ligações
     for porta in planta.get("portas", []):
         a, b = porta[0], porta[1]
@@ -743,6 +781,22 @@ def previa(planta, caminho, escala=80):
         aberta = len(porta) > 2 and porta[2] == "aberto"
         centro = (i0 + i1) / 2
         meia = ((i1 - i0) / 2 - 0.05) if aberta else 0.4
+        q = portas3d.get(f"{a}-{b}")
+        if q and not aberta:
+            (hx, hy), (fx, fy), (ox, oy) = porta_dobradica(planta, q)
+            r = q["r"]
+            lo, hi = (min(hx, fx), max(hx, fx)) if o == "h" else (min(hy, fy), max(hy, fy))
+            if o == "v":
+                d.rectangle([X(p) - 4, Y(lo), X(p) + 4, Y(hi)], fill=CORES.get(por_id[a]["tipo"], "#EEE"))
+            else:
+                d.rectangle([X(lo), Y(p) - 4, X(hi), Y(p) + 4], fill=CORES.get(por_id[a]["tipo"], "#EEE"))
+            # Y desta prévia não inverte o eixo: o ângulo na tela é o mesmo da planta (PIL gira no sentido horário)
+            af = math.degrees(math.atan2(fy - hy, fx - hx)) % 360
+            ao = math.degrees(math.atan2(oy - hy, ox - hx)) % 360
+            ini = af if round((ao - af) % 360) == 90 else ao
+            d.arc([X(hx - r), Y(hy - r), X(hx + r), Y(hy + r)], ini, ini + 90, fill="#C2683F", width=2)
+            d.line([X(hx), Y(hy), X(ox), Y(oy)], fill="#C2683F", width=2)
+            continue
         if o == "v":
             d.rectangle([X(p) - 4, Y(centro - meia), X(p) + 4, Y(centro + meia)], fill=CORES.get(por_id[a]["tipo"], "#EEE"))
             if not aberta:
