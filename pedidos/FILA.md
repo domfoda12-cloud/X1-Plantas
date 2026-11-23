@@ -4,6 +4,8 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [Adicionar a skill find-skills (vercel-labs)](2026-11/2026-11-23-0203-adicionar-a-skill-find-skills-vercel-labs.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |
+| 2026-11-23 | [Adicionar a skill last30days](2026-11/2026-11-23-0202-adicionar-a-skill-last30days.md) | aberta | Maestro; veto do Revisor se o dono confirmar. |
 | 2026-11-23 | [Adicionar a skill marketing-psychology (marketingskills)](2026-11/2026-11-23-0200-adicionar-a-skill-marketing-psychology-marketingskills.md) | aberta | Maestro; veto do `revisor-de-risco`. |
 | 2026-11-23 | [Adicionar o claude-chief-of-staff](2026-11/2026-11-23-0159-adicionar-o-claude-chief-of-staff.md) | aberta | Maestro; veto do Revisor e do Fable junto com a síntese do júri. |
 | 2026-11-23 | [Adicionar o llm-council (Karpathy) e pedir a opinião dele sobre o projeto de hoje](2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md) | aberta | Maestro: conduz. Etapa 1 e 2: Haiku, Sonnet, Opus e Fable (agentes gerais com o modelo de  |
