@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 29 documentos
+## Os 30 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -68,6 +68,14 @@ Pedido do dono no quadro (23/11/2026): "uma amostra grátis bem impressionante d
 Seções: Opção A: a Casa Compacta completa, caprichada (5 páginas); Opção B: a Casa Compacta + o guia "Seu lote cabe?" (8 a 9 páginas); O teste de preço (R$ 47 x R$ 67).
 
 Tamanho: 913 palavras.
+
+### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
+
+Pedido do dono (23/11, comentário no quadro; `decisoes-do-dono-2026-11-23.md`, linha 85), palavra por palavra: "quero algo mais como detalhes de como a casa pode ser mobiliada ou ideias de construções, coisas assim". Troca a ideia do "raio-X da casa". Autor: Arquiteto, 23/11/2026. É conteúdo…
+
+Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; cabe num lote de 8 x 15 m); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m); 3. F01 · Casa Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; cabe num lote de 10 x 15 m); 4. Medidas de móveis comuns no Brasil (as usadas nas contas); 5. Para a equipe (não vai ao público).
+
+Tamanho: 3468 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 

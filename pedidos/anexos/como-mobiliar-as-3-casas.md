@@ -45,7 +45,7 @@ A parede da esquerda (varanda, sala e serviço) fica na divisa, sem janela.
 
 ## 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m)
 
-Todos os cômodos têm **3,20 m livres** de largura. A parede da esquerda é a divisa de ponta a ponta, sem janela (Código Civil, art. 1.301); as janelas e as duas portas de fora dão para o recuo de 1,50 m da direita.
+Todos os cômodos têm **3,20 m livres** de largura. A parede da esquerda é a divisa de ponta a ponta, sem janela (Código Civil, art. 1.301); as janelas da sala, da cozinha, do serviço e do banheiro e as duas portas de fora dão para o recuo de 1,50 m da direita; os quartos têm janela na frente e no fundo.
 
 | Cômodo (por dentro) | O que cabe, com a passagem que sobra | O que não cabe |
 |---|---|---|
@@ -54,7 +54,7 @@ Todos os cômodos têm **3,20 m livres** de largura. A parede da esquerda é a d
 | **Sala** 3,20 x 3,54 m | **Sofá de 3 lugares** (2,00 x 0,88) embaixo da janela, depois do giro da porta da rua; **rack de TV** na parede da divisa, a **1,92 m** do sofá | Mesa de centro grande: o caminho da porta até a cozinha passa entre o sofá e a TV |
 | **Cozinha e copa** 3,20 x 3,14 m | **Pia e fogão** (1,80 m) embaixo da janela; **geladeira** e **mesa de 4** (1,20 x 0,80) na parede da divisa. Entre a mesa e a bancada: **142 cm** sem ninguém, **cerca de 1 m** com as cadeiras encostadas, uns **70 cm** com alguém sentado. Da mesa à passagem do hall: 104 cm | As 2 cadeiras do lado da divisa ficam com 38 cm: apertadas. Mesa de 6 lugares |
 | **Serviço** 2,19 x 1,18 m | **Máquina e tanque** na parede do fundo, ao lado do giro da porta (o trecho livre tem 1,20 m; os dois pedem 1,12). Na frente: **53 cm** | Porta para o quintal: o serviço não tem (a 2ª porta de fora é a da cozinha) |
-| **Banheiro** 2,19 x 1,58 m | Box no fundo (1,58 x 0,95, maior que os 0,90 x 0,95 da Portaria), vaso e pia na parede do hall; a porta passa a poucos cm da pia | — |
+| **Banheiro** 2,19 x 1,58 m | Box no fundo (1,58 x 0,95, maior que os 0,90 x 0,95 da Portaria), vaso e pia na parede do serviço; a porta (no hall) passa a poucos cm da pia | — |
 | **Hall** 0,89 x 2,94 m | Só passagem (89 cm), até o banheiro e o quarto casal | Armário ou estante: tira a passagem |
 
 **Três ideias de arrumação**
@@ -83,7 +83,7 @@ A parede da esquerda (sala e quarto casal) fica na divisa, sem janela. Os 3 quar
 | **Sala e jantar** 4,45 x 3,55 m | **Rack de TV** na parede da divisa, depois do giro da porta da rua; **sofá de 3 lugares** (2,00) de frente para ela, a **1,45 m**, de costas para a mesa; **mesa de 4** (1,20 x 0,80) junto da cozinha, com 75 cm para cada cadeira. Atrás do sofá até o corredor: **80 cm** | Mesa de 6 lugares: sem medida conferida |
 | **Cozinha** 2,04 x 3,49 m | Na parede do banheiro e do serviço (2,59 m depois da porta do serviço): **fogão, pia e geladeira** (2,50 m), sobram **9 cm**. Livre na frente: **144 cm** (129 na frente da geladeira). Sob a janela da frente cabe um braço de bancada em L | Mesa: fica na sala |
 | **Serviço** 1,59 x 2,09 m | **Tanque** no canto da janela e **máquina** na parede da cozinha, fora do giro das duas portas; **uns 60 cm** na frente do tanque. Tem porta para o recuo lateral | — |
-| **Banheiro** 1,59 x 2,38 m | Box de 0,90 x 0,95 no canto da frente, pia na parede do corredor, vaso no fundo, fora do giro da porta | — |
+| **Banheiro** 1,59 x 2,38 m | Box de 0,90 x 0,95 no canto da frente, pia na parede da cozinha (canos juntos), vaso no fundo, fora do giro da porta | — |
 | **Corredor** 6,49 x 0,98 m | Só passagem (98 cm) | Estante ou armário raso: com 25 a 30 cm de fundo, a passagem cai abaixo de 80 cm |
 
 **Três ideias de arrumação**
