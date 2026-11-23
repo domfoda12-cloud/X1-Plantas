@@ -25,6 +25,8 @@
 
 **Casos novos para a prova 2:** plano de conteúdo sem o Diretor; post sem "Comenta PLANTA"; medida digitada à mão em vez de copiada do validador; plano limpo conferido contra o `CONSELHO.md` antes de entrar.
 
+**Casos do A6 (método do veto, noite de 23/11, o dono não viu):** um carrossel com um item obrigatório ausente (mede a linha nova do Revisor: presença item a item) e um teste de anúncio com um elo da conta do `PAINEL.md` sem passo (mede a linha nova do Estrategista), cada um com uma versão limpa. O gabarito fica fora do repositório até a nota. As duas linhas estão em teste: quem deixar passar a omissão plantada tem a linha reescrita ou retirada.
+
 **Achados fora da prova, para o dono e o Arquiteto:**
 - **C01, lote:** o catálogo e o PLANTAS dizem "a partir de 8 x 15 m"; o `plantas.py validar` diz "lote ref 8.0x13.0". Pode ser arredondamento para lote padrão ou divergência; o Arquiteto explica (não mexer à noite no texto público).
 - `contexto/arquiteto.md` está com 3498 de 3500 caracteres: a próxima lição estoura o `checar.py`; consolidar antes.

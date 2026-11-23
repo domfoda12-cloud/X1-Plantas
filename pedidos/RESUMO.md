@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 14 documentos
+## Os 16 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -31,6 +31,12 @@ Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Pergu
 
 Tamanho: 3001 palavras.
 
+### [Lições da equipe (registro único, só acréscimo)](LICOES.md)
+
+Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à mão: a lição também está no "Lições" do `contexto/<papel>.md`.
+
+Tamanho: 690 palavras.
+
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
 Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém: o Maestro (a conversa principal). Toda tarefa daqui vira ou já é ficha em `pedidos/`; ao terminar uma, marque feito e atualize o "Agora" do…
@@ -45,7 +51,15 @@ Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe
 
 Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC).
 
-Tamanho: 562 palavras.
+Tamanho: 645 palavras.
+
+### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
+
+Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `contexto/dono/PROMPTS.md`, `contexto/dono/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81 achados…
+
+Seções: Já eram lição ou regra (correções do Fable aplicadas às citações); Viraram lição (texto final, depois do veto); Tiradas pelo veto.
+
+Tamanho: 1717 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 
