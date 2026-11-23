@@ -30,6 +30,7 @@ FECHADA = ["Conferência", "Resultado"]  # só precisam estar preenchidos em fic
 VAZIO = "(a preencher)"
 APRENDI = "O que aprendi"  # obrigatório só em ficha fechada de 23/11/2026 em diante (as antigas não quebram)
 DESDE_APRENDI = "2026-11-23"
+ORIGENS = ("dono", "prova", "auditoria", "juri", "maestro", "ficha")
 LIMITE_CONTEXTO = 3500  # o mesmo do checar.py: perto do limite, recusa e manda consolidar (nunca sobe o limite)
 
 
@@ -114,7 +115,7 @@ def quadro():
 def licoes_do_campo(valor):
     """'papel: lição' por linha -> [(papel, lição)]; 'nada novo' -> []; formato errado -> None."""
     valor = (valor or "").strip()
-    if valor.lower().startswith("nada"):
+    if re.fullmatch(r"nada novo\.?", valor, re.I):
         return []
     pares = [re.match(r"^(?:- )?`?([a-z][a-z-]*)`?:\s+(\S.*)$", l.strip()) for l in valor.splitlines() if l.strip()]
     return [(m.group(1), m.group(2).strip()) for m in pares] if pares and all(pares) else None
@@ -138,18 +139,26 @@ def _contexto(papel):
     return arq
 
 
-def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True):
-    """Confere (e, com gravar, grava) a lição no contexto do papel e no registro único pedidos/LICOES.md."""
+def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, base=None):
+    """Confere (e, com gravar, grava) a lição no contexto do papel e no registro único pedidos/LICOES.md.
+    Sem gravar, devolve o contexto como ficaria; `base` é esse texto da lição anterior (duas lições do mesmo papel somam)."""
     arq = _contexto(papel)
     texto = re.sub(r"\s+", " ", texto).strip()
+    origem = origem.replace("ú", "u")
+    if not texto or origem not in ORIGENS or not re.fullmatch(r"-|[1-5]", ponto) or not re.fullmatch(r"-|[\w.-]+", ficha):
+        sys.exit(f"Não grava: lição vazia, origem fora de {', '.join(ORIGENS)}, ponto fora de 1 a 5 ou ficha com caractere estranho.")
     hoje = datetime.now()
     marca = ", ".join(x for x in (f"{hoje:%d/%m}", "" if origem == "ficha" else origem, f"ficha {ficha}" if ficha != "-" else "", f"ponto {ponto}" if ponto != "-" else "") if x)
-    novo = inserir_licao(arq.read_text(encoding="utf-8"), f"- **{marca}:** {texto}")
+    atual = arq.read_text(encoding="utf-8") if base is None else base
+    linha = f"- **{marca}:** {texto}"
+    novo = inserir_licao(atual, linha)
+    if novo is None and not re.search(r"^## Lições", atual, re.M):
+        sys.exit(f"Não grava: contexto/{papel}.md não tem a seção '## Lições'.")
     if novo is None:
-        sys.exit(f"Não grava: contexto/{papel}.md sem seção '## Lições' ou passaria de {LIMITE_CONTEXTO} caracteres. "
+        sys.exit(f"Não grava: contexto/{papel}.md passaria de {LIMITE_CONTEXTO} caracteres (tem {len(atual)}; a lição pede {len(linha) + 1}). "
                  "Consolide: mova as lições mais antigas ao CONTEXTO-HISTORICO.md e tente de novo.")
     if not gravar:
-        return
+        return novo
     arq.write_text(novo, encoding="utf-8")
     reg = PEDIDOS / "LICOES.md"
     if not reg.exists():
@@ -164,6 +173,8 @@ def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True):
 def fechar(nome, virou):
     arq = achar(nome)
     txt = arq.read_text(encoding="utf-8")
+    if not (campo(txt, "Estado") or "").startswith("aberta"):
+        sys.exit("Não fecha: a ficha já está fechada (fechar de novo repetiria a linha do histórico e as lições).")
     faltam = [c for c in CAMPOS if (campo(txt, c) or VAZIO) == VAZIO and c not in ("Resultado",)]
     if faltam:
         sys.exit("Não fecha: falta preencher " + ", ".join(faltam))
@@ -173,8 +184,9 @@ def fechar(nome, virou):
         if aprendidas is None:
             sys.exit(f"Não fecha: o campo \"{APRENDI}\" falta ou está fora do formato. Escreva na ficha "
                      f"\"**{APRENDI}:** papel: lição\" (uma por linha, papel = nome do contexto/<papel>.md) ou \"nada novo\".")
-        for papel, t in aprendidas:  # confere todas antes de gravar qualquer uma
-            licao(papel, t, arq.name[:15], gravar=False)
+        previa = {}
+        for papel, t in aprendidas:  # confere todas, somadas por papel, antes de gravar qualquer uma
+            previa[papel] = licao(papel, t, arq.name[:15], origem="ficha", gravar=False, base=previa.get(papel))
     hoje = datetime.now()
     txt = trocar(trocar(txt, "Estado", f"fechada em {hoje:%d/%m/%Y}"), "Resultado", virou)
     arq.write_text(txt, encoding="utf-8")
@@ -216,7 +228,7 @@ def conferir():
                 erros.append(f"{f.name}: falta o campo '{c}'")
             elif v in ("", VAZIO) and not (aberta and c in FECHADA):
                 erros.append(f"{f.name}: campo '{c}' vazio")
-        if not aberta and f.name[:10] >= DESDE_APRENDI and licoes_do_campo(campo(t, APRENDI)) is None:
+        if (campo(t, "Estado") or "").startswith("fechada") and f.name[:10] >= DESDE_APRENDI and licoes_do_campo(campo(t, APRENDI)) is None:
             erros.append(f"{f.name}: fechada sem '{APRENDI}' no formato 'papel: lição' ou 'nada novo'")
     print("\n".join("  " + e for e in erros))
     return not erros
@@ -236,6 +248,8 @@ if __name__ == "__main__":
     elif cmd == "fechar" and len(a) == 3:
         fechar(a[1], a[2])
     elif cmd == "licao" and len(a) >= 3:
+        if len(a) % 2 == 0 or any(k not in ("--ficha", "--ponto", "--origem") for k in a[3::2]):
+            sys.exit(__doc__)
         op = {k: a[a.index(f"--{k}") + 1] for k in ("ficha", "ponto", "origem") if f"--{k}" in a}
         licao(a[1], a[2], op.get("ficha", "-"), op.get("ponto", "-"), op.get("origem", "maestro"))
     elif cmd == "quadro":

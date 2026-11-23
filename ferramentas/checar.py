@@ -162,6 +162,52 @@ if _ok_licao:
     print("[OK ] lição ao fechar ficha (lugar, limite, formato)")
 else:
     falhas.append("lição ao fechar ficha"); print("[ERRO] lição ao fechar ficha: lugar, limite ou formato errado")
+# De ponta a ponta, com fichas falsas numa pasta temporária (veto do Fable ao A2)
+import contextlib, io, tempfile
+with tempfile.TemporaryDirectory() as _d:
+    _d = Path(_d); _raiz, _ped = _p.RAIZ, _p.PEDIDOS
+    _p.RAIZ, _p.PEDIDOS = _d, _d / "pedidos"
+    try:
+        (_d / "contexto").mkdir(); (_d / "pedidos" / "2026-11").mkdir(parents=True)
+        (_d / "contexto" / "QUADRO.md").write_text("# Quadro\n", encoding="utf-8")
+        (_d / "contexto" / "maestro.md").write_text("# m\n\n## Lições\n\n- antiga\n", encoding="utf-8")
+        (_d / "contexto" / "cheio.md").write_text("# c\n\n## Lições\n\n" + "x" * (_p.LIMITE_CONTEXTO - 60) + "\n", encoding="utf-8")
+        _ler = lambda rel: (_d / rel).read_text(encoding="utf-8") if (_d / rel).exists() else ""
+        def _falsa(nome, aprendi=None, estado="aberta"):
+            t = "# falsa\n\n" + "".join(f"**{c}:** {estado if c == 'Estado' else 'ok'}\n\n" for c in _p.CAMPOS)
+            (_d / "pedidos" / "2026-11" / f"{nome}.md").write_text(t + (f"**{_p.APRENDI}:** {aprendi}\n\n" if aprendi else "") + "## Plano\n\nfica\n", encoding="utf-8")
+        def _roda(f, *a):
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    return f(*a) is not False
+            except SystemExit as e:
+                return e.code in (0, None)
+        _aberta = lambda nome: "**Estado:** aberta" in _ler(f"pedidos/2026-11/{nome}.md")
+        _meio = "y" * ((_p.LIMITE_CONTEXTO - len(_ler("contexto/maestro.md"))) // 2)  # duas cabem uma a uma, não juntas
+        _falsa("2026-11-22-0001-antiga"); _falsa("2026-11-23-0001-sem"); _falsa("2026-11-23-0002-boa", "maestro: aprendi isto")
+        _falsa("2026-11-23-0003-cheia", "maestro: não pode gravar\ncheio: não cabe"); _falsa("2026-11-23-0004-duas", f"maestro: a {_meio}\nmaestro: b {_meio}")
+        _falsa("2026-11-23-0005-mista", "Nada novo para o redator.\nmaestro: não pode sumir")
+        casos = [("ficha antiga fecha sem o campo", _roda(_p.fechar, "0001-antiga", "virou") and _roda(_p.conferir)),
+                 ("ficha nova sem o campo não fecha", not _roda(_p.fechar, "0001-sem", "virou") and _aberta("2026-11-23-0001-sem")),
+                 ("lição grava no contexto e no registro", _roda(_p.fechar, "0002-boa", "virou") and "aprendi isto" in _ler("contexto/maestro.md")
+                  and _ler("pedidos/LICOES.md").count("aprendi isto") == 1 and "fica" in _ler("pedidos/2026-11/2026-11-23-0002-boa.md")),
+                 ("recusa no limite sem gravar nada", not _roda(_p.fechar, "0003-cheia", "virou") and _aberta("2026-11-23-0003-cheia")
+                  and "não pode gravar" not in _ler("contexto/maestro.md") + _ler("pedidos/LICOES.md")),
+                 ("duas lições do mesmo papel somam", not _roda(_p.fechar, "0004-duas", "virou") and _aberta("2026-11-23-0004-duas")
+                  and _meio not in _ler("contexto/maestro.md") + _ler("pedidos/LICOES.md")),
+                 ("'nada' com lição junto não fecha", not _roda(_p.fechar, "0005-mista", "virou") and _aberta("2026-11-23-0005-mista")),
+                 ("lição avulsa: origem e ponto conferidos", not _roda(_p.licao, "maestro", "x", "-", "9", "prova") and not _roda(_p.licao, "maestro", "x", "-", "-", "qualquer")
+                  and not _roda(_p.licao, "maestro", "  ") and _roda(_p.licao, "maestro", "avulsa", "-", "3", "prova")),
+                 ("fechar de novo não repete a lição", not _roda(_p.fechar, "0002-boa", "de novo") and _ler("pedidos/LICOES.md").count("aprendi isto") == 1)]
+        _falsa("2026-11-23-0009-fechada-sem", estado="fechada em 23/11/2026")
+        casos.append(("conferir acusa fechada nova sem o campo", not _roda(_p.conferir)))
+    finally:
+        _p.RAIZ, _p.PEDIDOS = _raiz, _ped
+_ruins = [n for n, ok in casos if not ok]
+if _ruins:
+    falhas.append("lição ao fechar ficha, de ponta a ponta"); print("[ERRO] lição ao fechar ficha, de ponta a ponta: " + "; ".join(_ruins))
+else:
+    print(f"[OK ] lição ao fechar ficha, de ponta a ponta ({len(casos)} casos com fichas falsas)")
 rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executable, "ferramentas/conversas.py", "testar"])
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])

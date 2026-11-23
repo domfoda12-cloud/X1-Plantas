@@ -52,7 +52,7 @@
 | [`ferramentas/conversas.py`](ferramentas/conversas.py) | busca, só leitura, nas falas do dono nas conversas do Claude Code deste projeto, com máscara de dados (`buscar`, `testar`; o teste roda no `checar.py`) | `~/.claude/projects/<este projeto>/` (fora do repositório) |
 | [`pedidos/anexos/conversas-para-o-autor.py`](pedidos/anexos/conversas-para-o-autor.py) | anexo, não roda no sistema: cópia limpa da busca nas conversas, para o e-mail ao autor do cass (ficha `2237`) | nada |
 | [`ferramentas/pesquisa.py`](ferramentas/pesquisa.py) | caderno de pesquisa compartilhado: `buscar` antes da web, `nova` para registrar com fonte, `conferir` no `checar.py` | [`pesquisas/`](pesquisas) |
-| [`ferramentas/pedido.py`](ferramentas/pedido.py) (23) e [`ferramentas/guardar-pedido.py`](ferramentas/guardar-pedido.py) | guardam cada prompt do dono e cuidam das fichas e da [`pedidos/FILA.md`](pedidos/FILA.md) | [`pedidos/`](pedidos), [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
+| [`ferramentas/pedido.py`](ferramentas/pedido.py) (23) e [`ferramentas/guardar-pedido.py`](ferramentas/guardar-pedido.py) | guardam cada prompt do dono e cuidam das fichas e da [`pedidos/FILA.md`](pedidos/FILA.md); o `licao` e o `fechar` gravam a lição no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md` | [`pedidos/`](pedidos), [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
 
 ## 6. As pessoas e as regras em volta
 

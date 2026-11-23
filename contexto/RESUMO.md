@@ -43,7 +43,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
 
-Tamanho: 460 palavras.
+Tamanho: 496 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

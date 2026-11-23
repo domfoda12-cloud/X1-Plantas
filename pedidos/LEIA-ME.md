@@ -71,7 +71,7 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 | Correção | todo NÃO ou VETO traz a correção que vira SIM |
 | Novo e do papel | não repete o que já entrou e fica no papel dele |
 
-Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto"), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** uma linha em "Lições" do `contexto/<papel>.md` do agente (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
+Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto"), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** `python3 ferramentas/pedido.py licao <papel> "texto" --origem auditoria --ponto N` (grava no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md`, e recusa se o contexto passar do limite) (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
 
 ## Erro de sintonia entre agentes (dono, 22/11/2026)
 
@@ -106,7 +106,7 @@ Erro achado não é só corrigido: a causa vira **regra escrita ou conferência 
    Em "Quem executa", uma linha por agente chamado: **o que ele acrescenta** para chegar ao resultado que o dono quer (coluna "Acrescenta" de [`contexto/EQUIPE.md`](../contexto/EQUIPE.md)).
 4. **Execução.** O Opus passa o trabalho com o **pacote do executor** (abaixo).
 5. **Conferência (Opus).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência". Relatório de agente é afirmação, não prova: o Opus abre o arquivo, roda o comando ou olha o quadro.
-6. **Fechamento.** `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
+6. **Fechamento.** Escreva na ficha `**O que aprendi:** papel: lição` (uma por linha) ou `nada novo`; `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` grava as lições, fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
 
 ## Quem faz o quê
 
