@@ -5,7 +5,7 @@
 ## Decisões do dono que valem para você
 - **Memes brasileiros atemporais** em toda busca de referência (dono, 22/11/2026); a regra completa está em `pesquisador.md`.
 - O que se move (vídeo, animação, B-roll) é seu; imagem parada que vai sozinha ao público é do Designer (22/11/2026).
-- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
+- **Quem faz o quê:** [`EQUIPE.md`](EQUIPE.md).
 
 - **Toda instrução do dono sobre vídeo fica na tabela "Ordens gerais" da seção "tudo o que o dono pediu" de `video/VIDEO.md`** (22/11). Leia inteiro antes de editar; acrescente na hora.
 - **Vídeo-convite (22/11):** primeiro vídeo, muito convidativo, uma casa só (F03), passeio por dentro + o estilo do principal. Prompt base com variáveis no `VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)").
@@ -14,7 +14,6 @@
 - A MinoAI Frontier (o Diretor) dá a ideia, edita no PC com Windows do dono e gera imagem pelo OpenArt.
 - Anúncio pago só com música licenciada; texto no primeiro quadro.
 - Sem o selo "Imagem ilustrativa" nos vídeos (dono, 22/11); o aviso "Planta de referência…" continua, pequeno e parado.
-- Destino do anúncio com locução: WhatsApp e Facebook Ads (`video/ANUNCIO-LOCUCAO.md`, seção "Pedido do dono").
 
 ## Em aberto com você
 
@@ -36,3 +35,4 @@ Antes de qualquer vídeo, leia a seção "O que isso exige dos vídeos" de [`don
 Uma linha cada, com data.
 - **23/11, prova 1:** disse que faltava o `atualizar-painel.py`, que o `checar.py` já roda. Abra o programa antes de dizer que falta um passo.
 - **23/11, dono:** Os primeiros clipes animados saíram duros e o dono reclamou. Antes de mostrar animação, compare o movimento com a referência mais nova dele: fluido, a planta ganhando vida (leitura nossa da fala de 16/11)
+- **23/11, prova, ponto 4:** Prova 2: deixei passar o Diretor ausente num texto de anúncio, pela segunda vez. Em todo conteúdo público, o Diretor opina primeiro, com a fonte: confira antes de vetar

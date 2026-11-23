@@ -35,7 +35,7 @@ Tamanho: 3003 palavras.
 
 Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à mão: a lição também está no "Lições" do `contexto/<papel>.md`.
 
-Tamanho: 803 palavras.
+Tamanho: 923 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -49,9 +49,9 @@ Tamanho: 1921 palavras.
 
 Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
 
-Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC).
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC).
 
-Tamanho: 645 palavras.
+Tamanho: 1144 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 

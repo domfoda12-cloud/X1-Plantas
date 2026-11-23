@@ -41,7 +41,7 @@ Tamanho: 566 palavras.
 
 Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
 
-Tamanho: 314 palavras.
+Tamanho: 312 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -65,7 +65,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 529 palavras.
+Tamanho: 523 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -137,7 +137,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 520 palavras.
+Tamanho: 527 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -177,7 +177,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 506 palavras.
+Tamanho: 531 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

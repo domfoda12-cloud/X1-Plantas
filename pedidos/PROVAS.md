@@ -30,3 +30,25 @@
 **Achados fora da prova, para o dono e o Arquiteto:**
 - **C01, lote:** o catálogo e o PLANTAS dizem "a partir de 8 x 15 m"; o `plantas.py validar` diz "lote ref 8.0x13.0". Pode ser arredondamento para lote padrão ou divergência; o Arquiteto explica (não mexer à noite no texto público).
 - `contexto/arquiteto.md` está com 3498 de 3500 caracteres: a próxima lição estoura o `checar.py`; consolidar antes.
+
+## Prova 2 (23/11/2026, 14:10 a 14:40 UTC)
+
+10 planos montados pelo Fable (gabarito fora do repositório até a nota): 7 com um erro plantado (5 omissões, 2 escritos) e 3 limpos de verdade. Os mesmos 5 agentes, cada um com a sua linha do placar e o erro da prova 1 no pedido. Nota: Fable, lendo os relatórios brutos.
+
+| Agente | Achados (de 7) | Parciais | Alarmes falsos (de 3) | O que deixou passar |
+|---|---|---|---|---|
+| Revisor de risco | 7 | 0 | 0 | 2 alarmes fracos nos limpos (passo ausente virou condição) |
+| Estrategista | 7 | 0 | 0 | Nada do plantado |
+| Arquiteto | 6 | 0 | 0 | Diretor ausente (plano 7), pela segunda prova |
+| Editor de vídeo | 6 | 0 | 0 | Diretor ausente (plano 7), pela segunda prova |
+| Haiku | 6 | 1 | 0 | Medida copiada sem dizer qual (não rodou o validador); 2 alarmes fracos; 5 pontos falsos por não abrir o arquivo citado |
+
+**Gabarito** (copiado depois da nota): 1 teste de anúncio sem pedir ao parceiro contatos e vendas (caso E do A6); 2 post sem "Comente PLANTA"; 3 limpo; 4 promessa de aprovação; 5 limpo (com um problema real que o gabarito não previa); 6 medida digitada (2,49 em vez de 2,39); 7 texto de anúncio sem o Diretor; 8 limpo; 9 carrossel sem a linha "Planta de referência…" (caso R do A6); 10 pergunta do dono sem resposta tratada como sim.
+
+**Conclusões (Fable):**
+- **As lições ajudaram onde estavam escritas.** O Diretor ausente: prova 1, 1 de 5 viu; prova 2, 3 de 5. Viraram os dois que tinham a lição (Estrategista, Revisor); erraram de novo os dois sem ela (Arquiteto e Editor, com o contexto cheio).
+- **As 2 linhas do A6 acharam o seu caso, mas a prova não as provou:** os outros também acharam, porque dois planos da própria prova davam a resposta (falha de montagem). Continuam em teste (n = 1).
+- **Ajuste:** passo ausente só vira condição se uma regra escrita o exige naquele plano; senão é nota junto do SIM (Revisor, Haiku). Haiku: abrir o arquivo citado antes de dizer que há contradição.
+- **Prova 3:** sem versão limpa gêmea na mesma prova e sem plano que enuncie a regra medida.
+
+**Problemas reais achados fora do gabarito** (para consertar): o post 3 ensina "linha fina e dupla é janela", mas no nosso desenho a janela é um retângulo azul e o arco da porta só existe na planta mobiliada; "custo por contato" não existe em anúncio de comentário (decidir botão de mensagem ou contar pelo parceiro); teste de anúncio sem data de término; a pergunta "dá para construir direto?" tem duas respostas no `WHATSAPP.md`; a tabela da semana do `PAINEL.md` sem coluna de gasto; `EQUIPE.md` (Arquiteto em peça pública) contra `CONSELHO.md`; selo em imagem parada descrito de dois jeitos; "Comenta" contra "Comente PLANTA".
