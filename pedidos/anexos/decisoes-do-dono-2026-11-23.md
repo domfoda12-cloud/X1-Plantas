@@ -30,3 +30,4 @@
 | Base de plantas do Arquiteto | "Pesquise antes de revisar a casa, faz mais sentido ele revisar depois de estar mais informado" | Piloto de 30 plantas públicas primeiro; só depois o Arquiteto revisa a Casa Compacta e refaz as outras |
 | Congelar o sistema | "60% e-book 40% sistema, eu realmente quero deixar esse sistema o mais melhor possível; sempre que tiver grandes sugestões que possam ser implementadas, não tenha medo de me dizer" | Sem congelamento: divisão de 60% do trabalho no e-book e 40% no sistema; propor melhorias grandes ao dono |
 | chief-of-staff (confirmação) | "Confirmo o chief staff" | Entrada completa: leitura de tudo, veto do Revisor, adaptação; Gmail e Agenda pelos conectores do claude.ai |
+| Revisar já ou crescer a base | "B" | O Arquiteto revisa a Casa Compacta já, com as 30 de referência e a apostila; a base cresce em paralelo (mais variedade, lote desenhado, Uberlândia) |
