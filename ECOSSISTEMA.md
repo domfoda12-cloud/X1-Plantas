@@ -31,6 +31,7 @@
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
 | `ajudante` | Agente, **Haiku** | Integrado em 22/11: tarefa simples e pessoal do dono, não dos agentes. Não toca o público nem arquivo do projeto |
 | `planejador`, `revisor-de-seguranca` | Agentes da oficina de código, **Opus**, só leem | Integrados em 23/11 (everything-claude-code, MIT, ficha `0209`): o `planejador` divide tarefa grande em pedaços para a ficha (`/planejar`); o `revisor-de-seguranca` lê peça de terceiro, chave no repositório e ganchos antes do Conselho, e devolve ao `revisor-de-risco`, que tem o veto. Nenhum grava arquivo |
+| `guia-de-testes`, `consertador`, `limpador`, `atualizador-de-docs`, `testador-de-paginas` | Agentes da oficina de código, **Opus**, editam sem commit | Integrados em 23/11 (everything-claude-code, MIT, ficha `0209`): caso antes do conserto (`/tdd`), um erro por vez sem afrouxar conferência (`/build-fix`), código morto uma exclusão por vez (`/limpar-codigo`), MAPA, resumos e painel em dia, e a calculadora testada pela tela (`/e2e`; o script é o pedaço F). Nenhum tem Write; as proibições estão em cada arquivo |
 | `verificacao` (skill) e os comandos `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender`, `/ponto-de-volta` | Skill e comandos, do Maestro | Integrado em 23/11 (everything-claude-code, MIT, ficha `0209`): seção "Neste projeto" em cada um. A `verificacao` só confere; os comandos chamam um agente e guardam nele as regras |
 
 Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). A conversa principal interpreta e confere; os agentes executam.
@@ -54,6 +55,11 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
 | `planejador` (Opus; `tools:` Read, Grep, Glob) | leitura do projeto, das fichas e dos `RESUMO.md` | |
 | `revisor-de-seguranca` (Opus; `tools:` Read, Grep, Glob, Bash, só para ler) | `checar.py` (segredos e ganchos), `git log -p`, leitura do texto de terceiro no scratchpad | `npm audit` (ok do Maestro na ficha) |
+| `guia-de-testes` (Opus; `tools:` Read, Edit, Bash, Grep) | `checar.py` (lista `_casos`), `plantas.py` | |
+| `consertador` (Opus; `tools:` Read, Edit, Bash, Grep, Glob) | `checar.py`, `plantas.py validar`, `atualizar-painel.py` | instalar dependência (ficha) |
+| `limpador` (Opus; `tools:` Read, Edit, Bash, Grep, Glob, Graphify `graphify_callers` e `graphify_file_neighbors`) | `ponytail-audit` (achados), `resumos.py`, `checar.py` | apagar arquivo criado pelo dono |
+| `atualizador-de-docs` (Opus; `tools:` Read, Edit, Bash, Grep, Glob) | `resumos.py`, `atualizar-painel.py`, `MAPA-DO-SISTEMA.md` | |
+| `testador-de-paginas` (Opus; `tools:` Read, Edit, Bash, Grep, Glob) | Playwright local já instalado, `ebook/vendas/testar-calculadora.cjs` (pedaço F) | |
 
 **Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no computador do dono, dúvida, não usamos; o dono à mão, no computador dele, pode. Ficha `2151-integrar-o-cass`.
 
@@ -145,9 +151,9 @@ Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. 
 - skills/verification-loop com commands/verify: skill `verificacao` (uma porta só; modo rápido e completo; quadro final com o caso `claude/*`). Rodada de alcance: o `checar.py` verde no repositório.
 - commands/plan, tdd, e2e, code-review, build-fix, refactor-clean, learn e checkpoint: `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender` e `/ponto-de-volta`. Curtos; as proibições ficam no agente que cada um chama.
 - agents/planner (com o quadro de trade-off do architect) e agents/security-reviewer (pedaço C): `planejador` e `revisor-de-seguranca`, no Opus, só leitura, sem chamada automática.
+- agents/tdd-guide, build-error-resolver, refactor-cleaner, doc-updater e e2e-runner (pedaço D): `guia-de-testes`, `consertador`, `limpador`, `atualizador-de-docs` e `testador-de-paginas`, no Opus, sem Write, sem commit e sem chamada automática.
 
 **Lido, adaptação em pedaço seguinte** (lido; entra adaptado num pedaço seguinte da ficha `0209` e só aparece aqui com o nome quando existir):
-- agents/tdd-guide, build-error-resolver, e2e-runner, refactor-cleaner e doc-updater, com nome em português, `model` declarado e sem chamada automática.
 - A ideia de scripts/hooks/session-start.js e de suggest-compact.js, reescrita em Python, só com o "sim" do dono e sem nunca bloquear.
 
 **Fora, com o motivo:**

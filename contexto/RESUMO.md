@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 21 documentos
+## Os 23 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -35,7 +35,7 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Prompt sem papel.
 
-Tamanho: 576 palavras.
+Tamanho: 571 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 
@@ -163,6 +163,14 @@ Seções: Decisões do dono que valem para você; Em aberto com você; Onde olha
 
 Tamanho: 423 palavras.
 
+### [Contexto do Planejador (oficina de código)](planejador.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; Como você entra no fluxo; Leia barato; Lições.
+
+Tamanho: 209 palavras.
+
 ### [Contexto do Redator](redator.md)
 
 Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
@@ -178,6 +186,14 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
 Tamanho: 554 palavras.
+
+### [Contexto do Revisor de segurança (oficina de código)](revisor-de-seguranca.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 212 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

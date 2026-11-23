@@ -43,7 +43,8 @@ PASTAS = {
     "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
                 ["pedidos", "pedidos/anexos"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
-                    ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "planejador", "revisor-de-seguranca"]),
+                    ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "planejador", "revisor-de-seguranca", "guia-de-testes",
+                     "consertador", "limpador", "atualizador-de-docs", "testador-de-paginas"]),
 }
 FORA = ("contexto/entregas/", ".claude/", "node_modules/", "pedidos/2")  # pedidos/2…: as fichas, uma por pedido  # têm leitor próprio (ULTIMO.md, a skill, o agente)
 GERADOS = ("RESUMO.md", "INDICE.md", "FILA.md")
@@ -133,7 +134,8 @@ def gerar():
     indice += ("\n## Por agente\n\n" + "".join(
         f"- **{ag}:** " + ", ".join(f"[{PASTAS[c][0]}]({(Path(c) / ('RESUMO-RAIZ.md' if c == '.' else 'RESUMO.md')).as_posix()})"
                                     for c in PASTAS if ag in PASTAS[c][3] or "todos" in PASTAS[c][3]) + "\n"
-        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "diretor", "pesquisador", "redator", "revisor-de-risco", "supervisor", "planejador", "revisor-de-seguranca"]))
+        for ag in ["arquiteto", "designer", "editor-video", "estrategista", "diretor", "pesquisador", "redator", "revisor-de-risco", "supervisor", "planejador", "revisor-de-seguranca",
+                   "guia-de-testes", "consertador", "limpador", "atualizador-de-docs", "testador-de-paginas"]))
     (RAIZ / "INDICE.md").write_text(indice, encoding="utf-8")
 
 

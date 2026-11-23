@@ -24,7 +24,7 @@
 | `revisor-de-risco` (veto) | Honestidade, lei | Promessa sem lastro? A correção |
 | `supervisor` (Fable) | Socorro, auditoria, reprodução de referências | A causa; o que falta para imitar a referência |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
-| **Oficina de código** (Opus): `planejador`, `revisor-de-seguranca` | Plano em pedaços; segurança do código, só aponta | Pedaços de até 30 arquivos; chave ou gancho de risco |
+| **Oficina de código** (Opus): `planejador`, `revisor-de-seguranca`, `guia-de-testes`, `consertador`, `limpador`, `atualizador-de-docs`, `testador-de-paginas` | Código, nunca o público | Plano, segurança, caso, conserto, limpeza, docs, tela |
 
 ## Veto
 
@@ -32,7 +32,7 @@ Toda resposta de veto passa pela régua de 5 pontos (objetivo, lugar, prova, cor
 
 ## Fronteiras
 
-Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md`](CONVIVENCIA.md).
+Regras de convivência (o que já deu errado): [`CONVIVENCIA.md`](CONVIVENCIA.md).
 
 - Designer e Editor usam o Diretor; geração no OpenArt só com o "sim" do dono.
 - Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` acha; conclui o Arquiteto, o Estrategista ou um geral no Opus.
