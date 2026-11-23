@@ -9,6 +9,10 @@ As always, better the functionality of the agents make them smarter, idk how to 
 
 *Recado de 23/11 10:47:* Agora é a hora que você tem para me mandar todas as perguntas pendentes
 
+*Recado de 23/11 10:50:* Sinto que o método de ensino e pesquisa dos agentes está bem fraco, queria colocar uma base de dados grande com informações neles, como poderia fazer isso?
+Por exemplo nosso arquiteto, gostaria que ele tivesse centenas de plantas como referência mas não me parece muito possível com minhas ferramentas
+Não procuro ruas famosos, mais como memes históricos
+
 **O que ele pediu, parte por parte:** (1) Fazer os três testes de funcionamento real das ferramentas novas que propus (marketing-psychology num texto real; everything-claude-code na cópia separada; como se encaixam). (2) Achar funções que a equipe não cobre (ele deu o exemplo "ensinar") e pôr no sistema. (3) Deixar os agentes mais inteligentes; ele não sabe como e confia no Maestro.
 
 **Por que ele pediu, ou o que quer descobrir:** Voltou, achou pouco o trabalho da noite e perguntou se as ferramentas de ontem foram testadas de verdade (não foram).

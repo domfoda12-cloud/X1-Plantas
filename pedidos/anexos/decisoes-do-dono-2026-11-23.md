@@ -25,6 +25,6 @@
 | find-skills | "Pode instalar sozinho, caso passe pelo veto" | Entra; ferramenta achada só se instala depois da ficha e do veto |
 | Travar npx, npm install, rm -rf | Sim | Trava no `.claude/settings.json` |
 | Ordem e-book, animações, vídeo | "Redirecione a ordem para o que faz mais sentido para você" | O Maestro decide: e-book primeiro (é o que destrava a venda) |
-| Nome da rua | "Procure referências na internet…" | Pesquisa de referências (já há 15 ruas no caderno, ficha 2247); opções ao dono |
+| Nome da rua | "Procure referências na internet…"; depois: "Não procuro ruas famosas, mais como memes históricos" | Pesquisar nomes de rua tirados de **memes históricos brasileiros** (não ruas famosas); opções ao dono |
 | E-mail ao autor do cass | Eu mando | Rascunho em `pedidos/anexos/email-autor-cass.md` |
 | Congelar o sistema 7 dias | "Explique melhor" | Explicar ao dono |
