@@ -1,4 +1,6 @@
-# Rascunho: e-mail ao autor do cass (para o dono mandar)
+# E-mail ao autor do cass: ENVIADO em 23/11/2026 do Gmail do dono, com o sim dele, assinado "Dominic de Lima, a solo founder"
+
+(Abaixo, o rascunho de origem.)
 
 > Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md`. O dono troca os campos entre colchetes e manda **do e-mail dele, em particular** (não como issue pública). Esta sessão não manda e-mail. O endereço do autor não está aqui: pegue no perfil dele no GitHub (github.com/Dicklesworthstone) ou no site dele. Anexe `pedidos/anexos/conversas-para-o-autor.py` (a cópia limpa, sem nada do projeto), **não** a cópia do repositório. Os colchetes são escolha sua (o Fable marcou que eu não sei se "solo founder" é verdade).
 >

@@ -35,3 +35,4 @@
 | Banheiro da Casa Compacta | Economia de cano | Banheiro e quartos abrindo para a sala, encostados na cozinha (parede de canos única), como FNHIS e CAR-BA |
 | Validador | "Sim" (endurecer com as 5 regras das referências) | Primeiro como aviso, com a lista do que está fora em cada casa |
 | E-mail ao autor do cass | "Quero também que mande o e-mail"; assina Dominic de Lima, fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
+| E-mail ao autor do cass | "Sim" (depois de ver o texto final) | Enviado em 23/11 do Gmail do dono, com a cópia limpa da busca em anexo |
