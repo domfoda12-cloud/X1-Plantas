@@ -9,7 +9,31 @@
 >
 > **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
 >
-> Campos entre [colchetes]: preencha depois de o dono decidir preço, título, garantia, bônus e atualizações ([painel](../../PAINEL.md), seção 9). Até lá, não mande o campo como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
+> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): título **Antes do primeiro tijolo** (o subtítulo vai só no anúncio); só a Casa Compacta é grátis; garantia de 7 dias; bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas (a Casa Compacta e mais 2, ainda sem nome). **Não se prometem as próximas casas.**
+>
+> Campos entre [colchetes] ainda esperam o dono: **[preço]** (ele vai testar dois preços, valores a definir), o número do WhatsApp e a chave Pix, e os nomes das outras 2 casas. Até lá, não mande o campo como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
+>
+> Os números da Casa Compacta abaixo são os da C01 de hoje. Quando a Casa Compacta com hall for aprovada, troque-os pelos da ficha nova em [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md) antes de ligar a resposta automática.
+
+### Resposta automática a quem comenta PLANTA
+
+> Liga uma vez, no Instagram, e responde sozinha (dono, 23/11: "sim"). Qual ferramenta faz isso (a resposta automática do próprio Instagram ou outra) ainda não foi escolhido: **suposição**, a confirmar. Use 3 versões da resposta pública e alterne, para não sair a mesma frase em todo comentário.
+
+**Resposta pública, no comentário (alternar):**
+
+- "Te mandei no Direct, [nome]! A planta está lá."
+- "Mandei no seu Direct. Confere lá!"
+- "Já está no seu Direct, [nome]. Separa a medida do seu lote."
+
+**Mensagem no Direct (automática):**
+
+Oi, [nome]! A planta grátis é a **Casa Compacta**: 2 quartos, 50 m², cabe num lote de 8 x 15 m.
+
+Clica aqui que ela chega no seu WhatsApp: [link do WhatsApp: wa.me/ + o número do `ebook/config.json`, com a mensagem pronta "Oi! Quero a planta grátis da Casa Compacta."]
+
+Já separa a medida do seu lote (frente e fundo): lá eu te digo se ela cabe.
+
+> A mensagem pronta no link poupa a pessoa de escrever: ela só aperta "enviar". Quando essa mensagem chega, o Dia 0 abaixo sai como resposta pronta do WhatsApp Business.
 
 ### Dia 0: entrega da planta grátis (logo após o comentário "PLANTA")
 
@@ -27,15 +51,14 @@ Ela cabe num terreno de 8 x 15 m (no mínimo 8 x 13 m), com os recuos de referê
 
 **Se a pessoa mandou as medidas:**
 
-Com [frente] x [fundo] m, essas plantas cabem no seu terreno com os recuos de referência (os da sua cidade, você confirma na prefeitura):
+Com [frente] x [fundo] m, estas casas cabem no seu terreno com os recuos de referência (os da sua cidade, você confirma na prefeitura):
 
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
-- **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-Todas estão no e-book **[título]**, que tem [nº] casas. Quer ver uma delas inteira, mobiliada e desenhada no lote?
+Elas estão no e-book **Antes do primeiro tijolo**. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
-> Use a [calculadora de lote](calculadora-lote.html) (ou a coluna **Lote** do [catálogo](../catalogo.md)) para escolher 2 ou 3 casas com lote mínimo menor ou igual ao terreno. Ofereça só casas que estão no PDF que a pessoa vai receber: hoje são as 24 (nota para o parceiro, não vai ao cliente). **[lançamento: sair com 12 ou com 24, a definir pelo dono]**; se sair com 12, ofereça só as da leva 1.
+> O lançamento sai com **3 casas**: a Casa Compacta e mais 2, que o dono ainda vai definir (nota para o parceiro, não vai ao cliente). Use a [calculadora de lote](calculadora-lote.html) e ofereça só as 3 do lançamento que tenham lote mínimo menor ou igual ao terreno. Se nenhuma couber, diga com franqueza: "Com essa medida, nenhuma das 3 casas do e-book cabe com os recuos de referência." Não venda casa que não cabe.
 
 **Se a pessoa ainda não tem terreno:**
 
@@ -53,11 +76,13 @@ Oi, [nome]! Olha como fica a **[nome da planta]** por dentro, mobiliada e vista 
 
 No e-book ela vem com a planta mobiliada e as medidas, a casa desenhada no lote, a vista da rua e as perguntas para levar ao engenheiro.
 
+Quer que eu te mostre tudo o que vem no e-book?
+
 > Não existe animação de nenhuma casa ainda. A imagem 3D é ilustrativa: móveis e acabamentos não vêm junto.
 
 ### Dia 3: a oferta
 
-Oi, [nome]! O e-book **[título]** tem [nº] plantas de casas, para terreno estreito, primeira casa e família.
+Oi, [nome]! O e-book **Antes do primeiro tijolo** tem 3 casas térreas: a Casa Compacta e mais [nomes das outras 2 casas: a definir pelo dono].
 
 Cada casa vem com:
 - a planta mobiliada, com as medidas;
@@ -68,14 +93,38 @@ Cada casa vem com:
 E mais:
 - "ache pelo seu lote": cada frente de lote com as casas que cabem;
 - os 7 erros de planta que saem caro, com o jeito certo;
-- a ficha do seu terreno e os passos do e-book até a chave na mão;
-- [bônus e promessa de atualização: a definir pelo dono].
+- a ficha do seu terreno e os passos do e-book até a chave na mão.
 
-Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4] nos catálogos. No e-book são [nº] casas, cada uma mobiliada e desenhada no lote.
+Bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro.
 
-Valor de lançamento: **R$ [preço]** no Pix[, ou parcelado no cartão: a definir pelo dono]. [garantia: a definir pelo dono]
+Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4] nos catálogos. No e-book são 3 casas, cada uma mobiliada e desenhada no lote.
 
-Quer o link?
+Valor de lançamento: **R$ [preço]**, no Pix, aqui mesmo. Você recebe o e-book por link logo depois. E tem 7 dias: se achar que não é para você, me fala e eu devolvo o seu Pix.
+
+Quer que eu te mande a chave Pix?
+
+> **[preço]:** o dono vai testar dois preços (valores a definir). **Suposição, a confirmar com o Estrategista:** cada pessoa recebe um preço só, do começo ao fim, e o parceiro anota qual foi. Os bônus só entram nesta mensagem quando estiverem prontos no PDF.
+
+### Pagamento e entrega: Pix aqui no WhatsApp, e-book por link
+
+**Quando a pessoa disser sim:**
+
+Combinado, [nome]! A chave Pix é **[chave Pix: a definir pelo dono]**, em nome de [nome de quem recebe]. O valor é **R$ [preço]**.
+
+Assim que pagar, me manda o comprovante aqui que eu te envio o link do e-book.
+
+**Quando o Pix cair:**
+
+Recebi, [nome]. Obrigado! Aqui está o seu e-book **Antes do primeiro tijolo**:
+
+[link do Google Drive]
+
+Ele abre no celular e dá para baixar para imprimir. Qualquer dúvida sobre as casas ou sobre o seu lote, é só me chamar aqui.
+
+> **Para o parceiro (não vai ao cliente):**
+> - Só mande o link depois de ver o Pix no aplicativo do banco. Comprovante sozinho não basta: existe comprovante falso.
+> - O link do Drive fica em "qualquer pessoa com o link pode ver", nunca "editar".
+> - Anote a data do Pix: a garantia de 7 dias conta dela. Se a pessoa pedir a devolução dentro do prazo, devolva o Pix para a mesma conta que pagou. Pode perguntar o motivo depois, para aprender, mas a devolução não depende da resposta.
 
 ### Dia 5: a dúvida que trava
 
@@ -91,8 +140,8 @@ Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O pre
 
 ### Depois da compra
 
-- **Na hora:** envie o PDF e agradeça. Pergunte qual planta ela mais gostou e **"você vai construir agora, financiar ou construir para alugar?"**. A resposta diz qual perfil compra mais ([estratégia](../../ESTRATEGIA.md), seção 3) e vai para o painel.
-- **A cada lançamento novo:** [se o dono decidir que quem comprou recebe as novas sem pagar] envie as plantas novas. Peça para indicar alguém que está planejando construir.
+- **Na hora:** envie o link do e-book (mensagem "Quando o Pix cair", acima) e agradeça. Pergunte qual planta ela mais gostou e **"você vai construir agora, financiar ou construir para alugar?"**. A resposta diz qual perfil compra mais ([estratégia](../../ESTRATEGIA.md), seção 3) e vai para o painel.
+- **Casas novas:** não prometa (dono, 23/11: "ainda não sei"). Se a pessoa perguntar, responda como no FAQ ("Vou receber as plantas novas?"). Peça para indicar alguém que está planejando construir.
 
 ### Regras do funil
 
@@ -112,7 +161,7 @@ Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O pre
 
 ### "É caro."
 
-Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4], e aqui são [nº], cada uma desenhada no lote. [pagamento: parcelar no cartão, se o dono decidir.] E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
+Entendo. Pensa assim: uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4], e aqui são 3, cada uma desenhada no lote. E você só precisa acertar uma: escolher a errada sai bem mais caro na obra. Qual é o tamanho do seu terreno? Te mostro quais plantas do e-book cabem nele, para você ver se vale.
 
 ### "Não tenho terreno ainda."
 
@@ -138,11 +187,11 @@ Com elas você escolhe a casa que cabe no seu terreno e chega no profissional sa
 
 ### "E se eu não gostar?"
 
-[garantia: a definir pelo dono. Até lá, use a resposta de "Posso ver antes de pagar?".]
+Você tem 7 dias: se achar que não é para você, me fala aqui e eu devolvo o seu Pix. E antes de pagar você já viu a planta grátis, que é igual às páginas do e-book. Quer que eu te mostre as casas que cabem no seu terreno?
 
 ### "Posso ver antes de pagar?"
 
-Pode: a planta grátis que você recebeu é uma página igual às do e-book. Quer ver mais uma, das que cabem no seu terreno?
+Pode: a planta grátis que você recebeu é uma página igual às do e-book. Quer que eu te mostre, em 3D, as casas do e-book que cabem no seu terreno?
 
 ### Regras para as respostas
 
@@ -156,26 +205,26 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
 >
-> Campos entre [colchetes]: preencha depois de o dono decidir preço, título, pagamento, garantia e atualizações ([painel](../../PAINEL.md), seção 9). Até lá, não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
+> Decidido em 23/11 (dono): título, garantia de 7 dias, bônus, Pix pelo WhatsApp e entrega por link. Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
 >
 > O que o e-book tem de verdade está em [`../EBOOK.md`](../EBOOK.md), seções 2 e 3. Não prometa nada que não esteja lá.
 
 ### Sobre o e-book
 
 **O que vem no e-book?**
-[nº] casas térreas, num PDF de [nº] páginas. Cada casa tem duas páginas: a planta mobiliada com as medidas, a casa desenhada no lote mínimo, a ficha com área, quartos, banheiros e o melhor lado da rua, a vista da rua, a casa em 3D, para quem é e para quem não serve, e as perguntas para levar ao engenheiro. Também vêm o "ache pelo seu lote", os 7 erros de planta que saem caro, como ler uma planta, a ficha do seu terreno e os passos do e-book até a chave na mão. [bônus: a definir pelo dono]
+3 casas térreas, num PDF de [nº de páginas: sai do PDF do lançamento]. Cada casa tem duas páginas: a planta mobiliada com as medidas, a casa desenhada no lote mínimo, a ficha com área, quartos, banheiros e o melhor lado da rua, a vista da rua, a casa em 3D, para quem é e para quem não serve, e as perguntas para levar ao engenheiro. Também vêm o "ache pelo seu lote", os 7 erros de planta que saem caro, como ler uma planta, a ficha do seu terreno e os passos do e-book até a chave na mão. De bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro.
 
 **Vou receber as plantas novas?**
-[promessa de atualização: a definir pelo dono. Até lá, responda: "Hoje o e-book tem [nº] casas. Se sair versão nova, te aviso aqui."]
+Hoje o e-book tem 3 casas. Se sair casa nova, te aviso aqui. (Não prometa casa nova de graça: o dono ainda não decidiu.)
 
 **Como recebo?**
-Em PDF, pelo WhatsApp [ou e-mail], logo depois da confirmação do pagamento.
+Por um link do Google Drive, aqui no WhatsApp, logo depois que o Pix cair. Você abre no celular ou baixa para imprimir.
 
 **Quais formas de pagamento vocês aceitam?**
-[Preencher: PIX, cartão, boleto.]
+Pix, direto aqui pelo WhatsApp.
 
 **E se eu não gostar?**
-[garantia: a definir pelo dono. Até lá, não prometa devolução: mostre a planta grátis, que é igual às páginas do e-book.]
+Você tem 7 dias depois da compra: se achar que não é para você, me fala aqui e eu devolvo o seu Pix.
 
 ### Sobre as plantas
 
@@ -225,18 +274,9 @@ Depende do construtor, do clima e da aprovação na prefeitura. Não damos prazo
 | 2 | A casa no lote mínimo, a "Informação da casa", a vista da rua, a casa em 3D, "por que esta planta é assim" e as perguntas para o engenheiro |
 | 3 | "No seu lote cabem mais casas": as outras casas do e-book que cabem num lote de 8 x 15, a fita métrica e o convite para mandar a medida do lote |
 
-**Mande a casa que cabe no lote do cliente.** Há 5 plantas grátis prontas em `ebook/saida/` (lista em `ebook/config.json`, chave `plantas_gratis`):
+**Só a Casa Compacta é grátis** (dono, 23/11/2026; `ebook/config.json`, chave `plantas_gratis`). Mande `planta-gratis-C01.pdf` para todo mundo. Os PDFs grátis de E02, E03, C06 e F01 que ainda estão em `ebook/saida/` não vão mais ao cliente.
 
-| Lote do cliente (frente) | Planta grátis |
-|---|---|
-| 5 m | `planta-gratis-E03.pdf` (Casa Fita) |
-| 7 m | `planta-gratis-E02.pdf` (Casa Corredor) |
-| 8 m, quer 2 quartos | `planta-gratis-C01.pdf` (Casa Compacta) |
-| 8 m, quer 3 quartos | **[a definir pelo dono]**: a E07 saiu da lista em 22/11, porque o arranjo dela (3 quartos em fila) está na fila do redesenho. Até lá, mande a C01 e pergunte se 2 quartos servem |
-| 9 m ou mais, quer suíte | `planta-gratis-C06.pdf` (Casa Compacta Suíte) |
-| 10 m ou mais, 3 quartos | `planta-gratis-F01.pdf` (Casa Família Compacta) |
-
-Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calculadora-lote.html).
+Se a Casa Compacta não couber no lote da pessoa, diga com franqueza e confira na [calculadora de lote](calculadora-lote.html) se alguma das 3 casas do e-book cabe.
 
 **Não mande as imagens antigas** de `animacoes-3d/plantas/casa-compacta/` (03-perspectiva, animação etc.) nem o mockup `../visual/mockups/casa-c01-celulares.png`: são do desenho antigo da C01, de antes do redesenho de 22/11/2026. A imagem 3D atual de cada casa está em `../visual/3d/<ID>.jpg` e já sai dentro do PDF. Animação ainda não existe para nenhuma casa.
 
@@ -262,7 +302,7 @@ Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calc
 
 ### 3. O convite no fim da planta grátis
 
-A página 3 do PDF abre com **"Essa foi 1 de [nº de casas do e-book]"** (hoje 24; o número sai do PDF) e fecha com o convite:
+A página 3 do PDF abre com **"Essa foi 1 de [nº de casas do e-book]"** (o número sai do PDF; o PDF de hoje ainda diz 24 e lista casas fora do lançamento: gerar de novo com as 3 antes de mandar) e fecha com o convite:
 
 > **Me fala a frente do seu lote.** Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.
 

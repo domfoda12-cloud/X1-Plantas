@@ -158,7 +158,7 @@ Anote aqui cada teste para saber o que funciona.
 **Nome de exibição:** Plantas de Casas | Arquitetura Residencial
 
 **Bio (até 150 caracteres):**
-> As casas que cabem no seu lote 🏠 Veja em 3D antes de construir. Comenta PLANTA e ganhe uma 👇
+> As casas que cabem no seu lote 🏠 Veja em 3D antes de construir. Comente PLANTA e ganhe uma 👇
 
 **Link na bio:** link do seu WhatsApp ou da página que seu parceiro montar.
 

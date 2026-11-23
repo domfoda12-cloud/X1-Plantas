@@ -63,7 +63,7 @@ SE FOR O ANÚNCIO COM LOCUÇÃO
 REGRAS QUE NUNCA MUDAM
 - Nunca dizer nem dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto.
 - Nunca prometer aprovação na prefeitura ou no banco, prazo de obra ou custo exato de construção.
-- Chamada final sempre: "Comenta PLANTA".
+- Chamada final sempre: "Comente PLANTA".
 - Mostre o plano de edição antes de renderizar quando a edição for maior que só legenda.
 
 ENTREGA
@@ -101,7 +101,7 @@ Vídeos/X1-Plantas/
 | Tipo | Duração | Estrutura | B-roll |
 |---|---|---|---|
 | **Anúncio (v1 a v5)** | 38 s | Já definida pela camada ([`../video/VIDEO.md`](../video/VIDEO.md)) | A própria camada |
-| **Planta da semana** | 15 a 25 s | Gancho com a medida do lote → passeio pela casa → "Comenta PLANTA" | `animacao.mp4` da planta, depois blueprint e perspectivas |
+| **Planta da semana** | 15 a 25 s | Gancho com a medida do lote → passeio pela casa → "Comente PLANTA" | `animacao.mp4` da planta, depois blueprint e perspectivas |
 | **Cabe no seu lote** | 20 a 30 s | "Tem um lote [medida]?" → 3 casas que cabem, uma por bloco → chamada | Planta humanizada de cada casa |
 | **Erro que sai caro** | 15 a 25 s | Gancho do erro → por que sai caro → a planta mostrando o certo → chamada | Blueprint e planta humanizada |
 | **É possível…?** | 40 a 70 s | Pergunta → por que é difícil → processo, com o que deu errado → resultado → chamada | Gravação de tela do processo + animação da planta no fim |
@@ -361,7 +361,7 @@ Depois dos três itens vem a **visão geral** ("você tem a força de 100 pessoa
 | Fala contínua, uma única pausa proposital | Feito |
 | Imagem nova a cada 4 s, nada parado | Feito |
 | Promessa de que o último é o pior | Feito (ganchos v3 e v4) |
-| Chamada de uma linha ("Comenta PLANTA") | Feito |
+| Chamada de uma linha ("Comente PLANTA") | Feito |
 | Texto do gancho diferente da fala | Feito |
 | Glossário na tela (recuo, peitoril, nascente, hall, planta humanizada) | Feito |
 | Custo de cada erro, com o valor riscado | **Falta:** precisa de valores reais |

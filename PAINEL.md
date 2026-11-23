@@ -72,7 +72,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 - **Quem:** quem tem um lote e vai construir, quase sempre **com pedreiro e sem arquiteto** (a maioria das obras particulares, segundo a pesquisa CAU/BR e Datafolha de 2015; em texto público, sem percentual), muitas vezes **por etapas**.
 - **A primeira pergunta dessa pessoa:** "que casa cabe no meu lote?".
 - **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **casa que cresce**.
-- **Lançar com 12 ou com as 24 casas, preço, garantia, título e bônus:** decisão do dono, **em aberto** ([`CONTEXTO.md`](CONTEXTO.md)). As recomendações estão em [`ESTRATEGIA.md`](ESTRATEGIA.md), seção 7.
+- **Decidido pelo dono em 23/11/2026** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): lançamento com **3 casas** (a Casa Compacta e mais 2 a definir); título "Antes do primeiro tijolo"; só a Casa Compacta grátis; garantia de 7 dias; bônus: checklist da obra por fase e perguntas para levar ao engenheiro; Pix direto pelo WhatsApp e e-book por link. **Em aberto:** os valores dos dois preços em teste e as outras 2 casas ([`CONTEXTO.md`](CONTEXTO.md)). Funil: [`ebook/vendas/WHATSAPP.md`](ebook/vendas/WHATSAPP.md).
 
 ## 4. A conta que diz se o anúncio paga
 
@@ -168,11 +168,11 @@ Ficam num lugar só: [`CONTEXTO.md`](CONTEXTO.md), "Em aberto". As opções e a 
 |---|---|
 | **Quem assina o desenho.** A Lei 5.194/1966 (art. 13) diz que plantas e projetos só têm valor jurídico diante das autoridades quando feitos por profissional habilitado; o art. 6º trata do exercício da profissão sem registro. As plantas do e-book são feitas por quem não é arquiteto nem engenheiro. ([pesquisa](reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)) | Apresentar o e-book como **referência**, nunca como projeto. Ter um **arquiteto registrado** revisando e assinando as plantas, e confirmar com ele e com um advogado como isso aparece no produto. Não é parecer jurídico |
 | **Responsabilidade técnica.** Para construir e aprovar na prefeitura, a obra precisa de projeto com profissional habilitado | Escrever no e-book (capa interna e cada página) que as plantas são **de referência**, não projeto executivo, e que a obra precisa de responsável técnico. Confirmar o texto com um arquiteto |
-| **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Combinar com o parceiro como devolver o dinheiro; deixar a política escrita na oferta |
+| **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Garantia de 7 dias decidida (dono, 23/11): devolver o Pix para a mesma conta que pagou; a política está escrita na oferta e no passo a passo do Pix ([`WHATSAPP.md`](ebook/vendas/WHATSAPP.md)) |
 | **Direitos autorais** | Só plantas originais ou com licença escrita de venda. Nada de imagem de terceiros no e-book |
 | **Regras de anúncio da Meta** para imóveis e construção | Conferir no Gerenciador de Anúncios antes de subir cada campanha, porque as regras mudam |
 | **Medidas provisórias** | Nenhuma planta passa para `pronta` sem revisão de medidas |
-| **Promessa do anúncio maior que o e-book** | O anúncio promete economia com um arquiteto; o e-book precisa mostrar, em cada planta, os erros que ela evita |
+| **Promessa do anúncio maior que o e-book** | Nenhum anúncio no ar promete economia com arquiteto: as versões desse ângulo foram apagadas em 22/11/2026. O ângulo "economia com arquiteto" fica **guardado como opção**; se voltar, o Revisor de risco confere antes, e o e-book precisa mostrar, em cada planta, os erros que ela evita |
 
 ## 11. Rotina
 

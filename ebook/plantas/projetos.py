@@ -63,12 +63,14 @@ def todas():
 
     # ---------------------------------------------------------------- Casas compactas (C)
     # C01 redesenhada em 22/11/2026 (apostila 2 + Portaria MCID 725): parte da casa de referência da CAR-BA.
-    # Varanda de entrada, sala e jantar, cozinha nos fundos aberta para a sala, hall curto no lugar do corredor,
-    # banheiro de 1,50 m livres entre os dois quartos e serviço ao lado da cozinha, com porta para o quintal.
+    # Revisada em 23/11/2026 (rascunho C01R, "com hall", escolha do dono): coluna social de 3,35 m, varanda de 1,20 m,
+    # sala e jantar de 4,20 m de fundo (cabe a mesa de 4) e serviço de 1,40 m (1,19 m livres, como nas referências).
+    # Varanda de entrada, cozinha nos fundos aberta para a sala, hall curto no lugar do corredor,
+    # banheiro de 1,84 x 1,68 m livres entre os dois quartos e serviço com porta para o quintal.
     P.append(casa("C01", "Casa Compacta", 6.5, 8.5,
-                  V((3.5, H((1.4, F("varanda", "Varanda", "varanda")),
-                            (4.0, F("sala", "Sala e jantar", "sala")),
-                            (None, V((1.2, F("servico", "Serviço", "servico")),
+                  V((3.35, H((1.2, F("varanda", "Varanda", "varanda")),
+                            (4.2, F("sala", "Sala e jantar", "sala")),
+                            (None, V((1.4, F("servico", "Serviço", "servico")),
                                      (None, F("cozinha", "Cozinha", "cozinha")))))),
                     (None, H((3.3, F("quarto2", "Quarto", "dorm")),
                              (1.8, V((1.1, F("circ", "Hall", "circ")), (None, F("banho", "Banheiro", "banho")))),
@@ -77,7 +79,7 @@ def todas():
                    ("sala", "circ", "aberto"), ("circ", "quarto2"), ("circ", "banho"), ("circ", "quarto1"),
                    ("cozinha", "servico"), ("ext", "servico", "fundos")],
                   "2 quartos", 1,
-                  destaque="Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura"))
+                  destaque="Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura"))
     P.append(casa("C02", "Casa Studio", 4.5, 7.2,
                   H((4.0, F("estar", "Sala e cama", "estar")),
                     (None, V((2.7, F("cozinha", "Cozinha", "cozinha")),

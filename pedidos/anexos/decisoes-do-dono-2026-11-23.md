@@ -65,3 +65,11 @@
 | Resumo da manhã | Só quando eu pedir | Sem agendamento |
 | Pasta no Drive | Sim (sem nome) | Perguntar o nome |
 | Mais alguma coisa | "Eu respondi isso sozinho" | O sócio não respondeu |
+| Refazer (19:10) | "Quero que REFAÇA, começando por essa nova casa, pensando em Google Drive e uma forma comprimida de mandar por PDF em caso de emergência; escolha os estilos que achar melhor: A" | A Casa Compacta com hall (C01R) vira a oficial; estilo 1 nas casas e 3 na capa e no Instagram; entrega por link do Google Drive e um PDF comprimido de emergência |
+| Pasta no Drive | "Crie o nome você mesmo" | O Maestro escolhe o nome |
+| Casa do lote estreito | Casa Fita com 2 quartos | O Arquiteto tenta 2 quartos em 5 m; se não couber, 1 quarto |
+| Casa de família | Família Compacta (F01) | Conserto leve, continuar cabendo em 10 m |
+| Preços do teste | R$ 47 x R$ 67, semanas alternadas, começando pelo R$ 47 | — |
+| O que vai de graça | "Decidindo se vai tudo de graça, o que vai de graça, se vai ser um atendimento personalizado..." | Em aberto, o dono está decidindo |
+| everything-claude-code | Levar e terminar tudo | Terminar os agentes, os comandos e os avisos (só o do quadro e o contador), e levar à main com pull request |
+| WhatsApp do negócio | Número dado pelo dono | Entra no `ebook/config.json` |

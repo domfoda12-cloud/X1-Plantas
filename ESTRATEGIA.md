@@ -93,7 +93,7 @@
 
 ## 8. Ângulos de anúncio
 
-Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez (as 5 versões do vídeo atual são do ângulo "economia com arquiteto").
+Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez. Nenhum vídeo do ângulo "economia com arquiteto" está no ar: as versões feitas foram apagadas em 22/11/2026; o ângulo fica guardado como opção, e o Revisor de risco confere antes de voltar.
 
 | Ângulo | Gancho de exemplo | Perfil |
 |---|---|---|
@@ -120,10 +120,10 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez (as 5 vers
 
 | Etapa | Duração | O que acontece |
 |---|---|---|
-| **Aquecimento** | 2 a 3 semanas | Reels e anúncios com "Comenta PLANTA"; quem comenta recebe a planta grátis e entra na lista do WhatsApp. Medimos qual ângulo traz contato mais barato |
+| **Aquecimento** | 2 a 3 semanas | Reels e anúncios com "Comente PLANTA"; quem comenta recebe a planta grátis e entra na lista do WhatsApp. Medimos qual ângulo traz contato mais barato |
 | **Abertura** | 7 dias | E-book aberto para a lista com preço de lançamento e bônus. Mensagens da [sequência do WhatsApp](ebook/vendas/WHATSAPP.md) |
 | **Sempre aberto** | Depois | Anúncio do ângulo vencedor rodando; cada planta nova vira post e mensagem para quem já comprou |
-| **2º e 3º lançamentos** | A cada leva | Preço sobe; quem comprou recebe as plantas novas e é convidado a indicar |
+| **2º e 3º lançamentos** | A cada leva | Preço sobe; quem comprou é convidado a indicar. Casa nova para quem já comprou só se o dono decidir (23/11: "ainda não sei"); não se promete |
 
 ## 11. O que medir para saber se a estratégia está certa
 
