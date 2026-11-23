@@ -9,7 +9,7 @@
 
 ## C01 redesenhada em 22/11/2026: o que vale agora
 
-- **Casa Compacta (C01): 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m), frente para o norte** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais). Os 55 m², os "10% de circulação" e o quarto de 3,25 x 3,90 m eram do desenho antigo e saíram das legendas abaixo.
+- **Casa Compacta (C01): 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m), frente para o norte** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: um hall curto distribui, a varanda recebe e o banheiro passa de 1,80 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais).
 - **Toda imagem da C01 nesta pasta é do desenho antigo** (`imagens/`, gerada em 20/11, antes do redesenho): posts 2 (tela 2), 3, 6, 8, 9 e a reserva estão marcados **refazer: C01 redesenhada**. Gere as imagens 2D da C01 de novo e rode o gerador antes de publicar. Os textos das telas que ficam dentro do `gerar-imagens.cjs` também são do desenho antigo.
 
 ## Ajustes depois da estratégia (20/11/2026)
@@ -93,7 +93,7 @@ Essa é a Casa Compacta:
 🚿 1 banheiro
 📏 cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m)
 
-Sem corredor comprido: a sala distribui, a varanda cobre a porta da sala e o banheiro passa de 1,80 m de largura. Tudo em escala, com os móveis no lugar.
+Sem corredor comprido: um hall curto distribui, a varanda cobre a porta da sala e o banheiro passa de 1,80 m de largura. Tudo em escala, com os móveis no lugar.
 
 Quer receber essa planta humanizada de graça? Comente PLANTA que eu te mando no WhatsApp.
 
@@ -111,7 +111,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | Tela | Texto |
 |---|---|
 | 1 | *compare antes de escolher* · **3 casas, 3 terrenos. Qual cabe no seu?** · miniaturas com o lote: 8 x 15 (51 m²), 8 x 25 (58 m²), 11 x 15 (78 m²) · "Área, quartos e o terreno mínimo de cada uma." |
-| 2 | *planta 1 de 3 · C01* · **Casa Compacta** · 51 m² · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) · Destaque: sem corredor comprido, a sala com mesa distribui e a varanda recebe. **Refazer: C01 redesenhada** (imagem da planta antiga) |
+| 2 | *planta 1 de 3 · C01* · **Casa Compacta** · 51 m² · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) · Destaque: sem corredor comprido, um hall curto distribui e a varanda recebe. **Refazer: C01 redesenhada** (imagem da planta antiga) |
 | 3 | *planta 2 de 3 · E01* · **Casa Estreita** · 58 m² · 2 quartos (1 suíte) · 2 banheiros · cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m) · Destaque: garagem na frente e todos os cômodos abrindo para o corredor coberto. |
 | 4 | *planta 3 de 3 · F03* · **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m) · Destaque: suíte para o casal e varanda na frente. |
 | 5 | *lado a lado* · **Qual combina com o seu terreno?** · tabela: área, quartos, banheiros, lote mínimo, para quem · "Os recuos mudam de cidade para cidade: confira na sua prefeitura." |
@@ -149,7 +149,7 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 | 2 | *dica 1 de 5* · **A cota é a medida** · "A linha azul embaixo da casa, com um traço em cada ponta, mostra a largura em metros: aqui, 6,50 m. A linha do lado mostra o fundo: 8,50 m." | Recorte da cota de baixo (a da largura), em amarelo |
 | 3 | *dica 2 de 5* · **Amarelo é a porta de entrada** · "É por ali que você entra da rua. Na planta com móveis, o arco de cada porta mostra para que lado ela abre: esse espaço fica livre, nada de móvel ali." | Porta de entrada (o retângulo amarelo) marcada |
 | 4 | *dica 3 de 5* · **Azul é janela** · "Cada retângulo azul na parede é uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha marcadas |
-| 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "8,9 m² quer dizer um quarto de cerca de 2,80 x 3,20 m. Compare com o quarto onde você dorme hoje." | Quarto casal em amarelo (medidas livres do validador, `ebook/plantas/dados/C01.json`) |
+| 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "9,4 m² quer dizer um quarto de cerca de 2,90 x 3,20 m. Compare com o quarto onde você dorme hoje." | Quarto casal em amarelo (medidas livres do validador, `ebook/plantas/dados/C01.json`) |
 | 6 | *dica 5 de 5* · **Planta humanizada** · "É a mesma planta com piso e móveis em escala. Fica fácil ver como cada cômodo vai ser usado." | Planta humanizada |
 | 7 | *planta grátis* · **Quer treinar numa planta de verdade?** · Comente PLANTA | Miniaturas |
 
@@ -324,7 +324,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | Tela | Texto | Imagem |
 |---|---|---|
 | 1 | *e como evitar cada um* · **3 erros na planta que saem caro na obra** | Blueprint inteiro |
-| 2 | *erro 1 de 3* · **Corredor comprido** · ✕ Corredor custa por metro, e ninguém mora nele. · ✓ Na Casa Compacta não há corredor comprido: a sala distribui para os quartos e o banheiro. | Sala e passagem em amarelo |
+| 2 | *erro 1 de 3* · **Corredor comprido** · ✕ Corredor custa por metro, e ninguém mora nele. · ✓ Na Casa Compacta não há corredor comprido: um hall curto distribui para os quartos e o banheiro. | Sala e passagem em amarelo |
 | 3 | *erro 2 de 3* · **Banheiro de frente pra sala** · ✕ Quem está na sala vê a porta do banheiro. · ✓ A porta do banheiro não abre para a sala. | Porta do banho em amarelo |
 | 4 | *erro 3 de 3* · **Banheiro sem janela** · ✕ Sem ventilação natural, o mofo aparece rápido. · ✓ Janela alta na parede de fora: ventila e mantém a privacidade. | Janela do banho em amarelo |
 | 5 | *planta grátis* · **Quer a planta inteira, sem esses erros?** · Comente PLANTA | Miniaturas |
@@ -396,7 +396,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | 2 | *a planta com medidas* · **Blueprint com cotas** |
 | 3 | *a casa em 3D* · **Como ela fica por dentro** |
 | 4 | *o outro lado* · **Sala, cozinha e quartos** |
-| 5 | *por que funciona* · Sem corredor comprido: a sala com mesa distribui · Varanda cobrindo a porta da sala · Banheiro com mais de 1,80 m de largura |
+| 5 | *por que funciona* · Sem corredor comprido: um hall curto distribui · Varanda cobrindo a porta da sala · Banheiro com mais de 1,80 m de largura |
 | 6 | *planta grátis* · **Quer essa planta?** · Comente PLANTA |
 
 **Legenda:**
@@ -410,7 +410,7 @@ Planta da semana: Casa Compacta. 🏠
 📏 cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m)
 
 Por que ela funciona:
-• sem corredor comprido: a sala distribui
+• sem corredor comprido: um hall curto distribui
 • a varanda cobre a porta da sala, protegida da chuva e do sol
 • o banheiro passa de 1,80 m de largura
 

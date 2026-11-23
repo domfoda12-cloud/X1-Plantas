@@ -13,7 +13,6 @@
 >
 > Campos entre [colchetes] ainda esperam o dono: a chave Pix e o nome de quem recebe. O **[preço]** já tem valor (teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47). O número do WhatsApp já foi dado (está no `ebook/config.json`, chave `contato`). Até lá, não mande campo vazio como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
 >
-> A Casa Compacta com hall já é a oficial (dono, 23/11). Os números dela abaixo ainda são os da C01 antiga: troque-os pelos da ficha nova em [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md) antes de ligar a resposta automática.
 
 ### Resposta automática a quem comenta PLANTA
 
@@ -289,7 +288,7 @@ Se a Casa Compacta não couber no lote da pessoa, diga com franqueza e confira n
 **Para quem é:** casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.
 
 **Por que esta planta é assim:**
-- Sem corredor comprido: a sala distribui, e a circulação é só 4% da casa.
+- Sem corredor comprido: um hall curto distribui, e a circulação é só 4% da casa.
 - A varanda cobre a porta da sala, protegida da chuva e do sol direto.
 - O banheiro passa de 1,80 m de largura. Ele não encosta na cozinha nem no serviço: pede uma tubulação própria, que custa mais. Pergunte ao engenheiro quanto isso pesa no orçamento.
 

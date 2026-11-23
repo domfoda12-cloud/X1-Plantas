@@ -1,6 +1,6 @@
 # Respostas rápidas do WhatsApp Business
 
-> Pacote pronto para colar no celular do negócio. Parte da pasta de venda ([`WHATSAPP.md`](WHATSAPP.md): sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das [decisões do dono de 23/11](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md). **Passa pelo Revisor de risco antes de ir ao celular.**
+> Pacote pronto para colar no celular do negócio. Parte da pasta de venda ([`WHATSAPP.md`](WHATSAPP.md): sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das [decisões do dono de 23/11](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md). **Revisor de risco: SIM SE em 23/11 (noite); as condições foram aplicadas (dados do vendedor e ausência sem prazo). Antes de colar, preencha os [colchetes] e só envie o /oferta quando as 3 casas tiverem 3D refeito.**
 >
 > **Como usar:** no chat, digite `/` e o atalho (ex.: `/pix`), escolha a mensagem, troque o que está entre [colchetes] e envie. Nenhuma mensagem sai com colchete.
 >

@@ -18,11 +18,11 @@
 
 ### [Respostas rápidas do WhatsApp Business](RESPOSTAS-RAPIDAS.md)
 
-Pacote pronto para colar no celular do negócio. Parte da pasta de venda (`WHATSAPP.md`: sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das decisões do dono de 23/11. Passa pelo Revisor de risco antes de ir ao celular. Como usar: no chat, digite `/` e o…
+Pacote pronto para colar no celular do negócio. Parte da pasta de venda (`WHATSAPP.md`: sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das decisões do dono de 23/11. Revisor de risco: SIM SE em 23/11 (noite); as condições foram aplicadas (dados do vendedor e…
 
 Seções: 1. Lista dos atalhos; 2. As mensagens; 3. Passo a passo no celular (WhatsApp Business).
 
-Tamanho: 2226 palavras.
+Tamanho: 2253 palavras.
 
 ### [WhatsApp: sequência, objeções, perguntas e material grátis](WHATSAPP.md)
 
@@ -30,7 +30,7 @@ Tudo o que o parceiro usa na conversa com o comprador. Juntado em 22/11/2026 (fi
 
 Seções: Sequência de mensagens no WhatsApp; Respostas para objeções comuns; Perguntas frequentes dos compradores; Planta grátis: o que a pessoa recebe depois do comentário "PLANTA".
 
-Tamanho: 3480 palavras.
+Tamanho: 3446 palavras.
 
 ### [Atributos que vendem](atributos-que-vendem.md)
 

@@ -36,7 +36,7 @@ Parte da pasta E-book. Guia da frente: `EBOOK.md`. Painel geral: `../PAINEL.md`.
 
 Seções: Resumo; C. Compactas: primeira casa, orçamento curto; E. Terreno estreito: frente de 5 a 8 m; F. Família: 3 ou 4 quartos; S. Especiais: um uso ou terreno específico; O. Sobrados: dois pavimentos; Casas que crescem; O que vem em cada planta do e-book (hoje).
 
-Tamanho: 1996 palavras.
+Tamanho: 1995 palavras.
 
 ### [Lista de conserto: as 24 casas contra as plantas de referência](plantas/CONSERTOS.md)
 
