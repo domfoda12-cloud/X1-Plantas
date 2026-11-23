@@ -145,9 +145,9 @@ Tamanho: 379 palavras.
 
 O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fichas e o resumo de passagem (dono, 22/11/2026). Antes de trabalhar, o quadro; a equipe, `EQUIPE.md`; as regras de pedido, `../pedidos/LEIA-ME.md`.
 
-Seções: Decisões do dono que valem para você; Lições.
+Seções: Decisões do dono que valem para você; Como conduzir; Lições.
 
-Tamanho: 422 palavras.
+Tamanho: 517 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -155,7 +155,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 327 palavras.
+Tamanho: 372 palavras.
 
 ### [Contexto do Redator](redator.md)
 
@@ -171,7 +171,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 397 palavras.
+Tamanho: 420 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 
@@ -179,4 +179,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 212 palavras.
+Tamanho: 248 palavras.

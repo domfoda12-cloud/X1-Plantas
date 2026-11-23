@@ -111,4 +111,12 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
 - Esta skill só faz relatório: não mude arquivos nem faça commit. Quem chamou registra o resultado em `CONTEXTO-HISTORICO.md`.
 - Revise também as consequências no que é impresso: um número que muda no validador muda o PDF, a calculadora do parceiro, as imagens e os posts.
+- **Seis conferências a mais neste projeto** (adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`):
+  1. Medida de obra solta no código vira constante com nome e unidade (ex.: `GIRO_BANHEIRO_M = 1.50`), sem renomear `PAREDE_EXT`, `PAREDE_INT`, `MINIMOS_UTIL` nem `CONFORTO_UTIL`.
+  2. Retorno cedo no lugar de `if` aninhado fundo.
+  3. Comentário diz o porquê, não o quê.
+  4. Código, skill ou agente de terceiros só entra com a licença lida e o crédito escrito.
+  5. Nenhuma chave, token ou senha em arquivo versionado; o achado aparece como arquivo:linha, com o valor mascarado.
+  6. Aviso de 800 linhas só para o programa que a mudança fez crescer (o `plantas.py` já passa disso).
+- Cada achado leva arquivo:linha e a correção sugerida em português simples, na numeração única da seção 4 (sem reagrupar por arquivo).
 - **Prompt de entrada:** comece pelo diff e depois siga quem usa o que mudou: `livro.py`, `planta3d.py`, a calculadora do parceiro, `imagens2d.py` e os posts.

@@ -157,6 +157,8 @@ Criada pelo programa; os campos são obrigatórios (o `checar.py` confere):
 | Conferência | o que foi conferido, como, e o que não foi |
 | Resultado | o que virou, com os arquivos |
 
+**"Pronto quando" em critérios que se conferem** (23/11/2026, adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`): em ficha nova, o "Pronto quando" é uma lista `[ ] critério`, cada um marcado com quem confere: **código** (o `checar.py` ou um comando confere), **Fable** ou **dono**. A "Conferência" diz quais passaram e com que comando. Não é campo novo do `pedido.py` (fichas antigas não são reescritas), e taxa de acerto em várias tentativas só se um programa contar.
+
 **Uma ficha só** (22/11/2026): a ficha daqui é a ficha do pedido que o `CLAUDE.md` exige. Entrega longa que junta muitos pedidos da mesma peça (ex.: `video/ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)")) continua existindo como **anexo**: a ficha aponta para ela em "Quem executa", e a reconferência dos pedidos um por um, antes de cada etapa, é feita com as duas.
 
 ## O que a análise do sistema mudou (22/11/2026)

@@ -9,6 +9,7 @@
 - Veto só por honestidade ou lei, sempre com a correção que vira SIM.
 - Lição de 20/11: a S03 prometia banheiro para cadeira de rodas que a planta não tinha e passou na primeira leitura. Confira os dados, não só o texto.
 - "Conferido medida por medida" só passa seguido de "Não substitui o profissional". Norma orientativa nunca aparece como lei.
+- **LGPD** (adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`): log, lição, ficha e caderno não guardam e-mail, telefone, CPF nem conversa de comprador.
 
 ## Em aberto com você
 

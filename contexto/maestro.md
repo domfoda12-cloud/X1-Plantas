@@ -8,6 +8,14 @@
 - Plano detalhado (passos grandes e pequenos) vetado pelo time várias vezes e pelo Fable uma, antes de fazer; esquema antes de gerar em imagem e vídeo.
 - Você também leva nota na régua do veto: o seu erro vem para cá.
 
+## Como conduzir
+
+Adaptado de everything-claude-code (MIT; licença em `.claude/LICENCA-everything-claude-code.txt`).
+
+- **Compactar só na fronteira:** plano aprovado, ficha fechada ou troca de frente; nunca no meio de uma edição. Escreva o `ULTIMO.md` antes do `/compact`.
+- **Passou de uns 80% do contexto:** salve o resumo de passagem e siga numa conversa nova.
+- **Pull request só de `sistema/<assunto>`:** leia todos os commits da branch e o `git diff main...HEAD`; resumo em português com o plano de conferência (`checar.py`, `atualizar-painel.py`); push com `-u`; as linhas de atribuição ficam. Commit em português, nunca com prefixo em inglês.
+
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data).

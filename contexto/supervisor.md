@@ -13,6 +13,7 @@
 ## Em aberto com você
 
 - Auditorias 1 a 4 feitas em 22/11/2026 (`pedidos/AUDITORIAS.md`). Próxima: a cada 3 fichas fechadas.
+- **Três lentes em toda auditoria** (adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`): fatos (cada afirmação tem prova?), consistência (dois arquivos dizem a mesma coisa?) e redundância (a mesma regra em dois lugares, que vão divergir?).
 
 ## Leia barato
 

@@ -117,7 +117,46 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 |---|---|---|
 | **product-demo-agent-toolkit** ([chapter-dev-pty-ltd/product-demo-agent-toolkit](https://github.com/chapter-dev-pty-ltd/product-demo-agent-toolkit), MIT, versão 0.2.1, Node 22.18 ou mais) | **Aguarda o "sim" do dono para instalar** (a proteção automática do Claude Code bloqueou a instalação e a cópia das skills em 20/11) | Grava vídeo de demonstração de **página web** com Playwright: cursor que se move como uma mão, digitação no ritmo de uma pessoa, espera até a página carregar sem tempo morto, roteiro escrito depois de explorar a página, locução sincronizada com cada clique, 1080p a 60 quadros, 22 fundos, molduras, sons de clique e um estúdio de edição no navegador. Duas skills: `product-demo` (filmar) e `product-demo-review` (revisar o vídeo). **Uso no X1-Plantas:** filmar a calculadora do parceiro ("digite o seu lote e veja as casas que cabem") e o leitor do e-book folheando as páginas, como B-roll e anúncio. É da frente de **vídeo** (a última). **Cuidados do Revisor:** a locução usa o ElevenLabs, com chave paga (só com o "sim" do dono); a música "lofi" foi feita no ElevenLabs Music, e a licença para anúncio não foi conferida (não usar em anúncio pago); os sons são CC0 e os fundos são MIT ou Apache-2.0. O `setup` instala as skills na pasta global de todos os agentes do computador: preferir `product-demo-agent-toolkit skills .claude/skills`, que fica só no projeto |
 | **AgentScope 2.0** ([agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope), Apache-2.0, Python 3.11 ou mais) | Liberado, não usado: só ideias | Framework para **construir** agentes em Python que chamam modelos pela API (cobrada por token, à parte da assinatura). Não roda o Claude Code. Li o README e a lista de módulos; **não instalei nem rodei**. Ideias que já usamos ou passamos a usar: compactação automática do contexto e descarte de resultado de ferramenta grande (nosso resumo de passagem e o `CONTEXTO-HISTORICO.md`), escolha do modelo por resposta (nossa regra de Opus para decidir e Sonnet para o rotineiro), equipe com líder que delega (o Conselho) e procedimentos padrão em etapas (o roteiro de entrada). Só valeria instalar se um dia houvesse um agente próprio, por exemplo o que responde no WhatsApp |
+| **everything-claude-code** ([affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code), MIT; pedido pelo fork worldflowai) | **Entrando adaptado, em pedaços** (ficha `0209`); nada instalado nem rodado | Skills, comandos, agentes, regras e ganchos de programação para o Claude Code. Só o que serve entra, reescrito em português; o que quebraria é adaptado, e o resto fica de fora com o motivo. Lista completa logo abaixo |
 
+### everything-claude-code: o que foi lido e para onde foi (23/11/2026)
+
+Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. Original affaan-m/everything-claude-code (MIT, Copyright (c) 2026 Affaan Mustafa; licença em `.claude/LICENCA-everything-claude-code.txt`); o fork worldflowai não tem licença, e o que só existe nele não entra. Nada foi instalado nem rodado; o pacote não é plugin aqui. Cada linha: componente, o que virou e por quê.
+
+**Absorvido (já está no projeto, em português):**
+- skills/tdd-workflow: regra "caso antes do conserto", com a lista única dos arquivos, na seção "Neste projeto" da skill `ponytail`. Fora: 80% de cobertura, Jest, Playwright, mocks, pre-commit, CI.
+- skills/coding-standards, agents/code-reviewer e contexts/review: seis conferências na seção "Neste projeto" da `ponytail-review`. Fora: TS, React, zod, imutabilidade obrigatória.
+- rules/security, rules/coding-style, rules/testing e contexts/dev: linhas de segurança e estilo no `ferramentas/CLAUDE.md`. Fora: SQL, CSRF, login, limite de 800 linhas, console.log (não há servidor nem TS).
+- rules/agents e contexts/research: três lentes da auditoria no `contexto/supervisor.md`; hipótese e prova no `contexto/pesquisador.md`.
+- skills/strategic-compact, meia linha de rules/performance e o roteiro de PR de rules/git-workflow: "Como conduzir" no `contexto/maestro.md`.
+- skills/continuous-learning: linha "Aprendido nesta tarefa" no `contexto/entregas/MODELO.md`, com destino fixo por tipo de lição.
+- skills/eval-harness: "Pronto quando" em critérios `[ ]` no `pedidos/LEIA-ME.md` (sem campo novo no `pedido.py` e sem pasta de evals).
+- skills/security-review, parte de segredos e LGPD: `.env` e `.env.*` no `.gitignore` e a linha de LGPD no `contexto/revisor-de-risco.md`; a conferência de segredos no `checar.py` vem num pedaço seguinte.
+- scripts/lib/package-manager.js, só a informação: linha do npm no "O essencial" do `video/RESUMO.md`.
+- LICENSE: `.claude/LICENCA-everything-claude-code.txt`, citada em cada trecho adaptado.
+
+**Lido, adaptação em pedaço seguinte** (lido; entra adaptado num pedaço seguinte da ficha `0209` e só aparece aqui com o nome quando existir):
+- skills/verification-loop com commands/verify (uma porta só para a mesma conferência).
+- commands/plan, tdd, e2e, code-review, build-fix, refactor-clean, checkpoint e learn, com nome em português onde o original colide com comando nativo ou skill.
+- agents/planner, tdd-guide, security-reviewer, build-error-resolver, e2e-runner, refactor-cleaner e doc-updater, com nome em português, `model` declarado e sem chamada automática.
+- A ideia de scripts/hooks/session-start.js e de suggest-compact.js, reescrita em Python, só com o "sim" do dono e sem nunca bloquear.
+
+**Fora, com o motivo:**
+- commands/setup-pm: vetado por segurança (roda código de fora não lido e grava em `~/.claude`) e sem ganho (o npm já tem lockfile).
+- hooks/hooks.json como está: bloquearia criar `.md` (o projeto é feito de `.md`), roda `npx` da rede e substituiria o gancho que guarda os pedidos.
+- scripts/hooks/session-end.js, pre-compact.js e evaluate-session.js, com o gancho Stop: gravam em `~/.claude`, em inglês, e duplicam o `REGISTRO.md` e o `ULTIMO.md`; o Stop nem funciona (o caminho chega pelo stdin) e criaria skill fora do roteiro de entrada.
+- suggest-compact.js como está: o contador zera a cada chamada e o aviso não chega ao modelo.
+- scripts/lib/utils.js e o código do package-manager.js: só servem aos `.js` que não entram; mandam texto direto ao shell e cairiam no gerenciador errado.
+- skills/backend-patterns e frontend-patterns: lidos em 23/11/2026, não servem (não há servidor, banco, React nem Next).
+- skills/security-review como skill: teria o nome da `security-review` embutida e a sombrearia.
+- agents/architect como agente: não é o nosso `arquiteto` (plantas e norma) e disputaria o roteamento com ele; o quadro de trade-off entra no planejamento.
+- agents/code-reviewer como agente: seria um quarto revisor; o que faltava entrou na `ponytail-review`.
+- rules/agents como está: "usar sem pedir, sempre em paralelo" contraria "uma coisa por vez" e "o Conselho decide".
+- A pasta contexts/: ficaria ao lado de `contexto/` e confundiria; o útil entrou nas linhas acima.
+- mcp-configs/mcp-servers.json: gravaria chave em texto aberto, roda `npx -y` sem versão e abre o disco inteiro; o que serve já está nos conectores.
+- examples/CLAUDE.md: apagaria as regras do dono ou estouraria o limite do `CLAUDE.md`; "nunca commit na main" contraria a decisão de 22/11.
+- Formato de commit em inglês e "attribution disabled" (rules/git-workflow), tabela de modelos, ultrathink e modo plano (rules/performance): os commits daqui são em português com atribuição, e a divisão de modelos é do dono.
+- Pyright: baixa do npm e consulta a rede a cada rodada (condição do Revisor). npm audit fix, playwright install, CI, codecov, Jest, knip, depcheck, ts-prune, trufflehog, ts-morph, madge e jsdoc2md: baixam pacote ou mandam dado para fora sem ficha.
 
 ## 7. Como manter este inventário
 

@@ -10,6 +10,7 @@
 - Nada entra no projeto sem fonte; fonte primária brasileira primeiro.
 - TinyFish pago (dataset, deep research) só com o "sim" do dono.
 - O YouTube bloqueia download na nuvem; Reels e TikTok se analisam com o `analyze_hook`.
+- **Antes de concluir** (adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`): escreva a hipótese e a prova (fonte com link, guardada no caderno `pesquisas/`). Entregue os achados primeiro e a recomendação depois. A web vai pelo `ferramentas/pesquisa.py`, sem WebFetch solto e sem o agente Explore.
 
 ## Em aberto com você
 
