@@ -50,7 +50,7 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 
 ## 6. Skill ou agente novo: o roteiro de entrada
 
-Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". Vale para skill do projeto (`.claude/skills/`), agente (`.claude/agents/`), plugin e conector. Nada é usado antes de passar por estes passos:
+Pedido do dono (20/11/2026): "toda skill nova no ecossistema alcança tudo". E (23/11/2026): "não desista porque quebraria, faça funcionar sem quebrar" e "faça isso para todo agente novo e garanta que ele seja apresentado direito": **o que quebraria é adaptado** (caminho, gancho reescrito, nome com prefixo, só a parte que serve), e só fica de fora por lei, segurança ou licença, com o motivo escrito; **e todo agente, skill ou ferramenta nova é apresentado à equipe**: linha no `contexto/EQUIPE.md` (o que faz e o que acrescenta), `contexto/<nome>.md` se for agente, seção "Neste projeto" se for skill, aviso no `contexto/QUADRO.md` para todos, e o inventário. Vale para skill do projeto (`.claude/skills/`), agente (`.claude/agents/`), plugin e conector. Nada é usado antes de passar por estes passos:
 
 1. **Ler o que ela roda e a licença inteira.** Ganchos, acesso à rede, dados que saem do projeto, arquivos fora da pasta, e cláusula que restrinja quem pode usar. **Nada se baixa, instala ou roda antes do passo 2** (o cass foi vetado em 22/11: leitura cautelosa nossa, não parecer jurídico, da cláusula que proíbe hospedar e executar para a Anthropic e a OpenAI ou em sistema automático delas; ficha `2151`). O Revisor de risco confere e pode vetar uma parte (foi o que aconteceu com os ganchos do Ponytail).
 2. **Conselho de bolso** decide se entra; o Maestro decide, ouvindo o Diretor primeiro se a skill toca conteúdo.

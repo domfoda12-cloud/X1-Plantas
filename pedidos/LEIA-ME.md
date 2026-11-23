@@ -77,6 +77,10 @@ Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a not
 
 Quando dois papéis se atrapalham (fazem o mesmo, deixam um buraco, se contradizem), o Maestro cria na hora uma regra em [`contexto/CONVIVENCIA.md`](../contexto/CONVIVENCIA.md) e conta ao dono no fim, num relatório curto: o erro, a regra, quem muda.
 
+## Ferramenta ou agente novo (dono, 23/11/2026)
+
+Não desista porque quebraria: adapte até funcionar sem quebrar (fica de fora só por lei, segurança ou licença, com o motivo). Todo agente, skill ou ferramenta nova é **apresentado** à equipe: linha no `contexto/EQUIPE.md`, contexto próprio se for agente, "Neste projeto" se for skill, aviso no quadro e no inventário (`CONSELHO.md`, seção 6).
+
 ## Buscar o que o dono já disse (22/11/2026)
 
 Antes de perguntar ao dono algo que ele pode já ter dito, busque: `python3 ferramentas/pesquisa.py buscar <palavras>` (caderno e apostilas) e `python3 ferramentas/conversas.py buscar <palavras>` (as falas dele nas conversas do Claude Code deste projeto, nesta máquina: no Mac, todas; na nuvem, só a atual). A busca nas conversas serve para **lembrar**, não para copiar: ao repositório só vai a decisão, reescrita em uma linha, com a data e "conversa anterior"; nunca trecho literal, dado de pessoa, senha, chave, assunto pessoal ou caminho de arquivo (regra do Revisor, ficha `2151`).

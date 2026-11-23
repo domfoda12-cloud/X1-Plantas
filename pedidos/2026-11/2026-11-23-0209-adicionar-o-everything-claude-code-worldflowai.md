@@ -7,6 +7,8 @@ add
 
 *Recado de 23/11 02:13:* Dont give up because it would break, try to make it work without breaking
 
+*Recado de 23/11 02:14:* Take that for every new agent added and make sure theyre properly introduced
+
 **O que ele pediu, parte por parte:** Adicionar o everything-claude-code (github.com/worldflowai/everything-claude-code).
 
 **Por que ele pediu, ou o que quer descobrir:** Quer o sistema mais capaz e que aprenda sozinho ("work like a brain"); este pacote traz agentes, skills, comandos e ganchos de quem venceu um hackathon da Anthropic.
