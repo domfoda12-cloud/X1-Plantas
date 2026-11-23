@@ -210,6 +210,7 @@ else:
     print(f"[OK ] lição ao fechar ficha, de ponta a ponta ({len(casos)} casos com fichas falsas)")
 rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executable, "ferramentas/conversas.py", "testar"])
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
+rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])

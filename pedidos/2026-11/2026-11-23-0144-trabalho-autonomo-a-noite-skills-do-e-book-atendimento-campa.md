@@ -28,6 +28,8 @@
 
 *Recado de 23/11 02:09:* Make sure that the night queue is aware that the task followed will be done for the next hour
 
+*Recado de 23/11 07:11:* I hit my usage limit while you were working, but it has reset now. Please continue from where you left off.
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -99,3 +101,5 @@ A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "s
 Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 
 **Recado do dono (01:46): "Just stay awake 24h".** **Tarefa agendada:** "X1-Plantas: trabalho de 24 horas" (antes "da noite") (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; depois da fila, segue com o "Tempo livre" do `pedidos/PLANO.md` (alternando equipe e projeto) até 2026-11-24 01:45 UTC; então escreve o resumo das 24 horas e se apaga. Para se o dono escrever ou se aparecer aviso de limite de uso.
+
+**Limite de uso (23/11, 06:50 a 07:10 UTC):** o veto do A3 caiu no limite de 5 horas (2 agentes, 149 mil tokens antes do corte). O dono avisou às 07:11 que o limite voltou; o veto roda de novo (`wf_9fb12177-6be`, retomado). Gasto medido desta noite até aqui, só subagentes de workflow: júri 2,95 milhões; everything-claude-code 1,67 milhão (leitura) e a implementação parada; v6 536 mil; prova A0 536 mil; veto A2 256 mil.

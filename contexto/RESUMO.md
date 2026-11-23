@@ -35,7 +35,7 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 548 palavras.
+Tamanho: 565 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 

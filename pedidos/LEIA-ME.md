@@ -71,7 +71,7 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 | Correção | todo NÃO ou VETO traz a correção que vira SIM |
 | Novo e do papel | não repete o que já entrou e fica no papel dele |
 
-Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto"), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** `python3 ferramentas/pedido.py licao <papel> "texto" --origem auditoria --ponto N` (grava no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md`, e recusa se o contexto passar do limite) (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
+Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto", **desde 23/11 no formato fixo `| Rodada | Agente | Nota | Ponto que caiu | Por quê |`**, que o `ferramentas/placar.py` soma em `contexto/PLACAR.md`), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** `python3 ferramentas/pedido.py licao <papel> "texto" --origem auditoria --ponto N` (grava no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md`, e recusa se o contexto passar do limite) (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
 
 ## Erro de sintonia entre agentes (dono, 22/11/2026)
 
