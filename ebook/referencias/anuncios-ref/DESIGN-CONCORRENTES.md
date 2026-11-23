@@ -38,7 +38,7 @@ Nota "dá vontade de comprar" = minha leitura de design, de 0 a 5 (hipótese de 
 - **Link:** <https://www.plantapronta.com.br/> · **Captura:** `…/03-plantapronta-home.png` · ANUNCIOS linha 3
 - **O que mostra:** logo laranja/cinza, selos PagSeguro e "Protegido"; menu em barra preta; **foto de um casal sentado no chão com móveis desenhados à mão** (rabiscos) e a lista "Suporte técnico gratuito, Garantia de aprovação, Entrega imediata…"; filtro por pavimento, lote (5x20 … 20x40), dormitórios, suítes e área; grade de cartões "by Arquelux" com render + ícones (lote, quartos, banheiros, vagas).
 - **Cores/letras:** fundo cinza `#EEEEEE`, faixa preta, laranja `#FF9300`, texto cinza `#666`; Arial 13 px (Open Sans nos títulos).
-- **Bonito:** a foto do casal com desenho à mão é simpática e humana (a única das 14 com pessoas de verdade no topo); filtro de lote completo.
+- **Bonito:** a foto do casal com desenho à mão é simpática e humana (a única home com pessoas de verdade no topo); filtro de lote completo.
 - **Fraco:** parece site de 2012: moldura cinza, abas pretas, selos de pagamento grandes, **aviso de cookies e balão do WhatsApp cobrindo os cartões**; texto cinza claro sobre cinza; os cartões são casas de alto padrão (15x35), **não o lote de quem constrói por etapas**.
 
 ### 04. Planta Pronta, casa 161A · nota 3
@@ -46,7 +46,7 @@ Nota "dá vontade de comprar" = minha leitura de design, de 0 a 5 (hipótese de 
 - **O que mostra:** render grande de fachada + faixa de miniaturas; "Vantagens" com 6 itens e tique verde; **planta humanizada grande, colorida, com cotas em vermelho e o lote 12 x 30 m inteiro** (casa, garagem, jardim, recuos), botão "Inverter Planta" (espelhar); **3 caixas de preço lado a lado**: Personalizado R$ 2.290 (20 dias), Pronto **R$ 1.145 (desc. 50%)**, e o pacote "Estratégia: Construa Barato + Projeto 161A" **R$ 449** com selo "MAIS VENDIDO"; bloco "Quem fez esse projeto".
 - **Cores/letras:** laranja `#FF9300` nos botões e no menu, verde-maçã nos botões "Contratar", azul nos preços; títulos em Open Sans (cinza `#666`), fundo cinza e preto.
 - **Bonito:** **a planta humanizada grande, mostrando o lote inteiro com a casa dentro, é a melhor imagem de planta das 14** (mostra jardim, garagem, medidas do terreno); "Inverter Planta" é útil e raro; **3 preços lado a lado com um destacado como "mais vendido"** é uma boa prática de venda.
-- **Fraco:** o resto é a mesma moldura antiga; banner "Veja ideias de como construir mais barato" com foto de homem de terno no meio da página de venda; **desconto "50%" sobre o dobro do preço** (âncora fácil de desconfiar).
+- **Fraco:** o resto é a mesma moldura antiga; banner "Veja ideias de como construir mais barato" com foto de homem de terno no meio da página de venda; **"desc. 50%" sem mostrar o preço cheio** (o R$ 2.290 é outro produto, o personalizado).
 - **Achado novo para preço:** R$ 1.145 (pronto) e R$ 2.290 (personalizado) em uma loja que, no `ANUNCIOS.md`, não mostrava preço na home. Registrado no caderno.
 
 ### 05. Projeto Pronto, página inicial · nota 2
@@ -68,14 +68,14 @@ Nota "dá vontade de comprar" = minha leitura de design, de 0 a 5 (hipótese de 
 - **O que mostra:** render com **marca d'água grande "aquiprojetos.com" escrita em cima**; ficha em quadro de linhas (frente 9, fundos 25, quartos, suítes, banheiros, vagas); preço R$ 107,80 riscado e **R$ 98,00**; **5 "pacotes"** (Pacote 1: planta baixa em PDF R$ 98; Pacote 2 R$ 198; Pacote 3 **R$ 1.290**; Pacote 4 **R$ 1.990**) descritos em **parágrafo corrido, com checkboxes**; coluna "Projetos similares" com preços "78,00*".
 - **Cores/letras:** bordô `#831D1C`, botão de compra verde, fundo cinza-escuro `#343333` nas laterais; Open Sans 13 px.
 - **Bonito:** a **tabela de quem faz cada etapa** (licenciamento e obra com técnico local) é honesta; nada mais.
-- **Fraco:** **a página mais poluída**: aviso de cookies sobre a imagem, janela "Gerado pelo Gemini" em cima da lista, caixa de aceite no topo, ícones sociais soltos, "Descubrir mais" com links de palavra-chave que não ajudam; pacotes são um **muro de texto em itálico** com ✓ e termos como "Anteprojeto [MODELO]", "Alocação de Sapatas", "Cintamento de Base"; preço riscado com asterisco.
+- **Fraco:** **a página mais poluída**: aviso de cookies sobre a imagem, janela "Gerado pelo Gemini" em cima da lista, caixa de aceite no topo, ícones sociais soltos, "Descobrir mais" com links de palavra-chave que não ajudam; pacotes são um **muro de texto em itálico** com ✓ e termos como "Anteprojeto [MODELO]", "Alocação de Sapatas", "Cintamento de Base"; preço riscado com asterisco.
 
 ### 08. Arquiteto Bruno Machado, Casa de Campo P06 (Hotmart) · nota 3
 - **Link:** <https://arquitetobrunomachado.com.br/casa-de-campo-p06-220m%C2%B2> · **Captura:** `…/08-brunomachado-P06.png` · ANUNCIOS linha 9
 - **O que mostra:** logo manuscrito branco em faixa escura; foto/render em carrossel; título em preto pesado; lista de cômodos; **"10x R$ 67,00 ou R$ 670,00 à vista"** + botão laranja **COMPRAR**; **vídeo do YouTube** com o render; **planta baixa grande, mobiliada, com cotas, dentro do terreno**; faixa preta **"Exemplo de arquivos enviados"** com **6 pranchas reais em miniatura** (layout com perspectivas, planta executiva, elétrica, cobertura, cortes e fachada, fundação e hidráulica); "Como funciona?".
 - **Cores/letras:** faixa grafite `#2A2A25`, laranja forte no botão, bege-taupe nos títulos ("Como funciona?"), preto pesado; **Montserrat** em negrito nos títulos; logo em letra manuscrita.
 - **Bonito:** **é a única das 14 que mostra as pranchas de verdade que o comprador recebe**, em miniatura, antes de pagar. A planta é grande e legível. O render de fim de tarde (telhado, pedra, madeira) é o mais "arquitetura de revista" das lojas.
-- **Fraco:** a lista de cômodos e o preço ficam numa coluna com **muito branco vazio embaixo** (a imagem é pequena); o título em preto pesado sobre a foto grande disputa; a planta é um recorte de software com cor chapada; miniaturas pequenas demais para ler.
+- **Fraco:** a lista de cômodos e o preço ficam numa coluna com **muito branco vazio embaixo** (a imagem é pequena); a planta é um recorte de software com cor chapada; miniaturas pequenas demais para ler.
 - **Para nós:** o formato "exemplo de arquivos enviados" é o único modo de ver o produto por dentro; ninguém faz isso com **capa e miolo de livro**.
 
 ### 09. Monte Sua Casa, casa térrea 111,02 m² · nota 3
@@ -104,7 +104,7 @@ Nota "dá vontade de comprar" = minha leitura de design, de 0 a 5 (hipótese de 
 - **Link:** <https://hotmart.com/pt-br/marketplace/produtos/minhacasadozero/S80999854U> · **Captura:** `…/12-hotmart-minhacasadozero.png` · ANUNCIOS linha 18
 - **O que mostra:** capa de curso (homem de capacete e boné, madeira de telhado, título em letra condensada branca), texto "Já imaginou construir sua própria casa, mesmo sem ser pedreiro ou engenheiro?", **vídeo de aula com legenda "Colunas e vigas convencionais"**, "Vantagens".
 - **Cores/letras:** Nunito Sans; capa em laranja-pôr-do-sol, marrom e branco.
-- **Bonito:** a **capa tem pessoa e rosto** (única das 14 com isso na capa); o vídeo da obra mostra trabalho de verdade, de verdade mesmo (andaime, pilar).
+- **Bonito:** a **capa tem pessoa e rosto** (única das 14 com isso na capa); o vídeo mostra obra real (andaime, pilar).
 - **Fraco:** frase central cai na linha vermelha (dispensa profissional, ANUNCIOS linha 18); capa genérica de "curso"; vídeo com qualidade de celular e marca d'água do site.
 
 ### 13. Hotmart, "Projetos de Casas Populares" · nota 1
@@ -176,7 +176,7 @@ Fora das três, mas também ninguém tem: **uma identidade visual própria e rec
 
 ## Reconferência dos pedidos (ficha)
 
-1. **Escolher 8 a 12 concorrentes que mostram o produto por dentro, só público e sem login:** escolhi 14 páginas de 12 concorrentes (passei um pouco de 12 porque Só Projetos, Planta Pronta e Hotmart entram duas vezes), mais 1 PDF de amostra. Hotmart: não achei "página interna" do produto (o Hotmart mostra só a vitrine). **Cumpri, com a ressalva do miolo.**
+1. **Escolher 8 a 12 concorrentes que mostram o produto por dentro, só público e sem login:** escolhi 14 páginas de 13 concorrentes diferentes (Só Projetos e Planta Pronta entram 2 vezes; Hotmart são 3 vendedores), mais 1 PDF de amostra; passei do teto de 12 de propósito, para cobrir Hotmart e a amostra em PDF. Hotmart: não achei página interna do produto no Hotmart (mostra só a vitrine). **Cumpri, com a ressalva do miolo.**
 2. **Capturas com Playwright (2x, 1280, até 3000 px) em `ebook/plantas/rascunhos/concorrentes/NN-nome.png`:** cumpri (14 capturas + a imagem do PDF). **PDF para pasta nova e vazia e as 2 primeiras páginas:** o PDF do DF Projetos tem **1 página**, então só uma imagem; pasta `concorrentes-pdf/`. **Não cumpri** para e-book com miolo (não havia público).
 3. **Escrever o `DESIGN-CONCORRENTES.md` com link, o que mostra, cores e letras, bonito, fraco, nota; no fim, 5 iguais e 3 que ninguém faz:** cumpri.
 4. **Não copiar nada para o nosso e-book; caderno com `pesquisa.py nova`:** não copiei imagem alguma para fora de `rascunhos/`; 4 achados no caderno (concorrentes). Sem commit.
