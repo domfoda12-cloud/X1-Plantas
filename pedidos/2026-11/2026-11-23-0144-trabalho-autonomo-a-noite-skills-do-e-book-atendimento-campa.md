@@ -26,6 +26,8 @@
 
 *Recado de 23/11 02:04:* Or right before every hour
 
+*Recado de 23/11 02:09:* Make sure that the night queue is aware that the task followed will be done for the next hour
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -53,6 +55,8 @@
 
 | # | Tarefa | Estado |
 |---|---|---|
+**PRÓXIMA HORA (02:45 a 03:45 UTC), recado do dono "make sure that the night queue is aware that the task followed will be done for the next hour":** o acordar das 02:45 **continua o laço do júri, que já está rodando** como workflow em segundo plano (`wuk1a3lbr`, a partir da v3). Não começa outro laço: confere se ele terminou; se sim, lê o resultado, registra as notas na ficha `0156`, e põe a **sexta adição, everything-claude-code** (ficha `0209`: só as skills continuous-learning, verification-loop e strategic-compact, sem o plugin e sem os ganchos, que bloqueiam criar .md) na versão seguinte da proposta, para mais rodadas. Se o laço ainda estiver rodando, espera e registra o andamento. Nos últimos 10 minutos, escreve aqui a tarefa da hora seguinte.
+
 | J1 | Júri, rodada 1, sobre `pedidos/anexos/integracao-novos-v1.md` (as 5 adições: llm-council, chief-of-staff, marketing-psychology, last30days, find-skills): 4 opiniões, revisão anônima, presidente; depois o Maestro escreve a v2 com as críticas | **em andamento** (etapa 1 rodando às 02:05) |
 | J2 | Rodada 2 sobre a v2; v3 | |
 | J3 | Rodada 3 sobre a v3; v4 | |
