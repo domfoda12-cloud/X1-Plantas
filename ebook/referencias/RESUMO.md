@@ -39,7 +39,7 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
-Tamanho: 2383 palavras.
+Tamanho: 2394 palavras.
 
 ### [Plantas de referência: 51 casas térreas pequenas, de fontes públicas (30 do piloto + 21 da rodada 2)](plantas-ref/REFERENCIAS.md)
 

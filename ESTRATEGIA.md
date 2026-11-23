@@ -101,7 +101,7 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez (as 5 vers
 | **Erro caro** | "Ninguém te conta isso antes de bater a laje." | 1 |
 | **Escolha antes de gastar** (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026) | "Antes do primeiro tijolo, mede a frente do seu lote. A casa certa começa nessa medida." | 1 |
 | **Pedreiro** | "Mostra isso pro seu pedreiro antes de começar a obra." | 1 |
-| **Sair do aluguel** | "O aluguel que você paga em 1 ano já levanta as paredes dessa casa?" (só com número verdadeiro da sua região) | 1 |
+| **Sair do aluguel** | "O aluguel que você paga em 1 ano já levanta as paredes dessa casa?" (só com número verdadeiro da sua região) (em espera: fala de custo de obra; Revisor, 23/11) | 1 |
 | **Economia com arquiteto** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria." | 1 e 2 |
 | **Financiamento** | "Vai financiar a construção? Escolha a casa antes de pagar o projeto." | 2 |
 | **Renda extra** | "Duas kitnets no fundo do seu lote: quanto espaço precisa?" | 3 |

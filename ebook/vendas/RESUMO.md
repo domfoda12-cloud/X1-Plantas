@@ -30,4 +30,4 @@ Banco do Redator. Persona: `../referencias/MERCADO.md`. Números das plantas: `.
 
 Seções: 1. Atributos do produto (o e-book); 2. Atributos que aparecem nas plantas (use a ficha da casa); 3. Atributos proibidos (o Revisor veta); 4. Combinações campeãs para testar primeiro; 5. O que os testes ensinaram.
 
-Tamanho: 1149 palavras.
+Tamanho: 1148 palavras.

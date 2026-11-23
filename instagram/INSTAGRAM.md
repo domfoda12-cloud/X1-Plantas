@@ -173,7 +173,7 @@ Os pilares seguem a [estratégia de marketing](../ESTRATEGIA.md): falar com quem
 | **Cabe no seu lote** | 30% | "Tem um lote [medida]?" | Carrossel com 3 casas que cabem num 10 x 20 |
 | **Passeio 3D** | 25% | "Planta da semana" | Reel do blueprint ganhando vida |
 | **Erro que sai caro** | 20% | "Antes de bater a laje" | Um erro por reel, com a planta mostrando o certo |
-| **Leve pro engenheiro** | 15% | "Pergunta antes de começar" | Uma casa por post, com as 3 perguntas que ela traz para a primeira conversa com o engenheiro (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026) |
+| **Leve pro engenheiro** | 15% | "Pergunta antes de começar" | Uma casa por post, com as 3 perguntas que ela traz para a primeira conversa com o engenheiro (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026). C03 fica fora deste pilar até ser redesenhada (as perguntas dela falam de ampliação). |
 | **Bastidores e desafios** | 10% | "É possível…?" | "É possível caber 3 quartos em 8 m de frente?" |
 
 Cada post da série "Cabe no seu lote" usa um tamanho de lote diferente. O lote que mais gera comentários e mensagens vira anúncio.

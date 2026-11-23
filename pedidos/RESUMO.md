@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 17 documentos
+## Os 18 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -144,3 +144,11 @@ Cada plano é um rascunho de trabalho da equipe do X1-Plantas. Vete cada um como
 Seções: Plano 1: legenda do post da Casa Compacta (Redator); Plano 2: ângulo do primeiro anúncio (Estrategista); Plano 3: cena do vídeo principal (Editor de vídeo); Plano 4: conserto no gerador do PDF (Maestro); Plano 5: teste do last30days (Pesquisador); Plano 6: edição do vídeo com a MinoAI (Editor de vídeo); Plano 7: página do e-book da Casa Compacta (Arquiteto e Redator); Plano 8: roteiro dos dois vídeos (Editor de vídeo); Plano 9: conferência nova no checar.py (Maestro); Plano 10: legenda do post da planta grátis (Redator).
 
 Tamanho: 733 palavras.
+
+### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
+
+Pedido do dono, 23/11: "Título meio sem graça, tem que ser mais chamativo e atraente" (provisório: "Que casa cabe no seu lote?"). Ficha: `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`. O dono escolhe; nada foi aplicado no `ebook/config.json`. Todas…
+
+Seções: Opção 1 (a que eu recomendo); Opção 2; Opção 3; Passada da marketing-psychology (vontade, facilidade, pedido claro); O que ficou de fora, e por quê; Perguntas ao dono (curtas).
+
+Tamanho: 749 palavras.

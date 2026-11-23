@@ -160,4 +160,4 @@ Série "200 projetos modernos em porcelanato" (material profissional, catálogo 
 
 ### O diferencial que eles não têm
 
-**"por que esta planta é assim"**: em cada planta, três decisões explicadas (orientação, luz e ar, núcleo molhado, circulação, "a casa que cresce"; "ventilação cruzada" só depois de o arquiteto conferir, porque o validador não mede), com fonte nas regras de [`ARQUITETO.md`](ARQUITETO.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.
+**"por que esta planta é assim"**: em cada planta, três decisões explicadas (orientação, luz e ar, núcleo molhado, circulação; "a casa que cresce" só quando a ampliação estiver desenhada, depois do lançamento: dono, 23/11/2026; "ventilação cruzada" só depois de o arquiteto conferir, porque o validador não mede), com fonte nas regras de [`ARQUITETO.md`](ARQUITETO.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.
