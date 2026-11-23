@@ -36,3 +36,32 @@
 | Validador | "Sim" (endurecer com as 5 regras das referências) | Primeiro como aviso, com a lista do que está fora em cada casa |
 | E-mail ao autor do cass | "Quero também que mande o e-mail"; assina Dominic de Lima, fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
 | E-mail ao autor do cass | "Sim" (depois de ver o texto final) | Enviado em 23/11 do Gmail do dono, com a cópia limpa da busca em anexo |
+| Título (questionário, 18:28) | "Antes do primeiro tijolo"; subtítulo só no anúncio | Aplicado no `ebook/config.json` |
+| Casa Compacta (questionário) | "Com hall" | **Muda a escolha anterior (economia de cano): vale a mais nova.** Volta a C01R (com hall) |
+| Estilo das plantas | "Não sei o que se refere a estilos" | Mostrar de novo os 3 estilos, em palavras simples |
+| Peso do e-book | "Is there a better way to send the e-book?" | Responder: mandar por link (Drive ou página), não o PDF pesado |
+| Comprador imprime? | Os dois | Estilo que imprime bem |
+| Avisos das regras no PDF | Ficam internos | Decidido |
+| Próximas casas | "As mais vendáveis, a gente indica" | Equipe indica (Estrategista e Arquiteto), dono aprova |
+| Quantas casas no lançamento | 3 casas: "São só 3, então quero que capriche bem nessas 3, seja bem detalhista" | Lançamento com 3 casas, refeitas com o máximo de cuidado |
+| Preço | Testar dois preços | Valores dos dois a propor (Estrategista) |
+| Pagamento | Pix direto pelo WhatsApp | Sem plataforma: Pix e entrega pelo WhatsApp |
+| Bônus | Os 2 (checklist da obra por fase e perguntas ao engenheiro) | Aplicado no `ebook/config.json`; sai o bônus "próximas plantas grátis" (atualização: "ainda não sei") |
+| Prometer as próximas casas | Ainda não sei | Não se promete até ele decidir |
+| Quem atende o WhatsApp | "Um funil com mensagens pré-prontas" | Respostas prontas (WhatsApp Business) |
+| Número | Já temos o chip | Falta só o número entrar no `config.json` |
+| Resposta automática ao PLANTA | Sim | Montar |
+| Horas por dia de atendimento | Mais de 3 horas | — |
+| Instagram | "Estou em dúvida entre usar meu Insta ou criar um" | Levar recomendação |
+| Verba de anúncio | R$ 20 por dia, "teste com 20, depois escala" | Depois do teste sem gastar |
+| Primeiro Pix | Ainda este mês | Meta da semana no PAINEL |
+| Vendas no primeiro mês | 10 a 50 | Meta |
+| Quem decide preço e gasto | Os dois juntos | — |
+| Divisão | "Os dois em tudo"; "Estou trabalhando nos 2, por enquanto ele não fez nada; eventualmente quero que ele faça o funil e integre-o no sistema" | Sócio fica com o funil, depois |
+| Vídeo | Depois do e-book; "quero testar um vídeo full IA e um vídeo com rosto" | Dois testes de vídeo depois do e-book |
+| Nome da rua | Pesquisar memes históricos e trazer opções | Feito (`video/referencias/MEMES.md`), falta ele escolher |
+| everything-claude-code | Mostrar o que foi feito agora | Mostrar |
+| Júri | Mais uma rodada sobre as ferramentas novas | Rodar |
+| Resumo da manhã | Só quando eu pedir | Sem agendamento |
+| Pasta no Drive | Sim (sem nome) | Perguntar o nome |
+| Mais alguma coisa | "Eu respondi isso sozinho" | O sócio não respondeu |
