@@ -10,6 +10,8 @@
 
 *Recado de 23/11 01:49:* the IA inside the IA inside the IA inside the IA
 
+*Recado de 23/11 01:54:* I dont have a mac
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -47,6 +49,8 @@ A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "s
 | A8 | Auditoria do Fable do aprendizado da noite e resumo da manhã | — | resumo curto | |
 
 | A9 | **Camadas** (recado do dono, 01:50: "the IA inside the IA inside the IA inside the IA"): cada camada confere a de baixo. Agentes trabalham e vetam → o Maestro dá nota e tira a lição → o Fable audita o Maestro e as lições → o placar e o resumo do aprendizado medem se o erro caiu com o tempo e ajustam a regra. O Fable também leva nota (quem audita é auditado). Limite técnico: agente não abre agente sozinho; toda camada passa pela conversa principal, e a tarefa agendada é o que faz girar | o sistema melhora o jeito de melhorar | as 4 camadas escritas em `contexto/EQUIPE.md`, com a medida de cada uma | |
+
+| A10 | **Suposição do Mac:** o dono não tem Mac (23/11). Quando ele disser o que tem (PC com Windows, só celular...), corrigir as 63 menções em 22 arquivos (guia da MinoAI, editor, pesquisador, busca nas conversas, plano) e criar a conferência no `checar.py` que pega "Mac do dono" | erro de suposição não volta | zero menção a Mac do dono; conferência testada | espera a resposta |
 
 Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 

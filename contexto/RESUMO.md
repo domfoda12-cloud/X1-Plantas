@@ -27,7 +27,7 @@
 
 Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
 
-Tamanho: 557 palavras.
+Tamanho: 600 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
@@ -41,9 +41,9 @@ Tamanho: 548 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez; 22/11 · Documentos juntados; main em dia.
+Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
 
-Tamanho: 515 palavras.
+Tamanho: 460 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -147,7 +147,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 389 palavras.
+Tamanho: 422 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 

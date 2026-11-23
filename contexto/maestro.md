@@ -20,3 +20,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **22/11:** o e-mail ao autor do cass omitia o download do código-fonte e que o dono pediu; a cópia limpa não tinha sido rodada como o usuário a rodaria. Antes de mandar ao veto: confira o fato no registro e rode o que entrega do jeito que o outro vai rodar.
 - **22/11, correção do dono:** escrevi "escolha a melhor como padrão e siga", e pus padrões em uso (nome da rua, primeiro quadro) sem o "sim" dele. Sugestão é pesquisada e levada a ele; nada se usa sem permissão.
 - **22/11:** mandei o Pesquisador buscar ruas famosas sem o caminho da ficha (o pacote do executor manda a ficha primeiro); ele trabalhou sem saber o que era pedido e o que era suposição.
+- **23/11:** o projeto inteiro supôs que o dono tem um Mac (63 menções), e ninguém perguntou. Ele não tem. Equipamento, conta, lugar e hábito do dono: perguntar antes de planejar em cima.

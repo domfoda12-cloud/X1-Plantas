@@ -4,7 +4,7 @@
 
 ## Agora
 
-- Auditoria 4 corrigida. Vídeo do meme (ficha `2055`) esperando as escolhas do dono; memória das conversas (ficha `2151`): pergunta ao dono.
+- **O dono NÃO tem Mac** (23/11). Tudo que diz "no Mac do dono" é suposição errada (63 menções em 22 arquivos): não planeje nada que dependa de Mac; a correção espera ele dizer que equipamento tem. Noite: só aprendizado autônomo (ficha `0144`).
 
 ## 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro
 
@@ -29,9 +29,3 @@
 - **O dono pediu:** um plano passo a passo, em tarefas grandes e pequenas, com objetivo para a equipe; e "não só conserte, remende".
 - **Todos:** o plano está em [`../pedidos/PLANO.md`](../pedidos/PLANO.md) (5 fases, quem faz cada tarefa). Erro achado vira regra ou conferência no `checar.py` (`pedidos/LEIA-ME.md`).
 - **Todos:** o `checar.py` agora confere todos os links e no máximo 3 resumos por contexto.
-
-## 22/11 · Documentos juntados; main em dia
-
-- **O dono pediu:** juntar os arquivos lidos pelos mesmos agentes; levar o trabalho para a `main`.
-- **Todos:** 50 documentos viraram 12, cada antigo inteiro como seção. Nomes novos: `video/VIDEO.md` (com os pedidos do dono), `ANUNCIO-LOCUCAO.md`, `PRINCIPAL-E07.md`, `REFERENCIAS.md`; `instagram/INSTAGRAM.md`, `MINOAI-FRONTIER.md` (com o antigo `MAESTRO.md`); `ebook/referencias/ARQUITETO.md`, `MERCADO.md`, `VISUAL.md`; `ebook/vendas/WHATSAPP.md`; `reports/NOTAS-DA-PESQUISA.md`. Links já corrigidos.
-- **Quem conduz:** resumo de passagem agora vai no fim de `contexto/entregas/REGISTRO.md` e no `ULTIMO.md`.
