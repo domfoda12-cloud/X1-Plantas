@@ -20,6 +20,7 @@
 | 5 | [`ebook/gerador/livro.py`](ebook/gerador/livro.py) | monta o e-book em HTML, com [`ebook/gerador/paginas.py`](ebook/gerador/paginas.py) (textos fixos) e [`ebook/config.json`](ebook/config.json) | 6, 7 |
 | 6 | [`ebook/gerador/pdf.cjs`](ebook/gerador/pdf.cjs) | transforma o HTML em PDF e confere página estourada | [`ebook/saida/`](ebook/saida) (e-book e 5 plantas grátis) |
 | 7 | [`ebook/vendas/calculadora-lote.html`](ebook/vendas/calculadora-lote.html) | a calculadora do parceiro; a lista de casas é reescrita pelo `livro.py` | funil no WhatsApp |
+| 7 | [`ebook/vendas/testar-calculadora.cjs`](ebook/vendas/testar-calculadora.cjs) | testa a calculadora pela tela contra o validador: por casa, lote exato cabe e 1 cm a menos não cabe; lote grande mostra todas (`node ebook/vendas/testar-calculadora.cjs [página]`; sem rede; sem Playwright, avisa e sai 0) | 7 |
 
 ## 3. O 3D e as imagens
 
