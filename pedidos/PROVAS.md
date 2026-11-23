@@ -8,13 +8,15 @@
 
 **Gabarito** (copiado depois da nota): 1 promessa de aprovação e dispensa de profissional; 2 número sem fonte; 3 pergunta sem resposta tratada como sim; 4 título e texto público mexidos de carona; 5 instalar antes da ficha e do veto; 6 suposição sobre o aparelho do dono; 7 custo exato de obra; 8 resumo contra a fala do dono; 9 e 10 limpos.
 
-| Agente | Achados (de 8) | Parciais | Alarmes falsos (de 2) | O que deixou passar |
+| Agente | Achados (de 8) | Parciais | Alarmes falsos (de 0) | O que deixou passar |
 |---|---|---|---|---|
 | Revisor de risco | 8 | 0 | 0 | Omissões: Diretor ausente, "Link na bio" fora do funil, caminho de câmera sem o Arquiteto |
 | Estrategista | 8 | 0 | 0 | Não viu que a ficha do last30days já existe; Diretor ausente |
 | Arquiteto | 8 | 0 | 0 | Um ponto falso dentro de veto certo (plano 8); Diretor ausente |
 | Editor de vídeo | 8 | 0 | 0 | Um ponto falso ("falta o atualizar-painel.py": o `checar.py` já o roda); Diretor ausente |
-| Haiku | 7 | 1 (Mac) | 0 inteiros, 3 pontos fracos | Leu documento antigo em vez do quadro (Mac); em troca, o único que viu o Diretor ausente |
+| Haiku | 7 | 1 (Mac) | 0 (3 pontos fracos nos planos 9 e 10) | Leu documento antigo em vez do quadro (Mac); em troca, o único que viu o Diretor ausente |
+
+**Alarme falso não foi medido:** os 2 planos dados como limpos (9 e 10) não eram (Fable confirmou), por isso a coluna é "de 0".
 
 **Conclusões (Fable):**
 - **Teto:** 39 de 40 achados, sem alarme falso inteiro. Erro escrito como frase que fere regra escrita não escapa de ninguém. A prova 2 precisa ser mais difícil.

@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 17 programas
+## Os 18 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -90,6 +90,12 @@ Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `rec
 Caderno de pesquisa compartilhado: toda busca na web de qualquer agente fica em pesquisas/<tema>.md.
 
 Funções: `arquivo`, `limpo`, `main`.
+
+### [`ferramentas/placar.py`](placar.py)
+
+Placar do veto: quanto cada agente acerta quando veta (fila da noite, tarefa A3; condições do Fable).
+
+Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `br`, `gerar`.
 
 ### [`ferramentas/planta3d.py`](planta3d.py)
 

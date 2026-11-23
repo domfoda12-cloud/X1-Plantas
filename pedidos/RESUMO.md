@@ -29,7 +29,7 @@ Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um mo
 
 Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); O plano de tudo; Plano vetado antes de fazer (dono, 22/11/2026); Erro de sintonia entre agentes (dono, 22/11/2026); Ferramenta ou agente novo (dono, 23/11/2026); Buscar o que o dono já disse (22/11/2026); Faltou informação do dono? Sugira, não espere (dono, 22/11/2026); Consertar de vez (dono, 22/11/2026: "não só conserte, remende"); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; ….
 
-Tamanho: 2980 palavras.
+Tamanho: 3001 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -45,7 +45,7 @@ Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe
 
 Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC).
 
-Tamanho: 533 palavras.
+Tamanho: 562 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 

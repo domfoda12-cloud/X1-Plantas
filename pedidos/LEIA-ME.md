@@ -136,6 +136,7 @@ Todo pedido a um agente leva, nesta ordem:
 3. **O que já está decidido** (para ele não reabrir) e **o que ele não pode tocar** (arquivos de outro agente, arquivos gerados, palavras do dono).
 4. **Pronto quando:** o critério da ficha.
 5. **O que devolver:** o que mudou por arquivo, o que não resolveu e de quem depende, e o que ele não conferiu.
+6. **Em pedido de veto:** a linha do agente em `contexto/PLACAR.md`, copiada inteira (é assim que ele vê onde costuma errar).
 
 Dois agentes ao mesmo tempo nunca editam o mesmo arquivo. Agente não faz commit: quem conduz confere e envia.
 

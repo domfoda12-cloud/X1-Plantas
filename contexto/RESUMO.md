@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 20 documentos
+## Os 21 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -35,7 +35,13 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 565 palavras.
+Tamanho: 566 palavras.
+
+### [Placar do veto (gerado: não edite)](PLACAR.md)
+
+Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
+
+Tamanho: 256 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 

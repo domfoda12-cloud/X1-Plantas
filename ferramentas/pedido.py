@@ -168,6 +168,9 @@ def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, bas
     with open(reg, "a", encoding="utf-8") as h:
         h.write(f"| {hoje:%d/%m/%Y} | {papel} | {origem} | {ficha} | {ponto} | {texto.replace('|', '/')} |\n")
     print(f"lição gravada em contexto/{papel}.md e pedidos/LICOES.md")
+    if RAIZ == Path(__file__).resolve().parent.parent:  # no repositório de verdade (não no teste), o placar acompanha
+        import subprocess
+        subprocess.run([sys.executable, str(RAIZ / "ferramentas" / "placar.py")], cwd=RAIZ, capture_output=True)
 
 
 def fechar(nome, virou):
