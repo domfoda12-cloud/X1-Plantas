@@ -133,9 +133,11 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | E-book | Vendas; pedidos de reembolso | Plataforma de pagamento | Reembolsos: o e-book não entregou o que o anúncio prometeu |
 | 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
 
-| Semana | Custo por contato | Contatos | Vendas | Conversão | Custo por venda | Preço | Observação |
-|---|---|---|---|---|---|---|---|
-| | | | | | | | |
+| Semana | Gasto | Custo por contato | Contatos | Vendas | Conversão | Custo por venda | Preço | Observação |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
+
+Gasto vem do Gerenciador de Anúncios; contatos e vendas, do parceiro e da plataforma de pagamento. Em anúncio de "Comente PLANTA" o Gerenciador não mostra custo por contato: aí ele é gasto ÷ contatos que o parceiro contou. Todo teste pago já sai com a data de término marcada no Gerenciador (prova 2, 23/11).
 
 ## 8. Decisões tomadas
 
