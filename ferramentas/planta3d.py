@@ -200,7 +200,7 @@ def construir(planta):
                 continue
             paredes.append([R(a), fixo, R(b), fixo] if o == "h" else [fixo, R(a), fixo, R(b)])
 
-    moveis = mobiliar(planta, vaos_por_comodo, jan_por_comodo)
+    moveis = mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes)
     return paredes, janelas, portas, moveis
 
 
@@ -263,7 +263,41 @@ def _prof(c, lado):
     return (c["y1"] - c["y0"]) if lado in ("frente", "fundos") else (c["x1"] - c["x0"])
 
 
-PEGADA = {"criado": (0.45, 0.4), "vaso": (0.4, 0.65)}
+PEGADA = {"criado": (0.45, 0.4), "vaso": (0.4, 0.65), "cadeira": (0.45, 0.5)}
+FACE = 0.075  # metade da parede do motor 3D (ESPESSURA 0,15 m, desenhada sobre o eixo): o móvel para aí, na face de dentro
+CADEIRA_ZONA = (0.6, 0.75)  # largura x fundo livres na frente da escrivaninha para a cadeira e quem senta (Anexo G: 0,75 m da borda da mesa)
+
+
+def recuado(c, paredes):
+    """O cômodo até a face de dentro das paredes: cada lado com parede no motor 3D encolhe FACE.
+
+    Sem isso o móvel encostado ia até o eixo da parede, e a cabeceira da cama saía pela face de fora (Arquiteto, 23/11/2026)."""
+    r = dict(c)
+    for lado, o, fixo, a, b in arestas(c):
+        tem = any((p[1] == p[3]) == (o == "h") and abs((p[1] if o == "h" else p[0]) - fixo) < 1e-6
+                  and min(max(p[0], p[2]) if o == "h" else max(p[1], p[3]), b) - max(min(p[0], p[2]) if o == "h" else min(p[1], p[3]), a) > 0.01
+                  for p in paredes)
+        if tem:
+            k = {"frente": "y0", "fundos": "y1", "esq": "x0", "dir": "x1"}[lado]
+            r[k] = c[k] + (FACE if lado in ("frente", "esq") else -FACE)
+    return r
+
+
+def cadeira_de(m):
+    """A cadeira da escrivaninha, na frente dela (onde o motor 3D a desenhava até 23/11/2026, agora móvel próprio)."""
+    sx, sy = math.sin(m.get("rot", 0.0)), math.cos(m.get("rot", 0.0))
+    k = m["d"] / 2 + 0.25
+    return {"tipo": "cadeira", "x": m["x"] + sx * k, "y": m["y"] + sy * k, "rot": m.get("rot", 0.0)}
+
+
+def zona_da_cadeira(m):
+    """Retângulo livre na frente da escrivaninha: a cadeira e o espaço de puxá-la (CADEIRA_ZONA)."""
+    zw, zd = CADEIRA_ZONA
+    sx, sy = math.sin(m.get("rot", 0.0)), math.cos(m.get("rot", 0.0))
+    k = m["d"] / 2 + zd / 2
+    cx, cy = m["x"] + sx * k, m["y"] + sy * k
+    w, d = (zw, zd) if abs(sx) < 0.5 else (zd, zw)
+    return (cx - w / 2, cy - d / 2, cx + w / 2, cy + d / 2)
 NAO_COLIDE = ("tapete",)  # o tapete fica embaixo do sofá e da mesinha
 
 
@@ -322,12 +356,13 @@ def _lados_por_preferencia(c, vaos, janelas, quer_comprido=True):
     return sorted(lados, key=nota, reverse=True)
 
 
-def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
-    """Móveis de cada cômodo pelas regras de projeto. Nenhum móvel ocupa o chão de outro (conferido no checar.py)."""
+def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
+    """Móveis de cada cômodo pelas regras de projeto. Nenhum móvel ocupa o chão de outro nem entra na parede (checar.py)."""
     out = []
     por_id = {c["id"]: c for c in planta["comodos"]}
-    for c in planta["comodos"]:
-        t, cid = c["tipo"], c["id"]
+    for c0 in planta["comodos"]:
+        t, cid = c0["tipo"], c0["id"]
+        c = recuado(c0, paredes)  # o arranjo automático usa o chão livre, da face de dentro das paredes
         vaos = vaos_por_comodo.get(cid, [])
         jans = jan_por_comodo.get(cid, [])
         w, d = c["x1"] - c["x0"], c["y1"] - c["y0"]
@@ -345,9 +380,11 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             aqui.append(m)
             return m
 
-        if c.get("moveis"):  # arranjo desenhado à mão pelo Arquiteto (PL.movel), com x e y a partir do canto do cômodo
-            for m in c["moveis"]:
-                add(**{**m, "x": c["x0"] + m["x"], "y": c["y0"] + m["y"]})
+        if c0.get("moveis"):  # arranjo desenhado à mão pelo Arquiteto (PL.movel), com x e y a partir do canto do cômodo
+            for m in c0["moveis"]:
+                mm = add(**{**m, "x": c0["x0"] + m["x"], "y": c0["y0"] + m["y"]})
+                if m["tipo"] == "escrivaninha":
+                    add(**cadeira_de(mm))
             continue
 
         def ocupados(lado, prof):
@@ -371,9 +408,28 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                 return lado, pos
             return None, None
 
+        def escrivaninha(larguras, prof, lados):
+            """Escrivaninha com a cadeira na frente: só fica onde a cadeira cabe sem cama, móvel ou porta na frente."""
+            zonas_porta = [(va, c["y0"], vb, c["y0"] + 0.8) if l == "frente" else (va, c["y1"] - 0.8, vb, c["y1"]) if l == "fundos"
+                           else (c["x0"], va, c["x0"] + 0.8, vb) if l == "esq" else (c["x1"] - 0.8, va, c["x1"], vb)
+                           for (l, va, vb) in vaos]
+            for l in (lados or _lados_por_preferencia(c, vaos, jans)):
+                for larg in larguras:
+                    for canto in (False, True):
+                        if not encostar("escrivaninha", larg, prof, [l], no_canto=canto)[0]:
+                            continue
+                        z = zona_da_cadeira(aqui[-1])
+                        dentro = z[0] >= c["x0"] - 1e-6 and z[1] >= c["y0"] - 1e-6 and z[2] <= c["x1"] + 1e-6 and z[3] <= c["y1"] + 1e-6
+                        livre = not any(o["tipo"] not in NAO_COLIDE and sobrepoe(z, pegada(o)) for o in aqui[:-1])
+                        if dentro and livre and not any(sobrepoe(z, zp) for zp in zonas_porta):
+                            add(**cadeira_de(aqui[-1]))
+                            return True
+                        out.remove(aqui.pop())
+            return False  # sem lugar com a cadeira: o quarto fica sem escrivaninha
+
         def mesa_de_jantar():
             """Mesa de 4 lugares (0,80 x 1,20 m) no canto livre mais perto da cozinha, fora da frente das portas."""
-            cozinhas = [c] if t == "cozinha" else [o for o in por_id.values() if o["tipo"] == "cozinha" and PL.parede_comum(c, o)]
+            cozinhas = [c] if t == "cozinha" else [o for o in por_id.values() if o["tipo"] == "cozinha" and PL.parede_comum(c0, o)]
             alvo = ((cozinhas[0]["x0"] + cozinhas[0]["x1"]) / 2, (cozinhas[0]["y0"] + cozinhas[0]["y1"]) / 2) if cozinhas else (cx, cy)
             portas_zona = []
             for (l, va, vb) in vaos:  # 0,80 m livres na frente de cada porta ou passagem
@@ -425,9 +481,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                     if encostar("armario", arm, 0.6, restantes)[0]:
                         break
                 if not casal:
-                    for esc in (1.0, 0.8):
-                        if encostar("escrivaninha", esc, 0.5, restantes)[0]:
-                            break
+                    escrivaninha((1.0, 0.8), 0.5, restantes)
         elif t in ("sala", "estar"):
             jantar = t == "sala" and "jantar" in c["nome"].lower()
             if jantar:
@@ -527,7 +581,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)  # tanque no canto, máquina ao lado
             encostar("maquina", 0.6, 0.6, None, frente=0.4) or encostar("maquina", 0.6, 0.6, None, frente=0.3)
         elif t == "escritorio":
-            encostar("escrivaninha", 1.2, 0.6, None)
+            escrivaninha((1.2, 1.0), 0.6, None)
             encostar("armario", 1.2, 0.45, None)
         elif t == "garagem":
             add(tipo="carro", x=cx, y=cy, rot=0.0, w=1.75, d=min(4.2, d - 0.6))
