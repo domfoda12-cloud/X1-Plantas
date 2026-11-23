@@ -27,16 +27,23 @@
 **Resultado:** (a preencher)
 
 
-## Fila da noite (uma por acordar; plano vetado antes; nada pago, nada publicado)
+## Fila da noite, versão 2 (depois do veto do Fable, 23/11, SIM, SE, 5/5)
 
-| # | Tarefa | Quem | Entrega para a manhã |
-|---|---|---|---|
-| N1 | Veto do plano da noite e L1 (cada agente confirma as ferramentas) | Fable; todos | plano aprovado; ferramentas conferidas |
-| N2 | **Skills para construir o e-book:** procurar skills e ferramentas que ajudam (gerar PDF de qualidade, revisar páginas, imagens), passar pelo roteiro de entrada (licença lida, Revisor, Conselho) e propor as boas | Pesquisador acha; Designer e Arquiteto concluem; Revisor | lista com o que entra e por quê; nada instalado sem o veto |
-| N3 | **Atendimento ao cliente:** rever o funil do WhatsApp (mensagens, objeções, planta grátis) com as casas e regras de hoje; propor melhorias | Redator e Estrategista; Revisor | textos novos como proposta |
-| N4 | **Interface:** rever a calculadora do parceiro e as páginas do e-book (o que confunde o comprador) e propor melhorias | Designer; Arquiteto confere números | lista de melhorias com antes e depois |
-| N5 | **Campanha de anúncio (plano, sem gastar):** público, ângulos, peças, orçamento de teste em opções, o que medir | Estrategista com o Diretor; Redator; Revisor | plano de campanha para o dono aprovar verba |
-| N6 | Tempo livre: lições das auditorias para os contextos; cortar repetido numa pasta | Maestro | números de antes e depois |
-| N7 | Auditoria do Fable da noite e resumo da manhã | Fable; Maestro | resumo curto: pronto, em veto, esperando o dono |
+Uma por acordar; cada uma com plano curto vetado pelo time antes de executar. Até 6 chamadas de agente por acordar. Na primeira chamada de cada agente, ele diz numa linha as ferramentas que vê (substitui o L1).
+
+| # | Tarefa | Quem | Entrega | Estado |
+|---|---|---|---|---|
+| N1 | Veto do plano da noite | Fable | fila corrigida | **Feito:** SIM, SE com 6 correções, aplicadas aqui |
+| E07 | **Proposta da E07 redesenhada** (ficha `1616`): quartos fora de fila, mantendo se possível 72 m², 3 quartos, 1 suíte, 2 banheiros e lote de 8 m; validador; prévia mobiliada; a E07 do e-book **intacta** | `arquiteto`; Maestro confere | proposta para o dono aprovar | |
+| N3 | **Atendimento (funil do WhatsApp):** rever mensagens, objeções e planta grátis com as regras de hoje | `redator` e `estrategista`; `revisor-de-risco` | **arquivo de proposta** com antes e depois; `WHATSAPP.md` não muda | |
+| N5 | **Campanha de anúncio (plano):** a partir de `ESTRATEGIA.md` seções 8, 10 e 11; público, ângulos, peças, opções de verba de teste, o que medir | `estrategista` com o Diretor; `redator`; `revisor-de-risco` | plano para o dono; sem número inventado; preço e título como campo pendente | |
+| N4 | **Interface:** calculadora do parceiro e páginas do e-book (o que confunde o comprador) | `designer`; `arquiteto` confere números | arquivo de proposta; a calculadora e o PDF não mudam | |
+| N2 | **Skills para o e-book, só no papel:** buscar, ler a licença inteira na página, Revisor; nada de clone, pip, npx ou binário | `pesquisador`; `designer` e `arquiteto` concluem; `revisor-de-risco` | lista para a manhã; skill nossa só como rascunho, sem ativar | |
+| N6 | **Lições** das auditorias para os contextos (o "cortar repetido" sai: vira lista proposta, porque cortar é o que mais incomoda o dono) | Maestro | lições em dia | |
+| N7 | Auditoria do Fable da noite e resumo da manhã (até 15 linhas, até 5 perguntas com opção e recomendação) | Fable; Maestro | resumo | |
+
+**Regras da noite (Fable):** não tocar texto público (`WHATSAPP.md`, `calculadora-lote.html`, `ebook/config.json`, posts, PDF): tudo vira proposta; nada pago (OpenArt, TinyFish dataset, deep research ou automação, Meta Ads); nada instalado; número só com fonte e data; aviso de limite de uso: registrar e parar, sem adivinhar quando volta; falhou duas vezes, pula e anota; se a tarefa anterior ficou sem commit, o acordar continua nela; folga para tarefa que estourar a hora. Depois da fila: "Tempo livre" (`pedidos/PLANO.md`) até completar 24 horas.
+
+**Perguntas para a manhã (suposições):** "UI" é a calculadora e as páginas do e-book? "Customer service" é o funil do parceiro no WhatsApp?
 
 **Recado do dono (01:46): "Just stay awake 24h".** **Tarefa agendada:** "X1-Plantas: trabalho de 24 horas" (antes "da noite") (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; depois da fila, segue com o "Tempo livre" do `pedidos/PLANO.md` (alternando equipe e projeto) até 2026-11-24 01:45 UTC; então escreve o resumo das 24 horas e se apaga. Para se o dono escrever ou se aparecer aviso de limite de uso.
