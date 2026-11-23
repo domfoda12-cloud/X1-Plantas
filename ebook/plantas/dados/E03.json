@@ -204,6 +204,8 @@
     20
    ],
    "taxa_ocupacao": 0.52,
+   "circulacao_ref": 0.346,
+   "frente_estreita": true,
    "orientacao": {
     "melhor": "norte",
     "segunda": "sul",
@@ -215,6 +217,12 @@
      "oeste": 3.6
     }
    }
-  }
+  },
+  "referencias": [
+   "corredor coberto lateral ocupa 35% da casa de 34,3 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto casal com 2,30 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro, Quarto casal: da sala só se chega saindo de casa (corredor coberto, varanda ou quintal); nas referências banheiro e quartos se alcançam por dentro (regra 5a, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "referência (informação): casa de frente estreita, lote de 5,00 m de frente; as referências de São José dos Campos chegam a lote de 4 a 5 m (ebook/referencias/plantas-ref/REFERENCIAS.md, padrão 1)"
+  ]
  }
 }

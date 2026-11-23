@@ -17,7 +17,7 @@ Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 50 m², 2 q
 
 [PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 
-Ela cabe a partir de um terreno de 8 x 15 m, com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa com os recuos de referência.
+Ela cabe num terreno de 8 x 15 m (no mínimo 8 x 13 m), com os recuos de referência. **Qual é o tamanho do seu terreno?** (frente x fundo) Me fala que eu te digo se ela encaixa com os recuos de referência.
 
 > Esta pergunta é a mensagem mais importante da sequência. Tudo o que vem depois usa a resposta.
 >
@@ -134,7 +134,7 @@ Que bom! Se quiser, compara com as plantas do e-book para ver se tem algo que vo
 
 ### "Dá para construir direto com isso?"
 
-Não direto: as plantas são de referência. Um profissional faz o projeto completo para aprovar na prefeitura. O e-book te ajuda a escolher a casa certa antes disso. Quer ver as que cabem no seu terreno?
+Com elas você escolhe a casa que cabe no seu terreno e chega no profissional sabendo o que quer, com as medidas na mão. Construir direto, não: as plantas são **de referência**. Um arquiteto ou engenheiro faz o projeto completo a partir da planta escolhida, conferindo o terreno, as regras da sua cidade e a estrutura; é esse projeto que vai para a prefeitura. Quer ver as que cabem no seu terreno?
 
 ### "E se eu não gostar?"
 
@@ -180,7 +180,7 @@ Em PDF, pelo WhatsApp [ou e-mail], logo depois da confirmação do pagamento.
 ### Sobre as plantas
 
 **Dá para construir direto com essas plantas?**
-Não direto. As plantas são **de referência**: servem para escolher a casa certa para o seu terreno e levar para o profissional. Para construir e aprovar na prefeitura, um arquiteto ou engenheiro faz o projeto completo a partir da planta escolhida, conferindo o terreno, as regras da sua cidade e a estrutura.
+Com elas você escolhe a casa que cabe no seu terreno e chega no profissional sabendo o que quer, com as medidas na mão. Construir direto, não: as plantas são **de referência**. Um arquiteto ou engenheiro faz o projeto completo a partir da planta escolhida, conferindo o terreno, as regras da sua cidade e a estrutura; é esse projeto que vai para a prefeitura. Quer ver as que cabem no seu terreno?
 
 **Então por que comprar?**
 Porque você chega no profissional sabendo o que quer: a planta, o tamanho e os cuidados. Isso ajuda a evitar idas e voltas no projeto e os erros que saem caro na obra.
@@ -244,7 +244,7 @@ Sem a medida do lote, mande a C01. Confira o fundo na [calculadora de lote](calc
 
 ### 2. Ficha da Casa Compacta (para mandar em texto)
 
-**C01 · Casa Compacta** · 50 m² fechados · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m (com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
+**C01 · Casa Compacta** · 50 m² fechados · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8 x 13 m, com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
 
 **Para quem é:** casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.
 

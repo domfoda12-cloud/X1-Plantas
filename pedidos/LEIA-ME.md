@@ -83,7 +83,7 @@ Não desista porque quebraria: adapte até funcionar sem quebrar (fica de fora s
 
 ## Buscar o que o dono já disse (22/11/2026)
 
-Antes de perguntar ao dono algo que ele pode já ter dito, busque: `python3 ferramentas/pesquisa.py buscar <palavras>` (caderno e apostilas) e `python3 ferramentas/conversas.py buscar <palavras>` (as falas dele nas conversas do Claude Code deste projeto, nesta máquina: no Mac, todas; na nuvem, só a atual). A busca nas conversas serve para **lembrar**, não para copiar: ao repositório só vai a decisão, reescrita em uma linha, com a data e "conversa anterior"; nunca trecho literal, dado de pessoa, senha, chave, assunto pessoal ou caminho de arquivo (regra do Revisor, ficha `2151`).
+Antes de perguntar ao dono algo que ele pode já ter dito, busque: `python3 ferramentas/pesquisa.py buscar <palavras>` (caderno e apostilas) e `python3 ferramentas/conversas.py buscar <palavras>` (as falas dele nas conversas do Claude Code deste projeto, nesta máquina: no computador do dono, todas; na nuvem, só a atual). A busca nas conversas serve para **lembrar**, não para copiar: ao repositório só vai a decisão, reescrita em uma linha, com a data e "conversa anterior"; nunca trecho literal, dado de pessoa, senha, chave, assunto pessoal ou caminho de arquivo (regra do Revisor, ficha `2151`).
 
 ## Faltou informação do dono? Sugira, não espere (dono, 22/11/2026)
 

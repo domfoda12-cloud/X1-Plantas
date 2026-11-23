@@ -583,7 +583,7 @@ def dupla(L, p, por_id, numeros):
     erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
     cat = CATEGORIAS[p["id"][0]]
     L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · LOTE A PARTIR DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
+      <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · CABE NUM LOTE DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
         <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p></div>
       <div class="planta-grande">{svg_planta(p, moveis=True)}</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
@@ -597,10 +597,10 @@ def dupla(L, p, por_id, numeros):
     perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]}.</h2></div>
+      <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]} m.</h2></div>
       <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
-          <div class="r-por">Cabe a partir de {m(r['lote'][0])} x {m(r['lote'][1])} m · lote comercial {f} x {r['lote_comercial'][1]} m</div>
+          <div class="r-por">Lote comercial {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
           {linha('Área fechada', f"{n0(r['area_fechada'])} m²")}
           {linha('Medidas por fora', f"{m(p['W'])} x {m(p['D'])} m")}
@@ -660,7 +660,7 @@ def montar_gratis(plantas, config, pid):
                      f"o e-book tem {len(plantas)} casas, cada uma com o lote mínimo calculado.")
         legenda_ima = "As casas dos próximos tamanhos de lote."
     L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>
-      <p class="abertura">A {E(p['nome'])} cabe a partir de {f} m de frente. {E(frase_ima)}</p>
+      <p class="abertura">A {E(p['nome'])} cabe num lote de {f} m de frente. {E(frase_ima)}</p>
       {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}
       <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
       <p class="pequeno"><b>Planta de referência:</b> não é projeto executivo nem legal, não serve para aprovar nem para construir direto. Leve a um arquiteto ou engenheiro.</p>

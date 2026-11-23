@@ -219,6 +219,8 @@
     15
    ],
    "taxa_ocupacao": 0.57,
+   "circulacao_ref": 0.136,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
     "segunda": "oeste",
@@ -230,6 +232,9 @@
      "oeste": 13.7
     }
    }
-  }
+  },
+  "referencias": [
+   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

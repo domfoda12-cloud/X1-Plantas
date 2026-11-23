@@ -7,14 +7,14 @@
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - **Você é o Diretor; o Maestro é a conversa principal** (dono, 22/11/2026): você dá a ideia principal de todo conteúdo (vídeo, imagem, post, anúncio, texto público) e opina primeiro nele; quem decide é o Maestro. Em sistema e código, não precisa opinar (`CONSELHO.md`, seção 4, item 0).
-- Edição de vídeo é sua, mas roda no Mac ou PC do dono; criação de imagem é sua, usando o OpenArt, **com o "sim" do dono a cada uso** (22/11).
+- Edição de vídeo é sua, mas roda no PC com Windows do dono; criação de imagem é sua, usando o OpenArt, **com o "sim" do dono a cada uso** (22/11).
 - Só relate número que a ferramenta devolveu; nunca estime visualização, seguidor ou métrica de rede.
 - O nome do serviço é MinoAI Frontier, nunca só "Mino".
 
 ## Em aberto com você
 
 - Criar o estilo de edição no Edit Style Generator e conectar o Instagram (ainda não há conta conectada).
-- Assistir ao CONDOR XIII no Mac, ou receber 3 a 5 momentos com o minuto.
+- Assistir ao CONDOR XIII no PC do dono, ou receber 3 a 5 momentos com o minuto.
 - Dizer qual palavra de comentário testar: PLANTA ou LOTE.
 - Música: só licenciada em anúncio; pesquisar o estilo que lembra a infância do comprador (com o Pesquisador).
 

@@ -15,7 +15,7 @@
 - Proibido "pronta para construir" e "garantia de aprovação"; preço de concorrente só com fonte e data, num lugar só: `MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4 (R$ 98 a R$ 2.000 e R$ 420 a R$ 899, cada faixa com a sua fonte).
 <!-- /essencial -->
 
-## Os 3 documentos
+## Os 4 documentos
 
 ### [Apostila do Arquiteto](ARQUITETO.md)
 
@@ -31,7 +31,7 @@ A persona, os concorrentes e os projetos parecidos. Juntado em 22/11/2026 (ficha
 
 Seções: Quem compra: o público e o "Seu Marcos"; Concorrentes e o que o mercado já viu; Projetos similares: quem vende plantas de casas e o que aprender.
 
-Tamanho: 2599 palavras.
+Tamanho: 2682 palavras.
 
 ### [Referência visual](VISUAL.md)
 
@@ -39,4 +39,12 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
-Tamanho: 2351 palavras.
+Tamanho: 2394 palavras.
+
+### [Plantas de referência: 78 casas térreas pequenas, de fontes públicas (30 do piloto + 21 da rodada 2 + 27 da rodada 3)](plantas-ref/REFERENCIAS.md)
+
+Piloto da base de plantas do Arquiteto (decisão do dono, 23/11/2026: "pesquise antes de revisar a casa"). Levantado em 23/11/2026 com busca e leitura grátis (TinyFish e download direto; nada pago). Rodada 2 (23/11/2026, mesma data): linhas 31 a 51, foco em variedade e em lote estreito. Rodada 3…
+
+Seções: Como ler a tabela; Fontes (lidas em 23/11/2026); As 78 plantas (30 do piloto, 21 da rodada 2, 27 da rodada 3); Aviso de diversidade (importante para o Arquiteto); Quatro padrões (três do piloto, revistos com a rodada 2) e o que a rodada 3 mudou; O que ficou incerto ou não foi conferido.
+
+Tamanho: 13592 palavras.

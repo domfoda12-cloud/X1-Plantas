@@ -4,11 +4,11 @@
 
 | Agente | Nota do veto, de 0 a 5 (n) | Ponto que mais cai (vezes) | Provas: plantados achados; alarmes falsos | Lições (origem) |
 |---|---|---|---|---|
-| arquiteto | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | - |
+| arquiteto | n = 0, sem nota ainda | - | 14 de 15; 0 de 3; n = 2 | prova 1 |
 | designer | n = 0, sem nota ainda | - | - | dono 1 |
-| editor-video | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | dono 1 |
-| estrategista | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | dono 1, prova 1 |
-| haiku | n = 0, sem nota ainda | - | 7,5 de 8; alarme falso não medido; n = 1 | - |
-| maestro | n = 0, sem nota ainda | - | - | dono 6 |
+| editor-video | n = 0, sem nota ainda | - | 14 de 15; 0 de 3; n = 2 | dono 1, prova 1 |
+| estrategista | n = 0, sem nota ainda | - | 15 de 15; 0 de 3; n = 2 | dono 1, prova 1 |
+| haiku | n = 0, sem nota ainda | - | 14 de 15; 0 de 3; n = 2 | - |
+| maestro | n = 0, sem nota ainda | - | - | dono 6, maestro 1 |
 | pesquisador | n = 0, sem nota ainda | - | - | dono 1 |
-| revisor-de-risco | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | prova 1 |
+| revisor-de-risco | n = 0, sem nota ainda | - | 15 de 15; 0 de 3; n = 2 | prova 2 |

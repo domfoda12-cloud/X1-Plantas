@@ -6,7 +6,7 @@
 >
 > **Destino (dono, 22/11/2026): WhatsApp e Facebook Ads**, não Instagram nem TikTok. **Sem o selo "Imagem ilustrativa"** no vídeo (o dono tirou); o aviso legal fica pequeno, no canto, parado.
 >
-> A edição final roda **no Mac ou PC do dono**, na aba Code do app do Claude, com a MinoAI Frontier ligada. Este pacote tem tudo, menos a **gravação da voz do dono**.
+> A edição final roda **no PC com Windows do dono**, na aba Code do app do Claude, com a MinoAI Frontier ligada. Este pacote tem tudo, menos a **gravação da voz do dono**.
 
 ## 1. O que tem aqui (20 MB)
 
@@ -76,8 +76,8 @@
 - Cortes na batida. Nada de marca, logo de terceiros, escudo ou tela de jogo.
 - Depois de editar, o vídeo volta para o **Revisor de risco** antes de publicar.
 
-## 5. O que dizer para a MinoAI no Mac
+## 5. O que dizer para a MinoAI no PC
 
-Ponha esta pasta e a gravação da voz na pasta Filmes (no Windows, Vídeos), abra a aba Code do app do Claude com a MinoAI Frontier ligada e diga:
+Ponha esta pasta e a gravação da voz na pasta Vídeos, abra a aba Code do app do Claude com a MinoAI Frontier ligada e diga:
 
 > Edite um vídeo faceless para WhatsApp e Facebook Ads no estilo MinoAI Frontier com a minha locução `voz.m4a` e os clipes da pasta `kit-minoai`. Siga o plano de corte e as regras do arquivo `LEIA-ME.md` dessa pasta, na ordem da tabela. Use `aviso-legal.png` como camada parada, pequena, no canto. Não use o selo "Imagem ilustrativa". A música é `audio/big-big-128bpm.m4a`. Entregue em 1080 x 1920 com até 12 MB e uma versão de 720 x 1280 com até 5 MB.

@@ -10,7 +10,7 @@
 - **Vídeo sem apresentador** (principal e prévia do WhatsApp): `python3 video/montar.py video/roteiros/<nome>.json`. Texto e cenas ficam no roteiro; o aviso legal sai em todas as cenas. Clipe novo entra comprimido em `broll/clipes/`.
 - **Vídeos antigos:** apagados em 22/11 (git, commit 079dae7).
 - **Música:** anúncio pago só com faixa licenciada ou a trilha nossa (`musica/gerar_trilha.py`, aprovada pelo Revisor em 21/11). Áudio dos modelos de vídeo é descartado. A trilha "lofi" do toolkit (ElevenLabs, licença não conferida) não vai em anúncio.
-- **Edição final** é da MinoAI Frontier, no Mac do dono. **Gravação de páginas web** (calculadora, leitor do e-book): skill `product-demo`.
+- **Edição final** é da MinoAI Frontier, no PC do dono. **Gravação de páginas web** (calculadora, leitor do e-book): skill `product-demo`.
 - **Condições do dono para todo vídeo (22/11/2026):**
   - **Antes de montar vídeo ou gastar crédito do OpenArt:** mandar o resumo da produção e a lista de instruções, e esperar o dono confirmar os dois.
   - **Ficha do pedido** (a seção "Pedido do dono" de `ANUNCIO-LOCUCAO.md`): vai inteira em todo pedido a agente; a reconferência dela roda antes de cada etapa. **O destino do anúncio com locução é WhatsApp e Facebook Ads, não Instagram nem TikTok.**

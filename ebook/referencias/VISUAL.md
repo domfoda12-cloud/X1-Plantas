@@ -17,7 +17,7 @@
 | "Plantas exclusivas e inovadoras" | "24 casas, cada uma conferida contra as medidas mínimas de quarto, cozinha e banheiro" |
 | "Economize milhares com arquiteto" | "Chegue no seu engenheiro sabendo que casa você quer" |
 | "Projeto completo para construir" | "Planta de referência para conversar com o seu engenheiro e o seu pedreiro" |
-| "Casa barata" | "Casa que você constrói por etapas" |
+| "Casa barata" | "Casa compacta, que cabe no seu lote" ("por etapas" sai até as etapas serem desenhadas: dono, 23/11/2026) |
 | "Aprovado" / "garantido" | Nunca. Aprovação é da prefeitura |
 
 **Estrutura de cada página de casa** (cada frase abaixo deve caber em uma linha de celular):
@@ -35,7 +35,7 @@
 - "O erro de planta que o pedreiro não te conta: o corredor."
 - "Antes de comprar a laje, veja se a cozinha cabe." (a cozinha precisa de 1,50 m livres)
 - "Por que cozinha, banheiro e serviço ficam juntos?" (uma prumada só)
-- "A casa que cresce: comece com 1 quarto, termine com 2 sem quebrar nada." (C03)
+- "Antes do primeiro tijolo, mede a frente do seu lote. A casa certa começa nessa medida." (no lugar de "A casa que cresce… sem quebrar nada", da C03: em espera até ela ser redesenhada; dono, 23/11/2026)
 
 ### 2. Visual
 
@@ -160,4 +160,4 @@ Série "200 projetos modernos em porcelanato" (material profissional, catálogo 
 
 ### O diferencial que eles não têm
 
-**"por que esta planta é assim"**: em cada planta, três decisões explicadas (orientação, luz e ar, núcleo molhado, circulação, "a casa que cresce"; "ventilação cruzada" só depois de o arquiteto conferir, porque o validador não mede), com fonte nas regras de [`ARQUITETO.md`](ARQUITETO.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.
+**"por que esta planta é assim"**: em cada planta, três decisões explicadas (orientação, luz e ar, núcleo molhado, circulação; "a casa que cresce" só quando a ampliação estiver desenhada, depois do lançamento: dono, 23/11/2026; "ventilação cruzada" só depois de o arquiteto conferir, porque o validador não mede), com fonte nas regras de [`ARQUITETO.md`](ARQUITETO.md). Os catálogos mostram o resultado; o nosso e-book mostra o raciocínio. É o que o Marcos não consegue de um pedreiro.

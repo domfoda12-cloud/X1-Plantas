@@ -38,7 +38,7 @@ def pasta(nome):
 
 def quadro(p, svg, classe, titulo):
     m = p["_r"].metricas
-    sub = f"{PL.n0(m['area_fechada'])} m² · {p['quartos_txt'].replace(' (+1 depois)', '')} · lote a partir de {m['lote_comercial'][0]} x {m['lote_comercial'][1]} m"
+    sub = f"{PL.n0(m['area_fechada'])} m² · {p['quartos_txt'].replace(' (+1 depois)', '')} · cabe num lote de {m['lote_comercial'][0]} x {m['lote_comercial'][1]} m com recuos de referência"
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>'
             f'<div class="q {classe}"><div><h1>{titulo}</h1><div class="sub">{sub}</div></div>'
             f'<div class="fig">{svg}</div><div class="rod">{livro.AVISO}</div></div></body></html>')

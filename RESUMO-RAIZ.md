@@ -31,9 +31,9 @@ Tamanho: 1011 palavras.
 
 Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselho <tarefa>`). Painel: `PAINEL.md`.
 
-Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
+Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 5b. Modo júri (método do llm-council, 23/11/2026); 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 2267 palavras.
+Tamanho: 2578 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 8475 palavras.
+Tamanho: 8630 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1184 palavras.
+Tamanho: 1201 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 3453 palavras.
+Tamanho: 3553 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -65,7 +65,7 @@ Para quem vamos vender, o que essa pessoa quer, como ela fala e o que oferecer. 
 
 Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três perfis; 4. Posicionamento; 5. Os três diferenciais (repetir em tudo); 6. O que isso muda no produto; 7. A oferta; 8. Ângulos de anúncio; 9. Tom de voz; 10. Calendário do lançamento; 11. O que medir para saber se a estratégia está certa.
 
-Tamanho: 2076 palavras.
+Tamanho: 2204 palavras.
 
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 
@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 847 palavras.
+Tamanho: 870 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 
@@ -89,7 +89,7 @@ Comece por aqui. Este é o centro de controle do projeto: o que estamos construi
 
 Seções: 1. Situação agora; 2. Em que pé está (escrito à mão, 22/11/2026); 3. O negócio em uma frase; 4. A conta que diz se o anúncio paga; 5. Frentes, uma por vez; 6. Esta semana; 7. Números para acompanhar; 8. Decisões tomadas; 9. Decisões pendentes; 10. Riscos e cuidados; 11. Rotina; 12. Quem faz o quê; 13. Mapa do projeto.
 
-Tamanho: 2195 palavras.
+Tamanho: 2274 palavras.
 
 ### [X1-Plantas](README.md)
 
@@ -103,7 +103,7 @@ As regras, as decisões do dono e quem decide o quê. Leia este resumo primeiro;
 
 Seções: O essencial; Os 12 documentos.
 
-Tamanho: 1299 palavras.
+Tamanho: 1306 palavras.
 
 ### [Ferramentas: regras desta pasta](ferramentas/CLAUDE.md)
 

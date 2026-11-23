@@ -266,6 +266,8 @@
     20
    ],
    "taxa_ocupacao": 0.59,
+   "circulacao_ref": 0.095,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
     "segunda": "norte",
@@ -277,6 +279,11 @@
      "oeste": 9.7
     }
    }
-  }
+  },
+  "referencias": [
+   "Cozinha com 1,74 m no menor lado livre; nas referências e na régua federal, pelo menos 1,80 m (regra 5b, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: 0,99 m de largura livre; sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro com 2,39 x 1,08 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

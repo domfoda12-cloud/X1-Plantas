@@ -22,7 +22,7 @@
 | Ariel Helwani (X, 24/03/2024) | "A página do Payton é incrível, mas não pelos motivos de sempre de canal de lutador" |
 | Respostas ao post | "acid-house avant-garde"; "como as fitas VHS de mixtape do And1 e de skate dos anos 90, só que para MMA" |
 
-**Para completar** (fica em aberto): assistir quadro a quadro no Mac do dono, onde o `/watch` usa o navegador logado. Outra saída é o dono mandar 3 a 5 momentos favoritos com o minuto de cada um. Aí este arquivo ganha a seção "momento a momento".
+**Para completar** (fica em aberto): assistir quadro a quadro no PC do dono, onde o `/watch` usa o navegador logado. Outra saída é o dono mandar 3 a 5 momentos favoritos com o minuto de cada um. Aí este arquivo ganha a seção "momento a momento".
 
 ### 1b. O que o `analyze_hook` da MinoAI Frontier viu (reels da mesma dupla de edição)
 
@@ -141,7 +141,7 @@ Vem das análises da MinoAI Frontier (seção 1b), dos créditos e das palavras-
 - **Diretor (MinoAI Frontier), primeiro.** A biblioteca dela apoia três pontos:
   - Montar o sentido a cada dois planos (efeito Kuleshov) e deixar cada plano "só o tempo de passar a ideia" (Content Academy SOP).
   - Trocar de imagem a cada 0,75 s é coisa de Shorts para público jovem. Com público de 25 anos para cima, isso pode parecer infantil (coaching call "Mastering Superhooks", [link](https://www.loom.com/share/991211e6490344b283941f4204a7b8df)). O ritmo do CONDOR, guiado pela música, serve melhor à nossa persona (25 a 50 anos).
-  - Fazer a "quebra do vídeo" das referências: medir quanto tempo cada plano fica na tela e contar os cortes por minuto (Content Academy SOP). É isso que falta fazer com o CONDOR no Mac.
+  - Fazer a "quebra do vídeo" das referências: medir quanto tempo cada plano fica na tela e contar os cortes por minuto (Content Academy SOP). É isso que falta fazer com o CONDOR no PC do dono.
 - **Editor de vídeo:** o estilo serve como **embalagem** (abertura, transição, capa). A planta precisa ficar parada e legível por pelo menos 1,5 s. Arte que esconde a planta derruba a venda.
 - **Revisor de risco:** fachada e 3D gerados levam "Imagem ilustrativa" (em vídeo, o dono tirou o selo em 22/11/2026; em imagem parada continua). A frase-tese não pode prometer que a casa cabe em qualquer lote, por isso fica "a casa certa", e não "sua casa cabe".
 

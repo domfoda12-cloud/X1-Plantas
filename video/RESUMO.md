@@ -12,13 +12,13 @@
 - Montar: `python3 video/montar.py video/roteiros/<nome>.json`. Escaneamento: `python3 video/scan.py ID`. Passeio: `node render-passeio.cjs --planta ID`. 3D: `node render-planta.cjs --planta ID`. (`CLAUDE.md`)
 - `saida/` hoje: `previa-whatsapp/` e `principal/` são de 21/11, com a C01 antiga (remontar); `principal-condor/` e `convite/` são rascunhos; `principal-e07/` tem a versão antiga e a montagem com a voz do dono sobre a E07 em fila; `v1` a `v5` (R$ 1.000 do arquiteto) são antigos, não publicar. (`VIDEO.md`)
 - Todo clipe usa os prompts de câmera de `principal-e07/PROMPTS.md` e parte de imagem nossa. (`principal-e07/PROMPTS.md`)
-- Edição final: MinoAI Frontier, no Mac do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"))
+- Edição final: MinoAI Frontier, no PC com Windows do dono. Música: faixa licenciada ou a trilha nossa de 128 BPM. Até 12 MB; WhatsApp até 5 MB. (`CLAUDE.md`, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"))
 - Em aberto: o plano do anúncio com locução espera o dono aprovar a planta nova da E07 (na fila do redesenho) e o plano; nada foi gerado. (`ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"))
 - `PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro") é registro da versão de 21/11, substituído por `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"). (`PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro"))
 - Pacotes do vídeo: npm (`package-lock.json`), dentro de `video/`; instalar com `npm ci`, só com ficha. (`package-lock.json`)
 <!-- /essencial -->
 
-## Os 7 documentos
+## Os 8 documentos
 
 ### [Anúncio com a locução do dono](ANUNCIO-LOCUCAO.md)
 
@@ -26,7 +26,7 @@ A peça do anúncio com a voz do dono: o pedido (ficha anexa), o plano, o brief 
 
 Seções: Pedido do dono: anúncio do e-book com locução (ficha única); Plano de criação: anúncio do e-book com locução, com a planta nova; Brief criativo: anúncios de plantas de casas; Anúncios para o Facebook Ads.
 
-Tamanho: 5233 palavras.
+Tamanho: 5281 palavras.
 
 ### [Vídeo: regras desta pasta](CLAUDE.md)
 
@@ -48,7 +48,7 @@ A referência de edição favorita do dono (CONDOR) e a oferta e demanda de form
 
 Seções: Referência de edição: CONDOR XIII (Payton Talbott); Referência: como um formato viraliza (oferta e demanda).
 
-Tamanho: 4301 palavras.
+Tamanho: 4303 palavras.
 
 ### [Vídeo: regras, pedidos do dono e conferência](VIDEO.md)
 
@@ -56,7 +56,7 @@ Tudo o que vale para qualquer vídeo: o guia, as instruções do dono (palavra p
 
 Seções: Vídeo: o que existe hoje; Vídeo: tudo o que o dono pediu (não se perde); Checklist de revisão antes de subir o anúncio.
 
-Tamanho: 4457 palavras.
+Tamanho: 4465 palavras.
 
 ### [Prompts do vídeo da E07 (OpenArt)](principal-e07/PROMPTS.md)
 
@@ -70,6 +70,14 @@ Tamanho: 1006 palavras.
 
 E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026); os clipes deste pacote mostram a planta antiga e serão refeitos pelo plano novo, `../../ANUNCIO-LOCUCAO.md`. Parte da frente Vídeo. Plano desta versão: `../../PRINCIPAL-E07.md`; plano que vale agora:…
 
-Seções: 1. O que tem aqui (20 MB); 2. Roteiro para gravar (aprovado pelo Revisor de risco); 3. Plano de corte (128 BPM: 1 compasso = 1,875 s); 4. Regras da edição; 5. O que dizer para a MinoAI no Mac.
+Seções: 1. O que tem aqui (20 MB); 2. Roteiro para gravar (aprovado pelo Revisor de risco); 3. Plano de corte (128 BPM: 1 compasso = 1,875 s); 4. Regras da edição; 5. O que dizer para a MinoAI no PC.
 
-Tamanho: 1346 palavras.
+Tamanho: 1343 palavras.
+
+### [Memes brasileiros históricos: base de referência para o Editor e o Redator](referencias/MEMES.md)
+
+O que é: lista de memes brasileiros que o público de 25 a 50 anos reconhece, com origem, risco e fonte, para tirar ideias (gancho, frase, nome de rua) para o vídeo. Data: 23/11/2026. Pesquisador (Sonnet), passo 1; quem conclui é o Opus.
+
+Seções: A. Com ligação a casa, obra, vizinho, rua ou dinheiro; B. Sem ligação direta, mas muito reconhecidos; C. Reconhecidos, mas evitar em anúncio de família; Nomes de rua (opções para o dono); O que ficou incerto.
+
+Tamanho: 3421 palavras.

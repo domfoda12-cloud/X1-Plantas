@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 18 programas
+## Os 19 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -107,7 +107,7 @@ Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`
 
 Biblioteca e validador de plantas: as regras de projeto do X1-Plantas, em código.
 
-Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`, `melhor_orientacao`.
+Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`, `referencias`.
 
 ### [`ferramentas/recortes.py`](recortes.py)
 
@@ -120,3 +120,9 @@ Funções: `main`.
 Gera o índice do projeto e o resumo de cada pasta de documentos, para os agentes lerem barato.
 
 Funções: `rastreados`, `limpar`, `do_que_trata`, `ficha_md`, `ficha_py`, `essencial`, `docs_da`, `gerar`, `conferir`.
+
+### [`ferramentas/salvar.py`](salvar.py)
+
+Salvar e enviar só com a conferência verde (conserto de vez: o Maestro enviou duas vezes com o checar.py vermelho em 23/11).
+
+Funções: `rodar`.

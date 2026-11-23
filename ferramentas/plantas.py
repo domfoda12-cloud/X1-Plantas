@@ -25,6 +25,7 @@ Uso:
     python3 ferramentas/plantas.py exportar         grava um JSON por planta em ebook/plantas/dados/
     python3 ferramentas/plantas.py fichas           regrava ebook/plantas/PLANTAS.md (a ficha de cada planta)
     python3 ferramentas/plantas.py resumo           mostra a tabela com os números calculados
+    python3 ferramentas/plantas.py referencias      casa x regra das referências: grava ebook/plantas/CONSERTOS.md
 """
 import json
 import math
@@ -322,6 +323,7 @@ class Relatorio:
     def __init__(self, planta):
         self.p = planta
         self.erros, self.avisos, self.info = [], [], []
+        self.referencias, self.ref_info = [], []  # régua das referências: lista de conserto, não vai ao comprador
         self.metricas = {}
 
     def erro(self, m):
@@ -552,16 +554,104 @@ def validar(planta):
     lote_fundo = round(ymax + rec["frente"] + rec["fundos"], 1)
     r.metricas["lote"] = (lote_frente, lote_fundo)
     r.metricas["recuos"] = rec
-    n_lote = math.ceil(lote_frente * 2) / 2
     r.metricas["lote_comercial"] = (math.ceil(lote_frente), math.ceil(lote_fundo / 5) * 5)
     ocupacao = (W * D) / (lote_frente * lote_fundo)
     r.metricas["taxa_ocupacao"] = round(ocupacao, 2)
     if lote_frente < 5.0:
         r.erro(f"lote de {lote_frente:.1f} m de frente é menor que o mínimo da Lei 6.766 (5 m)")
 
+    # Régua das 51 plantas de referência (aviso, não erro; dono, 23/11/2026)
+    referencias(planta, r, g)
+
     # Orientação
     r.metricas["orientacao"] = melhor_orientacao(planta)
     return r
+
+
+# As 5 regras tiradas das 51 plantas de referência (ebook/referencias/plantas-ref/REFERENCIAS.md), aprovadas
+# pelo dono em 23/11/2026 como AVISO: viram a lista de conserto, não barram a planta. Medidas por dentro.
+FONTE_REF = "ebook/referencias/plantas-ref/REFERENCIAS.md"
+REF = {
+    "circ_max": 0.06, "circ_ate_m2": 60.0, "lote_corredor": 4.5,  # 1: circulação; exceção: lote de 4 a 4,5 m
+    "banho": 1.50,                                                # 2: os dois lados do banheiro
+    "quarto": 2.85, "quarto_2camas": 2.60,                        # 3: largura do quarto
+    "servico": 1.15,                                              # 4: "cerca de 1,20" (5 cm de folga)
+    "cozinha": 1.80,                                              # 5b: menor lado da cozinha
+    "frente_estreita": 6.0,                                       # informação: lote de até 6 m de frente
+}
+REGRAS_REF = [("1", "Circulação"), ("2", "Banheiro"), ("3", "Quarto"), ("4", "Serviço"), ("5a", "Por dentro"), ("5b", "Cozinha")]
+
+
+def _m(v):
+    return f"{v:.2f}".replace(".", ",")
+
+
+def referencias(planta, r, g):
+    """Grava em r.referencias [(regra, medida curta, frase)] e em r.metricas["frente_estreita"] a informação do lote.
+    Fica fora de r.avisos de propósito: os avisos vão ao PDF e às fichas do comprador; estes são a lista de conserto."""
+    r.referencias, r.ref_info = [], []  # fora de r.info também: o info vai ao PDF
+    cs = planta["comodos"]
+    u = r.metricas["util"]
+    def fora(regra, curta, frase):
+        r.referencias.append((regra, curta, f"{frase} (regra {regra}, {FONTE_REF})"))
+    a_f = r.metricas["area_fechada"]
+    frente = r.metricas["lote"][0]
+    # 1. Circulação: o corredor coberto de fora a fora (id "corr") também é caminho, e entra na conta
+    circ = sum(area(c) for c in cs if c["tipo"] == "circ" or c["id"] == "corr")
+    pc = circ / a_f if a_f else 0
+    r.metricas["circulacao_ref"] = round(pc, 3)
+    if a_f <= REF["circ_ate_m2"] + 1e-6 and pc > REF["circ_max"] + 1e-6:
+        qual = "corredor coberto lateral" if any(c["id"] == "corr" for c in cs) else "circulação"
+        if frente <= REF["lote_corredor"] + 1e-6:
+            r.ref_info.append(f"referência: {qual} de {pc * 100:.0f}% da casa, aceito como exceção (lote de {_m(frente)} m de frente; "
+                          f"as referências de 4 a 4,5 m usam corredor lateral; regra 1, {FONTE_REF})")
+        else:
+            fora("1", f"{pc * 100:.0f}%", f"{qual} ocupa {pc * 100:.0f}% da casa de {_f(a_f)} m²; nas referências de até 60 m² "
+                 f"fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente)")
+    # 2. Banheiro, 3. Quarto, 4. Serviço, 5b. Cozinha: o menor lado livre
+    for c in cs:
+        t = c["tipo"]
+        lx, ly = u[c["id"]][:2]
+        menor = min(lx, ly)
+        if t == "banho" and menor < REF["banho"] - 1e-6:
+            fora("2", _m(menor), f"{c['nome']} com {_m(lx)} x {_m(ly)} m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais")
+        if t == "dorm" and menor < REF["quarto_2camas"] - 1e-6:
+            fora("3", _m(menor), f"{c['nome']} com {_m(menor)} m de largura livre: abaixo de 2,60 m não cabem as duas camas; "
+                 "nas referências o quarto tem 2,85 a 3,00 m")
+        elif t in ("dorm", "casal") and menor < REF["quarto"] - 1e-6:
+            fora("3", _m(menor), f"{c['nome']} com {_m(menor)} m de largura livre; nas referências o quarto tem 2,85 a 3,00 m")
+        if t == "servico":
+            saida = any(c["id"] in (pt[0], pt[1]) and ({pt[0], pt[1]} - {c["id"]}) & ({"ext"} | {o["id"] for o in cs if o["tipo"] in EXTERNOS | SEMIEXTERNOS})
+                        for pt in planta.get("portas", []))
+            falta = []
+            if menor < REF["servico"] - 1e-6:
+                falta.append(f"{_m(menor)} m de largura livre")
+            if not saida:
+                falta.append("sem porta para o quintal")
+            if falta:
+                fora("4", " e ".join(([_m(menor)] if menor < REF["servico"] - 1e-6 else []) + (["sem saída"] if not saida else [])),
+                     f"{c['nome']}: " + "; ".join(falta) + "; nas referências o serviço tem cerca de 1,20 m e sai para o quintal")
+        if t == "cozinha" and menor < REF["cozinha"] - 1e-6:
+            fora("5b", _m(menor), f"{c['nome']} com {_m(menor)} m no menor lado livre; nas referências e na régua federal, pelo menos 1,80 m")
+    # 5a. Banheiro e quartos alcançados por dentro: a partir da sala, sem sair para varanda, corredor coberto ou quintal
+    dentro = {c["id"] for c in casa_fechada(planta)}
+    vistos = {c["id"] for c in cs if c["tipo"] in ("sala", "estar", "jantar")}
+    fila = list(vistos)
+    while fila:
+        n = fila.pop()
+        for m in g.get(n, ()):
+            if m in dentro and m not in vistos:
+                vistos.add(m)
+                fila.append(m)
+    por_fora = [c["nome"] for c in cs if c["tipo"] in ("banho", "dorm", "casal") and c["id"] not in vistos]
+    if por_fora:
+        fora("5a", f"{len(por_fora)} por fora", f"{', '.join(por_fora)}: da sala só se chega saindo de casa (corredor coberto, varanda ou quintal); "
+             "nas referências banheiro e quartos se alcançam por dentro")
+    # Informação: frente estreita
+    r.metricas["frente_estreita"] = frente <= REF["frente_estreita"] + 1e-6
+    if r.metricas["frente_estreita"]:
+        r.ref_info.append(f"referência (informação): casa de frente estreita, lote de {_m(frente)} m de frente; "
+                      f"as referências de São José dos Campos chegam a lote de 4 a 5 m ({FONTE_REF}, padrão 1)")
 
 
 def melhor_orientacao(planta):
@@ -785,8 +875,8 @@ def cmd_fichas():
         m = p["_r"].metricas
         L += [f"## {p['id']} · {p['nome']}", "",
               f"![{p['id']}](previas/{p['id']}.png)", "",
-              f"**{n0(m['area_fechada'])} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · lote a partir de "
-              f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** · frente para o **{m['orientacao']['melhor']}**", ""]
+              f"**{n0(m['area_fechada'])} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · cabe num lote de "
+              f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** (no mínimo {_f(m['lote'][0])} x {_f(m['lote'][1])} m) · frente para o **{m['orientacao']['melhor']}**", ""]
         if p.get("destaque"):
             L += [f"*{p['destaque']}*", ""]
         L += ["**Por que esta planta é assim**", ""] + [f"- {t}" for t in pensou(p)]
@@ -823,6 +913,10 @@ def cmd_validar(ids):
             print("      ✗", e)
         for a in r.avisos:
             print("      !", a)
+        for _, _, a in r.referencias:
+            print("      ! referência:", a)
+        for a in r.ref_info:
+            print("      ·", a)
         ruim += bool(r.erros)
     print(f"\n{len(plantas)} plantas, {ruim} com erro.")
     return 1 if ruim else 0
@@ -846,7 +940,8 @@ def cmd_exportar():
         r = p["_r"]
         dado = {k: v for k, v in p.items() if k != "_r"}
         dado["pensou"] = pensou(p)
-        dado["validacao"] = {"erros": r.erros, "avisos": r.avisos, "info": r.info, "metricas": r.metricas}
+        dado["validacao"] = {"erros": r.erros, "avisos": r.avisos, "info": r.info, "metricas": r.metricas,
+                             "referencias": [a for _, _, a in r.referencias] + r.ref_info}
         (saida / f"{p['id']}.json").write_text(json.dumps(dado, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(plantas)} arquivos em {saida}")
 
@@ -858,6 +953,37 @@ def cmd_resumo():
         q = p["quartos_txt"]
         print(f"| {p['id']} | {p['nome']} | {n0(m['area_fechada'])} m² | {q} | {p['banheiros']} | "
               f"{m['lote_comercial'][0]} x {m['lote_comercial'][1]} | {m['orientacao']['melhor']} |")
+
+
+def cmd_referencias():
+    """Casa x regra das 51 plantas de referência: o que está fora em cada casa (a lista de conserto)."""
+    plantas = carregar()
+    cab = "| Casa | m² | Frente do lote | " + " | ".join(f"{n} {t}" for n, t in REGRAS_REF) + " | Fora |"
+    L = ["# Lista de conserto: as 24 casas contra as plantas de referência", "",
+         "> Gerado por `python3 ferramentas/plantas.py referencias`; não edite. Régua: as 5 regras tiradas das 51 plantas de "
+         "[`../referencias/plantas-ref/REFERENCIAS.md`](../referencias/plantas-ref/REFERENCIAS.md), aprovadas pelo dono em 23/11/2026 "
+         "como aviso (não barram a planta e não vão ao PDF). Medidas livres, por dentro das paredes; `-` = dentro da regra.", "",
+         "Regras: **1** circulação (com o corredor coberto lateral) até 6% em casa de até 60 m² (corredor lateral só em lote de 4 a 4,5 m) · "
+         "**2** banheiro com os dois lados de 1,50 m ou mais · **3** quarto de 2,85 a 3,00 m de largura, nunca abaixo de 2,60 m se for de duas camas · "
+         "**4** serviço com cerca de 1,20 m e saída para o quintal · **5a** banheiro e quartos alcançados por dentro de casa · **5b** cozinha com pelo menos 1,80 m. "
+         "Frente do lote: o lote mínimo de referência; *estreita* = até 6 m.", "",
+         cab, "|" + "---|" * (cab.count("|") - 1)]
+    conta = {n: 0 for n, _ in REGRAS_REF}
+    for p in plantas:
+        r, m = p["_r"], p["_r"].metricas
+        celula = {}
+        for regra, curta, _ in r.referencias:
+            celula.setdefault(regra, []).append(curta)
+        for n in celula:
+            conta[n] += 1
+        fr = _m(m["lote"][0]).rstrip("0").rstrip(",") + " m" + (" *estreita*" if m["frente_estreita"] else "")
+        L.append(f"| {p['id']} | {n0(m['area_fechada'])} | {fr} | " + " | ".join(", ".join(celula.get(n, ["-"])) for n, _ in REGRAS_REF) + f" | {len(celula)} |")
+    L.append("| **Casas fora** | | " + str(sum(p["_r"].metricas["frente_estreita"] for p in plantas)) + " estreitas | "
+             + " | ".join(f"**{conta[n]}**" for n, _ in REGRAS_REF) + " | |")
+    L += ["", "O detalhe de cada casa (medida e frase): `python3 ferramentas/plantas.py validar ID`, linhas \"! referência\".", ""]
+    (PASTA / "CONSERTOS.md").write_text("\n".join(L), encoding="utf-8")
+    print("\n".join(L[6:-2]))
+    print("\nebook/plantas/CONSERTOS.md gerado")
 
 
 if __name__ == "__main__":
@@ -873,5 +999,7 @@ if __name__ == "__main__":
         cmd_fichas()
     elif cmd == "resumo":
         cmd_resumo()
+    elif cmd == "referencias":
+        cmd_referencias()
     else:
         sys.exit(__doc__)

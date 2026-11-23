@@ -27,9 +27,9 @@
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.
 - **OpenArt: só com o "sim" do dono a cada uso (22/11);** saldo em [`ORCAMENTO.md`](ORCAMENTO.md). O selo "Imagem ilustrativa" saiu dos vídeos (dono, 22/11) e continua em imagem parada. **Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
 - **Vídeos guardados (22/11):** assistir ao convite (`video/saida/convite/`, passeio pela F03, o último feito) e ao principal de 21/11 (`video/saida/principal/`); os outros foram apagados para refazer do zero. Dizer o que é "pagar por mais" e se libera o OpenArt para a versão realista.
-- **Vídeo (aberto pelo dono em 21/11):** refazer do zero pelo plano de `contexto/dono/RETROSPECTIVA.md`; criar o Instagram e configurar a MinoAI Frontier no Mac.
-- **Skill `make-pdf`:** em teste; o binário fica fora do repositório (`~/.cache/gstack`) e some quando a máquina é trocada ([`ECOSSISTEMA.md`](ECOSSISTEMA.md)).
+- **Vídeo (aberto pelo dono em 21/11):** refazer do zero pelo plano de `contexto/dono/RETROSPECTIVA.md`; criar o Instagram e configurar a MinoAI Frontier no PC com Windows do dono (WSL).
 - **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a C01 redesenhada: refazer quando a frente de animação abrir.
+- **Chefe de gabinete (23/11):** para o `bom-dia` ver agenda e e-mail, conectar Gmail e Google Calendar em claude.ai (Conectores) e abrir conversa nova; preencher a meta da semana (`PAINEL.md`, seção 6).
 - Informar quanto resta do limite semanal (Configurações → Uso) para fechar o [orçamento](ORCAMENTO.md) em números.
 - Atualizar o relatório jurídico com Caixa e Confea (pedido antes, sem resposta).
 

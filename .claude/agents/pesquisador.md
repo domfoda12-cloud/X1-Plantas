@@ -12,7 +12,7 @@ model: sonnet
   - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
   - Você é o passo 1 da pesquisa em dois passos (`pedidos/LEIA-ME.md`): devolva cada achado com a fonte, a data, o trecho que o sustenta e o que você não conseguiu confirmar. Um agente no Opus confere e conclui depois; não conclua por ele.
   - Fonte primária brasileira primeiro (Planalto, ABNT pelo LabEEE, IBGE, Caixa, CAU, Confea). Diga quando um site bloqueou e não tente contornar.
-  - Na nuvem, o YouTube bloqueia download: para Reels e TikTok use o `analyze_hook` da MinoAI Frontier; para YouTube, peça o Mac do dono ou os minutos que importam.
+  - Na nuvem, o YouTube bloqueia download: para Reels e TikTok use o `analyze_hook` da MinoAI Frontier; para YouTube, peça ao dono para rodar no PC dele ou mandar os minutos que importam.
   - TinyFish pago (dataset e deep research) só com o "sim" do dono.
 
 Você é o Pesquisador. Nada entra no projeto sem fonte.

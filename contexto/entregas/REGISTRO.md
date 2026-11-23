@@ -52,7 +52,7 @@
 `video/broll/clipes/` (8 clipes do OpenArt, Kling 3.0, e a animação 3D da C01 do motor novo) e `video/broll/paginas/` (4 páginas do e-book).
 Saídas: `video/saida/principal/x1-plantas-principal.mp4` (29 s, 14,2 MB) e `video/saida/previa-whatsapp/x1-plantas-previa.mp4` (19 s, 1,2 MB).
 **Como conferir:** `python3 video/montar.py video/roteiros/principal.json` monta de novo; assistir aos dois arquivos.
-**Não feito / ressalva:** sem música e sem locução (a faixa licenciada entra na edição da MinoAI Frontier, no Mac do dono). O Revisor de risco aprovou os roteiros; os vídeos prontos foram conferidos por quem montou, não por ele. Os 5 anúncios antigos (`saida/v1` a `v5`) continuam com o 3D velho.
+**Não feito / ressalva:** sem música e sem locução (a faixa licenciada entra na edição da MinoAI Frontier, no computador do dono). O Revisor de risco aprovou os roteiros; os vídeos prontos foram conferidos por quem montou, não por ele. Os 5 anúncios antigos (`saida/v1` a `v5`) continuam com o 3D velho.
 **Decisão do dono pendente:** aprovar os dois vídeos; palavra da chamada (PLANTA ou LOTE); publicar.
 **Próximo passo:** ouvir o dono sobre os vídeos. OpenArt tem 115 créditos: não dá para outro clipe.
 
@@ -72,14 +72,14 @@ Roteiro da v3 e prompt para o roteirista (WhatsApp e Instagram) num documento do
 <!-- era: contexto/entregas/REGISTRO.md -->
 ## 2026-11-22-0010-anuncio-ebook-locucao
 
-**Tarefa:** anúncio do e-book com a casa E07, agora com locução do dono (26 s), para a MinoAI Frontier editar no Mac.
+**Tarefa:** anúncio do e-book com a casa E07, agora com locução do dono (26 s), para a MinoAI Frontier editar no computador do dono.
 **Feito:** `video/principal-e07/kit-minoai/` (20 MB): 9 clipes comprimidos, balão do tio, aviso legal e selo como camadas paradas, logo, música e `LEIA-ME.md` com o roteiro aprovado, o plano de corte e a frase para dizer à MinoAI.
 `video/principal-e07/PROMPTS.md`: prompts de movimento de câmera (Kling 3 Omni) e de imagem, para repetir em outra casa.
 Documento do dono (roteiro, prompt do roteirista, registro, prompts): https://claude.ai/artifact/Lr8SvUJPmvcZ5JAZvzywNU
 Antes: logo em `marca/logo/`, trilha em `video/musica/`, vídeo sem voz versão 2 em `video/saida/principal-e07/` (aprovado pelo Revisor).
 **Como conferir:** abrir o `LEIA-ME.md` do pacote; os clipes tocam direto. `python3 ferramentas/checar.py`.
 **Atualização 22/11:** o dono mandou a voz (texto original dele). Vídeo com locução montado aqui por `video/principal-e07/montar_locucao.py`: `video/saida/principal-e07/x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e `-whatsapp.mp4` (2,3 MB). Dois cortes no áudio por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); blueprint sem áreas por cômodo.
-**Não feito / ressalva:** o Revisor só libera se o dono confirmar que o tio e a mensagem existem e que "volto pro Brasil em algumas semanas" é verdade; senão, regravar a abertura ("Todo grupo de família tem um tio que manda isso:") e a frase do Brasil. A abertura da gravação parece engolida ("Meu tio" em 0,2 s). A edição fina da MinoAI no Mac continua opcional, com o pacote. Ele não abriu o PDF da planta grátis da E07 (conferir se não sai com "[título]" e "[preço]"). Ninguém ouviu a trilha ainda.
+**Não feito / ressalva:** o Revisor só libera se o dono confirmar que o tio e a mensagem existem e que "volto pro Brasil em algumas semanas" é verdade; senão, regravar a abertura ("Todo grupo de família tem um tio que manda isso:") e a frase do Brasil. A abertura da gravação parece engolida ("Meu tio" em 0,2 s). A edição fina da MinoAI no computador do dono continua opcional, com o pacote. Ele não abriu o PDF da planta grátis da E07 (conferir se não sai com "[título]" e "[preço]"). Ninguém ouviu a trilha ainda.
 **Decisão do dono pendente:** "o tio" ou "meu tio" (só se for verdade); confirmar "tô voltando pro Brasil"; PLANTA ou LOTE; logo; publicar (o Instagram ainda não existe, e o envio da planta precisa funcionar antes).
 **Próximo passo:** receber a gravação da voz ou o vídeo editado e passar pelo Revisor. Regra nova do dono: recados no meio do trabalho entram todos juntos na mesma entrega.
 **Parado em 22/11 por ordem do dono:** ele quer tirar o selo "Imagem ilustrativa" e considera erro a E07 ter os 3 quartos em fila. Regra nova: antes de qualquer vídeo ou crédito do OpenArt, mandar o resumo da produção e a lista de instruções, e esperar a confirmação dos dois. Não gerar nada antes disso.
@@ -105,7 +105,7 @@ Antes: logo em `marca/logo/`, trilha em `video/musica/`, vídeo sem voz versão 
 `video/roteiros/principal-condor.json` refeito com a E07: gancho, escaneamento, casa em 3D, e-book, chamada. Sem clipe do OpenArt.
 Saída: `video/saida/principal-condor/x1-plantas-principal-condor.mp4` (21 s, 7,7 MB), conferida quadro a quadro.
 **Como conferir:** `python3 video/scan.py E07 && python3 video/montar.py video/roteiros/principal-condor.json`; assistir.
-**Não feito / ressalva:** É RASCUNHO: a E07 está na fila do redesenho das plantas (`contexto/QUADRO.md`); não publicar antes de o dono decidir. sem música (entra no Mac). O 3D é ilustração, não "vida real". Revisor de risco não foi chamado: os textos são os já aprovados, só os números mudaram para os da E07 (validador). Cada tempo dura 0,3 s, como o dono pediu; é rápido para ler.
+**Não feito / ressalva:** É RASCUNHO: a E07 está na fila do redesenho das plantas (`contexto/QUADRO.md`); não publicar antes de o dono decidir. sem música (entra no computador do dono). O 3D é ilustração, não "vida real". Revisor de risco não foi chamado: os textos são os já aprovados, só os números mudaram para os da E07 (validador). Cada tempo dura 0,3 s, como o dono pediu; é rápido para ler.
 **Decisão do dono pendente:** aprovar a sequência; PLANTA ou LOTE; quando filma.
 **Próximo passo:** ouvir o dono; mandar a lista de 8 planos para a filmagem com o celular.
 
@@ -168,7 +168,7 @@ Mídias e o vídeo antigo apagados (voltam com `git checkout 079dae7 -- <caminho
 `video/scan.py` (escaneamento; a planta agora ocupa a tela em qualquer lote). `video/montar.py` ganhou `"leve": true`.
 `video/roteiros/convite.json` → `video/saida/convite/x1-plantas-convite.mp4` (26 s, F03 Casa Família, sem OpenArt).
 **Como conferir:** `cd video && node render-passeio.cjs --planta F03 --vel 1.3 && cd .. && python3 video/montar.py video/roteiros/convite.json`; assistir.
-**Não feito / ressalva:** é ilustração 3D, não foto, e 1080 × 1920, não 4K. Sem música (Mac). Revisor de risco não viu. O principal com a E07 segue rascunho.
+**Não feito / ressalva:** é ilustração 3D, não foto, e 1080 × 1920, não 4K. Sem música (entra no computador do dono). Revisor de risco não viu. O principal com a E07 segue rascunho.
 **Decisão do dono pendente:** o que é "pagar por mais"; se "motor art" era o motor próprio ou o OpenArt; E07 ou outra casa no principal; quando filma.
 **Próximo passo:** ouvir o dono; mandar a lista de planos para a filmagem com o celular.
 

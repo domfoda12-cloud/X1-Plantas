@@ -7,7 +7,8 @@ estourada, numa pasta temporária), se toda skill, todo comando (.claude/command
 passaram pelo roteiro de entrada (CONSELHO.md, seção 6), se o .claude/settings.json está são e,
 como aviso, se há chave ou token gravado em arquivo do repositório (só arquivo:linha e tipo).
 Atenção: não só confere, também REGRAVA arquivos do repositório: os dados das plantas
-(ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), os módulos do motor 3D
+(ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), a lista de conserto
+(ebook/plantas/CONSERTOS.md), os módulos do motor 3D
 (video/src/plantas/<ID>.js), a lista de casas da calculadora do parceiro
 (ebook/vendas/calculadora-lote.html) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
 Sai com código 1 se algo falhar.
@@ -203,11 +204,24 @@ _c = lambda pid, cid: next(c for c in _ps[pid]["comodos"] if c["id"] == cid)
 _casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aberta do outro", lambda: PL.util(_ps["C05"], _c("C05", "sala"))[0], 2.85),
           ("quarto casal da E04: 3,00 de eixo entre a divisa e o pátio, duas paredes externas", lambda: PL.util(_ps["E04"], _c("E04", "quarto1"))[0], 2.70),
           ("banheiro da S03: giro de 1,50 m", lambda: min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
+# Régua das 51 plantas de referência (aviso; dono, 23/11/2026): cada regra tem uma casa que falha e uma que passa
+_tem = lambda pid, regra: any(x[0] == regra for x in _ps[pid]["_r"].referencias)
+_e03 = __import__("copy").deepcopy(_ps["E03"])
+_e03["recuos"] = {"esq": 0.0, "dir": 1.0}  # lote de 4,5 m de frente: o corredor lateral vira exceção dita
+_r03 = PL.validar(_e03)
+_casos += [("referência 1, circulação: C03 (9%) fora", lambda: _tem("C03", "1"), True), ("referência 1: C01 (4%) dentro", lambda: _tem("C01", "1"), False),
+           ("referência 1: E03 em lote de 4,5 m vira exceção dita", lambda: (any(x[0] == "1" for x in _r03.referencias), any("exceção" in a for a in _r03.ref_info)), (False, True)),
+           ("referência 2, banheiro: C04 (1,08) fora", lambda: _tem("C04", "2"), True), ("referência 2: S03 (1,50 de giro) dentro", lambda: _tem("S03", "2"), False),
+           ("referência 3, quarto: E02 (2,30) fora", lambda: _tem("E02", "3"), True), ("referência 3: C07 (3,04) dentro", lambda: _tem("C07", "3"), False),
+           ("referência 4, serviço: C04 (0,99, sem saída) fora", lambda: _tem("C04", "4"), True), ("referência 4: C03 (2,09, porta para fora) dentro", lambda: _tem("C03", "4"), False),
+           ("referência 5a, por dentro: E02 (pelo corredor coberto) fora", lambda: _tem("E02", "5a"), True), ("referência 5a: C01 dentro", lambda: _tem("C01", "5a"), False),
+           ("referência 5b, cozinha: C04 (1,74) fora", lambda: _tem("C04", "5b"), True), ("referência 5b: C01 (2,18) dentro", lambda: _tem("C01", "5b"), False),
+           ("frente estreita: E03 sim, C01 não", lambda: (_ps["E03"]["_r"].metricas["frente_estreita"], _ps["C01"]["_r"].metricas["frente_estreita"]), (True, False))]
 _ruins = []
 for _nome, _conta, _esperado in _casos:
     try:
         _v = _conta()
-        _errado = _v != _esperado if isinstance(_esperado, bool) else abs(_v - _esperado) > 1e-6
+        _errado = _v != _esperado if isinstance(_esperado, (bool, tuple)) else abs(_v - _esperado) > 1e-6
     except Exception as e:  # noqa: BLE001 (qualquer erro do caso é falha do caso)
         _v, _errado = f"erro {type(e).__name__}: {e}", True
     if _errado:
@@ -216,11 +230,12 @@ if _ruins:
     falhas.append("regra das paredes")
     print(f"[ERRO] regra das paredes ({len(_ruins)} de {len(_casos)} casos):\n  " + "\n  ".join(_ruins))
 else:
-    print(f"[OK ] regra das paredes ({len(_casos)} casos)")
+    print(f"[OK ] regra das paredes e régua das referências ({len(_casos)} casos)")
 
 rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "validar"])
 rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "exportar"])
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
+rodar("lista de conserto (CONSERTOS.md)", [sys.executable, "ferramentas/plantas.py", "referencias"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
 # Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio).
@@ -234,6 +249,25 @@ if quebrados:
     print("[ERRO] links quebrados:\n  " + "\n  ".join(quebrados[:20]))
 else:
     print("[OK ] links entre documentos")
+# O dono usa um PC com Windows (23/11, tarefa A10): a suposição do Mac não volta. Registros ficam de fora.
+_MAC = re.compile(r"Mac do dono|Mac dele")
+_MAC_EXCECOES = ("CONTEXTO-HISTORICO.md", "contexto/CONVIVENCIA.md", "contexto/dono/", "pedidos/entrada/",
+                 "pedidos/AUDITORIAS.md", "pedidos/LICOES.md", "pedidos/2026-11/", "pedidos/anexos/")
+_mac = []
+for f in sorted(RAIZ.rglob("*")):
+    if f.suffix not in (".md", ".py", ".html") or any(p in f.parts for p in ignorar) or f == Path(__file__).resolve():
+        continue
+    rel = f.relative_to(RAIZ).as_posix()
+    if rel.startswith(_MAC_EXCECOES):
+        continue
+    for n, linha in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+        if _MAC.search(linha):
+            _mac.append(f"{rel}:{n}")
+if _mac:
+    falhas.append("suposição do Mac do dono")
+    print("[ERRO] o dono usa PC com Windows, não Mac:\n  " + "\n  ".join(_mac[:20]))
+else:
+    print("[OK ] nenhuma suposição de Mac do dono")
 # Fechar ficha não pode apagar as seções depois do Resultado (auditoria 4: o plano da 2151 sumiu assim)
 import importlib.util as _iu
 _e = _iu.spec_from_file_location("pedido", RAIZ / "ferramentas" / "pedido.py"); _p = _iu.module_from_spec(_e); _e.loader.exec_module(_p)

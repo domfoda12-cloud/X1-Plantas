@@ -4,7 +4,7 @@ Busca no que o dono já disse nas conversas do Claude Code deste projeto (só le
 
 Pedido do dono (22/11/2026): achar o que ele já disse em qualquer conversa, para nenhum agente perguntar de novo.
 Lê os registros que o próprio Claude Code grava
-em ~/.claude/projects/<pasta deste projeto>/*.jsonl, na máquina onde roda (no Mac, todas as conversas de lá; na nuvem,
+em ~/.claude/projects/<pasta deste projeto>/*.jsonl, na máquina onde roda (no computador do dono, todas as conversas de lá; na nuvem,
 só a conversa atual).
 
   python3 ferramentas/conversas.py buscar E07 quartos       # falas do dono com todas as palavras

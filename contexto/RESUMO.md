@@ -49,7 +49,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
 
-Tamanho: 496 palavras.
+Tamanho: 492 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -65,7 +65,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 529 palavras.
+Tamanho: 523 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -81,7 +81,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 355 palavras.
+Tamanho: 357 palavras.
 
 ### [As ideias gerais do projeto: o que liga um pedido ao outro](dono/IDEIAS-GERAIS.md)
 
@@ -89,7 +89,7 @@ Escrito pelo Fable em 22/11/2026, depois de reler todos os prompts do dono com a
 
 Seções: A ideia central; Os nove fios; O que isso exige dos vídeos (prioridade dele agora); Perguntas que só o dono responde; O que não deu para saber.
 
-Tamanho: 1118 palavras.
+Tamanho: 1121 palavras.
 
 ### [Os prompts do dono, palavra por palavra](dono/PROMPTS.md)
 
@@ -105,7 +105,7 @@ Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada tra
 
 Seções: E-book; Vídeos; Imagens e 3D; O que se repete; Plano para refazer do zero; O que esta leitura não conseguiu avaliar.
 
-Tamanho: 4677 palavras.
+Tamanho: 4681 palavras.
 
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
@@ -129,7 +129,7 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
-Tamanho: 6827 palavras.
+Tamanho: 6829 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
@@ -137,7 +137,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo ger
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 513 palavras.
+Tamanho: 527 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -149,11 +149,11 @@ Tamanho: 524 palavras.
 
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
-O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fichas e o resumo de passagem (dono, 22/11/2026). Antes de trabalhar, o quadro; a equipe, `EQUIPE.md`; as regras de pedido, `../pedidos/LEIA-ME.md`.
+O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fichas e o resumo de passagem (dono, 22/11/2026). Antes de trabalhar, o quadro; a equipe, `EQUIPE.md`; as regras de pedido e como conduzir (compactar, conversa nova, PR), `../pedidos/LEIA-ME.md`.
 
-Seções: Decisões do dono que valem para você; Como conduzir; Lições.
+Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 608 palavras.
+Tamanho: 610 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -177,7 +177,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 529 palavras.
+Tamanho: 554 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

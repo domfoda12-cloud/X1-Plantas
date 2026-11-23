@@ -1,0 +1,67 @@
+# Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)
+
+> Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
+
+| Assunto | Resposta do dono | O que vira |
+|---|---|---|
+| Título | "Título meio sem graça, tem que ser mais chamativo e atraente" | Redator traz opções mais chamativas (sem promessa proibida); o dono escolhe |
+| Casas do lançamento | Só as refeitas e aprovadas por ele, uma por vez | Ordem: Casa Compacta (feita), lote estreito, compactas |
+| Preço | "Ainda a ser decidido, pode variar com o tempo" | Fica em aberto; R$ 67 segue só como recomendação |
+| Garantia | 7 dias | Decidido |
+| WhatsApp | "Nem o meu nem o dele, um número feito para isso" | Número próprio do negócio: o dono providencia o chip; fica em branco até lá |
+| Plantas grátis | Só a Casa Compacta | Decidido |
+| Arquiteto | "Nós já temos um arquiteto! Só precisamos que ele fique tão bom quanto um profissional no assunto de planejar construções de casas" | Melhorar o agente `arquiteto`; o aviso legal continua (o projeto da obra é assinado por profissional habilitado) |
+| Teste de procura | Depois do arquiteto | Posts sem gastar, depois que o Arquiteto revisar a Casa Compacta |
+| Lote ("a partir de") | Trocar | "Cabe num lote de" + número exato onde couber, nas 24 casas |
+| "Por etapas" | Tirar agora, fazer depois | Frase sai dos textos; etapas desenhadas depois do lançamento |
+| Tarefa de hora em hora | Mudar para o e-book | Cada acordar trabalha a hora inteira no e-book, nada no sistema |
+| Júri | Sim, mais uma rodada | Uma rodada sobre a proposta mais nova |
+| everything-claude-code | Quero ver antes | Mostrar o que foi feito; nada avança |
+| Avisos automáticos | O do quadro e o contador | Entram quando o everything-claude-code for aprovado |
+| Computador | PC com Windows | Corrigir as menções a Mac (tarefa A10) |
+| Regras da noite (nota, placar, provas, método do veto) | Manter e medir | A prova 2 mede; o que não ajudar sai |
+| chief-of-staff | Instalar inteiro | Roteiro de entrada completo (licença, veto, Gmail e Agenda com o acesso dele) |
+| last30days | Teste sem conta, depois do primeiro anúncio | Espera |
+| find-skills | "Pode instalar sozinho, caso passe pelo veto" | Entra; ferramenta achada só se instala depois da ficha e do veto |
+| Travar npx, npm install, rm -rf | Sim | Trava no `.claude/settings.json` |
+| Ordem e-book, animações, vídeo | "Redirecione a ordem para o que faz mais sentido para você" | O Maestro decide: e-book primeiro (é o que destrava a venda) |
+| Nome da rua | "Procure referências na internet…"; depois: "Não procuro ruas famosas, mais como memes históricos" | Pesquisar nomes de rua tirados de **memes históricos brasileiros** (não ruas famosas); opções ao dono |
+| E-mail ao autor do cass | Eu mando | Rascunho em `pedidos/anexos/email-autor-cass.md` |
+| Base de plantas do Arquiteto | "Pesquise antes de revisar a casa, faz mais sentido ele revisar depois de estar mais informado" | Piloto de 30 plantas públicas primeiro; só depois o Arquiteto revisa a Casa Compacta e refaz as outras |
+| Congelar o sistema | "60% e-book 40% sistema, eu realmente quero deixar esse sistema o mais melhor possível; sempre que tiver grandes sugestões que possam ser implementadas, não tenha medo de me dizer" | Sem congelamento: divisão de 60% do trabalho no e-book e 40% no sistema; propor melhorias grandes ao dono |
+| chief-of-staff (confirmação) | "Confirmo o chief staff" | Entrada completa: leitura de tudo, veto do Revisor, adaptação; Gmail e Agenda pelos conectores do claude.ai |
+| Revisar já ou crescer a base | "B" | O Arquiteto revisa a Casa Compacta já, com as 30 de referência e a apostila; a base cresce em paralelo (mais variedade, lote desenhado, Uberlândia) |
+| Casa Compacta revisada | "Sim" (aprova a revisão) | Entra no e-book e na planta grátis depois do redesenho do banheiro abaixo; refazer imagem, 3D e texto do lote |
+| Banheiro da Casa Compacta | Economia de cano | Banheiro e quartos abrindo para a sala, encostados na cozinha (parede de canos única), como FNHIS e CAR-BA |
+| Validador | "Sim" (endurecer com as 5 regras das referências) | Primeiro como aviso, com a lista do que está fora em cada casa |
+| E-mail ao autor do cass | "Quero também que mande o e-mail"; assina Dominic de Lima, fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
+| E-mail ao autor do cass | "Sim" (depois de ver o texto final) | Enviado em 23/11 do Gmail do dono, com a cópia limpa da busca em anexo |
+| Título (questionário, 18:28) | "Antes do primeiro tijolo"; subtítulo só no anúncio | Aplicado no `ebook/config.json` |
+| Casa Compacta (questionário) | "Com hall" | **Muda a escolha anterior (economia de cano): vale a mais nova.** Volta a C01R (com hall) |
+| Estilo das plantas | "Não sei o que se refere a estilos" | Mostrar de novo os 3 estilos, em palavras simples |
+| Peso do e-book | "Is there a better way to send the e-book?" | Responder: mandar por link (Drive ou página), não o PDF pesado |
+| Comprador imprime? | Os dois | Estilo que imprime bem |
+| Avisos das regras no PDF | Ficam internos | Decidido |
+| Próximas casas | "As mais vendáveis, a gente indica" | Equipe indica (Estrategista e Arquiteto), dono aprova |
+| Quantas casas no lançamento | 3 casas: "São só 3, então quero que capriche bem nessas 3, seja bem detalhista" | Lançamento com 3 casas, refeitas com o máximo de cuidado |
+| Preço | Testar dois preços | Valores dos dois a propor (Estrategista) |
+| Pagamento | Pix direto pelo WhatsApp | Sem plataforma: Pix e entrega pelo WhatsApp |
+| Bônus | Os 2 (checklist da obra por fase e perguntas ao engenheiro) | Aplicado no `ebook/config.json`; sai o bônus "próximas plantas grátis" (atualização: "ainda não sei") |
+| Prometer as próximas casas | Ainda não sei | Não se promete até ele decidir |
+| Quem atende o WhatsApp | "Um funil com mensagens pré-prontas" | Respostas prontas (WhatsApp Business) |
+| Número | Já temos o chip | Falta só o número entrar no `config.json` |
+| Resposta automática ao PLANTA | Sim | Montar |
+| Horas por dia de atendimento | Mais de 3 horas | — |
+| Instagram | "Estou em dúvida entre usar meu Insta ou criar um" | Levar recomendação |
+| Verba de anúncio | R$ 20 por dia, "teste com 20, depois escala" | Depois do teste sem gastar |
+| Primeiro Pix | Ainda este mês | Meta da semana no PAINEL |
+| Vendas no primeiro mês | 10 a 50 | Meta |
+| Quem decide preço e gasto | Os dois juntos | — |
+| Divisão | "Os dois em tudo"; "Estou trabalhando nos 2, por enquanto ele não fez nada; eventualmente quero que ele faça o funil e integre-o no sistema" | Sócio fica com o funil, depois |
+| Vídeo | Depois do e-book; "quero testar um vídeo full IA e um vídeo com rosto" | Dois testes de vídeo depois do e-book |
+| Nome da rua | Pesquisar memes históricos e trazer opções | Feito (`video/referencias/MEMES.md`), falta ele escolher |
+| everything-claude-code | Mostrar o que foi feito agora | Mostrar |
+| Júri | Mais uma rodada sobre as ferramentas novas | Rodar |
+| Resumo da manhã | Só quando eu pedir | Sem agendamento |
+| Pasta no Drive | Sim (sem nome) | Perguntar o nome |
+| Mais alguma coisa | "Eu respondi isso sozinho" | O sócio não respondeu |

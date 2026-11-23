@@ -1,11 +1,10 @@
 {
-  "titulo": "[título]",
+  "titulo": "Antes do primeiro tijolo",
   "subtitulo": "Plantas de casas para quem vai construir no Brasil",
   "preco": "[preço]",
   "bonus": [
-    "[bônus: atualizações grátis com as próximas plantas]",
-    "[bônus: checklist de obra]",
-    "[bônus: animações por QR code]"
+    "Checklist da obra por fase",
+    "Perguntas para levar ao engenheiro"
   ],
   "lancamento_atual": 1,
   "planta_da_capa": "C01",
@@ -14,10 +13,6 @@
   "contato": "[WhatsApp do parceiro]",
   "ano": "2026",
   "plantas_gratis": [
-    "C01",
-    "E03",
-    "E02",
-    "F01",
-    "C06"
+    "C01"
   ]
 }

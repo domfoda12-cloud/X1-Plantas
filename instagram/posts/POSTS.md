@@ -9,14 +9,14 @@
 
 ## C01 redesenhada em 22/11/2026: o que vale agora
 
-- **Casa Compacta (C01): 50 m², 2 quartos, 1 banheiro, lote a partir de 8 x 15 m, frente para o norte** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais). Os 55 m², os "10% de circulação" e o quarto de 3,25 x 3,90 m eram do desenho antigo e saíram das legendas abaixo.
+- **Casa Compacta (C01): 50 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m), frente para o norte** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais). Os 55 m², os "10% de circulação" e o quarto de 3,25 x 3,90 m eram do desenho antigo e saíram das legendas abaixo.
 - **Toda imagem da C01 nesta pasta é do desenho antigo** (`imagens/`, gerada em 20/11, antes do redesenho): posts 2 (tela 2), 3, 6, 8, 9 e a reserva estão marcados **refazer: C01 redesenhada**. Gere as imagens 2D da C01 de novo e rode o gerador antes de publicar. Os textos das telas que ficam dentro do `gerar-imagens.cjs` também são do desenho antigo.
 
 ## Ajustes depois da estratégia (20/11/2026)
 
 Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
-- **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 50 m² em lote a partir de 8 x 15 (desde 22/11); Casa Estreita 58 m², 2 quartos (1 suíte), lote a partir de 8 x 25; Casa Família 78 m², 3 quartos (1 suíte), lote a partir de 11 x 15. Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
+- **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 50 m², cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) (desde 22/11); Casa Estreita 58 m², 2 quartos (1 suíte), cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m); Casa Família 78 m², 3 quartos (1 suíte), cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m). Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
 - **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
 - **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
@@ -78,7 +78,7 @@ Telas de 1080 x 1350 (4:5, o tamanho máximo do feed). Capas de reel com 1080 x 
 | 0:00 a 0:04 | `animacao.mp4` do início: o blueprint se desenhando | "essa é a **planta**" · "de 50 m²" |
 | 0:04 a 0:06 | Cômodos ganhando piso e móveis | "agora ela" · "**ganha vida**" |
 | 0:06 a 0:12 | Câmera deslizando sobre a casa 3D | "2 quartos" · "1 banheiro" · "sala e cozinha **juntas**" |
-| 0:12 a 0:15 | `03-perspectiva.png` parada, zoom lento, ficha embaixo: "Casa Compacta · 50 m² · lote a partir de 8 x 15 m" | "quer ver a sua **antes**?" · "comente **PLANTA**" |
+| 0:12 a 0:15 | `03-perspectiva.png` parada, zoom lento, ficha embaixo: "Casa Compacta · 50 m² · cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m)" | "quer ver a sua **antes**?" · "comente **PLANTA**" |
 
 Se o apresentador já tiver gravado, a versão com rosto é melhor: ele fala por cima "Antes de gastar um tijolo, olha a casa pronta. Comenta PLANTA que eu te mando essa planta de graça."
 
@@ -91,7 +91,7 @@ Essa é a Casa Compacta:
 📐 50 m²
 🛏️ 2 quartos
 🚿 1 banheiro
-📏 lote a partir de 8 x 15 m
+📏 cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m)
 
 Sem corredor comprido: a sala distribui, a varanda cobre a porta da sala e o banheiro passa de 1,50 m de largura. Tudo em escala, com os móveis no lugar.
 
@@ -111,9 +111,9 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | Tela | Texto |
 |---|---|
 | 1 | *compare antes de escolher* · **3 casas, 3 terrenos. Qual cabe no seu?** · miniaturas com o lote: 8 x 15 (50 m²), 8 x 25 (58 m²), 11 x 15 (78 m²) · "Área, quartos e o terreno mínimo de cada uma." |
-| 2 | *planta 1 de 3 · C01* · **Casa Compacta** · 50 m² · 2 quartos · 1 banheiro · lote a partir de 8 x 15 m · Destaque: sem corredor comprido, a sala distribui e a varanda recebe. **Refazer: C01 redesenhada** (imagem da planta antiga) |
-| 3 | *planta 2 de 3 · E01* · **Casa Estreita** · 58 m² · 2 quartos (1 suíte) · 2 banheiros · lote a partir de 8 x 25 m · Destaque: garagem na frente e todos os cômodos abrindo para o corredor coberto. |
-| 4 | *planta 3 de 3 · F03* · **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · lote a partir de 11 x 15 m · Destaque: suíte para o casal e varanda na frente. |
+| 2 | *planta 1 de 3 · C01* · **Casa Compacta** · 50 m² · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) · Destaque: sem corredor comprido, a sala distribui e a varanda recebe. **Refazer: C01 redesenhada** (imagem da planta antiga) |
+| 3 | *planta 2 de 3 · E01* · **Casa Estreita** · 58 m² · 2 quartos (1 suíte) · 2 banheiros · cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m) · Destaque: garagem na frente e todos os cômodos abrindo para o corredor coberto. |
+| 4 | *planta 3 de 3 · F03* · **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m) · Destaque: suíte para o casal e varanda na frente. |
 | 5 | *lado a lado* · **Qual combina com o seu terreno?** · tabela: área, quartos, banheiros, lote mínimo, para quem · "Os recuos mudam de cidade para cidade: confira na sua prefeitura." |
 | 6 | *planta grátis* · **Quer essa planta?** · Comente PLANTA · "e eu te mando a planta humanizada da Casa Compacta de graça no WhatsApp." |
 
@@ -122,9 +122,9 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 ```
 Antes de escolher a planta, olhe o terreno. 📏
 
-Casa Compacta: 50 m², 2 quartos, 1 banheiro. Lote a partir de 8 x 15 m.
-Casa Estreita: 58 m², 2 quartos (1 suíte), 2 banheiros. Lote a partir de 8 x 25 m.
-Casa Família: 78 m², 3 quartos (1 suíte), 2 banheiros. Lote a partir de 11 x 15 m.
+Casa Compacta: 50 m², 2 quartos, 1 banheiro. Cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m).
+Casa Estreita: 58 m², 2 quartos (1 suíte), 2 banheiros. Cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m).
+Casa Família: 78 m², 3 quartos (1 suíte), 2 banheiros. Cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m).
 
 Arrasta para ver cada uma e a comparação no final.
 
@@ -146,9 +146,9 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 | Tela | Texto | Imagem |
 |---|---|---|
 | 1 | *salve para consultar* · **Como ler uma planta baixa em 1 minuto** | Blueprint inteiro |
-| 2 | *dica 1 de 5* · **A cota é a medida** · "A linha com um traço em cada ponta mostra a medida, em metros. Aqui, a casa tem 6,50 m de largura." | Recorte da cota de cima, em amarelo |
-| 3 | *dica 2 de 5* · **O arco é a porta** · "Ele mostra para que lado a porta abre. Esse espaço precisa ficar livre: nada de móvel ali." | Porta de entrada em amarelo |
-| 4 | *dica 3 de 5* · **Linha fina na parede é janela** · "Onde a parede vira linhas finas e duplas, há uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha em amarelo |
+| 2 | *dica 1 de 5* · **A cota é a medida** · "A linha azul embaixo da casa, com um traço em cada ponta, mostra a largura em metros: aqui, 6,50 m. A linha do lado mostra o fundo: 8,50 m." | Recorte da cota de baixo (a da largura), em amarelo |
+| 3 | *dica 2 de 5* · **Amarelo é a porta de entrada** · "É por ali que você entra da rua. Na planta com móveis, o arco de cada porta mostra para que lado ela abre: esse espaço fica livre, nada de móvel ali." | Porta de entrada (o retângulo amarelo) marcada |
+| 4 | *dica 3 de 5* · **Azul é janela** · "Cada retângulo azul na parede é uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha marcadas |
 | 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "8,9 m² quer dizer um quarto de cerca de 2,80 x 3,20 m. Compare com o quarto onde você dorme hoje." | Quarto casal em amarelo (medidas livres do validador, `ebook/plantas/dados/C01.json`) |
 | 6 | *dica 5 de 5* · **Planta humanizada** · "É a mesma planta com piso e móveis em escala. Fica fácil ver como cada cômodo vai ser usado." | Planta humanizada |
 | 7 | *planta grátis* · **Quer treinar numa planta de verdade?** · Comente PLANTA | Miniaturas |
@@ -159,8 +159,8 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 Planta baixa parece desenho de engenheiro, mas dá pra ler em 1 minuto. 📐
 
 1. A cota é a medida
-2. O arco é a porta (e o espaço que ela precisa)
-3. Linha fina na parede é janela
+2. Amarelo é a porta de entrada (e, na planta com móveis, o arco mostra para onde cada porta abre)
+3. Azul é janela
 4. O m² é a área de cada cômodo
 5. A planta humanizada mostra os móveis em escala
 
@@ -191,7 +191,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | 0:00 a 0:03 | Retângulo do lote 8 x 25 m se desenhando, a frente de 8 m destacada em amarelo | "**8 metros**" · "de frente" |
 | 0:03 a 0:06 | `animacao.mp4`: o blueprint se desenha dentro do lote | "2 quartos" · "2 banheiros" · "**cabe?**" |
 | 0:06 a 0:12 | A casa ganha vida; câmera desliza ao longo do corredor lateral | "corredor **do lado**" · "luz natural" · "em **todos** os cômodos" |
-| 0:12 a 0:15 | Perspectiva parada + ficha: "Casa Estreita · 58 m² · lote a partir de 8 x 25 m" | "cabe sim" · "comente **PLANTA**" |
+| 0:12 a 0:15 | Perspectiva parada + ficha: "Casa Estreita · 58 m² · cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m)" | "cabe sim" · "comente **PLANTA**" |
 
 **Legenda:**
 
@@ -202,7 +202,7 @@ Casa Estreita:
 📐 58 m²
 🛏️ 2 quartos (1 suíte)
 🚿 2 banheiros
-📏 lote a partir de 8 x 25 m
+📏 cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m)
 
 O segredo é o corredor na lateral: todos os cômodos ganham janela e luz natural, mesmo com só 8 m de frente.
 
@@ -276,7 +276,7 @@ De um arquivo de medidas a uma casa 3D. 🧱➡️🏠
 
 É assim que cada planta é feita: primeiro as medidas, depois o blueprint com cotas, depois piso e móveis em escala, e por fim a casa em 3D.
 
-Essa é a Casa Compacta: 50 m², 2 quartos, 1 banheiro, lote a partir de 8 x 15 m.
+Essa é a Casa Compacta: 50 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m).
 
 Quer receber essa planta de graça? Comente PLANTA.
 
@@ -293,7 +293,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 | Tela | Texto |
 |---|---|
-| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · lote a partir de 11 x 15 m |
+| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m) |
 
 **Legenda:**
 
@@ -303,7 +303,7 @@ Casa Família: espaço para todo mundo. 🏡
 📐 78 m²
 🛏️ 3 quartos (1 suíte)
 🚿 2 banheiros
-📏 lote a partir de 11 x 15 m
+📏 cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m)
 
 Suíte com banheiro próprio para o casal e varanda na frente, cobrindo a porta da sala.
 
@@ -363,7 +363,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 | 0:03 a 0:06 | `01-blueprint.png` | "Vem com o **blueprint** e as medidas," |
 | 0:06 a 0:10 | `03-perspectiva.png` e `04-perspectiva-lateral.png`, troca a cada 2 s | "a casa em **3D** dos dois lados," |
 | 0:10 a 0:14 | `animacao.mp4` dos 6 aos 10 s | "e a animação da casa **ganhando vida**." |
-| 0:14 a 0:18 | Ficha "Casa Compacta · 50 m² · 2 quartos · 1 banheiro" + botão amarelo "PLANTA" pulsando | "Comenta **PLANTA** que eu te mando no WhatsApp." |
+| 0:14 a 0:18 | Ficha "Casa Compacta · 50 m² · 2 quartos · 1 banheiro" + botão amarelo "PLANTA" pulsando | "Comente **PLANTA** que eu te mando no WhatsApp." |
 
 **Legenda:**
 
@@ -375,7 +375,7 @@ Tá aqui o que você recebe de graça. 🎁
 ✅ A casa em 3D, de dois ângulos
 ✅ A animação da casa ganhando vida
 
-É a Casa Compacta: 50 m², 2 quartos, 1 banheiro, lote a partir de 8 x 15 m.
+É a Casa Compacta: 50 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m).
 
 Comente PLANTA que eu te mando no WhatsApp.
 
@@ -407,7 +407,7 @@ Planta da semana: Casa Compacta. 🏠
 📐 50 m²
 🛏️ 2 quartos
 🚿 1 banheiro
-📏 lote a partir de 8 x 15 m
+📏 cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m)
 
 Por que ela funciona:
 • sem corredor comprido: a sala distribui
