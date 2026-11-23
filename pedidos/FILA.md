@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [Trabalho autônomo à noite: skills do e-book, atendimento, campanha de anúncio](2026-11/2026-11-23-0144-trabalho-autonomo-a-noite-skills-do-e-book-atendimento-campa.md) | aberta | Maestro (Opus) conduz cada acordar; o time de cada assunto executa e veta; o Fable veta o  |
 | 2026-11-22 | [Correção: sugestão só com permissão; pesquisar ruas famosas do Brasil](2026-11/2026-11-22-2247-correcao-sugestao-so-com-permissao-pesquisar-ruas-famosas-do.md) | fechada em 22/11/2026 | Maestro: regra. `pesquisador` (Sonnet): ruas famosas; `redator` e `revisor-de-risco`: conc |
 | 2026-11-22 | [Faltou informação do dono: sugerir e seguir, não só esperar](2026-11/2026-11-22-2245-faltou-informacao-do-dono-sugerir-e-seguir-nao-so-esperar.md) | fechada em 22/11/2026 | Maestro (Opus): a regra. Editor: o rascunho do esquema com os padrões. |
 | 2026-11-22 | [Escanear vídeos virais brasileiros atemporais, mais antigos, para o público adulto](2026-11/2026-11-22-2241-escanear-videos-virais-brasileiros-atemporais-mais-antigos-p.md) | aberta | `pesquisador` (Sonnet) acha; `editor-video` (Opus) conclui, com o Diretor (MinoAI) quando  |
