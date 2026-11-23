@@ -143,3 +143,19 @@ A nota caiu duas vezes seguidas (6,5, 6,3, 6,0; correção do Revisor às 04:00)
 ### Rodada 6, a pedido do dono ("Sim, mais uma"): o plano de lançamento (23/11, 17:45 a 18:30)
 
 Opinaram Haiku 2, Sonnet 3, Opus 2 (média 2,3 de 10 para o primeiro Pix em 30 dias); o Fable presidiu sem opinar e conferiu os fatos no repositório. **Diagnóstico:** não há como receber um Pix (sem plataforma, conta, número, preço, título); não há produto fechado (zero casas refeitas aprovadas: C01R2 e E07R são rascunhos; falta número mínimo e data); PDF, painel e funil ainda contam a história de ontem (5 grátis, 24 casas, "a partir de" no PDF guardado; garantia "[a definir]" no WhatsApp). Desatualizado nas opiniões: os consertos da prova 2 já entraram; nenhum vídeo com "economia de arquiteto" foi publicado (as versões foram apagadas em 22/11). **5 ações em ordem:** (1) fechar a isca (dono aprova a C01R2; vira oficial; só a C01 grátis; PDFs de novo); (2) caminho do dinheiro e do contato, em paralelo (dono: plataforma, conta, chip, Instagram; Pesquisador: taxa e CPF; Ajudante: passo a passo); (3) funil em dia com as decisões de 23/11 (1 grátis, garantia de 7 dias, número real de casas, frases velhas fora; combinado escrito com o parceiro); (4) teste de procura sem gastar, ângulo "pelo lote"; (5) produto mínimo e venda para a lista. **Decisões do dono:** quantas casas bastam e até quando; aprovar a C01R2; quem recebe e por onde; preço, título e se promete as próximas casas; manter 60/40 ou pôr mais no e-book até o primeiro Pix. O júri: a nota sobe quando essas decisões existirem, não reescrevendo o plano.
+
+## Rodada 7 (23/11, noite): ferramentas novas
+
+Jurados anônimos: 4,5, 4 e 5 de 10. O Fable presidiu sem opinar antes e deu **5 de 10**.
+- Fatos conferidos no repositório:
+  - a equipe vai de 9 para 16 agentes, os 7 novos em Opus;
+  - consertador e limpador editam e rodam comando, com a proibição só no texto;
+  - não há venda.
+- Erros dos jurados: um contou 48 arquivos, quando são 56 (1.287 linhas); dois julgaram a find-skills, que não existe.
+- Recomendação: manter parte.
+  - Ficam já: a trava, os 2 avisos, o teste da calculadora, verificacao, testador-de-paginas e revisor-de-seguranca.
+  - Esperam a 1ª venda: consertador, limpador, atualizador-de-docs, planejador, guia-de-testes e os comandos deles.
+  - Fora da branch: juntar bom-dia e triagem-email numa rotina só, com o Ajudante; júri com no máximo 2 rodadas.
+- Pergunta ao dono: mantém "levar tudo", com a regra de saída "agente sem uso em 3 fichas fechadas sai"? Sem resposta, vale a decisão dele (levar tudo).
+
+O que aprendi: supervisor: opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.
