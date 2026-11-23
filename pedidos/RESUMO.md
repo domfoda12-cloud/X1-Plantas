@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 18 documentos
+## Os 19 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -60,6 +60,14 @@ Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `
 Seções: Já eram lição ou regra (correções do Fable aplicadas às citações); Viraram lição (texto final, depois do veto); Tiradas pelo veto.
 
 Tamanho: 1717 palavras.
+
+### [O que vai de graça: 2 opções de amostra](anexos/amostra-gratis-opcoes.md)
+
+Pedido do dono no quadro (23/11/2026): "uma amostra grátis bem impressionante do que vamos oferecer a eles, talvez um guia também". Ainda não decidido. Feito pelo Estrategista. Nenhum número abaixo foi medido: ainda não há venda.
+
+Seções: Opção A: a Casa Compacta completa, caprichada (5 páginas); Opção B: a Casa Compacta + o guia "Seu lote cabe?" (8 a 9 páginas); O teste de preço (R$ 47 x R$ 67).
+
+Tamanho: 913 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
