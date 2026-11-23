@@ -6,7 +6,7 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - Mudou `plantas.py` ou `ebook/plantas/projetos.py`: `python3 ferramentas/plantas.py validar` (0 erros), depois `python3 ferramentas/checar.py` (ferramentas/CLAUDE.md).
-- `checar.py` confere sintaxe, skills e agentes, tamanho dos contextos, índice e resumos e a regra das paredes, e **regrava** dados, fichas, módulos 3D, a calculadora do parceiro e a "Situação agora" do painel. O PDF ele só confere, numa pasta temporária (checar.py).
+- `checar.py` confere sintaxe, skills, comandos e agentes, o `.claude/settings.json`, chave gravada no repositório (aviso, só arquivo:linha), tamanho dos contextos, índice e resumos e a regra das paredes, e **regrava** dados, fichas, módulos 3D, a calculadora do parceiro e a "Situação agora" do painel. O PDF ele só confere, numa pasta temporária (checar.py).
 - Gerado, não edite à mão: `ebook/plantas/dados/*.json`, `ebook/plantas/PLANTAS.md` (`plantas.py fichas`), `video/src/plantas/<ID>.js`, a lista `CASAS` de `ebook/vendas/calculadora-lote.html`, `ebook/saida/` e a "Situação agora" do `PAINEL.md` (código).
 - PDF de verdade: `python3 ebook/gerador/livro.py` grava `ebook/saida/ebook.pdf`, as plantas grátis e a calculadora; `--previa <pasta>` salva um PNG por página; `--conferir` não mexe em `ebook/saida`, mas regrava a calculadora (livro.py).
 - "Situação agora" do painel conta pela coluna Situação do `ebook/catalogo.md` e pelos 5 arquivos em `animacoes-3d/plantas/<nome>/`, não pelas 24 casas validadas: por isso diz "0 de 12 prontas" (atualizar-painel.py).

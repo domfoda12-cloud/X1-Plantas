@@ -3,8 +3,9 @@
 Uso: python3 ferramentas/checar.py
 Confere: sintaxe de todo .py, .cjs e .js (fora de node_modules), as 24 plantas no validador,
 a regra das paredes, o tamanho dos contextos, o índice e os resumos, o PDF do e-book (sem página
-estourada, numa pasta temporária) e se toda skill e todo agente passaram pelo roteiro de entrada
-(CONSELHO.md, seção 6).
+estourada, numa pasta temporária), se toda skill, todo comando (.claude/commands) e todo agente
+passaram pelo roteiro de entrada (CONSELHO.md, seção 6), se o .claude/settings.json está são e,
+como aviso, se há chave ou token gravado em arquivo do repositório (só arquivo:linha e tipo).
 Atenção: não só confere, também REGRAVA arquivos do repositório: os dados das plantas
 (ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), os módulos do motor 3D
 (video/src/plantas/<ID>.js), a lista de casas da calculadora do parceiro
@@ -56,16 +57,20 @@ print("[OK ] sintaxe dos .cjs/.js")
 conselho = (RAIZ / "CONSELHO.md").read_text(encoding="utf-8")
 ecossistema = (RAIZ / "ECOSSISTEMA.md").read_text(encoding="utf-8") if (RAIZ / "ECOSSISTEMA.md").exists() else ""
 fora = []
-for sk in sorted((RAIZ / ".claude" / "skills").glob("*/SKILL.md")):
-    nome = sk.parent.name
-    if "## Neste projeto" not in sk.read_text(encoding="utf-8"):
-        fora.append(f"skill {nome}: falta a seção '## Neste projeto (X1-Plantas)' no SKILL.md")
-    if "Prompt de entrada" not in sk.read_text(encoding="utf-8"):
-        fora.append(f"skill {nome}: falta o 'Prompt de entrada' específico")
-    if f"`{nome}`" not in conselho and f"/{nome}`" not in conselho:
-        fora.append(f"skill {nome}: não está citada no CONSELHO.md")
-    if f"`{nome}`" not in ecossistema:
-        fora.append(f"skill {nome}: não está no inventário ECOSSISTEMA.md")
+# Skill (.claude/skills/<nome>/SKILL.md) e comando (.claude/commands/<nome>.md): mesmas 4 conferências;
+# o nome pode vir citado como `nome` ou `/nome`. Sem a pasta de comandos, o laço só não roda.
+_pecas = [("skill", sk.parent.name, sk) for sk in sorted((RAIZ / ".claude" / "skills").glob("*/SKILL.md"))]
+_pecas += [("comando", c.stem, c) for c in sorted((RAIZ / ".claude" / "commands").glob("*.md"))]
+for tipo, nome, arq in _pecas:
+    texto = arq.read_text(encoding="utf-8")
+    if "## Neste projeto" not in texto:
+        fora.append(f"{tipo} {nome}: falta a seção '## Neste projeto (X1-Plantas)' em {arq.relative_to(RAIZ)}")
+    if "Prompt de entrada" not in texto:
+        fora.append(f"{tipo} {nome}: falta o 'Prompt de entrada' específico")
+    if f"`{nome}`" not in conselho and f"`/{nome}`" not in conselho:
+        fora.append(f"{tipo} {nome}: não está citad{'a' if tipo == 'skill' else 'o'} no CONSELHO.md")
+    if f"`{nome}`" not in ecossistema and f"`/{nome}`" not in ecossistema:
+        fora.append(f"{tipo} {nome}: não está no inventário ECOSSISTEMA.md")
 for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
     if f"`{ag.stem}`" not in conselho:
         fora.append(f"agente {ag.stem}: não está citado no CONSELHO.md")
@@ -86,10 +91,79 @@ _mapa = (RAIZ / "MAPA-DO-SISTEMA.md").read_text(encoding="utf-8") if (RAIZ / "MA
 _progs = subprocess.run(["git", "ls-files", "*.py", "*.cjs", "video/src/*.js", "video/src/*.html"], cwd=RAIZ, capture_output=True, text=True).stdout.split()
 fora += [f"programa fora do MAPA-DO-SISTEMA.md: {p}" for p in _progs if not p.startswith("video/src/plantas/") and f"({p})" not in _mapa]
 if fora:
-    falhas.append("roteiro de entrada de skills e agentes")
-    print("[ERRO] roteiro de entrada de skills e agentes:\n  " + "\n  ".join(fora))
+    falhas.append("roteiro de entrada de skills, comandos e agentes")
+    print("[ERRO] roteiro de entrada de skills, comandos e agentes:\n  " + "\n  ".join(fora))
 else:
-    print("[OK ] skills e agentes passaram pelo roteiro de entrada")
+    print("[OK ] skills, comandos e agentes passaram pelo roteiro de entrada")
+
+# .claude/settings.json: JSON válido; todo gancho termina em "|| true" (gancho que falha não pode travar a
+# conversa) e todo ferramentas/*.py que ele chama existe (com "2>/dev/null || true", um script apagado
+# ou renomeado deixaria o gancho morto em silêncio); o UserPromptSubmit continua guardando o pedido.
+_cfg_sessao = RAIZ / ".claude" / "settings.json"
+_ruim_cfg = []
+try:
+    _ganchos = json.loads(_cfg_sessao.read_text(encoding="utf-8")).get("hooks", {})
+except (OSError, ValueError) as e:
+    _ganchos, _ruim_cfg = {}, [f"não abre como JSON: {e}"]
+_cmds = [(ev, h.get("command", "")) for ev, grupos in _ganchos.items() for g in grupos for h in g.get("hooks", [])]
+for ev, cmd in _cmds:
+    if not cmd.rstrip().endswith("|| true"):
+        _ruim_cfg.append(f"gancho {ev} não termina em '|| true': {cmd}")
+    _ruim_cfg += [f"gancho {ev} chama ferramentas/{py}, que não existe" for py in re.findall(r"ferramentas/([\w.-]+\.py)", cmd)
+                  if not (RAIZ / "ferramentas" / py).exists()]
+if not _ruim_cfg and not any(ev == "UserPromptSubmit" and "ferramentas/guardar-pedido.py" in cmd for ev, cmd in _cmds):
+    _ruim_cfg.append("o UserPromptSubmit não chama mais ferramentas/guardar-pedido.py (os pedidos do dono deixam de ser guardados)")
+if _ruim_cfg:
+    falhas.append(".claude/settings.json")
+    print("[ERRO] .claude/settings.json:\n  " + "\n  ".join(_ruim_cfg))
+else:
+    print(f"[OK ] .claude/settings.json ({len(_cmds)} gancho(s), todos com '|| true' e com o script no lugar)")
+
+# Segredos no repositório (adaptado de everything-claude-code, MIT; .claude/LICENCA-everything-claude-code.txt).
+# Só chaves: os mesmos padrões da MASCARA do ferramentas/conversas.py (chave privada, prefixos de API, JWT,
+# Bearer/Basic, ?key= na URL). Lê todo arquivo rastreado ou novo (fora do .gitignore) que abre como UTF-8.
+# A exceção é o valor falso inteiro dos testes da máscara, em qualquer arquivo; nunca um prefixo.
+# Mostra arquivo:linha e tipo, nunca o valor. Por enquanto é AVISO (rodada de alcance).
+_CHAVE = re.compile(
+    r"(?P<chave_privada>-----BEGIN [A-Z ]*KEY-----.*?(?:-----END [A-Z ]*KEY-----|$))"
+    r"|(?P<chave_de_API>\b(?:sk-ant-|sk_live_|sk_test_|sk-|ghp_|gho_|ghs_|github_pat_|glpat-|hf_|ya29\.|AKIA|AIza|xox[abp]-|APP_USR-)[\w.-]{6,})"
+    r"|(?P<JWT>\beyJ[\w-]{10,}\.[\w-]+\.[\w-]+)"
+    r"|(?P<cabecalho_de_autorizacao>\b(?:Bearer|Basic)\s+[\w.=+/-]{8,})"
+    r"|(?P<chave_na_URL>[?&](?:key|token|secret)=[^\s&]+)", re.I)
+_LIMPA = ".,-`'\""  # o que o padrão engole no fim: o "..." de um texto, a crase de um trecho, a aspa de uma string
+_FALSOS = {v.rstrip(_LIMPA) for v in (
+    "?key=kkk333,", "sk_live_abcdef123", "APP_USR-12345678", "ghs_abcdefgh", "glpat-abcdefgh", "hf_abcdefgh",
+    "ya29.abcdefgh", "Basic dXNlcjpwYXNz", "sk-ant-abc123def456ghi", "ghp_abcdefgh1234", "AIzaSyABCDEFGH123",
+    "eyJhbGciOiJIUzI1.eyJzdWIiOiIx.abc", "Bearer abcdefgh123", "sk-ant-abc",
+    "-----BEGIN PRIVATE KEY-----MIIE-----END PRIVATE KEY-----")}
+
+
+def _git_z(*args):
+    """git ls-files cortado em \\0: nome com acento ou espaço chega inteiro, sem aspas nem \\303."""
+    r = subprocess.run(["git", "ls-files", "-z", *args], cwd=RAIZ, capture_output=True, text=True)
+    return [x for x in r.stdout.split("\0") if x]
+
+
+_achados, _binarios = [], 0
+for _arq in sorted(set(_git_z() + _git_z("--others", "--exclude-standard"))):
+    try:
+        _linhas = (RAIZ / _arq).read_text(encoding="utf-8").splitlines()
+    except UnicodeDecodeError:
+        _binarios += 1
+        continue
+    except OSError:
+        continue  # apagado no disco e ainda no índice, pasta, link quebrado: nada a ler
+    for _n, _l in enumerate(_linhas, 1):
+        for _m in _CHAVE.finditer(_l):
+            if _m.group(0).rstrip(_LIMPA) not in _FALSOS:
+                _achados.append(f"{_arq}:{_n}: {_m.lastgroup.replace('_', ' ')}")
+_achados += [f"{a}: arquivo .env rastreado pelo git (tire com git rm --cached e confira o .gitignore)"
+             for a in _git_z("--", ".env*", "*/.env*")]
+if _achados:
+    print("[AVISO] segredos no repositório: possível chave gravada (o valor não é mostrado). Se for real, "
+          "avise o dono para revogar no serviço; o histórico do git guarda a antiga:\n  " + "\n  ".join(_achados[:30]))
+else:
+    print(f"[OK ] segredos no repositório (nenhuma chave nem .env; {_binarios} binários pulados)")
 grandes = []
 for nome, limite in LIMITES:
     if not (RAIZ / nome).exists():
@@ -116,15 +190,25 @@ sys.path.insert(0, str(RAIZ / "ferramentas"))
 import plantas as PL  # noqa: E402
 _ps = {p["id"]: p for p in PL.carregar()}
 _c = lambda pid, cid: next(c for c in _ps[pid]["comodos"] if c["id"] == cid)
-_casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aberta do outro", PL.util(_ps["C05"], _c("C05", "sala"))[0], 2.85),
-          ("quarto casal da E04: 3,00 de eixo entre a divisa e o pátio, duas paredes externas", PL.util(_ps["E04"], _c("E04", "quarto1"))[0], 2.70),
-          ("banheiro da S03: giro de 1,50 m", min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
-_ruins = [f"{n}: deu {v}, esperado {e}" for n, v, e in _casos if (abs(v - e) > 1e-6 if not isinstance(e, bool) else v != e)]
+# Cada caso: (o que se confere, conta adiada com lambda, valor esperado tirado da planta, nunca da saída atual).
+# A conta roda dentro de try: um caso com casa ou cômodo que não existe falha sozinho, sem derrubar o checar.
+_casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aberta do outro", lambda: PL.util(_ps["C05"], _c("C05", "sala"))[0], 2.85),
+          ("quarto casal da E04: 3,00 de eixo entre a divisa e o pátio, duas paredes externas", lambda: PL.util(_ps["E04"], _c("E04", "quarto1"))[0], 2.70),
+          ("banheiro da S03: giro de 1,50 m", lambda: min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
+_ruins = []
+for _nome, _conta, _esperado in _casos:
+    try:
+        _v = _conta()
+        _errado = _v != _esperado if isinstance(_esperado, bool) else abs(_v - _esperado) > 1e-6
+    except Exception as e:  # noqa: BLE001 (qualquer erro do caso é falha do caso)
+        _v, _errado = f"erro {type(e).__name__}: {e}", True
+    if _errado:
+        _ruins.append(f"{_nome}: deu {_v}, esperado {_esperado}")
 if _ruins:
     falhas.append("regra das paredes")
-    print("[ERRO] regra das paredes:\n  " + "\n  ".join(_ruins))
+    print(f"[ERRO] regra das paredes ({len(_ruins)} de {len(_casos)} casos):\n  " + "\n  ".join(_ruins))
 else:
-    print("[OK ] regra das paredes (3 casos)")
+    print(f"[OK ] regra das paredes ({len(_casos)} casos)")
 
 rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "validar"])
 rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "exportar"])
