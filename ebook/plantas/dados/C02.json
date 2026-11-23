@@ -146,6 +146,8 @@
     15
    ],
    "taxa_ocupacao": 0.46,
+   "circulacao_ref": 0.0,
+   "frente_estreita": true,
    "orientacao": {
     "melhor": "norte",
     "segunda": "leste",
@@ -157,6 +159,11 @@
      "oeste": -0.9
     }
    }
-  }
+  },
+  "referencias": [
+   "Banheiro com 1,59 x 1,48 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "referência (informação): casa de frente estreita, lote de 6,00 m de frente; as referências de São José dos Campos chegam a lote de 4 a 5 m (ebook/referencias/plantas-ref/REFERENCIAS.md, padrão 1)"
+  ]
  }
 }

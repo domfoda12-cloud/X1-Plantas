@@ -206,6 +206,8 @@
     20
    ],
    "taxa_ocupacao": 0.38,
+   "circulacao_ref": 0.093,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "norte",
     "segunda": "sul",
@@ -217,6 +219,11 @@
      "oeste": 3.6
     }
    }
-  }
+  },
+  "referencias": [
+   "circulação ocupa 9% da casa de 41,2 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro com 2,09 x 1,08 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto casal com 2,69 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

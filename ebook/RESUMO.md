@@ -14,7 +14,7 @@
 - A foto de fachada da C01 saiu em 22/11 (vista da rua simplificada); fotos só em C03, E07 e F01. O mockup `casa-c01-celulares.png` ainda é da C01 antiga (`EBOOK.md`, seção 8).
 <!-- /essencial -->
 
-## Os 4 documentos
+## Os 5 documentos
 
 ### [E-book: regras desta pasta](CLAUDE.md)
 
@@ -37,6 +37,12 @@ Parte da pasta E-book. Guia da frente: `EBOOK.md`. Painel geral: `../PAINEL.md`.
 Seções: Resumo; C. Compactas: primeira casa, orçamento curto; E. Terreno estreito: frente de 5 a 8 m; F. Família: 3 ou 4 quartos; S. Especiais: um uso ou terreno específico; O. Sobrados: dois pavimentos; Casas que crescem; O que vem em cada planta do e-book (hoje).
 
 Tamanho: 1994 palavras.
+
+### [Lista de conserto: as 24 casas contra as plantas de referência](plantas/CONSERTOS.md)
+
+Gerado por `python3 ferramentas/plantas.py referencias`; não edite. Régua: as 5 regras tiradas das 51 plantas de `../referencias/plantas-ref/REFERENCIAS.md`, aprovadas pelo dono em 23/11/2026 como aviso (não barram a planta e não vão ao PDF). Medidas livres, por dentro das paredes; `-` = dentro da…
+
+Tamanho: 831 palavras.
 
 ### [As 24 plantas: ficha de cada uma](plantas/PLANTAS.md)
 

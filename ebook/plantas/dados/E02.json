@@ -224,6 +224,8 @@
     20
    ],
    "taxa_ocupacao": 0.42,
+   "circulacao_ref": 0.384,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "norte",
     "segunda": "oeste",
@@ -235,6 +237,14 @@
      "oeste": 7.0
     }
    }
-  }
+  },
+  "referencias": [
+   "corredor coberto lateral ocupa 38% da casa de 39,8 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: 1,09 m de largura livre; sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro com 1,09 x 1,88 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto casal com 2,30 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto com 2,30 m de largura livre: abaixo de 2,60 m não cabem as duas camas; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro, Quarto casal, Quarto: da sala só se chega saindo de casa (corredor coberto, varanda ou quintal); nas referências banheiro e quartos se alcançam por dentro (regra 5a, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

@@ -276,6 +276,8 @@
     25
    ],
    "taxa_ocupacao": 0.52,
+   "circulacao_ref": 0.217,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "norte",
     "segunda": "oeste",
@@ -287,6 +289,11 @@
      "oeste": 9.6
     }
    }
-  }
+  },
+  "referencias": [
+   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banho da suíte com 1,19 x 3,08 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro, Banho da suíte, Suíte, Quarto: da sala só se chega saindo de casa (corredor coberto, varanda ou quintal); nas referências banheiro e quartos se alcançam por dentro (regra 5a, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

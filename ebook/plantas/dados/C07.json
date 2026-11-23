@@ -236,6 +236,8 @@
     15
    ],
    "taxa_ocupacao": 0.57,
+   "circulacao_ref": 0.095,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
     "segunda": "oeste",
@@ -247,6 +249,11 @@
      "oeste": 11.4
     }
    }
-  }
+  },
+  "referencias": [
+   "circulação ocupa 10% da casa de 55,3 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: 0,99 m de largura livre; sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro com 1,89 x 1,08 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

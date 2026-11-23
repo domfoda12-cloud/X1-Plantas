@@ -241,6 +241,8 @@
     15
    ],
    "taxa_ocupacao": 0.52,
+   "circulacao_ref": 0.105,
+   "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
     "segunda": "norte",
@@ -252,6 +254,14 @@
      "oeste": 7.8
     }
    }
-  }
+  },
+  "referencias": [
+   "circulação ocupa 11% da casa de 57,0 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banheiro com 2,29 x 1,08 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto com 2,59 m de largura livre: abaixo de 2,60 m não cabem as duas camas; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Suíte com 2,79 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Banho da suíte com 1,49 x 2,79 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+  ]
  }
 }

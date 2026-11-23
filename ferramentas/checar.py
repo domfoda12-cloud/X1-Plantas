@@ -6,7 +6,8 @@ a regra das paredes, o tamanho dos contextos, o índice e os resumos, o PDF do e
 estourada, numa pasta temporária) e se toda skill e todo agente passaram pelo roteiro de entrada
 (CONSELHO.md, seção 6).
 Atenção: não só confere, também REGRAVA arquivos do repositório: os dados das plantas
-(ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), os módulos do motor 3D
+(ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), a lista de conserto
+(ebook/plantas/CONSERTOS.md), os módulos do motor 3D
 (video/src/plantas/<ID>.js), a lista de casas da calculadora do parceiro
 (ebook/vendas/calculadora-lote.html) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
 Sai com código 1 se algo falhar.
@@ -119,16 +120,30 @@ _c = lambda pid, cid: next(c for c in _ps[pid]["comodos"] if c["id"] == cid)
 _casos = [("sala da C05: 3,00 de eixo, parede externa de um lado e passagem aberta do outro", PL.util(_ps["C05"], _c("C05", "sala"))[0], 2.85),
           ("quarto casal da E04: 3,00 de eixo entre a divisa e o pátio, duas paredes externas", PL.util(_ps["E04"], _c("E04", "quarto1"))[0], 2.70),
           ("banheiro da S03: giro de 1,50 m", min(PL.util(_ps["S03"], _c("S03", "banho"))[:2]) >= 1.5, True)]
-_ruins = [f"{n}: deu {v}, esperado {e}" for n, v, e in _casos if (abs(v - e) > 1e-6 if not isinstance(e, bool) else v != e)]
+# Régua das 51 plantas de referência (aviso; dono, 23/11/2026): cada regra tem uma casa que falha e uma que passa
+_tem = lambda pid, regra: any(x[0] == regra for x in _ps[pid]["_r"].referencias)
+_e03 = __import__("copy").deepcopy(_ps["E03"])
+_e03["recuos"] = {"esq": 0.0, "dir": 1.0}  # lote de 4,5 m de frente: o corredor lateral vira exceção dita
+_r03 = PL.validar(_e03)
+_casos += [("referência 1, circulação: C03 (9%) fora", _tem("C03", "1"), True), ("referência 1: C01 (4%) dentro", _tem("C01", "1"), False),
+           ("referência 1: E03 em lote de 4,5 m vira exceção dita", (any(x[0] == "1" for x in _r03.referencias), any("exceção" in a for a in _r03.ref_info)), (False, True)),
+           ("referência 2, banheiro: C04 (1,08) fora", _tem("C04", "2"), True), ("referência 2: S03 (1,50 de giro) dentro", _tem("S03", "2"), False),
+           ("referência 3, quarto: E02 (2,30) fora", _tem("E02", "3"), True), ("referência 3: C07 (3,04) dentro", _tem("C07", "3"), False),
+           ("referência 4, serviço: C04 (0,99, sem saída) fora", _tem("C04", "4"), True), ("referência 4: C03 (2,09, porta para fora) dentro", _tem("C03", "4"), False),
+           ("referência 5a, por dentro: E02 (pelo corredor coberto) fora", _tem("E02", "5a"), True), ("referência 5a: C01 dentro", _tem("C01", "5a"), False),
+           ("referência 5b, cozinha: C04 (1,74) fora", _tem("C04", "5b"), True), ("referência 5b: C01 (2,18) dentro", _tem("C01", "5b"), False),
+           ("frente estreita: E03 sim, C01 não", (_ps["E03"]["_r"].metricas["frente_estreita"], _ps["C01"]["_r"].metricas["frente_estreita"]), (True, False))]
+_ruins = [f"{n}: deu {v}, esperado {e}" for n, v, e in _casos if (abs(v - e) > 1e-6 if not isinstance(e, (bool, tuple)) else v != e)]
 if _ruins:
     falhas.append("regra das paredes")
     print("[ERRO] regra das paredes:\n  " + "\n  ".join(_ruins))
 else:
-    print("[OK ] regra das paredes (3 casos)")
+    print(f"[OK ] regra das paredes e régua das referências ({len(_casos)} casos)")
 
 rodar("validador das plantas", [sys.executable, "ferramentas/plantas.py", "validar"])
 rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "exportar"])
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
+rodar("lista de conserto (CONSERTOS.md)", [sys.executable, "ferramentas/plantas.py", "referencias"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
 # Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio).
