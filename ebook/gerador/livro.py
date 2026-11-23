@@ -600,7 +600,7 @@ def dupla(L, p, por_id, numeros):
       <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]} m.</h2></div>
       <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
-          <div class="r-por">Lote comercial {f} x {r['lote_comercial'][1]} m · no mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m, com recuos de referência</div>
+          <div class="r-por">Lote comercial {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
           {linha('Área fechada', f"{n0(r['area_fechada'])} m²")}
           {linha('Medidas por fora', f"{m(p['W'])} x {m(p['D'])} m")}
