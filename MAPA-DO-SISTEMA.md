@@ -55,6 +55,7 @@
 | [`ferramentas/placar.py`](ferramentas/placar.py) | placar do veto: soma as tabelas de veto das fichas de 23/11 em diante, as provas e as lições; `--conferir` no `checar.py` | [`contexto/PLACAR.md`](contexto/PLACAR.md) |
 | [`ferramentas/pesquisa.py`](ferramentas/pesquisa.py) | caderno de pesquisa compartilhado: `buscar` antes da web, `nova` para registrar com fonte, `conferir` no `checar.py` | [`pesquisas/`](pesquisas) |
 | [`ferramentas/pedido.py`](ferramentas/pedido.py) (23) e [`ferramentas/guardar-pedido.py`](ferramentas/guardar-pedido.py) | guardam cada prompt do dono e cuidam das fichas e da [`pedidos/FILA.md`](pedidos/FILA.md); o `licao` e o `fechar` gravam a lição no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md` | [`pedidos/`](pedidos), [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
+| [`ferramentas/abrir-sessao.py`](ferramentas/abrir-sessao.py) | gancho de abertura (SessionStart): toda conversa principal começa com as fichas abertas, o "## Agora" do quadro, os títulos dos avisos e o começo do `ULTIMO.md` (até 2000 caracteres; só lê, nunca trava) | [`contexto/QUADRO.md`](contexto/QUADRO.md), [`contexto/entregas/ULTIMO.md`](contexto/entregas/ULTIMO.md), `.claude/settings.json` |
 
 ## 6. As pessoas e as regras em volta
 

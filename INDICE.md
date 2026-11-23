@@ -5,7 +5,7 @@
 | Categoria | Para que serve | Resumo | Quem lê |
 |---|---|---|---|
 | **Comando e contexto** | As regras, as decisões do dono e quem decide o quê | [`RESUMO-RAIZ.md`](RESUMO-RAIZ.md) (12) | todos |
-| **Contexto por papel** | O que cada agente precisa saber, o quadro de avisos e os prompts do dono | [`contexto/RESUMO.md`](contexto/RESUMO.md) (23) | todos |
+| **Contexto por papel** | O que cada agente precisa saber, o quadro de avisos e os prompts do dono | [`contexto/RESUMO.md`](contexto/RESUMO.md) (28) | todos |
 | **Caderno de pesquisa** | Tudo o que a equipe achou na web, por tema, com fonte, data e certeza | [`pesquisas/RESUMO.md`](pesquisas/RESUMO.md) (5) | todos |
 | **Produto: o e-book** | O que o e-book é, o plano, o catálogo e as 24 plantas | [`ebook/RESUMO.md`](ebook/RESUMO.md) (5) | arquiteto, designer, redator, revisor-de-risco |
 | **Pesquisa e técnica** | Público, concorrentes, regras de projeto e apostilas do Arquiteto | [`ebook/referencias/RESUMO.md`](ebook/referencias/RESUMO.md) (4) | arquiteto, pesquisador, estrategista |

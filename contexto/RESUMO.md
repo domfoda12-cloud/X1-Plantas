@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 23 documentos
+## Os 28 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -66,6 +66,22 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
 Tamanho: 523 palavras.
+
+### [Contexto do Atualizador de documentos (oficina de código)](atualizador-de-docs.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 179 palavras.
+
+### [Contexto do Consertador (oficina de código)](consertador.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 176 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -147,6 +163,22 @@ Seções: Decisões do dono que valem para você; Em aberto com você; Onde olha
 
 Tamanho: 524 palavras.
 
+### [Contexto do Guia de testes (oficina de código)](guia-de-testes.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 207 palavras.
+
+### [Contexto do Limpador (oficina de código)](limpador.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 167 palavras.
+
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
 O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fichas e o resumo de passagem (dono, 22/11/2026). Antes de trabalhar, o quadro; a equipe, `EQUIPE.md`; as regras de pedido e como conduzir (compactar, conversa nova, PR), `../pedidos/LEIA-ME.md`.
@@ -202,3 +234,11 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
 Tamanho: 248 palavras.
+
+### [Contexto do Testador de páginas (oficina de código)](testador-de-paginas.md)
+
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 23/11/2026, adaptado do everything-claude-code (MIT; ficha `0209`).
+
+Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
+
+Tamanho: 180 palavras.

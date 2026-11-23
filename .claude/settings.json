@@ -2,6 +2,17 @@
   "model": "opus",
   "effortLevel": "high",
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/ferramentas/abrir-sessao.py\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
