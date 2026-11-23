@@ -4,8 +4,10 @@
 //      móveis surgem e o jardim cresce em volta.
 //   3. Planta humanizada: paredes cortadas a ~1,1 m, vista de cima, sombras suaves.
 //
-// Coordenadas: x do mundo = x da planta; z do mundo = y da planta (0 = frente). Com a câmera
-// do lado dos fundos (+z) olhando para a frente, a imagem fica igual à planta 2D (frente no alto).
+// Coordenadas: os módulos de src/plantas/ já vêm no mundo 3D (ferramentas/planta3d.py, espelhar):
+// x do mundo = LARGURA - x da planta; z do mundo = y da planta (0 = frente). Assim, quem olha da rua
+// (câmera em -z) vê a casa igual à planta do e-book; da câmera dos fundos (+z), a planta aparece girada
+// meia volta (frente no alto), nunca espelhada.
 import * as THREE from '../node_modules/three/build/three.module.js';
 import { RoundedBoxGeometry } from '../node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js';
 // Qual planta: ?planta=C01 carrega ./plantas/C01.js (gerado por ferramentas/planta3d.py); sem parâmetro, a C01.
@@ -252,7 +254,7 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
     g.strokeStyle = `rgba(255,255,255,${0.9 * pp})`; g.lineWidth = 2;
     for (const d of portas) {
       const [cx, cy] = P(d.x, d.y); const r = d.r * K;
-      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp)); g.stroke();
+      g.beginPath(); g.arc(cx, cy, r, d.a0, lerp(d.a0, d.a1, pp), d.a1 < d.a0); g.stroke(); // espelhada, a folha gira ao contrário
       g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(d.a1) * r * pp, cy + Math.sin(d.a1) * r * pp); g.stroke();
     }
   }
@@ -481,7 +483,7 @@ export function criarCasa(renderer) {
   }
 
   // Câmera em coordenadas esféricas ao redor do centro da casa.
-  // theta = 0: câmera do lado dos fundos (+z), imagem igual à planta 2D (frente no alto).
+  // theta = 0: câmera do lado dos fundos (+z), planta girada meia volta (frente no alto); theta = pi: da rua, igual ao e-book.
   // inclinacao: 0 = vista de cima; ~0.6 = perspectiva.
   function enquadrar({ theta = 0, inclinacao = 0.02, distancia = 22, fov = 30, alvo = [0, 0], aspecto = 1 }) {
     camera.fov = fov; camera.aspect = aspecto; camera.updateProjectionMatrix();

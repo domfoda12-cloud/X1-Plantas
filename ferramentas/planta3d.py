@@ -1,6 +1,7 @@
 """Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
 
-Para cada planta gera video/src/plantas/<ID>.js com o mesmo formato de video/src/planta.js
+Para cada planta gera video/src/plantas/<ID>.js com o mesmo formato de video/src/planta.js,
+já em coordenadas do mundo 3D: x espelhado (X = LARGURA - x, ver espelhar()), y igual (0 = frente)
 (LARGURA, PROFUNDIDADE, ambientes, paredes com vãos de porta, janelas, portas) e mais
 MOVEIS (posicionados pelas regras de projeto do X1-Plantas), ORDEM (sequência em que os cômodos ganham vida)
 e META (nome, área, quartos, cotas).
@@ -206,8 +207,11 @@ OPOSTO = {"frente": "fundos", "fundos": "frente", "esq": "dir", "dir": "esq"}
 ROT = {"frente": 0.0, "fundos": math.pi, "esq": math.pi / 2, "dir": -math.pi / 2}
 
 
-def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados=()):
-    """Posição central (ao longo do lado) onde cabe uma peça de largura w sem bloquear porta nem outro móvel."""
+def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados=(), prof=None):
+    """Posição central (ao longo do lado) onde cabe uma peça de largura w sem bloquear porta nem outro móvel.
+
+    Com prof (profundidade da peça), a porta de um lado perpendicular só tira lugar se o vão dela
+    começar dentro da faixa que a peça ocupa junto da parede; sem prof, vale a regra antiga (0,95 m do canto)."""
     _, o, fixo, a, b = next(x for x in arestas(c) if x[0] == lado)
     livres = [(a + margem, b - margem)]
     for (oa, ob) in ocupados:
@@ -219,10 +223,15 @@ def _livre_no_lado(c, lado, vaos, w, margem=0.05, perto_passagem=False, ocupados
         elif l != OPOSTO[lado]:
             # porta num lado perpendicular, perto do canto com este lado: a peça não pode ficar na frente dela
             canto = c["y0"] if lado == "frente" else c["y1"] if lado == "fundos" else c["x0"] if lado == "esq" else c["x1"]
-            if min(abs(va - canto), abs(vb - canto)) < perto_canto:
+            if prof is not None:
+                faixa = (canto, canto + prof + 0.1) if lado in ("frente", "esq") else (canto - prof - 0.1, canto)
+                bate = va < faixa[1] and vb > faixa[0]
+            else:
+                bate = min(abs(va - canto), abs(vb - canto)) < perto_canto
+            if bate:
                 ponta = c["x0"] if l == "esq" else c["x1"] if l == "dir" else c["y0"] if l == "frente" else c["y1"]
                 # só o sofá pode chegar a 0,5 m de uma passagem aberta larga (ela não tem folha de porta)
-                folga = 0.5 if perto_passagem and vb - va > 1.2 else 0.95
+                folga = 0.5 if perto_passagem and vb - va > 1.2 else (PORTA + 0.05 if prof is not None else 0.95)  # raio da folha da porta
                 livres = subtrair(livres, ponta - folga, ponta + folga)
     cabe = [(p, q) for (p, q) in livres if q - p >= w]
     if not cabe:
@@ -330,7 +339,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
                 if _prof(c, lado) < prof + frente:
                     continue
-                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga))
+                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga), prof=prof + folga)
                 if pos is None:
                     continue
                 x, y = _no_lado(c, lado, pos, prof, folga)
@@ -340,7 +349,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
 
         def mesa_de_jantar():
             """Mesa de 4 lugares (0,80 x 1,20 m) no canto livre mais perto da cozinha, fora da frente das portas."""
-            cozinhas = [por_id[o] for o in por_id if por_id[o]["tipo"] == "cozinha" and PL.parede_comum(c, por_id[o])]
+            cozinhas = [c] if t == "cozinha" else [o for o in por_id.values() if o["tipo"] == "cozinha" and PL.parede_comum(c, o)]
             alvo = ((cozinhas[0]["x0"] + cozinhas[0]["x1"]) / 2, (cozinhas[0]["y0"] + cozinhas[0]["y1"]) / 2) if cozinhas else (cx, cy)
             portas_zona = []
             for (l, va, vb) in vaos:  # 0,80 m livres na frente de cada porta ou passagem
@@ -379,29 +388,42 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                                  manta="#B9C7D6" if casal else "#E3B9A4")
             if lado:
                 for s in (-1, 1):
-                    p = pos + s * (bw / 2 + 0.3)
+                    p = pos + s * (bw / 2 + 0.28)  # criado de 0,45 m ao lado da cama, sem entrar nela
                     a, b = (c["x0"], c["x1"]) if lado in ("frente", "fundos") else (c["y0"], c["y1"])
                     livre = all(not (l == lado and va - 0.1 < p < vb + 0.1) for (l, va, vb) in vaos)
                     x, y = _no_lado(c, lado, p, 0.4)
-                    if a + 0.25 < p < b - 0.25 and livre and cabe({"tipo": "criado", "x": x, "y": y}):
-                        add(tipo="criado", x=x, y=y)
+                    if a + 0.25 < p < b - 0.25 and livre and cabe({"tipo": "criado", "x": x, "y": y, "rot": ROT[lado]}):
+                        add(tipo="criado", x=x, y=y, rot=ROT[lado])
                     if not casal:
                         break
-                arm = 1.8 if casal else 1.4
                 restantes = [l for l in _lados_por_preferencia(c, vaos, jans) if l != lado]
-                encostar("armario", arm, 0.6, restantes)
+                for arm in ((1.8, 1.5, 1.2) if casal else (1.4, 1.2, 1.0)):  # o maior guarda-roupa que couber
+                    if encostar("armario", arm, 0.6, restantes)[0]:
+                        break
                 if not casal:
-                    encostar("escrivaninha", 1.0, 0.5, restantes)
+                    for esc in (1.0, 0.8):
+                        if encostar("escrivaninha", esc, 0.5, restantes)[0]:
+                            break
         elif t in ("sala", "estar"):
             jantar = t == "sala" and "jantar" in c["nome"].lower()
             if jantar:
                 mesa_de_jantar()  # primeiro a mesa, perto da cozinha; o estar se arruma no que sobra
             lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c, l) >= 2.6]
             lado = pos = None
-            # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta, medido na parede em que encosta
-            for larg in (2.1, 1.8, 1.5):
-                for l in (lados or _lados_por_preferencia(c, vaos, jans)):
-                    lado, pos = encostar("sofa", min(larg, _comp(c, l) - 0.6), 0.88, [l], cor="#8A9A86")
+            # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta, medido na parede em que encosta,
+            # de preferência com a TV (rack) na parede da frente dele; sem par, o sofá fica sozinho
+            p_op = None
+            for com_tv in (True, False):
+                for larg in (2.1, 1.8, 1.5, 1.4):
+                    for l in (lados or _lados_por_preferencia(c, vaos, jans)):
+                        lado, pos = encostar("sofa", min(larg, _comp(c, l) - 0.6), 0.88, [l], cor="#8A9A86")
+                        if not lado:
+                            continue
+                        p_op = _livre_no_lado(c, OPOSTO[lado], vaos, 1.6, ocupados=ocupados(OPOSTO[lado], 0.4), prof=0.4)
+                        if p_op is not None or not com_tv:
+                            break
+                        out.remove(aqui.pop())
+                        lado = None
                     if lado:
                         break
                 if lado:
@@ -409,7 +431,6 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             if lado:
                 op = OPOSTO[lado]
                 x, y = _no_lado(c, op, pos, 0.4)
-                p_op = _livre_no_lado(c, op, vaos, 1.6, ocupados=ocupados(op, 0.4))
                 if p_op is not None:
                     x, y = _no_lado(c, op, p_op, 0.4)
                     add(tipo="rack", x=x, y=y, rot=ROT[op], w=1.6, d=0.4)
@@ -452,20 +473,35 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
                 x, y = _no_lado(c, lado, pos, 0.62)
                 add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
                 restantes = [l for l in _lados_por_preferencia(c, vaos, []) if l != lado]
-                encostar("geladeira", 0.72, 0.7, restantes)
+                if not encostar("geladeira", 0.72, 0.7, restantes)[0] and comp_max - 0.8 >= 1.2:
+                    # sem outra parede livre, a geladeira fica na ponta da bancada, na mesma parede
+                    out.remove(aqui.pop())
+                    a_ = (c["x0"] if lado in ("frente", "fundos") else c["y0"])
+                    ini = pos - comp_max / 2
+                    x, y = _no_lado(c, lado, ini + (comp_max - 0.8) / 2, 0.62)
+                    add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max - 0.8, d=0.62)
+                    if not encostar("geladeira", 0.72, 0.7, [lado])[0]:
+                        out.remove(aqui.pop())
+                        x, y = _no_lado(c, lado, pos, 0.62)
+                        add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
             if w * d >= 8.5 and min(w, d) >= 2.6:
-                mesa = {"tipo": "mesaJantar", "x": cx, "y": cy, "w": 0.85, "d": 1.2}
-                if cabe(mesa, 0.1):
-                    add(**mesa)
+                mesa_de_jantar()
         elif t in ("banho", "lavabo"):
             lados = _lados_por_preferencia(c, vaos, jans)
-            if min(w, d) >= 1.2 and t == "banho":
-                encostar("box", 0.8, 0.85, [l for l in lados if _comp(c, l) >= 1.6], frente=0.3)
-            encostar("vaso", 0.4, 0.65, lados, frente=0.3)
-            encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)
+            # o box primeiro (é o maior); se ele tirar o lugar do vaso ou da pia, tenta o box em outra parede
+            opcoes = sorted((l for l in lados if _comp(c, l) >= 0.9), key=lambda l: _comp(c, l) < 1.6) if min(w, d) >= 1.2 and t == "banho" else []
+            for box_lado in opcoes + [None]:
+                antes = len(aqui)
+                if box_lado and not encostar("box", 0.8, 0.85, [box_lado], frente=0.3)[0]:
+                    continue
+                ok = encostar("vaso", 0.4, 0.65, lados, frente=0.3)[0] and encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)[0]
+                if ok or box_lado is None:
+                    break
+                while len(aqui) > antes:
+                    out.remove(aqui.pop())
         elif t == "servico":
             encostar("tanque", 0.6, 0.5, None, frente=0.4)
-            encostar("maquina", 0.6, 0.6, None, frente=0.4)
+            encostar("maquina", 0.6, 0.6, None, frente=0.4) or encostar("maquina", 0.6, 0.6, None, frente=0.3)
         elif t == "escritorio":
             encostar("escrivaninha", 1.2, 0.6, None)
             encostar("armario", 1.2, 0.45, None)
@@ -494,6 +530,28 @@ def ordem(planta):
     return [c["id"] for c in sorted(cs, key=lambda c: (prio.get(c["tipo"], 5), c["y0"], c["x0"]))]
 
 
+def espelhar(W, paredes, janelas, portas, moveis, ambientes):
+    """Passa da planta (x para a direita de quem olha da rua) para o mundo 3D, que é espelhado no eixo X.
+
+    No three.js (y para cima, z = fundos), quem olha da rua para a casa vê o x do mundo crescer para a ESQUERDA.
+    Sem espelhar, a imagem 3D sai invertida em relação à planta do e-book (achado do Designer, 23/11/2026).
+    Com X = largura - x, a casa vista da rua bate com a planta: porta, janelas e cômodos do mesmo lado."""
+    X = lambda x: R(W - x)
+    paredes = [[X(a), b, X(c), d] for (a, b, c, d) in paredes]
+    for j in janelas:
+        a, b, c, d = j["seg"]
+        j["seg"] = [X(c), d, X(a), b] if b == d else [X(a), b, X(c), d]
+    for p in portas:  # ângulo a vira pi - a; a folha fechada continua em a0 e a aberta em a1
+        p["x"], p["a0"], p["a1"] = X(p["x"]), math.pi - p["a0"], math.pi - p["a1"]
+    for m in moveis:
+        m["x"] = X(m["x"])
+        if m.get("rot"):
+            m["rot"] = R(-m["rot"])
+    for a in ambientes:
+        a["x0"], a["x1"] = X(a["x1"]), X(a["x0"])
+    return paredes, janelas, portas, moveis, ambientes
+
+
 def modulo(planta):
     paredes, janelas, portas, moveis = construir(planta)
     r = planta["_r"]
@@ -503,6 +561,7 @@ def modulo(planta):
            for c in planta["comodos"] if c["tipo"] != "futuro"]
     futuros = [{"id": c["id"], "nome": c["nome"], "x0": c["x0"], "y0": c["y0"], "x1": c["x1"], "y1": c["y1"]}
                for c in planta["comodos"] if c["tipo"] == "futuro"]
+    paredes, janelas, portas, moveis, _ = espelhar(planta["W"], paredes, janelas, portas, moveis, amb + futuros)
     meta = {"id": planta["id"], "nome": planta["nome"], "area": m["area_fechada"], "quartos": planta["quartos_txt"],
             "banheiros": planta["banheiros"], "lote": m["lote_comercial"], "orientacao": m["orientacao"]["melhor"]}
     J = lambda v: json.dumps(v, ensure_ascii=False)

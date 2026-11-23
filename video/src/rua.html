@@ -135,7 +135,7 @@ plano(LW, LD, M.grama, LW / 2, 0.005, LD / 2, 2, 2);
 const E = 0.14;
 bloco(E, 1.9, LD, M.muro, 0, 0, LD / 2, cena); bloco(E, 1.9, LD, M.muro, LW, 0, LD / 2, cena); bloco(LW, 1.9, E, M.muro, LW / 2, 0, LD, cena);
 const ext = portas.find((p) => p.id.startsWith('ext-')) || portas[0];
-const portaX = OX + LARGURA - (ext.x + Math.cos(ext.a0) * ext.r / 2);
+const portaX = OX + ext.x + Math.cos(ext.a0) * ext.r / 2; // o módulo já vem espelhado (planta3d.py, espelhar)
 const vaoA = Math.max(0.2, portaX - 0.7), vaoB = Math.min(LW - 0.2, portaX + 0.7);
 bloco(vaoA, 0.6, E, M.faixa, vaoA / 2, 0, 0, cena); bloco(LW - vaoB, 0.6, E, M.faixa, (vaoB + LW) / 2, 0, 0, cena);
 bloco(1.1, 0.03, OZ + 0.1, M.calcada, portaX, 0, OZ / 2 - 0.05, cena); // caminho até a porta
@@ -168,8 +168,8 @@ arbusto(0.8, 0.9, 1.2); arbusto(LW - 0.8, 1.0, 1.4); arbusto(LW - 0.9, OZ + 1.2,
 
 // ----- a casa, a partir da planta -----
 const pecas = []; // { o, ordem, tipo }  ordem 0..1 = quando a peça aparece na obra
-// quem olha da rua vê o x da planta crescer para a direita: a casa entra espelhada no eixo X do mundo
-const casa = new THREE.Group(); casa.position.set(OX + LARGURA, 0, OZ); casa.scale.x = -1; cena.add(casa);
+// quem olha da rua vê o x da planta crescer para a direita: o módulo já vem espelhado no eixo X (planta3d.py, espelhar)
+const casa = new THREE.Group(); casa.position.set(OX, 0, OZ); cena.add(casa);
 const cx = LARGURA / 2, cz = PROFUNDIDADE / 2;
 const ordemDe = (x, z) => (Math.atan2(z - cz, x - cx) + Math.PI) / (2 * Math.PI);
 const add = (o, tipo, ordem) => { pecas.push({ o, tipo, ordem }); return o; };

@@ -50,7 +50,8 @@
     const v = new THREE.Mesh(new THREE.BoxGeometry(h ? c : E, ALT - j.verga, h ? E : c), branco); v.position.set((x0 + x1) / 2, j.verga + (ALT - j.verga) / 2, (y0 + y1) / 2); casa.cena.add(v);
   }
 
-  const pts = q.get('caminho').split(';').map((s) => s.split(',').map(Number)).map(([x, z]) => new THREE.Vector3(x, 0, z));
+  // o caminho vem em metros da planta; o módulo já está espelhado no x (planta3d.py, espelhar)
+  const pts = q.get('caminho').split(';').map((s) => s.split(',').map(Number)).map(([x, z]) => new THREE.Vector3(D.LARGURA - x, 0, z));
   const curva = new THREE.CatmullRomCurve3(pts, false, 'centripetal', 0.5);
   const OLHO = Number(q.get('olho') || 1.45), FOV = Number(q.get('fov') || 78), FRENTE = Number(q.get('frente') || 1.6);
   const cam = casa.camera; cam.fov = FOV; cam.aspect = W / H; cam.near = 0.08; cam.up.set(0, 1, 0); cam.updateProjectionMatrix();

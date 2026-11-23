@@ -47,8 +47,9 @@ const lerp = (a, b, v) => a + (b - a) * v;
 const IMAGENS = [
   { arquivo: '01-blueprint.png', estado: { desenho: 1, paredes: 0, vida: 0 }, camera: { theta: 0, inclinacao: 0.0, distancia: 23, alvo: [0, 0.3] } },
   { arquivo: '02-planta-humanizada.png', estado: { desenho: 1, paredes: 1, vida: 1 }, camera: { theta: 0, inclinacao: 0.02, distancia: 21, alvo: [0, 0] } },
-  { arquivo: '03-perspectiva.png', estado: { desenho: 1, paredes: 1, vida: 1 }, camera: { theta: 0.55, inclinacao: 0.62, distancia: 20, alvo: [0, 0.4] } },
-  { arquivo: '04-perspectiva-lateral.png', estado: { desenho: 1, paredes: 1, vida: 1 }, camera: { theta: -0.75, inclinacao: 0.6, distancia: 20, alvo: [0, 0.4] } },
+  // As perspectivas olham da rua (theta perto de pi): a casa aparece como na planta do e-book, frente embaixo.
+  { arquivo: '03-perspectiva.png', estado: { desenho: 1, paredes: 1, vida: 1 }, camera: { theta: Math.PI - 0.55, inclinacao: 0.62, distancia: 20, alvo: [0, -0.4] } },
+  { arquivo: '04-perspectiva-lateral.png', estado: { desenho: 1, paredes: 1, vida: 1 }, camera: { theta: Math.PI + 0.75, inclinacao: 0.6, distancia: 20, alvo: [0, -0.4] } },
 ];
 
 // Animação vertical de 12 s: blueprint se desenha, paredes sobem, casa ganha vida, câmera desliza.
