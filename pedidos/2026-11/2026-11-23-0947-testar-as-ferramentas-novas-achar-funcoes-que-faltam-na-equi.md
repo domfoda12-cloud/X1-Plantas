@@ -5,6 +5,8 @@
 **Prompt (palavra por palavra):** Faça os testes, also look for gaps in agente that we need, some function that we don't got cover (for example teaching) and look to add them in the system
 As always, better the functionality of the agents make them smarter, idk how to properly do that but i trust your best
 
+*Recado de 23/11 09:52:* Also críticize my way of prompting, the project in general, and look for ways to improve
+
 **O que ele pediu, parte por parte:** (1) Fazer os três testes de funcionamento real das ferramentas novas que propus (marketing-psychology num texto real; everything-claude-code na cópia separada; como se encaixam). (2) Achar funções que a equipe não cobre (ele deu o exemplo "ensinar") e pôr no sistema. (3) Deixar os agentes mais inteligentes; ele não sabe como e confia no Maestro.
 
 **Por que ele pediu, ou o que quer descobrir:** Voltou, achou pouco o trabalho da noite e perguntou se as ferramentas de ontem foram testadas de verdade (não foram).
