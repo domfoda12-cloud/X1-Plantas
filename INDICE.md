@@ -15,7 +15,7 @@
 | **Animações 3D e imagens** | O motor 3D, o OpenArt e as referências de planta que ganha vida | [`animacoes-3d/RESUMO.md`](animacoes-3d/RESUMO.md) (3) | arquiteto, designer, editor-video |
 | **Jurídico** | O que a lei exige de arquiteto e engenheiro, preços e critérios | [`reports/RESUMO.md`](reports/RESUMO.md) (2) | revisor-de-risco, pesquisador, estrategista |
 | **Pedidos do dono** | Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos | [`pedidos/RESUMO.md`](pedidos/RESUMO.md) (22) | todos |
-| **Código** | Os programas que validam as plantas e geram PDF, 3D, fichas e painel | [`ferramentas/RESUMO.md`](ferramentas/RESUMO.md) (19) | arquiteto, designer |
+| **Código** | Os programas que validam as plantas e geram PDF, 3D, fichas e painel | [`ferramentas/RESUMO.md`](ferramentas/RESUMO.md) (20) | arquiteto, designer |
 
 ## Por agente
 

@@ -113,8 +113,14 @@ def conflitos(p):
 
 
 # ------------------------------------------------------------------ desenho
-def marcar(p, svg, pontos, problemas):
-    """Põe círculos, números e a etiqueta "janela em cima da porta" no próprio SVG do e-book (mesmas coordenadas)."""
+def dentro(ponto, problemas):
+    x, y, rx, ry = ponto
+    return any(abs(px - x) <= rx and abs(py - y) <= ry for px, py in problemas)
+
+
+def marcar(p, svg, pontos, problemas, enfeites=True):
+    """Põe círculos, números e a etiqueta "janela em cima da porta" no próprio SVG do e-book (mesmas coordenadas).
+    enfeites=False: só o círculo (para o "de perto", onde número e etiqueta já estão no texto)."""
     Dm = max([p["D"]] + [c["y1"] for c in p["comodos"] if c["tipo"] == "futuro"])
     vb = [float(v) for v in svg.split('viewBox="', 1)[1].split('"', 1)[0].split()]
     Y = lambda y: Dm - y
@@ -124,11 +130,13 @@ def marcar(p, svg, pontos, problemas):
             continue
         cx, cy = x, Y(y)
         s.append(f'<ellipse cx="{cx:.3f}" cy="{cy:.3f}" rx="{rx:.3f}" ry="{ry:.3f}" fill="{VERM}" fill-opacity=".07" stroke="{VERM}" stroke-width=".085" stroke-dasharray=".26 .14"/>')
+        if not enfeites:
+            continue
         bx = min(max(cx - rx * .72, vb[0] + .4), vb[0] + vb[2] - .4)
         by = min(max(cy - ry * .72, vb[1] + .4), vb[1] + vb[3] - .4)
         s.append(f'<circle cx="{bx:.3f}" cy="{by:.3f}" r=".36" fill="{VERM}" stroke="#fff" stroke-width=".07"/>'
                  f'<text x="{bx:.3f}" y="{by + .17:.3f}" text-anchor="middle" font-family="Inter" font-weight="800" font-size=".5" fill="#fff">{n}</text>')
-        if any(abs(px - x) <= rx and abs(py - y) <= ry for px, py in problemas):
+        if dentro((x, y, rx, ry), problemas):
             ty = cy + ry + .5 if cy < Dm / 2 else cy - ry - .3
             txt = "janela em cima da porta"
             lw = len(txt) * .205 + .4
@@ -160,7 +168,7 @@ li{display:flex;gap:18px;align-items:flex-start;background:#fff;border-radius:20
 li b{flex:none;width:58px;height:58px;border-radius:50%;background:#D62828;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center}
 li>div{flex:1;min-width:0} .perto{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
 .perto figure{background:#F4EFE6;border-radius:14px;overflow:hidden;margin:0}
-.perto svg{display:block;width:100%;height:250px} .perto figcaption{font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:6px 14px 8px;color:#56616E}
+.perto svg{display:block;width:100%;height:auto} .perto figcaption{font-size:24px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:6px 14px 8px;color:#56616E}
 .igual{margin-top:22px;background:#FFC857;border-radius:22px;padding:20px 26px}
 .igual h2{font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;font-size:44px;line-height:1}
 .igual div{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:14px}
@@ -173,17 +181,25 @@ def de_perto(p, svg, ponto):
     """O mesmo desenho, só a janela em volta do ponto (troca o viewBox): para ler no celular sem dar zoom."""
     Dm = max([p["D"]] + [c["y1"] for c in p["comodos"] if c["tipo"] == "futuro"])
     x, y, rx, ry = ponto
-    vb = f"{x - rx - .7:.3f} {Dm - y - ry - .75:.3f} {2 * rx + 1.4:.3f} {2 * ry + 1.85:.3f}"
+    w = max(2 * rx + 1.2, (2 * ry + 1.2) * 1.5)  # recorte de 3 x 2, com folga em volta do círculo
+    topo = Dm - y - ry - .3  # o círculo encosta em cima; embaixo fica o cômodo, para entender onde é
     a, b = svg.split('viewBox="', 1)
-    return a + f'viewBox="{vb}" preserveAspectRatio="xMidYMid slice"' + b.split('"', 1)[1]
+    return a + f'viewBox="{x - w / 2:.3f} {topo:.3f} {w:.3f} {w / 1.5:.3f}"' + b.split('"', 1)[1]
 
 
-def pagina(pa, pb, svga, svgb, legendas, titulo, pontos=()):
+def pagina(pa, pb, pontos, legendas, titulo):
+    base = {}
+    for q in (pa, pb):
+        svg, prob = livro.svg_planta(q, humanizada=True, estilo="revista"), conflitos(q)
+        base[id(q)] = (marcar(q, svg, pontos, prob), svg, prob)
+    (svga, crua_a, prob_a), (svgb, crua_b, prob_b) = base[id(pa)], base[id(pb)]
+    so = lambda q, crua, prob, i: de_perto(q, marcar(q, crua, [pontos[i]], prob, enfeites=False), pontos[i])
+    nota = lambda pt, prob: f' · <em style="color:{VERM};font-style:normal">janela em cima da porta</em>' if dentro(pt, prob) else ""
     na, nb = numeros(pa), numeros(pb)
     iguais = "".join(f"<span>{E(v)}</span>" for k, v in na.items() if nb[k] == v)
     muda = " · ".join(f"{k}: {E(na[k])} → {E(nb[k])}" for k in na if nb[k] != na[k])
-    perto = lambda i: (f'<div class="perto"><figure>{de_perto(pa, svga, pontos[i])}<figcaption>antes</figcaption></figure>'
-                       f'<figure>{de_perto(pb, svgb, pontos[i])}<figcaption>depois</figcaption></figure></div>') if i < len(pontos) else ""
+    perto = lambda i: (f'<div class="perto"><figure>{so(pa, crua_a, prob_a, i)}<figcaption>antes{nota(pontos[i], prob_a)}</figcaption></figure>'
+                       f'<figure>{so(pb, crua_b, prob_b, i)}<figcaption>depois{nota(pontos[i], prob_b)}</figcaption></figure></div>') if i < len(pontos) else ""
     itens = "".join(f"<li><b>{i + 1}</b><div><span>{E(legendas[i]) if i < len(legendas) else ''}</span>{perto(i)}</div></li>"
                     for i in range(max(len(legendas), len(pontos))))
     return (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body>'
@@ -232,11 +248,9 @@ def main():
         print(f"ponto {n}: x {x:.2f} m, y {y:.2f} m (da frente)")
     if len(legendas) != len(pontos):
         print(f"AVISO: {len(pontos)} ponto(s) marcados e {len(legendas)} frase(s) de legenda")
-    svga = marcar(pa, livro.svg_planta(pa, humanizada=True, estilo="revista"), pontos, conflitos(pa))
-    svgb = marcar(pb, livro.svg_planta(pb, humanizada=True, estilo="revista"), pontos, conflitos(pb))
     saida = Path(a.saida).resolve()
     saida.parent.mkdir(parents=True, exist_ok=True)
-    png(pagina(pa, pb, svga, svgb, legendas, a.titulo or f"{pa['nome'].split(' (')[0]}: o que muda", pontos), saida)
+    png(pagina(pa, pb, pontos, legendas, a.titulo or f"{pa['nome'].split(' (')[0]}: o que muda"), saida)
     print(f"imagem: {saida}")
 
 

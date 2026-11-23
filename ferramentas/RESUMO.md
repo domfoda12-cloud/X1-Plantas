@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 19 programas
+## Os 20 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -38,6 +38,12 @@ Textos fixos do e-book que o gerador (livro.py) usa: o aviso completo, os 7 erro
 As 24 plantas do 1º e do 2º lançamento, desenhadas pelas regras de projeto do X1-Plantas (não são projeto de arquiteto).
 
 Funções: `todas`.
+
+### [`ferramentas/antes-depois.py`](antes-depois.py)
+
+Antes e depois de uma planta, para o dono ver o conserto com os olhos (pedido dele, 23/11/2026).
+
+Funções: `carregar`, `pecas`, `mudancas`, `conflitos`, `dentro`, `marcar`, `numeros`, `de_perto`, `pagina`, `png`, `main`.
 
 ### [`ferramentas/atualizar-painel.py`](atualizar-painel.py)
 
