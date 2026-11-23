@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 8248 palavras.
+Tamanho: 8475 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1197 palavras.
+Tamanho: 1184 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 803 palavras.
+Tamanho: 847 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 

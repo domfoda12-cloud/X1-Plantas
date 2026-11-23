@@ -21,13 +21,13 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 20 documentos
+## Os 21 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
 Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
 
-Tamanho: 600 palavras.
+Tamanho: 654 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
@@ -35,7 +35,13 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 548 palavras.
+Tamanho: 566 palavras.
+
+### [Placar do veto (gerado: não edite)](PLACAR.md)
+
+Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
+
+Tamanho: 312 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -43,7 +49,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
 
-Tamanho: 460 palavras.
+Tamanho: 496 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -67,7 +73,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 358 palavras.
+Tamanho: 406 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 
@@ -127,11 +133,11 @@ Tamanho: 6827 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral: `CONTEXTO.md`; histórico, só para detalhe antigo: `CONTEXTO-HISTORICO.md`; última tarefa, se a sua continua: `entregas/ULTIMO.md`.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 500 palavras.
+Tamanho: 513 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -139,7 +145,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 379 palavras.
+Tamanho: 524 palavras.
 
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
@@ -147,7 +153,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Como conduzir; Lições.
 
-Tamanho: 517 palavras.
+Tamanho: 608 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -155,7 +161,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 372 palavras.
+Tamanho: 423 palavras.
 
 ### [Contexto do Redator](redator.md)
 
@@ -171,7 +177,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 420 palavras.
+Tamanho: 529 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

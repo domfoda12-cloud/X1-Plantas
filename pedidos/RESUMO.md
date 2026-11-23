@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 8 documentos
+## Os 16 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -29,7 +29,13 @@ Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um mo
 
 Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); O plano de tudo; Plano vetado antes de fazer (dono, 22/11/2026); Erro de sintonia entre agentes (dono, 22/11/2026); Ferramenta ou agente novo (dono, 23/11/2026); Buscar o que o dono já disse (22/11/2026); Faltou informação do dono? Sugira, não espere (dono, 22/11/2026); Consertar de vez (dono, 22/11/2026: "não só conserte, remende"); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; ….
 
-Tamanho: 2945 palavras.
+Tamanho: 3177 palavras.
+
+### [Lições da equipe (registro único, só acréscimo)](LICOES.md)
+
+Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à mão: a lição também está no "Lições" do `contexto/<papel>.md`.
+
+Tamanho: 750 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -38,6 +44,22 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 Seções: O objetivo da equipe; Fase 1 · Organizar a base (ficha `1529-organizar-os-arquivos`); Fase 2 · O plano mestre da equipe (ficha `1944-plano-mestre`); Fase 3 · E-book: as casas refeitas (frente atual); Fase 4 · Animações e imagens (abre só quando a fase 3 fechar); Fase 5 · Vídeo; Fase 6 · Vender e medir (o objetivo é o Pix); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
 Tamanho: 1920 palavras.
+
+### [Provas da equipe](PROVAS.md)
+
+Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
+
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC).
+
+Tamanho: 645 palavras.
+
+### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
+
+Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `contexto/dono/PROMPTS.md`, `contexto/dono/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81 achados…
+
+Seções: Já eram lição ou regra (correções do Fable aplicadas às citações); Viraram lição (texto final, depois do veto); Tiradas pelo veto.
+
+Tamanho: 1717 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 
@@ -71,8 +93,48 @@ Tamanho: 771 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 3, 23/11/2026)](anexos/integracao-novos-v3.md)
 
-O que mudou da v2 para a v3 (escrita com as 8 críticas do júri; rodada 1: média 4,75; rodada 2: média 6,1) - Saiu o que não tinha fonte: os "900 mil tokens" do júri (nenhum arquivo guarda esse número); as "63 menções a Mac" (contei hoje, antes deste arquivo: 89, em 32 arquivos `.md`); "instalação…
+O que mudou da v2 para a v3 (escrita com as 8 críticas do júri; médias: rodada 1, 4,75; rodada 2, 6,1) - Regra nova sua (02:13 e 02:14): "não desista porque quebraria, faça funcionar sem quebrar", e apresentar direito cada agente novo. Cada adição ganhou uma parte que entra adaptada; fica de fora…
 
-Seções: O cérebro: por onde um pedido passa; Cada adição; Perguntas para você; Ordem, quem faz e quando o júri para; O que não muda.
+Seções: O cérebro: por onde um pedido passa; Cada adição; Perguntas para você; Ordem, quem faz e quando o júri para.
 
-Tamanho: 1728 palavras.
+Tamanho: 1421 palavras.
+
+### [Proposta de integração das 6 adições do dono (5 do pedido e a sexta, da ficha `0209`): versão 4, 23/11/2026](anexos/integracao-novos-v4.md)
+
+O que mudou da v3 para a v4 (escrita com as críticas das rodadas 1, 2 e 3) - Página de decisões em dois blocos: primeiro o que destrava o Pix; depois as ferramentas, com "aceito todas as recomendações". - Ordem corrigida: nada que depende do seu sim acontece antes dele. - Fatos refeitos com o…
+
+Seções: O cérebro: por onde um pedido passa; Cada adição; Perguntas para você; Ordem, quem faz e quando o júri para.
+
+Tamanho: 2579 palavras.
+
+### [Integração das 6 adições do dono (5 do pedido e a sexta, da ficha `0209`): versão 5, 23/11/2026](anexos/integracao-novos-v5.md)
+
+Escrita com as críticas das rodadas 1 e 2 (por extenso), as notas da rodada 3 (estão na ficha `0156`: Haiku 6, Sonnet 7, Opus 6,5; média 6,5; presidiu o Fable) e a síntese do presidente da rodada 4. As críticas por extenso das rodadas 3 e 4 não estão no repositório. O que mudou da v4 para a v5 - A…
+
+Seções: O cérebro: por onde um pedido passa; Página de decisões, versão 1; Cada adição (para o júri conferir); As outras opções (para quem disser "quero ver"); Ordem, quem faz e quando o júri para.
+
+Tamanho: 2911 palavras.
+
+### [Integração das 6 adições: versão 6, curta (23/11/2026)](anexos/integracao-novos-v6.md)
+
+O que mudou da v5 para a v6
+
+Seções: 1. O estado verdadeiro; 2. Página de decisões (pode responder só esta); 3. Uma linha por ferramenta.
+
+Tamanho: 880 palavras.
+
+### [Júri: síntese dos presidentes, rodadas 3 a 5 (23/11/2026)](anexos/juri-rodadas-3-a-5.md)
+
+Saída do laço do júri (ficha `0156`), sem edição. Base da v6 curta, que é o último passo do júri.
+
+Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku); v5: média 6 (presidente: sonnet).
+
+Tamanho: 10600 palavras.
+
+### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
+
+Cada plano é um rascunho de trabalho da equipe do X1-Plantas. Vete cada um como faria de verdade: o plano pode ter problema ou estar certo. Não suponha que todos têm erro.
+
+Seções: Plano 1: legenda do post da Casa Compacta (Redator); Plano 2: ângulo do primeiro anúncio (Estrategista); Plano 3: cena do vídeo principal (Editor de vídeo); Plano 4: conserto no gerador do PDF (Maestro); Plano 5: teste do last30days (Pesquisador); Plano 6: edição do vídeo com a MinoAI (Editor de vídeo); Plano 7: página do e-book da Casa Compacta (Arquiteto e Redator); Plano 8: roteiro dos dois vídeos (Editor de vídeo); Plano 9: conferência nova no checar.py (Maestro); Plano 10: legenda do post da planta grátis (Redator).
+
+Tamanho: 733 palavras.

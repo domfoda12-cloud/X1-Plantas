@@ -27,7 +27,7 @@
 
 ## Veto
 
-Toda resposta de veto passa pela régua de 5 pontos (objetivo, lugar, prova, correção, novo e do papel; `pedidos/LEIA-ME.md`). Nota abaixo de 4 ou afirmação sem fonte vira repreensão em "Lições".
+Toda resposta de veto passa pela régua de 5 pontos (objetivo, lugar, prova, correção, novo e do papel; `pedidos/LEIA-ME.md`). Nota abaixo de 4 ou afirmação sem fonte vira repreensão em "Lições". **Quem chama o veto cola no pedido a linha do agente no [placar](PLACAR.md)**; ele lê antes de vetar.
 
 ## Fronteiras
 

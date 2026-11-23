@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 3 documentos
+## Os 4 documentos
 
 ### [Pesquisa: Ferramentas, skills, modelos e custos](ferramentas.md)
 
@@ -24,6 +24,12 @@ Tamanho: 147 palavras.
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
 Tamanho: 148 palavras.
+
+### [Pesquisa: O que não cabe nos outros](outros.md)
+
+Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
+
+Tamanho: 526 palavras.
 
 ### [Pesquisa: Vídeo, gancho, edição e redes sociais](video.md)
 

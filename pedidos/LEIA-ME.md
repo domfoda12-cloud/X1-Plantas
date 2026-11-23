@@ -71,7 +71,7 @@ O plano de trabalho, fase por fase, com tarefas grandes e pequenas e quem faz ca
 | Correção | todo NÃO ou VETO traz a correção que vira SIM |
 | Novo e do papel | não repete o que já entrou e fica no papel dele |
 
-Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto"), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** uma linha em "Lições" do `contexto/<papel>.md` do agente (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
+Os 5 pontos e o corte em 4 são escolha nossa, não do dono. O Maestro dá a nota na ficha (tabela "Qualidade do veto", **desde 23/11 no formato fixo `| Rodada | Agente | Nota | Ponto que caiu | Por quê |`**, que o `ferramentas/placar.py` soma em `contexto/PLACAR.md`), dizendo qual ponto caiu; prova do que o dono pediu é a fala dele, não um resumo (regra 12 da convivência). **Abaixo de 4, ou afirmação sem fonte, é repreensão:** `python3 ferramentas/pedido.py licao <papel> "texto" --origem auditoria --ponto N` (grava no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md`, e recusa se o contexto passar do limite) (o que faltou e o que fazer da próxima vez), que ele lê na próxima chamada. O Maestro também se dá nota, e erra também.
 
 ## Erro de sintonia entre agentes (dono, 22/11/2026)
 
@@ -106,7 +106,7 @@ Erro achado não é só corrigido: a causa vira **regra escrita ou conferência 
    Em "Quem executa", uma linha por agente chamado: **o que ele acrescenta** para chegar ao resultado que o dono quer (coluna "Acrescenta" de [`contexto/EQUIPE.md`](../contexto/EQUIPE.md)).
 4. **Execução.** O Opus passa o trabalho com o **pacote do executor** (abaixo).
 5. **Conferência (Opus).** Confere o que voltou contra o "Pronto quando" e preenche "Conferência". Relatório de agente é afirmação, não prova: o Opus abre o arquivo, roda o comando ou olha o quadro.
-6. **Fechamento.** `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
+6. **Fechamento.** Escreva na ficha `**O que aprendi:** papel: lição` (uma por linha) ou `nada novo`; `python3 ferramentas/pedido.py fechar <ficha> "o que virou"` grava as lições, fecha a ficha, escreve a linha no `CONTEXTO-HISTORICO.md` e atualiza a fila. Falta só o aviso no `contexto/QUADRO.md`, que é escrito à mão.
 
 ## Quem faz o quê
 
@@ -136,6 +136,7 @@ Todo pedido a um agente leva, nesta ordem:
 3. **O que já está decidido** (para ele não reabrir) e **o que ele não pode tocar** (arquivos de outro agente, arquivos gerados, palavras do dono).
 4. **Pronto quando:** o critério da ficha.
 5. **O que devolver:** o que mudou por arquivo, o que não resolveu e de quem depende, e o que ele não conferiu.
+6. **Em pedido de veto:** a linha do agente em `contexto/PLACAR.md`, copiada inteira (é assim que ele vê onde costuma errar).
 
 Dois agentes ao mesmo tempo nunca editam o mesmo arquivo. Agente não faz commit: quem conduz confere e envia.
 
@@ -156,6 +157,7 @@ Criada pelo programa; os campos são obrigatórios (o `checar.py` confere):
 | Quem executa | agente e modelo de cada parte |
 | Conferência | o que foi conferido, como, e o que não foi |
 | Resultado | o que virou, com os arquivos |
+| O que aprendi | (ficha de 23/11/2026 em diante) `papel: lição`, uma por linha, ou `nada novo`. O `fechar` grava cada lição no "Lições" do `contexto/<papel>.md` e em `pedidos/LICOES.md`; se o contexto passaria de 3500, não fecha e manda consolidar. Lição avulsa: `pedido.py licao <papel> "texto" --origem prova` |
 
 **"Pronto quando" em critérios que se conferem** (23/11/2026, adaptado de everything-claude-code, MIT; licença em `.claude/LICENCA-everything-claude-code.txt`): em ficha nova, o "Pronto quando" é uma lista `[ ] critério`, cada um marcado com quem confere: **código** (o `checar.py` ou um comando confere), **Fable** ou **dono**. A "Conferência" diz quais passaram e com que comando. Não é campo novo do `pedido.py` (fichas antigas não são reescritas), e taxa de acerto em várias tentativas só se um programa contar.
 
@@ -177,6 +179,14 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 | O relatório do agente era aceito como verdade | campo "Conferência", a regra "afirmação não é prova" e a auditoria do Fable |
 | "Sonnet com Opus" na pesquisa não dizia quem faz o quê | pesquisa em dois passos |
 | Ninguém ligava um pedido ao outro | campo "Ligação com as ideias gerais" e `IDEIAS-GERAIS.md` |
+
+## Como o Maestro conduz (adaptado do everything-claude-code, 23/11/2026)
+
+Adaptado de everything-claude-code (MIT; licença em `.claude/LICENCA-everything-claude-code.txt`).
+
+- **Compactar só na fronteira:** plano aprovado, ficha fechada ou troca de frente; nunca no meio de uma edição. Escreva o `ULTIMO.md` antes do `/compact`.
+- **Passou de uns 80% do contexto:** salve o resumo de passagem e siga numa conversa nova.
+- **Pull request só de `sistema/<assunto>`:** leia todos os commits da branch e o `git diff main...HEAD`; resumo em português com o plano de conferência (`checar.py`, `atualizar-painel.py`); push com `-u`; as linhas de atribuição ficam. Commit em português, nunca com prefixo em inglês.
 
 ## Limites honestos
 

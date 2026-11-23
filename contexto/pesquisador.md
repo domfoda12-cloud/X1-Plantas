@@ -29,3 +29,4 @@ Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus 
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+- **23/11, dono:** O dono cortou a conferência de um preço que apoiava um gancho de vídeo. Antes de pesquisa que ele não pediu, diga em uma linha para que serve; número em frase pública continua precisando de fonte, e quem cobra é o Revisor (leitura nossa da fala de 16/11)

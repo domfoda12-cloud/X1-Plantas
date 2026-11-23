@@ -34,3 +34,5 @@ Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus 
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+- **23/11, prova 1:** achou os 8 erros plantados, mas não viu omissão (Diretor ausente em conteúdo público, "Link na bio" fora do funil). Antes do SIM, conferir também o passo que falta, contra o `CONSELHO.md`.
+- **23/11, prova:** Método (noite, o dono não viu): antes de ler a peça ou o plano, escreva o que tem de ESTAR lá para quem recebe (pelo menos: aviso "Planta de referência", fonte de cada número, selo em imagem parada, Fable na peça final) e marque presente ou ausente, um por um. Ausente também é erro: devolva o trecho que falta (adaptação nossa de Shull, Rus e Basili, 2000, e Rassin, 2014).

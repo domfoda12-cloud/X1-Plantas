@@ -4,7 +4,7 @@
 
 ## Agora
 
-- **O dono NÃO tem Mac** (23/11). Tudo que diz "no Mac do dono" é suposição errada (63 menções em 22 arquivos): não planeje nada que dependa de Mac; a correção espera ele dizer que equipamento tem. Noite: só aprendizado autônomo (ficha `0144`).
+- **O dono NÃO tem Mac** (23/11). Tudo que diz "no Mac do dono" é suposição errada (63 menções em 22 arquivos): não planeje nada que dependa de Mac; a correção espera ele dizer que equipamento tem. Noite: só aprendizado autônomo (ficha `0144`). **Desde 23/11, toda ficha fecha com `**O que aprendi:** papel: lição` (ou `nada novo`)**: o `fechar` grava no seu `contexto/<papel>.md` e em `pedidos/LICOES.md`; lição de veto e de prova sai por `pedido.py licao` (`pedidos/LEIA-ME.md`, "A ficha").
 
 ## 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro
 
