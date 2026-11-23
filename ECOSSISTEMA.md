@@ -15,7 +15,7 @@
 | Quem | Como recebe as regras do projeto |
 |---|---|
 | **Qualquer modelo** (Fable, Opus, Sonnet, Haiku) na sessão principal | Automático: o Claude Code carrega o `CLAUDE.md` em toda sessão, seja qual for o modelo escolhido no `/model` |
-| **Skill do projeto** (`.claude/skills/`) | Seção "Neste projeto (X1-Plantas)" no próprio `SKILL.md`. O `checar.py` confere |
+| **Skill do projeto** (`.claude/skills/`) e **comando** (`.claude/commands/`) | Seção "Neste projeto (X1-Plantas)", com "Prompt de entrada", no próprio `SKILL.md` ou no arquivo do comando (citado como `/nome` ou `nome`). O `checar.py` confere |
 | **Agente do projeto** (`.claude/agents/`) | Linha "Alcance o projeto": o `CLAUDE.md` já chega carregado; lê `contexto/QUADRO.md` e o seu `contexto/<agente>.md`. O `checar.py` confere o contexto e o tamanho. O modelo de cada um está na seção 2 |
 | **Plugin e conector** (ficam fora do repositório) | Rodam dentro da sessão, que já tem o `CLAUDE.md`. Quando um deles abre um agente ou uma sessão própria, essa sessão nova não leva o contexto: na mensagem de abertura vai o **texto de entrada** da seção 5 |
 
@@ -131,7 +131,7 @@ Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. 
 - skills/strategic-compact, meia linha de rules/performance e o roteiro de PR de rules/git-workflow: "Como conduzir" no `contexto/maestro.md`.
 - skills/continuous-learning: linha "Aprendido nesta tarefa" no `contexto/entregas/MODELO.md`, com destino fixo por tipo de lição.
 - skills/eval-harness: "Pronto quando" em critérios `[ ]` no `pedidos/LEIA-ME.md` (sem campo novo no `pedido.py` e sem pasta de evals).
-- skills/security-review, parte de segredos e LGPD: `.env` e `.env.*` no `.gitignore` e a linha de LGPD no `contexto/revisor-de-risco.md`; a conferência de segredos no `checar.py` vem num pedaço seguinte.
+- skills/security-review, parte de segredos e LGPD: `.env` e `.env.*` no `.gitignore` e a linha de LGPD no `contexto/revisor-de-risco.md`; e a conferência "segredos no repositório" do `checar.py` (aviso; mostra arquivo:linha e tipo, nunca o valor; acusa `.env` rastreado).
 - scripts/lib/package-manager.js, só a informação: linha do npm no "O essencial" do `video/RESUMO.md`.
 - LICENSE: `.claude/LICENCA-everything-claude-code.txt`, citada em cada trecho adaptado.
 
@@ -162,4 +162,4 @@ Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. 
 
 - **Apareceu um nome novo** na lista de skills, plugins ou conectores da sessão: ele entra aqui como "Liberado, não usado" e passa pelo roteiro antes do primeiro uso.
 - **Usou pela primeira vez:** passa a "Integrado", com a evidência (o arquivo ou a linha do `CONTEXTO.md`).
-- O `checar.py` confere que toda skill e todo agente **do projeto** aparecem aqui e no `CONSELHO.md`. Plugin e conector não estão no repositório, então são conferidos à mão, no começo de cada sessão nova: o primeiro passo é comparar a lista da sessão com esta página.
+- O `checar.py` confere que toda skill, todo agente e todo comando (`.claude/commands/`) **do projeto** aparecem aqui e no `CONSELHO.md`, e que os ganchos do `.claude/settings.json` terminam em `|| true` e chamam script que existe. Plugin e conector não estão no repositório, então são conferidos à mão, no começo de cada sessão nova: o primeiro passo é comparar a lista da sessão com esta página.

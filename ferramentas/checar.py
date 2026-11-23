@@ -103,9 +103,16 @@ _cfg_sessao = RAIZ / ".claude" / "settings.json"
 _ruim_cfg = []
 try:
     _ganchos = json.loads(_cfg_sessao.read_text(encoding="utf-8")).get("hooks", {})
-except (OSError, ValueError) as e:
-    _ganchos, _ruim_cfg = {}, [f"não abre como JSON: {e}"]
-_cmds = [(ev, h.get("command", "")) for ev, grupos in _ganchos.items() for g in grupos for h in g.get("hooks", [])]
+except (OSError, ValueError, AttributeError) as e:
+    _ganchos, _ruim_cfg = {}, [f"não abre como JSON de configuração: {e}"]
+try:  # gancho de outro tipo (prompt, sem "command") não é conferido; estrutura torta vira erro, não traceback
+    _cmds = [(ev, h["command"]) for ev, grupos in _ganchos.items() for g in grupos for h in g.get("hooks", [])
+             if h.get("type", "command") == "command"]
+    if not all(isinstance(c, str) for _, c in _cmds):
+        raise TypeError
+except (AttributeError, TypeError, KeyError):
+    _cmds = []
+    _ruim_cfg.append("estrutura inesperada em hooks (esperado: evento, lista de grupos, ganchos com command)")
 for ev, cmd in _cmds:
     if not cmd.rstrip().endswith("|| true"):
         _ruim_cfg.append(f"gancho {ev} não termina em '|| true': {cmd}")
@@ -128,7 +135,7 @@ _CHAVE = re.compile(
     r"(?P<chave_privada>-----BEGIN [A-Z ]*KEY-----.*?(?:-----END [A-Z ]*KEY-----|$))"
     r"|(?P<chave_de_API>\b(?:sk-ant-|sk_live_|sk_test_|sk-|ghp_|gho_|ghs_|github_pat_|glpat-|hf_|ya29\.|AKIA|AIza|xox[abp]-|APP_USR-)[\w.-]{6,})"
     r"|(?P<JWT>\beyJ[\w-]{10,}\.[\w-]+\.[\w-]+)"
-    r"|(?P<cabecalho_de_autorizacao>\b(?:Bearer|Basic)\s+[\w.=+/-]{8,})"
+    r"|(?P<cabeçalho_de_autorização>\b(?:Bearer|Basic)\s+[\w.=+/-]{8,})"
     r"|(?P<chave_na_URL>[?&](?:key|token|secret)=[^\s&]+)", re.I)
 _LIMPA = ".,-`'\""  # o que o padrão engole no fim: o "..." de um texto, a crase de um trecho, a aspa de uma string
 _FALSOS = {v.rstrip(_LIMPA) for v in (
@@ -161,7 +168,8 @@ _achados += [f"{a}: arquivo .env rastreado pelo git (tire com git rm --cached e 
              for a in _git_z("--", ".env*", "*/.env*")]
 if _achados:
     print("[AVISO] segredos no repositório: possível chave gravada (o valor não é mostrado). Se for real, "
-          "avise o dono para revogar no serviço; o histórico do git guarda a antiga:\n  " + "\n  ".join(_achados[:30]))
+          "avise o dono para revogar no serviço; o histórico do git guarda a antiga:\n  " + "\n  ".join(_achados[:30])
+          + (f"\n  (e mais {len(_achados) - 30})" if len(_achados) > 30 else ""))
 else:
     print(f"[OK ] segredos no repositório (nenhuma chave nem .env; {_binarios} binários pulados)")
 grandes = []
