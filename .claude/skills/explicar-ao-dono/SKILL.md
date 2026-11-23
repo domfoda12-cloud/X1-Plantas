@@ -31,7 +31,7 @@ Passe só o texto da decisão (sem chave Pix, telefone, e-mail, nome de parceiro
 
 ### Pauta da semana
 
-Quando o dono pedir, ou na primeira conversa da semana: as decisões que travam o primeiro Pix (o "Em aberto" do `CONTEXTO.md` e a página de decisões mais nova em `pedidos/anexos/`, se houver), **no máximo 3, na ordem em que destravam**, cada uma no formato acima. O resto espera e é dito em uma linha.
+Quando o dono pedir, ou na primeira conversa da semana: as decisões que travam o primeiro Pix (o "Em aberto" do `CONTEXTO.md` e a página de decisões mais nova em `pedidos/anexos/`, se houver), **no máximo 3, na ordem em que destravam**, cada uma no formato acima. O resto espera e é dito em uma linha. A skill `bom-dia` mostra esta pauta toda manhã, junto com a meta da semana do `PAINEL.md`, seção 6.
 
 ### Como medir
 

@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 16 documentos
+## Os 17 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -60,6 +60,12 @@ Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `
 Seções: Já eram lição ou regra (correções do Fable aplicadas às citações); Viraram lição (texto final, depois do veto); Tiradas pelo veto.
 
 Tamanho: 1717 palavras.
+
+### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
+
+Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
+
+Tamanho: 660 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 

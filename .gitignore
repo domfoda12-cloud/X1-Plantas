@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 ebook/plantas/rascunhos/
 pedidos/entrada/
+
+# Dado pessoal do dono nunca vai ao git (chief-of-staff, 23/11/2026)
+pessoal/
+*.local.md
+*.local.yaml

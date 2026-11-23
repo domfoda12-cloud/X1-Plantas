@@ -115,6 +115,10 @@ Ordem do dono: **e-book → animações → vídeo** ([`CLAUDE.md`](CLAUDE.md)).
 
 O que espera o dono está em [`CONTEXTO.md`](CONTEXTO.md), "Em aberto"; o que acabou de mudar, no [quadro](contexto/QUADRO.md). As tarefas dos agentes saem das fichas em [`pedidos/`](pedidos/LEIA-ME.md). Esta seção não repete essas listas.
 
+**Meta da semana** (o dono escreve; ninguém inventa número; o `bom-dia` confere se as fichas abertas servem a ela):
+
+1. _(em branco)_
+
 ## 7. Números para acompanhar
 
 Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas grandes.
