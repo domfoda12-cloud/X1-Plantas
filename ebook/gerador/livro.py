@@ -724,7 +724,7 @@ def svg_lote(p):
     s.append(f'<text x="{hx + p["W"] / 2}" y="{Y(hy + p["D"] / 2) + .2}" text-anchor="middle" font-size=".6" font-weight="800" fill="#fff" class="tit">{p["id"]}</text>')
     s.append(f'<rect x="-1.2" y="{LD + .15}" width="{LW + 2.4}" height="{rua}" fill="#C9CED6"/>')
     s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua / 2 + .18}" text-anchor="middle" font-size=".5" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
-    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".42" class="mono" fill="#17202B">lote mínimo {m(LW)} m</text>')
+    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".36" class="mono" fill="#17202B">lote mínimo {m(LW)} m</text>')
     s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">lote mínimo {m(LD)} m</text>')
     s.append(f'<text x="{LW / 2}" y="{Y(rec["frente"] / 2) + .15}" text-anchor="middle" font-size=".36" class="mono" fill="#6B5A2E">recuo {m1(rec["frente"])} m</text>')
     ang = {"sul": 0, "norte": 180, "leste": 90, "oeste": -90}[r["orientacao"]["melhor"]]
