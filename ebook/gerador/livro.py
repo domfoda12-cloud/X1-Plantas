@@ -165,7 +165,7 @@ def _entrada_seta(cx, cy):
 EST_REVISTA = dict(nome="rv", linha="#5E5548", lw=.018, cor=CORES_MOVEIS, piso=PISO_REAL, rua="#9AA1AA", rua_txt="#4F5B69",
                    beiral="#9C8B76", sombra="rgba(40,30,20,.16)", parede="#2B2F36", janela_fundo="#FFFFFF", vidro="#5DB4E6",
                    arco="#8E8678", folha_porta="#8A5A3C", arvore=["#7DAF5C", "#8DBE69", "#6C9F4E", "#B5D88F"], cota="#0B4FA8",
-                   escala="#4F5B69", etiqueta=_etiqueta_pilula("#FFFFFF", "#17202B", "#4F5B69"))
+                   escala="#17202B", etiqueta=_etiqueta_pilula("#FFFFFF", "#17202B", "#4F5B69"))
 # 3) Maquete sobre o papel azul de projeto: paredes brancas com sombra (capa e Instagram)
 EST_MAQUETE = dict(nome="mq", linha="#6B7380", lw=.014,
                    cor={**CORES_MOVEIS, "sofa": "#6F9FA0", "sofa_esc": "#4F8283", "almofada": "#FFC857", "madeira": "#C38E5D",
@@ -405,6 +405,9 @@ def svg_humanizada(p, estilo="revista"):
 
     pl, pr, pt, pb = 1.25, .95, 1.3, 2.15  # margens: cota à esquerda, cota em cima, jardim e rua embaixo
     vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
+    # letra mínima: na página da casa a planta ocupa uns 171 x 165 mm; casa estreita e comprida sai em escala menor,
+    # então etiquetas e cotas crescem (k) para ficarem do tamanho das casas largas (nome do cômodo com ~3,6 mm)
+    k = max(1.0, 13.85 / min(171 / vb[2], 165 / vb[3]))
     s = [f'<svg viewBox="{f3(vb[0])} {f3(vb[1])} {f3(vb[2])} {f3(vb[3])}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta humanizada da {E(p["nome"])}">',
          ]
     K = S["piso"]
@@ -512,10 +515,10 @@ def svg_humanizada(p, estilo="revista"):
         nome = "PÁTIO" if t == "patio" else c["nome"].upper()
         area = m1(MET["util"][c["id"]][2]) + " m²"
         m2 = area + (" · coberta" if t in ("varanda", "garagem") else "")
-        fs0 = max(min(.26, (w - .3) / (len(nome) * .68)), .15)
+        fs0 = max(min(.26, (w / k - .3) / (len(nome) * .68)), .15)
         for fs in (fs0, fs0 * .88, fs0 * .78, fs0 * .7):  # diminui até não cobrir móvel nem porta
-            lw = max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26
-            lh = fs + .4
+            lw = (max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26) * k
+            lh = (fs + .4) * k
             x0, y0, x1, y1 = c["x0"] + .1, c["y0"] + .1, c["x1"] - .1, c["y1"] - .1
             cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
             melhor = None
@@ -523,24 +526,26 @@ def svg_humanizada(p, estilo="revista"):
                 for k in range(25):
                     cx = x0 + lw / 2 + max(0, x1 - x0 - lw) * i / 24
                     cy = y0 + lh / 2 + max(0, y1 - y0 - lh) * k / 24
-                    bb = (cx - lw / 2, cy - lh / 2, cx + lw / 2, cy + lh / 2)
+                    bb = (cx - lw / 2 - .07, cy - lh / 2 - .07, cx + lw / 2 + .07, cy + lh / 2 + .07)  # folga: não encosta no móvel
                     sc = sum(_inter(bb, o) for o in obst) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
                     if melhor is None or sc < melhor[0]:
                         melhor = (sc, cx, cy, bb)
             if sum(_inter(melhor[3], o) for o in obst) < .01:
                 break
-        s.append(S["etiqueta"](melhor[1], Y(melhor[2]), lw, lh, nome, m2, fs, CORES.get(t, "#EEE")))
+        cx, cy = melhor[1], Y(melhor[2])
+        s.append(f'<g transform="translate({f3(cx)} {f3(cy)}) scale({k:.3f}) translate({f3(-cx)} {f3(-cy)})">'
+                 + S["etiqueta"](cx, cy, lw / k, lh / k, nome, m2, fs, CORES.get(t, "#EEE")) + "</g>")
     # cotas (do validador) e escala gráfica
     cz = S["cota"]
-    s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size=".26" class="mono">'
+    s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(k, 1.35):.3f}" class="mono">'
              f'<line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
              f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">{m(W)} m</text>'
              f'<line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
              f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">{m(D)} m</text></g>')
-    ec, ex0, ey = S["escala"], Wm - 2.0 + pr, Dm + 1.47
-    s.append(f'<g font-size=".13" class="mono" fill="{ec}">' + "".join(
+    ec, ex0, ey = S["escala"], Wm + pr - 2.15, Dm + 1.98  # régua de escala na faixa da rua, fora da calçada
+    s.append(f'<g font-size=".15" class="mono" font-weight="700" fill="{ec}">' + "".join(
         f'<rect x="{f3(ex0 + i * .5)}" y="{f3(ey)}" width=".5" height=".07" fill="{ec if i % 2 == 0 else "#fff"}" stroke="{ec}" stroke-width=".01"/>' for i in range(4))
-        + f'<text x="{f3(ex0)}" y="{f3(ey - .05)}">0</text><text x="{f3(ex0 + 1)}" y="{f3(ey - .05)}" text-anchor="middle">1</text><text x="{f3(ex0 + 2)}" y="{f3(ey - .05)}" text-anchor="end">2 m</text></g>')
+        + f'<text x="{f3(ex0)}" y="{f3(ey - .04)}">0</text><text x="{f3(ex0 + 1)}" y="{f3(ey - .04)}" text-anchor="middle">1</text><text x="{f3(ex0 + 2)}" y="{f3(ey - .04)}" text-anchor="end">2 m</text></g>')
     s.append("</svg>")
     return "".join(s)
 
@@ -700,7 +705,7 @@ def arquivo_foto(pasta, nome):
     return jpg if jpg.exists() else pasta / f"{nome}.png"
 
 
-def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800):
+def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=None, largura=1800, fundo=False):
     """Foto final do OpenArt, convertida para JPEG de alta qualidade (1800 px) para o PDF não pesar."""
     from PIL import Image
     origem = arquivo_foto(pasta or FOTOS, nome)
@@ -714,7 +719,13 @@ def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=Non
         im = Image.open(origem).convert("RGB")
         im.resize((min(largura, im.width), round(im.height * min(largura, im.width) / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
     src = os.path.relpath(destino, SAIDA)
-    return (f'<figure class="foto" style="height:{altura_mm}mm"><img src="{src}" alt="" style="object-position:{pos}">'
+    estilo = f"height:{altura_mm}mm" if altura_mm else ""  # sem altura: quem manda é o CSS (ex.: .vistas)
+    if fundo:  # a cor da borda da imagem preenche a sobra quando ela cabe inteira na moldura (object-fit: contain)
+        im = Image.open(destino).convert("RGB")
+        borda = [im.getpixel((x, y)) for x in range(0, im.width, 7) for y in (0, im.height - 1)] + \
+                [im.getpixel((x, y)) for y in range(0, im.height, 7) for x in (0, im.width - 1)]
+        estilo += ";background:#%02x%02x%02x" % tuple(sum(c[i] for c in borda) // len(borda) for i in range(3))
+    return (f'<figure class="foto" style="{estilo}"><img src="{src}" alt="" style="object-position:{pos}">'
             f'<figcaption>{E(legenda)}</figcaption></figure>')
 
 
@@ -723,17 +734,14 @@ VISTAS3D = EBOOK / "visual" / "3d"  # planta 3D mobiliada, do nosso motor (ferra
 
 
 def fachada_bloco(p):
-    """Vista da rua (foto ilustrativa do OpenArt, ou o desenho) ao lado da planta 3D mobiliada da casa."""
-    n = len(avisos_juntos(p))
-    corredor = any(c["id"] == "corr" for c in p["comodos"])
-    aperto = n + (1 if corredor else 0) + (1 if p["_r"].metricas.get("area_coberta_aberta") else 0)
-    alt = 62 if not n else (36 if aperto < 3 else 30)
+    """Vista da rua (foto ilustrativa do OpenArt, ou o desenho) ao lado da planta 3D mobiliada da casa.
+    As duas molduras têm o mesmo tamanho e crescem até o fim da página (CSS .vistas); a foto e o 3D aparecem inteiros."""
     if arquivo_foto(FACHADAS, p['id']).exists():
         rua = (f'<h4>Vista da rua</h4>'
-               f'{foto(p["id"], alt, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 36%", FACHADAS)}')
+               f'{foto(p["id"], None, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center", FACHADAS, fundo=True)}')
     else:
-        rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg" style="height:{alt}mm">{svg_fachada(p)}</div>'
-    v3d = foto(p["id"], alt, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D, largura=900)
+        rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg">{svg_fachada(p)}</div>'
+    v3d = foto(p["id"], None, "Ilustração do modelo 3D, sem telhado.", "center", VISTAS3D, largura=900, fundo=True)
     if not v3d:
         return f'<div class="fachada">{rua}</div>'
     return f'<div class="fachada vistas"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'

@@ -25,3 +25,10 @@
 **Resultado:** Em andamento: `ebook/referencias/anuncios-ref/DESIGN-CONCORRENTES.md` (14 páginas de 13 concorrentes) pronto; skills e referências em pesquisa.
 
 **O que aprendi:** pesquisador: e-book concorrente quase nunca mostra o miolo em público; a amostra grátis com cadastro é a melhor fonte e depende do dono.
+
+## Entregas de 23/11 (noite)
+
+- Skills de venda: [`skills-candidatas-venda.md`](../anexos/skills-candidatas-venda.md), 12 candidatas. Topo: Click-to-WhatsApp Ads Planner, copy-thief, offers. Revisor: SIM SE nas 3 para entrar na fila do roteiro (copiar só a pasta da skill, fixar o commit, nunca conectar MCP nem rodar instalador).
+- Skills de design: [`skills-candidatas-design.md`](../anexos/skills-candidatas-design.md), 12 candidatas. Topo: frontend-design (SIM, só método), pdf-design (SIM SE: ler os scripts antes), canvas-design (SIM SE: sem baixar fonte, sem tirar o aviso legal).
+- Referências: `ebook/referencias/visual-ref/EDITORIAL.md` (18, com 5 ideias) e `video/referencias/GANCHOS-VISUAIS.md` (20, com 5 aberturas).
+- Nada foi instalado. Falta: o Diretor opinar, o dono dizer quais entram, e o roteiro da seção 6 para cada uma.

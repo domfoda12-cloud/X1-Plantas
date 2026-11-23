@@ -25,3 +25,7 @@
 **Resultado:** Em andamento: 5b mudou (régua com âncoras, ângulo por jurado, crítica com arquivo e linha, presidente confere 3 fatos, no máximo 2 rodadas, calibrar). Falta a régua escrita e a prova 3 (`pedidos/anexos/juri-proximas-melhorias.md`).
 
 **O que aprendi:** supervisor: opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.
+
+## Entrega de 23/11 (noite)
+
+[`juri-proximas-melhorias.md`](../anexos/juri-proximas-melhorias.md) (Fable): régua com exemplos de 3, 6 e 9, modelos de pedido, 5 melhorias com medida, desenho da prova 3 e 13 fontes públicas. Achados: nenhuma nota 9 existe ainda (o exemplo é escolha do Fable); a prova do júri está atrasada (7 rodadas, nenhuma prova); a revisão anônima com ranking não roda desde a rodada 3; o dono seguiu 4 de 9 recomendações do júri (contagem à mão).
