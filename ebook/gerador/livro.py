@@ -724,8 +724,8 @@ def svg_lote(p):
     s.append(f'<text x="{hx + p["W"] / 2}" y="{Y(hy + p["D"] / 2) + .2}" text-anchor="middle" font-size=".6" font-weight="800" fill="#fff" class="tit">{p["id"]}</text>')
     s.append(f'<rect x="-1.2" y="{LD + .15}" width="{LW + 2.4}" height="{rua}" fill="#C9CED6"/>')
     s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua / 2 + .18}" text-anchor="middle" font-size=".5" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
-    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".36" class="mono" fill="#17202B">lote mínimo {m(LW)} m</text>')
-    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">lote mínimo {m(LD)} m</text>')
+    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".36" class="mono" fill="#17202B">frente mínima {m(LW)} m</text>')
+    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">fundo mínimo {m(LD)} m</text>')
     s.append(f'<text x="{LW / 2}" y="{Y(rec["frente"] / 2) + .15}" text-anchor="middle" font-size=".36" class="mono" fill="#6B5A2E">recuo {m1(rec["frente"])} m</text>')
     ang = {"sul": 0, "norte": 180, "leste": 90, "oeste": -90}[r["orientacao"]["melhor"]]
     s.append(f'<g transform="translate({LW + .65} .75) rotate({ang})"><circle r=".55" fill="#fff" stroke="#17202B" stroke-width=".04"/>'
@@ -774,7 +774,7 @@ def svg_fita(contagem, paginas=None):
     def embaixo(f):
         pags = [str(n) for n in (paginas or {}).get(f, []) if isinstance(n, int) and n]
         if pequena and pags:
-            return "p. " + " e ".join(pags)
+            return ("pág. " if len(pags) == 1 else "págs. ") + " e ".join(pags)
         n = contagem.get(f, 0)
         return f"{n} casas" if n > 1 else "1 casa" if n == 1 else "—"
     marcas = "".join(f'<div class="marca" style="left:{(f - lo) / (hi - lo) * 100:.2f}%"><b>{f} m</b><small>{embaixo(f)}</small></div>' for f in frentes)
@@ -893,7 +893,7 @@ def svg_no_lote(p, k):
             f'{planta}'
             f'<g stroke="#4F5B69" stroke-width=".04"><line x1="-.25" y1="0" x2="-.25" y2="{LD}"/><line x1="-.37" y1="0" x2="-.13" y2="0"/><line x1="-.37" y1="{LD}" x2="-.13" y2="{LD}"/></g>'
             f'<text x="-.4" y="{LD / 2}" text-anchor="middle" font-size=".5" class="mono" font-weight="700" fill="#4F5B69" '
-            f'transform="rotate(-90 -.4 {LD / 2})">lote {LD} m</text></svg>')
+            f'transform="rotate(-90 -.4 {LD / 2})">{LD} m de fundo</text></svg>')
 
 
 def galeria(plantas, ids, legenda=""):
@@ -917,7 +917,7 @@ class Livro:
         tab = ""
         if orelha is not None:
             top = 30 + (orelha - 5) * 24
-            tab = f'<div class="orelha {"esq" if par else "dir"}" style="top:{top}mm">lote {orelha} m</div>'
+            tab = f'<div class="orelha {"esq" if par else "dir"}" style="top:{top}mm">frente {orelha} m</div>'
         rod = ""
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
@@ -1013,17 +1013,20 @@ def montar(plantas, config, numeros):
         itens = "".join(f'<li><b>{p["id"]}</b> {E(p["nome"])} <span>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span><i>p. {numeros[p["id"]]}</i></li>' for p in casas)
         linhas.append(f'<div class="faixa"><div class="faixa-m">{f} m</div><ul>{itens}</ul></div>')
     rf, rfu, rlat, rext = recuos_da_edicao(plantas)
-    recuos_txt = (f"Recuos de referência: frente {rf} m · fundos {rfu} m"
-                  + (f" · uma lateral {rlat} m, com a outra parede na divisa, se a prefeitura deixar." if rlat else ".")
-                  + (f" {rext}" if rext else ""))
+    recuos_txt = (f"Recuos de referência: {rf} m na frente, {rfu} m nos fundos"
+                  + (f" e {rlat} m num dos lados; a outra parede fica na divisa, se a prefeitura deixar." if rlat else ".")
+                  + (f" {rext}" if rext else "")
+                  # as 3 ressalvas do lote maior: frente e fundo mínimos, recuos da cidade, taxa de ocupação (não cortar)
+                  + " Lote maior também serve, se tiver pelo menos a frente e o fundo pedidos pela casa, se a prefeitura"
+                    " não exigir recuos maiores e se a taxa de ocupação (quanto do lote a casa pode cobrir) deixar.")
     por_id = {p["id"]: p for p in plantas}
     if pequena:
         L.pagina(ache_a_sua_casa(plantas, numeros, recuos_txt), "acha")
     else:
         L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
-      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
-      <p class="pequeno">{recuos_txt} Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
+      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos de referência. A medida exata de cada casa está na página dela.</p>
+      <p class="pequeno">{recuos_txt}</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
     L.inicio["lote"] = len(L.paginas)
 
@@ -1058,7 +1061,7 @@ def montar(plantas, config, numeros):
     def erro(i, t, porque, certo):
         return f'<div class="erro"><div class="erro-n">{i}</div><div><h3>{"O mais caro: " + E(t[0].lower() + t[1:]) if i == 7 else E(t)}</h3><p>{E(porque)}</p><p class="certo"><b>O jeito certo:</b> {certo[0].lower() + certo[1:]}</p></div></div>'
     bl = [erro(i, *e) for i, e in enumerate(TX.ERROS, start=1)]
-    L.pagina(f'<span class="sobre">Antes da laje</span><h2>Os 7 erros que saem caro</h2><p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}')
+    L.inicio["erros"] = L.pagina(f'<span class="sobre">Antes da laje</span><h2>Os 7 erros que saem caro</h2><p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}')
     L.pagina(f'<span class="sobre">Antes da laje</span>{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>')
 
     # 9. índice
@@ -1166,13 +1169,14 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
             f'<p>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))} · {p["banheiros"]} banheiro{"s" if p["banheiros"] > 1 else ""}</p>'
             + (f'<p class="ac-jeito">{E(jeito[p["id"]])}</p>' if p["id"] in jeito else "")
             + '</div>' for p in fila)
-        pags = "".join(f'<b class="ac-pag">p. {numeros[p["id"]]}</b>' for p in fila)  # fileira própria: as páginas alinhadas
+        pags = "".join(f'<b class="ac-pag">pág. {numeros[p["id"]]}</b>' for p in fila)  # fileira própria: as páginas alinhadas
         html.append(f'<div class="ac-fila{" ac-2" if len(filas) > 1 else ""}" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
                     f'<div class="ac-rua">RUA</div>{fitas}{txt}{pags}</div>')
-    return (f'<span class="sobre">Comece aqui</span><h2>Ache a sua casa</h2>'
-            f'<p class="abertura">A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>'
+    return (f'<span class="sobre">Comece aqui</span><h2>Qual casa cabe no seu lote?</h2>'
+            f'<p class="abertura">Procure a frente do seu lote na fita amarela: em cima dela está a casa que cabe, já com os recuos de referência. '
+            f'A medida exata está na página da casa.</p>'
             + "".join(html)
-            + f'<p class="pequeno ac-recuos">{recuos_txt} Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>')
+            + f'<p class="pequeno ac-recuos">{recuos_txt}</p>')
 
 
 AVISOS = []  # o que impede a entrega: gancho que não bate com o validador
@@ -1222,8 +1226,10 @@ def dupla(L, p, por_id, numeros):
     circs = [c for c in p["comodos"] if c["tipo"] == "circ"]
     if 2 in erros and (r["circulacao"] > 0.12 or any(max(c["x1"] - c["x0"], c["y1"] - c["y0"]) > 6.0 for c in circs)):
         erros.remove(2)  # sem pôr outro no lugar: só entra o que foi conferido
-    # numerados em sequência (1, 2, 3): o número é o da lista desta página, não o do capítulo dos 7 erros
-    erros_html = "".join(f'<li><span class="erro-mini">{i}</span>{E(TX.ERROS[n - 1][0])}</li>' for i, n in enumerate(erros, start=1))
+    # o número é o do capítulo dos 7 erros (1, 2, 4...), e o título diz onde ele está: o leitor acha o erro pelo número
+    erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
+    ne = numeros.get("erros")
+    erros_tit = f"Dos {len(TX.ERROS)} erros " + (f"da pág. {ne}" if isinstance(ne, int) and ne else "do e-book") + ", esta casa evita"
     cat = CATEGORIAS[p["id"][0]]
     L.inicio[p["id"]] = L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()}</span><h2 class="nome">{E(p['nome'])}</h2>
@@ -1231,7 +1237,7 @@ def dupla(L, p, por_id, numeros):
       <div class="planta-grande moldura">{svg_planta(p, humanizada=True)}</div>
       <div class="selo-tec">Planta de referência humanizada · medidas em metros · móveis para dar escala</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
-        <div><h4>Erros que esta casa evita</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
+        <div><h4>{erros_tit}</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
              "casa esq q", orelha=f, aviso=True)
     nao = t.get("nao_serve")
     nao_html = ""
@@ -1288,6 +1294,7 @@ def montar_gratis(plantas, config, pid):
     por_id = {p["id"]: p for p in plantas}
     numeros = {p["id"]: "e-book" for p in plantas}
     numeros["lote"] = 3
+    numeros["erros"] = "e-book"  # a planta grátis não tem o capítulo: "dos 7 erros do e-book"
     L.paginas = []
     dupla(L, por_id[pid], por_id, numeros)
     contagem = {}
@@ -1349,7 +1356,7 @@ def gerar(previa=None):
     numeros = {"lote": 3, **{p["id"]: 0 for p in plantas}}
     for _ in range(2):
         L = montar(plantas, config, numeros)
-        numeros = {"lote": L.inicio["lote"], **{p["id"]: L.inicio[p["id"]] for p in plantas}}
+        numeros = {"lote": L.inicio["lote"], "erros": L.inicio["erros"], **{p["id"]: L.inicio[p["id"]] for p in plantas}}
     SAIDA.mkdir(exist_ok=True)
     doc = (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{E(config.get("titulo", "E-book"))}</title>'
            f'<style>{CSS}</style></head><body>{"".join(L.paginas)}</body></html>')
