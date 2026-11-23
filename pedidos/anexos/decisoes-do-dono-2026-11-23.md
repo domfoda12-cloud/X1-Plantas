@@ -74,3 +74,7 @@
 | everything-claude-code | Levar e terminar tudo | Terminar os agentes, os comandos e os avisos (só o do quadro e o contador), e levar à main com pull request |
 | WhatsApp do negócio | Número dado pelo dono | Entra no `ebook/config.json` |
 | Visualizar as tarefas (19:45) | "Queria ter uma maneira de visualizar isso mais fácil" | Quadro de tarefas em https://claude.ai/artifact/R8SSzqnZxR6XafEP5uXBtX, atualizado pela equipe a cada tarefa e a cada hora |
+| 23/11 noite (comentário no quadro) | Criar o Diretor criativo com a MinoAI | **Sim.** Entra pelo roteiro de agente novo (CONSELHO seção 6) depois do e-book pronto. |
+| 23/11 noite (comentário no quadro) | O que vai de graça | "Talvez": uma **amostra grátis bem impressionante** do que vamos oferecer, **talvez um guia também**. Ainda não está fechado: Estrategista e Designer montam 2 opções para ele escolher. |
+| 23/11 noite (comentário no quadro) | E07: encostar na divisa | Pediu explicação mais clara do problema. Explicado no chat; decisão continua com ele. |
+| 23/11 noite | Melhorar o júri | **"2 sim"**: régua com âncoras, ângulo por jurado, prova por arquivo e linha, presidente confere fatos, no máximo 2 rodadas, calibração. Feito em CONSELHO 5b. |

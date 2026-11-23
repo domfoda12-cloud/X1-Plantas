@@ -25,7 +25,7 @@ O plano do perfil, os testes e o calendário de posts. Juntado em 22/11/2026 (fi
 
 Seções: Instagram: onde o editor trabalha; Plano de conteúdo: perfil de arquitetura no Instagram; Calendário: as 2 primeiras semanas do perfil.
 
-Tamanho: 3743 palavras.
+Tamanho: 3745 palavras.
 
 ### [MinoAI Frontier: o Diretor, a sessão no PC do dono e o estilo de edição](MINOAI-FRONTIER.md)
 
@@ -33,7 +33,7 @@ Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes
 
 Seções: Editor: MinoAI Frontier; Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier; Referências de vídeo: Mino Lee (@minolee.mp4).
 
-Tamanho: 4772 palavras.
+Tamanho: 4771 palavras.
 
 ### [Os 9 primeiros posts, prontos para o editor](posts/POSTS.md)
 
@@ -41,4 +41,4 @@ Tamanho: 4772 palavras.
 
 Seções: C01 redesenhada em 22/11/2026: o que vale agora; Ajustes depois da estratégia (20/11/2026); Resumo; Como gerar as imagens de novo; Regras que valem para todas as legendas; Post 1 · Reel · Passeio 3D da Casa Compacta; Post 2 · Carrossel · Três plantas lado a lado; Post 3 · Carrossel · Como ler uma planta baixa; Post 4 · Reel · Passeio 3D da Casa Estreita; Post 5 · Carrossel · Checklist antes de contratar o pedreiro; Post 6 · Reel · Bastidor: a planta virando 3D; Post 7 · Imagem · Casa Família; Post 8 · Carrossel · 3 erros comuns na planta; Post 9 · Reel · O material gratuito; ….
 
-Tamanho: 4121 palavras.
+Tamanho: 4127 palavras.
