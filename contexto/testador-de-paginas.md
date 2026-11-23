@@ -11,7 +11,7 @@
 ## O que já existe para você usar
 
 - A lista de casas da calculadora sai do validador (`livro.py`), regravada pelo `checar.py`.
-- O script de teste pela tela (`ebook/vendas/testar-calculadora.cjs`) é o pedaço F da ficha `0209` e ainda não existe.
+- O script de teste pela tela existe desde 23/11: `node ebook/vendas/testar-calculadora.cjs [página]` (gabarito do validador; por casa, lote exato cabe e 1 cm a menos não cabe; 73 medições).
 
 ## Leia barato
 

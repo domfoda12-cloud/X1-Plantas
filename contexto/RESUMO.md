@@ -47,9 +47,9 @@ Tamanho: 312 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
+Seções: Agora; 23/11 · Avisos automáticos e trava de comandos (everything-claude-code); 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente.
 
-Tamanho: 492 palavras.
+Tamanho: 545 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -241,4 +241,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. Entrou em 
 
 Seções: Decisões do dono que valem para você; O que já existe para você usar; Leia barato; Lições.
 
-Tamanho: 180 palavras.
+Tamanho: 191 palavras.
