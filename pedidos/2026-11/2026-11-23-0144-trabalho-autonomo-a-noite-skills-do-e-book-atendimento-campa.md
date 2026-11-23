@@ -20,6 +20,12 @@
 
 *Recado de 23/11 01:55:* No, i mean like that the agents can use to search on the WWW
 
+*Recado de 23/11 02:04:* https://github.com/vercel-labs/skills/blob/main/skills%2Ffind-skills%2FSKILL.md add
+
+*Recado de 23/11 02:04:* the add of these new agents
+
+*Recado de 23/11 02:04:* Or right before every hour
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -40,6 +46,18 @@
 
 **Resultado:** (a preencher)
 
+
+## Fila da noite, versão 4 (recados do dono, 02:0x: "make the jury criticise it a lot of times, and improve at each time"; "the add of these new agents"; "update the night queue after every hour, or right before every hour")
+
+**Como funciona agora:** no fim de cada acordar, o Maestro **reescreve esta fila** para a hora seguinte, com o que aconteceu (resultado do júri, recados do dono, lições). A fila abaixo é a da próxima hora.
+
+| # | Tarefa | Estado |
+|---|---|---|
+| J1 | Júri, rodada 1, sobre `pedidos/anexos/integracao-novos-v1.md` (as 5 adições: llm-council, chief-of-staff, marketing-psychology, last30days, find-skills): 4 opiniões, revisão anônima, presidente; depois o Maestro escreve a v2 com as críticas | **em andamento** (etapa 1 rodando às 02:05) |
+| J2 | Rodada 2 sobre a v2; v3 | |
+| J3 | Rodada 3 sobre a v3; v4 | |
+| Jn | Repetir até a nota do júri parar de subir duas rodadas seguidas; então o que é interno e passou no júri é aplicado (com o veto do Revisor), e o que é do dono vira opção para a manhã | |
+| Depois | A0 (prova de base), A2, A3, A10 da versão 3, se o dono não mudar a direção; o veredito do júri de 23/11 (parar de crescer o sistema) fica como pergunta para ele | |
 
 ## Fila da noite, versão 3 (recado do dono, 01:50: "esta noite não enfileire nada que você tenha de produzir; foque em deixar o sistema autônomo no aprendizado")
 

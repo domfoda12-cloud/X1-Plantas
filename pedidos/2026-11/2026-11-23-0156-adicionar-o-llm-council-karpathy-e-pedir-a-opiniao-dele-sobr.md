@@ -6,6 +6,10 @@
 
 And make it give its opinion on the project made today, take its opinion seriously
 
+*Recado de 23/11 02:04:* the add of these new agents
+
+*Recado de 23/11 02:04:* https://github.com/vercel-labs/skills/blob/main/skills%2Ffind-skills%2FSKILL.md add
+
 **O que ele pediu, parte por parte:** 1) Adicionar o llm-council de Karpathy (github.com/karpathy/llm-council). 2) Fazer ele dar a opinião sobre o projeto feito hoje. 3) Levar a opinião a sério.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer um olhar de fora, de vários modelos que não se conhecem, sobre o sistema que montamos em 22 e 23/11, e quer que a crítica vire mudança.
