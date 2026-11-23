@@ -525,7 +525,9 @@ def svg_humanizada(p, estilo="revista"):
         # tamanhos a tentar: pílula de 2 linhas (nome em cima, área embaixo), cada vez menor; se nenhuma couber sem
         # encostar em móvel ou porta, a pílula de 1 linha ("NOME  7,3 m²"), mais baixa, para cômodo apertado
         dois = lambda fs, kmax: (fs, False, max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26, fs + .4, kmax)
-        tentativas = [dois(fs0 * q, kl) for q in (1, .88, .78, .7)] + ([dois(fs0 * q, 1.0) for q in (.88, .78, .7)] if kl > 1 else [])
+        tentativas = [dois(fs0 * q, kl) for q in (1, .88, .78, .7)]
+        if kl > 1:  # sem lugar livre no tamanho cheio: cresce menos antes de voltar ao tamanho de antes
+            tentativas += [dois(fs0 * q, (1 + kl) / 2) for q in (1, .88, .78)] + [dois(fs0 * q, 1.0) for q in (.88, .78, .7)]
         tentativas += [(fs, True, len(nome) * fs * .68 + len(m2) * .16 * .62 + .45, fs + .2, kl) for fs in (.22, .19, .16)]
         cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
         escolha = None
