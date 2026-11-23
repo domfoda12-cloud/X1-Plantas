@@ -204,7 +204,7 @@ Se puder me contar o que faltou, me ajuda a melhorar. Mas a devolução não dep
 ```text
 Entendo, [nome]. Pensa assim: você só precisa acertar uma casa. Descobrir depois da fundação que ela não cabe no lote é o que pesa no bolso.
 
-Por R$ [preço] você escolhe antes de gastar: 3 casas mobiliadas, desenhadas no lote, e 7 dias para pedir o Pix de volta se não for para você.
+Por R$ [preço] você escolhe antes de gastar: 3 casas desenhadas no lote, com móveis no desenho para dar escala, e 7 dias para pedir o Pix de volta se não for para você.
 
 Qual é a medida do seu lote? Te mostro qual cabe, e você vê se vale.
 ```

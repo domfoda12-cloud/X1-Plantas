@@ -93,6 +93,8 @@ Pedido do dono (21/11, noite): ironia com a família brasileira e referências o
 <!-- era: video/roteiro-lancamento.md -->
 ## Roteiro: vídeo de aquecimento do lançamento ("casas na mala")
 
+> **SUSPENSA até ser reescrita** (Revisor de risco, 23/11/2026): contradiz a seção 10 da [`ESTRATEGIA.md`](../ESTRATEGIA.md): fala em lista do WhatsApp, data de lançamento e "12 ou 24" casas; hoje são 3. Não use este roteiro.
+
 > Parte da pasta Vídeo: [`VIDEO.md`](VIDEO.md). Estratégia: [`../ESTRATEGIA.md`](../ESTRATEGIA.md) (fase de aquecimento, seção 10). Editor: [MinoAI Frontier](../instagram/MINOAI-FRONTIER.md).
 >
 > **Canal:** vídeo do perfil do Instagram (orgânico). Não confundir com o anúncio com locução, que vai para WhatsApp e Facebook Ads ([`ANUNCIO-LOCUCAO.md`](ANUNCIO-LOCUCAO.md)).

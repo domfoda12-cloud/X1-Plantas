@@ -31,7 +31,7 @@ A persona, os concorrentes e os projetos parecidos. Juntado em 22/11/2026 (ficha
 
 Seções: Quem compra: o público e o "Seu Marcos"; Concorrentes e o que o mercado já viu; Projetos similares: quem vende plantas de casas e o que aprender.
 
-Tamanho: 2723 palavras.
+Tamanho: 2732 palavras.
 
 ### [Referência visual](VISUAL.md)
 

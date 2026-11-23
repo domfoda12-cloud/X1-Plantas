@@ -6,7 +6,7 @@
 
 Semana 1: todo mundo que pergunta o preço ouve **R$ 47**. Semana 2: **R$ 67**. Semana 3: R$ 47 de novo, e assim por diante. No fim, comparamos quanto cada preço trouxe de dinheiro por conversa e quanto custou cada venda.
 
-**O que nunca dizer:** "promoção", "preço de lançamento", "desconto", "o preço vai subir", "de R$ 67 por R$ 47". Se alguém perguntar do outro valor: "Estamos testando dois preços em semanas diferentes; o seu é R$ [preço] e fica esse até o fim."
+**O que nunca dizer:** "promoção", "preço de lançamento", "desconto", "o preço vai subir", "de R$ 67 por R$ 47". Se alguém perguntar do outro valor: "Estamos testando dois preços em semanas diferentes; o seu é R$ [preço] e fica esse, mesmo que você pague depois que a semana virar."
 
 ## 2. O que anotar, por pessoa
 
@@ -25,11 +25,13 @@ Na hora em que a pessoa recebe o preço, anote numa linha:
 | Nº | Data da oferta | Semana do teste | Preço oferecido | De onde veio | Pagou | Data do Pix | Devolveu |
 |---|---|---|---|---|---|---|---|
 
-A planilha fica no seu computador ou no seu Google Drive, **nunca no repositório**: conversa de WhatsApp é dado pessoal (LGPD). Aqui no projeto entra só a contagem da semana (PAINEL.md, seção 7: contatos, vendas, gasto, preço).
+A planilha fica no seu computador ou no seu Google Drive, **nunca no repositório**: conversa de WhatsApp é dado pessoal (LGPD). Aqui no projeto entra só a contagem da semana (PAINEL.md, seção 7: contatos, vendas, gasto, preço). Só você e o sócio acessam; apague a planilha e as etiquetas quando o teste acabar.
+
+**Quem pagou R$ 67 e descobre o R$ 47:** pode pedir o dinheiro de volta em 7 dias (garantia, contados da entrega do link) e comprar a R$ 47. É direito dele: não recuse.
 
 ## 4. A venda conta na semana da oferta
 
-Se a pessoa recebeu R$ 47 no domingo e pagou na terça, já na semana do R$ 67, ela **paga R$ 47** (o preço dela fica até o fim) e a venda **conta na semana do R$ 47**. O que manda é a data da oferta, não a data do Pix. Assim cada preço leva o crédito das vendas que ele mesmo trouxe.
+Se a pessoa recebeu R$ 47 no domingo e pagou na terça, já na semana do R$ 67, ela **paga R$ 47** (o preço dela fica esse, mesmo que pague depois que a semana virar) e a venda **conta na semana do R$ 47**. O que manda é a data da oferta, não a data do Pix. Assim cada preço leva o crédito das vendas que ele mesmo trouxe.
 
 ## 5. Quantas conversas antes de concluir
 

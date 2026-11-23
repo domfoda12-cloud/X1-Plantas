@@ -135,7 +135,7 @@ Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode p
 
 Oi, [nome]! Qualquer dúvida sobre o seu terreno, me chama.
 
-> Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Só diga que o preço sobe se isso for verdade.
+> Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Nunca diga que o preço sobe, nem promoção ou lançamento (ESTRATEGIA, seção 7).
 
 ### Depois da compra
 

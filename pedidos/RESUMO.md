@@ -103,7 +103,7 @@ Redator, 23/11/2026, noite. Pedido do dono: "Um novo" (comentário no quadro, `p
 
 Seções: 1. Nome de usuário (@): 6 opções; 2. Bio: 3 opções (limite de 150 caracteres); 3. Nome de exibição e categoria; 4. Os 9 primeiros posts (a grade de quem abre o perfil); 5. Destaques fixos (stories): 3; 6. O que só o dono faz; Para o Revisor de risco; Perguntas ao dono (curtas).
 
-Tamanho: 2874 palavras.
+Tamanho: 2940 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 1, 23/11/2026)](anexos/integracao-novos-v1.md)
 
@@ -223,7 +223,7 @@ Para o dono. Decisão dele em 23/11/2026 (decisões): dois preços, em semanas a
 
 Seções: 1. A regra em uma linha; 2. O que anotar, por pessoa; 3. O modelo de planilha (só os nomes das colunas); 4. A venda conta na semana da oferta; 5. Quantas conversas antes de concluir; 6. A conta: qual preço ganha; 7. Perguntas que só você responde.
 
-Tamanho: 743 palavras.
+Tamanho: 805 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 

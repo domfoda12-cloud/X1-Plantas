@@ -61,7 +61,7 @@
 ## 5. Os três diferenciais (repetir em tudo)
 
 1. **Ache pelo seu lote.** O e-book é organizado pelo tamanho do terreno, não só por categoria. A pessoa abre na página do "10 x 20" e vê todas as casas que cabem.
-2. **Veja antes de construir.** Cada planta em blueprint, planta humanizada, 3D e animação. É o que o pedreiro não consegue mostrar.
+2. **Veja antes de construir.** Cada planta em blueprint, planta humanizada e 3D. É o que o pedreiro não consegue mostrar.
 3. **Escolha antes de gastar.** A pessoa decide a casa com a medida do lote na mão, antes de pagar projeto ou abrir a fundação, e leva ao engenheiro as 3 perguntas que cada casa traz. *(No lugar de "Casa que cresce", que sai dos textos até as etapas serem desenhadas, depois do lançamento: dono, 23/11/2026.)*
 
 ## 6. O que isso muda no produto
@@ -81,7 +81,7 @@
 
 | Item | Recomendação | Por quê |
 |---|---|---|
-| **Preço** | **Teste R$ 47 x R$ 67** em semanas alternadas, começando pelo R$ 47 (decidido, 23/11). O preço fixo sai do resultado, com o dono | Os dois ficam abaixo de uma planta avulsa (âncora). **Nunca** se apresentam como promoção, lançamento, desconto ou aumento; quem perguntar ouve que estamos testando dois preços em semanas diferentes e que o dele fica até o fim. Como medir: [`teste-de-preco-como-medir.md`](pedidos/anexos/teste-de-preco-como-medir.md); conta no [painel](PAINEL.md), seção 4 |
+| **Preço** | **Teste R$ 47 x R$ 67** em semanas alternadas, começando pelo R$ 47 (decidido, 23/11). O preço fixo sai do resultado, com o dono | Os dois ficam abaixo de uma planta avulsa (âncora). **Nunca** se apresentam como promoção, lançamento, desconto ou aumento; quem perguntar ouve que estamos testando dois preços em semanas diferentes e que o dele fica esse, mesmo que pague depois que a semana virar. Como medir: [`teste-de-preco-como-medir.md`](pedidos/anexos/teste-de-preco-como-medir.md); conta no [painel](PAINEL.md), seção 4 |
 | **Pagamento** | **Pix** direto pelo WhatsApp (decidido, 23/11) | Pix é o jeito mais comum de pagar online no Brasil. Cartão parcelado fica fora enquanto não houver plataforma |
 | **Plataforma** | Nenhuma (decidido, 23/11): Pix e conversa no WhatsApp, e-book por link do Google Drive | Sem taxa por venda. Se um dia o dono quiser cartão, Kiwify ou Hotmart cobram cerca de 9% + valor fixo por venda ([comparativo](https://bit4learn.com/pt/lms/kiwify-venda-cursos-online/)) |
 | **Garantia** | 7 dias, contados da entrega do link; o Pix volta inteiro para a conta que pagou (decidido, 23/11) | É o direito de arrependimento do CDC (compra pela internet). Usar como argumento, não esconder. Nenhuma garantia de resultado, "em dobro" ou condicional |
@@ -102,7 +102,7 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez. Nenhum v�
 | **Escolha antes de gastar** (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026) | "Antes do primeiro tijolo, mede a frente do seu lote. A casa certa começa nessa medida." | 1 |
 | **Pedreiro** | "Mostra isso pro seu pedreiro antes de começar a obra." | 1 |
 | **Sair do aluguel** | "O aluguel que você paga em 1 ano já levanta as paredes dessa casa?" (só com número verdadeiro da sua região) (em espera: fala de custo de obra; Revisor, 23/11) | 1 |
-| **Economia com arquiteto** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria." | 1 e 2 |
+| **Economia com arquiteto** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria." (em espera: R$ 1.000 sem fonte e soa como dispensa do arquiteto; Revisor, 23/11) | 1 e 2 |
 | **Financiamento** | "Vai financiar a construção? Escolha a casa antes de pagar o projeto." | 2 |
 | **Renda extra** | "Duas kitnets no fundo do seu lote: quanto espaço precisa?" (em espera: nenhuma casa do lançamento é para alugar) | 3 |
 

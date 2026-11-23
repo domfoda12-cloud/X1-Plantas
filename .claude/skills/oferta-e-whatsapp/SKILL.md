@@ -54,7 +54,7 @@ Seis partes, por anúncio:
 - **Vetos que não mudam:**
   - Nunca prometer aprovação na prefeitura ou no banco, prazo ou custo de obra; nunca dizer nem dar a entender que a planta dispensa pedreiro, engenheiro ou arquiteto.
   - Nenhum depoimento, número de clientes, resultado ou escassez sem fonte. Hoje não há depoimento.
-  - **R$ 47 e R$ 67 em semanas alternadas são um teste do dono:** nunca se apresentam como promoção, lançamento, desconto ou aumento. Nada de "de R$ X por R$ Y" nem "valor total" empilhado. Se perguntarem do outro valor, a resposta é: "estamos testando dois preços em semanas diferentes; o seu é R$ [preço] e fica esse até o fim".
+  - **R$ 47 e R$ 67 em semanas alternadas são um teste do dono:** nunca se apresentam como promoção, lançamento, desconto ou aumento. Nada de "de R$ X por R$ Y" nem "valor total" empilhado. Se perguntarem do outro valor, a resposta é: "estamos testando dois preços em semanas diferentes; o seu é R$ [preço] e fica esse, mesmo que você pague depois que a semana virar".
   - **Garantia: 7 dias contados da entrega do link**, Pix devolvido inteiro. Nenhuma garantia de resultado, "em dobro" ou condicional.
   - Só a Casa Compacta é grátis; nada de casas novas prometidas.
   - Se a única casa que cabe no lote é a grátis, a oferta diz isso e mostra só o que vem a mais de fato no PDF; nunca "a casa que cabe no seu lote está no e-book".

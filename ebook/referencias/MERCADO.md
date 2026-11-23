@@ -98,12 +98,12 @@ IBGE, Censo 2022 (domicílios e moradores); IBGE Educa (tipos de moradia); Dataf
 
 | Produto | O que promete | Ponto fraco que vira o nosso argumento |
 |---|---|---|
-| [Hotmart: "500 plantas baixas de casas para você se inspirar"](https://hotmart.com/pt-br/marketplace/produtos/500-plantas-baixas-de-casas-para-voce-se-inspirar-na-sua-construcao-bonus/B87641576R) | Mais de 500 plantas "para se inspirar"; bônus de pergolados de madeira e 40 receitas caipiras | Quantidade sem filtro: o comprador não sabe qual cabe no lote dele. **Nosso contra-argumento: 3 casas no lançamento, cada uma com o lote mínimo calculado e conferida medida por medida** |
+| [Hotmart: "500 plantas baixas de casas para você se inspirar"](https://hotmart.com/pt-br/marketplace/produtos/500-plantas-baixas-de-casas-para-voce-se-inspirar-na-sua-construcao-bonus/B87641576R) | Mais de 500 plantas "para se inspirar"; bônus de pergolados de madeira e 40 receitas caipiras | Quantidade sem filtro: o comprador não sabe qual cabe no lote dele. **Nosso contra-argumento: 3 casas no lançamento, cada uma com o lote mínimo calculado e conferida medida por medida (não substitui o profissional)** |
 | [Hotmart: "guia de planta de casa"](https://hotmart.com/pt-br/marketplace/produtos/guia-de-planta-de-casa/B105011830R) | Conceitos básicos e tipos de plantas | Texto genérico, sem casas para escolher |
 | Plantas prontas avulsas (Aquiprojetos, Projeto Pronto, Modices) | Projeto por casa, de cerca de R$ 98 (só a planta baixa em PDF) a R$ 2.000 (pacote completo). Faixas, fontes e datas: [`MERCADO.md`](MERCADO.md#projetos-similares-quem-vende-plantas-de-casas-e-o-que-aprender), seção 4 | Uma casa por compra. **Nosso: 3 casas por menos que o preço de uma** |
 | Catálogos de porcelanato ("200 projetos") | Material profissional para quem vende serviço | Público diferente ([análise](VISUAL.md#análise-dos-catálogos-de-porcelanato-referência-de-formato)) |
 
-**Posicionamento:** os outros vendem quantidade ou inspiração. Nós vendemos **certeza**: "essa cabe no seu lote, e você sabe por quê".
+**Posicionamento:** os outros vendem quantidade ou inspiração. Nós vendemos **certeza**: "essa cabe no seu lote, com os recuos de referência, e você sabe por quê".
 
 ### A palavra do comentário: "PLANTA" divide espaço com jardinagem
 

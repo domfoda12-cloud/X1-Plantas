@@ -39,7 +39,7 @@ O plano do vídeo principal e o roteiro de lançamento. Juntado em 22/11/2026 (f
 
 Seções: Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro; Roteiro: vídeo de aquecimento do lançamento ("casas na mala").
 
-Tamanho: 3026 palavras.
+Tamanho: 3061 palavras.
 
 ### [Referências de vídeo](REFERENCIAS.md)
 

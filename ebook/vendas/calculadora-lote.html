@@ -79,7 +79,7 @@ function atualizar() {
   const n = cabem.length, varias = n > 1;
   // "As 3 maiores" (por área) só quando a lista corta casas; com 1 casa, tudo no singular
   const intro = n > TOPO ? `As ${TOPO} maiores:` : varias ? 'São estas:' : 'É esta:';
-  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m ${varias ? 'cabem' : 'cabe'} ${n} casa${varias ? 's' : ''} do e-book, com os recuos de referência. ${intro}\n\n${top}\n\n${varias ? 'Cada uma vem' : 'Ela vem'} mobiliada, desenhada no lote e com o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\n${varias ? 'Quer saber mais de alguma delas?' : 'Quer saber mais sobre ela?'}`;
+  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m ${varias ? 'cabem' : 'cabe'} ${n} casa${varias ? 's' : ''} do e-book, com os recuos de referência. ${intro}\n\n${top}\n\n${varias ? 'Cada uma vem' : 'Ela vem'} desenhada no lote, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\n${varias ? 'Quer saber mais de alguma delas?' : 'Quer saber mais sobre ela?'}`;
 }
 document.getElementById('form').addEventListener('input', atualizar);
 document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
