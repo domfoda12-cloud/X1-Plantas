@@ -210,3 +210,12 @@ Cada uma responde a um dos "5 pontos em que todos são iguais" de [`../anuncios-
 - **Gravar em `ebook/referencias/visual-ref/EDITORIAL.md`, pasta nova:** cumpri.
 - **Terminar com 5 ideias concretas contra o que todos fazem igual:** cumpri, uma por ponto do `DESIGN-CONCORRENTES.md`.
 - **Não conferi:** as imagens das obras uma por uma (descrevi o visual pelo que as páginas dizem e pelo que conheço); a página da Universidade Keio sobre o *Madori no Techo* hoje dá 404 (o resto veio da editora Chikuma Shobo); números que só apareceram no resumo da busca estão marcados "(busca)".
+
+## Referência do dono: a caligrafia "alienígena" (23/11/2026, noite)
+
+O dono mandou https://www.instagram.com/reel/DfIoYmaCk1U/ depois de dizer que "tem um artista bombando e um dos pontos criativos dele é uma caligrafia meio alienígena". Suposição nossa, a confirmar com ele: este é o artista. Números que a MinoAI Frontier devolveu em 23/11/2026: 960.212 visualizações, 92.275 curtidas, 790 comentários. A ferramenta não devolveu o nome do perfil.
+
+**O que a letra faz (lido na análise quadro a quadro):** a legenda troca letras por números parecidos, sempre em maiúsculas: "TH3 ONES WHO PROPH3SI3D", "M4N AND M4CHIN3", "KNOWL3DG3". O 3 entra no lugar do E e do B, o 4 no lugar do A e do H. Lê-se, mas com um segundo de estranheza: é isso que segura o olho. O resto do vídeo reforça: figura encapuzada, máscara, cenário conhecido, zero texto explicativo.
+
+**O que trazer:** a ideia de uma letra-assinatura nossa, que se reconhece de longe, só nos títulos curtos e nos números das casas (ex.: a "frase à mão" da ideia 4). Como a nossa matéria é medida, a troca natural é a contrária da dele: números e símbolos de planta (cota, seta, porta em arco, o "m²") entrando no desenho das letras.
+**O que não trazer:** copiar o alfabeto dele; usar a troca em texto corrido, em medidas, em preço ou no aviso legal (o comprador precisa ler de primeira; número trocado por letra numa medida é risco de erro de obra).

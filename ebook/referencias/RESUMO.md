@@ -69,6 +69,6 @@ Tamanho: 13592 palavras.
 
 Pedido do dono, 23/11/2026: "mais referências, coisas que já prendem o olho e já têm a atenção das pessoas, nada comum". Tema desta pasta: diagramação editorial e livros de arquitetura e casa famosos pelo visual. Quem escreveu: Designer. Como foi feito: só busca e leitura de páginas públicas…
 
-Seções: A ideia principal do Diretor (MinoAI Frontier), antes de tudo; As 18 referências em uma tabela; As 18, uma por uma; O que estas 18 têm em comum e os concorrentes não; 5 ideias concretas para o nosso e-book deixar o concorrente de boca aberta; Cuidados (para o Revisor de risco e o Maestro); Reconferência do pedido.
+Seções: A ideia principal do Diretor (MinoAI Frontier), antes de tudo; As 18 referências em uma tabela; As 18, uma por uma; O que estas 18 têm em comum e os concorrentes não; 5 ideias concretas para o nosso e-book deixar o concorrente de boca aberta; Cuidados (para o Revisor de risco e o Maestro); Reconferência do pedido; Referência do dono: a caligrafia "alienígena" (23/11/2026, noite).
 
-Tamanho: 5065 palavras.
+Tamanho: 5305 palavras.
