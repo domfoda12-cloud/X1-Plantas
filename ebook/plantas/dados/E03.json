@@ -2,72 +2,262 @@
  "id": "E03",
  "nome": "Casa Fita",
  "W": 3.5,
- "D": 13.2,
+ "D": 16.1,
  "comodos": [
+  {
+   "id": "quarto2",
+   "nome": "Quarto",
+   "tipo": "dorm",
+   "pref": [
+    "frente",
+    "dir"
+   ],
+   "moveis": [
+    {
+     "tipo": "camaSolteiro",
+     "x": 0.525,
+     "y": 1.025,
+     "rot": 0.0,
+     "w": 0.9,
+     "d": 1.9,
+     "manta": "#E3B9A4"
+    },
+    {
+     "tipo": "criado",
+     "x": 1.225,
+     "y": 0.275,
+     "rot": 0.0,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "escrivaninha",
+     "x": 2.25,
+     "y": 0.325,
+     "rot": 0.0,
+     "w": 1.0,
+     "d": 0.5
+    },
+    {
+     "tipo": "armario",
+     "x": 3.125,
+     "y": 2.25,
+     "rot": -1.5707963267948966,
+     "w": 1.4,
+     "d": 0.6
+    }
+   ],
+   "x0": 0.0,
+   "y0": 0.0,
+   "x1": 3.5,
+   "y1": 3.1
+  },
   {
    "id": "sala",
    "nome": "Sala",
    "tipo": "sala",
+   "moveis": [
+    {
+     "tipo": "tapete",
+     "x": 1.51,
+     "y": 2.2,
+     "rot": 0.0,
+     "w": 2.0,
+     "d": 2.2,
+     "cor": "#D9CBB4",
+     "borda": "#B49D7C"
+    },
+    {
+     "tipo": "sofa",
+     "x": 2.985,
+     "y": 2.2,
+     "rot": -1.5707963267948966,
+     "w": 2.1,
+     "d": 0.88,
+     "cor": "#8A9A86"
+    },
+    {
+     "tipo": "rack",
+     "x": 0.275,
+     "y": 2.2,
+     "rot": 1.5707963267948966,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "tipo": "mesaCentro",
+     "x": 1.51,
+     "y": 2.2,
+     "rot": 0.0,
+     "w": 0.6,
+     "d": 1.0
+    }
+   ],
    "x0": 0.0,
-   "y0": 0.0,
-   "x1": 2.6,
-   "y1": 3.9
+   "y0": 3.1,
+   "x1": 3.5,
+   "y1": 6.7
   },
   {
    "id": "cozinha",
-   "nome": "Cozinha",
+   "nome": "Cozinha e copa",
    "tipo": "cozinha",
+   "moveis": [
+    {
+     "tipo": "geladeira",
+     "x": 0.425,
+     "y": 0.42,
+     "rot": 1.5707963267948966,
+     "w": 0.72,
+     "d": 0.7
+    },
+    {
+     "tipo": "mesaJantar",
+     "x": 0.925,
+     "y": 1.5,
+     "rot": 0.0,
+     "w": 0.8,
+     "d": 1.2
+    },
+    {
+     "tipo": "bancada",
+     "x": 3.115,
+     "y": 1.0,
+     "rot": -1.5707963267948966,
+     "w": 1.8,
+     "d": 0.62
+    }
+   ],
    "x0": 0.0,
-   "y0": 3.9,
-   "x1": 2.6,
-   "y1": 6.7
+   "y0": 6.7,
+   "x1": 3.5,
+   "y1": 9.9
+  },
+  {
+   "id": "circ",
+   "nome": "Hall",
+   "tipo": "circ",
+   "x0": 0.0,
+   "y0": 9.9,
+   "x1": 1.1,
+   "y1": 12.9
   },
   {
    "id": "servico",
    "nome": "Serviço",
    "tipo": "servico",
-   "x0": 0.0,
-   "y0": 6.7,
-   "x1": 2.6,
-   "y1": 8.0
+   "moveis": [
+    {
+     "tipo": "maquina",
+     "x": 1.4,
+     "y": 0.94,
+     "rot": 3.141592653589793,
+     "w": 0.6,
+     "d": 0.6
+    },
+    {
+     "tipo": "tanque",
+     "x": 2.025,
+     "y": 0.99,
+     "rot": 3.141592653589793,
+     "w": 0.6,
+     "d": 0.5
+    }
+   ],
+   "x0": 1.1,
+   "y0": 9.9,
+   "x1": 3.5,
+   "y1": 11.2
   },
   {
    "id": "banho",
    "nome": "Banheiro",
    "tipo": "banho",
-   "x0": 0.0,
-   "y0": 8.0,
-   "x1": 2.6,
-   "y1": 9.8
+   "moveis": [
+    {
+     "tipo": "pia",
+     "x": 0.5,
+     "y": 0.26,
+     "rot": 0.0,
+     "w": 0.5,
+     "d": 0.4
+    },
+    {
+     "tipo": "vaso",
+     "x": 1.05,
+     "y": 0.385,
+     "rot": 0.0,
+     "w": 0.4,
+     "d": 0.65
+    },
+    {
+     "tipo": "box",
+     "x": 1.838,
+     "y": 0.85,
+     "rot": -1.5707963267948966,
+     "w": 1.58,
+     "d": 0.975
+    }
+   ],
+   "x0": 1.1,
+   "y0": 11.2,
+   "x1": 3.5,
+   "y1": 12.9
   },
   {
    "id": "quarto1",
    "nome": "Quarto casal",
    "tipo": "casal",
+   "moveis": [
+    {
+     "tipo": "camaCasal",
+     "x": 2.475,
+     "y": 1.6,
+     "rot": -1.5707963267948966,
+     "w": 1.4,
+     "d": 1.9,
+     "manta": "#B9C7D6"
+    },
+    {
+     "tipo": "criado",
+     "x": 3.225,
+     "y": 0.625,
+     "rot": -1.5707963267948966,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "criado",
+     "x": 3.225,
+     "y": 2.575,
+     "rot": -1.5707963267948966,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "armario",
+     "x": 0.375,
+     "y": 2.1,
+     "rot": 1.5707963267948966,
+     "w": 1.8,
+     "d": 0.6
+    }
+   ],
    "x0": 0.0,
-   "y0": 9.8,
-   "x1": 2.6,
-   "y1": 13.2
-  },
-  {
-   "id": "corr",
-   "nome": "Corredor coberto",
-   "tipo": "varanda",
-   "x0": 2.6,
-   "y0": 0.0,
+   "y0": 12.9,
    "x1": 3.5,
-   "y1": 13.2
+   "y1": 16.1
   }
  ],
  "portas": [
   [
    "ext",
-   "corr",
-   "frente"
+   "sala",
+   "dir"
   ],
   [
-   "corr",
-   "sala"
+   "sala",
+   "quarto2"
   ],
   [
    "sala",
@@ -75,39 +265,48 @@
    "aberto"
   ],
   [
-   "corr",
-   "cozinha"
+   "cozinha",
+   "circ",
+   "aberto"
   ],
   [
    "cozinha",
    "servico"
   ],
   [
-   "corr",
-   "servico"
+   "ext",
+   "cozinha",
+   "dir",
+   9.2
   ],
   [
-   "corr",
+   "circ",
    "banho"
   ],
   [
-   "corr",
+   "circ",
    "quarto1"
   ]
  ],
- "quartos_txt": "1 quarto",
+ "quartos_txt": "2 quartos",
  "banheiros": 1,
  "janelas": {
-  "sala": [
+  "quarto2": [
    [
     "frente",
-    1.5
+    1.8
+   ]
+  ],
+  "sala": [
+   [
+    "dir",
+    1.8
    ]
   ],
   "cozinha": [
    [
     "dir",
-    1.1
+    1.7
    ]
   ],
   "servico": [
@@ -119,79 +318,83 @@
   "banho": [
    [
     "dir",
-    1.2
+    1.1
    ]
   ],
   "quarto1": [
    [
     "fundos",
-    1.5
+    1.9
    ]
   ]
  },
  "recuos": {
-  "esq": 0.0
+  "esq": 0.0,
+  "dir": 1.5
  },
- "destaque": "Cabe em lote de 5 m de frente: todas as janelas dão para o corredor",
+ "destaque": "Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa",
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
+  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
   "Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
   "erros": [],
-  "avisos": [
-   "Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília",
-   "Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília"
-  ],
+  "avisos": [],
   "info": [],
   "metricas": {
-   "area_fechada": 34.3,
-   "area_total": 46.2,
-   "area_coberta_aberta": 11.9,
+   "area_fechada": 56.4,
+   "area_total": 56.4,
+   "area_coberta_aberta": 0,
    "util": {
+    "quarto2": [
+     3.2,
+     2.89,
+     9.2
+    ],
     "sala": [
-     2.3,
-     3.75,
-     8.6
+     3.2,
+     3.54,
+     11.3
     ],
     "cozinha": [
-     2.3,
-     2.74,
-     6.3
+     3.2,
+     3.14,
+     10.0
+    ],
+    "circ": [
+     0.89,
+     2.94,
+     2.6
     ],
     "servico": [
-     2.3,
+     2.19,
      1.18,
-     2.7
+     2.6
     ],
     "banho": [
-     2.3,
-     1.68,
-     3.9
+     2.19,
+     1.58,
+     3.5
     ],
     "quarto1": [
-     2.3,
-     3.19,
-     7.3
-    ],
-    "corr": [
-     0.9,
-     13.2,
-     11.9
+     3.2,
+     2.99,
+     9.6
     ]
    },
    "luz": {
-    "sala": 0.2071,
-    "cozinha": 0.1511,
-    "servico": 0.1775,
-    "banho": 0.1538,
+    "quarto2": 0.1991,
+    "sala": 0.2,
+    "cozinha": 0.1518,
+    "servico": 0.1923,
+    "banho": 0.1618,
     "quarto1": 0.2036
    },
-   "circulacao": 0.0,
+   "circulacao": 0.059,
    "lote": [
     5.0,
-    17.7
+    20.6
    ],
    "recuos": {
     "frente": 3.0,
@@ -201,27 +404,25 @@
    },
    "lote_comercial": [
     5,
-    20
+    25
    ],
-   "taxa_ocupacao": 0.52,
-   "circulacao_ref": 0.346,
+   "taxa_ocupacao": 0.55,
+   "circulacao_ref": 0.059,
    "frente_estreita": true,
    "orientacao": {
     "melhor": "norte",
-    "segunda": "sul",
-    "pior": "leste",
+    "segunda": "oeste",
+    "pior": "sul",
     "pontos": {
-     "norte": 7.7,
-     "leste": 1.9,
-     "sul": 6.3,
-     "oeste": 3.6
+     "norte": 11.4,
+     "leste": 6.1,
+     "sul": 5.5,
+     "oeste": 6.2
     }
    }
   },
   "referencias": [
-   "corredor coberto lateral ocupa 35% da casa de 34,3 m²; nas referências de até 60 m² fica em até 6% (corredor lateral só em lote de 4 a 4,5 m de frente) (regra 1, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto casal com 2,30 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Banheiro, Quarto casal: da sala só se chega saindo de casa (corredor coberto, varanda ou quintal); nas referências banheiro e quartos se alcançam por dentro (regra 5a, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
    "referência (informação): casa de frente estreita, lote de 5,00 m de frente; as referências de São José dos Campos chegam a lote de 4 a 5 m (ebook/referencias/plantas-ref/REFERENCIAS.md, padrão 1)"
   ]
  }

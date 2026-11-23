@@ -146,20 +146,15 @@
 
 ![E03](previas/E03.png)
 
-**34 m² fechados** · 1 quarto · 1 banheiro(s) · cabe num lote de **5 x 20 m** (no mínimo 5,0 x 17,7 m) · frente para o **norte**
+**56 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **5 x 25 m** (no mínimo 5,0 x 20,6 m) · frente para o **norte**
 
-*Cabe em lote de 5 m de frente: todas as janelas dão para o corredor*
+*Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
+- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
-
-**Atenção**
-
-- Sala fica com 2,30 x 3,75 m livres (8,6 m²): funciona, mas é apertado; o engenheiro confere a mobília
-- Quarto casal fica com 2,30 x 3,19 m livres (7,3 m²): funciona, mas é apertado; o engenheiro confere a mobília
 
 ## E04 · Casa Pátio
 
@@ -232,13 +227,15 @@
 
 ![F01](previas/F01.png)
 
-**68 m² fechados** · 3 quartos · 1 banheiro(s) · cabe num lote de **10 x 15 m** (no mínimo 9,9 x 12,6 m) · frente para o **sul**
+**71 m² fechados** · 3 quartos · 1 banheiro(s) · cabe num lote de **10 x 15 m** (no mínimo 10,0 x 12,8 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
+
+- Sala e jantar tem vão de 4.6 m: o engenheiro confere laje e vigas
 
 ## F02 · Casa Integrada
 

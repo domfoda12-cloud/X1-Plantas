@@ -113,7 +113,7 @@ Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`
 
 Biblioteca e validador de plantas: as regras de projeto do X1-Plantas, em código.
 
-Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`, `referencias`.
+Funções: `R`, `linha`, `coluna`, `area`, `lados`, `util`, `parede_comum`, `trecho_externo`, `F`, `movel`, `H`, `V`, `monta`, `casa`, `auto_janelas`, `Relatorio`, `casa_fechada`, `validar`.
 
 ### [`ferramentas/recortes.py`](recortes.py)
 

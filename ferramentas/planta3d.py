@@ -345,6 +345,11 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo):
             aqui.append(m)
             return m
 
+        if c.get("moveis"):  # arranjo desenhado à mão pelo Arquiteto (PL.movel), com x e y a partir do canto do cômodo
+            for m in c["moveis"]:
+                add(**{**m, "x": c["x0"] + m["x"], "y": c["y0"] + m["y"]})
+            continue
+
         def ocupados(lado, prof):
             """Trechos do lado já tomados por móveis na faixa de profundidade prof junto da parede."""
             if lado in ("frente", "fundos"):

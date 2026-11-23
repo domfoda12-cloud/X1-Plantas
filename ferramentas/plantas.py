@@ -231,6 +231,19 @@ def F(id, nome, tipo, **kw):
     return ("folha", dict(id=id, nome=nome, tipo=tipo, **kw))
 
 
+def movel(tipo, lado, x0, y0, x1, y1, **kw):
+    """Móvel posto à mão pelo Arquiteto: F(..., moveis=[movel(...), ...]) troca o arranjo automático do motor 3D naquele cômodo.
+
+    (x0, y0, x1, y1) é o retângulo que ele ocupa no chão, em metros a partir do canto (x0, y0) do cômodo, com a parede
+    desenhada (7,5 cm da face de fora na parede externa, 6 cm do eixo na interna); a mesa de jantar conta as cadeiras.
+    lado: a parede para a qual ele dá as costas (cabeceira da cama, encosto do sofá, fundo do armário e da escrivaninha)."""
+    w, d = (x1 - x0, y1 - y0) if lado in ("frente", "fundos") else (y1 - y0, x1 - x0)
+    if tipo == "mesaJantar":
+        w -= 0.9  # o motor soma as cadeiras (0,45 m de cada lado) à largura
+    rot = {"frente": 0.0, "fundos": math.pi, "esq": math.pi / 2, "dir": -math.pi / 2}[lado]
+    return dict(tipo=tipo, x=round((x0 + x1) / 2, 3), y=round((y0 + y1) / 2, 3), rot=rot, w=round(w, 3), d=round(d, 3), **kw)
+
+
 def H(*itens):
     return ("H", list(itens))
 

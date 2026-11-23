@@ -1,80 +1,223 @@
 {
  "id": "F01",
  "nome": "Casa Família Compacta",
- "W": 8.4,
- "D": 8.1,
+ "W": 8.5,
+ "D": 8.3,
  "comodos": [
   {
    "id": "sala",
-   "nome": "Sala",
+   "nome": "Sala e jantar",
    "tipo": "sala",
+   "moveis": [
+    {
+     "tipo": "rack",
+     "x": 0.275,
+     "y": 1.95,
+     "rot": 1.5707963267948966,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "tipo": "tapete",
+     "x": 1.3,
+     "y": 1.95,
+     "rot": 0.0,
+     "w": 1.4,
+     "d": 1.9,
+     "cor": "#D9CBB4",
+     "borda": "#B49D7C"
+    },
+    {
+     "tipo": "sofa",
+     "x": 2.44,
+     "y": 1.95,
+     "rot": -1.5707963267948966,
+     "w": 2.1,
+     "d": 0.88,
+     "cor": "#8A9A86"
+    },
+    {
+     "tipo": "mesaJantar",
+     "x": 3.9,
+     "y": 1.85,
+     "rot": 1.5707963267948966,
+     "w": 0.8,
+     "d": 1.2
+    }
+   ],
    "x0": 0.0,
    "y0": 0.0,
-   "x1": 4.2,
-   "y1": 3.6
+   "x1": 4.6,
+   "y1": 3.7
   },
   {
    "id": "cozinha",
    "nome": "Cozinha",
    "tipo": "cozinha",
-   "x0": 4.2,
+   "x0": 4.6,
    "y0": 0.0,
-   "x1": 6.6,
-   "y1": 3.6
-  },
-  {
-   "id": "servico",
-   "nome": "Serviço",
-   "tipo": "servico",
-   "x0": 6.6,
-   "y0": 0.0,
-   "x1": 8.4,
-   "y1": 2.0
-  },
-  {
-   "id": "banho",
-   "nome": "Banheiro",
-   "tipo": "banho",
-   "x0": 6.6,
-   "y0": 2.0,
-   "x1": 8.4,
-   "y1": 3.6
+   "x1": 6.7,
+   "y1": 3.7
   },
   {
    "id": "circ",
    "nome": "Circulação",
    "tipo": "circ",
    "x0": 0.0,
-   "y0": 3.6,
-   "x1": 8.4,
-   "y1": 4.7
+   "y0": 3.7,
+   "x1": 6.7,
+   "y1": 4.8
+  },
+  {
+   "id": "servico",
+   "nome": "Serviço",
+   "tipo": "servico",
+   "x0": 6.7,
+   "y0": 0.0,
+   "x1": 8.5,
+   "y1": 2.3
+  },
+  {
+   "id": "banho",
+   "nome": "Banheiro",
+   "tipo": "banho",
+   "x0": 6.7,
+   "y0": 2.3,
+   "x1": 8.5,
+   "y1": 4.8
   },
   {
    "id": "quarto1",
    "nome": "Quarto casal",
    "tipo": "casal",
+   "moveis": [
+    {
+     "tipo": "camaCasal",
+     "x": 1.025,
+     "y": 2.0,
+     "rot": 1.5707963267948966,
+     "w": 1.4,
+     "d": 1.9,
+     "manta": "#B9C7D6"
+    },
+    {
+     "tipo": "criado",
+     "x": 0.275,
+     "y": 1.05,
+     "rot": 1.5707963267948966,
+     "w": 0.4,
+     "d": 0.4
+    },
+    {
+     "tipo": "criado",
+     "x": 0.275,
+     "y": 2.975,
+     "rot": 1.5707963267948966,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "armario",
+     "x": 1.92,
+     "y": 0.36,
+     "rot": 0.0,
+     "w": 1.6,
+     "d": 0.6
+    }
+   ],
    "x0": 0.0,
-   "y0": 4.7,
-   "x1": 2.8,
-   "y1": 8.1
+   "y0": 4.8,
+   "x1": 2.833,
+   "y1": 8.3
   },
   {
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
-   "x0": 2.8,
-   "y0": 4.7,
-   "x1": 5.6,
-   "y1": 8.1
+   "moveis": [
+    {
+     "tipo": "camaSolteiro",
+     "x": 0.51,
+     "y": 2.475,
+     "rot": 3.141592653589793,
+     "w": 0.9,
+     "d": 1.9,
+     "manta": "#E3B9A4"
+    },
+    {
+     "tipo": "camaSolteiro",
+     "x": 2.323,
+     "y": 2.475,
+     "rot": 3.141592653589793,
+     "w": 0.9,
+     "d": 1.9,
+     "manta": "#E3B9A4"
+    },
+    {
+     "tipo": "criado",
+     "x": 1.417,
+     "y": 3.225,
+     "rot": 3.141592653589793,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "armario",
+     "x": 1.95,
+     "y": 0.36,
+     "rot": 0.0,
+     "w": 1.5,
+     "d": 0.6
+    }
+   ],
+   "x0": 2.833,
+   "y0": 4.8,
+   "x1": 5.667,
+   "y1": 8.3
   },
   {
    "id": "quarto3",
    "nome": "Quarto",
    "tipo": "dorm",
-   "x0": 5.6,
-   "y0": 4.7,
-   "x1": 8.4,
-   "y1": 8.1
+   "moveis": [
+    {
+     "tipo": "camaSolteiro",
+     "x": 2.308,
+     "y": 2.475,
+     "rot": 3.141592653589793,
+     "w": 0.9,
+     "d": 1.9,
+     "manta": "#E3B9A4"
+    },
+    {
+     "tipo": "criado",
+     "x": 1.605,
+     "y": 3.225,
+     "rot": 3.141592653589793,
+     "w": 0.45,
+     "d": 0.4
+    },
+    {
+     "tipo": "escrivaninha",
+     "x": 0.85,
+     "y": 3.175,
+     "rot": 3.141592653589793,
+     "w": 0.8,
+     "d": 0.5
+    },
+    {
+     "tipo": "armario",
+     "x": 0.36,
+     "y": 1.6,
+     "rot": 1.5707963267948966,
+     "w": 1.4,
+     "d": 0.6
+    }
+   ],
+   "x0": 5.667,
+   "y0": 4.8,
+   "x1": 8.5,
+   "y1": 8.3
   }
  ],
  "portas": [
@@ -91,6 +234,12 @@
   [
    "cozinha",
    "servico"
+  ],
+  [
+   "ext",
+   "servico",
+   "dir",
+   1.75
   ],
   [
    "sala",
@@ -120,43 +269,43 @@
   "sala": [
    [
     "frente",
-    2.2
+    2.4
    ]
   ],
   "cozinha": [
    [
     "frente",
-    1.3
+    1.2
    ]
   ],
   "servico": [
    [
     "dir",
-    0.6
+    0.7
    ]
   ],
   "banho": [
    [
     "dir",
-    0.8
+    1.2
    ]
   ],
   "quarto1": [
    [
     "fundos",
-    1.6
+    1.7
    ]
   ],
   "quarto2": [
    [
     "fundos",
-    1.6
+    1.7
    ]
   ],
   "quarto3": [
    [
     "fundos",
-    1.6
+    1.7
    ]
   ]
  },
@@ -168,66 +317,68 @@
  "validacao": {
   "erros": [],
   "avisos": [],
-  "info": [],
+  "info": [
+   "Sala e jantar tem vão de 4.6 m: o engenheiro confere laje e vigas"
+  ],
   "metricas": {
-   "area_fechada": 68.0,
-   "area_total": 68.0,
+   "area_fechada": 70.6,
+   "area_total": 70.6,
    "area_coberta_aberta": 0,
    "util": {
     "sala": [
-     4.05,
-     3.45,
-     14.0
+     4.45,
+     3.55,
+     15.8
     ],
     "cozinha": [
-     2.34,
-     3.39,
-     7.9
+     2.04,
+     3.49,
+     7.1
+    ],
+    "circ": [
+     6.49,
+     0.98,
+     6.4
     ],
     "servico": [
      1.59,
-     1.79,
-     2.8
+     2.09,
+     3.3
     ],
     "banho": [
      1.59,
-     1.48,
-     2.4
-    ],
-    "circ": [
-     8.1,
-     0.98,
-     7.9
+     2.38,
+     3.8
     ],
     "quarto1": [
-     2.59,
-     3.19,
-     8.3
+     2.62,
+     3.29,
+     8.6
     ],
     "quarto2": [
-     2.68,
-     3.19,
-     8.5
+     2.71,
+     3.29,
+     8.9
     ],
     "quarto3": [
-     2.59,
-     3.19,
-     8.3
+     2.62,
+     3.29,
+     8.6
     ]
    },
    "luz": {
-    "sala": 0.2037,
-    "cozinha": 0.1505,
-    "servico": 0.1667,
-    "banho": 0.1667,
-    "quarto1": 0.2017,
-    "quarto2": 0.2017,
-    "quarto3": 0.2017
+    "sala": 0.1974,
+    "cozinha": 0.1544,
+    "servico": 0.1691,
+    "banho": 0.16,
+    "quarto1": 0.2057,
+    "quarto2": 0.2057,
+    "quarto3": 0.2057
    },
-   "circulacao": 0.136,
+   "circulacao": 0.104,
    "lote": [
-    9.9,
-    12.6
+    10.0,
+    12.8
    ],
    "recuos": {
     "frente": 3.0,
@@ -240,26 +391,24 @@
     15
    ],
    "taxa_ocupacao": 0.55,
-   "circulacao_ref": 0.136,
+   "circulacao_ref": 0.104,
    "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
     "segunda": "oeste",
     "pior": "leste",
     "pontos": {
-     "norte": 11.8,
-     "leste": -7.7,
-     "sul": 16.0,
-     "oeste": 12.6
+     "norte": 12.9,
+     "leste": -8.0,
+     "sul": 17.0,
+     "oeste": 13.5
     }
    }
   },
   "referencias": [
-   "Serviço: sem porta para o quintal; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Banheiro com 1,59 x 1,48 m livres; nas referências o banheiro tem os dois lados com 1,50 m ou mais (regra 2, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto casal com 2,59 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto com 2,68 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto com 2,59 m de largura livre: abaixo de 2,60 m não cabem as duas camas; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)"
+   "Quarto casal com 2,62 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto com 2,71 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
+   "Quarto com 2,62 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)"
   ]
  }
 }
