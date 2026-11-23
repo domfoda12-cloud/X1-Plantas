@@ -4,6 +4,8 @@
 
 **Prompt (palavra por palavra):** What really its your limit? I would like for the system to keep studying andi mproving afk now that im going to sleep, it can use all tokens as you want but what really its your limit? Can you add skills that are relevant for building the ebook, think of ways to improve the UI and costumer service, Create a ads campaign marketing. These are all examples that you can learn about, id really like if you were autosufficient
 
+*Recado de 23/11 01:47:* Just stay awake 24h
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -37,4 +39,4 @@
 | N6 | Tempo livre: lições das auditorias para os contextos; cortar repetido numa pasta | Maestro | números de antes e depois |
 | N7 | Auditoria do Fable da noite e resumo da manhã | Fable; Maestro | resumo curto: pronto, em veto, esperando o dono |
 
-**Tarefa agendada:** "X1-Plantas: trabalho da noite" (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; apaga a si mesma quando a fila acabar.
+**Recado do dono (01:46): "Just stay awake 24h".** **Tarefa agendada:** "X1-Plantas: trabalho de 24 horas" (antes "da noite") (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; depois da fila, segue com o "Tempo livre" do `pedidos/PLANO.md` (alternando equipe e projeto) até 2026-11-24 01:45 UTC; então escreve o resumo das 24 horas e se apaga. Para se o dono escrever ou se aparecer aviso de limite de uso.
