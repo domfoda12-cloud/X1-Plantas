@@ -1,4 +1,7 @@
-"""Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das 24 plantas validadas.
+"""Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das plantas validadas.
+
+Edição de lançamento: só as casas de "casas_lancamento" no config.json (lista vazia ou ausente = todas).
+As outras continuam no projeto e no validador; contagens, índices e páginas saem das casas da edição.
 
 Uso:
     python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf, as plantas grátis
@@ -838,7 +841,7 @@ def montar(plantas, config, numeros):
       <div class="capa-topo"><span class="eti">{len(plantas)} PLANTAS DE CASAS TÉRREAS · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Meça a frente do seu lote, ache a medida na régua abaixo e abra a página.</p></div>
-      <div class="capa-planta maquete">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), humanizada=True, estilo="maquete")}</div>
+      <div class="capa-planta maquete">{svg_planta(next((p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), plantas[0]), humanizada=True, estilo="maquete")}</div>
       {svg_fita(contagem)}""", "capa", rodape=False, estilo=capa_fundo())
 
     # 2. aviso e como usar
@@ -863,6 +866,7 @@ def montar(plantas, config, numeros):
       <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
       <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
+    L.inicio["lote"] = len(L.paginas)
 
     # 4. ache pelo jeito da família
     grupos = [
@@ -876,14 +880,19 @@ def montar(plantas, config, numeros):
         ("Casa de praia ou de fim de semana", ["S05", "C07"]),
     ]
     por_id = {p["id"]: p for p in plantas}
+    grupos = [(t, [i for i in ids if i in por_id]) for t, ids in grupos]
+    grupos = [(t, ids) for t, ids in grupos if ids]  # edição de lançamento: grupo sem casa da edição sai
+    mostra = [i for i in ["C02", "C03", "C06", "F01", "S03", "S07"] if i in por_id]
+    if len(mostra) < min(6, len(plantas)):
+        mostra = [p["id"] for p in plantas][:6]
     blocos = "".join(f'<div class="grupo"><h3>{E(t)}</h3><p>' + " · ".join(f'<b>{i}</b> {E(por_id[i]["nome"])} <i>p. {numeros[i]}</i>' for i in ids) + "</p></div>" for t, ids in grupos)
     L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
       <p class="abertura">Se ainda não tem o lote, escolha pelo jeito de morar. Depois confira na página {numeros['lote']} se cabe.</p>
       <div class="grupos">{blocos}</div>
-      {galeria(plantas, ["C02", "C03", "C06", "F01", "S03", "S07"], "Algumas das 24 casas, cada uma para um jeito de morar.")}""")
+      {galeria(plantas, mostra, f"Algumas das {len(plantas)} casas, cada uma para um jeito de morar.")}""")
 
     # 5–6. como ler + glossário
-    c01 = por_id["C01"]
+    c01 = por_id.get("C01") or por_id.get(config.get("planta_da_capa")) or plantas[0]
     legenda = "".join(f"<li><b>{E(t)}.</b> {E(d)}</li>" for t, d in TX.LEGENDA_LEITURA)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
       <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis e a porta de entrada é amarela.</p>
@@ -918,9 +927,16 @@ def montar(plantas, config, numeros):
     # cada coluna com a largura do desenho do lote: os 3 saem na mesma escala (o de 5 m parece mesmo mais estreito)
     import re
     largura_vb = lambda svg: float(re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2])
-    colunas_lotes = " ".join(f"{largura_vb(svg_lote(por_id[i])):.2f}fr" for i in ["E03", "C01", "F02"])
+    lotes_ex = [i for i in ["E03", "C01", "F02"] if i in por_id]
+    if len(lotes_ex) < min(3, len(plantas)):
+        uma_por_largura = {}
+        for p in sorted(plantas, key=lambda p: (lote_frente(p), p["id"])):
+            uma_por_largura.setdefault(lote_frente(p), p["id"])
+        lotes_ex = list(uma_por_largura.values())
+        lotes_ex = [lotes_ex[0], lotes_ex[len(lotes_ex) // 2], lotes_ex[-1]] if len(lotes_ex) > 3 else lotes_ex
+    colunas_lotes = " ".join(f"{largura_vb(svg_lote(por_id[i])):.2f}fr" for i in lotes_ex)
     # o lote mais fundo manda na altura: a fileira estreita até ele caber em 100 mm (a E03 de 2 quartos pede lote de 20,6 m)
-    _vb = [[float(v) for v in re.search(r'viewBox="([^"]+)"', svg_lote(por_id[i])).group(1).split()[2:]] for i in ["E03", "C01", "F02"]]
+    _vb = [[float(v) for v in re.search(r'viewBox="([^"]+)"', svg_lote(por_id[i])).group(1).split()[2:]] for i in lotes_ex]
     largura_lotes = min(170.0, 100.0 * sum(w for w, _ in _vb) / max(h for _, h in _vb))
     L.pagina(f"""<span class="sobre">Depois de escolher</span><h2>Terreno e recuos</h2>
       <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
@@ -938,7 +954,7 @@ def montar(plantas, config, numeros):
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
-      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
+      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto")
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
@@ -1022,7 +1038,7 @@ def dupla(L, p, por_id, numeros):
         erros.remove(2)  # sem pôr outro no lugar: só entra o que foi conferido
     erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
     cat = CATEGORIAS[p["id"][0]]
-    L.pagina(f"""
+    L.inicio[p["id"]] = L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · CABE NUM LOTE DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
         <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p>{chips(p)}</div>
       <div class="planta-grande moldura">{svg_planta(p, humanizada=True)}</div>
@@ -1034,7 +1050,9 @@ def dupla(L, p, por_id, numeros):
     nao_html = ""
     if nao:
         alvo = nao[1]
-        nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])} Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, {"p. " + str(numeros[alvo]) if isinstance(numeros[alvo], int) else "no e-book"}.</p></div>'
+        # a alternativa só é citada se estiver nesta edição (no lançamento, as outras casas não estão no PDF)
+        veja = f' Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, {"p. " + str(numeros[alvo]) if isinstance(numeros[alvo], int) else "no e-book"}.' if alvo in por_id else ""
+        nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])}{veja}</p></div>'
     perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
@@ -1095,7 +1113,8 @@ def montar_gratis(plantas, config, pid):
     legenda_ima = f"Algumas das casas que também cabem num lote de {f} x {fundo} m."
     if not mesmas:
         # casa do menor lote: mostra o que cabe com um pouco mais de terreno
-        mesmas = sorted([q for q in plantas if q["id"] != pid], key=lambda q: (lote_frente(q), q["_r"].metricas["area_fechada"]))[:6]
+        # só as de frente maior: a frase fala em "um pouco mais de frente" (na edição de 3, a E03 é mais estreita e mais funda)
+        mesmas = sorted([q for q in plantas if q["id"] != pid and lote_frente(q) > f], key=lambda q: (lote_frente(q), q["_r"].metricas["area_fechada"]))[:6]
         titulo_ima = "E se o lote for um pouco maior?"
         frase_ima = (f"A {p['nome']} é a casa do e-book para o lote de {f} m. Com um pouco mais de frente, as opções crescem: "
                      f"o e-book tem {len(plantas)} casas, cada uma com o lote mínimo calculado.")
@@ -1117,16 +1136,12 @@ def gerar(previa=None):
             sys.exit(f"{p['id']} tem erro no validador: corrija antes de gerar o e-book")
     ordem = "CEFS"
     plantas.sort(key=lambda p: (ordem.index(p["id"][0]), p["id"]))
+    plantas = edicao(plantas, config)
     # 1ª passada descobre as páginas; a 2ª escreve os números certos
     numeros = {"lote": 3, **{p["id"]: 0 for p in plantas}}
     for _ in range(2):
         L = montar(plantas, config, numeros)
-        novos = {"lote": 3}
-        n = 10
-        for p in plantas:
-            novos[p["id"]] = n
-            n += 2
-        numeros = novos
+        numeros = {"lote": L.inicio["lote"], **{p["id"]: L.inicio[p["id"]] for p in plantas}}
     SAIDA.mkdir(exist_ok=True)
     doc = (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{E(config.get("titulo", "E-book"))}</title>'
            f'<style>{CSS}</style></head><body>{"".join(L.paginas)}</body></html>')
@@ -1145,6 +1160,11 @@ def gerar(previa=None):
     print(f"{len(L.paginas)} páginas, {len(plantas)} casas")
     atualizar_calculadora(plantas, numeros)
     gratis = config.get("plantas_gratis") or [config.get("planta_gratis", "C01")]
+    if SAIDA == EBOOK / "saida":  # planta grátis de casa que saiu da lista (ou da edição) não fica para trás
+        for velho in SAIDA.glob("planta-gratis-*.*"):
+            if velho.stem.removeprefix("planta-gratis-") not in gratis:
+                velho.unlink()
+                print(f"apagada: {velho.name} (fora de plantas_gratis)")
     for pid in gratis:
         G = montar_gratis(plantas, config, pid)
         arq = SAIDA / f"planta-gratis-{pid}.html"
@@ -1154,6 +1174,23 @@ def gerar(previa=None):
         falhou = falhou or r.returncode != 0
     if falhou or AVISOS:
         sys.exit("ERRO: página estourada, gancho que não bate com o validador ou falha ao gerar o PDF (veja os avisos acima)")
+
+
+def edicao(plantas, config):
+    """As casas desta edição (config.json, "casas_lancamento"; vazia ou ausente = todas), na ordem do e-book.
+    Casa da lista que não existe, planta grátis ou da capa fora da edição: erro (o PDF não sai)."""
+    ids = config.get("casas_lancamento") or []
+    if not ids:
+        return plantas
+    existem = {p["id"] for p in plantas}
+    faltam = [i for i in ids if i not in existem]
+    if faltam:
+        sys.exit(f"casas_lancamento cita casa que não existe: {', '.join(faltam)}")
+    gratis = config.get("plantas_gratis") or [config.get("planta_gratis", "C01")]
+    fora = [i for i in gratis + [config.get("planta_da_capa", "C01")] if i not in ids]
+    if fora:
+        sys.exit(f"planta grátis ou da capa fora da edição de lançamento: {', '.join(fora)}")
+    return [p for p in plantas if p["id"] in ids]
 
 
 def atualizar_calculadora(plantas, numeros):

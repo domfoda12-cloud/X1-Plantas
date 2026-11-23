@@ -474,6 +474,15 @@ export function criarCasa(renderer) {
       }
     });
 
+    // Box: o vidro vai até o corte das paredes; o chuveiro só aparece com a parede inteira (passeio)
+    for (const { m, obj } of moveis) {
+      if (m.tipo !== 'box') continue;
+      obj.traverse((o) => {
+        if (o.userData.alto) { const h = Math.min(o.userData.alto, corte); o.scale.y = h / o.userData.alto; o.position.y = h / 2; }
+        if (o.userData.chuveiro) o.visible = corte >= 1.97;
+      });
+    }
+
     // Jardim
     const vg = suave((vida - 0.45) / 0.35);
     grama.material.opacity = vg; grama.visible = vg > 0.005; grama.material.transparent = vg < 0.99;
@@ -549,11 +558,14 @@ function construirMovel(m) {
     case 'bancada': {
       g.add(em(caixa(m.w, 0.86, m.d, '#F2EEE7', 0.01), 0, 0.43, 0));
       g.add(em(caixa(m.w, 0.04, m.d, '#3B3936', 0.01, 0.4), 0, 0.88, 0));
-      g.add(em(caixa(0.55, 0.02, 0.4, '#9EA3A6', 0.02, 0.3), -0.5, 0.905, 0.02)); // cuba
-      g.add(em(caixa(0.6, 0.015, 0.5, '#141414', 0.01, 0.2), 0.8, 0.905, 0.0)); // cooktop
+      // cuba e cooktop cabem na bancada curta (antes o cooktop passava da ponta de bancada com menos de 2,2 m)
+      const lc = Math.min(0.6, m.w * 0.45); const ls = Math.min(0.55, m.w * 0.4);
+      const xc = Math.min(0.8, m.w / 2 - lc / 2 - 0.03); const xs = -Math.min(0.5, m.w / 2 - ls / 2 - 0.03);
+      g.add(em(caixa(ls, 0.02, 0.4, '#9EA3A6', 0.02, 0.3), xs, 0.905, 0.02)); // cuba
+      g.add(em(caixa(lc, 0.015, 0.5, '#141414', 0.01, 0.2), xc, 0.905, 0.0)); // cooktop
       for (const [dx, dz] of [[-0.14, -0.12], [0.14, -0.12], [-0.14, 0.12], [0.14, 0.12]]) {
-        const boca = new THREE.Mesh(new THREE.TorusGeometry(0.07, 0.008, 6, 20), new THREE.MeshStandardMaterial({ color: '#5A5A5A' }));
-        boca.rotation.x = Math.PI / 2; g.add(em(boca, 0.8 + dx, 0.915, dz));
+        const boca = new THREE.Mesh(new THREE.TorusGeometry(0.07 * lc / 0.6, 0.008, 6, 20), new THREE.MeshStandardMaterial({ color: '#5A5A5A' }));
+        boca.rotation.x = Math.PI / 2; g.add(em(boca, xc + dx * lc / 0.6, 0.915, dz));
       }
       break;
     }
@@ -588,9 +600,11 @@ function construirMovel(m) {
     case 'box': {
       g.add(em(caixa(m.w, 0.03, m.d, '#C9CED1', 0.01), 0, 0.015, 0));
       const vidro = new THREE.MeshStandardMaterial({ color: '#BFE0EA', transparent: true, opacity: 0.35, roughness: 0.1 });
-      const lado = new THREE.Mesh(new THREE.BoxGeometry(m.w, 1.9, 0.015), vidro); g.add(em(lado, 0, 0.95, m.d / 2));
-      const lado2 = new THREE.Mesh(new THREE.BoxGeometry(0.015, 1.9, m.d), vidro); g.add(em(lado2, -m.w / 2, 0.95, 0));
-      g.add(em(new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 0.02, 20), new THREE.MeshStandardMaterial({ color: '#9A9A9A', metalness: 0.6 })), 0.1, 1.95, -0.1));
+      // vidro e chuveiro param no corte das paredes (aplicar): na planta cortada a 1,1 m nada sobe acima dela e parece estar fora da casa
+      const lado = new THREE.Mesh(new THREE.BoxGeometry(m.w, 1.9, 0.015), vidro); g.add(em(lado, 0, 0.95, m.d / 2)); lado.userData.alto = 1.9;
+      const lado2 = new THREE.Mesh(new THREE.BoxGeometry(0.015, 1.9, m.d), vidro); g.add(em(lado2, -m.w / 2, 0.95, 0)); lado2.userData.alto = 1.9;
+      const chuveiro = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 0.02, 20), new THREE.MeshStandardMaterial({ color: '#9A9A9A', metalness: 0.6 }));
+      chuveiro.userData.chuveiro = true; g.add(em(chuveiro, 0.1, 1.95, -0.1));
       break;
     }
     case 'vaso': {

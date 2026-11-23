@@ -253,11 +253,55 @@ if _sob:
     falhas.append("móvel sobre móvel"); print("[ERRO] móvel sobre móvel: " + "; ".join(_sob[:12]))
 else:
     print("[OK ] nenhum móvel sobre outro nas plantas mobiliadas")
+# Móvel na parede, cadeira em cima da cama e quarto sem parede (achados do dono no 3D, 23/11/2026): erro, não aviso
+_par = [f"{pl['id']} {amb}: {tipo} entra {cm} cm na parede {qual}" for pl in _p3.PL.carregar() for (amb, tipo, qual, cm) in _p3.moveis_na_parede(pl)]
+_ext = [x for x in _par if "externa" in x]
+if _par:
+    falhas.append("móvel atravessando parede" + (" externa" if _ext else "")); print("[ERRO] móvel atravessando parede: " + "; ".join(_par[:12]))
+else:
+    print("[OK ] nenhum móvel atravessa parede (externa ou interna) no 3D")
+_cad = [f"{pl['id']} {amb}: cadeira em cima de {tipo}" for pl in _p3.PL.carregar() for (amb, tipo) in _p3.cadeiras_sem_lugar(pl)]
+if _cad:
+    falhas.append("cadeira sobre cama ou outro móvel"); print("[ERRO] cadeira sobre cama ou outro móvel: " + "; ".join(_cad[:12]))
+else:
+    print("[OK ] nenhuma cadeira de escrivaninha em cima de cama ou de outro móvel")
+_quartos = []
+for pl in _p3.PL.carregar():
+    _tipo = {c["id"]: c["tipo"] for c in pl["comodos"]}
+    _nome = {c["id"]: c["nome"] for c in pl["comodos"]}
+    for pt in pl.get("portas", []):
+        if len(pt) > 2 and pt[2] == "aberto" and "ext" not in pt[:2]:
+            a, b = pt[0], pt[1]
+            for q, o in ((a, b), (b, a)):
+                if _tipo[q] in ("dorm", "casal") and (_tipo[o] in _p3.PL.EXTERNOS | _p3.PL.SEMIEXTERNOS or "gourmet" in _nome[o].lower()):
+                    _quartos.append(f"{pl['id']} {_nome[q]} aberto para {_nome[o]}")
+if _quartos:
+    falhas.append("quarto aberto para área externa ou gourmet"); print("[ERRO] quarto sem parede para área externa ou gourmet: " + "; ".join(_quartos))
+else:
+    print("[OK ] nenhum quarto aberto para área externa ou gourmet")
 # Janela em cima da porta (achado do Arquiteto, 23/11/2026): aviso até as casas de fora do lançamento serem refeitas
 _jp = [f"{pl['id']} {jan} sobre a porta {porta}" for pl in _p3.PL.carregar() for (porta, jan) in _p3.janelas_sobre_portas(pl)]
 if _jp:
     print(f"[AVISO] janela em cima de porta ({len(_jp)}): " + "; ".join(_jp))
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
+# Edição de lançamento (dono, 23/11/2026: 3 casas): a calculadora e as plantas grátis só com casas da edição
+# ("casas_lancamento" no config.json; vazia = todas). As 24 plantas continuam no validador, acima.
+_cfg_ed = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))
+_todas = [p["id"] for p in PL.carregar()]
+_ed = _cfg_ed.get("casas_lancamento") or _todas
+_grat = _cfg_ed.get("plantas_gratis") or [_cfg_ed.get("planta_gratis", "C01")]
+_calc = re.search(r"const CASAS = (\[.*?\]);", (RAIZ / "ebook" / "vendas" / "calculadora-lote.html").read_text(encoding="utf-8"), re.S)
+_calc = json.loads(_calc.group(1)) if _calc else []
+_pags = [c.get("pag") for c in _calc]
+_ed_erros = ([f"casa da edição que não existe: {i}" for i in _ed if i not in _todas]
+             + ([f"calculadora com {sorted(c['id'] for c in _calc)}, edição {sorted(_ed)}"] if sorted(c["id"] for c in _calc) != sorted(_ed) else [])
+             + (["página da calculadora fora de ordem ou sem número"] if not all(isinstance(n, int) and n > 0 for n in _pags) or _pags != sorted(set(_pags)) else [])
+             + [f"planta grátis fora da edição: {i}" for i in _grat if i not in _ed]
+             + [f"PDF grátis velho em ebook/saida: {a.name}" for a in sorted((RAIZ / "ebook" / "saida").glob("planta-gratis-*.pdf")) if a.stem.removeprefix("planta-gratis-") not in _grat])
+if _ed_erros:
+    falhas.append("edição de lançamento"); print("[ERRO] edição de lançamento: " + "; ".join(_ed_erros))
+else:
+    print(f"[OK ] edição de lançamento: {len(_ed)} casas na calculadora e no PDF, plantas grátis {', '.join(_grat)}")
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
 # Campo do dono ainda vazio: não é erro de código, mas o PDF não pode ir ao cliente assim (auditoria de 22/11)

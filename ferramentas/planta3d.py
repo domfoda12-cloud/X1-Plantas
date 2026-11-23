@@ -586,7 +586,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                 x, y = _no_lado(c, lado, pos, 0.62)
                 add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
                 restantes = [l for l in _lados_por_preferencia(c, vaos, []) if l != lado]
-                if not encostar("geladeira", 0.72, 0.7, restantes)[0] and comp_max - 0.8 >= 1.2:
+                if not encostar("geladeira", 0.72, 0.7, restantes)[0] and comp_max - 0.8 >= 1.0:  # bancada curta (1 m, pia e fogão) antes de cozinha sem geladeira
                     # sem outra parede livre, a geladeira fica na ponta da bancada, na mesma parede
                     out.remove(aqui.pop())
                     a_ = (c["x0"] if lado in ("frente", "fundos") else c["y0"])
@@ -631,7 +631,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                     tirar(antes)
                 if feito:
                     break
-            if not feito:  # sem box: o vaso e a pia que couberem
+            if not feito and not vaso_e_pia():  # sem box: o vaso e a pia juntos ou, se não der, o que couber
                 encostar("vaso", 0.4, 0.65, lados, frente=0.3)[0] and encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)
         elif t == "servico":
             encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)  # tanque no canto, máquina ao lado

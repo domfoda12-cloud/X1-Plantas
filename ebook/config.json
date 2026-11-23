@@ -7,6 +7,11 @@
     "Perguntas para levar ao engenheiro"
   ],
   "lancamento_atual": 1,
+  "casas_lancamento": [
+    "C01",
+    "E03",
+    "F01"
+  ],
   "planta_da_capa": "C01",
   "planta_gratis": "C01",
   "link_animacao": "",
