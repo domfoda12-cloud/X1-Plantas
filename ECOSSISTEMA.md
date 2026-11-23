@@ -30,6 +30,7 @@
 | Ambiente de nuvem "x1-plantas" | Ambiente pessoal | Criado em 22/11: o script de preparação instala o motor 3D (`npm install` em `video/`) em toda conversa nova. Rede limitada: fontes do Google, OpenArt e instaladores de pacote. Para usar, escolher "x1-plantas" no menu de ambiente |
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
 | `ajudante` | Agente, **Haiku** | Integrado em 22/11: tarefa simples e pessoal do dono, não dos agentes. Não toca o público nem arquivo do projeto |
+| `verificacao` (skill) e os comandos `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender`, `/ponto-de-volta` | Skill e comandos, do Maestro | Integrado em 23/11 (everything-claude-code, MIT, ficha `0209`): seção "Neste projeto" em cada um. A `verificacao` só confere; os comandos chamam um agente e guardam nele as regras |
 
 Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). A conversa principal interpreta e confere; os agentes executam.
 
@@ -39,7 +40,7 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 
 | Quem (modelo) | Skills e ferramentas | Só com o "sim" do dono |
 |---|---|---|
-| **Maestro**, a conversa principal (Opus) | `conselho`, `explicar-ao-dono`, `bom-dia`, `triagem-email` (Gmail e Agenda: só leitura; enviar só com o sim do dono, um por vez), `ponytail`, `ponytail-review`, `ponytail-audit`, `artifact-*`, `dataviz`, `make-pdf`, `loop`, Graphify, `pedido.py`, `checar.py` | publicar, gastar, contratar |
+| **Maestro**, a conversa principal (Opus) | `conselho`, `explicar-ao-dono`, `bom-dia`, `triagem-email` (Gmail e Agenda: só leitura; enviar só com o sim do dono, um por vez), `ponytail`, `ponytail-review`, `ponytail-audit`, `verificacao` e os comandos da oficina de código (`/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender`, `/ponto-de-volta`), `artifact-*`, `dataviz`, `make-pdf`, `loop`, Graphify, `pedido.py`, `checar.py` | publicar, gastar, contratar |
 | **Diretor**, MinoAI Frontier | `search_mino_method`, `search_viral_hooks`, `analyze_hook`, `get_account_stats`, kit e estilo de edição | OpenArt, `publish_post` |
 | `redator` (Opus) | `redacao-que-vende`, `marketing-psychology`, ganchos da MinoAI | |
 | `estrategista` (Opus) | painel, `dataviz`, `marketing-psychology`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
@@ -137,9 +138,11 @@ Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. 
 - scripts/lib/package-manager.js, só a informação: linha do npm no "O essencial" do `video/RESUMO.md`.
 - LICENSE: `.claude/LICENCA-everything-claude-code.txt`, citada em cada trecho adaptado.
 
+**Entrou adaptado (pedaço B2, 23/11/2026):**
+- skills/verification-loop com commands/verify: skill `verificacao` (uma porta só; modo rápido e completo; quadro final com o caso `claude/*`). Rodada de alcance: o `checar.py` verde no repositório.
+- commands/plan, tdd, e2e, code-review, build-fix, refactor-clean, learn e checkpoint: `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender` e `/ponto-de-volta`. Curtos; as proibições ficam no agente que cada um chama.
+
 **Lido, adaptação em pedaço seguinte** (lido; entra adaptado num pedaço seguinte da ficha `0209` e só aparece aqui com o nome quando existir):
-- skills/verification-loop com commands/verify (uma porta só para a mesma conferência).
-- commands/plan, tdd, e2e, code-review, build-fix, refactor-clean, checkpoint e learn, com nome em português onde o original colide com comando nativo ou skill.
 - agents/planner, tdd-guide, security-reviewer, build-error-resolver, e2e-runner, refactor-cleaner e doc-updater, com nome em português, `model` declarado e sem chamada automática.
 - A ideia de scripts/hooks/session-start.js e de suggest-compact.js, reescrita em Python, só com o "sim" do dono e sem nunca bloquear.
 
