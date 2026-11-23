@@ -17,7 +17,7 @@
 |---|---|---|
 | **A maioria das obras particulares é feita sem arquiteto ou engenheiro** (autoconstrução). O custo é visto como a barreira. O número citado, 85,4%, é de 2015 e só de quem é economicamente ativo e já construiu ou reformou; as fontes dão 82%, "menos de 15% com profissional" e 9%, sem conciliar. **Em texto público, sem percentual** ([relatório jurídico](reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)) | Pesquisa CAU/BR e Datafolha, 2015 ([Gazeta do Povo](https://www.gazetadopovo.com.br/imoveis/maioria-das-obras-e-feita-sem-acompanhamento-tecnico-brrq8cjo6sdxlhrzc8xvvq8rk), [AECweb](https://www.aecweb.com.br/revista/noticias/o-caubr-e-o-datafolha-realizaram-pesquisa/12302)) | O público é enorme, sensível a preço e decide com o pedreiro. Falar como arquiteto afasta; falar como quem já passou por obra aproxima |
 | Pacotes com "milhares de plantas" em PDF são vendidos por poucos reais | [Mercado Livre](https://lista.mercadolivre.com.br/projetos-de-casas-1500-plantas) | Quantidade sozinha não vende: o comprador não sabe escolher no meio de 1.500. **Curadoria e busca pelo lote** são o diferencial |
-| Uma planta pronta avulsa custa de cerca de R$ 98 (só a planta baixa em PDF) a perto de R$ 2.000 (pacote completo) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/) | Âncora de preço: o e-book traz dezenas de plantas pelo preço de menos de uma planta avulsa |
+| Uma planta pronta avulsa custa de cerca de R$ 98 (só a planta baixa em PDF) a perto de R$ 2.000 (pacote completo) | [Aquiprojetos](https://aquiprojetos.com/planta-pronta-de-casa-terrea-h03b-0925.html), [Projeto Pronto](https://projetopronto.com/projetos-casa-terrea.html), [Modices](https://modices.com.br/planta-casa-terrea/) | Âncora de preço: o e-book traz 3 casas pelo preço de menos de uma planta avulsa |
 | Quem financia a construção pela Caixa precisa de projeto aprovado na prefeitura, alvará e ART ou RRT de um profissional | [Serasa](https://www.serasa.com.br/credito/blog/financiamento-construcao/), [Sienge](https://sienge.com.br/blog/proposta-de-construcao-individual/) | Para quem vai financiar, o e-book é o passo **antes** de pagar o profissional: escolher a casa e chegar sabendo o que quer |
 
 > Os preços dos concorrentes são de anúncios e mudam. Confira antes de citar números em anúncio.
@@ -77,7 +77,7 @@
 
 ## 7. A oferta
 
-> **Tudo nesta tabela é recomendação, não decisão.** Preço, garantia, bônus e lançar com 12 ou 24 casas são do dono e estão **em aberto** ([`CONTEXTO.md`](CONTEXTO.md), "Em aberto"). Nenhum texto ao cliente afirma preço, garantia ou bônus antes de ele decidir.
+> **Decidido em 23/11** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): garantia de 7 dias, contados da entrega do link (CDC, art. 49); Pix direto pelo WhatsApp, sem plataforma; lançamento com 3 casas (Casa Compacta, Casa Fita e Família Compacta); dois bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. Onde a tabela abaixo diverge disso, vale o decidido; o resto dela é recomendação. Em aberto: o que mais vai de graça (o dono está decidindo).
 
 | Item | Recomendação | Por quê |
 |---|---|---|
@@ -85,11 +85,11 @@
 | **Pagamento** | **Pix** e **cartão parcelado** | Pix é o jeito mais comum de pagar online no Brasil; o parcelamento derruba o "é caro" |
 | **Plataforma** | Kiwify ou Hotmart | Checkout, Pix, parcelamento, área de membros e garantia já prontos. Taxa de cerca de 9% + valor fixo por venda ([comparativo](https://bit4learn.com/pt/lms/kiwify-venda-cursos-online/)) |
 | **Garantia** | 7 dias, dinheiro de volta | É o direito de arrependimento do CDC (compra pela internet) e o padrão das plataformas. Usar como argumento, não esconder |
-| **Bônus** | 1. As próximas plantas sem pagar de novo · 2. Os 7 erros de planta que saem caro · 3. Checklist de obra · 4. Animações 3D por QR code | O bônus 1 é o mais forte: compra agora, ganha o e-book maior |
+| **Bônus** | 1. As próximas plantas sem pagar de novo (**não prometer**: o dono ainda não decidiu, 23/11) · 2. Os 7 erros de planta que saem caro · 3. Checklist de obra · 4. Animações 3D por QR code | Recomendação antiga; os bônus decididos estão no bloco acima |
 | **Order bump** (oferta no checkout) | "Planilha de orçamento por etapa" a R$ 17–27 | Fala com quem constrói por etapas. Só lance quando a planilha existir |
 | **Oferta depois da compra** | "Adaptação da planta ao seu terreno", feita por um arquiteto parceiro | Produto de valor alto para quem já confia em nós. Depende de ter o parceiro |
 
-**Preço ancorado na oferta:** _"Uma planta pronta avulsa custa a partir de R$ 98 nos catálogos. Aqui são [nº] plantas, cada uma desenhada no lote, por R$ 67."_ Confira o preço do concorrente na semana do anúncio.
+**Preço ancorado na oferta:** _"Uma planta pronta avulsa custa a partir de R$ 98 nos catálogos. Aqui são 3 casas, cada uma desenhada no lote, por R$ [preço do teste]."_ Confira o preço do concorrente na semana do anúncio.
 
 ## 8. Ângulos de anúncio
 

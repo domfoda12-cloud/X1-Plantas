@@ -10,16 +10,16 @@
    "tipo": "varanda",
    "x0": 0.0,
    "y0": 0.0,
-   "x1": 3.5,
-   "y1": 1.4
+   "x1": 3.35,
+   "y1": 1.2
   },
   {
    "id": "sala",
    "nome": "Sala e jantar",
    "tipo": "sala",
    "x0": 0.0,
-   "y0": 1.4,
-   "x1": 3.5,
+   "y0": 1.2,
+   "x1": 3.35,
    "y1": 5.4
   },
   {
@@ -28,23 +28,23 @@
    "tipo": "servico",
    "x0": 0.0,
    "y0": 5.4,
-   "x1": 1.2,
+   "x1": 1.4,
    "y1": 8.5
   },
   {
    "id": "cozinha",
    "nome": "Cozinha",
    "tipo": "cozinha",
-   "x0": 1.2,
+   "x0": 1.4,
    "y0": 5.4,
-   "x1": 3.5,
+   "x1": 3.35,
    "y1": 8.5
   },
   {
    "id": "quarto2",
    "nome": "Quarto",
    "tipo": "dorm",
-   "x0": 3.5,
+   "x0": 3.35,
    "y0": 0.0,
    "x1": 6.5,
    "y1": 3.3
@@ -53,16 +53,16 @@
    "id": "circ",
    "nome": "Hall",
    "tipo": "circ",
-   "x0": 3.5,
+   "x0": 3.35,
    "y0": 3.3,
-   "x1": 4.6,
+   "x1": 4.45,
    "y1": 5.1
   },
   {
    "id": "banho",
    "nome": "Banheiro",
    "tipo": "banho",
-   "x0": 4.6,
+   "x0": 4.45,
    "y0": 3.3,
    "x1": 6.5,
    "y1": 5.1
@@ -71,7 +71,7 @@
    "id": "quarto1",
    "nome": "Quarto casal",
    "tipo": "casal",
-   "x0": 3.5,
+   "x0": 3.35,
    "y0": 5.1,
    "x1": 6.5,
    "y1": 8.5
@@ -131,35 +131,35 @@
   "servico": [
    [
     "fundos",
-    0.6
+    0.7
    ]
   ],
   "cozinha": [
    [
     "fundos",
-    1.1
+    0.9
    ]
   ],
   "quarto2": [
    [
     "dir",
-    1.7
+    1.8
    ]
   ],
   "banho": [
    [
     "dir",
-    0.9
+    1.0
    ]
   ],
   "quarto1": [
    [
     "fundos",
-    1.7
+    1.8
    ]
   ]
  },
- "destaque": "Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura",
+ "destaque": "Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura",
  "pensou": [
   "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
@@ -173,34 +173,34 @@
   ],
   "info": [],
   "metricas": {
-   "area_fechada": 50.3,
+   "area_fechada": 51.2,
    "area_total": 55.2,
-   "area_coberta_aberta": 4.9,
+   "area_coberta_aberta": 4.0,
    "util": {
     "varanda": [
-     3.5,
-     1.4,
-     4.9
+     3.35,
+     1.2,
+     4.0
     ],
     "sala": [
-     3.29,
-     3.79,
+     3.14,
+     3.99,
      12.5
     ],
     "servico": [
-     0.99,
+     1.19,
      2.89,
-     2.9
+     3.4
     ],
     "cozinha": [
-     2.18,
+     1.83,
      2.95,
-     6.4
+     5.4
     ],
     "quarto2": [
-     2.7,
+     2.85,
      3.09,
-     8.3
+     8.8
     ],
     "circ": [
      1.04,
@@ -208,23 +208,23 @@
      1.7
     ],
     "banho": [
-     1.69,
+     1.84,
      1.68,
-     2.8
+     3.1
     ],
     "quarto1": [
-     2.79,
+     2.94,
      3.19,
-     8.9
+     9.4
     ]
    },
    "luz": {
-    "sala": 0.2,
+    "sala": 0.199,
     "servico": 0.1613,
-    "cozinha": 0.1543,
-    "quarto2": 0.2061,
-    "banho": 0.1579,
-    "quarto1": 0.2
+    "cozinha": 0.1489,
+    "quarto2": 0.2078,
+    "banho": 0.1626,
+    "quarto1": 0.2017
    },
    "circulacao": 0.039,
    "lote": [
@@ -249,17 +249,13 @@
     "segunda": "oeste",
     "pior": "sul",
     "pontos": {
-     "norte": 16.1,
+     "norte": 16.2,
      "leste": 2.3,
-     "sul": 0.8,
-     "oeste": 8.1
+     "sul": 0.7,
+     "oeste": 8.4
     }
    }
   },
-  "referencias": [
-   "Serviço: 0,99 m de largura livre; nas referências o serviço tem cerca de 1,20 m e sai para o quintal (regra 4, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto com 2,70 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)",
-   "Quarto casal com 2,79 m de largura livre; nas referências o quarto tem 2,85 a 3,00 m (regra 3, ebook/referencias/plantas-ref/REFERENCIAS.md)"
-  ]
+  "referencias": []
  }
 }

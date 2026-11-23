@@ -38,7 +38,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 
 ## 2. Em que pé está (escrito à mão, 22/11/2026)
 
-- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). Há **5 plantas grátis** para o funil (C01, E03, E02, F01, C06; a E07 saiu, na fila do redesenho). O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
+- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). **Só a Casa Compacta (C01) é grátis** no funil (dono, 23/11); os PDFs grátis de E02, E03, C06 e F01 não vão mais ao cliente. O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
 - **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Ficaram em `video/saida/` só o convite (F03, o último feito) e o principal de 21/11; o resto foi apagado em 22/11 para refazer do zero. Toda instrução dele sobre vídeo: [`video/VIDEO.md`](video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde).
 - **Animações 3D completas:** ainda não começaram (as imagens 3D paradas já estão no e-book).
 - **Organização:** tudo na `main`, a única branch. Cada pedido do dono vira ficha em [`pedidos/`](pedidos/LEIA-ME.md) e é executado pelo modelo certo. Índice e resumos por pasta: [`INDICE.md`](INDICE.md).
@@ -46,7 +46,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 
 ## 3. O negócio em uma frase
 
-**Um e-book com dezenas de plantas de casas originais**, em blueprint, planta humanizada e 3D, para quem vai construir no Brasil e ainda não sabe qual casa cabe no terreno e no bolso. As pessoas chegam pelos vídeos, ganham uma planta grátis no WhatsApp e compram o e-book.
+**Um e-book de plantas de casas originais** (3 casas térreas no lançamento), com planta mobiliada, a casa no lote, vista da rua e 3D, para quem vai construir no Brasil e ainda não sabe qual casa cabe no terreno e no bolso. As pessoas chegam pelos vídeos, ganham uma planta grátis no WhatsApp e compram o e-book.
 
 ```
                  ┌──────────────────────────────┐
@@ -72,7 +72,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 - **Quem:** quem tem um lote e vai construir, quase sempre **com pedreiro e sem arquiteto** (a maioria das obras particulares, segundo a pesquisa CAU/BR e Datafolha de 2015; em texto público, sem percentual), muitas vezes **por etapas**.
 - **A primeira pergunta dessa pessoa:** "que casa cabe no meu lote?".
 - **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **casa que cresce**.
-- **Decidido pelo dono em 23/11/2026** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): lançamento com **3 casas** (a Casa Compacta e mais 2 a definir); título "Antes do primeiro tijolo"; só a Casa Compacta grátis; garantia de 7 dias; bônus: checklist da obra por fase e perguntas para levar ao engenheiro; Pix direto pelo WhatsApp e e-book por link. **Em aberto:** os valores dos dois preços em teste e as outras 2 casas ([`CONTEXTO.md`](CONTEXTO.md)). Funil: [`ebook/vendas/WHATSAPP.md`](ebook/vendas/WHATSAPP.md).
+- **Decidido pelo dono em 23/11/2026** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): lançamento com **3 casas**: a Casa Compacta (com hall, a oficial), a Casa Fita (quartos a confirmar pelo Arquiteto) e a Família Compacta (F01); título "Antes do primeiro tijolo"; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47; só a Casa Compacta grátis; garantia de 7 dias, contados da entrega do link; bônus: checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; Pix direto pelo WhatsApp, sem plataforma, e e-book por link; estilo 1 nas casas e 3 na capa e no Instagram. **Em aberto:** o que mais vai de graça (tudo, parte ou atendimento personalizado): o dono está decidindo ([`CONTEXTO.md`](CONTEXTO.md)). Funil: [`ebook/vendas/WHATSAPP.md`](ebook/vendas/WHATSAPP.md).
 
 ## 4. A conta que diz se o anúncio paga
 
@@ -130,7 +130,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | Instagram | Comentários "PLANTA" por reel; seguidores novos | Instagram | 3 reels fracos seguidos diminuem o alcance do próximo |
 | Funil | Contatos → compras (taxa de conversão) | Parceiro | Abaixo da semana anterior: revisar a planta grátis e a oferta |
 | Funil | % que manda o tamanho do lote; **lote mais pedido** | Parceiro | Pouca gente manda o lote: mudar a primeira mensagem. O lote mais pedido define as próximas plantas e anúncios |
-| E-book | Vendas; pedidos de reembolso | Plataforma de pagamento | Reembolsos: o e-book não entregou o que o anúncio prometeu |
+| E-book | Vendas; pedidos de reembolso | Anotação do parceiro (Pix no WhatsApp, sem plataforma) | Reembolsos: o e-book não entregou o que o anúncio prometeu |
 | 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
 
 | Semana | Gasto | Custo por contato | Contatos | Vendas | Conversão | Custo por venda | Preço | Observação |
@@ -168,7 +168,7 @@ Ficam num lugar só: [`CONTEXTO.md`](CONTEXTO.md), "Em aberto". As opções e a 
 |---|---|
 | **Quem assina o desenho.** A Lei 5.194/1966 (art. 13) diz que plantas e projetos só têm valor jurídico diante das autoridades quando feitos por profissional habilitado; o art. 6º trata do exercício da profissão sem registro. As plantas do e-book são feitas por quem não é arquiteto nem engenheiro. ([pesquisa](reports/Arquiteto%20e%20engenheiro%20na%20construção%20residencial.md)) | Apresentar o e-book como **referência**, nunca como projeto. Ter um **arquiteto registrado** revisando e assinando as plantas, e confirmar com ele e com um advogado como isso aparece no produto. Não é parecer jurídico |
 | **Responsabilidade técnica.** Para construir e aprovar na prefeitura, a obra precisa de projeto com profissional habilitado | Escrever no e-book (capa interna e cada página) que as plantas são **de referência**, não projeto executivo, e que a obra precisa de responsável técnico. Confirmar o texto com um arquiteto |
-| **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Garantia de 7 dias decidida (dono, 23/11): devolver o Pix para a mesma conta que pagou; a política está escrita na oferta e no passo a passo do Pix ([`WHATSAPP.md`](ebook/vendas/WHATSAPP.md)) |
+| **Direito de arrependimento.** Compra pela internet pode ser cancelada em até 7 dias (Código de Defesa do Consumidor, art. 49) | Garantia de 7 dias decidida (dono, 23/11), contados da entrega do link: devolver o Pix para a mesma conta que pagou; a política está escrita na oferta e no passo a passo do Pix ([`WHATSAPP.md`](ebook/vendas/WHATSAPP.md)) |
 | **Direitos autorais** | Só plantas originais ou com licença escrita de venda. Nada de imagem de terceiros no e-book |
 | **Regras de anúncio da Meta** para imóveis e construção | Conferir no Gerenciador de Anúncios antes de subir cada campanha, porque as regras mudam |
 | **Medidas provisórias** | Nenhuma planta passa para `pronta` sem revisão de medidas |

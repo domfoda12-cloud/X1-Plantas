@@ -47,7 +47,7 @@
 
 ### 2. Formatos do perfil
 
-Cada formato vira uma série. O e-book tem dezenas de plantas, então nunca falta tema.
+Cada formato vira uma série. O e-book de lançamento tem 3 casas; post de casa que não está no e-book diz isso na legenda.
 
 | Formato | Gancho modelo | De onde vem | Material |
 |---|---|---|---|
@@ -160,7 +160,7 @@ Anote aqui cada teste para saber o que funciona.
 **Bio (até 150 caracteres):**
 > As casas que cabem no seu lote 🏠 Veja em 3D antes de construir. Comente PLANTA e ganhe uma 👇
 
-**Link na bio:** link do seu WhatsApp ou da página que seu parceiro montar.
+**Link na bio:** o link do WhatsApp do negócio (não há página de venda: o Pix e a entrega são pelo WhatsApp).
 
 **Destaques sugeridos:** Plantas · Passeio 3D · Terreno estreito · Dúvidas · Material grátis
 

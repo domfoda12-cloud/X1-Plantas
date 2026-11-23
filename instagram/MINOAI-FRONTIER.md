@@ -36,8 +36,8 @@ Cole esta mensagem na aba **Code**, com a pasta **Vídeos/X1-Plantas** aberta, t
 Edite este vídeo no estilo MinoAI Frontier: [nome do arquivo] — tipo: [ANÚNCIO COM LOCUÇÃO | PLANTA DA SEMANA | É POSSÍVEL | ERRO QUE SAI CARO | CABE NO SEU LOTE].
 
 CONTEXTO DO PROJETO
-- Perfil brasileiro de plantas de casas. O produto é um e-book com dezenas de plantas originais em blueprint, planta humanizada e 3D.
-- Público: quem tem um lote e vai construir, quase sempre com pedreiro e sem arquiteto, muitas vezes por etapas. Classe C, 25 a 50 anos. A pergunta dele é "que casa cabe no meu lote?".
+- Perfil brasileiro de plantas de casas. O produto é um e-book com 3 casas térreas no lançamento, com planta mobiliada, a casa no lote, vista da rua e 3D.
+- Público: quem tem um lote e vai construir, quase sempre com pedreiro e sem arquiteto. Classe C, 25 a 50 anos. A pergunta dele é "que casa cabe no meu lote?".
 - Objetivo de todo vídeo: a pessoa assistir até o fim e comentar PLANTA para receber uma planta grátis no WhatsApp.
 
 IDIOMA
@@ -177,7 +177,7 @@ Cole no começo de cada semana (ou sempre que abrir uma conversa nova com o Maes
 Você é o Maestro do projeto X1-Plantas: decide e rege a equipe. A MinoAI Frontier, ligada aqui, é o Diretor: dá a ideia principal de todo conteúdo.
 
 O PROJETO
-- E-book brasileiro com dezenas de plantas de casas originais (blueprint, planta humanizada, 3D e animação), para quem tem um lote e vai construir, quase sempre com pedreiro e por etapas.
+- E-book brasileiro com 3 casas térreas no lançamento, com planta mobiliada, a casa no lote, vista da rua e 3D, para quem tem um lote e vai construir, quase sempre com pedreiro.
 - Venda: vídeos no Instagram e no Facebook Ads → comentário "PLANTA" → planta grátis no WhatsApp → oferta do e-book.
 - Repositório: https://github.com/domfoda12-cloud/X1-Plantas, branch main, em Vídeos/X1-Plantas/projeto/ (se não existir, clone; se existir, atualize com git pull).
 

@@ -6,7 +6,7 @@ Regras: **1** circulação (com o corredor coberto lateral) até 6% em casa de a
 
 | Casa | m² | Frente do lote | 1 Circulação | 2 Banheiro | 3 Quarto | 4 Serviço | 5a Por dentro | 5b Cozinha | Fora |
 |---|---|---|---|---|---|---|---|---|---|
-| C01 | 50 | 8 m | - | - | 2,70, 2,79 | 0,99 | - | - | 2 |
+| C01 | 51 | 8 m | - | - | - | - | - | - | 0 |
 | C02 | 32 | 6 m *estreita* | - | 1,48 | - | sem saída | - | - | 2 |
 | C03 | 41 | 7 m | 9% | 1,08 | 2,69 | - | - | - | 3 |
 | C04 | 48 | 7,5 m | 10% | 1,08 | 2,79, 2,79 | 0,99 e sem saída | - | 1,74 | 5 |
@@ -30,6 +30,6 @@ Regras: **1** circulação (com o corredor coberto lateral) até 6% em casa de a
 | S05 | 59 | 8,9 m | 10% | 1,08, 1,19 | 2,79 | 0,99 e sem saída | - | - | 4 |
 | S07 | 74 | 10,9 m | - | 1,08, 1,09 | 2,39, 2,48, 2,78 | sem saída | - | - | 3 |
 | S09 | 78 | 13,9 m | - | 1,09 | 2,39, 2,48, 2,78 | sem saída | - | - | 3 |
-| **Casas fora** | | 2 estreitas | **11** | **21** | **19** | **22** | **6** | **3** | |
+| **Casas fora** | | 2 estreitas | **11** | **21** | **18** | **21** | **6** | **3** | |
 
 O detalhe de cada casa (medida e frase): `python3 ferramentas/plantas.py validar ID`, linhas "! referência".

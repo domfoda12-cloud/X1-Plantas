@@ -6,9 +6,9 @@
 
 ![C01](previas/C01.png)
 
-**50 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 13,0 m) · frente para o **norte**
+**51 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 13,0 m) · frente para o **norte**
 
-*Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura*
+*Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura*
 
 **Por que esta planta é assim**
 

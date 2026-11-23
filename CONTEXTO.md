@@ -21,10 +21,10 @@
 
 ## Em aberto (esperando o dono)
 
-- **Lançamento (decidido em 23/11, [decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)):** 3 casas; título "Antes do primeiro tijolo"; só a Casa Compacta grátis; garantia de 7 dias; Pix pelo WhatsApp, sem plataforma; e-book por link; o arquiteto é o nosso agente (o aviso legal fica). **Falta o dono:** o número do WhatsApp no `ebook/config.json` (o chip existe); os valores dos dois preços em teste; as outras 2 casas (a equipe indica); o estilo das plantas (mostrar os 3 de novo, em palavras simples); usar o Instagram dele ou criar um. As próximas casas não se prometem até ele decidir.
-- **Arranjo das plantas (22/11):** o dono reprovou o layout; o Arquiteto tem método novo ([apostila 2](ebook/referencias/ARQUITETO.md)). Em 23/11 ele escolheu a Casa Compacta com hall e só as 3 do lançamento refeitas, uma por vez, com o máximo de cuidado. A [pesquisa de 22/11](ebook/referencias/ARQUITETO.md) traz a régua federal e 5 ideias para ele escolher (seção 5).
+- **Lançamento (decidido em 23/11, [decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)):** 3 casas: Casa Compacta (com hall), Casa Fita (quartos a confirmar pelo Arquiteto) e Família Compacta (F01); título "Antes do primeiro tijolo"; preços em teste: R$ 47 e R$ 67, semanas alternadas, começando pelo R$ 47; só a Casa Compacta grátis; garantia de 7 dias, contados da entrega do link; Pix pelo WhatsApp, sem plataforma; e-book por link; estilo 1 nas casas, 3 na capa e no Instagram; WhatsApp no `ebook/config.json`; o arquiteto é o nosso agente (aviso legal fica). **Falta o dono:** o que mais vai de graça (tudo, parte ou atendimento personalizado): o dono está decidindo; usar o Instagram dele ou criar um. Próximas casas: não prometer.
+- **Arranjo das plantas (22/11):** o dono reprovou o layout; o Arquiteto tem método novo ([apostila 2](ebook/referencias/ARQUITETO.md)). Em 23/11: só as 3 do lançamento refeitas, uma por vez, com o máximo de cuidado. A [pesquisa de 22/11](ebook/referencias/ARQUITETO.md) traz a régua federal e 5 ideias (seção 5).
 - **Banheiros abaixo de 1,10 m livres** (18 casas, contagem de 22/11) e nota de clima por zona bioclimática: decidir ao refazer cada casa.
-- **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados agora saem do validador; a página publicada precisa ser republicada.
+- **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados saem do validador; republicar a página publicada.
 - **OpenArt: só com o "sim" do dono a cada uso (22/11);** saldo em [`ORCAMENTO.md`](ORCAMENTO.md). O selo "Imagem ilustrativa" saiu dos vídeos (dono, 22/11) e continua em imagem parada. **Vídeo realista:** o dono filma com o celular em alguns dias; o Editor manda a lista de planos. Até lá o vídeo usa planta, 3D próprio (ilustração) e páginas do e-book.
 - **Vídeos guardados (22/11):** assistir ao convite (`video/saida/convite/`, passeio pela F03, o último feito) e ao principal de 21/11 (`video/saida/principal/`); os outros foram apagados para refazer do zero. Dizer o que é "pagar por mais" e se libera o OpenArt para a versão realista.
 - **Vídeo (aberto pelo dono em 21/11):** refazer do zero pelo plano de `contexto/dono/RETROSPECTIVA.md`; criar o Instagram e configurar a MinoAI Frontier no PC com Windows do dono (WSL).
@@ -37,7 +37,7 @@
 
 - **Skills do Ponytail** (`/ponytail`, `/ponytail-review`, `/ponytail-audit`): só para o código das ferramentas. O texto que vai ao público é do Redator e do Revisor.
 - **AgentScope** (ideias, não instalado) e **product-demo-agent-toolkit** (vídeo de página web; a proteção automática bloqueou: o dono libera com o modo "Accept edits"; não contorne): [`ECOSSISTEMA.md`](ECOSSISTEMA.md), seção 6.
-- **Onde roda:** esta sessão roda na nuvem da Anthropic; servidor próprio não economiza token. O que economiza é ler pouco (o seu `contexto/<papel>.md` e o último resumo em `contexto/entregas/`) e usar o modelo certo para cada pedido ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
+- **Onde roda:** esta sessão roda na nuvem da Anthropic; servidor próprio não economiza token. O que economiza é ler pouco (o seu `contexto/<papel>.md` e o `ULTIMO.md`) e usar o modelo certo ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 
 ## Mapa: onde está cada coisa
 

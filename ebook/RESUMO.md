@@ -42,7 +42,7 @@ Tamanho: 1994 palavras.
 
 Gerado por `python3 ferramentas/plantas.py referencias`; não edite. Régua: as 5 regras tiradas das 51 plantas de `../referencias/plantas-ref/REFERENCIAS.md`, aprovadas pelo dono em 23/11/2026 como aviso (não barram a planta e não vão ao PDF). Medidas livres, por dentro das paredes; `-` = dentro da…
 
-Tamanho: 831 palavras.
+Tamanho: 830 palavras.
 
 ### [As 24 plantas: ficha de cada uma](plantas/PLANTAS.md)
 
@@ -50,4 +50,4 @@ Gerado por `python3 ferramentas/plantas.py fichas`. Parte da pasta E-book (`../E
 
 Seções: C01 · Casa Compacta; C02 · Casa Studio; C03 · Casa Inicial; C04 · Casa Duo; C05 · Casa Popular; C06 · Casa Compacta Suíte; C07 · Casa Compacta Varanda; E01 · Casa Estreita; E02 · Casa Corredor; E03 · Casa Fita; E04 · Casa Pátio; E05 · Casa Estreita Suíte; E06 · Casa Estreita Gourmet; E07 · Casa Estreita 3 Quartos; ….
 
-Tamanho: 3899 palavras.
+Tamanho: 3901 palavras.
