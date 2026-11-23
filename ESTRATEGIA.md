@@ -32,7 +32,7 @@
 - **Do que tem medo:** jogar dinheiro fora com um erro, obra parada, o pedreiro "fazer do jeito dele", a casa ficar escura ou quente, não ter como aumentar depois.
 - **Como fala:** "lote 10x20", "casa térrea", "3 quartos com 1 suíte", "área gourmet", "bater a laje", "puxadinho", "planta pronta".
 - **Onde está:** Facebook, Instagram, YouTube (vídeos de obra), grupos de WhatsApp e Facebook do loteamento.
-- **O que oferecer:** as plantas que cabem no lote dela, e as **casas que crescem** (começam menores e têm a ampliação prevista).
+- **O que oferecer:** as plantas que cabem no lote dela, para escolher a casa **antes de gastar** com projeto e fundação, e as perguntas certas para levar ao engenheiro e ao pedreiro. Casa com ampliação desenhada fica para depois do lançamento (dono, 23/11/2026): até lá, nenhum texto promete construir por etapas.
 
 **É o perfil principal.** Anúncios, e-book e funil falam primeiro com ele.
 
@@ -62,7 +62,7 @@
 
 1. **Ache pelo seu lote.** O e-book é organizado pelo tamanho do terreno, não só por categoria. A pessoa abre na página do "10 x 20" e vê todas as casas que cabem.
 2. **Veja antes de construir.** Cada planta em blueprint, planta humanizada, 3D e animação. É o que o pedreiro não consegue mostrar.
-3. **Casa que cresce.** Plantas com a ampliação prevista: começar com 2 quartos e chegar a 3 sem quebrar parede.
+3. **Escolha antes de gastar.** A pessoa decide a casa com a medida do lote na mão, antes de pagar projeto ou abrir a fundação, e leva ao engenheiro as 3 perguntas que cada casa traz. *(No lugar de "Casa que cresce", que sai dos textos até as etapas serem desenhadas, depois do lançamento: dono, 23/11/2026.)*
 
 ## 6. O que isso muda no produto
 
@@ -71,7 +71,7 @@
 | **Índice pelo tamanho do lote** (5 x 25, 8 x 25, 10 x 20, 10 x 25, 12 x 25, 12 x 30…) como primeira página depois da capa | É a primeira pergunta do público | E-book |
 | **Fachada de cada casa** (vista da rua, em 3D) | O brasileiro escolhe muito pela fachada; hoje só temos vistas de cima | Animações 3D |
 | **Medidas de cada cômodo** escritas na planta (ex.: "Quarto 1 · 3,20 x 4,30 m") | É o que a pessoa leva para o pedreiro e o profissional | Animações 3D e E-book |
-| **"Como cresce":** nas plantas que têm ampliação, mostrar a casa hoje e a casa ampliada | Fala com quem constrói por etapas | Animações 3D e E-book |
+| **"Como cresce" (em espera):** mostrar a casa hoje e a casa ampliada, só nas plantas que tiverem a ampliação desenhada | Fala com quem constrói por etapas. **Depois do lançamento** (dono, 23/11/2026): hoje só a C03 tem ampliação nos dados, e fraca | Animações 3D e E-book |
 | **Página "Leve para o seu pedreiro e o seu engenheiro"** em cada planta: medidas, o que conferir, perguntas para fazer | Conecta com a realidade da autoconstrução sem dizer que dispensa o profissional | E-book |
 | **Linguagem simples:** nada de "projeto executivo", "memorial descritivo" sem explicar | Quem constrói com pedreiro não usa esses termos | Todas |
 
@@ -99,7 +99,7 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez (as 5 vers
 |---|---|---|
 | **Pelo lote** | "Tem um lote 10 x 20? Essas 5 casas cabem nele." (um anúncio por tamanho de lote) | 1 |
 | **Erro caro** | "Ninguém te conta isso antes de bater a laje." | 1 |
-| **Casa que cresce** | "Comece com 2 quartos e chegue a 3 sem quebrar nenhuma parede." | 1 |
+| **Escolha antes de gastar** (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026) | "Antes do primeiro tijolo, mede a frente do seu lote. A casa certa começa nessa medida." | 1 |
 | **Pedreiro** | "Mostra isso pro seu pedreiro antes de começar a obra." | 1 |
 | **Sair do aluguel** | "O aluguel que você paga em 1 ano já levanta as paredes dessa casa?" (só com número verdadeiro da sua região) | 1 |
 | **Economia com arquiteto** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria." | 1 e 2 |
@@ -111,7 +111,7 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez (as 5 vers
 ## 9. Tom de voz
 
 - **Como um amigo que já construiu**, não como um arquiteto. "Você", frases curtas, exemplos de obra.
-- **Usar:** lote, casa térrea, quartos, suíte, área gourmet, edícula, fachada, pedreiro, "bater a laje", "cabe no seu lote", "sem quebrar parede".
+- **Usar:** lote, casa térrea, quartos, suíte, área gourmet, edícula, fachada, pedreiro, "bater a laje", "cabe no seu lote", "antes de gastar", "leva pro seu pedreiro". ("Sem quebrar parede" sai até existir ampliação desenhada: dono, 23/11/2026.)
 - **Evitar:** "projeto executivo", "memorial descritivo", "programa de necessidades", "estudo preliminar" sem explicar; inglês.
 - **Nunca:** dizer que a planta dispensa profissional, prometer aprovação na prefeitura ou no banco, dar custo de obra exato, prometer prazo.
 - **Honestidade que vende:** "as plantas são de referência: você escolhe aqui e leva para o seu pedreiro e o seu engenheiro" é um argumento, não um aviso escondido.

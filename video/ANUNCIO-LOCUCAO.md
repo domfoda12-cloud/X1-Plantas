@@ -346,6 +346,8 @@ Quer ver uma planta mostrando o jeito certo? Comenta PLANTA que eu te mando uma 
 
 ### Ângulo 3: casa que cresce
 
+> **Em espera (dono, 23/11/2026):** não sobe até a C03 ser redesenhada; "por etapas" saiu dos textos até as etapas serem desenhadas.
+
 **Texto na imagem:** Comece com 1 quarto. O 2º já está desenhado.
 
 **Texto principal:**

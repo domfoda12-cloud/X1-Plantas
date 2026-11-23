@@ -40,21 +40,21 @@
 | **Planta que existe** | Um rascunho feito pelo cunhado no caderno. A prefeitura vai pedir "projeto". Ele ainda não sabe como |
 | **Onde passa o tempo** | WhatsApp, Instagram e Facebook, pelo celular, à noite. Segue perfil de reforma e construção |
 | **Medo** | Gastar mais de R$ 100 mil e descobrir que errou a cozinha, ou que o terreno "não aceita" a casa. Contratar arquiteto e pagar mais que a laje |
-| **O que ele quer ouvir** | "Essa cabe no seu lote. Dá pra construir em etapas. Leva isso pro seu pedreiro e pro seu engenheiro." |
+| **O que ele quer ouvir** | "Essa cabe no seu lote. Dá pra construir em etapas. Leva isso pro seu pedreiro e pro seu engenheiro." (o "em etapas" é o desejo dele, não promessa nossa: o e-book ainda não mostra etapas, então não vai para peça; dono, 23/11/2026) |
 
 **O que o Marcos pergunta, em ordem** (é a ordem do funil do WhatsApp):
 
 1. "Cabe no meu lote?" (ele manda a medida)
 2. "Quantos quartos?"
 3. "Quanto custa construir?" (a gente **não promete valor de obra**; mostra a área e diz que o orçamento é do engenheiro e do material da cidade dele)
-4. "Dá pra fazer por etapas?"
+4. "Dá pra fazer por etapas?" (até as etapas serem desenhadas, a resposta honesta é: "A ordem da obra você combina com o seu engenheiro e o seu pedreiro. O e-book te ajuda a escolher a casa que cabe no lote antes de gastar.")
 5. "Vale a pena? E se não servir?" (a planta grátis mostra uma casa inteira; [garantia: a definir pelo dono])
 
 ### 3. Os outros perfis (da estratégia)
 
 | Perfil | Em uma frase | Plantas que atendem |
 |---|---|---|
-| **Marcos**: tem o lote, constrói em etapas | Casa de 2 quartos que cresce | C01, C03, C04, C05, E02, E03 |
+| **Marcos**: tem o lote, constrói em etapas | Casa de 2 quartos que cabe no lote (ampliação desenhada só na C03, em espera) | C01, C03, C04, C05, E02, E03 |
 | **Dona Lúcia**: aposentada, uma casa para ficar | Térrea, sem degrau, banheiro com espaço | S03 (Casa Acessível), C06 |
 | **Camila e Rafael**: casal jovem, casa própria com filho a caminho | Suíte, varanda, 3º quarto como escritório | C06, F02, S04, S05 |
 | **Investidor pequeno**: constrói para alugar | Studio, casa pequena fácil de alugar | C02, E03 |
@@ -81,7 +81,7 @@ A planta do e-book **não é projeto legal**. Ela é um ponto de partida para co
 
 - O Marcos reage mais a "cabe no seu lote" do que a "economize com arquiteto". (Teste: 2 anúncios, mesmo vídeo.)
 - A planta grátis de **2 quartos em lote 8 x 25** converte melhor que as outras (é o terreno mais comum nas conversas).
-- "Por etapas" é argumento mais forte que "econômica".
+- "Por etapas" é argumento mais forte que "econômica". (Em espera: só testar quando o e-book tiver as etapas desenhadas; dono, 23/11/2026.)
 - Mulheres de 28 a 40 anos são as decisoras de layout; homens de 30 a 50 são os pagantes. Dividir o público nos dois grupos.
 - Registre cada resultado em [`../../PAINEL.md`](../../PAINEL.md), seção 7.
 
