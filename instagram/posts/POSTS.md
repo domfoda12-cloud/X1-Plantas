@@ -146,9 +146,9 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 | Tela | Texto | Imagem |
 |---|---|---|
 | 1 | *salve para consultar* · **Como ler uma planta baixa em 1 minuto** | Blueprint inteiro |
-| 2 | *dica 1 de 5* · **A cota é a medida** · "A linha com um traço em cada ponta mostra a medida, em metros. Aqui, a casa tem 6,50 m de largura." | Recorte da cota de cima, em amarelo |
-| 3 | *dica 2 de 5* · **O arco é a porta** · "Ele mostra para que lado a porta abre. Esse espaço precisa ficar livre: nada de móvel ali." | Porta de entrada em amarelo |
-| 4 | *dica 3 de 5* · **Linha fina na parede é janela** · "Onde a parede vira linhas finas e duplas, há uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha em amarelo |
+| 2 | *dica 1 de 5* · **A cota é a medida** · "A linha azul embaixo da casa, com um traço em cada ponta, mostra a largura em metros: aqui, 6,50 m. A linha do lado mostra o fundo: 8,50 m." | Recorte da cota de baixo (a da largura), em amarelo |
+| 3 | *dica 2 de 5* · **Amarelo é a porta de entrada** · "É por ali que você entra da rua. Na planta com móveis, o arco de cada porta mostra para que lado ela abre: esse espaço fica livre, nada de móvel ali." | Porta de entrada (o retângulo amarelo) marcada |
+| 4 | *dica 3 de 5* · **Azul é janela** · "Cada retângulo azul na parede é uma janela. Confira se cada quarto tem a sua." | Janelas da sala e da cozinha marcadas |
 | 5 | *dica 4 de 5* · **O m² é a área do cômodo** · "8,9 m² quer dizer um quarto de cerca de 2,80 x 3,20 m. Compare com o quarto onde você dorme hoje." | Quarto casal em amarelo (medidas livres do validador, `ebook/plantas/dados/C01.json`) |
 | 6 | *dica 5 de 5* · **Planta humanizada** · "É a mesma planta com piso e móveis em escala. Fica fácil ver como cada cômodo vai ser usado." | Planta humanizada |
 | 7 | *planta grátis* · **Quer treinar numa planta de verdade?** · Comente PLANTA | Miniaturas |
@@ -159,8 +159,8 @@ Plantas de referência, não são projeto executivo. A obra precisa de responsá
 Planta baixa parece desenho de engenheiro, mas dá pra ler em 1 minuto. 📐
 
 1. A cota é a medida
-2. O arco é a porta (e o espaço que ela precisa)
-3. Linha fina na parede é janela
+2. Amarelo é a porta de entrada (e, na planta com móveis, o arco mostra para onde cada porta abre)
+3. Azul é janela
 4. O m² é a área de cada cômodo
 5. A planta humanizada mostra os móveis em escala
 
