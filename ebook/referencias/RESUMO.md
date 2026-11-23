@@ -15,7 +15,7 @@
 - Proibido "pronta para construir" e "garantia de aprovação"; preço de concorrente só com fonte e data, num lugar só: `MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4 (R$ 98 a R$ 2.000 e R$ 420 a R$ 899, cada faixa com a sua fonte).
 <!-- /essencial -->
 
-## Os 4 documentos
+## Os 5 documentos
 
 ### [Apostila do Arquiteto](ARQUITETO.md)
 
@@ -40,6 +40,14 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
 Tamanho: 2394 palavras.
+
+### [Anúncios e posts de referência: 39 peças reais de quem vende planta de casa, projeto pronto, e-book ou curso de obra no Brasil](anuncios-ref/ANUNCIOS.md)
+
+Base do Redator e do Estrategista (pedido do dono, 23/11/2026: "bases de dados para os agentes ficarem mais inteligentes"). Levantado em 23/11/2026 com busca e leitura grátis (TinyFish; nada pago). Passo 1 da pesquisa em dois passos (`pedidos/LEIA-ME.md`): quem conclui é o Estrategista (mercado) e…
+
+Seções: O que não consegui e por quê; Como ler; A. Lojas e catálogos de planta e projeto pronto (páginas lidas em 23/11/2026); B. E-books e cursos no Hotmart (páginas lidas em 23/11/2026; Hotmart não mostrou o preço na leitura, salvo onde está indicado); C. Posts e legendas no Instagram (lidos em 23/11/2026; curtidas e comentários são os da página na leitura); Os 5 padrões que mais se repetem; Os 5 que ninguém usa (espaço para nós); O que é proibido para nós (ESTRATEGIA.md, seção 9, e regras que não mudam); Fontes e o que sobrou.
+
+Tamanho: 4475 palavras.
 
 ### [Plantas de referência: 78 casas térreas pequenas, de fontes públicas (30 do piloto + 21 da rodada 2 + 27 da rodada 3)](plantas-ref/REFERENCIAS.md)
 

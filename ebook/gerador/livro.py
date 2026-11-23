@@ -1,4 +1,4 @@
-"""Gera o e-book "Que casa cabe no seu lote?" (PDF A4) a partir das 24 plantas validadas.
+"""Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das 24 plantas validadas.
 
 Uso:
     python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf, as plantas grátis
@@ -53,8 +53,12 @@ def m1(v):
 
 
 # ------------------------------------------------------------------ desenhos (SVG)
-def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
-    """Planta com a frente da casa para baixo: o leitor entra por baixo, como chega da rua."""
+def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=False, estilo="revista"):
+    """Planta com a frente da casa para baixo: o leitor entra por baixo, como chega da rua.
+    humanizada=True: a planta humanizada com o entorno (svg_humanizada), no estilo "revista" ou "maquete".
+    Sem ela, o desenho simples de cores chapadas (miniaturas da galeria e imagens2d.py)."""
+    if humanizada:
+        return svg_humanizada(p, estilo)
     fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
     Dm = max([p["D"]] + [c["y1"] for c in fut])
     Wm = max([p["W"]] + [c["x1"] for c in fut])
@@ -87,11 +91,11 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
             rot = math.degrees(mv.get("rot", 0) or 0)
             s.append(f'<g transform="translate({mv["x"]:.3f} {Y(mv["y"]):.3f}) scale(1 -1) rotate({-rot:.2f})">{_movel(mv)}</g>')
         for d in portas3d:
-            hx, hy, r = d["x"], d["y"], d["r"]
-            ax, ay = hx + r * math.cos(d["a0"]), hy + r * math.sin(d["a0"])
-            bx, by = hx + r * math.cos(d["a1"]), hy + r * math.sin(d["a1"])
+            r = d["r"]
+            (hx, hy), (ax, ay), (bx, by) = PL.porta_dobradica(p, d)  # dobradiça no canto (o arco do motor saía espelhado)
+            sweep = 1 if (bx - hx) * (Y(ay) - Y(hy)) - (Y(by) - Y(hy)) * (ax - hx) > 0 else 0
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{ax:.3f}" y2="{Y(ay):.3f}" stroke="#FBF8F2" stroke-width=".16"/>')
-            s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 1 {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
+            s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 {sweep} {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{bx:.3f}" y2="{Y(by):.3f}" stroke="#C2683F" stroke-width=".04"/>')
     # janelas e porta de entrada nas mesmas posições do motor 3D (a mesma da vista da rua e das imagens)
     _, jan3d, portas_ext, _ = P3.construir(p)
@@ -120,7 +124,443 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False):
 
 
 
-@@HUMANIZADA@@
+# ------------------------------------------------------------------ planta humanizada
+# Decisão do dono (23/11/2026): estilo 1 (planta humanizada de revista) nas páginas das casas,
+# estilo 3 (maquete sobre o papel azul) na capa e no Instagram. Tudo sai do validador e do motor 3D:
+# paredes, portas, janelas e móveis nas mesmas posições da imagem 3D e da vista da rua.
+f3 = lambda v: f"{v:.3f}"
+
+CORES_MOVEIS = {"madeira": "#C99A6B", "madeira_esc": "#8A6040", "sofa": "#8FA58A", "sofa_esc": "#748C70", "almofada": "#F2C14E",
+                "tapete": "#EFE4D2", "tapete_b": "#C7AE8A", "vaso_flor": "#E07A5F", "livro": "#3D6FB6", "cadeira": "#E9DCC6",
+                "bancada": "#E6E2DC", "inox": "#CFD6DD", "inox_esc": "#A9B3BD", "geladeira": "#F4F6F8", "louca": "#FFFFFF",
+                "agua": "#D6EBF5", "box": "#DCEFF6", "vidro": "#7FC3E8", "armario": "#F1E9DC", "luz": "#FFE3A1",
+                "vaso_planta": "#B9774E", "folha": ["#5E9C4E", "#7DB55E", "#4A8540"], "folha_l": "#3F6E35", "carro": "#E2B1A8",
+                "poltrona": "#E3C9A6", "manta_pe": "#E07A5F", "manta_pe_l": "#F6D1C3"}
+PISO_REAL = {"madeira": ["#D8B184", "#D1A877", "#DDBA8F", "#CFA673"], "madeira_l": "#A87E51", "porc": "#EEEBE6", "porc_l": "#D2CBC0",
+             "banho": "#E6F1F4", "banho_l": "#BFD6DD", "varanda": "#E5D3BE", "varanda_l": "#C9B091", "grama": "#BFDCA0",
+             "grama_l": "#94BF6E", "calcada": "#E3E1DC", "calcada_l": "#C9C5BD"}
+PISO = {"sala": "pMadeira", "estar": "pMadeira", "jantar": "pMadeira", "casal": "pMadeira", "dorm": "pMadeira", "circ": "pMadeira",
+        "escritorio": "pMadeira", "cozinha": "pPorc", "servico": "pPorc", "banho": "pAzulejo", "lavabo": "pAzulejo",
+        "varanda": "pVaranda", "garagem": "pCalcada", "patio": "pGrama", "externo": "pGrama"}
+
+
+def _etiqueta_pilula(fundo, texto, sub):
+    def f(cx, cy, lw, lh, nome, m2, fs, cor):
+        x, y = cx - lw / 2, cy - lh / 2
+        return (f'<rect x="{f3(x + .03)}" y="{f3(y + .05)}" width="{f3(lw)}" height="{f3(lh)}" rx=".14" fill="#000" opacity=".12"/>'
+                f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(lw)}" height="{f3(lh)}" rx=".14" fill="{fundo}"/>'
+                f'<rect x="{f3(x)}" y="{f3(y)}" width=".07" height="{f3(lh)}" rx=".035" fill="{cor}" stroke="#00000022" stroke-width=".005"/>'
+                f'<text x="{f3(cx + .02)}" y="{f3(y + .1 + fs * .85)}" text-anchor="middle" font-size="{fs:.3f}" font-weight="800" letter-spacing=".01" fill="{texto}">{E(nome)}</text>'
+                f'<text x="{f3(cx + .02)}" y="{f3(y + .1 + fs + .17)}" text-anchor="middle" font-size=".16" class="mono" font-weight="700" fill="{sub}">{E(m2)}</text>')
+    return f
+
+
+def _entrada_seta(cx, cy):
+    return (f'<g><path d="M{f3(cx)} {f3(cy - .32)} l-.2 .22 h.12 v.3 h.16 v-.3 h.12 z" fill="#FFC857" stroke="#17202B" stroke-width=".015"/>'
+            f'<rect x="{f3(cx - .55)}" y="{f3(cy + .2)}" width="1.1" height=".24" rx=".12" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>'
+            f'<text x="{f3(cx)}" y="{f3(cy + .365)}" text-anchor="middle" font-size=".14" font-weight="800" fill="#17202B" letter-spacing=".015">ENTRADA</text></g>')
+
+
+# 1) Humanizada de revista: pisos de verdade, móveis com sombra, jardim, etiqueta em pílula (páginas das casas)
+EST_REVISTA = dict(nome="rv", linha="#5E5548", lw=.018, cor=CORES_MOVEIS, piso=PISO_REAL, rua="#9AA1AA", rua_txt="#4F5B69",
+                   beiral="#9C8B76", sombra="rgba(40,30,20,.16)", parede="#2B2F36", janela_fundo="#FFFFFF", vidro="#5DB4E6",
+                   arco="#8E8678", folha_porta="#8A5A3C", arvore=["#7DAF5C", "#8DBE69", "#6C9F4E", "#B5D88F"], cota="#0B4FA8",
+                   escala="#4F5B69", etiqueta=_etiqueta_pilula("#FFFFFF", "#17202B", "#4F5B69"))
+# 3) Maquete sobre o papel azul de projeto: paredes brancas com sombra (capa e Instagram)
+EST_MAQUETE = dict(nome="mq", linha="#6B7380", lw=.014,
+                   cor={**CORES_MOVEIS, "sofa": "#6F9FA0", "sofa_esc": "#4F8283", "almofada": "#FFC857", "madeira": "#C38E5D",
+                        "tapete": "#F3EDE4", "tapete_b": "#D9C7AE", "manta_pe": "#0B4FA8", "manta_pe_l": "#7FA7DE"},
+                   piso={**PISO_REAL, "madeira": ["#D9AE7C", "#CFA16C", "#E0B988", "#C99A65"], "grama": "#A9D38A", "grama_l": "#86BC63", "calcada": "#EDEBE7"},
+                   manta_fixa=["#E9A27E", "#9DB8DD"], rua="#08397A", rua_txt="#DCE7F7", beiral="#8C7C68", sombra="rgba(20,30,50,.20)",
+                   parede="#FFFFFF", parede_contorno="#4A5563", parede_sombra="rgba(5,20,45,.35)", janela_fundo="#BFE3FA",
+                   vidro="#0B4FA8", arco="#A99F92", folha_porta="#9A6A44", arvore=["#6FA85A", "#86BE6A", "#5E9A4C", "#C3E3A0"],
+                   cota="#FFC857", escala="#FFC857", sombra_lote="rgba(3,25,60,.35)", etiqueta=_etiqueta_pilula("#17202B", "#FFFFFF", "#FFC857"))
+ESTILOS = {"revista": EST_REVISTA, "maquete": EST_MAQUETE}
+
+
+def _movel(mv, S=None, sombra=False):
+    """Móvel visto de cima, em coordenadas locais (cabeceira/encosto no lado -y). Com sombra=True, só a silhueta."""
+    S = S or EST_REVISTA
+    t, w, d = mv["tipo"], mv.get("w", .45), mv.get("d", .4)
+    L, sw, K = S["linha"], S["lw"], S["cor"]
+
+    def R(x, y, ww, hh, fill="#FFFFFF", rx=.04, extra=""):
+        if sombra:
+            return f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(ww)}" height="{f3(hh)}" rx="{rx}"/>'
+        return f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(ww)}" height="{f3(hh)}" rx="{rx}" fill="{fill}" stroke="{L}" stroke-width="{sw}" {extra}/>'
+
+    def C(x, y, r, fill="#FFFFFF", st=True):
+        if sombra:
+            return f'<circle cx="{f3(x)}" cy="{f3(y)}" r="{f3(r)}"/>'
+        borda = f' stroke="{L}" stroke-width="{sw}"' if st else ""
+        return f'<circle cx="{f3(x)}" cy="{f3(y)}" r="{f3(r)}" fill="{fill}"{borda}/>'
+
+    def ln(x0, y0, x1, y1, cor=None, wd=None):
+        if sombra:
+            return ""
+        return f'<line x1="{f3(x0)}" y1="{f3(y0)}" x2="{f3(x1)}" y2="{f3(y1)}" stroke="{cor or L}" stroke-width="{wd or sw * .7}" stroke-linecap="round"/>'
+
+    if t in ("camaCasal", "camaSolteiro"):
+        n = 2 if t == "camaCasal" else 1
+        manta = S["manta_fixa"][n - 1] if S.get("manta_fixa") else mv.get("manta", "#B9C7D6")
+        o = R(-w / 2 - .03, -d / 2 - .03, w + .06, d + .06, K["madeira_esc"], .05)   # estrado
+        o += R(-w / 2, -d / 2, w, d, "#FFFFFF", .05)                                  # colchão
+        o += R(-w / 2, -d / 2 + d * .34, w, d * .66, manta, .05)                      # edredom
+        o += R(-w / 2, -d / 2 + d * .34, w, .12, "#FFFFFF", .03)                      # dobra do lençol
+        o += R(-w / 2 + .04, d / 2 - .38, w - .08, .26, K["manta_pe"], .03)           # manta no pé
+        o += ln(-w / 2 + .1, d / 2 - .25, w / 2 - .1, d / 2 - .25, K["manta_pe_l"], .018)
+        lw = (w - .16) / n
+        return o + "".join(R(-w / 2 + .08 + i * lw + .03, -d / 2 + .07, lw - .06, .32, "#FFFFFF", .08) for i in range(n))
+    if t == "sofa":
+        o = R(-w / 2, -d / 2, w, d, K["sofa"], .08)
+        o += R(-w / 2 + .02, -d / 2 + .02, w - .04, .22, K["sofa_esc"], .06)
+        o += R(-w / 2 + .02, -d / 2 + .02, .17, d - .04, K["sofa_esc"], .06) + R(w / 2 - .19, -d / 2 + .02, .17, d - .04, K["sofa_esc"], .06)
+        k = 3 if w > 1.8 else 2
+        cw = (w - .4) / k
+        o += "".join(R(-w / 2 + .2 + i * cw + .015, -d / 2 + .26, cw - .03, d - .3, K["sofa"], .06) for i in range(k))
+        return o + R(-w / 2 + .22, -d / 2 + .22, .3, .22, K["almofada"], .07, 'transform="rotate(-12)"')
+    if t == "rack":  # rack com a TV (a faixa escura), como na imagem 3D
+        return R(-w / 2, -d / 2, w, d, K["madeira"], .03) + R(-w * .42, -d / 2 + .04, w * .84, .07, "#24282E", .02) + ln(-w / 2 + .1, .05, w / 2 - .1, .05, K["madeira_esc"])
+    if t == "tapete":
+        if sombra:
+            return ""
+        return (f'<rect x="{f3(-w / 2)}" y="{f3(-d / 2)}" width="{f3(w)}" height="{f3(d)}" rx=".05" fill="{K["tapete"]}" stroke="{K["tapete_b"]}" stroke-width=".03"/>'
+                f'<rect x="{f3(-w / 2 + .12)}" y="{f3(-d / 2 + .12)}" width="{f3(w - .24)}" height="{f3(d - .24)}" rx=".03" fill="none" stroke="{K["tapete_b"]}" stroke-width=".04"/>'
+                f'<rect x="{f3(-w / 2 + .22)}" y="{f3(-d / 2 + .22)}" width="{f3(w - .44)}" height="{f3(d - .44)}" rx=".02" fill="none" stroke="{K["tapete_b"]}" stroke-width=".015" stroke-dasharray=".06 .05"/>')
+    if t == "mesaCentro":
+        return R(-w / 2, -d / 2, w, d, K["madeira"], .06) + C(-.08, -.22, .07, K["vaso_flor"]) + R(.02, .08, .2, .28, K["livro"], .02)
+    if t == "mesaJantar":
+        cad = "".join(R(sx * (w / 2 + .14) - .17, sz - .17, .34, .34, K["cadeira"], .08) for sx in (-1, 1) for sz in (-.3, .3))
+        return cad + R(-w / 2, -d / 2, w, d, K["madeira"], .05)
+    if t == "bancada":
+        o = R(-w / 2, -d / 2, w, d, K["bancada"], .02)
+        o += R(-w / 2 + .3, -d / 2 + .1, .5, .38, K["inox"], .06) + R(-w / 2 + .36, -d / 2 + .15, .38, .28, K["inox_esc"], .05)
+        o += R(w / 2 - .72, -d / 2 + .06, .56, .48, "#2A2D33", .04)
+        for dx in (-.13, .13):
+            for dy in (-.11, .11):
+                o += C(w / 2 - .44 + dx, -d / 2 + .3 + dy, .075, "#2A2D33")
+                if not sombra:
+                    o += f'<circle cx="{f3(w / 2 - .44 + dx)}" cy="{f3(-d / 2 + .3 + dy)}" r=".045" fill="none" stroke="#6B7078" stroke-width=".012"/>'
+        return o
+    if t == "geladeira":
+        return R(-w / 2, -d / 2, w, d, K["geladeira"], .05) + R(-w / 2 + .05, d / 2 - .1, w - .1, .05, "#C9CED4", .02)
+    if t in ("tanque", "pia"):
+        agua = "" if sombra else f'<ellipse cx="0" cy=".04" rx="{f3(w * .32)}" ry="{f3(d * .3)}" fill="{K["agua"]}" stroke="{L}" stroke-width="{sw * .7}"/>'
+        return R(-w / 2, -d / 2, w, d, K["louca"], .05) + agua + C(0, -d / 2 + .07, .03, K["inox_esc"])
+    if t == "maquina":
+        return R(-w / 2, -d / 2, w, d, K["louca"], .05) + C(0, .03, min(w, d) * .32, K["inox"]) + C(0, .03, min(w, d) * .2, K["agua"])
+    if t == "vaso":
+        if sombra:
+            return R(-.19, -.31, .38, .16) + '<ellipse cx="0" cy=".06" rx=".17" ry=".23"/>'
+        return (R(-.19, -.31, .38, .16, K["louca"], .04) + f'<ellipse cx="0" cy=".06" rx=".17" ry=".23" fill="{K["louca"]}" stroke="{L}" stroke-width="{sw}"/>'
+                f'<ellipse cx="0" cy=".08" rx=".1" ry=".14" fill="{K["agua"]}"/>')
+    if t == "box":
+        if sombra:
+            return ""
+        return (f'<rect x="{f3(-w / 2)}" y="{f3(-d / 2)}" width="{f3(w)}" height="{f3(d)}" fill="{K["box"]}" opacity=".8"/>'
+                + ln(-w / 2, d / 2, w / 2, d / 2, K["vidro"], .03) + C(0, 0, .05, K["inox"]) + C(-w / 2 + .14, -d / 2 + .14, .07, K["inox"]))
+    if t == "armario":
+        n = max(2, round(w / .5))
+        o = R(-w / 2, -d / 2, w, d, K["armario"], .02)
+        o += "".join(ln(-w / 2 + w * i / n, -d / 2, -w / 2 + w * i / n, d / 2) for i in range(1, n))
+        return o + "".join(ln(-w / 2 + w * (i + .5) / n - .05, d / 2 - .06, -w / 2 + w * (i + .5) / n + .05, d / 2 - .06, K["madeira_esc"], .025) for i in range(n))
+    if t == "escrivaninha":
+        return R(-w / 2, -d / 2, w, d, K["madeira"], .03) + R(-.18, -d / 2 + .06, .36, .24, "#3A3F47", .02) + C(0, d / 2 + .22, .2, K["cadeira"])
+    if t == "criado":
+        return R(-.22, -.2, .44, .4, K["madeira"], .04) + ("" if sombra else C(0, 0, .11, K["luz"], st=False) + C(0, 0, .06, "#FFFFFF"))
+    if t == "planta":
+        r = .25 * mv.get("s", 1)
+        if sombra:
+            return f'<circle r="{f3(r)}"/>'
+        o = C(0, 0, r * .55, K["vaso_planta"])
+        for i in range(8):
+            o += f'<ellipse cx="{f3(r * .5)}" cy="0" rx="{f3(r * .52)}" ry="{f3(r * .2)}" fill="{K["folha"][i % 3]}" stroke="{K["folha_l"]}" stroke-width="{sw * .6}" transform="rotate({i * 45 + 10})"/>'
+        return o + C(0, 0, r * .18, K["folha"][2], st=False)
+    if t == "carro":
+        return R(-w / 2, -d / 2, w, d, K["carro"], .35) + R(-w / 2 + .15, -d * .2, w - .3, d * .35, "#B9C7D6", .15)
+    if t == "poltrona":
+        return R(-w / 2, -d / 2, w, d, K["poltrona"], .08) + R(-w / 2, -d / 2, w, .16, K["sofa_esc"], .06)
+    return ""
+
+
+def _bbox_movel(mv):
+    t = mv["tipo"]
+    w, d = mv.get("w", .45), mv.get("d", .4)
+    if t == "criado":
+        w, d = .44, .4
+    if t == "vaso":
+        w, d = .4, .62
+    if t == "planta":
+        w = d = .5 * mv.get("s", 1)
+    r = mv.get("rot", 0) or 0
+    c, s = abs(math.cos(r)), abs(math.sin(r))
+    hw, hd = c * w / 2 + s * d / 2, s * w / 2 + c * d / 2
+    return (mv["x"] - hw, mv["y"] - hd, mv["x"] + hw, mv["y"] + hd)
+
+
+def _inter(a, b):
+    return max(0, min(a[2], b[2]) - max(a[0], b[0])) * max(0, min(a[3], b[3]) - max(a[1], b[1]))
+
+
+def _area(b):
+    return (b[2] - b[0]) * (b[3] - b[1])
+
+
+MOVEIS_TIRADOS = {}  # móvel que o motor 3D pôs em cima de outro: sai do desenho e vai para o aviso ao Arquiteto
+
+
+def _moveis_sem_choque(pid, moveis):
+    ficam, tirados = [], []
+    for mv in moveis:
+        if mv["tipo"] == "tapete":
+            ficam.append(mv)
+            continue
+        b = _bbox_movel(mv)
+        if mv["tipo"] == "vaso":  # o vaso nunca sai: se bater no box, quem sai é o box
+            caixa = next((o for o in ficam if o["tipo"] == "box" and _inter(b, _bbox_movel(o)) > 0), None)
+            if caixa:
+                ficam.remove(caixa)
+                tirados.append(f'box ({caixa.get("amb", "?")}) por baixo do vaso')
+            ficam.append(mv)
+            continue
+        choque = next((o for o in ficam if o["tipo"] != "tapete" and _inter(b, _bbox_movel(o)) > .4 * min(_area(b), _area(_bbox_movel(o)))), None)
+        if choque:
+            tirados.append(f'{mv["tipo"]} ({mv.get("amb", "?")}) em cima de {choque["tipo"]}')
+            continue
+        ficam.append(mv)
+    MOVEIS_TIRADOS[pid] = tirados
+    return ficam
+
+
+def _arvore(x, y, r, K):
+    o = f'<circle cx="{f3(x + .12)}" cy="{f3(y + .14)}" r="{f3(r)}" fill="#000" opacity=".13"/><circle cx="{f3(x)}" cy="{f3(y)}" r="{f3(r)}" fill="{K[0]}"/>'
+    for i in range(6):
+        a = math.radians(i * 60 + 15)
+        o += f'<circle cx="{f3(x + math.cos(a) * r * .55)}" cy="{f3(y + math.sin(a) * r * .55)}" r="{f3(r * .42)}" fill="{K[i % 2 + 1]}"/>'
+    return o + f'<circle cx="{f3(x - r * .2)}" cy="{f3(y - r * .25)}" r="{f3(r * .3)}" fill="{K[3]}" opacity=".8"/>'
+
+
+def _piso(tipo, x, y, w, h, K):
+    """Piso desenhado em vetor (tábua, porcelanato, azulejo, grama). Sem <pattern>: o Chrome transforma padrão
+    em imagem no PDF (pesava uns 70 KB por cômodo e borrava na impressão)."""
+    x1, y1 = x + w, y + h
+    if w <= 0 or h <= 0:
+        return ""
+    if tipo == "madeira":  # tábuas de 1,20 m x 18 cm, desencontradas (vinílico ou laminado)
+        o = [f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{K["madeira"][0]}"/>']
+        row = 0
+        yy = y
+        while yy < y1 - 1e-6:
+            hh = min(.18, y1 - yy)
+            xx = x - [0, .6, .3, .9][row % 4]
+            i = 0
+            while xx < x1 - 1e-6:
+                a, b = max(xx, x), min(xx + 1.2, x1)
+                if b - a > 1e-3:
+                    o.append(f'<rect x="{f3(a)}" y="{f3(yy)}" width="{f3(b - a)}" height="{f3(hh)}" fill="{K["madeira"][(i + 2 * row) % len(K["madeira"])]}" stroke="{K["madeira_l"]}" stroke-width=".007"/>')
+                xx += 1.2
+                i += 1
+            yy += .18
+            row += 1
+        return "".join(o)
+    if tipo == "grama":  # fundo verde e tufos curtos (um caminho só)
+        tufos = []
+        for gx in range(int(w / .5) + 1):
+            for gy in range(int(h / .5) + 1):
+                bx, by = x + gx * .5, y + gy * .5
+                for dx, dy, ex, ey in ((.08, .12, .02, -.06), (.3, .3, -.02, -.06), (.4, .1, .015, -.05), (.15, .42, .02, -.05), (.22, .2, -.015, -.05)):
+                    if bx + dx < x1 and by + dy < y1:
+                        tufos.append(f"M{bx + dx:.2f} {by + dy:.2f}l{ex} {ey}")
+        return (f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{K["grama"]}"/>'
+                f'<path d="{"".join(tufos)}" stroke="{K["grama_l"]}" stroke-width=".012" stroke-linecap="round"/>')
+    passo, fundo, linha, esp = {"porc": (.6, "porc", "porc_l", .012), "banho": (.3, "banho", "banho_l", .01),
+                                "varanda": (.45, "varanda", "varanda_l", .014), "calcada": (.4, "calcada", "calcada_l", .012)}[tipo]
+    d = "".join(f"M{x + k * passo:.3f} {y:.3f}V{y1:.3f}" for k in range(1, int(w / passo - 1e-6) + 1))
+    d += "".join(f"M{x:.3f} {y + k * passo:.3f}H{x1:.3f}" for k in range(1, int(h / passo - 1e-6) + 1))
+    return (f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{K[fundo]}"/>'
+            + (f'<path d="{d}" stroke="{K[linha]}" stroke-width="{esp}" fill="none"/>' if d else ""))
+
+
+PISO_TIPO = {k: {"pMadeira": "madeira", "pPorc": "porc", "pAzulejo": "banho", "pVaranda": "varanda", "pCalcada": "calcada", "pGrama": "grama"}[v] for k, v in PISO.items()}
+
+
+def svg_humanizada(p, estilo="revista"):
+    """Planta humanizada com o entorno: recuos de referência, muro da divisa, jardim, caminho da entrada, calçada e rua.
+    A frente da casa fica para baixo (o leitor chega da rua). Medidas e áreas do validador; o resto do motor 3D."""
+    S = ESTILOS[estilo]
+    W, D = p["W"], p["D"]
+    MET = p["_r"].metricas
+    REC = MET["recuos"]
+    paredes, janelas, portas, moveis = P3.construir(p)
+    mov = _moveis_sem_choque(p["id"], moveis)
+    fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
+    Dm = max([D] + [c["y1"] for c in fut])
+    Wm = max([W] + [c["x1"] for c in fut])
+    Y = lambda y: Dm - y
+    portas_h = [(d, *PL.porta_dobradica(p, d)) for d in portas]
+    obst = [_bbox_movel(mv) for mv in mov if mv["tipo"] != "tapete"]
+    for d, H, A, B in portas_h:  # o giro da porta também não recebe etiqueta
+        xs, ys = (H[0], A[0], B[0]), (H[1], A[1], B[1])
+        obst.append((min(xs), min(ys), max(xs), max(ys)))
+
+    pl, pr, pt, pb = 1.25, .95, 1.3, 2.15  # margens: cota à esquerda, cota em cima, jardim e rua embaixo
+    vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
+    s = [f'<svg viewBox="{f3(vb[0])} {f3(vb[1])} {f3(vb[2])} {f3(vb[3])}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta humanizada da {E(p["nome"])}">',
+         ]
+    K = S["piso"]
+    # terreno: só o que os recuos de referência deixam ver (recuo 0 = muro da divisa)
+    jx0 = -min(.8, REC["esq"])
+    jx1 = Wm + min(.7, REC["dir"])
+    jy_fundo = Y(Dm) - min(.7, REC["fundos"])
+    if S.get("sombra_lote"):  # o lote "pousado" sobre o papel azul (sombra em vetor, sem filtro: imprime nítido)
+        s.append(f'<rect x="{f3(jx0 + .12)}" y="{f3(jy_fundo + .16)}" width="{f3(jx1 - jx0)}" height="{f3(Dm + 1.25 - jy_fundo)}" fill="{S["sombra_lote"]}"/>')
+    s.append(_piso("grama", jx0, jy_fundo, jx1 - jx0, Dm + 1.25 - jy_fundo, K))
+    s.append(_piso("calcada", -pl, Dm + 1.25, vb[2], .42, K))
+    s.append(f'<rect x="{f3(-pl)}" y="{f3(Dm + 1.67)}" width="{f3(vb[2])}" height="{f3(pb - 1.67 + .01)}" fill="{S["rua"]}"/>')
+    s.append(f'<text x="{f3(W / 2)}" y="{f3(Dm + 1.95)}" text-anchor="middle" font-size=".2" font-weight="700" letter-spacing=".12" fill="{S["rua_txt"]}">RUA</text>')
+    for lado, xm, xt in (("esq", -.2, -.34), ("dir", W + .08, W + .44)):
+        if REC[lado] == 0:
+            hach = "".join(f"M{f3(xm)} {f3(yy + .12)}l.12 -.12" for yy in [jy_fundo + k * .12 for k in range(int((Dm + 1.25 - jy_fundo) / .12))])
+            s.append(f'<rect x="{f3(xm)}" y="{f3(jy_fundo)}" width=".12" height="{f3(Dm + 1.25 - jy_fundo)}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
+                     f'<path d="{hach}" stroke="#B5AFA4" stroke-width=".02"/>')
+            s.append(f'<text x="{f3(xt)}" y="{f3(Dm + .75)}" font-size=".15" fill="#7A7467" transform="rotate(-90 {f3(xt)} {f3(Dm + .75)})">divisa</text>')
+    # caminho da rua até a entrada
+    ex = p.get("_entrada_x")
+    if ex is None:
+        frente = [c for c in p["comodos"] if c["y0"] == 0 and c["tipo"] == "varanda"]
+        ex = (frente[0]["x0"] + frente[0]["x1"]) / 2 if frente else None
+    if ex is not None:
+        ex = min(max(ex, .5), W - .5)
+        s.append(_piso("calcada", ex - .45, Dm, .9, 1.25, K))
+    # árvores nos recuos (longe do caminho)
+    KA = S["arvore"]
+    if REC["dir"] >= 1:
+        s.append(_arvore(W + .38, Y(.9), .3, KA) + _arvore(W + .4, Y(D - 1.5), .26, KA))
+    postas = []
+    for x, r in ((W - .9, .42), (.55, .3), (W / 2, .34)):
+        if len(postas) == 2 or (ex is not None and abs(x - ex) < r + .5) or any(abs(x - x2) < r + r2 + .1 for x2, r2 in postas):
+            continue
+        postas.append((x, r))
+        s.append(_arvore(x, Dm + .64, r, KA))
+    if REC["fundos"] >= 1:
+        s.append(_arvore(min(1.7, W / 2), jy_fundo + .32, .26, KA))
+    # pisos e ampliação
+    for c in p["comodos"]:
+        x0, y0, x1, y1 = c["x0"], c["y0"], c["x1"], c["y1"]
+        if c["tipo"] == "futuro":
+            s.append(f'<rect x="{f3(x0)}" y="{f3(Y(y1))}" width="{f3(x1 - x0)}" height="{f3(y1 - y0)}" fill="#FFF6DE" fill-opacity=".85" stroke="#E0A92E" stroke-width=".05" stroke-dasharray=".25 .18"/>')
+            s.append(f'<text x="{f3((x0 + x1) / 2)}" y="{f3(Y((y0 + y1) / 2))}" text-anchor="middle" font-size=".26" font-weight="800" fill="#9A6B00">AMPLIAÇÃO</text>')
+            s.append(f'<text x="{f3((x0 + x1) / 2)}" y="{f3(Y((y0 + y1) / 2) + .32)}" text-anchor="middle" font-size=".2" fill="#9A6B00">{E(c["nome"].split(" (")[0])}</text>')
+            continue
+        s.append(_piso(PISO_TIPO.get(c["tipo"], "porc"), x0, Y(y1), x1 - x0, y1 - y0, K))
+        if c["tipo"] in ("varanda", "garagem"):  # beiral
+            s.append(f'<rect x="{f3(x0)}" y="{f3(Y(y1))}" width="{f3(x1 - x0)}" height="{f3(y1 - y0)}" fill="none" stroke="{S["beiral"]}" stroke-width=".025" stroke-dasharray=".14 .08"/>')
+
+    # móveis: tapete, sombra, móveis
+    def tr(mv, dx=0, dy=0):
+        return f'translate({mv["x"] + dx:.3f} {Y(mv["y"]) + dy:.3f}) scale(1 -1) rotate({-math.degrees(mv.get("rot", 0) or 0):.2f})'
+    s += [f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] == "tapete"]
+    s.append(f'<g fill="{S["sombra"]}">' + "".join(f'<g transform="{tr(mv, .045, .06)}">{_movel(mv, S, sombra=True)}</g>' for mv in mov if mv["tipo"] != "tapete") + "</g>")
+    s += [f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] != "tapete"]
+    # paredes, com os vãos das portas (externa 15 cm, interna 12 cm, como nas contas do e-book)
+    def esp(a, b, c, d):
+        ext = (abs(a - c) < 1e-6 and (abs(a) < 1e-6 or abs(a - W) < 1e-6)) or (abs(b - d) < 1e-6 and (abs(b) < 1e-6 or abs(b - D) < 1e-6))
+        return .15 if ext else .12
+
+    def linhas(cor, extra=0, dx=0, dy=0):
+        return (f'<g stroke="{cor}" stroke-linecap="square">' + "".join(
+            f'<line x1="{f3(a + dx)}" y1="{f3(Y(b) + dy)}" x2="{f3(c + dx)}" y2="{f3(Y(d) + dy)}" stroke-width="{esp(a, b, c, d) + extra:.3f}"/>' for a, b, c, d in paredes) + "</g>")
+    if S.get("parede_sombra"):
+        s.append(linhas(S["parede_sombra"], dx=.09, dy=.11))
+    if S.get("parede_contorno"):
+        s.append(linhas(S["parede_contorno"], extra=.035))
+    s.append(linhas(S["parede"]))
+    # janelas (mesma posição do 3D e da vista da rua)
+    for j in janelas:
+        x0, y0, x1, y1 = j["seg"]
+        t = .15
+        if abs(y0 - y1) < 1e-6:
+            x, y, w, h = min(x0, x1), Y(y0) - t / 2, abs(x1 - x0), t
+            ls = [(x, Y(y0) - t / 4, x + w, Y(y0) - t / 4), (x, Y(y0) + t / 4, x + w, Y(y0) + t / 4), (x, Y(y0), x + w, Y(y0))]
+        else:
+            x, y, w, h = x0 - t / 2, Y(max(y0, y1)), t, abs(y1 - y0)
+            ls = [(x0 - t / 4, y, x0 - t / 4, y + h), (x0 + t / 4, y, x0 + t / 4, y + h), (x0, y, x0, y + h)]
+        s.append(f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{S["janela_fundo"]}" stroke="{S["parede"] if estilo == "revista" else S["parede_contorno"]}" stroke-width=".012"/>')
+        for k, (a, b, c, d) in enumerate(ls):
+            s.append(f'<line x1="{f3(a)}" y1="{f3(b)}" x2="{f3(c)}" y2="{f3(d)}" stroke="{S["vidro"] if k == 2 else "#2B2F36"}" stroke-width="{.03 if k == 2 else .008}"/>')
+    # portas: arco do giro e folha aberta, com a dobradiça no canto (PL.porta_dobradica); porta para fora em amarelo
+    for d, (hx, hy), (ax, ay), (bx, by) in portas_h:
+        r = d["r"]
+        va, vb_ = (ax - hx, Y(ay) - Y(hy)), (bx - hx, Y(by) - Y(hy))
+        sweep = 1 if vb_[0] * va[1] - vb_[1] * va[0] > 0 else 0
+        if str(d["id"]).startswith("ext-"):
+            horiz = abs(ay - hy) < 1e-6
+            if horiz:
+                s.append(f'<rect x="{f3(min(hx, ax))}" y="{f3(Y(hy) - .05)}" width="{f3(r)}" height=".1" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>')
+            else:
+                s.append(f'<rect x="{f3(hx - .05)}" y="{f3(Y(max(hy, ay)))}" width=".1" height="{f3(r)}" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>')
+        s.append(f'<path d="M{f3(bx)} {f3(Y(by))} A{r} {r} 0 0 {sweep} {f3(ax)} {f3(Y(ay))}" fill="none" stroke="{S["arco"]}" stroke-width=".015" stroke-dasharray=".05 .035"/>')
+        s.append(f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="{S["folha_porta"]}" stroke-width=".05" stroke-linecap="round"/>')
+    if ex is not None:
+        s.append(_entrada_seta(ex, Dm + .62))
+    # etiquetas dos cômodos, no ponto com menos móvel e porta por baixo
+    for c in p["comodos"]:
+        t = c["tipo"]
+        w, h = c["x1"] - c["x0"], c["y1"] - c["y0"]
+        if t in ("circ", "futuro", "externo") or min(w, h) < .95:
+            continue
+        nome = "PÁTIO" if t == "patio" else c["nome"].upper()
+        area = m1(MET["util"][c["id"]][2]) + " m²"
+        m2 = area + (" · coberta" if t in ("varanda", "garagem") else "")
+        fs0 = max(min(.26, (w - .3) / (len(nome) * .68)), .15)
+        for fs in (fs0, fs0 * .88, fs0 * .78, fs0 * .7):  # diminui até não cobrir móvel nem porta
+            lw = max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26
+            lh = fs + .4
+            x0, y0, x1, y1 = c["x0"] + .1, c["y0"] + .1, c["x1"] - .1, c["y1"] - .1
+            cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
+            melhor = None
+            for i in range(25):
+                for k in range(25):
+                    cx = x0 + lw / 2 + max(0, x1 - x0 - lw) * i / 24
+                    cy = y0 + lh / 2 + max(0, y1 - y0 - lh) * k / 24
+                    bb = (cx - lw / 2, cy - lh / 2, cx + lw / 2, cy + lh / 2)
+                    sc = sum(_inter(bb, o) for o in obst) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
+                    if melhor is None or sc < melhor[0]:
+                        melhor = (sc, cx, cy, bb)
+            if sum(_inter(melhor[3], o) for o in obst) < .01:
+                break
+        s.append(S["etiqueta"](melhor[1], Y(melhor[2]), lw, lh, nome, m2, fs, CORES.get(t, "#EEE")))
+    # cotas (do validador) e escala gráfica
+    cz = S["cota"]
+    s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size=".26" class="mono">'
+             f'<line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
+             f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">{m(W)} m</text>'
+             f'<line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
+             f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">{m(D)} m</text></g>')
+    ec, ex0, ey = S["escala"], Wm - 2.0 + pr, Dm + 1.47
+    s.append(f'<g font-size=".13" class="mono" fill="{ec}">' + "".join(
+        f'<rect x="{f3(ex0 + i * .5)}" y="{f3(ey)}" width=".5" height=".07" fill="{ec if i % 2 == 0 else "#fff"}" stroke="{ec}" stroke-width=".01"/>' for i in range(4))
+        + f'<text x="{f3(ex0)}" y="{f3(ey - .05)}">0</text><text x="{f3(ex0 + 1)}" y="{f3(ey - .05)}" text-anchor="middle">1</text><text x="{f3(ex0 + 2)}" y="{f3(ey - .05)}" text-anchor="end">2 m</text></g>')
+    s.append("</svg>")
+    return "".join(s)
+
+
+ICONES = {
+    "area": '<svg viewBox="0 0 24 24" fill="none" stroke="#0B4FA8" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h6V3"/></svg>',
+    "cama": '<svg viewBox="0 0 24 24" fill="none" stroke="#0B4FA8" stroke-width="2.2"><path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>',
+    "banho": '<svg viewBox="0 0 24 24" fill="none" stroke="#0B4FA8" stroke-width="2.2"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V6a2 2 0 0 1 4 0"/></svg>',
+    "lote": '<svg viewBox="0 0 24 24" fill="none" stroke="#17202B" stroke-width="2.2"><path d="M3 7h18M3 7v10M21 7v10M7 7v3M11 7v3M15 7v3M19 7v2"/></svg>',
+}
+
+
+def chips(p):
+    """Os números da casa em pílulas, logo abaixo do nome (do validador)."""
+    r = p["_r"].metricas
+    b = p["banheiros"]
+    return (f'<div class="chips"><span class="chip"><i>{ICONES["area"]}</i>{n0(r["area_fechada"])} m² fechados</span>'
+            f'<span class="chip"><i>{ICONES["cama"]}</i>{E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span>'
+            f'<span class="chip"><i>{ICONES["banho"]}</i>{b} banheiro{"s" if b > 1 else ""}</span>'
+            f'<span class="chip amar"><i>{ICONES["lote"]}</i>lote a partir de {lote_frente(p)} x {r["lote_comercial"][1]} m</span></div>')
 
 
 def svg_fachada(p, legenda=True):
@@ -304,8 +744,8 @@ def capa_fundo():
     if not arquivo_foto(FOTOS, "06-papel-azul").exists():
         return ""
     foto("06-papel-azul", 1)
-    src = os.path.relpath(CACHE_FOTOS / "06-papel-azul.jpg", SAIDA)
-    return f"background: linear-gradient(rgba(6,40,90,.55), rgba(6,40,90,.35)), url('{src}') center/cover"
+    src = os.path.relpath(CACHE_FOTOS / "06-papel-azul-1800.jpg", SAIDA)  # o nome que foto() grava no cache
+    return f"background: linear-gradient(rgba(6,40,90,.45), rgba(6,40,90,.25)), url('{src}') center/cover, var(--azul-escuro)"
 
 
 def galeria(plantas, ids, legenda=""):
@@ -333,10 +773,16 @@ class Livro:
         rod = ""
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
-                   f'<span>{AVISO if aviso else E(self.config.get("titulo_curto", "Que casa cabe no seu lote?"))}</span></div>')
+                   f'<span>{AVISO if aviso else E(self.config.get("titulo_curto") or titulo_do(self.config))}</span></div>')
         atributo_estilo = f' style="{estilo}"' if estilo else ""
         self.paginas.append(f'<section class="pagina {classe}"{atributo_estilo}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
         return n
+
+
+def titulo_do(config):
+    """O título do e-book (config.json); enquanto for espaço reservado, o título de trabalho."""
+    t = config.get("titulo", "")
+    return t if t and not t.startswith("[") else "Que casa cabe no seu lote?"
 
 
 def lote_frente(p):
@@ -348,16 +794,14 @@ def montar(plantas, config, numeros):
     contagem = {}
     for p in plantas:
         contagem[lote_frente(p)] = contagem.get(lote_frente(p), 0) + 1
-    titulo = config.get("titulo", "Que casa cabe no seu lote?")
-    if titulo.startswith("["):
-        titulo = "Que casa cabe no seu lote?"
+    titulo = titulo_do(config)
 
     # 1. capa
     L.pagina(f"""
       <div class="capa-topo"><span class="eti">{len(plantas)} PLANTAS DE CASAS TÉRREAS · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Meça a frente do seu lote, ache a medida na régua abaixo e abra a página.</p></div>
-      <div class="capa-planta">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), nomes=True, cotas=False, moveis=True)}</div>
+      <div class="capa-planta maquete">{svg_planta(next(p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), humanizada=True, estilo="maquete")}</div>
       {svg_fita(contagem)}""", "capa", rodape=False, estilo=capa_fundo())
 
     # 2. aviso e como usar
@@ -406,7 +850,7 @@ def montar(plantas, config, numeros):
     legenda = "".join(f"<li><b>{E(t)}.</b> {E(d)}</li>" for t, d in TX.LEGENDA_LEITURA)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
       <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis e a porta de entrada é amarela.</p>
-      <div class="leitura"><div class="leitura-fig">{svg_planta(c01, moveis=True)}</div><ul class="legenda">{legenda}</ul></div>
+      <div class="leitura"><div class="leitura-fig">{svg_planta(c01, humanizada=True)}</div><ul class="legenda">{legenda}</ul></div>
       <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""")
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>As palavras da obra</h2>
@@ -536,11 +980,12 @@ def dupla(L, p, por_id, numeros):
     cat = CATEGORIAS[p["id"][0]]
     L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · CABE NUM LOTE DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
-        <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p></div>
-      <div class="planta-grande">{svg_planta(p, moveis=True)}</div>
+        <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p>{chips(p)}</div>
+      <div class="planta-grande moldura">{svg_planta(p, humanizada=True)}</div>
+      <div class="selo-tec">Planta de referência humanizada · medidas em metros · móveis para dar escala</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
         <div><h4>Erros que esta casa evita</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
-             "casa esq", orelha=f, aviso=True)
+             "casa esq q", orelha=f, aviso=True)
     nao = t.get("nao_serve")
     nao_html = ""
     if nao:
@@ -570,7 +1015,7 @@ def dupla(L, p, por_id, numeros):
       <div><h4>Por que esta planta é assim</h4><div class="pensou">
         {''.join(f'<div>{icone(ic)}<p>{E(x)}</p></div>' for ic, x in zip(['sol', 'ar', 'agua', 'seta'], pens))}</div></div>
       <div class="duas">{nao_html}<div><h4>Leve ao seu engenheiro</h4><ul class="perg">{''.join(f'<li>{E(q)}</li>' for q in perg)}</ul></div></div>""",
-             "casa dir", orelha=f, aviso=True)
+             "casa dir q", orelha=f, aviso=True)
 
 
 # ------------------------------------------------------------------ saída

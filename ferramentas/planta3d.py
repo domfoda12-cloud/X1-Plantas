@@ -295,6 +295,22 @@ def sobrepostos(moveis):
     return out
 
 
+def janelas_sobre_portas(planta):
+    """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois)."""
+    _, janelas, portas, _ = construir(planta)
+    out = []
+    for d in portas:
+        hx, hy = d["x"], d["y"]
+        ex, ey = hx + d["r"] * math.cos(d["a0"]), hy + d["r"] * math.sin(d["a0"])
+        for j in janelas:
+            x0, y0, x1, y1 = j["seg"]
+            if abs(y0 - y1) < 1e-6 and abs(hy - ey) < 1e-6 and abs(hy - y0) < 1e-6 and min(hx, ex) < max(x0, x1) and max(hx, ex) > min(x0, x1):
+                out.append((d["id"], j["id"]))
+            if abs(x0 - x1) < 1e-6 and abs(hx - ex) < 1e-6 and abs(hx - x0) < 1e-6 and min(hy, ey) < max(y0, y1) and max(hy, ey) > min(y0, y1):
+                out.append((d["id"], j["id"]))
+    return out
+
+
 def _lados_por_preferencia(c, vaos, janelas, quer_comprido=True):
     lados = ["frente", "fundos", "esq", "dir"]
     def nota(l):

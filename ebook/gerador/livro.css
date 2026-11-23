@@ -147,3 +147,14 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .vistas .rua-svg { display: flex; align-items: center; }
 .vistas .rua-svg svg { max-height: 100%; width: 100%; }
 .vistas .v-3d .foto figcaption { font-size: 5pt; right: 1mm; bottom: 1mm; padding: .2mm 1mm; }
+
+/* planta humanizada (decisão do dono, 23/11/2026): estilo 1 nas casas, estilo 3 (maquete no papel azul) na capa */
+.pagina.q { background-image: linear-gradient(rgba(11,79,168,.055) .25mm, transparent .25mm), linear-gradient(90deg, rgba(11,79,168,.055) .25mm, transparent .25mm); background-size: 5mm 5mm; }
+.chips { display: flex; gap: 2mm; flex-wrap: wrap; margin-top: 1.2mm; }
+.chip { display: inline-flex; align-items: center; gap: 1.4mm; font-weight: 700; font-size: 8.6pt; padding: 1mm 2.6mm 1mm 1.2mm; border-radius: 10mm; background: #fff; border: .3mm solid var(--fio); box-shadow: 0 .5mm 1.2mm rgba(23,32,43,.08); }
+.chip i { width: 5.4mm; height: 5.4mm; border-radius: 50%; display: grid; place-items: center; background: var(--azul-claro); }
+.chip i svg { width: 3.4mm; height: 3.4mm; }
+.chip.amar { background: var(--fita); border-color: #E9B23C; } .chip.amar i { background: #fff; }
+.planta-grande.moldura { background: #fff; border: .3mm solid #E4E0D8; border-radius: 3mm; box-shadow: 0 2mm 6mm rgba(40,30,20,.10); padding: 2mm; }
+.selo-tec { font-family: var(--mono); font-size: 6.6pt; color: var(--cinza); letter-spacing: .03em; margin-top: -2.5mm; }
+.capa-planta.maquete { background: transparent; box-shadow: none; padding: 0; }

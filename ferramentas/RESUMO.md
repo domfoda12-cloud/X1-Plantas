@@ -25,9 +25,9 @@ Textos de cada casa do e-book, escritos pelo método do Redator (.claude/agents/
 
 ### [`ebook/gerador/livro.py`](../ebook/gerador/livro.py)
 
-Gera o e-book "Que casa cabe no seu lote?" (PDF A4) a partir das 24 plantas validadas.
+Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das 24 plantas validadas.
 
-Funções: `m`, `m1`, `svg_planta`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `galeria`, `Livro`, `lote_frente`, `montar`, `melhor_lado`, `avisos_juntos`, `dupla`.
+Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `galeria`, `Livro`, `titulo_do`, `lote_frente`, `montar`.
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 
@@ -101,7 +101,7 @@ Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `b
 
 Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
 
-Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `pegada`, `sobrepoe`, `sobrepostos`, `mobiliar`, `ordem`, `espelhar`, `modulo`, `main`.
+Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `pegada`, `sobrepoe`, `sobrepostos`, `janelas_sobre_portas`, `mobiliar`, `ordem`, `espelhar`, `modulo`, `main`.
 
 ### [`ferramentas/plantas.py`](plantas.py)
 

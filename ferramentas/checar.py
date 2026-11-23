@@ -253,6 +253,10 @@ if _sob:
     falhas.append("móvel sobre móvel"); print("[ERRO] móvel sobre móvel: " + "; ".join(_sob[:12]))
 else:
     print("[OK ] nenhum móvel sobre outro nas plantas mobiliadas")
+# Janela em cima da porta (achado do Arquiteto, 23/11/2026): aviso até as casas de fora do lançamento serem refeitas
+_jp = [f"{pl['id']} {jan} sobre a porta {porta}" for pl in _p3.PL.carregar() for (porta, jan) in _p3.janelas_sobre_portas(pl)]
+if _jp:
+    print(f"[AVISO] janela em cima de porta ({len(_jp)}): " + "; ".join(_jp))
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
