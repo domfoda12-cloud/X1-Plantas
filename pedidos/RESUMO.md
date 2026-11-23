@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 5 documentos
+## Os 6 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -52,3 +52,11 @@ Para o júri criticar, rodada após rodada (pedido do dono: "make the jury criti
 Seções: O que cada adição é, e o que propomos; Mudanças concretas da v1; O que não muda.
 
 Tamanho: 562 palavras.
+
+### [Proposta de integração das 5 adições do dono (versão 2, 23/11/2026)](anexos/integracao-novos-v2.md)
+
+Rodada 1 do júri sobre a v1: notas 4, 5 e 5 (e a do Fable a chegar). O que mudou da v1 para a v2, em uma linha cada: - Conflito explicitado: o veredito de 23/11 mandou parar de criar sistema por 7 dias; o dono, depois, pediu estas 5 adições. Regra da v2: o que o dono pediu pelo nome entra ou vira…
+
+Seções: As cinco, ligadas como num cérebro; Cada adição, com medida, custo e saída; Perguntas ao dono (uma linha cada, com a recomendação); O que não muda.
+
+Tamanho: 771 palavras.

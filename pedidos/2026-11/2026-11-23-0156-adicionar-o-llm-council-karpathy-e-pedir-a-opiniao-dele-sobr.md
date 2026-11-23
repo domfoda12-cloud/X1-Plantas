@@ -110,4 +110,11 @@ Discordam: vender antes (3 ou 4 casas, teste já) ou revisar antes (12 casas ref
 
 | Rodada | Versão | Haiku | Sonnet | Opus | Fable |
 |---|---|---|---|---|---|
-| 1 | v1 | 4 | 5 | 5 | (a chegar) |
+| 1 | v1 | 4 | 5 | 5 | 5 |
+| 2 | v2 | 6 | 6,5 | 6 | 6 |
+
+### Rodada 2, sobre a v2: média 6,1 (a v1 teve 4,75)
+
+O que os quatro acharam: a regra do presidente não fecha (se os 4 opinam, ninguém sobra: 3 opinam e o 4º preside, em rodízio); o custo "medido" do júri não tinha fonte no repositório; o chief-of-staff dizia "espera o dono" numa tabela e "faz já" na outra, e a linha de vendas já existe no PAINEL (seção 7); o passo 5 do roteiro é a rodada de alcance da marketing-psychology sobre os textos de venda (o único passo que toca o Pix), não uma linha nos contextos; o last30days roda na nuvem (o que trava é a conta logada e a chave ScrapeCreators, não o computador do dono) e cobre Instagram Reels e TikTok; find-skills: proibir só o `add` não basta; as perguntas têm de ir para a página única de decisões do veredito; falta teto para o laço do júri. O Fable notou que a v2 foi escrita sem a etapa 2 e a 3 do próprio método.
+
+**Da rodada 3 em diante o laço roda como workflow** (um agente reescreve conferindo cada fato no repositório; 3 modelos criticam em separado; um conferidor checa as afirmações; o 4º modelo preside, em rodízio; para na nota 8,5 sem fato errado, ou quando a nota não sobe por duas rodadas, ou em 6 rodadas).
