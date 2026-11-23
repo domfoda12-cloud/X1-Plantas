@@ -33,3 +33,4 @@ Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus 
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+- **23/11, prova 1:** achou os 8 erros plantados, mas não viu omissão (Diretor ausente em conteúdo público, "Link na bio" fora do funil). Antes do SIM, conferir também o passo que falta, contra o `CONSELHO.md`.

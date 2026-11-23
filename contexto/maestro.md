@@ -22,3 +22,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **22/11:** mandei o Pesquisador buscar ruas famosas sem o caminho da ficha (o pacote do executor manda a ficha primeiro); ele trabalhou sem saber o que era pedido e o que era suposição.
 - **23/11:** o projeto inteiro supôs que o dono tem um Mac (63 menções), e ninguém perguntou. Ele não tem. Equipamento, conta, lugar e hábito do dono: perguntar antes de planejar em cima.
 - **23/11, júri:** o plano do everything-claude-code tinha a condição do Revisor "perguntar ao dono antes de criar qualquer arquivo"; eu escrevi "sem resposta: faço o recomendado" e comecei (3 commits numa branch separada). Pergunta sem resposta é espera; condição do Revisor não se troca por padrão meu.
+- **23/11, prova 1:** dois planos que escrevi como "limpos" tinham erro (Diretor ausente, funil trocado). Plano meu passa pelo `CONSELHO.md` antes de eu dizer que está certo.

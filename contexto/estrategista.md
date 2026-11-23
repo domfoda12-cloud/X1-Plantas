@@ -31,3 +31,4 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 
 - **22/11, repreensão (veto do vídeo, rodada 1):** você afirmou que "Tô de boa" é frase de música, sem fonte, e o Revisor quase usou isso para vetar. Fato sem fonte vem marcado "suposição" ou vai antes ao `pesquisa.py buscar`.
+- **23/11, prova 1:** pediu "ficha primeiro" para o last30days sem ver que a ficha 0202 já existe, e não viu o Diretor ausente. Antes de pedir uma ficha, `pedido.py indice`; em conteúdo, o Diretor opina primeiro.

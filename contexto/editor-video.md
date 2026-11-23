@@ -34,3 +34,4 @@ Antes de qualquer vídeo, leia a seção "O que isso exige dos vídeos" de [`don
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+- **23/11, prova 1:** disse que faltava o `atualizar-painel.py`, que o `checar.py` já roda. Abra o programa antes de dizer que falta um passo.

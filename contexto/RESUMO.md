@@ -131,7 +131,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 500 palavras.
+Tamanho: 524 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 
@@ -139,7 +139,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 379 palavras.
+Tamanho: 416 palavras.
 
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
@@ -147,7 +147,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 470 palavras.
+Tamanho: 498 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -171,7 +171,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 397 palavras.
+Tamanho: 433 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 
