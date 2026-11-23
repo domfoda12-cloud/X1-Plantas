@@ -31,3 +31,7 @@
 | Congelar o sistema | "60% e-book 40% sistema, eu realmente quero deixar esse sistema o mais melhor possível; sempre que tiver grandes sugestões que possam ser implementadas, não tenha medo de me dizer" | Sem congelamento: divisão de 60% do trabalho no e-book e 40% no sistema; propor melhorias grandes ao dono |
 | chief-of-staff (confirmação) | "Confirmo o chief staff" | Entrada completa: leitura de tudo, veto do Revisor, adaptação; Gmail e Agenda pelos conectores do claude.ai |
 | Revisar já ou crescer a base | "B" | O Arquiteto revisa a Casa Compacta já, com as 30 de referência e a apostila; a base cresce em paralelo (mais variedade, lote desenhado, Uberlândia) |
+| Casa Compacta revisada | "Sim" (aprova a revisão) | Entra no e-book e na planta grátis depois do redesenho do banheiro abaixo; refazer imagem, 3D e texto do lote |
+| Banheiro da Casa Compacta | Economia de cano | Banheiro e quartos abrindo para a sala, encostados na cozinha (parede de canos única), como FNHIS e CAR-BA |
+| Validador | "Sim" (endurecer com as 5 regras das referências) | Primeiro como aviso, com a lista do que está fora em cada casa |
+| E-mail ao autor do cass | "Quero também que mande o e-mail"; assina Dominic de Lima, fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
