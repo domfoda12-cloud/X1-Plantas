@@ -407,10 +407,25 @@ def svg_humanizada(p, estilo="revista"):
     Wm = max([W] + [c["x1"] for c in fut])
     Y = lambda y: Dm - y
     portas_h = [(d, *PL.porta_dobradica(p, d)) for d in portas]
-    obst = [_bbox_movel(mv) for mv in mov if mv["tipo"] != "tapete"]
-    for d, H, A, B in portas_h:  # o giro da porta também não recebe etiqueta
+    # o que a etiqueta do cômodo não pode cobrir: móvel e louça (peso 1), piso do box (.5: é chão, mas tem o ralo)
+    # e o giro da porta, medido no quarto de círculo de verdade (o canto do quadrado fora do arco fica livre)
+    obst = [(*_bbox_movel(mv), .5 if mv["tipo"] == "box" else 1) for mv in mov if mv["tipo"] != "tapete"]
+    giros = []
+    for d, H, A, B in portas_h:
         xs, ys = (H[0], A[0], B[0]), (H[1], A[1], B[1])
-        obst.append((min(xs), min(ys), max(xs), max(ys), .25))  # giro de porta pesa menos que móvel: melhor que encostar na cama
+        giros.append(((min(xs), min(ys), max(xs), max(ys)), H, d["r"]))
+
+    def cobre(bb, pesos=True):
+        """Área da etiqueta (bb) em cima de móvel, box ou giro de porta; com pesos=False, a área pura."""
+        tot = sum(_inter(bb, o[:4]) * (o[4] if pesos else 1) for o in obst)
+        for g, (hx, hy), r in giros:
+            a = _inter(bb, g)
+            if a <= 0:
+                continue
+            ix0, iy0, ix1, iy1 = max(bb[0], g[0]), max(bb[1], g[1]), min(bb[2], g[2]), min(bb[3], g[3])
+            pts = [(ix0 + (ix1 - ix0) * (i + .5) / 6, iy0 + (iy1 - iy0) * (k + .5) / 6) for i in range(6) for k in range(6)]
+            tot += a * sum(math.hypot(x - hx, y - hy) <= r + .05 for x, y in pts) / 36 * (.6 if pesos else 1)
+        return tot
 
     pl, pr, pt, pb = 1.25, .95, 1.3, 2.15  # margens: cota à esquerda, cota em cima, jardim e rua embaixo
     vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
@@ -527,16 +542,19 @@ def svg_humanizada(p, estilo="revista"):
         fs0 = max(min(.26, (w - .3) / (len(nome) * .68)), .15)
         # tamanhos a tentar: pílula de 2 linhas (nome em cima, área embaixo), cada vez menor; se nenhuma couber sem
         # encostar em móvel ou porta, a pílula de 1 linha ("NOME  7,3 m²"), mais baixa, para cômodo apertado
-        dois = lambda fs, kmax: (fs, False, max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26, fs + .4, kmax)
+        dois = lambda fs, kmax, kmin=1.0, folga=.09: (fs, False, max(len(nome) * fs * .68, len(m2) * .16 * .62) + .26, fs + .4, kmax, kmin, folga)
         tentativas = [dois(fs0 * q, kl) for q in (1, .88, .78, .7)]
         if kl > 1:  # sem lugar livre no tamanho cheio: cresce menos antes de voltar ao tamanho de antes
             tentativas += [dois(fs0 * q, (1 + kl) / 2) for q in (1, .88, .78)] + [dois(fs0 * q, 1.0) for q in (.88, .78, .7)]
-        tentativas += [(fs, True, len(nome) * fs * .68 + len(m2) * .16 * .62 + .45, fs + .2, kl) for fs in (.22, .19, .16)]
+        tentativas += [(fs, True, len(nome) * fs * .68 + len(m2) * .16 * .62 + .45, fs + .2, kl, 1.0, .09) for fs in (.22, .19, .16)]
+        # cômodo apertado (banheiro, serviço): a pílula de 2 linhas um pouco menor antes de cobrir louça ou giro de porta
+        # (só se ficar livre e com letra de no mínimo .13 m, uns 6 pt na página; senão vale a de tamanho normal que menos cobre)
+        tentativas += [dois(fs0 * .7, k, k, .05) for k in (.88, .78) if fs0 * .7 * k >= .13]
         cx0, cy0 = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
-        escolha = None
-        for fs, linha, lw, lh, kmax in tentativas:
-            kr = max(1.0, min(kmax, (w - .16) / lw, (h - .16) / lh))  # cresce só até caber no cômodo
-            folga, parede = (.09, .18) if linha else (.09, .1)  # folga do móvel (com a sombra) e da parede
+        escolha, reserva = None, None
+        for fs, linha, lw, lh, kmax, kmin, folga in tentativas:
+            kr = max(kmin, min(kmax, (w - .16) / lw, (h - .16) / lh))  # cresce só até caber no cômodo
+            parede = .18 if linha else .1  # folga da parede
             if linha and lw > w - 2 * parede:
                 continue
             lw, lh = lw * kr, lh * kr
@@ -547,16 +565,17 @@ def svg_humanizada(p, estilo="revista"):
                     cx = x0 + lw / 2 + max(0, x1 - x0 - lw) * i / 24
                     cy = y0 + lh / 2 + max(0, y1 - y0 - lh) * k / 24
                     bb = (cx - lw / 2 - folga, cy - lh / 2 - folga, cx + lw / 2 + folga, cy + lh / 2 + folga)
-                    sc = sum(_inter(bb, o[:4]) * (o[4] if len(o) > 4 else 1) for o in obst) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
+                    sc = cobre(bb) * 20 + math.hypot(cx - cx0, cy - cy0) * .15
                     if melhor is None or sc < melhor[0]:
                         melhor = (sc, cx, cy, bb)
-            sobra = sum(_inter(melhor[3], o[:4]) for o in obst)
-            if escolha is None or (sobra < .01 and escolha[0] >= .01):
-                escolha = (sobra, melhor, fs, linha, lw, lh, kr)
+            sobra = cobre(melhor[3], pesos=False)
             if sobra < .01:
+                escolha = (sobra, melhor, fs, linha, lw, lh, kr)
                 break
-            if not linha:
-                escolha = (sobra, melhor, fs, linha, lw, lh, kr)  # sem lugar livre: fica a menor de 2 linhas (como antes)
+            peso = cobre(melhor[3])
+            if not linha and kmin >= 1 and (reserva is None or peso < reserva[0] - .01):
+                reserva = (peso, (sobra, melhor, fs, linha, lw, lh, kr))  # sem lugar livre: a de 2 linhas que menos cobre
+        escolha = escolha or reserva[1]
         _, melhor, fs, linha, lw, lh, kr = escolha
         cx, cy = melhor[1], Y(melhor[2])
         s.append(f'<g transform="translate({f3(cx)} {f3(cy)}) scale({kr:.3f}) translate({f3(-cx)} {f3(-cy)})">'
@@ -565,9 +584,9 @@ def svg_humanizada(p, estilo="revista"):
     cz = S["cota"]
     s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(kl, 1.35):.3f}" class="mono">'
              f'<line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
-             f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">{m(W)} m</text>'
+             f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">casa {m(W)} m</text>'
              f'<line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
-             f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">{m(D)} m</text></g>')
+             f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">casa {m(D)} m</text></g>')
     ec, ex0, ey = S["escala"], Wm + pr - 2.15, Dm + 1.98  # régua de escala na faixa da rua, fora da calçada
     s.append(f'<g font-size=".15" class="mono" font-weight="700" fill="{ec}">' + "".join(
         f'<rect x="{f3(ex0 + i * .5)}" y="{f3(ey)}" width=".5" height=".07" fill="{ec if i % 2 == 0 else "#fff"}" stroke="{ec}" stroke-width=".01"/>' for i in range(4))
@@ -584,14 +603,17 @@ ICONES = {
 }
 
 
-def chips(p):
-    """Os números da casa em pílulas, logo abaixo do nome (do validador)."""
+def chips(p, gancho=""):
+    """Os números da casa em pílulas, logo abaixo do nome (do validador). Só o que o gancho ainda não diz:
+    o lote fica no título da página da direita ("Cabe num lote de ..."). Com menos de 2 pílulas, a fileira sai."""
     r = p["_r"].metricas
     b = p["banheiros"]
-    return (f'<div class="chips"><span class="chip"><i>{ICONES["area"]}</i>{n0(r["area_fechada"])} m² fechados</span>'
-            f'<span class="chip"><i>{ICONES["cama"]}</i>{E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span>'
-            f'<span class="chip"><i>{ICONES["banho"]}</i>{b} banheiro{"s" if b > 1 else ""}</span>'
-            f'<span class="chip amar"><i>{ICONES["lote"]}</i>Cabe num lote de {lote_frente(p)} x {r["lote_comercial"][1]} m</span></div>')
+    quartos = p["quartos_txt"].replace(" (+1 depois)", "")
+    area = f"{n0(r['area_fechada'])} m²"
+    itens = ([f'<span class="chip"><i>{ICONES["area"]}</i>{area} fechados</span>'] if area not in gancho else []) + \
+            ([f'<span class="chip"><i>{ICONES["cama"]}</i>{E(quartos)}</span>'] if quartos not in gancho else []) + \
+            [f'<span class="chip"><i>{ICONES["banho"]}</i>{b} banheiro{"s" if b > 1 else ""}</span>']
+    return f'<div class="chips">{"".join(itens)}</div>' if len(itens) > 1 else ""
 
 
 def svg_fachada(p, legenda=True):
@@ -683,8 +705,8 @@ def svg_lote(p):
     s.append(f'<text x="{hx + p["W"] / 2}" y="{Y(hy + p["D"] / 2) + .2}" text-anchor="middle" font-size=".6" font-weight="800" fill="#fff" class="tit">{p["id"]}</text>')
     s.append(f'<rect x="-1.2" y="{LD + .15}" width="{LW + 2.4}" height="{rua}" fill="#C9CED6"/>')
     s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua / 2 + .18}" text-anchor="middle" font-size=".5" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
-    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".42" class="mono" fill="#17202B">{m(LW)} m</text>')
-    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">{m(LD)} m</text>')
+    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".42" class="mono" fill="#17202B">lote mínimo {m(LW)} m</text>')
+    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">lote mínimo {m(LD)} m</text>')
     s.append(f'<text x="{LW / 2}" y="{Y(rec["frente"] / 2) + .15}" text-anchor="middle" font-size=".36" class="mono" fill="#6B5A2E">recuo {m1(rec["frente"])} m</text>')
     ang = {"sul": 0, "norte": 180, "leste": 90, "oeste": -90}[r["orientacao"]["melhor"]]
     s.append(f'<g transform="translate({LW + .65} .75) rotate({ang})"><circle r=".55" fill="#fff" stroke="#17202B" stroke-width=".04"/>'
@@ -707,8 +729,21 @@ def icone(tipo):
     return base + '<path d="M5 15 L10 5 L15 15 Z" fill="none" stroke="#0B4FA8" stroke-width="1.4" stroke-linejoin="round"/></svg>'
 
 
-def svg_fita(contagem, alto=False):
-    W, lo, hi = 1000, 4.2, 14.8
+POUCAS = 6  # edição com até 6 casas: "Ache a sua casa" numa página só e a régua só com as frentes da edição
+
+
+def svg_fita(contagem, paginas=None):
+    """A fita métrica amarela (capa e fim). Com muitas casas, as frentes de 5 a 14 m e quantas casas cabem em cada uma.
+    Na edição pequena (até POUCAS casas), só as frentes que existem, numa régua ajustada a elas, e embaixo
+    a página da casa (paginas: frente -> números de página), ou a contagem se não houver página (planta grátis)."""
+    frentes = sorted(f for f, n in contagem.items() if n)
+    pequena = sum(contagem.values()) <= POUCAS and frentes
+    if pequena:
+        folga = max(.8, (frentes[-1] - frentes[0]) * .12)
+        lo, hi = frentes[0] - folga, frentes[-1] + folga
+    else:
+        lo, hi, frentes = 4.2, 14.8, list(range(5, 15))
+    W = 1000
     X = lambda v: (v - lo) / (hi - lo) * W
     s = [f'<svg viewBox="0 0 {W} 150" class="fita" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">',
          f'<rect width="{W}" height="150" fill="#FFC857"/>']
@@ -716,10 +751,15 @@ def svg_fita(contagem, alto=False):
         h = 34 if c % 10 == 0 else 22 if c % 5 == 0 else 12
         s.append(f'<line x1="{X(c / 10):.1f}" y1="0" x2="{X(c / 10):.1f}" y2="{h}" stroke="#1D1A12" stroke-width="{2 if c % 10 == 0 else 1}"/>')
     s.append("</svg>")
-    marcas = "".join(
-        f'<div class="marca" style="left:{(f - lo) / (hi - lo) * 100:.2f}%"><b>{f} m</b><small>{contagem.get(f, 0) or "—"}{" casas" if contagem.get(f, 0) > 1 else " casa" if contagem.get(f, 0) == 1 else ""}</small></div>'
-        for f in range(5, 15))
-    return f'<div class="fita-box">{"".join(s)}<div class="marcas">{marcas}</div></div>'
+
+    def embaixo(f):
+        pags = [str(n) for n in (paginas or {}).get(f, []) if isinstance(n, int) and n]
+        if pequena and pags:
+            return "p. " + " e ".join(pags)
+        n = contagem.get(f, 0)
+        return f"{n} casas" if n > 1 else "1 casa" if n == 1 else "—"
+    marcas = "".join(f'<div class="marca" style="left:{(f - lo) / (hi - lo) * 100:.2f}%"><b>{f} m</b><small>{embaixo(f)}</small></div>' for f in frentes)
+    return f'<div class="fita-box{" pequena" if pequena else ""}">{"".join(s)}<div class="marcas">{marcas}</div></div>'
 
 
 FOTOS = EBOOK / "visual" / "openart" / "final"
@@ -788,6 +828,27 @@ def capa_fundo():
     return f"background: linear-gradient(rgba(6,40,90,.45), rgba(6,40,90,.25)), url('{src}') center/cover, var(--azul-escuro)"
 
 
+def svg_no_lote(p, k):
+    """A casa (planta simples, cores de sempre) no lote comercial, com o recuo de referência, na escala k mm/m.
+    A frente fica para baixo, na rua (a rua e a fita são da página). Cota do fundo do lote ao lado."""
+    r = p["_r"].metricas
+    LW, LD = r["lote_comercial"]
+    rec = r["recuos"]
+    fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
+    Dm = max([p["D"]] + [c["y1"] for c in fut])
+    Wm = max([p["W"]] + [c["x1"] for c in fut])
+    planta = svg_planta(p, nomes=False, cotas=False, pad=0).replace(
+        "<svg ", f'<svg x="{f3(rec["esq"])}" y="{f3(LD - rec["frente"] - Dm)}" width="{f3(Wm)}" height="{f3(Dm)}" ', 1)
+    m0, vw, vh = .9, LW + 1.8, LD + .1  # margem igual dos dois lados: o lote fica no meio do desenho (e da fita)
+    return (f'<svg viewBox="{-m0} -.05 {f3(vw)} {f3(vh)}" style="width:{vw * k:.1f}mm;height:{vh * k:.1f}mm" xmlns="http://www.w3.org/2000/svg" '
+            f'role="img" aria-label="{E(p["nome"])} no lote de {LW} x {LD} m">'
+            f'<rect x="0" y="0" width="{LW}" height="{LD}" fill="#F3E6C4" stroke="#17202B" stroke-width=".06" stroke-dasharray=".3 .15"/>'
+            f'{planta}'
+            f'<g stroke="#4F5B69" stroke-width=".04"><line x1="-.25" y1="0" x2="-.25" y2="{LD}"/><line x1="-.37" y1="0" x2="-.13" y2="0"/><line x1="-.37" y1="{LD}" x2="-.13" y2="{LD}"/></g>'
+            f'<text x="-.4" y="{LD / 2}" text-anchor="middle" font-size=".5" class="mono" font-weight="700" fill="#4F5B69" '
+            f'transform="rotate(-90 -.4 {LD / 2})">lote {LD} m</text></svg>')
+
+
 def galeria(plantas, ids, legenda=""):
     """Faixa decorativa de plantas em miniatura (sem nomes), para fechar páginas de texto."""
     por_id = {p["id"]: p for p in plantas}
@@ -809,7 +870,7 @@ class Livro:
         tab = ""
         if orelha is not None:
             top = 30 + (orelha - 5) * 24
-            tab = f'<div class="orelha {"esq" if par else "dir"}" style="top:{top}mm">{orelha} m</div>'
+            tab = f'<div class="orelha {"esq" if par else "dir"}" style="top:{top}mm">lote {orelha} m</div>'
         rod = ""
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
@@ -855,20 +916,37 @@ def recuos_da_edicao(plantas):
     return v(r0["frente"]), v(r0["fundos"]), lateral, " ".join(extras)
 
 
+GRUPOS = [
+    ("Mora sozinho ou vai alugar", ["C02"]),
+    ("Quer sair do aluguel e crescer depois", ["C03"]),
+    ("Casal com 1 ou 2 filhos", ["C01", "C04", "C05", "C06", "E02", "E03", "E04", "E05"]),
+    ("Família de 4 ou mais", ["F01", "F02", "F03", "F04", "E07", "S09"]),
+    ("Trabalha em casa", ["S04"]),
+    ("Gosta de receber", ["S07", "E06", "F05"]),
+    ("Casa para a vida toda, pensada para ser sem degrau", ["S03"]),
+    ("Casa de praia ou de fim de semana", ["S05", "C07"]),
+]  # o jeito de morar de cada casa (páginas "Ache pelo jeito da sua família" e "Ache a sua casa")
+
+
 def montar(plantas, config, numeros):
     L = Livro(plantas, config)
     contagem = {}
     for p in plantas:
         contagem[lote_frente(p)] = contagem.get(lote_frente(p), 0) + 1
     titulo = titulo_do(config)
+    pequena = len(plantas) <= POUCAS  # edição pequena: "Ache a sua casa" no lugar de "pelo lote", "pela família" e índice
+    pag_frente = {}
+    for p in plantas:
+        pag_frente.setdefault(lote_frente(p), []).append(numeros[p["id"]])
+    qtd = "1 PLANTA DE CASA TÉRREA" if len(plantas) == 1 else f"{len(plantas)} PLANTAS DE CASAS TÉRREAS"
 
     # 1. capa
     L.pagina(f"""
-      <div class="capa-topo"><span class="eti">{len(plantas)} PLANTAS DE CASAS TÉRREAS · {E(config.get('ano', '2026'))}</span>
+      <div class="capa-topo"><span class="eti">{qtd} · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Meça a frente do seu lote, ache a medida na régua abaixo e abra a página.</p></div>
       <div class="capa-planta maquete">{svg_planta(next((p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), plantas[0]), humanizada=True, estilo="maquete")}</div>
-      {svg_fita(contagem)}""", "capa", rodape=False, estilo=capa_fundo())
+      {svg_fita(contagem, pag_frente)}""", "capa", rodape=False, estilo=capa_fundo())
 
     # 2. aviso e como usar
     L.pagina(f"""
@@ -891,7 +969,11 @@ def montar(plantas, config, numeros):
     recuos_txt = (f"Recuos de referência: frente {rf} m · fundos {rfu} m"
                   + (f" · uma lateral {rlat} m, com a outra parede na divisa, se a prefeitura deixar." if rlat else ".")
                   + (f" {rext}" if rext else ""))
-    L.pagina(f"""
+    por_id = {p["id"]: p for p in plantas}
+    if pequena:
+        L.pagina(ache_a_sua_casa(plantas, numeros, recuos_txt), "acha")
+    else:
+        L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
       <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
       <p class="pequeno">{recuos_txt} Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
@@ -899,24 +981,15 @@ def montar(plantas, config, numeros):
     L.inicio["lote"] = len(L.paginas)
 
     # 4. ache pelo jeito da família
-    grupos = [
-        ("Mora sozinho ou vai alugar", ["C02"]),
-        ("Quer sair do aluguel e crescer depois", ["C03"]),
-        ("Casal com 1 ou 2 filhos", ["C01", "C04", "C05", "C06", "E02", "E03", "E04", "E05"]),
-        ("Família de 4 ou mais", ["F01", "F02", "F03", "F04", "E07", "S09"]),
-        ("Trabalha em casa", ["S04"]),
-        ("Gosta de receber", ["S07", "E06", "F05"]),
-        ("Casa para a vida toda, pensada para ser sem degrau", ["S03"]),
-        ("Casa de praia ou de fim de semana", ["S05", "C07"]),
-    ]
-    por_id = {p["id"]: p for p in plantas}
+    grupos = GRUPOS
     grupos = [(t, [i for i in ids if i in por_id]) for t, ids in grupos]
     grupos = [(t, ids) for t, ids in grupos if ids]  # edição de lançamento: grupo sem casa da edição sai
     mostra = [i for i in ["C02", "C03", "C06", "F01", "S03", "S07"] if i in por_id]
     if len(mostra) < min(6, len(plantas)):
         mostra = [p["id"] for p in plantas][:6]
     blocos = "".join(f'<div class="grupo"><h3>{E(t)}</h3><p>' + " · ".join(f'<b>{i}</b> {E(por_id[i]["nome"])} <i>p. {numeros[i]}</i>' for i in ids) + "</p></div>" for t, ids in grupos)
-    L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
+    if not pequena:
+        L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
       <p class="abertura">Se ainda não tem o lote, escolha pelo jeito de morar. Depois confira na página {numeros['lote']} se cabe.</p>
       <div class="grupos">{blocos}</div>
       {galeria(plantas, mostra, f"Algumas das {len(plantas)} casas, cada uma para um jeito de morar." if len(mostra) < len(plantas)
@@ -947,7 +1020,8 @@ def montar(plantas, config, numeros):
         f'<td>{E(p["quartos_txt"])}</td><td class="n">{p["banheiros"]}</td>'
         f'<td class="n">{lote_frente(p)} x {p["_r"].metricas["lote_comercial"][1]}</td><td class="n">{numeros[p["id"]]}</td></tr>'
         for p in plantas)
-    L.pagina(f"""<span class="sobre">Índice rápido</span><h2>As {len(plantas)} casas</h2>
+    if not pequena:
+        L.pagina(f"""<span class="sobre">Índice rápido</span><h2>As {len(plantas)} casas</h2>
       <table class="indice"><thead><tr><th>ID</th><th>Casa</th><th>Área</th><th>Quartos</th><th>Banh.</th><th>Lote mín.</th><th>Pág.</th></tr></thead><tbody>{linhas}</tbody></table>""")
 
     # as casas
@@ -1020,8 +1094,36 @@ def montar(plantas, config, numeros):
           <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote e receba as casas que devem caber, como referência (não substitui o profissional): {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
       {foto("05-familia-lote", 78, pos="center 22%")}
-      {svg_fita(contagem)}""", "fim")
+      {svg_fita(contagem, pag_frente)}""", "fim")
     return L
+
+
+def ache_a_sua_casa(plantas, numeros, recuos_txt):
+    """Edição pequena (até POUCAS casas): as casas lado a lado, cada uma no seu lote comercial e todas na mesma escala,
+    pela frente do lote (a rua embaixo, a fita com a frente), com área, quartos, jeito de morar e página."""
+    casas = sorted(plantas, key=lambda p: (lote_frente(p), p["id"]))
+    filas = [casas] if len(casas) <= 3 else [casas[:(len(casas) + 1) // 2], casas[(len(casas) + 1) // 2:]]
+    lote = lambda p: p["_r"].metricas["lote_comercial"]
+    gap, col_min, alto = 6.0, 40.0, (128.0 if len(filas) == 1 else 50.0)  # mm; "alto" = lote mais fundo de cada fila
+    k = min(alto / max(lote(p)[1] for p in casas),
+            *[(176.0 - 10 - gap * (len(fila) - 1)) / sum(lote(p)[0] + 1.8 for p in fila) for fila in filas])
+    jeito = {i: t for t, ids in GRUPOS for i in ids}
+    html = []
+    for fila in filas:
+        cols = " ".join(f"{max(col_min, (lote(p)[0] + 1.8) * k):.1f}mm" for p in fila)
+        lotes = "".join(f'<div class="ac-lote">{svg_no_lote(p, k)}</div>' for p in fila)
+        fitas = "".join(f'<div class="ac-fita" style="width:{lote(p)[0] * k:.1f}mm;--m:{k:.2f}mm">{lote(p)[0]} m</div>' for p in fila)
+        txt = "".join(
+            f'<div class="ac-txt"><span class="mono id">{p["id"]}</span><h3>{E(p["nome"])}</h3>'
+            f'<p>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</p>'
+            + (f'<p class="ac-jeito">{E(jeito[p["id"]])}</p>' if p["id"] in jeito else "")
+            + f'<b class="ac-pag">p. {numeros[p["id"]]}</b></div>' for p in fila)
+        html.append(f'<div class="ac-fila" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
+                    f'<div class="ac-rua">RUA</div>{fitas}{txt}</div>')
+    return (f'<span class="sobre">Comece aqui</span><h2>Ache a sua casa</h2>'
+            f'<p class="abertura">A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>'
+            + "".join(html)
+            + f'<p class="pequeno ac-recuos">{recuos_txt} Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>')
 
 
 AVISOS = []  # o que impede a entrega: gancho que não bate com o validador
@@ -1065,16 +1167,18 @@ def dupla(L, p, por_id, numeros):
     if g and (f"{f} m de frente" not in g or (f"{n0(r['area_fechada'])} m²" not in g and "m²" in g)):
         AVISOS.append(p["id"])
         print(f"AVISO: gancho de {p['id']} não bate com o validador ({f} m, {n0(r['area_fechada'])} m²): {g}")
+    gancho = t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².')
     erros = list(t.get("erros", [1, 2, 4]))
     # "corredor comprido" só conta como evitado se a casa não tiver corredor de fora a fora
     circs = [c for c in p["comodos"] if c["tipo"] == "circ"]
     if 2 in erros and (r["circulacao"] > 0.12 or any(max(c["x1"] - c["x0"], c["y1"] - c["y0"]) > 6.0 for c in circs)):
         erros.remove(2)  # sem pôr outro no lugar: só entra o que foi conferido
-    erros_html = "".join(f'<li><span class="erro-mini">{n}</span>{E(TX.ERROS[n - 1][0])}</li>' for n in erros)
+    # numerados em sequência (1, 2, 3): o número é o da lista desta página, não o do capítulo dos 7 erros
+    erros_html = "".join(f'<li><span class="erro-mini">{i}</span>{E(TX.ERROS[n - 1][0])}</li>' for i, n in enumerate(erros, start=1))
     cat = CATEGORIAS[p["id"][0]]
     L.inicio[p["id"]] = L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · {cat.upper()} · CABE NUM LOTE DE {f} x {r['lote_comercial'][1]} M</span><h2 class="nome">{E(p['nome'])}</h2>
-        <p class="gancho">{E(t.get('gancho', f'{f} m de frente. {quartos}. {n0(r["area_fechada"])} m².'))}</p>{chips(p)}</div>
+      <div class="cab"><span class="mono id">{p['id']} · {cat.upper()}</span><h2 class="nome">{E(p['nome'])}</h2>
+        <p class="gancho">{E(gancho)}</p>{chips(p, gancho)}</div>
       <div class="planta-grande moldura">{svg_planta(p, humanizada=True)}</div>
       <div class="selo-tec">Planta de referência humanizada · medidas em metros · móveis para dar escala</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
