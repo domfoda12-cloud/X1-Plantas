@@ -21,7 +21,7 @@ DECISÃO: aprovado com as condições. Gasto de créditos: decisão do dono.
 - **Quem faz (decisão do dono, 20/11/2026):** a **MinoAI Frontier é a responsável pela edição de vídeo e pela criação de imagem**, e cria as imagens **usando o OpenArt**.
 - **OpenArt agora é um plugin do Claude** (`openart`), com skills prontas: `openart:performance-ads` (anúncio de feed), `openart:hook-variants` (o mesmo anúncio com ganchos diferentes), `openart:ugc`, `openart:tvc`, `openart:talking-head`, `openart:ad-variation`. A conta já está conectada e em uso (plano Pro desde 21/11/2026).
 - **Créditos do OpenArt:** 21.137 no plano Pro (medido em 22/11/2026). **Cada geração pede o "sim" do dono antes**, com o resumo e o custo (22/11/2026; a liberação "sem limite" de 20/11 caiu).
-- **MinoAI Frontier** edita no Mac ou PC do dono.
+- **MinoAI Frontier** edita no PC com Windows do dono (pelo WSL).
 - **Nossa base** sai daqui: prévias em `ebook/plantas/previas/`, 3D das 24 plantas em `ebook/visual/3d/` e o motor (`node video/render-planta.cjs --planta ID`). A pasta `animacoes-3d/plantas/casa-compacta/` é da C01 antiga: não use como referência.
 
 ## O fluxo
@@ -29,7 +29,7 @@ DECISÃO: aprovado com as condições. Gasto de créditos: decisão do dono.
 | # | Quem | O quê | Sai |
 |---|---|---|---|
 | 1 | Claude (nuvem) | Gera a prévia e o 3D da planta escolhida (`ferramentas/plantas.py previa`, `video/render-planta.cjs`) | `planta.png`, `perspectiva.png`, `animacao.mp4` |
-| 2 | Dono ou MinoAI (Mac), no OpenArt | **Imagem → imagem:** a perspectiva 3D vira foto realista, com o prompt abaixo | `fachada-realista.png` |
+| 2 | Dono ou MinoAI (PC do dono), no OpenArt | **Imagem → imagem:** a perspectiva 3D vira foto realista, com o prompt abaixo | `fachada-realista.png` |
 | 3 | Idem | **Imagem → vídeo:** a foto realista ganha um movimento de câmera de 4 a 5 s | `fachada-movimento.mp4` |
 | 4 | Arquiteto + Revisor | Conferem: mesma fachada, mesmas janelas, nenhum texto inventado | aprovado ou refazer |
 | 5 | MinoAI Frontier | Monta o reel: blueprint se desenhando (nosso) → paredes subindo (nosso) → foto realista em movimento (OpenArt) → planta humanizada com área e lote | reel de 12 a 20 s |
@@ -59,7 +59,7 @@ Imagem → vídeo: "movimento lento de câmera se aproximando da porta, 4 segund
 
 - Começar pelas 3 casas mais pedidas no WhatsApp (o parceiro informa; hoje a aposta é C01, E02 e F01).
 - Em imagem parada (post, e-book), na legenda: "imagem ilustrativa gerada a partir da planta". Em vídeo, sem o selo: aviso legal pequeno, no canto, parado (dono, 22/11/2026).
-- Guardar tudo em `Filmes/X1-Plantas/broll/ID/` no Mac, com o nome da planta.
+- Guardar tudo em `Vídeos/X1-Plantas/broll/ID/` no PC do dono, com o nome da planta.
 
 ## Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo")
 

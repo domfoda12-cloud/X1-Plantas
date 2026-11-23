@@ -45,7 +45,7 @@ Marcado **firme** (ele disse com clareza ou repetiu) ou **provável** (leitura n
 | Leve: até 12 MB; no WhatsApp, até 5 MB | firme |
 | Mostrar o que o comprador recebe | firme (o "pagar por mais" está em aberto) |
 | A linguagem do CONDOR XIII: B-roll com sentido, corte na música, fim forte | firme (a referência); provável (cada cena) |
-| Ele aprova antes de montar ou gastar; edição final da MinoAI Frontier, no Mac | firme |
+| Ele aprova antes de montar ou gastar; edição final da MinoAI Frontier, no PC com Windows dele | firme |
 
 **Dois vídeos, dois trabalhos.** A **prévia do WhatsApp** é para quem já comentou: mostra o e-book por dentro e pede a medida do lote. O **anúncio** é para quem nunca viu a marca: prende, mostra uma casa e manda comentar. Destino do anúncio com locução: WhatsApp e Facebook Ads.
 

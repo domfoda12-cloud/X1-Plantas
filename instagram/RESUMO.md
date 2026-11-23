@@ -25,15 +25,15 @@ O plano do perfil, os testes e o calendário de posts. Juntado em 22/11/2026 (fi
 
 Seções: Instagram: onde o editor trabalha; Plano de conteúdo: perfil de arquitetura no Instagram; Calendário: as 2 primeiras semanas do perfil.
 
-Tamanho: 3687 palavras.
+Tamanho: 3712 palavras.
 
-### [MinoAI Frontier: o Diretor, a sessão do Mac e o estilo de edição](MINOAI-FRONTIER.md)
+### [MinoAI Frontier: o Diretor, a sessão no PC do dono e o estilo de edição](MINOAI-FRONTIER.md)
 
 Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes `MAESTRO.md`, na raiz) e as referências do Mino Lee. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
 Seções: Editor: MinoAI Frontier; Maestro e Diretor: a sessão do Claude no seu computador, com a MinoAI Frontier; Referências de vídeo: Mino Lee (@minolee.mp4).
 
-Tamanho: 4776 palavras.
+Tamanho: 4767 palavras.
 
 ### [Os 9 primeiros posts, prontos para o editor](posts/POSTS.md)
 

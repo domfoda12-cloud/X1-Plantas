@@ -33,7 +33,7 @@ Regra que vale (dono, 22/11/2026): o OpenArt é permitido, mas cada uso pede o "
 
 Seções: A mesa (conselho completo, 20/11/2026); Situação das ferramentas; O fluxo; Prompts para o OpenArt (imagem → imagem); Regras; Economia de créditos (pedido do dono, 20/11/2026: "economizar o máximo, mas enfeitado; não usar o primeiro modelo"); Como tirar o máximo de cada crédito (preços medidos na conta em 20/11/2026).
 
-Tamanho: 2465 palavras.
+Tamanho: 2471 palavras.
 
 ### [Banco de referências: planta que ganha vida em 3D](REFERENCIAS-BLUEPRINT.md)
 

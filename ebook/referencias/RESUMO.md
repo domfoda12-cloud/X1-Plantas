@@ -31,7 +31,7 @@ A persona, os concorrentes e os projetos parecidos. Juntado em 22/11/2026 (ficha
 
 Seções: Quem compra: o público e o "Seu Marcos"; Concorrentes e o que o mercado já viu; Projetos similares: quem vende plantas de casas e o que aprender.
 
-Tamanho: 2599 palavras.
+Tamanho: 2682 palavras.
 
 ### [Referência visual](VISUAL.md)
 
@@ -39,7 +39,7 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
-Tamanho: 2351 palavras.
+Tamanho: 2383 palavras.
 
 ### [Plantas de referência: 51 casas térreas pequenas, de fontes públicas (30 do piloto + 21 da rodada 2)](plantas-ref/REFERENCIAS.md)
 

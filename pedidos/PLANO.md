@@ -69,7 +69,7 @@
 | 5.1 | P | Lista de planos para o dono filmar com o celular | `editor-video` (ideia do Diretor) | lista curta, plano por plano |
 | 5.2 | G | Anúncio com a voz do dono, com a casa nova | `editor-video` + `redator` + `arquiteto` + `revisor-de-risco` (Fable) | resumo e custo aprovados antes; vídeo aprovado depois |
 | 5.3 | G | Convite e principal refeitos | `editor-video` | idem |
-| 5.4 | Dono | Criar o Instagram; MinoAI no Mac; PLANTA ou LOTE | dono | feito por ele |
+| 5.4 | Dono | Criar o Instagram; MinoAI no PC (Windows); PLANTA ou LOTE | dono | feito por ele |
 | 5.5 | G | Meme recriado e POV do caramelo (ficha `2055-video-reel`, plano vetado pelo time e pelo Fable) | `editor-video` e equipe | ver a ficha |
 
 A lista de planos para o dono filmar (5.1) pode sair antes, se ele quiser filmar logo: pergunta a ele.

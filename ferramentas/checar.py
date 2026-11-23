@@ -142,6 +142,25 @@ if quebrados:
     print("[ERRO] links quebrados:\n  " + "\n  ".join(quebrados[:20]))
 else:
     print("[OK ] links entre documentos")
+# O dono usa um PC com Windows (23/11, tarefa A10): a suposição do Mac não volta. Registros ficam de fora.
+_MAC = re.compile(r"Mac do dono|Mac dele")
+_MAC_EXCECOES = ("CONTEXTO-HISTORICO.md", "contexto/CONVIVENCIA.md", "contexto/dono/", "pedidos/entrada/",
+                 "pedidos/AUDITORIAS.md", "pedidos/LICOES.md", "pedidos/2026-11/", "pedidos/anexos/")
+_mac = []
+for f in sorted(RAIZ.rglob("*")):
+    if f.suffix not in (".md", ".py", ".html") or any(p in f.parts for p in ignorar) or f == Path(__file__).resolve():
+        continue
+    rel = f.relative_to(RAIZ).as_posix()
+    if rel.startswith(_MAC_EXCECOES):
+        continue
+    for n, linha in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+        if _MAC.search(linha):
+            _mac.append(f"{rel}:{n}")
+if _mac:
+    falhas.append("suposição do Mac do dono")
+    print("[ERRO] o dono usa PC com Windows, não Mac:\n  " + "\n  ".join(_mac[:20]))
+else:
+    print("[OK ] nenhuma suposição de Mac do dono")
 # Fechar ficha não pode apagar as seções depois do Resultado (auditoria 4: o plano da 2151 sumiu assim)
 import importlib.util as _iu
 _e = _iu.spec_from_file_location("pedido", RAIZ / "ferramentas" / "pedido.py"); _p = _iu.module_from_spec(_e); _e.loader.exec_module(_p)

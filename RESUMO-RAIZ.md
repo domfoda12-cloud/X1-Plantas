@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 5b. Modo júri (método do llm-council, 23/11/2026); 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 2415 palavras.
+Tamanho: 2423 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1196 palavras.
+Tamanho: 1201 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2722 palavras.
+Tamanho: 2733 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -65,7 +65,7 @@ Para quem vamos vender, o que essa pessoa quer, como ela fala e o que oferecer. 
 
 Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três perfis; 4. Posicionamento; 5. Os três diferenciais (repetir em tudo); 6. O que isso muda no produto; 7. A oferta; 8. Ângulos de anúncio; 9. Tom de voz; 10. Calendário do lançamento; 11. O que medir para saber se a estratégia está certa.
 
-Tamanho: 2076 palavras.
+Tamanho: 2195 palavras.
 
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 

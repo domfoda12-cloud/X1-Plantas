@@ -51,13 +51,13 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 | `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
 
-**Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no Mac, dúvida, não usamos; o dono à mão, no Mac, pode. Ficha `2151-integrar-o-cass`.
+**Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no computador do dono, dúvida, não usamos; o dono à mão, no computador dele, pode. Ficha `2151-integrar-o-cass`.
 
 ## 3. Conectores (serviços externos)
 
 | Conector | Status | Quem usa | O que faz por fora | Alcance |
 |---|---|---|---|---|
-| **MinoAI Frontier** | Integrado | Diretor do conteúdo; usada pelo Designer e pelo Editor de vídeo | Lê as redes conectadas; a edição roda no Mac do dono | Feito: método, ganchos e `analyze_hook` usados (`instagram/MINOAI-FRONTIER.md` (seção "Editor: MinoAI Frontier"), `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)")) |
+| **MinoAI Frontier** | Integrado | Diretor do conteúdo; usada pelo Designer e pelo Editor de vídeo | Lê as redes conectadas; a edição roda no PC com Windows do dono | Feito: método, ganchos e `analyze_hook` usados (`instagram/MINOAI-FRONTIER.md` (seção "Editor: MinoAI Frontier"), `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)")) |
 | **OpenArt** | Integrado | MinoAI (imagens e vídeos) | Gasta créditos; manda as imagens de referência para o OpenArt | Plano Pro, 21.137 créditos em 22/11/2026. **Cada uso pede o "sim" do dono**, com resumo e custo antes. Guia: `animacoes-3d/OPENART-MINOAI.md`; saldo: `ORCAMENTO.md` |
 | **TinyFish** | Integrado | Pesquisador | Busca e leitura grátis; dataset e deep research são **pagos** (só com o "sim" do dono) | Feito: pesquisas de mercado, referências, normas |
 | **Google Drive / Google Docs** | Liberado, não usado | (a decidir) | Lê e escreve arquivos na conta Google do dono | Pendente. Antes do primeiro uso, o Revisor confere o que sai |
@@ -95,10 +95,10 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 
 | Quem | Prompt específico |
 |---|---|
-| **MinoAI Frontier** | Você é o Diretor: dê a ideia principal de todo conteúdo e opine primeiro nele, citando a fonte; quem decide é o Maestro (a conversa principal) (`search_mino_method`, `search_viral_hooks`). Edição só no Mac do dono. Referência de edição: `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"). O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
+| **MinoAI Frontier** | Você é o Diretor: dê a ideia principal de todo conteúdo e opine primeiro nele, citando a fonte; quem decide é o Maestro (a conversa principal) (`search_mino_method`, `search_viral_hooks`). Edição só no PC com Windows do dono. Referência de edição: `video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)"). O público tem de 25 a 50 anos: nada de hiperedição com corte a cada 0,75 s, e sempre texto no primeiro quadro. Nunca estime métrica de rede social |
 | **OpenArt** (e as skills `openart:*`) | Sempre imagem a partir de uma imagem nossa (planta, vista da rua ou 3D), nunca uma casa inventada. Primeiro o rascunho em 1k baixa, depois o final em 4K extra-alta a partir do rascunho aprovado. Parede de divisa sem janela. Imagem parada leva "Imagem ilustrativa"; vídeo não leva o selo (ordem do dono, 22/11), mas leva o aviso "Planta de referência…". No máximo 4 imagens em paralelo. Cada uso pede o "sim" do dono, com resumo e custo antes |
 | **TinyFish** | Busca e leitura são grátis; dataset e deep research são pagos e só rodam com o "sim" do dono. Fonte primária brasileira primeiro. Diga quando um site bloqueou |
-| **`watch`** | Na nuvem, o YouTube bloqueia o download. Para Reels e TikTok use o `analyze_hook` da MinoAI; para YouTube, peça o Mac do dono ou os minutos que importam |
+| **`watch`** | Na nuvem, o YouTube bloqueia o download. Para Reels e TikTok use o `analyze_hook` da MinoAI; para YouTube, peça ao dono para rodar no PC dele ou mandar os minutos que importam |
 | **`impeccable`** | Só detecte o que parece genérico e opine; não refaça. Identidade: azul `#0B4FA8`, amarelo `#FFC857`, Bricolage Grotesque e Inter |
 | **`artifact-*`** | Página privada, na identidade do projeto, com os dados tirados do validador, nunca colados à mão. Nada que se passe por marca real |
 | **`deep-research`** | Abre agentes: mande o texto base. Fonte brasileira primeiro. Use só quando a pergunta pede várias fontes, porque gasta muitos tokens |

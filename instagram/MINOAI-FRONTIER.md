@@ -1,4 +1,4 @@
-# MinoAI Frontier: o Diretor, a sessão do Mac e o estilo de edição
+# MinoAI Frontier: o Diretor, a sessão no PC do dono e o estilo de edição
 
 > Como a MinoAI Frontier trabalha no computador do dono, a rotina da semana (antes `MAESTRO.md`, na raiz) e as referências do Mino Lee. Juntado em 22/11/2026 (ficha de organizar os arquivos): cada seção é um documento antigo, inteiro.
 
@@ -15,7 +15,7 @@
 
 ### 1. Onde e como a MinoAI Frontier edita
 
-- **No seu computador**, no app do Claude (aba **Code**), num Mac com chip Apple (M1 ou mais novo, macOS 14+) ou num PC com Windows 10/11. Ela instala sozinha o que precisa (ffmpeg, Node, Python); você não digita comando nenhum.
+- **No seu computador**, no app do Claude (aba **Code**), no seu PC com Windows 10/11. Ela roda pelo WSL e instala sozinha o que precisa (o WSL, ffmpeg, Node, Python); você não digita comando nenhum.
 - **Não edita na nuvem.** Os chats na nuvem deste projeto podem planejar a edição, mas o vídeo só sai no seu computador.
 - **Precisa:** plano pago do Claude (Pro ou Max) e o conector MinoAI Frontier ligado na aba Code. Se ainda não estiver no seu Claude: app.contentacademy.io/mcp, opção Claude.
 
@@ -23,14 +23,14 @@
 
 | # | O que fazer | Por quê |
 |---|---|---|
-| 1 | No Mac, criar a pasta **Filmes/X1-Plantas** (no Windows, **Vídeos/X1-Plantas**) e copiar para ela a pasta **`broll/`** descrita na seção 4 | É onde a MinoAI Frontier procura os vídeos e o B-roll |
+| 1 | No PC, criar a pasta **Vídeos/X1-Plantas** e copiar para ela a pasta **`broll/`** descrita na seção 4 | É onde a MinoAI Frontier procura os vídeos e o B-roll |
 | 2 | Criar o seu **estilo de edição** no [Edit Style Generator](https://app.contentacademy.io/ai-editing/studio), com os 3 reels de referência do Mino Lee: [reel 1](https://www.instagram.com/reel/DflcLspiT9H/), [reel 2](https://www.instagram.com/reel/DfbA-o1u4FI/), [reel 3](https://www.instagram.com/reel/De9dwH9yDB9/) | Hoje a sua conta **não tem estilo salvo**: ela editaria com o padrão dela. Com o estilo salvo, ela segue o mesmo estilo que analisamos em [`MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4) |
 | 3 | Conectar o **Instagram** em app.contentacademy.io/mcp/connect-socials?platform=instagram (TikTok e YouTube Shorts, se quiser postar lá também) | Hoje **nenhuma rede está conectada**. Conectada, ela pode preparar a publicação. Os reels de teste você confere no app do Instagram |
 | 4 | Na primeira edição, quando ela pedir, **permitir os comandos do editor** uma vez | Para não aparecerem pedidos de aprovação a cada passo |
 
 ### 3. A mensagem de abertura
 
-Cole esta mensagem na aba **Code**, com a pasta **Filmes/X1-Plantas** aberta, toda vez que for editar. Troque só a primeira linha.
+Cole esta mensagem na aba **Code**, com a pasta **Vídeos/X1-Plantas** aberta, toda vez que for editar. Troque só a primeira linha.
 
 ```text
 Edite este vídeo no estilo MinoAI Frontier: [nome do arquivo] — tipo: [ANÚNCIO COM LOCUÇÃO | PLANTA DA SEMANA | É POSSÍVEL | ERRO QUE SAI CARO | CABE NO SEU LOTE].
@@ -67,7 +67,7 @@ REGRAS QUE NUNCA MUDAM
 - Mostre o plano de edição antes de renderizar quando a edição for maior que só legenda.
 
 ENTREGA
-- 1080 x 1920, vertical, salvo em Filmes/X1-Plantas/editados/ com o nome [data]-[tipo]-[versão].mp4.
+- 1080 x 1920, vertical, salvo em Vídeos/X1-Plantas/editados/ com o nome [data]-[tipo]-[versão].mp4.
 - No fim, me diga: duração, quais imagens do B-roll usou e em que segundos, e o texto do gancho.
 ```
 
@@ -76,7 +76,7 @@ ENTREGA
 Monte uma vez e acrescente cada planta nova. Tudo vem deste repositório:
 
 ```
-Filmes/X1-Plantas/
+Vídeos/X1-Plantas/
   broll/
     plantas/
       casa-compacta/        ← copie de animacoes-3d/plantas/casa-compacta/
@@ -164,8 +164,8 @@ Para achar mais: peça à MinoAI Frontier "ganchos virais sobre construir casa" 
 
 ### 2. Configuração (uma vez só)
 
-1. **Pasta de trabalho:** no Mac, `Filmes/X1-Plantas` (no Windows, `Vídeos/X1-Plantas`), com quatro subpastas: `projeto/`, `broll/`, `brutos/` e `editados/`. Ver [`instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md), seção 4.
-2. **App do Claude**, aba **Code**, pasta `Filmes/X1-Plantas` aberta e o conector **MinoAI Frontier** ligado.
+1. **Pasta de trabalho:** no PC, `Vídeos/X1-Plantas`, com quatro subpastas: `projeto/`, `broll/`, `brutos/` e `editados/`. Ver [`instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md), seção 4.
+2. **App do Claude**, aba **Code**, pasta `Vídeos/X1-Plantas` aberta e o conector **MinoAI Frontier** ligado.
 3. Colar a mensagem da seção 3. Na primeira vez, o Maestro baixa este repositório para `projeto/`, monta o `broll/` e instala o que faltar. Você só aprova quando ele pedir.
 4. Fazer os passos de [`instagram/MINOAI-FRONTIER.md`](MINOAI-FRONTIER.md), seção 2: estilo de edição salvo com os 3 reels do Mino Lee e Instagram conectado.
 
@@ -179,7 +179,7 @@ Você é o Maestro do projeto X1-Plantas: decide e rege a equipe. A MinoAI Front
 O PROJETO
 - E-book brasileiro com dezenas de plantas de casas originais (blueprint, planta humanizada, 3D e animação), para quem tem um lote e vai construir, quase sempre com pedreiro e por etapas.
 - Venda: vídeos no Instagram e no Facebook Ads → comentário "PLANTA" → planta grátis no WhatsApp → oferta do e-book.
-- Repositório: https://github.com/domfoda12-cloud/X1-Plantas, branch main, em Filmes/X1-Plantas/projeto/ (se não existir, clone; se existir, atualize com git pull).
+- Repositório: https://github.com/domfoda12-cloud/X1-Plantas, branch main, em Vídeos/X1-Plantas/projeto/ (se não existir, clone; se existir, atualize com git pull).
 
 LEIA ANTES DE QUALQUER COISA (em projeto/)
 - CLAUDE.md (regras que não mudam), contexto/QUADRO.md (o que o dono acabou de pedir), contexto/EQUIPE.md (a equipe) e contexto/diretor.md (o papel da MinoAI).

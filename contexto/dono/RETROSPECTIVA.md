@@ -107,7 +107,7 @@
 - **O que ensinou:** roteiro aprovado por ele antes de gastar funciona melhor que vídeo pronto para ele corrigir.
 
 **V8 · Anúncio com a voz do dono (22/11)** · [`entregas/2026-11-22-0010-anuncio-ebook-locucao.md`](../entregas/REGISTRO.md)
-- **O que era:** a gravação dele (29 s), áudio editado primeiro pelas regras da MinoAI Frontier, dois cortes por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); `x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e versão do WhatsApp (2,3 MB); pacote `kit-minoai/` para o Mac.
+- **O que era:** a gravação dele (29 s), áudio editado primeiro pelas regras da MinoAI Frontier, dois cortes por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); `x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e versão do WhatsApp (2,3 MB); pacote `kit-minoai/` para o computador do dono.
 - **O que o dono reclamou:** "Tire o imagem ilustrativa"; "Como podem os 3 quartos estar um seguido do outro? Isso é um erro gigante no layout"; "antes de qualquer vídeo ou gasto no OpenArt, quero um resumo… com a minha confirmação nos dois"; "O vídeo não é para TikTok nem Instagram" (22/11, histórico).
 - **O que funcionou:** a voz, o texto dele e o método "áudio primeiro, imagem obedece": **manteve** (o plano novo, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"), guarda voz, cortes, trilha e 25 s). Os dois cortes do Revisor: **não reclamou**. O peso (8,1 e 2,3 MB): **não reclamou**.
 - **O que ensinou:** a planta errada e o selo na tela estragaram a peça que ele mais construiu. A abertura saiu "engolida" ("Meu tio" em 0,2 s, segundo a entrega). O destino Reels/TikTok era suposição nossa passada ao Editor como ordem.
@@ -213,7 +213,7 @@ Em toda etapa: o Fable confere a entrega contra o "pronto quando" (abre o arquiv
 | 6 | **Anúncio com a voz do dono:** plano atualizado para a casa aprovada, imagens paradas, depois clipes, montagem com o áudio primeiro | `editor-video` (Opus), Diretor MinoAI Frontier, `revisor-de-risco` (Opus) | **Sim** (imagens cerca de 250; clipes cerca de 1.050, pelo `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova")) | Quatro paradas com o "sim" do dono (planta, plano, imagens paradas, vídeo); conferência quadro a quadro contra `palavras.json`; sem selo; aviso pequeno no canto; até 12 MB e WhatsApp até 5 MB |
 | 7 | **Prévia do WhatsApp** com a C01 nova e as páginas novas do e-book | `editor-video` (Opus), `revisor-de-risco` (Opus) | Não | `montar.py` com o roteiro sem selo; até 5 MB; nenhuma cena com casa antiga; dono aprova |
 | 8 | **Convite** realista (só depois de "pagar por mais" definido) e principal com o escaneamento da casa nova | `editor-video` (Opus), Diretor MinoAI Frontier | **Sim** se for OpenArt (custo levado ao dono antes); não, se for a filmagem dele | Dono aprova resumo e instruções antes; o vídeo só promete o que existe; números na tela só do validador |
-| 9 | **Edição final** de cada vídeo aprovado, com música e legendas | MinoAI Frontier, no Mac do dono (pacote como o `kit-minoai/`) | Não | Pacote com `LEIA-ME.md` entregue; o dono confirma que rodou no Mac |
+| 9 | **Edição final** de cada vídeo aprovado, com música e legendas | MinoAI Frontier, no PC com Windows do dono (pacote como o `kit-minoai/`) | Não | Pacote com `LEIA-ME.md` entregue; o dono confirma que rodou no PC |
 
 O `ajudante` (Haiku) não entra: ele faz só tarefa pessoal do dono.
 
