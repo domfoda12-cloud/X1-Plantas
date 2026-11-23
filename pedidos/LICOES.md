@@ -1,0 +1,15 @@
+# Lições da equipe (registro único, só acréscimo)
+
+> Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à mão: a lição também está no "Lições" do `contexto/<papel>.md`.
+
+| Data | Papel | Origem | Ficha | Ponto | Lição |
+|---|---|---|---|---|---|
+| 23/11/2026 | maestro | dono | - | - | Ele apontou o plano de outra conversa para aproveitar a decisão (o produto), e eu trouxe junto o tema antigo. De outra conversa vem só o que ele nomeou; o resto, pergunto qual parte vale (leitura nossa da fala de 16/11) |
+| 23/11/2026 | maestro | dono | - | - | Revisei só a forma dos arquivos, e o dono queria o conteúdo melhor. Revisão pedida por ele inclui pensar e fazer a melhoria do conteúdo, não só conferir (leitura nossa da fala de 18/11) |
+| 23/11/2026 | maestro | dono | - | - | Li o pedido de mais uma ferramenta como troca e tirei uma instalada (19/11); reescrevi a regra de um papel em cima de um comentário, e ele mandou desfazer (20/11). Tirar ou mudar regra só com ordem clara; na dúvida, digo o que vou mudar e pergunto (leitura nossa) |
+| 23/11/2026 | maestro | dono | - | - | Cinco vezes de 16 a 23/11 o dono não entendeu a resposta (termo técnico, opção só pela letra, frase solta). Ele disse que não é técnico: palavras simples, e cada opção numa frase com o que muda para ele (leitura nossa das falas de 16, 22 e 23/11) |
+| 23/11/2026 | maestro | dono | - | - | Pedi o sim dele para um teste pago que servia mais de apoio ao Conselho do que ao trabalho. Antes de levar pedido ao dono, o Conselho fecha a própria dúvida; teste pago só quando muda o resultado (leitura nossa da fala de 22/11) |
+| 23/11/2026 | estrategista | dono | - | - | O plano supôs uma página de vendas que não existe. O caminho é anúncio, comentário e WhatsApp, e o funil é do parceiro (CONTEXTO.md). Confira todo plano contra isso antes de entregar (leitura nossa da fala de 16/11) |
+| 23/11/2026 | pesquisador | dono | - | - | O dono cortou a conferência de um preço que apoiava um gancho de vídeo. Antes de pesquisa que ele não pediu, diga em uma linha para que serve; número em frase pública continua precisando de fonte, e quem cobra é o Revisor (leitura nossa da fala de 16/11) |
+| 23/11/2026 | editor-video | dono | - | - | Os primeiros clipes animados saíram duros e o dono reclamou. Antes de mostrar animação, compare o movimento com a referência mais nova dele: fluido, a planta ganhando vida (leitura nossa da fala de 16/11) |
+| 23/11/2026 | designer | dono | - | - | Imagens de teste do gerador ficaram no repositório, e o dono mandou apagar quando soube o que eram. Teste fica fora do repositório ou sai ao terminar; só fica o que tem função. Vale também para clipe de teste (leitura nossa da fala de 21/11) |

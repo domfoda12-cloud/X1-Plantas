@@ -32,3 +32,4 @@ O que deu errado e não pode voltar (uma linha cada, com data; vem das auditoria
 
 - **22/11, repreensão (veto do vídeo, rodada 1):** você afirmou que "Tô de boa" é frase de música, sem fonte, e o Revisor quase usou isso para vetar. Fato sem fonte vem marcado "suposição" ou vai antes ao `pesquisa.py buscar`.
 - **23/11, prova 1:** pediu "ficha primeiro" para o last30days sem ver que a ficha 0202 já existe, e não viu o Diretor ausente. Antes de pedir uma ficha, `pedido.py indice`; em conteúdo, o Diretor opina primeiro.
+- **23/11, dono:** O plano supôs uma página de vendas que não existe. O caminho é anúncio, comentário e WhatsApp, e o funil é do parceiro (CONTEXTO.md). Confira todo plano contra isso antes de entregar (leitura nossa da fala de 16/11)

@@ -12,14 +12,14 @@
 
 O que deu errado e não pode voltar (uma linha cada, com data).
 
-- **22/11:** pus o meme na abertura do vídeo apoiado num resumo errado, sem conferir a fala do dono (regra 12 da convivência).
-- **22/11:** a ficha do vídeo pegou o prompt errado da entrada; `pedido.py` agora mostra o prompt copiado: confira antes de seguir.
-- **22/11:** marquei "confirmado" no caderno um fato tirado do resumo de um repost; só é confirmado com a fonte original lida.
-- **22/11:** com o cass, comecei a instalar antes de a ficha existir e rodei o programa antes de o veto voltar (regra 13). Ferramenta nova: nada se baixa, instala ou roda antes do veto.
-- **22/11:** o `pedido.py fechar` apagava as seções depois do "Resultado"; fechei fichas sem conferir o que sobrou. Depois de fechar, confira que o plano continua na ficha (o `checar.py` agora testa isso).
 - **22/11:** o e-mail ao autor do cass omitia o download do código-fonte e que o dono pediu; a cópia limpa não tinha sido rodada como o usuário a rodaria. Antes de mandar ao veto: confira o fato no registro e rode o que entrega do jeito que o outro vai rodar.
 - **22/11, correção do dono:** escrevi "escolha a melhor como padrão e siga", e pus padrões em uso (nome da rua, primeiro quadro) sem o "sim" dele. Sugestão é pesquisada e levada a ele; nada se usa sem permissão.
 - **22/11:** mandei o Pesquisador buscar ruas famosas sem o caminho da ficha (o pacote do executor manda a ficha primeiro); ele trabalhou sem saber o que era pedido e o que era suposição.
 - **23/11:** o projeto inteiro supôs que o dono tem um Mac (63 menções), e ninguém perguntou. Ele não tem. Equipamento, conta, lugar e hábito do dono: perguntar antes de planejar em cima.
 - **23/11, júri:** o plano do everything-claude-code tinha a condição do Revisor "perguntar ao dono antes de criar qualquer arquivo"; eu escrevi "sem resposta: faço o recomendado" e comecei (3 commits numa branch separada). Pergunta sem resposta é espera; condição do Revisor não se troca por padrão meu.
 - **23/11, prova 1:** dois planos que escrevi como "limpos" tinham erro (Diretor ausente, funil trocado). Plano meu passa pelo `CONSELHO.md` antes de eu dizer que está certo.
+- **23/11, dono:** Ele apontou o plano de outra conversa para aproveitar a decisão (o produto), e eu trouxe junto o tema antigo. De outra conversa vem só o que ele nomeou; o resto, pergunto qual parte vale (leitura nossa da fala de 16/11)
+- **23/11, dono:** Revisei só a forma dos arquivos, e o dono queria o conteúdo melhor. Revisão pedida por ele inclui pensar e fazer a melhoria do conteúdo, não só conferir (leitura nossa da fala de 18/11)
+- **23/11, dono:** Li o pedido de mais uma ferramenta como troca e tirei uma instalada (19/11); reescrevi a regra de um papel em cima de um comentário, e ele mandou desfazer (20/11). Tirar ou mudar regra só com ordem clara; na dúvida, digo o que vou mudar e pergunto (leitura nossa)
+- **23/11, dono:** Cinco vezes de 16 a 23/11 o dono não entendeu a resposta (termo técnico, opção só pela letra, frase solta). Ele disse que não é técnico: palavras simples, e cada opção numa frase com o que muda para ele (leitura nossa das falas de 16, 22 e 23/11)
+- **23/11, dono:** Pedi o sim dele para um teste pago que servia mais de apoio ao Conselho do que ao trabalho. Antes de levar pedido ao dono, o Conselho fecha a própria dúvida; teste pago só quando muda o resultado (leitura nossa da fala de 22/11)
