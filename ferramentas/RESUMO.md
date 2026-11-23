@@ -107,7 +107,7 @@ Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `b
 
 Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
 
-Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `pegada`, `sobrepoe`, `sobrepostos`, `janelas_sobre_portas`, `mobiliar`, `ordem`, `espelhar`, `modulo`, `main`.
+Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `recuado`, `cadeira_de`, `zona_da_cadeira`, `pegada`, `sobrepoe`, `sobrepostos`, `moveis_na_parede`, `cadeiras_sem_lugar`, `janelas_sobre_portas`, `mobiliar`, `ordem`, `espelhar`.
 
 ### [`ferramentas/plantas.py`](plantas.py)
 

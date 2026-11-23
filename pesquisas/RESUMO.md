@@ -29,7 +29,7 @@ Tamanho: 306 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 199 palavras.
+Tamanho: 307 palavras.
 
 ### [Pesquisa: O que não cabe nos outros](outros.md)
 

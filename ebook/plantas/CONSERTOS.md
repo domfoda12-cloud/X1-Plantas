@@ -18,7 +18,7 @@ Regras: **1** circulação (com o corredor coberto lateral) até 6% em casa de a
 | E03 | 56 | 5 m *estreita* | - | - | - | sem saída | - | - | 1 |
 | E04 | 55 | 9 m | 12% | 1,08 | 2,70, 2,70 | 0,99 e sem saída | - | - | 4 |
 | E05 | 59 | 7,9 m | 26% | 1,09 | 2,39, 2,79 | sem saída | 4 por fora | - | 5 |
-| E06 | 68 | 8,6 m | - | 1,19 | - | sem saída | 4 por fora | - | 3 |
+| E06 | 68 | 8,6 m | - | 1,19 | 2,79 | sem saída | 4 por fora | - | 4 |
 | E07 | 72 | 8 m | - | 1,09 | 2,49 | sem saída | 5 por fora | - | 4 |
 | F01 | 71 | 10 m | - | - | 2,62, 2,71, 2,62 | - | - | - | 1 |
 | F02 | 86 | 11,5 m | - | 1,08, 1,09 | 2,59, 2,68 | 0,99 e sem saída | - | - | 3 |
@@ -30,6 +30,6 @@ Regras: **1** circulação (com o corredor coberto lateral) até 6% em casa de a
 | S05 | 59 | 8,9 m | 10% | 1,08, 1,19 | 2,79 | 0,99 e sem saída | - | - | 4 |
 | S07 | 74 | 10,9 m | - | 1,08, 1,09 | 2,39, 2,48, 2,78 | sem saída | - | - | 3 |
 | S09 | 78 | 13,9 m | - | 1,09 | 2,39, 2,48, 2,78 | sem saída | - | - | 3 |
-| **Casas fora** | | 2 estreitas | **10** | **20** | **17** | **21** | **5** | **3** | |
+| **Casas fora** | | 2 estreitas | **10** | **20** | **18** | **21** | **5** | **3** | |
 
 O detalhe de cada casa (medida e frase): `python3 ferramentas/plantas.py validar ID`, linhas "! referência".

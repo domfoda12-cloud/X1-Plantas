@@ -398,7 +398,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
         c = recuado(c0, paredes)  # o arranjo automático usa o chão livre, da face de dentro das paredes
         vaos = vaos_por_comodo.get(cid, [])
         jans = jan_por_comodo.get(cid, [])
-        w, d = c["x1"] - c["x0"], c["y1"] - c["y0"]
+        w, d = c0["x1"] - c0["x0"], c0["y1"] - c0["y0"]  # as regras de tamanho (limiares) seguem a medida de eixo, como antes
         cx, cy = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
         aqui = []  # móveis já postos neste cômodo
 
@@ -430,7 +430,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
 
         def encostar(tipo, larg, prof, lados=None, folga=0.0, frente=0.5, no_canto=False, **extra):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
-                if _prof(c, lado) < prof + frente:
+                if _prof(c0, lado) < prof + frente:
                     continue
                 pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga),
                                      prof=prof + folga, no_canto=no_canto)
@@ -496,7 +496,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
         if t in ("casal", "dorm"):
             casal = t == "casal"
             bw, bd = (1.6, 2.0) if casal else (0.95, 1.95)
-            lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c, l) >= bd + 0.6]
+            lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c0, l) >= bd + 0.6]
             lado, pos = encostar("camaCasal" if casal else "camaSolteiro", bw, bd, lados,
                                  manta="#B9C7D6" if casal else "#E3B9A4")
             if lado:
@@ -519,7 +519,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             jantar = t == "sala" and "jantar" in c["nome"].lower()
             if jantar:
                 mesa_de_jantar()  # primeiro a mesa, perto da cozinha; o estar se arruma no que sobra
-            lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c, l) >= 2.6]
+            lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c0, l) >= 2.6]
             lado = pos = None
             # sofá de 3, de 2 e meio e de 2 lugares: o maior que couber sem tapar porta, medido na parede em que encosta,
             # de preferência com a TV (rack) na parede da frente dele; sem par, o sofá fica sozinho
@@ -553,7 +553,9 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                     tw, td = (2.0, 2.2) if vertical else (2.2, 2.0)
                     for k in (1.0, 0.85, 0.7):  # tapete menor se a mesa de jantar estiver perto
                         tap = {"tipo": "tapete", "x": mx, "y": my, "w": tw * k, "d": td * k}
-                        if not any(o["tipo"] == "mesaJantar" and sobrepoe(pegada(tap), pegada(o)) for o in aqui):
+                        r = pegada(tap)
+                        dentro = r[0] >= c["x0"] - 1e-6 and r[1] >= c["y0"] - 1e-6 and r[2] <= c["x1"] + 1e-6 and r[3] <= c["y1"] + 1e-6
+                        if dentro and not any(o["tipo"] == "mesaJantar" and sobrepoe(r, pegada(o)) for o in aqui):
                             add(tipo="tapete", x=mx, y=my, w=tw * k, d=td * k, cor="#D9CBB4", borda="#B49D7C")
                             break
                     add(**centro)
@@ -570,7 +572,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             comp_max = 0
             lado, pos = None, None
             for l in _lados_por_preferencia(c, vaos, [], True):
-                if _prof(c, l) < 1.5:
+                if _prof(c0, l) < 1.5:
                     continue
                 larg = min(3.0, _comp(c, l) - 0.2)
                 while larg >= 1.2:
@@ -600,7 +602,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
         elif t in ("banho", "lavabo"):
             lados = _lados_por_preferencia(c, vaos, jans)
             # o box primeiro (é o maior); se ele tirar o lugar do vaso ou da pia, tenta o box em outra parede
-            opcoes = sorted((l for l in lados if _comp(c, l) >= 0.9), key=lambda l: _comp(c, l) < 1.6) if min(w, d) >= 1.2 and t == "banho" else []
+            opcoes = sorted((l for l in lados if _comp(c0, l) >= 0.9), key=lambda l: _comp(c0, l) < 1.6) if min(w, d) >= 1.2 and t == "banho" else []
             for box_lado in opcoes + [None]:
                 antes = len(aqui)
                 if box_lado and not encostar("box", 0.8, 0.85, [box_lado], frente=0.3)[0]:
@@ -629,7 +631,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
         elif t in ("patio", "externo"):
             n = max(1, int(w * d / 6))
             for i in range(n):
-                add(tipo="planta", x=c["x0"] + (i + 0.5) * w / n, y=cy, s=1.2)
+                add(tipo="planta", x=c["x0"] + (i + 0.5) * (c["x1"] - c["x0"]) / n, y=cy, s=1.2)
     return out
 
 
