@@ -30,7 +30,7 @@
 | 15 | A voz lê a frase do tio nos 2 primeiros segundos | 22/11 | Vale |
 | 16 | Corte da sala: legendar de propósito ou cortar direto de imagem para imagem | 22/11 | Vale |
 | 17 | Aviso legal parado, mesma posição e tamanho; **pequeno, no canto da tela** | 22/11 | Vale |
-| 18 | Fim em dois tempos: o balão volta em silêncio, "Comenta PLANTA" depois | 22/11 | Vale. O Editor propôs mudar (pôr "Comenta PLANTA" na hora da fala): **o dono decide** |
+| 18 | Fim em dois tempos: o balão volta em silêncio, "Comente PLANTA" depois | 22/11 | Vale. O Editor propôs mudar (pôr "Comente PLANTA" na hora da fala): **o dono decide** |
 | 19 | Vídeo compacto, não pode ser pesado | 22/11 | Vale: até 12 MB |
 | 20 | **Tirar o "Imagem ilustrativa"**; tirar essa condição do Revisor | 22/11 | Vale |
 | 21 | Os 3 quartos em fila são um erro de layout: refazer a planta de referência | 22/11 | Arquiteto desenhando; o dono aprova o desenho |
@@ -61,7 +61,7 @@ Suposição não é pedido. Cada uma fica aqui até ele confirmar ou derrubar.
 
 | Agente | O que eu pedi | O que voltou | O que eu pedi errado |
 |---|---|---|---|
-| **Editor de vídeo** (22/11) | Usar as ferramentas da MinoAI Frontier sobre o rascunho do plano: estilo, legendas, **área segura "para Reels/TikTok"**, gancho com exemplos virais, mudanças cena a cena, como pedir imagens e clipes | Estilo "história com B-roll"; área segura e legenda dos aplicativos; 3 ganchos para testar; nova ordem das cenas do meio; "Comenta PLANTA" na hora da fala; regras de composição para os prompts | **O destino.** Reels e TikTok foram suposição minha. O que ele disse sobre área segura e legenda só vale se o destino for esse |
+| **Editor de vídeo** (22/11) | Usar as ferramentas da MinoAI Frontier sobre o rascunho do plano: estilo, legendas, **área segura "para Reels/TikTok"**, gancho com exemplos virais, mudanças cena a cena, como pedir imagens e clipes | Estilo "história com B-roll"; área segura e legenda dos aplicativos; 3 ganchos para testar; nova ordem das cenas do meio; "Comente PLANTA" na hora da fala; regras de composição para os prompts | **O destino.** Reels e TikTok foram suposição minha. O que ele disse sobre área segura e legenda só vale se o destino for esse |
 | **Arquiteto** (22/11) | Proposta nova da E07: lote de 8 m, 3 quartos fora de fila, circulação por dentro, 72 m², 1 suíte, 2 banheiros, validador com zero erros, sem mexer no e-book | Em andamento | Nada, até aqui |
 | **Revisor de risco** (21/11 e 22/11) | Conferir o roteiro falado e o vídeo montado | Vetos: "mandei construir, olha o resultado"; "até provar que dava certo"; áreas por cômodo no blueprint; exigia o selo "Imagem ilustrativa" (o dono tirou) | Nada |
 | **Conselho inicial** (21/11) | Aprovar o plano do vídeo sem voz | Aprovado com condições | Não se aplica mais a este vídeo: o formato mudou |
@@ -126,7 +126,7 @@ Nenhuma etapa começa sem o "sim" da anterior.
 | 15,5–17,8 | "só ficamos obcecados." | **Outras duas plantas do e-book**, uma depois da outra (antes era o blueprint de novo) | legenda da fala | Páginas nossas, sem custo |
 | 17,8–19,2 | "Eu volto pro Brasil em algumas semanas" | **Bancada com onigiri, filtro de barro e café** (antes era a terceira fachada). A sala com o caramelo entra aqui também, se couber | legenda da fala | **Reaproveita** |
 | 19,2–21,1 | "com um e-book cheio de plantas assim." | Página do e-book **recortada de perto**, com letra que dá para ler | legenda da fala | Página nossa |
-| 21,1–25,3 | "Comenta PLANTA que eu te mando." e depois silêncio | Fachada rosa, outro trecho do clipe. **"Comenta PLANTA" entra na hora em que a palavra é dita** e fica até o fim. Em silêncio voltam, mais embaixo, o balão do tio e a resposta "Cabe em lote 8 x 25 m." | Um som grave baixo em cada um. Sem emoji | Refaz |
+| 21,1–25,3 | "Comenta PLANTA que eu te mando." e depois silêncio | Fachada rosa, outro trecho do clipe. **Proposta (o dono ainda decide, ver linhas 33 e 208): o texto "Comente PLANTA" entra na hora em que a fala diz "Comenta PLANTA"** e fica até o fim (a fala fica no "comenta", que soa natural; o escrito é sempre "Comente"). Em silêncio voltam, mais embaixo, o balão do tio e a resposta "Cabe em lote 8 x 25 m." | Um som grave baixo em cada um. Sem emoji | Refaz |
 
 **O que depende da planta nova:** se a casa encostar numa divisa, a fachada fica mais larga e a resposta do fim passa a dizer onde isso vale. Se a planta mudar a área ou o número de banheiros, a frase "72 metros quadrados… 2 banheiros" teria que ser regravada.
 
@@ -205,7 +205,7 @@ O saldo estava em torno de 21 mil créditos; eu confirmo o número antes de gera
 ### 9. O que falta o dono responder
 
 - Aprovar a planta nova, quando o desenho chegar.
-- Aprovar ou mudar este plano, em especial: o formato (4:5 para o Facebook, 9:16 para o WhatsApp), a ordem nova das cenas do meio, o fim ("Comenta PLANTA" na hora da fala ou só depois do balão) e o gancho (A, B ou C).
+- Aprovar ou mudar este plano, em especial: o formato (4:5 para o Facebook, 9:16 para o WhatsApp), a ordem nova das cenas do meio, o fim ("Comente PLANTA" na hora da fala ou só depois do balão) e o gancho (A, B ou C).
 - O tio e a mensagem existem? Se for piada, a abertura é regravada.
 - "Volto pro Brasil em algumas semanas" é literal?
 
@@ -308,7 +308,7 @@ O vídeo antigo "Os R$ 1.000 do arquiteto" seguia estas regras, e os anúncios d
 - Falar com quem **tem um lote e vai construir**, como quem já passou por obra.
 - **Nunca** dizer que a planta dispensa pedreiro, engenheiro ou arquiteto, nem prometer aprovação, prazo ou custo exato de obra.
 - Toda imagem ou vídeo mostra **uma casa do e-book** (blueprint, planta humanizada ou 3D). Nada de banco de imagens.
-- Chamada sempre igual: **"Comenta PLANTA"** (comentário no anúncio) ou **"Chama no WhatsApp"** (anúncio com botão).
+- Chamada sempre igual: **"Comente PLANTA"** (comentário no anúncio) ou **"Chama no WhatsApp"** (anúncio com botão).
 
 ### Ângulo 1: pelo lote (o mais promissor)
 
@@ -340,7 +340,7 @@ Corredor comprido, banheiro de frente pra sala, quarto que pega sol da tarde… 
 
 Separei os 7 erros de planta que mais saem caro na obra, com a planta mostrando o jeito certo.
 
-Quer ver uma planta mostrando o jeito certo? Comenta PLANTA que eu te mando uma de graça.
+Quer ver uma planta mostrando o jeito certo? Comente PLANTA que eu te mando uma de graça.
 
 **Botão:** Saiba mais
 
@@ -372,7 +372,7 @@ Com a planta mobiliada e desenhada no lote, você vê cada cômodo, cada móvel 
 
 Planta de referência: o projeto da obra é de um engenheiro ou arquiteto.
 
-Comenta PLANTA que eu te mando uma de graça.
+Comente PLANTA que eu te mando uma de graça.
 
 **Botão:** Saiba mais
 
@@ -383,7 +383,7 @@ As 5 versões `../saida/v1` a `v5` são deste ângulo, mas usam o 3D velho da C0
 **Texto principal:**
 Os 7 erros de planta que um arquiteto te faria evitar, explicados em 38 segundos, com a planta na tela.
 
-O último é o mais caro. Comenta PLANTA que eu te mando a planta grátis.
+O último é o mais caro. Comente PLANTA que eu te mando a planta grátis.
 
 ### Ângulo 6: oferta direta (só para quem já interagiu)
 

@@ -22,7 +22,7 @@ Tudo o que o parceiro usa na conversa com o comprador. Juntado em 22/11/2026 (fi
 
 Seções: Sequência de mensagens no WhatsApp; Respostas para objeções comuns; Perguntas frequentes dos compradores; Planta grátis: o que a pessoa recebe depois do comentário "PLANTA".
 
-Tamanho: 2684 palavras.
+Tamanho: 2740 palavras.
 
 ### [Atributos que vendem](atributos-que-vendem.md)
 
