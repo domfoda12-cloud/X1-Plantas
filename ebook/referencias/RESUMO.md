@@ -15,7 +15,7 @@
 - Proibido "pronta para construir" e "garantia de aprovação"; preço de concorrente só com fonte e data, num lugar só: `MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4 (R$ 98 a R$ 2.000 e R$ 420 a R$ 899, cada faixa com a sua fonte).
 <!-- /essencial -->
 
-## Os 6 documentos
+## Os 7 documentos
 
 ### [Apostila do Arquiteto](ARQUITETO.md)
 
@@ -64,3 +64,11 @@ Piloto da base de plantas do Arquiteto (decisão do dono, 23/11/2026: "pesquise 
 Seções: Como ler a tabela; Fontes (lidas em 23/11/2026); As 78 plantas (30 do piloto, 21 da rodada 2, 27 da rodada 3); Aviso de diversidade (importante para o Arquiteto); Quatro padrões (três do piloto, revistos com a rodada 2) e o que a rodada 3 mudou; O que ficou incerto ou não foi conferido.
 
 Tamanho: 13592 palavras.
+
+### [Referências editoriais que prendem o olho: livros, revistas e desenhos de casa famosos pelo visual](visual-ref/EDITORIAL.md)
+
+Pedido do dono, 23/11/2026: "mais referências, coisas que já prendem o olho e já têm a atenção das pessoas, nada comum". Tema desta pasta: diagramação editorial e livros de arquitetura e casa famosos pelo visual. Quem escreveu: Designer. Como foi feito: só busca e leitura de páginas públicas…
+
+Seções: A ideia principal do Diretor (MinoAI Frontier), antes de tudo; As 18 referências em uma tabela; As 18, uma por uma; O que estas 18 têm em comum e os concorrentes não; 5 ideias concretas para o nosso e-book deixar o concorrente de boca aberta; Cuidados (para o Revisor de risco e o Maestro); Reconferência do pedido.
+
+Tamanho: 5065 palavras.

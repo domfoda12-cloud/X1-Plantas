@@ -17,7 +17,7 @@
 - `PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro") é registro da versão de 21/11, substituído por `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"). (`PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro"))
 <!-- /essencial -->
 
-## Os 8 documentos
+## Os 9 documentos
 
 ### [Anúncio com a locução do dono](ANUNCIO-LOCUCAO.md)
 
@@ -72,6 +72,14 @@ E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026
 Seções: 1. O que tem aqui (20 MB); 2. Roteiro para gravar (aprovado pelo Revisor de risco); 3. Plano de corte (128 BPM: 1 compasso = 1,875 s); 4. Regras da edição; 5. O que dizer para a MinoAI no PC.
 
 Tamanho: 1343 palavras.
+
+### [Ganchos visuais: referências que prendem o olho (casa, planta, obra e lote)](referencias/GANCHOS-VISUAIS.md)
+
+O que é: 20 vídeos reais que já seguraram a atenção de muita gente, com o gancho dos 3 primeiros segundos, o recurso visual fora do comum, por que prende e o que dá para adaptar com honestidade. No fim, 5 aberturas para o nosso primeiro vídeo (o convite da F03). Data: 23/11/2026. Editor de vídeo…
+
+Seções: A. As 20 referências; B. O que a MinoAI Frontier ensina sobre o primeiro quadro; C. Cinco aberturas para o primeiro vídeo (convite da F03); D. O que não conferi.
+
+Tamanho: 3096 palavras.
 
 ### [Memes brasileiros históricos: base de referência para o Editor e o Redator](referencias/MEMES.md)
 

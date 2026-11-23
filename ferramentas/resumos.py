@@ -28,7 +28,7 @@ PASTAS = {
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),
     "ebook/referencias": ("Pesquisa e técnica", "Público, concorrentes, regras de projeto e apostilas do Arquiteto",
-                          ["ebook/referencias", "ebook/referencias/plantas-ref", "ebook/referencias/anuncios-ref"], ["arquiteto", "pesquisador", "estrategista"]),
+                          ["ebook/referencias", "ebook/referencias/plantas-ref", "ebook/referencias/anuncios-ref", "ebook/referencias/visual-ref"], ["arquiteto", "pesquisador", "estrategista"]),
     "ebook/vendas": ("Venda e WhatsApp", "O funil: planta grátis, mensagens, objeções e atributos que vendem",
                      ["ebook/vendas"], ["redator", "estrategista", "revisor-de-risco"]),
     "video": ("Vídeo e anúncio", "Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio",

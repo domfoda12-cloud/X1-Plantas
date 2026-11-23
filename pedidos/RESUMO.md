@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 19 documentos
+## Os 21 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -152,6 +152,22 @@ Cada plano é um rascunho de trabalho da equipe do X1-Plantas. Vete cada um como
 Seções: Plano 1: legenda do post da Casa Compacta (Redator); Plano 2: ângulo do primeiro anúncio (Estrategista); Plano 3: cena do vídeo principal (Editor de vídeo); Plano 4: conserto no gerador do PDF (Maestro); Plano 5: teste do last30days (Pesquisador); Plano 6: edição do vídeo com a MinoAI (Editor de vídeo); Plano 7: página do e-book da Casa Compacta (Arquiteto e Redator); Plano 8: roteiro dos dois vídeos (Editor de vídeo); Plano 9: conferência nova no checar.py (Maestro); Plano 10: legenda do post da planta grátis (Redator).
 
 Tamanho: 733 palavras.
+
+### [Skills candidatas para design criativo (passo 1 da pesquisa)](anexos/skills-candidatas-design.md)
+
+Pesquisador, 23/11/2026. Passo 1: achados com fonte. Quem conclui é o Opus (Designer e Maestro) e o Conselho. Nada foi baixado, instalado nem executado; só páginas públicas, nada pago, sem commit. Falta a ficha e o veto do Conselho para qualquer uma entrar (CONSELHO.md, seção 6). Para que serve: o…
+
+Seções: As 3 melhores no topo; Mapa rápido (as 12 lidas); Fichas; Lidas e descartadas; O que ainda precisa de decisão (nada disso eu fiz); O que não consegui confirmar; Fontes lidas (todas em 23/11/2026); Reconferência da ficha (tarefa recebida).
+
+Tamanho: 3188 palavras.
+
+### [Skills candidatas para a venda do e-book (WhatsApp, Instagram, anúncio)](anexos/skills-candidatas-venda.md)
+
+Pesquisa do Pesquisador, passo 1 de 2. Lida em 23/11/2026, só em páginas públicas do GitHub (arquivos "raw"), pelo TinyFish (busca e leitura, grátis). Nada foi baixado, instalado nem executado. Quem confere e conclui é o Opus; o Revisor de risco tem veto. Todas as leituras foram da branch `main`…
+
+Seções: As 3 melhores (para o primeiro Pix); Tabela das 12 candidatas; Descartadas (li o suficiente para dizer não); O que isto significa para a ordem de entrada (sugestão, quem decide é o Conselho e o dono); O que não consegui confirmar.
+
+Tamanho: 2263 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 
