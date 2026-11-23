@@ -140,6 +140,8 @@ def construir(planta):
             centro = porta[3] if len(porta) > 3 else padrao
             centro = min(max(centro, la + PORTA_ENTRADA / 2 + 0.05), lb - PORTA_ENTRADA / 2 - 0.05)
             a, b = centro - PORTA_ENTRADA / 2, centro + PORTA_ENTRADA / 2
+            if lado == "frente":
+                planta["_entrada_x"] = centro  # o caminho do jardim chega aqui (varanda aberta não tem folha de porta)
             if fechado(c):
                 abrir(o, fixo, a, b)
                 para_mais = lado in ("frente", "esq")
@@ -579,6 +581,7 @@ def modulo(planta):
         f"export const portas = {J(portas)};",
         f"export const MOVEIS = {J(moveis)};",
         f"export const ORDEM = {J(ordem(planta))};",
+        f"export const ENTRADA_X = {R(planta['W'] - planta.get('_entrada_x', planta['W'] / 2))};",
         "",
     ])
 

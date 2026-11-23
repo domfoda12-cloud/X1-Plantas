@@ -357,7 +357,7 @@ export function criarCasa(renderer) {
   grama.rotation.x = -Math.PI / 2; grama.position.set(centro.x, -0.02, centro.z); grama.receiveShadow = true; cena.add(grama);
   const reais = []; // objetos externos que surgem com o jardim
   const portaEntrada = portas.find((d) => d.id === 'entrada' || (String(d.id).startsWith('ext-') && Math.abs(d.y) < 0.01));
-  const ENTRADA_X = portaEntrada ? (portaEntrada.a0 === Math.PI ? portaEntrada.x - portaEntrada.r / 2 : portaEntrada.x + portaEntrada.r / 2) : LARGURA / 2;
+  const ENTRADA_X = DADOS.ENTRADA_X ?? (portaEntrada ? (portaEntrada.a0 === Math.PI ? portaEntrada.x - portaEntrada.r / 2 : portaEntrada.x + portaEntrada.r / 2) : LARGURA / 2);
   const rua = new THREE.Mesh(new THREE.BoxGeometry(40, 0.04, 2.2), new THREE.MeshStandardMaterial({ color: '#C9C3B6', roughness: 1 }));
   rua.position.set(centro.x, 0, -3.6); rua.receiveShadow = true; cena.add(rua); reais.push({ obj: rua, t: 0.55 });
   for (let i = 0; i < 5; i++) {

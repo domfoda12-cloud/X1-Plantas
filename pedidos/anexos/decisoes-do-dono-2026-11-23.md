@@ -73,3 +73,4 @@
 | O que vai de graça | "Decidindo se vai tudo de graça, o que vai de graça, se vai ser um atendimento personalizado..." | Em aberto, o dono está decidindo |
 | everything-claude-code | Levar e terminar tudo | Terminar os agentes, os comandos e os avisos (só o do quadro e o contador), e levar à main com pull request |
 | WhatsApp do negócio | Número dado pelo dono | Entra no `ebook/config.json` |
+| Visualizar as tarefas (19:45) | "Queria ter uma maneira de visualizar isso mais fácil" | Quadro de tarefas em https://claude.ai/artifact/R8SSzqnZxR6XafEP5uXBtX, atualizado pela equipe a cada tarefa e a cada hora |
