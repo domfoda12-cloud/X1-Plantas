@@ -156,6 +156,7 @@ Criada pelo programa; os campos são obrigatórios (o `checar.py` confere):
 | Quem executa | agente e modelo de cada parte |
 | Conferência | o que foi conferido, como, e o que não foi |
 | Resultado | o que virou, com os arquivos |
+| O que aprendi | (ficha de 23/11/2026 em diante) `papel: lição`, uma por linha, ou `nada novo`. O `fechar` grava cada lição no "Lições" do `contexto/<papel>.md` e em `pedidos/LICOES.md`; se o contexto passaria de 3500, não fecha e manda consolidar. Lição avulsa: `pedido.py licao <papel> "texto" --origem prova` |
 
 **Uma ficha só** (22/11/2026): a ficha daqui é a ficha do pedido que o `CLAUDE.md` exige. Entrega longa que junta muitos pedidos da mesma peça (ex.: `video/ANUNCIO-LOCUCAO.md` (seção "Pedido do dono: anúncio do e-book com locução (ficha única)")) continua existindo como **anexo**: a ficha aponta para ela em "Quem executa", e a reconferência dos pedidos um por um, antes de cada etapa, é feita com as duas.
 

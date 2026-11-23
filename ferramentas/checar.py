@@ -151,6 +151,17 @@ if "## Plano" in _fechada and "não some" in _fechada and _p.campo(_fechada, "Re
     print("[OK ] fechar ficha guarda as seções de depois")
 else:
     falhas.append("fechar ficha apaga seções"); print("[ERRO] fechar ficha apaga as seções depois do Resultado")
+# Lição ao fechar ficha (fila da noite, A2): vai ao fim do "Lições", recusa no limite, formato do campo "O que aprendi"
+_ctx = "# x\n\n## Lições\n\n- antiga\n\n## Depois\n\nfica\n"
+_ins = _p.inserir_licao(_ctx, "- nova")
+_ok_licao = (_ins is not None and _ins.index("- nova") < _ins.index("## Depois") and "fica" in _ins
+             and _p.inserir_licao(_ctx + "x" * _p.LIMITE_CONTEXTO, "- nova") is None and _p.inserir_licao("# sem seção\n", "- nova") is None
+             and _p.licoes_do_campo("maestro: a\n`revisor-de-risco`: b") == [("maestro", "a"), ("revisor-de-risco", "b")]
+             and _p.licoes_do_campo("nada novo") == [] and _p.licoes_do_campo("só texto solto") is None and _p.licoes_do_campo(None) is None)
+if _ok_licao:
+    print("[OK ] lição ao fechar ficha (lugar, limite, formato)")
+else:
+    falhas.append("lição ao fechar ficha"); print("[ERRO] lição ao fechar ficha: lugar, limite ou formato errado")
 rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executable, "ferramentas/conversas.py", "testar"])
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])

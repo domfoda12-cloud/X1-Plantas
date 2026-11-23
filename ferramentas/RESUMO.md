@@ -83,7 +83,7 @@ Funções: `pagina`, `celular`, `fundo`, `colar`, `mockups`, `broll`.
 
 Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
 
-Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `quadro`, `fechar`, `indice`, `conferir`.
+Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `quadro`, `licoes_do_campo`, `inserir_licao`, `licao`, `fechar`, `indice`, `conferir`.
 
 ### [`ferramentas/pesquisa.py`](pesquisa.py)
 
