@@ -919,6 +919,9 @@ def montar(plantas, config, numeros):
     import re
     largura_vb = lambda svg: float(re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2])
     colunas_lotes = " ".join(f"{largura_vb(svg_lote(por_id[i])):.2f}fr" for i in ["E03", "C01", "F02"])
+    # o lote mais fundo manda na altura: a fileira estreita até ele caber em 100 mm (a E03 de 2 quartos pede lote de 20,6 m)
+    _vb = [[float(v) for v in re.search(r'viewBox="([^"]+)"', svg_lote(por_id[i])).group(1).split()[2:]] for i in ["E03", "C01", "F02"]]
+    largura_lotes = min(170.0, 100.0 * sum(w for w, _ in _vb) / max(h for _, h in _vb))
     L.pagina(f"""<span class="sobre">Depois de escolher</span><h2>Terreno e recuos</h2>
       <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
       <div class="duas">
@@ -935,7 +938,7 @@ def montar(plantas, config, numeros):
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
-      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes}">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
+      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in ["E03", "C01", "F02"])}</div>""", "texto")
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
