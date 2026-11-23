@@ -133,7 +133,7 @@ Oi, [nome]! Ficou alguma dúvida sobre as plantas ou sobre o seu terreno? Pode p
 
 ### Dia 7: última mensagem
 
-Oi, [nome]! [Só se o dono definir uma data real; senão, apague a frase:] O preço de lançamento vale até [data]. [Só se o dono decidir e for verdade: depois do próximo lançamento o e-book fica maior e o preço sobe.] Qualquer dúvida sobre o seu terreno, me chama.
+Oi, [nome]! Qualquer dúvida sobre o seu terreno, me chama.
 
 > Depois desta mensagem, encerre a sequência. Não envie mais nada sem a pessoa pedir. Só diga que o preço sobe se isso for verdade.
 
@@ -168,7 +168,7 @@ Então é o melhor momento: escolhendo a casa primeiro, você procura um terreno
 
 ### "Vou pensar."
 
-Claro. A planta grátis fica com você. [Só se o dono definir uma data real; senão, apague a frase:] Só um aviso: o preço de lançamento vale até [data]. Tem alguma dúvida que eu possa responder agora?
+Claro. A planta grátis fica com você. Tem alguma dúvida que eu possa responder agora?
 
 > Só fale do prazo se ele for verdadeiro.
 

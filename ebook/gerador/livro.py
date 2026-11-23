@@ -853,7 +853,7 @@ def fachada_bloco(p):
     As duas molduras têm o mesmo tamanho e crescem até o fim da página (CSS .vistas); a foto e o 3D aparecem inteiros."""
     if arquivo_foto(FACHADAS, p['id']).exists():
         rua = (f'<h4>Vista da rua</h4>'
-               f'{foto(p["id"], None, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 22%", FACHADAS)}')
+               f'{foto(p["id"], None, "Imagem ilustrativa gerada a partir da vista da rua desta planta.", "center 22%", FACHADAS, largura=1100)}')
         tipo = " com-foto"  # foto em pé (4:5): moldura com altura mínima para a fachada aparecer inteira (CSS)
     else:
         rua = f'<h4>Vista da rua (simplificada)</h4><div class="rua-svg">{svg_fachada(p)}</div>'

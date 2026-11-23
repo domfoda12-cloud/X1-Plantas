@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 26 documentos
+## Os 28 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -96,6 +96,14 @@ Tamanho: 8430 palavras.
 Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md`. O dono troca os campos entre colchetes e manda do e-mail dele, em particular (não como issue pública). Esta sessão não manda e-mail. O endereço do autor não está aqui: pegue no perfil dele no GitHub…
 
 Tamanho: 517 palavras.
+
+### [Perfil novo do Instagram: material para o dono escolher (rascunho)](anexos/instagram-perfil-novo.md)
+
+Redator, 23/11/2026, noite. Pedido do dono: "Um novo" (comentário no quadro, `pedidos/anexos/decisoes-do-dono-2026-11-23.md`, linha "Instagram"): perfil novo, só do negócio. Quem cria a conta é ele; aqui fica o material para ele escolher. Rascunho: nada vai ao público antes do Revisor de risco.…
+
+Seções: 1. Nome de usuário (@): 6 opções; 2. Bio: 3 opções (limite de 150 caracteres); 3. Nome de exibição e categoria; 4. Os 9 primeiros posts (a grade de quem abre o perfil); 5. Destaques fixos (stories): 3; 6. O que só o dono faz; Para o Revisor de risco; Perguntas ao dono (curtas).
+
+Tamanho: 2874 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 1, 23/11/2026)](anexos/integracao-novos-v1.md)
 
@@ -208,6 +216,14 @@ Tamanho: 7353 palavras.
 Seções: 1. `oferta-e-whatsapp` sobre `ebook/vendas/RESPOSTAS-RAPIDAS.md`; 2. `design-editorial` sobre a página da Casa Compacta (`ebook/plantas/rascunhos/estilo-final-C01.png`).
 
 Tamanho: 1028 palavras.
+
+### [Teste de preço R$ 47 x R$ 67: como medir](anexos/teste-de-preco-como-medir.md)
+
+Para o dono. Decisão dele em 23/11/2026 (decisões): dois preços, em semanas alternadas, começando pelo R$ 47. Feito pelo Estrategista. Ainda não há nenhuma venda medida: nenhum número abaixo é resultado, só exemplo de conta.
+
+Seções: 1. A regra em uma linha; 2. O que anotar, por pessoa; 3. O modelo de planilha (só os nomes das colunas); 4. A venda conta na semana da oferta; 5. Quantas conversas antes de concluir; 6. A conta: qual preço ganha; 7. Perguntas que só você responde.
+
+Tamanho: 743 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 
