@@ -9,6 +9,6 @@
 | editor-video | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | dono 1 |
 | estrategista | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | dono 1, prova 1 |
 | haiku | n = 0, sem nota ainda | - | 7,5 de 8; alarme falso não medido; n = 1 | - |
-| maestro | n = 0, sem nota ainda | - | - | dono 5 |
+| maestro | n = 0, sem nota ainda | - | - | dono 6 |
 | pesquisador | n = 0, sem nota ainda | - | - | dono 1 |
 | revisor-de-risco | n = 0, sem nota ainda | - | 8 de 8; alarme falso não medido; n = 1 | prova 1 |
