@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 24 documentos
+## Os 25 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -192,6 +192,14 @@ Pesquisa do Pesquisador, passo 1 de 2. Lida em 23/11/2026, só em páginas públ
 Seções: As 3 melhores (para o primeiro Pix); Tabela das 12 candidatas; Descartadas (li o suficiente para dizer não); O que isto significa para a ordem de entrada (sugestão, quem decide é o Conselho e o dono); O que não consegui confirmar.
 
 Tamanho: 2263 palavras.
+
+### [Entrada de 6 skills: passo 1 do roteiro (ler o que ela roda)](anexos/skills-entrada-passo1.md)
+
+Pesquisador, 23/11/2026. Passo 1 de `CONSELHO.md`, seção 6. Só leitura de páginas públicas (TinyFish: GitHub raw, blob e a API pública de commits e pastas). Nada foi baixado, clonado, instalado nem executado; nada pago; sem commit. O `gh` e o `curl` do shell continuam sem acesso a esses…
+
+Seções: Resumo em uma tabela; 1. meta-click-to-message-ads (Insightful-Pipe/meta-ads-skills); Neste projeto (X1-Plantas); 2. copy-thief (thalesholleben/copy-thief); Neste projeto (X1-Plantas); 3. offers (coreyhaines31/marketingskills, pasta `skills/offers/`); Neste projeto (X1-Plantas); 4. frontend-design (anthropics/skills, pasta `skills/frontend-design/`); Neste projeto (X1-Plantas); 5. canvas-design (anthropics/skills, pasta `skills/canvas-design/`); Neste projeto (X1-Plantas); 6. pdf-design (Georgi45/pdf-design); Neste projeto (X1-Plantas); Riscos transversais (para o Revisor de risco); ….
+
+Tamanho: 7353 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 

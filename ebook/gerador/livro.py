@@ -591,7 +591,7 @@ def chips(p):
     return (f'<div class="chips"><span class="chip"><i>{ICONES["area"]}</i>{n0(r["area_fechada"])} m² fechados</span>'
             f'<span class="chip"><i>{ICONES["cama"]}</i>{E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span>'
             f'<span class="chip"><i>{ICONES["banho"]}</i>{b} banheiro{"s" if b > 1 else ""}</span>'
-            f'<span class="chip amar"><i>{ICONES["lote"]}</i>lote a partir de {lote_frente(p)} x {r["lote_comercial"][1]} m</span></div>')
+            f'<span class="chip amar"><i>{ICONES["lote"]}</i>Cabe num lote de {lote_frente(p)} x {r["lote_comercial"][1]} m</span></div>')
 
 
 def svg_fachada(p, legenda=True):
@@ -829,6 +829,32 @@ def lote_frente(p):
     return p["_r"].metricas["lote_comercial"][0]
 
 
+def casas_txt(n):
+    """"1 casa" / "3 casas"."""
+    return f"{n} casa{'s' if n != 1 else ''}"
+
+
+def recuos_da_edicao(plantas):
+    """Os recuos de referência das casas desta edição, do validador.
+    Devolve (frente, fundos, lateral da casa com parede na divisa ou None, frases de corredor e de esquina):
+    o trecho de corredor e o de esquina só entram se a edição tiver casa desse tipo, no singular ou no plural."""
+    v = lambda x: f"{x:g}".replace(".", ",")
+    tipos = {"divisa": [], "corredor": [], "esquina": []}
+    for p in plantas:
+        rec = p["_r"].metricas["recuos"]
+        lat = (rec["esq"], rec["dir"])
+        tipos["divisa" if min(lat) == 0 else "esquina" if max(lat) >= rec["frente"] else "corredor"].append(max(lat))
+    r0 = plantas[0]["_r"].metricas["recuos"]
+    na = lambda n: "Nas casas" if n > 1 else "Na casa"
+    extras = []
+    if tipos["corredor"]:
+        extras.append(f"{na(len(tipos['corredor']))} de corredor, {v(tipos['corredor'][0])} m nas duas laterais.")
+    if tipos["esquina"]:
+        extras.append(f"{na(len(tipos['esquina']))} de esquina, {v(tipos['esquina'][0])} m também na rua do lado.")
+    lateral = v(tipos["divisa"][0]) if tipos["divisa"] else None
+    return v(r0["frente"]), v(r0["fundos"]), lateral, " ".join(extras)
+
+
 def montar(plantas, config, numeros):
     L = Livro(plantas, config)
     contagem = {}
@@ -861,10 +887,14 @@ def montar(plantas, config, numeros):
         casas = [p for p in plantas if lote_frente(p) == f]
         itens = "".join(f'<li><b>{p["id"]}</b> {E(p["nome"])} <span>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</span><i>p. {numeros[p["id"]]}</i></li>' for p in casas)
         linhas.append(f'<div class="faixa"><div class="faixa-m">{f} m</div><ul>{itens}</ul></div>')
+    rf, rfu, rlat, rext = recuos_da_edicao(plantas)
+    recuos_txt = (f"Recuos de referência: frente {rf} m · fundos {rfu} m"
+                  + (f" · uma lateral {rlat} m, com a outra parede na divisa, se a prefeitura deixar." if rlat else ".")
+                  + (f" {rext}" if rext else ""))
     L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
       <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
-      <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
+      <p class="pequeno">{recuos_txt} Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
     L.inicio["lote"] = len(L.paginas)
 
@@ -889,7 +919,8 @@ def montar(plantas, config, numeros):
     L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
       <p class="abertura">Se ainda não tem o lote, escolha pelo jeito de morar. Depois confira na página {numeros['lote']} se cabe.</p>
       <div class="grupos">{blocos}</div>
-      {galeria(plantas, mostra, f"Algumas das {len(plantas)} casas, cada uma para um jeito de morar.")}""")
+      {galeria(plantas, mostra, f"Algumas das {len(plantas)} casas, cada uma para um jeito de morar." if len(mostra) < len(plantas)
+               else "A casa do e-book." if len(plantas) == 1 else f"As {len(plantas)} casas do e-book, cada uma para um lote e um jeito de morar.")}""")
 
     # 5–6. como ler + glossário
     c01 = por_id.get("C01") or por_id.get(config.get("planta_da_capa")) or plantas[0]
@@ -962,7 +993,10 @@ def montar(plantas, config, numeros):
 
     # próximos passos
     passos = [
-        ("Escolha 2 ou 3 casas", "Pela frente do lote e pelo jeito da família. Anote os IDs."),
+        # "2 ou 3" só num livro com mais de 3 casas
+        ("Escolha 2 ou 3 casas", "Pela frente do lote e pelo jeito da família. Anote os IDs.") if len(plantas) > 3 else
+        ("Escolha a sua casa", "Pela frente do lote e pelo jeito da família. Se couber mais de uma, anote os IDs.") if len(plantas) > 1 else
+        ("Confira se a casa cabe no seu lote", f"Pela frente e pelo fundo, com a conta da página {numeros['lote']}."),
         ("Confira as regras do seu lote", "Faça a consulta prévia na prefeitura e preencha a ficha do terreno."),
         ("Contrate um profissional habilitado", "Arquiteto (CAU) ou engenheiro civil (CREA). Ele adapta a planta ao terreno, ao sol e às regras da cidade e emite a RRT ou a ART."),
         ("Aprove o projeto na prefeitura", "Com o projeto legal aprovado, sai o alvará de construção."),
@@ -1052,6 +1086,9 @@ def dupla(L, p, por_id, numeros):
         alvo = nao[1]
         # a alternativa só é citada se estiver nesta edição (no lançamento, as outras casas não estão no PDF)
         veja = f' Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, {"p. " + str(numeros[alvo]) if isinstance(numeros[alvo], int) else "no e-book"}.' if alvo in por_id else ""
+        # sem a alternativa na edição: só diz que falta suíte se nenhuma casa da edição tiver (conferido no validador)
+        if not veja and "suíte" in nao[0] and not any("suíte" in q["quartos_txt"] for q in por_id.values()):
+            veja = " Este e-book não tem casa com suíte."
         nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])}{veja}</p></div>'
     perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'

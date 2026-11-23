@@ -41,10 +41,10 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 |---|---|---|
 | **Maestro**, a conversa principal (Opus) | `conselho`, `explicar-ao-dono`, `bom-dia`, `triagem-email` (Gmail e Agenda: só leitura; enviar só com o sim do dono, um por vez), `ponytail`, `ponytail-review`, `ponytail-audit`, `artifact-*`, `dataviz`, `make-pdf`, `loop`, Graphify, `pedido.py`, `checar.py` | publicar, gastar, contratar |
 | **Diretor**, MinoAI Frontier | `search_mino_method`, `search_viral_hooks`, `analyze_hook`, `get_account_stats`, kit e estilo de edição | OpenArt, `publish_post` |
-| `redator` (Opus) | `redacao-que-vende`, `marketing-psychology`, ganchos da MinoAI | |
-| `estrategista` (Opus) | painel, `dataviz`, `marketing-psychology`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
+| `redator` (Opus) | `redacao-que-vende`, `marketing-psychology`, `oferta-e-whatsapp`, ganchos da MinoAI | |
+| `estrategista` (Opus) | painel, `dataviz`, `marketing-psychology`, `oferta-e-whatsapp`, números da MinoAI, busca TinyFish | anúncio, TinyFish pago |
 | `arquiteto` (Opus) | `plantas.py`, `planta3d.py`, `imagens3d.py`, `ponytail`, web (Graphify fica com o Maestro) | |
-| `designer` (Opus; `tools:` sem gerar nem publicar desde 23/11) | Diretor MinoAI, `impeccable` (só detectar), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
+| `designer` (Opus; `tools:` sem gerar nem publicar desde 23/11) | Diretor MinoAI, `impeccable` (só detectar), `design-editorial` (planejar e conferir), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
 | `editor-video` (Opus; `tools:` sem gerar nem publicar desde 23/11) | Diretor MinoAI, `watch`, `video/render*.cjs`, `montar.py` | `transcribe_video` da MinoAI (não se sabe se gasta crédito: o Maestro roda), `openart:*` (`performance-ads`, `hook-variants`, `ugc`, `tvc`, `talking-head`...) |
 | `pesquisador` (Sonnet) | busca e leitura do TinyFish, web, `deep-research`, `watch`, `analyze_hook` | TinyFish dataset e deep research |
 | `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
@@ -119,6 +119,7 @@ Regras: qualidade antes de economia; uma coisa por vez (e-book → animações �
 | **AgentScope 2.0** ([agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope), Apache-2.0, Python 3.11 ou mais) | Liberado, não usado: só ideias | Framework para **construir** agentes em Python que chamam modelos pela API (cobrada por token, à parte da assinatura). Não roda o Claude Code. Li o README e a lista de módulos; **não instalei nem rodei**. Ideias que já usamos ou passamos a usar: compactação automática do contexto e descarte de resultado de ferramenta grande (nosso resumo de passagem e o `CONTEXTO-HISTORICO.md`), escolha do modelo por resposta (nossa regra de Opus para decidir e Sonnet para o rotineiro), equipe com líder que delega (o Conselho) e procedimentos padrão em etapas (o roteiro de entrada). Só valeria instalar se um dia houvesse um agente próprio, por exemplo o que responde no WhatsApp |
 
 - **claude-chief-of-staff** ([mimurchison/claude-chief-of-staff](https://github.com/mimurchison/claude-chief-of-staff), MIT, commit 2a10609): lido inteiro em 23/11, não instalado como veio. Viraram as skills `bom-dia` e `triagem-email`. Fora: install.sh (sobrescreve o ~/.claude/CLAUDE.md), o CLAUDE.md modelo, /my-tasks, /enrich (CRM de terceiros, LGPD) e schedules.yaml. Gmail e Google Calendar: o dono conecta em claude.ai.
+- **Seis skills de venda e de design** (lidas em 23/11, passo 1 em `pedidos/anexos/skills-entrada-passo1.md`; nenhuma instalada nem copiada): o método virou duas skills nossas, em português. `oferta-e-whatsapp` vem de Insightful-Pipe/meta-ads-skills (MIT, commit 4883fa97), thalesholleben/copy-thief (MIT, 2a9b3a01) e coreyhaines31/marketingskills, `offers` (MIT, 8a0c22d6). `design-editorial` vem de anthropics/skills, `frontend-design` e `canvas-design` (Apache 2.0, e4bb5d96) e Georgi45/pdf-design (MIT, a4d54449). Fora: o MCP da InsightfulPipe, os scripts do pdf-design (abrem navegador e baixam fonte), temas, fontes e todo estilo de arte de terceiros (condição do dono).
 
 ## 7. Como manter este inventário
 
