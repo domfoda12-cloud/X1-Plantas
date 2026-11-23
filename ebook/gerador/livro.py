@@ -1025,7 +1025,7 @@ def montar(plantas, config, numeros):
     else:
         L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
-      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos de referência. A medida exata de cada casa está na página dela.</p>
+      <p class="abertura">Ache a frente do seu lote: ao lado estão as casas desenhadas num lote comum dessa frente, já com os recuos de referência. O fundo mínimo e a medida exata de cada casa estão na página dela.</p>
       <p class="pequeno">{recuos_txt}</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
     L.inicio["lote"] = len(L.paginas)
@@ -1173,8 +1173,8 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
         html.append(f'<div class="ac-fila{" ac-2" if len(filas) > 1 else ""}" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
                     f'<div class="ac-rua">RUA</div>{fitas}{txt}{pags}</div>')
     return (f'<span class="sobre">Comece aqui</span><h2>Qual casa cabe no seu lote?</h2>'
-            f'<p class="abertura">Procure a frente do seu lote na fita amarela: em cima dela está a casa que cabe, já com os recuos de referência. '
-            f'A medida exata está na página da casa.</p>'
+            f'<p class="abertura">Procure a frente do seu lote na fita amarela: em cima dela está a casa desenhada num lote comum dessa frente, já com os recuos de referência. '
+            f'O fundo mínimo e a medida exata estão na página da casa.</p>'
             + "".join(html)
             + f'<p class="pequeno ac-recuos">{recuos_txt}</p>')
 
