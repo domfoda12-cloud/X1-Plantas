@@ -27,4 +27,5 @@
 | Ordem e-book, animações, vídeo | "Redirecione a ordem para o que faz mais sentido para você" | O Maestro decide: e-book primeiro (é o que destrava a venda) |
 | Nome da rua | "Procure referências na internet…"; depois: "Não procuro ruas famosas, mais como memes históricos" | Pesquisar nomes de rua tirados de **memes históricos brasileiros** (não ruas famosas); opções ao dono |
 | E-mail ao autor do cass | Eu mando | Rascunho em `pedidos/anexos/email-autor-cass.md` |
-| Congelar o sistema 7 dias | "Explique melhor" | Explicar ao dono |
+| Base de plantas do Arquiteto | "Pesquise antes de revisar a casa, faz mais sentido ele revisar depois de estar mais informado" | Piloto de 30 plantas públicas primeiro; só depois o Arquiteto revisa a Casa Compacta e refaz as outras |
+| Congelar o sistema | "60% e-book 40% sistema, eu realmente quero deixar esse sistema o mais melhor possível; sempre que tiver grandes sugestões que possam ser implementadas, não tenha medo de me dizer" | Sem congelamento: divisão de 60% do trabalho no e-book e 40% no sistema; propor melhorias grandes ao dono |

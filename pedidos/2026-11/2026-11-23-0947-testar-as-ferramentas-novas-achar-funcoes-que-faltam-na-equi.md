@@ -13,6 +13,9 @@ As always, better the functionality of the agents make them smarter, idk how to 
 Por exemplo nosso arquiteto, gostaria que ele tivesse centenas de plantas como referência mas não me parece muito possível com minhas ferramentas
 Não procuro ruas famosos, mais como memes históricos
 
+*Recado de 23/11 10:51:* 1 Pesquise antes de revisar a casa, faz mais sentido ele revisar depois de estar mais informado
+2 60% e book 40% sistema, eu realmente quero deixar esse sistema o mais melhor possível, sempre que tiver grandes sugestões que possam ser implementas não tenha medo de me dizer
+
 **O que ele pediu, parte por parte:** (1) Fazer os três testes de funcionamento real das ferramentas novas que propus (marketing-psychology num texto real; everything-claude-code na cópia separada; como se encaixam). (2) Achar funções que a equipe não cobre (ele deu o exemplo "ensinar") e pôr no sistema. (3) Deixar os agentes mais inteligentes; ele não sabe como e confia no Maestro.
 
 **Por que ele pediu, ou o que quer descobrir:** Voltou, achou pouco o trabalho da noite e perguntou se as ferramentas de ontem foram testadas de verdade (não foram).
