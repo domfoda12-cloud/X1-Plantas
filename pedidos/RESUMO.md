@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 7 documentos
+## Os 9 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -38,6 +38,14 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 Seções: O objetivo da equipe; Fase 1 · Organizar a base (ficha `1529-organizar-os-arquivos`); Fase 2 · O plano mestre da equipe (ficha `1944-plano-mestre`); Fase 3 · E-book: as casas refeitas (frente atual); Fase 4 · Animações e imagens (abre só quando a fase 3 fechar); Fase 5 · Vídeo; Fase 6 · Vender e medir (o objetivo é o Pix); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
 Tamanho: 1920 palavras.
+
+### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
+
+Saída do workflow wkfowrx4b (5 leitores, Revisor e compatibilidade por grupo, plano, Fable). Ficha `0209`. Texto dos agentes, sem edição; as correções do Fable valem sobre o plano.
+
+Seções: Entra (adaptado); Não entra; Ganchos; Passos; Testes; Veto do Fable: SIM, SE; Não conferido.
+
+Tamanho: 8430 palavras.
 
 ### [Rascunho: e-mail ao autor do cass (para o dono mandar)](anexos/email-autor-cass.md)
 
@@ -68,3 +76,11 @@ O que mudou da v2 para a v3 (escrita com as 8 críticas do júri; médias: rodad
 Seções: O cérebro: por onde um pedido passa; Cada adição; Perguntas para você; Ordem, quem faz e quando o júri para.
 
 Tamanho: 1421 palavras.
+
+### [Proposta de integração das 6 adições do dono (5 do pedido e a sexta, da ficha `0209`): versão 4, 23/11/2026](anexos/integracao-novos-v4.md)
+
+O que mudou da v3 para a v4 (escrita com as críticas das rodadas 1, 2 e 3) - Página de decisões em dois blocos: primeiro o que destrava o Pix; depois as ferramentas, com "aceito todas as recomendações". - Ordem corrigida: nada que depende do seu sim acontece antes dele. - Fatos refeitos com o…
+
+Seções: O cérebro: por onde um pedido passa; Cada adição; Perguntas para você; Ordem, quem faz e quando o júri para.
+
+Tamanho: 2579 palavras.
