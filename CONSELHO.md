@@ -51,10 +51,12 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 ## 5b. Modo júri (método do llm-council, 23/11/2026)
 
 Para decisão grande (custa dinheiro, vai ao público ou muda o sistema inteiro) ou quando o dono pedir. Método de Andrej Karpathy (`github.com/karpathy/llm-council`; o repositório não tem licença, então entra só o método, nada do código). Ficha de origem: `pedidos/2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md`.
-1. **Opiniões separadas:** 3 modelos (Haiku, Sonnet, Opus ou Fable) opinam sem ver os outros, com nota de 0 a 10.
+0. **Régua com âncoras** (dono, 23/11/2026, rodada 7): toda rodada leva a mesma régua com o que vale 3, 6 e 9 de 10, cada um com um exemplo do projeto. Sem régua escrita no pedido, a rodada não começa.
+1. **Opiniões separadas, cada uma por um ângulo:** 3 modelos (Haiku, Sonnet, Opus ou Fable) opinam sem ver os outros, com nota de 0 a 10. Cada jurado recebe um ângulo diferente (comprador, dinheiro, risco), não a mesma pergunta. **Toda crítica cita arquivo e linha**; crítica sem isso não conta.
 2. **Revisão anônima:** cada um lê as outras opiniões sem saber de quem são e as ordena.
-3. **Presidente:** o 4º modelo, que **não opinou** nesta rodada (rodízio), escreve a síntese e o que corrigir já.
-4. **Laço:** reescreve-se a proposta e repete-se até a nota chegar a 8,5 sem fato errado, não subir em duas rodadas, ou 6 rodadas. Em 23/11 parou na 5ª (6,5, 6,3, 6,0).
+3. **Presidente:** o 4º modelo, que **não opinou** nesta rodada (rodízio), **confere no repositório pelo menos 3 fatos** que os jurados afirmam (diz quais se confirmaram e quais não), escreve a síntese e o que corrigir já.
+4. **No máximo 2 rodadas** (dono, 23/11/2026): reescreve-se a proposta uma vez; se a nota não chegar a 8,5, a decisão vai ao dono com as duas notas. Antes, o laço ia até 6 rodadas e em 23/11 caiu três vezes seguidas (6,5, 6,3, 6,0).
+5. **Calibrar:** a cada 5 rodadas, uma prova com erro plantado (`pedidos/PROVAS.md`); e a nota do júri é comparada depois com o resultado real (custo por venda, `PAINEL.md` seção 4). Júri que dá nota alta para o que não vende perde peso.
 
 **Custo:** caro (o laço de 23/11, rodadas 3 a 5, gastou cerca de 2,95 milhões de tokens de subagentes): só com o motivo escrito na ficha.
 

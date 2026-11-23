@@ -136,3 +136,5 @@
 | 23/11/2026 | (consolidação do `contexto/maestro.md`) | **22/11:** mandei o Pesquisador buscar ruas famosas sem o caminho da ficha (o pacote do executor manda a ficha primeiro); ele trabalhou sem saber o que era pedido e o que era suposição. |
 | 23/11/2026 | (consolidação do `contexto/arquiteto.md`) | **Régua federal (Portaria MCID 725):** banheiro 1,50 m de largura (21 casas abaixo, contagem de 22/11), cozinha 1,80 m (C04, C05, S04), quarto de duas camas 2,60 m (6 casas), mesa para 4, porta de serviço. Ver `ebook/referencias/ARQUITETO.md` (seção "Pesquisa: como é a casa popular brasileira e os grandes passos para construir"). Entra no redesenho. |
 | 23/11/2026 | (consolidação do `contexto/editor-video.md`) | Destino do anúncio com locução: WhatsApp e Facebook Ads (`video/ANUNCIO-LOCUCAO.md`, seção "Pedido do dono"). |
+
+| 2026-11-23 | Júri melhor: "2 sim" | CONSELHO 5b: régua com âncoras, um ângulo por jurado, crítica com arquivo e linha, presidente confere 3 fatos, no máximo 2 rodadas, calibrar com prova e com a venda. |
