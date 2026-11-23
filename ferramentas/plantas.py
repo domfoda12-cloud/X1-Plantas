@@ -552,7 +552,6 @@ def validar(planta):
     lote_fundo = round(ymax + rec["frente"] + rec["fundos"], 1)
     r.metricas["lote"] = (lote_frente, lote_fundo)
     r.metricas["recuos"] = rec
-    n_lote = math.ceil(lote_frente * 2) / 2
     r.metricas["lote_comercial"] = (math.ceil(lote_frente), math.ceil(lote_fundo / 5) * 5)
     ocupacao = (W * D) / (lote_frente * lote_fundo)
     r.metricas["taxa_ocupacao"] = round(ocupacao, 2)
@@ -785,8 +784,8 @@ def cmd_fichas():
         m = p["_r"].metricas
         L += [f"## {p['id']} · {p['nome']}", "",
               f"![{p['id']}](previas/{p['id']}.png)", "",
-              f"**{n0(m['area_fechada'])} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · lote a partir de "
-              f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** · frente para o **{m['orientacao']['melhor']}**", ""]
+              f"**{n0(m['area_fechada'])} m² fechados** · {p['quartos_txt']} · {p['banheiros']} banheiro(s) · cabe num lote de "
+              f"**{m['lote_comercial'][0]} x {m['lote_comercial'][1]} m** (no mínimo {_f(m['lote'][0])} x {_f(m['lote'][1])} m) · frente para o **{m['orientacao']['melhor']}**", ""]
         if p.get("destaque"):
             L += [f"*{p['destaque']}*", ""]
         L += ["**Por que esta planta é assim**", ""] + [f"- {t}" for t in pensou(p)]

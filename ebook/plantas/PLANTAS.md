@@ -6,7 +6,7 @@
 
 ![C01](previas/C01.png)
 
-**50 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **norte**
+**50 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 13,0 m) · frente para o **norte**
 
 *Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura*
 
@@ -25,7 +25,7 @@
 
 ![C02](previas/C02.png)
 
-**32 m² fechados** · studio · 1 banheiro(s) · lote a partir de **6 x 15 m** · frente para o **norte**
+**32 m² fechados** · studio · 1 banheiro(s) · cabe num lote de **6 x 15 m** (no mínimo 6,0 x 11,7 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
@@ -37,7 +37,7 @@
 
 ![C03](previas/C03.png)
 
-**41 m² fechados** · 1 quarto (+1 depois) · 1 banheiro(s) · lote a partir de **7 x 20 m** · frente para o **norte**
+**41 m² fechados** · 1 quarto (+1 depois) · 1 banheiro(s) · cabe num lote de **7 x 20 m** (no mínimo 7,0 x 15,4 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
@@ -49,7 +49,7 @@
 
 ![C04](previas/C04.png)
 
-**48 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **sul**
+**48 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 7,5 x 14,1 m) · frente para o **sul**
 
 *Varanda na frente e dois quartos do mesmo tamanho*
 
@@ -67,7 +67,7 @@
 
 ![C05](previas/C05.png)
 
-**47 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **sul**
+**47 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 7,5 x 12,3 m) · frente para o **sul**
 
 *A casa de 2 quartos mais enxuta, sem desperdiçar um metro*
 
@@ -81,7 +81,7 @@
 
 ![C06](previas/C06.png)
 
-**57 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **sul**
+**57 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,1 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -93,7 +93,7 @@
 
 ![C07](previas/C07.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **8 x 15 m** · frente para o **sul**
+**55 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 14,8 m) · frente para o **sul**
 
 *Varanda larga para a rede e a cadeira de fim de tarde*
 
@@ -111,7 +111,7 @@
 
 ![E01](previas/E01.png)
 
-**58 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 25 m** · frente para o **norte**
+**58 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 23,7 m) · frente para o **norte**
 
 *Garagem na frente e todos os cômodos abrindo para o corredor*
 
@@ -129,7 +129,7 @@
 
 ![E02](previas/E02.png)
 
-**40 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **7 x 20 m** · frente para o **norte**
+**40 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **7 x 20 m** (no mínimo 6,6 x 19,8 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
@@ -146,7 +146,7 @@
 
 ![E03](previas/E03.png)
 
-**34 m² fechados** · 1 quarto · 1 banheiro(s) · lote a partir de **5 x 20 m** · frente para o **norte**
+**34 m² fechados** · 1 quarto · 1 banheiro(s) · cabe num lote de **5 x 20 m** (no mínimo 5,0 x 17,7 m) · frente para o **norte**
 
 *Cabe em lote de 5 m de frente: todas as janelas dão para o corredor*
 
@@ -165,7 +165,7 @@
 
 ![E04](previas/E04.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **norte**
+**55 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,5 m) · frente para o **norte**
 
 *Pátio de luz entre os quartos: o quarto casal abre janela para ele*
 
@@ -179,7 +179,7 @@
 
 ![E05](previas/E05.png)
 
-**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 20 m** · frente para o **norte**
+**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 20 m** (no mínimo 7,9 x 19,5 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
@@ -195,7 +195,7 @@
 
 ![E06](previas/E06.png)
 
-**68 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **9 x 25 m** · frente para o **norte**
+**68 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 25 m** (no mínimo 8,6 x 22,5 m) · frente para o **norte**
 
 *Área gourmet nos fundos, aberta para o corredor*
 
@@ -213,7 +213,7 @@
 
 ![E07](previas/E07.png)
 
-**72 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **8 x 25 m** · frente para o **norte**
+**72 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 22,4 m) · frente para o **norte**
 
 *3 quartos, um deles suíte, num lote de 8 m de frente*
 
@@ -232,7 +232,7 @@
 
 ![F01](previas/F01.png)
 
-**68 m² fechados** · 3 quartos · 1 banheiro(s) · lote a partir de **10 x 15 m** · frente para o **sul**
+**68 m² fechados** · 3 quartos · 1 banheiro(s) · cabe num lote de **10 x 15 m** (no mínimo 9,9 x 12,6 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -244,7 +244,7 @@
 
 ![F02](previas/F02.png)
 
-**86 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **12 x 15 m** · frente para o **sul**
+**86 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **12 x 15 m** (no mínimo 11,5 x 13,1 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -256,7 +256,7 @@
 
 ![F03](previas/F03.png)
 
-**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
+**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **11 x 15 m** (no mínimo 10,9 x 14,6 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -273,7 +273,7 @@
 
 ![F04](previas/F04.png)
 
-**80 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **11 x 20 m** · frente para o **sul**
+**80 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **11 x 20 m** (no mínimo 10,9 x 18,0 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -289,7 +289,7 @@
 
 ![F05](previas/F05.png)
 
-**91 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **13 x 15 m** · frente para o **sul**
+**91 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **13 x 15 m** (no mínimo 12,9 x 13,1 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
@@ -303,7 +303,7 @@
 
 ![S03](previas/S03.png)
 
-**78 m² fechados** · 2 quartos · 1 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
+**78 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **11 x 15 m** (no mínimo 10,3 x 13,4 m) · frente para o **sul**
 
 *Circulação larga e banheiro com espaço livre para o giro de 1,50 m da cadeira de rodas*
 
@@ -319,7 +319,7 @@
 
 ![S04](previas/S04.png)
 
-**66 m² fechados** · 2 quartos + escritório · 1 banheiro(s) · lote a partir de **10 x 20 m** · frente para o **sul**
+**66 m² fechados** · 2 quartos + escritório · 1 banheiro(s) · cabe num lote de **10 x 20 m** (no mínimo 9,3 x 15,3 m) · frente para o **sul**
 
 *Escritório com porta para a rua: cliente entra sem passar pela casa*
 
@@ -335,7 +335,7 @@
 
 ![S05](previas/S05.png)
 
-**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **9 x 15 m** · frente para o **sul**
+**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 8,9 x 14,9 m) · frente para o **sul**
 
 *Varandão na frente e suíte para o casal*
 
@@ -353,7 +353,7 @@
 
 ![S07](previas/S07.png)
 
-**74 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **11 x 15 m** · frente para o **sul**
+**74 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **11 x 15 m** (no mínimo 10,9 x 13,1 m) · frente para o **sul**
 
 *Cozinha aberta para a área gourmet, a casa que recebe*
 
@@ -367,7 +367,7 @@
 
 ![S09](previas/S09.png)
 
-**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · lote a partir de **14 x 15 m** · frente para o **sul**
+**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **14 x 15 m** (no mínimo 13,9 x 14,6 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 

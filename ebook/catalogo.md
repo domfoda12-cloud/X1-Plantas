@@ -7,7 +7,7 @@
 
 **Situação:** `no e-book` = planta validada (0 erros), duas páginas no PDF e imagem 3D em `visual/3d/` · `ideia` = só a descrição abaixo. Nenhuma casa tem animação ainda.
 
-**Lote** = frente x fundo do lote comercial mínimo, em metros, com os recuos de referência. Os recuos mudam de cidade para cidade.
+**Lote** = frente x fundo do lote comercial, em metros, com os recuos de referência: a medida exata arredondada para cima (frente no metro inteiro, fundo em múltiplo de 5 m), para nunca dizer que cabe onde não cabe. A medida mínima exata está em `plantas/PLANTAS.md` ("no mínimo") e na calculadora do parceiro. Os recuos mudam de cidade para cidade.
 
 **Lançamento** = em que leva a planta entra, pela proposta do [painel](../PAINEL.md), seção 3. O PDF de hoje já traz as 24 das levas 1 e 2; **[lançamento: sair com 12 ou com 24, a definir pelo dono]**.
 
