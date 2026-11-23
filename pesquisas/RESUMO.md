@@ -11,7 +11,13 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 5 documentos
+## Os 6 documentos
+
+### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
+
+Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
+
+Tamanho: 312 palavras.
 
 ### [Pesquisa: Ferramentas, skills, modelos e custos](ferramentas.md)
 

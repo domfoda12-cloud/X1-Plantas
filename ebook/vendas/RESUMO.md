@@ -14,7 +14,15 @@
 - Em aberto (dono): campos entre [colchetes]: título, preço, pagamento, data, garantia, bônus, promessa de atualização e se lança com 12 ou 24 (`WHATSAPP.md` (seção "Perguntas frequentes dos compradores"), `WHATSAPP.md` (seção "Sequência de mensagens no WhatsApp")).
 <!-- /essencial -->
 
-## Os 2 documentos
+## Os 3 documentos
+
+### [Respostas rápidas do WhatsApp Business](RESPOSTAS-RAPIDAS.md)
+
+Pacote pronto para colar no celular do negócio. Parte da pasta de venda (`WHATSAPP.md`: sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das decisões do dono de 23/11. Passa pelo Revisor de risco antes de ir ao celular. Como usar: no chat, digite `/` e o…
+
+Seções: 1. Lista dos atalhos; 2. As mensagens; 3. Passo a passo no celular (WhatsApp Business).
+
+Tamanho: 2200 palavras.
 
 ### [WhatsApp: sequência, objeções, perguntas e material grátis](WHATSAPP.md)
 
