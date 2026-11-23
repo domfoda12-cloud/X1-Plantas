@@ -1,6 +1,14 @@
 {
   "model": "opus",
   "effortLevel": "high",
+  "permissions": {
+    "deny": [
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ci:*)",
+      "Bash(rm -rf:*)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
