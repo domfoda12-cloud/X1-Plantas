@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [Adicionar o claude-chief-of-staff](2026-11/2026-11-23-0159-adicionar-o-claude-chief-of-staff.md) | aberta | Maestro; veto do Revisor e do Fable junto com a síntese do júri. |
 | 2026-11-23 | [Adicionar o llm-council (Karpathy) e pedir a opinião dele sobre o projeto de hoje](2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md) | aberta | Maestro: conduz. Etapa 1 e 2: Haiku, Sonnet, Opus e Fable (agentes gerais com o modelo de  |
 | 2026-11-23 | [Trabalho autônomo à noite: skills do e-book, atendimento, campanha de anúncio](2026-11/2026-11-23-0144-trabalho-autonomo-a-noite-skills-do-e-book-atendimento-campa.md) | aberta | Maestro (Opus) conduz cada acordar; o time de cada assunto executa e veta; o Fable veta o  |
 | 2026-11-22 | [Correção: sugestão só com permissão; pesquisar ruas famosas do Brasil](2026-11/2026-11-22-2247-correcao-sugestao-so-com-permissao-pesquisar-ruas-famosas-do.md) | fechada em 22/11/2026 | Maestro: regra. `pesquisador` (Sonnet): ruas famosas; `redator` e `revisor-de-risco`: conc |
