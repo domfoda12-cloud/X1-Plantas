@@ -8,7 +8,7 @@
 | **Contexto por papel** | O que cada agente precisa saber, o quadro de avisos e os prompts do dono | [`contexto/RESUMO.md`](contexto/RESUMO.md) (21) | todos |
 | **Caderno de pesquisa** | Tudo o que a equipe achou na web, por tema, com fonte, data e certeza | [`pesquisas/RESUMO.md`](pesquisas/RESUMO.md) (5) | todos |
 | **Produto: o e-book** | O que o e-book é, o plano, o catálogo e as 24 plantas | [`ebook/RESUMO.md`](ebook/RESUMO.md) (4) | arquiteto, designer, redator, revisor-de-risco |
-| **Pesquisa e técnica** | Público, concorrentes, regras de projeto e apostilas do Arquiteto | [`ebook/referencias/RESUMO.md`](ebook/referencias/RESUMO.md) (3) | arquiteto, pesquisador, estrategista |
+| **Pesquisa e técnica** | Público, concorrentes, regras de projeto e apostilas do Arquiteto | [`ebook/referencias/RESUMO.md`](ebook/referencias/RESUMO.md) (4) | arquiteto, pesquisador, estrategista |
 | **Venda e WhatsApp** | O funil: planta grátis, mensagens, objeções e atributos que vendem | [`ebook/vendas/RESUMO.md`](ebook/vendas/RESUMO.md) (2) | redator, estrategista, revisor-de-risco |
 | **Vídeo e anúncio** | Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio | [`video/RESUMO.md`](video/RESUMO.md) (7) | editor-video, diretor, redator, revisor-de-risco |
 | **Instagram** | Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier | [`instagram/RESUMO.md`](instagram/RESUMO.md) (3) | editor-video, diretor, redator, designer, estrategista |

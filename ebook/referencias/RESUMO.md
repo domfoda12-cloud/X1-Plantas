@@ -15,7 +15,7 @@
 - Proibido "pronta para construir" e "garantia de aprovação"; preço de concorrente só com fonte e data, num lugar só: `MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4 (R$ 98 a R$ 2.000 e R$ 420 a R$ 899, cada faixa com a sua fonte).
 <!-- /essencial -->
 
-## Os 3 documentos
+## Os 4 documentos
 
 ### [Apostila do Arquiteto](ARQUITETO.md)
 
@@ -40,3 +40,11 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
 Tamanho: 2351 palavras.
+
+### [Plantas de referência: 30 casas térreas pequenas, de fontes públicas](plantas-ref/REFERENCIAS.md)
+
+Piloto da base de plantas do Arquiteto (decisão do dono, 23/11/2026: "pesquise antes de revisar a casa"). Levantado em 23/11/2026 com busca e leitura grátis (TinyFish e download direto; nada pago). Só guardamos medidas e padrão, com a fonte; nunca a imagem da planta (direito autoral: as pranchas…
+
+Seções: Como ler a tabela; Fontes (lidas em 23/11/2026); As 30 plantas; Aviso de diversidade (importante para o Arquiteto); Três padrões que já aparecem; O que ficou incerto ou não foi conferido.
+
+Tamanho: 4087 palavras.
