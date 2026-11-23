@@ -317,10 +317,9 @@ Um anúncio para cada tamanho de lote. A pessoa se reconhece na hora.
 **Texto na imagem:** Tem um lote 10 x 20?
 
 **Texto principal:**
-14 casas do e-book cabem num lote 10 x 20, com os recuos de referência. Três delas:
+2 das 3 casas do e-book cabem num lote 10 x 20, com os recuos de referência:
 
 🏠 Casa Compacta · 51 m² · 2 quartos
-🏠 Casa Compacta Suíte · 57 m² · 2 quartos (1 suíte)
 🏠 Casa Família Compacta · 71 m² · 3 quartos
 
 Cada uma desenhada no lote, com as medidas e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.

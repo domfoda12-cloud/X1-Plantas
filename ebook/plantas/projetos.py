@@ -66,7 +66,7 @@ def todas():
     # Revisada em 23/11/2026 (rascunho C01R, "com hall", escolha do dono): coluna social de 3,35 m, varanda de 1,20 m,
     # sala e jantar de 4,20 m de fundo (cabe a mesa de 4) e serviço de 1,40 m (1,19 m livres, como nas referências).
     # Varanda de entrada, cozinha nos fundos aberta para a sala, hall curto no lugar do corredor,
-    # banheiro de 1,84 x 1,68 m livres entre os dois quartos e serviço com porta para o quintal.
+    # banheiro de 1,84 x 1,68 m livres entre os dois quartos e serviço com porta para fora, no corredor lateral.
     P.append(casa("C01", "Casa Compacta", 6.5, 8.5,
                   V((3.35, H((1.2, F("varanda", "Varanda", "varanda")),
                             (4.2, F("sala", "Sala e jantar", "sala")),
@@ -224,7 +224,7 @@ def todas():
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],
                   "3 quartos", 1,
-                  destaque="Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para o quintal"))
+                  destaque="Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para fora, no corredor lateral"))
     P.append(casa("F02", "Casa Integrada", 10.0, 8.6,
                   H((3.8, V((4.0, F("sala", "Sala", "sala")), (2.4, F("jantar", "Jantar", "jantar")),
                             (2.4, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),

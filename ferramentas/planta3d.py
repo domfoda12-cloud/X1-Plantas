@@ -465,22 +465,22 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             cozinhas = [c] if t == "cozinha" else [o for o in por_id.values() if o["tipo"] == "cozinha" and PL.parede_comum(c0, o)]
             alvo = ((cozinhas[0]["x0"] + cozinhas[0]["x1"]) / 2, (cozinhas[0]["y0"] + cozinhas[0]["y1"]) / 2) if cozinhas else (cx, cy)
             portas_zona = []
-            for (l, va, vb) in vaos:  # 0,80 m livres na frente de cada porta ou passagem
+            for (l, va, vb) in vaos:  # 0,80 m livres na frente de cada porta ou passagem, medidos do eixo da parede
                 if l == "frente":
-                    portas_zona.append((va, c["y0"], vb, c["y0"] + 0.8))
+                    portas_zona.append((va, c0["y0"], vb, c0["y0"] + 0.8))
                 elif l == "fundos":
-                    portas_zona.append((va, c["y1"] - 0.8, vb, c["y1"]))
+                    portas_zona.append((va, c0["y1"] - 0.8, vb, c0["y1"]))
                 elif l == "esq":
-                    portas_zona.append((c["x0"], va, c["x0"] + 0.8, vb))
+                    portas_zona.append((c0["x0"], va, c0["x0"] + 0.8, vb))
                 else:
-                    portas_zona.append((c["x1"] - 0.8, va, c["x1"], vb))
+                    portas_zona.append((c0["x1"] - 0.8, va, c0["x1"], vb))
             melhor = None
             for rot in (0.0, math.pi / 2):
-                for i in range(int(w / 0.05) + 1):
-                    for j in range(int(d / 0.05) + 1):
-                        m = {"tipo": "mesaJantar", "x": c["x0"] + i * 0.05, "y": c["y0"] + j * 0.05, "w": 0.8, "d": 1.2, "rot": rot}
+                for i in range(int(w / 0.025) + 1):
+                    for j in range(int(d / 0.025) + 1):
+                        m = {"tipo": "mesaJantar", "x": c["x0"] + i * 0.025, "y": c["y0"] + j * 0.025, "w": 0.8, "d": 1.2, "rot": rot}
                         r = pegada(m)
-                        if not cabe(m, 0.1) or r[0] < c["x0"] + 0.05 or r[1] < c["y0"] + 0.05 or r[2] > c["x1"] - 0.05 or r[3] > c["y1"] - 0.05:
+                        if not cabe(m, 0.1) or r[0] < c["x0"] or r[1] < c["y0"] or r[2] > c["x1"] or r[3] > c["y1"]:  # c já vai até a face da parede
                             continue
                         if any(sobrepoe(r, z) for z in portas_zona):
                             continue
@@ -603,15 +603,36 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             lados = _lados_por_preferencia(c, vaos, jans)
             # o box primeiro (é o maior); se ele tirar o lugar do vaso ou da pia, tenta o box em outra parede
             opcoes = sorted((l for l in lados if _comp(c0, l) >= 0.9), key=lambda l: _comp(c0, l) < 1.6) if min(w, d) >= 1.2 and t == "banho" else []
-            for box_lado in opcoes + [None]:
-                antes = len(aqui)
-                if box_lado and not encostar("box", 0.8, 0.85, [box_lado], frente=0.3)[0]:
-                    continue
-                ok = encostar("vaso", 0.4, 0.65, lados, frente=0.3)[0] and encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)[0]
-                if ok or box_lado is None:
-                    break
-                while len(aqui) > antes:
+            def tirar(ate):
+                while len(aqui) > ate:
                     out.remove(aqui.pop())
+
+            def vaso_e_pia():
+                """Procura parede e ponta para o vaso e a pia juntos (com a parede de verdade, o primeiro lugar nem sempre serve)."""
+                ate = len(aqui)
+                for vl in lados:
+                    for vc in (False, True):
+                        if not encostar("vaso", 0.4, 0.65, [vl], frente=0.3, no_canto=vc)[0]:
+                            continue
+                        for pl in reversed(lados):
+                            for pc in (False, True):
+                                if encostar("pia", 0.6, 0.42, [pl], frente=0.3, no_canto=pc)[0]:
+                                    return True
+                        tirar(ate)
+                return False
+
+            feito = False
+            for box_lado in opcoes:
+                for bc in (False, True):
+                    antes = len(aqui)
+                    if encostar("box", 0.8, 0.85, [box_lado], frente=0.3, no_canto=bc)[0] and vaso_e_pia():
+                        feito = True
+                        break
+                    tirar(antes)
+                if feito:
+                    break
+            if not feito:  # sem box: o vaso e a pia que couberem
+                encostar("vaso", 0.4, 0.65, lados, frente=0.3)[0] and encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)
         elif t == "servico":
             encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)  # tanque no canto, máquina ao lado
             encostar("maquina", 0.6, 0.6, None, frente=0.4) or encostar("maquina", 0.6, 0.6, None, frente=0.3)

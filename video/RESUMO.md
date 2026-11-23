@@ -25,7 +25,7 @@ A peça do anúncio com a voz do dono: o pedido (ficha anexa), o plano, o brief 
 
 Seções: Pedido do dono: anúncio do e-book com locução (ficha única); Plano de criação: anúncio do e-book com locução, com a planta nova; Brief criativo: anúncios de plantas de casas; Anúncios para o Facebook Ads.
 
-Tamanho: 5281 palavras.
+Tamanho: 5269 palavras.
 
 ### [Vídeo: regras desta pasta](CLAUDE.md)
 

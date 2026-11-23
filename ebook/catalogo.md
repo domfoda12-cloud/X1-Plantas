@@ -56,7 +56,7 @@
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| F01 | Casa Família Compacta | 71 m² | 3 | 1 | 10 x 15 | Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para o quintal | 1 | `no e-book` |
+| F01 | Casa Família Compacta | 71 m² | 3 | 1 | 10 x 15 | Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para fora, no corredor lateral | 1 | `no e-book` |
 | F02 | Casa Integrada | 86 m² | 3 (1 suíte) | 2 | 12 x 15 | Sala, cozinha e varanda num ambiente só | 2 | `no e-book` |
 | F03 | Casa Família | 78 m² | 3 (1 suíte) | 2 | 11 x 15 | Dois quartos com acesso ao banheiro social, varanda nos fundos | 1 | `no e-book` |
 | F04 | Casa Família Suíte | 80 m² | 3 (1 suíte) | 2 | 11 x 20 | Suíte do casal separada dos quartos das crianças | 1 | `no e-book` |

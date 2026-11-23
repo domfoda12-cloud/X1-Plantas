@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 22 documentos
+## Os 24 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -74,6 +74,14 @@ Tamanho: 913 palavras.
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
 Tamanho: 2443 palavras.
+
+### [E07 e a parede na divisa: o que fazer com a parede sem janela](anexos/e07-parede-na-divisa-ideias.md)
+
+Pedido do dono (23/11, comentário no quadro; `decisoes-do-dono-2026-11-23.md`, linha 86): "Crie uma solução criativa para o que pode ser feito ou acontecer naquele quarto/área, pode ser ideia de vídeo e/ou parte do e-book." Autor: Editor de vídeo, 23/11/2026. Rascunho de ideias: nada aqui é texto…
+
+Seções: O que encosta na divisa (lido no rascunho, não suposto); 1. Cinco usos de verdade para a parede sem janela; 2. Duas páginas de e-book: "A parede sem janela trabalha para você"; 3. Dois roteiros de vídeo, de 15 a 25 s; Em aberto (perguntas ao dono, uma de cada vez).
+
+Tamanho: 2124 palavras.
 
 ### [Plano de integração do everything-claude-code (vetado, 23/11/2026)](anexos/ecc-plano.md)
 
@@ -160,6 +168,14 @@ Cada plano é um rascunho de trabalho da equipe do X1-Plantas. Vete cada um como
 Seções: Plano 1: legenda do post da Casa Compacta (Redator); Plano 2: ângulo do primeiro anúncio (Estrategista); Plano 3: cena do vídeo principal (Editor de vídeo); Plano 4: conserto no gerador do PDF (Maestro); Plano 5: teste do last30days (Pesquisador); Plano 6: edição do vídeo com a MinoAI (Editor de vídeo); Plano 7: página do e-book da Casa Compacta (Arquiteto e Redator); Plano 8: roteiro dos dois vídeos (Editor de vídeo); Plano 9: conferência nova no checar.py (Maestro); Plano 10: legenda do post da planta grátis (Redator).
 
 Tamanho: 733 palavras.
+
+### [Quadrinhos cômicos do e-book: 3 roteiros e 1 vídeo](anexos/quadrinhos-roteiros.md)
+
+Redator, 23/11/2026, noite. Pedido do dono: quadrinhos cômicos no e-book ("Como ler esta planta" em quadrinhos e a obra em passos), no modo humor pelo absurdo (`video/referencias/GANCHOS-VISUAIS.md`, "Referência de humor do dono"; fim de `ebook/referencias/visual-ref/EDITORIAL.md`). Ficha…
+
+Seções: A fórmula e o nosso jeito de dizer; Roteiro 1 · O formigueiro e meio (medir o lote); Roteiro 2 · A planta lavada (a casa que não cabe); Roteiro 3 · Você está aqui (ensina a ler a planta); Versão em vídeo (24 segundos, toda em IA): A planta lavada; Para o Revisor de risco.
+
+Tamanho: 2209 palavras.
 
 ### [Skills candidatas para design criativo (passo 1 da pesquisa)](anexos/skills-candidatas-design.md)
 
