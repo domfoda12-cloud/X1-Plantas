@@ -41,7 +41,7 @@ Tamanho: 566 palavras.
 
 Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
 
-Tamanho: 312 palavras.
+Tamanho: 314 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -153,7 +153,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 593 palavras.
+Tamanho: 603 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
