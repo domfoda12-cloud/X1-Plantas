@@ -22,7 +22,7 @@
 
 **Estrutura de cada página de casa** (cada frase abaixo deve caber em uma linha de celular):
 
-1. **Gancho:** "8 m de frente. 2 quartos, varanda e banheiro largo. 50 m²." (C01; os ganchos de todas estão em [`../fichas/textos.py`](../fichas/textos.py), e o gerador recusa gancho que não bate com o validador)
+1. **Gancho:** "8 m de frente. 2 quartos, varanda e banheiro largo. 51 m²." (C01; os ganchos de todas estão em [`../fichas/textos.py`](../fichas/textos.py), e o gerador recusa gancho que não bate com o validador)
 2. **Promessa honesta:** "A casa que cabe no lote que você tem."
 3. **Por que esta planta é assim** (3 pontos, de [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md)).
 4. **Para quem serve** e **para quem não serve** (honestidade vende: na C01, "Para quem não serve: quem quer suíte. Veja a C06").

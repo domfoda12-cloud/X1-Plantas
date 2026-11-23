@@ -246,6 +246,13 @@ rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executab
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
+# Móvel sobre móvel (máquina sobre o tanque, vaso dentro do box), achado do Designer em 23/11/2026
+import planta3d as _p3  # noqa: E402
+_sob = [f"{pl['id']} {amb}: {a} sobre {b}" for pl in _p3.PL.carregar() for (amb, a, b) in _p3.sobrepostos(_p3.construir(pl)[3])]
+if _sob:
+    falhas.append("móvel sobre móvel"); print("[ERRO] móvel sobre móvel: " + "; ".join(_sob[:12]))
+else:
+    print("[OK ] nenhum móvel sobre outro nas plantas mobiliadas")
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
