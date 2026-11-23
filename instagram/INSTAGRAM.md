@@ -55,7 +55,7 @@ Cada formato vira uma série. O e-book de lançamento tem 3 casas; post de casa 
 | **É possível…?** | "É possível caber 3 quartos num terreno de 8 m de frente?" | Mino Lee, reel 1 | Planta do catálogo que resolve o desafio |
 | **Lista com prova** | "Eu ia pagar R$ X num projeto. Olha o que consegui por R$ Y" | Mino Lee, reel 2 | Imagens das plantas |
 | **POV bastidor** | "POV: fazendo a planta 3D da casa de um seguidor em 10 min" | Mino Lee, reel 3 | Tela do processo + animação 3D |
-| **Planta da semana** | "Casa de 50 m² com 2 quartos num lote de 8 x 15" | E-book | Animação 3D da planta ([`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md)) |
+| **Planta da semana** | "Casa de 51 m² com 2 quartos num lote de 8 x 15" | E-book | Animação 3D da planta ([`../animacoes-3d/`](../animacoes-3d/ANIMACOES-3D.md)) |
 
 ### 3. Regras de retenção: reel de Robert McKeaveney
 
@@ -146,7 +146,7 @@ Anote aqui cada teste para saber o que funciona.
 
 > Rascunho para você criar a conta pessoalmente. Trechos entre [colchetes] precisam de dados seus.
 >
-> **Revisto em 22/11/2026.** Números das casas: sempre os de [`../ebook/plantas/PLANTAS.md`](../ebook/plantas/PLANTAS.md) (a C01 Casa Compacta tem 50 m² desde 22/11). Os posts prontos estão em [`posts/POSTS.md`](posts/POSTS.md). O anúncio com locução não é deste perfil: vai para WhatsApp e Facebook Ads.
+> **Revisto em 22/11/2026.** Números das casas: sempre os de [`../ebook/plantas/PLANTAS.md`](../ebook/plantas/PLANTAS.md) (a C01 Casa Compacta tem 51 m², com hall, desde 23/11). Os posts prontos estão em [`posts/POSTS.md`](posts/POSTS.md). O anúncio com locução não é deste perfil: vai para WhatsApp e Facebook Ads.
 
 ### 1. Identidade
 

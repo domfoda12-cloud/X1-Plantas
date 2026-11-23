@@ -4,7 +4,7 @@
 >
 > **Como usar:** no chat, digite `/` e o atalho (ex.: `/pix`), escolha a mensagem, troque o que está entre [colchetes] e envie. Nenhuma mensagem sai com colchete.
 >
-> **Os [colchetes] que só o dono preenche:** [chave Pix], [nome de quem recebe], [link do Drive], [seu nome] (quem assina o atendimento). O **[preço]** é o da semana do teste: R$ 47 ou R$ 67, em semanas alternadas, começando pelo R$ 47; cada pessoa fica com o preço que recebeu primeiro, do começo ao fim (anote qual foi). Os outros colchetes ([nome], [frente], [fundo], a casa que cabe) saem da conversa e da [calculadora de lote](calculadora-lote.html).
+> **Os [colchetes] que só o dono preenche:** [chave Pix], [nome de quem recebe], [link do Drive], [seu nome] (quem assina o atendimento), [CPF/CNPJ] e [horário] (Decreto 7.962/2013, art. 2º: nome, CPF ou CNPJ, endereço e e-mail também no perfil comercial do WhatsApp Business). O **[preço]** é o da semana do teste: R$ 47 ou R$ 67, em semanas alternadas, começando pelo R$ 47; cada pessoa fica com o preço que recebeu primeiro, do começo ao fim (anote qual foi). Os outros colchetes ([nome], [frente], [fundo], a casa que cabe) saem da conversa e da [calculadora de lote](calculadora-lote.html).
 >
 > **Regras que valem para todas:** nunca prometa aprovação na prefeitura ou no banco, prazo ou custo de obra; a planta é de referência e o projeto é do profissional habilitado. Só a Casa Compacta é grátis: não ofereça mais nada de graça. Não prometa casas novas. No máximo uma mensagem por dia de você para a pessoa; respondê-la, sempre.
 
@@ -158,6 +158,7 @@ Combinado, [nome]!
 
 Chave Pix: [chave Pix]
 Nome: [nome de quem recebe]
+Vendedor: [nome de quem vende], CPF/CNPJ [CPF/CNPJ]
 Valor: R$ [preço]
 
 Confere o nome antes de confirmar. Pagou? Me manda o comprovante aqui que eu te envio o link do e-book.
@@ -257,7 +258,7 @@ Quer que eu te mostre as casas que cabem no seu lote?
 ### Ausência (automática)
 
 ```text
-Oi! Aqui é [seu nome], do e-book Antes do primeiro tijolo. Agora não consigo responder, mas vejo a sua mensagem em até 24 horas.
+Oi! Aqui é [seu nome], do e-book Antes do primeiro tijolo. Agora não consigo responder. Respondo no próximo horário de atendimento, [horário].
 
 Enquanto isso, me manda a medida do seu lote (frente x fundo, exemplo: 8 x 15). Assim eu já volto te dizendo qual casa cabe.
 ```

@@ -32,7 +32,7 @@
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| C01 | Casa Compacta | 50 m² | 2 | 1 | 8 x 15 | Sem corredor comprido: a sala distribui, a varanda recebe e o banheiro passa de 1,50 m de largura | 1 | `no e-book` |
+| C01 | Casa Compacta | 51 m² | 2 | 1 | 8 x 15 | Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura | 1 | `no e-book` |
 | C02 | Casa Studio | 32 m² | studio | 1 | 6 x 15 | Tudo em um ambiente; boa para aluguel | 2 | `no e-book` |
 | C03 | Casa Inicial | 41 m² | 1 (+1 depois) | 1 | 7 x 20 | Pronta para ganhar o 2º quarto depois | 1 | `no e-book` |
 | C04 | Casa Duo | 48 m² | 2 | 1 | 8 x 15 | Varanda na frente e dois quartos do mesmo tamanho | 1 | `no e-book` |

@@ -79,7 +79,7 @@ def todas():
                    ("sala", "circ", "aberto"), ("circ", "quarto2"), ("circ", "banho"), ("circ", "quarto1"),
                    ("cozinha", "servico"), ("ext", "servico", "fundos")],
                   "2 quartos", 1,
-                  destaque="Sem corredor comprido: a sala com mesa distribui, a varanda recebe e o banheiro passa de 1,80 m de largura"))
+                  destaque="Hall curto no lugar do corredor, varanda na entrada e banheiro de 1,84 x 1,68 m livres"))
     P.append(casa("C02", "Casa Studio", 4.5, 7.2,
                   H((4.0, F("estar", "Sala e cama", "estar")),
                     (None, V((2.7, F("cozinha", "Cozinha", "cozinha")),

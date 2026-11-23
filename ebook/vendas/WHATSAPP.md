@@ -27,7 +27,7 @@
 
 **Mensagem no Direct (automática):**
 
-Oi, [nome]! A planta grátis é a **Casa Compacta**: 2 quartos, 50 m², cabe num lote de 8 x 15 m.
+Oi, [nome]! A planta grátis é a **Casa Compacta**: 2 quartos, 51 m², cabe num lote de 8 x 15 m.
 
 Clica aqui que ela chega no seu WhatsApp: [link do WhatsApp: wa.me/ + o número do `ebook/config.json`, com a mensagem pronta "Oi! Quero a planta grátis da Casa Compacta."]
 
@@ -37,7 +37,7 @@ Já separa a medida do seu lote (frente e fundo): lá eu te digo se ela cabe.
 
 ### Dia 0: entrega da planta grátis (logo após o comentário "PLANTA")
 
-Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 50 m², 2 quartos.
+Oi, [nome]! Aqui está a planta que eu prometi: a **Casa Compacta**, 51 m², 2 quartos.
 
 [PDF da planta grátis: `ebook/saida/planta-gratis-C01.pdf`]
 
@@ -284,14 +284,14 @@ Se a Casa Compacta não couber no lote da pessoa, diga com franqueza e confira n
 
 ### 2. Ficha da Casa Compacta (para mandar em texto)
 
-**C01 · Casa Compacta** · 50 m² fechados · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8 x 13 m, com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
+**C01 · Casa Compacta** · 51 m² fechados · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8 x 13 m, com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
 
 **Para quem é:** casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.
 
 **Por que esta planta é assim:**
 - Sem corredor comprido: a sala distribui, e a circulação é só 4% da casa.
 - A varanda cobre a porta da sala, protegida da chuva e do sol direto.
-- O banheiro passa de 1,50 m de largura. Ele não encosta na cozinha nem no serviço: pede uma tubulação própria, que custa mais. Pergunte ao engenheiro quanto isso pesa no orçamento.
+- O banheiro passa de 1,80 m de largura. Ele não encosta na cozinha nem no serviço: pede uma tubulação própria, que custa mais. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Cuidados antes de construir:**
 - Confira os recuos da sua prefeitura para o seu lote.
