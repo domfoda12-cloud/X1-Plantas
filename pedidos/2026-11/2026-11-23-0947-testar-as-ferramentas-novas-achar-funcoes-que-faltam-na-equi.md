@@ -23,7 +23,7 @@ As always, better the functionality of the agents make them smarter, idk how to 
 
 **Quem executa:** Maestro (testes 2 e 3, código, skill); `redator` (teste da marketing-psychology); geral no Opus (mapa de lacunas); `arquiteto` (lote da C01 e "por etapas"); `revisor-de-risco` (veto).
 
-**Conferência:** (a preencher)
+**Conferência:** Teste 1 (marketing-psychology, Redator, na sequência do WhatsApp): carregou e a trava funcionou; valeu como conferência (achou o Dia 1 sem pergunta e o Dia 3 sem o lote da pessoa), pouco como ideia nova; 5 consertos na seção "Neste projeto", aplicados. Teste 2 (everything-claude-code na cópia separada, com a main junta): `checar.py` verde, ficha nova criada e `pedido.py conferir` ok, chave falsa acusada pela conferência de segredos; o contexto do Maestro estourava e foi consertado. Teste 3 (encaixe): marketing-psychology não estava em agente nenhum (agora no Redator e no Estrategista); o método do júri só existia numa ficha (agora `CONSELHO.md`, 5b). Lacunas (geral no Opus): ensinar o dono (skill nova `explicar-ao-dono`), ensinar o comprador a construir por etapas (não existe no e-book: pergunta ao dono), dúvidas do comprador que não voltam, Designer e Editor com todas as ferramentas (fechado). Nenhum agente novo: nenhuma lacuna é recorrente e sem dono. Arquiteto: o lote 8 x 15 contra 8 x 13 é arredondamento de propósito, mas "a partir de" junto do número arredondado engana (24 casas). Revisor: SIM SE nas 3 mudanças, correções aplicadas.
 
 **Resultado:** (a preencher)
 

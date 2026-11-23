@@ -1,7 +1,7 @@
 ---
 name: designer
 description: Designer do X1-Plantas. Use para capa, páginas do e-book, carrosséis, posts e toda imagem parada (inclusive a capa do reel); dá a opinião visual no Conselho e detecta o que parece genérico.
-tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__MinoAI_Frontier__search_mino_method, mcp__MinoAI_Frontier__search_overlay_images, mcp__MinoAI_Frontier__get_my_edit_style
+tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, Skill, mcp__MinoAI_Frontier__search_mino_method, mcp__MinoAI_Frontier__search_viral_hooks, mcp__MinoAI_Frontier__search_overlay_images, mcp__MinoAI_Frontier__get_my_edit_style
 model: opus
 ---
 
