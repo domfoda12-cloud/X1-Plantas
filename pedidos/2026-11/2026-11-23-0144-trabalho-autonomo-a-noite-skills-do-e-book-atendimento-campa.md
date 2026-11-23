@@ -6,6 +6,10 @@
 
 *Recado de 23/11 01:47:* Just stay awake 24h
 
+*Recado de 23/11 01:49:* This night dont queue anything that you have to produce, simply focus on making the system autonomous on learning
+
+*Recado de 23/11 01:49:* the IA inside the IA inside the IA inside the IA
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -27,23 +31,23 @@
 **Resultado:** (a preencher)
 
 
-## Fila da noite, versão 2 (depois do veto do Fable, 23/11, SIM, SE, 5/5)
+## Fila da noite, versão 3 (recado do dono, 01:50: "esta noite não enfileire nada que você tenha de produzir; foque em deixar o sistema autônomo no aprendizado")
 
-Uma por acordar; cada uma com plano curto vetado pelo time antes de executar. Até 6 chamadas de agente por acordar. Na primeira chamada de cada agente, ele diz numa linha as ferramentas que vê (substitui o L1).
+A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "sim" dele. Esta noite só se constrói **como o sistema aprende sozinho**. Uma tarefa por acordar; plano curto vetado; até 6 chamadas de agente; regras da noite da versão 2 continuam (nada pago, nada publicado, nada instalado, texto público intocado).
 
-| # | Tarefa | Quem | Entrega | Estado |
+| # | Tarefa | O que faz o sistema aprender sozinho | Pronto quando | Estado |
 |---|---|---|---|---|
-| N1 | Veto do plano da noite | Fable | fila corrigida | **Feito:** SIM, SE com 6 correções, aplicadas aqui |
-| E07 | **Proposta da E07 redesenhada** (ficha `1616`): quartos fora de fila, mantendo se possível 72 m², 3 quartos, 1 suíte, 2 banheiros e lote de 8 m; validador; prévia mobiliada; a E07 do e-book **intacta** | `arquiteto`; Maestro confere | proposta para o dono aprovar | |
-| N3 | **Atendimento (funil do WhatsApp):** rever mensagens, objeções e planta grátis com as regras de hoje | `redator` e `estrategista`; `revisor-de-risco` | **arquivo de proposta** com antes e depois; `WHATSAPP.md` não muda | |
-| N5 | **Campanha de anúncio (plano):** a partir de `ESTRATEGIA.md` seções 8, 10 e 11; público, ângulos, peças, opções de verba de teste, o que medir | `estrategista` com o Diretor; `redator`; `revisor-de-risco` | plano para o dono; sem número inventado; preço e título como campo pendente | |
-| N4 | **Interface:** calculadora do parceiro e páginas do e-book (o que confunde o comprador) | `designer`; `arquiteto` confere números | arquivo de proposta; a calculadora e o PDF não mudam | |
-| N2 | **Skills para o e-book, só no papel:** buscar, ler a licença inteira na página, Revisor; nada de clone, pip, npx ou binário | `pesquisador`; `designer` e `arquiteto` concluem; `revisor-de-risco` | lista para a manhã; skill nossa só como rascunho, sem ativar | |
-| N6 | **Lições** das auditorias para os contextos (o "cortar repetido" sai: vira lista proposta, porque cortar é o que mais incomoda o dono) | Maestro | lições em dia | |
-| N7 | Auditoria do Fable da noite e resumo da manhã (até 15 linhas, até 5 perguntas com opção e recomendação) | Fable; Maestro | resumo | |
+| A1 | Veto do Fable desta fila | — | fila aprovada | |
+| A2 | **Lição automática ao fechar ficha:** o `pedido.py fechar` passa a exigir o campo "O que aprendi" e copia a lição para o "Lições" do contexto de quem errou (e do Maestro) | todo erro vira lição sem depender de memória | testado no `checar.py` | |
+| A3 | **Placar do veto:** cada nota da régua vai para um placar (`contexto/PLACAR.md`, gerado), por agente e por ponto que caiu; o agente lê a sua linha antes de vetar | cada agente vê onde erra mais | placar gerado das fichas | |
+| A4 | **Minerar correções antigas do dono:** com `conversas.py`, achar as vezes em que ele corrigiu o time ("não", "errado", "eu disse"), e transformar cada uma em lição ou regra (sem copiar trecho) | o que ele já corrigiu não se repete | lições novas, com data | |
+| A5 | **Teste da equipe periódico:** um prompt de exemplo, 3 agentes, nota pela régua; o que sair confuso vira correção no contexto | o sistema se testa sem o dono pedir | rotina escrita e rodada uma vez | |
+| A6 | **Método de cada papel com fonte:** o Pesquisador busca a melhor prática de um papel por vez (ex.: veto, redação de resposta direta, arranjo de planta), o papel propõe, o Maestro decide; vira regra no contexto com fonte | saber mais, com prova | um papel por acordar | |
+| A7 | **Memória entre conversas:** um resumo do que foi aprendido no dia (lições, placar, regras novas) que a próxima conversa lê primeiro | o que se aprende hoje chega amanhã | arquivo curto, citado no quadro | |
+| A8 | Auditoria do Fable do aprendizado da noite e resumo da manhã | — | resumo curto | |
 
-**Regras da noite (Fable):** não tocar texto público (`WHATSAPP.md`, `calculadora-lote.html`, `ebook/config.json`, posts, PDF): tudo vira proposta; nada pago (OpenArt, TinyFish dataset, deep research ou automação, Meta Ads); nada instalado; número só com fonte e data; aviso de limite de uso: registrar e parar, sem adivinhar quando volta; falhou duas vezes, pula e anota; se a tarefa anterior ficou sem commit, o acordar continua nela; folga para tarefa que estourar a hora. Depois da fila: "Tempo livre" (`pedidos/PLANO.md`) até completar 24 horas.
+| A9 | **Camadas** (recado do dono, 01:50: "the IA inside the IA inside the IA inside the IA"): cada camada confere a de baixo. Agentes trabalham e vetam → o Maestro dá nota e tira a lição → o Fable audita o Maestro e as lições → o placar e o resumo do aprendizado medem se o erro caiu com o tempo e ajustam a regra. O Fable também leva nota (quem audita é auditado). Limite técnico: agente não abre agente sozinho; toda camada passa pela conversa principal, e a tarefa agendada é o que faz girar | o sistema melhora o jeito de melhorar | as 4 camadas escritas em `contexto/EQUIPE.md`, com a medida de cada uma | |
 
-**Perguntas para a manhã (suposições):** "UI" é a calculadora e as páginas do e-book? "Customer service" é o funil do parceiro no WhatsApp?
+Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 
 **Recado do dono (01:46): "Just stay awake 24h".** **Tarefa agendada:** "X1-Plantas: trabalho de 24 horas" (antes "da noite") (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; depois da fila, segue com o "Tempo livre" do `pedidos/PLANO.md` (alternando equipe e projeto) até 2026-11-24 01:45 UTC; então escreve o resumo das 24 horas e se apaga. Para se o dono escrever ou se aparecer aviso de limite de uso.
