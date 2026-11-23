@@ -20,3 +20,4 @@
 | 23/11/2026 | arquiteto | prova | - | 4 | Prova 2: deixei passar o Diretor ausente num texto de anúncio, pela segunda vez. Em todo conteúdo público (texto, post, anúncio, vídeo), o Diretor opina primeiro, com a fonte: confira antes de vetar |
 | 23/11/2026 | revisor-de-risco | prova | - | - | Prova 2: passo ausente só vira condição quando uma regra escrita o exige naquele plano; senão vai como nota junto do SIM |
 | 23/11/2026 | editor-video | prova | - | 4 | Prova 2: deixei passar o Diretor ausente num texto de anúncio, pela segunda vez. Em todo conteúdo público, o Diretor opina primeiro, com a fonte: confira antes de vetar |
+| 23/11/2026 | designer | ficha | 2026-11-23-1505 | - | a marca já tem regras fortes no código (papel, azul de projeto, fita); o rótulo RUA e o texto da AMPLIAÇÃO ficam abaixo de 4,5:1 e valem conserto no livro.py. |

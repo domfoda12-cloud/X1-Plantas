@@ -29,3 +29,4 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 - **23/11, dono:** Imagens de teste do gerador ficaram no repositório, e o dono mandou apagar quando soube o que eram. Teste fica fora do repositório ou sai ao terminar; só fica o que tem função. Vale também para clipe de teste (leitura nossa da fala de 21/11)
+- **23/11, ficha 2026-11-23-1505:** a marca já tem regras fortes no código (papel, azul de projeto, fita); o rótulo RUA e o texto da AMPLIAÇÃO ficam abaixo de 4,5:1 e valem conserto no livro.py.

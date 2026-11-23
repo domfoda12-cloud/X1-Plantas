@@ -41,15 +41,15 @@ Tamanho: 566 palavras.
 
 Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
 
-Tamanho: 312 palavras.
+Tamanho: 314 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente; 22/11 · Plano de trabalho; consertar de vez.
+Seções: Agora; 23/11 · Design system da marca; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro; 22/11 · Veto com régua; memes atemporais; convivência; 22/11 · Tempo livre deixa a equipe mais inteligente.
 
-Tamanho: 492 palavras.
+Tamanho: 527 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -73,7 +73,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 406 palavras.
+Tamanho: 440 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 

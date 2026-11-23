@@ -35,7 +35,7 @@ Tamanho: 3003 palavras.
 
 Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à mão: a lição também está no "Lições" do `contexto/<papel>.md`.
 
-Tamanho: 923 palavras.
+Tamanho: 965 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 

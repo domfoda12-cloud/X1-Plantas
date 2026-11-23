@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [design system extraido do codigo (artefato)](2026-11/2026-11-23-1505-design-system-extraido-do-codigo-artefato.md) | fechada em 23/11/2026 | Opus (Maestro), sozinho: tarefa interna que não vai ao público nem custa dinheiro; conselh |
 | 2026-11-23 | [Plantas mais bonitas e decoradas; e-book o mais atrativo possível](2026-11/2026-11-23-1119-plantas-mais-bonitas-e-decoradas-e-book-o-mais-atrativo-poss.md) | aberta | `designer` (3 mockups e o plano); Maestro (código depois da escolha); `revisor-de-risco` ( |
 | 2026-11-23 | [Testar as ferramentas novas, achar funções que faltam na equipe (ex.: ensinar) e deixar os agentes mais inteligentes](2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md) | aberta | Maestro (testes 2 e 3, código, skill); `redator` (teste da marketing-psychology); geral no |
 | 2026-11-23 | [Adicionar o everything-claude-code (worldflowai)](2026-11/2026-11-23-0209-adicionar-o-everything-claude-code-worldflowai.md) | aberta | Maestro (plano e código); 5 leitores, Revisor e conferência de compatibilidade por grupo;  |

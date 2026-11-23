@@ -1,8 +1,10 @@
-**Tarefa:** vídeo do meme e do POV do caramelo (ficha `2055-video-reel`): plano detalhado vetado; e a régua do veto (ficha `2102`).
-**Feito:** plano versão 4: 3 rodadas do time (Editor, Revisor, Arquiteto, Estrategista) e o veto do Fable, todas as correções aplicadas; notas de cada veto na ficha.
-**Feito:** régua do veto (5 pontos) em `pedidos/LEIA-ME.md`; repreensão vira "Lições" no contexto; 12 regras em `contexto/CONVIVENCIA.md`.
-**Feito:** `pedido.py` mostra o prompt que copia e aceita `--de` (a ficha tinha pegado o prompt errado); auditoria 3 corrigida; plano de tudo com a fase 6 (vender e medir).
-**Como conferir:** `python3 ferramentas/checar.py`; ficha 2055, seções "versão 4" e "Qualidade do veto".
-**Não feito / ressalva:** nada gerado nem gasto; agentes com ferramentas novas só valem na próxima conversa (o Estrategista já custou 37 mil em vez de 80 mil).
-**Decisão do dono pendente:** as 7 perguntas do passo 3 da ficha 2055 (onde entra o meme, qual vídeo do WhatsApp, Instagram, A/B, zoom out, quem dança, PLANTA ou LOTE).
-**Próximo passo:** com as respostas, passos 4 a 7 da ficha 2055; sem elas, a E07 (ficha 1616) ou o "Tempo livre" do `pedidos/PLANO.md`.
+## 2026-11-23-1505-design-system
+
+**Tarefa:** tirar o design system do código e montar um novo (ficha `1505-design-system-extraido-do-codigo-artefato`).
+**Feito:** artefato Design System "X1 Plantas", privado: https://claude.ai/artifact/FMbvtEZcoKTyGbQzXTZDPw.
+**Feito:** tokens de `ebook/gerador/livro.css`, `ebook/visual/plano-visual.html` (tema escuro) e `livro.py` (cores dos cômodos, ícones); logos de `marca/logo/` (perfil, horizontal, paredes).
+**Feito:** guia em português (voz, honestidade, cor, tipo, desenho técnico, logo, o que não fazer) e capa conferida nos dois temas.
+**Como conferir:** abrir o link; o `README.md` do artefato lista o que ficou de fora.
+**Não feito / ressalva:** sem componentes (não há biblioteca, só classes CSS); pt e mm convertidos em px; 2 pares de cor do código abaixo de 4,5:1, anotados.
+**Decisão do dono pendente:** quais peças viram componente (fita, orelha, ficha, caixas, card); confirmar o logo de perfil como oficial; compartilhar o link (menu Share), se outros forem ver.
+**Próximo passo:** com a escolha do dono, montar os componentes no mesmo artefato.
