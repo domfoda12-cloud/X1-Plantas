@@ -861,14 +861,14 @@ def montar(plantas, config, numeros):
     L.pagina(f"""
       <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
       <p class="abertura">Ache a frente do seu lote: ao lado estão as casas que cabem nele, já com os recuos. A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>
-      <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais, menos a E03 Casa Fita, que encosta numa divisa. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
+      <p class="pequeno">Recuos de referência: frente 3 m · fundos 1,5 m · uma lateral 1,5 m, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais. Na casa de esquina, 3 m também na rua do lado. Um lote mais largo também serve, se tiver o comprimento indicado, se os recuos da sua cidade não forem maiores e se a taxa de ocupação deixar.</p>
       <div class="faixas">{''.join(linhas)}</div>""", "lote")
 
     # 4. ache pelo jeito da família
     grupos = [
-        ("Mora sozinho ou vai alugar", ["C02", "E03"]),
+        ("Mora sozinho ou vai alugar", ["C02"]),
         ("Quer sair do aluguel e crescer depois", ["C03"]),
-        ("Casal com 1 ou 2 filhos", ["C01", "C04", "C05", "C06", "E02", "E04", "E05"]),
+        ("Casal com 1 ou 2 filhos", ["C01", "C04", "C05", "C06", "E02", "E03", "E04", "E05"]),
         ("Família de 4 ou mais", ["F01", "F02", "F03", "F04", "E07", "S09"]),
         ("Trabalha em casa", ["S04"]),
         ("Gosta de receber", ["S07", "E06", "F05"]),

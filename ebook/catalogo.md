@@ -46,7 +46,7 @@
 |---|---|---|---|---|---|---|---|---|
 | E01 | Casa Estreita | 58 m² | 2 (1 suíte) | 2 | 8 x 25 | Garagem na frente e todos os cômodos abrindo para o corredor | 1 | `no e-book` |
 | E02 | Casa Corredor | 40 m² | 2 | 1 | 7 x 20 | Cômodos em fila, todos com janela para o corredor lateral coberto | 1 | `no e-book` |
-| E03 | Casa Fita | 34 m² | 1 | 1 | 5 x 20 | Cabe em lote de 5 m de frente: todas as janelas dão para o corredor | 1 | `no e-book` |
+| E03 | Casa Fita | 56 m² | 2 | 1 | 5 x 25 | Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa | 1 | `no e-book` |
 | E04 | Casa Pátio | 55 m² | 2 | 1 | 9 x 15 | Pátio de luz entre os quartos: o quarto casal abre janela para ele | 2 | `no e-book` |
 | E05 | Casa Estreita Suíte | 59 m² | 2 (1 suíte) | 2 | 8 x 20 | Suíte nos fundos, longe da rua | 1 | `no e-book` |
 | E06 | Casa Estreita Gourmet | 68 m² | 2 (1 suíte) | 2 | 9 x 25 | Área gourmet nos fundos, aberta para o corredor | 2 | `no e-book` |
@@ -56,7 +56,7 @@
 
 | ID | Nome | Área | Quartos | Banheiros | Lote | Destaque | Lançamento | Situação |
 |---|---|---|---|---|---|---|---|---|
-| F01 | Casa Família Compacta | 68 m² | 3 | 1 | 10 x 15 | Três quartos com um banheiro bem posicionado | 1 | `no e-book` |
+| F01 | Casa Família Compacta | 71 m² | 3 | 1 | 10 x 15 | Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para o quintal | 1 | `no e-book` |
 | F02 | Casa Integrada | 86 m² | 3 (1 suíte) | 2 | 12 x 15 | Sala, cozinha e varanda num ambiente só | 2 | `no e-book` |
 | F03 | Casa Família | 78 m² | 3 (1 suíte) | 2 | 11 x 15 | Dois quartos com acesso ao banheiro social, varanda nos fundos | 1 | `no e-book` |
 | F04 | Casa Família Suíte | 80 m² | 3 (1 suíte) | 2 | 11 x 20 | Suíte do casal separada dos quartos das crianças | 1 | `no e-book` |

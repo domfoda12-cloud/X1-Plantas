@@ -140,7 +140,7 @@ Quer saber tudo o que vem no e-book?
 ### `/oferta`
 
 ```text
-[nome], a [casa que cabe] que cabe no seu lote está no e-book Antes do primeiro tijolo. São 3 casas térreas: Casa Compacta, Casa Fita (para lote estreito) e Família Compacta (3 quartos).
+[nome], a [casa que cabe] que cabe no seu lote está no e-book Antes do primeiro tijolo. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 m de frente) e Família Compacta (3 quartos).
 
 Cada uma vem mobiliada, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
 
@@ -149,7 +149,7 @@ R$ [preço], no Pix, aqui mesmo. Você recebe por link e tem 7 dias para pedir o
 Te mando a chave Pix?
 ```
 
-> **Bônus** (checklist da obra por fase e lista de perguntas ao engenheiro para imprimir): só acrescente "Bônus: ..." depois que estiverem prontos no PDF. Os quartos da Casa Fita esperam o Arquiteto (2 ou 1): por isso a mensagem diz "para lote estreito", sem número.
+> **Bônus** (checklist da obra por fase e lista de perguntas ao engenheiro para imprimir): só acrescente "Bônus: ..." depois que estiverem prontos no PDF. A Casa Fita tem 2 quartos (oficial desde 23/11/2026).
 
 ### `/pix`
 

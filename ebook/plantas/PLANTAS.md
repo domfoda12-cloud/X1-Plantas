@@ -229,6 +229,8 @@
 
 **71 m² fechados** · 3 quartos · 1 banheiro(s) · cabe num lote de **10 x 15 m** (no mínimo 10,0 x 12,8 m) · frente para o **sul**
 
+*Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para o quintal*
+
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.

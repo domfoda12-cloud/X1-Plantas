@@ -9,7 +9,7 @@
 >
 > **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
 >
-> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): título **Antes do primeiro tijolo** (o subtítulo vai só no anúncio); só a Casa Compacta é grátis; garantia de 7 dias; bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (quartos a confirmar pelo Arquiteto) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.**
+> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): título **Antes do primeiro tijolo** (o subtítulo vai só no anúncio); só a Casa Compacta é grátis; garantia de 7 dias; bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.**
 >
 > Campos entre [colchetes] ainda esperam o dono: a chave Pix e o nome de quem recebe. O **[preço]** já tem valor (teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47). O número do WhatsApp já foi dado (está no `ebook/config.json`, chave `contato`). Até lá, não mande campo vazio como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
 >
@@ -57,7 +57,7 @@ Com [frente] x [fundo] m, estas casas cabem no seu terreno com os recuos de refe
 
 Elas estão no e-book **Antes do primeiro tijolo**. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
-> O lançamento sai com **3 casas**: a Casa Compacta, a Casa Fita (quartos a confirmar pelo Arquiteto) e a Família Compacta (F01) (nota para o parceiro, não vai ao cliente). Use a [calculadora de lote](calculadora-lote.html) e ofereça só as 3 do lançamento que tenham lote mínimo menor ou igual ao terreno. Se nenhuma couber, diga com franqueza: "Com essa medida, nenhuma das 3 casas do e-book cabe com os recuos de referência." Não venda casa que não cabe.
+> O lançamento sai com **3 casas**: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01) (nota para o parceiro, não vai ao cliente). Use a [calculadora de lote](calculadora-lote.html) e ofereça só as 3 do lançamento que tenham lote mínimo menor ou igual ao terreno. Se nenhuma couber, diga com franqueza: "Com essa medida, nenhuma das 3 casas do e-book cabe com os recuos de referência." Não venda casa que não cabe.
 
 **Se a pessoa ainda não tem terreno:**
 

@@ -26,7 +26,7 @@
 |---|---|---|
 | Núcleo molhado (cozinha, serviço e banho juntos) | "Uma tubulação só: menos dia de encanador" | as que a ficha diz "Banheiro colado na cozinha e na área de serviço" em [`PLANTAS.md`](../plantas/PLANTAS.md). Não vale para a C01 (banheiro com prumada própria) nem para a suíte de E07, F03, F04 e S09 |
 | Corredor curto (até 11% da área) | "Só [X]% da casa é corredor. O resto você usa" (o X é o "Corredor" da Informação da casa; na C01, 4%) | C01, C03, C04, C05, C06, C07, F02, F05, S04, S05, S07 (todas com até 11%; números em `plantas/dados/`) |
-| Corredor coberto lateral | "Nenhum corredor dentro de casa: todo cômodo abre para a lateral" | E01, E02, E03, E05, E06, E07 |
+| Corredor coberto lateral | "Nenhum corredor dentro de casa: todo cômodo abre para a lateral" | E01, E02, E05, E06, E07 |
 | Lote de 5 m | "Cabe num lote de 5 m de frente" (não diga "o mais estreito que a lei permite": o piso de 5 m da Lei 6.766/1979 vale para loteamento novo, tem exceções e não vale para lote que já existe; ver [`MERCADO.md`](../referencias/MERCADO.md)) | E03 |
 | Casa que cresce (em espera até a C03 ser redesenhada; dono, 23/11/2026) | "O quarto 2 já tem lugar marcado" | C03 |
 | Pátio de luz | "Luz entre os quartos, sem janela para o vizinho" (vento só depois de o arquiteto conferir: o validador não mede ventilação cruzada) | E04 |

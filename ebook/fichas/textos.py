@@ -49,7 +49,7 @@ TEXTOS = {
                 perguntas=["O corredor coberto conta como área construída na minha cidade?", PADRAO[0], PADRAO[1]]),
     "E03": dict(gancho="5 m de frente. Achou que não cabia nada? Com uma parede na divisa (se a prefeitura deixar), cabe uma casa de 56 m².",
                 para_quem="Quem tem lote de 5 m de frente, o mínimo da lei federal de loteamento (Lei 6.766/1979, que tem exceção para habitação de interesse social; a sua cidade pode pedir mais), e achava que lá não cabia nada.",
-                nao_serve=("Quem precisa de 2 quartos (e tem lote de 7 m ou mais).", "E02"), erros=[2, 3, 4],
+                nao_serve=("Quem precisa de 3 quartos (e tem lote de 10 m de frente ou mais).", "F01"), erros=[2, 3, 4],
                 perguntas=["Meu lote de 5 m tem recuo lateral obrigatório?", "A parede da esquerda pode ficar na divisa?", PADRAO[1]]),
     "E04": dict(gancho="9 m de frente. Um pátio de luz entre os quartos.",
                 para_quem="Quem quer o quarto de casal claro, com janela para um pátio interno, e um cantinho de jardim dentro de casa.",

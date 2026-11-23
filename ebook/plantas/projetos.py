@@ -223,7 +223,8 @@ def todas():
                                  M("armario", "esq", 0.06, 0.9, 0.66, 2.3)]))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],
-                  "3 quartos", 1))
+                  "3 quartos", 1,
+                  destaque="Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para o quintal"))
     P.append(casa("F02", "Casa Integrada", 10.0, 8.6,
                   H((3.8, V((4.0, F("sala", "Sala", "sala")), (2.4, F("jantar", "Jantar", "jantar")),
                             (2.4, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
