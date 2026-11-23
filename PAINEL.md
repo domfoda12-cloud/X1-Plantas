@@ -19,7 +19,7 @@ _Gerado por `ferramentas/atualizar-painel.py` em 23/11/2026, a partir dos arquiv
 | Progresso do catálogo | `██████████████░░░░░░` 24/35 |
 | Casas com imagem 3D | 24 de 24 |
 | Casas com foto de fachada | 3 (C03, E07, F01) |
-| PDF do e-book | gerado, 22 MB · 5 plantas grátis |
+| PDF do e-book | gerado, 23 MB · 5 plantas grátis |
 | Vídeos em `video/saida/` | 2 pastas (convite, principal) · 0 versões antigas (`v1` a `v5`, com a C01 velha) |
 | Avisos de conferência | 0 |
 

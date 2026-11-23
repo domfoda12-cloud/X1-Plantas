@@ -4,6 +4,10 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-23 | [Refazer o e-book com 3 casas, Drive e PDF de emergência (lançamento)](2026-11/2026-11-23-1946-refazer-o-e-book-com-3-casas-drive-e-pdf-de-emergencia-lanca.md) | aberta | Arquiteto (casas e 3D), Designer (estilo e páginas), Redator e Revisor (textos), Maestro ( |
+| 2026-11-23 | [Quadro de tarefas para o dono ver a fila](2026-11/2026-11-23-1946-quadro-de-tarefas-para-o-dono-ver-a-fila.md) | aberta | Maestro; a tarefa agendada de hora em hora lê e atualiza. |
+| 2026-11-23 | [Melhorar o julgamento do júri](2026-11/2026-11-23-1946-melhorar-o-julgamento-do-juri.md) | aberta | Maestro (regras), Fable (régua, modelo de pedido e prova 3). |
+| 2026-11-23 | [Design dos concorrentes, skills de venda e design, referências fora do comum](2026-11/2026-11-23-1946-design-dos-concorrentes-skills-de-venda-e-design-referencias.md) | aberta | Pesquisador (concorrentes e skills), Designer (referências editoriais), Editor de vídeo (g |
 | 2026-11-23 | [Plantas mais bonitas e decoradas; e-book o mais atrativo possível](2026-11/2026-11-23-1119-plantas-mais-bonitas-e-decoradas-e-book-o-mais-atrativo-poss.md) | aberta | `designer` (3 mockups e o plano); Maestro (código depois da escolha); `revisor-de-risco` ( |
 | 2026-11-23 | [Testar as ferramentas novas, achar funções que faltam na equipe (ex.: ensinar) e deixar os agentes mais inteligentes](2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md) | aberta | Maestro (testes 2 e 3, código, skill); `redator` (teste da marketing-psychology); geral no |
 | 2026-11-23 | [Adicionar o everything-claude-code (worldflowai)](2026-11/2026-11-23-0209-adicionar-o-everything-claude-code-worldflowai.md) | aberta | Maestro (plano e código); 5 leitores, Revisor e conferência de compatibilidade por grupo;  |
