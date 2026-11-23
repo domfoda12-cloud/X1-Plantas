@@ -27,7 +27,7 @@ Textos de cada casa do e-book, escritos pelo método do Redator (.claude/agents/
 
 Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das plantas validadas.
 
-Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `galeria`, `Livro`, `titulo_do`, `lote_frente`, `montar`.
+Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `galeria`, `Livro`, `titulo_do`, `lote_frente`, `casas_txt`.
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 

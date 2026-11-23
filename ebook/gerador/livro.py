@@ -1145,17 +1145,33 @@ def montar_gratis(plantas, config, pid):
     fundo = p["_r"].metricas["lote_comercial"][1]
     mesmas = [q for q in plantas if lote_frente(q) <= f and q["_r"].metricas["lote_comercial"][1] <= fundo and q["id"] != pid]
     titulo_ima = "No seu lote cabem mais casas"
-    frase_ima = (f"Num lote de {f} x {fundo} m, com os recuos de referência, cabem outras {len(mesmas)} casas do e-book, "
+    frase_ima = (f"Num lote de {f} x {fundo} m, com os recuos de referência, {'cabem outras' if len(mesmas) > 1 else 'cabe outra'} "
+                 f"{casas_txt(len(mesmas)) if len(mesmas) > 1 else 'casa'} do e-book, "
                  "cada uma com a casa no lote, a \"Informação da casa\" e o porquê de cada escolha.")
-    legenda_ima = f"Algumas das casas que também cabem num lote de {f} x {fundo} m."
+    legenda_ima = (f"Algumas das casas que também cabem num lote de {f} x {fundo} m." if len(mesmas) > 6
+                   else f"{'As casas que também cabem' if len(mesmas) > 1 else 'A casa que também cabe'} num lote de {f} x {fundo} m.")
     if not mesmas:
         # casa do menor lote: mostra o que cabe com um pouco mais de terreno
         # só as de frente maior: a frase fala em "um pouco mais de frente" (na edição de 3, a E03 é mais estreita e mais funda)
-        mesmas = sorted([q for q in plantas if q["id"] != pid and lote_frente(q) > f], key=lambda q: (lote_frente(q), q["_r"].metricas["area_fechada"]))[:6]
+        maiores = sorted([q for q in plantas if q["id"] != pid and lote_frente(q) > f], key=lambda q: (lote_frente(q), q["_r"].metricas["area_fechada"]))
+        mesmas = maiores[:6]
         titulo_ima = "E se o lote for um pouco maior?"
-        frase_ima = (f"A {p['nome']} é a casa do e-book para o lote de {f} m. Com um pouco mais de frente, as opções crescem: "
-                     f"o e-book tem {len(plantas)} casas, cada uma com o lote mínimo calculado.")
-        legenda_ima = "As casas dos próximos tamanhos de lote."
+        if len(maiores) > 1:
+            frase_ima = (f"Com um pouco mais de frente, as opções crescem: {casas_txt(len(maiores))} do e-book pedem lote mais largo, "
+                         "cada uma com o lote mínimo calculado.")
+            legenda_ima = "Algumas das casas dos próximos tamanhos de lote." if len(maiores) > 6 else "As casas dos próximos tamanhos de lote."
+        elif maiores:
+            q = maiores[0]
+            lq = f"{lote_frente(q)} x {q['_r'].metricas['lote_comercial'][1]} m"
+            frase_ima = (f"Num lote de {lq} cabe a {q['nome']}, com {q['quartos_txt'].replace(' (+1 depois)', '')}. "
+                         "Ela também vem com a casa no lote e o porquê de cada escolha.")
+            legenda_ima = f"A {q['nome']}, para o lote de {lq}."
+        else:
+            # a casa grátis é a de frente maior: mostra as outras do e-book
+            mesmas = [q for q in plantas if q["id"] != pid][:6]
+            titulo_ima = "As outras casas do e-book"
+            frase_ima = f"O e-book tem mais {casas_txt(len(plantas) - 1)}, cada uma com o lote mínimo calculado."
+            legenda_ima = ""
     L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>
       <p class="abertura">A {E(p['nome'])} cabe num lote de {f} m de frente. {E(frase_ima)}</p>
       {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}

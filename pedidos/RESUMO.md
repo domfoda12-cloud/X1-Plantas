@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 25 documentos
+## Os 26 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -200,6 +200,14 @@ Pesquisador, 23/11/2026. Passo 1 de `CONSELHO.md`, seção 6. Só leitura de pá
 Seções: Resumo em uma tabela; 1. meta-click-to-message-ads (Insightful-Pipe/meta-ads-skills); Neste projeto (X1-Plantas); 2. copy-thief (thalesholleben/copy-thief); Neste projeto (X1-Plantas); 3. offers (coreyhaines31/marketingskills, pasta `skills/offers/`); Neste projeto (X1-Plantas); 4. frontend-design (anthropics/skills, pasta `skills/frontend-design/`); Neste projeto (X1-Plantas); 5. canvas-design (anthropics/skills, pasta `skills/canvas-design/`); Neste projeto (X1-Plantas); 6. pdf-design (Georgi45/pdf-design); Neste projeto (X1-Plantas); Riscos transversais (para o Revisor de risco); ….
 
 Tamanho: 7353 palavras.
+
+### [Primeiro uso das duas skills novas (roteiro de entrada, passo "rodar uma vez sobre o que já existe")](anexos/skills-primeiro-uso.md)
+
+23/11/2026. Skills: `.claude/skills/oferta-e-whatsapp/` e `.claude/skills/design-editorial/` (leitura das 6 fontes em `skills-entrada-passo1.md`). Nenhum arquivo do e-book ou da venda foi editado: são achados para o Redator, o Designer e o dono. Até 5 por peça. Números aqui são só os que um comando…
+
+Seções: 1. `oferta-e-whatsapp` sobre `ebook/vendas/RESPOSTAS-RAPIDAS.md`; 2. `design-editorial` sobre a página da Casa Compacta (`ebook/plantas/rascunhos/estilo-final-C01.png`).
+
+Tamanho: 1028 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 
