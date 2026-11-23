@@ -23,9 +23,27 @@ add
 
 **Suposições (o dono não disse):** Que 'adicionar' pode ser pegar só as skills de aprendizado (lidas e adaptadas), sem o plugin e sem os ganchos, porque os ganchos quebram o projeto. Vira pergunta ao dono.
 
-**Quem executa:** Maestro; júri (laço da noite); Revisor.
+**Quem executa:** Maestro (plano e código); 5 leitores, Revisor e conferência de compatibilidade por grupo; Fable (veto do plano: SIM, SE, 22 correções). Workflow wkfowrx4b, 17 agentes.
 
 **Conferência:** (no fim)
 
 **Resultado:** (a preencher)
 
+
+## Plano vetado (23/11, 02:40)
+
+Lido tudo (skills, comandos, agentes, regras, ganchos, mcp). **Entra adaptado e em português:** 1 skill (`verificacao`), 8 comandos, 7 agentes, linhas de regra em contextos que já existem e 2 avisos automáticos que **nunca bloqueiam**. **Não entra:** o hooks.json original (o bloqueio de .md travaria o projeto), setup-pm, mcp-servers.json, examples/CLAUDE.md, backend e frontend patterns, a skill security-review (sombrearia a embutida), pyright e tudo que roda `npx` ou baixa pacote. Plano inteiro com os motivos: `pedidos/anexos/ecc-plano.md`.
+
+**Pedaços** (um commit cada, `checar.py` verde no fim de cada um), numa cópia separada do repositório (`git worktree`), para o laço do júri seguir escrevendo na main sem misturar:
+- A, só texto: licença, linhas de regra, ECOSSISTEMA e CONSELHO com "lido, absorvido ou fora".
+- B1, `checar.py` mais rígido: segredos no repositório, comandos no roteiro de entrada, `_casos` à prova de erro.
+- B2, skill `verificacao` e os comandos. C, agentes que só leem. D, agentes que editam.
+- E (avisos automáticos no `settings.json`): **só com o sim do dono** (regra da noite e pergunta 2).
+- F, teste da calculadora pela tela. G, sessão nova na branch para provar ao vivo.
+
+**Perguntas ao dono** (com o que faço se ele não responder):
+1. Adicionar só as cópias adaptadas (recomendo) ou o pacote original com os ganchos desligados? *Sem resposta: adaptadas.*
+2. Avisos automáticos: só o que abre cada conversa com o quadro; esse e mais o contador de arquivos; ou nenhum? *Sem resposta: nenhum.*
+3. Faço agora, em pedaços, separado do e-book, ou espero o e-book? *Sem resposta: agora, separado, sem tocar o e-book.*
+4. Posso travar os comandos que baixam ou apagam pacotes (npx, npm install, rm -rf)? *Sem resposta: não travo.*
+5. No fim, você aprova levar tudo à versão principal depois de ler o resumo? *Sem resposta: fica esperando.*
