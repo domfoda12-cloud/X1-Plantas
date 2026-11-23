@@ -77,9 +77,9 @@ Tamanho: 1343 palavras.
 
 O que é: 20 vídeos reais que já seguraram a atenção de muita gente, com o gancho dos 3 primeiros segundos, o recurso visual fora do comum, por que prende e o que dá para adaptar com honestidade. No fim, 5 aberturas para o nosso primeiro vídeo (o convite da F03). Data: 23/11/2026. Editor de vídeo…
 
-Seções: A. As 20 referências; B. O que a MinoAI Frontier ensina sobre o primeiro quadro; C. Cinco aberturas para o primeiro vídeo (convite da F03); D. O que não conferi.
+Seções: A. As 20 referências; B. O que a MinoAI Frontier ensina sobre o primeiro quadro; C. Cinco aberturas para o primeiro vídeo (convite da F03); D. O que não conferi; Referência de humor do dono (23/11/2026, noite).
 
-Tamanho: 3096 palavras.
+Tamanho: 3360 palavras.
 
 ### [Memes brasileiros históricos: base de referência para o Editor e o Redator](referencias/MEMES.md)
 

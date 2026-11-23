@@ -79,3 +79,17 @@ Todas: texto no primeiro quadro, uma casa só (F03), passeio por dentro em segui
 - Números da MinoAI são os da biblioteca dela; hoje podem ser outros.
 - Não chamei o `analyze_hook` (análise quadro a quadro) em nenhum: se o dono quiser, os melhores candidatos são as refs. 1, 7 e 15.
 - O perfil do Ricardo Neves e o número da ref. 18 (que a matéria não explica) ficaram sem confirmação.
+
+## Referência de humor do dono (23/11/2026, noite)
+
+O dono mandou como "referência de humor" para os quadrinhos cômicos do e-book: https://www.instagram.com/reel/Df2EcY0Aouk/ (perfil com a marca "SEMIGENIUS"; animação 3D low-poly em vista isométrica). Números que a MinoAI Frontier devolveu em 23/11/2026: 1.188.998 visualizações, 108 comentários.
+
+**A fórmula (lida no roteiro e na análise quadro a quadro):**
+1. **Aperto que todo mundo conhece**, em 2 segundos: "você tentou estacionar 11 vezes e a rua inteira está buzinando".
+2. **A ideia absurda que tem lógica**: "espera, caranguejo anda de lado".
+3. **"Você, sendo um semigênio"** executa a ideia ao pé da letra (cola mil caranguejos embaixo do carro).
+4. **Um preço pequeno e ridículo** (um caranguejo belisca) e **funciona de primeira**.
+5. **Bola de neve**: cada consequência é maior e mais absurda que a anterior, até a cidade aplaudir e coroar o personagem prefeito.
+6. Narração em segunda pessoa ("você"), frases curtas, legenda grande palavra por palavra, 3 cortes nos primeiros 5 segundos, 26 segundos no total, e fecha com "manda para quem...".
+
+**O que trazer para nós:** a estrutura (aperto real de quem constrói, ideia absurda com lógica, escalada) e o visual isométrico low-poly, que combina com o nosso motor 3D. **O que não trazer:** os palavrões (o original tem um em quase toda frase; a análise aponta risco de alcance menor) e a marca "semigenius", que é deles. A piada nunca pode ensinar gambiarra de obra como solução de verdade: o absurdo tem de ser impossível à primeira vista, e o quadrinho fecha com o jeito certo (medir o lote, falar com o engenheiro).

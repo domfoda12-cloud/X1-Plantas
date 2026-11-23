@@ -87,3 +87,4 @@
 | 23/11 noite (comentário no quadro) | everything-claude-code | Perguntou: "por que o júri não quer os agentes de programação?" Ainda não decidiu. |
 | 23/11 noite | "Can you put a objective for the system to hit the 5h limit every time?" | Objetivo gravado na tarefa agendada de hora em hora: usar o limite inteiro de cada janela de 5 horas com trabalho útil (4 a 6 agentes em paralelo, fila sempre com 6 itens ou mais). A tarefa não se apaga mais sozinha depois de 24/11 01:45Z: pergunta a ele. |
 | 23/11 noite | "keep updating it after i send every comment" | Leitura dos comentários do quadro a cada 15 minutos enquanto houver comentário novo ou agente rodando, e a cada hora. |
+| 23/11 noite | Referência de humor para os quadrinhos | Mandou https://www.instagram.com/reel/Df2EcY0Aouk/ ("Referência de humor"). Fórmula anotada em `video/referencias/GANCHOS-VISUAIS.md`. Usar a estrutura, sem os palavrões e sem a marca deles. |
