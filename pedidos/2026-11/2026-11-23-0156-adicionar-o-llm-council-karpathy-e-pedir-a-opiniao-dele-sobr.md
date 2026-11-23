@@ -113,7 +113,8 @@ Discordam: vender antes (3 ou 4 casas, teste já) ou revisar antes (12 casas ref
 | 1 | v1 | 4 | 5 | 5 | 5 |
 | 2 | v2 | 6 | 6,5 | 6 | 6 |
 | 3 | v3 | 6 | 7 | 6,5 | presidiu |
-| 4 | v4 | | 6,5 | (rodando) | |
+| 4 | v4 | presidiu | 6,5 | 6 | 6,5 |
+| 5 | v5 | 5,5 | presidiu | 6 | 6,5 |
 
 ### Rodada 2, sobre a v2: média 6,1 (a v1 teve 4,75)
 
@@ -127,6 +128,10 @@ O presidente: sobe pouco (+0,4); o laço continua (não chegou a 8,5, há fato e
 
 **O que virou a v4** (`pedidos/anexos/integracao-novos-v4.md`): página de decisões em dois blocos (A: o que destrava o Pix, primeiro; B: ferramentas, com "aceito todas as recomendações"); nada que depende do sim acontece antes dele; fatos refeitos com os README; volta a pergunta do aparelho do dono.
 
-### Rodada 4, sobre a v4 (em andamento, 02:50)
+### Rodada 4, sobre a v4: média 6,3 (Haiku presidiu)
 
-Sonnet 6,5: corrige fatos e ordem, mas ficou mais longa e técnica, e a página de decisões continua só prometida. Opus criticando.
+A v4 corrigiu fatos e ordem, mas a página de decisões, quatro versões depois, ainda não existia, e ela escondia o trabalho do everything-claude-code já em andamento. O presidente mandou escrever a página como v5 e julgar só ela.
+
+### Rodada 5, sobre a v5: média 6,0 (Sonnet presidiu). O laço para.
+
+Notas caíram três vezes seguidas (6,5, 6,3, 6,0): vale o critério "nota que não sobe em duas rodadas". A v5 acertou em escrever a página e em dizer a verdade sobre o que toca o Pix; errou em fatos novos, em jargão na página do dono (arquivo, comando, códigos de casa) e em mexer no sistema antes do sim (o everything-claude-code: **parado às 03:16, ficha 0209**). Achados que valem para a página: o dono reprovou o arranjo das casas e só a C01 foi refeita; plantas grátis de hoje (C01, E03, E02, F01, C06) incluem casas reprovadas; preço de arquiteto já está pesquisado (`reports/NOTAS-DA-PESQUISA.md`); o gerador falhar com campo em colchetes deixaria o `checar.py` vermelho e precisa de cuidado. **Último passo do júri:** uma v6 curta, em três partes (o estado verdadeiro, o Bloco A limpo, uma linha por ferramenta), sem rodada nova; e a pergunta ao dono, em uma linha, se o júri para (recomendação: sim). Sínteses e correções: `pedidos/anexos/juri-rodadas-3-a-5.md` (18 agentes, 2,95 milhões de tokens de subagentes, 69 minutos).

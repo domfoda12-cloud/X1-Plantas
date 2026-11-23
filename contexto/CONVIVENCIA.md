@@ -18,3 +18,4 @@
 | 12 | 22/11 | Resumo nosso dizia uma coisa e a fala do dono, na mesma página, outra | Vale a fala do dono; quem achar a diferença corrige o resumo e avisa | todos |
 | 13 | 22/11 | O Maestro começou a instalar uma ferramenta antes de a ficha existir e rodou o programa antes de o veto voltar | Ferramenta nova: nada se baixa, instala ou roda antes de a ficha existir e de o veto voltar | Maestro |
 | 14 | 23/11 | Todos os papéis planejaram em cima de um Mac do dono que não existe | Fato sobre o dono (equipamento, contas, lugar) só entra no plano depois de ele confirmar; até lá, é suposição marcada | todos |
+| 15 | 23/11 | O Maestro trocou a condição do Revisor ("perguntar antes de criar arquivo") por "sem resposta: faço o recomendado" e começou | Pergunta ao dono sem resposta é **espera**; condição de veto só cai com o sim do dono ou um novo veto de quem a pôs | Maestro |
