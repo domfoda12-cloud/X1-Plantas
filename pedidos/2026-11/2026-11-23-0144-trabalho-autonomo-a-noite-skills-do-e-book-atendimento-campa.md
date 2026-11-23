@@ -12,6 +12,14 @@
 
 *Recado de 23/11 01:54:* I dont have a mac
 
+*Recado de 23/11 01:55:* Thats too simple of a task, its one simple command per run
+
+*Recado de 23/11 01:55:* Can I create a private web that the IA can use?
+
+*Recado de 23/11 01:55:* wdym the night routine will update it on every run
+
+*Recado de 23/11 01:55:* No, i mean like that the agents can use to search on the WWW
+
 **O que ele pediu, parte por parte:** 1) Qual é o meu limite de verdade. 2) O sistema seguir estudando e melhorando enquanto ele dorme, usando os tokens que quiser. 3) Exemplos: skills relevantes para construir o e-book; melhorar a interface e o atendimento ao cliente; criar uma campanha de anúncio. 4) Quer o sistema autossuficiente.
 
 **Por que ele pediu, ou o que quer descobrir:** Quer que o tempo dele dormindo vire trabalho, e quer saber até onde pode confiar no sistema sozinho.
@@ -24,7 +32,7 @@
 
 **Pronto quando:** Fila da noite escrita; tarefa agendada criada; a cada acordar uma tarefa da fila, com plano vetado, `checar.py` e commit; de manhã um resumo para o dono com o que ficou pronto e o que espera o "sim" dele.
 
-**Suposições (o dono não disse):** Que ele dorme umas 8 horas; acordar de hora em hora, até 8 vezes; nada pago nem publicado; tudo que é decisão dele vira opção para a manhã.
+**Suposições (o dono não disse):** Leitura nossa dos recados: "uma tarefa por acordar é simples demais" virou: cada acordar trabalha uns 40 a 50 minutos, várias tarefas, em paralelo só o que é leitura e pesquisa, e cria sozinho o próximo ciclo. 24 horas (até 24/11 01:45 UTC). Nada pago nem publicado; tudo que é decisão dele vira opção.
 
 **Quem executa:** Maestro (Opus) conduz cada acordar; o time de cada assunto executa e veta; o Fable veta o plano da noite e audita no fim.
 
@@ -35,11 +43,11 @@
 
 ## Fila da noite, versão 3 (recado do dono, 01:50: "esta noite não enfileire nada que você tenha de produzir; foque em deixar o sistema autônomo no aprendizado")
 
-A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "sim" dele. Esta noite só se constrói **como o sistema aprende sozinho**. Uma tarefa por acordar; plano curto vetado; até 6 chamadas de agente; regras da noite da versão 2 continuam (nada pago, nada publicado, nada instalado, texto público intocado).
+A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "sim" dele. Esta noite só se constrói **como o sistema aprende sozinho**. Cada acordar trabalha uns 40 a 50 minutos (várias tarefas); plano curto vetado; regras da noite da versão 2 continuam (nada pago, nada publicado, nada instalado, texto público intocado).
 
 | # | Tarefa | O que faz o sistema aprender sozinho | Pronto quando | Estado |
 |---|---|---|---|---|
-| A1 | Veto do Fable desta fila | — | fila aprovada | |
+| A1 | Veto do Fable desta fila | — | fila aprovada | **Feito:** SIM, SE para A2 a A9 (92 mil tokens); condições abaixo |
 | A2 | **Lição automática ao fechar ficha:** o `pedido.py fechar` passa a exigir o campo "O que aprendi" e copia a lição para o "Lições" do contexto de quem errou (e do Maestro) | todo erro vira lição sem depender de memória | testado no `checar.py` | |
 | A3 | **Placar do veto:** cada nota da régua vai para um placar (`contexto/PLACAR.md`, gerado), por agente e por ponto que caiu; o agente lê a sua linha antes de vetar | cada agente vê onde erra mais | placar gerado das fichas | |
 | A4 | **Minerar correções antigas do dono:** com `conversas.py`, achar as vezes em que ele corrigiu o time ("não", "errado", "eu disse"), e transformar cada uma em lição ou regra (sem copiar trecho) | o que ele já corrigiu não se repete | lições novas, com data | |
@@ -50,7 +58,21 @@ A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "s
 
 | A9 | **Camadas** (recado do dono, 01:50: "the IA inside the IA inside the IA inside the IA"): cada camada confere a de baixo. Agentes trabalham e vetam → o Maestro dá nota e tira a lição → o Fable audita o Maestro e as lições → o placar e o resumo do aprendizado medem se o erro caiu com o tempo e ajustam a regra. O Fable também leva nota (quem audita é auditado). Limite técnico: agente não abre agente sozinho; toda camada passa pela conversa principal, e a tarefa agendada é o que faz girar | o sistema melhora o jeito de melhorar | as 4 camadas escritas em `contexto/EQUIPE.md`, com a medida de cada uma | |
 
+| A0 | **Prova de base (antes de qualquer lição):** 6 a 8 planos com erro plantado, tirados das auditorias (promessa de aprovação, número sem fonte, sugestão usada sem o "sim", texto público mexido, instalar antes do veto, resumo contra a fala do dono...), com gabarito guardado fora do alcance dos agentes; 3 agentes vetam; nota = erros achados sobre plantados, e alarmes falsos; resultado em `pedidos/PROVAS.md`. Roda de novo no fim da noite | é a régua: sem ela não se sabe se aprendeu | nota de base registrada | |
 | A10 | **Suposição do Mac:** o dono não tem Mac (23/11). Quando ele disser o que tem (PC com Windows, só celular...), corrigir as 63 menções em 22 arquivos (guia da MinoAI, editor, pesquisador, busca nas conversas, plano) e criar a conferência no `checar.py` que pega "Mac do dono" | erro de suposição não volta | zero menção a Mac do dono; conferência testada | espera a resposta |
+
+**Condições do Fable (A1), valem para cada tarefa:**
+- A2: `pedido.py licao <papel> "texto" --ficha --ponto --origem` grava num registro só de acréscimo (`pedidos/LICOES.md`) e no "Lições" do contexto; `fechar` chama esse comando; "O que aprendi" obrigatório só em ficha fechada de 23/11 em diante; contexto perto do limite: o comando recusa e manda consolidar (nunca subir o limite); conferência no `checar.py` com ficha falsa.
+- A3: `ferramentas/placar.py` gera `contexto/PLACAR.md` com o n ao lado de cada média; formato fixo das tabelas de veto de 23/11 em diante: `| Rodada | Agente | Nota | Ponto que caiu | Por quê |`; nenhuma regra muda com n menor que 5; entra no mapa.
+- A4: na nuvem o `conversas.py` só vê esta conversa: minerar também `contexto/dono/PROMPTS.md` e `intencoes/`; uma palavra por busca; cada lição com a data da fala e "leitura nossa"; conferir se a mensagem da tarefa agendada cai em `pedidos/entrada/` e, se cair, filtrar.
+- A5 = a prova do A0, repetida; cada erro novo de auditoria vira caso novo.
+- A6: um papel por ciclo, pesquisa em dois passos, regra no `contexto/<papel>.md` com fonte, data e "noite, o dono não viu"; só vale com um caso novo na prova.
+- A7: não à mão: o topo do `PLACAR.md` gerado, citado no quadro.
+- A9: `contexto/CAMADAS.md` (o `EQUIPE.md` não cabe), medida por fato contado: prova (agentes), renota às cegas e erros por auditoria (Maestro), achados confirmados e erro que escapou (Fable), reincidência da lição (camada 4).
+- A8: o resumo lista toda regra criada à noite, para o dono manter ou desfazer.
+- Paralelo só leitura e pesquisa; só o Maestro escreve e faz commit. Ordem: A0 → A2 e A3 (com A4 e A6 ao lado) → prova de novo → A7, A9 → A8.
+- **Segurança:** não mudam à noite `CLAUDE.md`, configuração, ganchos, `tools:` e modelo dos agentes, palavras do dono, a tarefa agendada; no `checar.py` só se acrescenta; um commit por tarefa; falhou duas vezes: desfaz, anota, pula; uns 40 minutos de trabalho e 10 para conferir e salvar.
+- **Branch:** o `CLAUDE.md` manda mudança grande de sistema para `sistema/<assunto>` com pull request; o que a noite faz são conferências e ferramentas pequenas, uma por commit, reversíveis: fica na `main`, como todo o trabalho de 22/11 que o dono aprovou levar à main.
 
 Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 
