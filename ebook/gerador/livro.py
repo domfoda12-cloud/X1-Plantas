@@ -599,8 +599,9 @@ def svg_fachada(p, legenda=True):
     s = [f'<svg viewBox="-1.6 -.6 {W + 3.2} {H + 1.2}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vista frontal simplificada">']
     Yv = lambda z: H - z
     # céu suave e chão
-    s.append(f'<rect x="-1.6" y="-.6" width="{W + 3.2}" height="{H + .6}" fill="#EEF4FB"/>')
-    s.append(f'<rect x="-1.6" y="{H}" width="{W + 3.2}" height=".6" fill="#D9D3C4"/>')
+    # céu e chão passam da moldura: com overflow visível (CSS .vistas) enchem a caixa toda; em outro lugar ficam cortados
+    s.append(f'<rect x="-40" y="-40" width="{W + 80}" height="{H + 40}" fill="#EEF4FB"/>')
+    s.append(f'<rect x="-40" y="{H}" width="{W + 80}" height="40" fill="#D9D3C4"/>')
     # para cada faixa de x, o cômodo fechado mais à frente
     xs = sorted({round(v, 3) for c in cs for v in (c["x0"], c["x1"])})
     for a, b in zip(xs, xs[1:]):
@@ -741,11 +742,14 @@ def foto(nome, altura_mm, legenda="Imagem ilustrativa.", pos="center", pasta=Non
         im.resize((min(largura, im.width), round(im.height * min(largura, im.width) / im.width)), Image.LANCZOS).save(destino, "JPEG", quality=90, optimize=True, progressive=True)
     src = os.path.relpath(destino, SAIDA)
     estilo = f"height:{altura_mm}mm" if altura_mm else ""  # sem altura: quem manda é o CSS (ex.: .vistas)
-    if fundo:  # a cor da borda da imagem preenche a sobra quando ela cabe inteira na moldura (object-fit: contain)
-        im = Image.open(destino).convert("RGB")
-        borda = [im.getpixel((x, y)) for x in range(0, im.width, 7) for y in (0, im.height - 1)] + \
-                [im.getpixel((x, y)) for y in range(0, im.height, 7) for x in (0, im.width - 1)]
-        estilo += ";background:#%02x%02x%02x" % tuple(sum(c[i] for c in borda) // len(borda) for i in range(3))
+    if fundo:  # a imagem inteira na moldura (object-fit: contain); a sobra mostra a própria imagem desfocada
+        from PIL import ImageFilter, ImageEnhance
+        borrada = destino.with_name(destino.stem + "-fundo.jpg")
+        if not borrada.exists() or borrada.stat().st_mtime < destino.stat().st_mtime:
+            im = Image.open(destino).convert("RGB")
+            im = im.resize((160, round(im.height * 160 / im.width)), Image.LANCZOS).filter(ImageFilter.GaussianBlur(5))
+            ImageEnhance.Brightness(im).enhance(.92).save(borrada, "JPEG", quality=80)
+        estilo += f";background:url('{os.path.relpath(borrada, SAIDA)}') center/cover"
     return (f'<figure class="foto" style="{estilo}"><img src="{src}" alt="" style="object-position:{pos}">'
             f'<figcaption>{E(legenda)}</figcaption></figure>')
 
