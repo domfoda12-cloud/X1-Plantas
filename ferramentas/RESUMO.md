@@ -1,6 +1,6 @@
 # Resumo: Código
 
-> Os programas que validam as plantas e geram PDF, 3D, fichas e painel. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: arquiteto, designer.
+> Os programas que validam as plantas e geram PDF, 3D, fichas e painel. **Leia este resumo primeiro**; abra um documento inteiro só quando a tarefa pedir. Índice geral: [`INDICE.md`](../INDICE.md). Quem lê: arquiteto, designer, planejador, revisor-de-seguranca.
 
 ## O essencial
 

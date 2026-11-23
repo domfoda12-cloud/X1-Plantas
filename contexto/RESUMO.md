@@ -33,9 +33,9 @@ Tamanho: 654 palavras.
 
 Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada prompt; todos com o mesmo entendimento; tudo junto e organizado; gastando o mínimo de token e tempo. Agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
 
-Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
+Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Prompt sem papel.
 
-Tamanho: 566 palavras.
+Tamanho: 576 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 

@@ -30,6 +30,7 @@
 | Ambiente de nuvem "x1-plantas" | Ambiente pessoal | Criado em 22/11: o script de preparação instala o motor 3D (`npm install` em `video/`) em toda conversa nova. Rede limitada: fontes do Google, OpenArt e instaladores de pacote. Para usar, escolher "x1-plantas" no menu de ambiente |
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
 | `ajudante` | Agente, **Haiku** | Integrado em 22/11: tarefa simples e pessoal do dono, não dos agentes. Não toca o público nem arquivo do projeto |
+| `planejador`, `revisor-de-seguranca` | Agentes da oficina de código, **Opus**, só leem | Integrados em 23/11 (everything-claude-code, MIT, ficha `0209`): o `planejador` divide tarefa grande em pedaços para a ficha (`/planejar`); o `revisor-de-seguranca` lê peça de terceiro, chave no repositório e ganchos antes do Conselho, e devolve ao `revisor-de-risco`, que tem o veto. Nenhum grava arquivo |
 | `verificacao` (skill) e os comandos `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender`, `/ponto-de-volta` | Skill e comandos, do Maestro | Integrado em 23/11 (everything-claude-code, MIT, ficha `0209`): seção "Neste projeto" em cada um. A `verificacao` só confere; os comandos chamam um agente e guardam nele as regras |
 
 Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). A conversa principal interpreta e confere; os agentes executam.
@@ -51,6 +52,8 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 | `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
 | `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
+| `planejador` (Opus; `tools:` Read, Grep, Glob) | leitura do projeto, das fichas e dos `RESUMO.md` | |
+| `revisor-de-seguranca` (Opus; `tools:` Read, Grep, Glob, Bash, só para ler) | `checar.py` (segredos e ganchos), `git log -p`, leitura do texto de terceiro no scratchpad | `npm audit` (ok do Maestro na ficha) |
 
 **Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no computador do dono, dúvida, não usamos; o dono à mão, no computador dele, pode. Ficha `2151-integrar-o-cass`.
 
@@ -141,9 +144,10 @@ Pedido do dono, ficha `0209`; plano e motivos em `pedidos/anexos/ecc-plano.md`. 
 **Entrou adaptado (pedaço B2, 23/11/2026):**
 - skills/verification-loop com commands/verify: skill `verificacao` (uma porta só; modo rápido e completo; quadro final com o caso `claude/*`). Rodada de alcance: o `checar.py` verde no repositório.
 - commands/plan, tdd, e2e, code-review, build-fix, refactor-clean, learn e checkpoint: `/planejar`, `/tdd`, `/e2e`, `/revisao-rapida`, `/build-fix`, `/limpar-codigo`, `/aprender` e `/ponto-de-volta`. Curtos; as proibições ficam no agente que cada um chama.
+- agents/planner (com o quadro de trade-off do architect) e agents/security-reviewer (pedaço C): `planejador` e `revisor-de-seguranca`, no Opus, só leitura, sem chamada automática.
 
 **Lido, adaptação em pedaço seguinte** (lido; entra adaptado num pedaço seguinte da ficha `0209` e só aparece aqui com o nome quando existir):
-- agents/planner, tdd-guide, security-reviewer, build-error-resolver, e2e-runner, refactor-cleaner e doc-updater, com nome em português, `model` declarado e sem chamada automática.
+- agents/tdd-guide, build-error-resolver, e2e-runner, refactor-cleaner e doc-updater, com nome em português, `model` declarado e sem chamada automática.
 - A ideia de scripts/hooks/session-start.js e de suggest-compact.js, reescrita em Python, só com o "sim" do dono e sem nunca bloquear.
 
 **Fora, com o motivo:**

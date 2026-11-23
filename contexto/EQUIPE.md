@@ -24,6 +24,7 @@
 | `revisor-de-risco` (veto) | Honestidade, lei | Promessa sem lastro? A correção |
 | `supervisor` (Fable) | Socorro, auditoria, reprodução de referências | A causa; o que falta para imitar a referência |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
+| **Oficina de código** (Opus): `planejador`, `revisor-de-seguranca` | Plano em pedaços; segurança do código, só aponta | Pedaços de até 30 arquivos; chave ou gancho de risco |
 
 ## Veto
 
@@ -32,7 +33,6 @@ Toda resposta de veto passa pela régua de 5 pontos (objetivo, lugar, prova, cor
 ## Fronteiras
 
 Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md`](CONVIVENCIA.md).
-
 
 - Designer e Editor usam o Diretor; geração no OpenArt só com o "sim" do dono.
 - Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` acha; conclui o Arquiteto, o Estrategista ou um geral no Opus.
@@ -44,10 +44,7 @@ Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md
 - Menos agentes, o modelo mais barato que dá a qualidade; resumo, não documento; ficha, não conversa.
 - O `CLAUDE.md` já chega a todos. `ULTIMO.md` só se a tarefa continua. Antes da web, `pesquisa.py buscar`; antes de perguntar ao dono, `conversas.py buscar`.
 - Faltou decisão do dono? Pesquise referências e leve opções com recomendação; **nada se usa sem o "sim" dele** (`pedidos/LEIA-ME.md`).
-
-## Tempo livre
-
-Sem tarefa concreta, o Maestro deixa a equipe mais inteligente: lições, testes, método, cortar repetido, medir o gasto (`pedidos/PLANO.md`, "Tempo livre").
+- Tempo livre: `pedidos/PLANO.md`, "Tempo livre".
 
 ## Prompt sem papel
 
