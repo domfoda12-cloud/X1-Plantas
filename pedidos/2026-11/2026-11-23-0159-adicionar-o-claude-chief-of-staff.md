@@ -4,6 +4,8 @@
 
 **Prompt (palavra por palavra):** https://github.com/mimurchison/claude-chief-of-staff add
 
+*Recado de 23/11 10:52:* Confirmo o chief staff
+
 **O que ele pediu, parte por parte:** Adicionar o claude-chief-of-staff (github.com/mimurchison/claude-chief-of-staff).
 
 **Por que ele pediu, ou o que quer descobrir:** Quer o sistema mais autônomo e útil para ele, como um chefe de gabinete de IA.
