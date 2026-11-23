@@ -17,7 +17,7 @@
 - `PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro") é registro da versão de 21/11, substituído por `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"). (`PRINCIPAL-E07.md` (seção "Plano: vídeo principal "3 quartos em 8 m" (E07), quadro a quadro"))
 <!-- /essencial -->
 
-## Os 7 documentos
+## Os 8 documentos
 
 ### [Anúncio com a locução do dono](ANUNCIO-LOCUCAO.md)
 
@@ -72,3 +72,11 @@ E07 na fila do redesenho: o dono chamou de erro os 3 quartos em fila (22/11/2026
 Seções: 1. O que tem aqui (20 MB); 2. Roteiro para gravar (aprovado pelo Revisor de risco); 3. Plano de corte (128 BPM: 1 compasso = 1,875 s); 4. Regras da edição; 5. O que dizer para a MinoAI no PC.
 
 Tamanho: 1343 palavras.
+
+### [Memes brasileiros históricos: base de referência para o Editor e o Redator](referencias/MEMES.md)
+
+O que é: lista de memes brasileiros que o público de 25 a 50 anos reconhece, com origem, risco e fonte, para tirar ideias (gancho, frase, nome de rua) para o vídeo. Data: 23/11/2026. Pesquisador (Sonnet), passo 1; quem conclui é o Opus.
+
+Seções: A. Com ligação a casa, obra, vizinho, rua ou dinheiro; B. Sem ligação direta, mas muito reconhecidos; C. Reconhecidos, mas evitar em anúncio de família; Nomes de rua (opções para o dono); O que ficou incerto.
+
+Tamanho: 3421 palavras.

@@ -32,7 +32,7 @@ PASTAS = {
     "ebook/vendas": ("Venda e WhatsApp", "O funil: planta grátis, mensagens, objeções e atributos que vendem",
                      ["ebook/vendas"], ["redator", "estrategista", "revisor-de-risco"]),
     "video": ("Vídeo e anúncio", "Pedidos do dono, roteiros, planos, referências de edição e textos de anúncio",
-              ["video", "video/principal-e07", "video/principal-e07/kit-minoai"],
+              ["video", "video/principal-e07", "video/principal-e07/kit-minoai", "video/referencias"],
               ["editor-video", "diretor", "redator", "revisor-de-risco"]),
     "instagram": ("Instagram", "Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier",
                   ["instagram", "instagram/posts"], ["editor-video", "diretor", "redator", "designer", "estrategista"]),
