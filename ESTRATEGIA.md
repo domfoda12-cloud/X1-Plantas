@@ -45,7 +45,7 @@
 ### Perfil 3: "Quero construir para alugar"
 - **Quem:** quem já tem casa e quer **renda extra** com kitnet, edícula nos fundos ou casas geminadas.
 - **O que quer:** o máximo de unidades no lote, com custo baixo.
-- **O que oferecer:** a categoria Especiais (edícula, geminadas). Hoje essas plantas estão no 3º lançamento; se este perfil responder bem aos anúncios, antecipe.
+- **O que oferecer:** a categoria Especiais (edícula, geminadas). Nenhuma delas está no lançamento (3 casas: C01, E03 e F01, todas para morar; dono, 23/11/2026): não anunciar para este perfil até haver casa para ele. As próximas casas a equipe indica (Estrategista e Arquiteto) e o dono aprova.
 
 ## 4. Posicionamento
 
@@ -54,9 +54,9 @@
 | Pacote com "milhares de plantas" | Poucos reais | Sem curadoria, sem 3D, ninguém ajuda a escolher |
 | Planta pronta avulsa em catálogo | De ~R$ 98 a ~R$ 2.000 cada | Uma planta por vez; o cliente não sabe qual comprar |
 | Arquiteto sob medida | Muito mais | O custo é justamente a barreira para a maioria das obras |
-| **Nós** | **Uma fração de uma planta avulsa** | **Dezenas de plantas originais, escolhidas pelo lote, em 3D, com ajuda no WhatsApp** |
+| **Nós** | **Menos que uma planta avulsa** (preços em teste: R$ 47 e R$ 67) | **3 casas originais no lançamento, cada uma desenhada no lote, em 3D, com ajuda no WhatsApp** |
 
-**Frase de posicionamento:** _Para quem tem um lote e quer construir sem errar, o [título] mostra, em 3D, as casas que cabem no seu terreno, antes de você gastar com projeto._
+**Frase de posicionamento:** _Para quem tem um lote e quer construir sem errar, o Antes do primeiro tijolo mostra, em 3D, 3 casas desenhadas no lote, com a medida de lote de cada uma, antes de você gastar com projeto._
 
 ## 5. Os três diferenciais (repetir em tudo)
 
@@ -77,16 +77,16 @@
 
 ## 7. A oferta
 
-> **Decidido em 23/11** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): garantia de 7 dias, contados da entrega do link (CDC, art. 49); Pix direto pelo WhatsApp, sem plataforma; lançamento com 3 casas (Casa Compacta, Casa Fita e Família Compacta); dois bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. Onde a tabela abaixo diverge disso, vale o decidido; o resto dela é recomendação. Em aberto: o que mais vai de graça (o dono está decidindo).
+> **Decidido em 23/11** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): título "Antes do primeiro tijolo" (subtítulo só no anúncio); lançamento com 3 casas: C01 Casa Compacta (com hall, 51 m²), E03 Casa Fita (2 quartos, lote 5 x 25) e F01 Família Compacta; só a Casa Compacta é grátis; garantia de 7 dias, contados da entrega do link (CDC, art. 49); Pix direto pelo WhatsApp do negócio, sem plataforma; entrega por link do Google Drive (PDF comprimido só em emergência); dois bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47; Instagram novo, do negócio. Onde a tabela abaixo diverge disso, vale o decidido; o resto dela é recomendação. Em aberto: o que mais vai de graça (o dono pensa numa amostra grátis bem impressionante, talvez um guia; opções em [`amostra-gratis-opcoes.md`](pedidos/anexos/amostra-gratis-opcoes.md)) e prometer as próximas casas ("ainda não sei": não se promete).
 
 | Item | Recomendação | Por quê |
 |---|---|---|
-| **Preço de lançamento** | **R$ 67** no 1º lançamento, subindo no 2º e no 3º | Fica abaixo de uma planta avulsa (âncora) e dentro da compra por impulso. Teste R$ 47 e R$ 97 se o custo por venda pedir (conta no [painel](PAINEL.md), seção 4) |
-| **Pagamento** | **Pix** e **cartão parcelado** | Pix é o jeito mais comum de pagar online no Brasil; o parcelamento derruba o "é caro" |
-| **Plataforma** | Kiwify ou Hotmart | Checkout, Pix, parcelamento, área de membros e garantia já prontos. Taxa de cerca de 9% + valor fixo por venda ([comparativo](https://bit4learn.com/pt/lms/kiwify-venda-cursos-online/)) |
-| **Garantia** | 7 dias, dinheiro de volta | É o direito de arrependimento do CDC (compra pela internet) e o padrão das plataformas. Usar como argumento, não esconder |
-| **Bônus** | 1. As próximas plantas sem pagar de novo (**não prometer**: o dono ainda não decidiu, 23/11) · 2. Os 7 erros de planta que saem caro · 3. Checklist de obra · 4. Animações 3D por QR code | Recomendação antiga; os bônus decididos estão no bloco acima |
-| **Order bump** (oferta no checkout) | "Planilha de orçamento por etapa" a R$ 17–27 | Fala com quem constrói por etapas. Só lance quando a planilha existir |
+| **Preço** | **Teste R$ 47 x R$ 67** em semanas alternadas, começando pelo R$ 47 (decidido, 23/11). O preço fixo sai do resultado, com o dono | Os dois ficam abaixo de uma planta avulsa (âncora). **Nunca** se apresentam como promoção, lançamento, desconto ou aumento; quem perguntar ouve que estamos testando dois preços em semanas diferentes e que o dele fica até o fim. Como medir: [`teste-de-preco-como-medir.md`](pedidos/anexos/teste-de-preco-como-medir.md); conta no [painel](PAINEL.md), seção 4 |
+| **Pagamento** | **Pix** direto pelo WhatsApp (decidido, 23/11) | Pix é o jeito mais comum de pagar online no Brasil. Cartão parcelado fica fora enquanto não houver plataforma |
+| **Plataforma** | Nenhuma (decidido, 23/11): Pix e conversa no WhatsApp, e-book por link do Google Drive | Sem taxa por venda. Se um dia o dono quiser cartão, Kiwify ou Hotmart cobram cerca de 9% + valor fixo por venda ([comparativo](https://bit4learn.com/pt/lms/kiwify-venda-cursos-online/)) |
+| **Garantia** | 7 dias, contados da entrega do link; o Pix volta inteiro para a conta que pagou (decidido, 23/11) | É o direito de arrependimento do CDC (compra pela internet). Usar como argumento, não esconder. Nenhuma garantia de resultado, "em dobro" ou condicional |
+| **Bônus** | Checklist da obra por fase e perguntas para levar ao engenheiro (decidido, 23/11). As próximas casas sem pagar de novo: **não prometer** ("ainda não sei") | Bônus só entra se já existe no PDF e resolve uma objeção real; nunca com "valor" inventado |
+| **Oferta extra** (no WhatsApp, sem checkout) | "Planilha de orçamento" a R$ 17–27, em espera | Só se a planilha existir e o dono decidir; sem plataforma, seria um segundo Pix na mesma conversa |
 | **Oferta depois da compra** | "Adaptação da planta ao seu terreno", feita por um arquiteto parceiro | Produto de valor alto para quem já confia em nós. Depende de ter o parceiro |
 
 **Preço ancorado na oferta:** _"Uma planta pronta avulsa custa a partir de R$ 98 nos catálogos. Aqui são 3 casas, cada uma desenhada no lote, por R$ [preço do teste]."_ Confira o preço do concorrente na semana do anúncio.
@@ -97,14 +97,14 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez. Nenhum v�
 
 | Ângulo | Gancho de exemplo | Perfil |
 |---|---|---|
-| **Pelo lote** | "Tem um lote 10 x 20? Essas 5 casas cabem nele." (um anúncio por tamanho de lote) | 1 |
+| **Pelo lote** | "Tem um lote 10 x 15? Essa casa de 3 quartos foi desenhada nele." (um anúncio por casa do lançamento, com a medida de lote do catálogo: C01 8 x 15, E03 5 x 25, F01 10 x 15) | 1 |
 | **Erro caro** | "Ninguém te conta isso antes de bater a laje." | 1 |
 | **Escolha antes de gastar** (no lugar de "Casa que cresce", em espera até as etapas serem desenhadas: dono, 23/11/2026) | "Antes do primeiro tijolo, mede a frente do seu lote. A casa certa começa nessa medida." | 1 |
 | **Pedreiro** | "Mostra isso pro seu pedreiro antes de começar a obra." | 1 |
 | **Sair do aluguel** | "O aluguel que você paga em 1 ano já levanta as paredes dessa casa?" (só com número verdadeiro da sua região) (em espera: fala de custo de obra; Revisor, 23/11) | 1 |
 | **Economia com arquiteto** | "Vou te economizar os R$ 1.000 que um arquiteto te economizaria." | 1 e 2 |
 | **Financiamento** | "Vai financiar a construção? Escolha a casa antes de pagar o projeto." | 2 |
-| **Renda extra** | "Duas kitnets no fundo do seu lote: quanto espaço precisa?" | 3 |
+| **Renda extra** | "Duas kitnets no fundo do seu lote: quanto espaço precisa?" (em espera: nenhuma casa do lançamento é para alugar) | 3 |
 
 **O ângulo "pelo lote" é o mais promissor:** é concreto, a pessoa se reconhece na hora ("é o meu lote!"), e cada tamanho de lote vira um anúncio e um post diferente.
 
@@ -118,16 +118,19 @@ Cada ângulo fala com um medo ou desejo do perfil 1. Teste um por vez. Nenhum v�
 
 ## 10. Calendário do lançamento
 
-| Etapa | Duração | O que acontece |
+> Atualizado em 23/11/2026 pelas [decisões do dono](pedidos/anexos/decisoes-do-dono-2026-11-23.md): meta dele, o primeiro Pix ainda em novembro. Não há "abertura", "preço de lançamento" nem "preço que sobe": o e-book está à venda desde a primeira conversa, pelo preço da semana do teste. Nada de lista de transmissão, grupo ou mensagem a quem não pediu (LGPD): só recebe quem pediu, e pode sair quando quiser.
+
+| Etapa | Quando | O que acontece |
 |---|---|---|
-| **Aquecimento** | 2 a 3 semanas | Reels e anúncios com "Comente PLANTA"; quem comenta recebe a planta grátis e entra na lista do WhatsApp. Medimos qual ângulo traz contato mais barato |
-| **Abertura** | 7 dias | E-book aberto para a lista com preço de lançamento e bônus. Mensagens da [sequência do WhatsApp](ebook/vendas/WHATSAPP.md) |
-| **Sempre aberto** | Depois | Anúncio do ângulo vencedor rodando; cada planta nova vira post e mensagem para quem já comprou |
-| **2º e 3º lançamentos** | A cada leva | Preço sobe; quem comprou é convidado a indicar. Casa nova para quem já comprou só se o dono decidir (23/11: "ainda não sei"); não se promete |
+| **1. Teste de procura, sem gastar** | Quando o dono der o "sim" para postar | Posts no Instagram novo do negócio com "Comente PLANTA"; quem comenta recebe a Casa Compacta grátis no WhatsApp do negócio. Conta-se, por post, comentários e conversas |
+| **2. Venda aberta** | Com o PDF final das 3 casas e o link do Drive prontos | Na conversa, quem quer o e-book recebe o preço da semana (R$ 47 e R$ 67 alternando, começando pelo R$ 47), paga o Pix no WhatsApp e recebe o link do Google Drive; garantia de 7 dias da entrega do link. Mensagens da [sequência do WhatsApp](ebook/vendas/WHATSAPP.md). Cada conversa entra na planilha do [teste de preço](pedidos/anexos/teste-de-preco-como-medir.md) |
+| **3. Anúncio pago** | Depois do teste sem gastar, com o "sim" do dono a cada campanha | R$ 20 por dia (dono: "teste com 20, depois escala"), um anúncio que abre o WhatsApp por vez, com data de término no Gerenciador. Fica o que tiver o menor custo por venda ([painel](PAINEL.md), seção 4), não o contato mais barato |
+| **4. Próximas casas** | Depois do lançamento | A equipe indica as mais vendáveis (Estrategista e Arquiteto) e o dono aprova. O preço só muda por decisão do dono, com o resultado do teste. Quem comprou pode ser convidado a indicar, na conversa que já existe. Casa nova para quem já comprou só se o dono decidir (23/11: "ainda não sei"); não se promete |
 
 ## 11. O que medir para saber se a estratégia está certa
 
-- **Qual ângulo** traz o contato mais barato (comparar anúncios na mesma semana).
+- **Qual ângulo** traz a venda mais barata (custo por venda; o custo por contato só informa). Comparar anúncios na mesma semana, que é também a semana de um preço só.
+- **Qual preço do teste** (R$ 47 ou R$ 67) dá mais receita por conversa ([como medir](pedidos/anexos/teste-de-preco-como-medir.md)).
 - **Qual tamanho de lote** as pessoas mais mandam no WhatsApp. Esse é o lote das próximas plantas e dos próximos anúncios.
 - **Quantas pessoas mandam o terreno** depois da planta grátis. Se for pouco, a planta grátis ou a primeira mensagem precisam mudar.
 - **Qual perfil** compra mais (pergunte no pós-venda: "vai construir agora, financiar ou alugar?").

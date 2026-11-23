@@ -409,7 +409,14 @@ def svg_humanizada(p, estilo="revista"):
     portas_h = [(d, *PL.porta_dobradica(p, d)) for d in portas]
     # o que a etiqueta do cômodo não pode cobrir: móvel e louça (peso 1), piso do box (.5: é chão, mas tem o ralo)
     # e o giro da porta, medido no quarto de círculo de verdade (o canto do quadrado fora do arco fica livre)
-    obst = [(*_bbox_movel(mv), .5 if mv["tipo"] == "box" else 1) for mv in mov if mv["tipo"] != "tapete"]
+    LOUCA = {"vaso": 2, "pia": 2, "tanque": 2, "maquina": 2, "box": .4}
+    obst = [(*_bbox_movel(mv), LOUCA.get(mv["tipo"], 1)) for mv in mov if mv["tipo"] != "tapete"]
+    for mv in mov:  # o ralo e o chuveiro do box: a etiqueta pode pisar no piso do box, nunca neles nem encostada
+        if mv["tipo"] == "box":
+            th = mv.get("rot", 0) or 0
+            for lx, ly in ((0, 0), (-mv.get("w", .45) / 2 + .14, -mv.get("d", .4) / 2 + .14)):
+                px, py = mv["x"] + lx * math.cos(th) + ly * math.sin(th), mv["y"] - lx * math.sin(th) + ly * math.cos(th)
+                obst.append((px - .12, py - .12, px + .12, py + .12, 2))
     giros = []
     for d, H, A, B in portas_h:
         xs, ys = (H[0], A[0], B[0]), (H[1], A[1], B[1])
@@ -837,10 +844,10 @@ def svg_no_lote(p, k):
     fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
     Dm = max([p["D"]] + [c["y1"] for c in fut])
     Wm = max([p["W"]] + [c["x1"] for c in fut])
-    planta = svg_planta(p, nomes=False, cotas=False, pad=0).replace(
+    planta = svg_planta(p, nomes=False, cotas=False, pad=0, moveis=True).replace(
         "<svg ", f'<svg x="{f3(rec["esq"])}" y="{f3(LD - rec["frente"] - Dm)}" width="{f3(Wm)}" height="{f3(Dm)}" ', 1)
-    m0, vw, vh = .9, LW + 1.8, LD + .1  # margem igual dos dois lados: o lote fica no meio do desenho (e da fita)
-    return (f'<svg viewBox="{-m0} -.05 {f3(vw)} {f3(vh)}" style="width:{vw * k:.1f}mm;height:{vh * k:.1f}mm" xmlns="http://www.w3.org/2000/svg" '
+    vw, vh = LW + .1, LD + .1  # só o lote: a cota do fundo sai para a esquerda, no vão entre as colunas (overflow visível)
+    return (f'<svg viewBox="-.05 -.05 {f3(vw)} {f3(vh)}" style="width:{vw * k:.1f}mm;height:{vh * k:.1f}mm;overflow:visible" xmlns="http://www.w3.org/2000/svg" '
             f'role="img" aria-label="{E(p["nome"])} no lote de {LW} x {LD} m">'
             f'<rect x="0" y="0" width="{LW}" height="{LD}" fill="#F3E6C4" stroke="#17202B" stroke-width=".06" stroke-dasharray=".3 .15"/>'
             f'{planta}'
@@ -1104,22 +1111,24 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
     casas = sorted(plantas, key=lambda p: (lote_frente(p), p["id"]))
     filas = [casas] if len(casas) <= 3 else [casas[:(len(casas) + 1) // 2], casas[(len(casas) + 1) // 2:]]
     lote = lambda p: p["_r"].metricas["lote_comercial"]
-    gap, col_min, alto = 6.0, 40.0, (128.0 if len(filas) == 1 else 50.0)  # mm; "alto" = lote mais fundo de cada fila
+    gap, alto = 9.0, (144.0 if len(filas) == 1 else 56.0)  # mm; "alto" = lote mais fundo de cada fila
+    col_min = min(49.0, (176.0 - gap * (max(len(fl) for fl in filas) - 1)) / max(len(fl) for fl in filas))  # o texto cabe
     k = min(alto / max(lote(p)[1] for p in casas),
-            *[(176.0 - 10 - gap * (len(fila) - 1)) / sum(lote(p)[0] + 1.8 for p in fila) for fila in filas])
+            *[(176.0 - 12 - gap * (len(fila) - 1)) / sum(lote(p)[0] + .1 for p in fila) for fila in filas])
     jeito = {i: t for t, ids in GRUPOS for i in ids}
     html = []
     for fila in filas:
-        cols = " ".join(f"{max(col_min, (lote(p)[0] + 1.8) * k):.1f}mm" for p in fila)
+        cols = " ".join(f"{max(col_min, (lote(p)[0] + .1) * k):.1f}mm" for p in fila)
         lotes = "".join(f'<div class="ac-lote">{svg_no_lote(p, k)}</div>' for p in fila)
         fitas = "".join(f'<div class="ac-fita" style="width:{lote(p)[0] * k:.1f}mm;--m:{k:.2f}mm">{lote(p)[0]} m</div>' for p in fila)
         txt = "".join(
             f'<div class="ac-txt"><span class="mono id">{p["id"]}</span><h3>{E(p["nome"])}</h3>'
-            f'<p>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}</p>'
+            f'<p>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))} · {p["banheiros"]} banheiro{"s" if p["banheiros"] > 1 else ""}</p>'
             + (f'<p class="ac-jeito">{E(jeito[p["id"]])}</p>' if p["id"] in jeito else "")
-            + f'<b class="ac-pag">p. {numeros[p["id"]]}</b></div>' for p in fila)
+            + '</div>' for p in fila)
+        pags = "".join(f'<b class="ac-pag">p. {numeros[p["id"]]}</b>' for p in fila)  # fileira própria: as páginas alinhadas
         html.append(f'<div class="ac-fila" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
-                    f'<div class="ac-rua">RUA</div>{fitas}{txt}</div>')
+                    f'<div class="ac-rua">RUA</div>{fitas}{txt}{pags}</div>')
     return (f'<span class="sobre">Comece aqui</span><h2>Ache a sua casa</h2>'
             f'<p class="abertura">A medida é a frente de lote comercial (arredondada para o metro de cima) em que cada casa cabe; a medida exata está na ficha da casa.</p>'
             + "".join(html)

@@ -27,7 +27,7 @@ Textos de cada casa do e-book, escritos pelo método do Redator (.claude/agents/
 
 Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das plantas validadas.
 
-Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `galeria`, `Livro`, `titulo_do`, `lote_frente`, `casas_txt`.
+Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `svg_no_lote`, `galeria`, `Livro`, `titulo_do`, `lote_frente`.
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 
@@ -71,7 +71,7 @@ Guarda cada prompt do dono, palavra por palavra, em pedidos/entrada/ (um arquivo
 
 Imagens 2D das plantas para posts e anúncios (sem 3D): planta mobiliada, blueprint, vista da rua e casa no lote.
 
-Funções: `pasta`, `quadro`, `main`.
+Funções: `carimbo`, `pasta`, `quadro`, `main`.
 
 ### [`ferramentas/imagens3d.py`](imagens3d.py)
 

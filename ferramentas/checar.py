@@ -265,6 +265,23 @@ if _cad:
     falhas.append("cadeira sobre cama ou outro móvel"); print("[ERRO] cadeira sobre cama ou outro móvel: " + "; ".join(_cad[:12]))
 else:
     print("[OK ] nenhuma cadeira de escrivaninha em cima de cama ou de outro móvel")
+# Cadeira da escrivaninha posta à mão encostando no armário (F01, quarto 3, 23/11/2026): a zona de puxar fica livre
+_zona = [f"{pl['id']} {m['amb']}: {o['tipo']} na zona da cadeira" for pl in _p3.PL.carregar() for mv in [_p3.construir(pl)[3]]
+         for m in mv if m["tipo"] == "escrivaninha" for o in mv
+         if o["amb"] == m["amb"] and o["tipo"] not in _p3.NAO_COLIDE + ("escrivaninha", "cadeira") and _p3.sobrepoe(_p3.pegada(o), _p3.zona_da_cadeira(m), -0.005)]
+if _zona:
+    falhas.append("cadeira sem os 0,75 m de puxar"); print("[ERRO] cadeira sem os 0,75 m de puxar: " + "; ".join(_zona))
+else:
+    print("[OK ] toda escrivaninha com 0,60 x 0,75 m livres para a cadeira")
+# Prévia mais velha que os dados da casa (motor mudou porta, móveis e 3D em 23/11 e as prévias ficaram de 20 a 22/11)
+import imagens2d as _i2  # noqa: E402
+_carimbos = json.loads(_i2.CARIMBOS.read_text(encoding="utf-8")) if _i2.CARIMBOS.exists() else {}
+_velhas = [i for i in (p["id"] for p in PL.carregar())
+           if not (_i2.PREVIAS / f"{i}.png").exists() or _carimbos.get(i) != _i2.carimbo(i)]
+if _velhas:
+    falhas.append("prévia velha"); print(f"[ERRO] prévia mais velha que os dados da casa ({', '.join(_velhas)}): python3 ferramentas/imagens2d.py --previas {' '.join(_velhas)}")
+else:
+    print("[OK ] as prévias batem com os dados das casas (carimbo em ebook/plantas/previas/carimbos.json)")
 _quartos = []
 for pl in _p3.PL.carregar():
     _tipo = {c["id"]: c["tipo"] for c in pl["comodos"]}

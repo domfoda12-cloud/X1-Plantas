@@ -218,8 +218,8 @@ def todas():
                                  M("armario", "frente", 1.2, 0.06, 2.7, 0.66)])),
                              (None, F("quarto3", "Quarto", "dorm", moveis=[
                                  M("camaSolteiro", "fundos", 1.858, 1.525, 2.758, 3.425, manta="#E3B9A4"),
-                                 M("criado", "fundos", 1.38, 3.025, 1.83, 3.425),
-                                 M("escrivaninha", "fundos", 0.45, 2.925, 1.25, 3.425),
+                                 M("criado", "fundos", 1.4, 3.025, 1.85, 3.425),
+                                 M("escrivaninha", "fundos", 0.58, 2.925, 1.38, 3.425),  # cadeira com 0,75 m livres, fora da quina do armário
                                  M("armario", "esq", 0.06, 0.9, 0.66, 2.3)]))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],

@@ -21,7 +21,7 @@ projeto legal assinado por arquiteto ou engenheiro habilitado.
 
 Uso:
     python3 ferramentas/plantas.py validar          confere todas as plantas
-    python3 ferramentas/plantas.py previa [ID ...]  desenha as plantas em ebook/plantas/previas/
+    python3 ferramentas/plantas.py previa [ID ...]  rascunho em ebook/plantas/rascunhos/ (prévia em alta: imagens2d.py --previas)
     python3 ferramentas/plantas.py exportar         grava um JSON por planta em ebook/plantas/dados/
     python3 ferramentas/plantas.py fichas           regrava ebook/plantas/PLANTAS.md (a ficha de cada planta)
     python3 ferramentas/plantas.py resumo           mostra a tabela com os números calculados

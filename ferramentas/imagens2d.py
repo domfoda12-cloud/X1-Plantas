@@ -3,7 +3,11 @@
 Uso: python3 ferramentas/imagens2d.py C01 E01 F03
      python3 ferramentas/imagens2d.py --previas [IDs]   (prévias mobiliadas em alta de ebook/plantas/previas/)
 Saída: animacoes-3d/plantas-2d/<pasta>/{01-blueprint,02-planta-humanizada,03-fachada,04-lote}.png (1600 x 2000, 4:5)
+Cada prévia grava em previas/carimbos.json o carimbo dos dados da casa (ebook/plantas/dados/<ID>.json); o checar.py
+falha quando a prévia é mais velha que os dados (23/11/2026).
 """
+import hashlib
+import json
 import os
 import re
 import subprocess
@@ -19,6 +23,14 @@ import plantas as PL  # noqa: E402
 import livro  # noqa: E402
 
 SAIDA = RAIZ / "animacoes-3d" / "plantas-2d"
+PREVIAS = RAIZ / "ebook" / "plantas" / "previas"
+CARIMBOS = PREVIAS / "carimbos.json"
+
+
+def carimbo(pid):
+    """Hash dos dados da casa (JSON relido e ordenado: não muda com o fim de linha nem com a data do arquivo)."""
+    dado = json.loads((RAIZ / "ebook" / "plantas" / "dados" / f"{pid}.json").read_text(encoding="utf-8"))
+    return hashlib.sha256(json.dumps(dado, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:16]
 CSS = """@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap');
 *{margin:0;box-sizing:border-box} body{width:1600px;height:2000px;font-family:Inter,sans-serif}
 .q{width:1600px;height:2000px;display:grid;grid-template-rows:auto 1fr auto;padding:90px 90px 70px;gap:40px}
@@ -48,7 +60,8 @@ def main(ids, previas=False):
     todas = {p["id"]: p for p in PL.carregar()}
     trabalhos = []
     if previas:
-        dprev = RAIZ / "ebook" / "plantas" / "previas"
+        PL.cmd_exportar()  # o carimbo sai dos dados de agora, os mesmos que a prévia desenha
+        dprev = PREVIAS
         dprev.mkdir(parents=True, exist_ok=True)
         for pid in (ids or list(todas)):
             p = todas[pid]
@@ -75,16 +88,21 @@ def main(ids, previas=False):
 for (const [h, o] of JSON.parse(process.argv[process.argv.length - 1])) { await pg.goto('file://' + h); await pg.evaluate(() => document.fonts.ready); await pg.screenshot({ path: o }); }
 await b.close(); })();"""
     env = dict(os.environ, NODE_PATH=subprocess.run(["npm", "root", "-g"], capture_output=True, text=True).stdout.strip())
-    import json
     subprocess.run(["node", "-e", js, json.dumps(trabalhos)], env=env, check=True)
     for h, _ in trabalhos:
         os.remove(h)
-    print(f"{len(trabalhos)} imagens em {SAIDA.relative_to(RAIZ)}")
+    if previas:
+        carimbos = json.loads(CARIMBOS.read_text(encoding="utf-8")) if CARIMBOS.exists() else {}
+        carimbos.update({Path(o).stem: carimbo(Path(o).stem) for _, o in trabalhos})
+        CARIMBOS.write_text(json.dumps(dict(sorted(carimbos.items())), indent=1) + "\n", encoding="utf-8")
+    print(f"{len(trabalhos)} imagens em {(PREVIAS if previas else SAIDA).relative_to(RAIZ)}")
 
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    if args and args[0] == "--previas":
+    if args and args[0] in ("-h", "--help"):
+        print(__doc__)
+    elif args and args[0] == "--previas":
         main(args[1:], previas=True)
     else:
         main(args or ["C01", "E01", "F03"])

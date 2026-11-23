@@ -48,7 +48,7 @@
 2. "Quantos quartos?"
 3. "Quanto custa construir?" (a gente **não promete valor de obra**; mostra a área e diz que o orçamento é do engenheiro e do material da cidade dele)
 4. "Dá pra fazer por etapas?" (até as etapas serem desenhadas, a resposta honesta é: "A ordem da obra você combina com o seu engenheiro e o seu pedreiro. O e-book te ajuda a escolher a casa que cabe no lote antes de gastar.")
-5. "Vale a pena? E se não servir?" (a planta grátis mostra uma casa inteira; [garantia: a definir pelo dono])
+5. "Vale a pena? E se não servir?" (a Casa Compacta grátis mostra uma casa inteira; garantia de 7 dias, contados da entrega do link, com o Pix devolvido inteiro: dono, 23/11/2026)
 
 ### 3. Os outros perfis (da estratégia)
 
@@ -57,7 +57,7 @@
 | **Marcos**: tem o lote, constrói em etapas | Casa de 2 quartos que cabe no lote (ampliação desenhada só na C03, em espera) | C01, C03, C04, C05, E02, E03 |
 | **Dona Lúcia**: aposentada, uma casa para ficar | Térrea, sem degrau, banheiro com espaço | S03 (Casa Acessível), C06 |
 | **Camila e Rafael**: casal jovem, casa própria com filho a caminho | Suíte, varanda, 3º quarto como escritório | C06, F02, S04, S05 |
-| **Investidor pequeno**: constrói para alugar | Studio, casa pequena fácil de alugar | C02, E03 |
+| **Investidor pequeno**: constrói para alugar | Studio, casa pequena fácil de alugar | C02 (fora do lançamento). A E03 saiu deste perfil: agora tem 2 quartos, para morar (dono, 23/11/2026) |
 | **Quem tem esquina ou terreno comprido** | Casa certa para o formato do lote | S09, E01 a E07 |
 
 ### 4. O que cada lote aceita (dados das 24 plantas)
@@ -80,7 +80,7 @@ A planta do e-book **não é projeto legal**. Ela é um ponto de partida para co
 ### 6. Hipóteses para testar
 
 - O Marcos reage mais a "cabe no seu lote" do que a "economize com arquiteto". (Teste: 2 anúncios, mesmo vídeo.)
-- A planta grátis de **2 quartos em lote 8 x 25** converte melhor que as outras (é o terreno mais comum nas conversas).
+- ~~A planta grátis de 2 quartos em lote 8 x 25 converte melhor que as outras.~~ Encerrada: só a Casa Compacta é grátis (dono, 23/11/2026), não há outra planta grátis para comparar.
 - "Por etapas" é argumento mais forte que "econômica". (Em espera: só testar quando o e-book tiver as etapas desenhadas; dono, 23/11/2026.)
 - Mulheres de 28 a 40 anos são as decisoras de layout; homens de 30 a 50 são os pagantes. Dividir o público nos dois grupos.
 - Registre cada resultado em [`../../PAINEL.md`](../../PAINEL.md), seção 7.
@@ -98,9 +98,9 @@ IBGE, Censo 2022 (domicílios e moradores); IBGE Educa (tipos de moradia); Dataf
 
 | Produto | O que promete | Ponto fraco que vira o nosso argumento |
 |---|---|---|
-| [Hotmart: "500 plantas baixas de casas para você se inspirar"](https://hotmart.com/pt-br/marketplace/produtos/500-plantas-baixas-de-casas-para-voce-se-inspirar-na-sua-construcao-bonus/B87641576R) | Mais de 500 plantas "para se inspirar"; bônus de pergolados de madeira e 40 receitas caipiras | Quantidade sem filtro: o comprador não sabe qual cabe no lote dele. **Nosso contra-argumento: 24 casas, cada uma com o lote mínimo calculado e conferida medida por medida** |
+| [Hotmart: "500 plantas baixas de casas para você se inspirar"](https://hotmart.com/pt-br/marketplace/produtos/500-plantas-baixas-de-casas-para-voce-se-inspirar-na-sua-construcao-bonus/B87641576R) | Mais de 500 plantas "para se inspirar"; bônus de pergolados de madeira e 40 receitas caipiras | Quantidade sem filtro: o comprador não sabe qual cabe no lote dele. **Nosso contra-argumento: 3 casas no lançamento, cada uma com o lote mínimo calculado e conferida medida por medida** |
 | [Hotmart: "guia de planta de casa"](https://hotmart.com/pt-br/marketplace/produtos/guia-de-planta-de-casa/B105011830R) | Conceitos básicos e tipos de plantas | Texto genérico, sem casas para escolher |
-| Plantas prontas avulsas (Aquiprojetos, Projeto Pronto, Modices) | Projeto por casa, de cerca de R$ 98 (só a planta baixa em PDF) a R$ 2.000 (pacote completo). Faixas, fontes e datas: [`MERCADO.md`](MERCADO.md#projetos-similares-quem-vende-plantas-de-casas-e-o-que-aprender), seção 4 | Uma casa por compra. **Nosso: 24 casas pelo preço de uma** |
+| Plantas prontas avulsas (Aquiprojetos, Projeto Pronto, Modices) | Projeto por casa, de cerca de R$ 98 (só a planta baixa em PDF) a R$ 2.000 (pacote completo). Faixas, fontes e datas: [`MERCADO.md`](MERCADO.md#projetos-similares-quem-vende-plantas-de-casas-e-o-que-aprender), seção 4 | Uma casa por compra. **Nosso: 3 casas por menos que o preço de uma** |
 | Catálogos de porcelanato ("200 projetos") | Material profissional para quem vende serviço | Público diferente ([análise](VISUAL.md#análise-dos-catálogos-de-porcelanato-referência-de-formato)) |
 
 **Posicionamento:** os outros vendem quantidade ou inspiração. Nós vendemos **certeza**: "essa cabe no seu lote, e você sabe por quê".

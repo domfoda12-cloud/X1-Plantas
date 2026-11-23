@@ -21,7 +21,7 @@ _Gerado por `ferramentas/atualizar-painel.py` em 23/11/2026, a partir dos arquiv
 | Casas com foto de fachada | 3 (C03, E07, F01) |
 | PDF do e-book | gerado, 23 MB · 1 plantas grátis |
 | Vídeos em `video/saida/` | 2 pastas (convite, principal) · 0 versões antigas (`v1` a `v5`, com a C01 velha) |
-| Avisos de conferência | 0 |
+| Avisos de conferência | 3 |
 
 **Por categoria:**
 
@@ -34,11 +34,17 @@ _Gerado por `ferramentas/atualizar-painel.py` em 23/11/2026, a partir dos arquiv
 | Sobrados | 4 | 0 | 0 |
 
 Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03, O04.
+
+**Avisos:**
+
+- Link quebrado: ESTRATEGIA.md → pedidos/anexos/teste-de-preco-como-medir.md
+- Link quebrado: ESTRATEGIA.md → pedidos/anexos/teste-de-preco-como-medir.md
+- Link quebrado: ESTRATEGIA.md → pedidos/anexos/teste-de-preco-como-medir.md
 <!-- situacao:fim -->
 
 ## 2. Em que pé está (escrito à mão, 22/11/2026)
 
-- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). **Só a Casa Compacta (C01) é grátis** no funil (dono, 23/11); os PDFs grátis de E02, E03, C06 e F01 não vão mais ao cliente. O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (50 m²) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
+- **E-book:** as **24 casas** estão desenhadas, validadas e no PDF (`ebook/saida/ebook.pdf`, rascunho 1), cada uma com imagem 3D estática (`ebook/visual/3d/`). **Só a Casa Compacta (C01) é grátis** no funil (dono, 23/11); os PDFs grátis de E02, E03, C06 e F01 não vão mais ao cliente. O dono reprovou o arranjo das plantas em 22/11: a **C01 foi redesenhada** (hoje 51 m², com hall: a oficial, 23/11) e é o modelo; quais das outras 23 refazer, e quando, é decisão dele.
 - **Vídeo:** a frente foi **aberta pelo dono em 21/11**. Ficaram em `video/saida/` só o convite (F03, o último feito) e o principal de 21/11; o resto foi apagado em 22/11 para refazer do zero. Toda instrução dele sobre vídeo: [`video/VIDEO.md`](video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde).
 - **Animações 3D completas:** ainda não começaram (as imagens 3D paradas já estão no e-book).
 - **Organização:** tudo na `main`, a única branch. Cada pedido do dono vira ficha em [`pedidos/`](pedidos/LEIA-ME.md) e é executado pelo modelo certo. Índice e resumos por pasta: [`INDICE.md`](INDICE.md).
@@ -71,8 +77,8 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
 **Para quem vendemos** (detalhes, dados e fontes em [`ESTRATEGIA.md`](ESTRATEGIA.md)):
 - **Quem:** quem tem um lote e vai construir, quase sempre **com pedreiro e sem arquiteto** (a maioria das obras particulares, segundo a pesquisa CAU/BR e Datafolha de 2015; em texto público, sem percentual), muitas vezes **por etapas**.
 - **A primeira pergunta dessa pessoa:** "que casa cabe no meu lote?".
-- **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **casa que cresce**.
-- **Decidido pelo dono em 23/11/2026** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): lançamento com **3 casas**: a Casa Compacta (com hall, a oficial), a Casa Fita (2 quartos) e a Família Compacta (F01); título "Antes do primeiro tijolo"; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47; só a Casa Compacta grátis; garantia de 7 dias, contados da entrega do link; bônus: checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; Pix direto pelo WhatsApp, sem plataforma, e e-book por link; estilo 1 nas casas e 3 na capa e no Instagram. **Em aberto:** o que mais vai de graça (tudo, parte ou atendimento personalizado): o dono está decidindo ([`CONTEXTO.md`](CONTEXTO.md)). Funil: [`ebook/vendas/WHATSAPP.md`](ebook/vendas/WHATSAPP.md).
+- **Os três diferenciais:** **ache pelo seu lote**, **veja em 3D antes de construir** e **escolha antes de gastar** ("casa que cresce" sai até as etapas serem desenhadas: dono, 23/11).
+- **Decidido pelo dono em 23/11/2026** ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)): lançamento com **3 casas**: a Casa Compacta (com hall, a oficial), a Casa Fita (2 quartos) e a Família Compacta (F01); título "Antes do primeiro tijolo"; preços em teste: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47; só a Casa Compacta grátis; garantia de 7 dias, contados da entrega do link; bônus: checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, para imprimir; Pix direto pelo WhatsApp, sem plataforma, e e-book por link do Google Drive; Instagram novo, do negócio; estilo 1 nas casas e 3 na capa e no Instagram. **Em aberto:** o que mais vai de graça (tudo, parte ou atendimento personalizado): o dono está decidindo ([`CONTEXTO.md`](CONTEXTO.md)). Funil: [`ebook/vendas/WHATSAPP.md`](ebook/vendas/WHATSAPP.md).
 
 ## 4. A conta que diz se o anúncio paga
 
@@ -83,7 +89,8 @@ custo por venda = custo por contato ÷ taxa de conversão
 ```
 
 - **Custo por contato:** quanto o Facebook Ads cobra, em média, por cada pessoa que chama no WhatsApp. Aparece no Gerenciador de Anúncios.
-- **Taxa de conversão:** de cada 100 pessoas que chamam no WhatsApp, quantas compram. Quem mede é o parceiro.
+- **Taxa de conversão:** de cada 100 pessoas que chamam no WhatsApp, quantas compram. Quem mede é quem atende o WhatsApp do negócio, na planilha do [teste de preço](pedidos/anexos/teste-de-preco-como-medir.md).
+- **Durante o teste R$ 47 x R$ 67** (dono, 23/11), a conta sai separada para cada preço: as semanas de R$ 47 juntas, as de R$ 67 juntas.
 
 **Exemplo só para mostrar a conta** (não é previsão; troque pelos seus números assim que tiver):
 
@@ -106,7 +113,7 @@ Ordem do dono: **e-book → animações → vídeo** ([`CLAUDE.md`](CLAUDE.md)).
 
 | Frente | Situação | Fechada quando |
 |---|---|---|
-| **1. E-book** | **Agora.** Rascunho 1 com 24 casas; redesenho do arranjo começou pela C01 | O dono escolhe as casas a refazer e preenche título, preço, bônus e contato em `ebook/config.json`; Revisor de risco aprova; PDF final |
+| **1. E-book** | **Agora.** Lançamento com 3 casas (C01, E03, F01; dono, 23/11); título, bônus e contato já estão no `ebook/config.json`; o preço é o teste R$ 47 x R$ 67 | As 3 casas aprovadas; Revisor de risco aprova; PDF final, pasta no Drive com o "sim" do dono e PDF de emergência conferido |
 | **2. Animações 3D** | Não começou | As casas do lançamento com animação conferida contra a planta |
 | **3. Vídeo** | Aberta pelo dono em 21/11; rascunhos esperando ele | Vídeo aprovado pelo dono e pelo Revisor, com a casa nova |
 | **4. Vender** | Depois | Custo por venda abaixo do preço por 1 semana |
@@ -117,7 +124,7 @@ O que espera o dono está em [`CONTEXTO.md`](CONTEXTO.md), "Em aberto"; o que ac
 
 **Meta da semana** (o dono escreve; ninguém inventa número; o `bom-dia` confere se as fichas abertas servem a ela):
 
-1. _(em branco)_
+1. Primeiro Pix ainda em novembro (dono, 23/11: "ainda este mês"). No primeiro mês, 10 a 50 vendas (meta dele).
 
 ## 7. Números para acompanhar
 
@@ -137,7 +144,7 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 |---|---|---|---|---|---|---|---|---|
 | | | | | | | | | |
 
-Gasto vem do Gerenciador de Anúncios; contatos e vendas, do parceiro e da plataforma de pagamento. Em anúncio de "Comente PLANTA" o Gerenciador não mostra custo por contato: aí ele é gasto ÷ contatos que o parceiro contou. Todo teste pago já sai com a data de término marcada no Gerenciador (prova 2, 23/11).
+Gasto vem do Gerenciador de Anúncios; contatos e vendas, da planilha do [teste de preço](pedidos/anexos/teste-de-preco-como-medir.md) e dos Pix recebidos (não há plataforma de pagamento). Em anúncio de "Comente PLANTA" o Gerenciador não mostra custo por contato: aí ele é gasto ÷ contatos que o parceiro contou. Todo teste pago já sai com a data de término marcada no Gerenciador (prova 2, 23/11).
 
 ## 8. Decisões tomadas
 
@@ -155,6 +162,7 @@ Gasto vem do Gerenciador de Anúncios; contatos e vendas, do parceiro e da plata
 | 22/11 | **OpenArt só com o "sim" do dono a cada uso**, com resumo e custo antes |
 | 22/11 | Selo "Imagem ilustrativa" **sai dos vídeos**; o aviso "Planta de referência…" continua ([`contexto/revisor-de-risco.md`](contexto/revisor-de-risco.md)) |
 | 22/11 | A **`main` é a única branch**; índice e resumos por pasta; cada pedido vira ficha e vai ao modelo certo ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)) |
+| 23/11 | **Lançamento:** 3 casas (C01, E03, F01), título "Antes do primeiro tijolo", teste R$ 47 x R$ 67 em semanas alternadas, Pix no WhatsApp, link do Drive, garantia de 7 dias da entrega do link, só a Casa Compacta grátis, Instagram novo, R$ 20 por dia de anúncio depois do teste sem gastar ([decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)) |
 
 O histórico completo, pedido por pedido, está em [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md).
 
