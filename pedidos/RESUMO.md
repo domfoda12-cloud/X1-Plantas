@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 11 documentos
+## Os 12 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -92,6 +92,14 @@ Escrita com as críticas das rodadas 1 e 2 (por extenso), as notas da rodada 3 (
 Seções: O cérebro: por onde um pedido passa; Página de decisões, versão 1; Cada adição (para o júri conferir); As outras opções (para quem disser "quero ver"); Ordem, quem faz e quando o júri para.
 
 Tamanho: 2911 palavras.
+
+### [Integração das 6 adições: versão 6, curta (23/11/2026)](anexos/integracao-novos-v6.md)
+
+O que mudou da v5 para a v6
+
+Seções: 1. O estado verdadeiro; 2. Página de decisões (pode responder só esta); 3. Uma linha por ferramenta.
+
+Tamanho: 880 palavras.
 
 ### [Júri: síntese dos presidentes, rodadas 3 a 5 (23/11/2026)](anexos/juri-rodadas-3-a-5.md)
 
