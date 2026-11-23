@@ -1255,7 +1255,17 @@ def atualizar_calculadora(plantas, numeros):
     txt = arq.read_text(encoding="utf-8")
     ini = txt.index("const CASAS = ")
     fim = txt.index("];", ini) + 2
-    arq.write_text(txt[:ini] + "const CASAS = " + json.dumps(casas, ensure_ascii=False) + ";" + txt[fim:], encoding="utf-8")
+    txt = txt[:ini] + "const CASAS = " + json.dumps(casas, ensure_ascii=False) + ";" + txt[fim:]
+    # a nota dos recuos também sai das casas da edição (corredor e esquina só se houver)
+    rf, rfu, rlat, rext = recuos_da_edicao(plantas)
+    nota = (f"Conta feita com os recuos de referência do e-book: {rf} m na frente, {rfu} m nos fundos"
+            + (f" e {rlat} m numa lateral, com a outra parede na divisa, se a prefeitura deixar." if rlat else ".")
+            + (f" {rext}" if rext else "")
+            + " A prefeitura do cliente pode pedir recuos maiores. A lista de casas sai do validador a cada geração do e-book."
+              " É uma indicação de referência e não substitui o profissional.")
+    ini = txt.index('<p class="nota">') + len('<p class="nota">')
+    fim = txt.index("</p>", ini)
+    arq.write_text(txt[:ini] + html.escape(nota, quote=False) + txt[fim:], encoding="utf-8")
 
 
 if __name__ == "__main__":

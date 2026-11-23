@@ -53,7 +53,7 @@ button:focus-visible { outline:3px solid var(--fita); outline-offset:2px }
     <div class="msg" id="msg"></div>
     <div class="acoes"><button type="button" id="copiar">Copiar mensagem</button><span class="status" id="status" aria-live="polite"></span></div>
   </div>
-  <p class="nota">Conta feita com os recuos de referência do e-book: 3 m na frente, 1,5 m nos fundos e numa lateral, com a outra parede na divisa, se a prefeitura deixar. Nas casas de corredor, 1,5 m nas duas laterais; na de esquina, 3 m também na rua do lado. A prefeitura do cliente pode pedir recuos maiores. A lista de casas sai do validador a cada geração do e-book. É uma indicação de referência e não substitui o profissional.</p>
+  <p class="nota">Conta feita com os recuos de referência do e-book: 3 m na frente, 1,5 m nos fundos e 1,5 m numa lateral, com a outra parede na divisa, se a prefeitura deixar. A prefeitura do cliente pode pedir recuos maiores. A lista de casas sai do validador a cada geração do e-book. É uma indicação de referência e não substitui o profissional.</p>
 </div>
 <script>
 const CASAS = [{"id": "C01", "nome": "Casa Compacta", "area": 51, "q": "2 quartos", "b": 1, "fr": 8.0, "fu": 13.0, "pag": 10, "dest": "Hall curto no lugar do corredor, varanda na entrada e banheiro de 1,84 x 1,68 m livres"}, {"id": "E03", "nome": "Casa Fita", "area": 56, "q": "2 quartos", "b": 1, "fr": 5.0, "fu": 20.6, "pag": 12, "dest": "Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa"}, {"id": "F01", "nome": "Casa Família Compacta", "area": 71, "q": "3 quartos", "b": 1, "fr": 10.0, "fu": 12.8, "pag": 14, "dest": "Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para fora, no corredor lateral"}];
@@ -74,8 +74,12 @@ function atualizar() {
     lista.append(li);
   }
   if (!cabem.length) { msg.textContent = `Com ${fmt(f)} x ${fmt(d)} m e os recuos de referência, nenhuma casa do e-book cabe. Me confirma as medidas? Se a sua prefeitura deixar encostar na divisa, a conta muda.`; return; }
-  const top = cabem.slice(0, 3).map(c => `🏠 ${c.nome} · ${c.area} m² · ${c.q}`).join('\n');
-  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m cabem ${cabem.length} casa${cabem.length > 1 ? 's' : ''} do e-book, com os recuos de referência. Algumas:\n\n${top}\n\nCada uma vem mobiliada, desenhada no lote e com o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\nQuer que eu te mande uma delas inteira?`;
+  const TOPO = 3;
+  const top = cabem.slice(0, TOPO).map(c => `🏠 ${c.nome} · ${c.area} m² · ${c.q}`).join('\n');
+  const n = cabem.length, varias = n > 1;
+  // "As 3 maiores" (por área) só quando a lista corta casas; com 1 casa, tudo no singular
+  const intro = n > TOPO ? `As ${TOPO} maiores:` : varias ? 'São estas:' : 'É esta:';
+  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m ${varias ? 'cabem' : 'cabe'} ${n} casa${varias ? 's' : ''} do e-book, com os recuos de referência. ${intro}\n\n${top}\n\n${varias ? 'Cada uma vem' : 'Ela vem'} mobiliada, desenhada no lote e com o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\n${varias ? 'Quer que eu te mande uma delas inteira?' : 'Quer que eu te mande a planta inteira?'}`;
 }
 document.getElementById('form').addEventListener('input', atualizar);
 document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
