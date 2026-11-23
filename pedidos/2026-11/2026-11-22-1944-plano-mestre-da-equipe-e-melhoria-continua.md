@@ -13,6 +13,8 @@ Give a main plan, function and objective for the team and make them come out wit
 
 *Recado de 22/11 20:56:* Talvez no futura talvez queira entender melhor como melhorar as conexaos que os agentes tem, lembre antes de fazer as coisas de criar o plano detalhado(grande small steps...) que deve ser vetado pelo time varias vezes e o fable 1
 
+*Recado de 23/11 02:01:* I want my system to work like a brain
+
 **O que ele pediu, parte por parte:** Na fila, não agora. 1) Um plano principal, a função e o objetivo da equipe. 2) A equipe chega sozinha ao plano que deveria ser óbvio por todo o contexto da branch principal. 3) Pensar juntos por um tempo. 4) Continuar achando melhorias no sistema, no projeto, no plano e no código.
 
 **Por que ele pediu, ou o que quer descobrir:** Com a equipe organizada (fichas 1924 e 1935), ele quer saber se ela entendeu o projeto sem ele explicar: se o plano que sai dela bate com o que ele tem na cabeça, o contexto está bom. E quer que a melhoria vire rotina, não pedido.
@@ -33,3 +35,15 @@ Give a main plan, function and objective for the team and make them come out wit
 
 **Resultado:** (a preencher)
 
+## O sistema como um cérebro (direção do dono, 23/11 02:0x: "I want my system to work like a brain")
+
+| Parte do cérebro | No sistema hoje | Falta |
+|---|---|---|
+| Memória curta | quadro, "Agora" | — |
+| Memória longa | histórico, Lições, caderno de pesquisa, palavras do dono | consolidar (cortar repetido) |
+| Sentidos | web, MinoAI (vídeo), `conversas.py` | ver sites bloqueados |
+| Reflexos | `checar.py` (conferências automáticas) | conferência do "Mac" e de caminho entre crases |
+| Função executiva | Maestro | — |
+| Aprendizado | Lições, régua do veto, prova antes e depois (noite de 23/11) | medir se o erro cai |
+| Sono que consolida | rotina de 24 horas | — |
+| **Atenção e propósito** | — | **arquivo de metas que toda tarefa consulta (ideia do chief-of-staff); o júri do llm-council disse que o sistema pensou em si e não no Pix** |
