@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 28 documentos
+## Os 29 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -168,6 +168,14 @@ Saída do laço do júri (ficha `0156`), sem edição. Base da v6 curta, que é 
 Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku); v5: média 6 (presidente: sonnet).
 
 Tamanho: 10600 palavras.
+
+### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
+
+Pesquisador, passo 1. Cada item: o que o texto diz (citação curta), o link lido, o que não se confirmou e "muda algo nos nossos textos?". Não editei texto de venda. Quem conclui: o Revisor de risco (lei) e o Redator (texto). Todos os achados estão no caderno (`pesquisas/normas.md` e…
+
+Seções: 1. Lei 6.766/1979, art. 4º, II (lote mínimo); 2. Decreto 7.962/2013 (comércio eletrônico); 3. CDC, Lei 8.078/1990; 4. Código Civil, arts. 1.301 e 1.302; 5. LGPD, Lei 13.709/2018; 6. WhatsApp Business, ajuda oficial; 7. Instagram e Meta; Reconferência do pedido.
+
+Tamanho: 2331 palavras.
 
 ### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
 
