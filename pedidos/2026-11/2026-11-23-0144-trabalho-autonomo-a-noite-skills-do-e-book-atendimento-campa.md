@@ -105,3 +105,9 @@ Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 **Recado do dono (01:46): "Just stay awake 24h".** **Tarefa agendada:** "X1-Plantas: trabalho de 24 horas" (antes "da noite") (`trig_01JBJYsSkBLwfVLfmJyS1kvr`), de hora em hora no minuto 45 (UTC), a primeira às 02:45; acorda esta conversa e faz a próxima linha da fila; depois da fila, segue com o "Tempo livre" do `pedidos/PLANO.md` (alternando equipe e projeto) até 2026-11-24 01:45 UTC; então escreve o resumo das 24 horas e se apaga. Para se o dono escrever ou se aparecer aviso de limite de uso.
 
 **Limite de uso (23/11, 06:50 a 07:10 UTC):** o veto do A3 caiu no limite de 5 horas (2 agentes, 149 mil tokens antes do corte). O dono avisou às 07:11 que o limite voltou; o veto roda de novo (`wf_9fb12177-6be`, retomado). Gasto medido desta noite até aqui, só subagentes de workflow: júri 2,95 milhões; everything-claude-code 1,67 milhão (leitura) e a implementação parada; v6 536 mil; prova A0 536 mil; veto A2 256 mil.
+
+## Limite de uso batido (objetivo do dono)
+
+- **23/11, por volta de 22:30 UTC:** aviso "You've hit your 5-hour limit · resets 12:40am (UTC)". Os dois presidentes da prova 3 do júri foram cortados no começo; tudo o mais já estava entregue. As tarefas agendadas de 22:45 e 23:45 UTC chegaram com a sessão parada e não rodaram.
+- **24/11, 00:46 UTC:** janela renovada; retomado pelos dois presidentes da prova 3.
+- Entre 21:45 e 22:30 UTC rodaram 15 agentes (Redator, Fable, Designer, Arquiteto, Pesquisador, Revisor, 6 jurados, 1 conferidor, 2 presidentes cortados). Tokens que os relatórios mostraram: cerca de 2,2 milhões (soma dos avisos de conclusão; os 2 cortados não informaram).
