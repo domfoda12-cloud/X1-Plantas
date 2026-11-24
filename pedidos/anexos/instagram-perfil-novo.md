@@ -145,7 +145,7 @@ Ideia, não regra: numa aula gravada da MinoAI Frontier ("Coaching call Content 
 - Sem preço, sem número de seguidores ou de vendas, sem prazo, custo ou aprovação. "Cabe" só aparece com "recuos de referência" ou como pergunta.
 - Categorias técnicas ("Arquiteto", "Construtora") descartadas pelo mesmo motivo.
 - Garantia de 7 dias: decidida pelo dono em 23/11 (`decisoes-do-dono-2026-11-23.md`). Dados do vendedor: a conferir.
-- Números só os da ficha do validador. Os de E03 e F01 podem mudar com a E03R e a F01R.
+- Números só os da ficha do validador. Os de E03 e F01 já são os das casas novas, oficiais desde 23/11.
 
 ## Perguntas ao dono (curtas)
 

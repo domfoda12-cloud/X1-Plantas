@@ -71,7 +71,11 @@ def todas():
                   V((3.35, H((1.2, F("varanda", "Varanda", "varanda")),
                             (4.2, F("sala", "Sala e jantar", "sala")),
                             (None, V((1.4, F("servico", "Serviço", "servico")),
-                                     (None, F("cozinha", "Cozinha", "cozinha")))))),
+                                     (None, F("cozinha", "Cozinha", "cozinha", moveis=[
+                                         # tudo na parede do quarto casal (24/11/2026): a geladeira saiu da frente da janela
+                                         # do fundo; geladeira na ponta da sala, pia e fogão depois, 1,13 m livres na frente
+                                         M("geladeira", "dir", 1.19, 0.08, 1.89, 0.8),
+                                         M("bancada", "dir", 1.27, 0.85, 1.89, 2.65)])))))),
                     (None, H((3.3, F("quarto2", "Quarto", "dorm")),
                              (1.8, V((1.1, F("circ", "Hall", "circ")), (None, F("banho", "Banheiro", "banho")))),
                              (None, F("quarto1", "Quarto casal", "casal"))))),
@@ -128,7 +132,7 @@ def todas():
     # dos Campos, Modelos 5A e 5B (plantas-ref/REFERENCIAS.md): 3,50 m de largura num lote de 5 m, colada na divisa da esquerda
     # e com 1,50 m de recuo à direita; um quarto em cada ponta, sala e cozinha no meio, hall de 0,89 m ao lado do banheiro.
     # Mudou da SJC: banheiro de 1,58 m livres (régua federal), serviço coberto junto da cozinha e do banho (uma prumada) e copa
-    # com mesa de 4. Móveis à mão (movel): mesa e geladeira na divisa, pia e fogão embaixo da janela, 1,03 m de passagem.
+    # com mesa de 4. Móveis à mão (movel): mesa e geladeira na divisa, pia e fogão embaixo da janela, 0,94 m de passagem.
     # Serviço sem porta para fora (a parede de 1,18 m não comporta porta e janela): a porta de serviço fica na cozinha, ao lado.
     P.append(casa("E03", "Casa Fita", 3.5, 16.1,
                   H((3.1, F("quarto2", "Quarto", "dorm", pref=("frente", "dir"), moveis=[
@@ -143,7 +147,7 @@ def todas():
                         M("mesaCentro", "frente", 1.21, 1.7, 1.81, 2.7)])),
                     (3.2, F("cozinha", "Cozinha e copa", "cozinha", moveis=[
                         M("geladeira", "esq", 0.075, 0.06, 0.775, 0.78),
-                        M("mesaJantar", "frente", 0.075, 0.9, 1.775, 2.1),               # 4 lugares
+                        M("mesaJantar", "frente", 0.16, 0.9, 1.86, 2.1),                 # 4 lugares; cadeira da divisa com 46 cm (24/11/2026: eram 38)
                         M("bancada", "dir", 2.805, 0.1, 3.425, 1.9)])),                  # pia e fogão embaixo da janela
                     (3.0, V((1.1, F("circ", "Hall", "circ")),
                             (None, H((1.3, F("servico", "Serviço", "servico", moveis=[

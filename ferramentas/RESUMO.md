@@ -55,7 +55,7 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 
 Confere se o código do projeto tem erro, de uma vez só.
 
-Funções: `rodar`, `recuos_escondidos`.
+Funções: `rodar`, `moveis_ruins`, `recuos_escondidos`.
 
 ### [`ferramentas/conversas.py`](conversas.py)
 

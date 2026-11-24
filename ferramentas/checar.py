@@ -273,6 +273,29 @@ if _zona:
     falhas.append("cadeira sem os 0,75 m de puxar"); print("[ERRO] cadeira sem os 0,75 m de puxar: " + "; ".join(_zona))
 else:
     print("[OK ] toda escrivaninha com 0,60 x 0,75 m livres para a cadeira")
+# Geladeira na frente da janela (C01) e cadeira de 38 cm na divisa (E03), achados ao mobiliar as 3 casas, 24/11/2026
+def moveis_ruins(plantas):
+    """Móvel alto na frente de janela e cadeira de jantar a menos de 45 cm da parede, nas plantas dadas."""
+    return ([f"{pl['id']} {amb}: {tipo} na frente da janela ({cm} cm)" for pl in plantas for (amb, tipo, cm) in _p3.altos_na_janela(pl)]
+            + [f"{pl['id']} {amb}: cadeira de jantar com {cm} cm até a parede (mínimo {round(100 * _p3.CADEIRA_PAREDE)})"
+               for pl in plantas for (amb, cm) in _p3.cadeiras_apertadas(pl)])
+
+
+_mr = moveis_ruins(_p3.PL.carregar())
+# prova de que a conferência pega o erro: E03 com a mesa de volta na divisa e C01 com a geladeira na frente da janela
+_prova = {p["id"]: p for p in _p3.PL.carregar() if p["id"] in ("C01", "E03")}
+for _c in _prova["E03"]["comodos"]:
+    if _c["id"] == "cozinha":
+        _c["moveis"] = [dict(m, x=0.925) if m["tipo"] == "mesaJantar" else m for m in _c["moveis"]]
+for _c in _prova["C01"]["comodos"]:
+    if _c["id"] == "cozinha":
+        _c["moveis"] = [dict(m, x=1.075, y=2.675, rot=3.14159) if m["tipo"] == "geladeira" else m for m in _c["moveis"]]
+_pegou = moveis_ruins(_prova.values())
+if _mr or len(_pegou) != 2:
+    falhas.append("móvel alto na janela ou cadeira apertada")
+    print("[ERRO] móvel alto na frente de janela ou cadeira de jantar apertada: " + ("; ".join(_mr) if _mr else f"a prova não pegou os 2 erros postos de propósito ({_pegou})"))
+else:
+    print("[OK ] nenhum móvel alto na frente de janela e toda cadeira de jantar com 45 cm até a parede (prova: pegou os 2 erros postos de propósito)")
 # Prévia mais velha que os dados da casa (motor mudou porta, móveis e 3D em 23/11 e as prévias ficaram de 20 a 22/11)
 import imagens2d as _i2  # noqa: E402
 _carimbos = json.loads(_i2.CARIMBOS.read_text(encoding="utf-8")) if _i2.CARIMBOS.exists() else {}

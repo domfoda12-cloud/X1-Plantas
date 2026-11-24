@@ -24,6 +24,21 @@ Estou curioso, tem como transformar o MINOAI in a Creative business agent, Como 
 
 **Conferência:** `checar.py` verde em cada salvamento; Revisor SIM SE aplicado nos textos da C01 e nas respostas rápidas; auditoria do Fable (6 erros, 23/11 noite).
 
-**Resultado:** Em andamento: C01 com hall oficial (51 m²), estilo novo no gerador, 6 imagens 3D refeitas, rascunhos E03R e F01R esperando o dono, PDF de emergência em rascunho.
+**Resultado:** Em andamento: C01 com hall oficial (51 m²), estilo novo no gerador, 6 imagens 3D refeitas, E03 e F01 novas oficiais (o dono delegou: "revise; se aprovar, faça"), edição de lançamento com 3 casas no gerador (17 páginas, 4,9 MB, só em pasta temporária: **o PDF em `ebook/saida/` ainda é o velho, de 24 casas; não mandar**), 3D das 24 casas sem espelho.
 
 **O que aprendi:** maestro: pedido do dono vira ficha na hora, não no fim do dia; a auditoria achou 4 pedidos da tarde sem ficha.
+
+## Vereditos do Revisor de risco (23/11, noite; antes só estavam em mensagem de commit)
+
+| O que | Veredito | Condição aplicada |
+|---|---|---|
+| Textos da C01 (51 m², destaque) e respostas rápidas | SIM SE | destaque "Hall curto no lugar do corredor..."; dados do vendedor (Decreto 7.962); ausência sem prazo |
+| Trocas 50 → 51 m² em WhatsApp, catálogo, Instagram | SIM SE | "um hall curto distribui"; 9,4 m²; aviso velho apagado |
+| Textos da E03 e F01 novas | SIM SE | porta do serviço "para fora, no corredor lateral"; "lote de 5 x 25 m"; anúncio "2 das 3 casas" |
+| Gancho da E03: "5 m de frente. 2 quartos e 56 m², com uma parede na divisa (se a prefeitura deixar)." | SIM | - |
+| 7 frases da edição de 3 casas | SIM SE | calculadora: "Quer saber mais sobre ela?" no lugar de "te mando a planta inteira" |
+| Página 3, "Qual casa cabe no seu lote?" | SIM SE | "a casa desenhada num lote comum dessa frente... O fundo mínimo e a medida exata estão na página da casa." |
+| Skills `oferta-e-whatsapp` e `design-editorial` | SIM SE e SIM | frase do preço; LGPD; casa grátis; veto do `/oferta` a quem só cabe a C01 |
+| Instagram novo, estratégia, teste de preço | SIM SE | sem "mobiliada"; selo "Imagem ilustrativa"; dados do vendedor; "mesmo que você pague depois que a semana virar" |
+
+**Parecer do Arquiteto sobre a E03 e a F01** (23/11, 20:40 UTC): aprovadas depois de consertar 9 defeitos de móveis e passagens nos rascunhos; validador com 0 erros nas 24 casas. Falta: imagem de antes e depois das duas para o dono (prometida).
