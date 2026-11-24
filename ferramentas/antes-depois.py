@@ -10,6 +10,8 @@ Uso:
     Cada planta é um id oficial (ebook/plantas/projetos.py) ou um rascunho .py (ebook/plantas/rascunhos/).
     --legenda: uma frase por ponto, na ordem dos números (repita a opção ou separe com "|").
     --ponto X,Y[,raio]: ponto marcado à mão, em metros (X da esquerda, Y da frente); soma aos achados sozinhos.
+        Casa redesenhada inteira: "X,Y[,raio];X2,Y2[,raio2]" marca um lugar no antes e outro no depois ("-" = não tem).
+    --nota: uma frase embaixo da faixa dos números (ex.: "Ela não cabe mais num lote de 5 x 20 m").
     --sem-auto: só os pontos à mão.  --titulo: título de cima (padrão: o nome da casa).
 """
 import argparse
@@ -114,6 +116,8 @@ def conflitos(p):
 
 # ------------------------------------------------------------------ desenho
 def dentro(ponto, problemas):
+    if ponto is None:
+        return False
     x, y, rx, ry = ponto
     return any(abs(px - x) <= rx and abs(py - y) <= ry for px, py in problemas)
 
@@ -125,7 +129,10 @@ def marcar(p, svg, pontos, problemas, enfeites=True):
     vb = [float(v) for v in svg.split('viewBox="', 1)[1].split('"', 1)[0].split()]
     Y = lambda y: Dm - y
     s = []
-    for n, (x, y, rx, ry) in enumerate(pontos, 1):
+    for n, pt in enumerate(pontos, 1):
+        if pt is None:  # ponto que só existe do outro lado
+            continue
+        x, y, rx, ry = pt
         if x - rx > p["W"] + .5 or y - ry > Dm + .5:
             continue
         cx, cy = x, Y(y)
@@ -173,7 +180,8 @@ li>div{flex:1;min-width:0} .perto{display:grid;grid-template-columns:1fr 1fr;gap
 .igual h2{font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;font-size:44px;line-height:1}
 .igual div{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:14px}
 .igual span{background:#fff;border-radius:999px;padding:8px 20px;font-size:36px;font-weight:800}
-.muda{margin-top:12px;font-size:32px;font-weight:700}
+.igual h2.seg{margin-top:22px} .muda{margin-top:16px;font-size:36px;line-height:1.22;font-weight:700}
+.perto .nada{display:flex;flex-direction:column} .nada div{flex:1;display:flex;align-items:center;justify-content:center;min-height:120px;font-size:30px;font-weight:800;color:#56616E}
 .rod{margin-top:18px;font-size:22px;opacity:.6}"""
 
 
@@ -187,19 +195,26 @@ def de_perto(p, svg, ponto):
     return a + f'viewBox="{x - w / 2:.3f} {topo:.3f} {w:.3f} {w / 1.5:.3f}"' + b.split('"', 1)[1]
 
 
-def pagina(pa, pb, pontos, legendas, titulo):
-    base = {}
-    for q in (pa, pb):
+def pagina(pa, pb, pontos, legendas, titulo, obs=None):
+    """pontos: lista de pares (ponto no antes, ponto no depois); um lado pode ser None (não tem)."""
+    lados = {}
+    for k, q in enumerate((pa, pb)):
         svg, prob = livro.svg_planta(q, humanizada=True, estilo="revista"), conflitos(q)
-        base[id(q)] = (marcar(q, svg, pontos, prob), svg, prob)
-    (svga, crua_a, prob_a), (svgb, crua_b, prob_b) = base[id(pa)], base[id(pb)]
-    so = lambda q, crua, prob, i: de_perto(q, marcar(q, crua, [pontos[i]], prob, enfeites=False), pontos[i])
+        lados[k] = (q, marcar(q, svg, [pp[k] for pp in pontos], prob), svg, prob)
     nota = lambda pt, prob: f' · <em style="color:{VERM};font-style:normal">janela em cima da porta</em>' if dentro(pt, prob) else ""
+
+    def fig(k, i, nome):
+        q, _, crua, prob = lados[k]
+        pt = pontos[i][k]
+        if pt is None:
+            return f'<figure class="nada"><div>não tinha</div><figcaption>{nome}</figcaption></figure>' if k == 0 else \
+                   f'<figure class="nada"><div>não tem mais</div><figcaption>{nome}</figcaption></figure>'
+        return f'<figure>{de_perto(q, marcar(q, crua, [pt], prob, enfeites=False), pt)}<figcaption>{nome}{nota(pt, prob)}</figcaption></figure>'
+    svga, svgb = lados[0][1], lados[1][1]
     na, nb = numeros(pa), numeros(pb)
     iguais = "".join(f"<span>{E(v)}</span>" for k, v in na.items() if nb[k] == v)
-    muda = " · ".join(f"{k}: {E(na[k])} → {E(nb[k])}" for k in na if nb[k] != na[k])
-    perto = lambda i: (f'<div class="perto"><figure>{so(pa, crua_a, prob_a, i)}<figcaption>antes{nota(pontos[i], prob_a)}</figcaption></figure>'
-                       f'<figure>{so(pb, crua_b, prob_b, i)}<figcaption>depois{nota(pontos[i], prob_b)}</figcaption></figure></div>') if i < len(pontos) else ""
+    muda = "".join(f"<span>{k}: {E(na[k])} → {E(nb[k])}</span>" for k in na if nb[k] != na[k])
+    perto = lambda i: f'<div class="perto">{fig(0, i, "antes")}{fig(1, i, "depois")}</div>' if i < len(pontos) else ""
     itens = "".join(f"<li><b>{i + 1}</b><div><span>{E(legendas[i]) if i < len(legendas) else ''}</span>{perto(i)}</div></li>"
                     for i in range(max(len(legendas), len(pontos))))
     return (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body>'
@@ -207,8 +222,10 @@ def pagina(pa, pb, pontos, legendas, titulo):
             f'<div class="duas"><div class="lado antes"><span class="tag">ANTES</span>{svga}</div>'
             f'<div class="lado depois"><span class="tag">DEPOIS</span>{svgb}</div></div>'
             + (f"<ol>{itens}</ol>" if itens else "")
-            + f'<div class="igual"><h2>O que NÃO muda</h2><div>{iguais or "<span>tudo muda nos números</span>"}</div>'
-            + (f'<p class="muda">Muda: {muda}</p>' if muda else "") + "</div>"
+            + '<div class="igual">'
+            + (f'<h2>O que muda</h2><div>{muda}</div>' if muda else "")
+            + (f'<h2{" class=seg" if muda else ""}>O que NÃO muda</h2><div>{iguais}</div>' if iguais else "")
+            + (f'<p class="muda">{E(obs)}</p>' if obs else "") + "</div>"
             f'<p class="rod mono">{E(pa["id"])} x {E(pb["id"])} · desenho do e-book, números do validador</p></body></html>')
 
 
@@ -233,24 +250,33 @@ def main():
     ap.add_argument("--ponto", action="append", default=[], help="X,Y[,raio] em metros, marcado à mão")
     ap.add_argument("--sem-auto", action="store_true", help="só os pontos à mão")
     ap.add_argument("--titulo")
+    ap.add_argument("--nota", help="uma frase embaixo da faixa dos números")
     ap.add_argument("--saida", required=True)
     a = ap.parse_args()
     pa, pb = carregar(a.antes, a.variante), carregar(a.depois, a.variante)
-    pontos = [] if a.sem_auto else mudancas(pa, pb)
-    for t in a.ponto:
+    pontos = [] if a.sem_auto else [(m, m) for m in mudancas(pa, pb)]
+
+    def ler(t):
+        if t.strip() == "-":
+            return None
         v = [float(x) for x in t.split(",")]
         r = v[2] if len(v) > 2 else .7
-        pontos.append((v[0], v[1], r, r))
-    pontos.sort(key=lambda q: (-round(q[1]), q[0]))  # leitura: de cima (fundos) para baixo, da esquerda para a direita
+        return (v[0], v[1], r, r)
+    for t in a.ponto:
+        lado = t.split(";")
+        pontos.append((ler(lado[0]), ler(lado[-1])))
+    chave = lambda pp: next(q for q in (pp[1], pp[0]) if q)  # ordena pelo depois (o que o leitor vai construir)
+    pontos.sort(key=lambda pp: (-round(chave(pp)[1]), chave(pp)[0]))  # leitura: de cima (fundos) para baixo, da esquerda para a direita
     legendas = [t.strip() for x in a.legenda for t in x.split("|") if t.strip()]
     legendas = [t.split(".", 1)[1].strip() if t.split(".", 1)[0].isdigit() else t for t in legendas]
-    for n, (x, y, rx, ry) in enumerate(pontos, 1):
+    for n, pp in enumerate(pontos, 1):
+        x, y = chave(pp)[:2]
         print(f"ponto {n}: x {x:.2f} m, y {y:.2f} m (da frente)")
     if len(legendas) != len(pontos):
         print(f"AVISO: {len(pontos)} ponto(s) marcados e {len(legendas)} frase(s) de legenda")
     saida = Path(a.saida).resolve()
     saida.parent.mkdir(parents=True, exist_ok=True)
-    png(pagina(pa, pb, pontos, legendas, a.titulo or f"{pa['nome'].split(' (')[0]}: o que muda"), saida)
+    png(pagina(pa, pb, pontos, legendas, a.titulo or f"{pa['nome'].split(' (')[0]}: o que muda", a.nota), saida)
     print(f"imagem: {saida}")
 
 
