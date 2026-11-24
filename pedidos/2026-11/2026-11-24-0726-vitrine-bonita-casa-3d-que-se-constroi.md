@@ -22,7 +22,7 @@
 
 **Conferência:** Testado no computador e no celular em 4 pontos da obra (Casa Compacta). Depois do teste mudei o lado da câmera (o texto da planta estava de cabeça para baixo) e não revi; Casa Fita e Família não foram abertas no teste.
 
-**Resultado:** Artifact privado 'Antes do Primeiro Tijolo': casa 3D do motor próprio que se constrói na tela, com trena como controle e as 3 casas do lançamento
+**Resultado:** Artifact privado 'Antes do Primeiro Tijolo': casa 3D do motor próprio que se constrói na tela, com trena como controle e as 3 casas do lançamento Link (privado): https://claude.ai/artifact/V5htiPv3jPRcbJWwQgc9kj. Página guardada em `pedidos/anexos/vitrines/maquete-viva.html`; para remontar, copiar ao lado dela `video/src/casa3d.js` (uma cópia por casa, com os imports trocados), `video/src/plantas/{C01,E03,F01}.js` e a three.js. Auditoria de 24/11: as 3 casas abrem e trocam sem erro na cópia local.
 
 **O que aprendi:** maestro: quando o dono pede algo "cool" para mostrar, ele quer uma peça para ver e mexer, não uma página que explica; comece pelo que só o projeto tem (o motor 3D).
 

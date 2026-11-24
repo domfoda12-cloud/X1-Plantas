@@ -23,9 +23,10 @@
 | 24/11/2026 | redator | ficha | 2026-11-23-0200 | - | no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão. |
 | 24/11/2026 | supervisor | ficha | 2026-11-23-1946 | - | opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas. |
 
+| 24/11/2026 | maestro | ficha | 2026-11-24-0726 | - | quando o dono pede algo "cool" para mostrar, ele quer uma peça para ver e mexer, não uma página que explica; comece pelo que só o projeto tem (o motor 3D). |
+| 24/11/2026 | maestro | dono | - | - | Uma pergunta por cartão no quadro: o dono achou cansativo responder 5 juntas (23/11). |
+
 ## Saídas do contexto/maestro.md por falta de espaço (24/11/2026)
 
 - **23/11, júri:** o plano do everything-claude-code tinha a condição do Revisor "perguntar ao dono antes de criar qualquer arquivo"; eu escrevi "sem resposta: faço o recomendado" e comecei (3 commits numa branch separada). Pergunta sem resposta é espera; condição do Revisor não se troca por padrão meu.
 - **23/11, prova 1:** dois planos que escrevi como "limpos" tinham erro (Diretor ausente, funil trocado). Plano meu passa pelo `CONSELHO.md` antes de eu dizer que está certo.
-| 24/11/2026 | maestro | ficha | 2026-11-24-0726 | - | quando o dono pede algo "cool" para mostrar, ele quer uma peça para ver e mexer, não uma página que explica; comece pelo que só o projeto tem (o motor 3D). |
-| 24/11/2026 | maestro | dono | - | - | Uma pergunta por cartão no quadro: o dono achou cansativo responder 5 juntas (23/11). |

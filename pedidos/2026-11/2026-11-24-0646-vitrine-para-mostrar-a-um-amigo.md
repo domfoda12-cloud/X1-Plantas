@@ -22,7 +22,7 @@
 
 **Conferência:** Números tirados de git, checar.py e pedidos/ em 24/11; uma olhada no computador e no celular antes de publicar; os ajustes do celular feitos depois dessa olhada não foram revistos.
 
-**Resultado:** Artifact privado 'A Obra do X1-Plantas' publicado: equipe em planta baixa clicável, números reais da semana, 8 folhas do rascunho e 3 erros que a equipe pegou
+**Resultado:** Artifact privado 'A Obra do X1-Plantas' publicado: equipe em planta baixa clicável, números reais da semana, 8 folhas do rascunho e 3 erros que a equipe pegou Link (privado): https://claude.ai/artifact/PZEW6gM5uJ7rKA3DGxMHsy. Depois da auditoria de 24/11 corrigi 3 números da página (barra de 16/11 é 15, não 8; tirei "todos com a conferência verde"; alarme falso é 1 de 4). O código desta página não foi guardado: o dono recusou a peça.
 
 **O que aprendi:** nada novo
 
