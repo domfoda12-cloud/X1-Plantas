@@ -83,7 +83,7 @@ Quer que eu te mostre tudo o que vem no e-book?
 
 ### Dia 3: a oferta
 
-Oi, [nome]! O e-book **[título do e-book]** tem 3 casas térreas: a Casa Compacta, a Casa Fita e a Família Compacta.
+Oi, [nome]! O e-book **[título do e-book]** tem 3 casas térreas: a Casa Compacta, a Casa Fita e a Casa Família Compacta.
 
 Cada casa vem com:
 - a planta mobiliada, com as medidas;

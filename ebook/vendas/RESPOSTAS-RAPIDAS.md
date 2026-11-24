@@ -142,7 +142,7 @@ Quer saber tudo o que vem no e-book?
 ### `/oferta`
 
 ```text
-[nome], a [casa que cabe] que cabe no seu lote está no e-book [título do e-book]. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 x 25 m) e Família Compacta (3 quartos).
+[nome], a [casa que cabe] que cabe no seu lote está no e-book [título do e-book]. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 x 25 m) e Casa Família Compacta (3 quartos).
 
 Cada uma vem com os móveis desenhados para dar escala, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
 

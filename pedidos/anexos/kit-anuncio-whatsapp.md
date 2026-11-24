@@ -392,7 +392,7 @@ Qual é a frente e o fundo do seu lote? Com a medida eu te digo se ela cabe no s
 - "Me chama no WhatsApp e manda a medida do seu lote. Eu te digo se ela cabe no seu." (A, B e C: promessa de conferir com a calculadora e os recuos de referência, não com a regra da cidade; o `/cabe` diz que os recuos da cidade se confirmam na prefeitura)
 - "Conferida medida por medida (não substitui o profissional)." (todas)
 - "Planta de referência: o projeto da obra é assinado por arquiteto ou engenheiro habilitado. Imagem ilustrativa." (todas; no vídeo o dono tirou o selo, mas no anúncio parado a skill manda manter)
-- "No e-book Antes do primeiro tijolo, ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro." (A1, B1: confere com o PDF de 24/11)
+- "No e-book [título do e-book], ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro." (A1, B1: confere com o PDF de 24/11)
 - "banheiro dentro de casa" (A1: tirado de "banheiro por dentro de casa", da ficha da E03)
 - "Os 3 quartos ficam nos fundos, longe da rua" (B1, B2, primeira resposta B: da ficha da F01; nada de "longe do barulho")
 - "põe um beliche para o casal e pronto" / "O beliche fica para as crianças, se elas quiserem." (A2, humor: não presume quem a pessoa é? não ensina gambiarra?)

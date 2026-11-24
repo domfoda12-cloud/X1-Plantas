@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 49 documentos
+## Os 51 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -237,7 +237,7 @@ Tamanho: 10600 palavras.
 
 Seções: 0. Quais anúncios podem rodar e quais esperam; 1. Diagnóstico antes de escrever (skill, seções 1 e 2); 2. O que é igual nos 3 anúncios; 3. Anúncio A: Casa Fita (lote de 5 x 25); 4. Anúncio B: Família Compacta (lote de 10 x 15); 5. Cuidado do anúncio B: quem chega com 8 ou 9 m de frente; 6. Anúncio C: Casa Compacta (lote de 8 x 15). ESPERA A DECISÃO DO DONO; 7. Como anotar a origem, sem dado pessoal no repositório; 8. O que medir por anúncio, e quando parar; 9. Para o Revisor de risco (frases, uma por linha); 10. Perguntas ao dono (uma por linha); 11. Conformidade (skill, seção 4).
 
-Tamanho: 5731 palavras.
+Tamanho: 5730 palavras.
 
 ### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
 
@@ -254,6 +254,14 @@ Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma pa
 Seções: 1. As 17 páginas de hoje e para onde vão; 2. A ordem proposta: a casa primeiro, o geral depois; 3. Onde entram as páginas novas; 4. Como o leitor sabe em que parte está (sem trocar a identidade); 5. Esboço do sumário novo; 6. O que muda no gerador (para o D17; eu não mexi); 7. Perguntas; 8. O que não conferi.
 
 Tamanho: 2786 palavras.
+
+### [Página "A parede sem janela" (parte geral do e-book): texto (passo D19)](anexos/pagina-parede-sem-janela-texto.md)
+
+Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou acontecer naquele quarto/área, pode ser ideia de vídeo e/ou parte do e-book." 24/11, decisão 8: o e-book terá "uma parte falando de cada casa específica, e outra parte falando de casas no geral"; esta página "pode ir pro…
+
+Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
+
+Tamanho: 1979 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 
@@ -388,6 +396,14 @@ Tamanho: 513 palavras.
 Seções: Conferência do Arquiteto (24/11): SIM SE; Decisão do Maestro sobre os dois pareceres (24/11).
 
 Tamanho: 757 palavras.
+
+### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
+
+[Revisor] SIM no post 2; SIM SE nos posts 4 e 7 e nas notas. Rodou no Opus, em rascunho; a peça final passa pelo Fable. Conferido contra `PLANTAS.md`, os dados da E03 e da F01, o `config.json` e as imagens 3D paradas. Os números batem (E03: 56 m², 2 quartos, 1 banheiro, 5 x 25, mínimo 5,0 x 20,6;…
+
+Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE.
+
+Tamanho: 648 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 

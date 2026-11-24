@@ -16,8 +16,8 @@
 
 Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 
-- **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 51 m², cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) (desde 23/11); Casa Estreita 58 m², 2 quartos (1 suíte), cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m); Casa Família 78 m², 3 quartos (1 suíte), cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m). Os dados do gerador já foram corrigidos; **confira cada legenda abaixo contra a ficha antes de publicar.**
-- **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E01 F03`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
+- **Os números das plantas agora vêm do validador** ([`../../ebook/plantas/PLANTAS.md`](../../ebook/plantas/PLANTAS.md)): Casa Compacta 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) (desde 23/11); Casa Fita 56 m², 2 quartos, 1 banheiro, cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m); Casa Família Compacta 71 m², 3 quartos, 1 banheiro, cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m). Os textos do gerador ainda são da E01 e da F03 (passo F20). **Confira cada legenda abaixo contra a ficha antes de publicar.**
+- **As imagens dos carrosséis agora saem das plantas validadas em 2D** (`animacoes-3d/plantas-2d/`, geradas por `python3 ferramentas/imagens2d.py C01 E03 F01`), em 2160 x 2700. O 3D antigo da Casa Compacta não é mais usado.
 - **Os vídeos 3D da Casa Compacta (posts 1 e 6) são do desenho antigo**, que tem outro layout. Não publique até o 3D novo sair (último passo). Use no lugar as páginas do e-book: [`../../ebook/visual/mockups/`](../../ebook/visual/mockups) e o B-roll `../../video/broll/clipes/ebook-folheando.mp4`.
 - **"O que o arquiteto pensou" não se usa mais** (decisão do Revisor de risco): diga "por que esta planta é assim" até um arquiteto assinar as plantas.
 - **Post novo sugerido pelo Diretor (MinoAI Frontier):** reel com o gancho "Me fala a frente do seu lote que em 10 segundos eu te mostro quais casas cabem nele", mostrando a fita métrica da capa e o B-roll do e-book.
@@ -38,7 +38,7 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 | 9 | Reel | O material gratuito | imagens da Casa Compacta + capa | **Refazer: C01 redesenhada** (as imagens e a animação são da casa antiga) |
 | R | Carrossel (6) | Reserva: Casa Compacta completa | `imagens/reserva-casa-compacta/` | **Refazer: C01 redesenhada** |
 
-**O que falta de outra frente** (pedir ao chat de **Animações 3D**): gerar as plantas **E01 Casa Estreita** e **F03 Casa Família** em `animacoes-3d/plantas/casa-estreita/` e `animacoes-3d/plantas/casa-familia/`, com os 5 arquivos de sempre. Quando existirem, rode o gerador de novo (abaixo) e as telas saem com as imagens no lugar do aviso.
+A 3D parada da E03 Casa Fita e da F01 Casa Família Compacta já existe (`ebook/visual/3d/E03.jpg`, `F01.jpg`); falta a animação de cada uma (chat de Animações 3D) e o gerador ler as 3 casas (F20).
 
 > O post 3 estava como "Imagem" no plano, mas o plano também pede "uma dica por slide". Virou carrossel.
 > O post 7 pede a "fachada". O motor 3D hoje faz a casa com as paredes cortadas a 1,1 m, vista de cima. Usamos a `03-perspectiva.png`. Uma fachada de verdade (vista da rua, paredes inteiras, telhado) exige ajuste no motor: pedir ao chat de **Animações 3D** se quiser.
@@ -188,10 +188,12 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 | Tempo | Na tela | Legenda |
 |---|---|---|
-| 0:00 a 0:03 | Retângulo do lote 5 x 25 m se desenhando, a frente de 5 m destacada em amarelo | "**5 metros**" · "de frente" |
+| 0:00 a 0:03 | Retângulo do lote 5 x 25 m se desenhando, a frente de 5 m destacada em amarelo | "**5 metros**" · "de frente" · "por 25 de fundo" |
 | 0:03 a 0:06 | `animacao.mp4`: o blueprint se desenha dentro do lote | "2 quartos" · "1 banheiro" · "**cabe?**" |
 | 0:06 a 0:12 | A casa ganha vida; câmera desliza da frente aos fundos | "um quarto" · "em **cada ponta**" · "sala e copa **no meio**" |
 | 0:12 a 0:15 | Perspectiva parada + ficha: "Casa Fita · 56 m² · cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m)" | "cabe, com os" · "recuos de referência" · "comente **PLANTA**" |
+
+Canto da tela, o vídeo todo, parado: Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
 
 **Legenda:**
 
@@ -202,14 +204,14 @@ Casa Fita:
 📐 56 m²
 🛏️ 2 quartos
 🚿 1 banheiro
-📏 cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m)
+📏 cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m), com os recuos de referência
 
 O segredo é um quarto em cada ponta, com a sala e a copa no meio. Sala, cozinha e quartos têm janela para fora, mesmo com só 5 m de frente.
 
 Tem terreno estreito? Me conta a medida nos comentários.
-Quer uma planta humanizada de graça? Comente PLANTA.
+Quer a planta humanizada da Casa Compacta de graça? Comente PLANTA.
 
-Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
+Planta de referência, não é projeto executivo. A obra precisa de responsável técnico. Os recuos mudam de cidade para cidade: confira na sua prefeitura.
 
 #plantadecasa #terrenoestreito #casapropria #construcao #arquitetura
 ```
@@ -293,22 +295,22 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 | Tela | Texto |
 |---|---|
-| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m) |
+| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m) · no canto: Planta de referência, não é projeto executivo. A obra precisa de responsável técnico. · selo **Imagem ilustrativa** |
 
 **Legenda:**
 
 ```
-Casa Família Compacta: espaço para todo mundo. 🏡
+Casa Família Compacta: 3 quartos em 71 m². 🏡
 
 📐 71 m²
 🛏️ 3 quartos
 🚿 1 banheiro
 📏 cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m)
 
-Os 3 quartos ficam nos fundos, longe da rua. Na sala cabe a mesa de 4, e o serviço tem porta para fora, no corredor lateral.
+Os 3 quartos ficam nos fundos, longe da rua. Na sala cabe a mesa de 4, e o serviço tem porta para fora, para a faixa livre de 1,5 m ao lado da casa (recuo de referência).
 
 Você moraria nessa? Comenta aqui o que mudaria.
-Quer uma planta humanizada de graça? Comente PLANTA.
+Quer a planta humanizada da Casa Compacta de graça? Comente PLANTA.
 
 Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.
 
@@ -388,7 +390,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Reserva · Carrossel · Casa Compacta completa
 
-**Imagens:** `imagens/reserva-casa-compacta/` (01 a 06). **Refazer: C01 redesenhada** (as 6 telas são da planta antiga). Use no lugar do post 2 ou do 7 se o 3D da Casa Estreita ou da Casa Família não chegar a tempo.
+**Imagens:** `imagens/reserva-casa-compacta/` (01 a 06). **Refazer: C01 redesenhada** (as 6 telas são da planta antiga). Use no lugar do post 2 ou do 7 se o 3D da Casa Fita ou da Casa Família Compacta não chegar a tempo.
 
 | Tela | Texto |
 |---|---|

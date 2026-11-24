@@ -56,7 +56,7 @@
 | Arquiteto sob medida | Muito mais | O custo é justamente a barreira para a maioria das obras |
 | **Nós** | **Menos que uma planta avulsa** (preços em teste: R$ 47 e R$ 67) | **3 casas originais no lançamento, cada uma desenhada no lote, em 3D, com ajuda no WhatsApp** |
 
-**Frase de posicionamento:** _Para quem tem um lote e quer construir sem errar, o Antes do primeiro tijolo mostra, em 3D, 3 casas desenhadas no lote, com a medida de lote de cada uma, antes de você gastar com projeto._
+**Frase de posicionamento:** _Para quem tem um lote e quer construir sem errar, o e-book [título: em troca, decisão 34] mostra, em 3D, 3 casas desenhadas no lote, com a medida de lote de cada uma, antes de você gastar com projeto._
 
 ## 5. Os três diferenciais (repetir em tudo)
 
