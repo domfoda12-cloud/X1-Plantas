@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 16h05, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois: o júri decide e mostra depois (dono, cartão v6); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 12384 palavras.
+Tamanho: 12425 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -439,7 +439,7 @@ VETO em 3 pontos, cada um com a troca que vira SIM; o resto passa com troca ou c
 
 Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página; Reconferência do Revisor, 24/11 (depois das trocas do Arquiteto).
 
-Tamanho: 1093 palavras.
+Tamanho: 1151 palavras.
 
 ### [Veredito do Revisor de risco: rascunho do lançamento (24/11/2026)](anexos/veto-ebook-lancamento-2026-11-24.md)
 
