@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 52 documentos
+## Os 53 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -156,6 +156,14 @@ Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo;
 Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
 Tamanho: 4137 palavras.
+
+### [Perfil novo do Instagram, 3ª rodada: a identidade do Lote Carente (24/11/2026)](anexos/instagram-identidade-lote-carente-2026-11-24.md)
+
+Pedido do dono (no quadro, 24/11, sobre a 2ª rodada, `instagram-nomes-e-bios-absurdos-2026-11-24.md`). Sobre os nomes: "Todas nao tem um senso de identidade meio grande, parece generico dms. lote carente foi a melhor opcao". Sobre as bios: "Quis dizer basica no sentido que so está explicando o que…
+
+Seções: O que a MinoAI Frontier devolveu (só isto; a leitura minha vem marcada); 1. O personagem em 6 linhas; 2. Cinco bios na voz dele; 3. Três nomes de exibição (o campo ao lado do @); 4. O que fica fixo fora da bio (lei e honestidade); 5. Seis ideias de post na voz dele (uma linha cada); 6. Se @lotecarente estiver ocupado; 7. Recomendação do Redator: @lotecarente + nome "Plantas térreas de referência" + Bio 1; Para o Revisor de risco; O que não conferi.
+
+Tamanho: 2594 palavras.
 
 ### [Perfil novo do Instagram: 8 nomes e 4 bios no humor pelo absurdo (24/11/2026)](anexos/instagram-nomes-e-bios-absurdos-2026-11-24.md)
 

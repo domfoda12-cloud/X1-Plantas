@@ -1,0 +1,15 @@
+# Veto: página "A parede que não pode ter janela" (passo D19), 24/11/2026 · Revisor de risco, Opus (rascunho)
+
+Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fable.
+
+1. **Título e subtítulo:** SIM.
+2. **Abertura:** SIM (bate com o art. 1.301, caput e §2º, e com o parágrafo único do art. 1.302). Ajuste opcional: "Na parede encostada, só escapam…".
+3. **Ideia 1 (cabeceira na parede cega):** SIM. Família Compacta conferida nos dados. **Casa Fita passa como está:** o quarto da frente tem 3,20 x 2,89 m livres; com a cama de casal de cabeceira na divisa sobram 84 cm até o guarda-roupa e 1,49 m nos lados. Condição de montagem: a página da Casa Fita no PDF traz essa frase, senão "(página da casa)" aponta para nada.
+4. **Ideia 2 (a parede que guarda):** SIM (guarda-roupa, rack e geladeira na divisa; bancada na parede do recuo, embaixo da janela de 1,70 m).
+5. **Ideia 3 (janela alta do outro lado):** SIM ("o engenheiro diz se vale", "não está nas 3 casas" e a legenda "esquema" bastam).
+6. **Ideia 4 (luz que vem de cima):** **SIM SE** "sem abrir a parede do vizinho" → "sem abrir janela na parede da divisa" (a parede é do dono da casa).
+7. **Leve ao engenheiro:** SIM. Se couber, acrescentar "A prefeitura deixa a casa encostar na divisa?".
+8. **Aviso:** SIM, inteiro. Página estourada cobrindo o aviso é veto.
+9. **Croquis:** SIM (o 3 e o 4 com "esquema, não é das 3 casas"; no 1 e no 2, o que não está no dado leva "sugestão"). Croqui gerado por IA volta ao Revisor.
+
+Nada de custo, prazo, aprovação ou dispensa de profissional. **Não conferido:** a página montada; "é onde mais entra goteira" (frase do Arquiteto, sem número); o desempenho da telha translúcida.

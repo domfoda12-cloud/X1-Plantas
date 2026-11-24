@@ -123,7 +123,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
             s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 {sweep} {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{bx:.3f}" y2="{Y(by):.3f}" stroke="#C2683F" stroke-width=".04"/>')
     # janelas e porta de entrada nas mesmas posições do motor 3D (a mesma da vista da rua e das imagens)
-    for j in jan3d:
+    for j in (j for j in jan3d if j.get("tipo") != "veneziana"):  # a veneziana vem depois da soleira
         x0s, y0s, x1s, y1s = j["seg"]
         if abs(y0s - y1s) < 1e-6:
             x, y, w, h = min(x0s, x1s), Y(y0s) - .07, abs(x1s - x0s), .14
@@ -139,6 +139,7 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
             s.append(_soleira(p, d, Y, .2, SOLEIRA_FORA, "fora"))
     if ent is None:
         s.append(_soleira_beira(p, Y, .2))
+    s.extend(_veneziana(p, j, Y) for j in jan3d if j.get("tipo") == "veneziana")
     s.extend(rotulos)
     if cotas:
         s.append(f'<g stroke="#0B4FA8" stroke-width=".03" fill="#0B4FA8" font-size=".3" class="mono">'
@@ -234,6 +235,25 @@ def _soleira(p, d, Y, larg, cor, marca):
         x, y, w, h = hx - larg / 2, Y(max(hy, ay)), larg, d["r"]
     return (f'<rect data-porta="{marca}" x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{cor}"'
             f' stroke="#17202B" stroke-width="{f3(larg * .12)}"/>')
+
+
+def _veneziana(p, j, Y, cor="#0B4FA8"):
+    """Veneziana em cima da porta de fora (j["tipo"] == "veneziana"): acima do corte da planta, então vai tracejada, como
+    o arquiteto desenha o que fica no alto, com a palavra do lado de fora da parede (D1, 24/11/2026)."""
+    x0, y0, x1, y1 = j["seg"]
+    e, t = .2, .13  # meia largura do tracejado; tamanho da letra
+    if abs(y0 - y1) < 1e-6:
+        fora = 1 if y0 > p["D"] / 2 else -1  # para onde fica o lado de fora (y da planta)
+        caixa = (min(x0, x1), Y(y0) - e / 2, abs(x1 - x0), e)
+        tx, ty, rot = (x0 + x1) / 2, Y(y0 + fora * .3) + t / 3, 0
+    else:
+        fora = 1 if x0 > p["W"] / 2 else -1
+        caixa = (x0 - e / 2, Y(max(y0, y1)), e, abs(y1 - y0))
+        tx, ty, rot = x0 + fora * .3, Y((y0 + y1) / 2), -90
+    x, y, w, h = caixa
+    return (f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="none" stroke="{cor}" stroke-width=".03" stroke-dasharray=".07 .05"/>'
+            f'<text x="{f3(tx)}" y="{f3(ty)}" text-anchor="middle" font-size="{t}" font-weight="700" fill="{cor}" letter-spacing=".01"'
+            f' transform="rotate({rot} {f3(tx)} {f3(ty)})">VENEZIANA</text>')
 
 
 def _soleira_beira(p, Y, larg):
@@ -596,8 +616,8 @@ def svg_humanizada(p, estilo="revista"):
     if S.get("parede_contorno"):
         s.append(_svg_paredes(caixas, Y, S["parede_contorno"], extra=.035))
     s.append(_svg_paredes(caixas, Y, S["parede"]))
-    # janelas (mesma posição do 3D e da vista da rua)
-    for j in janelas:
+    # janelas (mesma posição do 3D e da vista da rua); a veneziana em cima da porta vem depois das portas, tracejada
+    for j in (j for j in janelas if j.get("tipo") != "veneziana"):
         x0, y0, x1, y1 = j["seg"]
         t = .15
         if abs(y0 - y1) < 1e-6:
@@ -628,6 +648,7 @@ def svg_humanizada(p, estilo="revista"):
             s.append(f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="{S["folha_porta"]}" stroke-width=".05" stroke-linecap="round"/>')
     if ent["id"] is None:
         s.append(_soleira_beira(p, Y, .13))
+    s.extend(_veneziana(p, j, Y) for j in janelas if j.get("tipo") == "veneziana")  # azul nos dois estilos: o amarelo da capa some no gramado
     if ex is not None:
         s.append(_entrada_seta(ex, Dm + .62))
     elif lado_ent:  # entrada pela lateral: a seta sobe pelo corredor do lado; a pílula chega para dentro do desenho
@@ -769,8 +790,9 @@ def svg_fachada(p, legenda=True):
             continue
         a, b = min(x0s, x1s), max(x0s, x1s)
         pe = j["peitoril"]
-        s.append(f'<rect x="{a:.3f}" y="{Yv(2.2):.3f}" width="{b - a:.3f}" height="{2.2 - pe:.3f}" fill="#9CCBE8" stroke="#2A3340" stroke-width=".04"/>')
-        s.append(f'<line x1="{(a + b) / 2:.3f}" y1="{Yv(2.2):.3f}" x2="{(a + b) / 2:.3f}" y2="{Yv(pe):.3f}" stroke="#2A3340" stroke-width=".03"/>')
+        vg = j["verga"]  # 2,2 m na janela; na veneziana em cima da porta, o topo dela
+        s.append(f'<rect x="{a:.3f}" y="{Yv(vg):.3f}" width="{b - a:.3f}" height="{vg - pe:.3f}" fill="#9CCBE8" stroke="#2A3340" stroke-width=".04"/>')
+        s.append(f'<line x1="{(a + b) / 2:.3f}" y1="{Yv(vg):.3f}" x2="{(a + b) / 2:.3f}" y2="{Yv(pe):.3f}" stroke="#2A3340" stroke-width=".03"/>')
     for d in portas3d:
         # porta de entrada: da rua (ext-*) ou de uma varanda/garagem para um cômodo fechado que se vê da rua
         partes = str(d["id"]).split("-", 1)
