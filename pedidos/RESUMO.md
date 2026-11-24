@@ -437,9 +437,9 @@ Tamanho: 305 palavras.
 
 [Revisor] SIM no post 2; SIM SE nos posts 4 e 7 e nas notas. Rodou no Opus, em rascunho; a peça final passa pelo Fable. Conferido contra `PLANTAS.md`, os dados da E03 e da F01, o `config.json` e as imagens 3D paradas. Os números batem (E03: 56 m², 2 quartos, 1 banheiro, 5 x 25, mínimo 5,0 x 20,6;…
 
-Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE.
+Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE; Telas dos posts 2, 4 e 7 (rascunho do Designer, passo F20): SIM SE · Revisor, 24/11, Opus.
 
-Tamanho: 648 palavras.
+Tamanho: 844 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 
