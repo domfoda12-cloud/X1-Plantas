@@ -10,11 +10,11 @@
 
 ## Aviso que abre a página (texto-base para o Redator)
 
-"Este checklist é para você, dono da obra, acompanhar cada fase. Ele não ensina a construir e não substitui o engenheiro ou o arquiteto. Medidas, materiais e o jeito de fazer cada etapa são decididos pelo responsável técnico da sua obra, que assina a ART ou o RRT. Regras de recuo, alvará e habite-se mudam de cidade para cidade: pergunte na sua prefeitura."
+"Este checklist é para você, dono da obra, saber o que olhar, perguntar, fotografar e guardar em cada fase. Ele não ensina a construir, não substitui o engenheiro ou o arquiteto e não faz de você o fiscal da obra: a parte técnica é do responsável técnico, que assina a ART ou o RRT e decide medidas, materiais e o jeito de fazer. Alvará, recuos, habite-se e multas mudam de cidade para cidade: pergunte na sua prefeitura. A planta do e-book é de referência."
 
 ## Os momentos de chamar o engenheiro (resumo para o topo da página)
 
-Antes de cavar · antes de cada concretagem · antes de fechar parede com cano e fio dentro · antes do reboco · antes de pedir o habite-se. E sempre que alguém quiser mudar o projeto. [F1: "exija a presença do profissional em todas as etapas da obra"; "para qualquer alteração na obra, deve-se sempre consultar o responsável"]. A escolha destes 5 momentos como "pontos de parada" é minha: [H].
+Os momentos de falar com o engenheiro antes de seguir: antes de cavar · antes de cada concretagem · antes de fechar parede com cano e fio dentro · antes do reboco · antes de pedir o habite-se. E sempre que alguém quiser mudar o projeto. [F1: "exija a presença do profissional em todas as etapas da obra"; "para qualquer alteração na obra, deve-se sempre consultar o responsável"]. A escolha destes 5 momentos como "pontos de parada" é minha: [H].
 
 ## Nota sobre a ordem das fases
 
@@ -24,7 +24,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 
 ## Fase 0a. Antes de começar: o lote, o projeto e o profissional
 
-**Se pular:** você descobre o problema do lote ou da prefeitura depois de gastar. Obra sem alvará pode levar multa e até ordem de demolir; casa em lote sem escritura em dia corre o risco de "perder o investimento". [F2]
+**Se pular:** você descobre o problema do lote ou da prefeitura depois de gastar. Obra sem alvará pode ser multada e embargada, e a parte irregular pode ter de ser demolida; quem decide é a prefeitura. Casa em lote sem escritura em dia corre o risco de "perder o investimento", como diz o guia do governo. [F2; erro 5 do e-book]
 
 - **Confira:** a matrícula atualizada do lote no Cartório de Registro de Imóveis, no seu nome, com as medidas do lote. [F1, F2]
 - **Confira:** na prefeitura, o que pode ser construído no seu lote (recuos, quanto do lote a casa pode ocupar, altura), antes de fechar a planta. [F1]
@@ -32,21 +32,21 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 - **Pergunte:** quais projetos vão ser feitos para a sua casa (arquitetônico, estrutural, elétrico, hidráulico). Cada um diz uma coisa que o pedreiro vai seguir. [F1]
 - **Guarde:** contrato por escrito com o profissional e com o pedreiro ou empreiteiro: o que está incluído, valor, como e quando paga, quem compra o material. Assinado pelos dois e por duas testemunhas. [F2, F3]
 
-> Se a renda da família for baixa (o guia federal fala em menos de 3 salários mínimos), pergunte na prefeitura sobre assistência técnica pública e gratuita (Lei 11.888/2008). [F2]
+> Se a renda da família é de até 3 salários mínimos, a Lei 11.888/2008 dá direito a assistência técnica pública e gratuita para projeto e construção de casa de interesse social. Pergunte na prefeitura se a sua cidade oferece: depende de programa local. [Lei 11.888/2008, arts. 2º e 3º, Planalto, lida pelo Revisor em 24/11/2026; F2]
 
 ## Fase 0b. Antes de começar: alvará, ligações e cadastro da obra
 
-**Se pular:** obra parada pela fiscalização; ligação de água ou luz puxada de qualquer jeito, com risco de choque; surpresa com a papelada da obra na hora de averbar a casa. [F1, F4; o risco da ligação é H]
+**Se pular:** obra parada pela fiscalização; ligação de água ou luz puxada de qualquer jeito; surpresa com a papelada da obra na hora de averbar a casa. [F1, F4; o risco da ligação é H]
 
 - **Confira:** o alvará de construção saiu **antes** do primeiro serviço. [F1, F2]
 - **Confira:** ficam na obra o alvará, uma via de cada ART ou RRT e uma cópia de todos os projetos, para a fiscalização e para o pedreiro consultar. A placa do responsável técnico também fica na obra (obrigação dele). [F1]
-- **Pergunte à companhia de água e à de luz da sua cidade:** o que elas pedem para ligar a água e a luz da obra. Não puxe do vizinho. [H]
+- **Pergunte à companhia de água e à de luz da sua cidade:** o que elas pedem para ligar a água e a luz da obra. [H]
 - **Pergunte ao engenheiro ou a um contador:** a sua obra precisa entrar no Cadastro Nacional de Obras (CNO) da Receita Federal, e o que precisa ser regularizado no fim. Isso pesa na averbação. [F4, F1]
 - **Se for financiar:** pergunte ao banco, antes de começar, que documentos ele pede e como ele vistoria e libera cada parte do dinheiro. Não adiante etapa sem saber. [F7, secundária]
 
 ## Fase 1. Locação: a casa marcada no chão do lote
 
-**Se pular:** a casa sai torta, fora do lugar, invadindo o recuo ou o vizinho. O erro só aparece com a parede de pé, e aí o conserto é derrubar. [H; F2 cita multa e demolição para construção fora da regra]
+**Se pular:** a casa pode sair fora do lugar do projeto, invadindo o recuo ou o lote do vizinho. Obra fora das regras pode ser multada, embargada ou ter que demolir a parte irregular. [erro 5 do e-book, `paginas.py`; F2 cita multa e demolição para construção fora da regra]
 
 - **Confira:** as divisas do lote (marcos, muro, vizinho) antes de marcar a casa. Se houver dúvida sobre onde é a divisa, fale com o profissional antes de cavar. [H]
 - **Confira com o projeto aprovado** (não com a planta do e-book, que é de referência): a distância da casa até a frente e até as laterais, no chão, com trena, junto com o pedreiro. [H; F1 para seguir o projeto]
@@ -56,10 +56,10 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 
 ## Fase 2. Fundação e baldrame
 
-**Se pular:** trinca que aparece meses depois, parede que cede, porta que passa a emperrar. A fundação fica embaixo de tudo, por isso consertar depois é o serviço mais difícil da casa. [F2 cita reforço de fundação como conserto de trinca de origem estrutural; "o mais difícil" é H]
+**Se pular:** trinca que aparece meses depois, parede que cede, porta que passa a emperrar. A fundação fica embaixo de tudo: consertar depois é difícil. [F2 cita reforço de fundação como conserto de trinca de origem estrutural]
 
 - **Pergunte ao engenheiro:** a fundação foi escolhida para o solo do **seu** lote? Precisou de sondagem? [F8, F1]
-- **Pergunte e combine:** ele quer ver as valas e a armação antes de concretar? Combine como o pedreiro avisa, e não deixe concretar sem a liberação dele. [H; materiais de ensino sobre a NBR 14931 citam inspeção de fôrma e armadura antes da concretagem, não lidos na norma]
+- **Pergunte ao engenheiro:** o seu contrato inclui ele ver as valas e a armação antes de concretar? Se incluir, combine como o pedreiro avisa ele antes. [H; base técnica para a equipe: material de ensino sobre inspeção antes da concretagem, norma não lida]
 - **Confira:** o projeto estrutural está na obra e o pedreiro segue o projeto, não "de cabeça". [F1]
 - **Fotografe antes de cobrir:** as valas abertas, a armação montada e o concreto sendo lançado. Foto com data. [H; F3]
 - **Guarde:** as notas do cimento, do aço e da brita; se o concreto veio de usina, a nota com o que foi pedido. [H]
@@ -70,7 +70,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 
 - **Pergunte ao engenheiro:** que impermeabilização vai no baldrame e onde mais vai (banheiro, área de serviço, laje, se houver), e qual produto. [F2]
 - **Confira:** a impermeabilização do baldrame foi feita **antes** de subir as paredes. [F2 para a função; o momento é H]
-- **Confira:** o produto usado é o que o engenheiro especificou, aplicado como diz a embalagem. [H]
+- **Pergunte ao engenheiro:** o produto usado é o que ele especificou? [H]
 - **Fotografe antes de cobrir:** o baldrame impermeabilizado, de todos os lados que der. [H]
 - **Guarde:** a nota e a embalagem ou a ficha do produto, com o número do lote. [H]
 
@@ -78,7 +78,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 
 **Se pular:** trinca na diagonal saindo do canto da janela ou da porta (falta de contraverga, diz o guia federal); parede fora de prumo e fiada torta, que "pode ter um custo alto" para disfarçar no reboco. [F2]
 
-- **Confira:** em cada janela, a peça em cima (verga) e a peça embaixo (contraverga); em cada porta, a verga. Tudo antes do reboco, do jeito que o projeto pede. [F2 para a contraverga; a verga da porta é H]
+- **Pergunte ao engenheiro** onde vão a verga e a contraverga nas janelas e nas portas, e confira que estão lá antes do reboco, como o projeto pede. [F2 para a contraverga; a verga da porta é H]
 - **Confira:** porta e janela no lugar e no tamanho do projeto antes de fechar o vão. [H]
 - **Confira:** peça ao pedreiro para mostrar, com prumo e nível, que a parede está reta e as fiadas niveladas. [F2 lista os dois defeitos]
 - **Pergunte ao engenheiro:** a parede da sua casa é só fechamento ou é estrutural (alvenaria estrutural)? Se for estrutural, nenhum rasgo ou furo sem ele. [H]
@@ -89,7 +89,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 **Se pular:** laje que trinca ou cede; ferragem que fica aparecendo, enferruja e, no pior caso, rompe. [F2: "ferragens expostas", "rompimento" e "até mesmo, ao desabamento"]
 
 - **Pergunte ao engenheiro:** em que ordem entram parede, pilar, viga e laje na **sua** obra. Depende do sistema que ele escolheu. [H]
-- **Combine:** aviso antes de cada concretagem (pilar, viga, laje) para ele liberar; quando tirar as escoras é decisão dele. [H; material sobre a NBR 14931 diz que a retirada segue o plano do responsável técnico, norma não lida]
+- **Pergunte ao engenheiro:** ele quer ser avisado antes de cada concretagem (pilar, viga, laje)? Quando tirar as escoras, quem decide é ele. [H; base técnica para a equipe: material de ensino diz que a retirada segue o plano do responsável técnico, norma não lida]
 - **Confira:** os eletrodutos e as caixas de luz que vão dentro da laje já estão no lugar antes de concretar. [H]
 - **Fotografe antes de concretar:** a armação de pilares, vigas e laje, e os canos e eletrodutos que passam por dentro. [H]
 - **Guarde:** notas do concreto e do aço; se a laje for pré-moldada, a nota e o manual do fabricante. [H]
@@ -100,7 +100,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 
 - **Pergunte ao engenheiro ou arquiteto:** o telhado (estrutura, tipo de telha, inclinação) segue o que o fabricante da telha pede? [H]
 - **Confira:** telhas sem quebra nem trinca, e peça de vedação (rufo, calha) onde o telhado encosta em parede. [F2 para telha quebrada; rufo é H]
-- **Confira:** a madeira chegou tratada, sem cupim, com nota. [H]
+- **Guarde** a nota da madeira, com a espécie e o tratamento; pergunte ao engenheiro se é a especificada. [H]
 - **Teste:** depois da primeira chuva forte (ou com mangueira, se o engenheiro concordar), olhe o forro e as paredes por dentro procurando mancha. [H]
 - **Fotografe antes das telhas e guarde:** a estrutura do telhado pronta; as notas da madeira e das telhas, com o modelo. [H]
 
@@ -109,7 +109,7 @@ Mantive a ordem pedida, com 2 ajustes: dividi "antes de começar" em duas partes
 **Se pular:** vazamento dentro da parede, que só aparece como mancha e conta de água alta, e aí quebra o azulejo novo; fio mal emendado, choque, curto e incêndio. [F2]
 
 - **Confira:** o encanamento de água foi **testado contra vazamento** antes de fechar os rasgos e rebocar. [F5]
-- **Pergunte ao engenheiro:** o projeto elétrico tem fio terra e DR nos circuitos do banheiro, da cozinha e da área de serviço, como pede a norma de instalação elétrica (NBR 5410)? [F6, secundária]
+- **Pergunte ao engenheiro:** o projeto elétrico segue a norma de instalações elétricas (NBR 5410)? Tem fio terra e DR nos circuitos do banheiro, da cozinha e da área de serviço? [F6, secundária]
 - **Confira:** ninguém furou viga, pilar ou laje fora do que está no projeto estrutural. [F5]
 - **Confira:** o esgoto tem as caixas que o projeto mostra (inspeção, gordura) e vai para onde o projeto diz (rede ou fossa), não para o terreno. [F1, F2]
 - **Fotografe antes de fechar:** cada parede com cano e eletroduto, com a trena encostada, para saber depois onde não furar. [H]

@@ -46,8 +46,9 @@ ERROS = [
     ("Não prever ampliação",
      "A família cresce e a casa precisa de mais um quarto. Se ninguém pensou nisso, a ampliação quebra "
      "paredes, mexe no telhado ou não cabe no lote.",
-     "Deixe livre o lado por onde a casa vai crescer, sem caixa d'água, fossa ou banheiro no caminho. "
-     "Converse com o engenheiro para a estrutura já ficar pronta para isso."),
+     "Se a família pode crescer, diga isso ao engenheiro antes do projeto: ele vê se o lote tem espaço e deixa livre "
+     "o lado da ampliação, sem caixa d'água, fossa ou banheiro no caminho. As casas deste e-book não trazem "
+     "ampliação desenhada: aumentar a casa é projeto novo, do engenheiro ou do arquiteto."),
     ("Construir sem ver a casa pronta",
      "Mudar de ideia com a obra andando é o mais caro de tudo: quebrar, refazer e pagar o material duas vezes. "
      "E quase sempre acontece porque a pessoa só entendeu a casa quando viu as paredes de pé.",

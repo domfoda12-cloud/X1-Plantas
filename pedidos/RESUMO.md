@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 32 documentos
+## Os 35 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -69,13 +69,21 @@ Seções: Opção A: a Casa Compacta completa, caprichada (5 páginas); Opção 
 
 Tamanho: 913 palavras.
 
+### [Bônus 1: Checklist da obra por fase (rascunho técnico)](anexos/bonus-checklist-da-obra.md)
+
+Status: rascunho do Arquiteto, 24/11/2026, para o Redator e o Designer fazerem a página e o Revisor de risco conferir. Ainda não vai ao público. Pedido do dono: os 2 bônus de "Antes do primeiro tijolo" (`ebook/config.json`, chave `bonus`; decisão de 23/11 em…
+
+Seções: Aviso que abre a página (texto-base para o Redator); Os momentos de chamar o engenheiro (resumo para o topo da página); Nota sobre a ordem das fases; Fase 0a. Antes de começar: o lote, o projeto e o profissional; Fase 0b. Antes de começar: alvará, ligações e cadastro da obra; Fase 1. Locação: a casa marcada no chão do lote; Fase 2. Fundação e baldrame; Fase 3. Impermeabilização; Fase 4. Paredes, vergas e contravergas; Fase 5. Pilares, vigas e laje ou forro; Fase 6. Telhado; Fase 7. Água, esgoto e luz antes de fechar a parede; Fase 8. Chapisco, reboco e contrapiso; Fase 9. Esquadrias (portas e janelas); ….
+
+Tamanho: 3526 palavras.
+
 ### [Bônus 2: Perguntas para levar ao engenheiro (rascunho)](anexos/bonus-perguntas-ao-engenheiro.md)
 
 Estado: rascunho do Redator, 24/11/2026. Nada aqui vai ao público antes do Arquiteto (conteúdo técnico) e do Revisor de risco (veto). A página é do Designer. Pedido do dono: o e-book "Antes do primeiro tijolo" tem 2 bônus, "Checklist da obra por fase" e "Perguntas para levar ao engenheiro"…
 
 Seções: A folha (texto para o público); Para a equipe (não vai ao público).
 
-Tamanho: 2755 palavras.
+Tamanho: 2888 palavras.
 
 ### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
 
@@ -115,11 +123,11 @@ Tamanho: 517 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
-Redator, 24/11/2026. Rascunho: não vai ao público antes do Arquiteto e do Revisor de risco (listas no fim) e antes de o dono escolher entre A, B ou C (`amostra-gratis-opcoes.md`). Este texto só é usado se ele escolher a B, agora ou depois. Layout: `ebook/plantas/rascunhos/amostra.py`, função…
+Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
 
-Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
+Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
-Tamanho: 2904 palavras.
+Tamanho: 4129 palavras.
 
 ### [Perfil novo do Instagram: material para o dono escolher (rascunho)](anexos/instagram-perfil-novo.md)
 
@@ -193,6 +201,14 @@ Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku)
 
 Tamanho: 10600 palavras.
 
+### [Kit do anúncio pago que abre o WhatsApp (rascunho)](anexos/kit-anuncio-whatsapp.md)
+
+24/11/2026. Escrito pelo Redator com a skill `oferta-e-whatsapp` (passo a passo) e a `redacao-que-vende`, conferido com a `marketing-psychology` (vontade, facilidade, um pedido só). Origem: achados 1, 2 e 5 de `skills-primeiro-uso.md`. RASCUNHO: nada aqui vai ao público. Antes, três coisas: o…
+
+Seções: 0. Quais anúncios podem rodar e quais esperam; 1. Diagnóstico antes de escrever (skill, seções 1 e 2); 2. O que é igual nos 3 anúncios; 3. Anúncio A: Casa Fita (lote de 5 x 25); 4. Anúncio B: Família Compacta (lote de 10 x 15); 5. Cuidado do anúncio B: quem chega com 8 ou 9 m de frente; 6. Anúncio C: Casa Compacta (lote de 8 x 15). ESPERA A DECISÃO DO DONO; 7. Como anotar a origem, sem dado pessoal no repositório; 8. O que medir por anúncio, e quando parar; 9. Para o Revisor de risco (frases, uma por linha); 10. Perguntas ao dono (uma por linha); 11. Conformidade (skill, seção 4).
+
+Tamanho: 5680 palavras.
+
 ### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
 
 Pesquisador, passo 1. Cada item: o que o texto diz (citação curta), o link lido, o que não se confirmou e "muda algo nos nossos textos?". Não editei texto de venda. Quem conclui: o Revisor de risco (lei) e o Redator (texto). Todos os achados estão no caderno (`pesquisas/normas.md` e…
@@ -264,3 +280,9 @@ Pedido do dono, 23/11: "Título meio sem graça, tem que ser mais chamativo e at
 Seções: Opção 1 (a que eu recomendo); Opção 2; Opção 3; Passada da marketing-psychology (vontade, facilidade, pedido claro); O que ficou de fora, e por quê; Perguntas ao dono (curtas).
 
 Tamanho: 749 palavras.
+
+### [Veto do Revisor de risco: os 2 bônus (24/11/2026)](anexos/veto-bonus-2026-11-24.md)
+
+Texto do Revisor, como ele entregou. As trocas são aplicadas pelo Redator.
+
+Tamanho: 1057 palavras.

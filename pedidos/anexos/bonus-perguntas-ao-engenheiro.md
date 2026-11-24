@@ -13,6 +13,8 @@
 
 *Para a primeira conversa com o engenheiro ou o arquiteto. Imprima ou abra no celular.*
 
+Esta folha só traz perguntas. Quem responde é o engenheiro ou o arquiteto habilitado, para o seu lote e a sua cidade. A casa do e-book é planta de referência: o projeto legal é dele, com ART ou RRT.
+
 **Você chega com a casa escolhida e com as perguntas na mão. Ele responde; você anota.**
 
 Dá para escrever todas estas perguntas na palma da mão, mas aí o engenheiro estica a mão para te cumprimentar e metade fica com ele.
@@ -139,6 +141,10 @@ ____________________________________________
 ---
 
 ## Para a equipe (não vai ao público)
+
+> **INTERNO: daqui até o fim do arquivo, nada vai ao público** (nem ao PDF, nem ao Drive). O texto público é só a seção "A folha (texto para o público)", acima da linha.
+
+**P9 conferida no dado (Redator, 24/11/2026):** nas 3 casas o recuo da esquerda é 0 (`C01.json`, `E03.json` e `F01.json`, `validacao.metricas.recuos.esq = 0.0`; direita 1,5 m), e o validador dá erro em janela na divisa (`ferramentas/plantas.py` L422-423) e as 3 passam sem erro. Por isso a P9 fica "a parede da esquerda". Se uma planta for espelhada, a frase muda junto.
 
 ### Método do Redator (atributos)
 
