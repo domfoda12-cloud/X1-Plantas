@@ -125,8 +125,53 @@ DUAS_PARTES = {
     "parte1": ("parte 1", "A casa do seu lote", "Uma casa por frente de terreno"),      # cada casa: aba amarela
     "parte2": ("parte 2", "Para qualquer casa", "Aba azul na borda"),                   # casas em geral: aba azul
     "aba_geral": "geral",
-    # páginas reservadas (ainda rascunho em outros scripts; entram no D20 e no D21): só o quadro "página em preparo"
+    # página reservada (ainda rascunho em outro script; entra no D20): só o quadro "página em preparo"
     "comodo": "cômodo a cômodo",
-    "parede": "A parede que não pode ter janela",
     "em_preparo": "Página em preparo",
+}
+
+
+# Página "A parede que não pode ter janela" (parte 2, casas em geral; D21, 24/11/2026). Texto do Redator, copiado sem
+# mudar de pedidos/anexos/pagina-parede-sem-janela-texto.md (seção 3), com a conferência do Arquiteto e o veto do
+# Revisor de 24/11 já aplicados. Os "rotulos" são as palavras dos croquis e da folha, do rascunho do Designer
+# (ebook/plantas/rascunhos/parede_sem_janela.py). Só o modo --duas-partes usa. Mudou aqui, volta ao Revisor.
+PAREDE = {
+    "sobre": "Casas em geral",
+    "titulo": "A parede que não pode ter janela",
+    "sub": "E quatro jeitos de ela trabalhar para você",
+    "abre": "Casa encostada no vizinho tem uma parede sem janela: o Código Civil não deixa abrir janela a menos de 1,5 m do terreno vizinho (art. 1.301; o engenheiro confirma). Só escapam aberturas de até 10 x 20 cm, a mais de 2 m do piso, e essas o vizinho pode tapar quando construir (art. 1.302). Não é defeito. A luz vem pelos outros lados, e essa parede trabalha para você.",
+    "campos": ("O que fazer", "Cuidado", "Nas casas"),
+    "ideias": [
+        {"nome": "A cabeceira na parede cega",
+         "faz": "Encoste a cabeceira da cama na parede da divisa, com prateleira em cima. A parede da janela fica livre: nenhum guarda-roupa tapando a luz.",
+         "cuid": "Nicho na parede da divisa, só se o engenheiro aprovar. Prateleira presa na parede, sim.",
+         "casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, a cama de casal cabe com a cabeceira na divisa (página da casa)."},
+        {"nome": "A parede que guarda",
+         "faz": "Guarda-roupa, estante, rack e geladeira na parede da divisa; a janela fica para a cama, o sofá e a pia.",
+         "cuid": "Móvel colado esconde umidade: pergunte ao engenheiro pela impermeabilização do pé da parede. Fure só sabendo onde passa o cano.",
+         "casas": "Casa Fita: guarda-roupa de 6 portas no quarto casal, rack na sala e geladeira na divisa, bancada embaixo da janela. Família Compacta: rack na sala."},
+        {"nome": "A janela alta do outro lado",
+         "faz": "Telhado mais alto no cômodo escuro, com uma faixa de janela virada para o recuo, a 1,5 m ou mais do vizinho, como toda janela.",
+         "cuid": "Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito: é onde mais entra goteira.",
+         "casas": "Não está nas 3 casas: leve a ideia ao engenheiro."},
+        {"nome": "A luz que vem de cima",
+         "faz": "No ponto mais longe da janela, uma telha translúcida ou uma claraboia traz a luz do dia, sem abrir janela na parede da divisa.",
+         "cuid": "Com forro ou laje embaixo, é preciso abrir um vão neles. Estrutura, vedação, calha e calor: o engenheiro escolhe se e como. A chuva não pode cair no vizinho (art. 1.300).",
+         "casas": "Não está nas 3 casas: leve a ideia ao engenheiro."}],
+    "engenheiro": "Leve ao engenheiro",
+    "perguntas": [
+        "Esta parede da divisa é estrutural? Posso prender armário alto ou fazer nicho nela?",
+        "O pé da parede da divisa leva impermeabilização? Como fica o lado de fora, se o vizinho ainda não construiu?",
+        "Para onde vai a chuva do telhado deste lado? O código de obras da minha cidade pede mais de 1,5 m para janela perto da divisa?",
+        "A prefeitura deixa a casa encostar na divisa?"],
+    "rotulos": {
+        "muro": "parede da divisa, sem janela", "vizinho": "lado do vizinho", "sugestao": "sugestão",
+        "janela_livre": "janela livre", "prateleira": "prateleira", "cabeceira": ("cabeceira", "na divisa"),
+        "casa_quarto": ("Família Compacta", "quarto casal"),
+        "geladeira": "geladeira", "aereo": "aéreo", "pia": "pia", "janela": "janela", "recuo": "recuo",
+        "esquema": "esquema, não é das 3 casas", "distancia": "1,5 m ou mais", "janela_alta": "janela alta", "rufo": "rufo",
+        "comodo_escuro": ("cômodo", "escuro"), "telha": "telha clara", "vao": "vão no forro", "calha": "calha",
+        "agua": ("a água fica", "no seu lote"),
+        "selo": ("Imagem ilustrativa", "croquis: móveis e prateleira não vêm junto"),
+    },
 }

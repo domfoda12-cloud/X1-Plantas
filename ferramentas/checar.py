@@ -222,7 +222,9 @@ with tempfile.TemporaryDirectory() as _d:
     _p.RAIZ, _p.PEDIDOS = _d, _d / "pedidos"
     try:
         (_d / "contexto").mkdir(); (_d / "pedidos" / "2026-11").mkdir(parents=True)
-        (_d / "contexto" / "QUADRO.md").write_text("# Quadro\n", encoding="utf-8")
+        # o fechar exige o aviso da ficha no quadro com as 3 partes (F27): as fichas falsas de 0001 a 0005 têm, a 0006 não, a 0007 tem uma linha só
+        (_d / "contexto" / "QUADRO.md").write_text("# Quadro\n\n## 23/11 · falsas\n\n- **O dono pediu:** x (fichas `2026-11-22-0001`, " + ", ".join(f"`2026-11-23-000{n}`" for n in range(1, 6))
+                                                   + ")\n- **O que mudou:** y\n- **Todos:** z\n\n## 23/11 · curta\n\n- o pedido 2026-11-23-0007 virou uma linha só\n", encoding="utf-8")
         (_d / "contexto" / "maestro.md").write_text("# m\n\n## Lições\n\n- antiga\n", encoding="utf-8")
         (_d / "contexto" / "cheio.md").write_text("# c\n\n## Lições\n\n" + "x" * (_p.LIMITE_CONTEXTO - 60) + "\n", encoding="utf-8")
         _ler = lambda rel: (_d / rel).read_text(encoding="utf-8") if (_d / rel).exists() else ""
@@ -252,6 +254,9 @@ with tempfile.TemporaryDirectory() as _d:
                  ("lição avulsa: origem e ponto conferidos", not _roda(_p.licao, "maestro", "x", "-", "9", "prova") and not _roda(_p.licao, "maestro", "x", "-", "-", "qualquer")
                   and not _roda(_p.licao, "maestro", "  ") and _roda(_p.licao, "maestro", "avulsa", "-", "3", "prova")),
                  ("fechar de novo não repete a lição", not _roda(_p.fechar, "0002-boa", "de novo") and _ler("pedidos/LICOES.md").count("aprendi isto") == 1)]
+        _falsa("2026-11-23-0006-calada", "nada novo"); _falsa("2026-11-23-0007-curta", "nada novo")
+        casos.append(("sem aviso de 3 partes no quadro não fecha", not _roda(_p.fechar, "0006-calada", "virou") and _aberta("2026-11-23-0006-calada")
+                      and not _roda(_p.fechar, "0007-curta", "virou") and _aberta("2026-11-23-0007-curta")))
         _falsa("2026-11-23-0009-fechada-sem", estado="fechada em 23/11/2026")
         casos.append(("conferir acusa fechada nova sem o campo", not _roda(_p.conferir)))
     finally:
@@ -499,5 +504,7 @@ _dec = sorted((RAIZ / "pedidos" / "anexos").glob("decisoes-do-dono-*.md"))
 _tc, _td = _ultimo_commit(RAIZ / "CONTEXTO.md"), _ultimo_commit(_dec[-1]) if _dec else None
 if _tc and _td and aviso_contexto_velho(_tc, _td):
     print(aviso_contexto_velho(_tc, _td))
+if _p.aviso_ultimo_velho():  # o resumo de passagem também envelhece (F30, auditoria R5): aviso, não erro
+    print(_p.aviso_ultimo_velho())
 print(f"\n{'Tudo certo.' if not falhas else str(len(falhas)) + ' problema(s): ' + ', '.join(falhas)}")
 sys.exit(1 if falhas else 0)

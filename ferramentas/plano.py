@@ -16,6 +16,7 @@ import datetime, re, sys
 from pathlib import Path
 
 PLANO = Path(__file__).resolve().parent.parent / "pedidos" / "PLANO.md"
+JURI = PLANO.parent / "anexos" / "juri-decisoes-faceis-2026-11-24.md"  # as decisões que o júri tomou e mostra ao dono (cartão v6)
 SECOES = ["## Agora", "## Depois", "## Esperando o dono", "## Não fazer"]
 RE_PASSO = re.compile(r"^\| ([A-Z]\d+) \|")
 RE_DEC = re.compile(r"^(\d+)\. ")
@@ -154,12 +155,25 @@ def gravar(linhas):
     PLANO.write_text("\n".join(linhas), encoding="utf-8")
 
 
+def falta_no_juri(pid):
+    """O que falta à decisão J<n> no arquivo do júri (seção '## J1' ou linha de tabela '| J1 |'); lista vazia = pode fechar (F24)."""
+    t = JURI.read_text(encoding="utf-8") if JURI.exists() else ""
+    m = re.search(rf"^## {pid}\b.*?(?=^## |\Z)|^\| {pid} \|[^\n]*", t, re.S | re.M)
+    if not m:
+        return [f"a seção '## {pid}' (ou a linha '| {pid} |')"]
+    bloco = m.group(0).replace("*", "").replace("`", "").lower()
+    return [nome for nome, r in (('"como desfazer"', r"como desfazer"), ('"mostrado ao dono: sim"', r"mostrado ao dono:\s*sim\b")) if not re.search(r, bloco)]
+
+
 def cmd_feito(pid, nota):
     linhas, passos, _ = ler()
     if pid not in passos:
         sys.exit(f"Não existe o passo {pid}.")
     if passos[pid]["feito"]:
         sys.exit(f"{pid} já está marcado como feito.")
+    if re.fullmatch(r"J\d+", pid) and falta_no_juri(pid):  # regra v6 do dono: o júri decide, mas mostra e diz como desfazer
+        sys.exit(f"Não marca {pid}: em pedidos/anexos/{JURI.name} falta " + " e ".join(falta_no_juri(pid))
+                 + ". Decisão do júri só fecha com o \"como desfazer\" escrito e \"mostrado ao dono: sim\".")
     hoje = datetime.date.today().strftime("%d/%m")
     i = passos[pid]["linha"]
     linhas[i] = linhas[i].replace(f"| {pid} | ", f"| {pid} | **Feito {hoje}:** {nota.rstrip('.')}. ", 1)
@@ -249,6 +263,10 @@ def cmd_conferir():
                 erros.append(f"{p['id']} depende da decisão {n}, que não está em 'Esperando o dono'")
         if p["secao"] == "agora" and not p["feito"] and (p["decisoes"] or [x for x in p["passos"] if x in passos and not passos[x]["feito"]]):
             erros.append(f"{p['id']} está em 'Agora' mas ainda depende de alguém: vai para 'Depois'")
+    # uma coisa por vez (dono, 20/11 e 23/11): vídeo e animação só depois do primeiro Pix medido (D13)
+    if not ("D13" in passos and passos["D13"]["feito"]):
+        erros += [f"{p['id']} está em 'Agora' e mexe em '{p['onde']}': vídeo e animação só abrem depois do D13 feito (uma coisa por vez: primeiro o e-book vende)"
+                  for p in passos.values() if p["secao"] == "agora" and not p["feito"] and re.search(r"video/|animacoes-3d/", p["onde"])]
     abertos_agora = [p["id"] for p in passos.values() if p["secao"] == "agora" and not p["feito"]]
     if len(abertos_agora) > 3:
         erros.append(f"'Agora' tem {len(abertos_agora)} passos abertos; o máximo é 3")

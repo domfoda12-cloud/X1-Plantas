@@ -101,7 +101,7 @@ Funções: `main`.
 
 Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
 
-Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `sem_auditoria`, `aviso_auditoria`, `auditar`, `quadro`, `licoes_do_campo`, `inserir_licao`, `licao`, `fechar`, `indice`, `conferir`.
+Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `sem_auditoria`, `aviso_auditoria`, `auditar`, `quadro`, `quando`, `falta_no_quadro`, `contextos_parados`, `aviso_ultimo_velho`, `licoes_do_campo`, `inserir_licao`.
 
 ### [`ferramentas/pesquisa.py`](pesquisa.py)
 
@@ -119,7 +119,7 @@ Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `b
 
 O plano geral (pedidos/PLANO.md) em comandos: o que dá para fazer agora, o que cada decisão do dono destrava, e a conferência.
 
-Funções: `ler`, `dependencias`, `sobra`, `falta`, `curto`, `bloqueia`, `cmd_agora`, `cmd_destrava`, `cmd_caminho`, `gravar`, `cmd_feito`, `cmd_respondido`, `cmd_subir`, `cmd_conferir`.
+Funções: `ler`, `dependencias`, `sobra`, `falta`, `curto`, `bloqueia`, `cmd_agora`, `cmd_destrava`, `cmd_caminho`, `gravar`, `falta_no_juri`, `cmd_feito`, `cmd_respondido`, `cmd_subir`, `cmd_conferir`.
 
 ### [`ferramentas/planta3d.py`](planta3d.py)
 

@@ -13,7 +13,7 @@
 | "Mantenha todo o contexto, tudo o que eu faço significa algo" | Este arquivo. Nada do que foi pedido se perde entre conversas |
 | "Você é o maestro, a MinoAI o diretor" (22/11) | O Maestro (Opus) decide; o Diretor (MinoAI) dá a ideia do conteúdo e opina primeiro, com fonte ([equipe](contexto/EQUIPE.md)) |
 | "Falo muito de eficiência, mas a prioridade é sempre a maior qualidade" | Peça final sempre na melhor configuração; economia só em rascunho e teste ([`CLAUDE.md`](CLAUDE.md)) |
-| "Foque em uma coisa por vez, não misture tudo ao mesmo tempo" | Uma frente por vez, do começo ao fim, antes de abrir outra. Ordem atual: e-book → animações → vídeo |
+| "Foque em uma coisa por vez, não misture tudo ao mesmo tempo" | Uma frente por vez, do começo ao fim, antes de abrir outra. Ordem atual: e-book → animações → vídeo. Divisão do esforço (dono, 23/11): **60% e-book, 40% sistema**; o `plano.py conferir` barra passo de vídeo ou animação em "Agora" antes do D13 |
 | "Ótimo ao máximo, TUDO" | Fazer completo e bem feito, sem atalho que prejudique a qualidade |
 | "Quando eu paro para acrescentar informação, junte tudo" | Recados no meio do trabalho entram todos na mesma entrega |
 | "Antes de qualquer vídeo ou gasto no OpenArt, me dê o resumo da produção e as instruções que segue; confirmo os dois" | Nada é montado nem gasto sem as duas confirmações do dono ([`video/CLAUDE.md`](video/CLAUDE.md)) |

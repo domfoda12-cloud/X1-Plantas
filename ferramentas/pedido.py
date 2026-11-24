@@ -7,7 +7,9 @@ Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o úl
      python3 ferramentas/pedido.py listar [--fechadas]     mostra as fichas abertas (ou as fechadas)
      python3 ferramentas/pedido.py fechar <ficha> "o que virou"   fecha a ficha e escreve a linha no CONTEXTO-HISTORICO.md
          (ficha de 23/11/2026 em diante precisa do campo "O que aprendi": "papel: lição", uma por linha, ou "nada novo";
-          cada lição vai ao "Lições" do contexto/<papel>.md e a pedidos/LICOES.md)
+          cada lição vai ao "Lições" do contexto/<papel>.md e a pedidos/LICOES.md;
+          recusa se o contexto/QUADRO.md não tiver o aviso da ficha (o código 2026-11-24-1144 dela) com as 3 partes: "pediu:", "mudou:"
+          e o que muda para cada papel; e avisa se o contexto/<papel>.md de quem está em "Papéis afetados" não mudou desde que ela abriu)
      python3 ferramentas/pedido.py licao <papel> "lição" [--ficha X] [--ponto 1-5] [--origem dono|prova|auditoria|juri|maestro]
                                                            grava uma lição no contexto/<papel>.md e em pedidos/LICOES.md
      python3 ferramentas/pedido.py quadro                  tira do contexto/QUADRO.md o aviso mais antigo se passar de 5 ou do tamanho
@@ -18,6 +20,7 @@ Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o úl
 A ficha é a fonte única do pedido: o histórico e a fila saem dela, para ninguém escrever a mesma coisa três vezes.
 """
 import re
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -31,6 +34,7 @@ FECHADA = ["Conferência", "Resultado"]  # só precisam estar preenchidos em fic
 VAZIO = "(a preencher)"
 APRENDI = "O que aprendi"  # obrigatório só em ficha fechada de 23/11/2026 em diante (as antigas não quebram)
 DESDE_APRENDI = "2026-11-23"
+AFETADOS = "Papéis afetados"  # a pergunta do fechar (F31): nomes de contexto/<papel>.md, ou "ninguém"
 ORIGENS = ("dono", "prova", "auditoria", "juri", "maestro", "ficha")
 LIMITE_CONTEXTO = 5000  # o mesmo do checar.py (subiu de 3500 em 24/11/2026, com o sim do dono: cartão p21)
 
@@ -79,7 +83,7 @@ def nova(assunto, juntar=1):
     arq.parent.mkdir(parents=True, exist_ok=True)
     corpo = f"# {assunto}\n\n" + "".join(
         f"**{c}:** " + ("aberta" if c == "Estado" else ultimos_prompts(juntar) if c.startswith("Prompt") else VAZIO) + "\n\n" for c in CAMPOS)
-    corpo += f"**{APRENDI}:** {VAZIO}\n\n"
+    corpo += f"**{APRENDI}:** {VAZIO}\n\n**{AFETADOS}:** {VAZIO}\n\n"
     arq.write_text(corpo, encoding="utf-8")
     print(arq.relative_to(RAIZ))
 
@@ -136,6 +140,65 @@ def quadro():
         print("saiu do quadro (já está no histórico):", t[avisos[-1]:].split("\n", 1)[0])
         t = t[:avisos[-1]].rstrip() + "\n"
     q.write_text(t, encoding="utf-8")
+
+
+def quando(arq):
+    """Hora da última mudança do arquivo: a do último commit se ele está salvo e igual no git; senão, a do disco
+    (numa conversa nova a hora do disco é a do clone, por isso o git vem primeiro)."""
+    try:
+        git = lambda *c: subprocess.run(["git", *c, "--", str(arq)], cwd=RAIZ, capture_output=True, text=True, timeout=30)
+        estado = git("status", "--porcelain")
+        if estado.returncode == 0 and not estado.stdout.strip():
+            return int(git("log", "-1", "--format=%ct").stdout.strip())
+    except (OSError, ValueError, subprocess.SubprocessError):
+        pass  # sem git, fora do git ou arquivo sem commit: vale o disco
+    return arq.stat().st_mtime
+
+
+def falta_no_quadro(cod):
+    """O que falta ao aviso da ficha no contexto/QUADRO.md; lista vazia = aviso com as 3 partes (F27, auditoria R2).
+    O aviso é o bloco "## ..." que cita o código da ficha (em "## Agora", a linha que cita); as partes: "pediu:", "mudou:"
+    e o que muda para cada papel ("muda para", "Todos:" ou o nome de um papel antes de dois-pontos)."""
+    q = RAIZ / "contexto" / "QUADRO.md"
+    blocos = []
+    for s in re.split(r"^(?=## )", q.read_text(encoding="utf-8") if q.exists() else "", flags=re.M):
+        blocos += s.splitlines() if s.startswith("## Agora") else [s]
+    blocos = [b for b in blocos if cod in b]
+    if not blocos:
+        return [f"o aviso inteiro (nenhum bloco do quadro cita `{cod}`)"]
+    papeis = "|".join(re.escape(p.stem).replace("\\-", "[ -]") for p in (RAIZ / "contexto").glob("*.md") if p.stem.islower())
+    partes = [('o que o dono pediu ("pediu:")', r"pediu:"), ('o que mudou ("mudou:")', r"mudou:"),
+              ('o que muda para cada papel ("muda para ...", "Todos:" ou o nome do papel e dois-pontos)', rf"muda para|\b(?:todos|{papeis})\b[^\n:]*:")]
+    return min(([nome for nome, r in partes if not re.search(r, b, re.I)] for b in blocos), key=len)
+
+
+def contextos_parados(arq, txt):
+    """Os avisos do fechar sobre os papéis afetados (F31, auditoria R3): a pergunta, se a ficha não responde, e cada
+    contexto/<papel>.md que não mudou desde que a ficha abriu (a hora está no nome dela). Avisa, não recusa."""
+    v = (campo(txt, AFETADOS) or "").lower()
+    papeis = [p for p in dict.fromkeys(re.findall(r"[a-z][a-z-]*", v)) if (RAIZ / "contexto" / f"{p}.md").is_file()]
+    if not papeis and not re.search(r"ningu[eé]m|nenhum", v):
+        return [f"[AVISO] Quais papéis este pedido afetou? Escreva na ficha \"**{AFETADOS}:** arquiteto, redator\" (nomes de contexto/<papel>.md) "
+                "ou \"ninguém\", e atualize o contexto de cada um."]
+    try:
+        abriu = datetime.strptime(arq.name[:15], "%Y-%m-%d-%H%M")
+    except ValueError:
+        return []
+    return [f"[AVISO] contexto/{p}.md não mudou desde que a ficha abriu ({abriu:%d/%m %H:%M}): o pedido afetou o `{p}`; escreva nele o que muda, "
+            "senão ele trabalha com o contexto de antes do pedido." for p in papeis if quando(RAIZ / "contexto" / f"{p}.md") < abriu.timestamp()]
+
+
+def aviso_ultimo_velho():
+    """A frase do aviso se o contexto/entregas/ULTIMO.md for mais velho que a última ficha fechada; senão, vazio (F30, auditoria R5)."""
+    ult = RAIZ / "contexto" / "entregas" / "ULTIMO.md"
+    fechadas = [f for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada")]
+    if not ult.exists() or not fechadas:
+        return ""
+    t, f = max((quando(f), f) for f in fechadas)
+    if quando(ult) >= t:
+        return ""
+    return (f"[AVISO] o contexto/entregas/ULTIMO.md ({datetime.fromtimestamp(quando(ult)):%d/%m %H:%M}) é mais velho que a última ficha fechada "
+            f"({f.name[:15]}, {datetime.fromtimestamp(t):%d/%m %H:%M}): escreva o resumo de passagem no REGISTRO.md e copie para o ULTIMO.md")
 
 
 def licoes_do_campo(valor):
@@ -195,7 +258,6 @@ def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, bas
         h.write(f"| {hoje:%d/%m/%Y} | {papel} | {origem} | {ficha} | {ponto} | {texto.replace('|', '/')} |\n")
     print(f"lição gravada em contexto/{papel}.md e pedidos/LICOES.md")
     if RAIZ == Path(__file__).resolve().parent.parent:  # no repositório de verdade (não no teste), o placar acompanha
-        import subprocess
         subprocess.run([sys.executable, str(RAIZ / "ferramentas" / "placar.py")], cwd=RAIZ, capture_output=True)
 
 
@@ -216,6 +278,12 @@ def fechar(nome, virou):
         previa = {}
         for papel, t in aprendidas:  # confere todas, somadas por papel, antes de gravar qualquer uma
             previa[papel] = licao(papel, t, arq.name[:15], origem="ficha", gravar=False, base=previa.get(papel))
+    sem = falta_no_quadro(arq.name[:15])
+    if sem:
+        sys.exit(f"Não fecha: falta no contexto/QUADRO.md o aviso desta ficha (`{arq.name[:15]}`) com as 3 partes. Falta: " + "; ".join(sem)
+                 + ". Escreva no topo do quadro um bloco \"## data · assunto\" que cite a ficha, com \"**O dono pediu:**\", \"**O que mudou:**\" "
+                 "e o que muda para cada papel (\"**Todos:**\", \"**Arquiteto:**\"...).")
+    parados = contextos_parados(arq, txt)  # antes de gravar as lições: lição no contexto não conta como contexto atualizado
     hoje = datetime.now()
     txt = trocar(trocar(txt, "Estado", f"fechada em {hoje:%d/%m/%Y}"), "Resultado", virou)
     arq.write_text(txt, encoding="utf-8")
@@ -227,7 +295,8 @@ def fechar(nome, virou):
         h.write(f"| {hoje:%d/%m/%Y} | \"{prompt.replace('|', '/')}\" | {virou.replace('|', '/')} Ficha: `{arq.relative_to(RAIZ)}` |\n")
     indice()
     quadro()
-    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md (depois rode `pedido.py quadro`, que tira o mais antigo se passar do limite) e marque \"Feito\" em pedidos/PLANO.md.")
+    print("fechada; linha escrita no CONTEXTO-HISTORICO.md. O aviso do contexto/QUADRO.md foi conferido (3 partes); marque \"Feito\" em pedidos/PLANO.md.")
+    print("\n".join(parados), end="\n" if parados else "")
     if aviso_auditoria():
         print(aviso_auditoria())
 
