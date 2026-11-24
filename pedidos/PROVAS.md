@@ -90,3 +90,71 @@ Presidentes (1 crítica falsa plantada em cada grupo):
 - O presidente que confere vale a pena: derrubou as 2 críticas falsas plantadas e 1 crítica alta falsa de jurado, e achou 1 erro que nenhum jurado viu (`--saida` obrigatório).
 - Achados reais para consertar: `ESTRATEGIA.md` linha 100 sugere anúncio "C01 8 x 15", que colide com o veto do `/oferta`; a conta de R$ 280 por preço pode não chegar a 5 vendas; `livro.py --previa` sem `--conferir` regrava o PDF oficial.
 - Custo: 9 chamadas de jurado e presidente mais o conferidor; cerca de 1,6 milhão de tokens (soma dos avisos de conclusão; os 2 presidentes cortados pelo limite não informaram).
+
+## Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC)
+
+Passo F11 do `pedidos/PLANO.md`, feito pelo Supervisor (Fable). **O que esta prova é:** o trabalho real dos dois papéis conferido contra o repositório (plano do commit `8b3bcc8`; grupos do commit `bb4ac70`, que é o que está no HEAD), mais 18 quebras plantadas no `plano.py conferir` numa cópia em pasta temporária (lista escrita antes de rodar; o plano de verdade não foi tocado). **O que ela não é:** o F11 pedia também rodar os dois agentes de novo sobre o plano de `4b212b3` com 2 respostas inventadas do dono. Isso não foi feito (o Supervisor não lança agente nesta tarefa); n de casos novos = 0. O F11 fica meio feito.
+
+**Gabarito (de onde sai o certo):** `pedidos/anexos/decisoes-do-dono-2026-11-23.md` (respostas do dono), `git log`, os arquivos citados em cada "pronto quando", a saída de `plano.py conferir`, `agora`, `destrava` e `caminho D12` (todos rodaram; 47 passos, 36 decisões, 16 no caminho do D12, batem com o texto do plano).
+
+### Planejador: 22 passos conferidos, 11 certos, 11 com erro (0 alto, 6 médios, 5 baixos)
+
+Amostra: A1 a A10; D1, D3, D9, D12, D14, D16, D19; F2, F4, F8, F16, F18. Certos: A2, A3, A4, A5, A7, A10, D3, D12, F2, F4, F8.
+
+| Passo | Gravidade | O que está errado | Prova |
+|---|---|---|---|
+| A6 (feito) | média | Metade do "pronto quando" não existe: a ficha `1946-refazer` não tem a linha da variante c nem o comando do D1 | `grep -n -i "variante\|C01J\|janela"` na ficha: nada |
+| A8 (aberto) | média | Já estava meio feito no mesmo commit do plano: o documento já usa a NBR 5410:2004 e a Portaria só como referência (`8b3bcc8` mudou 200 linhas dele). Falta só o Revisor levantar os vetos 1 e 2. O plano descreve o passo inteiro e o "primeiro gesto" já foi dado | `comodo-a-comodo-3-casas.md` linhas 15, 21, 24; `pesquisa.py buscar "NBR 5410"`: 5 achados |
+| D1 | média | O "pronto quando" repete o buraco do A6: pede só o validador e a janela. Não pede "porta em fixo: []", que foi o erro achado à mão | `PLANO.md` linha 79; `C01J.py c` mostra `porta em fixo: [('cozinha', 'ext-cozinha', 'bancada', 60.0)]` |
+| D14 | média | Espera a decisão 24 (foto), mas o próprio plano diz que "a foto se troca depois a qualquer hora". Sem ela o caminho do D12 cai de 16 para 15 | `PLANO.md` linhas 40, 94 e 169 |
+| D16, D17 | média | A suposição 1 (o cômodo a cômodo entra no e-book pago) decide: as páginas vão ao gerador e ao PDF final "sem esperar a resposta". A decisão 36 pergunta só das outras páginas. Falta a pergunta numerada e o D17 ou o D3 depender dela | `PLANO.md` linhas 73, 81, 82, 84 e 193 |
+| F18 | média | Passo velho: o `salvar.py` não tem mais "Opus 5.5" desde `306f0aa`; o grep do "pronto quando" já passa sem trabalho. O que sobra de verdade: o nome fixo agora é outro (`salvar.py` linha 13) | `grep -n "Opus 5.5" ferramentas/salvar.py`: nada |
+| F16 | baixa | O grep do "pronto quando" já acha "Conselho" e "espera" hoje, em outras lições: passa antes do trabalho | `contexto/maestro.md` linhas 21 e 22 |
+| A1 (feito) | baixa | Pedia "uma linha por página" (20 páginas); o arquivo tem 6 linhas de troca e o veredito geral | `veto-ebook-lancamento-2026-11-24.md`, 26 linhas |
+| A9 | baixa | "Seção 2 (linhas 118 a 208)": a seção da E03 está nas linhas 130 a 222 (o documento mudou no A8) | `grep -n "^## "` no documento |
+| D9 | baixa | A decisão 19 diz que destrava "a data na mensagem do D9", mas o D9 não depende dela; e a nota velha da linha 90 não precisa esperar o D6 (parte que subia para "Agora") | `PLANO.md` linhas 92 e 161 |
+| D19 | baixa | Espera o A10, mas a decisão 8 já disse que a página vai na parte geral; o rascunho podia começar | `PLANO.md` linha 83 |
+
+Fora da amostra, baixos: a decisão 32 cita a ficha `0144`, mas o "sim" está na `1946-refazer`, linha 19 (que ainda diz "PDF final gerado com preço"); a diferença para a conta do organizador (38) é explicada como "vídeo e próximas casas", mas faltam também U4 (endereço e e-mail), a segunda pergunta do x3 ("planta maior"), que sumiu do plano, e o p1, que o plano conta (decisão 20) e o organizador deu como respondido.
+
+**O que estava certo:** nenhum passo livre decide pelo dono; nenhuma decisão marcada como respondida sem fala dele (1, 6, 8, 15 e 26 batem com o anexo); nenhuma respondida ficou pendente; as contas do caminho e do "destrava" batem com o programa.
+
+### `plano.py conferir`: pegou 11 de 18 quebras (as 5 pedidas: 5 de 5)
+
+Pegou: dependência para passo que não existe; ciclo; "Agora" vazio; linha com 7 colunas; decisão fora de sequência; passo de "Agora" com decisão; decisão que não existe; 4 abertos em "Agora"; coluna vazia; seção apagada; fila com menos de 6 livres.
+
+Deixou passar 7:
+
+| Quebra | Gravidade | O que acontece |
+|---|---|---|
+| "Depende de" em texto livre ("quando o dono responder a janela") | alta | O passo vira **livre** no `agora`: a equipe faria o D1 sem a decisão 2 |
+| "decisões 3 a 5" | média | Lê só a 3; a 4 e a 5 somem do caminho |
+| Passo repetido (duas linhas D7) | média | A segunda apaga a primeira, calado |
+| Decisão repetida (dois "20.") | média | Idem; a sequência continua "certa" |
+| Passo feito com dependência aberta (D3 feito, D1 aberto) | média | Aceita |
+| Linha "\|D7 \|" sem espaço | média | O passo some da conta (46 passos) sem aviso |
+| "**Respondido" sem fala nenhuma | baixa | Conta como respondida |
+
+### Organizador (versão do HEAD, `bb4ac70`, 10:39): a conta fecha; 4 erros (0 alto, 2 médios, 2 baixos)
+
+Somado à mão: 43 + 23 + 17 + 7 = 90; repetidos 1 + 3 + 14 + 6 = 24; novos 66; 38 em 9 grupos (5, 4, 5, 5, 3, 4, 5, 3, 4, contadas as linhas) + 5 + 6 + 16 + 1 = 66. Os 42 cartões, os 20 itens C, os 3 U e o D1 aparecem cada um uma vez. Nenhum grupo passa de 5; nenhum repetido em 2 grupos.
+
+- **Média:** 5 perguntas já respondidas continuam pendentes (p3, p14, p9, v3, p11), e q11 e p6 ainda oferecem as opções que ele recusou. As respostas são das 11:07 às 11:15, depois da cópia; o arquivo não diz a hora da cópia. É o F2.
+- **Média:** o p1 (página de venda) saiu como "já respondido" por uma regra antiga do `CONTEXTO.md`, sem fala do dono sobre o cartão, que está aberto. O plano conta o mesmo item como decisão 20. Os dois arquivos se contradizem e nenhum diz por quê.
+- **Baixa:** sumiu 1 item da fonte que ele cita: "E07: encostar na divisa... decisão continua com ele" (`decisoes-do-dono-2026-11-23.md`, linha de 23/11 noite). Ele contou 7 linhas abertas ali; são pelo menos 8.
+- **Baixa:** a tabela "Já respondidos" tem 7 linhas e a conta diz 6 (o v1 é repetido e aparece lá também, sem aviso).
+
+### Lições e conferências propostas (ninguém muda regra com n menor que 5: são propostas)
+
+Linhas para `.claude/agents/planejador.md`:
+- **"Pronto quando" tem de falhar hoje:** rode o comando do "pronto quando" antes de escrever o passo. Se ele já passa sem o trabalho (o grep já acha, o arquivo já existe), troque por um que só passe depois. E ele cobre o erro que o passo quer evitar (no conserto de planta: "porta em fixo", "móvel na parede" e "janela sobre porta" vazios).
+- **Passo "feito" se confere parte por parte:** cada metade do "pronto quando" tem o arquivo e a linha; a que faltar fica escrita como "falta" no passo ou vira passo novo. Passo aberto que já tem parte feita descreve só o resto.
+- **Suposição sua que muda o que vai no PDF pago vira decisão numerada**, e o passo que leva isso ao gerador ou ao PDF final depende dela. Decisão que o próprio plano diz que "se troca depois" não entra em "depende de".
+
+Linhas para `.claude/agents/organizador.md`:
+- **Diga a hora de cada fonte:** no topo, a data e a hora da cópia do quadro e o commit dos arquivos lidos. Antes de devolver, leia o fim de `pedidos/anexos/decisoes-do-dono-*.md` e tire o que ele respondeu depois da cópia.
+- **"Já respondido" só com fala do dono citada** (arquivo e linha). Regra antiga que parece responder um cartão aberto não fecha a pergunta: ela fica no grupo, com a nota. Cada tabela tem o mesmo número de linhas que a conta diz; se o seu total difere do `pedidos/PLANO.md`, liste item por item a diferença.
+
+Conferências para o `ferramentas/plano.py conferir` (Maestro): recusar "depende de" que, tirados os códigos e "ninguém", ainda tem palavra; ler "decisões 3 a 5" como faixa; recusar passo ou decisão repetidos; recusar passo feito com dependência aberta; avisar linha de tabela que começa com código e não foi lida; recusar "Respondido" sem texto.
+
+**Não conferido:** os 42 cartões do quadro, os 23 itens do `CONTEXTO.md` e os 17 do `ULTIMO.md` na versão que o organizador leu (só a conta e os códigos); a versão nova dos grupos, que outro agente escrevia; os outros 25 passos do plano; se o `checar.py` barra porta contra móvel nas casas oficiais; a conta de áreas do F7; o quadro de tarefas do A2; o custo desta prova em tokens.

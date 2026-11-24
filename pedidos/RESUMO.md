@@ -47,15 +47,15 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 9618 palavras.
+Tamanho: 9692 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
 Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
 
-Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC).
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC); Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC).
 
-Tamanho: 1801 palavras.
+Tamanho: 3450 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 
@@ -113,13 +113,13 @@ Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026,
 
 Tamanho: 2968 palavras.
 
-### [Decisões pendentes do dono, em grupos (24/11/2026)](anexos/decisoes-pendentes-em-grupos.md)
+### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
-Proposta do `organizador`, primeira rodada (ficha `2026-11-24-1027`). Só propõe: não mexe no quadro de tarefas, não decide nada pelo dono, não muda prioridade que ele deu. Fontes: os cartões abertos do quadro de tarefas (cópia de 24/11), o "Em aberto" do `CONTEXTO.md`, o "Decisão do dono pendente"…
+Proposta do `organizador`, segunda versão (passo F2 do `pedidos/PLANO.md`; a primeira é da ficha `2026-11-24-1027`, manhã de 24/11). Só propõe: não mexe no quadro de tarefas, não decide nada pelo dono, não muda prioridade que ele deu. Fontes novas desta versão: as duas seções de 24/11 de…
 
-Seções: Contagem; Decisões do dono, na ordem em que ele deveria tratar; Saíram da lista de decisões; Proposta: como reagrupar os cartões do quadro (de → para).
+Seções: O que mudou desde a manhã; Contagem; Decisões do dono, na ordem em que ele deveria tratar; Saíram da lista de decisões; Cartão → grupo (para o Maestro atualizar o Canteiro).
 
-Tamanho: 2650 palavras.
+Tamanho: 3876 palavras.
 
 ### [E07 e a parede na divisa: o que fazer com a parede sem janela](anexos/e07-parede-na-divisa-ideias.md)
 

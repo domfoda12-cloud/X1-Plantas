@@ -113,7 +113,7 @@ Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `b
 
 O plano geral (pedidos/PLANO.md) em comandos: o que dá para fazer agora, o que cada decisão do dono destrava, e a conferência.
 
-Funções: `ler`, `dependencias`, `falta`, `curto`, `bloqueia`, `cmd_agora`, `cmd_destrava`, `cmd_caminho`, `gravar`, `cmd_feito`, `cmd_respondido`, `cmd_conferir`.
+Funções: `ler`, `dependencias`, `sobra`, `falta`, `curto`, `bloqueia`, `cmd_agora`, `cmd_destrava`, `cmd_caminho`, `gravar`, `cmd_feito`, `cmd_respondido`, `cmd_conferir`.
 
 ### [`ferramentas/planta3d.py`](planta3d.py)
 

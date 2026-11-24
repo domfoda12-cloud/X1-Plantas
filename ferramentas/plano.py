@@ -53,9 +53,20 @@ def dependencias(dep, ordem):
         if a in ordem and b in ordem:
             ps += ordem[ordem.index(a): ordem.index(b) + 1]
     ps += re.findall(r"[A-Z]\d+", dep)
-    for trecho in re.findall(r"decis(?:ão|ões)\s+([\d,\se]+)", dep):
+    for trecho in re.findall(r"decis(?:ão|ões)\s+([\d,\sea]+)", dep):
+        for a, b in re.findall(r"(\d+)\s+a\s+(\d+)", trecho):      # "decisões 3 a 5" = 3, 4 e 5
+            ds += list(range(int(a), int(b) + 1))
         ds += [int(n) for n in re.findall(r"\d+", trecho)]
     return list(dict.fromkeys(ps)), list(dict.fromkeys(ds))
+
+
+def sobra(dep):
+    """O que resta da coluna 'depende de' depois de tirar os códigos: tem de ser nada (texto livre não se calcula)."""
+    t = re.sub(r"\*\*|`", "", dep)
+    t = re.sub(r"decis(?:ão|ões)\s+[\d,\sea]+", " ", t)
+    t = re.sub(r"[A-Z]\d+(\s+a\s+[A-Z]\d+)?", " ", t)
+    t = re.sub(r"\bninguém\b|\be\b|[,;.]", " ", t)
+    return t.strip()
 
 
 def falta(p, passos, decisoes):
@@ -175,6 +186,28 @@ def cmd_conferir():
         erros.append("as seções Agora, Depois, Esperando o dono e Não fazer estão fora de ordem")
     if not passos:
         erros.append("nenhum passo com número (A1, D1...) nas tabelas de Agora e Depois")
+    # linha de passo mal escrita some calada: "|D7 |" ou "| D7|" (prova 4, 24/11)
+    secao = ""
+    vistos = {}
+    for l in texto.split("\n"):
+        if l.startswith("## "):
+            secao = l
+        if (secao.startswith("## Agora") or secao.startswith("## Depois")) and re.match(r"^\|\s*[A-Z]\d+\s*\|", l):
+            cod = re.match(r"^\|\s*([A-Z]\d+)", l).group(1)
+            if not RE_PASSO.match(l):
+                erros.append(f"{cod}: a linha tem de começar com '| {cod} | ' (com os espaços), senão o passo some da conta")
+            vistos[cod] = vistos.get(cod, 0) + 1
+    erros += [f"{c}: o código aparece {n} vezes" for c, n in vistos.items() if n > 1]
+    nd = [int(m.group(1)) for l in texto.split("\n") for m in [RE_DEC.match(l)] if m]
+    erros += [f"decisão {n}: o número aparece mais de uma vez" for n in sorted(set(x for x in nd if nd.count(x) > 1))]
+    for p in passos.values():
+        resto = sobra(p["dep"])
+        if resto:
+            erros.append(f"{p['id']}: 'depende de' tem texto que não é código ('{resto[:50]}'): use só passos (D3, D3 a D11), 'decisão N' ou 'ninguém'")
+        if p["feito"]:
+            fp, _ = falta(p, passos, decisoes)
+            if fp:
+                erros.append(f"{p['id']} está feito, mas depende de {', '.join(fp)}, que não está feito")
     for p in passos.values():
         for campo in ("quem", "onde", "pronto", "dep"):
             if not p[campo]:
