@@ -23,7 +23,7 @@ Tamanho: 667 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 1341 palavras.
+Tamanho: 1748 palavras.
 
 ### [Pesquisa: Normas, leis e código de obras](normas.md)
 

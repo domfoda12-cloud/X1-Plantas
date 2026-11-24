@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 43 documentos
+## Os 44 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -43,11 +43,11 @@ Tamanho: 1209 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
-Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Segunda rodada: 24/11/2026, 11h10 UTC, conferida contra o repositório nesta hora,…
+Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Terceira rodada: 24/11/2026, 11h55 UTC, conferida contra o repositório nesta hora (`git…
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 5478 palavras.
+Tamanho: 5533 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -332,6 +332,14 @@ Tamanho: 749 palavras.
 Texto do Revisor, como ele entregou. As trocas são aplicadas pelo Redator.
 
 Tamanho: 1057 palavras.
+
+### [Veto do Revisor de risco: `comodo-a-comodo-3-casas.md` (24/11/2026)](anexos/veto-comodo-a-comodo-2026-11-24.md)
+
+VETO em 3 pontos, cada um com a troca que vira SIM; o resto passa com troca ou como está. L = linha do documento na versão lida. Conferido contra os dados das 3 casas e `PLANTAS.md`: medidas livres, perímetros, janelas, portas, folga no fundo e distâncias da tomada ao box batem. Não há promessa de…
+
+Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página.
+
+Tamanho: 811 palavras.
 
 ### [Veredito do Revisor de risco: rascunho do lançamento (24/11/2026)](anexos/veto-ebook-lancamento-2026-11-24.md)
 
