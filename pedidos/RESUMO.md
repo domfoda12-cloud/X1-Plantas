@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 31 documentos
+## Os 32 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -68,6 +68,14 @@ Pedido do dono no quadro (23/11/2026): "uma amostra grátis bem impressionante d
 Seções: Opção A: a Casa Compacta completa, caprichada (5 páginas); Opção B: a Casa Compacta + o guia "Seu lote cabe?" (8 a 9 páginas); O teste de preço (R$ 47 x R$ 67).
 
 Tamanho: 913 palavras.
+
+### [Bônus 2: Perguntas para levar ao engenheiro (rascunho)](anexos/bonus-perguntas-ao-engenheiro.md)
+
+Estado: rascunho do Redator, 24/11/2026. Nada aqui vai ao público antes do Arquiteto (conteúdo técnico) e do Revisor de risco (veto). A página é do Designer. Pedido do dono: o e-book "Antes do primeiro tijolo" tem 2 bônus, "Checklist da obra por fase" e "Perguntas para levar ao engenheiro"…
+
+Seções: A folha (texto para o público); Para a equipe (não vai ao público).
+
+Tamanho: 2755 palavras.
 
 ### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
 
