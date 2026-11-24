@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-24 | [vitrine para mostrar a um amigo](2026-11/2026-11-24-0646-vitrine-para-mostrar-a-um-amigo.md) | fechada em 24/11/2026 | Maestro (página e números). |
 | 2026-11-23 | [Refazer o e-book com 3 casas, Drive e PDF de emergência (lançamento)](2026-11/2026-11-23-1946-refazer-o-e-book-com-3-casas-drive-e-pdf-de-emergencia-lanca.md) | aberta | Arquiteto (casas e 3D), Designer (estilo e páginas), Redator e Revisor (textos), Maestro ( |
 | 2026-11-23 | [Quadro de tarefas para o dono ver a fila](2026-11/2026-11-23-1946-quadro-de-tarefas-para-o-dono-ver-a-fila.md) | aberta | Maestro; a tarefa agendada de hora em hora lê e atualiza. |
 | 2026-11-23 | [Melhorar o julgamento do júri](2026-11/2026-11-23-1946-melhorar-o-julgamento-do-juri.md) | fechada em 24/11/2026 | Maestro (regras), Fable (régua, modelo de pedido e prova 3). |
