@@ -137,3 +137,5 @@ Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 - **24/11 07:46 UTC (hora agendada):** nenhum comentário novo no quadro. Na hora anterior o dono recusou a primeira vitrine e pediu uma bonita: saiu a casa 3D (ficha `2026-11-24-0726`); 1 agente (Supervisor, auditoria, 113.658 tokens no relatório). Consertos da auditoria feitos e resumo de passagem escrito. O bloco PRÓXIMA HORA continua valendo.
 
 - **24/11 08:46 UTC (hora agendada):** nenhum comentário novo no quadro. O dono pediu uma peça livre, fora do projeto: saiu a "Revoada" (ficha `2026-11-24-08..-peca-livre`, aberta até ele ver); revista na cópia local. 0 agentes nesta hora. O bloco PRÓXIMA HORA continua valendo.
+
+- **24/11 10:46 UTC (hora agendada):** o dono pediu dois agentes (ficha `2026-11-24-1027`, fechada): `planejador` e `organizador`. 3 agentes rodaram (Organizador 144.002 tokens, Planejador 176.372, Revisor 77.418). Os 3 passos do "Agora" do `pedidos/PLANO.md` foram feitos: leitura do rascunho pelo Revisor, resumos velhos corrigidos, `ferramentas/pdf-leve.py`. O que sobra espera o dono (grupo 1 de `pedidos/anexos/decisoes-pendentes-em-grupos.md`).

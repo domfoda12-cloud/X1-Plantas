@@ -31,6 +31,7 @@
 | 12 | [`ferramentas/imagens3d.py`](ferramentas/imagens3d.py) | recorta a imagem 3D de cada casa para o e-book | [`ebook/visual/3d/`](ebook/visual/3d) → 5 |
 | 13 | [`ferramentas/imagens2d.py`](ferramentas/imagens2d.py) | planta, blueprint, vista da rua e lote em 2D, para posts | `animacoes-3d/plantas-2d/` → 15 |
 | 13b | [`ferramentas/antes-depois.py`](ferramentas/antes-depois.py) | antes e depois de uma planta (oficial ou rascunho) no desenho do e-book, com círculo no que mudou, legenda e "o que NÃO muda", para o dono ver o conserto | `ebook/plantas/rascunhos/demo-*.png` Com `--dividir`, sai em duas imagens (plantas; pontos de perto) que cabem no WhatsApp. |
+| 13c | [`ferramentas/pdf-leve.py`](ferramentas/pdf-leve.py) | PDF leve de emergência: copia um PDF reduzindo só as fotos e as imagens 3D (texto e plantas ficam iguais); nunca grava em cima do original | o arquivo de destino que você indicar (teste de 24/11: 4,9 MB → 3,0 MB, 17 páginas) |
 | 14 | [`ferramentas/recortes.py`](ferramentas/recortes.py) e [`ferramentas/mockups.py`](ferramentas/mockups.py) | recortes 9:16 e 1:1 das fotos; e-book no celular e folheando | [`ebook/visual/`](ebook/visual) |
 | 15 | [`instagram/posts/gerar-imagens.cjs`](instagram/posts/gerar-imagens.cjs) | as telas dos carrosséis | `instagram/posts/imagens/` |
 

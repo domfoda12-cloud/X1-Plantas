@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 37 documentos
+## Os 38 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -45,7 +45,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, conferido); Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 3619 palavras.
+Tamanho: 3669 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -296,6 +296,14 @@ Tamanho: 749 palavras.
 Texto do Revisor, como ele entregou. As trocas são aplicadas pelo Redator.
 
 Tamanho: 1057 palavras.
+
+### [Veredito do Revisor de risco: rascunho do lançamento (24/11/2026)](anexos/veto-ebook-lancamento-2026-11-24.md)
+
+Passo A1 do `pedidos/PLANO.md`. O Revisor leu o PDF direto: 17 páginas do e-book e 3 da planta grátis. SIM (rascunho): nada é veto. Nenhuma página promete aprovação, prazo ou custo; nenhuma dá a entender que dispensa profissional.
+
+Seções: Trocas que não dependiam do dono; Depende do dono; Não conferido pelo Revisor.
+
+Tamanho: 350 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 

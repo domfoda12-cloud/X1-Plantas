@@ -12,7 +12,7 @@
 - Chamada final sempre "Comente PLANTA"; o parceiro responde no WhatsApp. Post com planta leva a linha "Planta de referência, não é projeto executivo. A obra precisa de responsável técnico." (`posts/POSTS.md`)
 - "O que o arquiteto pensou" não se usa mais; diga "por que esta planta é assim" (Revisor de risco, 20/11/2026). (`posts/POSTS.md`)
 - Imagens dos carrosséis: `NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs`; saem em `posts/imagens/`. Nunca publique tela com o aviso "FALTA O 3D". (`posts/POSTS.md`, `INSTAGRAM.md` (seção "Calendário: as 2 primeiras semanas do perfil"))
-- C01 redesenhada em 22/11/2026: 50 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8 x 13). As legendas já dizem isso; as imagens da C01 (posts 2 tela 2, 3, 6, 8, 9 e reserva) são do desenho antigo e estão marcadas "refazer: C01 redesenhada". (`ebook/plantas/PLANTAS.md`, `posts/POSTS.md`)
+- C01 redesenhada em 22/11 e de novo em 23/11/2026 (com hall): 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8 x 13). As legendas já dizem isso; as imagens da C01 (posts 2 tela 2, 3, 6, 8, 9 e reserva) são do desenho antigo e estão marcadas "refazer: C01 redesenhada". (`ebook/plantas/PLANTAS.md`, `posts/POSTS.md`)
 - O calendário parte de 23/11/2026; se atrasar, empurre tudo: a ordem importa mais que a data. (`INSTAGRAM.md` (seção "Calendário: as 2 primeiras semanas do perfil"))
 - Em aberto: o plano do perfil é rascunho; o registro dos testes está vazio. (`INSTAGRAM.md` (seção "Plano de conteúdo: perfil de arquitetura no Instagram"), `INSTAGRAM.md` (seção "Instagram: onde o editor trabalha"))
 <!-- /essencial -->
