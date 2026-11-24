@@ -1,0 +1,222 @@
+<title>Revoada</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: uma tela só, um céu de fim de tarde. O bando é a página; o texto fica pequeno, no canto de baixo. */
+:root{ --ceu-alto:#141B3C; --ceu-meio:#5B3F6B; --ceu-baixo:#F2A65A; --brasa:#FFD9A0; --terra:#0B0C14; --ave:#0A0B12;
+  --texto:#FBEBD3; --texto-fraco:rgba(251,235,211,.72);
+  --tit:"Instrument Serif",Georgia,"Times New Roman",serif; --txt:"Inter",Arial,sans-serif; color-scheme:dark }
+html,body{height:100%}
+body{background:var(--ceu-alto);color:var(--texto);font:14px/1.5 var(--txt);overflow:hidden;position:relative;-webkit-user-select:none;user-select:none}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:crosshair}
+.legenda{position:absolute;left:0;top:0;max-width:27rem;pointer-events:none;
+  padding:20px max(16px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px))}
+h1{font:italic 400 clamp(2.6rem,9vw,4.6rem)/.95 var(--tit);margin:0 0 .5rem;letter-spacing:-.01em}
+.legenda p{margin:0;color:var(--texto-fraco);text-wrap:pretty}
+.legenda p b{color:var(--texto);font-weight:600}
+.legenda .voce{margin-top:.5rem;font-weight:500;color:var(--brasa)}
+.botoes{position:absolute;right:0;bottom:0;display:flex;gap:8px;
+  padding:0 max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) 16px}
+button{font:600 12px var(--txt);letter-spacing:.04em;color:var(--texto);background:rgba(11,12,20,.45);
+  border:1px solid rgba(251,235,211,.4);border-radius:99px;padding:8px 14px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--brasa);outline-offset:2px}
+</style>
+
+<canvas id="ceu" aria-label="Um bando de estorninhos voando ao entardecer. Toque para ser o falcão."></canvas>
+<div class="botoes"><button type="button" id="pausa" aria-pressed="false">Pausar</button></div>
+<div class="legenda">
+  <h1>Revoada</h1>
+  <p><b id="n"></b> estorninhos. Nenhum conhece a forma do bando: cada um só acompanha os <b>sete vizinhos mais próximos</b>. As ondas escuras aparecem sozinhas.</p>
+  <p class="voce" id="voce">Toque no céu. Você é o falcão.</p>
+</div>
+
+<script>
+(() => {
+const cv = document.getElementById('ceu'), g = cv.getContext('2d');
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const COR = { alto: css('--ceu-alto'), meio: css('--ceu-meio'), baixo: css('--ceu-baixo'), brasa: css('--brasa'), terra: css('--terra'), ave: css('--ave') };
+const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---- mundo -----------------------------------------------------------------
+const N = Math.min(innerWidth, innerHeight) < 600 ? 1500 : 2300;
+document.getElementById('n').textContent = N.toLocaleString('pt-BR');
+const X = 620, Y = 300, Z = 320, R = 38, R2 = R * R, K = 7;
+const GX = Math.ceil(2 * X / R), GY = Math.ceil(2 * Y / R), GZ = Math.ceil(2 * Z / R), NC = GX * GY * GZ;
+const px = new Float32Array(N), py = new Float32Array(N), pz = new Float32Array(N);
+const vx = new Float32Array(N), vy = new Float32Array(N), vz = new Float32Array(N);
+const vira = new Float32Array(N);              // quanto a ave está inclinando (vira asa = fica mais escura)
+const cel = new Int32Array(N), ini = new Int32Array(NC + 1), itens = new Int32Array(N), balde = new Uint8Array(N);
+const sx = new Float32Array(N), sy = new Float32Array(N), tx = new Float32Array(N), ty = new Float32Array(N);
+
+let sem = 20261124; const rnd = () => { sem = (sem * 1664525 + 1013904223) >>> 0; return sem / 4294967296; };
+for (let i = 0; i < N; i++) {
+  const a = rnd() * 6.283, r = 150 * Math.cbrt(rnd()), h = (rnd() - .5) * 2;
+  px[i] = Math.cos(a) * r * 1.6; py[i] = h * 70; pz[i] = Math.sin(a) * r;
+  vx[i] = 3 + rnd(); vy[i] = (rnd() - .5); vz[i] = (rnd() - .5) * 2;
+}
+
+const falcao = { x: 0, y: 0, ativo: false, auto: 0, sxp: 0, syp: 0, ultimo: -1e9 };
+const nd = new Float32Array(K), ni = new Int32Array(K);
+let t = 0;
+
+function passo() {
+  t += 1;
+  // grade espacial (ordenação por contagem)
+  ini.fill(0);
+  for (let i = 0; i < N; i++) {
+    const cx = Math.min(GX - 1, Math.max(0, ((px[i] + X) / R) | 0)), cy = Math.min(GY - 1, Math.max(0, ((py[i] + Y) / R) | 0)), cz = Math.min(GZ - 1, Math.max(0, ((pz[i] + Z) / R) | 0));
+    const c = cx + GX * (cy + GY * cz); cel[i] = c; ini[c + 1]++;
+  }
+  for (let c = 0; c < NC; c++) ini[c + 1] += ini[c];
+  const pos = ini.slice(0, NC);
+  for (let i = 0; i < N; i++) itens[pos[cel[i]]++] = i;
+
+  // o ponto que o bando persegue passeia devagar pelo céu
+  const ax = larguraUtil * Math.sin(t * .0047), ay = 55 * Math.sin(t * .0071 + 1) + 5, az = 40 + 110 * Math.cos(t * .0059);
+
+  for (let i = 0; i < N; i++) {
+    const x = px[i], y = py[i], z = pz[i];
+    const c = cel[i], cx = c % GX, cy = ((c / GX) | 0) % GY, cz = (c / (GX * GY)) | 0;
+    let k = 0;
+    for (let dz = -1; dz <= 1; dz++) { const zz = cz + dz; if (zz < 0 || zz >= GZ) continue;
+      for (let dy = -1; dy <= 1; dy++) { const yy = cy + dy; if (yy < 0 || yy >= GY) continue;
+        for (let dx = -1; dx <= 1; dx++) { const xx = cx + dx; if (xx < 0 || xx >= GX) continue;
+          const cc = xx + GX * (yy + GY * zz);
+          for (let p = ini[cc], f = ini[cc + 1]; p < f; p++) {
+            const j = itens[p]; if (j === i) continue;
+            const ex = px[j] - x, ey = py[j] - y, ez = pz[j] - z, d = ex * ex + ey * ey + ez * ez;
+            if (d > R2) continue;
+            if (k < K) { let q = k++; while (q > 0 && nd[q - 1] > d) { nd[q] = nd[q - 1]; ni[q] = ni[q - 1]; q--; } nd[q] = d; ni[q] = j; }
+            else if (d < nd[K - 1]) { let q = K - 1; while (q > 0 && nd[q - 1] > d) { nd[q] = nd[q - 1]; ni[q] = ni[q - 1]; q--; } nd[q] = d; ni[q] = j; }
+          }
+        } } }
+    let fx = 0, fy = 0, fz = 0;
+    if (k) {
+      let mx = 0, my = 0, mz = 0, wx = 0, wy = 0, wz = 0;
+      for (let q = 0; q < k; q++) { const j = ni[q];
+        mx += px[j]; my += py[j]; mz += pz[j]; wx += vx[j]; wy += vy[j]; wz += vz[j];
+        if (nd[q] < 400) { const d = Math.sqrt(nd[q]) + .01, s = (20 - d) / d * .075; fx -= (px[j] - x) * s; fy -= (py[j] - y) * s; fz -= (pz[j] - z) * s; }
+      }
+      const u = 1 / k;
+      fx += (mx * u - x) * .0022 + (wx * u - vx[i]) * .055;
+      fy += (my * u - y) * .0022 + (wy * u - vy[i]) * .055;
+      fz += (mz * u - z) * .0022 + (wz * u - vz[i]) * .055;
+    }
+    fx += (ax - x) * .00055; fy += (ay - y) * .0011; fz += (az - z) * .0007;
+    if (y > 150) fy -= (y - 150) * .02; else if (y < -130) fy += (-130 - y) * .02;
+    const bx = larguraUtil + 70; if (x > bx) fx -= (x - bx) * .012; else if (x < -bx) fx -= (x + bx) * .012;
+    if (z < -120) fz += (-120 - z) * .012;   // nem no chão, nem fora do céu
+    if (falcao.ativo) {                         // o falcão: foge quem está perto dele na tela
+      const ex = x - falcao.x, ey = y - falcao.y, d2 = ex * ex + ey * ey;
+      if (d2 < 32400) { const d = Math.sqrt(d2) + .01, s = (1 - d / 180); const m = s * s * 1.5 / d; fx += ex * m; fy += ey * m; fz += (z > 0 ? 1 : -1) * s * .25; }
+    }
+    let nx = vx[i] + fx, ny = vy[i] + fy * .8, nz = vz[i] + fz;
+    const v = Math.sqrt(nx * nx + ny * ny + nz * nz) + 1e-6, alvo = Math.min(6.4, Math.max(3.4, v)), e = alvo / v;
+    nx *= e; ny *= e; nz *= e;
+    const curva = Math.sqrt(fx * fx + fy * fy + fz * fz);
+    vira[i] += (Math.min(1, curva * 2.6) - vira[i]) * .12;
+    vx[i] = nx; vy[i] = ny; vz[i] = nz;
+  }
+  for (let i = 0; i < N; i++) { px[i] += vx[i]; py[i] += vy[i]; pz[i] += vz[i]; }
+}
+
+// ---- desenho ---------------------------------------------------------------
+let larguraUtil = 300;
+let W = 0, H = 0, dpr = 1, foco = 1, cxT = 0, cyT = 0, ceu = null, estrelas = [], arvores = [];
+const D = 760;
+function medir() {
+  dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+  foco = Math.max(Math.min(W / 1.25, H / .78) * 1.05, H / 1.35); cxT = W / 2; cyT = H * .45;
+  larguraUtil = Math.min(260, Math.max(20, W * .5 / (foco / D) - 190));
+  ceu = g.createLinearGradient(0, 0, 0, H);
+  ceu.addColorStop(0, COR.alto); ceu.addColorStop(.48, COR.meio); ceu.addColorStop(.86, COR.baixo); ceu.addColorStop(1, COR.brasa);
+  let s = 7; const r = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+  estrelas = Array.from({ length: 70 }, () => ({ x: r() * W, y: r() * H * .42, a: .15 + r() * .6, f: 1 + r() * 3 }));
+  arvores = []; for (let x = -20; x < W + 40; x += 26 + r() * 70) arvores.push({ x, h: 14 + r() * 46, s: r() });
+}
+function chao() {
+  const base = H - Math.max(26, H * .055);
+  g.fillStyle = COR.terra; g.beginPath(); g.moveTo(0, H); g.lineTo(0, base);
+  for (let x = 0; x <= W; x += 24) g.lineTo(x, base - 7 * Math.sin(x * .006) - 4 * Math.sin(x * .021 + 2));
+  g.lineTo(W, H); g.fill();
+  g.strokeStyle = COR.terra; g.lineCap = 'round';
+  for (const a of arvores) {                    // árvores secas no horizonte
+    const y0 = base - 7 * Math.sin(a.x * .006) - 4 * Math.sin(a.x * .021 + 2) + 3;
+    const galho = (x, y, ang, comp, larg, n) => {
+      const x2 = x + Math.cos(ang) * comp, y2 = y + Math.sin(ang) * comp;
+      g.lineWidth = larg; g.beginPath(); g.moveTo(x, y); g.lineTo(x2, y2); g.stroke();
+      if (n) { galho(x2, y2, ang - .45 - a.s * .3, comp * .66, larg * .62, n - 1); galho(x2, y2, ang + .38 + a.s * .25, comp * .7, larg * .62, n - 1); }
+    };
+    galho(a.x, y0, -Math.PI / 2 + (a.s - .5) * .2, a.h * .42, Math.max(1, a.h * .06), a.h > 30 ? 4 : 3);
+  }
+}
+function desenhar() {
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.fillStyle = ceu; g.fillRect(0, 0, W, H);
+  g.fillStyle = COR.brasa;
+  for (const e of estrelas) { g.globalAlpha = e.a * (.6 + .4 * Math.sin(t * .02 * e.f + e.x)); g.fillRect(e.x, e.y, 1.3, 1.3); }
+  g.globalAlpha = 1;
+  // lua crescente
+  const lx = W * .84, ly = H * .2, lr = Math.max(9, Math.min(W, H) * .022);
+  g.fillStyle = COR.brasa; g.beginPath(); g.arc(lx, ly, lr, 0, 6.283); g.fill();
+  g.fillStyle = COR.alto; g.beginPath(); g.arc(lx + lr * .42, ly - lr * .16, lr * .92, 0, 6.283); g.fill();
+
+  for (let i = 0; i < N; i++) {
+    const e = foco / (pz[i] + D), x = cxT + px[i] * e, y = cyT + py[i] * e, c = 1.05 * e;
+    sx[i] = x; sy[i] = y; tx[i] = x - vx[i] * c; ty[i] = y - vy[i] * c - Math.abs(vz[i]) * c * .15;
+    const prof = pz[i] < -90 ? 2 : pz[i] < 110 ? 1 : 0, esc = vira[i] > .55 ? 2 : vira[i] > .25 ? 1 : 0;
+    balde[i] = prof * 3 + esc;
+  }
+  g.strokeStyle = COR.ave; g.lineCap = 'round';
+  const u = foco / D;
+  for (let b = 0; b < 9; b++) {
+    const prof = (b / 3) | 0, esc = b % 3;
+    g.lineWidth = (.95 + prof * .4 + esc * .7) * u * 1.2; g.globalAlpha = .42 + esc * .24 + prof * .08;
+    g.beginPath();
+    for (let i = 0; i < N; i++) if (balde[i] === b) { g.moveTo(sx[i], sy[i]); g.lineTo(tx[i], ty[i]); }
+    g.stroke();
+  }
+  g.globalAlpha = 1;
+  if (falcao.ativo) {                           // o falcão, de asas abertas
+    const x = falcao.sxp, y = falcao.syp, s = Math.max(9, foco * .018), bate = Math.sin(t * .25) * .25;
+    g.strokeStyle = COR.ave; g.lineWidth = s * .22; g.lineJoin = 'round'; g.beginPath();
+    g.moveTo(x - s * 1.5, y - s * (.35 + bate)); g.quadraticCurveTo(x - s * .6, y - s * .5, x, y);
+    g.quadraticCurveTo(x + s * .6, y - s * .5, x + s * 1.5, y - s * (.35 + bate)); g.stroke();
+  }
+  chao();
+}
+
+// ---- falcão: o dedo, ou sozinho quando ninguém toca -------------------------
+function mirar(clientX, clientY) {
+  const r = cv.getBoundingClientRect(), x = clientX - r.left, y = clientY - r.top, e = foco / D;
+  falcao.sxp = x; falcao.syp = y; falcao.x = (x - cxT) / e; falcao.y = (y - cyT) / e; falcao.ativo = true; falcao.ultimo = t;
+}
+let apertado = false;
+cv.addEventListener('pointerdown', (e) => { apertado = true; cv.setPointerCapture(e.pointerId); mirar(e.clientX, e.clientY); document.getElementById('voce').textContent = 'O bando abre onde você passa.'; });
+cv.addEventListener('pointermove', (e) => { if (apertado || e.pointerType === 'mouse') mirar(e.clientX, e.clientY); });
+const soltar = () => { apertado = false; };
+cv.addEventListener('pointerup', soltar); cv.addEventListener('pointercancel', soltar);
+cv.addEventListener('pointerleave', () => { if (!apertado) falcao.ultimo = t - 1e4; });
+function falcaoSozinho() {
+  if (t - falcao.ultimo < 150) return;          // alguém está no comando
+  const ciclo = t % 900;
+  if (ciclo < 240) {                            // um rasante a cada 15 segundos, atravessando o bando
+    let mx = 0, my = 0; for (let i = 0; i < N; i += 16) { mx += px[i]; my += py[i]; } mx /= N / 16; my /= N / 16;
+    const p = ciclo / 240, lado = ((t / 900) | 0) % 2 ? 1 : -1;
+    falcao.x = mx + lado * (p - .5) * 900; falcao.y = my + Math.sin(p * 3.14) * 60 - 20;
+    const e = foco / D; falcao.sxp = cxT + falcao.x * e; falcao.syp = cyT + falcao.y * e; falcao.ativo = true;
+  } else falcao.ativo = false;
+}
+
+// ---- laço ------------------------------------------------------------------
+let rodando = !calmo;
+const botao = document.getElementById('pausa');
+function rotulo() { botao.textContent = rodando ? 'Pausar' : 'Soltar o bando'; botao.setAttribute('aria-pressed', String(!rodando)); }
+botao.addEventListener('click', () => { rodando = !rodando; rotulo(); });
+medir(); addEventListener('resize', medir);
+for (let i = 0; i < 260; i++) passo();          // o bando já chega formado
+rotulo();
+(function quadro() { if (rodando) { falcaoSozinho(); passo(); } desenhar(); requestAnimationFrame(quadro); })();
+})();
+</script>
