@@ -35,7 +35,7 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 566 palavras.
+Tamanho: 590 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 
@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro.
+Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
 
-Tamanho: 567 palavras.
+Tamanho: 515 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

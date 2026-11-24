@@ -30,6 +30,8 @@
 | Ambiente de nuvem "x1-plantas" | Ambiente pessoal | Criado em 22/11: o script de preparação instala o motor 3D (`npm install` em `video/`) em toda conversa nova. Rede limitada: fontes do Google, OpenArt e instaladores de pacote. Para usar, escolher "x1-plantas" no menu de ambiente |
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
 | `ajudante` | Agente, **Haiku** | Integrado em 22/11: tarefa simples e pessoal do dono, não dos agentes. Não toca o público nem arquivo do projeto |
+| `planejador` | Agente, **Opus** | Integrado em 24/11 (pedido do dono): passo a passo de qualquer trabalho com mais de 3 passos: agora, depois, esperando o dono, não fazer. Dono do `pedidos/PLANO.md`. Não executa nem decide pelo dono |
+| `organizador` | Agente, **Opus** | Integrado em 24/11 (pedido do dono): separa um monte (tarefas, decisões, arquivos, cartões) em grupos de 3 a 7 com nome, critério e ordem. Só propõe, em `pedidos/anexos/`; não move nem apaga |
 
 Quem faz cada tipo de pedido, e com qual modelo: [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md). A conversa principal interpreta e confere; os agentes executam.
 
@@ -50,6 +52,8 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 | `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
 | `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
+| `planejador` (Opus) | leitura do projeto, `pedido.py listar`, `git log`; escreve só o `pedidos/PLANO.md` | |
+| `organizador` (Opus) | leitura do projeto; escreve só a proposta em `pedidos/anexos/` | |
 
 **Vetados (não usar):** **cass** (Coding Agent Session Search, de Jeffrey Emanuel), 22/11/2026. A licença (MIT com adendo, linhas 18 a 39) nega direitos à Anthropic e à OpenAI e proíbe hospedar e executar o programa para elas ou num sistema automático delas. Leitura cautelosa nossa, não parecer jurídico: nesta nuvem, veto claro; Claude Code no computador do dono, dúvida, não usamos; o dono à mão, no computador dele, pode. Ficha `2151-integrar-o-cass`.
 
