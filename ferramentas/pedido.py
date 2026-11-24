@@ -12,7 +12,8 @@ Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o úl
                                                            grava uma lição no contexto/<papel>.md e em pedidos/LICOES.md
      python3 ferramentas/pedido.py quadro                  tira do contexto/QUADRO.md o aviso mais antigo se passar de 5 ou do tamanho
      python3 ferramentas/pedido.py indice                  regenera pedidos/FILA.md
-     python3 ferramentas/pedido.py conferir                falha se alguma ficha estiver sem campo obrigatório
+     python3 ferramentas/pedido.py conferir                falha se alguma ficha estiver sem campo obrigatório; avisa (sem falhar) da auditoria atrasada
+     python3 ferramentas/pedido.py auditar                 lista as fichas fechadas que nenhuma auditoria leu (pedidos/AUDITORIAS.md)
 
 A ficha é a fonte única do pedido: o histórico e a fila saem dela, para ninguém escrever a mesma coisa três vezes.
 """
@@ -31,7 +32,7 @@ VAZIO = "(a preencher)"
 APRENDI = "O que aprendi"  # obrigatório só em ficha fechada de 23/11/2026 em diante (as antigas não quebram)
 DESDE_APRENDI = "2026-11-23"
 ORIGENS = ("dono", "prova", "auditoria", "juri", "maestro", "ficha")
-LIMITE_CONTEXTO = 3500  # o mesmo do checar.py: perto do limite, recusa e manda consolidar (nunca sobe o limite)
+LIMITE_CONTEXTO = 5000  # o mesmo do checar.py (subiu de 3500 em 24/11/2026, com o sim do dono: cartão p21)
 
 
 def fichas():
@@ -99,13 +100,38 @@ def listar(mostrar=True, estado="aberta"):
     return linhas
 
 
+def sem_auditoria():
+    """Fichas fechadas que nenhuma auditoria leu. Conta ficha, não linha (as 3 de 22/11 escaparam pela conta de totais):
+    vale como auditada a ficha cujo começo do nome (15 caracteres, 2026-11-22-2237) está numa linha de tabela de
+    pedidos/AUDITORIAS.md ou na linha "Fichas cobertas por auditorias anteriores". Citar a ficha no texto corrido não conta."""
+    arq = PEDIDOS / "AUDITORIAS.md"
+    lidas = "\n".join(l for l in (arq.read_text(encoding="utf-8") if arq.exists() else "").splitlines()
+                      if l.startswith(("|", "Fichas cobertas por auditorias")))
+    return [f for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada") and f.name[:15] not in lidas]
+
+
+def aviso_auditoria():
+    """A frase do aviso quando há 3 ou mais fichas fechadas sem auditoria; senão, vazio."""
+    faltam = sem_auditoria()
+    if len(faltam) < 3:
+        return ""
+    return (f"HORA DA AUDITORIA: {len(faltam)} fichas fechadas sem auditoria ({', '.join(f.name[:15] for f in faltam)}). Chame o agente "
+            "`supervisor` (Fable) com elas (`python3 ferramentas/pedido.py auditar`); a auditoria escreve o código de cada uma na tabela de pedidos/AUDITORIAS.md.")
+
+
+def auditar():
+    faltam = sem_auditoria()
+    print("\n".join(str(f.relative_to(RAIZ)) for f in faltam) or "nenhuma ficha fechada sem auditoria")
+    print(f"{len(faltam)} sem auditoria" + (" (com 3 ou mais é hora da auditoria)" if len(faltam) < 3 else ": HORA DA AUDITORIA"))
+
+
 def quadro():
     """Deixa no quadro o bloco "Agora" e os 5 avisos mais novos, dentro de 3.500 caracteres (o mais antigo sai: já está no histórico)."""
     q = RAIZ / "contexto" / "QUADRO.md"
     t = q.read_text(encoding="utf-8")
     while True:
         avisos = [m.start() for m in re.finditer(r"^## \d", t, re.M)]
-        if len(avisos) <= 1 or (len(avisos) <= 5 and len(t) <= 3500):
+        if len(avisos) <= 1 or (len(avisos) <= 5 and len(t) <= 6000):
             break
         print("saiu do quadro (já está no histórico):", t[avisos[-1]:].split("\n", 1)[0])
         t = t[:avisos[-1]].rstrip() + "\n"
@@ -202,11 +228,8 @@ def fechar(nome, virou):
     indice()
     quadro()
     print("fechada; linha escrita no CONTEXTO-HISTORICO.md. Falta o aviso no contexto/QUADRO.md (depois rode `pedido.py quadro`, que tira o mais antigo se passar do limite) e marque \"Feito\" em pedidos/PLANO.md.")
-    auditadas = len(re.findall(r"^\| \d", (PEDIDOS / "AUDITORIAS.md").read_text(encoding="utf-8"), re.M)) if (PEDIDOS / "AUDITORIAS.md").exists() else 0
-    fechadas = sum(1 for f in fichas() if (campo(f.read_text(encoding="utf-8"), "Estado") or "").startswith("fechada"))
-    if fechadas >= 3 * (auditadas + 1):
-        print(f"HORA DA AUDITORIA: {fechadas} fichas fechadas e {auditadas} auditorias. Chame o agente `supervisor` (Fable) "
-              "com as fichas fechadas desde a última (`python3 ferramentas/pedido.py listar --fechadas`).")
+    if aviso_auditoria():
+        print(aviso_auditoria())
 
 
 def indice():
@@ -234,6 +257,8 @@ def conferir():
         if (campo(t, "Estado") or "").startswith("fechada") and f.name[:10] >= DESDE_APRENDI and licoes_do_campo(campo(t, APRENDI)) is None:
             erros.append(f"{f.name}: fechada sem '{APRENDI}' no formato 'papel: lição' ou 'nada novo'")
     print("\n".join("  " + e for e in erros))
+    if aviso_auditoria():  # aviso, não erro: não trava o salvamento
+        print("[AVISO] " + aviso_auditoria())
     return not erros
 
 
@@ -259,6 +284,8 @@ if __name__ == "__main__":
         quadro()
     elif cmd == "indice":
         indice()
+    elif cmd == "auditar":
+        auditar()
     elif cmd == "conferir":
         indice()
         sys.exit(0 if conferir() else 1)

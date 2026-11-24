@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 51 documentos
+## Os 52 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -23,7 +23,7 @@ Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md
 
 Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano).
 
-Tamanho: 6654 palavras.
+Tamanho: 6681 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1209 palavras.
+Tamanho: 1254 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 11624 palavras.
+Tamanho: 11837 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -105,13 +105,19 @@ Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; l
 
 Tamanho: 9413 palavras.
 
+### [Conferência técnica do Arquiteto: página "A parede que não pode ter janela" (passo D19), 24/11/2026](anexos/conferencia-arquiteto-parede-sem-janela-2026-11-24.md)
+
+Conferido contra os dados da C01, E03 e F01 (recuo esquerdo 0,0 m = divisa; móveis por posição) e as prévias; o validador dá 0 erros nas 3 casas. Texto conferido: `pagina-parede-sem-janela-texto.md`.
+
+Tamanho: 594 palavras.
+
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
-Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro).
+Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 2968 palavras.
+Tamanho: 3866 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -261,7 +267,7 @@ Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou
 
 Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
 
-Tamanho: 1979 palavras.
+Tamanho: 2180 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 

@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 1090 palavras.
+Tamanho: 1120 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 

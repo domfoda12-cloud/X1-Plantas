@@ -1,43 +1,76 @@
 // Gera as imagens dos carrosséis, do post de imagem e das capas dos reels.
 //
 // Uso, na raiz do projeto:
-//   NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs            gera tudo
-//   NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs post-08     gera só os posts cujo nome contém "post-08"
+//   NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs                       gera tudo
+//   NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs post-08               gera só os posts cujo nome contém "post-08"
+//   NODE_PATH=$(npm root -g) node instagram/posts/gerar-imagens.cjs post-02 --saida <pasta>  grava em outra pasta (rascunho)
 //
-// As imagens das plantas vêm de animacoes-3d/plantas/<pasta>/ (só leitura).
-// Quando uma planta ainda não tem 3D, a tela sai com um aviso amarelo "FALTA O 3D".
-// Assim que o arquivo existir, rode o script de novo: a tela sai com a imagem certa.
+// As casas são as do lançamento (ebook/config.json, casas_lancamento). Os números (área, quartos, banheiros,
+// lote e mínimo) vêm dos dados do validador (ebook/plantas/dados/<ID>.json), nunca digitados aqui (passo F20, 24/11/2026).
+// As imagens 2D vêm de animacoes-3d/plantas-2d/<pasta>/ (python3 ferramentas/imagens2d.py C01 E03 F01) e a casa em 3D
+// parada, de ebook/visual/3d/<ID>.jpg. Quando falta um arquivo, a tela sai com um aviso amarelo "FALTA A IMAGEM".
 //
-// Saída: instagram/posts/imagens/<post>/NN.png (1080 x 1350; capas de reel 1080 x 1920).
+// Saída: instagram/posts/imagens/<post>/NN.png (1080 x 1350; capas de reel 1080 x 1920, em imagens/capas-reels/).
 
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
 const RAIZ = path.resolve(__dirname, '..', '..');
-// Imagens 2D validadas (ferramentas/imagens2d.py). O 3D antigo não é usado: ele mostra outro desenho da C01.
+// Imagens 2D validadas (ferramentas/imagens2d.py) e a 3D parada do nosso motor.
 const PLANTAS = path.join(RAIZ, 'animacoes-3d', 'plantas-2d');
-const SAIDA = path.join(__dirname, 'imagens');
+const TRES_D = path.join(RAIZ, 'ebook', 'visual', '3d');
+const DADOS = path.join(RAIZ, 'ebook', 'plantas', 'dados');
+const iSaida = process.argv.indexOf('--saida');
+const SAIDA = iSaida > 0 ? path.resolve(process.argv[iSaida + 1]) : path.join(__dirname, 'imagens');
 
 const COR = { azul: '#0B4FA8', escuro: '#083B80', claro: '#BFD4F2', amarelo: '#FFC857', ok: '#7EE2A8', ruim: '#FF9C8A' };
 const MARCA = 'Plantas de Casas';
-const AVISO = 'Planta de referência, não é projeto executivo. A obra precisa de responsável técnico. Medidas provisórias.';
+const AVISO = 'Planta de referência, não é projeto executivo. A obra precisa de responsável técnico.';
+const SELO = 'Imagem ilustrativa';
 
 // ---------------------------------------------------------------------------
-// Plantas usadas nos posts (dados do ebook/catalogo.md)
+// As casas do lançamento: números do validador, textos do instagram/posts/POSTS.md
 // ---------------------------------------------------------------------------
-const P = {
-  compacta: { id: 'C01', nome: 'Casa Compacta', pasta: 'casa-compacta', area: '55 m²', quartos: '2 quartos', banhos: '1 banheiro', lote: 'a partir de 8 x 15 m', para: 'Primeira casa', destaque: '2 quartos iguais e serviço coberto, com pouco corredor' },
-  estreita: { id: 'E01', nome: 'Casa Estreita', pasta: 'casa-estreita', area: '58 m²', quartos: '2 quartos (1 suíte)', banhos: '2 banheiros', lote: 'a partir de 8 x 25 m', para: 'Lote de 8 m de frente', destaque: 'Garagem na frente e todos os cômodos abrindo para o corredor coberto' },
-  familia: { id: 'F03', nome: 'Casa Família', pasta: 'casa-familia', area: '78 m²', quartos: '3 quartos (1 suíte)', banhos: '2 banheiros', lote: 'a partir de 11 x 15 m', para: 'Família com filhos', destaque: 'Suíte para o casal e varanda na frente' },
+// Só o texto fica aqui (vetado pelo Revisor em 24/11, pedidos/anexos/veto-posts-2-4-7-2026-11-24.md).
+// "para" é a linha "Para quem" da tabela do post 2.
+const TEXTO = {
+  C01: { destaque: 'sem corredor comprido, um hall curto distribui e a varanda recebe', para: 'Primeira casa' },
+  E03: { destaque: 'um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa', para: 'Lote estreito' },
+  F01: { destaque: 'os 3 quartos nos fundos, longe da rua, e sala com mesa de 4', para: 'Família com filhos' },
 };
+const slug = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const dec = (x) => x.toFixed(1).replace('.', ',');
+function casa(id) {
+  const d = JSON.parse(fs.readFileSync(path.join(DADOS, `${id}.json`), 'utf8'));
+  const m = d.validacao.metricas;
+  if (!TEXTO[id]) throw new Error(`${id} está em casas_lancamento mas não tem texto em TEXTO (gerar-imagens.cjs)`);
+  const [lf, lfu] = m.lote_comercial, [mf, mfu] = m.lote;
+  return {
+    id, nome: d.nome, pasta: slug(d.nome), ...TEXTO[id],
+    m2: Math.round(m.area_fechada), // como o n0 do validador: 70,6 vira 71
+    area: `${Math.round(m.area_fechada)} m²`,
+    quartos: d.quartos_txt.replace(' (+1 depois)', ''),
+    banhos: `${d.banheiros} banheiro${d.banheiros === 1 ? '' : 's'}`,
+    lote: `${lf} x ${lfu} m`,
+    minimo: `${dec(mf)} x ${dec(mfu)} m`,
+  };
+}
+const LANCAMENTO = JSON.parse(fs.readFileSync(path.join(RAIZ, 'ebook', 'config.json'), 'utf8')).casas_lancamento;
+const CASAS = Object.fromEntries(LANCAMENTO.map((id) => [id, casa(id)]));
+function de(id) {
+  if (!CASAS[id]) throw new Error(`${id} não está em casas_lancamento (ebook/config.json): o post não pode mostrar casa fora do e-book`);
+  return CASAS[id];
+}
+const P = { compacta: de('C01'), fita: de('E03'), familia: de('F01') };
 const ARQ = { blueprint: '01-blueprint.png', humanizada: '02-planta-humanizada.png', perspectiva: '03-fachada.png', lateral: '04-lote.png' };
+const COM_MOVEIS = new Set(['humanizada', '3d']); // imagem parada com móveis leva o selo "Imagem ilustrativa"
 
 const faltando = new Set();
 function arquivo(pl, tipo) {
-  const f = path.join(PLANTAS, pl.pasta, ARQ[tipo]);
+  const f = tipo === '3d' ? path.join(TRES_D, `${pl.id}.jpg`) : path.join(PLANTAS, pl.pasta, ARQ[tipo]);
   if (fs.existsSync(f)) return 'file://' + f;
-  faltando.add(`${pl.id} ${pl.nome}: animacoes-3d/plantas-2d/${pl.pasta}/${ARQ[tipo]}`);
+  faltando.add(`${pl.id} ${pl.nome}: ${path.relative(RAIZ, f)}`);
   return null;
 }
 
@@ -48,17 +81,18 @@ const y = (t) => `<span class="y">${t}</span>`;
 
 function falta(pl, tipo, w, h) {
   return `<div class="falta" style="width:${w}px;height:${h}px"><div>
-    <div class="falta-t">FALTA O 3D</div>
+    <div class="falta-t">FALTA A IMAGEM</div>
     <div class="falta-n">${pl.id} · ${pl.nome}</div>
-    <div class="falta-a">animacoes-3d/plantas/${pl.pasta}/<br>${ARQ[tipo]}</div></div></div>`;
+    <div class="falta-a">${tipo === '3d' ? `ebook/visual/3d/${pl.id}.jpg` : `animacoes-3d/plantas-2d/${pl.pasta}/<br>${ARQ[tipo]}`}</div></div></div>`;
 }
 
-// Imagem de uma planta num cartão. fit: cover ou contain.
-function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true } = {}) {
+// Imagem de uma planta num cartão (object-fit: cover). Planta mobiliada e 3D levam o selo "Imagem ilustrativa".
+function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true, fit = 'cover', fundo = '' } = {}) {
   const src = arquivo(pl, tipo);
   if (!src) return falta(pl, tipo, w, h);
-  return `<div class="card${borda ? '' : ' sem-borda'}" style="width:${w}px;height:${h}px;border-radius:${raio}px">
-    <img src="${src}" style="width:100%;height:100%;object-fit:cover;object-position:${pos}"></div>`;
+  const selo = COM_MOVEIS.has(tipo) ? `<span class="selo${w < 420 ? ' peq' : ''}">${SELO}</span>` : '';
+  return `<div class="card${borda ? '' : ' sem-borda'}" style="width:${w}px;height:${h}px;border-radius:${raio}px${fundo ? `;background:${fundo}` : ''}">
+    <img src="${src}" style="width:100%;height:100%;object-fit:${fit};object-position:${pos}">${selo}</div>`;
 }
 
 // Blueprint da Casa Compacta com recorte (em pixels da imagem original 2000 x 2500) e marcações.
@@ -85,7 +119,7 @@ const marca = {
 };
 const defs = `<defs><marker id="ponta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="${COR.amarelo}"/></marker></defs>`;
 
-const chips = (pl) => `<div class="chips">${[pl.area, pl.quartos, pl.banhos, 'lote ' + pl.lote].map((c) => `<span class="chip">${c}</span>`).join('')}</div>`;
+const chips = (pl) => `<div class="chips">${[pl.area, pl.quartos, pl.banhos, `cabe num lote de ${pl.lote}`, `no mínimo ${pl.minimo}`].map((c) => `<span class="chip">${c}</span>`).join('')}</div>`;
 
 // Moldura de uma tela 1080 x 1350
 function tela({ etiqueta = '', n, total, corpo, capa = false, aviso = false, alto = 1350 }) {
@@ -103,7 +137,7 @@ function telaCTA(total, { titulo = 'Quer essa planta?', texto } = {}) {
     corpo: `<div class="cta">
       <div class="t1" style="text-align:center">${titulo}</div>
       <div class="botao">Comente <b>PLANTA</b></div>
-      <div class="txt" style="text-align:center;max-width:820px">${texto || 'e eu te mando a <b>planta humanizada da Casa Compacta</b> de graça no WhatsApp.'}</div>
+      <div class="txt" style="text-align:center;max-width:820px">${texto || `e eu te mando a <b>planta humanizada da ${P.compacta.nome}</b> de graça no WhatsApp.`}</div>
       <div class="mini">${img(P.compacta, 'humanizada', 300, 375, { raio: 16 })}${img(P.compacta, 'blueprint', 300, 375, { raio: 16 })}${img(P.compacta, 'perspectiva', 300, 375, { raio: 16 })}</div>
     </div>`,
   });
@@ -116,25 +150,26 @@ const posts = {};
 
 // Post 2: três plantas lado a lado
 posts['post-02-tres-plantas'] = () => {
-  const lista = [P.compacta, P.estreita, P.familia];
+  const lista = LANCAMENTO.map(de);
   const T = 6;
   const capa = tela({
-    etiqueta: 'compare antes de escolher', n: 1, total: T, capa: true,
-    corpo: `<div class="t1">3 casas, 3 terrenos.<br>Qual ${y('cabe no seu')}?</div>
+    etiqueta: 'compare antes de escolher', n: 1, total: T, capa: true, aviso: true,
+    corpo: `<div class="t1">${lista.length} casas, ${lista.length} terrenos.<br>Qual ${y('cabe no seu')}?</div>
       <div class="trio">${lista.map((pl) => `<div class="trio-i">${img(pl, 'humanizada', 300, 375, { raio: 16 })}<div class="trio-l"><b>${pl.lote.replace(' m', '')}</b><br>${pl.area}</div></div>`).join('')}</div>
       <div class="txt">Área, quartos e o terreno mínimo de cada uma.</div>`,
   });
   const telas = lista.map((pl, i) => tela({
-    etiqueta: `planta ${i + 1} de 3 · ${pl.id}`, n: i + 2, total: T, aviso: true,
+    etiqueta: `planta ${i + 1} de ${lista.length} · ${pl.id}`, n: i + 2, total: T, aviso: true,
     corpo: `<div class="t2">${pl.nome}</div>${chips(pl)}
-      <div class="centro">${img(pl, 'humanizada', 600, 750)}</div>
+      <div class="centro">${img(pl, 'humanizada', 600, 750, { fundo: '#fff' })}</div>
       <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>`,
   }));
-  const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Lote mínimo', 'lote'], ['Para quem', 'para']];
+  const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Cabe no lote', 'lote'], ['No mínimo', 'minimo'], ['Para quem', 'para']];
+  const curto = (pl) => pl.nome.replace(/^Casa /, '').replace(' ', '<br>');
   const tabela = tela({
     etiqueta: 'lado a lado', n: 5, total: T, aviso: true,
     corpo: `<div class="t2">Qual combina com ${y('o seu terreno')}?</div>
-      <table class="tab"><tr><th></th>${lista.map((pl) => `<th>${pl.nome.replace('Casa ', '')}</th>`).join('')}</tr>
+      <table class="tab"><tr><th></th>${lista.map((pl) => `<th>${curto(pl)}</th>`).join('')}</tr>
       ${linhas.map(([rot, k]) => `<tr><td class="rot">${rot}</td>${lista.map((pl) => `<td>${String(pl[k]).replace(/ (quartos|banheiros?)$/, '')}</td>`).join('')}</tr>`).join('')}</table>
       <div class="txt peq">O lote mínimo é frente x fundo. Os recuos mudam de cidade para cidade: confira na sua prefeitura.</div>`,
   });
@@ -202,10 +237,11 @@ posts['post-05-checklist-pedreiro'] = () => {
   ];
 };
 
-// Post 7: Casa Família, imagem única
+// Post 7: Casa Família Compacta, imagem única. A 3D parada (1400 x 1207) entra inteira no alto; a ficha fica embaixo.
 posts['post-07-casa-familia'] = () => [
-  `<div class="tela" style="height:1350px;padding:0">${img(P.familia, 'perspectiva', 1080, 1350, { raio: 0, borda: false })}
-    <div class="faixa"><div class="t2" style="margin:0">${P.familia.nome}</div>${chips(P.familia)}<div class="aviso" style="position:static;margin-top:14px">${AVISO}</div></div></div>`,
+  `<div class="tela" style="height:1350px;padding:0">${img(P.familia, '3d', 1080, 900, { raio: 0, borda: false, pos: 'center 55%' })}
+    <div class="ficha7"><div class="t2" style="margin:0">${P.familia.nome}</div>${chips(P.familia)}<div class="aviso" style="position:static">${AVISO}</div>
+    <div class="marca" style="margin-top:6px"><span class="logo"></span>${MARCA}</div></div></div>`,
 ];
 
 // Post 8: erros comuns na planta
@@ -242,7 +278,7 @@ posts['reserva-casa-compacta'] = () => {
   return [
     tela({
       etiqueta: 'planta da semana · C01', n: 1, total: T, capa: true,
-      corpo: `<div class="t1">${pl.nome}:<br>${y('55 m²')}, 2 quartos</div>${chips(pl)}<div class="centro">${img(pl, 'humanizada', 560, 700)}</div>`,
+      corpo: `<div class="t1">${pl.nome}:<br>${y(pl.area)}, ${pl.quartos}</div>${chips(pl)}<div class="centro">${img(pl, 'humanizada', 560, 700)}</div>`,
     }),
     vista(2, 'a planta com medidas', 'Blueprint com cotas', 'blueprint'),
     vista(3, 'a casa em 3D', 'Como ela fica por dentro', 'perspectiva'),
@@ -266,13 +302,22 @@ function capa(titulo, visual, sub = '') {
     <div class="capa-txt"><div class="t1">${titulo}</div>${sub ? `<div class="txt">${sub}</div>` : ''}</div></div>`;
 }
 const fundo = (pl, tipo) => img(pl, tipo, 1080, 1920, { raio: 0, borda: false });
-posts['capas-reels'] = () => [
-  capa(`Você consegue ver a casa ${y('antes de construir')}?`, fundo(P.compacta, 'perspectiva'), 'Casa Compacta · 55 m² · 2 quartos'),
-  capa(`2 quartos e 2 banheiros em ${y('8 m de frente')}`, fundo(P.estreita, 'perspectiva'), 'Casa Estreita · 70 m² · lote 8 x 30 m'),
-  capa(`POV: a planta virando ${y('casa 3D')}`, `<div class="split">${img(P.compacta, 'blueprint', 1080, 960, { raio: 0, borda: false })}${img(P.compacta, 'perspectiva', 1080, 960, { raio: 0, borda: false })}</div>`),
-  capa(`Comente ${y('PLANTA')} e receba isto de graça`, fundo(P.compacta, 'humanizada'), 'planta humanizada + blueprint + 3D'),
-];
-const NOMES_CAPAS = ['post-01-reel-passeio-compacta', 'post-04-reel-casa-estreita', 'post-06-reel-bastidor', 'post-09-reel-material-gratis'];
+// Cada capa é um "post" à parte: o filtro "post-04" gera só a capa do post 4. Saem em imagens/capas-reels/<nome>.png.
+const CAPAS = {
+  'post-01-reel-passeio-compacta': () => capa(`Você consegue ver a casa ${y('antes de construir')}?`, fundo(P.compacta, 'perspectiva'), `${P.compacta.nome} · ${P.compacta.area} · ${P.compacta.quartos}`),
+  // Post 4: texto fixo do roteiro (POSTS.md) e a 3D parada da Casa Fita inteira, dentro da parte que aparece na grade (3:4).
+  'post-04-reel-casa-fita': () => {
+    const pl = P.fita, frente = pl.lote.split(' x ')[0];
+    return `<div class="tela capa-reel capa4" style="height:1920px">
+      <div class="capa4-t t1">É possível ${y(`${pl.quartos} num lote de ${frente} metros`)} de frente?</div>
+      <div class="capa4-img">${img(pl, '3d', 760, 858, { raio: 22 })}</div>
+      <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de ${pl.lote} (no mínimo ${pl.minimo})</div>
+      <div class="aviso" style="position:static">${AVISO}</div></div></div>`;
+  },
+  'post-06-reel-bastidor': () => capa(`POV: a planta virando ${y('casa 3D')}`, `<div class="split">${img(P.compacta, 'blueprint', 1080, 960, { raio: 0, borda: false })}${img(P.compacta, 'perspectiva', 1080, 960, { raio: 0, borda: false })}</div>`),
+  'post-09-reel-material-gratis': () => capa(`Comente ${y('PLANTA')} e receba isto de graça`, fundo(P.compacta, 'humanizada'), 'planta humanizada + blueprint + 3D'),
+};
+for (const [nome, fazer] of Object.entries(CAPAS)) posts[`capas-reels/${nome}`] = () => [fazer()];
 
 // ---------------------------------------------------------------------------
 // Estilo

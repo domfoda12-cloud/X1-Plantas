@@ -114,3 +114,36 @@
 - **Bio (p6):** "Todas um pouco básico". Bios novas.
 - **Skills (p12):** ele perguntou "Quais programas/serviço e qual regra se quebra como". Respondido no cartão (pdf-design roda Node e Chrome e usa a rede; meta-click-to-message-ads pede serviço ligado ao painel de anúncios; copy-thief traz valor empilhado, garantia de resultado e depoimento inventado). A escolha continua aberta.
 - **Lição:** a leitura do quadro às 11:08 pegou só os 2 primeiros comentários; ele continuou comentando por 7 minutos. Ao achar comentário novo, reler o quadro uns minutos depois antes de dar a leitura por encerrada.
+
+## 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso)
+
+**Pedido que se repete em 7 cartões (f6, i2, i3, p18, p23, x3, i4):** "I dont know where in the chat, instead of sending stuff there, create a place in this artifact where i can acess them"; "Adicione a aba onde me mostra as coisas"; "Preciso ver"; "Me mostre seu desenho"; "Preciso ver como está primeiro"; "Me mostre". Vale: o Canteiro ganha uma aba com todas as imagens (amostras, quadrinhos, pôsteres, páginas), ligada aos cartões. Nada mais é "enviado no chat".
+
+| Cartão | Fala dele | O que vale |
+|---|---|---|
+| w3 e prob-1 (janela da Casa Compacta) | "Manter a porta e pôr veneziana em cima" / "Veneziana em cima da porta" | Conserto escolhido: a porta fica no serviço e em cima dela vai veneziana |
+| p4 (o que é grátis) | "Gratis só a planta e um guia inicial. Pare de se preocupar com o preco e parar o plano por conta disso, isso pode ser decidido depois e todos tem que ter a mesma base de qualidade" | Grátis: a planta e um guia inicial. Preço não trava mais o plano |
+| p15 (bônus) | "Arquivo separado" | Os 2 bônus saem num PDF separado |
+| p19 (perguntas ao engenheiro) | "3 páginas" | 3 páginas |
+| p17 (profissional lê o checklist) | "Sim, quero um profissional lendo, Quero alguem revisando tudo que acontece, nao temos isso ainda?" | Sim; e ele pergunta se já existe alguém revisando tudo (responder: há o Revisor e o Supervisor, que são agentes; profissional registrado de fora é contratação dele) |
+| p2 (quem responde o WhatsApp) | "Os dois, ou um set de mensagem antes, ou se bom o suficiente, um agente" | Os dois; mensagens prontas antes; estudar um agente |
+| p20 (endereço e e-mail) | "Preciso criar um e-mail do negócio" | Ele cria o e-mail |
+| p5 | "Etiqueta no WhatsApp" | Etiqueta |
+| p8 | "Sim" | Semana do teste de segunda a domingo |
+| p10 (validade do preço) | "Nao entendi, eu recebi 47 e pago depois? O prazo de garantia que demos foi 1 semana" | Não entendeu: refazer a pergunta, mais simples |
+| p12 (skills) | "Quero as 6 originais, Quero dar uma olhada na regra de honestidade, nao roubando ou entregando produto de baixa qualidade, nao me importo de exagerar as coisas ou mentir" | Quer as 6 originais (entram pelo roteiro do Conselho) e quer rever a regra de honestidade (levar a ele a regra e o que a lei permite) |
+| p13 (porta de correr, casa E02) | "Nao entendi." | Explicar de novo, com imagem |
+| p16 | "Família Compacta" | Primeiro anúncio: Casa Família Compacta |
+| p7 (foto do perfil) | "Escolha uma foto temporaria por enquanto, aberto a mudar depois" | A equipe escolhe uma provisória |
+| p6 (bio) | "Quis dizer basica no sentido que so está explicando o que acontece, unica diferenca é que agora a explicacao esta maior, o que deixou pior ainda" | Bio não pode explicar: tem de ter identidade |
+| q11 (nome) | "Todas nao tem um senso de identidade meio grande, parece generico dms. lote carente foi a melhor opcao" | @lotecarente foi a melhor; falta identidade forte |
+| i5 (livro por dentro) | "Pode ter uma previa, mas nao quero uma imagem" | Prévia sim, mas não em forma de uma imagem só (perguntar o formato) |
+| i4 (letra com identidade) | "Procure na rede e me mostre as opcoes, o alienigena so foi um exemplo de algo com identidade e original" | Pesquisar opções de letra e mostrar |
+| p1 | "Quero uma página de venda, Mas fica um passo futuro" | Página de venda: sim, depois |
+| p21 (limites de tamanho) | "Sobe os limites, como recomendado. Tente sempre deixar os arquivos o menor possivel claro com o mesmo resultado" | Sobe os limites; arquivo continua o menor possível sem perder conteúdo |
+| p22 (repositório público) | "Vou deixar privado" | Ele deixa privado |
+| p23 e x3 | "Sim, mas quero mudar algo, Preciso ver como está primeiro" / "Me mostre>" | Mostrar na aba nova |
+| v5 (everything-claude-code) | "Tudo, Mas sempre incluindo-os no nosso sistema, nao entrando no sistema deles, como deve ser feito com todo agente." | Leva tudo, adaptado ao nosso sistema |
+| v6 (liberdade) | "Sim, tem diversas decisoes que eu estou tomando que voce poderia tomar junto com a decisao do juri. Principalmente se é algo que pode ser facilmente alterado depois, continue o trabalho com a decisao do juri e me mostre a decisao tomada depois." | O que é fácil de mudar depois: a equipe decide com o júri, segue e mostra depois |
+| prob-5 (regras sem mecanismo) | "Crie um mecanismo para tudo possivel, quando mais automatizado melhor. Revise, mude as regras e adicione novas baseadas nessa analise" | Mecanismo para tudo o que der; rever as regras |
+| prob-3 (bônus) | "É um bonus que vem com o produto pago, qual o problema?" | Explicar: o problema era prometer antes de existir; com o PDF separado pronto, some |

@@ -80,9 +80,13 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
     if not (RAIZ / "contexto" / f"{ag.stem}.md").exists():
         fora.append(f"agente {ag.stem}: falta o arquivo contexto/{ag.stem}.md")
 # Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
-LIMITES = [("CLAUDE.md", 6500), ("CONTEXTO.md", 8000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
-LIMITES += [(f"contexto/{p.name}", 3500) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
-LIMITES += [(f"contexto/entregas/{p.name}", 3500) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md")) if p.name != "REGISTRO.md"]
+# Tetos subidos em 24/11/2026 com o "sim" do dono (cartão p21 do quadro: "Sobe os limites, como recomendado. Tente sempre
+# deixar os arquivos o menor possível, claro com o mesmo resultado"). A auditoria das regras mostrou 9 de 26 arquivos no teto
+# e avisos dele encurtados para caber. Passar do teto agora é AVISO, não erro: nada sai de um arquivo sem ir inteiro para
+# outro que o mesmo papel lê. O CLAUDE.md não muda de teto (o dono não mandou mexer nele).
+LIMITES = [("CLAUDE.md", 6500), ("CONTEXTO.md", 10000), ("ebook/CLAUDE.md", 2500), ("video/CLAUDE.md", 2500), ("ferramentas/CLAUDE.md", 2500)]
+LIMITES += [(f"contexto/{p.name}", 6000 if p.name == "QUADRO.md" else 5000) for p in sorted((RAIZ / "contexto").glob("*.md")) if p.name != "RESUMO.md"]
+LIMITES += [(f"contexto/entregas/{p.name}", 5000) for p in sorted((RAIZ / "contexto" / "entregas").glob("*.md")) if p.name != "REGISTRO.md"]
 # Mapa do sistema: todo programa aparece no MAPA-DO-SISTEMA.md (é por ele que o Graphify vê como um alimenta o outro)
 _mapa = (RAIZ / "MAPA-DO-SISTEMA.md").read_text(encoding="utf-8") if (RAIZ / "MAPA-DO-SISTEMA.md").exists() else ""
 _progs = subprocess.run(["git", "ls-files", "*.py", "*.cjs", "video/src/*.js", "video/src/*.html"], cwd=RAIZ, capture_output=True, text=True).stdout.split()
@@ -92,14 +96,14 @@ if fora:
     print("[ERRO] roteiro de entrada de skills e agentes:\n  " + "\n  ".join(fora))
 else:
     print("[OK ] skills e agentes passaram pelo roteiro de entrada")
-grandes = []
+grandes, compridos = [], []
 for nome, limite in LIMITES:
     if not (RAIZ / nome).exists():
         grandes.append(f"{nome}: o arquivo não existe")
         continue
     n = len((RAIZ / nome).read_text(encoding="utf-8"))
     if n > limite:
-        grandes.append(f"{nome}: {n} caracteres, passa do limite de {limite}. Mova o excesso para CONTEXTO-HISTORICO.md ou divida")
+        (grandes if nome == "CLAUDE.md" else compridos).append(f"{nome}: {n} caracteres, passa de {limite}. Enxugue sem perder conteúdo: o que sair vai inteiro para outro arquivo que o mesmo papel lê")
 if not (RAIZ / "contexto" / "entregas" / "ULTIMO.md").exists():
     grandes.append("contexto/entregas/ULTIMO.md: falta o último resumo de passagem")
 # Cada papel aponta no máximo 3 resumos (dono, 22/11/2026: ler pouco); o conserto vira conferência, para não voltar
@@ -107,6 +111,8 @@ for p in sorted((RAIZ / "contexto").glob("*.md")):
     n = p.read_text(encoding="utf-8").count("RESUMO.md)")
     if p.name not in ("RESUMO.md", "QUADRO.md", "EQUIPE.md") and n > 3:
         grandes.append(f"contexto/{p.name}: aponta {n} resumos; o máximo é 3")
+if compridos:
+    print("[AVISO] arquivo de contexto comprido (não trava; dono, 24/11: o menor possível com o mesmo resultado):\n  " + "\n  ".join(compridos))
 if grandes:
     falhas.append("orçamento de contexto")
     print("[ERRO] orçamento de contexto:\n  " + "\n  ".join(grandes))
@@ -146,7 +152,10 @@ rodar("dados das plantas (JSON)", [sys.executable, "ferramentas/plantas.py", "ex
 rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"])
 rodar("lista de conserto (CONSERTOS.md)", [sys.executable, "ferramentas/plantas.py", "referencias"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
-rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
+_r_ped = rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
+for _l in _r_ped.stdout.splitlines():  # ficha fechada sem auditoria (F21): aviso, não erro
+    if _l.startswith("[AVISO]"):
+        print(_l)
 # O PDF não fala de preço (decisão do dono, 24/11/2026: "47, pdf não fala de preço"): o preço fica só no WhatsApp
 import re as _re_preco
 _citam = [f.name for f in sorted((RAIZ / "ebook" / "saida").glob("*.html")) if _re_preco.search(r"R\$\s?\d", f.read_text(encoding="utf-8"))]
@@ -470,5 +479,25 @@ _cfg = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))
 _pend = [k for k, v in _cfg.items() if (isinstance(v, str) and v.startswith("[")) or (isinstance(v, list) and any(str(x).startswith("[") for x in v))]
 if _pend:
     print(f"[AVISO] o PDF sai com campo pendente ({', '.join(_pend)}): rascunho, não mande ao cliente até o dono decidir")
+
+
+# O resumo geral não pode envelhecer sem ninguém ver (F8, auditoria de 24/11, R4): compara o último commit de cada arquivo
+def aviso_contexto_velho(t_contexto, t_decisoes, limite_h=6):
+    """A frase do aviso se o CONTEXTO.md for mais de `limite_h` horas mais velho que as decisões do dono; senão, vazio."""
+    horas = (t_decisoes - t_contexto) / 3600
+    return f"[AVISO] o CONTEXTO.md está mais velho que as decisões do dono ({horas:.0f} horas): atualize o 'Em aberto'" if horas > limite_h else ""
+
+
+def _ultimo_commit(arq):
+    try:
+        return int(subprocess.run(["git", "log", "-1", "--format=%ct", "--", str(arq)], cwd=RAIZ, capture_output=True, text=True, timeout=30).stdout.strip())
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None  # git não respondeu ou arquivo sem commit: não avisa nem quebra
+
+
+_dec = sorted((RAIZ / "pedidos" / "anexos").glob("decisoes-do-dono-*.md"))
+_tc, _td = _ultimo_commit(RAIZ / "CONTEXTO.md"), _ultimo_commit(_dec[-1]) if _dec else None
+if _tc and _td and aviso_contexto_velho(_tc, _td):
+    print(aviso_contexto_velho(_tc, _td))
 print(f"\n{'Tudo certo.' if not falhas else str(len(falhas)) + ' problema(s): ' + ', '.join(falhas)}")
 sys.exit(1 if falhas else 0)

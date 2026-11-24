@@ -55,7 +55,7 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 
 Confere se o código do projeto tem erro, de uma vez só.
 
-Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`, `portas_de_entrada_erradas`, `bonus_sem_conteudo`.
+Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`, `portas_de_entrada_erradas`, `bonus_sem_conteudo`, `aviso_contexto_velho`.
 
 ### [`ferramentas/conferir-rascunho.py`](conferir-rascunho.py)
 
@@ -101,7 +101,7 @@ Funções: `main`.
 
 Fichas dos pedidos do dono: criar, listar, fechar e conferir (regras em pedidos/LEIA-ME.md).
 
-Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `quadro`, `licoes_do_campo`, `inserir_licao`, `licao`, `fechar`, `indice`, `conferir`.
+Funções: `fichas`, `campo`, `trocar`, `ultimos_prompts`, `achar`, `nova`, `recado`, `listar`, `sem_auditoria`, `aviso_auditoria`, `auditar`, `quadro`, `licoes_do_campo`, `inserir_licao`, `licao`, `fechar`, `indice`, `conferir`.
 
 ### [`ferramentas/pesquisa.py`](pesquisa.py)
 

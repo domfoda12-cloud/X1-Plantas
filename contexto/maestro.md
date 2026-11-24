@@ -24,3 +24,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **24/11, ficha 2026-11-24-0726:** quando o dono pede algo "cool" para mostrar, ele quer uma peça para ver e mexer, não uma página que explica; comece pelo que só o projeto tem (o motor 3D).
 - **24/11, dono:** Uma pergunta por cartão no quadro: o dono achou cansativo responder 5 juntas (23/11).
 - **24/11, ficha 2026-11-24-1027:** agente novo avalia o próprio arquivo de papel na primeira rodada; as duas avaliações acharam falhas reais (limite de grupo, como contar, onde está o estado real).
+- **24/11, maestro:** Comentário novo no quadro: reler uns minutos depois; em 24/11 li às 11:08 e perdi 6 respostas escritas até 11:15, e outras 30 ficaram 2 horas sem leitura durante o limite de uso.

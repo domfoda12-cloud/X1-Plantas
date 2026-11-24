@@ -58,7 +58,7 @@
 | [`ferramentas/salvar.py`](ferramentas/salvar.py) | salva e envia só com o `checar.py` verde (commit com atribuição, push na main e na branch) | git |
 | [`ferramentas/placar.py`](ferramentas/placar.py) | placar do veto: soma as tabelas de veto das fichas de 23/11 em diante, as provas e as lições; `--conferir` no `checar.py` | [`contexto/PLACAR.md`](contexto/PLACAR.md) |
 | [`ferramentas/pesquisa.py`](ferramentas/pesquisa.py) | caderno de pesquisa compartilhado: `buscar` antes da web, `nova` para registrar com fonte, `conferir` no `checar.py` | [`pesquisas/`](pesquisas) |
-| [`ferramentas/pedido.py`](ferramentas/pedido.py) (23) e [`ferramentas/guardar-pedido.py`](ferramentas/guardar-pedido.py) | guardam cada prompt do dono e cuidam das fichas e da [`pedidos/FILA.md`](pedidos/FILA.md); o `licao` e o `fechar` gravam a lição no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md` | [`pedidos/`](pedidos), [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
+| [`ferramentas/pedido.py`](ferramentas/pedido.py) (23) e [`ferramentas/guardar-pedido.py`](ferramentas/guardar-pedido.py) | guardam cada prompt do dono e cuidam das fichas e da [`pedidos/FILA.md`](pedidos/FILA.md); o `licao` e o `fechar` gravam a lição no "Lições" do `contexto/<papel>.md` e no registro `pedidos/LICOES.md`; o `auditar` lista as fichas fechadas que nenhuma auditoria leu (conta ficha por ficha em [`pedidos/AUDITORIAS.md`](pedidos/AUDITORIAS.md)) e o `fechar` e o `conferir` avisam "HORA DA AUDITORIA" com 3 ou mais | [`pedidos/`](pedidos), [`CONTEXTO-HISTORICO.md`](CONTEXTO-HISTORICO.md) |
 
 ## 6. As pessoas e as regras em volta
 

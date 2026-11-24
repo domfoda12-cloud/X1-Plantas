@@ -142,10 +142,10 @@ Não entraram na fila, de propósito: a trava de `npx`, `npm install` e `rm -rf`
 
 **Para o e-book sair (o produto):**
 1. **Respondido 24/11:** "47, pdf não fala de preço": R$ 47 na primeira semana, só no WhatsApp; o PDF não mostra preço. Pergunta era: preço no PDF, R$ 47 impresso ou PDF sem preço (p3). Destravou a parte do preço do D3.
-2. Janela em cima da porta da Casa Compacta: qual dos 3 caminhos do A6? Porta no canto esquerdo da cozinha com janela de 0,80 m (só em rascunho); porta no serviço com bandeira ou veneziana em cima; ou deixar como está (w3). Destrava: D1 e, por ele, o serviço da C01 no cômodo a cômodo (D18).
-3. **Bônus dentro do PDF ou num PDF separado** (p15). Destrava: D2 (a oferta decidida em 23/11 e o `config.json` têm 2 bônus; o PDF e as mensagens de venda não citam nenhum).
-4. Um engenheiro ou arquiteto registrado lê o checklist antes da venda? É contratação (p17). Destrava: o bônus do checklist no D2.
-5. Folha de perguntas ao engenheiro: 2 páginas, 3, ou também no celular? (p19). Destrava: o bônus das perguntas no D2.
+2. **Respondido 24/11:** veneziana em cima da porta, a porta fica no serviço (quadro, 24/11 13:15). Janela em cima da porta da Casa Compacta: qual dos 3 caminhos do A6? Porta no canto esquerdo da cozinha com janela de 0,80 m (só em rascunho); porta no serviço com bandeira ou veneziana em cima; ou deixar como está (w3). Destrava: D1 e, por ele, o serviço da C01 no cômodo a cômodo (D18).
+3. **Respondido 24/11:** arquivo separado (quadro, 24/11 13:17). **Bônus dentro do PDF ou num PDF separado** (p15). Destrava: D2 (a oferta decidida em 23/11 e o `config.json` têm 2 bônus; o PDF e as mensagens de venda não citam nenhum).
+4. **Respondido 24/11:** sim, quer um profissional lendo; é contratação dele (quadro, 24/11 13:18). Um engenheiro ou arquiteto registrado lê o checklist antes da venda? É contratação (p17). Destrava: o bônus do checklist no D2.
+5. **Respondido 24/11:** 3 páginas (quadro, 24/11 13:17). Folha de perguntas ao engenheiro: 2 páginas, 3, ou também no celular? (p19). Destrava: o bônus das perguntas no D2.
 6. **Respondido 24/11:** "B": quer 3 opções de título novo (p14). Virou o A4 e a decisão 34.
 7. "Como mobiliar": página do e-book, da amostra ou dos dois? (x3). Destrava: páginas novas, se ele quiser. Suposição minha, não marcada como respondida: o pedido de 24/11 ("planejar cada quarto") e a resposta da 8 já põem o que cabe em cada cômodo na parte de cada casa do e-book; o que continua aberto é se vai também na amostra.
 8. **Respondido 24/11:** uma parte por casa e uma parte geral; a página da parede sem janela vai para a geral (quadro, 24/11 11:09). Parede sem janela: a página vai na Casa Fita, na E07 ou nas duas? (v3).
@@ -157,16 +157,16 @@ Não entraram na fila, de propósito: a trava de `npx`, `npm install` e `rm -rf`
 **Para a amostra grátis e a oferta:**
 
 13. **Amostra grátis: A, B, ou A agora e B depois; e se vai mais alguma coisa de graça** (f6 e v1). Destrava: D8, o `/planta`, o anúncio C e o primeiro post grátis.
-14. Quem já recebeu a Casa Compacta grátis compra o quê? (p4). Destrava: o fim do veto do `/oferta` para o lote de 8 x 15 m e o anúncio C.
+14. **Respondido 24/11:** grátis só a planta e um guia inicial; preço não trava o plano (quadro, 24/11 13:16). Quem já recebeu a Casa Compacta grátis compra o quê? (p4). Destrava: o fim do veto do `/oferta` para o lote de 8 x 15 m e o anúncio C.
 
 **Para vender dentro da lei e atender:**
 
 15. **Respondido 24/11:** CPF (comentário no quadro, 24/11 11:13); o resto (endereço e e-mail, cartão p20) virou a decisão 38 no F15. **Quem vende: CNPJ do MEI ou CPF** (e o endereço e o e-mail) (p9). Destravou a parte do CPF de D9, D10 e D14; sem isso não há venda pela internet dentro da lei (Decreto 7.962/2013).
-16. Quem responde o WhatsApp do negócio: ele, o sócio ou os dois? (p2). Destrava: horário e meta de resposta no D9.
-17. Onde anotar o preço que cada pessoa recebeu? (p5). Destrava: o teste de R$ 47 x R$ 67 valer (D12).
-18. A semana do teste vai de segunda a domingo? (p8). Destrava: D12.
+16. **Respondido 24/11:** os dois; mensagens prontas antes; estudar um agente (quadro, 24/11 13:19). Quem responde o WhatsApp do negócio: ele, o sócio ou os dois? (p2). Destrava: horário e meta de resposta no D9.
+17. **Respondido 24/11:** etiqueta no WhatsApp (quadro, 24/11 13:18). Onde anotar o preço que cada pessoa recebeu? (p5). Destrava: o teste de R$ 47 x R$ 67 valer (D12).
+18. **Respondido 24/11:** sim, segunda a domingo (quadro, 24/11 13:18). A semana do teste vai de segunda a domingo? (p8). Destrava: D12.
 19. Até quando vale o preço que a pessoa recebeu? (p10). Destrava: a data na mensagem do D9 e o D12.
-20. Vai existir uma página de venda, ou fica só anúncio, WhatsApp e Pix? (p1).
+20. **Respondido 24/11:** quer página de venda, mas num passo futuro (quadro, 24/11 13:34). Vai existir uma página de venda, ou fica só anúncio, WhatsApp e Pix? (p1).
 21. Ideia 5: a imagem do livro aberto, como um kit sobre a mesa, para o anúncio e o WhatsApp? (i5).
 
 **Para o Instagram e o anúncio:**
@@ -174,14 +174,14 @@ Não entraram na fila, de propósito: a trava de `npx`, `npm install` e `rm -rf`
 22. Nome do perfil (@) (q11). Destrava: D14. Ele recusou os 6 primeiros ("coisas absurdas prendem a atenção"); 8 nomes novos, com o veto do Revisor, em `pedidos/anexos/instagram-nomes-e-bios-absurdos-2026-11-24.md`.
 23. Bio (p6). Destrava: D14. Ele achou as 3 primeiras "um pouco básico"; 4 bios novas no mesmo arquivo.
 24. Foto do perfil: marca ou rosto (p7). Não trava passo (correção do F15, Prova 4): a foto se troca a qualquer hora; pode esperar o teste do vídeo com rosto. Entra no D14 quando ele escolher.
-25. Qual anúncio sobe primeiro: Família Compacta, Casa Fita ou Casa Compacta (p16). Destrava: D12.
+25. **Respondido 24/11:** Casa Família Compacta (quadro, 24/11 13:22). Qual anúncio sobe primeiro: Família Compacta, Casa Fita ou Casa Compacta (p16). Destrava: D12.
 
 **Do sistema (não travam o Pix):**
 
 26. **Respondido 24/11:** A: continua como está (quadro, 24/11 11:12). A tarefa de hora em hora continua: como está, com reserva, ou para? (p11).
-27. Skills: as 2 nossas ou as 6 como vieram? (p12).
-28. everything-claude-code: tudo ou só as 6 peças de proteção? (v5). A cópia está na branch `sistema/everything-claude-code`.
-29. Liberdade: "tire o grátis e publicar dessa lista" quer dizer que a equipe decide o grátis e publica sem perguntar? Sim ou não (v6). Até ele responder, grátis e publicação continuam dele.
+27. **Respondido 24/11:** quer as 6 originais; entram pelo roteiro do Conselho (quadro, 24/11 13:29). Skills: as 2 nossas ou as 6 como vieram? (p12).
+28. **Respondido 24/11:** tudo, mas adaptado ao nosso sistema, não entrando no deles (quadro, 24/11 13:31). everything-claude-code: tudo ou só as 6 peças de proteção? (v5). A cópia está na branch `sistema/everything-claude-code`.
+29. **Respondido 24/11:** sim: o que é fácil de mudar depois, a equipe decide com o júri, segue e mostra depois (quadro, 24/11 13:33). Liberdade: "tire o grátis e publicar dessa lista" quer dizer que a equipe decide o grátis e publica sem perguntar? Sim ou não (v6). Até ele responder, grátis e publicação continuam dele.
 30. A primeira vitrine (que mostra o rascunho e 3 erros internos) pode ser vista por alguém de fora? (ficha `0646`).
 
 **Fora do lançamento:**
@@ -191,19 +191,19 @@ Não entraram na fila, de propósito: a trava de `npx`, `npm install` e `rm -rf`
 
 **Novas desta rodada (24/11):**
 
-33. **Vender o e-book primeiro, sem bônus, e entregar os 2 bônus depois?** (A) Sim: o PDF final sai sem esperar os bônus; quem comprar antes recebe os bônus quando ficarem prontos; nenhuma mensagem fala de bônus antes disso. (B) Não: o PDF só sai com os 2 bônus, como decidido em 23/11. Opção do planejador, não escolhida; parecer do Revisor (A5): SIM SE nenhuma peça citar bônus antes de existir. Destrava, se for A: tira as decisões 3, 4 e 5 do caminho do primeiro Pix (17 → 15, conta à mão).
+33. **Respondido 24/11:** não se aplica: os bônus saem num arquivo separado (decisão 3), então o e-book não é vendido sem eles. **Vender o e-book primeiro, sem bônus, e entregar os 2 bônus depois?** (A) Sim: o PDF final sai sem esperar os bônus; quem comprar antes recebe os bônus quando ficarem prontos; nenhuma mensagem fala de bônus antes disso. (B) Não: o PDF só sai com os 2 bônus, como decidido em 23/11. Opção do planejador, não escolhida; parecer do Revisor (A5): SIM SE nenhuma peça citar bônus antes de existir. Destrava, se for A: tira as decisões 3, 4 e 5 do caminho do primeiro Pix (17 → 15, conta à mão).
 34. **Qual título:** uma das 3 opções do A4, ou mantém "Antes do primeiro tijolo"? Destrava: D3 (capa) e, por ele, a pasta do Drive, as respostas e o anúncio; também o D14.
 
 **Novas da terceira rodada (24/11):**
 
-35. **Limites de tamanho dos arquivos de contexto** (cartão p21): continuam como erro, viram aviso, ou sobem? A auditoria de 24/11 recomenda aviso e tetos maiores (quadro uns 6.000, contextos 5.000, `CONTEXTO.md` 10.000); os números são dele. Sem passo do caminho da venda preso; sem resposta, a equipe segue no limite de hoje e o F14 só avisa quando algo some.
+35. **Respondido 24/11:** sobe os limites, como recomendado; arquivo o menor possível com o mesmo resultado (quadro, 24/11 13:32). **Limites de tamanho dos arquivos de contexto** (cartão p21): continuam como erro, viram aviso, ou sobem? A auditoria de 24/11 recomenda aviso e tetos maiores (quadro uns 6.000, contextos 5.000, `CONTEXTO.md` 10.000); os números são dele. Sem passo do caminho da venda preso; sem resposta, a equipe segue no limite de hoje e o F14 só avisa quando algo some.
 36. **Além do cômodo a cômodo, entram as outras páginas que o Arquiteto recomendou** ("Antes do reboco" com tomadas e luz, "Carro ou quintal", "O que não fazer depois") **e os desenhos** (planta de pontos, vista de parede, corte do hall)? Ele mesmo escreveu "depois do sim do dono". Perguntar junto com a prova (D15), uma pergunta só. Sem passo preso: se sim, viram passos novos; sem resposta, o e-book sai sem elas.
 
 **Novas da correção do F15 (24/11, tarde):**
 
 37. **O cômodo a cômodo entra no e-book pago,** na parte de cada casa (como a página de prova da Casa Fita)? (A) Sim, nas 3 casas. (B) Não: fica fora do PDF pago (ou vai para outro lugar que ele disser). Sem cartão ainda: vai com a prova, no D15, num cartão só para ela. Era suposição do planejador (a Prova 4 apontou). Destrava: D20 e, por ele, o PDF final (D3). Sem resposta, o D20 e o D3 ficam parados; as páginas de prova seguem. **Conta à mão:** se for B, o D20 e o D18 saem do caminho e o D3 deixa de esperar por eles.
 38. **Endereço e e-mail de quem vende** (cartão p20): qual endereço e qual e-mail aparecem para o comprador? É o resto da 15 (ele respondeu CPF). O dado em si ele põe no celular, **nunca no repositório**. A lei pede os dois na venda pela internet (Decreto 7.962/2013). Destrava: D9, D10 e D14. Sem resposta, os três ficam parados.
-39. **O repositório é público** (o Supervisor viu, F17: `gh api` diz `public`) e o nome completo do dono estava em arquivos; já foi trocado por "[nome do dono]", mas o histórico do git ainda guarda. (A) Deixar o repositório privado; (B) limpar o histórico também; (C) deixar como está. Sem passo do caminho da venda preso; sem resposta, o nome continua no histórico público. Achado da auditoria de 24/11, tarde (`pedidos/AUDITORIAS.md`).
+39. **Respondido 24/11:** ele vai deixar o repositório privado (quadro, 24/11 13:28). **O repositório é público** (o Supervisor viu, F17: `gh api` diz `public`) e o nome completo do dono estava em arquivos; já foi trocado por "[nome do dono]", mas o histórico do git ainda guarda. (A) Deixar o repositório privado; (B) limpar o histórico também; (C) deixar como está. Sem passo do caminho da venda preso; sem resposta, o nome continua no histórico público. Achado da auditoria de 24/11, tarde (`pedidos/AUDITORIAS.md`).
 
 **O que só ele faz com as mãos** (não é decisão, é ação; nada disso entra no repositório): pôr a chave Pix, o nome de quem recebe e o horário no WhatsApp Business; criar a conta do Instagram; publicar; dar o "sim" e pagar cada campanha; compartilhar a calculadora com o sócio.
 
