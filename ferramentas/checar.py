@@ -8,8 +8,8 @@ estourada, numa pasta temporária) e se toda skill e todo agente passaram pelo r
 Atenção: não só confere, também REGRAVA arquivos do repositório: os dados das plantas
 (ebook/plantas/dados/*.json), as fichas (ebook/plantas/PLANTAS.md), a lista de conserto
 (ebook/plantas/CONSERTOS.md), os módulos do motor 3D
-(video/src/plantas/<ID>.js), a lista de casas da calculadora do parceiro
-(ebook/vendas/calculadora-lote.html) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
+(video/src/plantas/<ID>.js) e a seção "Situação agora" do PAINEL.md. Rode e confira o git diff.
+A calculadora do parceiro e o PDF oficial só são gravados por `python3 ebook/gerador/livro.py` puro.
 Sai com código 1 se algo falhar.
 """
 import json
