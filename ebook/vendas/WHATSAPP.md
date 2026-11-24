@@ -9,7 +9,9 @@
 >
 > **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
 >
-> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): título **Antes do primeiro tijolo** (o subtítulo vai só no anúncio); só a Casa Compacta é grátis; garantia de 7 dias; bônus: o checklist da obra por fase e as perguntas para levar ao engenheiro; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.**
+> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): só a Casa Compacta é grátis; garantia de 7 dias; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.** Bônus: fora de toda peça até existir no PDF (decisão 33). Título: em troca, 3 opções (decisão 34).
+>
+> **[título do e-book]:** o atual até o dono escolher (decisão 34); quando mudar, colar de novo a saudação e a ausência.
 >
 > Campos entre [colchetes] ainda esperam o dono: a chave Pix e o nome de quem recebe. O **[preço]** já tem valor (teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47). O número do WhatsApp já foi dado (está no `ebook/config.json`, chave `contato`). Até lá, não mande campo vazio como fato. O que o e-book tem de verdade: [`../EBOOK.md`](../EBOOK.md), seções 2 e 3.
 >
@@ -55,7 +57,7 @@ Com [frente] x [fundo] m, estas casas cabem no seu terreno com os recuos de refe
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 - **[ID] · [nome]**: [área], [quartos] quartos. [destaque]
 
-Elas estão no e-book **Antes do primeiro tijolo**. Quer ver uma delas inteira, mobiliada e desenhada no lote?
+Elas estão no e-book **[título do e-book]**. Quer ver uma delas inteira, mobiliada e desenhada no lote?
 
 > O lançamento sai com **3 casas**: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01) (nota para o parceiro, não vai ao cliente). Use a [calculadora de lote](calculadora-lote.html) e ofereça só as 3 do lançamento que tenham lote mínimo menor ou igual ao terreno. Se nenhuma couber, diga com franqueza: "Com essa medida, nenhuma das 3 casas do e-book cabe com os recuos de referência." Não venda casa que não cabe.
 
@@ -81,7 +83,7 @@ Quer que eu te mostre tudo o que vem no e-book?
 
 ### Dia 3: a oferta
 
-Oi, [nome]! O e-book **Antes do primeiro tijolo** tem 3 casas térreas: a Casa Compacta, a Casa Fita e a Família Compacta.
+Oi, [nome]! O e-book **[título do e-book]** tem 3 casas térreas: a Casa Compacta, a Casa Fita e a Família Compacta.
 
 Cada casa vem com:
 - a planta mobiliada, com as medidas;
@@ -94,15 +96,13 @@ E mais:
 - os 7 erros de planta que saem caro, com o jeito certo;
 - a ficha do seu terreno e os passos do e-book até a chave na mão.
 
-[Só quando os bônus estiverem prontos no PDF; até lá, apague esta linha:] Bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, pronta para imprimir (além das perguntas de cada casa).
-
 Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4] nos catálogos. No e-book são 3 casas, cada uma mobiliada e desenhada no lote.
 
 Valor: **R$ [preço]**, no Pix, aqui mesmo. Você recebe o e-book por link logo depois. E tem 7 dias: se achar que não é para você, me fala e eu devolvo o seu Pix.
 
 Quer que eu te mande a chave Pix?
 
-> **[preço]:** teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. **Suposição, a confirmar com o Estrategista:** quem cruza de semana (recebeu a oferta numa semana e paga na outra) fica com o preço que recebeu primeiro; cada pessoa recebe um preço só, do começo ao fim, e o parceiro anota qual foi. Os bônus só entram nesta mensagem quando estiverem prontos no PDF.
+> **[preço]:** teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. **Suposição, a confirmar com o Estrategista:** quem cruza de semana (recebeu a oferta numa semana e paga na outra) fica com o preço que recebeu primeiro; cada pessoa recebe um preço só, do começo ao fim, e o parceiro anota qual foi. Bônus: não cite enquanto a página não existir no PDF (decisão 33).
 
 ### Pagamento e entrega: Pix aqui no WhatsApp, e-book por link
 
@@ -110,11 +110,13 @@ Quer que eu te mande a chave Pix?
 
 Combinado, [nome]! A chave Pix é **[chave Pix: a definir pelo dono]**, em nome de [nome de quem recebe]. O valor é **R$ [preço]**.
 
+Vendedor: [nome de quem vende], CPF [CPF]
+
 Assim que pagar, me manda o comprovante aqui que eu te envio o link do e-book.
 
 **Quando o Pix cair:**
 
-Recebi, [nome]. Obrigado! Aqui está o seu e-book **Antes do primeiro tijolo**:
+Recebi, [nome]. Obrigado! Aqui está o seu e-book **[título do e-book]**:
 
 [link do Google Drive]
 
@@ -204,7 +206,7 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
 >
-> Decidido em 23/11 (dono): título, garantia de 7 dias, bônus, Pix pelo WhatsApp e entrega por link. Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
+> Decidido em 23/11 (dono): garantia de 7 dias, Pix pelo WhatsApp e entrega por link. Bônus: fora de toda peça até existir no PDF (decisão 33). Título: em troca, 3 opções (decisão 34). Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
 >
 > **Bônus só com página no PDF** (veto do Revisor de risco, 24/11; CDC, arts. 30 e 37): o checklist da obra por fase e a lista de perguntas para imprimir só são citados ao cliente quando as páginas deles existirem no PDF. O `livro.py` só anuncia o bônus que tem página registrada (`PAGINAS_BONUS`), e o `checar.py` acusa erro se o PDF citar um bônus sem página.
 >
@@ -213,7 +215,7 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 ### Sobre o e-book
 
 **O que vem no e-book?**
-3 casas térreas, num PDF de [nº de páginas: sai do PDF do lançamento]. Cada casa tem duas páginas: a planta mobiliada com as medidas, a casa desenhada no lote mínimo, a ficha com área, quartos, banheiros e o melhor lado da rua, a vista da rua, a casa em 3D, para quem é e para quem não serve, e as perguntas para levar ao engenheiro. Também vêm o "ache pelo seu lote", os 7 erros de planta que saem caro, como ler uma planta, a ficha do seu terreno e os passos do e-book até a chave na mão. [Só quando os bônus estiverem prontos no PDF:] De bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, pronta para imprimir.
+3 casas térreas, num PDF de [nº de páginas: sai do PDF do lançamento]. [páginas por casa: sai do PDF novo]: a planta mobiliada com as medidas, a casa desenhada no lote mínimo, a ficha com área, quartos, banheiros e o melhor lado da rua, a vista da rua, a casa em 3D, para quem é e para quem não serve, e as perguntas para levar ao engenheiro. Também vêm o "ache pelo seu lote", os 7 erros de planta que saem caro, como ler uma planta, a ficha do seu terreno e os passos do e-book até a chave na mão.
 
 **Vou receber as plantas novas?**
 Hoje o e-book tem 3 casas. Se sair casa nova, te aviso aqui. (Não prometa casa nova de graça: o dono ainda não decidiu.)
@@ -225,7 +227,7 @@ Por um link do Google Drive, aqui no WhatsApp, logo depois que o Pix cair. Você
 Pix, direto aqui pelo WhatsApp.
 
 **E se eu não gostar?**
-Você tem 7 dias depois da compra: se achar que não é para você, me fala aqui e eu devolvo o seu Pix.
+Você tem 7 dias, contados do dia em que você recebe o link: se achar que não é para você, me fala aqui e eu devolvo o seu Pix.
 
 ### Sobre as plantas
 

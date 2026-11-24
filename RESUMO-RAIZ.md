@@ -65,7 +65,7 @@ Para quem vamos vender, o que essa pessoa quer, como ela fala e o que oferecer. 
 
 Seções: 1. Em cinco linhas; 2. O que os dados dizem; 3. Quem compra: três perfis; 4. Posicionamento; 5. Os três diferenciais (repetir em tudo); 6. O que isso muda no produto; 7. A oferta; 8. Ângulos de anúncio; 9. Tom de voz; 10. Calendário do lançamento; 11. O que medir para saber se a estratégia está certa.
 
-Tamanho: 2744 palavras.
+Tamanho: 2743 palavras.
 
 ### [Mapa do sistema: como uma parte alimenta a outra](MAPA-DO-SISTEMA.md)
 
@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 1016 palavras.
+Tamanho: 1090 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 

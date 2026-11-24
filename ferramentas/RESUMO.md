@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 22 programas
+## Os 23 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -56,6 +56,12 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 Confere se o código do projeto tem erro, de uma vez só.
 
 Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`, `portas_de_entrada_erradas`, `bonus_sem_conteudo`.
+
+### [`ferramentas/conferir-rascunho.py`](conferir-rascunho.py)
+
+Confere um rascunho de planta antes de alguém dizer "pronto para aplicar" (lição do A6, 24/11/2026).
+
+Funções: `carregar_rascunho`, `conferencias`, `main`.
 
 ### [`ferramentas/conversas.py`](conversas.py)
 

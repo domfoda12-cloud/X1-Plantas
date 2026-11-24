@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 47 documentos
+## Os 48 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 9877 palavras.
+Tamanho: 9973 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -165,7 +165,7 @@ Redator, 23/11/2026, noite. Pedido do dono: "Um novo" (comentário no quadro, `p
 
 Seções: 1. Nome de usuário (@): 6 opções; 2. Bio: 3 opções (limite de 150 caracteres); 3. Nome de exibição e categoria; 4. Os 9 primeiros posts (a grade de quem abre o perfil); 5. Destaques fixos (stories): 3; 6. O que só o dono faz; Para o Revisor de risco; Perguntas ao dono (curtas).
 
-Tamanho: 2937 palavras.
+Tamanho: 2922 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 1, 23/11/2026)](anexos/integracao-novos-v1.md)
 
@@ -237,7 +237,7 @@ Tamanho: 10600 palavras.
 
 Seções: 0. Quais anúncios podem rodar e quais esperam; 1. Diagnóstico antes de escrever (skill, seções 1 e 2); 2. O que é igual nos 3 anúncios; 3. Anúncio A: Casa Fita (lote de 5 x 25); 4. Anúncio B: Família Compacta (lote de 10 x 15); 5. Cuidado do anúncio B: quem chega com 8 ou 9 m de frente; 6. Anúncio C: Casa Compacta (lote de 8 x 15). ESPERA A DECISÃO DO DONO; 7. Como anotar a origem, sem dado pessoal no repositório; 8. O que medir por anúncio, e quando parar; 9. Para o Revisor de risco (frases, uma por linha); 10. Perguntas ao dono (uma por linha); 11. Conformidade (skill, seção 4).
 
-Tamanho: 5728 palavras.
+Tamanho: 5731 palavras.
 
 ### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
 
@@ -386,3 +386,11 @@ Tamanho: 513 palavras.
 Texto do Revisor, como ele entregou.
 
 Tamanho: 842 palavras.
+
+### [Revisor de risco: textos de venda contra as decisões de 24/11 (passo F1), 24/11/2026](anexos/veto-textos-de-venda-2026-11-24.md)
+
+[Revisor] VETO em pontos de gravidade alta (bônus que não existe e casas fora do lançamento) → fazer as trocas da parte A. Rodou no Opus, em rascunho. Conferido contra `PLANTAS.md`: C01 51 m², 8 x 15 (mín. 8,0 x 13,0); E03 56 m², 5 x 25 (mín. 5,0 x 20,6); F01 71 m², 3 quartos, 10 x 15 (mín. 10,0 x…
+
+Seções: A. Pode corrigir já (não depende do dono); B. Espera o dono.
+
+Tamanho: 687 palavras.

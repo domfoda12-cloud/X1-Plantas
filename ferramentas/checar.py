@@ -256,6 +256,20 @@ rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executab
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conferir"])
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
+# 3D e e-book: mesma área por cômodo (F7, 24/11/2026: o desenho azul mostrava a área de eixo a eixo, 14,1 m² na sala da C01,
+# e o e-book a área livre, 12,5). O módulo de cada casa tem de trazer a área livre do validador, no formato do e-book (0,0).
+_m1 = lambda v: f"{v:.1f}".replace(".", ",")
+_area3d = []
+for pl in PL.carregar():
+    _js = (RAIZ / "video" / "src" / "plantas" / f"{pl['id']}.js").read_text(encoding="utf-8")
+    _amb = {a["id"]: a.get("area_livre") for a in json.loads(re.search(r"export const ambientes = (\[.*?\]);\n", _js).group(1))}
+    for _cid, (_, _, _a) in pl["_r"].metricas["util"].items():
+        if _cid in _amb and (_amb[_cid] is None or _m1(_amb[_cid]) != _m1(_a)):
+            _area3d.append(f"{pl['id']} {_cid}: 3D {_amb[_cid]}, e-book {_m1(_a)}")
+if _area3d:
+    falhas.append("3D e e-book com área diferente"); print("[ERRO] 3D e e-book: área diferente por cômodo: " + "; ".join(_area3d[:12]))
+else:
+    print("[OK ] 3D e e-book: mesma área por cômodo (área livre do validador no desenho azul)")
 # Móvel sobre móvel (máquina sobre o tanque, vaso dentro do box), achado do Designer em 23/11/2026
 import planta3d as _p3  # noqa: E402
 _sob = [f"{pl['id']} {amb}: {a} sobre {b}" for pl in _p3.PL.carregar() for (amb, a, b) in _p3.sobrepostos(_p3.construir(pl)[3])]

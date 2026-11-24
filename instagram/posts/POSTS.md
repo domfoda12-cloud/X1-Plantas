@@ -28,12 +28,12 @@ Estes posts foram feitos antes das 24 plantas validadas. O que mudou:
 | # | Formato | Tema | Imagens | Situação |
 |---|---|---|---|---|
 | 1 | Reel | Passeio 3D da Casa Compacta | `animacao.mp4` + capa | **Espera o vídeo:** use o B-roll `video/broll/clipes/ebook-folheando.mp4` ou espere o 3D novo |
-| 2 | Carrossel (6) | Três plantas lado a lado | `imagens/post-02-tres-plantas/` | **Refazer a tela 2: C01 redesenhada** |
+| 2 | Carrossel (6) | Três plantas lado a lado | `imagens/post-02-tres-plantas/` | **Refazer imagem:** tela 2 (C01 redesenhada) e telas 1, 3 e 4 (Casa Fita E03 e Casa Família Compacta F01 no lugar de E01 e F03) |
 | 3 | Carrossel (7) | Como ler uma planta baixa | `imagens/post-03-como-ler-planta/` | **Refazer: C01 redesenhada** (as 7 telas usam a planta antiga) |
-| 4 | Reel | Passeio 3D da Casa Estreita | capa em `imagens/capas-reels/` | **Espera o vídeo:** idem |
+| 4 | Reel | Passeio 3D da Casa Fita | capa em `imagens/capas-reels/` | **Espera o vídeo:** idem. **Refazer imagem:** a capa é da E01 |
 | 5 | Carrossel (5) | Checklist antes de contratar o pedreiro | `imagens/post-05-checklist-pedreiro/` | **Pronto** |
 | 6 | Reel | Bastidor: a planta virando 3D | imagens da Casa Compacta + capa | **Espera o 3D novo** (é um reel de bastidor do 3D) |
-| 7 | Imagem | Casa Família, vista 3D | `imagens/post-07-casa-familia/` | **Pronto** (vista da rua 2D) |
+| 7 | Imagem | Casa Família Compacta, vista 3D | `imagens/post-07-casa-familia/` | **Refazer: F01** (refazer imagem: a que existia era da F03) |
 | 8 | Carrossel (5) | 3 erros comuns na planta | `imagens/post-08-erros-comuns/` | **Refazer: C01 redesenhada** (recortes da planta antiga) |
 | 9 | Reel | O material gratuito | imagens da Casa Compacta + capa | **Refazer: C01 redesenhada** (as imagens e a animação são da casa antiga) |
 | R | Carrossel (6) | Reserva: Casa Compacta completa | `imagens/reserva-casa-compacta/` | **Refazer: C01 redesenhada** |
@@ -106,14 +106,14 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ## Post 2 · Carrossel · Três plantas lado a lado
 
-**Imagens:** `imagens/post-02-tres-plantas/` (01 a 06). **Falta 3D:** E01 Casa Estreita e F03 Casa Família (telas 1, 3 e 4).
+**Imagens:** `imagens/post-02-tres-plantas/` (01 a 06). **Refazer imagem** (telas 1, 3 e 4): o gerador `gerar-imagens.cjs` ainda desenha a E01 Casa Estreita e a F03 Casa Família, fora do lançamento, e as imagens foram apagadas em 22/11; trocar pela E03 e pela F01.
 
 | Tela | Texto |
 |---|---|
-| 1 | *compare antes de escolher* · **3 casas, 3 terrenos. Qual cabe no seu?** · miniaturas com o lote: 8 x 15 (51 m²), 8 x 25 (58 m²), 11 x 15 (78 m²) · "Área, quartos e o terreno mínimo de cada uma." |
+| 1 | *compare antes de escolher* · **3 casas, 3 terrenos. Qual cabe no seu?** · miniaturas com o lote: 8 x 15 (51 m²), 5 x 25 (56 m²), 10 x 15 (71 m²) · "Área, quartos e o terreno mínimo de cada uma." |
 | 2 | *planta 1 de 3 · C01* · **Casa Compacta** · 51 m² · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m) · Destaque: sem corredor comprido, um hall curto distribui e a varanda recebe. **Refazer: C01 redesenhada** (imagem da planta antiga) |
-| 3 | *planta 2 de 3 · E01* · **Casa Estreita** · 58 m² · 2 quartos (1 suíte) · 2 banheiros · cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m) · Destaque: garagem na frente e todos os cômodos abrindo para o corredor coberto. |
-| 4 | *planta 3 de 3 · F03* · **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m) · Destaque: suíte para o casal e varanda na frente. |
+| 3 | *planta 2 de 3 · E03* · **Casa Fita** · 56 m² · 2 quartos · 1 banheiro · cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m) · Destaque: um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa. |
+| 4 | *planta 3 de 3 · F01* · **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m) · Destaque: os 3 quartos nos fundos, longe da rua, e sala com mesa de 4. |
 | 5 | *lado a lado* · **Qual combina com o seu terreno?** · tabela: área, quartos, banheiros, lote mínimo, para quem · "Os recuos mudam de cidade para cidade: confira na sua prefeitura." |
 | 6 | *planta grátis* · **Quer essa planta?** · Comente PLANTA · "e eu te mando a planta humanizada da Casa Compacta de graça no WhatsApp." |
 
@@ -123,8 +123,8 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 Antes de escolher a planta, olhe o terreno. 📏
 
 Casa Compacta: 51 m², 2 quartos, 1 banheiro. Cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m).
-Casa Estreita: 58 m², 2 quartos (1 suíte), 2 banheiros. Cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m).
-Casa Família: 78 m², 3 quartos (1 suíte), 2 banheiros. Cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m).
+Casa Fita: 56 m², 2 quartos, 1 banheiro. Cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m).
+Casa Família Compacta: 71 m², 3 quartos, 1 banheiro. Cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m).
 
 Arrasta para ver cada uma e a comparação no final.
 
@@ -176,35 +176,35 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ---
 
-## Post 4 · Reel · Passeio 3D da Casa Estreita
+## Post 4 · Reel · Passeio 3D da Casa Fita
 
-**Falta 3D:** E01 Casa Estreita (`animacao.mp4` e `03-perspectiva.png` em `animacoes-3d/plantas/casa-estreita/`). Capa já desenhada: `imagens/capas-reels/post-04-reel-casa-estreita.png` (sai com aviso até a planta existir).
+**Refazer imagem:** o gerador `gerar-imagens.cjs` ainda desenha a E01 Casa Estreita e a F03 Casa Família, fora do lançamento, e as imagens foram apagadas em 22/11 (a capa `imagens/capas-reels/post-04-reel-casa-estreita.png` é da E01); trocar pela E03 Casa Fita (casa em 3D parada: `ebook/visual/3d/E03.jpg`). Não existe animação de nenhuma casa: o `animacao.mp4` do roteiro ainda não existe.
 
 **Formato:** "É possível…?" ([`../MINOAI-FRONTIER.md`](../MINOAI-FRONTIER.md#referências-de-vídeo-mino-lee-minoleemp4), reel 1).
 
-**Texto fixo no alto:** É possível 2 quartos e 2 banheiros em 8 m de frente?
+**Texto fixo no alto:** É possível 2 quartos num lote de 5 metros de frente?
 
 **Roteiro (15 s):**
 
 | Tempo | Na tela | Legenda |
 |---|---|---|
-| 0:00 a 0:03 | Retângulo do lote 8 x 25 m se desenhando, a frente de 8 m destacada em amarelo | "**8 metros**" · "de frente" |
-| 0:03 a 0:06 | `animacao.mp4`: o blueprint se desenha dentro do lote | "2 quartos" · "2 banheiros" · "**cabe?**" |
-| 0:06 a 0:12 | A casa ganha vida; câmera desliza ao longo do corredor lateral | "corredor **do lado**" · "luz natural" · "em **todos** os cômodos" |
-| 0:12 a 0:15 | Perspectiva parada + ficha: "Casa Estreita · 58 m² · cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m)" | "cabe sim" · "comente **PLANTA**" |
+| 0:00 a 0:03 | Retângulo do lote 5 x 25 m se desenhando, a frente de 5 m destacada em amarelo | "**5 metros**" · "de frente" |
+| 0:03 a 0:06 | `animacao.mp4`: o blueprint se desenha dentro do lote | "2 quartos" · "1 banheiro" · "**cabe?**" |
+| 0:06 a 0:12 | A casa ganha vida; câmera desliza da frente aos fundos | "um quarto" · "em **cada ponta**" · "sala e copa **no meio**" |
+| 0:12 a 0:15 | Perspectiva parada + ficha: "Casa Fita · 56 m² · cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m)" | "cabe, com os" · "recuos de referência" · "comente **PLANTA**" |
 
 **Legenda:**
 
 ```
 Terreno estreito não precisa virar casa apertada. 📏
 
-Casa Estreita:
-📐 58 m²
-🛏️ 2 quartos (1 suíte)
-🚿 2 banheiros
-📏 cabe num lote de 8 x 25 m (no mínimo 8,0 x 23,7 m)
+Casa Fita:
+📐 56 m²
+🛏️ 2 quartos
+🚿 1 banheiro
+📏 cabe num lote de 5 x 25 m (no mínimo 5,0 x 20,6 m)
 
-O segredo é o corredor na lateral: todos os cômodos ganham janela e luz natural, mesmo com só 8 m de frente.
+O segredo é um quarto em cada ponta, com a sala e a copa no meio. Sala, cozinha e quartos têm janela para fora, mesmo com só 5 m de frente.
 
 Tem terreno estreito? Me conta a medida nos comentários.
 Quer uma planta humanizada de graça? Comente PLANTA.
@@ -287,25 +287,25 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 ---
 
-## Post 7 · Imagem · Casa Família
+## Post 7 · Imagem · Casa Família Compacta
 
-**Imagem:** `imagens/post-07-casa-familia/01.png`. **Falta 3D:** F03 Casa Família (`03-perspectiva.png`). Até lá, a tela sai com aviso.
+**Imagem:** `imagens/post-07-casa-familia/01.png`. **Refazer imagem:** o gerador `gerar-imagens.cjs` ainda desenha a E01 Casa Estreita e a F03 Casa Família, fora do lançamento, e as imagens foram apagadas em 22/11; trocar pela F01 Casa Família Compacta (casa em 3D: `ebook/visual/3d/F01.jpg`).
 
 | Tela | Texto |
 |---|---|
-| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família** · 78 m² · 3 quartos (1 suíte) · 2 banheiros · cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m) |
+| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m) |
 
 **Legenda:**
 
 ```
-Casa Família: espaço para todo mundo. 🏡
+Casa Família Compacta: espaço para todo mundo. 🏡
 
-📐 78 m²
-🛏️ 3 quartos (1 suíte)
-🚿 2 banheiros
-📏 cabe num lote de 11 x 15 m (no mínimo 10,9 x 14,6 m)
+📐 71 m²
+🛏️ 3 quartos
+🚿 1 banheiro
+📏 cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m)
 
-Suíte com banheiro próprio para o casal e varanda na frente, cobrindo a porta da sala.
+Os 3 quartos ficam nos fundos, longe da rua. Na sala cabe a mesa de 4, e o serviço tem porta para fora, no corredor lateral.
 
 Você moraria nessa? Comenta aqui o que mudaria.
 Quer uma planta humanizada de graça? Comente PLANTA.

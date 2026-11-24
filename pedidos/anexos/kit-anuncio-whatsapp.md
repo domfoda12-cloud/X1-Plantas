@@ -15,7 +15,7 @@
 **Nenhum anúncio roda hoje.** Condições gerais para qualquer um (de [`ESTRATEGIA.md`](../../ESTRATEGIA.md), seção 10, e de [`../../contexto/entregas/ULTIMO.md`](../../contexto/entregas/ULTIMO.md)):
 
 1. Depois do teste de procura sem gastar, e com o "sim" do dono para cada campanha. Verba: R$ 20 por dia, um anúncio que abre o WhatsApp por vez, com data de término no Gerenciador.
-2. PDF final com o preço e link do Drive prontos (hoje o PDF sai sem preço).
+2. PDF final, sem preço (dono, 24/11), e link do Drive prontos.
 3. Dados de quem vende no perfil do WhatsApp Business e no `/pix` (Decreto 7.962/2013): ainda faltam.
 4. Este kit passou pelo Revisor de risco.
 
@@ -37,10 +37,10 @@ O e-book já é forte em (c) tempo e (d) esforço: a casa que cabe no lote e as 
 | Parte | Situação |
 |---|---|
 | O que se entrega | Decidido: 3 casas, PDF por link do Google Drive |
-| Bônus | Decidido (checklist da obra por fase e perguntas ao engenheiro), mas **só entra no texto quando estiver no PDF**. Fora deste kit |
+| Bônus | Bônus: fora de toda peça até existir no PDF (decisão 33). |
 | Garantia | Decidida: 7 dias contados da entrega do link, Pix devolvido inteiro |
 | Por que agora | **Nenhum, e está certo assim.** Não há data nem limite real; sem urgência |
-| Nome | Decidido: "Antes do primeiro tijolo" |
+| Nome | Título: em troca, 3 opções (decisão 34). |
 | Preço e forma de pagar | Teste R$ 47 x R$ 67 em semanas alternadas (decidido); Pix no WhatsApp +55 75 99122-5333 (`ebook/config.json`) |
 
 **Uma mudança de oferta proposta (opção para o dono):** os anúncios A e B **não prometem nada de graça nem dizem o preço**. Por quê: a amostra grátis é a Casa Compacta, que não cabe num lote de 5 m de frente, e o que vai de graça ainda está em aberto; o preço muda toda semana e já tem resposta pronta na conversa (`/oferta`).
@@ -63,10 +63,12 @@ A ajuda oficial do WhatsApp Business descreve **uma** mensagem de saudação, qu
 **Proposta (opção para o dono e o Maestro; o arquivo é o `RESPOSTAS-RAPIDAS.md`):** quando um anúncio estiver no ar, usar esta saudação, que não cita casa nem grátis:
 
 ```text
-Oi! Que bom que você chamou. Aqui é [seu nome], do e-book Antes do primeiro tijolo.
+Oi! Que bom que você chamou. Aqui é [seu nome], do e-book [título do e-book].
 
 Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com ela eu te digo quais das 3 casas cabem no seu lote (se alguma cabe), com os recuos de referência.
 ```
+
+> **[título do e-book]:** o atual até o dono escolher (decisão 34); quando mudar, colar de novo a saudação e a ausência.
 
 ### 2b. Regras da resposta (iguais para A, B e C)
 
@@ -124,7 +126,7 @@ TEXTO: Lote de 5 x 25 m? Cabe uma casa de 2 quartos, com os recuos de referênci
 
 A Casa Fita tem 56 m² e cabe num lote de 5 x 25 m, com os recuos de referência: um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa.
 
-No e-book Antes do primeiro tijolo, ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro. Conferida medida por medida (não substitui o profissional).
+No e-book [título do e-book], ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro. Conferida medida por medida (não substitui o profissional).
 
 Me chama no WhatsApp e manda a medida do seu lote. Eu te digo se ela cabe no seu.
 
@@ -146,7 +148,7 @@ Não precisa. A Casa Fita tem 2 quartos em 56 m², um em cada ponta, com sala e 
 
 O beliche fica para as crianças, se elas quiserem.
 
-No e-book Antes do primeiro tijolo, ela vem com as medidas, desenhada no lote e em 3D. Conferida medida por medida (não substitui o profissional).
+No e-book [título do e-book], ela vem com as medidas, desenhada no lote e em 3D. Conferida medida por medida (não substitui o profissional).
 
 Me manda a medida do seu lote no WhatsApp. Eu te digo se ela cabe no seu.
 
@@ -207,7 +209,7 @@ TEXTO: Tem um lote de 10 x 15? Essa casa de 3 quartos foi desenhada nele.
 
 A Família Compacta tem 71 m² e cabe num lote de 10 x 15 m, com os recuos de referência. Os 3 quartos ficam nos fundos, longe da rua, e a sala tem lugar para a mesa de 4.
 
-No e-book Antes do primeiro tijolo, ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro. Conferida medida por medida (não substitui o profissional).
+No e-book [título do e-book], ela vem com as medidas, desenhada no lote, em 3D e com as perguntas para levar ao seu engenheiro. Conferida medida por medida (não substitui o profissional).
 
 Me chama no WhatsApp e manda a medida do seu lote. Eu te digo se ela cabe no seu.
 
@@ -227,7 +229,7 @@ TEXTO: Em casa com um quarto a menos, toda noite tem campeonato: par ou ímpar p
 
 Num lote de 10 x 15 m dá para encerrar o campeonato. A Família Compacta tem 3 quartos em 71 m², os 3 nos fundos, longe da rua. Cabe com os recuos de referência.
 
-No e-book Antes do primeiro tijolo, ela vem com as medidas, desenhada no lote e em 3D. Conferida medida por medida (não substitui o profissional).
+No e-book [título do e-book], ela vem com as medidas, desenhada no lote e em 3D. Conferida medida por medida (não substitui o profissional).
 
 Me manda a medida do seu lote no WhatsApp. Eu te digo se ela cabe no seu.
 

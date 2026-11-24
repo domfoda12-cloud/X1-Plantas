@@ -6,7 +6,7 @@
 
 > **Como usar:** no chat, digite `/` e o atalho (ex.: `/pix`), escolha a mensagem, troque o que está entre [colchetes] e envie. Nenhuma mensagem sai com colchete.
 >
-> **Os [colchetes] que só o dono preenche:** [chave Pix], [nome de quem recebe], [link do Drive], [seu nome] (quem assina o atendimento), [CPF/CNPJ] e [horário] (Decreto 7.962/2013, art. 2º: nome, CPF ou CNPJ, endereço e e-mail também no perfil comercial do WhatsApp Business). O **[preço]** é o da semana do teste: R$ 47 ou R$ 67, em semanas alternadas, começando pelo R$ 47; cada pessoa fica com o preço que recebeu primeiro, do começo ao fim (anote qual foi). Os outros colchetes ([nome], [frente], [fundo], a casa que cabe) saem da conversa e da [calculadora de lote](calculadora-lote.html).
+> **Os [colchetes] que só o dono preenche:** [chave Pix], [nome de quem recebe], [link do Drive], [seu nome] (quem assina o atendimento), [CPF] (o dono põe no celular; nunca no repositório) e [horário] (Decreto 7.962/2013, art. 2º: nome, CPF ou CNPJ, endereço e e-mail também no perfil comercial do WhatsApp Business). O **[preço]** é o da semana do teste: R$ 47 ou R$ 67, em semanas alternadas, começando pelo R$ 47; cada pessoa fica com o preço que recebeu primeiro, do começo ao fim (anote qual foi). **[título do e-book]:** o atual até o dono escolher (decisão 34); quando mudar, colar de novo a saudação e a ausência. Os outros colchetes ([nome], [frente], [fundo], a casa que cabe) saem da conversa e da [calculadora de lote](calculadora-lote.html).
 >
 > **Regras que valem para todas:** nunca prometa aprovação na prefeitura ou no banco, prazo ou custo de obra; a planta é de referência e o projeto é do profissional habilitado. Só a Casa Compacta é grátis: não ofereça mais nada de graça. Não prometa casas novas. No máximo uma mensagem por dia de você para a pessoa; respondê-la, sempre.
 
@@ -39,7 +39,7 @@
 ### Saudação (automática)
 
 ```text
-Oi! Que bom que você chamou. Aqui é [seu nome], do e-book Antes do primeiro tijolo.
+Oi! Que bom que você chamou. Aqui é [seu nome], do e-book [título do e-book].
 
 Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com ela eu te digo quais das 3 casas cabem no seu lote (se alguma cabe), com os recuos de referência.
 ```
@@ -142,7 +142,7 @@ Quer saber tudo o que vem no e-book?
 ### `/oferta`
 
 ```text
-[nome], a [casa que cabe] que cabe no seu lote está no e-book Antes do primeiro tijolo. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 x 25 m) e Família Compacta (3 quartos).
+[nome], a [casa que cabe] que cabe no seu lote está no e-book [título do e-book]. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 x 25 m) e Família Compacta (3 quartos).
 
 Cada uma vem com os móveis desenhados para dar escala, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
 
@@ -151,7 +151,7 @@ R$ [preço], no Pix, aqui mesmo. Você recebe por link e tem 7 dias para pedir o
 Te mando a chave Pix?
 ```
 
-> **Bônus** (checklist da obra por fase e lista de perguntas ao engenheiro para imprimir): só acrescente "Bônus: ..." depois que estiverem prontos no PDF. A Casa Fita tem 2 quartos (oficial desde 23/11/2026).
+> **Bônus** (checklist da obra por fase e lista de perguntas ao engenheiro para imprimir): só acrescente "Bônus: ..." depois que estiverem prontos no PDF e o dono mandar (decisão 33). A Casa Fita tem 2 quartos (oficial desde 23/11/2026).
 
 ### `/pix`
 
@@ -160,7 +160,7 @@ Combinado, [nome]!
 
 Chave Pix: [chave Pix]
 Nome: [nome de quem recebe]
-Vendedor: [nome de quem vende], CPF/CNPJ [CPF/CNPJ]
+Vendedor: [nome de quem vende], CPF [CPF]
 Valor: R$ [preço]
 
 Confere o nome antes de confirmar. Pagou? Me manda o comprovante aqui que eu te envio o link do e-book.
@@ -171,7 +171,7 @@ Confere o nome antes de confirmar. Pagou? Me manda o comprovante aqui que eu te 
 ```text
 Recebi, [nome]. Obrigado pela confiança!
 
-Aqui está o seu e-book Antes do primeiro tijolo:
+Aqui está o seu e-book [título do e-book]:
 [link do Drive]
 
 Abre no celular e dá para baixar e imprimir. Os seus 7 dias de garantia contam de hoje.
@@ -260,7 +260,7 @@ Quer que eu te mostre as casas que cabem no seu lote?
 ### Ausência (automática)
 
 ```text
-Oi! Aqui é [seu nome], do e-book Antes do primeiro tijolo. Agora não consigo responder. Respondo no próximo horário de atendimento, [horário].
+Oi! Aqui é [seu nome], do e-book [título do e-book]. Agora não consigo responder. Respondo no próximo horário de atendimento, [horário].
 
 Enquanto isso, me manda a medida do seu lote (frente x fundo, exemplo: 8 x 15). Assim eu já volto te dizendo qual casa cabe.
 ```
