@@ -447,8 +447,8 @@ def validar(planta):
                 r.erro(f"{c['nome']}: janela e veneziana somam {(a_jan + a_ven) / livre * 100:.0f}% do piso livre (mínimo de referência 12,5%)")
             m2 = lambda v: f"{v:.2f}".replace(".", ",")
             de = {"servico": "do serviço", "cozinha": "da cozinha", "banho": "do banheiro", "lavabo": "do lavabo"}.get(t, "do cômodo")
-            r.aviso(f"{c['nome']}: o ar entra por uma veneziana de {m2(vl)} x {m2(vh)} m em cima da porta de fora ({m2(a_ven)} m², "
-                    f"{n0((a_jan + a_ven) / livre * 100)}% do piso livre de {_f(livre)} m², contando o vão inteiro; a referência é 1/8, 12,5%). "
+            r.aviso(f"{c['nome']}: {'no lugar de janela, uma' if not lista else 'além da janela, uma'} veneziana de {m2(vl)} x {m2(vh)} m em cima da porta de fora ({m2(a_ven)} m², "
+                    f"{n0((a_jan + a_ven) / livre * 100)}% do piso livre de {_f(livre)} m², contando o vão inteiro; a referência é 1/8 do piso). "
                     f"As aletas tiram parte do ar e quase toda a luz: o engenheiro confere a ventilação e a luz {de}")
             a_jan += a_ven
         razao = a_jan / area(c) if area(c) else 0

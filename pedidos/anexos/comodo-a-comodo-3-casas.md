@@ -54,9 +54,9 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 
 ### Serviço · 1,19 x 2,89 m livres (3,4 m²)
 - **Cabe** (anexo de mobiliar): tanque e máquina lado a lado na divisa, entre os giros das duas portas; **66 cm** na frente do tanque, **54 cm** na frente da máquina.
-- **Este cômodo espera o conserto da janela em cima da porta (decisão do dono).** No desenho, a parede do fundo do serviço tem 1,19 m livres e recebe a **porta de fora (0,90) e a janela (0,70)**, e a janela cai em cima da porta (o `checar.py` avisa: "C01 servico sobre a porta ext-servico"). Nada deste cômodo vira página, imagem 3D ou vista até a planta ser resolvida em `projetos.py`. As notas abaixo valem para o arranjo de dentro e são revistas depois do conserto.
+- **Ventilação: veneziana em cima da porta de fora** (decisão do dono, 24/11: "manter a porta e pôr veneziana em cima"; aplicada no D1). A parede do fundo tem 1,19 m livres e só comporta a porta de fora (0,90); a janela de 0,70 que caía em cima dela saiu. No lugar, uma **veneziana de 0,90 x 0,50 m no vão da porta, de 2,10 a 2,60 m do piso** (sobram 20 cm de verga até o teto de 2,80 do desenho 3D; com pé-direito menor, a veneziana fica mais baixa, e quem decide é o projeto). **Conta:** 0,45 m² de vão para 3,4 m² de piso livre dá 13%; a referência do projeto é 1/8 (12,5%, 0,43 m²). Só passa contando o vão inteiro: as aletas tiram parte do ar e quase toda a luz, e a luz do dia passa a vir da porta aberta e da cozinha. **O engenheiro confere a ventilação e a luz do serviço** (é o aviso do validador, no "Atenção" da página da casa). Na planta, a veneziana aparece tracejada (fica acima do corte); na imagem 3D, cortada a 1,1 m, não aparece.
 - **Ideias:**
-  1. **Prateleira em cima da máquina, na divisa**, acima da tampa aberta, para sabão e balde.
+  1. **Prateleira em cima da máquina, na divisa**, acima da tampa aberta, para sabão e balde. Não na parede do fundo: em cima da porta fica a veneziana.
   2. **Varal de teto para dia de chuva**, preso na laje ou no forro (o profissional confere a fixação); o varal de sol fica no fundo do lote, a um passo da porta.
 - **Tomadas:** perímetro de 8,2 m: o mínimo é **3 pontos** (área de serviço entra na regra da cozinha, um a cada 3,5 m). O da máquina em lugar seco, longe do respingo do tanque. O lugar de cada um, o eletricista confere. Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
 - **Cuidado:** tanque encostado no canto da porta, com a folha batendo nele. Esta planta evita (a folha passa a 3 cm).
@@ -108,7 +108,7 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 ### Frente do lote · 3,0 x 8,0 m (recuo de referência)
 - **O que cabe:** moto, sim (uma moto pequena mede uns 2,0 x 0,75 m). **Carro, não:** não cabe carro de frente para a rua no recuo de referência de 3,0 m; um carro popular pequeno mede uns 3,6 m; o tamanho da vaga é o código de obras que diz. (Fonte das medidas: nota no fim.)
 - **Ideias:**
-  1. **Carro ou quintal: decida antes de marcar a obra.** No lote de 8 x 15, sobram 3,5 m no fundo. Se a casa for 2,0 m para trás, a frente fica com **5,0 m** e o fundo com **1,5 m**, o mínimo do Código Civil para janela (art. 1.301), para as janelas da cozinha, do serviço e do quarto casal; o código de obras pode pedir mais. O código de obras da cidade diz o recuo de frente e o tamanho da vaga; o engenheiro marca.
+  1. **Carro ou quintal: decida antes de marcar a obra.** No lote de 8 x 15, sobram 3,5 m no fundo. Se a casa for 2,0 m para trás, a frente fica com **5,0 m** e o fundo com **1,5 m**, o mínimo do Código Civil para janela (art. 1.301), para as janelas da cozinha e do quarto casal e a veneziana do serviço; o código de obras pode pedir mais. O código de obras da cidade diz o recuo de frente e o tamanho da vaga; o engenheiro marca.
   2. **Horta na frente, se a rua ficar ao norte** (a melhor posição para esta casa, pelo validador): aí é a frente que pega sol, e o fundo fica do lado da sombra da casa.
 - **Cuidado:** fazer o muro e o portão antes de saber onde ficam o medidor de luz e o hidrômetro.
 - **Pergunte:** à prefeitura ou ao engenheiro, o recuo de frente da sua cidade (pode ser maior que os 3,0 m de referência); à concessionária, onde vai o padrão de entrada.
@@ -120,9 +120,9 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 - **Pergunte:** ao engenheiro, se o recuo de 1,5 m é medido até a face de fora da parede.
 
 ### Fundo do lote · 3,5 x 8,0 m no lote de 8 x 15 (1,5 m no lote mínimo)
-- **O que tem:** a porta do serviço e as janelas da cozinha, do serviço e do quarto casal.
+- **O que tem:** a porta do serviço, com a veneziana em cima, e as janelas da cozinha e do quarto casal.
 - **Ideias:** varal de sol a um passo da porta do serviço; torneira e ralo junto da porta (o lugar, a saída da água e o caimento, o encanador confere).
-- **Onde a casa cresce:** aqui tem chão (2,0 m além do recuo mínimo), mas **três janelas dependem dele**. Cômodo no fundo tapa a luz da cozinha, do serviço e do quarto casal: só com projeto novo.
+- **Onde a casa cresce:** aqui tem chão (2,0 m além do recuo mínimo), mas **duas janelas e a veneziana do serviço dependem dele**. Cômodo no fundo tapa a luz da cozinha e do quarto casal e o ar do serviço: só com projeto novo.
 - **Cuidado:** cobrir o fundo inteiro com telha para o varal. Cobertura leve, só na frente da porta do serviço, e o engenheiro confere se não tira a luz da janela da cozinha.
 
 ---

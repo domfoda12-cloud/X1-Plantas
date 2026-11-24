@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 53 documentos
+## Os 55 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -103,7 +103,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público); 6. O que ainda não pode virar página.
 
-Tamanho: 9413 palavras.
+Tamanho: 9543 palavras.
 
 ### [Conferência técnica do Arquiteto: página "A parede que não pode ter janela" (passo D19), 24/11/2026](anexos/conferencia-arquiteto-parede-sem-janela-2026-11-24.md)
 
@@ -309,6 +309,14 @@ Seções: 1. Passeios 3D de casa pequena e configuradores de planta, na web; 2. 
 
 Tamanho: 4490 palavras.
 
+### [A regra de honestidade: o que é nosso e o que é da lei](anexos/regra-de-honestidade-para-o-dono-2026-11-24.md)
+
+Revisor de risco, 24/11/2026 (Opus). Pedido do dono no quadro: "Quero dar uma olhada na regra de honestidade, nao roubando ou entregando produto de baixa qualidade, nao me importo de exagerar as coisas ou mentir". Quem decide é o dono. Só não dá para mudar o que é lei.
+
+Seções: (a) O que a regra de hoje proíbe; (b) O que pode soltar sem risco; (c) O que continua proibido, e por quê; (d) Onde o dono quer a linha (três perguntas, uma por cartão); Conferência; Nota do Maestro.
+
+Tamanho: 966 palavras.
+
 ### [Skills candidatas, 24/11/2026: júri, casas, cooperação e venda (passo 1 da pesquisa)](anexos/skills-candidatas-2026-11-24.md)
 
 Pesquisador (Sonnet), 24/11/2026. Pedido do dono: "procure mais skills, talvez o júri precise de ajuda com uma". Passo 1 de 2: achados com fonte. Quem conclui é o Opus; o Revisor de risco tem veto. Nada foi baixado, instalado nem executado. Só páginas públicas lidas pelo TinyFish (busca e leitura,…
@@ -410,6 +418,12 @@ Tamanho: 513 palavras.
 Seções: Conferência do Arquiteto (24/11): SIM SE; Decisão do Maestro sobre os dois pareceres (24/11).
 
 Tamanho: 757 palavras.
+
+### [Veto: página "A parede que não pode ter janela" (passo D19), 24/11/2026 · Revisor de risco, Opus (rascunho)](anexos/veto-parede-sem-janela-2026-11-24.md)
+
+Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fable.
+
+Tamanho: 305 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 
