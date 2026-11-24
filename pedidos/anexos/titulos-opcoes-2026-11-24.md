@@ -95,3 +95,13 @@ Fontes: [Hotmart, "Tudo o que você precisa saber antes de construir uma casa do
 ## Se o título mudar, revisar também
 
 A frase "Antes do primeiro tijolo, mede a frente do seu lote…" aparece em `ebook/vendas/atributos-que-vendem.md` (linha 13 e combinação 2) e em `ebook/referencias/VISUAL.md` (linha 38). O motivo da troca, parecer cópia, vale para essas frases também. Eu não mexi nelas.
+
+## Veto do Revisor de risco (24/11, rascunho): os três passam com troca
+
+| Opção | Título | Subtítulo depois do Revisor |
+|---|---|---|
+| 1 | **A casa do seu lote** (fica, com "de referência" por perto na capa) | "3 casas térreas de referência, desenhadas para lotes de 5 x 25, 8 x 15 e 10 x 15 m. Mede a frente do seu e veja se uma delas serve. O recuo da sua cidade, o seu engenheiro confere." ("acha a sua" garantia que uma cabe) |
+| 2 | **Errar na planta sai caro** (fica) | "3 casas térreas de referência, conferidas medida por medida. Não substitui o profissional. Escolha antes de gastar." |
+| 3 | **Veja a casa antes da obra** (o original "Sua casa antes da obra" não passa: parece projeto sob medida) | "Veja mobiliadas e em 3D 3 casas térreas de referência, para lotes de 5 x 25, 8 x 15 e 10 x 15 m, antes de gastar com a fundação." |
+
+Não conferido: a capa em prévia com cada título. Quem escolhe é o dono (cartão p14 do quadro).
