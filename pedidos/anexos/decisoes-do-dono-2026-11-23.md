@@ -34,7 +34,7 @@
 | Casa Compacta revisada | "Sim" (aprova a revisão) | Entra no e-book e na planta grátis depois do redesenho do banheiro abaixo; refazer imagem, 3D e texto do lote |
 | Banheiro da Casa Compacta | Economia de cano | Banheiro e quartos abrindo para a sala, encostados na cozinha (parede de canos única), como FNHIS e CAR-BA |
 | Validador | "Sim" (endurecer com as 5 regras das referências) | Primeiro como aviso, com a lista do que está fora em cada casa |
-| E-mail ao autor do cass | "Quero também que mande o e-mail"; assina Dominic de Lima, fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
+| E-mail ao autor do cass | "Quero também que mande o e-mail"; assina [nome do dono], fundador sozinho | Enviar do Gmail dele depois de ele ver o texto final e dizer "sim, envia" |
 | E-mail ao autor do cass | "Sim" (depois de ver o texto final) | Enviado em 23/11 do Gmail do dono, com a cópia limpa da busca em anexo |
 | Título (questionário, 18:28) | "Antes do primeiro tijolo"; subtítulo só no anúncio | Aplicado no `ebook/config.json` |
 | Casa Compacta (questionário) | "Com hall" | **Muda a escolha anterior (economia de cano): vale a mais nova.** Volta a C01R (com hall) |

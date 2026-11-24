@@ -1,4 +1,4 @@
-# E-mail ao autor do cass: ENVIADO em 23/11/2026 do Gmail do dono, com o sim dele, assinado "Dominic de Lima, a solo founder"
+# E-mail ao autor do cass: ENVIADO em 23/11/2026 do Gmail do dono, com o sim dele, assinado "[nome do dono], a solo founder"
 
 (Abaixo, o rascunho de origem.)
 
