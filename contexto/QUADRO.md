@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`)
+
+- **O dono pediu:** "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele".
+- **O que mudou:** critério novo para todo o conteúdo do PDF: cada página nomeia uma dor real do comprador e entrega a saída. Primeiro sai o mapa página por página; texto só muda depois de o dono ver.
+- **Todos:** dor só da pesquisa do comprador ou dos dados da casa, nunca inventada nem com medo exagerado. **Planejador:** faz o mapa. **Redator:** reescreve só o que o dono marcar, com plano. **Designer:** o formato das páginas não muda sem pedido.
+
 ## 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`)
 
 - **O dono pediu:** "O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem".
