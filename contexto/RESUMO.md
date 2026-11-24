@@ -193,7 +193,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 531 palavras.
+Tamanho: 550 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

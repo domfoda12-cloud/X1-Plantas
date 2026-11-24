@@ -1350,15 +1350,15 @@ def dupla(L, p, por_id, numeros):
         veja = f' Veja a <b>{alvo} {E(por_id[alvo]["nome"])}</b>, {"p. " + str(numeros[alvo]) if isinstance(numeros[alvo], int) else "no e-book"}.' if alvo in por_id else ""
         # sem a alternativa na edição: só diz que falta suíte se nenhuma casa da edição tiver (conferido no validador)
         if not veja and "suíte" in nao[0] and not any("suíte" in q["quartos_txt"] for q in por_id.values()):
-            veja = " Este e-book não tem casa com suíte."
+            veja = " O e-book completo não tem casa com suíte." if numeros.get("erros") == "e-book" else " Este e-book não tem casa com suíte."
         nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])}{veja}</p></div>'
-    perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book."]
+    perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book" + (" completo" if numeros.get("erros") == "e-book" else "") + "."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]} m.</h2></div>
       <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
-          <div class="r-por">Lote comercial {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
+          <div class="r-por">Lote comum {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>
           {linha('Área fechada', f"{n0(r['area_fechada'])} m²")}
           {linha('Medidas por fora', f"{m(p['W'])} x {m(p['D'])} m")}

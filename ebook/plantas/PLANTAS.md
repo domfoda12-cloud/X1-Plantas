@@ -18,7 +18,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 - Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## C02 · Casa Studio
@@ -61,7 +61,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 
 ## C05 · Casa Popular
 
@@ -105,7 +105,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 
 ## E01 · Casa Estreita
 
@@ -265,7 +265,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 - Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F04 · Casa Família Suíte
@@ -346,7 +346,7 @@
 
 **Atenção**
 
-- Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho
+- Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 
 ## S07 · Casa Gourmet
 

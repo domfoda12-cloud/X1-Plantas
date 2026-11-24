@@ -36,3 +36,4 @@ O que deu errado e não pode voltar (uma linha cada, com data; vem das auditoria
 - **23/11, prova 1:** achou os 8 erros plantados, mas não viu omissão (Diretor ausente em conteúdo público, "Link na bio" fora do funil). Antes do SIM, conferir também o passo que falta, contra o `CONSELHO.md`.
 - **23/11, prova:** Método (noite, o dono não viu): antes de ler a peça ou o plano, escreva o que tem de ESTAR lá para quem recebe (pelo menos: aviso "Planta de referência", fonte de cada número, selo em imagem parada, Fable na peça final) e marque presente ou ausente, um por um. Ausente também é erro: devolva o trecho que falta (adaptação nossa de Shull, Rus e Basili, 2000, e Rassin, 2014).
 - **23/11, prova:** Prova 2: passo ausente só vira condição quando uma regra escrita o exige naquele plano; senão vai como nota junto do SIM
+- **24/11, maestro:** Palavra técnica ambígua ("lote comercial") também confunde o comprador: conferir o vocabulário, não só os números.

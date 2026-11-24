@@ -532,7 +532,7 @@ def validar(planta):
         if c["tipo"] == "varanda" and c["id"] != "corr":
             for lado in ("esq", "dir"):
                 if _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4:
-                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral fica fechada, sem abertura para o vizinho")
+                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)")
                     break
 
     # Áreas molhadas juntas
