@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 39 documentos
+## Os 40 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -45,7 +45,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 5353 palavras.
+Tamanho: 5432 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -314,6 +314,14 @@ Passo A1 do `pedidos/PLANO.md`. O Revisor leu o PDF direto: 17 páginas do e-boo
 Seções: Trocas que não dependiam do dono; Depende do dono; Não conferido pelo Revisor.
 
 Tamanho: 350 palavras.
+
+### [Parecer do Revisor de risco: vender o e-book sem os 2 bônus (decisão 33, passo A5), 24/11/2026](anexos/veto-opcao-sem-bonus-2026-11-24.md)
+
+[Revisor] SIM SE. A escolha é do dono; o parecer só diz se a opção é honesta. Vender sem bônus é honesto e dentro da lei se o comprador nunca ler "bônus" antes de o bônus existir. CDC, art. 30: a oferta vincula; o que não foi oferecido não obriga. Promessa sem data descumpre o Decreto 7.962/2013,…
+
+Seções: Trocas, só se o dono disser sim.
+
+Tamanho: 513 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 
