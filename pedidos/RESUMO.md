@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 48 documentos
+## Os 49 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 11453 palavras.
+Tamanho: 11572 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -103,7 +103,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público); 6. O que ainda não pode virar página.
 
-Tamanho: 9394 palavras.
+Tamanho: 9413 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
@@ -261,7 +261,7 @@ Passo A9 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Desi
 
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
-Tamanho: 1691 palavras.
+Tamanho: 1698 palavras.
 
 ### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
 
@@ -380,6 +380,14 @@ Tamanho: 350 palavras.
 Seções: Trocas, só se o dono disser sim.
 
 Tamanho: 513 palavras.
+
+### [Revisor de risco: página de prova "cômodo a cômodo" da Casa Fita (passo D15), 24/11/2026](anexos/veto-pagina-prova-E03-2026-11-24.md)
+
+[Revisor] SIM SE, com 4 trocas pequenas. Não há veto. Rodou no Opus, sobre o rascunho; a peça final pede nova leitura no Fable. Imagens lidas: `ebook/plantas/rascunhos/comodo-a-comodo/E03-pagina-1.png` e `E03-pagina-2.png`.
+
+Seções: Conferência do Arquiteto (24/11): SIM SE; Decisão do Maestro sobre os dois pareceres (24/11).
+
+Tamanho: 757 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 

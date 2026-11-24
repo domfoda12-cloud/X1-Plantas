@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 5b. Modo júri (método do llm-council, 23/11/2026); 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 2855 palavras.
+Tamanho: 3021 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 

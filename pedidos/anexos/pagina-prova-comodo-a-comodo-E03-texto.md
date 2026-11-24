@@ -14,7 +14,7 @@
 
 | Atributo | Escada | D | P | E |
 |---|---|---|---|---|
-| Pia sob a janela de 1,70 m: tomada nos 22 cm | sem parede atrás da pia → decide tomada e torneira antes → não descobre no acabamento → não paga parede aberta de novo | 4 | 5 | 5 |
+| Pia sob a janela de 1,70 m: tomada nos 22,5 cm | sem parede atrás da pia → decide tomada e torneira antes → não descobre no acabamento → não paga parede aberta de novo | 4 | 5 | 5 |
 | Recuo de 1,5 m como "rua de dentro" | 4 cômodos com janela para ele → não cobrir → a casa continua clara | 4 | 5 | 5 |
 | Quarto da frente que troca de uso | tomada nas 2 cabeceiras → solteiro, 2 camas ou casal → sem extensão no chão | 5 | 5 | 4 |
 | Maleiro sobre o hall (0,89 x 2,94 m) | espaço que ninguém usa → armário sem tirar passagem → mais lugar para guardar | 5 | 4 | 5 |
@@ -41,20 +41,20 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 ### 1 · Quarto da frente · 3,20 x 2,89 m
 
 - **Ideia (24 palavras):** Tomada nas duas paredes de cabeceira (divisa e recuo): o quarto vira solteiro, duas camas ou casal sem extensão no chão. O eletricista confere.
-- **Cuidado (18 palavras):** Nicho na divisa, a parede de 15 cm do vizinho: prateleira, sim; nicho, só se o engenheiro aprovar.
+- **Cuidado (20 palavras):** Nicho na divisa, a parede de 15 cm que separa do vizinho: prateleira, sim; nicho, só se o engenheiro aprovar.
 - **Aponta:** ideia nas paredes da divisa (esquerda) e do recuo (direita), na altura da cabeceira; cuidado na parede da divisa.
 
 ### 2 · Sala · 3,20 x 3,54 m
 
 - **Ideia (25 palavras):** Sofá embaixo da janela, rack na divisa e 1,92 m entre os dois: esse vão é o corredor da casa. Mesa de centro, só pequena.
-- **Cuidado (17 palavras):** A porta do quarto da frente abre direto na sala: do sofá, vê-se a lateral da cama.
+- **Cuidado (15 palavras):** A porta do quarto da frente abre direto na sala: do sofá, vê-se a cama.
 - **Aponta:** ideia no vão entre a parede do recuo (sofá, janela) e a da divisa (rack); cuidado na porta do quarto da frente, no canto da divisa.
 
 ### 3 · Cozinha e copa · 3,20 x 3,14 m (destaque da página)
 
-- **Ideia (25 palavras):** Janela de 1,70 m sobre a pia: torneira de bancada; tomada sob a janela ou nos 22 cm até a porta. Eletricista e encanador conferem.
+- **Ideia (25 palavras):** Janela de 1,70 m sobre a pia: torneira de bancada; tomada sob a janela ou nos 22,5 cm até a porta. Eletricista e encanador conferem.
 - **Cuidado (20 palavras):** Fechar a parede sem marcar tomada e torneira da pia: depois do acabamento, não sobra parede. Decida antes do reboco.
-- **Aponta:** parede do recuo (direita): a janela da pia e o trecho de 22 cm entre a janela e a porta de fora.
+- **Aponta:** parede do recuo (direita): a janela da pia e o trecho de 22,5 cm entre a janela e a porta de fora.
 
 ### 4 · Banheiro · 2,19 x 1,58 m
 
@@ -64,20 +64,20 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 
 ### 5 · Hall · 0,89 x 2,94 m
 
-- **Ideia (24 palavras):** Maleiro por cima do hall, acima das portas: 0,89 x 2,94 m, com 40 a 70 cm conforme o pé-direito. Eletricista confere a luz.
+- **Ideia (25 palavras):** Maleiro por cima do hall, acima das portas: 0,89 x 2,94 m, com uns 40 a 70 cm conforme o pé-direito. Eletricista confere a luz.
 - **Cuidado (18 palavras):** Hall de 89 cm: estante ou armário tira a passagem. Na parede da divisa, só ganchos e quadros.
 - **Aponta:** ideia no teto do hall, por cima das portas; cuidado na parede da divisa do hall (2,9 m, sem porta).
 
 ### 6 · Quarto casal (fundos) · 3,20 x 2,99 m
 
-- **Ideia (25 palavras):** Cabe cama queen: 75 cm no pé e 70 de cada lado. Um segundo interruptor na cabeceira apaga a luz com você deitado; eletricista confere.
+- **Ideia (26 palavras):** Cabe cama queen: 75 cm no pé e uns 70 de cada lado. Um segundo interruptor na cabeceira apaga a luz com você deitado; eletricista confere.
 - **Cuidado (16 palavras):** Cômodo novo no fundo do lote tapa a única janela deste quarto. Ampliar pede projeto novo.
 - **Aponta:** ideia na parede do recuo (cabeceira, ao lado do criado); cuidado na janela da parede do fundo.
 
 ### 7 · Recuo lateral (direita) · 1,5 x 16,1 m
 
-- **Ideia (22 palavras):** Marque com trena: janela a 1,5 m do vizinho, o mínimo do Código Civil (art. 1.301). A sua cidade pode pedir mais.
-- **Cuidado (20 palavras):** Telhado no recuo tira boa parte da luz de 4 cômodos; se ventila, quem diz é o código de obras.
+- **Ideia (22 palavras):** Marque com trena: janela a 1,5 m da divisa, o mínimo do Código Civil (art. 1.301). A sua cidade pode pedir mais.
+- **Cuidado (25 palavras):** Telhado no recuo tira boa parte da luz de 4 cômodos; se a janela ainda conta como ventilação, quem diz é o código de obras.
 - **Aponta:** a faixa do recuo inteira, ao longo da parede direita; o cuidado marca as 4 janelas (sala, cozinha, serviço e banheiro).
 
 ### Nota das tomadas (18 palavras; letra pequena, perto dos números 1, 3 e 6)
@@ -86,7 +86,7 @@ Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que
 
 ### Pergunte ao seu engenheiro ou eletricista (3 perguntas, 57 palavras)
 
-1. **Ao eletricista:** a tomada da bancada cabe na faixa sob a janela da cozinha ou nos 22 cm até a porta? *(aponta 3)*
+1. **Ao eletricista:** a tomada da bancada cabe na faixa sob a janela da cozinha ou nos 22,5 cm até a porta? *(aponta 3)*
 2. **Ao engenheiro:** a parede da divisa é estrutural? Leva impermeabilização no pé, do lado do vizinho? *(aponta 1 e 5)*
 3. **Ao engenheiro:** a caixa d'água vai em cima do hall e do banheiro? O maleiro atrapalha o acesso a ela? *(aponta 5)*
 
@@ -95,7 +95,7 @@ Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que
 **Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.**
 Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só onde o projeto previu. Quem diz é o engenheiro.
 
-**Total da página:** cerca de 485 palavras (contagem por bloco acima).
+**Total da página:** cerca de 492 palavras (contagem por bloco acima).
 
 ---
 

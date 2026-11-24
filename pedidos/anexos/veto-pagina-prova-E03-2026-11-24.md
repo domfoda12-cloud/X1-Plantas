@@ -20,3 +20,14 @@
 Promessa ou dispensa de profissional: nenhuma. Sem preço, prazo nem aprovação.
 
 **Não conferido pelo Revisor:** o anexo de mobiliar; o texto do Código Civil (citado de memória nesta leitura; está conferido em `leis-conferidas-2026-11-23.md`); a posição de cada barra amarela (é do Arquiteto).
+
+## Conferência do Arquiteto (24/11): SIM SE
+
+- **As 7 faixas amarelas estão certas** (conferidas contra os dados da E03). Um erro de leitura: a porta de entrada da sala sai amarela do desenho do livro, ao lado do número 2, e parece uma faixa do item 2. A legenda diz que a porta de entrada também é amarela, ou a porta muda de cor nesta página.
+- **Cozinha:** da janela ao vão da porta de fora são 22,5 cm pelos dados.
+- **Números que batem:** os 6 tamanhos de cômodo, 1,92 m na sala, 1,70 m da janela, 75 cm no pé da cama queen, box de 0,90 m, 89 cm do hall, 1,5 x 16,1 m do recuo, 15 cm da parede, as 4 janelas no recuo. "Quarto da frente" e "Quarto casal (fundos)" estão nomeados certo.
+- **Não batem:** "70 de cada lado" da queen dá 70,5 cm; "40 a 70 cm" do maleiro depende de um pé-direito de 2,50 m que veio da apostila; "vê-se a lateral da cama" (pela porta vê-se o pé da cama de solteiro).
+
+## Decisão do Maestro sobre os dois pareceres (24/11)
+
+O Revisor pediu 22 cm (arredondar para baixo não promete espaço) e o Arquiteto pediu 23 cm (a regra de arredondar do projeto). **Vale "22,5 cm", o número exato dos dados**, que não promete a mais nem foge da regra. Trocas finais para a página: item 1 "a parede de 15 cm que separa do vizinho"; item 2 "vê-se a cama"; item 3 e pergunta 1 e pílula do detalhe "22,5 cm"; item 5 "uns 40 a 70 cm"; item 6 "uns 70 de cada lado"; item 7 "janela a 1,5 m da divisa" e "se a janela ainda conta como ventilação, quem diz é o código de obras"; item 3 da página direita "na página anterior"; legenda com "Tracejado bege: o que fica por cima (o maleiro do hall)", "Tracejado azul: o recuo, área aberta" e "A porta de entrada também é amarela, como no resto do e-book".
