@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24/11 · Visita 3D mais realista: guardada para depois (ficha `2026-11-24-2046`)
+
+- **O dono pediu:** gosta da visita 3D e quer saber se dá para usar modelos mais realistas; "Dont start working on it if yes, i think it costs a lot of credit, save it for later".
+- **O que mudou:** nada no produto. O pedido ficou guardado; ninguém trabalha nele até ele mandar.
+- **Todos:** não mexer na visita 3D agora. Quando ele liberar, toda biblioteca de modelos passa pelo roteiro de entrada (licença lida, veto) antes de baixar qualquer coisa.
+
 ## 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`)
 
 - **O dono pediu:** "Slow down on it, if we work on all the tasks at the same time, none will be done". E perguntou o que mais gastou o limite de uso da última janela.

@@ -149,3 +149,4 @@
 | prob-3 (bônus) | "É um bonus que vem com o produto pago, qual o problema?" | Explicar: o problema era prometer antes de existir; com o PDF separado pronto, some |
 
 | 24/11 20:45 (conversa) | "Slow down on it, if we work on all the tasks at the same time, none will be done" | Uma tarefa principal por vez, até o fim; no máximo 2 agentes juntos. Substitui o "4 a 6 agentes em paralelo" de 23/11. Tarefa de hora em hora reescrita. |
+| 24/11 20:45 (conversa) | "I like the 3d visit but can it use more realistic models?" e "Dont start working on it if yes, i think it costs a lot of credit, save it for later" | Dá para fazer; guardado para depois, ninguém começa até ele mandar. |

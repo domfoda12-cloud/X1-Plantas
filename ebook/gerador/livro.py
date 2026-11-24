@@ -1372,7 +1372,7 @@ def sumario(plantas, numeros):
         f'<li class="sum-casa"><span class="sum-aba am">frente {lote_frente(p)} m</span><span>{E(p["nome"])}'
         f'<small>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}'
         + (f' · {folhas[p["id"]]} páginas' if folhas.get(p["id"]) else "")
-        + (f' · {E(TX.DUAS_PARTES["sum_comodo"].format(numeros["comodo-" + p["id"]]))}' if numeros.get("comodo-" + p["id"]) else "")
+        + (f'<br>{E(TX.DUAS_PARTES["sum_comodo"].format(numeros["comodo-" + p["id"]]))}' if numeros.get("comodo-" + p["id"]) else "")
         + f'</small></span><em>{pag(p["id"])}</em></li>'
         for p in sorted(plantas, key=lambda p: (lote_frente(p), p["id"])))
     geral = ("".join(linha(TX.TITULOS[c], c) for c in ("ler", "palavras", "erros", "terreno"))
