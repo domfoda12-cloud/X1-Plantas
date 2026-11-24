@@ -14,7 +14,7 @@
 | **Instagram** | Plano do perfil, calendário, posts prontos e o guia da MinoAI Frontier | [`instagram/RESUMO.md`](instagram/RESUMO.md) (3) | editor-video, diretor, redator, designer, estrategista |
 | **Animações 3D e imagens** | O motor 3D, o OpenArt e as referências de planta que ganha vida | [`animacoes-3d/RESUMO.md`](animacoes-3d/RESUMO.md) (3) | arquiteto, designer, editor-video |
 | **Jurídico** | O que a lei exige de arquiteto e engenheiro, preços e critérios | [`reports/RESUMO.md`](reports/RESUMO.md) (2) | revisor-de-risco, pesquisador, estrategista |
-| **Pedidos do dono** | Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos | [`pedidos/RESUMO.md`](pedidos/RESUMO.md) (67) | todos |
+| **Pedidos do dono** | Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos | [`pedidos/RESUMO.md`](pedidos/RESUMO.md) (68) | todos |
 | **Código** | Os programas que validam as plantas e geram PDF, 3D, fichas e painel | [`ferramentas/RESUMO.md`](ferramentas/RESUMO.md) (24) | arquiteto, designer |
 
 ## Por agente

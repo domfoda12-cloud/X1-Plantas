@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 67 documentos
+## Os 68 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -284,6 +284,14 @@ Pedido do dono (quadro, 24/11/2026), palavra por palavra: "Procure na rede e me 
 Seções: Como ler as marcações; Família 1: letreiro de obra e de placa pintada à mão (letreiramento popular, "abridor de letras"); Família 2: estêncil e carimbo de caixote; Família 3: letra de planta técnica e de normógrafo; Família 4: letra "estranha" ou alienígena (forma inventada, ainda legível); Família 5: letra de quadrinho e de gibi; Família 6: display gorda e engraçada; Quais 3 eu levaria ao Designer para testar no nome "Lote Carente" (leitura minha, não decisão); O que não consegui conferir; Reconferência do pedido (um por um).
 
 Tamanho: 2923 palavras.
+
+### [Mapa dor e saída do e-book, página por página (24/11/2026)](anexos/mapa-dor-solucao-do-ebook-2026-11-24.md)
+
+Pedido do dono (ficha `2026-11-24-2130`): "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele". Recado dele, 21:34: "Nao precisa mostrar a dor diretamente, mostra indiretamente sabe daquele jeitinho". Autor: Planejador. É só o mapa: nenhum…
+
+Seções: 1. As dores do comprador (só da pesquisa e dos dados); 2. As 24 páginas; 3. O que mudar, em ordem de quanto ajuda o comprador; 4. Dores sem página e páginas sem dor; 5. Limites (o Revisor de risco tem veto); 6. Perguntas para o dono.
+
+Tamanho: 2099 palavras.
 
 ### [Mapa das duas partes do e-book (passo A10, 24/11/2026)](anexos/mapa-duas-partes-do-ebook-2026-11-24.md)
 
