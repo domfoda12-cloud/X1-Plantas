@@ -49,7 +49,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos; 22/11 · cass vetado; fechar ficha não apaga mais; lições do Maestro.
 
-Tamanho: 492 palavras.
+Tamanho: 532 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
