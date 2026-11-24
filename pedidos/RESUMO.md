@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: A ordem das próximas 5 tarefas (uma por vez); O objetivo da equipe; Onde estamos (24/11, 20h50, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: o júri já decidiu, agora espera o dono (cartões do Canteiro); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); ….
 
-Tamanho: 14014 palavras.
+Tamanho: 14029 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -445,9 +445,9 @@ Tamanho: 229 palavras.
 
 VETO em 3 pontos, cada um com a troca que vira SIM; o resto passa com troca ou como está. L = linha do documento na versão lida. Conferido contra os dados das 3 casas e `PLANTAS.md`: medidas livres, perímetros, janelas, portas, folga no fundo e distâncias da tomada ao box batem. Não há promessa de…
 
-Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página; Reconferência do Revisor, 24/11 (depois das trocas do Arquiteto).
+Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página; Reconferência do Revisor, 24/11 (depois das trocas do Arquiteto); Reconferência 24/11: páginas do gerador e ONDE_BONUS (Revisor, Opus, rascunho; a peça final pede o Fable).
 
-Tamanho: 1151 palavras.
+Tamanho: 1414 palavras.
 
 ### [Veredito do Revisor de risco: rascunho do lançamento (24/11/2026)](anexos/veto-ebook-lancamento-2026-11-24.md)
 

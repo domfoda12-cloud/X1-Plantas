@@ -194,7 +194,7 @@ COMODO = {
     "tomadas": "Tomadas:",
     "atencao": "Atenção (8).",
     "ref": "Em destaque na página anterior, com a parede ampliada.",
-    "selo": {"E03": "Imagem ilustrativa: móveis e acabamentos não vêm junto",
+    "selo": {"E03": "Imagem ilustrativa: móveis e acabamentos são sugestão",
              "C01": "Imagem ilustrativa: móveis e acabamentos são sugestão",
              "F01": "Imagem ilustrativa: móveis e acabamentos são sugestão"},
     "detalhe": {"E03": "Detalhe da cozinha, ampliado", "C01": "Detalhe do hall, ampliado"},
