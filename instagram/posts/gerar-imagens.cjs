@@ -99,7 +99,7 @@ function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true, fit = 'c
 
 // Planta mobiliada recortada nas paredes e desenhada em pixels por metro: as 3 casas ficam na mesma escala.
 // A caixa das paredes (pl.caixa) é medida na própria imagem antes de desenhar (medir(), no fim do arquivo).
-const MARG = { e: 1.0, d: 0.25, c: 0.55, b: 1.0 }; // metros em volta das paredes: cotas à esquerda e embaixo, veneziana em cima
+const MARG = { e: 1.0, d: 0.25, c: 0.55, b: 1.3 }; // metros em volta das paredes: cotas à esquerda e embaixo, veneziana em cima
 const tam = (pl) => ({ w: pl.W + MARG.e + MARG.d, h: pl.D + MARG.c + MARG.b });
 function escala(pl, pxm, { raio = 18 } = {}) {
   const src = arquivo(pl, 'humanizada'), { w, h } = tam(pl);
@@ -111,6 +111,14 @@ function escala(pl, pxm, { raio = 18 } = {}) {
     <span class="selo${W < 420 ? ' peq' : ''} borda">${SELO}</span></div>`;
 }
 const caberEm = (lista, larg, alt, gap) => Math.min((larg - gap * (lista.length - 1)) / lista.reduce((t, pl) => t + tam(pl).w, 0), alt / Math.max(...lista.map((pl) => tam(pl).h)));
+// A casa no lote (04-lote.png), recortada no desenho (pl.lote4, medido em medir()), com altura h.
+function noLote(pl, h) {
+  const src = arquivo(pl, 'lateral'), c = pl.lote4;
+  if (!src || !c) return falta(pl, 'lateral', Math.round(h / 2), h);
+  const k = (h - 24) / (c.y1 - c.y0), w = Math.round((c.x1 - c.x0) * k) + 24;
+  return `<div class="card" style="width:${w}px;height:${h}px;border-radius:14px;background:#fff;position:relative">
+    <img src="${src}" style="position:absolute;left:${12 - c.x0 * k - 3}px;top:${12 - c.y0 * k - 3}px;width:${c.iw * k}px;height:${c.ih * k}px;max-width:none"></div>`;
+}
 // Régua amarela (trena) de 5 m na escala da tela
 const regua = (pxm) => `<div class="regua"><div class="regua-b" style="width:${5 * pxm}px">${[0, 1, 2, 3, 4].map(() => '<i></i>').join('')}</div><span>5 m</span></div>`;
 
@@ -185,7 +193,8 @@ posts['post-02-tres-plantas'] = () => {
     if (pl.D > 1.5 * pl.W) {
       const pxm = caberEm([pl], 380, 1030, 0);
       return tela({ ...base, corpo: `<div class="lado"><div class="lado-t"><div class="t2">${pl.nome}</div><div class="chips col">${[pl.area, pl.quartos, pl.banhos, `cabe num lote de ${pl.lote}`, `no mínimo ${pl.minimo}`].map((c) => `<span class="chip">${c}</span>`).join('')}</div>
-        <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>${regua(pxm)}</div><div class="lado-p">${escala(pl, pxm)}</div></div>` });
+        <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>
+        <div class="lote-m">${noLote(pl, 440)}<div class="txt peq">a casa no lote de ${pl.lote},<br>com a rua embaixo</div></div>${regua(pxm)}</div><div class="lado-p">${escala(pl, pxm)}</div></div>` });
     }
     return tela({ ...base, corpo: `<div class="t2">${pl.nome}</div>${chips(pl)}
       <div class="centro">${escala(pl, caberEm([pl], 936, 780, 0))}</div>
@@ -392,6 +401,8 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .lado{flex:1;display:flex;gap:44px;min-height:0}
 .lado-t{flex:1;display:flex;flex-direction:column;gap:30px}
 .lado-t .regua{margin-top:auto}
+.lote-m{display:flex;align-items:flex-end;gap:26px}
+.lado-t{gap:26px}
 .lado-p{display:flex;align-items:flex-start;padding-top:20px}
 .chips.col{flex-direction:column;align-items:flex-start}
 .trio-i{display:flex;flex-direction:column;align-items:center;gap:16px}
@@ -453,18 +464,26 @@ async function medir(page) {
   for (const pl of Object.values(CASAS)) {
     const f = path.join(PLANTAS, pl.pasta, ARQ.humanizada);
     if (!fs.existsSync(f)) continue;
-    pl.caixa = await page.evaluate(async (url) => {
+    pl.caixa = await caixa(page, f, 'paredes');
+    const c = pl.caixa, sx = (c.x1 - c.x0) / pl.W, sy = (c.y1 - c.y0) / pl.D;
+    if (Math.abs(sx / sy - 1) > 0.03) throw new Error(`${pl.id}: a caixa das paredes não bate com ${pl.W} x ${pl.D} m (${sx.toFixed(0)} e ${sy.toFixed(0)} px/m)`);
+    const fl = path.join(PLANTAS, pl.pasta, ARQ.lateral);
+    if (fs.existsSync(fl)) pl.lote4 = await caixa(page, fl, 'desenho');
+  }
+}
+// "paredes": linhas e colunas com muitos pixels escuros. "desenho": tudo o que não é branco entre o subtítulo e o rodapé.
+async function caixa(page, f, modo) {
+  return page.evaluate(async ([url, modo]) => {
       const im = new Image(); im.src = url; await im.decode();
       const W = im.naturalWidth, H = im.naturalHeight, cv = document.createElement('canvas');
       cv.width = W; cv.height = H; const g = cv.getContext('2d'); g.drawImage(im, 0, 0);
       const d = g.getImageData(0, 0, W, H).data, lin = new Uint32Array(H), col = new Uint32Array(W);
-      for (let yy = 0; yy < H; yy++) for (let x = 0; x < W; x++) { const i = (yy * W + x) * 4; if (d[i] < 70 && d[i + 1] < 70 && d[i + 2] < 70) { lin[yy]++; col[x]++; } }
-      const lim = W / 50, pri = (a) => a.findIndex((v) => v > lim), ult = (a) => a.length - 1 - Array.from(a).reverse().findIndex((v) => v > lim);
+      const y0 = modo === 'desenho' ? Math.round(H * 0.14) : 0, y1 = modo === 'desenho' ? Math.round(H * 0.93) : H;
+      const sim = modo === 'desenho' ? (i) => Math.min(d[i], d[i + 1], d[i + 2]) < 235 : (i) => d[i] < 70 && d[i + 1] < 70 && d[i + 2] < 70;
+      for (let yy = y0; yy < y1; yy++) for (let x = 0; x < W; x++) { if (sim((yy * W + x) * 4)) { lin[yy]++; col[x]++; } }
+      const lim = modo === 'desenho' ? 0 : W / 50, pri = (a) => a.findIndex((v) => v > lim), ult = (a) => a.length - 1 - Array.from(a).reverse().findIndex((v) => v > lim);
       return { iw: W, ih: H, x0: pri(col), x1: ult(col), y0: pri(lin), y1: ult(lin) };
-    }, 'data:image/png;base64,' + fs.readFileSync(f).toString('base64'));
-    const c = pl.caixa, sx = (c.x1 - c.x0) / pl.W, sy = (c.y1 - c.y0) / pl.D;
-    if (Math.abs(sx / sy - 1) > 0.03) throw new Error(`${pl.id}: a caixa das paredes não bate com ${pl.W} x ${pl.D} m (${sx.toFixed(0)} e ${sy.toFixed(0)} px/m)`);
-  }
+    }, ['data:image/png;base64,' + fs.readFileSync(f).toString('base64'), modo]);
 }
 
 (async () => {
