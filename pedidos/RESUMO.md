@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 16h05, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois: o júri decide e mostra depois (dono, cartão v6); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 12282 palavras.
+Tamanho: 12364 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -171,7 +171,7 @@ Pedido do dono (no quadro, 24/11, sobre a 2ª rodada, `instagram-nomes-e-bios-ab
 
 Seções: O que a MinoAI Frontier devolveu (só isto; a leitura minha vem marcada); 1. O personagem em 6 linhas; 2. Cinco bios na voz dele; 3. Três nomes de exibição (o campo ao lado do @); 4. O que fica fixo fora da bio (lei e honestidade); 5. Seis ideias de post na voz dele (uma linha cada); 6. Se @lotecarente estiver ocupado; 7. Recomendação do Redator: @lotecarente + nome "Plantas térreas de referência" + Bio 1; Para o Revisor de risco; O que não conferi.
 
-Tamanho: 2594 palavras.
+Tamanho: 2662 palavras.
 
 ### [Perfil novo do Instagram: 8 nomes e 4 bios no humor pelo absurdo (24/11/2026)](anexos/instagram-nomes-e-bios-absurdos-2026-11-24.md)
 

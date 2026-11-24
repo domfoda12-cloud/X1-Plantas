@@ -114,6 +114,8 @@ Fora da lista, para quando faltar ideia: "Quem casa a gente é o engenheiro. Eu 
 
 **Eu não consigo conferir se está livre:** só no aplicativo, na hora de criar a conta. Sem acento, sem número, sem ponto, sem traço, sem underline.
 
+**Conferido por fora em 24/11 (Pesquisador, busca sem login, sem criar conta):** @lotecarente, @lote.carente, @olotecarente, @eulotecarente e @diariodolotecarente não têm perfil público no Instagram; os 3 primeiros também não têm conta pública no TikTok. É indício de livre, não prova: a mesma tela aparece para nome apagado ou reservado. Facebook e INPI não deu para conferir. Só o aplicativo confirma (Editar perfil → Nome de usuário). Registro: `pesquisas/concorrentes.md`.
+
 | @ | Letras | Por que mantém o personagem | Risco |
 |---|---|---|---|
 | @olotecarente | 12 | "O Lote Carente", como nome próprio de personagem. | Quem digita pode esquecer o "o". |

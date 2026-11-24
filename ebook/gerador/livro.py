@@ -1280,9 +1280,9 @@ def montar(plantas, config, numeros, duas_partes=False):
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
       <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto", orelha=geral)
-    if duas_partes:  # a página nova entra no D21; aqui só o lugar dela, para a numeração bater com o mapa
+    if duas_partes:  # a página "A parede que não pode ter janela" (D21): só no e-book em duas partes, ao lado de "Terreno e recuos"
         L.bloco = "parede"
-        L.inicio["parede"] = reservada(L, TX.DUAS_PARTES["parede"], orelha=geral)
+        L.inicio["parede"] = pagina_parede(L, por_id, orelha=geral)
     L.bloco = "ficha"
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
@@ -1352,7 +1352,7 @@ def cab(chave):
 
 def reservada(L, titulo, casa=None, lado="", orelha=None):
     """Página reservada do modo duas partes: só o quadro "página em preparo", para a contagem e a numeração baterem
-    com o mapa enquanto a página de verdade é rascunho em outro script (cômodo a cômodo: D20; parede sem janela: D21)."""
+    com o mapa enquanto a página de verdade é rascunho em outro script (cômodo a cômodo: D20)."""
     quadro = (f'<div class="reservada" data-reservada="1"><b>{E(TX.DUAS_PARTES["em_preparo"])}</b>'
               f'<span>{E(titulo)}</span></div>')
     if casa:
@@ -1375,7 +1375,7 @@ def sumario(plantas, numeros):
         + (f' · {folhas[p["id"]]} páginas' if folhas.get(p["id"]) else "") + f'</small></span><em>{pag(p["id"])}</em></li>'
         for p in sorted(plantas, key=lambda p: (lote_frente(p), p["id"])))
     geral = ("".join(linha(TX.TITULOS[c], c) for c in ("ler", "palavras", "erros", "terreno"))
-             + linha(TX.DUAS_PARTES["parede"], "parede", "em preparo")
+             + linha(TX.PAREDE["titulo"], "parede")
              + "".join(linha(TX.TITULOS[c], c) for c in ("ficha", "passos")))
     (e1, n1, s1), (e2, n2, s2) = TX.DUAS_PARTES["parte1"], TX.DUAS_PARTES["parte2"]
     topo = lambda cor, e, n, s: (f'<div class="sum-cab"><span class="sum-aba {cor}">{E(e)}</span>'
@@ -1383,6 +1383,235 @@ def sumario(plantas, numeros):
     return (f'<div class="sum"><div class="sum-parte">{topo("am", e1, n1, s1)}'
             f'<ul>{linha(TX.TITULOS["ache"], "lote")}{casas}</ul></div>'
             f'<div class="sum-parte">{topo("az", e2, n2, s2)}<ul>{geral}</ul></div></div>')
+
+
+# ------------------------------------------------------------------ página "A parede que não pode ter janela" (D21)
+# Parte 2 (casas em geral) do modo --duas-partes, só prévia. O desenho é o do rascunho do Designer
+# (ebook/plantas/rascunhos/parede_sem_janela.py, D19): a parede da divisa desce a folha pela esquerda e os 4 croquis
+# encostam nela. Texto e rótulos: paginas.py (PAREDE). Medidas dos croquis em mm; nada aqui é gerado por IA.
+PSJ_TINTA, PSJ_AZUL, PSJ_FITA, PSJ_CINZA, PSJ_BEGE = "#17202B", "#0B4FA8", "#FFC857", "#4F5B69", "#B08A4E"
+PSJ_CW, PSJ_CH, PSJ_PD = 47.0, 36.0, 2.6     # croqui: largura, altura, grossura da parede da divisa (mm)
+PSJ_CASA = "F01"                              # o croqui 1 é o quarto casal da Família Compacta, do desenho do e-book
+
+
+def _psj_pilula(x, y, txt, fs=2.25, cor=PSJ_TINTA, ancora="middle", fundo="#fff", borda=None):
+    w, h = len(txt) * fs * .6 + fs * .9, fs * 1.55
+    x0 = x - w / 2 if ancora == "middle" else (x if ancora == "start" else x - w)
+    return (f'<rect x="{x0:.2f}" y="{y - h / 2:.2f}" width="{w:.2f}" height="{h:.2f}" rx="{h / 2:.2f}" fill="{fundo}" stroke="{borda or cor}" stroke-width=".22"/>'
+            f'<text x="{x0 + w / 2:.2f}" y="{y + fs * .36:.2f}" text-anchor="middle" font-size="{fs}" font-weight="700" class="mono" fill="{cor}">{E(txt)}</text>')
+
+
+def _psj_sugestao(x, y):
+    return _psj_pilula(x, y, TX.PAREDE["rotulos"]["sugestao"], 2.2, cor="#8A5A00", ancora="start", fundo="#FFF4DA", borda=PSJ_BEGE)
+
+
+def _psj_rot(x, y, txt, cor=PSJ_TINTA, fs=2.3, anc="start"):
+    return f'<text x="{x:.2f}" y="{y:.2f}" text-anchor="{anc}" font-size="{fs}" font-weight="700" class="mono" fill="{cor}">{E(txt)}</text>'
+
+
+def _psj_chamada(x0, y0, x1, y1, cor=PSJ_TINTA):
+    return (f'<line x1="{x0:.2f}" y1="{y0:.2f}" x2="{x1:.2f}" y2="{y1:.2f}" stroke="{cor}" stroke-width=".22"/>'
+            f'<circle cx="{x0:.2f}" cy="{y0:.2f}" r=".55" fill="{cor}"/>')
+
+
+def _psj_seta(pts, cor=PSJ_FITA, larg=1.1, borda=PSJ_TINTA):
+    """Seta grossa (sol ou água) por uma polilinha em mm; a ponta no último ponto."""
+    d = "M" + " L".join(f"{x:.2f} {y:.2f}" for x, y in pts)
+    (xa, ya), (xb, yb) = pts[-2], pts[-1]
+    a = math.atan2(yb - ya, xb - xa)
+    c, s = math.cos(a), math.sin(a)
+    p1, p2, p3 = (xb + c * 1.3, yb + s * 1.3), (xb - s * 1.5, yb + c * 1.5), (xb + s * 1.5, yb - c * 1.5)
+    ponta = f'<path d="M{p1[0]:.2f} {p1[1]:.2f} L{p2[0]:.2f} {p2[1]:.2f} L{p3[0]:.2f} {p3[1]:.2f} Z" fill="{cor}" stroke="{borda}" stroke-width=".25" stroke-linejoin="round"/>'
+    return (f'<path d="{d}" fill="none" stroke="{borda}" stroke-width="{larg + .5:.2f}" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'<path d="{d}" fill="none" stroke="{cor}" stroke-width="{larg:.2f}" stroke-linecap="round" stroke-linejoin="round"/>' + ponta)
+
+
+def _psj_parede(y, h):
+    """A parede da divisa em cada croqui: o mesmo tijolo escuro da parede da página (a mesma marca nos 4)."""
+    return f'<rect x="0" y="{y:.2f}" width="{PSJ_PD:.2f}" height="{h:.2f}" fill="url(#psj-tijolo)"/>'
+
+
+def _psj_svg(corpo, legenda=None):
+    w, h = PSJ_CW, PSJ_CH
+    defs = (f'<defs><pattern id="psj-tijolo" width="8" height="3.2" patternUnits="userSpaceOnUse">'
+            f'<rect width="8" height="3.2" fill="{PSJ_TINTA}"/><path d="M0 .1H8M0 1.7H8M2 .1V1.7M6 1.7V3.2" stroke="#2C3846" stroke-width=".35"/></pattern>'
+            f'<pattern id="psj-porc" width="2.4" height="2.4" patternUnits="userSpaceOnUse"><rect width="2.4" height="2.4" fill="{PISO_REAL["porc"]}"/>'
+            f'<path d="M0 0H2.4M0 0V2.4" stroke="{PISO_REAL["porc_l"]}" stroke-width=".12"/></pattern>'
+            f'<pattern id="psj-grama" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="{PISO_REAL["grama"]}"/>'
+            f'<path d="M.6 .9l.15 -.45M2 2.2l.15 -.45" stroke="{PISO_REAL["grama_l"]}" stroke-width=".18"/></pattern>'
+            f'<pattern id="psj-terra" width="2.2" height="2.2" patternUnits="userSpaceOnUse"><path d="M0 2.2L2.2 0" stroke="#B5AFA4" stroke-width=".22"/></pattern></defs>')
+    leg = _psj_rot(w - 1.6, h - 1.6, legenda, PSJ_CINZA, 2.1, "end") if legenda else ""
+    return (f'<svg viewBox="0 0 {w:.2f} {h:.2f}" width="{w:.2f}mm" height="{h:.2f}mm" xmlns="http://www.w3.org/2000/svg">{defs}'
+            f'<rect x="0" y="0" width="{w:.2f}" height="{h:.2f}" fill="#fff"/>{corpo}{leg}</svg>')
+
+
+def psj_croqui_quarto(p):
+    """Croqui 1: o quarto casal da Família Compacta, recortado da planta humanizada do e-book (o mesmo desenho)."""
+    R = TX.PAREDE["rotulos"]
+    CW, CH = PSJ_CW, PSJ_CH
+    _, janelas, _, _ = _geometria(p)
+    q = next(c for c in p["comodos"] if c["id"] == "quarto1")
+    cama = next(m for m in q["moveis"] if m["tipo"] == "camaCasal")
+    criados = [m for m in q["moveis"] if m["tipo"] == "criado"]
+    jq = [j for j in janelas if j["id"] == "quarto1"]
+    # o que o texto diz tem de estar no dado: cabeceira e 2 criados na divisa, janela no fundo
+    ok = (q["x0"] == 0 and p["_r"].metricas["recuos"]["esq"] == 0 and len(criados) == 2
+          and all(abs(c["x"] - .35) < .05 for c in criados) and abs(cama["rot"] - math.pi / 2) < .01
+          and jq and p["janelas"]["quarto1"][0][0] == "fundos")
+    if not ok:
+        AVISOS.append("parede sem janela")
+        print(f'AVISO: {p["id"]}: o quarto casal não bate mais com a página da parede sem janela '
+              "(cabeceira e 2 criados na divisa, janela no fundo)")
+    jan = jq[0]["seg"]
+    Dm = max([p["D"]] + [c["y1"] for c in p["comodos"] if c["tipo"] == "futuro"])
+    interno = svg_humanizada(p).split(">", 1)[1].rsplit("</svg>", 1)[0]
+    # recorte: da face de fora da divisa (x=0) até a parede do quarto ao lado; do quintal do fundo à porta
+    x0, x1 = 0.0, q["x1"] + .12
+    ys0, ys1 = Dm - p["D"] - .55, Dm - (q["y0"] - .07)
+    k = CH / (ys1 - ys0)
+    wq = (x1 - x0) * k
+    X = lambda x: (x - x0) * k
+    Ys = lambda y: (Dm - y - ys0) * k
+    s = [f'<svg x="0" y="0" width="{wq:.2f}" height="{CH:.2f}" viewBox="{x0:.3f} {ys0:.3f} {x1 - x0:.3f} {ys1 - ys0:.3f}" overflow="hidden">{interno}</svg>']
+    # a prateleira sobre a cabeceira: sugestão (não está no desenho da casa), tracejado bege
+    pr_y0, pr_y1 = q["y0"] + cama["y"] - cama["w"] / 2, q["y0"] + cama["y"] + cama["w"] / 2
+    s.append(f'<rect x="{X(.17):.2f}" y="{Ys(pr_y1):.2f}" width="{.25 * k:.2f}" height="{(pr_y1 - pr_y0) * k:.2f}" fill="{PSJ_FITA}" fill-opacity=".35" stroke="{PSJ_BEGE}" stroke-width=".4" stroke-dasharray="1 .7"/>')
+    s.append(_psj_parede(0, CH))
+    xr = wq + 2.0   # rótulos à direita do desenho
+    rot = lambda y, txt, cor=PSJ_TINTA: _psj_rot(xr + .8, y, txt, cor)
+    s.append(_psj_chamada(X((jan[0] + jan[2]) / 2 + .55), Ys(jan[1]), xr, 4.0, PSJ_AZUL) + rot(4.8, R["janela_livre"], PSJ_AZUL))
+    s.append(_psj_chamada(X(.29), Ys(pr_y1 - .3), xr, 12.5) + rot(13.3, R["prateleira"]) + _psj_sugestao(xr + .6, 16.4))
+    s.append(_psj_chamada(X(.62), Ys(pr_y0 + .35), xr, 22.5) + rot(23.3, R["cabeceira"][0]) + rot(26.2, R["cabeceira"][1]))
+    s.append(_psj_rot(xr + .8, CH - 4.6, R["casa_quarto"][0], PSJ_CINZA, 1.8) + _psj_rot(xr + .8, CH - 2.0, R["casa_quarto"][1], PSJ_CINZA, 1.8))
+    return _psj_svg("".join(s))
+
+
+def psj_croqui_cozinha():
+    """Croqui 2: uma cozinha qualquer, vista de cima, em faixa, sem nome de casa (o aéreo é sugestão)."""
+    R = TX.PAREDE["rotulos"]
+    CW, CH = PSJ_CW, PSJ_CH
+    k = 12.5
+    S = EST_REVISTA
+    xin, xpar, xrec = .21, 2.95, 3.10          # face da divisa, parede do recuo (de/até), em metros
+    y0, y1 = .12, 2.70                          # a faixa de cozinha (cortada em cima e embaixo)
+    X = lambda x: x * k
+    Y = lambda y: y * k + .6
+    s = [f'<rect x="{X(xin):.2f}" y="{Y(y0):.2f}" width="{X(xpar - xin):.2f}" height="{(y1 - y0) * k:.2f}" fill="url(#psj-porc)"/>']
+    s.append(f'<rect x="{X(xrec):.2f}" y="0" width="{CW - X(xrec):.2f}" height="{CH:.2f}" fill="url(#psj-grama)"/>')
+    jy0, jy1 = .6, 1.6                          # parede do recuo com a janela em cima da pia
+    s.append(f'<rect x="{X(xpar):.2f}" y="0" width="{X(xrec - xpar):.2f}" height="{Y(jy0):.2f}" fill="{S["parede"]}"/>'
+             f'<rect x="{X(xpar):.2f}" y="{Y(jy1):.2f}" width="{X(xrec - xpar):.2f}" height="{CH - Y(jy1):.2f}" fill="{S["parede"]}"/>'
+             f'<rect x="{X(xpar):.2f}" y="{Y(jy0):.2f}" width="{X(xrec - xpar):.2f}" height="{(jy1 - jy0) * k:.2f}" fill="#fff" stroke="{S["parede"]}" stroke-width=".25"/>'
+             f'<line x1="{X((xpar + xrec) / 2):.2f}" y1="{Y(jy0):.2f}" x2="{X((xpar + xrec) / 2):.2f}" y2="{Y(jy1):.2f}" stroke="{S["vidro"]}" stroke-width=".6"/>')
+    for yy in (y0, y1):
+        s.append(f'<line x1="{X(xin):.2f}" y1="{Y(yy):.2f}" x2="{X(xpar):.2f}" y2="{Y(yy):.2f}" stroke="{PSJ_CINZA}" stroke-width=".25" stroke-dasharray="1.2 .8"/>')
+    # móveis do e-book (o mesmo desenho das plantas), em metros; o grupo escala para mm
+    mv = lambda m, x, y, rot: f'<g transform="translate({X(x):.2f} {Y(y):.2f}) scale({k}) rotate({rot})">{_movel(m)}</g>'
+    s.append(mv({"tipo": "bancada", "w": 1.8, "d": .6}, xpar - .3, 1.45, 90))   # pia em cima, embaixo da janela
+    s.append(mv({"tipo": "geladeira", "w": .72, "d": .7}, xin + .35, .58, -90))
+    ay0, ay1 = 1.1, 2.6                          # o armário aéreo na parede da divisa: sugestão
+    s.append(f'<rect x="{X(xin) + .2:.2f}" y="{Y(ay0):.2f}" width="{.35 * k:.2f}" height="{(ay1 - ay0) * k:.2f}" fill="{PSJ_FITA}" fill-opacity=".35" stroke="{PSJ_BEGE}" stroke-width=".4" stroke-dasharray="1 .7"/>')
+    s.append(_psj_parede(0, CH))
+    s.append(_psj_rot(X(xin + .78), Y(.62), R["geladeira"]))
+    s.append(_psj_rot(X(xin + .5), Y(1.72), R["aereo"]) + _psj_sugestao(X(xin + .5), Y(1.72) + 3.0))
+    s.append(_psj_rot(X(xpar - .66), Y(1.13), R["pia"], anc="end"))
+    xj = X(xrec) + (CW - X(xrec)) / 2
+    em_pe = lambda y, txt, cor: (f'<text x="{xj:.2f}" y="{Y(y):.2f}" text-anchor="middle" font-size="2.2" font-weight="700" class="mono" '
+                                 f'fill="{cor}" transform="rotate(-90 {xj:.2f} {Y(y):.2f})">{E(txt)}</text>')
+    s.append(em_pe(1.1, R["janela"], PSJ_AZUL) + em_pe(2.2, R["recuo"], "#3F6E35"))
+    return _psj_svg("".join(s))
+
+
+def psj_corte(tipo):
+    """Croquis 3 e 4: a casa como uma fatia. Esquema: a planta não tem telhado, forro nem laje nos dados."""
+    R = TX.PAREDE["rotulos"]
+    CW, CH, PD = PSJ_CW, PSJ_CH, PSJ_PD
+    AZUL, TINTA, CINZA = PSJ_AZUL, PSJ_TINTA, PSJ_CINZA
+    k = 7.0
+    chao = CH - 5.0                                  # linha do piso, em mm
+    X = lambda x: PD + x * k
+    Y = lambda h: chao - h * k
+    larg = 5.0                                       # casa do esquema, em metros (não é das 3 casas)
+    VID = EST_REVISTA["vidro"]
+    s = [f'<rect x="0" y="{chao:.2f}" width="{CW:.2f}" height="{CH - chao:.2f}" fill="url(#psj-terra)"/>'
+         f'<line x1="0" y1="{chao:.2f}" x2="{CW:.2f}" y2="{chao:.2f}" stroke="{TINTA}" stroke-width=".35"/>']
+    pare = lambda x, h0, h1, w=.15: f'<rect x="{X(x):.2f}" y="{Y(h1):.2f}" width="{w * k:.2f}" height="{(h1 - h0) * k:.2f}" fill="#8F887C"/>'
+    telha = lambda pts: ('<path d="M' + " L".join(f"{X(a):.2f} {Y(b):.2f}" for a, b in pts) + '" fill="none" stroke="#9C5B3B" stroke-width="1.1" stroke-linecap="square"/>')
+    rot = _psj_rot
+    jan_baixa = lambda h0, h1: f'<line x1="{X(larg - .08):.2f}" y1="{Y(h1):.2f}" x2="{X(larg - .08):.2f}" y2="{Y(h0):.2f}" stroke="{VID}" stroke-width=".8"/>'
+    if tipo == 3:
+        hb, ha = 2.8, 3.55                           # telhado baixo e o do meio, mais alto
+        xa0, xa1 = 1.6, 3.4
+        s.append(f'<rect x="{X(0):.2f}" y="{Y(2.7):.2f}" width="{larg * k:.2f}" height="{2.7 * k:.2f}" fill="#FBF7EF"/>'
+                 f'<rect x="{X(xa0):.2f}" y="{Y(3.45):.2f}" width="{(xa1 - xa0) * k:.2f}" height="{.75 * k:.2f}" fill="#FBF7EF"/>')
+        s.append(pare(xa1 - .07, 2.7, 2.85, .14) + pare(xa1 - .07, 3.35, 3.5, .14) + pare(xa0 - .07, 2.7, 3.5, .14) + pare(larg - .15, 0, 2.7))
+        s.append(jan_baixa(1.0, 2.1))
+        s.append(telha([(0, hb), (xa0, hb)]) + telha([(xa0 - .1, ha), (xa1 + .2, ha)]) + telha([(xa1, hb), (larg + .3, hb - .2)]))
+        # rufo no encontro do telhado baixo com a parede da faixa de janela
+        s.append(f'<path d="M{X(xa1) - .1:.2f} {Y(3.0):.2f} V{Y(2.8) - .2:.2f} H{X(xa1) + 2.2:.2f}" fill="none" stroke="{AZUL}" stroke-width=".6"/>')
+        s.append(_psj_chamada(X(xa1) + 1.6, Y(2.8), X(larg) + .8, Y(2.8) + 5.0, AZUL) + rot(X(larg) + 1.2, Y(2.8) + 5.8, R["rufo"], AZUL))
+        # o sol: entra pela faixa de janela e desce no cômodo escuro
+        s.append(_psj_seta([(CW - 1.8, Y(3.1) - 2.2), (X(xa1) + .3, Y(3.1)), (X(2.65), Y(.35))]))
+        # a faixa de janela por cima da seta (a seta passa por ela), com o nome
+        s.append(f'<rect x="{X(xa1) - .7:.2f}" y="{Y(3.35):.2f}" width="1.4" height="{.5 * k:.2f}" fill="#fff" stroke="{TINTA}" stroke-width=".25"/>'
+                 f'<line x1="{X(xa1):.2f}" y1="{Y(3.35):.2f}" x2="{X(xa1):.2f}" y2="{Y(2.85):.2f}" stroke="{VID}" stroke-width=".8"/>')
+        yc = Y(ha) - 3.0
+        s.append(f'<g stroke="{AZUL}" stroke-width=".3"><line x1="{X(0):.2f}" y1="{yc:.2f}" x2="{X(xa1):.2f}" y2="{yc:.2f}"/>'
+                 f'<line x1="{X(0):.2f}" y1="{yc - 1:.2f}" x2="{X(0):.2f}" y2="{yc + 1:.2f}"/><line x1="{X(xa1):.2f}" y1="{yc - 1:.2f}" x2="{X(xa1):.2f}" y2="{yc + 1:.2f}"/></g>')
+        s.append(_psj_pilula((X(0) + X(xa1)) / 2, yc, R["distancia"], 2.2, cor=AZUL))
+        s.append(rot(X(xa1) + 2.0, yc + .8, R["janela_alta"], AZUL) + _psj_chamada(X(xa1) + .5, Y(3.25), X(xa1) + 2.6, yc + 1.6, AZUL))
+        s.append(rot(X(1.3), Y(1.3), R["comodo_escuro"][0], CINZA, 2.1) + rot(X(1.3), Y(1.3) + 2.6, R["comodo_escuro"][1], CINZA, 2.1))
+    else:
+        hd, hr, hf = 2.85, 3.6, 2.55                 # telhado de uma água: baixo na divisa (calha), alto no recuo; forro
+        xt0, xt1 = 1.3, 2.1                          # a telha clara, longe da janela
+        alt = lambda x: hd + (hr - hd) * x / larg
+        xm = (xt0 + xt1) / 2
+        s.append(f'<rect x="{X(0):.2f}" y="{Y(hf):.2f}" width="{larg * k:.2f}" height="{hf * k:.2f}" fill="#FBF7EF"/>')
+        s.append(pare(larg - .15, 0, alt(larg)) + jan_baixa(1.2, 2.2))
+        s.append(f'<g stroke="#8F887C" stroke-width=".7"><line x1="{X(0):.2f}" y1="{Y(hf):.2f}" x2="{X(xt0):.2f}" y2="{Y(hf):.2f}"/>'
+                 f'<line x1="{X(xt1):.2f}" y1="{Y(hf):.2f}" x2="{X(larg - .15):.2f}" y2="{Y(hf):.2f}"/></g>'
+                 f'<g stroke="#8F887C" stroke-width=".35"><line x1="{X(xt0):.2f}" y1="{Y(hf):.2f}" x2="{X(xt0):.2f}" y2="{Y(alt(xt0)):.2f}"/>'
+                 f'<line x1="{X(xt1):.2f}" y1="{Y(hf):.2f}" x2="{X(xt1):.2f}" y2="{Y(alt(xt1)):.2f}"/></g>')
+        s.append(telha([(.1, hd), (xt0, alt(xt0))]) + telha([(xt1, alt(xt1)), (larg + .3, alt(larg + .3))]))
+        s.append(f'<line x1="{X(xt0):.2f}" y1="{Y(alt(xt0)):.2f}" x2="{X(xt1):.2f}" y2="{Y(alt(xt1)):.2f}" stroke="#BFE3FA" stroke-width="1.1"/>'
+                 f'<line x1="{X(xt0):.2f}" y1="{Y(alt(xt0)) - .55:.2f}" x2="{X(xt1):.2f}" y2="{Y(alt(xt1)) - .55:.2f}" stroke="{AZUL}" stroke-width=".25"/>')
+        s.append(f'<ellipse cx="{X(xm):.2f}" cy="{chao - .5:.2f}" rx="{(xt1 - xt0) * k * .75:.2f}" ry=".9" fill="{PSJ_FITA}" opacity=".6"/>')
+        s.append(_psj_seta([(X(xm) + 8.0, Y(alt(xm)) - 7.0), (X(xm), Y(alt(xm)) - .3), (X(xm), chao - 2.4)]))
+        # a calha do lado da divisa, o cano descendo do lado de dentro e a água seguindo para o lote
+        cx = X(.0)
+        s.append(f'<path d="M{cx:.2f} {Y(hd) - .3:.2f} v1.5 h2.4 v-1.5" fill="#fff" stroke="{AZUL}" stroke-width=".45"/>')
+        s.append(f'<line x1="{cx + 1.2:.2f}" y1="{Y(hd) + 1.2:.2f}" x2="{cx + 1.2:.2f}" y2="{chao - 1.0:.2f}" stroke="{AZUL}" stroke-width=".6"/>')
+        s.append(_psj_seta([(cx + 1.2, chao - 1.0), (X(.95), chao - 1.0)], cor="#7FC3E8", larg=.7, borda=AZUL))
+        s.append(_psj_chamada(X(xt0) + .6, Y(alt(xt0)) - .8, X(.6), Y(hd) - 5.2, AZUL) + rot(X(.1) - 1.0, Y(hd) - 6.0, R["telha"], AZUL))
+        s.append(_psj_chamada(X(xt1) - .2, Y(hf) + .3, X(2.3), Y(hf) + 3.2) + rot(X(2.3) + .5, Y(hf) + 4.0, R["vao"], fs=2.1))
+        s.append(rot(cx + 2.4, Y(hf) + 4.0, R["calha"], AZUL))
+        s.append(rot(X(2.35), Y(.75), R["agua"][0], AZUL, 2.1) + rot(X(2.35), Y(.75) + 2.6, R["agua"][1], AZUL, 2.1))
+    topo = 3.0 if tipo == 3 else 5.0
+    s.append(_psj_parede(topo, chao - topo))
+    return _psj_svg("".join(s), R["esquema"])
+
+
+def pagina_parede(L, por_id, orelha=None):
+    """A página inteira: cabeçalho (título, subtítulo, abertura), as 4 ideias com o croqui e o número na parede,
+    a caixa "Leve ao engenheiro" e o aviso legal no rodapé."""
+    import re
+    P = TX.PAREDE
+    R = P["rotulos"]
+    casa = por_id.get(PSJ_CASA) or next(p for p in PL.carregar() if p["id"] == PSJ_CASA)
+    # número e unidade, "art." e o número, e "10 x 20 cm" não se separam na quebra de linha
+    nb = lambda t: re.sub(r"\(art\. ([\d.]+)", "(art.\u00a0\\1", re.sub(r"(\d) (m²|m|cm)\b", "\\1\u00a0\\2", E(t))).replace("10 x 20\u00a0cm", "10\u00a0x\u00a020\u00a0cm")
+    figs = [psj_croqui_quarto(casa), psj_croqui_cozinha(), psj_corte(3), psj_corte(4)]
+    classes = ("faz", "cuid", "casas")
+    ideias = "".join(
+        f'<article class="ideia"><span class="nm">{i}</span><figure>{fig}</figure><div><h3>{E(it["nome"])}</h3>'
+        + "".join(f'<p class="{c}"><b>{E(r)}</b>{nb(it[c])}</p>' for c, r in zip(classes, P["campos"])) + "</div></article>"
+        for i, (it, fig) in enumerate(zip(P["ideias"], figs), 1))
+    muro = f'<div class="muro"><span class="rot">{E(R["muro"])}</span></div><span class="vizinho">{E(R["vizinho"])}</span>'
+    cabecalho = (f'<header class="cab-psj"><div><span class="sobre">{E(P["sobre"])}</span><h2>{E(P["titulo"])}</h2>'
+                 f'<p class="sub">{E(P["sub"])}</p></div><p class="abre">{nb(P["abre"])}</p></header>')
+    eng = (f'<section class="eng"><h3>{E(P["engenheiro"])}<span class="selo-psj"><span>{E(R["selo"][0])}</span>{E(R["selo"][1])}</span></h3>'
+           f'<ol>{"".join(f"<li>{nb(q)}</li>" for q in P["perguntas"])}</ol></section>')
+    return L.pagina(f"{muro}{cabecalho}{ideias}{eng}", "q psj", orelha=orelha, aviso=True)
 
 
 def ache_a_sua_casa(plantas, numeros, recuos_txt):
