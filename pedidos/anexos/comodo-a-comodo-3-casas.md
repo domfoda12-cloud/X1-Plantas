@@ -148,9 +148,9 @@ O que esta casa tem de próprio: **a divisa de ponta a ponta à esquerda, sem ja
 - **Ideias:**
   1. **Sem mesa de centro grande:** o caminho da porta até a cozinha passa entre o sofá e a TV. Os 1,92 m são o corredor da casa.
   2. **TV e antena na divisa**: atrás do rack não tem quarto, tem o vizinho.
-  3. **Interruptor nos 42 cm** entre o fim da porta aberta e a janela, acima do encosto do sofá.
+  3. **Interruptor nos 43 cm** entre o fim da porta aberta e a janela, acima do encosto do sofá.
 - **Tomadas:** perímetro de 13,5 m: o mínimo é **3 pontos** (um a cada 5 m). Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
-- **Cuidado:** a porta do quarto da frente abre direto na sala: quem está no sofá vê dentro. Esta planta não evita; a porta fica no canto da divisa, e o que se vê é a lateral da cama.
+- **Cuidado:** a porta do quarto da frente abre direto na sala: quem está no sofá vê dentro. Esta planta não evita; a porta fica no canto da divisa, e o que se vê é a cama (no desenho, o pé da cama de solteiro).
 - **Pergunte:** ao eletricista, onde fica o quadro de luz (a sala é o primeiro cômodo depois da porta).
 
 ### Cozinha e copa · 3,20 x 3,14 m livres (10,0 m²)
@@ -158,7 +158,7 @@ O que esta casa tem de próprio: **a divisa de ponta a ponta à esquerda, sem ja
 - **Ideias:**
   1. **Armário aéreo na divisa, por cima da mesa e da geladeira.** É a única parede da cozinha sem janela nem porta (3 m).
   2. **Banco corrido na divisa** no lugar das 2 cadeiras apertadas (anexo de mobiliar).
-- **Tomadas:** perímetro de 12,7 m: o mínimo é **4 pontos** (um a cada 3,5 m), com **duas tomadas em cima da bancada da pia**. **O ponto delicado desta cozinha:** a janela (1,70 m) cobre a parede da bancada inteira. As duas tomadas da bancada não têm parede: ou ficam na faixa estreita entre o tampo e o peitoril (1,10 m no desenho), ou nas pontas (**22 cm** de parede entre a janela e a porta de fora; quase nada do lado da sala); o eletricista confere se a caixa cabe com o batente e o marco. Micro-ondas e filtro vão para a divisa, perto da geladeira. A torneira da pia é de bancada, porque a parede é janela; o encanador confere. Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
+- **Tomadas:** perímetro de 12,7 m: o mínimo é **4 pontos** (um a cada 3,5 m), com **duas tomadas em cima da bancada da pia**. **O ponto delicado desta cozinha:** a janela (1,70 m) cobre a parede da bancada inteira. As duas tomadas da bancada não têm parede: ou ficam na faixa estreita entre o tampo e o peitoril (1,10 m no desenho), ou nas pontas (**23 cm** de parede entre o vão da janela e o vão da porta de fora, 22,5 cm no desenho, antes de batente e marco; quase nada do lado da sala); o eletricista confere se a caixa cabe com o batente e o marco. Micro-ondas e filtro vão para a divisa, perto da geladeira. A torneira da pia é de bancada, porque a parede é janela; o encanador confere. Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
 - **Cuidado:** pôr a pia embaixo da janela e só descobrir na hora do acabamento que não sobrou parede para tomada e torneira. Esta planta tem a luz certa na pia e pede esse cuidado.
 - **Pergunte:** ao eletricista, se a faixa entre o tampo e o peitoril comporta tomada; ao engenheiro, onde fica o botijão e se a porta de fora, a um passo do fogão, muda alguma coisa.
 

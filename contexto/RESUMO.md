@@ -177,7 +177,7 @@ Só o que importa para este papel. Leia antes o quadro. Você diz o passo a pass
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 212 palavras.
+Tamanho: 554 palavras.
 
 ### [Contexto do Redator](redator.md)
 
