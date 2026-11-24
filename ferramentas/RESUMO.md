@@ -43,7 +43,7 @@ Funções: `todas`.
 
 Antes e depois de uma planta, para o dono ver o conserto com os olhos (pedido dele, 23/11/2026).
 
-Funções: `carregar`, `pecas`, `mudancas`, `conflitos`, `dentro`, `marcar`, `numeros`, `de_perto`, `pagina`, `png`, `main`.
+Funções: `carregar`, `pecas`, `mudancas`, `conflitos`, `dentro`, `textos`, `marcar`, `numeros`, `de_perto`, `junto`, `pagina`, `png`, `main`.
 
 ### [`ferramentas/atualizar-painel.py`](atualizar-painel.py)
 

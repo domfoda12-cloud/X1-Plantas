@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 30 documentos
+## Os 31 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -71,11 +71,11 @@ Tamanho: 913 palavras.
 
 ### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
 
-Pedido do dono (23/11, comentário no quadro; `decisoes-do-dono-2026-11-23.md`, linha 85), palavra por palavra: "quero algo mais como detalhes de como a casa pode ser mobiliada ou ideias de construções, coisas assim". Troca a ideia do "raio-X da casa". Autor: Arquiteto, 23/11/2026. É conteúdo…
+Medidas conferidas em 24/11/2026, cômodo por cômodo, pela face de dentro da parede, contra `ebook/plantas/dados/<ID>.json`, `video/src/plantas/<ID>.js` (móveis, portas e janelas do desenho 3D) e `python3 ferramentas/plantas.py validar` (C01, E03 e F01: zero erros). Mudou desde 23/11: a sala e a…
 
 Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; cabe num lote de 8 x 15 m); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m); 3. F01 · Casa Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; cabe num lote de 10 x 15 m); 4. Medidas de móveis comuns no Brasil (as usadas nas contas); 5. Para a equipe (não vai ao público).
 
-Tamanho: 3490 palavras.
+Tamanho: 4461 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
@@ -104,6 +104,14 @@ Tamanho: 8430 palavras.
 Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md`. O dono troca os campos entre colchetes e manda do e-mail dele, em particular (não como issue pública). Esta sessão não manda e-mail. O endereço do autor não está aqui: pegue no perfil dele no GitHub…
 
 Tamanho: 517 palavras.
+
+### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
+
+Redator, 24/11/2026. Rascunho: não vai ao público antes do Arquiteto e do Revisor de risco (listas no fim) e antes de o dono escolher entre A, B ou C (`amostra-gratis-opcoes.md`). Este texto só é usado se ele escolher a B, agora ou depois. Layout: `ebook/plantas/rascunhos/amostra.py`, função…
+
+Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
+
+Tamanho: 2904 palavras.
 
 ### [Perfil novo do Instagram: material para o dono escolher (rascunho)](anexos/instagram-perfil-novo.md)
 
