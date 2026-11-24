@@ -296,6 +296,31 @@ if _mr or len(_pegou) != 2:
     print("[ERRO] móvel alto na frente de janela ou cadeira de jantar apertada: " + ("; ".join(_mr) if _mr else f"a prova não pegou os 2 erros postos de propósito ({_pegou})"))
 else:
     print("[OK ] nenhum móvel alto na frente de janela e toda cadeira de jantar com 45 cm até a parede (prova: pegou os 2 erros postos de propósito)")
+# Guarda-roupa sem 60 cm na frente e porta que bate em tanque, pia, vaso, bancada, box ou máquina (C01: a cama a 10 cm das
+# portas do guarda-roupa e a folha da cozinha no tanque), achados do levantamento das 3 casas, 24/11/2026
+def frente_e_folha(plantas):
+    """Guarda-roupa com menos de 60 cm livres na frente e porta que bate em móvel fixo ao abrir, nas plantas dadas."""
+    return ([f"{pl['id']} {amb}: guarda-roupa com {cm} cm livres na frente (mínimo {round(100 * _p3.FRENTE_ARMARIO)})"
+             for pl in plantas for (amb, cm) in _p3.armarios_sem_frente(pl)]
+            + [f"{pl['id']} {amb}: a porta {porta} bate no {tipo} ({cm} cm)" for pl in plantas for (amb, porta, tipo, cm) in _p3.portas_em_fixos(pl)])
+
+
+_ff = frente_e_folha(_p3.PL.carregar())
+# prova: na C01, a cama de volta a 10 cm da frente do guarda-roupa e o tanque de volta no canto da porta da cozinha
+_prova = {p["id"]: p for p in _p3.PL.carregar() if p["id"] == "C01"}
+for _c in _prova["C01"]["comodos"]:
+    if _c["id"] == "quarto2":
+        _c["moveis"] = [dict(m, y=2.4) if m["tipo"] == "armario" else m for m in _c["moveis"]]
+    if _c["id"] == "servico":
+        _c["moveis"] = [dict(m, y=0.42) if m["tipo"] == "tanque" else m for m in _c["moveis"]]
+_pegou = frente_e_folha(_prova.values())
+if _ff or len(_pegou) != 2 or not all(any(k in x for x in _pegou) for k in ("guarda-roupa", "tanque")):
+    falhas.append("guarda-roupa sem frente ou porta batendo em móvel fixo")
+    print("[ERRO] guarda-roupa sem 60 cm na frente ou porta que bate em móvel fixo: "
+          + ("; ".join(_ff) if _ff else f"a prova não pegou os 2 erros postos de propósito ({_pegou})"))
+else:
+    print("[OK ] todo guarda-roupa com 60 cm livres na frente e nenhuma porta bate em tanque, pia, vaso, bancada, box ou máquina"
+          " (prova: pegou os 2 erros postos de propósito)")
 # Prévia mais velha que os dados da casa (motor mudou porta, móveis e 3D em 23/11 e as prévias ficaram de 20 a 22/11)
 import imagens2d as _i2  # noqa: E402
 _carimbos = json.loads(_i2.CARIMBOS.read_text(encoding="utf-8")) if _i2.CARIMBOS.exists() else {}

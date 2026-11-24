@@ -69,16 +69,43 @@ def todas():
     # banheiro de 1,84 x 1,68 m livres entre os dois quartos e serviço com porta para fora, no corredor lateral.
     P.append(casa("C01", "Casa Compacta", 6.5, 8.5,
                   V((3.35, H((1.2, F("varanda", "Varanda", "varanda")),
-                            (4.2, F("sala", "Sala e jantar", "sala")),
-                            (None, V((1.4, F("servico", "Serviço", "servico")),
+                            (4.2, F("sala", "Sala e jantar", "sala", moveis=[
+                                # 24/11/2026: o arranjo de antes, agora pela face de verdade da divisa (15 cm). A mesa girada
+                                # (proposta do levantamento) dá 75 cm às cadeiras mas deixa uns 70 cm na entrada da cozinha: não
+                                M("sofa", "esq", 0.15, 0.96, 1.03, 2.36, cor="#8A9A86"),       # depois do giro da porta da varanda
+                                M("rack", "dir", 2.89, 0.302, 3.29, 1.902),                    # 1,86 m de frente para o sofá
+                                M("tapete", "frente", 1.06, 0.5, 2.86, 2.35, cor="#D9CBB4", borda="#B49D7C"),
+                                M("mesaCentro", "frente", 1.66, 0.92, 2.26, 1.92),
+                                M("mesaJantar", "esq", 0.275, 2.425, 1.475, 4.125)])),          # 4 lugares; 1,81 m até a parede do quarto
+                            (None, V((1.4, F("servico", "Serviço", "servico", moveis=[
+                                         # medidas da Portaria MCID 725 (tanque 0,52 x 0,53, máquina 0,60 x 0,65), fora do giro das 2 portas
+                                         M("tanque", "esq", 0.15, 0.75, 0.68, 1.27),
+                                         M("maquina", "esq", 0.15, 1.3, 0.8, 1.9)])),
                                      (None, F("cozinha", "Cozinha", "cozinha", moveis=[
                                          # tudo na parede do quarto casal (24/11/2026): a geladeira saiu da frente da janela
                                          # do fundo; geladeira na ponta da sala, pia e fogão depois, 1,13 m livres na frente
                                          M("geladeira", "dir", 1.19, 0.08, 1.89, 0.8),
                                          M("bancada", "dir", 1.27, 0.85, 1.89, 2.65)])))))),
-                    (None, H((3.3, F("quarto2", "Quarto", "dorm")),
-                             (1.8, V((1.1, F("circ", "Hall", "circ")), (None, F("banho", "Banheiro", "banho")))),
-                             (None, F("quarto1", "Quarto casal", "casal"))))),
+                    (None, H((3.3, F("quarto2", "Quarto", "dorm", moveis=[
+                                  # 24/11/2026: duas camas com a cabeceira na rua, 1,05 m entre elas, e o guarda-roupa de 4 portas
+                                  # na parede do hall, fora do giro da porta: 73 cm livres na frente dele (era 10 cm)
+                                  M("camaSolteiro", "frente", 0.15, 0.15, 1.05, 2.05, manta="#E3B9A4"),
+                                  M("camaSolteiro", "frente", 2.1, 0.15, 3.0, 2.05, manta="#E3B9A4"),
+                                  M("criado", "frente", 1.35, 0.15, 1.8, 0.55),
+                                  M("armario", "fundos", 1.39, 2.78, 3.0, 3.24)])),
+                             (1.8, V((1.1, F("circ", "Hall", "circ")), (None, F("banho", "Banheiro", "banho", moveis=[
+                                  # 24/11/2026: box de 0,95 x 0,90 (Portaria MCID 725: 0,90 x 0,95), vaso na parede da janela e pia
+                                  # no fundo, ao lado do giro da porta; ninguém atravessa o box
+                                  M("box", "dir", 0.95, 0.06, 1.9, 0.96),
+                                  M("vaso", "dir", 1.25, 1.15, 1.9, 1.55),
+                                  M("pia", "fundos", 0.13, 1.32, 0.73, 1.74)])))),
+                             (None, F("quarto1", "Quarto casal", "casal", moveis=[
+                                  # 24/11/2026: cama de casal padrão (1,38 x 1,88) com a cabeceira na parede da cozinha; guarda-roupa
+                                  # de 6 portas (2,00 x 0,47) na parede do hall, depois da porta: 80 cm na frente, 1,06 m no pé da cama
+                                  M("camaCasal", "esq", 0.06, 1.33, 1.94, 2.71, manta="#B9C7D6"),
+                                  M("criado", "esq", 0.06, 0.88, 0.46, 1.33),                    # fora do giro da porta
+                                  M("criado", "esq", 0.06, 2.71, 0.46, 3.16),
+                                  M("armario", "frente", 1.0, 0.06, 3.0, 0.53)]))))),
                   [("ext", "varanda", "frente"), ("varanda", "sala"), ("sala", "cozinha", "aberto"),
                    ("sala", "circ", "aberto"), ("circ", "quarto2"), ("circ", "banho"), ("circ", "quarto1"),
                    ("cozinha", "servico"), ("ext", "servico", "fundos")],
@@ -136,32 +163,32 @@ def todas():
     # Serviço sem porta para fora (a parede de 1,18 m não comporta porta e janela): a porta de serviço fica na cozinha, ao lado.
     P.append(casa("E03", "Casa Fita", 3.5, 16.1,
                   H((3.1, F("quarto2", "Quarto", "dorm", pref=("frente", "dir"), moveis=[
-                        M("camaSolteiro", "frente", 0.075, 0.075, 0.975, 1.975, manta="#E3B9A4"),
-                        M("criado", "frente", 1.0, 0.075, 1.45, 0.475),
-                        M("escrivaninha", "frente", 1.75, 0.075, 2.75, 0.575),          # a cadeira fica a 0,8 m da cama
-                        M("armario", "dir", 2.825, 1.55, 3.425, 2.95)])),
+                        M("camaSolteiro", "frente", 0.15, 0.15, 1.05, 2.05, manta="#E3B9A4"),
+                        M("criado", "frente", 1.075, 0.15, 1.525, 0.55),
+                        M("escrivaninha", "frente", 1.75, 0.15, 2.75, 0.65),          # a cadeira fica a 0,8 m da cama
+                        M("armario", "dir", 2.75, 1.55, 3.35, 2.95)])),
                     (3.6, F("sala", "Sala", "sala", moveis=[
                         M("tapete", "frente", 0.51, 1.1, 2.51, 3.3, cor="#D9CBB4", borda="#B49D7C"),
-                        M("sofa", "dir", 2.545, 1.15, 3.425, 3.25, cor="#8A9A86"),       # 3 lugares, depois da porta
-                        M("rack", "esq", 0.075, 1.4, 0.475, 3.0),
+                        M("sofa", "dir", 2.47, 1.15, 3.35, 3.25, cor="#8A9A86"),       # 3 lugares, depois da porta
+                        M("rack", "esq", 0.15, 1.4, 0.55, 3.0),
                         M("mesaCentro", "frente", 1.21, 1.7, 1.81, 2.7)])),
                     (3.2, F("cozinha", "Cozinha e copa", "cozinha", moveis=[
-                        M("geladeira", "esq", 0.075, 0.06, 0.775, 0.78),
+                        M("geladeira", "esq", 0.15, 0.06, 0.85, 0.78),
                         M("mesaJantar", "frente", 0.16, 0.9, 1.86, 2.1),                 # 4 lugares; cadeira da divisa com 46 cm (24/11/2026: eram 38)
-                        M("bancada", "dir", 2.805, 0.1, 3.425, 1.9)])),                  # pia e fogão embaixo da janela
+                        M("bancada", "dir", 2.73, 0.1, 3.35, 1.9)])),                  # pia e fogão embaixo da janela
                     (3.0, V((1.1, F("circ", "Hall", "circ")),
                             (None, H((1.3, F("servico", "Serviço", "servico", moveis=[
-                                          M("maquina", "fundos", 1.1, 0.64, 1.7, 1.24),
-                                          M("tanque", "fundos", 1.725, 0.74, 2.325, 1.24)])),
+                                          M("maquina", "fundos", 1.025, 0.64, 1.625, 1.24),
+                                          M("tanque", "fundos", 1.65, 0.74, 2.25, 1.24)])),
                                      (None, F("banho", "Banheiro", "banho", moveis=[
-                                         M("pia", "frente", 0.25, 0.06, 0.75, 0.46),     # fora do giro da porta
+                                         M("pia", "frente", 0.28, 0.06, 0.78, 0.46),     # fora do giro da porta (2 cm)
                                          M("vaso", "frente", 0.85, 0.06, 1.25, 0.71),
-                                         M("box", "dir", 1.35, 0.06, 2.325, 1.64)])))))),
+                                         M("box", "dir", 1.35, 0.06, 2.25, 1.64)])))))),             # 0,90 x 1,58
                     (None, F("quarto1", "Quarto casal", "casal", moveis=[
-                        M("camaCasal", "dir", 1.525, 0.9, 3.425, 2.3, manta="#B9C7D6"),  # passagem dos dois lados
-                        M("criado", "dir", 3.025, 0.4, 3.425, 0.85),
-                        M("criado", "dir", 3.025, 2.35, 3.425, 2.8),
-                        M("armario", "esq", 0.075, 1.2, 0.675, 3.0)]))),
+                        M("camaCasal", "dir", 1.45, 0.9, 3.35, 2.3, manta="#B9C7D6"),  # passagem dos dois lados
+                        M("criado", "dir", 2.95, 0.4, 3.35, 0.85),
+                        M("criado", "dir", 2.95, 2.35, 3.35, 2.8),
+                        M("armario", "esq", 0.15, 1.2, 0.75, 3.0)]))),
                   [("ext", "sala", "dir"), ("sala", "quarto2"), ("sala", "cozinha", "aberto"), ("cozinha", "circ", "aberto"),
                    ("cozinha", "servico"), ("ext", "cozinha", "dir", 9.2), ("circ", "banho"), ("circ", "quarto1")],
                   "2 quartos", 1, recuos={"esq": 0.0, "dir": 1.5},
@@ -203,7 +230,7 @@ def todas():
     _q = 8.5 / 3
     P.append(casa("F01", "Casa Família Compacta", 8.5, 8.3,
                   H((4.8, V((6.7, H((3.7, V((4.6, F("sala", "Sala e jantar", "sala", moveis=[
-                                                 M("rack", "esq", 0.075, 1.15, 0.475, 2.75),     # TV na parede da divisa
+                                                 M("rack", "esq", 0.15, 1.15, 0.55, 2.75),     # TV na parede da divisa
                                                  M("tapete", "frente", 0.6, 1.0, 2.0, 2.9, cor="#D9CBB4", borda="#B49D7C"),
                                                  M("sofa", "dir", 2.0, 0.9, 2.88, 3.0, cor="#8A9A86"),
                                                  M("mesaJantar", "esq", 3.3, 1.0, 4.5, 2.7)])),  # 4 lugares, junto da cozinha
@@ -211,20 +238,20 @@ def todas():
                                     (None, F("circ", "Circulação", "circ")))),
                             (None, H((2.3, F("servico", "Serviço", "servico")), (None, F("banho", "Banheiro", "banho")))))),
                     (None, V((_q, F("quarto1", "Quarto casal", "casal", moveis=[
-                                 M("camaCasal", "esq", 0.075, 1.3, 1.975, 2.7, manta="#B9C7D6"),
-                                 M("criado", "esq", 0.075, 0.85, 0.475, 1.25),
-                                 M("criado", "esq", 0.075, 2.75, 0.475, 3.2),
+                                 M("camaCasal", "esq", 0.15, 1.34, 2.05, 2.74, manta="#B9C7D6"),
+                                 M("criado", "esq", 0.15, 0.89, 0.55, 1.34),                    # fora do giro da porta (3 cm)
+                                 M("criado", "esq", 0.15, 2.79, 0.55, 3.24),
                                  M("armario", "frente", 1.12, 0.06, 2.72, 0.66)])),
                              (_q, F("quarto2", "Quarto", "dorm", moveis=[
-                                 M("camaSolteiro", "fundos", 0.06, 1.525, 0.96, 3.425, manta="#E3B9A4"),
-                                 M("camaSolteiro", "fundos", 1.873, 1.525, 2.773, 3.425, manta="#E3B9A4"),  # 0,91 m entre elas
-                                 M("criado", "fundos", 1.192, 3.025, 1.642, 3.425),
+                                 M("camaSolteiro", "fundos", 0.06, 1.45, 0.96, 3.35, manta="#E3B9A4"),
+                                 M("camaSolteiro", "fundos", 1.873, 1.45, 2.773, 3.35, manta="#E3B9A4"),  # 0,91 m entre elas
+                                 M("criado", "fundos", 1.192, 2.95, 1.642, 3.35),
                                  M("armario", "frente", 1.2, 0.06, 2.7, 0.66)])),
                              (None, F("quarto3", "Quarto", "dorm", moveis=[
-                                 M("camaSolteiro", "fundos", 1.858, 1.525, 2.758, 3.425, manta="#E3B9A4"),
-                                 M("criado", "fundos", 1.4, 3.025, 1.85, 3.425),
-                                 M("escrivaninha", "fundos", 0.58, 2.925, 1.38, 3.425),  # cadeira com 0,75 m livres, fora da quina do armário
-                                 M("armario", "esq", 0.06, 0.9, 0.66, 2.3)]))))),
+                                 M("camaSolteiro", "fundos", 1.783, 1.45, 2.683, 3.35, manta="#E3B9A4"),
+                                 M("criado", "fundos", 1.32, 2.95, 1.77, 3.35),
+                                 M("escrivaninha", "fundos", 0.51, 2.85, 1.31, 3.35),  # cadeira com 0,75 m livres, fora da quina do armário
+                                 M("armario", "esq", 0.06, 0.9, 0.61, 2.3)]))))),            # 0,55 de fundo: a cama foi 7,5 cm para dentro (24/11/2026)
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],
                   "3 quartos", 1,

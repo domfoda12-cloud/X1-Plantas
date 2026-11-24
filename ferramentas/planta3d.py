@@ -200,7 +200,7 @@ def construir(planta):
                 continue
             paredes.append([R(a), fixo, R(b), fixo] if o == "h" else [fixo, R(a), fixo, R(b)])
 
-    moveis = mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes)
+    moveis = mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes, portas)
     return paredes, janelas, portas, moveis
 
 
@@ -264,14 +264,16 @@ def _prof(c, lado):
 
 
 PEGADA = {"criado": (0.45, 0.4), "vaso": (0.4, 0.65), "cadeira": (0.45, 0.5)}
-FACE = 0.075  # metade da parede do motor 3D (ESPESSURA 0,15 m, desenhada sobre o eixo): o móvel para aí, na face de dentro
+ESP_EXT, ESP_INT = PL.PAREDE_EXT, PL.PAREDE_INT  # as paredes do validador: externa de 15 cm para dentro, interna de 12 no eixo
+FACE = ESP_EXT / 2  # o motor 3D desenha a parede externa com o eixo 7,5 cm para dentro da face de fora (paredes_reais)
 CADEIRA_ZONA = (0.6, 0.75)  # largura x fundo livres na frente da escrivaninha para a cadeira e quem senta (Anexo G: 0,75 m da borda da mesa)
 
 
-def recuado(c, paredes):
-    """O cômodo até a face de dentro das paredes: cada lado com parede no motor 3D encolhe FACE.
+def recuado(c, paredes, planta=None):
+    """O cômodo até a face de dentro das paredes de verdade: 15 cm na externa, 6 cm de cada lado da interna (PL._desconto).
 
-    Sem isso o móvel encostado ia até o eixo da parede, e a cabeceira da cama saía pela face de fora (Arquiteto, 23/11/2026)."""
+    Até 24/11/2026 o motor 3D desenhava a parede externa sobre o eixo e o móvel parava a 7,5 cm do eixo, dentro da parede
+    de verdade. Agora a parede do 3D (paredes_reais) e o móvel param na mesma face, a do validador (Arquiteto, 24/11/2026)."""
     r = dict(c)
     for lado, o, fixo, a, b in arestas(c):
         tem = any((p[1] == p[3]) == (o == "h") and abs((p[1] if o == "h" else p[0]) - fixo) < 1e-6
@@ -279,8 +281,108 @@ def recuado(c, paredes):
                   for p in paredes)
         if tem:
             k = {"frente": "y0", "fundos": "y1", "esq": "x0", "dir": "x1"}[lado]
-            r[k] = c[k] + (FACE if lado in ("frente", "esq") else -FACE)
+            d = PL._desconto(planta, c, lado) if planta else FACE
+            r[k] = c[k] + (d if lado in ("frente", "esq") else -d)
     return r
+
+
+# ---------------------------------------------------------------- paredes de verdade (as do validador) para o desenho 3D
+def _classe(planta, o, fixo, s):
+    """Que parede é esta no ponto s da linha: +1/-1 externa (o cômodo fechado fica do lado de mais/de menos), 0 interna."""
+    pts = [(s, fixo - 0.05), (s, fixo + 0.05)] if o == "h" else [(fixo - 0.05, s), (fixo + 0.05, s)]
+    menos, mais = ((v := PL._dentro(planta, x, y)) is not None and fechado(v) for x, y in pts)
+    return 0 if menos and mais else 1 if mais else -1 if menos else None
+
+
+def paredes_reais(planta, paredes):
+    """As paredes do eixo (construir) na posição de verdade: [(o, fixo_real, ini, fim, esp, classe, fixo_eixo)].
+
+    Externa: 15 cm para dentro da face de fora (o eixo do desenho vai 7,5 cm para dentro); interna: 12 cm sobre o eixo.
+    ini e fim são as pontas de verdade: no canto e no T a parede vai até a face de fora da parede que ela encontra; no vão de
+    porta e na ponta solta, para no vão. Uma linha com trecho externo e trecho interno vira duas peças."""
+    cortes = {"h": sorted({c[k] for c in planta["comodos"] for k in ("x0", "x1")}),
+              "v": sorted({c[k] for c in planta["comodos"] for k in ("y0", "y1")})}
+    pecas = []
+    for p in paredes:
+        o = "h" if p[1] == p[3] else "v"
+        fixo = p[1] if o == "h" else p[0]
+        a, b = (min(p[0], p[2]), max(p[0], p[2])) if o == "h" else (min(p[1], p[3]), max(p[1], p[3]))
+        pts = [a] + [s for s in cortes[o] if a + 1e-6 < s < b - 1e-6] + [b]
+        trechos = []
+        for s0, s1 in zip(pts, pts[1:]):
+            k = _classe(planta, o, fixo, (s0 + s1) / 2)
+            if trechos and trechos[-1][2] == k:
+                trechos[-1][1] = s1
+            else:
+                trechos.append([s0, s1, k])
+        for i, (s0, s1, k) in enumerate(trechos):
+            if k is None:
+                continue
+            esp = ESP_EXT if k else ESP_INT
+            pecas.append({"o": o, "eixo": fixo, "fixo": fixo + k * FACE, "esp": esp, "classe": k, "a": s0, "b": s1,
+                          "corte_a": i > 0, "corte_b": i < len(trechos) - 1})
+    for q in pecas:
+        corpo = (q["fixo"] - q["esp"] / 2, q["fixo"] + q["esp"] / 2)
+        for ponta, sinal in (("a", -1), ("b", 1)):
+            e = q[ponta]
+            if q["corte_" + ponta]:  # a linha muda de externa para interna aqui: a externa avança a espessura dela
+                if q["classe"]:
+                    q[ponta] = e + sinal * ESP_EXT
+                continue
+            achadas = [r for r in pecas if r["o"] != q["o"] and abs(r["eixo"] - e) < 1e-6 and r["a"] - 1e-6 <= q["eixo"] <= r["b"] + 1e-6]
+            if not achadas:
+                continue  # vão de porta ou ponta solta: a parede para aí
+            sobra = lambda r: min(corpo[1], r["b"] + (ESP_EXT if r["corte_b"] and r["classe"] else 0)) - max(corpo[0], r["a"] - (ESP_EXT if r["corte_a"] and r["classe"] else 0))
+            r = max(achadas, key=sobra)
+            q[ponta] = r["fixo"] + sinal * r["esp"] / 2  # até a face de fora da parede encontrada
+    return [(q["o"], q["fixo"], q["a"], q["b"], q["esp"], q["classe"], q["eixo"]) for q in pecas]
+
+
+def desloca(reais, o, eixo, s):
+    """Quanto o eixo do desenho anda (para dentro da casa) no ponto s da parede de eixo (o, eixo): 0 na interna."""
+    for (o2, fixo, a, b, esp, k, e2) in reais:
+        if o2 == o and abs(e2 - eixo) < 1e-6 and a - 1e-6 <= s <= b + 1e-6:
+            return fixo - e2
+    return 0.0
+
+
+def para_desenho(planta, paredes, janelas, portas):
+    """Paredes, janelas e portas na posição de verdade, no formato de video/src/planta.js (antes de espelhar).
+
+    Parede: [x0, y0, x1, y1, esp], com as pontas recolhidas ESPESSURA/2 (o motor e a vista da rua somam ESPESSURA/2 em
+    cada ponta); a janela e a dobradiça da porta externa vão com a parede, 7,5 cm para dentro."""
+    reais = paredes_reais(planta, paredes)
+    caixa = lambda q: (q[2], q[1] - q[4] / 2, q[3], q[1] + q[4] / 2) if q[0] == "h" else (q[1] - q[4] / 2, q[2], q[1] + q[4] / 2, q[3])
+    contida = lambda q: any(r is not q and all(abs(u - v) < 1e-6 or (u > v if i < 2 else u < v)
+                                               for i, (u, v) in enumerate(zip(caixa(q), caixa(r)))) for r in reais)
+    out = []
+    for q in reais:
+        o, fixo, a, b, esp = q[:5]
+        if b - a < ESP_EXT and contida(q):
+            continue  # toquinho de parede (ao lado de uma passagem) que já está dentro da parede do canto
+        a2, b2 = a + ESP_EXT / 2, b - ESP_EXT / 2
+        if b2 < a2:  # parede mais curta que 15 cm: fica com o comprimento de verdade em volta do meio
+            a2 = b2 = (a + b) / 2
+        out.append([R(a2), R(fixo), R(b2), R(fixo), esp] if o == "h" else [R(fixo), R(a2), R(fixo), R(b2), esp])
+    jan = []
+    for j in janelas:
+        x0, y0, x1, y1 = j["seg"]
+        if y0 == y1:
+            dy = desloca(reais, "h", y0, (x0 + x1) / 2)
+            jan.append({**j, "seg": [x0, R(y0 + dy), x1, R(y1 + dy)]})
+        else:
+            dx = desloca(reais, "v", x0, (y0 + y1) / 2)
+            jan.append({**j, "seg": [R(x0 + dx), y0, R(x1 + dx), y1]})
+    por = []
+    for d in portas:
+        horiz = abs(math.sin(d["a0"])) < 1e-6
+        ponta = d["x"] + d["r"] * math.cos(d["a0"]) if horiz else d["y"] + d["r"] * math.sin(d["a0"])
+        meio = (d["x"] + ponta) / 2 if horiz else (d["y"] + ponta) / 2
+        if horiz:
+            por.append({**d, "y": R(d["y"] + desloca(reais, "h", d["y"], meio))})
+        else:
+            por.append({**d, "x": R(d["x"] + desloca(reais, "v", d["x"], meio))})
+    return out, jan, por
 
 
 def cadeira_de(m):
@@ -329,25 +431,20 @@ def sobrepostos(moveis):
     return out
 
 
-def moveis_na_parede(planta, tol=0.02):
-    """Móveis que entram numa parede do motor 3D (15 cm sobre o eixo) mais que tol: [(amb, tipo, 'externa'|'interna', cm)].
+def moveis_na_parede(planta, tol=0.005):
+    """Móveis que entram numa parede de verdade (a do desenho 3D, paredes_reais) mais que tol: [(amb, tipo, 'externa'|'interna', cm)].
 
-    tol de 2 cm: o arranjo à mão (PL.movel) encosta a 6 cm do eixo da parede interna, que no 3D tem 7,5 cm de cada lado."""
+    Desde 24/11/2026 a parede do 3D e a do validador são a mesma (externa de 15 cm para dentro, interna de 12 no eixo):
+    móvel encostado para na face e a tolerância caiu de 2 cm para meio centímetro."""
     paredes, _, _, moveis = construir(planta)
     out = []
-    for p in paredes:
-        h = p[1] == p[3]
-        a, b = (min(p[0], p[2]), max(p[0], p[2])) if h else (min(p[1], p[3]), max(p[1], p[3]))
-        fixo = p[1] if h else p[0]
-        caixa = (a - FACE, fixo - FACE, b + FACE, fixo + FACE) if h else (fixo - FACE, a - FACE, fixo + FACE, b + FACE)
-        meio = (a + b) / 2
-        lados = [(meio, fixo - 0.1), (meio, fixo + 0.1)] if h else [(fixo - 0.1, meio), (fixo + 0.1, meio)]
-        externa = any((v := PL._dentro(planta, x, y)) is None or not fechado(v) for x, y in lados)
+    for (o, fixo, a, b, esp, k, _) in paredes_reais(planta, paredes):
+        caixa = (a, fixo - esp / 2, b, fixo + esp / 2) if o == "h" else (fixo - esp / 2, a, fixo + esp / 2, b)
         for m in moveis:
             r = pegada(m)
             dx, dy = min(r[2], caixa[2]) - max(r[0], caixa[0]), min(r[3], caixa[3]) - max(r[1], caixa[1])
             if dx > tol and dy > tol:
-                out.append((m["amb"], m["tipo"], "externa" if externa else "interna", round(100 * min(dx, dy))))
+                out.append((m["amb"], m["tipo"], "externa" if k else "interna", round(100 * min(dx, dy))))
     return out
 
 
@@ -387,12 +484,12 @@ def altos_na_janela(planta):
         r = pegada(m)
         c = por_id[m["amb"]]
         for j, a0, b0, a1, b1 in zonas_de_janela(janelas, m["amb"]):
-            if b0 == b1:  # janela na frente ou no fundo do cômodo
-                fundo = b0 + (FACE if abs(b0 - c["y0"]) < 1e-6 else -FACE)
+            if b0 == b1:  # janela na frente ou no fundo do cômodo (a faixa sai da face de verdade da parede)
+                fundo = b0 + (PL._desconto(planta, c, "frente") if abs(b0 - c["y0"]) < 1e-6 else -PL._desconto(planta, c, "fundos"))
                 z = (a0, fundo, a1, fundo + FRENTE_JANELA) if abs(b0 - c["y0"]) < 1e-6 else (a0, fundo - FRENTE_JANELA, a1, fundo)
                 lap = min(r[2], z[2]) - max(r[0], z[0])
             else:
-                fundo = a0 + (FACE if abs(a0 - c["x0"]) < 1e-6 else -FACE)
+                fundo = a0 + (PL._desconto(planta, c, "esq") if abs(a0 - c["x0"]) < 1e-6 else -PL._desconto(planta, c, "dir"))
                 z = (fundo, b0, fundo + FRENTE_JANELA, b1) if abs(a0 - c["x0"]) < 1e-6 else (fundo - FRENTE_JANELA, b0, fundo, b1)
                 lap = min(r[3], z[3]) - max(r[1], z[1])
             if sobrepoe(r, z, -0.02):
@@ -423,6 +520,93 @@ def cadeiras_apertadas(planta, minimo=CADEIRA_PAREDE):
     return out
 
 
+FRENTE_ARMARIO = 0.6  # livre na frente do guarda-roupa de porta de abrir: a folha (33 a 40 cm) abre e a pessoa fica na frente (24/11/2026)
+FIXOS = ("tanque", "pia", "vaso", "bancada", "box", "maquina")  # o que não sai do lugar (água, esgoto, obra): a porta não pode bater
+
+
+def armarios_sem_frente(planta, minimo=FRENTE_ARMARIO):
+    """Guarda-roupa com menos de 'minimo' livres na frente, até a parede de verdade ou o primeiro móvel: [(amb, cm)].
+
+    Achado do levantamento das 3 casas (24/11/2026): na C01 a cama ficava a 10 cm da frente do guarda-roupa."""
+    paredes, _, _, moveis = construir(planta)
+    por_id = {c["id"]: c for c in planta["comodos"]}
+    out = []
+    for m in (m for m in moveis if m["tipo"] == "armario"):
+        c = recuado(por_id[m["amb"]], paredes, planta)
+        r = pegada(m)
+        sx, sy = round(math.sin(m.get("rot", 0.0))), round(math.cos(m.get("rot", 0.0)))  # para onde as portas abrem
+        k = 0 if sx else 1  # eixo da frente: 0 = x, 1 = y
+        sinal = sx or sy
+        face = r[2 + k] if sinal > 0 else r[k]
+        livre = (c["x1" if k == 0 else "y1"] - face) if sinal > 0 else (face - c["x0" if k == 0 else "y0"])
+        for o in moveis:
+            if o is m or o["amb"] != m["amb"] or o["tipo"] in NAO_COLIDE:
+                continue
+            q = pegada(o)
+            j = 1 - k  # o eixo ao longo das portas
+            lap = min(r[2 + j], q[2 + j]) - max(r[j], q[j])
+            if lap <= 0.005:
+                continue  # fora da faixa das portas
+            perto, longe = (q[k], q[2 + k]) if sinal > 0 else (-q[2 + k], -q[k])
+            f = face if sinal > 0 else -face
+            if longe > f + 0.005:
+                livre = min(livre, max(0.0, perto - f))
+        if livre < minimo - 0.005:
+            out.append((m["amb"], round(100 * livre)))
+    return out
+
+
+def giros_de_porta(planta, portas=None):
+    """A folha de cada porta como no e-book (PL.porta_dobradica), com a dobradiça na face da parede do lado em que abre.
+
+    [(id, cômodo, (hx, hy), raio, u, v)]: u aponta para onde a folha aberta fica, v para a folha fechada (ao longo da parede)."""
+    if portas is None:
+        portas = construir(planta)[2]
+    out = []
+    for d in portas:
+        H, P, A = PL.porta_dobradica(planta, d)
+        r = d["r"]
+        u = (round((A[0] - H[0]) / r), round((A[1] - H[1]) / r))
+        v = (round((P[0] - H[0]) / r), round((P[1] - H[1]) / r))
+        c = PL._dentro(planta, H[0] + 0.3 * u[0] + 0.4 * v[0], H[1] + 0.3 * u[1] + 0.4 * v[1])
+        if c is None:
+            continue
+        lado = {(0, 1): "frente", (0, -1): "fundos", (1, 0): "esq", (-1, 0): "dir"}[u]
+        e = PL._desconto(planta, c, lado)
+        out.append((d["id"], c["id"], (H[0] + e * u[0], H[1] + e * u[1]), r, u, v))
+    return out
+
+
+def bate_na_porta(giro, ret, tol=0.005):
+    """Quanto (m) o retângulo entra no quarto de círculo que a folha varre; 0 se não entra."""
+    _, _, (hx, hy), r, u, v = giro
+    x0, y0, x1, y1 = ret
+    for (dx, dy) in (u, v):  # o quarto de círculo fica do lado de u e de v da dobradiça
+        if dx > 0: x0 = max(x0, hx)
+        if dx < 0: x1 = min(x1, hx)
+        if dy > 0: y0 = max(y0, hy)
+        if dy < 0: y1 = min(y1, hy)
+    if x1 - x0 <= tol or y1 - y0 <= tol:
+        return 0.0
+    dist = math.hypot(min(max(hx, x0), x1) - hx, min(max(hy, y0), y1) - hy)
+    return max(0.0, r - dist) if dist < r - tol else 0.0
+
+
+def portas_em_fixos(planta, fixos=FIXOS):
+    """Porta que bate em tanque, pia, vaso, bancada, box ou máquina ao abrir: [(cômodo, porta, tipo, cm)]. Vazia = tudo certo.
+
+    Achado do levantamento das 3 casas (24/11/2026): na C01 a folha da porta da cozinha batia no tanque."""
+    moveis = construir(planta)[3]
+    out = []
+    for g in giros_de_porta(planta):
+        for m in moveis:
+            if m["amb"] == g[1] and m["tipo"] in fixos:
+                cm = bate_na_porta(g, pegada(m))
+                if cm:
+                    out.append((g[1], g[0], m["tipo"], round(100 * cm, 1)))
+    return out
+
+
 def janelas_sobre_portas(planta):
     """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois)."""
     _, janelas, portas, _ = construir(planta)
@@ -450,23 +634,49 @@ def _lados_por_preferencia(c, vaos, janelas, quer_comprido=True):
     return sorted(lados, key=nota, reverse=True)
 
 
-def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
+def frente_do_armario(m):
+    """Retângulo de FRENTE_ARMARIO na frente das portas do guarda-roupa (o chão que fica livre para abrir)."""
+    r = pegada(m)
+    sx, sy = round(math.sin(m.get("rot", 0.0))), round(math.cos(m.get("rot", 0.0)))
+    f = FRENTE_ARMARIO
+    return ((r[2], r[1], r[2] + f, r[3]) if sx > 0 else (r[0] - f, r[1], r[0], r[3]) if sx < 0 else
+            (r[0], r[3], r[2], r[3] + f) if sy > 0 else (r[0], r[1] - f, r[2], r[1]))
+
+
+def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=(), portas=()):
     """Móveis de cada cômodo pelas regras de projeto. Nenhum móvel ocupa o chão de outro nem entra na parede (checar.py)."""
     out = []
     por_id = {c["id"]: c for c in planta["comodos"]}
     for c0 in planta["comodos"]:
         t, cid = c0["tipo"], c0["id"]
-        c = recuado(c0, paredes)  # o arranjo automático usa o chão livre, da face de dentro das paredes
+        c = recuado(c0, paredes, planta)  # o arranjo automático usa o chão livre, da face de dentro das paredes de verdade
         vaos = vaos_por_comodo.get(cid, [])
         jans = jan_por_comodo.get(cid, [])
         w, d = c0["x1"] - c0["x0"], c0["y1"] - c0["y0"]  # as regras de tamanho (limiares) seguem a medida de eixo, como antes
         cx, cy = (c["x0"] + c["x1"]) / 2, (c["y0"] + c["y1"]) / 2
         aqui = []  # móveis já postos neste cômodo
 
+        giros = [g for g in giros_de_porta(planta, portas) if g[1] == cid]  # a folha de cada porta que abre aqui (24/11/2026)
+
         def cabe(m, folga=0.0):
             r = pegada(m)
             dentro = r[0] >= c["x0"] - 1e-6 and r[1] >= c["y0"] - 1e-6 and r[2] <= c["x1"] + 1e-6 and r[3] <= c["y1"] + 1e-6
-            return dentro and not any(o["tipo"] not in NAO_COLIDE and sobrepoe(r, pegada(o), folga) for o in aqui)
+            return dentro and not any(o["tipo"] not in NAO_COLIDE and sobrepoe(r, pegada(o), folga) for o in aqui) \
+                and (m["tipo"] in NAO_COLIDE or not any(bate_na_porta(g, r) for g in giros)) \
+                and not any(o["tipo"] == "armario" and sobrepoe(r, frente_do_armario(o), -0.005) for o in aqui)
+
+        def na_folha(lado, prof):
+            """Trechos do lado em que uma peça de fundo prof, encostada nele, levaria a folha de uma porta ao abrir."""
+            ini, fim = (c["x0"], c["x1"]) if lado in ("frente", "fundos") else (c["y0"], c["y1"])
+            b0, b1 = {"frente": (c["y0"], c["y0"] + prof), "fundos": (c["y1"] - prof, c["y1"]),
+                      "esq": (c["x0"], c["x0"] + prof), "dir": (c["x1"] - prof, c["x1"])}[lado]
+            out_, s, passo = [], ini, 0.02
+            while giros and s < fim - 1e-9:
+                ret = (s, b0, s + passo, b1) if lado in ("frente", "fundos") else (b0, s, b1, s + passo)
+                if any(bate_na_porta(g, ret) for g in giros):
+                    out_.append((s, s + passo))
+                s += passo
+            return unir(out_)
 
         def add(**m):
             m = {"amb": cid, **{k: (R(v) if isinstance(v, float) else v) for k, v in m.items()}}
@@ -507,7 +717,11 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
                 if _prof(c0, lado) < prof + frente:
                     continue
-                tomados = ocupados(lado, prof + folga) + (na_janela(lado, prof + folga) if tipo in ALTOS else [])
+                livre_frente = FRENTE_ARMARIO if tipo == "armario" else 0.0  # o guarda-roupa leva junto os 60 cm da frente
+                if livre_frente and _prof(c, lado) < prof + folga + livre_frente:
+                    continue
+                tomados = ocupados(lado, prof + folga + livre_frente) + na_folha(lado, prof + folga) \
+                    + (na_janela(lado, prof + folga) if tipo in ALTOS else [])
                 pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=tomados,
                                      prof=prof + folga, no_canto=no_canto)
                 if pos is None:
@@ -530,7 +744,9 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                         z = zona_da_cadeira(aqui[-1])
                         dentro = z[0] >= c["x0"] - 1e-6 and z[1] >= c["y0"] - 1e-6 and z[2] <= c["x1"] + 1e-6 and z[3] <= c["y1"] + 1e-6
                         livre = not any(o["tipo"] not in NAO_COLIDE and sobrepoe(z, pegada(o)) for o in aqui[:-1])
-                        if dentro and livre and not any(sobrepoe(z, zp) for zp in zonas_porta):
+                        arm = [frente_do_armario(o) for o in aqui[:-1] if o["tipo"] == "armario"]
+                        if dentro and livre and not any(sobrepoe(z, zp) for zp in zonas_porta) \
+                                and not any(sobrepoe(z, fa, -0.005) or sobrepoe(pegada(aqui[-1]), fa, -0.005) for fa in arm):
                             add(**cadeira_de(aqui[-1]))
                             return True
                         out.remove(aqui.pop())
@@ -558,7 +774,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                         r = pegada(m)
                         if not cabe(m, 0.1) or r[0] < c["x0"] or r[1] < c["y0"] or r[2] > c["x1"] or r[3] > c["y1"]:  # c já vai até a face da parede
                             continue
-                        if any(sobrepoe(r, z) for z in portas_zona):
+                        if any(sobrepoe(r, z) for z in portas_zona) or any(bate_na_porta(g, r) for g in giros):
                             continue
                         dist = math.hypot(m["x"] - alvo[0], m["y"] - alvo[1])
                         if melhor is None or dist < melhor[0]:
@@ -571,11 +787,15 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
 
         if t in ("casal", "dorm"):
             casal = t == "casal"
-            bw, bd = (1.6, 2.0) if casal else (0.95, 1.95)
+            bw, bd = (1.38, 1.88) if casal else (0.88, 1.88)  # colchão de casal e de solteiro padrão (24/11/2026: era queen, 1,60 x 2,00)
             lados = [l for l in _lados_por_preferencia(c, vaos, jans) if _prof(c0, l) >= bd + 0.6]
-            lado, pos = encostar("camaCasal" if casal else "camaSolteiro", bw, bd, lados,
-                                 manta="#B9C7D6" if casal else "#E3B9A4")
-            if lado:
+
+            def cama_e_armario(lados_cama, canto):
+                """Cama, criados e o maior guarda-roupa com 60 cm na frente; devolve (lado da cama, tem guarda-roupa)."""
+                lado, pos = encostar("camaCasal" if casal else "camaSolteiro", bw, bd, lados_cama, no_canto=canto,
+                                     manta="#B9C7D6" if casal else "#E3B9A4")
+                if not lado:
+                    return None, False
                 for s in (-1, 1):
                     p = pos + s * (bw / 2 + 0.28)  # criado de 0,45 m ao lado da cama, sem entrar nela
                     a, b = (c["x0"], c["x1"]) if lado in ("frente", "fundos") else (c["y0"], c["y1"])
@@ -585,10 +805,30 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                         add(tipo="criado", x=x, y=y, rot=ROT[lado])
                     if not casal:
                         break
+                for arm in ((2.0, 1.6, 1.2) if casal else (1.5, 1.2, 1.0)):  # o maior guarda-roupa que couber, com 60 cm na frente
+                    if encostar("armario", arm, 0.5, [l for l in _lados_por_preferencia(c, vaos, jans) if l != lado])[0]:
+                        return lado, True  # 0,50 de fundo, o da Portaria MCID 725 (24/11/2026: era 0,60)
+                return lado, False
+
+            # a cama do lugar de sempre; se ali o guarda-roupa não tiver os 60 cm na frente, a cama tenta outra parede ou o canto
+            lado, com_armario = cama_e_armario(lados, False)
+            for l, canto in [(l, k) for l in lados for k in (False, True)]:
+                if com_armario or not lado:
+                    break
+                ate = [m for m in aqui]
+                while aqui:
+                    out.remove(aqui.pop())
+                lado2, ok = cama_e_armario([l], canto)
+                if ok:
+                    lado, com_armario = lado2, True
+                    break
+                while aqui:
+                    out.remove(aqui.pop())
+                for m in ate:
+                    out.append(m)
+                    aqui.append(m)
+            if lado:
                 restantes = [l for l in _lados_por_preferencia(c, vaos, jans) if l != lado]
-                for arm in ((1.8, 1.5, 1.2) if casal else (1.4, 1.2, 1.0)):  # o maior guarda-roupa que couber
-                    if encostar("armario", arm, 0.6, restantes)[0]:
-                        break
                 if not casal:
                     escrivaninha((1.0, 0.8), 0.5, restantes)
         elif t in ("sala", "estar"):
@@ -606,7 +846,7 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                         lado, pos = encostar("sofa", min(larg, _comp(c, l) - 0.6), 0.88, [l], cor="#8A9A86")
                         if not lado:
                             continue
-                        p_op = _livre_no_lado(c, OPOSTO[lado], vaos, 1.6, ocupados=ocupados(OPOSTO[lado], 0.4), prof=0.4)
+                        p_op = _livre_no_lado(c, OPOSTO[lado], vaos, 1.6, ocupados=ocupados(OPOSTO[lado], 0.4) + na_folha(OPOSTO[lado], 0.4), prof=0.4)
                         if p_op is not None or not com_tv:
                             break
                         out.remove(aqui.pop())
@@ -718,20 +958,39 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                 return False
 
             feito = False
-            for box_lado in opcoes:
-                for bc in (False, True):
-                    antes = len(aqui)
-                    if encostar("box", 0.8, 0.85, [box_lado], frente=0.3, no_canto=bc)[0] and vaso_e_pia():
-                        feito = True
+            # box de 0,90 x 0,95 (Portaria MCID 725, Anexo, item 2.I.c.v) nos dois sentidos; o de 0,80 x 0,85 só se o maior não couber
+            for bw_, bd_ in ((0.95, 0.9), (0.9, 0.95), (0.8, 0.85)):
+                for box_lado in opcoes:
+                    for bc in (True, False):  # o box vai no canto (duas paredes), não solto no meio da parede
+                        antes = len(aqui)
+                        if encostar("box", bw_, bd_, [box_lado], frente=0.3, no_canto=bc)[0] and vaso_e_pia():
+                            feito = True
+                            break
+                        tirar(antes)
+                    if feito:
                         break
-                    tirar(antes)
                 if feito:
                     break
             if not feito and not vaso_e_pia():  # sem box: o vaso e a pia juntos ou, se não der, o que couber
                 encostar("vaso", 0.4, 0.65, lados, frente=0.3)[0] and encostar("pia", 0.6, 0.42, list(reversed(lados)), frente=0.3)
         elif t == "servico":
             encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)  # tanque no canto, máquina ao lado
-            encostar("maquina", 0.6, 0.6, None, frente=0.4) or encostar("maquina", 0.6, 0.6, None, frente=0.3)
+            if not (encostar("maquina", 0.6, 0.6, None, frente=0.4)[0] or encostar("maquina", 0.6, 0.6, None, frente=0.3)[0]):
+                # sem lugar para a máquina (a folha da porta tomou o canto): o tanque procura outra parede (24/11/2026)
+                for l in _lados_por_preferencia(c, vaos, jans):
+                    for canto in (True, False):
+                        while aqui:
+                            out.remove(aqui.pop())
+                        if encostar("tanque", 0.6, 0.5, [l], frente=0.4, no_canto=canto)[0] and \
+                                encostar("maquina", 0.6, 0.6, None, frente=0.3)[0]:
+                            break
+                    else:
+                        continue
+                    break
+                else:  # nem assim: fica só o tanque, no canto
+                    while aqui:
+                        out.remove(aqui.pop())
+                    encostar("tanque", 0.6, 0.5, None, frente=0.4, no_canto=True)
         elif t == "escritorio":
             escrivaninha((1.2, 1.0), 0.6, None)
             encostar("armario", 1.2, 0.45, None)
@@ -767,7 +1026,7 @@ def espelhar(W, paredes, janelas, portas, moveis, ambientes):
     Sem espelhar, a imagem 3D sai invertida em relação à planta do e-book (achado do Designer, 23/11/2026).
     Com X = largura - x, a casa vista da rua bate com a planta: porta, janelas e cômodos do mesmo lado."""
     X = lambda x: R(W - x)
-    paredes = [[X(a), b, X(c), d] for (a, b, c, d) in paredes]
+    paredes = [[X(p[0]), p[1], X(p[2]), p[3], *p[4:]] for p in paredes]
     for j in janelas:
         a, b, c, d = j["seg"]
         j["seg"] = [X(c), d, X(a), b] if b == d else [X(a), b, X(c), d]
@@ -784,6 +1043,7 @@ def espelhar(W, paredes, janelas, portas, moveis, ambientes):
 
 def modulo(planta):
     paredes, janelas, portas, moveis = construir(planta)
+    paredes, janelas, portas = para_desenho(planta, paredes, janelas, portas)  # parede externa para dentro, como no validador
     r = planta["_r"]
     m = r.metricas
     amb = [{"id": c["id"], "nome": c["nome"], "tipo": c["tipo"], "x0": c["x0"], "y0": c["y0"], "x1": c["x1"], "y1": c["y1"],

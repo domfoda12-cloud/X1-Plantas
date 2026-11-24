@@ -55,7 +55,7 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 
 Confere se o código do projeto tem erro, de uma vez só.
 
-Funções: `rodar`, `moveis_ruins`, `recuos_escondidos`.
+Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`.
 
 ### [`ferramentas/conversas.py`](conversas.py)
 
@@ -107,7 +107,7 @@ Funções: `nome`, `numero`, `linhas_de_tabela`, `vetos`, `provas`, `licoes`, `b
 
 Converte as plantas validadas (ebook/plantas/projetos.py) em módulos para o motor 3D.
 
-Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `recuado`, `cadeira_de`, `zona_da_cadeira`, `pegada`, `sobrepoe`, `sobrepostos`, `moveis_na_parede`, `cadeiras_sem_lugar`, `zonas_de_janela`, `altos_na_janela`, `cadeiras_apertadas`, `janelas_sobre_portas`.
+Funções: `fechado`, `arestas`, `subtrair`, `unir`, `trecho_livre`, `construir`, `recuado`, `paredes_reais`, `desloca`, `para_desenho`, `cadeira_de`, `zona_da_cadeira`, `pegada`, `sobrepoe`, `sobrepostos`, `moveis_na_parede`, `cadeiras_sem_lugar`, `zonas_de_janela`.
 
 ### [`ferramentas/plantas.py`](plantas.py)
 

@@ -39,23 +39,26 @@ export const CORES = {
 // Paredes divididas em trechos (cheios e janelas)
 // ---------------------------------------------------------------------------
 function trechos() {
+  // Cada parede vem de ferramentas/planta3d.py (para_desenho) como [x0, y0, x1, y1, esp]: o eixo de verdade (a externa
+  // 7,5 cm para dentro da face de fora, a interna no eixo) e as pontas recolhidas ESPESSURA/2. Aqui as pontas voltam ao
+  // lugar de verdade e cada trecho tem o comprimento exato: o pedaço ao lado da janela não entra mais no vão (24/11/2026).
   const out = [];
-  for (const [x0, y0, x1, y1] of paredes) {
+  for (const [x0, y0, x1, y1, esp = ESPESSURA] of paredes) {
     const h = y0 === y1;
-    const ini = h ? Math.min(x0, x1) : Math.min(y0, y1);
-    const fim = h ? Math.max(x0, x1) : Math.max(y0, y1);
+    const ini = (h ? Math.min(x0, x1) : Math.min(y0, y1)) - ESPESSURA / 2;
+    const fim = (h ? Math.max(x0, x1) : Math.max(y0, y1)) + ESPESSURA / 2;
     const fixo = h ? y0 : x0;
     const js = janelas
       .filter((j) => (j.seg[1] === j.seg[3]) === h && (h ? j.seg[1] : j.seg[0]) === fixo)
-      .map((j) => ({ ...j, a: h ? j.seg[0] : j.seg[1], b: h ? j.seg[2] : j.seg[3] }))
-      .filter((j) => j.a >= ini && j.b <= fim)
+      .map((j) => ({ ...j, a: Math.min(h ? j.seg[0] : j.seg[1], h ? j.seg[2] : j.seg[3]), b: Math.max(h ? j.seg[0] : j.seg[1], h ? j.seg[2] : j.seg[3]) }))
+      .filter((j) => j.a >= ini + ESPESSURA / 2 - 1e-6 && j.b <= fim - ESPESSURA / 2 + 1e-6)
       .sort((p, q) => p.a - q.a);
     const pt = (s) => (h ? [s, fixo] : [fixo, s]);
     let c = ini;
     const add = (a, b, janela) => {
       if (b - a < 0.01) return;
       const [ax, ay] = pt(a); const [bx, by] = pt(b);
-      out.push({ x0: ax, y0: ay, x1: bx, y1: by, h, janela });
+      out.push({ x0: ax, y0: ay, x1: bx, y1: by, h, janela, esp });
     };
     for (const j of js) { add(c, j.a, null); add(j.a, j.b, j); c = j.b; }
     add(c, fim, null);
@@ -228,11 +231,11 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
   // Paredes: linhas duplas desenhadas em sequência
   const total = TRECHOS.reduce((s, t) => s + Math.hypot(t.x1 - t.x0, t.y1 - t.y0), 0);
   let resta = suave(p / 0.45) * total;
-  const e = ESPESSURA / 2;
   for (const t of TRECHOS) {
     const comp = Math.hypot(t.x1 - t.x0, t.y1 - t.y0);
     if (resta <= 0) break;
     const f = Math.min(1, resta / comp); resta -= comp;
+    const e = t.esp / 2;
     const xb = lerp(t.x0, t.x1, f); const yb = lerp(t.y0, t.y1, f);
     const ox = t.h ? 0 : e; const oy = t.h ? e : 0;
     if (t.janela) {
@@ -356,7 +359,7 @@ export function criarCasa(renderer) {
   const grama = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), new THREE.MeshStandardMaterial({ map: texturaGrama(), roughness: 1, transparent: true, opacity: 0 }));
   grama.rotation.x = -Math.PI / 2; grama.position.set(centro.x, -0.02, centro.z); grama.receiveShadow = true; cena.add(grama);
   const reais = []; // objetos externos que surgem com o jardim
-  const portaEntrada = portas.find((d) => d.id === 'entrada' || (String(d.id).startsWith('ext-') && Math.abs(d.y) < 0.01));
+  const portaEntrada = portas.find((d) => d.id === 'entrada' || (String(d.id).startsWith('ext-') && Math.abs(d.y) < 0.2)); // a dobradiça fica no meio da parede de 15 cm
   const ENTRADA_X = DADOS.ENTRADA_X ?? (portaEntrada ? (portaEntrada.a0 === Math.PI ? portaEntrada.x - portaEntrada.r / 2 : portaEntrada.x + portaEntrada.r / 2) : LARGURA / 2);
   const rua = new THREE.Mesh(new THREE.BoxGeometry(40, 0.04, 2.2), new THREE.MeshStandardMaterial({ color: '#C9C3B6', roughness: 1 }));
   rua.position.set(centro.x, 0, -3.6); rua.receiveShadow = true; cena.add(rua); reais.push({ obj: rua, t: 0.55 });
@@ -406,8 +409,8 @@ export function criarCasa(renderer) {
   const matVidro = new THREE.MeshStandardMaterial({ color: '#A9D2E0', roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0.8 });
   const matAresta = new THREE.LineBasicMaterial({ color: '#FFFFFF', transparent: true, opacity: 1 });
   const paredesObj = TRECHOS.map((t) => {
-    const comp = Math.hypot(t.x1 - t.x0, t.y1 - t.y0) + (t.janela ? 0 : ESPESSURA);
-    const geo = new THREE.BoxGeometry(t.h ? comp : ESPESSURA, 1, t.h ? ESPESSURA : comp);
+    const comp = Math.hypot(t.x1 - t.x0, t.y1 - t.y0); // já com as pontas de verdade (trechos)
+    const geo = new THREE.BoxGeometry(t.h ? comp : t.esp, 1, t.h ? t.esp : comp);
     const g = new THREE.Group();
     const corpo = new THREE.Mesh(geo, matParede); corpo.castShadow = true; corpo.receiveShadow = true;
     const linhas = new THREE.LineSegments(new THREE.EdgesGeometry(geo), matAresta);
