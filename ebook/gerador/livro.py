@@ -59,6 +59,24 @@ def m1(v):
 
 
 # ------------------------------------------------------------------ desenhos (SVG)
+def _geometria(p):
+    """Paredes, janelas, portas e móveis na posição de verdade, a mesma do 3D (P3.paredes_reais e P3.para_desenho):
+    parede externa de 15 cm para dentro da face de fora, interna de 12 cm no eixo; a janela e a porta da parede externa
+    vão junto, 7,5 cm para dentro. Paredes em caixas (x0, y0, x1, y1), em metros, frente em y=0 (24/11/2026)."""
+    paredes, janelas, portas, moveis = P3.construir(p)
+    caixas = [(a, f - e / 2, b, f + e / 2) if o == "h" else (f - e / 2, a, f + e / 2, b)
+              for (o, f, a, b, e, _, _) in P3.paredes_reais(p, paredes)]
+    _, janelas, portas = P3.para_desenho(p, paredes, janelas, portas)
+    return caixas, janelas, portas, moveis
+
+
+def _svg_paredes(caixas, Y, cor, extra=0, dx=0, dy=0):
+    """As paredes como retângulos cheios (extra: borda a mais em volta, para o contorno da maquete)."""
+    return (f'<g fill="{cor}">' + "".join(
+        f'<rect x="{f3(x0 - extra / 2 + dx)}" y="{f3(Y(y1) - extra / 2 + dy)}" width="{f3(x1 - x0 + extra)}" height="{f3(y1 - y0 + extra)}"/>'
+        for x0, y0, x1, y1 in caixas) + "</g>")
+
+
 def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=False, estilo="revista"):
     """Planta com a frente da casa para baixo: o leitor entra por baixo, como chega da rua.
     humanizada=True: a planta humanizada com o entorno (svg_humanizada), no estilo "revista" ou "maquete".
@@ -81,9 +99,9 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
             s.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2)}" text-anchor="middle" font-size=".28" font-weight="700" fill="#9A6B00">AMPLIAÇÃO</text>')
             s.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .36}" text-anchor="middle" font-size=".22" fill="#9A6B00">{E(c["nome"].split(" (")[0])}</text>')
             continue
-        aberto = t in ABERTOS
-        s.append(f'<rect x="{x0}" y="{Y(y1)}" width="{w}" height="{h}" fill="{CORES.get(t, "#EEE")}" '
-                 f'stroke="{"#B9B3A8" if aberto else "#2A3340"}" stroke-width="{.03 if aberto else .12}"/>')
+        aberto = t in ABERTOS  # a parede do cômodo fechado vem depois, na posição de verdade (_geometria)
+        s.append(f'<rect x="{x0}" y="{Y(y1)}" width="{w}" height="{h}" fill="{CORES.get(t, "#EEE")}"'
+                 + (' stroke="#B9B3A8" stroke-width=".03"/>' if aberto else "/>"))
         if nomes and min(w, h) >= 1.15 and t not in ("circ", "externo"):
             nome = "PÁTIO" if t == "patio" else c["nome"].upper()
             fs = max(min(.34, (w - .2) / (len(nome) * .74)), .17)
@@ -91,20 +109,20 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
             rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) - .04}" text-anchor="middle" font-size="{fs:.3f}" font-weight="700" fill="#1E2733" {halo}>{E(nome)}</text>')
             if t not in ABERTOS:
                 rotulos.append(f'<text x="{x0 + w / 2}" y="{Y(y0 + h / 2) + .3}" text-anchor="middle" font-size=".22" class="mono" fill="#56616E" {halo}>{m1(p["_r"].metricas["util"][c["id"]][2] if "_r" in p else w * h)} m²</text>')
+    caixas, jan3d, portas_ext, mov = _geometria(p)
     if moveis:
-        _, _, portas3d, mov = P3.construir(p)
         for mv in mov:
             rot = math.degrees(mv.get("rot", 0) or 0)
             s.append(f'<g transform="translate({mv["x"]:.3f} {Y(mv["y"]):.3f}) scale(1 -1) rotate({-rot:.2f})">{_movel(mv)}</g>')
-        for d in portas3d:
+    s.append(_svg_paredes(caixas, Y, "#2A3340"))  # o vão da porta já fica aberto na parede
+    if moveis:
+        for d in portas_ext:
             r = d["r"]
             (hx, hy), (ax, ay), (bx, by) = PL.porta_dobradica(p, d)  # dobradiça no canto (o arco do motor saía espelhado)
             sweep = 1 if (bx - hx) * (Y(ay) - Y(hy)) - (Y(by) - Y(hy)) * (ax - hx) > 0 else 0
-            s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{ax:.3f}" y2="{Y(ay):.3f}" stroke="#FBF8F2" stroke-width=".16"/>')
             s.append(f'<path d="M{bx:.3f} {Y(by):.3f} A{r} {r} 0 0 {sweep} {ax:.3f} {Y(ay):.3f}" fill="none" stroke="#C2683F" stroke-width=".025" stroke-dasharray=".06 .04"/>')
             s.append(f'<line x1="{hx:.3f}" y1="{Y(hy):.3f}" x2="{bx:.3f}" y2="{Y(by):.3f}" stroke="#C2683F" stroke-width=".04"/>')
     # janelas e porta de entrada nas mesmas posições do motor 3D (a mesma da vista da rua e das imagens)
-    _, jan3d, portas_ext, _ = P3.construir(p)
     for j in jan3d:
         x0s, y0s, x1s, y1s = j["seg"]
         if abs(y0s - y1s) < 1e-6:
@@ -112,11 +130,14 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
         else:
             x, y, w, h = x0s - .07, Y(max(y0s, y1s)), .14, abs(y1s - y0s)
         s.append(f'<rect x="{x:.3f}" y="{y:.3f}" width="{w:.3f}" height="{h:.3f}" fill="#8ED2FF" stroke="#0B4FA8" stroke-width=".03"/>')
-    for d in portas_ext:
-        if not str(d["id"]).startswith("ext-") or abs(math.sin(d["a0"])) > 1e-6:
+    for d in portas_ext:  # porta para fora (da frente, do fundo ou do lado) em amarelo, no vão da parede
+        if not str(d["id"]).startswith("ext-"):
             continue
-        a = d["x"] if abs(d["a0"]) < 1e-6 else d["x"] - d["r"]
-        s.append(f'<rect x="{a:.3f}" y="{Y(d["y"]) - .1:.3f}" width="{d["r"]:.3f}" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
+        (hx, hy), (ax, ay), _ = PL.porta_dobradica(p, d)
+        if abs(ay - hy) < 1e-6:
+            s.append(f'<rect x="{min(hx, ax):.3f}" y="{Y(hy) - .1:.3f}" width="{d["r"]:.3f}" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
+        else:
+            s.append(f'<rect x="{hx - .1:.3f}" y="{Y(max(hy, ay)):.3f}" width=".2" height="{d["r"]:.3f}" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
     s.extend(rotulos)
     if cotas:
         s.append(f'<g stroke="#0B4FA8" stroke-width=".03" fill="#0B4FA8" font-size=".3" class="mono">'
@@ -411,7 +432,7 @@ def svg_humanizada(p, estilo="revista"):
     W, D = p["W"], p["D"]
     MET = p["_r"].metricas
     REC = MET["recuos"]
-    paredes, janelas, portas, moveis = P3.construir(p)
+    caixas, janelas, portas, moveis = _geometria(p)
     mov = _moveis_sem_choque(p["id"], moveis)
     fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
     Dm = max([D] + [c["y1"] for c in fut])
@@ -505,19 +526,13 @@ def svg_humanizada(p, estilo="revista"):
     s.append(f'<g fill="{S["sombra"]}">' + "".join(f'<g transform="{tr(mv, .045, .06)}">{_movel(mv, S, sombra=True)}</g>' for mv in mov if mv["tipo"] != "tapete") + "</g>")
     i_moveis = len(s)  # os móveis entram aqui depois das etiquetas (o ralo encostado numa etiqueta não é desenhado)
     s.append("")
-    # paredes, com os vãos das portas (externa 15 cm, interna 12 cm, como nas contas do e-book)
-    def esp(a, b, c, d):
-        ext = (abs(a - c) < 1e-6 and (abs(a) < 1e-6 or abs(a - W) < 1e-6)) or (abs(b - d) < 1e-6 and (abs(b) < 1e-6 or abs(b - D) < 1e-6))
-        return .15 if ext else .12
-
-    def linhas(cor, extra=0, dx=0, dy=0):
-        return (f'<g stroke="{cor}" stroke-linecap="square">' + "".join(
-            f'<line x1="{f3(a + dx)}" y1="{f3(Y(b) + dy)}" x2="{f3(c + dx)}" y2="{f3(Y(d) + dy)}" stroke-width="{esp(a, b, c, d) + extra:.3f}"/>' for a, b, c, d in paredes) + "</g>")
+    # paredes de verdade, com os vãos das portas: externa de 15 cm para dentro da face de fora, interna de 12 cm no
+    # eixo (as do validador e do 3D, P3.paredes_reais); o móvel encostado para na face de dentro
     if S.get("parede_sombra"):
-        s.append(linhas(S["parede_sombra"], dx=.09, dy=.11))
+        s.append(_svg_paredes(caixas, Y, S["parede_sombra"], dx=.09, dy=.11))
     if S.get("parede_contorno"):
-        s.append(linhas(S["parede_contorno"], extra=.035))
-    s.append(linhas(S["parede"]))
+        s.append(_svg_paredes(caixas, Y, S["parede_contorno"], extra=.035))
+    s.append(_svg_paredes(caixas, Y, S["parede"]))
     # janelas (mesma posição do 3D e da vista da rua)
     for j in janelas:
         x0, y0, x1, y1 = j["seg"]

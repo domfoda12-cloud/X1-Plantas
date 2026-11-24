@@ -234,8 +234,9 @@ def F(id, nome, tipo, **kw):
 def movel(tipo, lado, x0, y0, x1, y1, **kw):
     """Móvel posto à mão pelo Arquiteto: F(..., moveis=[movel(...), ...]) troca o arranjo automático do motor 3D naquele cômodo.
 
-    (x0, y0, x1, y1) é o retângulo que ele ocupa no chão, em metros a partir do canto (x0, y0) do cômodo, com a parede
-    desenhada (7,5 cm da face de fora na parede externa, 6 cm do eixo na interna); a mesa de jantar conta as cadeiras.
+    (x0, y0, x1, y1) é o retângulo que ele ocupa no chão, em metros a partir do canto (x0, y0) do cômodo; a parede é a de
+    verdade, a mesma do 3D e da planta 2D (P3.paredes_reais): a face de dentro fica a 15 cm da face de fora na parede
+    externa e a 6 cm do eixo na interna, então móvel encostado começa aí. A mesa de jantar conta as cadeiras.
     lado: a parede para a qual ele dá as costas (cabeceira da cama, encosto do sofá, fundo do armário e da escrivaninha)."""
     w, d = (x1 - x0, y1 - y0) if lado in ("frente", "fundos") else (y1 - y0, x1 - x0)
     if tipo == "mesaJantar":

@@ -377,11 +377,11 @@ def para_desenho(planta, paredes, janelas, portas):
     for d in portas:
         horiz = abs(math.sin(d["a0"])) < 1e-6
         ponta = d["x"] + d["r"] * math.cos(d["a0"]) if horiz else d["y"] + d["r"] * math.sin(d["a0"])
-        meio = (d["x"] + ponta) / 2 if horiz else (d["y"] + ponta) / 2
-        if horiz:
-            por.append({**d, "y": R(d["y"] + desloca(reais, "h", d["y"], meio))})
-        else:
-            por.append({**d, "x": R(d["x"] + desloca(reais, "v", d["x"], meio))})
+        # o meio da porta cai no vão, onde não há parede: o deslocamento vem da parede que encosta numa das pontas do vão
+        # (até 24/11/2026 media no meio, dava 0 e a porta externa ficava na face de fora; Designer, 24/11/2026)
+        o, fixo, dob = ("h", d["y"], d["x"]) if horiz else ("v", d["x"], d["y"])
+        dd = next((v for v in (desloca(reais, o, fixo, s) for s in (dob, ponta)) if v), 0.0)
+        por.append({**d, "y": R(d["y"] + dd)} if horiz else {**d, "x": R(d["x"] + dd)})
     return out, jan, por
 
 
