@@ -191,11 +191,11 @@ def marcar(p, svg, pontos, problemas, enfeites=True):
             txt = "janela em cima da porta"
             lw = len(txt) * .205 + .4
             tx = min(max(cx, vb[0] + lw / 2 + .05), vb[0] + vb[2] - lw / 2 - .05)
-            # a etiqueta vai para o primeiro lugar livre perto do círculo (embaixo e em cima, afastando de 30 em 30 cm)
-            emb, ema = [cy + ry + .5 + k * .3 for k in range(7)], [cy - ry - .3 - k * .3 for k in range(7)]
-            opc = [t for par in zip(*((emb, ema) if cy < Dm / 2 else (ema, emb))) for t in par]
+            # a etiqueta fica colada no círculo, embaixo ou em cima, afastando de 30 em 30 cm só para sair de cima
+            # de nome de cômodo, número ou cota (cada passo pesa um pouco: longe do círculo, ela parece de outro ponto)
+            opc = [(k, cy + ry + .5 + k * .3) for k in range(4)] + [(k + .5 * (cy < Dm / 2), cy - ry - .3 - k * .3) for k in range(4)]
             fora = lambda t: t - .38 < vb[1] + .05 or t + .16 > vb[1] + vb[3] - .05
-            ty = min(opc, key=lambda t: (fora(t), sum(_cruza((tx - lw / 2, t - .38, tx + lw / 2, t + .16), o) for o in ocupado + cotas)))
+            ty = min(opc, key=lambda kt: (fora(kt[1]), sum(_cruza((tx - lw / 2, kt[1] - .38, tx + lw / 2, kt[1] + .16), o) for o in ocupado + cotas) + .03 * kt[0]))[1]
             ocupado.append((tx - lw / 2, ty - .38, tx + lw / 2, ty + .16))
             cima.append(f'<rect x="{tx - lw / 2:.3f}" y="{ty - .38:.3f}" width="{lw:.3f}" height=".54" rx=".27" fill="{VERM}"/>'
                         f'<text x="{tx:.3f}" y="{ty:.3f}" text-anchor="middle" font-family="Inter" font-weight="800" font-size=".34" fill="#fff">{txt}</text>')
@@ -234,7 +234,7 @@ li>div{flex:1;min-width:0} .perto{display:grid;grid-template-columns:1fr 1fr;gap
 .igual span{background:#fff;border-radius:999px;padding:8px 20px;font-size:36px;font-weight:800}
 .igual h2.seg{margin-top:22px} .muda{margin-top:16px;font-size:36px;line-height:1.22;font-weight:700}
 .perto .nada{display:flex;flex-direction:column} .nada div{flex:1;display:flex;align-items:center;justify-content:center;min-height:120px;font-size:30px;font-weight:800;color:#56616E}
-.rod{margin-top:18px;font-size:22px;opacity:.6}"""
+.rod{margin-top:18px;font-size:22px;opacity:.6} .prox{margin-top:18px;font-size:34px;font-weight:800;color:#0B4FA8}"""
 
 
 def de_perto(p, svg, ponto, aspecto=1.5):
@@ -243,7 +243,7 @@ def de_perto(p, svg, ponto, aspecto=1.5):
     o nome que ainda ficar cortado sai, e saem as cotas e a régua (pedaço de cota confunde)."""
     Dm = max([p["D"]] + [c["y1"] for c in p["comodos"] if c["tipo"] == "futuro"])
     x, y, rx, ry = ponto
-    w = max(2 * rx + 1.2, (2 * ry + 1.2) * aspecto)  # recorte largo, com folga em volta do círculo
+    w = max(2 * rx + 1.2, (2 * ry + 1.0) * aspecto)  # recorte largo, com folga em volta do círculo
     h = w / aspecto
     c = [x - w / 2, Dm - y - ry - .3]  # o círculo encosta em cima; embaixo fica o cômodo, para entender onde é
     circ = (x - rx - .12, Dm - y - ry - .12, x + rx + .12, Dm - y + ry + .12)
@@ -264,6 +264,11 @@ def de_perto(p, svg, ponto, aspecto=1.5):
             svg = svg[:i] + svg[j:]
     a, b = svg.split('viewBox="', 1)
     return a + f'viewBox="{c[0]:.3f} {c[1]:.3f} {w:.3f} {h:.3f}"' + b.split('"', 1)[1]
+
+
+def junto(t):
+    """Medida não quebra no fim da linha: "1,59 x 1,48 m" fica numa linha só (espaço que não quebra)."""
+    return re.sub(r"(?<=\d) (?=x \d|m\b|m²)|(?<=\d x) (?=\d)", "\u00a0", t)
 
 
 def pagina(pa, pb, pontos, legendas, titulo, obs=None, parte=0, aspecto=1.5):
@@ -288,7 +293,7 @@ def pagina(pa, pb, pontos, legendas, titulo, obs=None, parte=0, aspecto=1.5):
     muda = "".join(f"<span>{k}: {E(na[k])} → {E(nb[k])}</span>" for k in na if nb[k] != na[k])
     perto = lambda i: f'<div class="perto">{fig(0, i, "antes")}{fig(1, i, "depois")}</div>' if i < len(pontos) else ""
     itens = "" if parte == 1 else "".join(
-        f"<li><b>{i + 1}</b><div><span>{E(legendas[i]) if i < len(legendas) else ''}</span>{perto(i)}</div></li>"
+        f"<li><b>{i + 1}</b><div><span>{E(junto(legendas[i])) if i < len(legendas) else ''}</span>{perto(i)}</div></li>"
         for i in range(max(len(legendas), len(pontos))))
     plantas = "" if parte == 2 else (f'<div class="duas"><div class="lado antes"><span class="tag">ANTES</span>{svga}</div>'
                                      f'<div class="lado depois"><span class="tag">DEPOIS</span>{svgb}</div></div>')
@@ -296,7 +301,9 @@ def pagina(pa, pb, pontos, legendas, titulo, obs=None, parte=0, aspecto=1.5):
                                    + (f'<h2>O que muda</h2><div>{muda}</div>' if muda else "")
                                    + (f'<h2{" class=seg" if muda else ""}>O que NÃO muda</h2><div>{iguais}</div>' if iguais else "")
                                    + (f'<p class="muda">{E(obs)}</p>' if obs else "") + "</div>")
-    rodape = {0: "", 1: " · parte 1 de 2: cada número, de perto, na parte 2", 2: " · parte 2 de 2"}[parte]
+    rodape = {0: "", 1: " · parte 1 de 2", 2: " · parte 2 de 2"}[parte]
+    if parte == 1 and pontos:
+        faixa += '<p class="prox">Cada número, de perto, na próxima imagem →</p>'
     return (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body>'
             f'<h1>{E(titulo if parte < 2 else pa["nome"].split(" (")[0] + ": cada mudança de perto")}</h1>'
             + plantas + (f"<ol>{itens}</ol>" if itens else "") + faixa +
@@ -379,7 +386,7 @@ def main():
         alt = png(pagina(pa, pb, pontos, legendas, titulo, a.nota, parte=2, aspecto=asp), s2)
         if alt <= LIMITE:
             break
-    print(f"imagem: {s2}" + ("" if alt <= LIMITE else f"  AVISO: {2 * alt} px de altura, passa de {2 * LIMITE}"))
+    print(f"imagem: {s2} (recorte de perto {asp:g} x 1)" + ("" if alt <= LIMITE else f"  AVISO: {2 * alt} px de altura, passa de {2 * LIMITE}"))
 
 
 if __name__ == "__main__":
