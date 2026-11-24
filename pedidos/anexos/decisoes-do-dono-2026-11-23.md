@@ -104,3 +104,13 @@
 - **Preço no PDF (cartão p3):** "47, pdf não fala de preço". Vale: o preço da primeira semana é R$ 47 e o PDF não mostra preço nenhum; o preço fica só no WhatsApp. `ebook/config.json` guarda "R$ 47" para a equipe; o `checar.py` passa a dar erro se o PDF citar preço.
 - **Título (cartão p14):** "B", isto é, ele quer 3 opções de título novo no lugar de "Antes do primeiro tijolo" (a frase abre a legenda de um vídeo de 5,2 milhões de visualizações). O título atual fica até ele escolher.
 - **Comentário na página Revoada (11:04 UTC):** "Delete it, looks nice". Ambíguo (apagar a página inteira?); perguntei no próprio comentário e não apaguei.
+
+## 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro)
+
+- **Parede sem janela (v3):** "Quero uma parte falando de cada casa específica, e outra parte falando de casas no geral, essa pode ir pro geral". Vale: o e-book ganha uma parte por casa e uma parte geral; a página da parede sem janela vai para a geral.
+- **Tarefa de hora em hora (p11):** "A" = continua como está.
+- **Quem vende (p9):** "Cpf". Ele vende com o CPF. O número nunca entra no repositório; ele põe no celular. Faltam o endereço e o e-mail (cartão novo `p20-endereco-email`).
+- **Nome do Instagram (q11):** "Não gostei de nenhuma opção, lembre, coisas absurdas prendem a atenção". Nomes novos, com humor pelo absurdo.
+- **Bio (p6):** "Todas um pouco básico". Bios novas.
+- **Skills (p12):** ele perguntou "Quais programas/serviço e qual regra se quebra como". Respondido no cartão (pdf-design roda Node e Chrome e usa a rede; meta-click-to-message-ads pede serviço ligado ao painel de anúncios; copy-thief traz valor empilhado, garantia de resultado e depoimento inventado). A escolha continua aberta.
+- **Lição:** a leitura do quadro às 11:08 pegou só os 2 primeiros comentários; ele continuou comentando por 7 minutos. Ao achar comentário novo, reler o quadro uns minutos depois antes de dar a leitura por encerrada.

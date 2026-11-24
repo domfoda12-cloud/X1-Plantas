@@ -49,7 +49,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
 
-Tamanho: 572 palavras.
+Tamanho: 538 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

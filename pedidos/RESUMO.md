@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 40 documentos
+## Os 41 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 5432 palavras.
+Tamanho: 5478 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -101,9 +101,9 @@ Tamanho: 4995 palavras.
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
-Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC).
+Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro).
 
-Tamanho: 2747 palavras.
+Tamanho: 2968 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -246,6 +246,14 @@ Redator, 23/11/2026, noite. Pedido do dono: quadrinhos cômicos no e-book ("Como
 Seções: A fórmula e o nosso jeito de dizer; Roteiro 1 · O formigueiro e meio (medir o lote); Roteiro 2 · A planta lavada (a casa que não cabe); Roteiro 3 · Você está aqui (ensina a ler a planta); Versão em vídeo (24 segundos, toda em IA): A planta lavada; Para o Revisor de risco.
 
 Tamanho: 2209 palavras.
+
+### [Skills candidatas, 24/11/2026: júri, casas, cooperação e venda (passo 1 da pesquisa)](anexos/skills-candidatas-2026-11-24.md)
+
+Pesquisador (Sonnet), 24/11/2026. Pedido do dono: "procure mais skills, talvez o júri precise de ajuda com uma". Passo 1 de 2: achados com fonte. Quem conclui é o Opus; o Revisor de risco tem veto. Nada foi baixado, instalado nem executado. Só páginas públicas lidas pelo TinyFish (busca e leitura,…
+
+Seções: Em 15 linhas (o que o Maestro precisa); Quadro rápido (11 candidatas); Frente 1: para o júri; Frente 2: para as casas; Frente 3: cooperação com o dono; Frente 4: venda (só o que é novo); O que levar ao Conselho (recomendação, quem decide é o Maestro); Reconferência do pedido (ficha em `pedidos/`: não recebi o número; reconferi contra o texto do pedido); O que não consegui conferir.
+
+Tamanho: 5337 palavras.
 
 ### [Skills candidatas para design criativo (passo 1 da pesquisa)](anexos/skills-candidatas-design.md)
 

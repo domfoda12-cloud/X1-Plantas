@@ -93,7 +93,7 @@ Depois do primeiro Pix, na ordem do dono: animações e imagens (fase 4 do hist�
 5. Folha de perguntas ao engenheiro: 2 páginas, 3, ou também no celular? (p19). Destrava: o bônus das perguntas no D2.
 6. **Respondido 24/11:** "B": quer 3 opções de título novo (p14). Virou o A4 e a decisão 34.
 7. "Como mobiliar": página do e-book, da amostra ou dos dois? (x3). Destrava: páginas novas, se ele quiser.
-8. Parede sem janela: a página vai na Casa Fita, na E07 ou nas duas? (v3).
+8. **Respondido 24/11:** uma parte por casa e uma parte geral; a página da parede sem janela vai para a geral (quadro, 24/11 11:09). Parede sem janela: a página vai na Casa Fita, na E07 ou nas duas? (v3).
 9. Pôster das 3 casas: A, B ou C? (i3).
 10. Quadrinhos: quais dos 3 roteiros? (i2).
 11. Quadrinhos: desenho nosso, de graça, ou ver o custo da arte por IA? (p18).
@@ -106,7 +106,7 @@ Depois do primeiro Pix, na ordem do dono: animações e imagens (fase 4 do hist�
 
 **Para vender dentro da lei e atender:**
 
-15. **Quem vende: CNPJ do MEI ou CPF** (e o endereço e o e-mail) (p9). Destrava: D9, D10 e D14; sem isso não há venda pela internet dentro da lei (Decreto 7.962/2013).
+15. **Respondido 24/11:** CPF (comentário no quadro, 24/11 11:13); faltam endereço e e-mail, cartão p20. **Quem vende: CNPJ do MEI ou CPF** (e o endereço e o e-mail) (p9). Destrava: D9, D10 e D14; sem isso não há venda pela internet dentro da lei (Decreto 7.962/2013).
 16. Quem responde o WhatsApp do negócio: ele, o sócio ou os dois? (p2). Destrava: horário e meta de resposta no D9.
 17. Onde anotar o preço que cada pessoa recebeu? (p5). Destrava: o teste de R$ 47 x R$ 67 valer (D12).
 18. A semana do teste vai de segunda a domingo? (p8). Destrava: D12.
@@ -123,7 +123,7 @@ Depois do primeiro Pix, na ordem do dono: animações e imagens (fase 4 do hist�
 
 **Do sistema (não travam o Pix):**
 
-26. A tarefa de hora em hora continua: como está, com reserva, ou para? (p11).
+26. **Respondido 24/11:** A: continua como está (quadro, 24/11 11:12). A tarefa de hora em hora continua: como está, com reserva, ou para? (p11).
 27. Skills: as 2 nossas ou as 6 como vieram? (p12).
 28. everything-claude-code: tudo ou só as 6 peças de proteção? (v5). A cópia está na branch `sistema/everything-claude-code`.
 29. Liberdade: "tire o grátis e publicar dessa lista" quer dizer que a equipe decide o grátis e publica sem perguntar? Sim ou não (v6). Até ele responder, grátis e publicação continuam dele.
