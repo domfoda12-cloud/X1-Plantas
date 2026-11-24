@@ -1,6 +1,6 @@
 # Melhorar o julgamento do júri
 
-**Estado:** aberta
+**Estado:** fechada em 24/11/2026
 
 **Prompt (palavra por palavra):** Como posso melhor O julgamento do juri
 
@@ -20,9 +20,9 @@
 
 **Quem executa:** Maestro (regras), Fable (régua, modelo de pedido e prova 3).
 
-**Conferência:** `checar.py` verde depois da mudança no `CONSELHO.md` 5b.
+**Conferência:** `checar.py` verde depois da mudança no `CONSELHO.md` 5b. Conferido em 24/11: a régua exigida em toda rodada está no 5b, item 0, e escrita em `pedidos/anexos/juri-proximas-melhorias.md` (parte 1); a prova 3 está em `pedidos/PROVAS.md` e os 4 papéis do júri aparecem no `contexto/PLACAR.md`.
 
-**Resultado:** Em andamento: 5b mudou (régua com âncoras, ângulo por jurado, crítica com arquivo e linha, presidente confere 3 fatos, no máximo 2 rodadas, calibrar). Falta a régua escrita e a prova 3 (`pedidos/anexos/juri-proximas-melhorias.md`).
+**Resultado:** CONSELHO.md 5b com régua com âncoras, um ângulo por jurado, crítica com arquivo e linha, presidente que confere 3 fatos e no máximo 2 rodadas; régua escrita em pedidos/anexos/juri-proximas-melhorias.md; prova 3 do júri rodada (pedidos/PROVAS.md) e no placar. Melhorar o júri continua a cada rodada.
 
 **O que aprendi:** supervisor: opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.
 

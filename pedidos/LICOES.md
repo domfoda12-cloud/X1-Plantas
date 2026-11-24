@@ -20,3 +20,5 @@
 | 23/11/2026 | arquiteto | prova | - | 4 | Prova 2: deixei passar o Diretor ausente num texto de anúncio, pela segunda vez. Em todo conteúdo público (texto, post, anúncio, vídeo), o Diretor opina primeiro, com a fonte: confira antes de vetar |
 | 23/11/2026 | revisor-de-risco | prova | - | - | Prova 2: passo ausente só vira condição quando uma regra escrita o exige naquele plano; senão vai como nota junto do SIM |
 | 23/11/2026 | editor-video | prova | - | 4 | Prova 2: deixei passar o Diretor ausente num texto de anúncio, pela segunda vez. Em todo conteúdo público, o Diretor opina primeiro, com a fonte: confira antes de vetar |
+| 24/11/2026 | redator | ficha | 2026-11-23-0200 | - | no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão. |
+| 24/11/2026 | supervisor | ficha | 2026-11-23-1946 | - | opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas. |

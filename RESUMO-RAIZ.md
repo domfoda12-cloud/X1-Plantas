@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 8668 palavras.
+Tamanho: 8916 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 2821 palavras.
+Tamanho: 2848 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 

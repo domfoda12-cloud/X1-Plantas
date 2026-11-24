@@ -15,4 +15,6 @@
 | juri-risco | n = 0, sem nota ainda | - | 5 de 5; 0 de 4; n = 2 | - |
 | maestro | n = 0, sem nota ainda | - | - | dono 6, maestro 1 |
 | pesquisador | n = 0, sem nota ainda | - | - | dono 1 |
+| redator | n = 0, sem nota ainda | - | - | ficha 1 |
 | revisor-de-risco | n = 0, sem nota ainda | - | 15 de 15; 0 de 3; n = 2 | prova 2 |
+| supervisor | n = 0, sem nota ainda | - | - | ficha 1 |

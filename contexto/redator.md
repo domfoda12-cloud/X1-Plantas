@@ -27,3 +27,4 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
+- **24/11, ficha 2026-11-23-0200:** no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão.

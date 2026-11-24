@@ -319,6 +319,34 @@ if _ed_erros:
     falhas.append("edição de lançamento"); print("[ERRO] edição de lançamento: " + "; ".join(_ed_erros))
 else:
     print(f"[OK ] edição de lançamento: {len(_ed)} casas na calculadora e no PDF, plantas grátis {', '.join(_grat)}")
+# Recuos da página "Qual casa cabe no seu lote?" (conserto de 24/11/2026): o texto mostra UM conjunto de recuos
+# (frente e fundos da primeira casa, a primeira lateral de cada tipo). Se as casas da edição tiverem recuos de
+# referência diferentes entre si, o texto esconde o de alguma casa: falha até o texto do livro.py mostrar todos.
+def recuos_escondidos(plantas_ed, mostrado):
+    """Recuos de referência de casa da edição que o texto da página do lote não mostra.
+    mostrado = o que livro.recuos_da_edicao devolve: (frente, fundos, lateral ou None, frases extras)."""
+    v = lambda x: f"{x:g}".replace(".", ",")
+    rf, rfu, rlat, rext = mostrado
+    laterais = (f"{rlat} m " if rlat else "") + (rext or "")
+    falta = []
+    for p in plantas_ed:
+        rec = p["_r"].metricas["recuos"]
+        if v(rec["frente"]) != rf:
+            falta.append(f"{p['id']} frente {v(rec['frente'])} m (o texto diz {rf} m)")
+        if v(rec["fundos"]) != rfu:
+            falta.append(f"{p['id']} fundos {v(rec['fundos'])} m (o texto diz {rfu} m)")
+        falta += [f"{p['id']} lateral {v(x)} m (não aparece no texto)" for x in sorted({rec["esq"], rec["dir"]}) if x and f"{v(x)} m " not in laterais]
+    return falta
+
+
+sys.path.insert(0, str(RAIZ / "ebook" / "gerador"))
+import livro as _livro  # noqa: E402
+_pl_ed = [p for p in PL.carregar() if p["id"] in _ed]
+_rec_esc = recuos_escondidos(_pl_ed, _livro.recuos_da_edicao(_pl_ed)) if _pl_ed else []
+if _rec_esc:
+    falhas.append("recuos da página do lote"); print('[ERRO] "Qual casa cabe no seu lote?" mostra um conjunto só de recuos, mas as casas da edição têm recuos diferentes: ' + "; ".join(_rec_esc))
+else:
+    print(f"[OK ] recuos da página do lote: as {len(_pl_ed)} casas da edição têm os recuos que o texto mostra")
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
 # Campo do dono ainda vazio: não é erro de código, mas o PDF não pode ir ao cliente assim (auditoria de 22/11)

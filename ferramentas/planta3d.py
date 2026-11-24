@@ -362,6 +362,67 @@ def cadeiras_sem_lugar(planta):
     return out
 
 
+ALTOS = ("geladeira", "armario", "estante")  # móvel que passa do peitoril: na frente da janela, tapa luz e ventilação
+FRENTE_JANELA = 0.5  # faixa na frente da janela, a partir da face de dentro da parede, que móvel alto não pode ocupar
+CADEIRA_PAREDE = 0.45  # da borda da mesa de jantar até a parede de verdade, para a cadeira e quem senta (Arquiteto, 24/11/2026)
+
+
+def zonas_de_janela(janelas, cid):
+    """Faixa de FRENTE_JANELA na frente de cada janela do cômodo (retângulos no chão, a partir da face do 3D)."""
+    out = []
+    for j in janelas:
+        if j["id"] != cid:
+            continue
+        x0, y0, x1, y1 = j["seg"]
+        out.append((j, min(x0, x1), y0, max(x0, x1), y0) if y0 == y1 else (j, x0, min(y0, y1), x0, max(y0, y1)))
+    return out
+
+
+def altos_na_janela(planta):
+    """Geladeira, guarda-roupa ou estante na frente de janela: [(amb, tipo, cm na frente)]. Lista vazia = tudo certo."""
+    _, janelas, _, moveis = construir(planta)
+    por_id = {c["id"]: c for c in planta["comodos"]}
+    out = []
+    for m in (m for m in moveis if m["tipo"] in ALTOS):
+        r = pegada(m)
+        c = por_id[m["amb"]]
+        for j, a0, b0, a1, b1 in zonas_de_janela(janelas, m["amb"]):
+            if b0 == b1:  # janela na frente ou no fundo do cômodo
+                fundo = b0 + (FACE if abs(b0 - c["y0"]) < 1e-6 else -FACE)
+                z = (a0, fundo, a1, fundo + FRENTE_JANELA) if abs(b0 - c["y0"]) < 1e-6 else (a0, fundo - FRENTE_JANELA, a1, fundo)
+                lap = min(r[2], z[2]) - max(r[0], z[0])
+            else:
+                fundo = a0 + (FACE if abs(a0 - c["x0"]) < 1e-6 else -FACE)
+                z = (fundo, b0, fundo + FRENTE_JANELA, b1) if abs(a0 - c["x0"]) < 1e-6 else (fundo - FRENTE_JANELA, b0, fundo, b1)
+                lap = min(r[3], z[3]) - max(r[1], z[1])
+            if sobrepoe(r, z, -0.02):
+                out.append((m["amb"], m["tipo"], round(100 * lap)))
+    return out
+
+
+def cadeiras_apertadas(planta, minimo=CADEIRA_PAREDE):
+    """Mesa de jantar com cadeira a menos de 'minimo' da parede de verdade (15 cm externa, 6 cm de cada lado da interna).
+
+    As cadeiras ficam nos dois lados compridos da mesa (pegada: +0,45 m de cada lado). [(amb, cm)]. Vazia = tudo certo."""
+    moveis = construir(planta)[3]
+    por_id = {c["id"]: c for c in planta["comodos"]}
+    out = []
+    for m in (m for m in moveis if m["tipo"] == "mesaJantar"):
+        c = por_id[m["amb"]]
+        faces = {"esq": c["x0"] + PL._desconto(planta, c, "esq"), "dir": c["x1"] - PL._desconto(planta, c, "dir"),
+                 "frente": c["y0"] + PL._desconto(planta, c, "frente"), "fundos": c["y1"] - PL._desconto(planta, c, "fundos")}
+        deitada = abs(abs(m.get("rot", 0.0)) - math.pi / 2) < 1e-3
+        meia = m.get("w", 0.8) / 2  # metade do tampo no sentido das cadeiras
+        if deitada:  # cadeiras para a frente e para o fundo
+            folgas = (m["y"] - meia - faces["frente"], faces["fundos"] - (m["y"] + meia))
+        else:  # cadeiras para a esquerda e para a direita
+            folgas = (m["x"] - meia - faces["esq"], faces["dir"] - (m["x"] + meia))
+        for f in folgas:
+            if f < minimo - 0.005:
+                out.append((m["amb"], round(100 * f)))
+    return out
+
+
 def janelas_sobre_portas(planta):
     """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois)."""
     _, janelas, portas, _ = construir(planta)
@@ -428,11 +489,26 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
             faixa = (c["x0"], c["y0"], c["x0"] + prof, c["y1"]) if lado == "esq" else (c["x1"] - prof, c["y0"], c["x1"], c["y1"])
             return [(r[1], r[3]) for r in (pegada(o) for o in aqui if o["tipo"] not in NAO_COLIDE) if sobrepoe(r, faixa)]
 
+        def na_janela(lado, prof):
+            """Trechos do lado em que móvel alto taparia janela (24/11/2026): a janela da mesma parede e, no canto,
+            a faixa de FRENTE_JANELA na frente da janela da parede do lado, se a peça de fundo prof chegar nela."""
+            ini, fim = (c["x0"], c["x1"]) if lado in ("frente", "fundos") else (c["y0"], c["y1"])
+            prof_ini, prof_fim = {"frente": (c["y0"], c["y0"] + prof), "fundos": (c["y1"] - prof, c["y1"]),
+                                  "esq": (c["x0"], c["x0"] + prof), "dir": (c["x1"] - prof, c["x1"])}[lado]
+            out_ = []
+            for (l, ja, jb) in jans:
+                if l == lado:
+                    out_.append((ja, jb))
+                elif l != OPOSTO[lado] and ja < prof_fim and jb > prof_ini:
+                    out_.append((ini, ini + FRENTE_JANELA) if l in ("frente", "esq") else (fim - FRENTE_JANELA, fim))
+            return out_
+
         def encostar(tipo, larg, prof, lados=None, folga=0.0, frente=0.5, no_canto=False, **extra):
             for lado in (lados or _lados_por_preferencia(c, vaos, jans)):
                 if _prof(c0, lado) < prof + frente:
                     continue
-                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=ocupados(lado, prof + folga),
+                tomados = ocupados(lado, prof + folga) + (na_janela(lado, prof + folga) if tipo in ALTOS else [])
+                pos = _livre_no_lado(c, lado, vaos, larg, perto_passagem=(tipo == "sofa"), ocupados=tomados,
                                      prof=prof + folga, no_canto=no_canto)
                 if pos is None:
                     continue
@@ -586,19 +662,39 @@ def mobiliar(planta, vaos_por_comodo, jan_por_comodo, paredes=()):
                 x, y = _no_lado(c, lado, pos, 0.62)
                 add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
                 restantes = [l for l in _lados_por_preferencia(c, vaos, []) if l != lado]
-                if not encostar("geladeira", 0.72, 0.7, restantes)[0] and comp_max - 0.8 >= 1.0:  # bancada curta (1 m, pia e fogão) antes de cozinha sem geladeira
+
+                def geladeira():
+                    if encostar("geladeira", 0.72, 0.7, restantes)[0] or comp_max - 0.8 < 1.0:  # bancada curta (1 m, pia e fogão) antes de cozinha sem geladeira
+                        return
                     # sem outra parede livre, a geladeira fica na ponta da bancada, na mesma parede
-                    out.remove(aqui.pop())
-                    a_ = (c["x0"] if lado in ("frente", "fundos") else c["y0"])
+                    banc = next(m for m in aqui if m["tipo"] == "bancada")
+                    aqui.remove(banc)
+                    out.remove(banc)
                     ini = pos - comp_max / 2
-                    x, y = _no_lado(c, lado, ini + (comp_max - 0.8) / 2, 0.62)
-                    add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max - 0.8, d=0.62)
-                    if not encostar("geladeira", 0.72, 0.7, [lado])[0]:
+                    for desloc in (0.0, 0.8):  # a geladeira na ponta de lá da bancada ou, se ali taparia a janela, na de cá
+                        x, y = _no_lado(c, lado, ini + desloc + (comp_max - 0.8) / 2, 0.62)
+                        curta = add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max - 0.8, d=0.62)
+                        if encostar("geladeira", 0.72, 0.7, [lado])[0]:
+                            return
+                        aqui.remove(curta)
+                        out.remove(curta)
+                    add(**{k: v for k, v in banc.items() if k != "amb"})
+                geladeira()
+            if w * d >= 8.5 and min(w, d) >= 2.6 and not mesa_de_jantar() and lado:
+                # a geladeira (fora da janela, 24/11/2026) tomou o lugar da mesa: a mesa primeiro, a geladeira no que sobrar
+                antes = list(aqui)
+                while aqui:  # recomeça: bancada inteira, mesa, geladeira
+                    out.remove(aqui.pop())
+                x, y = _no_lado(c, lado, pos, 0.62)
+                add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
+                if mesa_de_jantar():
+                    geladeira()
+                else:  # nem assim: volta o arranjo de antes, sem mesa
+                    while aqui:
                         out.remove(aqui.pop())
-                        x, y = _no_lado(c, lado, pos, 0.62)
-                        add(tipo="bancada", x=x, y=y, rot=ROT[lado], w=comp_max, d=0.62)
-            if w * d >= 8.5 and min(w, d) >= 2.6:
-                mesa_de_jantar()
+                    for m in antes:
+                        out.append(m)
+                        aqui.append(m)
         elif t in ("banho", "lavabo"):
             lados = _lados_por_preferencia(c, vaos, jans)
             # o box primeiro (é o maior); se ele tirar o lugar do vaso ou da pia, tenta o box em outra parede

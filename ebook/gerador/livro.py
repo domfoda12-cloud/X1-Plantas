@@ -8,9 +8,12 @@ Uso:
                                                    (ebook/saida/planta-gratis-<ID>.pdf, as de config.json)
                                                    e a lista de casas da calculadora do parceiro
                                                    (ebook/vendas/calculadora-lote.html)
-    python3 ebook/gerador/livro.py --previa DIR    também salva um PNG de cada página em DIR
+    python3 ebook/gerador/livro.py --previa DIR    salva um PNG de cada página em DIR; gera tudo numa pasta
+                                                   temporária e NÃO mexe em ebook/saida nem na calculadora
     python3 ebook/gerador/livro.py --conferir      confere numa pasta temporária, sem mexer em ebook/saida
-                                                   (a calculadora do parceiro é regravada mesmo assim)
+                                                   nem na calculadora
+
+O PDF oficial e a calculadora só são gravados sem --previa e sem --conferir.
 
 Tudo sai dos dados: plantas e números de ebook/plantas/projetos.py (via ferramentas/plantas.py),
 textos de cada casa de ebook/fichas/textos.py, textos gerais de ebook/gerador/paginas.py
@@ -1373,7 +1376,7 @@ def gerar(previa=None):
     print(r.stdout.strip(), r.stderr.strip())
     falhou = r.returncode != 0
     print(f"{len(L.paginas)} páginas, {len(plantas)} casas")
-    atualizar_calculadora(plantas, numeros)
+    atualizar_calculadora(plantas, numeros, gravar=SAIDA == EBOOK / "saida")
     gratis = config.get("plantas_gratis") or [config.get("planta_gratis", "C01")]
     if SAIDA == EBOOK / "saida":  # planta grátis de casa que saiu da lista (ou da edição) não fica para trás
         for velho in SAIDA.glob("planta-gratis-*.*"):
@@ -1408,8 +1411,9 @@ def edicao(plantas, config):
     return [p for p in plantas if p["id"] in ids]
 
 
-def atualizar_calculadora(plantas, numeros):
-    """Reescreve a lista de casas da calculadora do parceiro a partir do validador (nunca à mão)."""
+def atualizar_calculadora(plantas, numeros, gravar=True):
+    """Reescreve a lista de casas da calculadora do parceiro a partir do validador (nunca à mão).
+    Com gravar=False (--previa e --conferir) não toca no arquivo: só avisa se ele está desatualizado."""
     arq = EBOOK / "vendas" / "calculadora-lote.html"
     casas = [{"id": p["id"], "nome": p["nome"], "area": int(n0(p["_r"].metricas["area_fechada"])), "q": p["quartos_txt"],
               "b": p["banheiros"], "fr": p["_r"].metricas["lote"][0], "fu": p["_r"].metricas["lote"][1],
@@ -1427,13 +1431,19 @@ def atualizar_calculadora(plantas, numeros):
               " É uma indicação de referência e não substitui o profissional.")
     ini = txt.index('<p class="nota">') + len('<p class="nota">')
     fim = txt.index("</p>", ini)
-    arq.write_text(txt[:ini] + html.escape(nota, quote=False) + txt[fim:], encoding="utf-8")
+    novo = txt[:ini] + html.escape(nota, quote=False) + txt[fim:]
+    if gravar:
+        arq.write_text(novo, encoding="utf-8")
+    elif novo != arq.read_text(encoding="utf-8"):
+        print("AVISO: a calculadora do parceiro está desatualizada; ela só é regravada na geração oficial"
+              " (python3 ebook/gerador/livro.py, sem --previa e sem --conferir)")
 
 
 if __name__ == "__main__":
     prev = None
-    if "--conferir" in sys.argv:
-        # só confere (página estourada, gancho, PDF): gera numa pasta temporária e não mexe em ebook/saida
+    if "--conferir" in sys.argv or "--previa" in sys.argv:
+        # conferência e prévia: gera numa pasta temporária e não mexe em ebook/saida nem na calculadora.
+        # O PDF oficial só é gravado sem --previa e sem --conferir.
         import tempfile
         SAIDA = Path(tempfile.mkdtemp(prefix="ebook-conferir-"))
     if "--previa" in sys.argv:

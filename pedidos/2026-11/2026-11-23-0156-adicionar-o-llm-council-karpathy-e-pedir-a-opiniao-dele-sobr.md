@@ -1,6 +1,6 @@
 # Adicionar o llm-council (Karpathy) e pedir a opinião dele sobre o projeto de hoje
 
-**Estado:** aberta
+**Estado:** fechada em 24/11/2026
 
 **Prompt (palavra por palavra):** I dont have a mac
 
@@ -26,9 +26,11 @@ And make it give its opinion on the project made today, take its opinion serious
 
 **Quem executa:** Maestro: conduz. Etapa 1 e 2: Haiku, Sonnet, Opus e Fable (agentes gerais com o modelo de cada um). Etapa 3: Fable (presidente).
 
-**Conferência:** (no fim)
+**Conferência:** Conferido em 24/11 no repositório: as 3 etapas e o veredito do presidente estão nesta ficha (abaixo); as críticas viraram a página de decisões (`pedidos/anexos/integracao-novos-v6.md`) e as respostas do dono (`pedidos/anexos/decisoes-do-dono-2026-11-23.md`); o método está no `CONSELHO.md`, seção 5b, e no `ECOSSISTEMA.md`, seção 6. Não conferido: se cada crítica das rodadas 1 a 7 tem ação própria (a pergunta da rodada 7 segue na ficha do everything-claude-code).
 
-**Resultado:** (a preencher)
+**Resultado:** O júri rodou 7 vezes (as 3 etapas e o veredito do Fable estão na ficha); as críticas viraram a página de decisões e as respostas do dono de 23/11; entrou só o método, no CONSELHO.md 5b e no ECOSSISTEMA.md seção 6, nada do programa.
+
+**O que aprendi:** nada novo
 
 
 ## Etapa 1: as 4 opiniões (anônimas)
@@ -158,4 +160,4 @@ Jurados anônimos: 4,5, 4 e 5 de 10. O Fable presidiu sem opinar antes e deu **5
   - Fora da branch: juntar bom-dia e triagem-email numa rotina só, com o Ajudante; júri com no máximo 2 rodadas.
 - Pergunta ao dono: mantém "levar tudo", com a regra de saída "agente sem uso em 3 fichas fechadas sai"? Sem resposta, vale a decisão dele (levar tudo).
 
-O que aprendi: supervisor: opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.
+Lição da rodada 7 (gravada pela ficha `1946-melhorar-o-julgamento-do-juri`, para não repetir): supervisor: opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.

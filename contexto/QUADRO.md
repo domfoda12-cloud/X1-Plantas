@@ -5,6 +5,7 @@
 ## Agora
 
 - **O computador do dono é um PC com Windows** (23/11), não Mac: a MinoAI roda nele pelo WSL; as menções a Mac foram corrigidas (A10) e o `checar.py` barra a volta. Noite: só aprendizado autônomo (ficha `0144`). **Desde 23/11, toda ficha fecha com `**O que aprendi:** papel: lição` (ou `nada novo`)**: o `fechar` grava no seu `contexto/<papel>.md` e em `pedidos/LICOES.md`; lição de veto e de prova sai por `pedido.py licao` (`pedidos/LEIA-ME.md`, "A ficha").
+- **Prévia do e-book não grava mais o PDF oficial** (24/11): `livro.py --previa <pasta>` e `--conferir` geram numa pasta temporária e não tocam em `ebook/saida/` nem na calculadora; o PDF oficial e a calculadora só saem com `python3 ebook/gerador/livro.py` puro.
 
 ## 23/11 · Lançamento com 3 casas; título, preço e entrega decididos
 

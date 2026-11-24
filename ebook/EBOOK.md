@@ -23,7 +23,7 @@
 - **Para quem:** quem vai construir no Brasil, principalmente a primeira casa, e ainda não sabe que planta cabe no terreno e no bolso. Persona: [`referencias/MERCADO.md`](referencias/MERCADO.md).
 - **Promessa:** "Encontre a planta certa para o seu terreno antes de gastar com projeto". A planta é de referência: o projeto da obra é de um arquiteto ou engenheiro.
 - **As 24 casas:** dados em `plantas/dados/`, prévias em `plantas/previas/`, fichas em [`plantas/PLANTAS.md`](plantas/PLANTAS.md). Todas passam no validador (`python3 ferramentas/plantas.py validar`; regras em [`referencias/ARQUITETO.md`](referencias/ARQUITETO.md)). Nenhuma foi revisada ainda por um arquiteto registrado.
-- **Gerar:** `python3 ebook/gerador/livro.py [--previa DIR]` gera `ebook/saida/ebook.pdf` e as 5 plantas grátis (`planta-gratis-<ID>.pdf`). Imagem 3D de uma casa: `python3 ferramentas/imagens3d.py ID` (sai em `visual/3d/ID.jpg`). O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
+- **Gerar:** `python3 ebook/gerador/livro.py` (com `--previa DIR` ou `--conferir`, tudo vai para uma pasta temporária e nada é regravado em `ebook/saida` nem na calculadora) gera `ebook/saida/ebook.pdf` e as 5 plantas grátis (`planta-gratis-<ID>.pdf`). Imagem 3D de uma casa: `python3 ferramentas/imagens3d.py ID` (sai em `visual/3d/ID.jpg`). O gerador antigo (`gerar.py`) foi apagado em 21/11: imprimia promessas vetadas.
 - **Direção visual:** azul de projeto `#0B4FA8`, amarelo `#FFC857`, títulos em Bricolage Grotesque, texto em Inter. Prévia aprovada como direção em 20/11: [`visual/plano-visual.html`](visual/plano-visual.html).
 - **Idioma e moeda:** português do Brasil, preços em R$.
 

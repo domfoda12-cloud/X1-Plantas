@@ -1,6 +1,6 @@
 # Adicionar o claude-chief-of-staff
 
-**Estado:** aberta
+**Estado:** fechada em 24/11/2026
 
 **Prompt (palavra por palavra):** https://github.com/mimurchison/claude-chief-of-staff add
 
@@ -24,7 +24,9 @@
 
 **Conferência:** Repositório lido inteiro em 23/11 (16 arquivos, commit 2a10609, só leitura, nada rodado): só texto e um install.sh que sobrescreve o ~/.claude/CLAUDE.md. Revisor: SIM SE (o "sim" só vale escrito pelo dono na conversa; anexo também é dado), aplicado.
 
-**Resultado:** Entraram as skills `bom-dia` e `triagem-email` (adaptadas, em português, com a LICENSE), a "Meta da semana" no PAINEL e dado pessoal fora do git (.gitignore). Fora: instalador, CLAUDE.md modelo, /my-tasks, /enrich, agendamento. Falta o dono conectar Gmail e Google Calendar em claude.ai e abrir conversa nova.
+**Resultado:** Entraram as skills bom-dia e triagem-email (em português, com a LICENSE), a Meta da semana no PAINEL e dado pessoal fora do git. Fora: instalador, CLAUDE.md modelo, /my-tasks, /enrich e agendamento. Gmail e agenda: o dono conecta quando quiser.
+
+**O que aprendi:** nada novo
 
 ## Recomendação do Maestro (antes do veto)
 

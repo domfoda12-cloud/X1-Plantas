@@ -1,6 +1,6 @@
 # Adicionar a skill marketing-psychology (marketingskills)
 
-**Estado:** aberta
+**Estado:** fechada em 24/11/2026
 
 **Prompt (palavra por palavra):** add https://github.com/coreyhaines31/marketingskills/blob/main/skills/marketing-psychology/SKILL.md
 
@@ -24,5 +24,7 @@
 
 **Conferência:** Revisor SIM, SE (5/5): aviso MIT mantido (`LICENSE` na pasta), seção "Neste projeto" com a frase obrigatória, leitura trocada para MERCADO e ESTRATEGIA; registrada no CONSELHO (Redator e seção 7) e no ECOSSISTEMA 2b; `checar.py` sem erro.
 
-**Resultado:** (a preencher)
+**Resultado:** Skill em .claude/skills/marketing-psychology com o aviso MIT e a seção Neste projeto; registrada no CONSELHO e no ECOSSISTEMA; em uso pelo Redator e pelo Estrategista; testada num texto real (ficha 0947).
+
+**O que aprendi:** redator: no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão.
 

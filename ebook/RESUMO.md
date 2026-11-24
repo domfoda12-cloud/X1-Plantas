@@ -6,7 +6,7 @@
 
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - PDF A4 de 61 páginas com 24 casas térreas, 2 páginas por casa (páginas 10 a 57); o catálogo propõe 35 plantas em 3 levas: 12, 12 e 11 (`EBOOK.md`, `catalogo.md`, `gerador/livro.py`).
-- Gerar: `python3 ebook/gerador/livro.py` cria `ebook/saida/ebook.pdf` e 5 plantas grátis; `--previa <pasta>` salva um PNG por página. Página estourada é erro; o aviso legal nunca fica coberto (`CLAUDE.md`).
+- Gerar: `python3 ebook/gerador/livro.py` cria `ebook/saida/ebook.pdf` e 5 plantas grátis; `--previa <pasta>` salva um PNG por página, numa pasta temporária, sem regravar `ebook/saida` nem a calculadora. Página estourada é erro; o aviso legal nunca fica coberto (`CLAUDE.md`).
 - Números vêm do validador, nunca digitados: em caso de dúvida vale `plantas/PLANTAS.md` (C01: 50 m², frente norte, lote 8 x 15). Textos das casas: `fichas/textos.py`. Mudança de texto passa pelo Revisor de risco (`CLAUDE.md`).
 - Cada casa tem planta mobiliada, casa no lote, "Informação da casa", vista da rua (foto ilustrativa em C01, C03, E07 e F01; desenho nas outras) e a casa em 3D nas 24 (`visual/3d/`). Não tem blueprint separado, perspectivas, animação, QR nem checklist de obra (`EBOOK.md`, seção 3).
 - Regra fixa: a planta é de referência. Nunca dizer que dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra (`EBOOK.md`).
@@ -20,7 +20,7 @@
 
 O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerais estão no `CLAUDE.md` da raiz.
 
-Tamanho: 209 palavras.
+Tamanho: 243 palavras.
 
 ### [E-book: plantas de casas térreas](EBOOK.md)
 
@@ -28,7 +28,7 @@ Parte do projeto X1-Plantas. Painel geral: `../PAINEL.md`. Esta pasta é o produ
 
 Seções: Nesta pasta; 1. O produto; 2. O PDF, página por página; 3. As duas páginas de cada casa; 4. Como uma casa entra no e-book; 5. Lançamentos e decisões; 6. Funil de vendas; 7. Cuidados; 8. O que falta.
 
-Tamanho: 1534 palavras.
+Tamanho: 1552 palavras.
 
 ### [Catálogo de plantas do e-book](catalogo.md)
 
