@@ -1064,6 +1064,18 @@ GRUPOS = [
 ]  # o jeito de morar de cada casa (páginas "Ache pelo jeito da sua família" e "Ache a sua casa")
 
 
+# Bônus (achado do Revisor, 24/11/2026; CDC, arts. 30 e 37): o config.json diz o que o dono quer dar (decisão dele), mas
+# o PDF só anuncia o bônus que tem página de verdade aqui. Para um bônus entrar: escreva a função que acrescenta a
+# página dele, com data-bonus="<nome>" na página, e registre-a abaixo. Hoje nenhum tem página (os rascunhos estão em
+# pedidos/anexos/bonus-*.md). O checar.py falha se o "O que vem junto" listar bônus sem página.
+PAGINAS_BONUS = {}  # nome do bônus, igual ao do config.json -> função(L) que acrescenta a página dele
+
+
+def bonus_com_conteudo(config):
+    """Os bônus do config.json que o PDF pode anunciar: só os que têm página registrada em PAGINAS_BONUS."""
+    return [b for b in config.get("bonus", []) if not b.startswith("[") and b in PAGINAS_BONUS]
+
+
 def montar(plantas, config, numeros):
     L = Livro(plantas, config)
     contagem = {}
@@ -1220,7 +1232,9 @@ def montar(plantas, config, numeros):
     L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto")
 
     # bônus e contato
-    bonus = [b for b in config.get("bonus", []) if not b.startswith("[")]
+    bonus = bonus_com_conteudo(config)
+    for b in bonus:
+        PAGINAS_BONUS[b](L)
     contato = config.get("contato", "")
     gerais = FICHAS.PADRAO + ["O meu lote tem matrícula e está regular na prefeitura?",
                               "Quanto custa o projeto completo e o que está incluído nele?"]
@@ -1228,7 +1242,7 @@ def montar(plantas, config, numeros):
       <p class="abertura">Você já tem o mais difícil: o lote e uma casa que deve caber nele (confirme os recuos na prefeitura), com o porquê de cada parede. O próximo passo é a primeira conversa com o engenheiro ou o arquiteto.</p>
       <div class="duas"><div><h3>Pergunte em qualquer casa</h3><ul class="lista">{''.join(f'<li>{E(q)}</li>' for q in gerais)}</ul>
           <p class="pequeno">Leve também a ficha do terreno preenchida e as perguntas da página da casa escolhida.</p></div>
-        <div><h3>O que vem junto</h3>{'<ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<p class="pendente">[bônus: decisão do dono]</p>'}
+        {'<div><h3>O que vem junto</h3><ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<div>'}
           {('<h3>Novas casas</h3><p>' + E(config['promessa_atualizacao']) + '</p>') if config.get('promessa_atualizacao') else ''}
           <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote e receba as casas que devem caber, como referência (não substitui o profissional): {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>

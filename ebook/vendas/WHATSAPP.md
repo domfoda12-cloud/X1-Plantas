@@ -94,7 +94,7 @@ E mais:
 - os 7 erros de planta que saem caro, com o jeito certo;
 - a ficha do seu terreno e os passos do e-book até a chave na mão.
 
-Bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, pronta para imprimir (além das perguntas de cada casa).
+[Só quando os bônus estiverem prontos no PDF; até lá, apague esta linha:] Bônus: o checklist da obra por fase e a lista completa de perguntas para levar ao engenheiro, pronta para imprimir (além das perguntas de cada casa).
 
 Uma planta pronta avulsa custa a partir de R$ [preço do concorrente, com fonte e data: ver `../referencias/MERCADO.md` (seção "Projetos similares: quem vende plantas de casas e o que aprender"), seção 4] nos catálogos. No e-book são 3 casas, cada uma mobiliada e desenhada no lote.
 

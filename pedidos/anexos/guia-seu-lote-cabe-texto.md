@@ -78,18 +78,18 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 
 | Bloco | Espaço | Texto | Caracteres |
 |---|---|---|---|
-| `abertura` | 2 linhas | Com estas 5 respostas, eu te digo na conversa quais das 3 casas do e-book devem caber no seu lote, com os recuos de referência. | 127 (2 linhas) |
+| `abertura` | 2 linhas | Com estas respostas, eu te digo na conversa quais das 3 casas do e-book devem caber no seu lote, com os recuos de referência. | 127 (2 linhas) |
 | `am-rascunho em` (hoje "1 quadradinho = 1 m") | 1 linha curta | 1 quadradinho = 1 m · o caramelo é opcional | 43 |
 | `am-cta h3` | fica | Me manda essa foto. | (do Designer) |
-| `am-cta p` | 3 linhas de ~55 | Imprimiu? Manda a foto desta página. Está no celular? Manda as 5 respostas por escrito. A resposta é de referência e não substitui o profissional. | 146 (3 linhas) |
-| **bloco novo** `am-so`, embaixo da caixa amarela (o mesmo da página 5 da amostra A) | título + 2 linhas | **No e-book, além desta casa:** A Casa Fita e a Casa Família Compacta completas: planta, 3D e o lote · Checklist da obra por fase · Perguntas para levar ao engenheiro | 26 + 134 |
+| `am-cta p` | 3 linhas de ~55 | Imprimiu? Manda a foto desta página. Está no celular? Manda as respostas por escrito. A resposta é de referência e não substitui o profissional. | 146 (3 linhas) |
+| **bloco novo** `am-so`, embaixo da caixa amarela (o mesmo da página 5 da amostra A) | título + 2 linhas | **No e-book, além desta casa:** A Casa Fita e a Casa Família Compacta completas: planta, 3D e o lote · Perguntas para levar ao engenheiro | 26 + 134 |
 
 - As 5 respostas são as do formulário: frente, fundo, largura do fundo, cidade e o lado da rua.
 - Humor da página: "o caramelo é opcional" (1 frase, volta ao cachorro da p. 1).
 - O quadriculado é `flex` com mínimo de 60 mm: ele encolhe e o bloco novo cabe (hoje tem cerca de 125 mm).
 - **"Além desta casa", e não "as 3 casas":** quem recebeu a amostra já tem a Casa Compacta. Diz só o que vem a mais de fato no PDF (veto da `oferta-e-whatsapp`). As imagens 3D das três existem em `ebook/visual/3d/` (C01, E03, F01), e a do Quadro de 23/11 pede refazê-las sem espelhar: o "3D" da lista só vale se elas estiverem no PDF final.
 - Sem preço, sem garantia, sem prazo de resposta.
-- **Sugestão (Revisor decide):** uma linha de LGPD no `am-cta p` ou no `pequeno`: "O seu número fica só nesta conversa." (`leis-conferidas-2026-11-23.md`, item 5). Não está no texto acima.
+- **Sugestão (Revisor decide):** uma linha de LGPD no `am-cta p` ou no `pequeno`: "Seu número serve só para este atendimento; se quiser, peça e eu apago." (`leis-conferidas-2026-11-23.md`, item 5). Não está no texto acima.
 
 ---
 

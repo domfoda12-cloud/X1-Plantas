@@ -65,7 +65,7 @@ A ajuda oficial do WhatsApp Business descreve **uma** mensagem de saudação, qu
 ```text
 Oi! Que bom que você chamou. Aqui é [seu nome], do e-book Antes do primeiro tijolo.
 
-Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com ela eu te digo qual casa cabe, com os recuos de referência.
+Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com ela eu te digo quais das 3 casas cabem no seu lote (se alguma cabe), com os recuos de referência.
 ```
 
 ### 2b. Regras da resposta (iguais para A, B e C)
@@ -73,6 +73,7 @@ Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com e
 - **Primeira resposta humana:** meta interna de até 5 minutos dentro do horário de atendimento. **Nunca vai escrita para o cliente**: a skill não deixa prometer tempo antes de o dono dizer quem atende e em que horário. Fora do horário, a mensagem de ausência já pede a medida.
 - No máximo dois passos automáticos (saudação e ausência) antes de uma pessoa entrar.
 - Pergunta de preço, reclamação ou "quero falar com alguém": uma pessoa responde, nada automático.
+- Quem chega do Instagram com "Quero a planta grátis" continua recebendo o `/planta` (o post prometeu; veto do Revisor de 24/11, CDC, art. 30).
 - A pessoa já mandou a medida na primeira mensagem? Pule a pergunta e vá direto ao `/cabe` ou ao `/naocabe`.
 - Uma mensagem, um pedido.
 - Quem decide se cabe é a [calculadora de lote](../../ebook/vendas/calculadora-lote.html). A tabela abaixo só explica o veto, com os mínimos do validador e os recuos de referência:
@@ -119,7 +120,7 @@ Os 3 que entram: **lote de 5 x 25** (campeão), **2 quartos, um em cada ponta**,
 **Título:** Casa de 2 quartos para lote de 5 m
 
 ```text
-TEXTO: Lote de 5 m de frente? Cabe uma casa de 2 quartos.
+TEXTO: Lote de 5 x 25 m? Cabe uma casa de 2 quartos, com os recuos de referência.
 
 A Casa Fita tem 56 m² e cabe num lote de 5 x 25 m, com os recuos de referência: um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa.
 
@@ -282,7 +283,7 @@ Escrito agora para não atrasar quando o dono decidir. **Não roda antes disso.*
 
 Fora de propósito: a Casa Compacta **não** tem os canos juntos (o banheiro tem tubulação própria; a ficha avisa que custa mais). Não usar "uma tubulação só" nela.
 
-### C1 (campeão: o lote)
+### C1 (campeão: o lote). Não roda até o dono decidir o que vai de graça
 
 **Título:** Casa de 2 quartos para lote de 8 x 15
 
@@ -302,7 +303,7 @@ O QUE MEDIR: conversas, plantas grátis entregues e vendas com o código C1.
 VARIAÇÃO PARA TESTE: C2, com o 2º atributo (só 4% de corredor), no modo de humor.
 ```
 
-### C2 (teste: modo de humor do dono; atributo 2)
+### C2 (teste: modo de humor do dono; atributo 2). Não roda até o dono decidir o que vai de graça
 
 **Título:** Corredor de apostar corrida? Aqui não
 
@@ -399,7 +400,7 @@ Qual é a frente e o fundo do seu lote? Com a medida eu te digo se ela cabe no s
 - Saudação nova sem "planta grátis" (seção 2a): muda o funil do Instagram também
 - "Que bom que você gostou, [nome]. E a obra, você pensa em começar quando?" (pergunta 2)
 - **Achado fora deste arquivo:** `RESPOSTAS-RAPIDAS.md` ainda usa a palavra vetada pela ficha `1946-refazer` (a que começa com "mobili") no `/cabe` (linha 113), no `/3d` (linha 131) e no `/oferta` (linha 147). Não mexi (só podia criar este arquivo).
-- **Achado fora deste arquivo:** o veto da linha 5 de `RESPOSTAS-RAPIDAS.md` diz "lote de 8 m de frente com menos de 20,6 m de fundo, ou menos de 10 m de frente". Pelos mínimos do validador, "só a Casa Compacta" é **frente de 8 a 9,9 m e fundo de 13 a 20,5 m**; com menos de 8 m de frente, a Casa Compacta nem cabe. Conferir e acertar a frase.
+- **Nota resolvida (Revisor, 24/11):** a linha 5 de `RESPOSTAS-RAPIDAS.md` já diz "frente de 8 a 9,9 m e fundo de 13 a 20,5 m", que bate com os mínimos do validador. Nada a acertar.
 
 ## 10. Perguntas ao dono (uma por linha)
 

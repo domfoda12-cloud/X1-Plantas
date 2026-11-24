@@ -12,6 +12,7 @@ Atenção: não só confere, também REGRAVA arquivos do repositório: os dados 
 A calculadora do parceiro e o PDF oficial só são gravados por `python3 ebook/gerador/livro.py` puro.
 Sai com código 1 se algo falhar.
 """
+import html
 import json
 import subprocess
 import re
@@ -418,7 +419,28 @@ if _ent or len(_prova) != 2:
     print("[ERRO] casa sem exatamente uma porta de entrada marcada: " + ("; ".join(_ent[:12]) if _ent else f"a prova não pegou os 2 erros ({_prova})"))
 else:
     print(f"[OK ] uma porta de entrada amarela por casa ({len(_desenhos)} desenhos; prova: pegou os 2 erros postos de propósito)")
-rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
+# Bônus sem conteúdo (achado do Revisor, 24/11/2026; CDC, arts. 30 e 37): o "O que vem junto" do PDF só pode listar
+# bônus que tenha página no PDF (data-bonus="<nome>"; o livro.py registra em PAGINAS_BONUS).
+def bonus_sem_conteudo(paginas):
+    """paginas: o HTML de cada página do e-book. Devolve os bônus listados em "O que vem junto" sem página própria."""
+    doc = "".join(paginas)
+    bloco = re.search(r"<h3>O que vem junto</h3>(.*?)(?:<h3>|</div>)", doc, re.S)
+    itens = [html.unescape(i) for i in re.findall(r"<li>(.*?)</li>", bloco.group(1), re.S)] if bloco else []
+    return [i for i in itens if f'data-bonus="{html.escape(i)}"' not in doc]
+
+
+_pl_livro = _livro.edicao(sorted(PL.carregar(), key=lambda p: ("CEFS".index(p["id"][0]), p["id"])), _cfg_ed)
+_paginas = _livro.montar(_pl_livro, _cfg_ed, {"lote": 3, **{p["id"]: 0 for p in _pl_livro}}).paginas
+_bsc = bonus_sem_conteudo(_paginas)
+_prova_b = bonus_sem_conteudo(['<h3>O que vem junto</h3><ul class="lista"><li>Prova</li><li>Tem</li></ul></div>',
+                               '<section class="pagina" data-bonus="Tem"></section>'])
+if _bsc or _prova_b != ["Prova"]:
+    falhas.append("bônus sem conteúdo no PDF")
+    print("[ERRO] o PDF anuncia bônus sem página: " + ("; ".join(_bsc) if _bsc else f"a prova não pegou o erro ({_prova_b})"))
+else:
+    _anun = _livro.bonus_com_conteudo(_cfg_ed)
+    print(f"[OK ] bônus do PDF: {len(_anun)} anunciado(s), todos com página (prova: pegou o bônus sem página posto de propósito)")
+rodar("painel",[sys.executable, "ferramentas/atualizar-painel.py"])
 
 # Campo do dono ainda vazio: não é erro de código, mas o PDF não pode ir ao cliente assim (auditoria de 22/11)
 _cfg = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))
