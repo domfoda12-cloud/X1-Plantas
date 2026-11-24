@@ -133,7 +133,7 @@ DUAS_PARTES = {
 
 # Página "A parede que não pode ter janela" (parte 2, casas em geral; D21, 24/11/2026). Texto do Redator, copiado sem
 # mudar de pedidos/anexos/pagina-parede-sem-janela-texto.md (seção 3), com a conferência do Arquiteto e o veto do
-# Revisor de 24/11 já aplicados. Os "rotulos" são as palavras dos croquis e da folha, do rascunho do Designer
+# Revisor de 24/11 já aplicados, e também as trocas da leitura final da página montada (Revisor, 24/11). Os "rotulos" são as palavras dos croquis e da folha, do rascunho do Designer
 # (ebook/plantas/rascunhos/parede_sem_janela.py). Só o modo --duas-partes usa. Mudou aqui, volta ao Revisor.
 PAREDE = {
     "sobre": "Casas em geral",
@@ -142,17 +142,17 @@ PAREDE = {
     "abre": "Casa encostada no vizinho tem uma parede sem janela: o Código Civil não deixa abrir janela a menos de 1,5 m do terreno vizinho (art. 1.301; o engenheiro confirma). Só escapam aberturas de até 10 x 20 cm, a mais de 2 m do piso, e essas o vizinho pode tapar quando construir (art. 1.302). Não é defeito. A luz vem pelos outros lados, e essa parede trabalha para você.",
     "campos": ("O que fazer", "Cuidado", "Nas casas"),
     "ideias": [
-        {"nome": "A cabeceira na parede cega",
+        {"nome": "A cabeceira na parede sem janela",
          "faz": "Encoste a cabeceira da cama na parede da divisa, com prateleira em cima. A parede da janela fica livre: nenhum guarda-roupa tapando a luz.",
          "cuid": "Nicho na parede da divisa, só se o engenheiro aprovar. Prateleira presa na parede, sim.",
-         "casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, a cama de casal cabe com a cabeceira na divisa (página da casa)."},
+         "casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal cabe com a cabeceira na divisa."},
         {"nome": "A parede que guarda",
          "faz": "Guarda-roupa, estante, rack e geladeira na parede da divisa; a janela fica para a cama, o sofá e a pia.",
          "cuid": "Móvel colado esconde umidade: pergunte ao engenheiro pela impermeabilização do pé da parede. Fure só sabendo onde passa o cano.",
          "casas": "Casa Fita: guarda-roupa de 6 portas no quarto casal, rack na sala e geladeira na divisa, bancada embaixo da janela. Família Compacta: rack na sala."},
         {"nome": "A janela alta do outro lado",
          "faz": "Telhado mais alto no cômodo escuro, com uma faixa de janela virada para o recuo, a 1,5 m ou mais do vizinho, como toda janela.",
-         "cuid": "Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito: é onde mais entra goteira.",
+         "cuid": "Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito, para não dar goteira.",
          "casas": "Não está nas 3 casas: leve a ideia ao engenheiro."},
         {"nome": "A luz que vem de cima",
          "faz": "No ponto mais longe da janela, uma telha translúcida ou uma claraboia traz a luz do dia, sem abrir janela na parede da divisa.",
@@ -168,10 +168,10 @@ PAREDE = {
         "muro": "parede da divisa, sem janela", "vizinho": "lado do vizinho", "sugestao": "sugestão",
         "janela_livre": "janela livre", "prateleira": "prateleira", "cabeceira": ("cabeceira", "na divisa"),
         "casa_quarto": ("Família Compacta", "quarto casal"),
-        "geladeira": "geladeira", "aereo": "aéreo", "pia": "pia", "janela": "janela", "recuo": "recuo",
+        "geladeira": "geladeira", "aereo": "armário aéreo", "pia": "pia", "janela": "janela", "recuo": "recuo",
         "esquema": "esquema, não é das 3 casas", "distancia": "1,5 m ou mais", "janela_alta": "janela alta", "rufo": "rufo",
-        "comodo_escuro": ("cômodo", "escuro"), "telha": "telha clara", "vao": "vão no forro", "calha": "calha",
+        "comodo_escuro": ("cômodo", "escuro"), "telha": ("telha", "translúcida"), "vao": "vão no forro", "calha": "calha",
         "agua": ("a água fica", "no seu lote"),
-        "selo": ("Imagem ilustrativa", "croquis: móveis e prateleira não vêm junto"),
+        "selo": ("Imagem ilustrativa", "croquis: os móveis e a prateleira são sugestão"),
     },
 }

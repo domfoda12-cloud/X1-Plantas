@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 63 documentos
+## Os 64 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -237,6 +237,14 @@ Seções: 1. O estado verdadeiro; 2. Página de decisões (pode responder só es
 
 Tamanho: 880 palavras.
 
+### [Júri das decisões fáceis de desfazer (24/11/2026)](anexos/juri-decisoes-faceis-2026-11-24.md)
+
+Regra do dono (24/11, cartão v6): "se é algo que pode ser facilmente alterado depois, continue o trabalho com a decisão do júri e me mostre a decisão tomada depois". Continuam só dele: gasto, publicar, e-mail, contratação, dados pessoais, preço e o que não se desfaz.
+
+Seções: J1; J2; J3; J5; J7; J8; J9.
+
+Tamanho: 1346 palavras.
+
 ### [Júri: as próximas melhorias (23/11/2026, Supervisor)](anexos/juri-proximas-melhorias.md)
 
 Pedido do dono: "continuar melhorando o júri é essencial". Ficha de origem do júri: `pedidos/2026-11/2026-11-23-0156-adicionar-o-llm-council-karpathy-e-pedir-a-opiniao-dele-sobr.md` (abaixo, "ficha 0156"). Regras em vigor: `CONSELHO.md`, seção 5b. Este documento é proposta. Nada aqui foi rodado,…
@@ -307,7 +315,7 @@ Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou
 
 Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
 
-Tamanho: 2200 palavras.
+Tamanho: 2201 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 
@@ -475,7 +483,9 @@ Tamanho: 872 palavras.
 
 Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fable.
 
-Tamanho: 305 palavras.
+Seções: Leitura final da página montada, 24/11/2026 (Revisor, Fable).
+
+Tamanho: 529 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 

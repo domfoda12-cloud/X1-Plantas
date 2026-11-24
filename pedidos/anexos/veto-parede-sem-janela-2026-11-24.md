@@ -13,3 +13,20 @@ Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fabl
 9. **Croquis:** SIM (o 3 e o 4 com "esquema, não é das 3 casas"; no 1 e no 2, o que não está no dado leva "sugestão"). Croqui gerado por IA volta ao Revisor.
 
 Nada de custo, prazo, aprovação ou dispensa de profissional. **Não conferido:** a página montada; "é onde mais entra goteira" (frase do Arquiteto, sem número); o desempenho da telha translúcida.
+
+## Leitura final da página montada, 24/11/2026 (Revisor, Fable)
+
+**SIM SE**, com as 2 trocas obrigatórias e as recomendadas abaixo, aplicadas em seguida no gerador (`ebook/gerador/paginas.py`, `PAREDE`, e `ebook/gerador/livro.py`) e no texto (`pagina-parede-sem-janela-texto.md`).
+
+**Obrigatórias**
+1. Ideia 1, "Nas casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal cabe com a cabeceira na divisa." (sai o "(página da casa)", que apontava para nada).
+2. Ao lado do selo "Imagem ilustrativa": "croquis: os móveis e a prateleira são sugestão" (no lugar de "móveis e prateleira não vêm junto").
+
+**Recomendadas (todas aplicadas)**
+3. Título da ideia 1: "A cabeceira na parede sem janela".
+4. Ideia 3, "Cuidado": "Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito, para não dar goteira."
+5. Rótulos dos croquis: "telha clara" → "telha translúcida"; "aéreo" → "armário aéreo".
+6. Legenda "esquema, não é das 3 casas": fundo branco atrás das letras, para a hachura do chão não passar por cima.
+7. Página "Terreno e recuos": "Em área urbana, o Código Civil (art. 1.301) não deixa abrir janela a menos de 1,5 m do terreno vizinho (o engenheiro confirma)."
+
+**Pendência para o Arquiteto:** com a cama de casal no quarto da frente da Casa Fita, a escrivaninha ainda é usável?

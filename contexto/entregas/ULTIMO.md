@@ -1,11 +1,10 @@
 # Último resumo de passagem
 
-## 2026-11-24-0750-vitrines-para-o-amigo-do-dono
+## 2026-11-24-1800-juri-mecanismos-e-pagina-da-parede
 
-**Tarefa:** o dono pediu um artifact bonito para mostrar o sistema a um amigo que acha tudo de IA genérico.
-**Feito:** 1) página de texto "A Obra do X1-Plantas" (ele recusou: queria peça para ver, não para ler); 2) casa 3D que se constrói na tela, "Antes do Primeiro Tijolo", com o motor `video/src/casa3d.js` e as 3 casas do lançamento. Links nas fichas `2026-11-24-0646` e `2026-11-24-0726`; página guardada em `pedidos/anexos/vitrines/maquete-viva.html`. Auditoria de 24/11 (manhã) em `pedidos/AUDITORIAS.md`; consertei os números errados da primeira página, os links, a fonte da lição "uma pergunta por cartão" e o `pedidos/LICOES.md`.
-**Como conferir:** `python3 ferramentas/checar.py`; abrir os dois links das fichas.
-**Não feito / ressalva:** a página 3D publicada não foi revista depois de eu virar a câmera (o Supervisor testou só a cópia local, as 3 casas abrem). No celular o nome da Casa Fita quebra em duas linhas. Nada disso mexe no e-book.
-**Decisão do dono pendente:** amostra grátis (A, B, ou A agora e B depois; protótipo em `ebook/plantas/rascunhos/amostra/`) e o que ganha quem já recebeu a C01; CNPJ ou CPF, endereço e e-mail de quem vende; preço no PDF ou PDF sem preço; janela da C01; roteiros de quadrinho e bordão; pôster A ou B; @ e bio do Instagram; 2 skills nossas ou as 6; everything-claude-code inteiro ou 6 peças; "grátis" e "publicar" saem da lista dele?; a tarefa de hora em hora continua?
-Novas de 24/11: se a primeira página (mostra rascunho do e-book e 3 erros internos) pode ser vista por alguém de fora; se a tarefa de hora em hora continua.
-**Próximo passo:** ler os comentários do quadro de tarefas. Sem resposta do dono, não criar rascunho novo em cima de rascunho.
+**Tarefa:** tocar o plano enquanto o dono não responde: júri das decisões fáceis, mecanismos de regra e a página da parede sem janela no gerador.
+**Feito:** 1) júri J1, J2, J3, J5, J7, J8, J9 em 2 rodadas (`pedidos/anexos/juri-decisoes-faceis-2026-11-24.md`): nenhuma nota chegou a 8,5; as propostas reescritas têm cartão no Canteiro. 2) `pedido.py fechar` recusa ficha sem aviso de 3 partes no quadro e avisa contexto parado; `checar.py` avisa `ULTIMO.md` velho; `plano.py feito J<n>` exige "mostrado ao dono: sim"; `plano.py conferir` barra vídeo em "Agora" antes do D13. 3) página "A parede que não pode ter janela" no gerador, página 21 do modo `--duas-partes` (só prévia); o Revisor (Fable) deu SIM SE e as trocas estão sendo aplicadas. 4) @lotecarente: sem perfil público no Instagram e no TikTok (indício, não prova).
+**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/plano.py agora`; `python3 ebook/gerador/livro.py --previa <pasta> --duas-partes`.
+**Não feito / ressalva:** os passos J seguem abertos: só fecham quando o dono responder aos cartões (o mecanismo recusa antes). A revisão anônima do júri não rodou. A frase "60% e-book, 40% sistema" não entrou no `CLAUDE.md` (espera o dono). Fichas abertas de 24/11 (peça livre, 1103, 1119, 1144) agora precisam de aviso de 3 partes no quadro para fechar.
+**Decisão do dono pendente:** título (p14), validade do preço (p10), formato da prévia (i5), os 4 cartões "decidimos" (j1, j3, j7, j9), endereço (40), profissional (41), "sim" do anúncio (46).
+**Próximo passo:** ler os comentários do Canteiro; conferir as páginas cômodo a cômodo da Família Compacta e da Casa Compacta que o Designer está montando e levá-las à aba Ver.

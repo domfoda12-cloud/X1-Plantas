@@ -28,10 +28,10 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 
 **Abertura** (70): Casa encostada no vizinho tem uma parede sem janela: o Código Civil não deixa abrir janela a menos de 1,5 m do terreno vizinho (art. 1.301; o engenheiro confirma). Só escapam aberturas de até 10 x 20 cm, a mais de 2 m do piso, e essas o vizinho pode tapar quando construir (art. 1.302). Não é defeito. A luz vem pelos outros lados, e essa parede trabalha para você.
 
-### 1. A cabeceira na parede cega (título 5)
+### 1. A cabeceira na parede sem janela (título 6)
 - **O que fazer** (24): Encoste a cabeceira da cama na parede da divisa, com prateleira em cima. A parede da janela fica livre: nenhum guarda-roupa tapando a luz.
 - **Cuidado** (15): Nicho na parede da divisa, só se o engenheiro aprovar. Prateleira presa na parede, sim.
-- **Nas casas** (27): Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, a cama de casal cabe com a cabeceira na divisa (página da casa).
+- **Nas casas** (28): Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal cabe com a cabeceira na divisa.
 - **Designer desenha:** o quarto casal da Família Compacta, vista de cima: a parede da divisa em traço grosso (a mesma marca nos 4 croquis), a cama com a cabeceira e os 2 criados nela, a janela no fundo, livre. Uma linha fina da prateleira sobre a cabeceira, com a palavra "sugestão" (a prateleira não está no desenho da casa).
 
 ### 2. A parede que guarda (título 4)
@@ -42,7 +42,7 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 
 ### 3. A janela alta do outro lado (título 6)
 - **O que fazer** (25): Telhado mais alto no cômodo escuro, com uma faixa de janela virada para o recuo, a 1,5 m ou mais do vizinho, como toda janela.
-- **Cuidado** (23): Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito: é onde mais entra goteira.
+- **Cuidado** (22): Muda telhado e estrutura: o engenheiro diz se vale. O encontro dos dois telhados pede rufo bem feito, para não dar goteira.
 - **Nas casas** (10): Não está nas 3 casas: leve a ideia ao engenheiro.
 - **Designer desenha:** corte da casa (como uma fatia), com a legenda "esquema, não é das 3 casas" e sem nome de casa: à esquerda a parede da divisa lisa; dois telhados, o do meio mais alto, com a faixa de janela virada para o lado do recuo e a marca "1,5 m ou mais" entre ela e a divisa; o encontro dos telhados marcado "rufo"; uma seta de sol entrando pela janela.
 
@@ -60,7 +60,7 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 
 **Aviso** (15, inteiro e parado, nunca coberto): Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.
 
-**Total: 437 palavras** (contadas por programa, títulos incluídos). **Passam do limite, de propósito:** os "Cuidado" das ideias 3 (23 palavras) e 4 (31) e o "Nas casas" da ideia 1 (27) são as frases do Arquiteto, mantidas inteiras; a abertura cresceu para 70 com o §2º e o art. 1.302 (a 3 avisa da goteira no encontro dos telhados; a 4 diz que a telha não ilumina sem abrir o forro ou a laje). Cabe em 1 página A4 com os 4 croquis pequenos em duas colunas; se não couber, **a ideia 3 (a janela alta) sai primeiro** (a mais cara e a única que muda a estrutura) e a página fica com 3 ideias, sem mexer no resto. Cor: só as duas que o livro já tem (amarelo e azul de projeto); a aba é a azul "geral".
+**Total: 438 palavras** (437 antes da leitura final do Revisor na página montada, 24/11: título da ideia 1, "Nas casas" da ideia 1, agora com 28 palavras, e "Cuidado" da ideia 3, agora com 22; `veto-parede-sem-janela-2026-11-24.md`, última seção). **Passam do limite, de propósito:** os "Cuidado" das ideias 3 (23 palavras) e 4 (31) e o "Nas casas" da ideia 1 (27) são as frases do Arquiteto, mantidas inteiras; a abertura cresceu para 70 com o §2º e o art. 1.302 (a 3 avisa da goteira no encontro dos telhados; a 4 diz que a telha não ilumina sem abrir o forro ou a laje). Cabe em 1 página A4 com os 4 croquis pequenos em duas colunas; se não couber, **a ideia 3 (a janela alta) sai primeiro** (a mais cara e a única que muda a estrutura) e a página fica com 3 ideias, sem mexer no resto. Cor: só as duas que o livro já tem (amarelo e azul de projeto); a aba é a azul "geral".
 
 ## 4. Formato de entrega
 

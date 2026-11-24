@@ -1275,7 +1275,7 @@ def montar(plantas, config, numeros, duas_partes=False):
           <li>No Plano Diretor, na lei de zoneamento e no código de obras da sua cidade.</li>
           <li>Melhor: peça na prefeitura a consulta prévia do seu lote (leve a matrícula ou o IPTU).</li>
           <li>Em condomínio, leia também o regulamento.</li>
-          <li>Em área urbana, o Código Civil (art. 1.301) proíbe janela a menos de 1,5 m da divisa com o vizinho.</li></ul></div>
+          <li>Em área urbana, o Código Civil (art. 1.301) não deixa abrir janela a menos de 1,5 m do terreno vizinho (o engenheiro confirma).</li></ul></div>
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
@@ -1440,7 +1440,11 @@ def _psj_svg(corpo, legenda=None):
             f'<pattern id="psj-grama" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="{PISO_REAL["grama"]}"/>'
             f'<path d="M.6 .9l.15 -.45M2 2.2l.15 -.45" stroke="{PISO_REAL["grama_l"]}" stroke-width=".18"/></pattern>'
             f'<pattern id="psj-terra" width="2.2" height="2.2" patternUnits="userSpaceOnUse"><path d="M0 2.2L2.2 0" stroke="#B5AFA4" stroke-width=".22"/></pattern></defs>')
-    leg = _psj_rot(w - 1.6, h - 1.6, legenda, PSJ_CINZA, 2.1, "end") if legenda else ""
+    leg = ""
+    if legenda:  # fundo branco atrás das letras: a hachura do chão não passa por cima delas (Revisor, 24/11)
+        lw = len(legenda) * 2.1 * .6 + 1.6
+        leg = (f'<rect x="{w - 1.6 - lw + .8:.2f}" y="{h - 4.0:.2f}" width="{lw:.2f}" height="3.3" rx=".6" fill="#fff"/>'
+               + _psj_rot(w - 1.6, h - 1.6, legenda, PSJ_CINZA, 2.1, "end"))
     return (f'<svg viewBox="0 0 {w:.2f} {h:.2f}" width="{w:.2f}mm" height="{h:.2f}mm" xmlns="http://www.w3.org/2000/svg">{defs}'
             f'<rect x="0" y="0" width="{w:.2f}" height="{h:.2f}" fill="#fff"/>{corpo}{leg}</svg>')
 
@@ -1582,7 +1586,7 @@ def psj_corte(tipo):
         s.append(f'<path d="M{cx:.2f} {Y(hd) - .3:.2f} v1.5 h2.4 v-1.5" fill="#fff" stroke="{AZUL}" stroke-width=".45"/>')
         s.append(f'<line x1="{cx + 1.2:.2f}" y1="{Y(hd) + 1.2:.2f}" x2="{cx + 1.2:.2f}" y2="{chao - 1.0:.2f}" stroke="{AZUL}" stroke-width=".6"/>')
         s.append(_psj_seta([(cx + 1.2, chao - 1.0), (X(.95), chao - 1.0)], cor="#7FC3E8", larg=.7, borda=AZUL))
-        s.append(_psj_chamada(X(xt0) + .6, Y(alt(xt0)) - .8, X(.6), Y(hd) - 5.2, AZUL) + rot(X(.1) - 1.0, Y(hd) - 6.0, R["telha"], AZUL))
+        s.append(_psj_chamada(X(xt0) + .6, Y(alt(xt0)) - .8, X(.6), Y(hd) - 5.2, AZUL) + rot(X(.1) - 1.0, Y(hd) - 8.2, R["telha"][0], AZUL, 2.1) + rot(X(.1) - 1.0, Y(hd) - 5.7, R["telha"][1], AZUL, 2.1))  # em 2 linhas: não encosta na seta do sol
         s.append(_psj_chamada(X(xt1) - .2, Y(hf) + .3, X(2.3), Y(hf) + 3.2) + rot(X(2.3) + .5, Y(hf) + 4.0, R["vao"], fs=2.1))
         s.append(rot(cx + 2.4, Y(hf) + 4.0, R["calha"], AZUL))
         s.append(rot(X(2.35), Y(.75), R["agua"][0], AZUL, 2.1) + rot(X(2.35), Y(.75) + 2.6, R["agua"][1], AZUL, 2.1))
