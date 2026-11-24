@@ -41,11 +41,11 @@ Tamanho: 1209 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
-Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Escrito em 24/11/2026, 10h40 UTC, conferido contra o repositório nesta hora. Ao terminar…
+Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Segunda rodada: 24/11/2026, 11h10 UTC, conferida contra o repositório nesta hora,…
 
-Seções: O objetivo da equipe; Onde estamos (24/11, conferido); Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
+Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 3669 palavras.
+Tamanho: 5279 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -99,7 +99,9 @@ Tamanho: 4995 palavras.
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
-Tamanho: 2622 palavras.
+Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC).
+
+Tamanho: 2747 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026)](anexos/decisoes-pendentes-em-grupos.md)
 

@@ -4,6 +4,7 @@
 
 ## Agora
 
+- **Preço e título, respostas do dono no quadro** (24/11): **R$ 47 na primeira semana e o PDF não fala de preço** (só no WhatsApp; o `checar.py` confere). **Título:** ele quer 3 opções novas no lugar de "Antes do primeiro tijolo"; o Redator escreve, o título atual fica até ele escolher. Nenhuma peça põe preço no PDF.
 - **Dois papéis novos, pedido do dono** (24/11): `planejador` (passo a passo: agora, depois, esperando o dono; dono do `pedidos/PLANO.md`) e `organizador` (separa um monte em grupos de 3 a 7; só propõe). **Para todos:** trabalho com mais de 3 passos pede o plano ao `planejador` antes; monte misturado vai ao `organizador`. Nenhum dos dois executa nem decide pelo dono.
 - **Peça livre a pedido do dono** (24/11): ele quis ver algo fora do projeto, feito do zero; saiu a "Revoada" (bando de pássaros simulado; link na ficha `2026-11-24-08..-peca-livre`). Não muda nada para nenhum papel.
 - **A vitrine em texto não serviu** (24/11): o dono quer peça bonita de ver; saiu a casa 3D que se constrói na tela (link na ficha `2026-11-24-07..-vitrine-bonita`). Lição para todos: "cool" é para ver e mexer, não para ler.

@@ -98,3 +98,9 @@
 | 24/11 | Terceira referência ("Ref") | Mandou https://www.instagram.com/reel/DfGDJfVvRlD/ sem dizer para quê. **Suposição:** referência de formato para vídeo e para o checklist da obra (falha → conserto, 3D low-poly). Anotada em `video/referencias/GANCHOS-VISUAIS.md`. A legenda do vídeo usa "Antes do primeiro tijolo", a mesma expressão do título do e-book: avisado ao dono. |
 
 - **Comentário do dono no quadro de tarefas (cartão das 5 ideias, 23/11):** "Responder as 5 perguntas juntas aqui foi meio cansativo". Virou a regra "uma pergunta por cartão" no quadro (lição do Maestro de 24/11). Vale para o quadro; o `pedidos/LEIA-ME.md` (umas 5 perguntas por vez na conversa) não mudou.
+
+## 24/11/2026, comentários no quadro de tarefas (11:07 UTC)
+
+- **Preço no PDF (cartão p3):** "47, pdf não fala de preço". Vale: o preço da primeira semana é R$ 47 e o PDF não mostra preço nenhum; o preço fica só no WhatsApp. `ebook/config.json` guarda "R$ 47" para a equipe; o `checar.py` passa a dar erro se o PDF citar preço.
+- **Título (cartão p14):** "B", isto é, ele quer 3 opções de título novo no lugar de "Antes do primeiro tijolo" (a frase abre a legenda de um vídeo de 5,2 milhões de visualizações). O título atual fica até ele escolher.
+- **Comentário na página Revoada (11:04 UTC):** "Delete it, looks nice". Ambíguo (apagar a página inteira?); perguntei no próprio comentário e não apaguei.

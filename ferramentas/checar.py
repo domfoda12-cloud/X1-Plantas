@@ -147,6 +147,14 @@ rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"
 rodar("lista de conserto (CONSERTOS.md)", [sys.executable, "ferramentas/plantas.py", "referencias"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
+# O PDF não fala de preço (decisão do dono, 24/11/2026: "47, pdf não fala de preço"): o preço fica só no WhatsApp
+import re as _re_preco
+_citam = [f.name for f in sorted((RAIZ / "ebook" / "saida").glob("*.html")) if _re_preco.search(r"R\$\s?\d", f.read_text(encoding="utf-8"))]
+if _citam:
+    falhas.append("preço dentro do PDF")
+    print(f"[ERRO] o PDF cita preço ({', '.join(_citam)}): o dono decidiu que o PDF não fala de preço")
+else:
+    print("[OK ] o PDF não cita preço (decisão do dono)")
 rodar("plano geral (seções, dependências, no máximo 3 passos abertos em Agora)", [sys.executable, "ferramentas/plano.py", "conferir"])
 # Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio).
 # Um conferidor só: o do painel (o mesmo que avisa no atualizar-painel.py).
