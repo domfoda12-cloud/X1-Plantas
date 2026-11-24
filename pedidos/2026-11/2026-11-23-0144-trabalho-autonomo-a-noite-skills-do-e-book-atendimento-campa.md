@@ -135,3 +135,5 @@ Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 - **24/11 06:46 UTC (hora agendada):** nenhum comentário novo no quadro; o dono pediu só a vitrine (ficha `2026-11-24-0646`, feita pelo Maestro, sem agentes). Sem trabalho útil sem as decisões dele: 0 agentes nesta hora. O bloco PRÓXIMA HORA continua valendo como está.
 
 - **24/11 07:46 UTC (hora agendada):** nenhum comentário novo no quadro. Na hora anterior o dono recusou a primeira vitrine e pediu uma bonita: saiu a casa 3D (ficha `2026-11-24-0726`); 1 agente (Supervisor, auditoria, 113.658 tokens no relatório). Consertos da auditoria feitos e resumo de passagem escrito. O bloco PRÓXIMA HORA continua valendo.
+
+- **24/11 08:46 UTC (hora agendada):** nenhum comentário novo no quadro. O dono pediu uma peça livre, fora do projeto: saiu a "Revoada" (ficha `2026-11-24-08..-peca-livre`, aberta até ele ver); revista na cópia local. 0 agentes nesta hora. O bloco PRÓXIMA HORA continua valendo.

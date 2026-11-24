@@ -20,7 +20,7 @@
 
 **Quem executa:** Maestro.
 
-**Conferência:** Duas olhadas, no computador e no celular. Depois da segunda mudei os limites do voo (o bando saía da tela) e publiquei sem rever. A frase "sete vizinhos mais próximos" é verdadeira no código (cada ave usa os 7 mais perto dentro do alcance) e vem de um estudo de 2008 sobre estorninhos em Roma, citado de memória, sem conferir a fonte.
+**Conferência:** Duas olhadas, no computador e no celular. Depois da segunda mudei os limites do voo (o bando saía da tela) e publiquei sem rever. Às 08:50 UTC revi a versão final na cópia local: 4 capturas ao longo de 24 segundos no computador e 4 no celular; o bando fica dentro da tela, muda de forma e abre com o falcão. A página publicada em si não foi aberta. A frase "sete vizinhos mais próximos" é verdadeira no código (cada ave usa os 7 mais perto dentro do alcance) e vem de um estudo de 2008 sobre estorninhos em Roma, citado de memória, sem conferir a fonte.
 
 **Resultado:** Artifact privado "Revoada": https://claude.ai/artifact/VjLuYD36p7TgHQNpmuHhHp. Código inteiro em `pedidos/anexos/vitrines/revoada.html` (um arquivo, sem biblioteca).
 
