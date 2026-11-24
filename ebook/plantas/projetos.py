@@ -166,7 +166,7 @@ def todas():
                         M("camaSolteiro", "frente", 0.15, 0.15, 1.05, 2.05, manta="#E3B9A4"),
                         M("criado", "frente", 1.075, 0.15, 1.525, 0.55),
                         M("escrivaninha", "frente", 1.75, 0.15, 2.75, 0.65),          # a cadeira fica a 0,8 m da cama
-                        M("armario", "dir", 2.75, 1.55, 3.35, 2.95)])),
+                        M("armario", "dir", 2.89, 1.43, 3.35, 3.04)])),                # 4 portas de loja, 1,61 x 0,46 (24/11/2026: era 1,40 x 0,60)
                     (3.6, F("sala", "Sala", "sala", moveis=[
                         M("tapete", "frente", 0.51, 1.1, 2.51, 3.3, cor="#D9CBB4", borda="#B49D7C"),
                         M("sofa", "dir", 2.47, 1.15, 3.35, 3.25, cor="#8A9A86"),       # 3 lugares, depois da porta
@@ -178,8 +178,9 @@ def todas():
                         M("bancada", "dir", 2.73, 0.1, 3.35, 1.9)])),                  # pia e fogão embaixo da janela
                     (3.0, V((1.1, F("circ", "Hall", "circ")),
                             (None, H((1.3, F("servico", "Serviço", "servico", moveis=[
-                                          M("maquina", "fundos", 1.025, 0.64, 1.625, 1.24),
-                                          M("tanque", "fundos", 1.65, 0.74, 2.25, 1.24)])),
+                                          # medidas da Portaria MCID 725 (máquina 0,60 x 0,65, tanque 0,52 x 0,53), fora do giro
+                                          M("maquina", "fundos", 1.12, 0.59, 1.72, 1.24),
+                                          M("tanque", "fundos", 1.73, 0.71, 2.25, 1.24)])),
                                      (None, F("banho", "Banheiro", "banho", moveis=[
                                          M("pia", "frente", 0.28, 0.06, 0.78, 0.46),     # fora do giro da porta (2 cm)
                                          M("vaso", "frente", 0.85, 0.06, 1.25, 0.71),
@@ -188,7 +189,7 @@ def todas():
                         M("camaCasal", "dir", 1.45, 0.9, 3.35, 2.3, manta="#B9C7D6"),  # passagem dos dois lados
                         M("criado", "dir", 2.95, 0.4, 3.35, 0.85),
                         M("criado", "dir", 2.95, 2.35, 3.35, 2.8),
-                        M("armario", "esq", 0.15, 1.2, 0.75, 3.0)]))),
+                        M("armario", "esq", 0.15, 1.05, 0.62, 3.05)]))),              # 6 portas de loja, 2,00 x 0,47: 83 cm até o pé da cama
                   [("ext", "sala", "dir"), ("sala", "quarto2"), ("sala", "cozinha", "aberto"), ("cozinha", "circ", "aberto"),
                    ("cozinha", "servico"), ("ext", "cozinha", "dir", 9.2), ("circ", "banho"), ("circ", "quarto1")],
                   "2 quartos", 1, recuos={"esq": 0.0, "dir": 1.5},
@@ -236,22 +237,29 @@ def todas():
                                                  M("mesaJantar", "esq", 3.3, 1.0, 4.5, 2.7)])),  # 4 lugares, junto da cozinha
                                              (None, F("cozinha", "Cozinha", "cozinha")))),
                                     (None, F("circ", "Circulação", "circ")))),
-                            (None, H((2.3, F("servico", "Serviço", "servico")), (None, F("banho", "Banheiro", "banho")))))),
+                            (None, H((2.3, F("servico", "Serviço", "servico", moveis=[
+                                # medidas da Portaria MCID 725 (tanque 0,52 x 0,53, máquina 0,60 x 0,65), fora do giro das 2 portas
+                                # (24/11/2026: o motor punha 0,60 x 0,50 e 0,60 x 0,60): tanque no canto da janela, máquina no fundo
+                                M("tanque", "frente", 1.13, 0.15, 1.65, 0.68),
+                                M("maquina", "fundos", 0.06, 1.59, 0.66, 2.24)])),
+                                     (None, F("banho", "Banheiro", "banho")))))),
                     (None, V((_q, F("quarto1", "Quarto casal", "casal", moveis=[
                                  M("camaCasal", "esq", 0.15, 1.34, 2.05, 2.74, manta="#B9C7D6"),
                                  M("criado", "esq", 0.15, 0.89, 0.55, 1.34),                    # fora do giro da porta (3 cm)
                                  M("criado", "esq", 0.15, 2.79, 0.55, 3.24),
-                                 M("armario", "frente", 1.12, 0.06, 2.72, 0.66)])),
+                                 M("armario", "frente", 1.163, 0.06, 2.773, 0.52)])),         # 4 portas de loja, 1,61 x 0,46: 82 cm até a cama
                              (_q, F("quarto2", "Quarto", "dorm", moveis=[
                                  M("camaSolteiro", "fundos", 0.06, 1.45, 0.96, 3.35, manta="#E3B9A4"),
                                  M("camaSolteiro", "fundos", 1.873, 1.45, 2.773, 3.35, manta="#E3B9A4"),  # 0,91 m entre elas
                                  M("criado", "fundos", 1.192, 2.95, 1.642, 3.35),
-                                 M("armario", "frente", 1.2, 0.06, 2.7, 0.66)])),
+                                 M("armario", "frente", 1.163, 0.06, 2.773, 0.52)])),         # 4 portas de loja: 93 cm até o pé das camas
                              (None, F("quarto3", "Quarto", "dorm", moveis=[
                                  M("camaSolteiro", "fundos", 1.783, 1.45, 2.683, 3.35, manta="#E3B9A4"),
                                  M("criado", "fundos", 1.32, 2.95, 1.77, 3.35),
-                                 M("escrivaninha", "fundos", 0.51, 2.85, 1.31, 3.35),  # cadeira com 0,75 m livres, fora da quina do armário
-                                 M("armario", "esq", 0.06, 0.9, 0.61, 2.3)]))))),            # 0,55 de fundo: a cama foi 7,5 cm para dentro (24/11/2026)
+                                 M("escrivaninha", "fundos", 0.06, 2.85, 0.86, 3.35),  # no lugar dela cabe a 2ª cama: 82 cm entre as duas
+                                 # 4 portas de loja (1,61 x 0,46) na parede do corredor, depois da porta: 93 cm até o pé da cama
+                                 # (24/11/2026: era 1,40 x 0,55 na parede da esquerda, sem modelo de loja)
+                                 M("armario", "frente", 1.073, 0.06, 2.683, 0.52)]))))),
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],
                   "3 quartos", 1,

@@ -395,6 +395,29 @@ if _rec_esc:
     falhas.append("recuos da página do lote"); print('[ERRO] "Qual casa cabe no seu lote?" mostra um conjunto só de recuos, mas as casas da edição têm recuos diferentes: ' + "; ".join(_rec_esc))
 else:
     print(f"[OK ] recuos da página do lote: as {len(_pl_ed)} casas da edição têm os recuos que o texto mostra")
+# Porta de entrada amarela (Designer, 24/11/2026): "Como ler uma planta" diz "a porta de entrada é amarela". Em cada
+# casa e em cada desenho (revista, maquete e a planta simples com móveis) há UMA porta marcada data-porta="entrada";
+# nas humanizadas, também uma seta ENTRADA. As outras portas para fora têm a soleira cinza (data-porta="fora").
+def portas_de_entrada_erradas(desenhos):
+    """desenhos: [(nome, svg, quer_seta)]. Devolve o que não tem exatamente uma porta de entrada (e uma seta)."""
+    ruins = []
+    for nome, svg, quer_seta in desenhos:
+        n, s = svg.count('data-porta="entrada"'), svg.count('data-seta="entrada"')
+        if n != 1 or (quer_seta and s != 1):
+            ruins.append(f"{nome}: {n} porta(s) de entrada marcada(s)" + (f", {s} seta(s) ENTRADA" if quer_seta else ""))
+    return ruins
+
+
+_desenhos = [(f"{p['id']} {est}", _livro.svg_humanizada(p, est), True) for p in PL.carregar() for est in ("revista", "maquete")]
+_desenhos += [(f"{p['id']} simples", _livro.svg_planta(p, moveis=True), False) for p in PL.carregar()]
+_ent = portas_de_entrada_erradas(_desenhos)
+_prova = portas_de_entrada_erradas([("prova", _desenhos[0][1].replace('data-porta="entrada"', 'data-porta="fora"'), True),
+                                    ("prova2", _desenhos[0][1] * 2, True)])
+if _ent or len(_prova) != 2:
+    falhas.append("porta de entrada amarela")
+    print("[ERRO] casa sem exatamente uma porta de entrada marcada: " + ("; ".join(_ent[:12]) if _ent else f"a prova não pegou os 2 erros ({_prova})"))
+else:
+    print(f"[OK ] uma porta de entrada amarela por casa ({len(_desenhos)} desenhos; prova: pegou os 2 erros postos de propósito)")
 rodar("painel", [sys.executable, "ferramentas/atualizar-painel.py"])
 
 # Campo do dono ainda vazio: não é erro de código, mas o PDF não pode ir ao cliente assim (auditoria de 22/11)

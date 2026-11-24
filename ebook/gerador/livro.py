@@ -130,14 +130,15 @@ def svg_planta(p, nomes=True, cotas=True, pad=0.5, moveis=False, humanizada=Fals
         else:
             x, y, w, h = x0s - .07, Y(max(y0s, y1s)), .14, abs(y1s - y0s)
         s.append(f'<rect x="{x:.3f}" y="{y:.3f}" width="{w:.3f}" height="{h:.3f}" fill="#8ED2FF" stroke="#0B4FA8" stroke-width=".03"/>')
-    for d in portas_ext:  # porta para fora (da frente, do fundo ou do lado) em amarelo, no vão da parede
-        if not str(d["id"]).startswith("ext-"):
-            continue
-        (hx, hy), (ax, ay), _ = PL.porta_dobradica(p, d)
-        if abs(ay - hy) < 1e-6:
-            s.append(f'<rect x="{min(hx, ax):.3f}" y="{Y(hy) - .1:.3f}" width="{d["r"]:.3f}" height=".2" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
-        else:
-            s.append(f'<rect x="{hx - .1:.3f}" y="{Y(max(hy, ay)):.3f}" width=".2" height="{d["r"]:.3f}" fill="#FFC857" stroke="#17202B" stroke-width=".03"/>')
+    # a porta de entrada em amarelo (a da seta ENTRADA, mesmo passando pela varanda); as outras para fora, soleira cinza
+    ent = porta_de_entrada(p)["id"]
+    for d in portas_ext:
+        if d["id"] == ent:
+            s.append(_soleira(p, d, Y, .2, "#FFC857", "entrada"))
+        elif str(d["id"]).startswith("ext-"):
+            s.append(_soleira(p, d, Y, .2, SOLEIRA_FORA, "fora"))
+    if ent is None:
+        s.append(_soleira_beira(p, Y, .2))
     s.extend(rotulos)
     if cotas:
         s.append(f'<g stroke="#0B4FA8" stroke-width=".03" fill="#0B4FA8" font-size=".3" class="mono">'
@@ -188,10 +189,58 @@ def _etiqueta_pilula(fundo, texto, sub):
     return f
 
 
-def _entrada_seta(cx, cy):
-    return (f'<g><path d="M{f3(cx)} {f3(cy - .32)} l-.2 .22 h.12 v.3 h.16 v-.3 h.12 z" fill="#FFC857" stroke="#17202B" stroke-width=".015"/>'
-            f'<rect x="{f3(cx - .55)}" y="{f3(cy + .2)}" width="1.1" height=".24" rx=".12" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>'
-            f'<text x="{f3(cx)}" y="{f3(cy + .365)}" text-anchor="middle" font-size=".14" font-weight="800" fill="#17202B" letter-spacing=".015">ENTRADA</text></g>')
+def _entrada_seta(cx, cy, px=None):
+    """Seta ENTRADA em cx; a pílula do texto em px (perto da borda do desenho, ela chega para dentro)."""
+    px = cx if px is None else px
+    return (f'<g data-seta="entrada"><path d="M{f3(cx)} {f3(cy - .32)} l-.2 .22 h.12 v.3 h.16 v-.3 h.12 z" fill="#FFC857" stroke="#17202B" stroke-width=".015"/>'
+            f'<rect x="{f3(px - .55)}" y="{f3(cy + .2)}" width="1.1" height=".24" rx=".12" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>'
+            f'<text x="{f3(px)}" y="{f3(cy + .365)}" text-anchor="middle" font-size=".14" font-weight="800" fill="#17202B" letter-spacing=".015">ENTRADA</text></g>')
+
+
+# Portas para fora (24/11/2026): a página "Como ler uma planta" diz "a porta de entrada é amarela". Por isso só a porta
+# por onde se entra na casa (a da seta ENTRADA, mesmo passando pela varanda) tem soleira e folha amarelas; as outras
+# portas para fora (serviço, escritório, cozinha pela lateral) têm a soleira cinza de cimento. O checar.py conta: uma só.
+SOLEIRA_FORA = "#A8A39A"
+
+
+def porta_de_entrada(p):
+    """A porta por onde se entra na casa: {"id": porta do motor 3D ou None, "lado": lado da porta da rua}.
+    Da rua direto num cômodo fechado: "ext-<cômodo>". Da rua para varanda, garagem ou corredor aberto: a porta desse
+    espaço para dentro da casa (sala primeiro). Passagem sem folha (varanda aberta para a sala): id None, e o desenho
+    marca a beira da varanda onde o caminho chega. Porta da frente primeiro (a última, a mesma do _entrada_x do motor);
+    sem porta na frente, a da lateral que dá na sala."""
+    tipo = {c["id"]: c["tipo"] for c in p["comodos"]}
+    social = ("sala", "estar", "jantar")
+    ext = [q for q in p.get("portas", []) if q[0] == "ext"]
+    frente = [q for q in ext if q[2] == "frente"]
+    q = frente[-1] if frente else min(ext, key=lambda q: tipo[q[1]] not in social)
+    alvo = q[1]
+    if tipo[alvo] not in ABERTOS:
+        return {"id": f"ext-{alvo}", "lado": q[2]}
+    outro = lambda d: d[0] if d[1] == alvo else d[1]
+    cands = [d for d in p.get("portas", []) if d[0] != "ext" and alvo in d[:2] and tipo[outro(d)] not in ABERTOS]
+    if not cands:
+        return {"id": None, "lado": q[2]}
+    d = min(cands, key=lambda d: (len(d) > 2 and d[2] == "aberto", tipo[outro(d)] not in social))
+    return {"id": None if len(d) > 2 and d[2] == "aberto" else f"{d[0]}-{d[1]}", "lado": q[2]}
+
+
+def _soleira(p, d, Y, larg, cor, marca):
+    """Soleira no vão da porta d (da dobradiça à ponta da folha fechada), com data-porta para o checar.py contar."""
+    (hx, hy), (ax, ay), _ = PL.porta_dobradica(p, d)
+    if abs(ay - hy) < 1e-6:
+        x, y, w, h = min(hx, ax), Y(hy) - larg / 2, d["r"], larg
+    else:
+        x, y, w, h = hx - larg / 2, Y(max(hy, ay)), larg, d["r"]
+    return (f'<rect data-porta="{marca}" x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{cor}"'
+            f' stroke="#17202B" stroke-width="{f3(larg * .12)}"/>')
+
+
+def _soleira_beira(p, Y, larg):
+    """Entrada sem folha de porta (varanda aberta para a sala): a soleira amarela na beira da varanda, onde o caminho chega."""
+    ex = p["_entrada_x"]
+    return (f'<rect data-porta="entrada" x="{f3(ex - .45)}" y="{f3(Y(0) - larg / 2)}" width=".9" height="{f3(larg)}"'
+            f' fill="#FFC857" stroke="#17202B" stroke-width="{f3(larg * .12)}"/>')
 
 
 # 1) Humanizada de revista: pisos de verdade, móveis com sombra, jardim, etiqueta em pílula (páginas das casas)
@@ -495,13 +544,27 @@ def svg_humanizada(p, estilo="revista"):
     if ex is not None:
         ex = min(max(ex, .5), W - .5)
         s.append(_piso("calcada", ex - .45, Dm, .9, 1.25, K))
+    # entrada pela lateral (sem porta na frente, ex.: E03): o caminho sobe pelo recuo do lado até a porta de entrada
+    ent = porta_de_entrada(p)
+    lado_ent, y_ent = None, None
+    if ex is None and ent["lado"] in ("esq", "dir") and REC[ent["lado"]] > 0:
+        d = next(d for d in portas if d["id"] == ent["id"])
+        y_ent = max(PL.porta_dobradica(p, d)[0][1], PL.porta_dobradica(p, d)[1][1])
+        a, b = (jx0, 0) if ent["lado"] == "esq" else (W, jx1)
+        cx = (a + b) / 2
+        lado_ent = (cx, max(-pl + .6, min(cx, Wm + pr - .6)))
+        s.append(_piso("calcada", a, Y(y_ent) - .1, b - a, Dm + 1.25 - Y(y_ent) + .1, K))
+    ex_livre = ex if ex is not None else (lado_ent[1] if lado_ent else None)  # onde não pode ter árvore na frente
     # árvores nos recuos (longe do caminho)
     KA = S["arvore"]
     if REC["dir"] >= 1:
-        s.append(_arvore(W + .38, Y(.9), .3, KA) + _arvore(W + .4, Y(D - 1.5), .26, KA))
+        if not (lado_ent and ent["lado"] == "dir" and .9 < y_ent + .4):
+            s.append(_arvore(W + .38, Y(.9), .3, KA))
+        if not (lado_ent and ent["lado"] == "dir" and D - 1.5 < y_ent + .4):
+            s.append(_arvore(W + .4, Y(D - 1.5), .26, KA))
     postas = []
     for x, r in ((W - .9, .42), (.55, .3), (W / 2, .34)):
-        if len(postas) == 2 or (ex is not None and abs(x - ex) < r + .5) or any(abs(x - x2) < r + r2 + .1 for x2, r2 in postas):
+        if len(postas) == 2 or (ex_livre is not None and abs(x - ex_livre) < r + .5) or any(abs(x - x2) < r + r2 + .1 for x2, r2 in postas):
             continue
         postas.append((x, r))
         s.append(_arvore(x, Dm + .64, r, KA))
@@ -546,21 +609,29 @@ def svg_humanizada(p, estilo="revista"):
         s.append(f'<rect x="{f3(x)}" y="{f3(y)}" width="{f3(w)}" height="{f3(h)}" fill="{S["janela_fundo"]}" stroke="{S["parede"] if estilo == "revista" else S["parede_contorno"]}" stroke-width=".012"/>')
         for k, (a, b, c, d) in enumerate(ls):
             s.append(f'<line x1="{f3(a)}" y1="{f3(b)}" x2="{f3(c)}" y2="{f3(d)}" stroke="{S["vidro"] if k == 2 else "#2B2F36"}" stroke-width="{.03 if k == 2 else .008}"/>')
-    # portas: arco do giro e folha aberta, com a dobradiça no canto (PL.porta_dobradica); porta para fora em amarelo
+    # portas: arco do giro e folha aberta, com a dobradiça no canto (PL.porta_dobradica). A porta de entrada (a da seta
+    # ENTRADA, mesmo passando pela varanda) tem soleira e folha amarelas; as outras para fora, a soleira cinza de cimento
     for d, (hx, hy), (ax, ay), (bx, by) in portas_h:
         r = d["r"]
         va, vb_ = (ax - hx, Y(ay) - Y(hy)), (bx - hx, Y(by) - Y(hy))
         sweep = 1 if vb_[0] * va[1] - vb_[1] * va[0] > 0 else 0
-        if str(d["id"]).startswith("ext-"):
-            horiz = abs(ay - hy) < 1e-6
-            if horiz:
-                s.append(f'<rect x="{f3(min(hx, ax))}" y="{f3(Y(hy) - .05)}" width="{f3(r)}" height=".1" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>')
-            else:
-                s.append(f'<rect x="{f3(hx - .05)}" y="{f3(Y(max(hy, ay)))}" width=".1" height="{f3(r)}" fill="#FFC857" stroke="#17202B" stroke-width=".012"/>')
+        e_entrada = d["id"] == ent["id"]
+        if e_entrada:
+            s.append(_soleira(p, d, Y, .13, "#FFC857", "entrada"))
+        elif str(d["id"]).startswith("ext-"):
+            s.append(_soleira(p, d, Y, .1, SOLEIRA_FORA, "fora"))
         s.append(f'<path d="M{f3(bx)} {f3(Y(by))} A{r} {r} 0 0 {sweep} {f3(ax)} {f3(Y(ay))}" fill="none" stroke="{S["arco"]}" stroke-width=".015" stroke-dasharray=".05 .035"/>')
-        s.append(f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="{S["folha_porta"]}" stroke-width=".05" stroke-linecap="round"/>')
+        if e_entrada:  # folha amarela com contorno escuro (lê no piso de madeira e no papel azul)
+            s.append(f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="#17202B" stroke-width=".085" stroke-linecap="round"/>'
+                     f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="#FFC857" stroke-width=".05" stroke-linecap="round"/>')
+        else:
+            s.append(f'<line x1="{f3(hx)}" y1="{f3(Y(hy))}" x2="{f3(bx)}" y2="{f3(Y(by))}" stroke="{S["folha_porta"]}" stroke-width=".05" stroke-linecap="round"/>')
+    if ent["id"] is None:
+        s.append(_soleira_beira(p, Y, .13))
     if ex is not None:
         s.append(_entrada_seta(ex, Dm + .62))
+    elif lado_ent:  # entrada pela lateral: a seta sobe pelo corredor do lado; a pílula chega para dentro do desenho
+        s.append(_entrada_seta(lado_ent[0], Dm + .62, lado_ent[1]))
     # etiquetas dos cômodos, no ponto com menos móvel e porta por baixo
     etiquetas = []
     for c in p["comodos"]:

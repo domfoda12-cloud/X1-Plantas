@@ -27,7 +27,7 @@ Textos de cada casa do e-book, escritos pelo método do Redator (.claude/agents/
 
 Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das plantas validadas.
 
-Funções: `m`, `m1`, `svg_planta`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `svg_no_lote`, `galeria`, `Livro`, `titulo_do`, `lote_frente`.
+Funções: `m`, `m1`, `svg_planta`, `porta_de_entrada`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `svg_no_lote`, `galeria`, `Livro`, `titulo_do`.
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 
@@ -55,7 +55,7 @@ Funções: `pasta_da_planta`, `ler_catalogo`, `ancoras`, `conferir_links`, `barr
 
 Confere se o código do projeto tem erro, de uma vez só.
 
-Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`.
+Funções: `rodar`, `moveis_ruins`, `frente_e_folha`, `recuos_escondidos`, `portas_de_entrada_erradas`.
 
 ### [`ferramentas/conversas.py`](conversas.py)
 

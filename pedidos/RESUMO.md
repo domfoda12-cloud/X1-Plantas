@@ -87,11 +87,11 @@ Tamanho: 2888 palavras.
 
 ### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
 
-Medidas conferidas em 24/11/2026, cômodo por cômodo, pela face de dentro da parede, contra `ebook/plantas/dados/<ID>.json`, `video/src/plantas/<ID>.js` (móveis, portas e janelas do desenho 3D) e `python3 ferramentas/plantas.py validar` (C01, E03 e F01: zero erros). Mudou desde 23/11: a sala e a…
+Medidas conferidas em 24/11/2026, segunda conferência, cômodo por cômodo, pela face de dentro da parede, contra `ebook/plantas/dados/<ID>.json`, `video/src/plantas/<ID>.js` (móveis, portas e janelas do desenho 3D) e `python3 ferramentas/plantas.py validar` (C01, E03 e F01: zero erros). Mudou desde…
 
 Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; cabe num lote de 8 x 15 m); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m); 3. F01 · Casa Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; cabe num lote de 10 x 15 m); 4. Medidas de móveis comuns no Brasil (as usadas nas contas); 5. Para a equipe (não vai ao público).
 
-Tamanho: 4705 palavras.
+Tamanho: 4995 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
