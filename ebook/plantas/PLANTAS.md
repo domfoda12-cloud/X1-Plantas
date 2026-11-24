@@ -18,7 +18,7 @@
 
 **Atenção**
 
-- Serviço: no lugar de janela, uma veneziana de 0,90 x 0,50 m em cima da porta de fora (0,45 m², 13% do piso livre de 3,4 m², contando o vão inteiro; a referência é 1/8 do piso). As aletas tiram parte do ar e quase toda a luz: o engenheiro confere a ventilação e a luz do serviço
+- Serviço: não tem janela. A ventilação vem de uma veneziana de 0,90 x 0,50 m em cima da porta de fora, que só cabe com pé-direito de uns 2,80 m. Ela deixa passar menos ar e quase nenhuma luz: o engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da sua cidade.
 - Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
 - Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 

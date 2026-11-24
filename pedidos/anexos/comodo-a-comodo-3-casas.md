@@ -1,6 +1,6 @@
 # Cômodo a cômodo: o próximo passo depois da planta (C01, E03, F01)
 
-**Revisto pelo Revisor de risco em 24/11/2026: trocas aplicadas** (veredito em [`veto-comodo-a-comodo-2026-11-24.md`](veto-comodo-a-comodo-2026-11-24.md)). **Reconferência do Revisor aplicada (Arquiteto, 24/11):** sem distância da tomada ao box, fonte da contagem em cada "o mínimo é", corredor, marcas só na nota de fonte e números da Portaria conferidos no PDF.
+**Revisto pelo Revisor de risco em 24/11/2026: trocas aplicadas** (veredito em [`veto-comodo-a-comodo-2026-11-24.md`](veto-comodo-a-comodo-2026-11-24.md)). **Reconferência do Revisor aplicada (Arquiteto, 24/11):** sem distância da tomada ao box, fonte da contagem em cada "o mínimo é", corredor, marcas só na nota de fonte e números da Portaria conferidos no PDF. **Veneziana do serviço da C01 (Arquiteto, 24/11):** trocas do veredito [`veto-veneziana-C01-2026-11-24.md`](veto-veneziana-C01-2026-11-24.md) aplicadas (art. 1.301, condição do pé-direito, seções 5 e 6).
 
 **As 5 ideias para abrir a página** (escolhidas pelo Revisor de risco, as mais seguras e úteis):
 1. Testar o encanamento antes de fechar a parede e um registro por cômodo (banheiro da C01).
@@ -54,7 +54,7 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 
 ### Serviço · 1,19 x 2,89 m livres (3,4 m²)
 - **Cabe** (anexo de mobiliar): tanque e máquina lado a lado na divisa, entre os giros das duas portas; **66 cm** na frente do tanque, **54 cm** na frente da máquina.
-- **Ventilação: veneziana em cima da porta de fora** (decisão do dono, 24/11: "manter a porta e pôr veneziana em cima"; aplicada no D1). A parede do fundo tem 1,19 m livres e só comporta a porta de fora (0,90); a janela de 0,70 que caía em cima dela saiu. No lugar, uma **veneziana de 0,90 x 0,50 m no vão da porta, de 2,10 a 2,60 m do piso** (sobram 20 cm de verga até o teto de 2,80 do desenho 3D; com pé-direito menor, a veneziana fica mais baixa, e quem decide é o projeto). **Conta:** 0,45 m² de vão para 3,4 m² de piso livre dá 13%; a referência do projeto é 1/8 (12,5%, 0,43 m²). Só passa contando o vão inteiro: as aletas tiram parte do ar e quase toda a luz, e a luz do dia passa a vir da porta aberta e da cozinha. **O engenheiro confere a ventilação e a luz do serviço** (é o aviso do validador, no "Atenção" da página da casa). Na planta, a veneziana aparece tracejada (fica acima do corte); na imagem 3D, cortada a 1,1 m, não aparece.
+- **Ventilação: veneziana em cima da porta de fora** (decisão do dono, 24/11: "manter a porta e pôr veneziana em cima"; aplicada no D1). A parede do fundo tem 1,19 m livres e só comporta a porta de fora (0,90); a janela de 0,70 que caía em cima dela saiu. No lugar, uma **veneziana de 0,90 x 0,50 m no vão da porta, de 2,10 a 2,60 m do piso** (sobram 20 cm de verga até o teto de 2,80 do desenho 3D). **Conta:** 0,45 m² de vão para 3,4 m² de piso livre dá 13%; a referência do projeto é 1/8 (12,5%, 0,43 m²). **Só vale com pé-direito de uns 2,80 m:** com 2,55 ou 2,50 m, a veneziana cai para uns 0,35 a 0,40 m de altura e dá entre 9% e 11%, abaixo da referência (quem decide o pé-direito é o projeto). E só passa contando o vão inteiro: a veneziana deixa passar menos ar e quase nenhuma luz, e a luz do dia passa a vir da porta aberta e da cozinha. **O engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da cidade** (é o aviso do validador, no "Atenção" da página da casa, com a condição do pé-direito). Na planta, a veneziana aparece tracejada (fica acima do corte); na imagem 3D, cortada a 1,1 m, não aparece.
 - **Ideias:**
   1. **Prateleira em cima da máquina, na divisa**, acima da tampa aberta, para sabão e balde. Não na parede do fundo: em cima da porta fica a veneziana.
   2. **Varal de teto para dia de chuva**, preso na laje ou no forro (o profissional confere a fixação); o varal de sol fica no fundo do lote, a um passo da porta.
@@ -108,7 +108,7 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 ### Frente do lote · 3,0 x 8,0 m (recuo de referência)
 - **O que cabe:** moto, sim (uma moto pequena mede uns 2,0 x 0,75 m). **Carro, não:** não cabe carro de frente para a rua no recuo de referência de 3,0 m; um carro popular pequeno mede uns 3,6 m; o tamanho da vaga é o código de obras que diz. (Fonte das medidas: nota no fim.)
 - **Ideias:**
-  1. **Carro ou quintal: decida antes de marcar a obra.** No lote de 8 x 15, sobram 3,5 m no fundo. Se a casa for 2,0 m para trás, a frente fica com **5,0 m** e o fundo com **1,5 m**, o mínimo do Código Civil para janela (art. 1.301), para as janelas da cozinha e do quarto casal e a veneziana do serviço; o código de obras pode pedir mais. O código de obras da cidade diz o recuo de frente e o tamanho da vaga; o engenheiro marca.
+  1. **Carro ou quintal: decida antes de marcar a obra.** No lote de 8 x 15, sobram 3,5 m no fundo. Se a casa for 2,0 m para trás, a frente fica com **5,0 m** e o fundo com **1,5 m**, o mínimo do Código Civil para janela (art. 1.301), para as janelas da cozinha e do quarto casal e a veneziana do serviço (maior que a abertura de 10 x 20 cm que o §2º deixa de fora; o engenheiro confirma); o código de obras pode pedir mais. O código de obras da cidade diz o recuo de frente e o tamanho da vaga; o engenheiro marca.
   2. **Horta na frente, se a rua ficar ao norte** (a melhor posição para esta casa, pelo validador): aí é a frente que pega sol, e o fundo fica do lado da sombra da casa.
 - **Cuidado:** fazer o muro e o portão antes de saber onde ficam o medidor de luz e o hidrômetro.
 - **Pergunte:** à prefeitura ou ao engenheiro, o recuo de frente da sua cidade (pode ser maior que os 3,0 m de referência); à concessionária, onde vai o padrão de entrada.
@@ -319,7 +319,7 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
 ## 4. O que disso vira o quê (recomendação; quem decide é o dono)
 
 **Página do e-book** (o Redator escreve, o Designer desenha, o Revisor confere):
-1. **"Antes do reboco", uma por casa:** a planta com tomadas, pontos de luz e interruptores marcados no lugar dos móveis (a conta mínima da NBR 5410:2004 pelas fontes do "Como ler" e as ideias acima). É o que o comprador leva ao eletricista, que confere na norma vigente. A da C01 espera o conserto do serviço.
+1. **"Antes do reboco", uma por casa:** a planta com tomadas, pontos de luz e interruptores marcados no lugar dos móveis (a conta mínima da NBR 5410:2004 pelas fontes do "Como ler" e as ideias acima). É o que o comprador leva ao eletricista, que confere na norma vigente. A da C01 já pode sair com o serviço resolvido (veneziana em cima da porta, D1).
 2. **"Carro ou quintal: decida antes de marcar a obra":** as 3 casas, o recuo de referência de 3,0 m contra um carro popular pequeno de uns 3,6 m (o tamanho da vaga é o código de obras que diz), e quanto a casa pode ir para trás em cada lote (2,0, 4,4 e 2,2 m).
 3. **"O que não fazer depois", por casa:** C01, não fechar a varanda; E03, não cobrir o recuo; F01, não construir no fundo. Cada um com o porquê tirado da planta.
 4. **"Cômodo a cômodo", uma por casa:** este documento enxuto, com os 4 itens por cômodo.
@@ -335,14 +335,14 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
 1. **Planta de pontos de cada casa**, saída do mesmo dado da planta (tomada baixa, média e alta, ponto de luz, interruptor simples e paralelo).
 2. **Vista de parede:** a bancada da E03 embaixo da janela, com a faixa da tomada; a parede do box da C01 com o guarda-roupa do outro lado.
 3. **Corte do hall da C01** com o maleiro em cima das portas, nos dois pés-direitos (2,55 e 2,80 m).
-4. **A C01 no lote de 8 x 15 nas duas posições:** a de hoje e a recuada 2 m, com o carro (depois do conserto do serviço: o desenho mostra a casa inteira).
+4. **A C01 no lote de 8 x 15 nas duas posições:** a de hoje e a recuada 2 m, com o carro (o serviço já está resolvido: o desenho mostra a casa inteira, com a veneziana tracejada em cima da porta).
 5. **A sala da C01 com a TV na divisa** (ideia 1 da sala), se o Arquiteto e o dono aprovarem mudar o 3D: só vira desenho se o 3D mostrar o mesmo arranjo.
 
 ---
 
 ## 5. Para a equipe (não vai ao público)
 
-- **C01, serviço, casa do lançamento:** a parede do fundo (1,19 m livres) não comporta a porta de fora (0,90) e a janela (0,70); no desenho a janela cai em cima da porta. O `checar.py` já avisa (`janelas_sobre_portas`), com a nota "até as casas de fora do lançamento serem refeitas", mas a C01 **está** no lançamento. Espera a decisão do dono sobre o conserto; depois, o Arquiteto aplica em `projetos.py`, com o validador e o arrasto de sempre (exportar, 3D, imagem 3D, PDF, calculadora). Não mexi: a tarefa proibia.
+- **C01, serviço, casa do lançamento: consertado (D1, 24/11).** A parede do fundo (1,19 m livres) não comportava a porta de fora (0,90) e a janela (0,70). O dono decidiu "manter a porta e pôr veneziana em cima": a janela saiu e entrou `veneziana_sobre_porta="fundos"` em `projetos.py` (0,90 x 0,50 m, de 2,10 a 2,60 m), com o validador, o arrasto e o veto do Revisor aplicados ([`veto-veneziana-C01-2026-11-24.md`](veto-veneziana-C01-2026-11-24.md): quadro "Atenção" com a condição do pé-direito de uns 2,80 m e o item "Tracejado azul" no "Como ler uma planta"). Fica para o engenheiro da obra: se a veneziana basta no código de obras da cidade e o pé-direito.
 - **Convenção de lado e sol, a conferir:** `ORIENTACAO` em `plantas.py` dá esquerda = oeste com a rua ao norte, mas a página do lote no PDF desenha a rua embaixo e a esquerda à esquerda, onde, com a rua ao norte, fica o leste. Pode ser um espelho no cálculo de sol das janelas laterais. Não conferi a fundo; por isso este documento só fala de sol na frente e no fundo.
 - **Ampliação desenhada:** as 3 casas não têm (passo 8 do método da apostila 2). Este documento diz onde não dá; desenhar onde dá é trabalho novo, que o dono decide.
 - **Frases que não podem ir à página:** "cabe carro", "pode fechar", "pode cobrir", "sem engenheiro"; nem número mínimo de tomadas sem fonte, Portaria do MCMV como regra para a casa do comprador, frequência de erro sem fonte, ou marca e modelo de carro e de moto (lista do veto do Revisor de risco, 24/11/2026). Toda ideia de obra termina com quem decide.
@@ -351,7 +351,7 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
 
 ## 6. O que ainda não pode virar página
 
-- **O serviço da C01:** espera o conserto da janela em cima da porta (decisão do dono). Nenhuma página, imagem 3D, vista ou planta de pontos que mostre esse cômodo sai antes da planta resolvida em `projetos.py` e do arrasto de sempre.
+- **O serviço da C01: liberado, com condição.** O conserto foi feito (veneziana em cima da porta, D1, 24/11) e o veto 3 do Revisor caiu. Toda página, vista ou planta de pontos que mostre esse cômodo leva a condição do pé-direito (o 13% só vale com uns 2,80 m; com 2,50 a 2,55 m dá uns 9 a 11%) e diz que o engenheiro confere a ventilação e a luz no código de obras. Na imagem 3D, cortada a 1,1 m, a veneziana não aparece; vista de parede que mostre a porta do fundo tem de desenhá-la.
 - **A distância da tomada ao box (página e post 4):** a contagem de tomadas fechou em duas fontes secundárias de 2004 ou mais novas, mas a distância ao box só tem o manual de 2003, anterior à norma vigente. A regra do banheiro na norma de 2004 (item 9.1) não foi lida, e a revisão da NBR 5410 em consulta nacional (O Setor Elétrico, agosto de 2025) mexe na tomada perto do box. Veto mantido do Revisor (24/11): nenhum número de distância vai à página nem ao post 4; os dois dizem "do lado mais longe do box; a distância, o eletricista confere".
 - **Divergência da USP, não resolvida:** um material da USP (atrás de login, só visto no resumo da busca, não aberto) fala em uma tomada por bancada de 0,30 m ou mais; as duas fontes abertas, que citam a norma de 2004, falam em duas em cima da bancada da pia. Este documento usa as duas tomadas e diz que o eletricista confere.
 

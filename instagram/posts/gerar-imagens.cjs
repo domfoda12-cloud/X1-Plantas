@@ -35,9 +35,10 @@ const SELO = 'Imagem ilustrativa';
 // Só o texto fica aqui (vetado pelo Revisor em 24/11, pedidos/anexos/veto-posts-2-4-7-2026-11-24.md).
 // "para" é a linha "Para quem" da tabela do post 2.
 const TEXTO = {
-  C01: { destaque: 'sem corredor comprido, um hall curto distribui e a varanda recebe', para: 'Primeira casa' },
-  E03: { destaque: 'um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa', para: 'Lote estreito' },
-  F01: { destaque: 'os 3 quartos nos fundos, longe da rua, e sala com mesa de\u00a04', para: 'Família com filhos' },
+  // "para": texto das fichas, palavra por palavra (Revisor, 24/11, condição c)
+  C01: { destaque: 'sem corredor comprido, um hall curto distribui e a varanda recebe', para: 'Casal com 1 ou 2 filhos' },
+  E03: { destaque: 'um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa', para: 'Lote de 5 m de frente' },
+  F01: { destaque: 'os 3 quartos nos fundos, longe da rua, e sala com mesa de\u00a04', para: 'Família de 4 ou 5' },
 };
 const slug = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const dec = (x) => x.toFixed(1).replace('.', ',');
@@ -47,7 +48,7 @@ function casa(id) {
   if (!TEXTO[id]) throw new Error(`${id} está em casas_lancamento mas não tem texto em TEXTO (gerar-imagens.cjs)`);
   const [lf, lfu] = m.lote_comercial, [mf, mfu] = m.lote;
   return {
-    id, nome: d.nome, pasta: slug(d.nome), ...TEXTO[id],
+    id, nome: d.nome, pasta: slug(d.nome), ...TEXTO[id], W: d.W, D: d.D,
     m2: Math.round(m.area_fechada), // como o n0 do validador: 70,6 vira 71
     area: `${Math.round(m.area_fechada)} m²`,
     quartos: d.quartos_txt.replace(' (+1 depois)', ''),
@@ -87,14 +88,31 @@ function falta(pl, tipo, w, h) {
 }
 
 // Imagem de uma planta num cartão (object-fit: cover). Planta mobiliada e 3D levam o selo "Imagem ilustrativa".
-function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true, fit = 'cover', fundo = '' } = {}) {
+function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true, fit = 'cover', fundo = '', selo: comSelo = COM_MOVEIS.has(tipo) } = {}) {
   const src = arquivo(pl, tipo);
   if (!src) return falta(pl, tipo, w, h);
   // Na 3D o selo fica dentro, no canto; na planta 2D ele senta na borda de cima, fora das cotas e do título.
-  const selo = COM_MOVEIS.has(tipo) ? `<span class="selo${w < 420 ? ' peq' : ''}${tipo === '3d' ? '' : ' borda'}">${SELO}</span>` : '';
+  const selo = comSelo ? `<span class="selo${w < 420 ? ' peq' : ''}${tipo === '3d' ? '' : ' borda'}">${SELO}</span>` : '';
   return `<div class="cardw" style="width:${w}px;height:${h}px"><div class="card${borda ? '' : ' sem-borda'}" style="width:${w}px;height:${h}px;border-radius:${raio}px${fundo ? `;background:${fundo}` : ''}">
     <img src="${src}" style="width:100%;height:100%;object-fit:${fit};object-position:${pos}"></div>${selo}</div>`;
 }
+
+// Planta mobiliada recortada nas paredes e desenhada em pixels por metro: as 3 casas ficam na mesma escala.
+// A caixa das paredes (pl.caixa) é medida na própria imagem antes de desenhar (medir(), no fim do arquivo).
+const MARG = { e: 1.0, d: 0.25, c: 0.55, b: 1.0 }; // metros em volta das paredes: cotas à esquerda e embaixo, veneziana em cima
+const tam = (pl) => ({ w: pl.W + MARG.e + MARG.d, h: pl.D + MARG.c + MARG.b });
+function escala(pl, pxm, { raio = 18 } = {}) {
+  const src = arquivo(pl, 'humanizada'), { w, h } = tam(pl);
+  const W = Math.round(w * pxm), H = Math.round(h * pxm);
+  if (!src || !pl.caixa) return falta(pl, 'humanizada', W, H);
+  const c = pl.caixa, s = (c.x1 - c.x0) / pl.W, k = pxm / s;
+  return `<div class="cardw" style="width:${W}px;height:${H}px"><div class="card" style="width:${W}px;height:${H}px;border-radius:${raio}px;background:#fff;position:relative">
+    <img src="${src}" style="position:absolute;left:${-(c.x0 - MARG.e * s) * k - 3}px;top:${-(c.y0 - MARG.c * s) * k - 3}px;width:${c.iw * k}px;height:${c.ih * k}px;max-width:none"></div>
+    <span class="selo${W < 420 ? ' peq' : ''} borda">${SELO}</span></div>`;
+}
+const caberEm = (lista, larg, alt, gap) => Math.min((larg - gap * (lista.length - 1)) / lista.reduce((t, pl) => t + tam(pl).w, 0), alt / Math.max(...lista.map((pl) => tam(pl).h)));
+// Régua amarela (trena) de 5 m na escala da tela
+const regua = (pxm) => `<div class="regua"><div class="regua-b" style="width:${5 * pxm}px">${[0, 1, 2, 3, 4].map(() => '<i></i>').join('')}</div><span>5 m</span></div>`;
 
 // Blueprint da Casa Compacta com recorte (em pixels da imagem original 2000 x 2500) e marcações.
 // Coordenadas em metros viram pixels: x = 340 + 203,1·m ; y = 325 + 203,1·m
@@ -139,7 +157,7 @@ function telaCTA(total, { titulo = 'Quer essa planta?', texto } = {}) {
       <div class="t1" style="text-align:center">${titulo}</div>
       <div class="botao">Comente <b>PLANTA</b></div>
       <div class="txt" style="text-align:center;max-width:820px">${texto || `e eu te mando a <b>planta humanizada da ${P.compacta.nome}</b> de graça no WhatsApp.`}</div>
-      <div class="mini">${img(P.compacta, 'humanizada', 300, 375, { raio: 16 })}${img(P.compacta, 'blueprint', 300, 375, { raio: 16 })}${img(P.compacta, 'perspectiva', 300, 375, { raio: 16 })}</div>
+      <div class="mini">${img(P.compacta, 'humanizada', 300, 375, { raio: 16 })}${img(P.compacta, 'blueprint', 300, 375, { raio: 16, selo: true })}${img(P.compacta, 'perspectiva', 300, 375, { raio: 16, selo: true })}</div>
     </div>`,
   });
 }
@@ -153,18 +171,26 @@ const posts = {};
 posts['post-02-tres-plantas'] = () => {
   const lista = LANCAMENTO.map(de);
   const T = 6;
+  // Capa: as 3 plantas na mesma escala, em pé na mesma linha, com a régua de 5 m (a Casa Fita aparece comprida como é).
+  const pxm1 = caberEm(lista, 936, 640, 34);
   const capa = tela({
     etiqueta: 'compare antes de escolher', n: 1, total: T, capa: true, aviso: true,
     corpo: `<div class="t1">${lista.length} casas, ${lista.length} terrenos.<br>Qual ${y('cabe no seu')}?</div>
-      <div class="centro" style="flex-direction:column;gap:44px"><div class="trio">${lista.map((pl) => `<div class="trio-i">${img(pl, 'humanizada', 300, 375, { raio: 16 })}<div class="trio-l"><b>${pl.lote.replace(' m', '')}</b><br>${pl.area}</div></div>`).join('')}</div>
-      <div class="txt" style="align-self:flex-start">Área, quartos e o terreno mínimo de cada uma.</div></div>`,
+      <div class="centro" style="flex-direction:column;gap:26px;justify-content:flex-end"><div class="trio">${lista.map((pl) => `<div class="trio-i">${escala(pl, pxm1, { raio: 14 })}<div class="trio-l"><b>${pl.lote.replace(' m', '')}</b><br>${pl.area}</div></div>`).join('')}</div>
+      <div class="escala-l">${regua(pxm1)}<span class="txt peq">as 3 na mesma escala</span></div></div>`,
   });
-  const telas = lista.map((pl, i) => tela({
-    etiqueta: `planta ${i + 1} de ${lista.length} · ${pl.id}`, n: i + 2, total: T, aviso: true,
-    corpo: `<div class="t2">${pl.nome}</div>${chips(pl)}
-      <div class="centro">${img(pl, 'humanizada', 600, 750, { fundo: '#fff' })}</div>
-      <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>`,
-  }));
+  // Casa comprida (fundo maior que 1,5 x a frente): planta em pé à direita, texto à esquerda.
+  const telas = lista.map((pl, i) => {
+    const base = { etiqueta: `planta ${i + 1} de ${lista.length} · ${pl.id}`, n: i + 2, total: T, aviso: true };
+    if (pl.D > 1.5 * pl.W) {
+      const pxm = caberEm([pl], 380, 1030, 0);
+      return tela({ ...base, corpo: `<div class="lado"><div class="lado-t"><div class="t2">${pl.nome}</div><div class="chips col">${[pl.area, pl.quartos, pl.banhos, `cabe num lote de ${pl.lote}`, `no mínimo ${pl.minimo}`].map((c) => `<span class="chip">${c}</span>`).join('')}</div>
+        <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>${regua(pxm)}</div><div class="lado-p">${escala(pl, pxm)}</div></div>` });
+    }
+    return tela({ ...base, corpo: `<div class="t2">${pl.nome}</div>${chips(pl)}
+      <div class="centro">${escala(pl, caberEm([pl], 936, 780, 0))}</div>
+      <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>` });
+  });
   const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Lote', 'lote'], ['No mínimo', 'minimo'], ['Para quem', 'para']];
   const curto = (pl) => pl.nome.replace(/^Casa /, '').replace(' ', '<br>');
   const tabela = tela({
@@ -241,7 +267,7 @@ posts['post-05-checklist-pedreiro'] = () => {
 // Post 7: Casa Família Compacta, imagem única. A 3D parada (1400 x 1207) entra inteira no alto, 1080 x 930; a ficha fica embaixo.
 posts['post-07-casa-familia'] = () => [
   `<div class="tela" style="height:1350px;padding:0">${img(P.familia, '3d', 1080, 930, { raio: 0, borda: false })}
-    <div class="ficha7"><div class="t2" style="margin:0">${P.familia.nome}</div>${chips(P.familia)}<div class="aviso" style="position:static">${AVISO}</div>
+    <div class="ficha7"><div class="t2" style="margin:0">${P.familia.nome}</div>${chips(P.familia)}<div class="aviso" style="position:static;margin-top:auto">${AVISO}</div>
     <div class="marca" style="margin-top:6px"><span class="logo"></span>${MARCA}</div></div></div>`,
 ];
 
@@ -312,7 +338,7 @@ const CAPAS = {
     return `<div class="tela capa-reel capa4" style="height:1920px">
       <div class="capa4-t t1">É possível ${y(`${pl.quartos} num lote de ${frente} metros`)} de frente?</div>
       <div class="capa4-img">${img(pl, '3d', 760, 858, { raio: 22 })}</div>
-      <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de <span class="nw">${pl.lote}</span> <span class="nw">(no mínimo ${pl.minimo})</span></div>
+      <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de <span class="nw">${pl.lote}</span>, com recuos de referência <span class="nw">(no mínimo ${pl.minimo})</span></div>
       <div class="aviso" style="position:static">${AVISO}</div></div></div>`;
   },
   'post-06-reel-bastidor': () => capa(`POV: a planta virando ${y('casa 3D')}`, `<div class="split">${img(P.compacta, 'blueprint', 1080, 960, { raio: 0, borda: false })}${img(P.compacta, 'perspectiva', 1080, 960, { raio: 0, borda: false })}</div>`),
@@ -323,7 +349,7 @@ for (const [nome, fazer] of Object.entries(CAPAS)) posts[`capas-reels/${nome}`] 
 // ---------------------------------------------------------------------------
 // Estilo
 // ---------------------------------------------------------------------------
-const CSS = `
+const CSS = `@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}}
 .tela{position:relative;width:1080px;overflow:hidden;padding:64px 72px 0;display:flex;flex-direction:column;
@@ -335,8 +361,8 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .etq{font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:${COR.claro}}
 .num{font-size:24px;font-weight:600;color:${COR.claro};border:2px solid rgba(191,212,242,.6);border-radius:30px;padding:4px 16px}
 .corpo{flex:1;display:flex;flex-direction:column;gap:30px;padding-top:34px;padding-bottom:170px;min-height:0}
-.t1{font-size:84px;font-weight:800;line-height:1.06;letter-spacing:-1.5px}
-.t2{font-size:62px;font-weight:800;line-height:1.08;letter-spacing:-1px}
+.t1{font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:86px;font-weight:800;line-height:1.04;letter-spacing:-1.5px}
+.t2{font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:64px;font-weight:800;line-height:1.06;letter-spacing:-1px}
 .txt{font-size:36px;line-height:1.35;font-weight:500;color:#EAF1FB}
 .txt.peq{font-size:28px;color:${COR.claro}}
 .y{color:${COR.amarelo}}
@@ -357,7 +383,17 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .falta-t{font-size:44px;font-weight:800;color:${COR.amarelo};letter-spacing:2px}
 .falta-n{font-size:32px;font-weight:700;margin-top:12px}
 .falta-a{font-size:20px;color:${COR.claro};margin-top:14px;line-height:1.4;word-break:break-all}
-.trio{display:flex;gap:30px;justify-content:center;margin-top:20px}
+.trio{display:flex;gap:34px;justify-content:center;align-items:flex-end}
+.trio-i{justify-content:flex-end}
+.escala-l{align-self:stretch;display:flex;align-items:center;gap:22px}
+.regua{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:800;color:${COR.amarelo}}
+.regua-b{display:flex;height:18px;border:3px solid ${COR.amarelo};border-radius:3px}
+.regua-b i{flex:1;border-right:2px solid ${COR.amarelo}}.regua-b i:nth-child(odd){background:${COR.amarelo}}.regua-b i:last-child{border-right:none}
+.lado{flex:1;display:flex;gap:44px;min-height:0}
+.lado-t{flex:1;display:flex;flex-direction:column;gap:30px}
+.lado-t .regua{margin-top:auto}
+.lado-p{display:flex;align-items:flex-start;padding-top:20px}
+.chips.col{flex-direction:column;align-items:flex-start}
 .trio-i{display:flex;flex-direction:column;align-items:center;gap:16px}
 .trio-i .falta-t{font-size:26px}.trio-i .falta-n{font-size:22px}.trio-i .falta-a{font-size:14px}
 .mini .falta-t{font-size:26px}.mini .falta-n{font-size:22px}.mini .falta-a{font-size:14px}
@@ -400,7 +436,8 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .selo.peq{font-size:14px;padding:3px 10px;border-width:1.5px}
 .selo.peq.borda{top:-12px;right:14px}
 .ficha7{position:absolute;left:0;right:0;top:930px;bottom:0;padding:34px 72px 40px;display:flex;flex-direction:column;gap:18px}
-.ficha7 .chip{font-size:26px;padding:6px 18px}
+.ficha7 .chip{font-size:29px;padding:7px 20px}
+.ficha7 .t2{font-size:70px}
 .capa4-t{position:absolute;left:72px;right:72px;top:262px}
 .capa4-img{position:absolute;left:0;right:0;top:560px;display:flex;justify-content:center}
 .capa4-f{position:absolute;left:72px;right:72px;top:1442px;display:flex;flex-direction:column;gap:14px}
@@ -410,10 +447,31 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 // ---------------------------------------------------------------------------
 // Render
 // ---------------------------------------------------------------------------
+// Caixa das paredes da planta mobiliada, medida nos pixels escuros (linha ou coluna com mais de 1/50 da imagem).
+// Confere a escala: largura e fundo da casa (W e D do dado) têm de dar os mesmos pixels por metro.
+async function medir(page) {
+  for (const pl of Object.values(CASAS)) {
+    const f = path.join(PLANTAS, pl.pasta, ARQ.humanizada);
+    if (!fs.existsSync(f)) continue;
+    pl.caixa = await page.evaluate(async (url) => {
+      const im = new Image(); im.src = url; await im.decode();
+      const W = im.naturalWidth, H = im.naturalHeight, cv = document.createElement('canvas');
+      cv.width = W; cv.height = H; const g = cv.getContext('2d'); g.drawImage(im, 0, 0);
+      const d = g.getImageData(0, 0, W, H).data, lin = new Uint32Array(H), col = new Uint32Array(W);
+      for (let yy = 0; yy < H; yy++) for (let x = 0; x < W; x++) { const i = (yy * W + x) * 4; if (d[i] < 70 && d[i + 1] < 70 && d[i + 2] < 70) { lin[yy]++; col[x]++; } }
+      const lim = W / 50, pri = (a) => a.findIndex((v) => v > lim), ult = (a) => a.length - 1 - Array.from(a).reverse().findIndex((v) => v > lim);
+      return { iw: W, ih: H, x0: pri(col), x1: ult(col), y0: pri(lin), y1: ult(lin) };
+    }, 'data:image/png;base64,' + fs.readFileSync(f).toString('base64'));
+    const c = pl.caixa, sx = (c.x1 - c.x0) / pl.W, sy = (c.y1 - c.y0) / pl.D;
+    if (Math.abs(sx / sy - 1) > 0.03) throw new Error(`${pl.id}: a caixa das paredes não bate com ${pl.W} x ${pl.D} m (${sx.toFixed(0)} e ${sy.toFixed(0)} px/m)`);
+  }
+}
+
 (async () => {
   const filtro = process.argv.slice(2).filter((a, i, l) => a !== '--saida' && l[i - 1] !== '--saida')[0] || '';
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
+  await medir(page);
   const tmp = path.join(SAIDA, '.tmp.html');
   fs.mkdirSync(SAIDA, { recursive: true });
   for (const [nome, fazer] of Object.entries(posts)) {

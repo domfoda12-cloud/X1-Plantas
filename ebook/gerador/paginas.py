@@ -81,6 +81,7 @@ LEGENDA_LEITURA = [
     ("Cotas", "As medidas da casa por fora das paredes, em metros. Aqui, 6,50 m de frente e 8,50 m de fundo."),
     ("Porta", "O arco mostra para que lado a folha abre. Confira se ela não bate em móvel."),
     ("Janela", "O trecho da parede com linhas finas. A largura dela aparece na cota."),
+    ("Tracejado azul", "Veneziana em cima da porta (fica acima da altura do corte)."),
     ("Parede", "A faixa escura. Nas contas do e-book, a externa tem 15 cm e a interna 12 cm."),
     ("Nome e área do cômodo", "A área livre, por dentro das paredes, em m². Compare com o seu cômodo de hoje."),
     ("Móveis", "Desenhados em escala, para mostrar que a cama, o sofá e a mesa cabem."),

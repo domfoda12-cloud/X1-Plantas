@@ -434,7 +434,8 @@ def validar(planta):
         ven = c.get("veneziana_sobre_porta")
         if ven:
             # declarada, nunca automática: tem de ter porta de fora embaixo, não divide a parede com janela e, contando o vão
-            # inteiro, chega a 1/8 do piso livre; mesmo assim vira aviso (as aletas tiram parte do ar e quase toda a luz)
+            # inteiro, chega a 1/8 do piso livre; mesmo assim vira aviso (passa menos ar e quase nenhuma luz, e só com o
+            # pé-direito de 2,80 m do desenho: com 2,50 ou 2,55 m ela fica mais baixa e dá uns 9 a 11%; veto do Revisor, 24/11)
             vl, vh = VENEZIANA_PORTA["largura"], VENEZIANA_PORTA["topo"] - VENEZIANA_PORTA["base"]
             a_ven, livre = vl * vh, util(planta, c)[2]
             if RAZAO_JANELA[t] != 1 / 8:
@@ -447,9 +448,10 @@ def validar(planta):
                 r.erro(f"{c['nome']}: janela e veneziana somam {(a_jan + a_ven) / livre * 100:.0f}% do piso livre (mínimo de referência 12,5%)")
             m2 = lambda v: f"{v:.2f}".replace(".", ",")
             de = {"servico": "do serviço", "cozinha": "da cozinha", "banho": "do banheiro", "lavabo": "do lavabo"}.get(t, "do cômodo")
-            r.aviso(f"{c['nome']}: {'no lugar de janela, uma' if not lista else 'além da janela, uma'} veneziana de {m2(vl)} x {m2(vh)} m em cima da porta de fora ({m2(a_ven)} m², "
-                    f"{n0((a_jan + a_ven) / livre * 100)}% do piso livre de {_f(livre)} m², contando o vão inteiro; a referência é 1/8 do piso). "
-                    f"As aletas tiram parte do ar e quase toda a luz: o engenheiro confere a ventilação e a luz {de}")
+            pd = VENEZIANA_PORTA["topo"] + 0.2  # 20 cm de verga até o teto (ver VENEZIANA_PORTA)
+            r.aviso(f"{c['nome']}: {'não tem janela. A ventilação vem de' if not lista else 'além da janela, a ventilação conta com'} uma veneziana de "
+                    f"{m2(vl)} x {m2(vh)} m em cima da porta de fora, que só cabe com pé-direito de uns {m2(pd)} m. Ela deixa passar menos ar e "
+                    f"quase nenhuma luz: o engenheiro confere se a ventilação e a luz {de} bastam no código de obras da sua cidade.")
             a_jan += a_ven
         razao = a_jan / area(c) if area(c) else 0
         soma_luz[c["id"]] = razao

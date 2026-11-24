@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 56 documentos
+## Os 58 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -43,11 +43,11 @@ Tamanho: 1254 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
-Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Terceira rodada: 24/11/2026, 11h55 UTC, conferida contra o repositório nesta hora (`git…
+Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador`. Quarta rodada: 24/11/2026, 16h05 UTC, conferida contra o repositório nesta hora (`git log` até `ca5b47b`, `git…
 
-Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
+Seções: O objetivo da equipe; Onde estamos (24/11, 16h05, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois: o júri decide e mostra depois (dono, cartão v6); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 12082 palavras.
+Tamanho: 11900 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -103,7 +103,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público); 6. O que ainda não pode virar página.
 
-Tamanho: 9543 palavras.
+Tamanho: 9711 palavras.
 
 ### [Conferência técnica do Arquiteto: página "A parede que não pode ter janela" (passo D19), 24/11/2026](anexos/conferencia-arquiteto-parede-sem-janela-2026-11-24.md)
 
@@ -411,6 +411,12 @@ Seções: Trocas que não dependiam do dono; Depende do dono; Não conferido pel
 
 Tamanho: 350 palavras.
 
+### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
+
+SIM SE. Arquivo lido: `instagram-identidade-lote-carente-2026-11-24.md`.
+
+Tamanho: 269 palavras.
+
 ### [Parecer do Revisor de risco: vender o e-book sem os 2 bônus (decisão 33, passo A5), 24/11/2026](anexos/veto-opcao-sem-bonus-2026-11-24.md)
 
 [Revisor] SIM SE. A escolha é do dono; o parecer só diz se a opção é honesta. Vender sem bônus é honesto e dentro da lei se o comprador nunca ler "bônus" antes de o bônus existir. CDC, art. 30: a oferta vincula; o que não foi oferecido não obriga. Promessa sem data descumpre o Decreto 7.962/2013,…
@@ -454,3 +460,9 @@ Tamanho: 842 palavras.
 Seções: A. Pode corrigir já (não depende do dono); B. Espera o dono.
 
 Tamanho: 687 palavras.
+
+### [Revisor de risco: veneziana da Casa Compacta (passo D1), 24/11/2026 · Opus, rascunho](anexos/veto-veneziana-C01-2026-11-24.md)
+
+SIM SE. Conferido nos dados: `veneziana_sobre_porta: fundos`; 0,90 x 0,50 = 0,45 m²; 0,45 / 3,4 = 13%. A página não estoura; os avisos aparecem nas páginas 8 e 9 e na planta grátis. O veto 3 do cômodo a cômodo (serviço da C01) fica levantado, com as condições abaixo.
+
+Tamanho: 340 palavras.
