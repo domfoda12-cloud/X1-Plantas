@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 6 documentos
+## Os 7 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -25,11 +25,17 @@ Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.p
 
 Tamanho: 1748 palavras.
 
+### [Pesquisa: Público, preço, demanda e números de mercado](mercado.md)
+
+Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
+
+Tamanho: 351 palavras.
+
 ### [Pesquisa: Normas, leis e código de obras](normas.md)
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 2143 palavras.
+Tamanho: 2588 palavras.
 
 ### [Pesquisa: O que não cabe nos outros](outros.md)
 

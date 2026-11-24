@@ -35,7 +35,8 @@ def ler():
                 MAL.append(f"{m.group(1)}: a linha tem {len(c)} colunas e precisa de 6 (um | dentro do texto desloca as colunas: escreva 'ou' no lugar)")
                 continue
             passos[m.group(1)] = dict(id=m.group(1), linha=i, texto=c[1], quem=c[2], onde=c[3], pronto=c[4], dep=c[-1],
-                                      feito=c[1].startswith("**Feito"), secao="agora" if secao.startswith("## Agora") else "depois")
+                                      feito=c[1].startswith("**Feito"),
+                                      secao="agora" if secao.startswith("## Agora") else ("fila" if "fila da equipe" in secao.lower() else "depois"))
         m = RE_DEC.match(l)
         if m and secao.startswith("## Esperando o dono"):
             decisoes[int(m.group(1))] = dict(n=int(m.group(1)), linha=i, texto=l[len(m.group(0)):], respondida="**Respondido" in l)
@@ -86,9 +87,15 @@ def cmd_agora():
     livres = [p for p in abertos if falta(p, passos, decisoes) == ([], [])]
     print(f"Plano: {sum(p['feito'] for p in passos.values())} de {len(passos)} passos feitos; "
           f"{sum(not d['respondida'] for d in decisoes.values())} decisões do dono sem resposta.\n")
-    print("PODE COMEÇAR JÁ:" if livres else "PODE COMEÇAR JÁ: nada. Tudo o que falta espera o dono ou um passo anterior.")
-    for p in livres:
+    agora = [p for p in livres if p["secao"] == "agora"]
+    print("AGORA (abertos, podem começar já):" if agora else "AGORA: VAZIO. A regra do dono é nunca ficar vazio: suba um passo livre da fila ou chame o planejador.")
+    for p in agora:
         print(f"  {p['id']}  {curto(p['texto'])}\n       quem: {curto(p['quem'], 60)} · pronto quando: {curto(p['pronto'], 90)}")
+    fila = [p for p in livres if p["secao"] != "agora"]
+    if fila:
+        print("\nLIVRES PARA SUBIR (fila da equipe e Depois, na ordem do plano):")
+        for p in fila:
+            print(f"  {p['id']}  {curto(p['texto'], 95)}  [{curto(p['quem'], 40)}]")
     so_dono = [p for p in abertos if p not in livres and not falta(p, passos, decisoes)[0]]
     if so_dono:
         print("\nSÓ FALTA O DONO RESPONDER (o passo anterior já está feito):")
@@ -185,6 +192,12 @@ def cmd_conferir():
     abertos_agora = [p["id"] for p in passos.values() if p["secao"] == "agora" and not p["feito"]]
     if len(abertos_agora) > 3:
         erros.append(f"'Agora' tem {len(abertos_agora)} passos abertos; o máximo é 3")
+    # regra do dono (24/11/2026): "Sempre coloque algo no Agora, nunca pare"
+    if not abertos_agora:
+        erros.append("'Agora' está vazio: suba um passo livre da fila da equipe ou de 'Depois' (regra do dono, 24/11: nunca vazio)")
+    livres_fora = [p["id"] for p in passos.values() if p["secao"] != "agora" and not p["feito"] and falta(p, passos, decisoes) == ([], [])]
+    if len(livres_fora) < 6:
+        erros.append(f"só há {len(livres_fora)} passos livres fora de 'Agora' (mínimo 6): chame o planejador para encher a fila da equipe")
     # ciclo de dependência
     def ciclo(i, pilha):
         if i in pilha:

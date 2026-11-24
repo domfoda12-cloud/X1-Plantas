@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 44 documentos
+## Os 45 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -45,9 +45,9 @@ Tamanho: 1209 palavras.
 
 Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador` (antes era o Maestro). Terceira rodada: 24/11/2026, 11h55 UTC, conferida contra o repositório nesta hora (`git…
 
-Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
+Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 5533 palavras.
+Tamanho: 9618 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -103,7 +103,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público).
 
-Tamanho: 7413 palavras.
+Tamanho: 8504 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
@@ -262,6 +262,14 @@ Redator, 23/11/2026, noite. Pedido do dono: quadrinhos cômicos no e-book ("Como
 Seções: A fórmula e o nosso jeito de dizer; Roteiro 1 · O formigueiro e meio (medir o lote); Roteiro 2 · A planta lavada (a casa que não cabe); Roteiro 3 · Você está aqui (ensina a ler a planta); Versão em vídeo (24 segundos, toda em IA): A planta lavada; Para o Revisor de risco.
 
 Tamanho: 2209 palavras.
+
+### [Referências para a visita 3D por dentro das casas (mais móveis, quadros, detalhe e personalização)](anexos/referencias-visita-3d-2026-11-24.md)
+
+Pedido do dono (24/11/2026), palavra por palavra: "Adicione mais móveis, quadros, o mais detalhado possível, referências legais também. Se puder deixar personalizável pro usuário também é legal." Autor: Pesquisador (passo 1 da pesquisa em dois passos). Só leitura e só grátis: nada foi baixado nem…
+
+Seções: 1. Passeios 3D de casa pequena e configuradores de planta, na web; 2. Estilo "maquete" e low-poly de interiores: o que dá vida; 3. Como a casa brasileira de classe C é mobiliada de verdade (50 a 70 m²); 4. Personalização que ajuda a decidir; 5. As 10 ideias que mais valem a pena, da mais barata de fazer à mais cara; 6. O que eu não consegui confirmar ou não fiz; Reconferência dos pedidos do dono (24/11/2026).
+
+Tamanho: 4490 palavras.
 
 ### [Skills candidatas, 24/11/2026: júri, casas, cooperação e venda (passo 1 da pesquisa)](anexos/skills-candidatas-2026-11-24.md)
 
