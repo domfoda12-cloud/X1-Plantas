@@ -27,7 +27,7 @@
 
 Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
 
-Tamanho: 654 palavras.
+Tamanho: 692 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
@@ -49,7 +49,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
 
-Tamanho: 538 palavras.
+Tamanho: 537 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

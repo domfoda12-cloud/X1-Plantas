@@ -4,11 +4,11 @@
 
 ## Agora
 
+- **Regra nova do dono** (24/11): **"Agora" do `pedidos/PLANO.md` nunca fica vazio, e agente fora do projeto trabalha nele mesmo, no sistema ou em outro agente.** Pediu também a visita 3D com mais móveis, quadros e personalização (ficha `2026-11-24-1144`).
 - **Pedido grande do dono** (24/11, ficha `2026-11-24-1119`): casas cômodo a cômodo (Arquiteto), visita 3D (feita), Canteiro reformado como lugar de trabalho (abas Hoje, Decisões, Problemas, Plano, Quadro; ele responde por botão), auditoria das regras (feita: 13 de 32 sem mecanismo), skills novas (pesquisa feita). **Respostas dele no quadro:** vende com CPF; a tarefa de hora em hora continua; e-book com uma parte por casa e uma parte geral; quer @ e bio com humor pelo absurdo. **Ele avisou: não baixar a qualidade em troca de tokens;** os limites de tamanho esperam a decisão dele.
 - **Preço e título, respostas do dono no quadro** (24/11): **R$ 47 na primeira semana e o PDF não fala de preço** (só no WhatsApp; o `checar.py` confere). **Título:** ele quer 3 opções novas no lugar de "Antes do primeiro tijolo"; o Redator escreve, o título atual fica até ele escolher. Nenhuma peça põe preço no PDF.
 - **Dois papéis novos, pedido do dono** (24/11): `planejador` (passo a passo: agora, depois, esperando o dono; dono do `pedidos/PLANO.md`) e `organizador` (separa um monte em grupos de 3 a 7; só propõe). **Para todos:** trabalho com mais de 3 passos pede o plano ao `planejador` antes; monte misturado vai ao `organizador`. Nenhum dos dois executa nem decide pelo dono.
 - **O computador do dono é um PC com Windows** (23/11), não Mac: a MinoAI roda nele pelo WSL; as menções a Mac foram corrigidas (A10) e o `checar.py` barra a volta. Noite: só aprendizado autônomo (ficha `0144`). **Desde 23/11, toda ficha fecha com `**O que aprendi:** papel: lição` (ou `nada novo`)**: o `fechar` grava no seu `contexto/<papel>.md` e em `pedidos/LICOES.md`; lição de veto e de prova sai por `pedido.py licao` (`pedidos/LEIA-ME.md`, "A ficha").
-- **Prévia do e-book não grava mais o PDF oficial** (24/11): `livro.py --previa <pasta>` e `--conferir` geram numa pasta temporária e não tocam em `ebook/saida/` nem na calculadora; o PDF oficial e a calculadora só saem com `python3 ebook/gerador/livro.py` puro.
 
 ## 23/11 · Lançamento com 3 casas; título, preço e entrega decididos
 
