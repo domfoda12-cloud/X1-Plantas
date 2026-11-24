@@ -299,7 +299,7 @@ Passos D16 e D18 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho par
 
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
-Tamanho: 2125 palavras.
+Tamanho: 2156 palavras.
 
 ### [Página "cômodo a cômodo": Casa Família Compacta (F01), texto](anexos/pagina-comodo-a-comodo-F01-texto.md)
 
@@ -307,7 +307,7 @@ Passo D16 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Des
 
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
-Tamanho: 1969 palavras.
+Tamanho: 2017 palavras.
 
 ### [Página "A parede sem janela" (parte geral do e-book): texto (passo D19)](anexos/pagina-parede-sem-janela-texto.md)
 
@@ -475,9 +475,9 @@ Tamanho: 757 palavras.
 
 Não conferido: as páginas montadas (ainda não existem); os números que vêm do anexo de mobiliar e não foram refeitos (3,20 m, 1,21 m, 40 a 70 cm, 34 cm, o limite de 1,50 m do rack).
 
-Seções: Casa Família Compacta (F01): SIM SE; Casa Compacta (C01): SIM SE; Conferência técnica do Arquiteto (24/11); Decisão do Maestro (24/11), para mostrar ao dono depois.
+Seções: Casa Família Compacta (F01): SIM SE; Casa Compacta (C01): SIM SE; Conferência técnica do Arquiteto (24/11); Decisão do Maestro (24/11), para mostrar ao dono depois; Páginas montadas (D32), 24/11/2026.
 
-Tamanho: 872 palavras.
+Tamanho: 1250 palavras.
 
 ### [Veto: página "A parede que não pode ter janela" (passo D19), 24/11/2026 · Revisor de risco, Opus (rascunho)](anexos/veto-parede-sem-janela-2026-11-24.md)
 

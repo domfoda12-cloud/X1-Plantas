@@ -64,7 +64,7 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 ### 5 · Corredor · 6,49 x 0,98 m
 
 - **Ideia (16 palavras):** Luz do corredor com interruptores paralelos: acende na sala, apaga perto do banheiro. O eletricista confere.
-- **Cuidado (18 palavras):** Estante rasa derruba a passagem de 98 cm para 68 a 73 cm. Aqui, corredor não vira depósito.
+- **Cuidado (20 palavras):** Estante de 30 cm de fundo derruba a passagem de 98 cm para 68 cm. Aqui, corredor não vira depósito.
 - **Aponta:** ideia nas duas pontas: junto da sala e perto da porta do banheiro; cuidado ao longo da parede dos quartos.
 
 ### 6 · Quarto casal · 2,62 x 3,29 m
@@ -79,7 +79,7 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 - **Cuidado (18 palavras):** Guarda-roupa na parede do banheiro: impermeabilização do lado do banheiro e vão atrás do móvel. O pedreiro confere.
 - **Aponta:** ideia na parede da esquerda (a do quarto do meio), no canto da escrivaninha, embaixo da janela; cuidado na parede do corredor, no trecho que é o fundo do banheiro.
 
-### 8 · Fundo do lote · 3,7 x 10,0 m no lote de 10 x 15 (1,5 m no lote mínimo)
+### 8 · Fundo do lote · 10,0 x 3,7 m no lote de 10 x 15 (1,5 m no lote mínimo, de 10 x 12,8)
 
 - **Ideia (23 palavras):** Com a rua ao sul, a melhor para esta casa, o fundo fica ao norte: o lado do sol, para varal e horta.
 - **Cuidado (15 palavras):** Cômodo no fundo tapa a janela dos 3 quartos. Ampliar pede projeto novo do arquiteto.
@@ -89,9 +89,9 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 
 Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que confere na norma vigente.
 
-### Pergunte ao seu engenheiro ou eletricista (3 perguntas, 58 palavras)
+### Pergunte ao seu engenheiro ou eletricista (3 perguntas, 75 palavras)
 
-1. **Ao engenheiro:** onde passa a viga do vão de 4,60 m da sala? A janela de 2,40 m leva verga e contraverga? *(aponta 1)*
+1. **Ao engenheiro:** a sala é aberta para a cozinha e o corredor, sem parede entre eles: onde passam as vigas, e o ponto de luz da mesa fica livre delas? A janela de 2,40 m leva verga e contraverga? *(aponta 1)*
 2. **Ao engenheiro:** os canos da pia, do banheiro e do serviço descem num trecho só, na parede comum dos três? *(aponta 2, 3 e 4)*
 3. **Ao eletricista:** a máquina tem circuito próprio? O circuito do serviço e do banheiro tem DR? *(aponta 3 e 4)*
 
@@ -100,7 +100,7 @@ Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que
 **Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.**
 Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só onde o projeto previu. Quem diz é o engenheiro.
 
-**Total da página:** 481 palavras (soma dos blocos acima, sem os rótulos "Ideia", "Cuidado" e "Aponta"). Passa do limite, por ser a frase exata do Arquiteto: a ideia do 1 (32).
+**Total da página:** 500 palavras (soma dos blocos acima, sem os rótulos "Ideia", "Cuidado" e "Aponta"; 481 antes das trocas do D32 nas páginas montadas: pergunta 1, cuidado do 5 e título do 8). Passa do limite, por serem as frases exatas do Arquiteto e do Revisor: a ideia do 1 (32) e a pergunta 1.
 
 ---
 

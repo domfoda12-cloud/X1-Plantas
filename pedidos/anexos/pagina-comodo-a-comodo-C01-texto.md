@@ -40,7 +40,7 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 ### 1 · Varanda · 3,35 x 1,20 m (uns 3,20 m entre a divisa e o quarto)
 
 - **Ideia (28 palavras):** Ganchos de rede entre a divisa e o quarto (uns 3,20 m); na divisa, só em parede ou pilar que o engenheiro aprove. Rede armada fecha a entrada.
-- **Cuidado (20 palavras):** Não feche a varanda: a única janela da sala dá para ela; fechada, a sala fica sem janela para fora.
+- **Cuidado (34 palavras):** Não feche a varanda: a única janela da sala dá para ela; fechada, a sala fica sem janela para fora. A lateral da divisa já é fechada (Código Civil, art. 1.301; o engenheiro confirma).
 - **Aponta:** ideia entre a divisa (esquerda; o desenho não mostra parede ali) e a parede do quarto da frente (direita); cuidado na janela da sala, na parede entre a sala e a varanda.
 
 ### 2 · Quarto da frente · 2,85 x 3,09 m
@@ -75,7 +75,7 @@ Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um l
 
 ### 7 · Cozinha · 1,83 x 2,95 m
 
-- **Ideia (25 palavras):** Bancada de apoio em L sob a janela do fundo: 1,21 m, uns 40 cm de fundo, para micro-ondas e liquidificador. Eletricista confere a tomada.
+- **Ideia (20 palavras):** Bancada de apoio em L sob a janela do fundo: 1,21 m, para micro-ondas e liquidificador. Eletricista confere a tomada.
 - **Cuidado (20 palavras):** A parede da pia é a da cabeceira do casal: caixas de tomada não ficam costas com costas. Eletricista confere.
 - **Aponta:** ideia na parede do fundo, embaixo da janela; cuidado na parede da direita (a do quarto casal), atrás da pia e da bancada.
 
@@ -104,7 +104,7 @@ Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que
 **Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.**
 Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só onde o projeto previu. Quem diz é o engenheiro.
 
-**Total da página:** 577 palavras (soma dos blocos acima com a nota da veneziana, sem os rótulos "Ideia", "Cuidado" e "Aponta"); sem a nota da veneziana, 519. Passam do limite, por serem a frase exata do Revisor ou do Arquiteto: ideia do 1 (28), ideia do 3 (37) e cuidado do 3 (26).
+**Total da página:** 586 palavras (soma dos blocos acima com a nota da veneziana, sem os rótulos "Ideia", "Cuidado" e "Aponta"); sem a nota da veneziana, 528 (577 e 519 antes das trocas do D32 nas páginas montadas: cuidado do 1 e ideia do 7). Passam do limite, por serem a frase exata do Revisor ou do Arquiteto: ideia do 1 (28), cuidado do 1 (34), ideia do 3 (37) e cuidado do 3 (26).
 
 ---
 
