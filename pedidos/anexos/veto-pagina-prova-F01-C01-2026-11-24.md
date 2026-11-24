@@ -44,3 +44,14 @@ Conferido contra os dados, a geometria do 3D e as prévias; o validador dá 0 er
 - **Nas duas:** selo "Imagem ilustrativa: móveis e acabamentos são sugestão".
 - **Todas aplicadas** nos textos (`pagina-comodo-a-comodo-F01-texto.md`, `-C01-texto.md`) e no rascunho (`ebook/plantas/rascunhos/comodo_a_comodo.py`); F01 e C01 regeradas em `ebook/plantas/rascunhos/comodo-a-comodo/` (páginas, dupla e celular); a Casa Fita (E03) saiu igual, pixel a pixel.
 - **Falta:** a leitura final do Revisor no Fable antes do D20.
+
+## Leitura final, Fable, 24/11/2026
+
+- **Casa Compacta (C01): SIM.**
+- **Casa Família Compacta (F01): SIM SE** as trocas 1 e 2 (a 3 recomendada), **aplicadas em seguida** no rascunho (`ebook/plantas/rascunhos/comodo_a_comodo.py`) e regeradas em `ebook/plantas/rascunhos/comodo-a-comodo/`:
+  1. legenda: "Pontilhado amarelo: aqui não há parede; a sala é aberta para a cozinha (veja o 2).";
+  2. rótulo junto da ENTRADA: "frente: 3 m até a rua, recuo de referência (cortada no desenho)";
+  3. cota: "vão livre 4,45".
+- Nas duas, o rótulo "divisa" da lateral esquerda estava cortado (lia-se "aivisa"): o recorte da planta abriu 10 cm à esquerda e ele sai inteiro (conferido em tamanho real). As notas internas do texto da F01 e o comentário do script dizem "vão livre 4,45 (4,60 no eixo, o do validador)".
+- A faixa "Rascunho D31" não vai ao PDF final.
+- A página gerada no D20 pede nova leitura (estouro e aviso).

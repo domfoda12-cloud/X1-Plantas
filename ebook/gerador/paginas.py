@@ -145,7 +145,7 @@ PAREDE = {
         {"nome": "A cabeceira na parede sem janela",
          "faz": "Encoste a cabeceira da cama na parede da divisa, com prateleira em cima. A parede da janela fica livre: nenhum guarda-roupa tapando a luz.",
          "cuid": "Nicho na parede da divisa, só se o engenheiro aprovar. Prateleira presa na parede, sim.",
-         "casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal cabe com a cabeceira na divisa."},
+         "casas": "Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal padrão (1,38 x 1,88 m) cabe com a cabeceira na divisa, com 1 criado e a escrivaninha no canto da janela, do lado do recuo. Meça antes de comprar."},
         {"nome": "A parede que guarda",
          "faz": "Guarda-roupa, estante, rack e geladeira na parede da divisa; a janela fica para a cama, o sofá e a pia.",
          "cuid": "Móvel colado esconde umidade: pergunte ao engenheiro pela impermeabilização do pé da parede. Fure só sabendo onde passa o cano.",

@@ -13,13 +13,13 @@ A mesma da página da Casa Fita (seção "Ideia principal" do molde): gancho "An
 
 | Atributo | Escada | D | P | E |
 |---|---|---|---|---|
-| Luz da mesa marcada (3,75 m da parede da divisa e 1,70 m da parede da frente, medidos por dentro), depois da viga do vão de 4,60 m | a sala grande tem viga no meio → o ponto se marca depois que o engenheiro acha a viga → a luz cai na mesa → não abre laje ou forro de novo | 4 | 5 | 5 |
+| Luz da mesa marcada (3,75 m da parede da divisa e 1,70 m da parede da frente, medidos por dentro), depois da viga do vão livre 4,45 (4,60 no eixo, o do validador) | a sala grande tem viga no meio → o ponto se marca depois que o engenheiro acha a viga → a luz cai na mesa → não abre laje ou forro de novo | 4 | 5 | 5 |
 | Quarto 3 que serve de estudo, escritório ou hóspede | tomada e internet ao lado da escrivaninha → 3 usos no mesmo quarto → a casa acompanha a família | 5 | 4 | 4 |
 | Guarda-roupa de 6 portas não cabe no casal; o de 4 com maleiro compensa | o comprador sabe antes da loja → não compra o móvel errado → não perde a troca | 5 | 5 | 4 |
 | Guarda-roupa do quarto 3 na parede do banheiro | o que a planta não evita, dito → impermeabilização antes → sem mofo no móvel | 4 | 5 | 5 |
 | Parede da pia sem janela: aéreo nos 2,59 m depois da porta do serviço | mais armário na cozinha → menos coisa na bancada | 4 | 5 | 4 |
 
-**Destaque: a sala (número 1).** É a ideia mais específica desta planta: só a F01 tem o vão de 4,60 m que o validador manda o engenheiro conferir, e o ponto da mesa tem as duas medidas prontas. É a decisão mais "antes de fechar" da casa: depois da laje ou do forro, mudar a luz custa abrir de novo. A sala é também onde a família de 3 quartos passa o dia. Ordem dos números: da rua para o fundo; os 3 quartos, da divisa para o recuo.
+**Destaque: a sala (número 1).** É a ideia mais específica desta planta: só a F01 tem o vão livre 4,45 (4,60 no eixo, o do validador) que o validador manda o engenheiro conferir, e o ponto da mesa tem as duas medidas prontas. É a decisão mais "antes de fechar" da casa: depois da laje ou do forro, mudar a luz custa abrir de novo. A sala é também onde a família de 3 quartos passa o dia. Ordem dos números: da rua para o fundo; os 3 quartos, da divisa para o recuo.
 
 ---
 

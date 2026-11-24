@@ -30,3 +30,8 @@ Nada de custo, prazo, aprovação ou dispensa de profissional. **Não conferido:
 7. Página "Terreno e recuos": "Em área urbana, o Código Civil (art. 1.301) não deixa abrir janela a menos de 1,5 m do terreno vizinho (o engenheiro confirma)."
 
 **Pendência para o Arquiteto:** com a cama de casal no quarto da frente da Casa Fita, a escrivaninha ainda é usável?
+
+
+## Frase da Casa Fita na ideia 1, 24/11/2026 (Arquiteto conferiu; Revisor, Fable, deu a frase)
+
+O Arquiteto conferiu na E03: a cama de casal cabe com a cabeceira na divisa e a porta abre, mas só com 1 criado e com a escrivaninha mudando para o canto da janela. O Revisor trocou a frase por: "Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal padrão (1,38 x 1,88 m) cabe com a cabeceira na divisa, com 1 criado e a escrivaninha no canto da janela, do lado do recuo. Meça antes de comprar." Aplicada no `PAREDE` do gerador e no texto. Se o Arquiteto confirmar a queen, "padrão (1,38 x 1,88 m)" pode sair.

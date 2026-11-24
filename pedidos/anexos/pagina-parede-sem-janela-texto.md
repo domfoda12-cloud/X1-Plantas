@@ -31,7 +31,7 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 ### 1. A cabeceira na parede sem janela (título 6)
 - **O que fazer** (24): Encoste a cabeceira da cama na parede da divisa, com prateleira em cima. A parede da janela fica livre: nenhum guarda-roupa tapando a luz.
 - **Cuidado** (15): Nicho na parede da divisa, só se o engenheiro aprovar. Prateleira presa na parede, sim.
-- **Nas casas** (28): Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal cabe com a cabeceira na divisa.
+- **Nas casas** (28): Família Compacta: o quarto casal, como no desenho. Casa Fita: no quarto da frente, desenhado com cama de solteiro, a de casal padrão (1,38 x 1,88 m) cabe com a cabeceira na divisa, com 1 criado e a escrivaninha no canto da janela, do lado do recuo. Meça antes de comprar.
 - **Designer desenha:** o quarto casal da Família Compacta, vista de cima: a parede da divisa em traço grosso (a mesma marca nos 4 croquis), a cama com a cabeceira e os 2 criados nela, a janela no fundo, livre. Uma linha fina da prateleira sobre a cabeceira, com a palavra "sugestão" (a prateleira não está no desenho da casa).
 
 ### 2. A parede que guarda (título 4)

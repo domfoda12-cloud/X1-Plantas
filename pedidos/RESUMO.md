@@ -307,7 +307,7 @@ Passo D16 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Des
 
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
-Tamanho: 2017 palavras.
+Tamanho: 2027 palavras.
 
 ### [Página "A parede sem janela" (parte geral do e-book): texto (passo D19)](anexos/pagina-parede-sem-janela-texto.md)
 
@@ -315,7 +315,7 @@ Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou
 
 Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
 
-Tamanho: 2231 palavras.
+Tamanho: 2254 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 
@@ -475,17 +475,17 @@ Tamanho: 757 palavras.
 
 Não conferido: as páginas montadas (ainda não existem); os números que vêm do anexo de mobiliar e não foram refeitos (3,20 m, 1,21 m, 40 a 70 cm, 34 cm, o limite de 1,50 m do rack).
 
-Seções: Casa Família Compacta (F01): SIM SE; Casa Compacta (C01): SIM SE; Conferência técnica do Arquiteto (24/11); Decisão do Maestro (24/11), para mostrar ao dono depois; Páginas montadas (D32), 24/11/2026.
+Seções: Casa Família Compacta (F01): SIM SE; Casa Compacta (C01): SIM SE; Conferência técnica do Arquiteto (24/11); Decisão do Maestro (24/11), para mostrar ao dono depois; Páginas montadas (D32), 24/11/2026; Leitura final, Fable, 24/11/2026.
 
-Tamanho: 1250 palavras.
+Tamanho: 1399 palavras.
 
 ### [Veto: página "A parede que não pode ter janela" (passo D19), 24/11/2026 · Revisor de risco, Opus (rascunho)](anexos/veto-parede-sem-janela-2026-11-24.md)
 
 Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fable.
 
-Seções: Leitura final da página montada, 24/11/2026 (Revisor, Fable).
+Seções: Leitura final da página montada, 24/11/2026 (Revisor, Fable); Frase da Casa Fita na ideia 1, 24/11/2026 (Arquiteto conferiu; Revisor, Fable, deu a frase).
 
-Tamanho: 529 palavras.
+Tamanho: 649 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 
