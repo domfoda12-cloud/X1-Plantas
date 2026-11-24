@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 45 documentos
+## Os 47 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 9692 palavras.
+Tamanho: 9799 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -247,6 +247,22 @@ Seções: 1. Lei 6.766/1979, art. 4º, II (lote mínimo); 2. Decreto 7.962/2013 
 
 Tamanho: 2331 palavras.
 
+### [Mapa das duas partes do e-book (passo A10, 24/11/2026)](anexos/mapa-duas-partes-do-ebook-2026-11-24.md)
+
+Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma parte falando de cada casa específica, e outra parte falando de casas no geral"; a página da parede sem janela "pode ir pro geral". Autor: Designer, 24/11/2026. É proposta: quem decide a ordem é o Maestro…
+
+Seções: 1. As 17 páginas de hoje e para onde vão; 2. A ordem proposta: a casa primeiro, o geral depois; 3. Onde entram as páginas novas; 4. Como o leitor sabe em que parte está (sem trocar a identidade); 5. Esboço do sumário novo; 6. O que muda no gerador (para o D17; eu não mexi); 7. Perguntas; 8. O que não conferi.
+
+Tamanho: 2786 palavras.
+
+### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
+
+Passo A9 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Designer montar e para o Revisor de risco e o Arquiteto conferirem (D15). Não está aprovado e não vai ao público. Pedido do dono (24/11), palavra por palavra: "Planejar cada quarto, ideias do que fazer em lugares da casa".…
+
+Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
+
+Tamanho: 1691 palavras.
+
 ### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
 
 Cada plano é um rascunho de trabalho da equipe do X1-Plantas. Vete cada um como faria de verdade: o plano pode ter problema ou estar certo. Não suponha que todos têm erro.
@@ -345,9 +361,9 @@ Tamanho: 1057 palavras.
 
 VETO em 3 pontos, cada um com a troca que vira SIM; o resto passa com troca ou como está. L = linha do documento na versão lida. Conferido contra os dados das 3 casas e `PLANTAS.md`: medidas livres, perímetros, janelas, portas, folga no fundo e distâncias da tomada ao box batem. Não há promessa de…
 
-Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página.
+Seções: Vetos; Trocas que passam (sem veto); As 5 mais seguras e úteis para abrir a página; Reconferência do Revisor, 24/11 (depois das trocas do Arquiteto).
 
-Tamanho: 811 palavras.
+Tamanho: 1093 palavras.
 
 ### [Veredito do Revisor de risco: rascunho do lançamento (24/11/2026)](anexos/veto-ebook-lancamento-2026-11-24.md)
 

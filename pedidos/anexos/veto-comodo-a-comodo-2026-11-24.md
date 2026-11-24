@@ -27,3 +27,15 @@
 5. Caixas de tomada que não ficam costas com costas, e tomada nas duas paredes de cabeceira (L31, L40, L56, L125).
 
 **Não conferido pelo Revisor:** o anexo de mobiliar (passagens); os PDFs da Portaria 725, Tigre, UDESC e guia do MCID; as páginas de medida de carro; nenhuma imagem.
+
+## Reconferência do Revisor, 24/11 (depois das trocas do Arquiteto)
+
+Releu o documento inteiro e refez as contas de tomada pelas medidas livres: todas batem.
+
+- **Veto 1, contagem de tomadas: levantado, com condição.** Duas fontes de 2026 que citam a norma de 2004 estão no caderno. Na página, cada "o mínimo é N pontos" leva na mesma página: "pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente".
+- **Veto 1, os 60 cm do box: mantido.** Número de manual anterior à norma vigente, e a revisão em consulta mexe nesse ponto. Não vai à página nem ao post 4. Em L86, L177 e L261 a página diz "do lado mais longe do box; a distância, o eletricista confere". Busca na web em 24/11: nenhuma fonte de 2004 para os 60 cm.
+- **Veto 2, Portaria 725 e Anexo G: levantado.** Condição para virar página: os números 2,55 e 2,30 m, a porta de 0,80 x 2,10, os 80 cm entre as camas, a rede, a veneziana e os 2,50 m de São Paulo vêm "pela apostila"; registrar esses números no caderno antes.
+- **Veto 3, serviço da C01: mantido** (espera a decisão do dono sobre a janela).
+- **Trocas menores: todas entraram** (amostra de 14 linhas).
+- **Notas sem veto:** L271 "o eletricista pode contar junto" vira "pergunte ao eletricista se o corredor conta à parte"; L15 "todas registradas no caderno" não vale para o que veio da apostila; marcas (Tigre, Elektro/Pirelli, QuintoAndar) ficam na nota de fonte, não no corpo da página.
+- **Não conferido:** os PDFs da Portaria, do guia do MCID, da apostila e da UDESC; o anexo de mobiliar; as imagens.
