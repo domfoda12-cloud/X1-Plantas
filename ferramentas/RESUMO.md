@@ -17,11 +17,17 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 23 programas
+## Os 24 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
 Textos de cada casa do e-book, escritos pelo método do Redator (.claude/agents/redator.md).
+
+### [`ebook/gerador/bonus.py`](../ebook/gerador/bonus.py)
+
+O PDF dos 2 bônus do e-book (passo D35 do pedidos/PLANO.md, 24/11/2026): sai junto do e-book, no mesmo comando.
+
+Funções: `em_arquivo`, `limpa`, `inline`, `secoes`, `ler_checklist`, `ler_perguntas`, `svg`, `tijolos`, `sinal`, `linhas`, `pagina`, `html_fase`, `montar`, `html_bloco`, `conferir`, `gerar`.
 
 ### [`ebook/gerador/livro.py`](../ebook/gerador/livro.py)
 
