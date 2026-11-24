@@ -18,6 +18,7 @@ PLANO = Path(__file__).resolve().parent.parent / "pedidos" / "PLANO.md"
 SECOES = ["## Agora", "## Depois", "## Esperando o dono", "## Não fazer"]
 RE_PASSO = re.compile(r"^\| ([A-Z]\d+) \|")
 RE_DEC = re.compile(r"^(\d+)\. ")
+MAL = []  # linhas de passo com número errado de colunas, achadas em ler()
 
 
 def ler():
@@ -30,7 +31,8 @@ def ler():
         m = RE_PASSO.match(l)
         if m and (secao.startswith("## Agora") or secao.startswith("## Depois")):
             c = [x.strip() for x in l.strip().strip("|").split("|")]
-            if len(c) < 6:
+            if len(c) != 6:
+                MAL.append(f"{m.group(1)}: a linha tem {len(c)} colunas e precisa de 6 (um | dentro do texto desloca as colunas: escreva 'ou' no lugar)")
                 continue
             passos[m.group(1)] = dict(id=m.group(1), linha=i, texto=c[1], quem=c[2], onde=c[3], pronto=c[4], dep=c[-1],
                                       feito=c[1].startswith("**Feito"), secao="agora" if secao.startswith("## Agora") else "depois")
@@ -160,6 +162,7 @@ def cmd_conferir():
     texto = PLANO.read_text(encoding="utf-8")
     _, passos, decisoes = ler()
     erros = [f"falta a seção '{s}'" for s in SECOES if s not in texto]
+    erros += MAL
     pos = [texto.find(s) for s in SECOES if s in texto]
     if pos != sorted(pos):
         erros.append("as seções Agora, Depois, Esperando o dono e Não fazer estão fora de ordem")
