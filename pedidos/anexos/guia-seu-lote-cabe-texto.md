@@ -1,5 +1,7 @@
 # Guia "Seu lote cabe?": o texto real (RASCUNHO)
 
+> **Conferido pelo Arquiteto em 24/11/2026.** As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
+
 > Redator, 24/11/2026. **Rascunho: não vai ao público** antes do Arquiteto e do Revisor de risco (listas no fim) e antes de o dono escolher entre A, B ou C ([`amostra-gratis-opcoes.md`](amostra-gratis-opcoes.md)). Este texto só é usado se ele escolher a B, agora ou depois.
 > Layout: `ebook/plantas/rascunhos/amostra.py`, função `guia()`; imagens `ebook/plantas/rascunhos/amostra/B-p1.png` a `B-p4.png`. Cada bloco abaixo troca um marcador `prov(...)` do layout. Títulos, desenhos e o formulário já são do Designer: só mexo neles onde está escrito **"sugestão"**.
 > Números: recuos de referência do validador, como os devolve `recuos_da_edicao()` para C01, E03 e F01 (3 m na frente, 1,5 m nos fundos, 1,5 m num lado, a outra parede na divisa); nomes das casas dos dados (`E03` "Casa Fita", `F01` "Casa Família Compacta"); bônus do `ebook/config.json`. Nenhum preço.
@@ -33,9 +35,9 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 | Bloco | Espaço | Texto | Caracteres |
 |---|---|---|---|
 | `abertura` | 2 linhas, até ~156 | Antes de escolher a casa, meça o lote. Você precisa de uma trena comprida (a de 30 m é a mais prática), de alguém para segurar a ponta e de um papel. | 149 (2 linhas, justo) |
-| `1. A frente` | até 5 linhas de ~31 | Na calçada, de um muro de vizinho ao outro (ou de marco a marco, se ainda não tem muro). Trena esticada, sem barriga. | 117 (4 linhas) |
+| `1. A frente` | até 5 linhas de ~31 | Rente à calçada, de um muro de vizinho ao outro (ou de marco a marco, se ainda não tem muro). Trena esticada, sem barriga. | 122 (4 linhas) |
 | `2. O fundo` | até 5 linhas | Pela lateral, da frente até o muro do fundo. Meça dos dois lados: se der diferente, anote as duas medidas. | 106 (4 linhas) |
-| `3. A largura do fundo` | até 5 linhas | Lá atrás, de um lado ao outro. Deu diferente da frente? O lote não é retângulo: anote tudo e mande assim mesmo. | 111 (4 linhas) |
+| `3. A largura do fundo` | até 5 linhas | Lá atrás, de um lado ao outro. Deu diferente da frente? O lote não é retângulo: meça também de um canto da frente ao canto oposto do fundo e mande tudo. | 152 (5 linhas, justo) |
 | `pequeno` (era do Arquiteto) | 2 linhas de ~118 | Anote em metros, com os centímetros (8,35 m, e não "uns 8"). A medida da trena é para escolher a casa; a do projeto vem da matrícula do lote e da medição do profissional. | 170 (2 linhas) |
 
 - "8,35 m" é só exemplo de como anotar, não medida de casa.
@@ -47,11 +49,11 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 |---|---|---|---|
 | `abertura` (sem número) | 2 linhas | É a faixa do lote onde a casa não entra: entre ela e a rua, o vizinho e o fundo. Ali ficam o jardim, o varal e a paz com o vizinho. | 131 (2 linhas) |
 | `Onde perguntar` (texto) | ~12 linhas de ~50 até o rodapé | Na prefeitura, no setor que aprova obras. Peça a consulta prévia do lote (cada cidade dá um nome) e leve a matrícula ou o carnê do IPTU. Pergunte: | 146 (3 linhas) |
-| `Onde perguntar` (lista, 3 itens) | 1 linha cada | Quanto de recuo na frente, nos lados e no fundo? / Posso encostar uma parede na divisa? / Quanto do lote a casa pode cobrir? | 48, 36, 34 |
+| `Onde perguntar` (lista, 4 itens) | 1 linha cada | Quanto de recuo na frente, nos lados e no fundo? / Posso encostar uma parede (sem janela) na divisa? / Quanto do lote a casa pode cobrir? / Quanto tem de ficar sem piso, com terra ou grama? | 48, 49, 34, 49 |
 | `Onde perguntar` (fecho) | 1 linha | Em condomínio, leia também o regulamento. | 41 |
 | `caixa azul` (troca só o marcador, depois do texto fixo "Frente 3 m, fundos 1,5 m, uma lateral 1,5 m e a outra parede na divisa, se a prefeitura deixar.") | +2 linhas de ~45 | A sua cidade pode pedir mais. O número do seu lote, quem diz é a prefeitura. | 76 (2 linhas) |
 
-- Total da coluna "Onde perguntar": cerca de 8 linhas, cabe com folga. A lista precisa de `<ul class="lista">` (Designer).
+- Total da coluna "Onde perguntar": cerca de 9 linhas, cabe com folga (o Arquiteto acrescentou o 4º item e o "sem janela"). A lista precisa de `<ul class="lista">` (Designer).
 - Humor da página: "a paz com o vizinho" (1 frase).
 - **Sugestão (Revisor):** no desenho, "a casa cabe aqui" é "cabe" sem "com os recuos de referência". Trocar por **"o espaço da casa"** e deixar a linha de baixo ("o que sobra depois dos recuos").
 - Não repete o pago: o e-book tem a página "Terreno e recuos" (taxa de ocupação, coeficiente, permeabilidade e a conta) e a "Ficha do meu terreno". O guia leva só as 3 perguntas sem as quais "devem caber" não quer dizer nada.
@@ -62,14 +64,14 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 
 | Bloco | Espaço | Texto | Caracteres |
 |---|---|---|---|
-| `abertura` (era do Arquiteto) | 2 linhas | Quarto com sol da tarde esquenta; sala com sol da manhã fica agradável. E o sol não muda de lado por causa da planta: a planta é que se ajeita a ele. | 149 (2 linhas, justo) |
-| `Como descobrir` | ~7 linhas de ~50 | Com a bússola do celular (ou um app de bússola): fique no lote, de frente para a rua, longe de carro e de portão de ferro. A letra que aparece é o lado da rua. Deu NE? Marque norte e leste. Sem bússola: logo cedo, aponte o braço direito para o sol. Você está de frente para o norte. | 282 (6 linhas) |
-| `Como descobrir`, **versão curta** | 5 linhas | Bússola do celular: no lote, de frente para a rua, longe de carro e de portão de ferro. A letra que aparece é o lado da rua (deu NE? marque os dois). Sem bússola: logo cedo, braço direito no sol; você olha para o norte. | 219 (5 linhas) |
-| `caixa amarela` (troca só o marcador, depois do texto fixo "A Casa Compacta fica melhor com a rua ao norte.") | +4 linhas de ~45 | Se a sua rua fica para outro lado, ela pode servir: o seu engenheiro ou arquiteto ajusta as janelas ou espelha a planta. No e-book, cada casa diz o melhor lado da rua. | 167 (4 linhas) |
-| **bloco novo** `pequeno`, embaixo das duas colunas (Designer acrescenta) | 2 linhas de ~118 | O sol nasce do lado leste e se põe do lado oeste (muda um pouco no ano). No Sul, o do meio-dia passa pelo norte o ano todo; quanto mais perto do Norte e do Nordeste, mais meses ele passa pelo sul, no fim e no começo do ano. | 223 (2 linhas) |
+| `abertura` (era do Arquiteto) | 2 linhas | Quarto virado para o sol da tarde esquenta mais; o da manhã é mais brando. E o sol não muda de lado por causa da planta: a planta é que se ajeita a ele. | 152 (2 linhas, justo) |
+| `Como descobrir` | ~7 linhas de ~50 | Bússola do celular: no lote, de frente para a rua, celular deitado na mão, longe de carro e de portão de ferro. A letra que aparece é o lado da rua. Deu NE? Marque norte e leste. Sem bússola: logo cedo, aponte o braço direito para o sol; você olha mais ou menos para o norte. | 275 (6 linhas) |
+| `Como descobrir`, **versão curta** | 5 linhas | Bússola do celular: no lote, de frente para a rua, celular deitado, longe de carro e de portão de ferro. A letra é o lado da rua (deu NE? marque os dois). Sem bússola: logo cedo, braço direito no sol; você olha mais ou menos para o norte. | 238 (5 linhas, justo) |
+| `caixa amarela` (troca só o marcador, depois do texto fixo "A Casa Compacta fica melhor com a rua ao norte.") | +4 linhas de ~45 | Se a sua rua fica para outro lado, ela pode servir: o seu engenheiro ou arquiteto ajusta janelas e beirais ou espelha a planta. No e-book, cada casa diz o melhor lado da rua. | 174 (4 linhas) |
+| **bloco novo** `pequeno`, embaixo das duas colunas (Designer acrescenta) | 2 linhas de ~118 | O sol nasce para o leste e se põe para o oeste em todo o Brasil. Ao meio-dia, no Sul, passa pelo norte o ano todo; mais para cima, quase a pino e, parte do ano, um pouco ao sul (em Salvador, do fim de outubro a meados de fevereiro). | 232 (2 linhas, justo) |
 
 - Humor da página: "o sol não muda de lado por causa da planta" (1 frase).
-- **Por que o bloco novo:** o desenho mostra o sol do meio-dia ao norte. Isso vale o ano todo só no Sul; mais acima no mapa, ele passa por cima da cabeça até duas vezes por ano e, entre essas datas, pelo lado sul. Sem a nota, o desenho engana quem mora em Fortaleza ou em Salvador. Fonte: o sol só fica a pino entre os trópicos ([Astro4Edu, glossário](https://astro4edu.org/pt-br/resources/glossary/term/494/)); no Ceará passa "quase exatamente sobre as nossas cabeças", "não mais do que duas vezes por ano" ([O Povo, 07/03/2023](https://mais.opovo.com.br/colunistas/romario-fernandes/2023/03/07/nesse-sabado-o-sol-vai-passar-mermincima-da-moleira-do-cearense.html)). A conta dos meses é minha (declinação do sol contra a latitude) e vai para o Arquiteto conferir.
+- **Por que o bloco novo:** o desenho mostra o sol do meio-dia ao norte. Isso vale o ano todo só no Sul; mais acima no mapa, ele passa por cima da cabeça até duas vezes por ano e, entre essas datas, pelo lado sul. Sem a nota, o desenho engana quem mora em Fortaleza ou em Salvador. Fonte: o sol só fica a pino entre os trópicos ([Astro4Edu, glossário](https://astro4edu.org/pt-br/resources/glossary/term/494/)); no Ceará passa "quase exatamente sobre as nossas cabeças", "não mais do que duas vezes por ano" ([O Povo, 07/03/2023](https://mais.opovo.com.br/colunistas/romario-fernandes/2023/03/07/nesse-sabado-o-sol-vai-passar-mermincima-da-moleira-do-cearense.html)). A conta dos meses é minha (declinação do sol contra a latitude) e vai para o Arquiteto conferir. **Arquiteto (24/11):** conta refeita e conferida com fonte que abri: sol a pino em Salvador por volta de 27/10 e de 15/02 ([SAB, II SNEA 2012](https://www.sab-astro.org.br/wp-content/uploads/2017/03/SNEA2012_TCO15.pdf)); no RS a sombra do meio-dia aponta sempre para o sul e o nascente fica mais ao norte no inverno ([F. Lang da Silveira, IF-UFRGS](https://ppgenfis.if.ufrgs.br/mef008/arquivos/Movimento_do_Sol_Lang.pdf)). As duas estão no caderno `pesquisas/plantas.md`. No texto público, cite só as que o time abriu.
 - **Sugestão de título (opcional, Maestro e Designer):** a p. 4 pede "a rua fica para o", não o lado do nascente. "Descubra para que lado fica a sua rua." amarra as duas páginas. Se o título ficar, o texto acima continua certo.
 
 ## Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."

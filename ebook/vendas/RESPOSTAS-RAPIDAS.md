@@ -2,7 +2,7 @@
 
 > Pacote pronto para colar no celular do negócio. Parte da pasta de venda ([`WHATSAPP.md`](WHATSAPP.md): sequência, objeções e perguntas completas). Escrito pelo Redator em 23/11/2026 a partir das [decisões do dono de 23/11](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md). **Revisor de risco: SIM SE em 23/11 (noite); as condições foram aplicadas (dados do vendedor e ausência sem prazo). Antes de colar, preencha os [colchetes] e só envie o /oferta quando as 3 casas tiverem 3D refeito.**
 >
-> **VETO do Revisor (23/11, noite): não envie o `/oferta` a quem só cabe a Casa Compacta** (lote de 8 m de frente com menos de 20,6 m de fundo, ou menos de 10 m de frente): essa pessoa já recebeu a casa dela de graça, e a mensagem ainda não diz o que vem a mais. Espera a decisão do dono sobre o que vai de graça.
+> **VETO do Revisor (23/11, noite): não envie o `/oferta` a quem só cabe a Casa Compacta** (frente de 8 a 9,9 m e fundo de 13 a 20,5 m: nesse lote não cabem a Casa Fita, que pede 20,6 m de fundo, nem a Família Compacta, que pede 10 m de frente): essa pessoa já recebeu a casa dela de graça, e a mensagem ainda não diz o que vem a mais. Espera a decisão do dono sobre o que vai de graça.
 
 > **Como usar:** no chat, digite `/` e o atalho (ex.: `/pix`), escolha a mensagem, troque o que está entre [colchetes] e envie. Nenhuma mensagem sai com colchete.
 >
@@ -110,7 +110,7 @@ Boa notícia, [nome]! Com [frente] x [fundo] m, cabe no seu lote, com os recuos 
 
 Os recuos da sua cidade, você confirma na prefeitura.
 
-Quer ver como ela fica por dentro, mobiliada, em 3D?
+Quer ver como ela fica por dentro, em 3D, com os móveis desenhados para dar escala?
 ```
 
 > Liste só as casas do lançamento que a calculadora disser que cabem (apague a linha que sobrar). A área e os quartos saem de [`../plantas/PLANTAS.md`](../plantas/PLANTAS.md).
@@ -128,7 +128,7 @@ Tem outro lote em vista, ou a medida é outra? Me manda que eu confiro de novo.
 ### `/3d` (extra)
 
 ```text
-Olha a [nome da casa] por dentro, [nome], mobiliada e vista de cima.
+Olha a [nome da casa] por dentro, [nome], vista de cima, com os móveis desenhados para dar escala.
 
 (Imagem ilustrativa: móveis e acabamentos não vêm junto. Planta de referência.)
 
@@ -144,7 +144,7 @@ Quer saber tudo o que vem no e-book?
 ```text
 [nome], a [casa que cabe] que cabe no seu lote está no e-book Antes do primeiro tijolo. São 3 casas térreas: Casa Compacta, Casa Fita (2 quartos, lote de 5 x 25 m) e Família Compacta (3 quartos).
 
-Cada uma vem mobiliada, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
+Cada uma vem com os móveis desenhados para dar escala, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
 
 R$ [preço], no Pix, aqui mesmo. Você recebe por link e tem 7 dias para pedir o Pix de volta.
 
