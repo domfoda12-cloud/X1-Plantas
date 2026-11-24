@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 41 documentos
+## Os 43 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -97,6 +97,14 @@ Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 
 
 Tamanho: 4995 palavras.
 
+### [Cômodo a cômodo: o próximo passo depois da planta (C01, E03, F01)](anexos/comodo-a-comodo-3-casas.md)
+
+Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-a-comodo-...`), palavra por palavra: "continue trabalhando nas casas, podem estar desenhadas corretas mas qual o próximo passo? Planejar cada quarto, ideias do que fazer em lugares da casa etc". Continua dois pedidos de…
+
+Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público).
+
+Tamanho: 7413 palavras.
+
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
@@ -142,6 +150,14 @@ Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo;
 Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
 Tamanho: 4137 palavras.
+
+### [Perfil novo do Instagram: 8 nomes e 4 bios no humor pelo absurdo (24/11/2026)](anexos/instagram-nomes-e-bios-absurdos-2026-11-24.md)
+
+Pedido do dono (comentários no quadro, 24/11): recusou os 6 nomes de `instagram-perfil-novo.md` ("Não gostei de nenhuma opção, lembre, coisas absurdas prendem a atenção") e as 3 bios ("Todas um pouco básico"). Rascunho do Redator. Ainda não passou pelo Revisor de risco. Quem escolhe o @ e a bio é o…
+
+Seções: O que a MinoAI Frontier devolveu (só isto; leitura minha marcada como tal); 1. Oito nomes (@), em 3 linhas de humor; 2. Quatro bios (até 150 caracteres); 3. Recomendação do Redator: @lotecarente + Bio 1; Para o Revisor de risco; O que não conferi; Veto do Revisor de risco (24/11, rascunho).
+
+Tamanho: 2230 palavras.
 
 ### [Perfil novo do Instagram: material para o dono escolher (rascunho)](anexos/instagram-perfil-novo.md)
 

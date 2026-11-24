@@ -116,3 +116,10 @@ VARIAÇÃO PARA TESTE: @casasolteira com a Bio 2, que traz o 2º atributo, ver a
 - O limite de letras do nome de exibição, e se o Instagram conta "²" e "↓" como 1 caractere (o programa contou 1).
 - Se o humor funciona com o público brasileiro classe C: a MinoAI não devolveu nenhum perfil brasileiro nem de humor sobre casa.
 - Se já existe perfil, marca ou produto com esses nomes (não busquei no INPI nem no Instagram).
+
+## Veto do Revisor de risco (24/11, rascunho)
+
+- **Nomes:** 7 SIM. **@encolhiacasa: NÃO** (dá a entender que o perfil diminui a casa até caber, que é adaptar planta, serviço que o produto não faz; e ecoa o título de um filme, sem marca conferida). Notas: não escrever "lote carente" junto de "bairro", "comunidade" ou "periferia"; com @acamafoiprarua, nenhum post brinca com despejo.
+- **Bios 1, 3 e 4: SIM SE** a linha 2 disser quem assina a obra. Trocas exatas: Bio 1 "Plantas de referência pela medida do lote. A obra, seu engenheiro assina."; Bio 3 "Plantas de referência. A obra, seu engenheiro assina."; Bio 4 "Em metro: plantas de referência, frentes de 5, 8 e 10 m. Seu engenheiro assina a obra." **Bio 2: SIM** (se couber, "51 m² fechados").
+- Os caracteres das trocas foram contados à mão: recontar antes de publicar; se passar de 150, corta-se da linha 1, nunca a frase do engenheiro.
+- Não conferido: se os nomes estão livres, marca no INPI, o destaque "Dúvidas" com os dados do vendedor. A versão final passa pelo Revisor no Fable.

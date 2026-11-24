@@ -27,9 +27,9 @@ And look for more skills, maybe the jury needs help with one?
 
 **Quem executa:** Arquiteto (cômodo a cômodo); Maestro (visita 3D e Canteiro); Supervisor (auditoria das regras e dos limites); Pesquisador (skills); Revisor antes de qualquer texto virar página.
 
-**Conferência:** (a preencher)
+**Conferência:** Visita 3D: testada no computador (3 casas, por dentro e por fora) e aberta no celular; depois do último ajuste (parar longe dos móveis) vi 2 telas. Canteiro: testado com dados de mentira no computador e no celular (largura certa); a página publicada com os dados de verdade eu não abri. Auditoria das regras: escrita pelo Supervisor em `pedidos/AUDITORIAS.md`. Cômodo a cômodo: escrito pelo Arquiteto, sem Revisor ainda. Skills: só leitura, nada instalado. Tentei subir o teto do `contexto/QUADRO.md` e a trava do ambiente negou: fica para o dono.
 
-**Resultado:** (a preencher)
+**Resultado:** (1) `pedidos/anexos/comodo-a-comodo-3-casas.md`: 32 áreas nas 3 casas, com o que cabe, ideias, erro comum e o que perguntar. (2) Visita 3D: https://claude.ai/artifact/49H7oquCDuXYAEpqkjhjh8 (código em `pedidos/anexos/vitrines/visita.html`). (3) Canteiro reformado, mesmo link: abas Hoje, Decisões (9 grupos, resposta por botão), Problemas (com imagem), Plano e Quadro, mais a caixa de recados. (4) Auditoria das regras de 24/11: 32 regras, 13 sem mecanismo. (5) Limites de tamanho: respondido, e a decisão virou o cartão p21. (6) `pedidos/anexos/skills-candidatas-2026-11-24.md`: 11 candidatas, 6 para o júri. Ficha aberta: faltam o Revisor no cômodo a cômodo, o Conselho nas skills e as respostas do dono.
 
 **O que aprendi:** (a preencher)
 
