@@ -1138,7 +1138,7 @@ def montar(plantas, config, numeros):
     c01 = por_id.get("C01") or por_id.get(config.get("planta_da_capa")) or plantas[0]
     legenda = "".join(f"<li><b>{E(t)}.</b> {E(d)}</li>" for t, d in TX.LEGENDA_LEITURA)
     L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
-      <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis e a porta de entrada é amarela.</p>
+      <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis, a porta de entrada é amarela e as outras portas para fora têm a soleira cinza.</p>
       <div class="leitura"><div class="leitura-fig">{svg_planta(c01, humanizada=True)}</div><ul class="legenda">{legenda}</ul></div>
       <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""")
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
