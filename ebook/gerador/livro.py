@@ -13,6 +13,11 @@ Uso:
     python3 ebook/gerador/livro.py --conferir      confere numa pasta temporária, sem mexer em ebook/saida
                                                    nem na calculadora
 
+    python3 ebook/gerador/livro.py --previa DIR --duas-partes
+                                                   prévia do e-book em duas partes (D17, 24/11/2026): casas pela frente
+                                                   do lote; abertura, parte 1 (cada casa), parte 2 (casas em geral, com
+                                                   a aba azul "geral"), fecho; sumário na página 2. Sem --previa, recusa.
+
 O PDF oficial e a calculadora só são gravados sem --previa e sem --conferir.
 
 Tudo sai dos dados: plantas e números de ebook/plantas/projetos.py (via ferramentas/plantas.py),
@@ -1021,21 +1026,46 @@ class Livro:
         self.config = config
         self.paginas = []
         self.inicio = {}
+        self.bloco = ""    # o bloco da página que está sendo escrita (montar); a ordem do modo duas partes sai dele
+        self.fichas = []   # (bloco, argumentos) de cada página, para reordenar e numerar de novo
+        self.folhas = {}   # casa -> quantas páginas ela ocupa
 
     def pagina(self, conteudo, classe="", orelha=None, rodape=True, aviso=False, estilo=""):
         n = len(self.paginas) + 1
+        self.fichas.append((self.bloco, (conteudo, classe, orelha, rodape, aviso, estilo)))
+        self.paginas.append(self._folha(n, conteudo, classe, orelha, rodape, aviso, estilo))
+        return n
+
+    def _folha(self, n, conteudo, classe, orelha, rodape, aviso, estilo):
+        """orelha: a frente do lote (aba amarela), uma lista de frentes (várias abas) ou "geral" (aba azul da parte 2)."""
         par = n % 2 == 0
+        lado = "esq" if par else "dir"
         tab = ""
-        if orelha is not None:
+        if orelha == "geral":
+            tab = f'<div class="orelha geral {lado}" style="top:{aba_geral_mm(self.plantas)}mm">{E(TX.DUAS_PARTES["aba_geral"])}</div>'
+        elif isinstance(orelha, (list, tuple)):
+            tab = "".join(f'<div class="orelha {lado}" style="top:{30 + (f - 5) * 24}mm">frente {f} m</div>' for f in orelha)
+        elif orelha is not None:
             top = 30 + (orelha - 5) * 24
-            tab = f'<div class="orelha {"esq" if par else "dir"}" style="top:{top}mm">frente {orelha} m</div>'
+            tab = f'<div class="orelha {lado}" style="top:{top}mm">frente {orelha} m</div>'
         rod = ""
         if rodape:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
                    f'<span>{AVISO if aviso else E(self.config.get("titulo_curto") or titulo_do(self.config))}</span></div>')
         atributo_estilo = f' style="{estilo}"' if estilo else ""
-        self.paginas.append(f'<section class="pagina {classe}"{atributo_estilo}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>')
-        return n
+        return f'<section class="pagina {classe}"{atributo_estilo}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>'
+
+    def reordenar(self, ordem):
+        """Põe os blocos na ordem dada e numera tudo de novo: rodapé, lado da aba e L.inicio (os números citados nos
+        textos saem de L.inicio na passada seguinte do gerador)."""
+        fora = sorted({b for b, _ in self.fichas} - set(ordem))
+        if fora:
+            sys.exit(f"bloco de página fora da ordem das duas partes: {', '.join(fora)}")
+        pos = sorted(range(len(self.fichas)), key=lambda i: ordem.index(self.fichas[i][0]))  # estável: dentro do bloco, como estava
+        novo = {velho + 1: k + 1 for k, velho in enumerate(pos)}
+        self.fichas = [self.fichas[i] for i in pos]
+        self.paginas = [self._folha(k + 1, *args) for k, (_, args) in enumerate(self.fichas)]
+        self.inicio = {chave: novo[n] for chave, n in self.inicio.items()}
 
 
 def titulo_do(config):
@@ -1098,8 +1128,11 @@ def bonus_com_conteudo(config):
     return [b for b in config.get("bonus", []) if not b.startswith("[") and b in PAGINAS_BONUS]
 
 
-def montar(plantas, config, numeros):
+def montar(plantas, config, numeros, duas_partes=False):
+    """As páginas do e-book. Cada página nasce num bloco (L.bloco); com duas_partes=True (só prévia, D17) os blocos
+    são reordenados no fim como no mapa: abertura; parte 1, cada casa; parte 2, casas em geral (aba azul); fecho."""
     L = Livro(plantas, config)
+    geral = "geral" if duas_partes else None  # a aba lateral das páginas da parte 2
     contagem = {}
     for p in plantas:
         contagem[lote_frente(p)] = contagem.get(lote_frente(p), 0) + 1
@@ -1111,6 +1144,7 @@ def montar(plantas, config, numeros):
     qtd = "1 PLANTA DE CASA TÉRREA" if len(plantas) == 1 else f"{len(plantas)} PLANTAS DE CASAS TÉRREAS"
 
     # 1. capa
+    L.bloco = "capa"
     L.pagina(f"""
       <div class="capa-topo"><span class="eti">{qtd} · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
@@ -1118,18 +1152,21 @@ def montar(plantas, config, numeros):
       <div class="capa-planta maquete">{svg_planta(next((p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), plantas[0]), humanizada=True, estilo="maquete")}</div>
       {svg_fita(contagem, pag_frente)}""", "capa", rodape=False, estilo=capa_fundo())
 
-    # 2. aviso e como usar
+    # 2. aviso e como usar (no modo duas partes, o sumário entra e a foto encolhe)
+    L.bloco = "usar"
     L.pagina(f"""
-      <span class="sobre">Antes de começar</span><h2>Como usar este e-book</h2>
+      {cab("usar")}
       <ol class="passos3">
         <li><b>Meça a frente do seu lote.</b><span>Com a trena, do muro de um vizinho ao do outro. Essa medida é a porta de entrada do e-book.</span></li>
         <li><b>Ache as casas que cabem.</b><span>Na página {numeros['lote']}, cada largura de lote leva às casas que cabem nela. A aba amarela na borda das páginas faz o mesmo quando você folheia.</span></li>
         <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas. Você chega na primeira conversa sabendo o que quer e o que perguntar.</span></li>
       </ol>
-      {foto("02-maos-medindo", 66, pos="center 72%")}
+      {sumario(plantas, numeros) if duas_partes else foto("02-maos-medindo", 66, pos="center 72%")}
       <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""")
+    L.inicio["usar"] = len(L.paginas)
 
-    # 3. ache pelo lote
+    # 3. ache pelo lote (no modo duas partes é a porta da parte 1: mostra as abas de todas as frentes)
+    L.bloco = "ache"
     linhas = []
     for f in sorted(contagem):
         casas = [p for p in plantas if lote_frente(p) == f]
@@ -1144,13 +1181,13 @@ def montar(plantas, config, numeros):
                     " não exigir recuos maiores e se a taxa de ocupação (quanto do lote a casa pode cobrir) deixar.")
     por_id = {p["id"]: p for p in plantas}
     if pequena:
-        L.pagina(ache_a_sua_casa(plantas, numeros, recuos_txt), "acha")
+        L.pagina(ache_a_sua_casa(plantas, numeros, recuos_txt), "acha", orelha=sorted(contagem) if duas_partes else None)
     else:
         L.pagina(f"""
-      <span class="sobre">Comece aqui</span><h2>Ache pelo seu lote</h2>
+      <span class="sobre">{TX.SOBRE["ache"]}</span><h2>Ache pelo seu lote</h2>
       <p class="abertura">Ache a frente do seu lote: ao lado estão as casas desenhadas num lote comum dessa frente, já com os recuos de referência. O fundo mínimo e a medida exata de cada casa estão na página dela.</p>
       <p class="pequeno">{recuos_txt}</p>
-      <div class="faixas">{''.join(linhas)}</div>""", "lote")
+      <div class="faixas">{''.join(linhas)}</div>""", "lote", orelha=sorted(contagem) if duas_partes else None)
     L.inicio["lote"] = len(L.paginas)
 
     # 4. ache pelo jeito da família
@@ -1161,47 +1198,57 @@ def montar(plantas, config, numeros):
     if len(mostra) < min(6, len(plantas)):
         mostra = [p["id"] for p in plantas][:6]
     blocos = "".join(f'<div class="grupo"><h3>{E(t)}</h3><p>' + " · ".join(f'<b>{i}</b> {E(por_id[i]["nome"])} <i>p. {numeros[i]}</i>' for i in ids) + "</p></div>" for t, ids in grupos)
+    L.bloco = "familia"
     if not pequena:
-        L.pagina(f"""<span class="sobre">Comece aqui</span><h2>Ache pelo jeito da sua família</h2>
+        L.pagina(f"""<span class="sobre">{TX.SOBRE["familia"]}</span><h2>Ache pelo jeito da sua família</h2>
       <p class="abertura">Se ainda não tem o lote, escolha pelo jeito de morar. Depois confira na página {numeros['lote']} se cabe.</p>
       <div class="grupos">{blocos}</div>
       {galeria(plantas, mostra, f"Algumas das {len(plantas)} casas, cada uma para um jeito de morar." if len(mostra) < len(plantas)
                else "A casa do e-book." if len(plantas) == 1 else f"As {len(plantas)} casas do e-book, cada uma para um lote e um jeito de morar.")}""")
 
     # 5–6. como ler + glossário
+    L.bloco = "ler"
     c01 = por_id.get("C01") or por_id.get(config.get("planta_da_capa")) or plantas[0]
     legenda = "".join(f"<li><b>{E(t)}.</b> {E(d)}</li>" for t, d in TX.LEGENDA_LEITURA)
-    L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>Como ler uma planta</h2>
+    L.inicio["ler"] = L.pagina(f"""{cab("ler")}
       <p class="abertura">Todas as casas deste e-book são desenhadas do mesmo jeito: a <b>rua fica embaixo</b>, cada cômodo tem nome e área, as janelas são azuis, a porta de entrada é amarela e as outras portas para fora têm a soleira cinza.</p>
       <div class="leitura"><div class="leitura-fig">{svg_planta(c01, humanizada=True)}</div><ul class="legenda">{legenda}</ul></div>
-      <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""")
+      <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""", orelha=geral)
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
-    L.pagina(f"""<span class="sobre">Antes de escolher</span><h2>As palavras da obra</h2>
+    L.inicio["palavras"] = L.pagina(f"""{cab("palavras")}
       <p class="abertura">As palavras que aparecem nas plantas, na prefeitura e na conversa com o engenheiro.</p>
-      <dl class="glossario">{termos}</dl>""")
+      <dl class="glossario">{termos}</dl>""", orelha=geral)
 
     # 7–8. os 7 erros
+    L.bloco = "erros"
     def erro(i, t, porque, certo):
         return f'<div class="erro"><div class="erro-n">{i}</div><div><h3>{"O mais caro: " + E(t[0].lower() + t[1:]) if i == 7 else E(t)}</h3><p>{E(porque)}</p><p class="certo"><b>O jeito certo:</b> {certo[0].lower() + certo[1:]}</p></div></div>'
     bl = [erro(i, *e) for i, e in enumerate(TX.ERROS, start=1)]
-    L.inicio["erros"] = L.pagina(f'<span class="sobre">Antes da laje</span><h2>Os 7 erros que saem caro</h2><p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}')
-    L.pagina(f'<span class="sobre">Antes da laje</span>{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>')
+    L.inicio["erros"] = L.pagina(f'{cab("erros")}<p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}', orelha=geral)
+    L.pagina(f'<span class="sobre">{TX.SOBRE["erros"]}</span>{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>', orelha=geral)
 
     # 9. índice
+    L.bloco = "indice"
     linhas = "".join(
         f'<tr><td class="mono">{p["id"]}</td><td>{E(p["nome"])}</td><td class="n">{n0(p["_r"].metricas["area_fechada"])} m²</td>'
         f'<td>{E(p["quartos_txt"])}</td><td class="n">{p["banheiros"]}</td>'
         f'<td class="n">{lote_frente(p)} x {p["_r"].metricas["lote_comercial"][1]}</td><td class="n">{numeros[p["id"]]}</td></tr>'
         for p in plantas)
     if not pequena:
-        L.pagina(f"""<span class="sobre">Índice rápido</span><h2>As {len(plantas)} casas</h2>
+        L.pagina(f"""<span class="sobre">{TX.SOBRE["indice"]}</span><h2>As {len(plantas)} casas</h2>
       <table class="indice"><thead><tr><th>ID</th><th>Casa</th><th>Área</th><th>Quartos</th><th>Banh.</th><th>Lote mín.</th><th>Pág.</th></tr></thead><tbody>{linhas}</tbody></table>""")
 
-    # as casas
+    # as casas (no modo duas partes, cada uma ganha as páginas reservadas do cômodo a cômodo: entram no D20)
+    L.bloco = "casas"
     for p in plantas:
         dupla(L, p, por_id, numeros)
+        if duas_partes:
+            for i, lado in enumerate(("esq", "dir")[:FOLHAS_COMODO], start=1):
+                reservada(L, f'{TX.DUAS_PARTES["comodo"]} ({i} de {FOLHAS_COMODO})', casa=p, lado=lado)
+        L.folhas[p["id"]] = len(L.paginas) + 1 - L.inicio[p["id"]]
 
     # terreno
+    L.bloco = "terreno"
     # cada coluna com a largura do desenho do lote: os 3 saem na mesma escala (o de 5 m parece mesmo mais estreito)
     import re
     largura_vb = lambda svg: float(re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2])
@@ -1216,7 +1263,7 @@ def montar(plantas, config, numeros):
     # o lote mais fundo manda na altura: a fileira estreita até ele caber em 100 mm (a E03 de 2 quartos pede lote de 20,6 m)
     _vb = [[float(v) for v in re.search(r'viewBox="([^"]+)"', svg_lote(por_id[i])).group(1).split()[2:]] for i in lotes_ex]
     largura_lotes = min(170.0, 100.0 * sum(w for w, _ in _vb) / max(h for _, h in _vb))
-    L.pagina(f"""<span class="sobre">Depois de escolher</span><h2>Terreno e recuos</h2>
+    L.inicio["terreno"] = L.pagina(f"""{cab("terreno")}
       <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
       <div class="duas">
         <div><h3>O que a prefeitura define</h3><ul class="lista">
@@ -1232,13 +1279,18 @@ def montar(plantas, config, numeros):
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
-      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto")
+      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto", orelha=geral)
+    if duas_partes:  # a página nova entra no D21; aqui só o lugar dela, para a numeração bater com o mapa
+        L.bloco = "parede"
+        L.inicio["parede"] = reservada(L, TX.DUAS_PARTES["parede"], orelha=geral)
+    L.bloco = "ficha"
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
-    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Ficha do meu terreno</h2><p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}')
+    L.inicio["ficha"] = L.pagina(f'{cab("ficha")}<p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}', orelha=geral)
 
     # próximos passos
+    L.bloco = "passos"
     passos = [
         # "2 ou 3" só num livro com mais de 3 casas
         ("Escolha 2 ou 3 casas", "Pela frente do lote e pelo jeito da família. Anote os IDs.") if len(plantas) > 3 else
@@ -1251,16 +1303,18 @@ def montar(plantas, config, numeros):
         ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
         ("Regularize a casa pronta", "Habite-se na prefeitura e registro da casa na matrícula do lote, no cartório."),
     ]
-    L.pagina(f'<span class="sobre">Depois de escolher</span><h2>Do e-book até a chave na mão</h2><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto")
+    L.inicio["passos"] = L.pagina(f'{cab("passos")}<ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto", orelha=geral)
 
     # bônus e contato
+    L.bloco = "bonus"
     bonus = bonus_com_conteudo(config)
     for b in bonus:
         PAGINAS_BONUS[b](L)
+    L.bloco = "fim"
     contato = config.get("contato", "")
     gerais = FICHAS.PADRAO + ["O meu lote tem matrícula e está regular na prefeitura?",
                               "Quanto custa o projeto completo e o que está incluído nele?"]
-    L.pagina(f"""<span class="sobre">Fim (e começo da obra)</span><h2>Agora é com você</h2>
+    L.pagina(f"""{cab("fim")}
       <p class="abertura">Você já tem o mais difícil: o lote e uma casa que deve caber nele (confirme os recuos na prefeitura), com o porquê de cada parede. O próximo passo é a primeira conversa com o engenheiro ou o arquiteto.</p>
       <div class="duas"><div><h3>Pergunte em qualquer casa</h3><ul class="lista">{''.join(f'<li>{E(q)}</li>' for q in gerais)}</ul>
           <p class="pequeno">Leve também a ficha do terreno preenchida e as perguntas da página da casa escolhida.</p></div>
@@ -1270,7 +1324,65 @@ def montar(plantas, config, numeros):
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
       {foto("05-familia-lote", 78, pos="center 22%")}
       {svg_fita(contagem, pag_frente)}""", "fim")
+    if duas_partes:
+        L.reordenar(ORDEM_DUAS_PARTES)
     return L
+
+
+# E-book em duas partes (decisão do dono, 24/11/2026; mapa do Designer em
+# pedidos/anexos/mapa-duas-partes-do-ebook-2026-11-24.md). Só em prévia: python3 ebook/gerador/livro.py --previa DIR --duas-partes
+ORDEM_DUAS_PARTES = ["capa", "usar",                                   # abertura (sem aba)
+                     "ache", "familia", "indice", "casas",             # parte 1, cada casa (aba amarela da frente)
+                     "ler", "erros", "terreno", "parede", "ficha", "passos", "bonus",  # parte 2, casas em geral (aba azul)
+                     "fim"]                                            # fecho (sem aba)
+FOLHAS_COMODO = 2  # folhas reservadas ao cômodo a cômodo em cada casa (o mapa: a casa tem 4 páginas, 2 pares abertos)
+GERAL_MM = 200     # altura da aba azul "geral", do topo da folha; desce se a edição tiver frente cuja aba passe daqui
+
+
+def aba_geral_mm(plantas):
+    """A aba azul fica sempre na mesma altura, abaixo da última aba de frente (cada aba tem 20 mm)."""
+    ultima = 30 + (max(lote_frente(p) for p in plantas) - 5) * 24
+    return max(GERAL_MM, ultima + 26)
+
+
+def cab(chave):
+    """Sobretítulo e título de uma página fixa, do lugar único (paginas.py: SOBRE e TITULOS)."""
+    return f'<span class="sobre">{TX.SOBRE[chave]}</span><h2>{TX.TITULOS[chave]}</h2>'
+
+
+def reservada(L, titulo, casa=None, lado="", orelha=None):
+    """Página reservada do modo duas partes: só o quadro "página em preparo", para a contagem e a numeração baterem
+    com o mapa enquanto a página de verdade é rascunho em outro script (cômodo a cômodo: D20; parede sem janela: D21)."""
+    quadro = (f'<div class="reservada" data-reservada="1"><b>{E(TX.DUAS_PARTES["em_preparo"])}</b>'
+              f'<span>{E(titulo)}</span></div>')
+    if casa:
+        return L.pagina(f'<div class="cab"><span class="mono id">{casa["id"]} · {E(casa["nome"].upper())}</span></div>{quadro}',
+                        f"casa {lado} q", orelha=lote_frente(casa), aviso=True)
+    return L.pagina(quadro, orelha=orelha)
+
+
+def sumario(plantas, numeros):
+    """O sumário da página 2 no modo duas partes (desenho do esboço ebook/plantas/rascunhos/sumario-duas-partes.py).
+    Todo número de página vem de `numeros` (a passada anterior do gerador), nunca digitado."""
+    pag = lambda chave: numeros.get(chave) or "—"
+    folhas = numeros.get("folhas", {})
+    linha = lambda titulo, chave, marca="": (f'<li><span>{E(titulo)}'
+                                             + (f'<span class="sum-marca">{E(marca)}</span>' if marca else "")
+                                             + f'</span><em>{pag(chave)}</em></li>')
+    casas = "".join(
+        f'<li class="sum-casa"><span class="sum-aba am">frente {lote_frente(p)} m</span><span>{E(p["nome"])}'
+        f'<small>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}'
+        + (f' · {folhas[p["id"]]} páginas' if folhas.get(p["id"]) else "") + f'</small></span><em>{pag(p["id"])}</em></li>'
+        for p in sorted(plantas, key=lambda p: (lote_frente(p), p["id"])))
+    geral = ("".join(linha(TX.TITULOS[c], c) for c in ("ler", "palavras", "erros", "terreno"))
+             + linha(TX.DUAS_PARTES["parede"], "parede", "em preparo")
+             + "".join(linha(TX.TITULOS[c], c) for c in ("ficha", "passos")))
+    (e1, n1, s1), (e2, n2, s2) = TX.DUAS_PARTES["parte1"], TX.DUAS_PARTES["parte2"]
+    topo = lambda cor, e, n, s: (f'<div class="sum-cab"><span class="sum-aba {cor}">{E(e)}</span>'
+                                 f'<div><b>{E(n)}</b><i>{E(s)}</i></div></div>')
+    return (f'<div class="sum"><div class="sum-parte">{topo("am", e1, n1, s1)}'
+            f'<ul>{linha(TX.TITULOS["ache"], "lote")}{casas}</ul></div>'
+            f'<div class="sum-parte">{topo("az", e2, n2, s2)}<ul>{geral}</ul></div></div>')
 
 
 def ache_a_sua_casa(plantas, numeros, recuos_txt):
@@ -1297,7 +1409,7 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
         pags = "".join(f'<b class="ac-pag">pág. {numeros[p["id"]]}</b>' for p in fila)  # fileira própria: as páginas alinhadas
         html.append(f'<div class="ac-fila{" ac-2" if len(filas) > 1 else ""}" style="grid-template-columns:{cols};column-gap:{gap:.0f}mm">{lotes}'
                     f'<div class="ac-rua">RUA</div>{fitas}{txt}{pags}</div>')
-    return (f'<span class="sobre">Comece aqui</span><h2>Qual casa cabe no seu lote?</h2>'
+    return (cab("ache") +
             f'<p class="abertura">Procure a frente do seu lote na fita amarela: em cima dela está a casa desenhada num lote comum dessa frente, já com os recuos de referência. '
             f'O fundo mínimo e a medida exata estão na página da casa.</p>'
             + "".join(html)
@@ -1468,7 +1580,9 @@ def montar_gratis(plantas, config, pid):
     return L
 
 
-def gerar(previa=None):
+def gerar(previa=None, duas_partes=False):
+    if duas_partes and (not previa or SAIDA == EBOOK / "saida"):
+        sys.exit(RECUSA_DUAS_PARTES)
     config = json.loads((EBOOK / "config.json").read_text(encoding="utf-8"))
     plantas = PL.carregar()
     for p in plantas:
@@ -1477,11 +1591,19 @@ def gerar(previa=None):
     ordem = "CEFS"
     plantas.sort(key=lambda p: (ordem.index(p["id"][0]), p["id"]))
     plantas = edicao(plantas, config)
+    if duas_partes:  # as casas pela frente do lote (decisão do Maestro, 24/11/2026): quem folheia vai para a frente quando o lote cresce
+        plantas.sort(key=lambda p: (lote_frente(p), p["id"]))
     # 1ª passada descobre as páginas; a 2ª escreve os números certos
     numeros = {"lote": 3, **{p["id"]: 0 for p in plantas}}
     for _ in range(2):
-        L = montar(plantas, config, numeros)
-        numeros = {"lote": L.inicio["lote"], "erros": L.inicio["erros"], **{p["id"]: L.inicio[p["id"]] for p in plantas}}
+        L = montar(plantas, config, numeros, duas_partes)
+        numeros = {**L.inicio, "folhas": dict(L.folhas)}
+    if duas_partes:
+        print("modo duas partes (só prévia): " + ", ".join(f"{p['id']} pág. {numeros[p['id']]}" for p in plantas)
+              + f"; casas em geral a partir da pág. {numeros['ler']}")
+        for p in plantas:  # a casa abre em página par: planta à esquerda, lote à direita, a dupla junta
+            if numeros[p["id"]] % 2:
+                print(f"AVISO: {p['id']} começa na página {numeros[p['id']]} (ímpar): a dupla da casa não fica lado a lado")
     SAIDA.mkdir(exist_ok=True)
     doc = (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{E(config.get("titulo", "E-book"))}</title>'
            f'<style>{CSS}</style></head><body>{"".join(L.paginas)}</body></html>')
@@ -1514,6 +1636,11 @@ def gerar(previa=None):
         falhou = falhou or r.returncode != 0
     if falhou or AVISOS:
         sys.exit("ERRO: página estourada, gancho que não bate com o validador ou falha ao gerar o PDF (veja os avisos acima)")
+
+
+RECUSA_DUAS_PARTES = ("ERRO: --duas-partes só roda junto com --previa <pasta> nesta etapa (D17). O e-book em duas partes "
+                      "ainda é prévia: o PDF oficial em ebook/saida/ e a calculadora não podem mudar agora.\n"
+                      "Use: python3 ebook/gerador/livro.py --previa <pasta> --duas-partes")
 
 
 def edicao(plantas, config):
@@ -1570,4 +1697,6 @@ if __name__ == "__main__":
         SAIDA = Path(tempfile.mkdtemp(prefix="ebook-conferir-"))
     if "--previa" in sys.argv:
         prev = Path(sys.argv[sys.argv.index("--previa") + 1]).resolve()
-    gerar(prev)
+    if "--duas-partes" in sys.argv and not prev:
+        sys.exit(RECUSA_DUAS_PARTES)
+    gerar(prev, duas_partes="--duas-partes" in sys.argv)

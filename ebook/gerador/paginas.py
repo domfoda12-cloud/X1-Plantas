@@ -89,3 +89,44 @@ LEGENDA_LEITURA = [
     ("A casa em 3D", "A mesma planta com paredes e móveis, vista de cima e sem telhado, na página de cada casa."),
     ("Sol", "Em cada casa testamos as quatro posições da rua em relação ao sol, numa conta simples. A ficha diz o melhor e o pior lado; o arquiteto confere para o clima da sua cidade."),
 ]
+
+# Sobretítulo e título de cada página fixa: um lugar só (D17, 24/11/2026). O livro.py e o sumário do modo
+# --duas-partes leem daqui. No e-book em duas partes (cada casa primeiro, casas em geral depois) os sobretítulos
+# que dizem o tempo ("Antes de escolher") ficam fora de ordem: quem reescreve é o Redator, aqui, e o Revisor confere.
+SOBRE = {
+    "usar": "Antes de começar",
+    "ache": "Comece aqui",
+    "familia": "Comece aqui",
+    "ler": "Antes de escolher",
+    "palavras": "Antes de escolher",
+    "erros": "Antes da laje",
+    "indice": "Índice rápido",
+    "terreno": "Depois de escolher",
+    "ficha": "Depois de escolher",
+    "passos": "Depois de escolher",
+    "fim": "Fim (e começo da obra)",
+}
+TITULOS = {
+    "usar": "Como usar este e-book",
+    "ache": "Qual casa cabe no seu lote?",
+    "ler": "Como ler uma planta",
+    "palavras": "As palavras da obra",
+    "erros": "Os 7 erros que saem caro",
+    "terreno": "Terreno e recuos",
+    "ficha": "Ficha do meu terreno",
+    "passos": "Do e-book até a chave na mão",
+    "fim": "Agora é com você",
+}
+
+# E-book em duas partes (decisão do dono, 24/11/2026: "uma parte falando de cada casa específica, e outra parte
+# falando de casas no geral"). Só o modo --duas-partes do livro.py usa, e só em prévia. TEXTO PROVISÓRIO, do esboço
+# do Designer (pedidos/anexos/mapa-duas-partes-do-ebook-2026-11-24.md): o Redator dá os nomes e o Revisor confere.
+DUAS_PARTES = {
+    "parte1": ("parte 1", "A casa do seu lote", "Uma casa por frente de terreno"),      # cada casa: aba amarela
+    "parte2": ("parte 2", "Para qualquer casa", "Aba azul na borda"),                   # casas em geral: aba azul
+    "aba_geral": "geral",
+    # páginas reservadas (ainda rascunho em outros scripts; entram no D20 e no D21): só o quadro "página em preparo"
+    "comodo": "cômodo a cômodo",
+    "parede": "A parede que não pode ter janela",
+    "em_preparo": "Página em preparo",
+}

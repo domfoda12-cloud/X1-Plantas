@@ -174,3 +174,22 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .ac-fila.ac-2 .ac-fita { height: 8mm; padding-top: 2.2mm; font-size: 12pt; }
 .ac-fila.ac-2 .ac-txt { padding-top: 2mm; gap: .4mm; } .ac-fila.ac-2 .ac-txt h3 { font-size: 12pt; } .ac-fila.ac-2 .ac-txt p { font-size: 8.8pt; }
 .ac-fila.ac-2 .ac-pag { font-size: 12pt; margin-top: 1mm; }
+
+/* e-book em duas partes (modo --duas-partes do livro.py, só prévia; D17, 24/11/2026) */
+.orelha.geral { background: var(--azul); color: #fff; }  /* a aba da parte 2, casas em geral: sempre na mesma altura */
+.sum { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }  /* o sumário da página 2: a aba dele é a aba da borda */
+.sum-parte { display: grid; gap: 2mm; align-content: start; }
+.sum-cab { display: flex; align-items: center; gap: 3mm; border-bottom: .5mm solid var(--tinta); padding-bottom: 1.5mm; }
+.sum-cab b { font-family: var(--tit); font-weight: 800; font-size: 14pt; color: var(--azul); line-height: 1.05; }
+.sum-cab i { font-style: normal; font-size: 8.5pt; color: var(--cinza); display: block; }
+.sum-aba { font-family: var(--mono); font-weight: 700; font-size: 7.5pt; padding: .8mm 2mm; border-radius: 1mm; white-space: nowrap; }
+.sum-aba.am { background: var(--fita); color: #1D1A12; } .sum-aba.az { background: var(--azul); color: #fff; }
+.sum ul { list-style: none; display: grid; gap: 1.6mm; }
+.sum li { display: grid; grid-template-columns: 1fr auto; gap: 3mm; align-items: baseline; font-size: 10pt; border-bottom: .3mm dotted var(--fio); padding-bottom: 1.2mm; }
+.sum li.sum-casa { grid-template-columns: auto 1fr auto; }
+.sum li small { display: block; color: var(--cinza); font-size: 8.5pt; }
+.sum li em { font-family: var(--mono); font-style: normal; font-weight: 700; color: var(--azul); font-size: 9pt; }
+.sum-marca { font-family: var(--mono); font-size: 6.5pt; color: #8A5A00; background: var(--fita-claro); padding: 0 1mm; margin-left: 1.5mm; white-space: nowrap; }
+.reservada { flex: 1 1 auto; display: grid; place-content: center; justify-items: center; gap: 2mm; border: .5mm dashed #C9A23A; border-radius: 3mm; background: var(--fita-claro); color: #8A5A00; text-align: center; }
+.reservada b { font-family: var(--mono); font-size: 9pt; letter-spacing: .1em; text-transform: uppercase; }
+.reservada span { font-family: var(--tit); font-weight: 800; font-size: 20pt; color: var(--tinta); }
