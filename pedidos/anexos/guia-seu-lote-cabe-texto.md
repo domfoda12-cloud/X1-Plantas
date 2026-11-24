@@ -15,7 +15,7 @@
 
 | Atributo | Escada | D | P | E |
 |---|---|---|---|---|
-| **A sua medida vira a resposta** | trena na mão → 5 respostas → na conversa, quais das 3 casas devem caber, com os recuos de referência → não paga projeto de casa que não cabe | 5 | 4 (o lote de cada casa sai do validador; o recuo da cidade, a prefeitura confirma) | 4 (a Aquiprojetos e a Só Projetos perguntam a medida; ninguém ensina a medir) |
+| **A sua medida vira a resposta** | trena na mão → as respostas da ficha → na conversa, quais das 3 casas devem caber, com os recuos de referência → não paga projeto de casa que não cabe | 5 | 4 (o lote de cada casa sai do validador; o recuo da cidade, a prefeitura confirma) | 4 (a Aquiprojetos e a Só Projetos perguntam a medida; ninguém ensina a medir) |
 | **O recuo explicado, sem enrolação** | sabe o que perguntar na prefeitura → não descobre o recuo depois da fundação | 4 | 5 | 5 (concorrentes mostram o terreno mínimo "sem explicar recuo nem norma", caderno `concorrentes`) |
 | **O lado da rua conta** | sabe de que lado fica a rua → a casa certa para o sol dele → quarto mais fresco | 3 | 5 ("melhor lado da rua" de cada casa, do validador) | 4 |
 | Fazer em casa, com o que tem | trena, celular e um papel → nada a comprar | 4 | 5 | 2 |
@@ -84,7 +84,7 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 | `am-cta p` | 3 linhas de ~55 | Imprimiu? Manda a foto desta página. Está no celular? Manda as respostas por escrito. A resposta é de referência e não substitui o profissional. | 146 (3 linhas) |
 | **bloco novo** `am-so`, embaixo da caixa amarela (o mesmo da página 5 da amostra A) | título + 2 linhas | **No e-book, além desta casa:** A Casa Fita e a Casa Família Compacta completas: planta, 3D e o lote · Perguntas para levar ao engenheiro | 26 + 134 |
 
-- As 5 respostas são as do formulário: frente, fundo, largura do fundo, cidade e o lado da rua.
+- As respostas são as do formulário: frente, fundo, largura do fundo, cidade, lote torto (de canto a canto), se é de esquina e o lado da rua.
 - Humor da página: "o caramelo é opcional" (1 frase, volta ao cachorro da p. 1).
 - O quadriculado é `flex` com mínimo de 60 mm: ele encolhe e o bloco novo cabe (hoje tem cerca de 125 mm).
 - **"Além desta casa", e não "as 3 casas":** quem recebeu a amostra já tem a Casa Compacta. Diz só o que vem a mais de fato no PDF (veto da `oferta-e-whatsapp`). As imagens 3D das três existem em `ebook/visual/3d/` (C01, E03, F01), e a do Quadro de 23/11 pede refazê-las sem espelhar: o "3D" da lista só vale se elas estiverem no PDF final.
@@ -99,8 +99,8 @@ O humor desta página já está no desenho (o caramelo do vizinho: fora da medid
 TEXTO: as 4 páginas acima.
 ATRIBUTO CAMPEÃO: "a sua medida vira a resposta" (5/4/4), na abertura da p. 4 e no fecho de cada passo.
 POR QUE VENDE: quem mede o lote já se vê construindo, e a única coisa que falta para saber se cabe é mandar a medida.
-O QUE MEDIR: resposta no WhatsApp com a medida (quantos que receberam a amostra B mandam as 5 respostas) e, depois, venda; o custo por venda decide.
-VARIAÇÃO PARA TESTE (abertura da p. 4, com o 2º atributo): "Com estas 5 respostas e os recuos que a prefeitura te passar, eu te digo na conversa quais das 3 casas do e-book devem caber no seu lote."
+O QUE MEDIR: resposta no WhatsApp com a medida (quantos que receberam a amostra B mandam as respostas da ficha) e, depois, venda; o custo por venda decide.
+VARIAÇÃO PARA TESTE (abertura da p. 4, com o 2º atributo): "Com estas respostas e os recuos que a prefeitura te passar, eu te digo na conversa quais das 3 casas do e-book devem caber no seu lote."
 ```
 
 ## O Arquiteto precisa conferir
@@ -113,7 +113,7 @@ VARIAÇÃO PARA TESTE (abertura da p. 4, com o 2º atributo): "Com estas 5 respo
 6. P. 3: o bloco do sol ("No Sul, o do meio-dia passa pelo norte o ano todo; ... mais meses ele passa pelo sul, no fim e no começo do ano"). Pela minha conta, Fortaleza tem uns 5 meses de sol do meio-dia ao sul, Salvador uns 3 e meio, Brasília uns 2 e meio, e o norte do Paraná, alguns dias.
 7. P. 3: "braço direito para o sol, logo cedo: você está de frente para o norte"; a bússola do celular mostra o norte magnético, que no Brasil fica alguns graus fora do norte verdadeiro: muda a escolha entre os quatro lados?
 8. P. 3: "ajusta as janelas ou espelha a planta" (na C01 a parede da divisa troca de lado) e "No e-book, cada casa diz o melhor lado da rua" (linha "Melhor lado da rua" da Informação da casa).
-9. P. 4: as 5 respostas bastam para a conversa dizer quais casas devem caber.
+9. P. 4: estas respostas bastam para a conversa dizer quais casas devem caber.
 
 ## Resposta do Arquiteto (24/11/2026)
 

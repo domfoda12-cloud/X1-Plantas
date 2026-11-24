@@ -384,7 +384,7 @@ Qual é a frente e o fundo do seu lote? Com a medida eu te digo se ela cabe no s
 
 ## 9. Para o Revisor de risco (frases, uma por linha)
 
-- "Lote de 5 m de frente? Cabe uma casa de 2 quartos." (A1, primeira linha: o "com os recuos de referência" vem na frase seguinte; basta ou precisa estar na mesma frase?)
+- **Resolvida (Revisor, 24/11, SIM SE aplicado):** a 1ª linha do A1 passou a "Lote de 5 x 25 m? Cabe uma casa de 2 quartos, com os recuos de referência." (o fundo e os recuos na mesma frase: um lote de 5 x 15 não lê "cabe" antes do corte; a E03 pede 20,6 m de fundo)
 - "Tem um lote de 10 x 15? Essa casa de 3 quartos foi desenhada nele." (B1)
 - "Tem um lote de 8 x 15? Essa casa de 2 quartos foi desenhada nele." (C1, em espera)
 - "Me chama no WhatsApp e manda a medida do seu lote. Eu te digo se ela cabe no seu." (A, B e C: promessa de conferir com a calculadora e os recuos de referência, não com a regra da cidade; o `/cabe` diz que os recuos da cidade se confirmam na prefeitura)

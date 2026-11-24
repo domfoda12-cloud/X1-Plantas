@@ -14,7 +14,7 @@
 
 | Atalho | Quando usar |
 |---|---|
-| (automática) | Mensagem de saudação: sai sozinha quando a pessoa chama |
+| (automática) | Mensagem de saudação: sai sozinha quando a pessoa chama e pede a medida do lote (quem pede a planta grátis recebe o `/planta` em seguida) |
 | (Instagram) | Resposta a quem comenta PLANTA: no comentário e no Direct |
 | `/planta` | Entregar a planta grátis (com o PDF) |
 | `/medida` | Pedir a medida do lote de novo, explicando como medir |
@@ -41,10 +41,10 @@
 ```text
 Oi! Que bom que você chamou. Aqui é [seu nome], do e-book Antes do primeiro tijolo.
 
-Já te mando a planta grátis da Casa Compacta.
-
-Enquanto isso, me fala: qual é a medida do seu lote? Frente x fundo (exemplo: 8 x 15). Com ela eu te digo se a casa cabe.
+Me fala a medida do seu lote: frente x fundo (exemplo: 5 x 25 ou 10 x 15). Com ela eu te digo quais das 3 casas cabem no seu lote (se alguma cabe), com os recuos de referência.
 ```
+
+> **Uma saudação só para todas as origens** (o WhatsApp Business tem uma só; ver o [kit do anúncio](../../pedidos/anexos/kit-anuncio-whatsapp.md), seção 2a): por isso ela não cita casa nem grátis. Revisor de risco: SIM SE em 24/11, já aplicado. **Quem chega do Instagram com "Quero a planta grátis" recebe o `/planta` logo depois da saudação** (o post prometeu; CDC, art. 30).
 
 ### Instagram: quem comenta PLANTA
 
@@ -271,7 +271,7 @@ Enquanto isso, me manda a medida do seu lote (frente x fundo, exemplo: 8 x 15). 
 
 1. **Abra o WhatsApp Business** com o número do negócio.
 2. **Ache as ferramentas:** no Android, toque nos três pontinhos (canto de cima, à direita) e em **Ferramentas comerciais**; no iPhone, em **Configurações** e depois **Ferramentas comerciais**.
-3. **Mensagem de saudação:** toque em **Mensagem de saudação**, ligue a chave, toque na mensagem, apague o texto que vem pronto e cole o texto "Saudação" acima, sem os colchetes (troque [seu nome]). Em quem recebe, escolha **Todos**. Salve.
+3. **Mensagem de saudação:** toque em **Mensagem de saudação**, ligue a chave, toque na mensagem, apague o texto que vem pronto e cole o texto "Saudação" acima, sem os colchetes (troque [seu nome]). Em quem recebe, escolha **Todos** (a mesma saudação vale para o Instagram e para todos os anúncios). Salve.
 4. **Mensagem de ausência:** toque em **Mensagem de ausência**, ligue a chave, cole o texto "Ausência" acima. Em programar, escolha **Horário personalizado** e ponha o horário em que ninguém atende (ou **Fora do horário comercial**, se o horário estiver no perfil comercial). Salve.
 5. **Respostas rápidas:** toque em **Respostas rápidas** e no **+**. Em **Mensagem**, cole o texto; em **Atalho**, escreva o atalho sem a barra (ex.: `pix`). Salve. Repita para os 16 atalhos da lista (cabe até 50).
 6. **Teste antes de ligar o anúncio:** de outro celular, mande "Oi" para o número do negócio e veja se a saudação chega. Num chat qualquer, digite `/` e confira se os atalhos aparecem e se o texto saiu inteiro (alguns guias falam em limite de 512 caracteres por resposta rápida; se cortar, avise o Redator).

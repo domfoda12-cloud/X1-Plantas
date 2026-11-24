@@ -206,6 +206,8 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 >
 > Decidido em 23/11 (dono): título, garantia de 7 dias, bônus, Pix pelo WhatsApp e entrega por link. Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
 >
+> **Bônus só com página no PDF** (veto do Revisor de risco, 24/11; CDC, arts. 30 e 37): o checklist da obra por fase e a lista de perguntas para imprimir só são citados ao cliente quando as páginas deles existirem no PDF. O `livro.py` só anuncia o bônus que tem página registrada (`PAGINAS_BONUS`), e o `checar.py` acusa erro se o PDF citar um bônus sem página.
+>
 > O que o e-book tem de verdade está em [`../EBOOK.md`](../EBOOK.md), seções 2 e 3. Não prometa nada que não esteja lá.
 
 ### Sobre o e-book
