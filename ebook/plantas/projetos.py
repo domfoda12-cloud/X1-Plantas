@@ -263,7 +263,7 @@ def todas():
                   [("ext", "sala", "frente"), ("sala", "cozinha", "aberto"), ("cozinha", "servico"), ("ext", "servico", "dir", 1.75),
                    ("sala", "circ", "aberto"), ("circ", "banho"), ("circ", "quarto1"), ("circ", "quarto2"), ("circ", "quarto3")],
                   "3 quartos", 1,
-                  destaque="Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para fora, no corredor lateral"))
+                  destaque="Os 3 quartos nos fundos, longe da rua; sala com mesa de 4 e serviço com porta para fora, para a faixa livre de 1,5 m ao lado da casa (recuo de referência)"))
     P.append(casa("F02", "Casa Integrada", 10.0, 8.6,
                   H((3.8, V((4.0, F("sala", "Sala", "sala")), (2.4, F("jantar", "Jantar", "jantar")),
                             (2.4, F("cozinha", "Cozinha", "cozinha")), (None, F("servico", "Serviço", "servico")))),
