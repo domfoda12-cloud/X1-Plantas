@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-24 | [terminar o e-book: o que falta e separar o que vai ao cliente](2026-11/2026-11-24-2050-terminar-o-e-book-o-que-falta-e-separar-o-que-vai-ao-cliente.md) | aberta | Maestro (separação); a equipe segue os 10 passos, um por vez. |
 | 2026-11-24 | [visita 3D com modelos mais realistas (guardar para depois)](2026-11/2026-11-24-2046-visita-3d-com-modelos-mais-realistas-guardar-para-depois.md) | aberta | Ninguém agora. Quando ele mandar: Pesquisador (bibliotecas e licenças), Revisor (veto), De |
 | 2026-11-24 | [desacelerar: uma tarefa por vez](2026-11/2026-11-24-2043-desacelerar-uma-tarefa-por-vez.md) | aberta | Maestro (regra, quadro, tarefa agendada); Planejador (ordem no plano). |
 | 2026-11-24 | [visita 3D mais detalhada e personalizavel; Agora nunca vazio; agente parado trabalha em si, no sistema ou em outro agente](2026-11/2026-11-24-1144-visita-3d-mais-detalhada-e-personalizavel-agora-nunca-vazio-.md) | aberta | Agente de código (visita 3D); Pesquisador (referências); Planejador (fila e Agora); Reviso |

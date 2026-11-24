@@ -43,11 +43,11 @@ Tamanho: 1254 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
-Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador`. Quarta rodada: 24/11/2026, 16h05 UTC, conferida contra o repositório nesta hora (`git log` até `ca5b47b`, `git…
+Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a passo, separado em tarefas grandes e pequenas, entre os agentes". Quem mantém, desde 24/11: o `planejador`. Quinta rodada: 24/11/2026, 20h50 UTC, conferida contra o repositório nesta hora (`git log` até `905e349`; o D20…
 
-Seções: O objetivo da equipe; Onde estamos (24/11, 16h05, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois: o júri decide e mostra depois (dono, cartão v6); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
+Seções: A ordem das próximas 5 tarefas (uma por vez); O objetivo da equipe; Onde estamos (24/11, 20h50, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: o júri já decidiu, agora espera o dono (cartões do Canteiro); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); ….
 
-Tamanho: 12444 palavras.
+Tamanho: 13978 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 

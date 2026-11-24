@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`)
+
+- **O dono pediu:** "Quero terminar o ebook o que falta. Falta uma separacao exata do que estamos trabalhando e vamos implementar pro cliente, temos que terminar tudo 1 por 1 comecando pelo E book".
+- **O que mudou:** existe a separação em `pedidos/anexos/o-que-vai-ao-cliente-2026-11-24.md`: o que o cliente recebe, o que é só ferramenta nossa, e os 10 passos que faltam para o e-book.
+- **Todos:** só se trabalha nos 10 passos do e-book, na ordem, um por vez. Sistema, Instagram, vitrines e vídeo esperam. **Planejador:** a ordem do topo do plano segue essa tabela.
+
 ## 24/11 · Visita 3D mais realista: guardada para depois (ficha `2026-11-24-2046`)
 
 - **O dono pediu:** gosta da visita 3D e quer saber se dá para usar modelos mais realistas; "Dont start working on it if yes, i think it costs a lot of credit, save it for later".

@@ -15,7 +15,8 @@ Uso:
 
     python3 ebook/gerador/livro.py --previa DIR --duas-partes
                                                    prévia do e-book em duas partes (D17, 24/11/2026): casas pela frente
-                                                   do lote; abertura, parte 1 (cada casa), parte 2 (casas em geral, com
+                                                   do lote; abertura, parte 1 (cada casa, com as 2 páginas "cômodo a
+                                                   cômodo" depois da dupla dela, D20), parte 2 (casas em geral, com
                                                    a aba azul "geral"), fecho; sumário na página 2. Sem --previa, recusa.
 
 O PDF oficial e a calculadora só são gravados sem --previa e sem --conferir.

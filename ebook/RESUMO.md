@@ -20,7 +20,7 @@
 
 O Claude Code carrega este arquivo sozinho quando trabalha aqui. As regras gerais estão no `CLAUDE.md` da raiz.
 
-Tamanho: 286 palavras.
+Tamanho: 313 palavras.
 
 ### [E-book: plantas de casas térreas](EBOOK.md)
 
