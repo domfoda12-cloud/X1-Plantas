@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 65 documentos
+## Os 66 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: A ordem das próximas 5 tarefas (uma por vez); O objetivo da equipe; Onde estamos (24/11, 20h50, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: o júri já decidiu, agora espera o dono (cartões do Canteiro); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); ….
 
-Tamanho: 14029 palavras.
+Tamanho: 14051 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -300,6 +300,14 @@ Pedido do dono (24/11, 20:50): "Falta uma separação exata do que estamos traba
 Seções: 1. O que o cliente recebe; 2. O que NÃO vai ao cliente (é ferramenta nossa); 3. O que falta para o e-book ficar pronto, um por um; 4. Depois do e-book, na ordem.
 
 Tamanho: 631 palavras.
+
+### [`/oferta` para quem só cabe a Casa Compacta, e a entrega com dois arquivos (RASCUNHO)](anexos/oferta-so-casa-compacta-2026-11-24.md)
+
+Redator, 24/11/2026. Passo D41 do `pedidos/PLANO.md` (parte A) e a condição do Revisor sobre o "bonus.pdf" (parte B). Rascunho: não vai ao público sem a leitura do Revisor de risco (seção no fim) e sem o dono. Nada foi editado no `WHATSAPP.md` nem no `RESPOSTAS-RAPIDAS.md`: as trocas da parte B…
+
+Seções: Parte A. A mensagem para quem só cabe a Casa Compacta; Parte B. Entrega com dois arquivos; Dúvidas para o Revisor; Leitura do Revisor.
+
+Tamanho: 3567 palavras.
 
 ### [Página "cômodo a cômodo": Casa Compacta (C01), texto](anexos/pagina-comodo-a-comodo-C01-texto.md)
 
