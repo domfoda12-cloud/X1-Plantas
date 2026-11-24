@@ -29,19 +29,19 @@ Tamanho: 1748 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 351 palavras.
+Tamanho: 470 palavras.
 
 ### [Pesquisa: Normas, leis e código de obras](normas.md)
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 2823 palavras.
+Tamanho: 3225 palavras.
 
 ### [Pesquisa: O que não cabe nos outros](outros.md)
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 1075 palavras.
+Tamanho: 1176 palavras.
 
 ### [Pesquisa: Projeto de casa: referências, medidas, arranjo](plantas.md)
 

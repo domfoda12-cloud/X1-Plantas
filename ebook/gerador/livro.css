@@ -177,6 +177,7 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 
 /* e-book em duas partes (modo --duas-partes do livro.py, só prévia; D17, 24/11/2026) */
 .orelha.geral { background: var(--azul); color: #fff; }  /* a aba da parte 2, casas em geral: sempre na mesma altura */
+.usar2 .miolo { justify-content: space-between; }  /* sem a foto: a sobra se reparte e o aviso assenta no pé da folha */
 .sum { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }  /* o sumário da página 2: a aba dele é a aba da borda */
 .sum-parte { display: grid; gap: 2mm; align-content: start; }
 .sum-cab { display: flex; align-items: center; gap: 3mm; border-bottom: .5mm solid var(--tinta); padding-bottom: 1.5mm; }

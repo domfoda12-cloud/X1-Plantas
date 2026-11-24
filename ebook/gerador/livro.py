@@ -1162,7 +1162,7 @@ def montar(plantas, config, numeros, duas_partes=False):
         <li><b>Leve a escolhida ao seu engenheiro.</b><span>Cada casa explica por que foi desenhada assim e traz as perguntas certas. Você chega na primeira conversa sabendo o que quer e o que perguntar.</span></li>
       </ol>
       {sumario(plantas, numeros) if duas_partes else foto("02-maos-medindo", 66, pos="center 72%")}
-      <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""")
+      <div class="caixa amarela"><h3>Planta de referência</h3>{TX.AVISO_COMPLETO}</div>""", "usar2" if duas_partes else "")
     L.inicio["usar"] = len(L.paginas)
 
     # 3. ache pelo lote (no modo duas partes é a porta da parte 1: mostra as abas de todas as frentes)

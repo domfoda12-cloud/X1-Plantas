@@ -18,7 +18,7 @@
 | Ordem | Arquivo | O que faz | Alimenta |
 |---|---|---|---|
 | 4 | [`ebook/fichas/textos.py`](ebook/fichas/textos.py) | o texto de cada casa | 5 |
-| 5 | [`ebook/gerador/livro.py`](ebook/gerador/livro.py) | monta o e-book em HTML, com [`ebook/gerador/paginas.py`](ebook/gerador/paginas.py) (textos fixos) e [`ebook/config.json`](ebook/config.json) | 6, 7 |
+| 5 | [`ebook/gerador/livro.py`](ebook/gerador/livro.py) | monta o e-book em HTML, com [`ebook/gerador/paginas.py`](ebook/gerador/paginas.py) (textos fixos) e [`ebook/config.json`](ebook/config.json); com `--previa <pasta> --duas-partes`, a prévia do e-book em duas partes (cada casa, depois casas em geral; só prévia) | 6, 7 |
 | 6 | [`ebook/gerador/pdf.cjs`](ebook/gerador/pdf.cjs) | transforma o HTML em PDF e confere página estourada | [`ebook/saida/`](ebook/saida) (e-book e 5 plantas grátis) |
 | 7 | [`ebook/vendas/calculadora-lote.html`](ebook/vendas/calculadora-lote.html) | a calculadora do parceiro; a lista de casas é reescrita pelo `livro.py` | funil no WhatsApp |
 
