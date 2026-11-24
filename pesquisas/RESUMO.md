@@ -41,7 +41,7 @@ Tamanho: 2823 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 724 palavras.
+Tamanho: 1075 palavras.
 
 ### [Pesquisa: Projeto de casa: referências, medidas, arranjo](plantas.md)
 

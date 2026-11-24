@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 55 documentos
+## Os 56 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h55, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 11945 palavras.
+Tamanho: 12026 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -261,6 +261,14 @@ Seções: 1. Lei 6.766/1979, art. 4º, II (lote mínimo); 2. Decreto 7.962/2013 
 
 Tamanho: 2331 palavras.
 
+### [Letras com identidade para o projeto: 10 opções em 6 famílias (24/11/2026)](anexos/letras-com-identidade-2026-11-24.md)
+
+Pedido do dono (quadro, 24/11/2026), palavra por palavra: "Procure na rede e me mostre as opcoes, o alienigena so foi um exemplo de algo com identidade e original". Antes (23/11) ele tinha dito "caligrafia meio alienígena". O que se quer: uma letra com identidade para os títulos do e-book e para o…
+
+Seções: Como ler as marcações; Família 1: letreiro de obra e de placa pintada à mão (letreiramento popular, "abridor de letras"); Família 2: estêncil e carimbo de caixote; Família 3: letra de planta técnica e de normógrafo; Família 4: letra "estranha" ou alienígena (forma inventada, ainda legível); Família 5: letra de quadrinho e de gibi; Família 6: display gorda e engraçada; Quais 3 eu levaria ao Designer para testar no nome "Lote Carente" (leitura minha, não decisão); O que não consegui conferir; Reconferência do pedido (um por um).
+
+Tamanho: 2923 palavras.
+
 ### [Mapa das duas partes do e-book (passo A10, 24/11/2026)](anexos/mapa-duas-partes-do-ebook-2026-11-24.md)
 
 Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma parte falando de cada casa específica, e outra parte falando de casas no geral"; a página da parede sem janela "pode ir pro geral". Autor: Designer, 24/11/2026. É proposta: quem decide a ordem é o Maestro…
@@ -275,7 +283,7 @@ Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou
 
 Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
 
-Tamanho: 2180 palavras.
+Tamanho: 2200 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 

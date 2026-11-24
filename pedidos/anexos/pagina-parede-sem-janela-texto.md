@@ -47,7 +47,7 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 - **Designer desenha:** corte da casa (como uma fatia), com a legenda "esquema, não é das 3 casas" e sem nome de casa: à esquerda a parede da divisa lisa; dois telhados, o do meio mais alto, com a faixa de janela virada para o lado do recuo e a marca "1,5 m ou mais" entre ela e a divisa; o encontro dos telhados marcado "rufo"; uma seta de sol entrando pela janela.
 
 ### 4. A luz que vem de cima (título 6)
-- **O que fazer** (23): No ponto mais longe da janela, uma telha translúcida ou uma claraboia traz a luz do dia, sem abrir a parede do vizinho.
+- **O que fazer** (24): No ponto mais longe da janela, uma telha translúcida ou uma claraboia traz a luz do dia, sem abrir janela na parede da divisa.
 - **Cuidado** (31): Com forro ou laje embaixo, é preciso abrir um vão neles. Estrutura, vedação, calha e calor: o engenheiro escolhe se e como. A chuva não pode cair no vizinho (art. 1.300).
 - **Nas casas** (10): Não está nas 3 casas: leve a ideia ao engenheiro.
 - **Designer desenha:** o mesmo corte, com a mesma legenda "esquema, não é das 3 casas" e sem nome de casa: a telha clara no fundo do cômodo e, logo embaixo dela, o vão aberto no forro, marcado "vão no forro"; a seta de sol desce pela telha e pelo vão até o piso; do lado da divisa, a calha com uma seta da água indo para dentro do lote, nunca para o vizinho.
@@ -56,6 +56,7 @@ Os 3 maiores: a regra explicada, a luz e as perguntas. **Campeão: a regra expli
 1. (14) Esta parede da divisa é estrutural? Posso prender armário alto ou fazer nicho nela?
 2. (20) O pé da parede da divisa leva impermeabilização? Como fica o lado de fora, se o vizinho ainda não construiu?
 3. (26) Para onde vai a chuva do telhado deste lado? O código de obras da minha cidade pede mais de 1,5 m para janela perto da divisa?
+4. (7) A prefeitura deixa a casa encostar na divisa? (pergunta pedida pelo Revisor, veto de 24/11, item 7)
 
 **Aviso** (15, inteiro e parado, nunca coberto): Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado.
 
