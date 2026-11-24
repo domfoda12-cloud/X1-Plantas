@@ -15,3 +15,24 @@
 - Nota: "sobram 34 cm" fica mais claro como "a passagem fica com 34 cm".
 
 **Não conferido:** as páginas montadas (ainda não existem); os números que vêm do anexo de mobiliar e não foram refeitos (3,20 m, 1,21 m, 40 a 70 cm, 34 cm, o limite de 1,50 m do rack).
+
+## Conferência técnica do Arquiteto (24/11)
+
+Conferido contra os dados, a geometria do 3D e as prévias; o validador dá 0 erros nas duas casas.
+
+**Casa Família Compacta:** todos os números batem. Trocas:
+- Item 1 e tabela de atributos: "3,75 m da parede da divisa e 1,70 m da parede da frente, medidos por dentro".
+- Item 4 ("Aponta"): "ideia no canto do box, nas paredes da cozinha e do serviço (onde correm os canos); cuidado na pia, na parede de fora, embaixo da janela, do lado do fundo, longe do box (no canto da frente, junto da cozinha)". Banheiro: vale o desenho (o arranjo do anexo de mobiliar nunca foi desenhado; o anexo e o documento do Arquiteto foram corrigidos).
+- Item 7: acrescentar "…na parede do quarto do meio, fora das costas da tomada da cama de lá". Título do 7: "Quarto 3 (o do canto, atrás do banheiro)". "Parede do quarto 2" (itens 6 e 7) vira "parede do quarto do meio".
+
+**Casa Compacta:** os números batem, com dois erros:
+- **Rack:** "até 1,50 m" está errado (a divisa tem 1,47 m livres entre a folha da porta e a cadeira). Item 3: "TV na divisa, num rack de até 1,35 m; sofá de 2 lugares na parede do quarto, a 1,86 m dela. Eletricista confere."
+- **Varanda:** o desenho não mostra parede nem pilar na divisa da varanda. Item 1: "Ganchos de rede entre a divisa e o quarto (uns 3,20 m); na divisa, só em parede ou pilar que o engenheiro aprove. Rede armada fecha a entrada." "Aponta": "a divisa (esquerda; o desenho não mostra parede ali)".
+- **TV:** não fica atrás da cama; fica na parede de 12 cm do quarto da frente, logo depois do pé de uma cama. Cuidado: "Do jeito da planta, a TV fica na parede de 12 cm do quarto da frente, logo depois do pé de uma cama: o som passa." Trocar "atrás da cama" por "na parede do quarto" na tabela de atributos e no parágrafo do destaque.
+- Nomes dos quartos da C01: certos.
+
+**Parecer do Arquiteto sobre o destaque:** não destacaria uma troca de móveis que o desenho não mostra; ou ela vai para a planta oficial (só os móveis da sala: sofá na parede do quarto, rack de 1,35 m na divisa; pede regenerar planta, 3D, visita, PDF e posts), ou o destaque passa para o hall.
+
+## Decisão do Maestro (24/11), para mostrar ao dono depois
+
+**O destaque da Casa Compacta passa a ser o hall.** A ideia da TV fica como um item comum da sala, com as frases do Revisor e do Arquiteto ("no desenho, ela está na parede do quarto…", rack de até 1,35 m). Levar a troca dos móveis da sala para a planta oficial vira um passo próprio do júri, porque mexe em planta, 3D, PDF e posts.

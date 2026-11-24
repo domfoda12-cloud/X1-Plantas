@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 61 documentos
+## Os 63 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -103,7 +103,7 @@ Medidas conferidas em 24/11/2026, segunda conferência, cômodo por cômodo, pel
 
 Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; cabe num lote de 8 x 15 m); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m); 3. F01 · Casa Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; cabe num lote de 10 x 15 m); 4. Medidas de móveis comuns no Brasil (as usadas nas contas); 5. Para a equipe (não vai ao público).
 
-Tamanho: 4995 palavras.
+Tamanho: 5051 palavras.
 
 ### [Cômodo a cômodo: o próximo passo depois da planta (C01, E03, F01)](anexos/comodo-a-comodo-3-casas.md)
 
@@ -111,7 +111,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público); 6. O que ainda não pode virar página.
 
-Tamanho: 9711 palavras.
+Tamanho: 9958 palavras.
 
 ### [Conferência técnica do Arquiteto: página "A parede que não pode ter janela" (passo D19), 24/11/2026](anexos/conferencia-arquiteto-parede-sem-janela-2026-11-24.md)
 
@@ -419,6 +419,12 @@ Texto do Revisor, como ele entregou. As trocas são aplicadas pelo Redator.
 
 Tamanho: 1057 palavras.
 
+### [Revisor de risco: rótulos novos do PDF dos bônus (passo D34), 24/11/2026 · Opus, rascunho](anexos/veto-bonus-pdf-separado-2026-11-24.md)
+
+SIM. Abriu as 12 páginas. Todas têm o rodapé "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado." inteiro e o selo de rascunho no topo. O "Antes de usar" da página 2 é igual, palavra por palavra, ao texto do veto anterior, com "não substitui o…
+
+Tamanho: 229 palavras.
+
 ### [Veto do Revisor de risco: `comodo-a-comodo-3-casas.md` (24/11/2026)](anexos/veto-comodo-a-comodo-2026-11-24.md)
 
 VETO em 3 pontos, cada um com a troca que vira SIM; o resto passa com troca ou como está. L = linha do documento na versão lida. Conferido contra os dados das 3 casas e `PLANTAS.md`: medidas livres, perímetros, janelas, portas, folga no fundo e distâncias da tomada ao box batem. Não há promessa de…
@@ -456,6 +462,14 @@ Tamanho: 513 palavras.
 Seções: Conferência do Arquiteto (24/11): SIM SE; Decisão do Maestro sobre os dois pareceres (24/11).
 
 Tamanho: 757 palavras.
+
+### [Revisor de risco: textos das páginas "cômodo a cômodo" da Casa Família Compacta e da Casa Compacta (passo D32), 24/11/2026 · Opus, rascunho](anexos/veto-pagina-prova-F01-C01-2026-11-24.md)
+
+Não conferido: as páginas montadas (ainda não existem); os números que vêm do anexo de mobiliar e não foram refeitos (3,20 m, 1,21 m, 40 a 70 cm, 34 cm, o limite de 1,50 m do rack).
+
+Seções: Casa Família Compacta (F01): SIM SE; Casa Compacta (C01): SIM SE; Conferência técnica do Arquiteto (24/11); Decisão do Maestro (24/11), para mostrar ao dono depois.
+
+Tamanho: 872 palavras.
 
 ### [Veto: página "A parede que não pode ter janela" (passo D19), 24/11/2026 · Revisor de risco, Opus (rascunho)](anexos/veto-parede-sem-janela-2026-11-24.md)
 

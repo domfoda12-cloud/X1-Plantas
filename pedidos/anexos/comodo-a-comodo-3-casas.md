@@ -36,11 +36,11 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 ### Sala e jantar · 3,14 x 3,99 m livres (12,5 m²)
 - **Cabe** (anexo de mobiliar): sofá de 2 lugares na divisa, rack na parede do quarto da frente a 1,86 m do sofá, mesa de 4 no fundo, colada na passagem da cozinha. As cadeiras ficam com 46 e 51 cm (a referência do Anexo G da NBR 15575 sugere 75): banco sem encosto do lado da parede do serviço resolve.
 - **Ideias:**
-  1. **Trocar a TV de parede.** Hoje o rack fica na parede do quarto da frente, atrás da cama de uma criança. Dá para inverter: **rack de até 1,50 m na divisa**, começando 5 cm depois da folha aberta da porta e terminando 7 cm antes da cadeira da mesa; **sofá de 2 lugares (1,40) na parede do quarto**, que tem 1,95 m livres antes da abertura do hall. A distância TV e sofá continua 1,86 m, a janela fica livre. O som da TV vai para a divisa, e o sofá, que não faz barulho, encosta no quarto. Rack de 1,60 não cabe nesse lugar; sofá de 3 lugares (2,00) também não.
+  1. **Trocar a TV de parede.** Hoje o rack (1,60) fica na parede de 12 cm do quarto da frente: os primeiros 55 cm dele ficam atrás do pé de uma das camas, e o meio dele (onde vai a caixa da TV) fica 25 cm depois desse pé. A cabeceira fica na parede da rua, a uns 2 m: a tomada da cama **não** fica costas com costas com a da TV; o que passa a parede é o som. Dá para inverter: **rack de até 1,35 m na divisa** (a parede da divisa tem **1,47 m** livres entre a folha aberta da porta, que vai até 80 cm da parede da varanda, e a cadeira da mesa; com 5 cm de folga de cada lado, 1,35 m); **sofá de 2 lugares (1,40) na parede do quarto**, que tem 1,95 m livres antes da abertura do hall. A distância TV e sofá continua 1,86 m, a janela fica livre. Rack de 1,50 ou 1,60 não cabe nesse lugar (bate na cadeira da mesa); sofá de 3 lugares (2,00) também não. Conferido na geometria do 3D em 24/11 (D32); **não está no desenho**: só vira página com destaque se o Maestro e o júri mandarem pôr na planta oficial.
   2. **Dois pontos de luz no teto, decididos antes da laje ou do forro:** um no meio do estar e outro em cima da mesa, a **73 cm da parede da divisa e a 87 cm da parede do serviço** (o centro da mesa no desenho). A luz do meio da sala, sozinha, cai no tapete e deixa a mesa na sombra.
   3. **Interruptor do lado da maçaneta:** no desenho, a folha da porta abre contra a divisa, e sobram **20 cm de parede entre a porta e a janela**. O interruptor vai nessa faixa, não atrás da porta, onde a folha aberta encosta; o eletricista confere se a caixa cabe com o batente e o marco.
 - **Tomadas:** perímetro de 14,3 m: o mínimo é **3 pontos** (um a cada 5 m). Sugestão de lugar: atrás da TV (com antena), um do lado do sofá e um na divisa junto da mesa (celular, ventilador). Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
-- **Cuidado:** caixa de tomada e de antena da TV **costas com costas** com a tomada da cama do outro lado da parede de 12 cm. Esta planta, do jeito que está, põe a TV atrás da cama do quarto da frente: a ideia 1 evita.
+- **Cuidado:** TV na parede de 12 cm de um quarto: o som passa. Esta planta, do jeito que está, põe a TV na parede do quarto da frente, logo depois do pé de uma das camas (não atrás da cabeceira): a ideia 1 evita. Se a TV ficar onde está, a caixa dela não vai costas com costas com tomada nenhuma do quarto.
 - **Pergunte:** ao eletricista, se a caixa da TV pode ficar na divisa e por onde desce o fio da antena; ao engenheiro, onde passa a viga do teto antes de marcar o ponto da mesa.
 
 ### Cozinha · 1,83 x 2,95 m livres (5,4 m²)
@@ -98,7 +98,7 @@ O que esta casa tem de próprio: o **hall de 1,7 m²** no meio de tudo (a circul
 - **Pergunte:** ao eletricista, se o quadro de luz pode ficar no hall, no meio da casa, ou onde ele recomenda.
 
 ### Varanda · 3,35 x 1,20 m (4,0 m², coberta e aberta na frente)
-- **Cabe:** cadeiras encostadas na janela da sala, fora da porta (anexo de mobiliar). Entre a parede da divisa e a parede do quarto ficam **3,20 m** (3,35 no eixo menos os 15 cm da parede da divisa).
+- **Cabe:** cadeiras encostadas na janela da sala, fora da porta (anexo de mobiliar). Entre a divisa e a parede do quarto ficam **uns 3,20 m** (3,35 no eixo menos uns 15 cm de parede na divisa). **O desenho (2D e 3D) não mostra parede nem pilar do lado da divisa da varanda**, embora o validador diga que essa lateral fica fechada: gancho de rede desse lado só em parede ou pilar que o engenheiro aprove.
 - **Ideias:**
   1. **Rede, só de pôr e tirar.** Os 3,20 m estão dentro da faixa da Portaria MCID 725 (2,90 a 3,30 m entre os ganchos). Mas a porta da sala fica na ponta da divisa e o caminho da rua passa pela varanda: **rede armada fecha a entrada**. Ganchos sim, rede guardada quando não estiver em uso. Rede de um gancho só, no canto do quarto, longe da porta, pede apoio no teto: o engenheiro confere a viga ou a laje.
   2. **Uma tomada e um ponto de luz na varanda** (a NBR 5410:2004 pede um ponto de tomada na varanda, pelas fontes do "Como ler"); o interruptor da luz da varanda fica dentro da sala, ao lado da porta.
@@ -230,7 +230,7 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
 - **Cabe** (anexo de mobiliar): rack na divisa, sofá de 3 lugares solto no meio, de costas para a mesa, mesa de 4 junto da cozinha.
 - **Ideias:**
   1. **A tomada do sofá vai embaixo da janela da frente**, na ponta dele: o sofá não encosta em parede (a janela tem peitoril de 1,00 m no desenho; tomada baixa passa embaixo). A altura da caixa com o peitoril, o eletricista confere.
-  2. **Ponto de luz em cima da mesa:** a **3,75 m da divisa e 1,70 m da parede da frente** (centro da mesa no desenho), marcado **depois** que o engenheiro disser onde passa a viga do vão de 4,60 m.
+  2. **Ponto de luz em cima da mesa:** a **3,75 m da parede da divisa e 1,70 m da parede da frente, medidos da face de dentro** (centro da mesa no desenho; da linha da divisa seriam 3,90 m), marcado **depois** que o engenheiro disser onde passa a viga do vão de 4,60 m.
   3. **Interruptor nos 62 cm** entre a porta da rua e a janela.
 - **Tomadas:** perímetro de 16,0 m: o mínimo é **4 pontos** (um a cada 5 m). Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
 - **Cuidado:** sala atravessada por dois caminhos (a pesquisa da UFRGS liga isso à insatisfação do morador). **Esta planta não evita de todo:** quem entra e vai para os quartos passa entre a TV e o sofá (1,45 m), e o corredor corre no fundo da sala. O que ajuda: sem mesa de centro e sem tapete solto no caminho.
@@ -256,11 +256,11 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
 - **Pergunte:** ao eletricista, o DR; ao engenheiro, onde fica o botijão (o serviço é o cômodo com porta para fora).
 
 ### Banheiro · 1,59 x 2,38 m livres (3,8 m²)
-- **Cabe** (anexo de mobiliar): box de 0,90 x 0,95 no canto da frente, pia na parede da cozinha (canos juntos), vaso no fundo. **Aviso:** os dados da F01 não trazem os móveis do banheiro; o desenho 3D arruma sozinho e põe outro arranjo. As ideias abaixo seguem o arranjo do anexo.
+- **Cabe** (o desenho da planta, o mesmo da prévia, do PDF e do 3D; corrigido no D32, 24/11): box de 0,95 x 0,90 no canto da frente, junto da cozinha e do serviço (a máquina fica do outro lado); vaso ao lado do box, na parede do serviço; pia na parede de fora, embaixo da janela (peitoril de 1,60 m), do lado do fundo. Os dados da F01 não trazem os móveis do banheiro: o desenho arruma sozinho (`mobiliar`, em `ferramentas/planta3d.py`). **Apertado:** entre o box e a parede de fora sobram 59 cm para o vaso (8,5 cm de um lado, 10,5 do outro); o arquiteto da obra confere.
 - **Ideias:**
-  1. **Tomada ao lado da pia, do lado mais longe do box; a distância, o eletricista confere.**
+  1. **Tomada ao lado da pia, do lado do fundo, o mais longe do box; a distância, o eletricista confere.**
   2. **Registro próprio** e teste do encanamento antes do reboco (guia do MCID; ficha do fabricante, nota de fonte).
-- **Cuidado:** vaso encostado na parede do quarto. Aqui o vaso fica na parede do quarto 3, onde está o guarda-roupa dele (ver o quarto 3).
+- **Cuidado:** espelho em cima da pia: a janela fica em cima dela, a partir de 1,60 m. O espelho vai entre a torneira e o peitoril, ou na parede do lado.
 - **Pergunte:** ao pedreiro, a impermeabilização da parede do fundo do banheiro.
 
 ### Corredor · 6,49 x 0,98 m livres (6,4 m²)
@@ -294,7 +294,7 @@ O que esta casa tem de próprio: **os 3 quartos lado a lado nos fundos**, a sala
   1. **Canto de estudo no canto da escrivaninha:** tomada baixa e ponto de internet na parede da esquerda, ao lado da mesa (a do quarto 2: deslocada da tomada da cama de lá).
   2. **Quarto de hóspede ou escritório:** as tomadas da escrivaninha e as das duas camas servem às três funções.
 - **Tomadas:** perímetro de 11,8 m: o mínimo é **3 pontos** (um a cada 5 m). Pela NBR 5410:2004, segundo UDESC (2026) e Engenharia 360; o eletricista confere na norma vigente.
-- **Cuidado: guarda-roupa encostado no banheiro.** **Esta planta não evita:** a "parede do corredor" deste quarto, onde o guarda-roupa fica, é, nesse trecho, a parede do fundo do banheiro (a do vaso, no arranjo do anexo). O cuidado é o mesmo da C01: impermeabilização do lado do banheiro e vão atrás do móvel.
+- **Cuidado: guarda-roupa encostado no banheiro.** **Esta planta não evita:** a "parede do corredor" deste quarto, onde o guarda-roupa fica, é, nesse trecho, a parede do fundo do banheiro (no desenho, o lado da porta e da passagem: o box fica na outra ponta, a quase 1,5 m). O cuidado é o mesmo da C01, mais leve: impermeabilização do lado do banheiro e vão atrás do móvel.
 - **Pergunte:** ao pedreiro, a impermeabilização dessa parede pelo lado do banheiro.
 
 ### Frente do lote · 3,0 x 10,0 m
