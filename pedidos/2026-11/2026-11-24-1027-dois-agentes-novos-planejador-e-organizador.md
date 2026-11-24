@@ -1,6 +1,6 @@
 # dois agentes novos: planejador e organizador
 
-**Estado:** aberta
+**Estado:** fechada em 24/11/2026
 
 **Prompt (palavra por palavra):** I want you to work on 2 things, idk it we have agents like those but I want something especialized in planning things, the step by step that has to be followed, what to do next what to do now etc etc
 And someone who can organize large groups of things in smaller ones (smth like that)
@@ -21,9 +21,9 @@ And someone who can organize large groups of things in smaller ones (smth like t
 
 **Quem executa:** Maestro escreve e registra; `planejador` e `organizador` fazem a primeira rodada; Supervisor confere na próxima auditoria.
 
-**Conferência:** (a preencher)
+**Conferência:** `checar.py` verde com os dois agentes registrados. Primeira rodada feita (como agente geral lendo o arquivo do papel, porque a sessão ainda não tinha carregado os nomes; eles apareceram depois). Li o topo do plano e do arquivo de grupos; corrigi no plano a frase "o e-book promete 2 bônus" (quem promete é a oferta; o PDF anuncia 0, pelo `checar.py`). Não conferi item por item as 90 entradas do Organizador nem os 32 do Planejador; os dois números diferem (38 e 32) e o plano explica por quê.
 
-**Resultado:** (a preencher)
+**Resultado:** Agentes planejador e organizador criados e registrados; primeira rodada: plano geral reescrito e decisões pendentes em 9 grupos
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** maestro: agente novo avalia o próprio arquivo de papel na primeira rodada; as duas avaliações acharam falhas reais (limite de grupo, como contar, onde está o estado real).
 

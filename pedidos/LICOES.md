@@ -30,3 +30,4 @@
 
 - **23/11, júri:** o plano do everything-claude-code tinha a condição do Revisor "perguntar ao dono antes de criar qualquer arquivo"; eu escrevi "sem resposta: faço o recomendado" e comecei (3 commits numa branch separada). Pergunta sem resposta é espera; condição do Revisor não se troca por padrão meu.
 - **23/11, prova 1:** dois planos que escrevi como "limpos" tinham erro (Diretor ausente, funil trocado). Plano meu passa pelo `CONSELHO.md` antes de eu dizer que está certo.
+| 24/11/2026 | maestro | ficha | 2026-11-24-1027 | - | agente novo avalia o próprio arquivo de papel na primeira rodada; as duas avaliações acharam falhas reais (limite de grupo, como contar, onde está o estado real). |

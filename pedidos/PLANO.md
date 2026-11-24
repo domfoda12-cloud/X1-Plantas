@@ -54,7 +54,7 @@ Depois do primeiro Pix, na ordem do dono: animações e imagens (fase 4 do hist�
 **Para o e-book sair (o produto):**
 1. **Preço no PDF: R$ 47 impresso, ou PDF sem preço** (p3). Destrava: D3 (PDF final), D5, D6, D7, D9 e, por elas, todo o resto até o Pix.
 2. Janela em cima da porta da Casa Compacta: aprova o conserto? (w3). Destrava: D1.
-3. **Bônus dentro do PDF ou num PDF separado** (p15). Destrava: D2 (hoje o e-book promete 2 bônus e não tem nenhum).
+3. **Bônus dentro do PDF ou num PDF separado** (p15). Destrava: D2 (hoje a oferta e o `config.json` falam em 2 bônus; o PDF não traz nem anuncia nenhum).
 4. Um engenheiro ou arquiteto registrado lê o checklist antes da venda? É contratação (p17). Destrava: o bônus do checklist no D2.
 5. Folha de perguntas ao engenheiro: 2 páginas, 3, ou também no celular? (p19). Destrava: o bônus das perguntas no D2.
 6. Título "Antes do primeiro tijolo": mantém, ou quer 3 opções novas? (p14). Destrava: capa definitiva (se mantiver, nada muda).
@@ -104,7 +104,7 @@ Depois do primeiro Pix, na ordem do dono: animações e imagens (fase 4 do hist�
 
 ## Não fazer (parece o próximo passo, mas não é)
 
-- **Mandar o PDF de hoje a alguém:** sai sem preço e sem os bônus que promete.
+- **Mandar o PDF de hoje a alguém:** sai sem preço e sem os 2 bônus que a oferta promete.
 - **Pôr R$ 47 no PDF por conta própria:** o dono decidiu começar pelo R$ 47, mas não decidiu se o preço aparece no PDF (decisão 1).
 - **Fazer rascunho novo em cima de rascunho** (outra amostra, outro pôster, outro quadrinho, outro bônus) enquanto ele não escolhe entre os que já existem: gasta e confunde (regra do `contexto/entregas/ULTIMO.md` e da ficha `0144`).
 - **Mexer nas outras 21 casas, na E07 ou na E02:** o lançamento tem 3 casas, "capriche bem nessas 3". As fichas `1616` (E07) e o p13 (E02) esperam.

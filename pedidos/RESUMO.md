@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 36 documentos
+## Os 37 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -37,7 +37,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1142 palavras.
+Tamanho: 1181 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -45,7 +45,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, conferido); Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 3609 palavras.
+Tamanho: 3619 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -100,6 +100,14 @@ Tamanho: 4995 palavras.
 Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-11/2026-11-23-0947-testar-as-ferramentas-novas-achar-funcoes-que-faltam-na-equi.md`). As palavras entre aspas são dele. Vale até ele dizer o contrário.
 
 Tamanho: 2622 palavras.
+
+### [Decisões pendentes do dono, em grupos (24/11/2026)](anexos/decisoes-pendentes-em-grupos.md)
+
+Proposta do `organizador`, primeira rodada (ficha `2026-11-24-1027`). Só propõe: não mexe no quadro de tarefas, não decide nada pelo dono, não muda prioridade que ele deu. Fontes: os cartões abertos do quadro de tarefas (cópia de 24/11), o "Em aberto" do `CONTEXTO.md`, o "Decisão do dono pendente"…
+
+Seções: Contagem; Decisões do dono, na ordem em que ele deveria tratar; Saíram da lista de decisões; Proposta: como reagrupar os cartões do quadro (de → para).
+
+Tamanho: 2650 palavras.
 
 ### [E07 e a parede na divisa: o que fazer com a parede sem janela](anexos/e07-parede-na-divisa-ideias.md)
 

@@ -4,7 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
-| 2026-11-24 | [dois agentes novos: planejador e organizador](2026-11/2026-11-24-1027-dois-agentes-novos-planejador-e-organizador.md) | aberta | Maestro escreve e registra; `planejador` e `organizador` fazem a primeira rodada; Supervis |
+| 2026-11-24 | [dois agentes novos: planejador e organizador](2026-11/2026-11-24-1027-dois-agentes-novos-planejador-e-organizador.md) | fechada em 24/11/2026 | Maestro escreve e registra; `planejador` e `organizador` fazem a primeira rodada; Supervis |
 | 2026-11-24 | [peca livre, fora do projeto: revoada](2026-11/2026-11-24-0840-peca-livre-fora-do-projeto-revoada.md) | aberta | Maestro. |
 | 2026-11-24 | [vitrine bonita, casa 3D que se constroi](2026-11/2026-11-24-0726-vitrine-bonita-casa-3d-que-se-constroi.md) | fechada em 24/11/2026 | Maestro. |
 | 2026-11-24 | [vitrine para mostrar a um amigo](2026-11/2026-11-24-0646-vitrine-para-mostrar-a-um-amigo.md) | fechada em 24/11/2026 | Maestro (página e números). |
