@@ -111,3 +111,23 @@ Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 - **23/11, por volta de 22:30 UTC:** aviso "You've hit your 5-hour limit · resets 12:40am (UTC)". Os dois presidentes da prova 3 do júri foram cortados no começo; tudo o mais já estava entregue. As tarefas agendadas de 22:45 e 23:45 UTC chegaram com a sessão parada e não rodaram.
 - **24/11, 00:46 UTC:** janela renovada; retomado pelos dois presidentes da prova 3.
 - Entre 21:45 e 22:30 UTC rodaram 15 agentes (Redator, Fable, Designer, Arquiteto, Pesquisador, Revisor, 6 jurados, 1 conferidor, 2 presidentes cortados). Tokens que os relatórios mostraram: cerca de 2,2 milhões (soma dos avisos de conclusão; os 2 cortados não informaram).
+
+## Resumo das 24 horas (23/11, 01:45 UTC, a 24/11, 01:45 UTC)
+
+**Números que as ferramentas devolveram:** 129 commits na `main` (`git log --since`); 13 fichas de 23/11; 17 fichas abertas, nenhuma fechada; `checar.py` em "Tudo certo" no último salvamento (aceb099), com 2 avisos (janela em cima de porta em 16 casos; preço pendente no PDF). O limite de 5 horas foi batido uma vez (cerca de 22:30 UTC).
+
+**E-book (cerca de 60%):**
+- 3 casas do lançamento refeitas e oficiais: C01 com hall (51 m²), E03 com 2 quartos (56 m², lote 5 x 25), F01 (71 m²).
+- Edição de lançamento só com as 3 casas: 17 páginas, 4,9 MB (cabe no WhatsApp); página nova "Qual casa cabe no seu lote?"; estilo novo das plantas e da capa.
+- 3D das 24 casas sem espelho; móveis medidos pela face da parede; 24 prévias refeitas com carimbo.
+- Protótipos para o dono escolher: amostra grátis (A e B), pôster com miniaturas absurdas (A e B), 3 roteiros de quadrinho, "como mobiliar as 3 casas".
+
+**Venda:** respostas rápidas do WhatsApp; textos do funil em dia com as decisões; teste de preço explicado; perfil novo do Instagram em rascunho; base de 39 anúncios e do design de 13 concorrentes; 7 leis conferidas no texto oficial.
+
+**Sistema (cerca de 40%):** lição ao fechar ficha e placar do veto; `salvar.py`; `antes-depois.py`; 2 skills nossas (`oferta-e-whatsapp`, `design-editorial`) e `explicar-ao-dono`, `bom-dia`, `triagem-email`; júri com regras novas e a prova 3 (detecção 5 de 5); quadro de tarefas do dono com comentário por cartão; conferências novas no `checar.py` (móvel em parede, cadeira sobre móvel, quarto aberto, prévia velha, edição de lançamento, suposição de Mac).
+
+**Erros do Maestro nas 24 horas (para não repetir):** começou o everything-claude-code sem o "sim"; salvou com o `checar.py` vermelho duas vezes (virou o `salvar.py`); deixou pedidos sem ficha; duas trocas de texto feitas por comando não entraram ou comeram um parágrafo (conferir com `grep` depois de cada troca); o conferidor da prova 3 rodou junto com os jurados.
+
+**Não feito:** PDF final (falta o preço no PDF e a janela da C01); pasta no Drive; pull request do everything-claude-code e a prova dos ganchos numa conversa nova; fechar as fichas cumpridas; a arte dos quadrinhos; o agente Diretor criativo.
+
+**Com o dono:** amostra grátis (A, B, ou A agora e B depois) e o que ganha quem já recebeu a Casa Compacta; CNPJ ou CPF e endereço de quem vende; preço no PDF; conserto da janela da C01; roteiros de quadrinho e bordão; pôster A ou B; nome e bio do Instagram; everything-claude-code inteiro ou 6 peças; se "grátis" e "publicar" saem da lista do que só ele decide; os horários do limite de uso; **se a tarefa agendada continua**.
