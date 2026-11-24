@@ -4,11 +4,13 @@ Edição de lançamento: só as casas de "casas_lancamento" no config.json (list
 As outras continuam no projeto e no validador; contagens, índices e páginas saem das casas da edição.
 
 Uso:
-    python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf, as plantas grátis
+    python3 ebook/gerador/livro.py                 PDF em ebook/saida/ebook.pdf, o PDF dos bônus (ebook/saida/bonus.pdf,
+                                                   de ebook/gerador/bonus.py), as plantas grátis
                                                    (ebook/saida/planta-gratis-<ID>.pdf, as de config.json)
                                                    e a lista de casas da calculadora do parceiro
                                                    (ebook/vendas/calculadora-lote.html)
-    python3 ebook/gerador/livro.py --previa DIR    salva um PNG de cada página em DIR; gera tudo numa pasta
+    python3 ebook/gerador/livro.py --previa DIR    salva um PNG de cada página em DIR (as dos bônus em DIR/bonus) e uma
+                                                   cópia dos 2 PDFs (ebook.pdf e bonus.pdf); gera tudo numa pasta
                                                    temporária e NÃO mexe em ebook/saida nem na calculadora
     python3 ebook/gerador/livro.py --conferir      confere numa pasta temporária, sem mexer em ebook/saida
                                                    nem na calculadora
@@ -46,6 +48,7 @@ import planta3d as P3  # noqa: E402
 import math  # noqa: E402
 import paginas as TX  # noqa: E402
 import textos as FICHAS  # noqa: E402
+import bonus as BN  # noqa: E402
 
 E = html.escape
 AVISO = "Planta de referência. O projeto para a prefeitura é assinado por arquiteto ou engenheiro habilitado."
@@ -1120,8 +1123,9 @@ GRUPOS = [
 
 # Bônus (achado do Revisor, 24/11/2026; CDC, arts. 30 e 37): o config.json diz o que o dono quer dar (decisão dele), mas
 # o PDF só anuncia o bônus que tem página de verdade aqui. Para um bônus entrar: escreva a função que acrescenta a
-# página dele, com data-bonus="<nome>" na página, e registre-a abaixo. Hoje nenhum tem página (os rascunhos estão em
-# pedidos/anexos/bonus-*.md). O checar.py falha se o "O que vem junto" listar bônus sem página.
+# página dele, com data-bonus="<nome>" na página, e registre-a abaixo. Hoje nenhum tem página dentro do e-book:
+# os 2 bônus saem num arquivo separado (bonus.pdf, de ebook/gerador/bonus.py, gerado junto em gerar()), e a última
+# página só diz onde ele está (TX.ONDE_BONUS). O checar.py falha se o "O que vem junto" listar bônus sem página.
 PAGINAS_BONUS = {}  # nome do bônus, igual ao do config.json -> função(L) que acrescenta a página dele
 
 
@@ -1309,6 +1313,7 @@ def montar(plantas, config, numeros, duas_partes=False):
     # bônus e contato
     L.bloco = "bonus"
     bonus = bonus_com_conteudo(config)
+    bn = BN.em_arquivo(config)  # os bônus que saem no arquivo separado (D35): o e-book só diz onde ele está
     for b in bonus:
         PAGINAS_BONUS[b](L)
     L.bloco = "fim"
@@ -1320,6 +1325,7 @@ def montar(plantas, config, numeros, duas_partes=False):
       <div class="duas"><div><h3>Pergunte em qualquer casa</h3><ul class="lista">{''.join(f'<li>{E(q)}</li>' for q in gerais)}</ul>
           <p class="pequeno">Leve também a ficha do terreno preenchida e as perguntas da página da casa escolhida.</p></div>
         {'<div><h3>O que vem junto</h3><ul class="lista">' + ''.join(f'<li>{E(b)}</li>' for b in bonus) + '</ul>' if bonus else '<div>'}
+          {('<h3>' + E(TX.ONDE_BONUS[0]) + '</h3><p>' + E(TX.ONDE_BONUS[1].format(a=bn[0], b=bn[1], arquivo=BN.ARQUIVO)) + '</p>') if bn else ''}
           {('<h3>Novas casas</h3><p>' + E(config['promessa_atualizacao']) + '</p>') if config.get('promessa_atualizacao') else ''}
           <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote e receba as casas que devem caber, como referência (não substitui o profissional): {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
@@ -2743,6 +2749,15 @@ def gerar(previa=None, duas_partes=False):
             if velho.stem.removeprefix("planta-gratis-") not in gratis:
                 velho.unlink()
                 print(f"apagada: {velho.name} (fora de plantas_gratis)")
+    if BN.em_arquivo(config):  # o PDF dos bônus sai junto, no mesmo comando (D35); página estourada nele também é erro
+        falhou = not BN.gerar(sys.modules[__name__], config, SAIDA, env, previa) or falhou
+    elif SAIDA == EBOOK / "saida":  # sem bônus no config.json, o arquivo velho não fica para trás
+        (SAIDA / BN.ARQUIVO).unlink(missing_ok=True)
+    if previa:  # a prévia guarda também os 2 PDFs, para conferir que saem juntos
+        import shutil
+        for nome in ("ebook.pdf", BN.ARQUIVO):
+            if (SAIDA / nome).exists():
+                shutil.copy(SAIDA / nome, previa / nome)
     for pid in gratis:
         G = montar_gratis(plantas, config, pid)
         arq = SAIDA / f"planta-gratis-{pid}.html"

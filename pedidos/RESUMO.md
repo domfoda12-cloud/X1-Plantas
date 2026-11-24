@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 64 documentos
+## Os 65 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -292,6 +292,14 @@ Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma pa
 Seções: 1. As 17 páginas de hoje e para onde vão; 2. A ordem proposta: a casa primeiro, o geral depois; 3. Onde entram as páginas novas; 4. Como o leitor sabe em que parte está (sem trocar a identidade); 5. Esboço do sumário novo; 6. O que muda no gerador (para o D17; eu não mexi); 7. Perguntas; 8. O que não conferi.
 
 Tamanho: 2786 palavras.
+
+### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
+
+Pedido do dono (24/11, 20:50): "Falta uma separação exata do que estamos trabalhando e vamos implementar pro cliente, temos que terminar tudo 1 por 1 começando pelo e-book". Fonte dos passos: `python3 ferramentas/plano.py caminho D6`.
+
+Seções: 1. O que o cliente recebe; 2. O que NÃO vai ao cliente (é ferramenta nossa); 3. O que falta para o e-book ficar pronto, um por um; 4. Depois do e-book, na ordem.
+
+Tamanho: 631 palavras.
 
 ### [Página "cômodo a cômodo": Casa Compacta (C01), texto](anexos/pagina-comodo-a-comodo-C01-texto.md)
 

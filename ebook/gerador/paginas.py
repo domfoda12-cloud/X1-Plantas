@@ -121,6 +121,11 @@ TITULOS = {
 # E-book em duas partes (decisão do dono, 24/11/2026: "uma parte falando de cada casa específica, e outra parte
 # falando de casas no geral"). Só o modo --duas-partes do livro.py usa, e só em prévia. TEXTO PROVISÓRIO, do esboço
 # do Designer (pedidos/anexos/mapa-duas-partes-do-ebook-2026-11-24.md): o Redator dá os nomes e o Revisor confere.
+# Onde estão os bônus (D35, 24/11/2026): título e frase da última página do e-book. Os bônus saem num arquivo separado,
+# gerado junto (ebook/gerador/bonus.py); {a} e {b} são os nomes do config.json e {arquivo} o nome do PDF.
+# Só aparece se o arquivo dos bônus sai. Texto novo: espera a leitura do Revisor de risco.
+ONDE_BONUS = ("Os bônus", "{a} e {b} estão em outro arquivo, que vem junto com este e-book: {arquivo}.")
+
 DUAS_PARTES = {
     "parte1": ("parte 1", "A casa do seu lote", "Uma casa por frente de terreno"),      # cada casa: aba amarela
     "parte2": ("parte 2", "Para qualquer casa", "Aba azul na borda"),                   # casas em geral: aba azul
