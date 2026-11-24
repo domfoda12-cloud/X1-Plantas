@@ -115,6 +115,31 @@ VARIAÇÃO PARA TESTE (abertura da p. 4, com o 2º atributo): "Com estas 5 respo
 8. P. 3: "ajusta as janelas ou espelha a planta" (na C01 a parede da divisa troca de lado) e "No e-book, cada casa diz o melhor lado da rua" (linha "Melhor lado da rua" da Informação da casa).
 9. P. 4: as 5 respostas bastam para a conversa dizer quais casas devem caber.
 
+## Resposta do Arquiteto (24/11/2026)
+
+Conferido contra `ebook/plantas/dados/C01.json`, `E03.json`, `F01.json` e `python3 ferramentas/plantas.py validar` (as três com 0 erros). Recuos nos três: frente 3,0, fundos 1,5, esquerda 0 (divisa), direita 1,5. Lote exato do validador: C01 8,0 x 13,0; E03 5,0 x 20,6; F01 10,0 x 12,8 (o comercial é 8 x 15, 5 x 25 e 10 x 15). Melhor lado da rua: C01 norte, E03 norte, F01 sul.
+
+1. **CERTA, com uma troca:** "Na calçada" virou "Rente à calçada" (mede-se na linha do lote, não no meio-fio). Medir de muro a muro dá a largura livre, que é igual ou menor que a do lote: erra para o lado seguro. "A de 30 m é a mais prática": certa.
+2. **CERTA.** O projeto usa a matrícula e o levantamento do profissional; a trena é só para escolher.
+3. **TROCADA.** Quatro lados não definem um lote torto; com a diagonal (de um canto da frente ao canto oposto do fundo), sim, e é uma medida a mais, sem topografia. Texto novo na tabela. **Para a conversa (kit do WhatsApp):** lote torto se confere pela menor frente e pelo menor lado; se a casa só cabe usando a medida maior, ou se o lote tem curva, mais de 4 lados ou é de esquina, a resposta é "depende do desenho do profissional", sem "cabe".
+4. **CERTA, com um acréscimo:** "Quanto do lote a casa pode cobrir?" é a taxa de ocupação, em palavra simples. Acrescentei "Quanto tem de ficar sem piso, com terra ou grama?" (taxa de permeabilidade: numa casa térrea em lote pequeno, aperta mais que o coeficiente e a altura, que quase nunca barram casa de um andar) e "(sem janela)" na pergunta da divisa: janela a menos de 1,5 m do vizinho é proibida por lei (Código Civil, art. 1.301, no caderno `normas`); é por isso que a lateral de referência tem 1,5 m. A zona do lote vem junto na consulta prévia; não precisa ser pergunta. "A casa cabe aqui": trocar, ver "Para o Designer".
+5. **TROCADA.** "Fica agradável" é promessa de conforto. Novo: "Quarto virado para o sol da tarde esquenta mais; o da manhã é mais brando." Bate com `ARQUITETO.md`, seção 7.
+6. **TROCADA.** A conta do Redator está certa no essencial (Fortaleza 4/10 a 11/03, cerca de 5 meses; Salvador 29/10 a 14/02, 3 meses e meio; Feira de Santana 27/10 a 16/02), com dois acertos: Brasília dá 3 meses (7/11 a 6/02), não 2 e meio; e entre os trópicos o sol do meio-dia passa **quase a pino**, só um pouco ao sul, não "pelo sul" como no inverno passa pelo norte. Em Roraima e no Amapá (acima do Equador), passa ao sul mais da metade do ano; o "parte do ano" do texto novo cobre. No norte do Paraná, uns 10 dias em dezembro, a menos de meio grau do pino: o "no Sul, o ano todo" vale na prática. Leste e oeste valem no Brasil inteiro, e é por eles que a pessoa acha o lado no lote dela; o meio-dia só explica o desenho.
+7. **TROCADA.** O braço direito no sol nascente, de frente para o norte, está certo de direção, mas o sol nasce até uns 24 a 27 graus fora do leste conforme o mês (UFRGS); e a bússola do celular mostra o norte magnético, que em todo o Brasil fica a oeste do norte verdadeiro (Observatório Nacional; o número da Bahia não li, só sei que é negativo). Muda a escolha entre os quatro lados só quando a rua fica perto da diagonal; o "Deu NE? Marque norte e leste" já cobre. Troquei "você está de frente para o norte" por "você olha mais ou menos para o norte" e pus "celular deitado na mão".
+8. **CERTA, com uma troca:** o e-book tem "Melhor lado da rua" e "Pode espelhar: sim, troca o lado" na Informação da casa (`livro.py`). Espelhar troca esquerda e direita (e o lado da divisa); não resolve rua do lado oposto. Por isso "ajusta janelas e beirais ou espelha a planta", em alternativa.
+9. **BASTAM, se a conversa perguntar mais duas coisas:** "É de esquina?" (em muitas cidades o lote de esquina tem recuo nas duas ruas, e isso muda o que cabe) e as duas medidas laterais, se o lote for torto (o passo 2 já pede). A conversa compara com o **lote exato** do validador (acima), não com o comercial; e, se a prefeitura der recuo maior, refaz a conta. Sugestão ao Designer: um quadradinho "lote de esquina? sim / não" no formulário da p. 4.
+
+### Para o Designer (o que muda no desenho para não enganar)
+
+- **P. 2, o miolo azul:** "a casa cabe aqui" vira "o espaço da casa" (como o Revisor sugeriu). E o azul cheio ocupando tudo diz que a casa enche o que sobra, o que a taxa de ocupação e a permeabilidade podem não deixar: desenhe o que sobra só com contorno azul tracejado e, dentro dele, uma casa azul cheia menor, com quintal no fundo.
+- **P. 2, a divisa:** "divisa: encostar só se a prefeitura deixar" ganha "parede sem janela".
+- **P. 2, a calçada:** pôr uma faixa estreita "calçada" entre o lote e a RUA. Muita gente conta o recuo do meio-fio; ele conta da linha do lote.
+- **P. 2, proporção:** está certa (a faixa da frente tem o dobro da dos fundos e da lateral, como 3 m e 1,5 m). Manter.
+- **P. 3, o sol do meio-dia:** o rótulo "meio-dia" vira "meio-dia (pelo norte quase o ano todo)", ou um asterisco que leve ao bloco novo. Sem isso, o desenho engana quem mora no Nordeste no verão.
+- **P. 3, a rua:** com o norte para cima, a RUA embaixo é uma rua ao **sul**, e a caixa ao lado diz que a Casa Compacta fica melhor com a rua ao norte. Escreva embaixo da RUA "neste exemplo, a rua fica ao sul", ou ponha a RUA em cima (ao norte) e o arco do sol passando por ela.
+- **P. 3, a bússola:** "a bússola do celular mostra o norte" vira "mostra o norte, mais ou menos".
+- **P. 3, o título:** concordo com "Descubra para que lado fica a sua rua." É o que a p. 4 pede; o sol nascente é só o jeito de descobrir (decisão do Maestro com o Designer).
+
 ## O Revisor de risco precisa ver
 
 1. P. 2: "no setor que aprova obras", "consulta prévia do lote (cada cidade dá um nome)": nada de número, prazo ou aprovação prometidos.
