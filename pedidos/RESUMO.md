@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 58 documentos
+## Os 61 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 16h05, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois: o júri decide e mostra depois (dono, cartão v6); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 12091 palavras.
+Tamanho: 12254 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -88,6 +88,14 @@ Estado: rascunho do Redator, 24/11/2026. Nada aqui vai ao público antes do Arqu
 Seções: A folha (texto para o público); Para a equipe (não vai ao público).
 
 Tamanho: 2888 palavras.
+
+### [Como contratar o profissional que lê o checklist (passo D22)](anexos/como-contratar-o-profissional-2026-11-24.md)
+
+Feito em 24/11/2026 pelo Pesquisador (passo 1 da pesquisa; o Opus confere e conclui depois). Só leitura e pesquisa grátis. Nenhum profissional foi escolhido, contatado ou nomeado, e nada aqui tem dado pessoal. A escolha e o pagamento são do dono (decisão 41 do `pedidos/PLANO.md`). Pedido do dono…
+
+Seções: 1. Quem pode ler e como conferir que o registro é verdadeiro; 2. Onde achar um profissional para um serviço pequeno (leitura e parecer); 3. O que pedir exatamente; 4. Preço: o que achei e o que não achei; 5. Se o nome dele pode aparecer; 6. A mensagem pronta (WhatsApp); 7. A decisão que é dele; Fontes (todas lidas em 24/11/2026, salvo quando diz "trecho de busca"); O que não conferi (resumo); Reconferência do pedido (passo D22).
+
+Tamanho: 4516 palavras.
 
 ### [Como mobiliar as 3 casas do lançamento (conteúdo técnico)](anexos/como-mobiliar-as-3-casas.md)
 
@@ -276,6 +284,22 @@ Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma pa
 Seções: 1. As 17 páginas de hoje e para onde vão; 2. A ordem proposta: a casa primeiro, o geral depois; 3. Onde entram as páginas novas; 4. Como o leitor sabe em que parte está (sem trocar a identidade); 5. Esboço do sumário novo; 6. O que muda no gerador (para o D17; eu não mexi); 7. Perguntas; 8. O que não conferi.
 
 Tamanho: 2786 palavras.
+
+### [Página "cômodo a cômodo": Casa Compacta (C01), texto](anexos/pagina-comodo-a-comodo-C01-texto.md)
+
+Passos D16 e D18 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Designer montar (D31) e para o Revisor de risco e o Arquiteto conferirem (D32). Não está aprovado e não vai ao público. Pedido do dono (24/11), palavra por palavra: "Planejar cada quarto, ideias do que fazer em…
+
+Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
+
+Tamanho: 2016 palavras.
+
+### [Página "cômodo a cômodo": Casa Família Compacta (F01), texto](anexos/pagina-comodo-a-comodo-F01-texto.md)
+
+Passo D16 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Designer montar (D31) e para o Revisor de risco e o Arquiteto conferirem (D32). Não está aprovado e não vai ao público. Pedido do dono (24/11), palavra por palavra: "Planejar cada quarto, ideias do que fazer em lugares da…
+
+Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
+
+Tamanho: 1880 palavras.
 
 ### [Página "A parede sem janela" (parte geral do e-book): texto (passo D19)](anexos/pagina-parede-sem-janela-texto.md)
 

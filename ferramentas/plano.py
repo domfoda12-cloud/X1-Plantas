@@ -9,6 +9,7 @@ Uso: python3 ferramentas/plano.py agora             passos que podem começar j�
      python3 ferramentas/plano.py caminho <passo>   tudo o que falta, em ordem, para chegar a um passo (ex.: D12)
      python3 ferramentas/plano.py feito <passo> "o que virou"          marca o passo como feito, com a data
      python3 ferramentas/plano.py respondido <n> "o que o dono disse"  marca a decisão n como respondida (só com fala dele)
+     python3 ferramentas/plano.py subir [passo...]  sobe passos livres para "Agora" (sem nome: os primeiros livres, até ficar com 3)
      python3 ferramentas/plano.py conferir          falha se o plano estiver quebrado (usado pelo checar.py)
 """
 import datetime, re, sys
@@ -176,6 +177,32 @@ def cmd_respondido(n, nota):
     gravar(linhas); print(f"Decisão {n} marcada como respondida."); cmd_agora()
 
 
+def cmd_subir(ids):
+    """Move a linha de cada passo para o fim da tabela de "Agora". Só passo livre (nada falta) e até o limite de 3 abertos."""
+    linhas, passos, decisoes = ler()
+    abertos = [p["id"] for p in passos.values() if p["secao"] == "agora" and not p["feito"]]
+    livres = [p["id"] for p in passos.values() if p["secao"] != "agora" and not p["feito"] and falta(p, passos, decisoes) == ([], [])]
+    if not ids:
+        ids = livres[: max(0, 3 - len(abertos))]
+    for i in ids:
+        if i not in passos:
+            sys.exit(f"Não existe o passo {i}.")
+        if i not in livres:
+            sys.exit(f"{i} não pode subir: já está em 'Agora', está feito, ou ainda depende de alguém.")
+    if len(abertos) + len(ids) > 3:
+        sys.exit(f"'Agora' ficaria com {len(abertos) + len(ids)} passos abertos; o máximo é 3.")
+    if not ids:
+        print("Nada para subir."); return
+    textos = [linhas[passos[i]["linha"]] for i in ids]
+    for n in sorted((passos[i]["linha"] for i in ids), reverse=True):
+        del linhas[n]
+    ini = next(k for k, l in enumerate(linhas) if l.startswith("## Agora"))
+    fim = next((k for k in range(ini + 1, len(linhas)) if linhas[k].startswith("## ")), len(linhas))
+    ult = max(k for k in range(ini, fim) if linhas[k].startswith("|"))
+    linhas[ult + 1: ult + 1] = textos
+    gravar(linhas); print("Subiram para 'Agora': " + ", ".join(ids)); cmd_agora()
+
+
 def cmd_conferir():
     texto = PLANO.read_text(encoding="utf-8")
     _, passos, decisoes = ler()
@@ -256,5 +283,6 @@ if __name__ == "__main__":
     elif a[0] == "caminho" and len(a) == 2: cmd_caminho(a[1])
     elif a[0] == "feito" and len(a) == 3: cmd_feito(a[1], a[2])
     elif a[0] == "respondido" and len(a) == 3: cmd_respondido(a[1], a[2])
+    elif a[0] == "subir": cmd_subir(a[1:])
     elif a[0] == "conferir": cmd_conferir()
     else: sys.exit(__doc__)
