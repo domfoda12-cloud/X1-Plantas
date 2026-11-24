@@ -151,7 +151,7 @@ R$ [preço], no Pix, aqui mesmo. Você recebe por link e tem 7 dias para pedir o
 Te mando a chave Pix?
 ```
 
-> **Bônus** (checklist da obra por fase e lista de perguntas ao engenheiro para imprimir): só acrescente "Bônus: ..." depois que estiverem prontos no PDF e o dono mandar (decisão 33). A Casa Fita tem 2 quartos (oficial desde 23/11/2026).
+> **Bônus** (checklist da obra por fase e perguntas para levar ao engenheiro): vêm no bonus.pdf, um arquivo separado, na mesma pasta do link do Drive (decisão do dono p15). Só acrescente "Bônus: ..." à oferta quando o bonus.pdf estiver na pasta e o dono aprovar o texto. Enquanto o bonus.pdf tiver o selo de rascunho (D23), a oferta só o cita como "ainda em rascunho", ou não cita. A Casa Fita tem 2 quartos (oficial desde 23/11/2026).
 
 ### `/pix`
 
@@ -171,15 +171,17 @@ Confere o nome antes de confirmar. Pagou? Me manda o comprovante aqui que eu te 
 ```text
 Recebi, [nome]. Obrigado pela confiança!
 
-Aqui está o seu e-book [título do e-book]:
+Aqui está o seu e-book [título do e-book], com o arquivo dos bônus:
 [link do Drive]
+
+No link estão o e-book e o bonus.pdf, com o checklist da obra por fase e as perguntas para levar ao engenheiro.
 
 Abre no celular e dá para baixar e imprimir. Os seus 7 dias de garantia contam de hoje.
 
 Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou construir para alugar?
 ```
 
-> **Para quem atende (não vai ao cliente):** só mande depois de ver o Pix no aplicativo do banco; comprovante sozinho não basta, existe comprovante falso. O link do Drive fica em "qualquer pessoa com o link pode ver", nunca "editar". Anote a data em que mandou o link: a garantia conta dela.
+> **Para quem atende (não vai ao cliente):** só mande depois de ver o Pix no aplicativo do banco; comprovante sozinho não basta, existe comprovante falso. O link do Drive fica em "qualquer pessoa com o link pode ver", nunca "editar". Anote a data em que mandou o link: a garantia conta dela. Antes de mandar, abra o link e confira que o e-book e o bonus.pdf estão na pasta. O link é o da pasta, não o de um arquivo só, em "qualquer pessoa com o link pode ver".
 
 ### `/garantia`
 

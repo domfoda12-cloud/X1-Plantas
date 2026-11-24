@@ -9,7 +9,7 @@
 >
 > **Objetivo:** entregar a planta grátis, descobrir o terreno da pessoa e mostrar as plantas do e-book que cabem nele. A venda acontece porque a oferta é **sobre o terreno dela**, não porque insistimos.
 >
-> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): só a Casa Compacta é grátis; garantia de 7 dias; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.** Bônus: fora de toda peça até existir no PDF (decisão 33). Título: em troca, 3 opções (decisão 34).
+> **Decidido pelo dono em 23/11/2026** ([decisões](../../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): só a Casa Compacta é grátis; garantia de 7 dias; pagamento por Pix direto aqui no WhatsApp, sem plataforma; o e-book vai por link do Google Drive depois do Pix; lançamento com 3 casas: a Casa Compacta, a Casa Fita (2 quartos) e a Família Compacta (F01); estilo das plantas: o 1 nas casas e o 3 na capa e no Instagram. **Não se prometem as próximas casas.** Bônus: vêm no bonus.pdf, um arquivo separado na mesma pasta do link do e-book (decisão do dono p15); cite só quando ele estiver na pasta. Enquanto o bonus.pdf tiver o selo de rascunho (D23), a oferta só o cita como "ainda em rascunho", ou não cita. Título: em troca, 3 opções (decisão 34).
 >
 > **[título do e-book]:** o atual até o dono escolher (decisão 34); quando mudar, colar de novo a saudação e a ausência.
 >
@@ -102,7 +102,7 @@ Valor: **R$ [preço]**, no Pix, aqui mesmo. Você recebe o e-book por link logo 
 
 Quer que eu te mande a chave Pix?
 
-> **[preço]:** teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. **Suposição, a confirmar com o Estrategista:** quem cruza de semana (recebeu a oferta numa semana e paga na outra) fica com o preço que recebeu primeiro; cada pessoa recebe um preço só, do começo ao fim, e o parceiro anota qual foi. Bônus: não cite enquanto a página não existir no PDF (decisão 33).
+> **[preço]:** teste do dono: R$ 47 e R$ 67, em semanas alternadas, começando pelo R$ 47. **Suposição, a confirmar com o Estrategista:** quem cruza de semana (recebeu a oferta numa semana e paga na outra) fica com o preço que recebeu primeiro; cada pessoa recebe um preço só, do começo ao fim, e o parceiro anota qual foi. Bônus: os 2 (checklist da obra por fase e perguntas para levar ao engenheiro) vêm num arquivo separado, o bonus.pdf, na mesma pasta do link do e-book (decisão do dono p15). Só cite depois que o bonus.pdf estiver na pasta do Drive. Enquanto o bonus.pdf tiver o selo de rascunho (D23), a oferta só o cita como "ainda em rascunho", ou não cita.
 
 ### Pagamento e entrega: Pix aqui no WhatsApp, e-book por link
 
@@ -116,13 +116,16 @@ Assim que pagar, me manda o comprovante aqui que eu te envio o link do e-book.
 
 **Quando o Pix cair:**
 
-Recebi, [nome]. Obrigado! Aqui está o seu e-book **[título do e-book]**:
+Recebi, [nome]. Obrigado! Aqui está o seu e-book **[título do e-book]**, com o arquivo dos bônus:
 
 [link do Google Drive]
+
+No link estão o e-book e o bonus.pdf, com o checklist da obra por fase e as perguntas para levar ao engenheiro.
 
 Ele abre no celular e dá para baixar para imprimir. Qualquer dúvida sobre as casas ou sobre o seu lote, é só me chamar aqui.
 
 > **Para o parceiro (não vai ao cliente):**
+> - Antes de mandar, abra o link e confira que o e-book e o bonus.pdf estão na pasta. O link é o da pasta, não o de um arquivo só, em "qualquer pessoa com o link pode ver".
 > - Só mande o link depois de ver o Pix no aplicativo do banco. Comprovante sozinho não basta: existe comprovante falso.
 > - O link do Drive fica em "qualquer pessoa com o link pode ver", nunca "editar".
 > - Anote a data em que mandou o link: a garantia de 7 dias conta dela (CDC, art. 49, conta do recebimento). Se a pessoa pedir a devolução dentro do prazo, devolva o Pix para a mesma conta que pagou. Pode perguntar o motivo depois, para aprender, mas a devolução não depende da resposta.
@@ -206,9 +209,9 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 
 > Material do funil, para o parceiro. Parte da pasta E-book: [`../EBOOK.md`](../EBOOK.md). Painel: [`../../PAINEL.md`](../../PAINEL.md).
 >
-> Decidido em 23/11 (dono): garantia de 7 dias, Pix pelo WhatsApp e entrega por link. Bônus: fora de toda peça até existir no PDF (decisão 33). Título: em troca, 3 opções (decisão 34). Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
+> Decidido em 23/11 (dono): garantia de 7 dias, Pix pelo WhatsApp e entrega por link. Bônus: vêm no bonus.pdf, um arquivo separado na mesma pasta do link do e-book (decisão do dono p15); cite só quando ele estiver na pasta. Enquanto o bonus.pdf tiver o selo de rascunho (D23), a oferta só o cita como "ainda em rascunho", ou não cita. Título: em troca, 3 opções (decisão 34). Campos entre [colchetes] ainda esperam o dono ([painel](../../PAINEL.md), seção 9): não responda esses pontos como fato. Toda pergunta nova que aparecer no WhatsApp entra aqui.
 >
-> **Bônus só com página no PDF** (veto do Revisor de risco, 24/11; CDC, arts. 30 e 37): o checklist da obra por fase e a lista de perguntas para imprimir só são citados ao cliente quando as páginas deles existirem no PDF. O `livro.py` só anuncia o bônus que tem página registrada (`PAGINAS_BONUS`), e o `checar.py` acusa erro se o PDF citar um bônus sem página.
+> **Bônus num arquivo à parte** (veto do Revisor de risco, 24/11; CDC, arts. 30 e 37; decisão do dono p15): o checklist da obra por fase e as perguntas para levar ao engenheiro estão no bonus.pdf, que vai na mesma pasta do Drive que o e-book. A última página do e-book diz isso ao cliente; por isso o link de entrega leva sempre os dois arquivos, e quem atende abre a pasta antes de mandar. Os bônus só são citados ao cliente quando o bonus.pdf estiver na pasta. O e-book não lista bônus no "O que vem junto" (`PAGINAS_BONUS` está vazio no `livro.py`), e o `checar.py` acusa erro se listar um bônus sem página. Enquanto o bonus.pdf tiver o selo de rascunho (D23), a oferta só o cita como "ainda em rascunho", ou não cita.
 >
 > O que o e-book tem de verdade está em [`../EBOOK.md`](../EBOOK.md), seções 2 e 3. Não prometa nada que não esteja lá.
 
@@ -221,7 +224,7 @@ Pode: a planta grátis que você recebeu é uma página igual às do e-book. Que
 Hoje o e-book tem 3 casas. Se sair casa nova, te aviso aqui. (Não prometa casa nova de graça: o dono ainda não decidiu.)
 
 **Como recebo?**
-Por um link do Google Drive, aqui no WhatsApp, logo depois que o Pix cair. Você abre no celular ou baixa para imprimir.
+Por um link do Google Drive, aqui no WhatsApp, logo depois que o Pix cair. No link estão o e-book e o arquivo dos bônus. Você abre no celular ou baixa para imprimir.
 
 **Quais formas de pagamento vocês aceitam?**
 Pix, direto aqui pelo WhatsApp.

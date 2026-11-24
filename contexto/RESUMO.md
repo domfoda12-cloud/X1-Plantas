@@ -27,7 +27,7 @@
 
 Dono, 22/11/2026: "se ver algum erro de sintonia, não sinta medo em criar alguma regra de convivência para cobrir o erro; apenas faça um relatório e me fale depois". O Maestro cria a regra na hora, escreve aqui (o erro visto, a regra, quem muda) e conta ao dono no fim da tarefa. Todo agente lê esta…
 
-Tamanho: 692 palavras.
+Tamanho: 759 palavras.
 
 ### [A equipe: quem faz o quê e o que cada um acrescenta](EQUIPE.md)
 
@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`); 24/11 · Visita 3D mais realista: guardada para depois (ficha `2026-11-24-2046`); 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`); Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
+Seções: 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`); 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`); 24/11 · Visita 3D mais realista: guardada para depois (ficha `2026-11-24-2046`); 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`); Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
 
-Tamanho: 895 palavras.
+Tamanho: 1014 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -177,7 +177,7 @@ Só o que importa para este papel. Leia antes o quadro. Você diz o passo a pass
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 694 palavras.
+Tamanho: 766 palavras.
 
 ### [Contexto do Redator](redator.md)
 
@@ -185,7 +185,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 308 palavras.
+Tamanho: 391 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 

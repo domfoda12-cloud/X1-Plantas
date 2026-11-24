@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 66 documentos
+## Os 67 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 3971 palavras.
+Tamanho: 4014 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -307,7 +307,7 @@ Redator, 24/11/2026. Passo D41 do `pedidos/PLANO.md` (parte A) e a condição do
 
 Seções: Parte A. A mensagem para quem só cabe a Casa Compacta; Parte B. Entrega com dois arquivos; Dúvidas para o Revisor; Leitura do Revisor.
 
-Tamanho: 3567 palavras.
+Tamanho: 3769 palavras.
 
 ### [Página "cômodo a cômodo": Casa Compacta (C01), texto](anexos/pagina-comodo-a-comodo-C01-texto.md)
 
@@ -470,6 +470,12 @@ Tamanho: 350 palavras.
 SIM SE. Arquivo lido: `instagram-identidade-lote-carente-2026-11-24.md`.
 
 Tamanho: 269 palavras.
+
+### [Veto: oferta para quem só cabe a Casa Compacta, entrega com dois arquivos e o guia (24/11/2026)](anexos/veto-oferta-so-casa-compacta-2026-11-24.md)
+
+O veredito inteiro está na seção "Leitura do Revisor" de `oferta-so-casa-compacta-2026-11-24.md`. Aqui fica a cópia, para a ficha.
+
+Tamanho: 863 palavras.
 
 ### [Parecer do Revisor de risco: vender o e-book sem os 2 bônus (decisão 33, passo A5), 24/11/2026](anexos/veto-opcao-sem-bonus-2026-11-24.md)
 

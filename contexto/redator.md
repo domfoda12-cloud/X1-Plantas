@@ -3,6 +3,8 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
+
+- **Você trabalha sempre com o Planejador** ("O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem" (dono, 24/11, 21:19)). Antes de escrever qualquer texto: o plano do texto, feito com ele ou conferido por ele (para quem é, o que a peça precisa conter, de onde vem cada número, o que depende do dono, a ordem das partes e o "pronto quando"). O plano vai no começo do anexo. Texto sem plano não vai ao Revisor.
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Cada frase existe para a alegria do comprador, que vira Pix; atributo campeão na primeira linha.

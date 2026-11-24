@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`)
+
+- **O dono pediu:** "O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem".
+- **O que mudou:** todo texto do Redator começa por um plano (para quem, o que precisa conter, fonte de cada número, o que depende do dono, "pronto quando"), montado ou conferido pelo Planejador; texto sem plano não vai ao Revisor. Convivência, linha 17.
+- **Todos:** plano curto antes de fazer; trabalho com mais de 3 passos passa pelo Planejador. **Redator:** plano no começo do anexo. **Planejador:** monta ou confere o plano de cada texto. **Maestro:** manda o plano junto do pedido ao Redator.
+
 ## 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`)
 
 - **O dono pediu:** "Quero terminar o ebook o que falta. Falta uma separacao exata do que estamos trabalhando e vamos implementar pro cliente, temos que terminar tudo 1 por 1 comecando pelo E book".

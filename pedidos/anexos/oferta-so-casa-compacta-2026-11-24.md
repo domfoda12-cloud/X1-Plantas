@@ -34,25 +34,29 @@
 
 Os 3 que entram: cômodo a cômodo (campeão do que vem a mais), a honestidade (abre a mensagem, porque é o que ela precisa ouvir antes de tudo) e os bônus. A parede da divisa ficou de fora por espaço: é a melhor troca se o dono disser não ao cômodo a cômodo (ver "Se o cômodo a cômodo não entrar").
 
-### Versão A: o fato e a lista (59 palavras)
+> **As versões A e B abaixo estão com as trocas do Revisor (24/11) e esperam o dono.** O texto é o dele, palavra por palavra; por isso passam de 60 palavras (A: 67; B: 74). Até o dono decidir se vende os bônus antes da leitura do profissional (D23), "checklist e perguntas" vira `checklist e perguntas ao engenheiro (ainda em rascunho)` ou sai (veto do selo, na leitura do Revisor). A primeira linha só vale se o `/planta` já foi nesta conversa.
+
+### Versão A: o fato e a lista · com as trocas do Revisor, espera o dono
 
 ```text
-[nome], com os recuos de referência, só cabe no seu lote a Casa Compacta, que você já tem. A Casa Fita e a Família Compacta não cabem.
+[nome], pelos recuos de referência, só a Casa Compacta cabe no seu lote, e ela você já tem. A Casa Fita e a Família Compacta não cabem. O recuo da sua cidade, a prefeitura confirma.
 
 No pago: a Casa Compacta cômodo a cômodo, como ler planta e recuos, checklist e perguntas ao engenheiro.
 
 R$ [preço], 7 dias para pedir o Pix de volta. Te mando a chave?
 ```
 
-### Versão B: "o grátis basta para escolher; o pago é para a obra" (60 palavras) · RECOMENDADA
+### Versão B: "o pago é para a obra" · RECOMENDADA · com as trocas do Revisor, espera o dono
 
 ```text
-[nome], o grátis basta para escolher: pelos recuos de referência, só a Casa Compacta cabe no seu lote. A Casa Fita e a Família Compacta não cabem.
+[nome], pelos recuos de referência, só a Casa Compacta cabe no seu lote, e ela você já tem. A Casa Fita e a Família Compacta não cabem. O recuo da sua cidade, a prefeitura confirma.
 
-O pago é para a obra: o que decidir antes de fechar a parede, checklist e perguntas ao engenheiro.
+O pago é para a obra, com o seu engenheiro: o que decidir antes de fechar a parede, checklist e perguntas para levar a ele.
 
 R$ [preço], 7 dias para pedir o Pix de volta. Te mando a chave?
 ```
+
+Rascunho antes do Revisor, só para registro: a primeira linha da A era `[nome], com os recuos de referência, só cabe no seu lote a Casa Compacta, que você já tem. ...`; a da B era `[nome], o grátis basta para escolher: pelos recuos de referência, ...` e o meio da B era `O pago é para a obra: o que decidir antes de fechar a parede, checklist e perguntas ao engenheiro.`
 
 **Por que recomendo a B:** ela diz o que é verdade do jeito que ajuda a pessoa a decidir. Não tenta vender de novo a casa que ela já tem: dá ao pago outro trabalho, a obra, que é o momento em que ela vai precisar dele. Quem paga sabendo disso não se sente enganado e pede menos devolução. A A é mais segura de ler (lista tudo), mas soa como "mais páginas" e não diz para que servem. As duas terminam com a mesma linha de preço e o mesmo pedido, para o teste comparar só a primeira parte.
 
@@ -60,9 +64,9 @@ R$ [preço], 7 dias para pedir o Pix de volta. Te mando a chave?
 
 ### Se o cômodo a cômodo não entrar (o dono disser não no `j1-comodo-no-pago`)
 
-Troque só a linha do meio (as duas continuam dentro de 60 palavras):
-- **A:** `No pago: a parede sem janela, como ler planta e recuos, checklist e perguntas ao engenheiro.` (57 palavras no total)
-- **B:** `O pago é para a obra: o que a parede da divisa pode ter, checklist e perguntas ao engenheiro.` (60 palavras no total)
+Troque só a linha do meio (texto do Revisor; só vale com a página da parede no PDF oficial, e os bônus seguem a regra do selo):
+- **A:** `No pago: o que a parede da divisa pode ter, como ler planta e recuos, checklist e perguntas ao engenheiro.`
+- **B:** `O pago é para a obra, com o seu engenheiro: o que a parede da divisa pode ter, checklist e perguntas para levar a ele.`
 
 ### Quando pode ser enviada (condições)
 
