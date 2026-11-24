@@ -28,6 +28,7 @@ Direção visual: a prévia em ebook/visual/plano-visual.html (resumo em ebook/E
 import html
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -1238,13 +1239,12 @@ def montar(plantas, config, numeros, duas_partes=False):
         L.pagina(f"""<span class="sobre">{TX.SOBRE["indice"]}</span><h2>As {len(plantas)} casas</h2>
       <table class="indice"><thead><tr><th>ID</th><th>Casa</th><th>Área</th><th>Quartos</th><th>Banh.</th><th>Lote mín.</th><th>Pág.</th></tr></thead><tbody>{linhas}</tbody></table>""")
 
-    # as casas (no modo duas partes, cada uma ganha as páginas reservadas do cômodo a cômodo: entram no D20)
+    # as casas (no modo duas partes, cada uma ganha as 2 páginas do cômodo a cômodo, D20: paginas_comodo)
     L.bloco = "casas"
     for p in plantas:
         dupla(L, p, por_id, numeros)
         if duas_partes:
-            for i, lado in enumerate(("esq", "dir")[:FOLHAS_COMODO], start=1):
-                reservada(L, f'{TX.DUAS_PARTES["comodo"]} ({i} de {FOLHAS_COMODO})', casa=p, lado=lado)
+            L.inicio["comodo-" + p["id"]] = paginas_comodo(L, p)
         L.folhas[p["id"]] = len(L.paginas) + 1 - L.inicio[p["id"]]
 
     # terreno
@@ -1335,7 +1335,6 @@ ORDEM_DUAS_PARTES = ["capa", "usar",                                   # abertur
                      "ache", "familia", "indice", "casas",             # parte 1, cada casa (aba amarela da frente)
                      "ler", "erros", "terreno", "parede", "ficha", "passos", "bonus",  # parte 2, casas em geral (aba azul)
                      "fim"]                                            # fecho (sem aba)
-FOLHAS_COMODO = 2  # folhas reservadas ao cômodo a cômodo em cada casa (o mapa: a casa tem 4 páginas, 2 pares abertos)
 GERAL_MM = 200     # altura da aba azul "geral", do topo da folha; desce se a edição tiver frente cuja aba passe daqui
 
 
@@ -1372,7 +1371,9 @@ def sumario(plantas, numeros):
     casas = "".join(
         f'<li class="sum-casa"><span class="sum-aba am">frente {lote_frente(p)} m</span><span>{E(p["nome"])}'
         f'<small>{n0(p["_r"].metricas["area_fechada"])} m² · {E(p["quartos_txt"].replace(" (+1 depois)", ""))}'
-        + (f' · {folhas[p["id"]]} páginas' if folhas.get(p["id"]) else "") + f'</small></span><em>{pag(p["id"])}</em></li>'
+        + (f' · {folhas[p["id"]]} páginas' if folhas.get(p["id"]) else "")
+        + (f' · {E(TX.DUAS_PARTES["sum_comodo"].format(numeros["comodo-" + p["id"]]))}' if numeros.get("comodo-" + p["id"]) else "")
+        + f'</small></span><em>{pag(p["id"])}</em></li>'
         for p in sorted(plantas, key=lambda p: (lote_frente(p), p["id"])))
     geral = ("".join(linha(TX.TITULOS[c], c) for c in ("ler", "palavras", "erros", "terreno"))
              + linha(TX.PAREDE["titulo"], "parede")
@@ -1616,6 +1617,887 @@ def pagina_parede(L, por_id, orelha=None):
     eng = (f'<section class="eng"><h3>{E(P["engenheiro"])}<span class="selo-psj"><span>{E(R["selo"][0])}</span>{E(R["selo"][1])}</span></h3>'
            f'<ol>{"".join(f"<li>{nb(q)}</li>" for q in P["perguntas"])}</ol></section>')
     return L.pagina(f"{muro}{cabecalho}{ideias}{eng}", "q psj", orelha=orelha, aviso=True)
+
+
+# ------------------------------------------------------------------ páginas "cômodo a cômodo" de cada casa (D20)
+# Parte 1 (cada casa) do modo --duas-partes, só prévia: 2 páginas depois da dupla da casa. O desenho é o do rascunho do
+# Designer (ebook/plantas/rascunhos/comodo_a_comodo.py, A9 e D31): a planta do e-book (svg_humanizada) com a parede de
+# cada número pintada de amarelo. Texto e rótulos: paginas.py (COMODOS e COMODO). Toda medida desenhada sai dos dados
+# e do validador e é conferida contra o texto: se não bater, o gerador avisa e falha (_ca_aviso).
+CA_TINTA, CA_AZUL, CA_FITA, CA_CINZA = "#17202B", "#0B4FA8", "#FFC857", "#4F5B69"
+CA_VERDE = "#1B6E35"   # F01: área aberta (faixa livre, fundo); o tracejado azul é a veneziana da C01
+CA_LARG = 176          # largura do miolo da folha, em mm (210 menos as margens de 17)
+
+
+def _ca_aviso(txt):
+    """Dado que não bate com o texto aprovado: avisa e impede a entrega (gerar() falha com AVISOS)."""
+    txt = "cômodo a cômodo: " + txt
+    if txt not in AVISOS:
+        AVISOS.append(txt)
+        print("AVISO:", txt)
+
+
+def _ca_nb(txt):
+    """Número e unidade não se separam na quebra de linha ("1,86 m", "46 e 51 cm", "12,5 m²")."""
+    return re.sub(r"(\d) (m²|m|cm)\b", "\\1\u00a0\\2", txt)
+
+
+class _CaGeo:
+    """Paredes, portas e móveis do desenho do e-book (a mesma geometria do svg_humanizada e do 3D), em metros."""
+
+    def __init__(self, p):
+        self.p = p
+        self.caixas, _, self.portas, moveis = _geometria(p)
+        self.mov = _moveis_sem_choque(p["id"], moveis)
+        self.com = {c["id"]: c for c in p["comodos"]}
+        fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
+        self.Dm = max([p["D"]] + [c["y1"] for c in fut])
+
+    def caixa(self, mv, cad=True):
+        """Caixa do móvel em metros (x0, y0, x1, y1), y para o fundo; com as cadeiras da mesa e da escrivaninha."""
+        t, w, d = mv["tipo"], mv.get("w", .45), mv.get("d", .4)
+        if t == "criado":
+            w, d = .44, .4
+        if t == "vaso":
+            w, d = .4, .62
+        if t == "mesaJantar" and cad:
+            w += .62
+        if t == "escrivaninha" and cad:
+            d += .84
+        r = mv.get("rot", 0) or 0
+        c, s = abs(math.cos(r)), abs(math.sin(r))
+        hw, hd = c * w / 2 + s * d / 2, s * w / 2 + c * d / 2
+        return (mv["x"] - hw, mv["y"] - hd, mv["x"] + hw, mv["y"] + hd)
+
+    def mv(self, tipo, amb, i=0, cad=True):
+        achados = sorted((m for m in self.mov if m["tipo"] == tipo and m.get("amb") == amb), key=lambda m: (m["x"], m["y"]))
+        return self.caixa(achados[i], cad)
+
+    def face(self, cid, lado):
+        """Face de dentro da parede do cômodo (as paredes de verdade, P3.paredes_reais); sem parede, a linha do cômodo."""
+        c = self.com[cid]
+        ov = lambda a0, a1, b0, b1: min(a1, b1) - max(a0, b0)
+        if lado in ("x0", "x1"):
+            v = c[lado]
+            ws = [b for b in self.caixas if b[0] - 1e-6 <= v <= b[2] + 1e-6 and ov(b[1], b[3], c["y0"], c["y1"]) > .3]
+            return (max(b[2] for b in ws) if lado == "x0" else min(b[0] for b in ws)) if ws else v
+        v = c[lado]
+        ws = [b for b in self.caixas if b[1] - 1e-6 <= v <= b[3] + 1e-6 and ov(b[0], b[2], c["x0"], c["x1"]) > .3]
+        return (max(b[3] for b in ws) if lado == "y0" else min(b[1] for b in ws)) if ws else v
+
+    def obstaculos(self):
+        """Móveis (sem o tapete) e giros de porta, em metros (y para o fundo)."""
+        obs = [self.caixa(m) for m in self.mov if m["tipo"] != "tapete"]
+        giros = []
+        for d in self.portas:
+            H, A, B = PL.porta_dobradica(self.p, d)
+            giros.append((H, d["r"], (min(H[0], A[0], B[0]), min(H[1], A[1], B[1]), max(H[0], A[0], B[0]), max(H[1], A[1], B[1]))))
+        return obs, giros
+
+
+def _ca_etiquetas(svg, Dm):
+    """As pílulas com o nome do cômodo que o svg_humanizada escolheu, em metros (y para o fundo)."""
+    r = []
+    for cx, cy, k, x, y, w, h in re.findall(r'<g transform="translate\(([-\d.]+) ([-\d.]+)\) scale\(([\d.]+)\) translate\([^)]*\)"><rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="([\d.]+)"', svg):
+        cx, cy, k, x, y, w, h = map(float, (cx, cy, k, x, y, w, h))
+        sx0, sy0 = cx + (x - .03 - cx) * k, cy + (y - .05 - cy) * k
+        sx1, sy1 = cx + (x + w - cx) * k, cy + (y + h - cy) * k
+        r.append((sx0, Dm - sy1, sx1, Dm - sy0))
+    return r
+
+
+def _ca_num(v):
+    """10.0 -> "10"; 12.8 -> "12,8" (lote e recuo, como no texto)."""
+    return f"{v:g}".replace(".", ",")
+
+
+def _ca_cm(v):
+    """Metros em centímetros, como no texto ("91 cm"; "22,5 cm")."""
+    return f"{v * 100:.1f}".replace(".", ",").removesuffix(",0") + " cm"
+
+
+def _ca_conferir_util(p, T, por_n):
+    U = p["_r"].metricas["util"]
+    for it in T["itens"]:
+        if it["n"] in por_n:
+            w, d, _ = U[por_n[it["n"]]]
+            if it["dim"] != f"{m(w)} x {m(d)} m":
+                _ca_aviso(f"lugar {it['n']}: texto {it['dim']}, validador {m(w)} x {m(d)} m")
+
+
+def _ca_no_texto(txt, *onde):
+    """A medida do desenho está no texto? Se não, avisa e a cota não sai."""
+    if any(txt in o for o in onde):
+        return True
+    _ca_aviso(f"o desenho mede {txt}; o texto não traz esse número (cota não desenhada)")
+    return False
+
+
+# ------------------------------------------------------------------ a planta com as marcas (tudo em metros, por cima do desenho)
+class _CaPlanta:
+    """O desenho do e-book (svg_humanizada) com o recuo da direita inteiro, as paredes marcadas e os números.
+    O que muda de casa para casa (marcas, números, cotas) está em self.casa (classes E03, F01, C01 abaixo)."""
+
+    def __init__(self, p, T, casa):
+        self.p, self.T, self.casa = p, T, casa
+        self.g = _CaGeo(p)
+        self.Dm = self.g.Dm
+        self.W, self.D = p["W"], p["D"]
+        self.n = len(T["itens"])
+        self.rec = p["_r"].metricas["recuos"]["dir"]
+        casa.conferir(self)
+        svg = svg_humanizada(p)
+        com_item = casa.com_item
+        Dm = self.Dm
+
+        def tira(mt):  # o nome do cômodo com número sai: o nome está na linha do número (mesma regra do mobiliar.py)
+            cx, cy = map(float, re.match(r'<g transform="translate\(([-\d.]+) ([-\d.]+)\)', mt.group(0)).groups())
+            dentro = [c["id"] for c in p["comodos"] if c["x0"] <= cx <= c["x1"] and c["y0"] <= Dm - cy <= c["y1"]]
+            return "" if dentro and dentro[0] in com_item else mt.group(0)
+        svg = re.sub(r'<g transform="translate\([-\d.]+ [-\d.]+\) scale\([\d.]+\) translate\([^)]*\)">.*?</g>', tira, svg)
+        self.etq = _ca_etiquetas(svg, Dm)
+        # o desenho do livro mostra só 0,70 m do recuo da direita; aqui ele vai inteiro (1,50 m), com a divisa do lote
+        K = ESTILOS["revista"]["piso"]
+        S = ESTILOS["revista"]
+        W, xr = self.W, self.W + self.rec
+        fundo = (
+            _piso("grama", W, -.7, self.rec, Dm + 1.95, K)
+            + _piso("calcada", W, Dm + 1.25, self.rec + 1, .42, K)
+            + f'<rect x="{W}" y="{Dm + 1.67:.3f}" width="{self.rec + 1}" height="1" fill="{S["rua"]}"/>')
+        hach = "".join(f"M{xr:.3f} {yy + .12:.3f}l.12 -.12" for yy in [-.7 + k * .12 for k in range(int((Dm + 1.95) / .12))])
+        muro = (f'<rect x="{xr:.3f}" y="-.7" width=".12" height="{Dm + 1.95:.3f}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
+                f'<path d="{hach}" stroke="#B5AFA4" stroke-width=".02"/>')
+        # F01: o fundo do lote entra até o recuo de fundos do lote mínimo (1,5 m), por cima da cota "casa" do livro
+        ef = casa.fundo_extra(self)
+        if ef:
+            y0 = -ef
+            hach_e = lambda x: "".join(f"M{x:.3f} {yy + .12:.3f}l.12 -.12" for yy in [y0 + k * .12 for k in range(int((ef - .7) / .12) + 1)])
+            muro += (_piso("grama", 0, y0, xr, ef - .7 + .02, K)
+                     + f'<rect x="-.08" y="{y0:.3f}" width=".08" height="{ef - .7:.3f}" fill="#fff"/>'
+                     + f'<rect x="-.2" y="{y0:.3f}" width=".12" height="{ef - .7:.3f}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
+                     + f'<path d="{hach_e(-.2)}" stroke="#B5AFA4" stroke-width=".02"/>'
+                     + f'<rect x="{xr:.3f}" y="{y0:.3f}" width=".12" height="{ef - .7:.3f}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
+                     + f'<path d="{hach_e(xr)}" stroke="#B5AFA4" stroke-width=".02"/>')
+        i = svg.index(">") + 1
+        self.base = svg[:i] + fundo + svg[i:].rsplit("</svg>", 1)[0] + muro
+
+    # coordenadas: x do validador; y da tela = Dm - y (frente embaixo)
+    def Y(self, y):
+        return self.Dm - y
+
+    def parede(self, eixo, v, a, b):
+        """Retângulos (tela) da parede que passa em x=v (eixo 'x') ou y=v (eixo 'y'), entre a e b."""
+        r = []
+        for b0, b1, b2, b3 in self.g.caixas:
+            if eixo == "x" and b0 <= v <= b2 and min(b, b3) - max(a, b1) > .02:
+                r.append((b0, self.Y(min(b, b3)), b2 - b0, min(b, b3) - max(a, b1)))
+            if eixo == "y" and b1 <= v <= b3 and min(b, b2) - max(a, b0) > .02:
+                r.append((max(a, b0), self.Y(b3), min(b, b2) - max(a, b0), b3 - b1))
+        return r
+
+    def par(self, eixo, v, a, b):
+        """Como parede(), só com as paredes que correm na direção do eixo pedido (parede() também pega a parede
+        que cruza a linha; na Casa Fita isso não acontece nos trechos marcados, e ela fica como está)."""
+        return [r for r, c in zip(self.parede(eixo, v, a, b), [c for c in self.g.caixas if self._cruza(c, eixo, v, a, b)])
+                if (c[3] - c[1] >= c[2] - c[0]) == (eixo == "x")]
+
+    @staticmethod
+    def _cruza(c, eixo, v, a, b):
+        b0, b1, b2, b3 = c
+        if eixo == "x":
+            return b0 <= v <= b2 and min(b, b3) - max(a, b1) > .02
+        return b1 <= v <= b3 and min(b, b2) - max(a, b0) > .02
+
+    # --- as tintas: parede inteira, meia parede (o lado de um cômodo), faixa por fora (parede com janela), sem parede
+    @staticmethod
+    def pinta(rs):
+        return "".join(f'<rect x="{x + .02:.3f}" y="{y:.3f}" width="{max(.02, w - .04):.3f}" height="{h:.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".018"/>' for x, y, w, h in rs)
+
+    @staticmethod
+    def pinta_h(rs):
+        return "".join(f'<rect x="{x:.3f}" y="{y + .02:.3f}" width="{w:.3f}" height="{max(.02, h - .04):.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".018"/>' for x, y, w, h in rs)
+
+    def meia(self, eixo, v, a, b, lado):
+        """A metade da espessura da parede do lado de um cômodo (lado '+' = x maior ou mais para o fundo):
+        quando dois números apontam a mesma parede, cada um pinta a sua face."""
+        s = []
+        for x, y, w, h in self.par(eixo, v, a, b):
+            if eixo == "x":
+                x, w = (x + w / 2, w / 2) if lado == "+" else (x, w / 2)
+            else:
+                y, h = (y, h / 2) if lado == "+" else (y + h / 2, h / 2)
+            s.append(f'<rect x="{x:.3f}" y="{y:.3f}" width="{w:.3f}" height="{h:.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".008"/>')
+        return "".join(s)
+
+    def fora_v(self, y0, y1, x=None, lado="+"):
+        """Faixa amarela rente à parede vertical em x, por fora dela (lado '+': à direita), entre y0 e y1."""
+        x = self.W if x is None else x
+        xx = x + .03 if lado == "+" else x - .14
+        return f'<rect x="{xx:.3f}" y="{self.Y(y1):.3f}" width=".11" height="{y1 - y0:.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".018"/>'
+
+    def fora_h(self, x0, x1, y):
+        return f'<rect x="{x0:.3f}" y="{self.Y(y) - .14:.3f}" width="{x1 - x0:.3f}" height=".11" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".018"/>'
+
+    def sem_parede(self, eixo, v, a, b):
+        """Pontilhado amarelo na linha onde o desenho não tem parede (o lado aberto, a divisa sem muro)."""
+        n = max(2, int(abs(b - a) / .2))
+        pts = [(v, a + (b - a) * k / n) if eixo == "x" else (a + (b - a) * k / n, v) for k in range(n + 1)]
+        return "".join(f'<circle cx="{x:.3f}" cy="{self.Y(y):.3f}" r=".055" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".016"/>' for x, y in pts)
+
+    def por_cima(self, x0, y0, x1, y1):
+        """Tracejado bege: o que fica por cima (maleiro)."""
+        return f'<rect x="{x0:.3f}" y="{self.Y(y1):.3f}" width="{x1 - x0:.3f}" height="{y1 - y0:.3f}" fill="{CA_FITA}" fill-opacity=".28" stroke="{CA_TINTA}" stroke-width=".025" stroke-dasharray=".12 .08"/>'
+
+    def area_aberta(self, x0, y0, x1, y1, cor=CA_AZUL, aberto_em_cima=False):
+        """Tracejado (azul na Casa Fita; verde na F01): área aberta. aberto_em_cima: o lote continua além do desenho,
+        o lado de cima fica sem tracejado e leva a marca de corte."""
+        if not aberto_em_cima:
+            return f'<rect x="{x0:.3f}" y="{self.Y(y1):.3f}" width="{x1 - x0:.3f}" height="{y1 - y0:.3f}" fill="none" stroke="{cor}" stroke-width=".035" stroke-dasharray=".2 .12"/>'
+        Y = self.Y
+        return f'<path d="M{x0:.3f} {Y(y1):.3f}V{Y(y0):.3f}H{x1:.3f}V{Y(y1):.3f}" fill="none" stroke="{cor}" stroke-width=".035" stroke-dasharray=".2 .12"/>' + self.corte(x0, x1, y1)
+
+    def corte(self, x0, x1, y):
+        """Marca de corte (linha de interrupção com o zigue-zague no meio): o terreno continua além do desenho."""
+        Y, xm = self.Y(y), (x0 + x1) / 2
+        return (f'<path d="M{x0 - .05:.3f} {Y:.3f}H{xm - .18:.3f}L{xm - .08:.3f} {Y - .16:.3f}L{xm + .08:.3f} {Y + .16:.3f}L{xm + .18:.3f} {Y:.3f}H{x1 + .05:.3f}" '
+                f'fill="none" stroke="{CA_TINTA}" stroke-width=".025" stroke-linejoin="round"/>')
+
+    def marcas(self, so=None):
+        m = self.casa.marcas(self)
+        return "".join(v for n, v in m.items() if so is None or n in so)
+
+    def obstaculos(self, k):
+        obs, giros = self.g.obstaculos()
+        return obs + [gb for _, _, gb in giros] + list(self.etq)
+
+    def lugar(self, cid, pref, r, extra=()):
+        """Ponto do número no chão livre do cômodo, o mais perto possível de pref (metros, y do validador)."""
+        g = self.g
+        x0, x1, y0, y1 = g.face(cid, "x0"), g.face(cid, "x1"), g.face(cid, "y0"), g.face(cid, "y1")
+        obs, giros = g.obstaculos()
+        ocup = obs + list(extra) + [(a, self.Dm - d, c, self.Dm - b) for a, b, c, d in self.etq]
+        melhor = None
+        for i in range(41):
+            for j in range(41):
+                x = x0 + r + .05 + (x1 - x0 - 2 * r - .1) * i / 40
+                y = y0 + r + .05 + (y1 - y0 - 2 * r - .1) * j / 40
+                bb = (x - r - .04, y - r - .04, x + r + .04, y + r + .04)
+                duro = sum(_inter(bb, o) for o in ocup)
+                for (hx, hy), rr, gb in giros:
+                    if _inter(bb, gb) > 0 and math.hypot(x - hx, y - hy) < rr + r + .03:
+                        duro += .05
+                sc = duro * 1000 + math.hypot(x - pref[0], y - pref[1])
+                if melhor is None or sc < melhor[0]:
+                    melhor = (sc, x, y, duro)
+        if melhor[3] > 0:
+            _ca_aviso(f"número em {cid}: encosta em móvel, porta ou etiqueta ({melhor[3]:.3f} m²)")
+        return melhor[1], melhor[2]
+
+    def numero(self, x, y, n, r, grande=False):
+        Y = self.Y(y)
+        anel = f'<circle cx="{x:.3f}" cy="{Y:.3f}" r="{r * 1.32:.3f}" fill="none" stroke="{CA_TINTA}" stroke-width="{r * .07:.3f}" stroke-dasharray="{r * .2:.3f} {r * .14:.3f}"/>' if grande else ""
+        return (f'{anel}<circle cx="{x:.3f}" cy="{Y + r * .13:.3f}" r="{r:.3f}" fill="{CA_TINTA}" opacity=".25"/>'
+                f'<circle cx="{x:.3f}" cy="{Y:.3f}" r="{r:.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width="{r * .15:.3f}"/>'
+                f'<text x="{x:.3f}" y="{Y + r * .45:.3f}" text-anchor="middle" font-size="{r * 1.33:.3f}" font-weight="800" class="tit" fill="{CA_TINTA}">{n}</text>')
+
+    def pilula(self, x, y, txt, fs, rot=0, cor=CA_AZUL):
+        w, h = len(txt) * fs * .62 + fs * .7, fs * 1.45
+        return (f'<g transform="translate({x:.3f} {self.Y(y):.3f}) rotate({rot})"><rect x="{-w / 2:.3f}" y="{-h / 2:.3f}" width="{w:.3f}" height="{h:.3f}" rx="{h / 2:.3f}" fill="#fff" stroke="{cor}" stroke-width="{fs * .09:.3f}"/>'
+                f'<text x="0" y="{fs * .36:.3f}" text-anchor="middle" font-size="{fs:.3f}" font-weight="700" class="mono" fill="{cor}">{E(txt)}</text></g>')
+
+    @staticmethod
+    def caixa_pilula(x, y, txt, fs, rot=0):
+        """A caixa (metros, y do validador) que a pílula ocupa: os números não sentam nela."""
+        w, h = len(txt) * fs * .62 + fs * .7, fs * 1.45
+        if rot:
+            w, h = h, w
+        return (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
+
+    def cota(self, ax, bx, y, txt, fs, px=None):
+        Y, t = self.Y(y), fs * .35
+        return (f'<g stroke="{CA_AZUL}" stroke-width="{fs * .1:.3f}" fill="none"><line x1="{ax:.3f}" y1="{Y:.3f}" x2="{bx:.3f}" y2="{Y:.3f}"/>'
+                f'<line x1="{ax:.3f}" y1="{Y - t:.3f}" x2="{ax:.3f}" y2="{Y + t:.3f}"/><line x1="{bx:.3f}" y1="{Y - t:.3f}" x2="{bx:.3f}" y2="{Y + t:.3f}"/></g>'
+                + self.pilula((ax + bx) / 2 if px is None else px, y, txt, fs))
+
+    def cota_v(self, x, ay, by, txt, fs, py=None):
+        t = fs * .35
+        return (f'<g stroke="{CA_AZUL}" stroke-width="{fs * .1:.3f}"><line x1="{x:.3f}" y1="{self.Y(ay):.3f}" x2="{x:.3f}" y2="{self.Y(by):.3f}"/>'
+                f'<line x1="{x - t:.3f}" y1="{self.Y(ay):.3f}" x2="{x + t:.3f}" y2="{self.Y(ay):.3f}"/><line x1="{x - t:.3f}" y1="{self.Y(by):.3f}" x2="{x + t:.3f}" y2="{self.Y(by):.3f}"/></g>'
+                + self.pilula(x, (ay + by) / 2 if py is None else py, txt, fs, rot=-90))
+
+    def svg(self, k, recorte, so=None, rn=2.6, rn3=3.6, fs_mm=2.5, zoom=False):
+        """SVG em mm. recorte = (x0, x1, y_fundo, y_frente) em metros do validador. k = mm por metro."""
+        x0, x1, yf, yr = recorte
+        vx, vy, vw, vh = x0, self.Y(yf), x1 - x0, yf - yr
+        r, r3, fs = rn / k, rn3 / k, fs_mm / k
+        so = set(so or range(1, self.n + 1))
+        s = [self.base]
+        s += self.casa.chao(self, so, zoom)
+        s.append(self.marcas(so))
+        extra = []
+        s += self.casa.medidas(self, so, zoom, fs, extra)
+        s += self.casa.numeros(self, so, zoom, r, r3, fs, extra, s)
+        s.append("</svg>")
+        out = "".join(s)
+        out = re.sub(r'^<svg viewBox="[^"]*"', f'<svg viewBox="{vx:.3f} {vy:.3f} {vw:.3f} {vh:.3f}" width="{vw * k:.2f}mm" height="{vh * k:.2f}mm"', out)
+        return out, vw * k, vh * k
+
+    def numeros_em(self, so, zoom, r, r3, fs, extra, prefs, destaque):
+        """Os números no chão livre de cada cômodo (prefs: n -> (cômodo, ponto preferido))."""
+        nums = []
+        for n in sorted(so):
+            if n not in prefs:
+                continue
+            cid, pref = prefs[n]
+            rr = r3 if n == destaque else r
+            if cid is None:   # ponto fixo, fora de cômodo (recuo, fundo)
+                x, y = pref
+            else:
+                x, y = self.lugar(cid, pref, rr * (1.32 if n == destaque else 1), extra)
+            extra.append((x - rr, y - rr, x + rr, y + rr))
+            nums.append(self.numero(x, y, n, rr, grande=(n == destaque)))
+        return nums
+
+
+# ------------------------------------------------------------------ Casa Fita (E03): o desenho da prova de 24/11, sem mudança
+class _CaE03:
+    id, destaque = "E03", 3
+    com_item = {"quarto2", "sala", "cozinha", "circ", "banho", "quarto1"}
+
+    def fundo_extra(self, P):
+        return 0
+
+    def conferir(self, P):
+        p, T = P.p, P.T
+        _ca_conferir_util(p, T, {1: "quarto2", 2: "sala", 3: "cozinha", 4: "banho", 5: "circ", 6: "quarto1"})
+        rec = p["_r"].metricas["recuos"]["dir"]
+        if T["itens"][6]["dim"] != f"{m1(rec)} x {m1(p['D'])} m":
+            _ca_aviso(f"lugar 7: texto {T['itens'][6]['dim']}, dados {m1(rec)} x {m1(p['D'])} m")
+        _, jan, portas, _ = _geometria(p)
+        jc = next(j for j in jan if j["id"] == "cozinha")["seg"]
+        if f"{m(abs(jc[3] - jc[1]))} m" not in T["itens"][2]["ideia"]:
+            _ca_aviso(f"janela da cozinha: desenho {m(abs(jc[3] - jc[1]))} m, não está no texto")
+        pc = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "ext-cozinha"))
+        vao = min(pc[0][1], pc[1][1]) - jc[3]
+        # 22,5 cm: o número exato dos dados, sem arredondar (decisão do Maestro, 24/11, veto-pagina-prova-E03-2026-11-24.md)
+        if _ca_cm(vao) not in T["itens"][2]["ideia"]:
+            _ca_aviso(f"cozinha: entre a janela e a porta, o desenho tem {vao * 100:.1f} cm; o texto não traz esse número")
+        P.jc, P.pc = jc, pc
+
+    def marcas(self, P):
+        """As paredes de cada número, pintadas de amarelo (a parede inteira de espessura, ou uma faixa por fora
+        quando a parede tem janela, para não esconder a janela). Lugares e paredes: campo "Aponta" do texto."""
+        Y, W, jc = P.Y, P.W, P.jc
+        pinta, pinta_h, fora_v, fora_h = P.pinta, P.pinta_h, P.fora_v, P.fora_h
+        return {
+            # 1: tomada nas duas cabeceiras (divisa e recuo); nicho na divisa
+            1: pinta(P.parede("x", .07, .75, 2.05)) + pinta(P.parede("x", 3.43, .3, 1.35)),
+            # 2: o vão de 1,92 m é a cota (em medidas()); o cuidado é a porta do quarto da frente, no canto da divisa
+            2: pinta_h([(.25, Y(3.16), .8, .12)]),
+            # 3: a janela da pia (por fora, para não esconder a janela) e os 22,5 cm até a porta de fora
+            3: fora_v(jc[1], jc[3]) + f'<rect x="{W + .03:.3f}" y="{Y(P.pc[1][1]):.3f}" width=".11" height="{P.pc[1][1] - jc[3]:.3f}" fill="{CA_TINTA}"/>',
+            # 4: a parede do serviço (vaso e pia) e a janela dentro do box
+            4: pinta_h(P.parede("y", 11.2, 1.16, 2.5)) + fora_v(11.5, 12.6),
+            # 5: o maleiro por cima do hall (tracejado = por cima) e a parede da divisa do hall
+            5: (f'<rect x=".2" y="{Y(12.84):.3f}" width=".8" height="{12.84 - 9.96:.3f}" fill="{CA_FITA}" fill-opacity=".28" stroke="{CA_TINTA}" stroke-width=".025" stroke-dasharray=".12 .08"/>'
+                + pinta(P.parede("x", .07, 9.96, 12.84))),
+            # 6: o interruptor na cabeceira (parede do recuo, ao lado do criado) e a janela do fundo
+            6: pinta(P.parede("x", 3.43, 13.15, 13.9)) + fora_h(.8, 2.7, 16.1 + .14 + .03),
+            # 7: o recuo inteiro (tracejado azul)
+            7: (f'<rect x="{W + .2:.3f}" y="{Y(P.D):.3f}" width="{P.rec - .3:.3f}" height="{P.D:.3f}" fill="none" stroke="{CA_AZUL}" stroke-width=".035" stroke-dasharray=".2 .12"/>'),
+        }
+
+    def chao(self, P, so, zoom):
+        if not zoom and 3 in so:   # a cozinha, destaque da página: o chão em amarelo claro
+            g = P.g
+            return [f'<rect x="{g.face("cozinha", "x0"):.3f}" y="{P.Y(g.face("cozinha", "y1")):.3f}" width="{g.face("cozinha", "x1") - g.face("cozinha", "x0"):.3f}" height="{g.face("cozinha", "y1") - g.face("cozinha", "y0"):.3f}" fill="{CA_FITA}" fill-opacity=".2"/>']
+        return []
+
+    def medidas(self, P, so, zoom, fs, extra):
+        s, Wc = [], P.W
+        if 2 in so:  # o vão de 1,92 m entre o rack e o sofá, medido no desenho; só sai se bater com o texto
+            rk, sf = P.g.mv("rack", "sala"), P.g.mv("sofa", "sala")
+            txt = m(sf[0] - rk[2])
+            if txt + " m" in P.T["itens"][1]["ideia"]:
+                yc = 4.55
+                s.append(P.cota(rk[2], sf[0], yc, txt, fs))
+                extra.append((rk[2], yc - fs, sf[0], yc + fs))
+            else:
+                _ca_aviso(f"sala: o desenho mede {txt} m entre o rack e o sofá; o texto não traz esse número (cota não desenhada)")
+        if 3 in so:   # 1,70 da janela e os 22,5 cm, por fora, no recuo (os números saem do texto, conferidos em conferir())
+            jc = P.jc
+            m170 = re.search(r"(\d,\d\d) m", P.T["itens"][2]["ideia"]).group(1)
+            m22 = re.search(r"(\d+(?:,\d+)? cm)", P.T["itens"][2]["ideia"]).group(1)
+            xm = Wc + .42 if zoom else Wc + .55
+            s.append(f'<g stroke="{CA_AZUL}" stroke-width="{fs * .1:.3f}"><line x1="{xm:.3f}" y1="{P.Y(jc[1]):.3f}" x2="{xm:.3f}" y2="{P.Y(jc[3]):.3f}"/>'
+                     f'<line x1="{xm - fs * .35:.3f}" y1="{P.Y(jc[1]):.3f}" x2="{xm + fs * .35:.3f}" y2="{P.Y(jc[1]):.3f}"/><line x1="{xm - fs * .35:.3f}" y1="{P.Y(jc[3]):.3f}" x2="{xm + fs * .35:.3f}" y2="{P.Y(jc[3]):.3f}"/></g>')
+            s.append(P.pilula(xm, (jc[1] + jc[3]) / 2, m170, fs, rot=-90))
+            if zoom:  # os 22,5 cm, com linha de chamada até a faixa preta
+                ym = (jc[3] + P.pc[1][1]) / 2
+                s.append(f'<line x1="{Wc + .14:.3f}" y1="{P.Y(ym):.3f}" x2="{Wc + .9:.3f}" y2="{P.Y(ym + .45):.3f}" stroke="{CA_TINTA}" stroke-width="{fs * .08:.3f}"/>')
+                s.append(P.pilula(Wc + 1.0, ym + .45, m22, fs, cor=CA_TINTA))
+        return s
+
+    def numeros(self, P, so, zoom, r, r3, fs, extra, s):
+        nums, Wc = [], P.W
+        prefs = {1: ("quarto2", (1.85, 1.75)), 2: ("sala", (1.8, 3.75)), 3: ("cozinha", (2.0, 8.0)),
+                 4: ("banho", (2.0, 12.55)), 5: ("circ", (.6, 11.2)), 6: ("quarto1", (2.3, 13.35))}
+        for n in sorted(so):
+            if n == 7:
+                if not zoom:
+                    nums.append(P.numero(Wc + P.rec / 2 + .1, 11.5, 7, r))
+                    s.append(f'<text x="{Wc + P.rec / 2 + .1:.3f}" y="{P.Y(10.6):.3f}" text-anchor="end" font-size="{fs * .95:.3f}" font-weight="700" class="mono" fill="{CA_AZUL}" transform="rotate(-90 {Wc + P.rec / 2 + .1:.3f} {P.Y(10.6):.3f})">{E(TX.COMODO["desenho"]["recuo"].format(P.T["itens"][6]["dim"].split(" x ")[0]))}</text>')
+                continue
+            cid, pref = prefs[n]
+            rr = r3 if n == 3 else r
+            x, y = P.lugar(cid, pref, rr * (1.32 if n == 3 else 1), extra)
+            extra.append((x - rr, y - rr, x + rr, y + rr))
+            nums.append(P.numero(x, y, n, rr, grande=(n == 3)))
+        return nums
+
+    def legenda(self):
+        return _ca_legenda(self.id)
+
+
+# ------------------------------------------------------------------ Casa Família Compacta (F01), 8,50 x 8,30
+class _CaF01:
+    id, destaque = "F01", 1
+    com_item = {"sala", "cozinha", "servico", "banho", "circ", "quarto1", "quarto3"}
+
+    def fundo_extra(self, P):
+        # o desenho do livro mostra 0,70 m do fundo; aqui vai o recuo de fundos do lote mínimo (dados: recuos.fundos)
+        return P.p["_r"].metricas["recuos"]["fundos"] + .1
+
+    def conferir(self, P):
+        p, T, g = P.p, P.T, P.g
+        it = {i["n"]: i for i in T["itens"]}
+        _ca_conferir_util(p, T, {1: "sala", 2: "cozinha", 3: "servico", 4: "banho", 5: "circ", 6: "quarto1", 7: "quarto3"})
+        # 1: o ponto de luz no meio da mesa, medido por dentro das paredes da divisa e da frente
+        mesa = g.mv("mesaJantar", "sala", cad=False)
+        P.luz = ((mesa[0] + mesa[2]) / 2, (mesa[1] + mesa[3]) / 2)
+        P.fx0, P.fy0 = g.face("sala", "x0"), g.face("sala", "y0")
+        P.m_luz_x, P.m_luz_y = m(P.luz[0] - P.fx0), m(P.luz[1] - P.fy0)
+        rk, sf = g.mv("rack", "sala"), g.mv("sofa", "sala")
+        P.rk, P.sf, P.m_tv = rk, sf, m(sf[0] - rk[2])
+        # o vão livre da sala, por dentro (D32, Arquiteto): da face de dentro da divisa até o lado aberto para a cozinha
+        P.vao = p["_r"].metricas["util"]["sala"][0]
+        if abs(P.fx0 + P.vao - g.com["sala"]["x1"]) > .005:
+            _ca_aviso("sala: o vão livre não chega ao lado aberto para a cozinha (o pontilhado)")
+        assert p["_r"].info, "o validador não avisa mais o vão da sala"
+        ok = [_ca_no_texto(f"{P.m_luz_x} m da parede da divisa", it[1]["ideia"]), _ca_no_texto(f"{P.m_luz_y} m da parede da frente", it[1]["ideia"]),
+              _ca_no_texto(f"({P.m_tv} m)", it[1]["cuid"])]
+        P.cotas_sala = all(ok)
+        P.m_vao = m(P.vao)
+        P.tem_vao = _ca_no_texto(f"{P.m_vao} x ", it[1]["dim"])
+        # 2: os 2,59 m de parede depois da porta do serviço
+        _, jan, portas, _ = _geometria(p)
+        pcs = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "cozinha-servico"))
+        P.porta_cs = max(pcs[0][1], pcs[1][1], pcs[2][1] if abs(pcs[2][0] - 6.7) < .01 else 0)
+        P.fy1_coz = g.face("cozinha", "y1")
+        P.m_259 = m(P.fy1_coz - P.porta_cs)
+        P.tem_259 = _ca_no_texto(f"{P.m_259} m depois da porta do serviço", it[2]["ideia"])
+        # 3: uns 91 cm entre o tanque e a máquina
+        tq, mq = g.mv("tanque", "servico"), g.mv("maquina", "servico")
+        P.tq, P.mq, P.m_91 = tq, mq, _ca_cm(round(mq[1] - tq[3], 2))
+        P.tem_91 = _ca_no_texto(f"uns {P.m_91}", it[3]["cuid"])
+        P.jan = {j["id"]: j["seg"] for j in jan}
+        pe = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "ext-sala"))
+        P.porta_ent = max(pe[0][0], pe[1][0], pe[2][0])     # a parede da frente começa depois da porta de entrada
+        rec = p["_r"].metricas["recuos"]
+        lote = p["_r"].metricas["lote_comercial"]
+        fundo_com = lote[1] - rec["frente"] - P.D
+        lmin = p["_r"].metricas["lote"]
+        d8 = f"{m1(lote[0])} x {m1(fundo_com)} m"
+        r8 = f"no lote de {lote[0]} x {lote[1]} ({m1(rec['fundos'])} m no lote mínimo, de {_ca_num(lmin[0])} x {_ca_num(lmin[1])})"
+        if it[8]["dim"] != d8 or it[8]["resto"] != r8:
+            _ca_aviso(f"lugar 8: texto {it[8]['dim']} {it[8]['resto']}, dados {d8} {r8}")
+        # as legendas do fundo e da frente, no desenho (D32)
+        P.txt_fundo = (TX.COMODO["desenho"]["fundo"][0].format(m1(fundo_com), lote[0], lote[1]),
+                       TX.COMODO["desenho"]["fundo"][1].format(m1(rec['fundos']), _ca_num(lmin[0]), _ca_num(lmin[1])))
+        P.txt_frente = TX.COMODO["desenho"]["frente"].format(_ca_num(rec['frente']))
+        if f"{m1(rec['dir'])} m" not in it[3]["ideia"]:
+            _ca_aviso("lugar 3: a faixa livre do texto não é o recuo da direita dos dados")
+
+    def marcas(self, P):
+        W, D, g = P.W, P.D, P.g
+        q1 = g.mv("armario", "quarto1")
+        cama = g.mv("camaCasal", "quarto1")
+        esc_ = g.mv("escrivaninha", "quarto3", cad=False)
+        pia = g.mv("pia", "banho")
+        box = g.mv("box", "banho")
+        return {
+            # 1: "medida a partir da parede da divisa (esquerda) e da parede da frente": a parede da divisa da sala
+            #    inteira e a faixa por fora da parede da frente (ela tem a janela de 2,40 m); o caminho entre o rack e
+            #    o sofá é a cota de 1,45 m (em medidas())
+            1: P.pinta(P.par("x", .07, .15, 3.64)) + P.fora_h(P.porta_ent, 4.54, -.17),
+            # 2: "parede da direita (a do banheiro e do serviço), em cima da pia e do fogão": a face da cozinha, da porta
+            #    do serviço ao fundo da cozinha; "o lado sem parede que dá para a sala": pontilhado
+            2: P.meia("x", 6.7, P.porta_cs, P.fy1_coz, "-") + P.sem_parede("x", 4.6, .15, 3.6),
+            # 3: "do lado de fora da porta do serviço, na parede da direita (a faixa livre)": por fora, da janela do
+            #    serviço ao fim do serviço (a porta no meio); o cuidado (entre tanque e máquina) é a cota de 91 cm
+            3: P.fora_v(P.jan["servico"][3], 2.24),
+            # 4: "no canto do box, nas paredes da cozinha e do serviço": a face do banheiro nas duas paredes, no
+            #    comprimento do box; "na pia, na parede de fora, embaixo da janela": faixa por fora, no trecho da pia
+            4: P.meia("x", 6.7, box[1], box[3], "+") + P.meia("y", 2.3, 6.76, box[2], "+") + P.fora_v(pia[1], pia[3]),
+            # 5: "nas duas pontas: junto da sala e perto da porta do banheiro": a divisa na ponta do corredor e a parede
+            #    da cozinha antes da porta do banheiro; "ao longo da parede dos quartos": a face do corredor
+            5: P.pinta(P.par("x", .07, 3.76, 4.74)) + P.meia("y", 3.7, 6.0, 6.64, "+") + P.meia("y", 4.8, .15, 6.64, "-"),
+            # 6: "na parede do corredor (guarda-roupa e maleiro)": a face do quarto atrás do guarda-roupa, com o maleiro
+            #    tracejado por cima; "entre o pé da cama e a parede do quarto do meio": a face do quarto no pé da cama
+            6: P.meia("y", 4.8, q1[0], q1[2], "+") + P.por_cima(q1[0], q1[1], q1[2], q1[3]) + P.meia("x", 2.833, cama[1], cama[3], "-"),
+            # 7: "na parede da esquerda (a do quarto do meio), no canto da escrivaninha, embaixo da janela"; "na parede
+            #    do corredor, no trecho que é o fundo do banheiro"
+            7: P.meia("x", 5.667, esc_[1], esc_[3], "+") + P.meia("y", 4.8, 6.76, 8.35, "+"),
+            # 8: "a faixa do fundo inteira, ao longo da parede do fundo; o cuidado marca as 3 janelas dos quartos"
+            8: (P.area_aberta(.1, D + .2, W + P.rec - .12, D + P.p["_r"].metricas["recuos"]["fundos"] - .1, cor=CA_VERDE, aberto_em_cima=True)
+                + "".join(P.fora_h(P.jan[q][0], P.jan[q][2], D + .17) for q in ("quarto1", "quarto2", "quarto3"))),
+        }
+
+    def chao(self, P, so, zoom):
+        s = []
+        if 3 in so and not zoom:   # a faixa livre de 1,5 m do item 3 (tracejado verde: área aberta)
+            s.append(P.area_aberta(P.W + .2, .05, P.W + P.rec - .12, P.D - .05, cor=CA_VERDE))
+        if 1 in so and not zoom:   # a sala, destaque da página: o chão em amarelo claro
+            g = P.g
+            s.append(f'<rect x="{g.face("sala", "x0"):.3f}" y="{P.Y(g.face("sala", "y1")):.3f}" width="{4.54 - g.face("sala", "x0"):.3f}" height="{g.face("sala", "y1") - g.face("sala", "y0"):.3f}" fill="{CA_FITA}" fill-opacity=".2"/>')
+        return s
+
+    def medidas(self, P, so, zoom, fs, extra):
+        s = []
+        if 1 in so:
+            lx, ly = P.luz
+            if P.tem_vao:   # o vão livre da sala, da face de dentro da divisa até o pontilhado (D32)
+                yv = 3.33
+                s.append(P.cota(P.fx0, P.fx0 + P.vao, yv, TX.COMODO["desenho"]["vao"].format(P.m_vao), fs, px=1.5))
+                extra.append(P.caixa_pilula(1.5, yv, TX.COMODO["desenho"]["vao"].format(P.m_vao), fs))
+            if P.cotas_sala:
+                # o ponto de luz: 3,75 m da divisa e 1,70 m da frente, por dentro
+                s.append(P.cota(P.fx0, lx, ly, P.m_luz_x, fs, px=1.3))
+                s.append(P.cota_v(lx, P.fy0, ly, P.m_luz_y, fs, py=.62))
+                extra += [P.caixa_pilula(1.3, ly, P.m_luz_x, fs), P.caixa_pilula(lx, .62, P.m_luz_y, fs, rot=1)]
+                # o caminho entre a TV e o sofá
+                yt = 2.5
+                s.append(P.cota(P.rk[2], P.sf[0], yt, P.m_tv, fs, px=1.3))
+                extra.append(P.caixa_pilula(1.3, yt, P.m_tv, fs))
+                rl = fs * .62
+                s.append(f'<g transform="translate({lx:.3f} {P.Y(ly):.3f})"><circle r="{rl:.3f}" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width="{fs * .1:.3f}"/>'
+                         f'<path d="M{-rl * .7:.3f} {-rl * .7:.3f}L{rl * .7:.3f} {rl * .7:.3f}M{rl * .7:.3f} {-rl * .7:.3f}L{-rl * .7:.3f} {rl * .7:.3f}" stroke="{CA_TINTA}" stroke-width="{fs * .1:.3f}"/></g>')
+                s.append(P.pilula(lx, ly + fs * 1.55, TX.COMODO["desenho"]["luz"], fs * .8, cor=CA_TINTA))
+                extra.append(P.caixa_pilula(lx, ly + fs * 1.55, TX.COMODO["desenho"]["luz"], fs * .8))
+        if 2 in so and P.tem_259 and not zoom:
+            xc = 5.72
+            s.append(P.cota_v(xc, P.porta_cs, P.fy1_coz, P.m_259, fs, py=1.75))
+            extra.append(P.caixa_pilula(xc, 1.75, P.m_259, fs, rot=1))
+        if 3 in so and P.tem_91 and not zoom:
+            xc = 7.64
+            s.append(P.cota_v(xc, P.tq[3], P.mq[1], P.m_91, fs * .85))
+            extra.append(P.caixa_pilula(xc, (P.tq[3] + P.mq[1]) / 2, P.m_91, fs * .85, rot=1))
+        if 3 in so and not zoom:   # a faixa livre (texto do item 3)
+            xt, yt = P.W + P.rec / 2 + .12, 5.0
+            s.append(f'<text x="{xt:.3f}" y="{P.Y(yt):.3f}" text-anchor="middle" font-size="{fs * .95:.3f}" font-weight="700" class="mono" fill="{CA_VERDE}" transform="rotate(-90 {xt:.3f} {P.Y(yt):.3f})">{E(TX.COMODO["desenho"]["faixa"].format(m1(P.rec)))}</text>')
+        if 8 in so and not zoom:
+            rf = P.p["_r"].metricas["recuos"]["fundos"]
+            yt = P.Y(P.D + rf / 2 + .02)
+            s.append(f'<text x="2.75" y="{yt - fs * .3:.3f}" font-size="{fs * .95:.3f}" font-weight="700" class="mono" fill="{CA_VERDE}">{E(P.txt_fundo[0])}'
+                     f'<tspan x="2.75" dy="{fs * 1.25:.3f}">{E(P.txt_fundo[1])}</tspan></text>')
+        if 1 in so and not zoom:   # a frente: o desenho corta o recuo da frente
+            ff = fs * .8
+            w = len(P.txt_frente) * ff * .62 + ff * .7
+            s.append(P.pilula(1.4 + w / 2, -.86, P.txt_frente, ff, cor=CA_TINTA))
+        return s
+
+    def numeros(self, P, so, zoom, r, r3, fs, extra, s):
+        rf = P.p["_r"].metricas["recuos"]["fundos"]
+        prefs = {1: ("sala", (1.55, .55)), 2: ("cozinha", (5.1, 2.6)), 3: ("servico", (7.1, 1.32)), 4: ("banho", (7.45, 3.55)),
+                 5: ("circ", (3.4, 4.25)), 6: ("quarto1", (2.42, 6.84)), 7: ("quarto3", (6.75, 6.3)),
+                 8: (None, (2.3, P.D + rf / 2 + .02))}
+        return P.numeros_em(so, zoom, r, r3, fs, extra, prefs, self.destaque)
+
+    def legenda(self):
+        return _ca_legenda(self.id)
+
+
+# ------------------------------------------------------------------ Casa Compacta (C01), 6,50 x 8,50
+class _CaC01:
+    id, destaque = "C01", 4
+    com_item = {"varanda", "quarto2", "sala", "circ", "banho", "quarto1", "cozinha", "servico"}
+
+    def fundo_extra(self, P):
+        return 0
+
+    def conferir(self, P):
+        p, T, g = P.p, P.T, P.g
+        it = {i["n"]: i for i in T["itens"]}
+        _ca_conferir_util(p, T, {1: "varanda", 2: "quarto2", 3: "sala", 4: "circ", 5: "banho", 6: "quarto1", 7: "cozinha", 8: "servico"})
+        # o hall só tem pedaços de parede entre as 3 portas: a face de dentro vem desses pedaços (a mesma do validador)
+        c = g.com["circ"]
+        toca = lambda v: [b for b in g.caixas if b[1] - 1e-6 <= v <= b[3] + 1e-6 and min(b[2], c["x1"]) - max(b[0], c["x0"]) > .05 and b[2] - b[0] > b[3] - b[1]]
+        P.hall = (g.face("circ", "x0"), max(b[3] for b in toca(c["y0"])), g.face("circ", "x1"), min(b[1] for b in toca(c["y1"])))
+        P.m_hx, P.m_hy = m(P.hall[2] - P.hall[0]), m(P.hall[3] - P.hall[1])
+        P.tem_hall = _ca_no_texto(f"{P.m_hx} x {P.m_hy} m", it[4]["ideia"])
+        # 7: a bancada em L de 1,21 m, da parede do serviço até a bancada de hoje
+        bc = g.mv("bancada", "cozinha")
+        P.bc, P.fx0_coz = bc, g.face("cozinha", "x0")
+        P.m_121 = m(bc[0] - P.fx0_coz)
+        P.tem_121 = _ca_no_texto(f"{P.m_121} m", it[7]["ideia"])
+        # 2 e 5: os 95 cm do guarda-roupa atrás do box
+        box, arm = g.mv("box", "banho"), g.mv("armario", "quarto2")
+        P.box, P.arm2 = box, arm
+        if _ca_cm(round(min(box[2], arm[2]) - max(box[0], arm[0]), 2)) not in it[2]["cuid"]:
+            _ca_aviso("quarto da frente: o trecho do guarda-roupa atrás do box não bate com o texto")
+        _, jan, portas, _ = _geometria(p)
+        P.jan = {j["id"]: j for j in jan}
+        ven = P.jan["servico"]
+        if ven.get("tipo") != "veneziana":
+            _ca_aviso("o serviço não tem a veneziana nos dados")
+        if T.get("veneziana") not in p["_r"].avisos:
+            _ca_aviso("a nota da veneziana do texto não é igual ao aviso dos dados")
+        vp = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "varanda-sala"))
+        P.folha_porta = max(vp[0][1], vp[1][1], vp[2][1])
+        P.mesa = g.mv("mesaJantar", "sala")
+
+    def marcas(self, P):
+        W, D, g = P.W, P.D, P.g
+        js, jq1, jc = P.jan["sala"]["seg"], P.jan["quarto1"]["seg"], P.jan["cozinha"]["seg"]
+        pia = g.mv("pia", "banho")
+        mq = g.mv("maquina", "servico")
+        h = P.hall
+        return {
+            # 1: "entre a divisa (esquerda; o desenho não mostra parede ali) e a parede do quarto da frente (direita)":
+            #    pontilhado na linha da divisa (nada de parede desenhada) e a parede do quarto; "na janela da sala, na
+            #    parede entre a sala e a varanda": faixa do lado da varanda, rente à janela
+            1: P.sem_parede("x", .05, .08, 1.15) + P.pinta(P.par("x", 3.42, 0, 1.2)) + P.fora_h(js[0], js[2], 1.2 - .17),
+            # 2: "na parede da rua (frente, sem janela)"; "na parede do fundo do quarto, no trecho do banheiro, do lado
+            #    da janela do recuo": a face do quarto no trecho do box (os 95 cm)
+            2: P.pinta_h(P.par("y", .07, 3.5, 6.35)) + P.meia("y", 3.3, P.box[0], P.box[2], "-"),
+            # 3: "na parede da divisa (esquerda, o rack) e na parede do quarto da frente (direita, o sofá, antes da
+            #    abertura do hall)"; o cuidado é a mesma parede do quarto. As duas paredes marcadas, os móveis do
+            #    desenho como estão (a troca é sugestão do texto, não vai ao desenho): a divisa entre a folha da porta
+            #    e a cadeira da mesa, e a parede do quarto até a abertura do hall
+            3: P.pinta(P.par("x", .07, P.folha_porta, P.mesa[1])) + P.pinta(P.par("x", 3.35, 1.35, 3.38)),
+            # 4: "no teto do hall inteiro, por cima das portas": o maleiro tracejado; "nas paredes do hall onde ele
+            #    apoia": os pedaços de parede do hall (o lado da sala é aberto e fica sem tinta)
+            4: (P.por_cima(h[0] + .03, h[1], h[2], h[3])
+                + P.pinta_h(P.par("y", 3.3, 3.42, 4.45)) + P.pinta(P.par("x", 4.45, 3.36, 5.04)) + P.pinta_h(P.par("y", 5.1, 3.42, 4.45))),
+            # 5: "na pia, no fundo do banheiro, ao lado da porta"; "na parede do box que dá para o quarto da frente":
+            #    a face do banheiro na mesma parede que o 2 marca do lado do quarto
+            5: P.meia("y", 5.1, pia[0], pia[2], "-") + P.meia("y", 3.3, P.box[0], P.box[2], "+"),
+            # 6: "na parede do fundo (a da janela)": faixa por fora; o cuidado (o lado da cama junto da janela) é o
+            #    lugar do número
+            6: P.fora_h(g.face("quarto1", "x0"), g.face("quarto1", "x1"), D + .17),
+            # 7: "na parede do fundo, embaixo da janela": faixa por fora; "na parede da direita (a do quarto casal),
+            #    atrás da pia e da bancada"
+            7: P.fora_h(jc[0], jc[2], D + .17) + P.meia("x", 3.35, P.bc[1], P.bc[3], "-"),
+            # 8: "na parede da divisa (esquerda), acima da máquina"; o cuidado é a veneziana em cima da porta de fora,
+            #    que o desenho do livro já traz tracejada em azul
+            8: P.pinta(P.par("x", .07, mq[1], mq[3])),
+        }
+
+    def chao(self, P, so, zoom):
+        if 4 in so and not zoom:   # o hall, destaque da página: o chão em amarelo claro
+            h = P.hall
+            return [f'<rect x="{h[0]:.3f}" y="{P.Y(h[3]):.3f}" width="{h[2] - h[0]:.3f}" height="{h[3] - h[1]:.3f}" fill="{CA_FITA}" fill-opacity=".2"/>']
+        return []
+
+    def medidas(self, P, so, zoom, fs, extra):
+        s = []
+        if 4 in so and zoom and P.tem_hall:
+            h = P.hall
+            yc, xc = h[1] + .2, h[0] + .17
+            s.append(P.cota(h[0], h[2], yc, P.m_hx, fs, px=(h[0] + h[2]) / 2 + .12))
+            s.append(P.cota_v(xc, h[1], h[3], P.m_hy, fs, py=4.55))
+            extra += [P.caixa_pilula((h[0] + h[2]) / 2 + .12, yc, P.m_hx, fs), P.caixa_pilula(xc, 4.55, P.m_hy, fs, rot=1)]
+        if 7 in so and P.tem_121 and not zoom:
+            yc = 8.12
+            s.append(P.cota(P.fx0_coz, P.bc[0], yc, P.m_121, fs))
+            extra.append(P.caixa_pilula((P.fx0_coz + P.bc[0]) / 2, yc, P.m_121, fs))
+        return s
+
+    def numeros(self, P, so, zoom, r, r3, fs, extra, s):
+        prefs = {1: ("varanda", (1.7, .6)), 2: ("quarto2", (4.92, 1.4)), 3: ("sala", (1.8, 3.35)),
+                 4: ("circ", (3.97, 4.0) if zoom else (3.9, 4.2)), 5: ("banho", (4.95, 3.55)), 6: ("quarto1", (4.6, 8.08)),
+                 7: ("cozinha", (2.0, 7.2)), 8: ("servico", (1.05, 7.0))}
+        return P.numeros_em(so, zoom, r, r3, fs, extra, prefs, self.destaque)
+
+    def legenda(self):
+        return _ca_legenda(self.id)
+
+
+def _ca_esc(t):
+    return E(_ca_nb(t))
+
+
+def _ca_cab_item(it):
+    resto = f'<span class="ca-sub2">{_ca_esc(it["resto"])}</span>' if it.get("resto") else ""
+    return f'<span class="nn">{it["n"]}</span><h3>{_ca_esc(it["nome"])} <span class="mono">{_ca_esc(it["dim"])}</span>{resto}</h3>'
+
+
+def _ca_linha(it, ref=False):
+    cab = _ca_cab_item(it)
+    if ref:
+        return f'<article class="ln ref">{cab}<p class="ao">{E(TX.COMODO["ref"])}</p></article>'
+    return (f'<article class="ln">{cab}<p class="ca-id"><b>{E(TX.COMODO["ideia"])}</b> {_ca_esc(it["ideia"])}</p>'
+            f'<p class="cuid"><b>{E(TX.COMODO["cuidado"])}</b> {_ca_esc(it["cuid"])}</p></article>')
+
+
+def _ca_cartao(it):
+    return (f'<article class="cd">{_ca_cab_item(it)}<p class="ca-id"><b>{E(TX.COMODO["ideia"])}</b> {_ca_esc(it["ideia"])}</p>'
+            f'<p class="cuid"><b>{E(TX.COMODO["cuidado"])}</b> {_ca_esc(it["cuid"])}</p></article>')
+
+
+def _ca_heroi(it, largo=False, estreito=False, leg=""):
+    cls = "heroi" + (" largo" if largo else "") + (" estreito" if estreito else "")
+    lg = f'<span class="leg-h">{E(leg)}</span>' if leg else ""
+    return (f'<div class="{cls}">{lg}{_ca_cab_item(it)}'
+            f'<p class="ca-id"><b>{E(TX.COMODO["ideia"])}</b> {_ca_esc(it["ideia"])}</p><p class="cuid"><b>{E(TX.COMODO["cuidado"])}</b> {_ca_esc(it["cuid"])}</p></div>')
+
+
+def _ca_legenda(cid):
+    """A legenda da planta: o desenho de cada marca e a frase dela (paginas.py, COMODO["legenda"])."""
+    d = {}
+    d["amarelo"] = f'<svg viewBox="0 0 9 4"><rect x=".3" y="1.2" width="8.4" height="1.6" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".25"/></svg>'
+    d["ponto"] = f'<svg viewBox="0 0 9 4">' + "".join(f'<circle cx="{x}" cy="2" r=".7" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".22"/>' for x in (1, 3.33, 5.67, 8)) + "</svg>"
+    d["trac"] = f'<svg viewBox="0 0 9 4"><rect x=".4" y=".5" width="8.2" height="3" fill="{CA_FITA}" fill-opacity=".28" stroke="{CA_TINTA}" stroke-width=".3" stroke-dasharray="1 .7"/></svg>'
+    d["medida"] = f'<svg viewBox="0 0 9 4"><line x1=".5" y1="2" x2="8.5" y2="2" stroke="{CA_AZUL}" stroke-width=".35"/><line x1=".5" y1="1" x2=".5" y2="3" stroke="{CA_AZUL}" stroke-width=".35"/><line x1="8.5" y1="1" x2="8.5" y2="3" stroke="{CA_AZUL}" stroke-width=".35"/></svg>'
+    d["recuo"] = f'<svg viewBox="0 0 9 4"><rect x=".4" y=".5" width="8.2" height="3" fill="none" stroke="{CA_AZUL}" stroke-width=".3" stroke-dasharray="1.2 .7"/></svg>'
+    d["verde"] = f'<svg viewBox="0 0 9 4"><rect x=".4" y=".5" width="8.2" height="3" fill="#BFDDA0" stroke="{CA_VERDE}" stroke-width=".3" stroke-dasharray="1.2 .7"/></svg>'
+    d["ven"] = f'<svg viewBox="0 0 9 4"><rect x=".4" y="1.3" width="8.2" height="1.4" fill="#9AA0A6" stroke="none"/><rect x=".4" y="1.1" width="8.2" height="1.8" fill="none" stroke="{CA_AZUL}" stroke-width=".35" stroke-dasharray="1 .6"/></svg>'
+    d["porta"] = (f'<svg viewBox="0 0 9 4"><path d="M2.6 3.3 A3.2 3.2 0 0 1 5.8 .1" fill="none" stroke="{CA_CINZA}" stroke-width=".18" stroke-dasharray=".5 .35"/>'
+             f'<rect x="2.3" y="3" width="4.4" height=".7" fill="{CA_FITA}" stroke="{CA_TINTA}" stroke-width=".2"/>'
+             f'<line x1="2.6" y1="3.1" x2="2.6" y2=".1" stroke="{CA_FITA}" stroke-width=".55" stroke-linecap="round"/>'
+             f'<line x1="2.6" y1="3.1" x2="2.6" y2=".1" stroke="{CA_TINTA}" stroke-width=".12"/></svg>')
+    return '<div class="legenda-ca">' + "".join(f'<div>{d[m]}<span>{E(txt)}</span></div>' for m, txt in TX.COMODO["legenda"][cid]) + "</div>"
+
+
+def _ca_perguntas(T):
+    li = "".join(f'<li><b>{_ca_esc(a)}</b> {_ca_esc(b)}{"".join(f"<span class=ref>{n}</span>" for n in ns)}</li>' for a, b, ns in T["perguntas"])
+    return f'<div class="perg"><h3>{E(TX.COMODO["perguntas"])}</h3><ol>{li}</ol></div>'
+
+
+def _ca_cabeca(p, T, sub=True):
+    r = p["_r"].metricas
+    lote = r["lote_comercial"]
+    return (f'<div><div class="ca-eti"><span>{E(TX.COMODO["eti"])}</span><i>{E(p["id"])}</i>'
+            f'<span class="f">{E(p["nome"])}, {PL.n0(r["area_fechada"])} m², {E(p["quartos_txt"])}, lote de {lote[0]} x {lote[1]} m</span></div>'
+            f'<h2>{E(T["titulo"])}</h2>' + (f'<p class="ca-sub">{E(T["sub"])}</p>' if sub else "")
+            + f'<p class="ca-abre">{_ca_esc(T["abre"])}</p></div>')
+
+
+def _ca_selo(cid):
+    return f'<span class="selo">{E(TX.COMODO["selo"][cid])}</span>'
+
+
+def _ca_eti2(p, T):
+    return f'<div class="ca-eti"><span>{E(TX.COMODO["eti"])}</span><i>{E(p["id"])}</i><span class="f">{E(T["sub"])}</span></div>'
+
+
+def _ca_paginas_E03(L, p, T, casa, orelha):
+    """Casa comprida (5 x 16): planta em pé encostada no meio do livro, detalhe da cozinha à esquerda; lista em linhas."""
+    PLT = _CaPlanta(p, T, casa)
+    D, W, rec = PLT.D, PLT.W, PLT.rec
+    rec_main = (-.42, W + rec + .32, D + .55, -1.05)      # a casa inteira, do fundo à calçada
+    rec_zoom = (-.05, W + rec + .15, 9.94, 5.87)          # a cozinha e o recuo ao lado dela
+    it = T["itens"]
+    nota = f'<p class="nota-ca"><b>{E(TX.COMODO["tomadas"])}</b> {_ca_esc(T["nota"])}</p>'
+    alv = f'<p class="alv">{_ca_esc(T["alvenaria"])}</p>'
+    svg_m, wm, hm = PLT.svg(11.6, rec_main)
+    kz = (CA_LARG - (wm + 3) - 6 - 3) / (rec_zoom[1] - rec_zoom[0])   # coluna da esquerda menos a moldura
+    svg_z, wz, hz = PLT.svg(kz, rec_zoom, so={3}, rn3=5.2, fs_mm=3.0, zoom=True)
+    n = L.pagina(f"""{_ca_cabeca(p, T)}
+      <div class="ca-corpo">
+        <div class="ca-esq">
+          {casa.legenda()}
+          <div class="cozinha-bloco"><figure class="ca-zoom"><span class="leg">{E(TX.COMODO["detalhe"]["E03"])}</span><div class="moldura">{svg_z}</div></figure>
+          {_ca_heroi(it[2])}</div>
+          {nota}
+          {alv}
+        </div>
+        <div class="ca-planta" style="width:{wm + 3:.2f}mm"><div class="moldura">{svg_m}</div>{_ca_selo("E03")}</div>
+      </div>""", "q ca", orelha=orelha, aviso=True)
+    linhas = "".join(_ca_linha(i, ref=(i["n"] == 3)) for i in it)
+    L.pagina(f"""{_ca_eti2(p, T)}
+      <div class="linhas">{linhas}</div>
+      {_ca_perguntas(T)}
+      {nota}
+      {alv}""", "q ca", orelha=orelha, aviso=True)
+    return n
+
+
+def _ca_paginas_F01(L, p, T, casa, orelha):
+    """Casa quase quadrada (8,50 x 8,30): a planta na largura da página 1, com o destaque (a sala) nela; na página 2,
+    o destaque em texto grande e os outros 7 lugares em cartões de 2 colunas."""
+    PLT = _CaPlanta(p, T, casa)
+    D, W, rec = PLT.D, PLT.W, PLT.rec
+    rf = p["_r"].metricas["recuos"]["fundos"]
+    rec_main = (-.52, W + rec + .3, D + rf + .1, -1.05)   # -.52: o rótulo "divisa" inteiro
+    it = T["itens"]
+    nota = f'<p class="nota-ca"><b>{E(TX.COMODO["tomadas"])}</b> {_ca_esc(T["nota"])}</p>'
+    alv = f'<p class="alv">{_ca_esc(T["alvenaria"])}</p>'
+    svg_m, wm, hm = PLT.svg(15.2, rec_main, rn=2.7, rn3=3.9, fs_mm=2.5)
+    n = L.pagina(f"""{_ca_cabeca(p, T)}
+      <div class="ca-planta larga"><div class="moldura">{svg_m}</div></div>
+      <div class="ca-pe">{casa.legenda()}<div class="ca-pe-dir">{_ca_selo("F01")}{alv}</div></div>""", "q ca", orelha=orelha, aviso=True)
+    cartoes = "".join(_ca_cartao(i) for i in it if i["n"] != 1)
+    L.pagina(f"""{_ca_eti2(p, T)}
+      {_ca_heroi(it[0], largo=True, leg=TX.COMODO["destaque"]["F01"])}
+      <div class="cartoes">{cartoes}{_ca_perguntas(T)}</div>
+      {nota}
+      {alv}""", "q ca", orelha=orelha, aviso=True)
+    return n
+
+
+def _ca_paginas_C01(L, p, T, casa, orelha):
+    """Casa de 6,50 x 8,50: planta grande encostada no meio do livro; ao lado, numa coluna estreita, o hall ampliado;
+    embaixo, o destaque na largura da página. Na página 2, os outros 7 em cartões e a nota da veneziana junto do 8."""
+    PLT = _CaPlanta(p, T, casa)
+    D, W, rec = PLT.D, PLT.W, PLT.rec
+    rec_main = (-.52, W + rec + .3, D + .55, -1.05)   # -.52: o rótulo "divisa" inteiro
+    rec_hall = (3.05, 4.75, 5.55, 2.85)               # o hall e um pedaço das 3 portas
+    it = T["itens"]
+    nota = f'<p class="nota-ca"><b>{E(TX.COMODO["tomadas"])}</b> {_ca_esc(T["nota"])}</p>'
+    ven = f'<p class="nota-ca ven"><b>{E(TX.COMODO["atencao"])}</b> {_ca_esc(T["veneziana"])}</p>'
+    alv = f'<p class="alv">{_ca_esc(T["alvenaria"])}</p>'
+    col = 40
+    k = (CA_LARG - col - 5 - 3) / (rec_main[1] - rec_main[0])
+    svg_m, wm, hm = PLT.svg(k, rec_main, rn=2.7, rn3=3.9, fs_mm=2.5)
+    kz = (col - 3) / (rec_hall[1] - rec_hall[0])
+    svg_z, _, _ = PLT.svg(kz, rec_hall, so={4}, rn3=4.4, fs_mm=2.6, zoom=True)
+    n = L.pagina(f"""{_ca_cabeca(p, T)}
+      <div class="ca-corpo">
+        <div class="ca-esq estreita" style="width:{col}mm;flex:none">
+          <figure class="ca-zoom"><span class="leg">{E(TX.COMODO["detalhe"]["C01"])}</span><div class="moldura">{svg_z}</div></figure>
+          {casa.legenda()}
+        </div>
+        <div class="ca-planta" style="width:{wm + 3:.2f}mm"><div class="moldura">{svg_m}</div>{_ca_selo("C01")}</div>
+      </div>
+      {_ca_heroi(it[3], largo=True, leg=TX.COMODO["destaque"]["C01"])}
+      {alv}""", "q ca", orelha=orelha, aviso=True)
+    cartoes = "".join(_ca_cartao(i) if i["n"] != 4 else "" for i in it) + f'<div class="cd nota-cd">{ven}{nota}</div>'
+    L.pagina(f"""{_ca_eti2(p, T)}
+      <div class="cartoes">{cartoes}</div>
+      {_ca_perguntas(T)}
+      {alv}""", "q ca c01", orelha=orelha, aviso=True)
+    return n
+
+
+CA_CASAS = {"E03": (_CaE03, _ca_paginas_E03), "F01": (_CaF01, _ca_paginas_F01), "C01": (_CaC01, _ca_paginas_C01)}
+FOLHAS_COMODO = 2  # folhas do cômodo a cômodo em cada casa (o mapa: a casa tem 4 páginas, 2 pares abertos)
+
+
+def paginas_comodo(L, p):
+    """As 2 páginas "cômodo a cômodo" da casa p, depois da dupla dela. Devolve o número da primeira. Casa sem texto
+    aprovado (paginas.py, COMODOS) fica com as páginas reservadas, para a numeração do mapa não mudar."""
+    if p["id"] not in CA_CASAS or p["id"] not in TX.COMODOS:
+        n = [reservada(L, f'{TX.DUAS_PARTES["comodo"]} ({i} de {FOLHAS_COMODO})', casa=p, lado=lado)
+             for i, lado in enumerate(("esq", "dir")[:FOLHAS_COMODO], start=1)]
+        return n[0]
+    T = TX.COMODOS[p["id"]]
+    assert [i["n"] for i in T["itens"]] == list(range(1, len(T["itens"]) + 1)) and len(T["itens"]) >= 7 and len(T["perguntas"]) == 3
+    classe, paginas = CA_CASAS[p["id"]]
+    antes = len(L.paginas)
+    n = paginas(L, p, T, classe(), lote_frente(p))
+    assert len(L.paginas) - antes == FOLHAS_COMODO
+    return n
 
 
 def ache_a_sua_casa(plantas, numeros, recuos_txt):

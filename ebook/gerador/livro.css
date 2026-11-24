@@ -227,3 +227,93 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
   color: #fff; font-family: var(--mono); font-weight: 700; font-size: 6.5pt; display: grid; place-items: center; line-height: 1; }
 .selo-psj { font-family: var(--mono); font-size: 6.6pt; font-weight: 500; color: var(--cinza); }
 .selo-psj span { background: var(--tinta); color: #fff; padding: .3mm 1.6mm; border-radius: .8mm; font-weight: 700; margin-right: 1.4mm; }
+
+/* páginas "cômodo a cômodo" de cada casa (parte 1 do modo duas partes; D20), do rascunho do Designer
+   (ebook/plantas/rascunhos/comodo_a_comodo.py). Toda regra presa em .ca (a classe da folha): nomes como .perg, .selo,
+   .legenda e .ideia já existem acima, e regra solta aqui mudaria as outras páginas */
+.ca .miolo { gap: 4mm; }
+.ca .ca-eti { font-family: var(--mono); font-size: 8.5pt; font-weight: 700; color: var(--azul); display: flex; gap: 2.5mm; align-items: center; flex-wrap: wrap; }
+.ca .ca-eti i { font-style: normal; background: var(--fita); color: var(--tinta); padding: .3mm 1.6mm; border-radius: .8mm; }
+.ca .ca-eti span.f { color: var(--cinza); font-weight: 500; }
+.ca h2 { font-size: 34pt; margin-top: 1.5mm; }
+.ca .ca-sub { font-family: var(--tit); font-weight: 600; font-size: 14pt; line-height: 1.15; color: var(--tinta); margin-top: 1.2mm; }
+.ca .ca-abre { font-size: 10.5pt; line-height: 1.4; color: var(--cinza); margin-top: 2mm; max-width: 165mm; }
+.ca .ca-corpo { display: flex; gap: 6mm; flex: 1 1 auto; min-height: 0; }
+.ca .ca-esq { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5mm; }
+.ca .cozinha-bloco { display: grid; gap: 4.5mm; margin: auto 0; }
+.ca .ca-planta { flex: none; display: flex; flex-direction: column; gap: 2mm; align-items: flex-end; }
+.ca .ca-planta .moldura, .ca .ca-zoom .moldura { background: #fff; border: .3mm solid var(--fio); border-radius: 2mm; padding: 1.2mm; line-height: 0; }
+.ca .ca-planta svg, .ca .ca-zoom svg { display: block; }
+.ca .selo { font-family: var(--mono); font-size: 6.8pt; background: var(--tinta); color: #fff; padding: .4mm 1.8mm; border-radius: .8mm; font-weight: 700; line-height: 1.5; }
+.ca .ca-zoom { display: grid; gap: 1.6mm; }
+.ca .ca-zoom .leg { font-family: var(--mono); font-size: 7.5pt; font-weight: 700; color: var(--azul); }
+.ca .heroi { display: grid; grid-template-columns: 13mm 1fr; gap: 1mm 3mm; background: var(--fita-claro); border-left: 1.4mm solid var(--fita); padding: 3.2mm 4mm 3.6mm 3mm; border-radius: 0 2mm 2mm 0; }
+.ca .heroi .nn { grid-row: span 3; width: 12mm; height: 12mm; border-radius: 50%; background: var(--fita); border: .5mm solid var(--tinta); display: grid; place-items: center; font-family: var(--tit); font-weight: 800; font-size: 20pt; line-height: 1; box-sizing: border-box; }
+.ca .heroi h3 { font-family: var(--tit); font-weight: 800; font-size: 16pt; line-height: 1.05; margin: .6mm 0 0; display: flex; gap: 2.5mm; align-items: baseline; flex-wrap: wrap; }
+.ca .heroi h3 .mono { white-space: nowrap; font-family: var(--mono); font-size: 9pt; color: var(--azul); font-weight: 700; }
+.ca .heroi p { font-size: 12.2pt; line-height: 1.4; margin: 0; }
+.ca .heroi p b { color: var(--azul); }
+.ca .heroi p.cuid b { color: #8A3B12; }
+.ca .legenda-ca { display: grid; gap: 1.4mm; font-size: 8.8pt; color: var(--cinza); line-height: 1.3; }
+.ca .legenda-ca div { display: grid; grid-template-columns: 9mm 1fr; gap: 2mm; align-items: center; }
+.ca .legenda-ca svg { width: 9mm; height: 4mm; }
+.ca .nota-ca { font-size: 7.8pt; line-height: 1.35; color: var(--cinza); border-top: .3mm solid var(--fio); padding-top: 1.6mm; }
+.ca .nota-ca b { color: var(--tinta); }
+.ca .alv { font-size: 7.6pt; line-height: 1.35; color: var(--cinza); border: .3mm solid var(--fio); border-left: 1mm solid var(--azul); background: #fff; padding: 1.6mm 2.5mm; border-radius: 0 1mm 1mm 0; }
+.ca .linhas ~ .alv { margin-top: auto; }
+.ca .linhas { position: relative; display: grid; gap: 0; }
+.ca .linhas::before { content: ""; position: absolute; left: 5.5mm; top: 7mm; bottom: 7mm; border-left: .5mm dashed var(--tinta); opacity: .35; }
+.ca .ln { display: grid; grid-template-columns: 11mm 1fr 1fr; gap: 1.4mm 5mm; padding: 3mm 0 3.4mm; border-top: .3mm solid var(--fio); position: relative; }
+.ca .ln:first-child { border-top: 0; }
+.ca .ln .nn { grid-row: span 2; width: 9mm; height: 9mm; border-radius: 50%; background: var(--fita); border: .45mm solid var(--tinta); display: grid; place-items: center; font-family: var(--tit); font-weight: 800; font-size: 14pt; line-height: 1; box-sizing: border-box; margin-left: 1mm; position: relative; z-index: 1; }
+.ca .ln h3 { grid-column: span 2; font-family: var(--tit); font-weight: 800; font-size: 12.5pt; line-height: 1.1; margin: 1.2mm 0 0; display: flex; gap: 2.5mm; align-items: baseline; }
+.ca .ln h3 .mono { white-space: nowrap; font-family: var(--mono); font-size: 8.5pt; color: var(--azul); font-weight: 700; }
+.ca .ln p { font-size: 9.4pt; line-height: 1.36; margin: 0; }
+.ca .ln p b { color: var(--azul); }
+.ca .ln p.cuid b { color: #8A3B12; }
+.ca .ln.ref h3 { grid-column: span 2; }
+.ca .ln.ref .ao { grid-column: span 2; font-size: 9pt; color: var(--cinza); }
+.ca .ponta { font-family: var(--mono); font-size: 7.5pt; font-weight: 700; color: var(--cinza); padding-left: 1.5mm; }
+.ca .perg { background: var(--azul-claro); border-top: .8mm solid var(--azul); border-radius: 0 0 2mm 2mm; padding: 3mm 4mm 3.4mm; }
+.ca .perg h3 { font-family: var(--tit); font-weight: 800; font-size: 12.5pt; color: var(--azul); margin-bottom: 1.8mm; }
+.ca .perg ol { list-style: none; display: grid; gap: 1.6mm; }
+.ca .perg li { font-size: 9.3pt; line-height: 1.34; }
+.ca .perg .ref { display: inline-grid; place-items: center; width: 4.2mm; height: 4.2mm; border-radius: 50%; background: var(--fita); border: .3mm solid var(--tinta); font-family: var(--tit); font-weight: 800; font-size: 7pt; margin-left: .8mm; vertical-align: .1mm; line-height: 1; box-sizing: border-box; }
+.ca .ca-planta.larga { align-items: center; }
+.ca .ca-pe { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; }
+.ca .ca-pe-dir { display: grid; gap: 2.5mm; justify-items: start; }
+.ca .ca-pe .legenda-ca { font-size: 8.4pt; gap: 1.1mm; }
+.ca .ca-sub2 { display: block; font-family: var(--mono); font-size: 7.6pt; font-weight: 500; color: var(--cinza); margin-top: .6mm; }
+.ca .heroi .ca-sub2 { flex-basis: 100%; }
+.ca .heroi.largo { grid-template-columns: 13mm 1.18fr .82fr; column-gap: 5mm; padding: 2.6mm 4mm 3mm 3mm; }
+.ca .heroi.largo h3 { grid-column: span 2; }
+.ca .heroi.largo .nn { grid-row: span 2; }
+.ca .heroi.largo p { font-size: 10.8pt; line-height: 1.34; }
+.ca .cartoes .perg { align-self: start; margin-top: 2.8mm; }
+.ca .cartoes .perg li { font-size: 8.8pt; }
+.ca .cartoes .perg h3 { font-size: 11.4pt; line-height: 1.12; }
+.ca .cartoes .perg { padding: 2.6mm 3.4mm 3mm; }
+.ca .heroi .leg-h { grid-column: 1 / -1; font-family: var(--mono); font-size: 7.4pt; font-weight: 700; color: #8A5A00; margin-bottom: .4mm; }
+.ca .heroi.estreito { grid-template-columns: 1fr; padding: 3mm 3.2mm 3.4mm 3mm; gap: 1.4mm; }
+.ca .heroi.estreito .nn { grid-row: auto; width: 10mm; height: 10mm; font-size: 16pt; }
+.ca .heroi.estreito h3 { font-size: 14pt; }
+.ca .heroi.estreito p { font-size: 10.4pt; line-height: 1.36; }
+.ca .cartoes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 6mm; }
+.ca .cd { display: grid; grid-template-columns: 10mm 1fr; gap: 1mm 2.5mm; padding: 2.4mm 0 2.6mm; border-top: .3mm solid var(--fio); align-content: start; }
+.ca .cd:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+.ca .cd .nn { grid-row: span 3; width: 8.6mm; height: 8.6mm; border-radius: 50%; background: var(--fita); border: .45mm solid var(--tinta); display: grid; place-items: center; font-family: var(--tit); font-weight: 800; font-size: 13pt; line-height: 1; box-sizing: border-box; }
+.ca .cd h3 { font-family: var(--tit); font-weight: 800; font-size: 11.6pt; line-height: 1.1; margin: .8mm 0 0; display: flex; gap: 0 2.2mm; align-items: baseline; flex-wrap: wrap; }
+.ca .cd h3 .mono { white-space: nowrap; font-family: var(--mono); font-size: 8.2pt; color: var(--azul); font-weight: 700; }
+.ca .cd p { font-size: 9pt; line-height: 1.32; margin: 0; }
+.ca .cd p b { color: var(--azul); }
+.ca .cd p.cuid b { color: #8A3B12; }
+.ca .cd.nota-cd { grid-template-columns: 1fr; gap: 2mm; }
+.ca .ca-esq.estreita { gap: 4mm; }
+.ca .ca-esq.estreita .legenda-ca { font-size: 7.9pt; gap: 1.6mm; }
+.ca .ca-esq.estreita .legenda-ca div { grid-template-columns: 7mm 1fr; gap: 1.6mm; align-items: start; }
+.ca .ca-esq.estreita .legenda-ca svg { width: 7mm; height: 3.2mm; margin-top: .4mm; }
+.ca.c01 .cd p { font-size: 9.4pt; line-height: 1.36; }
+.ca.c01 .cd { padding: 3mm 0 3.4mm; }
+.ca .cd.nota-cd .nota-ca { border-top: 0; padding-top: 0; font-size: 8.4pt; }
+.ca .nota-ca.ven { background: var(--fita-claro); border: .3mm dashed #E0A92E; border-radius: 1.4mm; padding: 2mm 2.6mm; }
+.ca .cartoes ~ .alv { margin-top: auto; }

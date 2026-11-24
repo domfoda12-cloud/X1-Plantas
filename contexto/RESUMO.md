@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
+Seções: 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`); Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
 
-Tamanho: 537 palavras.
+Tamanho: 695 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

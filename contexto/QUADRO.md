@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`)
+
+- **O dono pediu:** "Slow down on it, if we work on all the tasks at the same time, none will be done". E perguntou o que mais gastou o limite de uso da última janela.
+- **O que mudou:** acabou a regra de 23/11 de rodar 4 a 6 agentes em paralelo para gastar o limite. Agora é UMA tarefa principal de cada vez, até o fim (feita, conferida, salva), com no máximo 2 agentes juntos (quem faz e quem confere). A tarefa de hora em hora foi reescrita com isso. A tarefa atual é o D20 (cômodo a cômodo das 3 casas no gerador, prévia).
+- **Todos:** ninguém abre tarefa nova enquanto a atual não fechou; "Agora" tem uma tarefa, nunca zero. **Planejador:** escreve no topo do plano a ordem das próximas 5, uma por vez. **Maestro:** não lança agente em paralelo fora do par fazer/conferir.
+
 ## Agora
 
 - **Regra nova do dono** (24/11): **"Agora" do `pedidos/PLANO.md` nunca fica vazio, e agente fora do projeto trabalha nele mesmo, no sistema ou em outro agente.** Pediu também a visita 3D com mais móveis, quadros e personalização (ficha `2026-11-24-1144`).

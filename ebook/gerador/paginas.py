@@ -125,8 +125,9 @@ DUAS_PARTES = {
     "parte1": ("parte 1", "A casa do seu lote", "Uma casa por frente de terreno"),      # cada casa: aba amarela
     "parte2": ("parte 2", "Para qualquer casa", "Aba azul na borda"),                   # casas em geral: aba azul
     "aba_geral": "geral",
-    # página reservada (ainda rascunho em outro script; entra no D20): só o quadro "página em preparo"
+    # página reservada (casa que ainda não tem o cômodo a cômodo aprovado): só o quadro "página em preparo"
     "comodo": "cômodo a cômodo",
+    "sum_comodo": "cômodo a cômodo na pág. {}",   # no sumário da página 2, na linha de cada casa
     "em_preparo": "Página em preparo",
 }
 
@@ -175,3 +176,290 @@ PAREDE = {
         "selo": ("Imagem ilustrativa", "croquis: os móveis e a prateleira são sugestão"),
     },
 }
+
+
+# Páginas "cômodo a cômodo" de cada casa (parte 1 do modo --duas-partes; D20, 24/11/2026). Só o modo --duas-partes usa.
+# COMODO: os rótulos fixos da folha e do desenho, do rascunho do Designer (ebook/plantas/rascunhos/comodo_a_comodo.py,
+# A9 e D31), com as trocas do Revisor e do Arquiteto (pedidos/anexos/veto-pagina-prova-E03-2026-11-24.md e
+# veto-pagina-prova-F01-C01-2026-11-24.md). Mudou aqui, volta ao Revisor.
+COMODO = {
+    "eti": "Cômodo a cômodo",
+    "ideia": "Ideia:", "cuidado": "Cuidado:",
+    "perguntas": "Pergunte ao seu engenheiro ou eletricista",
+    "tomadas": "Tomadas:",
+    "atencao": "Atenção (8).",
+    "ref": "Em destaque na página anterior, com a parede ampliada.",
+    "selo": {"E03": "Imagem ilustrativa: móveis e acabamentos não vêm junto",
+             "C01": "Imagem ilustrativa: móveis e acabamentos são sugestão",
+             "F01": "Imagem ilustrativa: móveis e acabamentos são sugestão"},
+    "detalhe": {"E03": "Detalhe da cozinha, ampliado", "C01": "Detalhe do hall, ampliado"},
+    "destaque": {"F01": "Destaque: na planta, as cotas do ponto de luz e o vão da sala",
+                 "C01": "Destaque: o hall, ampliado ao lado da planta"},
+    # a legenda de cada planta: (marca desenhada, frase)
+    "legenda": {
+        "E03": [("amarelo", "Em amarelo, a parede de cada número."),
+                ("trac", "Tracejado bege: o que fica por cima (o maleiro do hall)."),
+                ("recuo", "Tracejado azul: o recuo, área aberta."),
+                ("porta", "A porta de entrada também é amarela, como no resto do e-book."),
+                ("medida", "Em azul, medida em metros.")],
+        "F01": [("amarelo", "Em amarelo, a parede de cada número."),
+                ("ponto", "Pontilhado amarelo: aqui não há parede; a sala é aberta para a cozinha (veja o 2)."),
+                ("trac", "Tracejado bege: o maleiro, em cima do guarda-roupa do quarto casal."),
+                ("verde", "Tracejado verde: a faixa livre ao lado da casa e o fundo do lote, área aberta."),
+                ("porta", "A porta de entrada também é amarela, como no resto do e-book."),
+                ("medida", "Em azul, medida em metros.")],
+        "C01": [("amarelo", "Em amarelo, a parede de cada número."),
+                ("ponto", "Pontilhado amarelo: a divisa da varanda; o desenho não mostra a parede, mas esse lado é fechado (veja o 1)."),
+                ("trac", "Tracejado bege: o que fica por cima (o maleiro do hall)."),
+                ("ven", "Tracejado azul: veneziana em cima da porta (fica acima da altura do corte)."),
+                ("porta", "A porta de entrada também é amarela, como no resto do e-book."),
+                ("medida", "Em azul, medida em metros.")],
+    },
+    # palavras dentro do desenho; os números ({}) vêm dos dados e do validador, no livro.py
+    "desenho": {"luz": "ponto de luz", "vao": "vão livre {}", "faixa": "faixa livre {} m", "recuo": "recuo {} m",
+                "fundo": ("fundo: {} m no lote de {} x {}", "({} m no lote mínimo, de {} x {})"),
+                "frente": "frente: {} m até a rua, recuo de referência (cortada no desenho)"},
+}
+
+# COMODOS: o texto de cada casa, copiado sem mudar dos arquivos aprovados pelo Revisor de risco (seção "TEXTO DA
+# PÁGINA" de pedidos/anexos/pagina-prova-comodo-a-comodo-E03-texto.md, pagina-comodo-a-comodo-C01-texto.md e
+# pagina-comodo-a-comodo-F01-texto.md). "dim" e as medidas dentro das frases são conferidas pelo livro.py contra o
+# validador a cada geração: se o dado mudar, o gerador avisa e falha. Em "perguntas": (pergunta, complemento, os
+# números a que ela aponta). Mudou aqui, volta ao Revisor.
+COMODOS = {'E03': {'titulo': 'Antes de fechar a parede',
+         'sub': '7 lugares da Casa Fita, cômodo a cômodo',
+         'abre': 'Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um lugar da planta, com '
+                 'a medida para levar à obra.',
+         'nota': 'Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que confere na norma '
+                 'vigente.',
+         'itens': [{'n': 1,
+                    'nome': 'Quarto da frente',
+                    'dim': '3,20 x 2,89 m',
+                    'resto': '',
+                    'ideia': 'Tomada nas duas paredes de cabeceira (divisa e recuo): o quarto vira solteiro, duas '
+                             'camas ou casal sem extensão no chão. O eletricista confere.',
+                    'cuid': 'Nicho na divisa, a parede de 15 cm que separa do vizinho: prateleira, sim; nicho, só se '
+                            'o engenheiro aprovar.'},
+                   {'n': 2,
+                    'nome': 'Sala',
+                    'dim': '3,20 x 3,54 m',
+                    'resto': '',
+                    'ideia': 'Sofá embaixo da janela, rack na divisa e 1,92 m entre os dois: esse vão é o corredor '
+                             'da casa. Mesa de centro, só pequena.',
+                    'cuid': 'A porta do quarto da frente abre direto na sala: do sofá, vê-se a cama.'},
+                   {'n': 3,
+                    'nome': 'Cozinha e copa',
+                    'dim': '3,20 x 3,14 m',
+                    'resto': '',
+                    'ideia': 'Janela de 1,70 m sobre a pia: torneira de bancada; tomada sob a janela ou nos 22,5 cm '
+                             'até a porta. Eletricista e encanador conferem.',
+                    'cuid': 'Fechar a parede sem marcar tomada e torneira da pia: depois do acabamento, não sobra '
+                            'parede. Decida antes do reboco.'},
+                   {'n': 4,
+                    'nome': 'Banheiro',
+                    'dim': '2,19 x 1,58 m',
+                    'resto': '',
+                    'ideia': 'Antes de fechar a parede, peça ao encanador o teste do encanamento e um registro só do '
+                             'banheiro.',
+                    'cuid': 'Janela dentro do box de 0,90 m pega água do chuveiro: o material dela, decida com o '
+                            'pedreiro.'},
+                   {'n': 5,
+                    'nome': 'Hall',
+                    'dim': '0,89 x 2,94 m',
+                    'resto': '',
+                    'ideia': 'Maleiro por cima do hall, acima das portas: 0,89 x 2,94 m, com uns 40 a 70 cm conforme '
+                             'o pé-direito. Eletricista confere a luz.',
+                    'cuid': 'Hall de 89 cm: estante ou armário tira a passagem. Na parede da divisa, só ganchos e '
+                            'quadros.'},
+                   {'n': 6,
+                    'nome': 'Quarto casal (fundos)',
+                    'dim': '3,20 x 2,99 m',
+                    'resto': '',
+                    'ideia': 'Cabe cama queen: 75 cm no pé e uns 70 de cada lado. Um segundo interruptor na '
+                             'cabeceira apaga a luz com você deitado; eletricista confere.',
+                    'cuid': 'Cômodo novo no fundo do lote tapa a única janela deste quarto. Ampliar pede projeto '
+                            'novo.'},
+                   {'n': 7,
+                    'nome': 'Recuo lateral (direita)',
+                    'dim': '1,5 x 16,1 m',
+                    'resto': '',
+                    'ideia': 'Marque com trena: janela a 1,5 m da divisa, o mínimo do Código Civil (art. 1.301). A '
+                             'sua cidade pode pedir mais.',
+                    'cuid': 'Telhado no recuo tira boa parte da luz de 4 cômodos; se a janela ainda conta como '
+                            'ventilação, quem diz é o código de obras.'}],
+         'perguntas': [('Ao eletricista:',
+                        'a tomada da bancada cabe na faixa sob a janela da cozinha ou nos 22,5 cm até a porta?',
+                        [3]),
+                       ('Ao engenheiro:',
+                        'a parede da divisa é estrutural? Leva impermeabilização no pé, do lado do vizinho?',
+                        [1, 5]),
+                       ('Ao engenheiro:',
+                        "a caixa d'água vai em cima do hall e do banheiro? O maleiro atrapalha o acesso a ela?",
+                        [5])],
+         'alvenaria': 'Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só '
+                      'onde o projeto previu. Quem diz é o engenheiro.'},
+ 'C01': {'titulo': 'Antes de fechar a parede',
+         'sub': '8 lugares da Casa Compacta, cômodo a cômodo',
+         'abre': 'Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um lugar da planta, com '
+                 'a medida para levar à obra.',
+         'nota': 'Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que confere na norma '
+                 'vigente.',
+         'veneziana': 'Serviço: não tem janela. A ventilação vem de uma veneziana de 0,90 x 0,50 m em cima da porta '
+                      'de fora, que só cabe com pé-direito de uns 2,80 m. Ela deixa passar menos ar e quase nenhuma '
+                      'luz: o engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da sua '
+                      'cidade.',
+         'itens': [{'n': 1,
+                    'nome': 'Varanda',
+                    'dim': '3,35 x 1,20 m',
+                    'resto': '(uns 3,20 m entre a divisa e o quarto)',
+                    'ideia': 'Ganchos de rede entre a divisa e o quarto (uns 3,20 m); na divisa, só em parede ou '
+                             'pilar que o engenheiro aprove. Rede armada fecha a entrada.',
+                    'cuid': 'Não feche a varanda: a única janela da sala dá para ela; fechada, a sala fica sem '
+                            'janela para fora. A lateral da divisa já é fechada (Código Civil, art. 1.301; o '
+                            'engenheiro confirma).'},
+                   {'n': 2,
+                    'nome': 'Quarto da frente',
+                    'dim': '2,85 x 3,09 m',
+                    'resto': '',
+                    'ideia': 'Três tomadas baixas na parede da rua, que não tem janela: no meio e perto de cada '
+                             'ponta. Duas camas hoje, casal amanhã. Eletricista confere.',
+                    'cuid': 'Guarda-roupa: 95 cm dele ficam atrás do box. Parede bem impermeabilizada e vão atrás do '
+                            'móvel; o pedreiro confere.'},
+                   {'n': 3,
+                    'nome': 'Sala e jantar',
+                    'dim': '3,14 x 3,99 m',
+                    'resto': '',
+                    'ideia': 'Troque a TV de parede: no desenho, ela está na parede do quarto. Na divisa, num rack '
+                             'de até 1,35 m, com o sofá de 2 lugares na parede do quarto, a 1,86 m dela. Eletricista '
+                             'confere.',
+                    'cuid': 'Do jeito da planta, a TV fica na parede de 12 cm do quarto da frente, logo depois do pé '
+                            'de uma cama: o som passa.'},
+                   {'n': 4,
+                    'nome': 'Hall',
+                    'dim': '1,04 x 1,68 m',
+                    'resto': '',
+                    'ideia': 'Maleiro sobre o hall inteiro, acima das 3 portas: 1,04 x 1,68 m para mala e cobertor. '
+                             'Luz do teto: o eletricista confere.',
+                    'cuid': 'Altura: uns 40 a 70 cm, conforme o pé-direito. Tampo e peso que aguenta: marceneiro ou '
+                            'pedreiro confere.'},
+                   {'n': 5,
+                    'nome': 'Banheiro',
+                    'dim': '1,84 x 1,68 m',
+                    'resto': '',
+                    'ideia': 'Este banheiro tem cano só dele: peça ao encanador um registro só do banheiro e o teste '
+                             'do encanamento antes do reboco.',
+                    'cuid': 'Box: parede de 12 cm, com o guarda-roupa do quarto atrás. Prateleira, sim; nicho, só se '
+                            'o pedreiro garantir.'},
+                   {'n': 6,
+                    'nome': 'Quarto casal',
+                    'dim': '2,94 x 3,19 m',
+                    'resto': '',
+                    'ideia': 'Espera do ar-condicionado antes do reboco: tomada alta e dreno na parede da janela, '
+                             'condensadora no fundo. Eletricista e pedreiro conferem.',
+                    'cuid': 'Queen não cabe: a passagem fica com 34 cm do lado da janela. Casal padrão (1,38 x 1,88 '
+                            'm) cabe.'},
+                   {'n': 7,
+                    'nome': 'Cozinha',
+                    'dim': '1,83 x 2,95 m',
+                    'resto': '',
+                    'ideia': 'Bancada de apoio em L sob a janela do fundo: 1,21 m, para micro-ondas e '
+                             'liquidificador. Eletricista confere a tomada.',
+                    'cuid': 'A parede da pia é a da cabeceira do casal: caixas de tomada não ficam costas com '
+                            'costas. Eletricista confere.'},
+                   {'n': 8,
+                    'nome': 'Serviço',
+                    'dim': '1,19 x 2,89 m',
+                    'resto': '',
+                    'ideia': 'Prateleira em cima da máquina, na divisa, para sabão e balde. Na parede do fundo, não: '
+                             'em cima da porta fica a veneziana.',
+                    'cuid': 'A veneziana (0,90 x 0,50 m) só cabe com pé-direito de uns 2,80 m. Ventilação e luz, o '
+                            'engenheiro confere.'}],
+         'perguntas': [('Ao engenheiro:',
+                        'qual vai ser o pé-direito da obra? Com menos de uns 2,80 m, como fica a ventilação do '
+                        'serviço?',
+                        [8]),
+                       ('Ao eletricista:', 'a caixa da TV pode ir na divisa? Por onde desce o fio da antena?', [3]),
+                       ('Ao engenheiro:',
+                        'o recuo de 1,5 m da divisa é medido até a face de fora da parede?',
+                        [2, 5])],
+         'alvenaria': 'Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só '
+                      'onde o projeto previu. Quem diz é o engenheiro.'},
+ 'F01': {'titulo': 'Antes de fechar a parede',
+         'sub': '8 lugares da Casa Família Compacta, cômodo a cômodo',
+         'abre': 'Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um lugar da planta, com '
+                 'a medida para levar à obra.',
+         'nota': 'Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que confere na norma '
+                 'vigente.',
+         'itens': [{'n': 1,
+                    'nome': 'Sala e jantar',
+                    'dim': '4,45 x 3,55 m',
+                    'resto': '',
+                    'ideia': 'Ponto de luz da mesa: 3,75 m da parede da divisa e 1,70 m da parede da frente, medidos '
+                             'por dentro. Antes, o engenheiro diz onde passa a viga; o eletricista confere.',
+                    'cuid': 'Quem entra e vai aos quartos passa entre TV e sofá (1,45 m): sem mesa de centro.'},
+                   {'n': 2,
+                    'nome': 'Cozinha',
+                    'dim': '2,04 x 3,49 m',
+                    'resto': '',
+                    'ideia': 'Parede da pia sem janela: cabe armário aéreo nos 2,59 m depois da porta do serviço. '
+                             'Antes de furar, o encanador marca os canos.',
+                    'cuid': 'Sem ponto de depurador sobre o fogão, o cheiro de fritura vai à sala, aberta para a '
+                            'cozinha. Eletricista confere.'},
+                   {'n': 3,
+                    'nome': 'Serviço',
+                    'dim': '1,59 x 2,09 m',
+                    'resto': '',
+                    'ideia': 'Torneira e ralo do lado de fora da porta, na faixa livre de 1,5 m ao lado da casa. O '
+                             'encanador confere lugar e caimento.',
+                    'cuid': 'Entre tanque e máquina, uns 91 cm: o caminho da cozinha ao quintal. Cesto e balde, só '
+                            'em prateleira.'},
+                   {'n': 4,
+                    'nome': 'Banheiro',
+                    'dim': '1,59 x 2,38 m',
+                    'resto': '',
+                    'ideia': 'Antes de fechar a parede, peça ao encanador o teste do encanamento e um registro só do '
+                             'banheiro.',
+                    'cuid': 'Tomada da pia: do lado mais longe do box; a distância, o eletricista confere.'},
+                   {'n': 5,
+                    'nome': 'Corredor',
+                    'dim': '6,49 x 0,98 m',
+                    'resto': '',
+                    'ideia': 'Luz do corredor com interruptores paralelos: acende na sala, apaga perto do banheiro. '
+                             'O eletricista confere.',
+                    'cuid': 'Estante de 30 cm de fundo derruba a passagem de 98 cm para 68 cm. Aqui, corredor não '
+                            'vira depósito.'},
+                   {'n': 6,
+                    'nome': 'Quarto casal',
+                    'dim': '2,62 x 3,29 m',
+                    'resto': '',
+                    'ideia': 'O guarda-roupa de 6 portas não cabe. O de 4 portas cabe, e um maleiro em cima dele, '
+                             'até o teto, compensa.',
+                    'cuid': 'Queen cabe só no limite: 64 cm no pé e 7 cm sobrando com os criados. Meça antes de '
+                            'comprar.'},
+                   {'n': 7,
+                    'nome': 'Quarto 3 (o do canto, atrás do banheiro)',
+                    'dim': '2,62 x 3,29 m',
+                    'resto': '',
+                    'ideia': 'Estudo, escritório ou hóspede: tomada e internet na parede do quarto do meio, fora das '
+                             'costas da tomada da cama de lá. Eletricista confere.',
+                    'cuid': 'Guarda-roupa na parede do banheiro: impermeabilização do lado do banheiro e vão atrás '
+                            'do móvel. O pedreiro confere.'},
+                   {'n': 8,
+                    'nome': 'Fundo do lote',
+                    'dim': '10,0 x 3,7 m',
+                    'resto': 'no lote de 10 x 15 (1,5 m no lote mínimo, de 10 x 12,8)',
+                    'ideia': 'Com a rua ao sul, a melhor para esta casa, o fundo fica ao norte: o lado do sol, para '
+                             'varal e horta.',
+                    'cuid': 'Cômodo no fundo tapa a janela dos 3 quartos. Ampliar pede projeto novo do arquiteto.'}],
+         'perguntas': [('Ao engenheiro:',
+                        'a sala é aberta para a cozinha e o corredor, sem parede entre eles: onde passam as vigas, e '
+                        'o ponto de luz da mesa fica livre delas? A janela de 2,40 m leva verga e contraverga?',
+                        [1]),
+                       ('Ao engenheiro:',
+                        'os canos da pia, do banheiro e do serviço descem num trecho só, na parede comum dos três?',
+                        [2, 3, 4]),
+                       ('Ao eletricista:',
+                        'a máquina tem circuito próprio? O circuito do serviço e do banheiro tem DR?',
+                        [3, 4])],
+         'alvenaria': 'Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só '
+                      'onde o projeto previu. Quem diz é o engenheiro.'}}
