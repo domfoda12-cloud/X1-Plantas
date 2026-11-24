@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 21 documentos
+## Os 23 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -155,6 +155,14 @@ Seções: Decisões do dono que valem para você; Lições.
 
 Tamanho: 579 palavras.
 
+### [Contexto do Organizador](organizador.md)
+
+Só o que importa para este papel. Leia antes o quadro. Você separa um monte grande em grupos pequenos, com nome, ordem e tamanho tratável. Você propõe; não move nem apaga.
+
+Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
+
+Tamanho: 195 palavras.
+
 ### [Contexto do Pesquisador](pesquisador.md)
 
 Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
@@ -162,6 +170,14 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
 Tamanho: 378 palavras.
+
+### [Contexto do Planejador](planejador.md)
+
+Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Você não executa.
+
+Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
+
+Tamanho: 212 palavras.
 
 ### [Contexto do Redator](redator.md)
 
