@@ -45,7 +45,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: O objetivo da equipe; Onde estamos (24/11, 11h10, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); Sempre, em toda fase.
 
-Tamanho: 5288 palavras.
+Tamanho: 5353 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -289,9 +289,9 @@ Tamanho: 805 palavras.
 
 Pedido do dono (quadro de tarefas, cartão p14, 24/11): "B", ou seja, 3 opções de título novo. Motivo: "Antes do primeiro tijolo" abre a legenda de um vídeo de referência com 5,2 milhões de visualizações e pode parecer cópia. O título atual fica até ele escolher. Quem escolhe é o dono. Rascunho do…
 
-Seções: Cabe na capa?; Opção 1: o lote; Opção 2: o medo de errar; Opção 3: ver a casa antes; Já existe com esse nome? (busca de 24/11/2026); Recomendação (quem escolhe é o dono); Vontade, facilidade e pedido (conferência da marketing-psychology, feita por mim, sem rodar a skill inteira); Se o título mudar, revisar também; Veto do Revisor de risco (24/11, rascunho): os três passam com troca.
+Seções: Cabe na capa?; Opção 1: o lote; Opção 2: o medo de errar; Opção 3: ver a casa antes; Já existe com esse nome? (busca de 24/11/2026); Recomendação (quem escolhe é o dono); Vontade, facilidade e pedido (conferência da marketing-psychology, feita por mim, sem rodar a skill inteira); Se o título mudar, revisar também; Veto do Revisor de risco (24/11, rascunho): os três passam com troca; Opinião do Diretor (MinoAI Frontier), 24/11.
 
-Tamanho: 1814 palavras.
+Tamanho: 2734 palavras.
 
 ### [Opções de título do e-book (Redator, 23/11/2026)](anexos/titulos-opcoes.md)
 

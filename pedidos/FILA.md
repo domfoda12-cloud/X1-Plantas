@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-24 | [casas comodo a comodo, visita 3D, canteiro como lugar de trabalho, revisar regras, skills](2026-11/2026-11-24-1119-casas-comodo-a-comodo-visita-3d-canteiro-como-lugar-de-traba.md) | aberta | Arquiteto (cômodo a cômodo); Maestro (visita 3D e Canteiro); Supervisor (auditoria das reg |
 | 2026-11-24 | [melhorar o planejador](2026-11/2026-11-24-1103-melhorar-o-planejador.md) | aberta | Maestro (ferramenta, papel, conferência); `planejador` (segunda rodada). |
 | 2026-11-24 | [dois agentes novos: planejador e organizador](2026-11/2026-11-24-1027-dois-agentes-novos-planejador-e-organizador.md) | fechada em 24/11/2026 | Maestro escreve e registra; `planejador` e `organizador` fazem a primeira rodada; Supervis |
 | 2026-11-24 | [peca livre, fora do projeto: revoada](2026-11/2026-11-24-0840-peca-livre-fora-do-projeto-revoada.md) | aberta | Maestro. |
