@@ -133,3 +133,5 @@ Depois de A9: repetir A5 e A6 (um papel por vez) até completar 24 horas.
 **Com o dono:** amostra grátis (A, B, ou A agora e B depois) e o que ganha quem já recebeu a Casa Compacta; CNPJ ou CPF e endereço de quem vende; preço no PDF; conserto da janela da C01; roteiros de quadrinho e bordão; pôster A ou B; nome e bio do Instagram; everything-claude-code inteiro ou 6 peças; se "grátis" e "publicar" saem da lista do que só ele decide; os horários do limite de uso; **se a tarefa agendada continua**.
 
 - **24/11 06:46 UTC (hora agendada):** nenhum comentário novo no quadro; o dono pediu só a vitrine (ficha `2026-11-24-0646`, feita pelo Maestro, sem agentes). Sem trabalho útil sem as decisões dele: 0 agentes nesta hora. O bloco PRÓXIMA HORA continua valendo como está.
+
+- **24/11 07:46 UTC (hora agendada):** nenhum comentário novo no quadro. Na hora anterior o dono recusou a primeira vitrine e pediu uma bonita: saiu a casa 3D (ficha `2026-11-24-0726`); 1 agente (Supervisor, auditoria, 113.658 tokens no relatório). Consertos da auditoria feitos e resumo de passagem escrito. O bloco PRÓXIMA HORA continua valendo.

@@ -1,8 +1,11 @@
-## 2026-11-24-0220-lancamento-3-casas-noite
+# Último resumo de passagem
 
-**Tarefa:** e-book de lançamento com 3 casas e o caminho da venda (fichas `1946-refazer`, `1946-quadro`, `1946-design`, `0144`).
-**Feito:** C01 (51 m², hall), E03 (2 quartos, 56 m², lote 5 x 25) e F01 (71 m²) oficiais em `ebook/plantas/projetos.py`; edição de lançamento em `ebook/saida/ebook.pdf` (17 páginas, 4,9 MB, 3 casas; `casas_lancamento` no `ebook/config.json`); página 3 "Qual casa cabe no seu lote?"; 3D e prévias das 24 casas refeitos; móveis medidos pela face da parede e fora das janelas (`ferramentas/planta3d.py`); `--previa` e `--conferir` não gravam mais `ebook/saida` nem a calculadora; skills `oferta-e-whatsapp` e `design-editorial`; prova 3 do júri em `pedidos/PROVAS.md`; vereditos do Revisor na ficha `1946-refazer`.
-**Como conferir:** `python3 ferramentas/checar.py` ("Tudo certo"; avisos: janela em cima de porta e preço pendente); quadro do dono em https://claude.ai/artifact/R8SSzqnZxR6XafEP5uXBtX (coleção `tarefas`, campo `comentario`).
-**Não feito / ressalva:** o PDF ainda sai sem preço (rascunho: não mandar ao cliente); janela em cima da porta do serviço da C01 (conserto em `ebook/plantas/rascunhos/C01J.py`, espera o dono); antes e depois da E03 e da F01 para o dono; `pedidos/anexos/como-mobiliar-as-3-casas.md` com medidas velhas da copa da E03 e da cozinha da C01; pasta no Drive; pull request da branch `sistema/everything-claude-code`; arte dos quadrinhos; `/oferta` vetado a quem só cabe a C01.
+## 2026-11-24-0750-vitrines-para-o-amigo-do-dono
+
+**Tarefa:** o dono pediu um artifact bonito para mostrar o sistema a um amigo que acha tudo de IA genérico.
+**Feito:** 1) página de texto "A Obra do X1-Plantas" (ele recusou: queria peça para ver, não para ler); 2) casa 3D que se constrói na tela, "Antes do Primeiro Tijolo", com o motor `video/src/casa3d.js` e as 3 casas do lançamento. Links nas fichas `2026-11-24-0646` e `2026-11-24-0726`; página guardada em `pedidos/anexos/vitrines/maquete-viva.html`. Auditoria de 24/11 (manhã) em `pedidos/AUDITORIAS.md`; consertei os números errados da primeira página, os links, a fonte da lição "uma pergunta por cartão" e o `pedidos/LICOES.md`.
+**Como conferir:** `python3 ferramentas/checar.py`; abrir os dois links das fichas.
+**Não feito / ressalva:** a página 3D publicada não foi revista depois de eu virar a câmera (o Supervisor testou só a cópia local, as 3 casas abrem). No celular o nome da Casa Fita quebra em duas linhas. Nada disso mexe no e-book.
 **Decisão do dono pendente:** amostra grátis (A, B, ou A agora e B depois; protótipo em `ebook/plantas/rascunhos/amostra/`) e o que ganha quem já recebeu a C01; CNPJ ou CPF, endereço e e-mail de quem vende; preço no PDF ou PDF sem preço; janela da C01; roteiros de quadrinho e bordão; pôster A ou B; @ e bio do Instagram; 2 skills nossas ou as 6; everything-claude-code inteiro ou 6 peças; "grátis" e "publicar" saem da lista dele?; a tarefa de hora em hora continua?
-**Próximo passo:** ler os comentários do dono no quadro; gerar o antes e depois da E03 e da F01 com `ferramentas/antes-depois.py`.
+Novas de 24/11: se a primeira página (mostra rascunho do e-book e 3 erros internos) pode ser vista por alguém de fora; se a tarefa de hora em hora continua.
+**Próximo passo:** ler os comentários do quadro de tarefas. Sem resposta do dono, não criar rascunho novo em cima de rascunho.
