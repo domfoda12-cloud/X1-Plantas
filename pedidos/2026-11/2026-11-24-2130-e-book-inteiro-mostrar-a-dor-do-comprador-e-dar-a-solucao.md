@@ -4,6 +4,9 @@
 
 **Prompt (palavra por palavra):** No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele
 
+*Recado de 24/11 21:34:* como podemos economizar tokens?
+Nao precisa mostrar a dor diretamente, mostra indiretamente sabe daquele jeitinho
+
 **O que ele pediu, parte por parte:** 1) No conteúdo do PDF em geral, cada parte mostra a dor que o comprador tem ou teria. 2) E dá a solução para ele.
 
 **Por que ele pediu, ou o que quer descobrir:** Disse que estava perdendo o fio do que estamos fazendo; quer um critério simples para o conteúdo inteiro.

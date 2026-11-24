@@ -5,7 +5,7 @@
 ## 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`)
 
 - **O dono pediu:** "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele".
-- **O que mudou:** critério novo para todo o conteúdo do PDF: cada página nomeia uma dor real do comprador e entrega a saída. Primeiro sai o mapa página por página; texto só muda depois de o dono ver.
+- **O que mudou:** critério novo para todo o conteúdo do PDF: cada página faz o comprador sentir uma dor real dele, de forma indireta ("daquele jeitinho": cena, exemplo, detalhe que ele reconhece, nunca anunciada), e entrega a saída. Primeiro sai o mapa página por página; texto só muda depois de o dono ver.
 - **Todos:** dor só da pesquisa do comprador ou dos dados da casa, nunca inventada nem com medo exagerado. **Planejador:** faz o mapa. **Redator:** reescreve só o que o dono marcar, com plano. **Designer:** o formato das páginas não muda sem pedido.
 
 ## 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`)
