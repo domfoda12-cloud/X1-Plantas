@@ -315,7 +315,7 @@ Pedido do dono. 23/11: "Crie uma solução criativa para o que pode ser feito ou
 
 Seções: 1. A ideia principal (Diretor, MinoAI Frontier, 24/11); 2. Atributos (escada e nota); 3. O texto da página (pronto para o Designer); 4. Formato de entrega; 5. O que foi conferido e o que não foi.
 
-Tamanho: 2201 palavras.
+Tamanho: 2231 palavras.
 
 ### [Página de prova "cômodo a cômodo": Casa Fita (E03), texto](anexos/pagina-prova-comodo-a-comodo-E03-texto.md)
 
