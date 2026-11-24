@@ -1,0 +1,235 @@
+<title>Visita às Casas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: uma tela só, vista na altura dos olhos. Em cima, onde você está; à direita, a planta com o seu ponto; embaixo, o controle de andar. */
+:root{ --azul:#0B4FA8; --azul-fundo:#083B80; --branco:#FFFFFF; --nevoa:#DCE8FA; --trena:#FFC857; --trena-tinta:#2A2108; --ceu:#F6E2BF;
+  --tit:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif; --txt:"Inter",Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark }
+html,body{height:100%}
+body{background:var(--ceu);color:var(--branco);font:15px/1.45 var(--txt);overflow:hidden;position:relative;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+canvas#tela{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+canvas#tela:active{cursor:grabbing}
+.topo{position:absolute;left:0;right:0;top:0;pointer-events:none;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+  padding:14px max(14px,env(safe-area-inset-right,0px)) 0 max(14px,env(safe-area-inset-left,0px))}
+.topo>*{pointer-events:auto}
+.onde{background:rgba(8,59,128,.9);border-radius:12px;padding:10px 14px;min-width:0;max-width:min(60vw,22rem)}
+.onde .casa{font:500 10.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--trena);margin:0 0 2px}
+.onde h1{font:800 clamp(1.25rem,4.6vw,1.9rem)/1.05 var(--tit);letter-spacing:-.02em;margin:0}
+.onde .med{font:500 12px var(--mono);color:var(--nevoa);margin:4px 0 0}
+.lado{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.casas{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.casas button,.acao{font:600 12.5px var(--txt);color:var(--branco);background:rgba(8,59,128,.9);border:1.5px solid rgba(255,255,255,.45);padding:7px 12px;border-radius:99px;cursor:pointer}
+.casas button[aria-pressed="true"]{background:var(--trena);color:var(--trena-tinta);border-color:var(--trena)}
+button:focus-visible{outline:3px solid var(--branco);outline-offset:2px}
+#mapa{width:clamp(96px,22vw,150px);height:auto;background:rgba(8,59,128,.9);border-radius:10px;display:block}
+.base{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;pointer-events:none;
+  padding:0 max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.base>*{pointer-events:auto}
+#manche{width:116px;height:116px;border-radius:50%;background:rgba(8,59,128,.55);border:2px solid rgba(255,255,255,.55);position:relative;touch-action:none;flex:0 0 auto}
+#manche i{position:absolute;left:50%;top:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--trena);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.dica{background:rgba(8,59,128,.9);border-radius:10px;padding:8px 12px;font:500 12px/1.4 var(--txt);color:var(--nevoa);max-width:19rem;margin:0}
+.dica b{color:var(--branco)}
+.dica[hidden]{display:none}
+.aviso{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;font:600 15px var(--txt);color:var(--azul-fundo);pointer-events:none}
+.aviso[hidden]{display:none}
+.selo{position:absolute;right:0;bottom:0;font:500 10.5px var(--mono);color:rgba(8,59,128,.8);pointer-events:none;
+  padding:0 max(10px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) 0}
+</style>
+
+<canvas id="tela" aria-label="Visita 3D por dentro da casa. Arraste para olhar em volta; use o controle ou as setas para andar."></canvas>
+<p class="aviso" id="aviso">Abrindo a porta…</p>
+
+<div class="topo">
+  <div class="onde">
+    <p class="casa" id="casa-nome"></p>
+    <h1 id="comodo">Na calçada</h1>
+    <p class="med" id="medida"></p>
+  </div>
+  <div class="lado">
+    <div class="casas" id="casas" role="group" aria-label="Escolha a casa">
+      <button type="button" data-id="C01" aria-pressed="true">Compacta</button>
+      <button type="button" data-id="E03" aria-pressed="false">Fita</button>
+      <button type="button" data-id="F01" aria-pressed="false">Família</button>
+    </div>
+    <canvas id="mapa" width="300" height="300" aria-label="Planta da casa com o lugar onde você está"></canvas>
+    <button type="button" class="acao" id="porta">Voltar para a porta</button>
+  </div>
+</div>
+
+<div class="base">
+  <div id="manche" role="application" aria-label="Controle de andar"><i id="pino"></i></div>
+  <p class="dica"><b>Arraste a tela</b> para olhar em volta. <b>Empurre o botão amarelo</b> para andar, ou use as setas e W A S D. Toque num cômodo da planta para ir até ele.</p>
+</div>
+<p class="selo">Ilustração do modelo 3D, a partir das medidas da planta de referência</p>
+
+<script type="module">
+import * as THREE from './lib/three.module.min.js';
+
+const tela = document.getElementById('tela'), aviso = document.getElementById('aviso');
+const elComodo = document.getElementById('comodo'), elMedida = document.getElementById('medida'), elCasa = document.getElementById('casa-nome');
+const mapa = document.getElementById('mapa'), gm = mapa.getContext('2d');
+
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ canvas: tela, antialias: true }); }
+catch (e) { aviso.textContent = 'Este aparelho não abriu o 3D. Tente em outro navegador.'; throw e; }
+renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+
+const MODULOS = { C01: () => import('./casa-C01.js'), E03: () => import('./casa-E03.js'), F01: () => import('./casa-F01.js') };
+const DADOS = { C01: () => import('./plantas/C01.js'), E03: () => import('./plantas/E03.js'), F01: () => import('./plantas/F01.js') };
+const casas = {};
+let atual = null;
+const eu = { x: 0, z: 0, giro: Math.PI, cima: 0 };       // giro: PI olha para os fundos (+z)
+const OLHO = 1.5, RAIO = 0.2, PASSO = 1.5;                // altura dos olhos, largura do corpo, metros por segundo
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const virgula = (n, c = 1) => n.toFixed(c).replace('.', ',');
+const FORA = ['varanda', 'garagem', 'patio', 'jardim', 'futuro', 'quintal'];
+
+function vestir(casa, D) {                                // teto, vergas e luz quente: a casa inteira, não cortada
+  const ALT = D.PE_DIREITO || 2.8, E = D.ESPESSURA || 0.15;
+  casa.aplicar({ desenho: 1, paredes: 1, vida: 1, corte: ALT });
+  casa.cena.background = new THREE.Color('#F6E2BF');
+  casa.cena.traverse((o) => {
+    if (o.isDirectionalLight) { o.color.set('#FFD9A0'); o.intensity = 2.4; o.position.set(D.LARGURA / 2 - 9, 13, D.PROFUNDIDADE / 2 - 7); }
+    if (o.isHemisphereLight) { o.color.set('#FFF4E2'); o.groundColor.set('#C9A77C'); o.intensity = 1.25; }
+  });
+  const branco = new THREE.MeshStandardMaterial({ color: '#FBF7EF', roughness: 0.95, side: THREE.DoubleSide });
+  for (const a of D.ambientes) {
+    if (['patio', 'jardim', 'futuro', 'quintal'].includes(a.tipo)) continue;
+    const teto = new THREE.Mesh(new THREE.PlaneGeometry(a.x1 - a.x0, a.y1 - a.y0), branco);
+    teto.rotation.x = Math.PI / 2; teto.position.set((a.x0 + a.x1) / 2, ALT, (a.y0 + a.y1) / 2); casa.cena.add(teto);
+    if (!FORA.includes(a.tipo)) { const l = new THREE.PointLight('#FFE2B8', 5, 9, 1.6); l.position.set((a.x0 + a.x1) / 2, ALT - 0.35, (a.y0 + a.y1) / 2); casa.cena.add(l); }
+  }
+  for (const p of D.portas) {
+    const cx = p.x + Math.cos(p.a0) * p.r / 2, cz = p.y + Math.sin(p.a0) * p.r / 2, h = Math.abs(Math.cos(p.a0)) > 0.5;
+    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? p.r : E, ALT - 2.1, h ? E : p.r), branco); v.position.set(cx, 2.1 + (ALT - 2.1) / 2, cz); casa.cena.add(v);
+  }
+  for (const j of D.janelas) {
+    const [x0, y0, x1, y1] = j.seg, h = y0 === y1, c = Math.hypot(x1 - x0, y1 - y0);
+    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? c : E, ALT - j.verga, h ? E : c), branco); v.position.set((x0 + x1) / 2, j.verga + (ALT - j.verga) / 2, (y0 + y1) / 2); casa.cena.add(v);
+  }
+  const cam = casa.camera; cam.fov = 74; cam.near = 0.06; cam.far = 120; cam.up.set(0, 1, 0); cam.rotation.order = 'YXZ';
+}
+
+function naPorta() {                                    // começa na calçada, de frente para a porta mais perto da rua
+  const D = atual.dados; eu.x = D.ENTRADA_X ?? D.LARGURA / 2; eu.z = -2.4; eu.giro = Math.PI; eu.cima = -0.04;
+  const frente = D.portas.filter((p) => Math.abs(Math.cos(p.a0)) > 0.5).sort((a, b) => a.y - b.y)[0];   // porta numa parede de frente
+  if (frente && frente.y < D.PROFUNDIDADE * 0.4) eu.x = frente.x + Math.cos(frente.a0) * frente.r / 2;
+}
+
+// parede não se atravessa: empurra o corpo para fora de cada trecho de parede (as portas são os vãos entre os trechos)
+function esbarrar() {
+  const D = atual.dados, E = D.ESPESSURA || 0.15;
+  for (let volta = 0; volta < 3; volta++) for (const [x0, y0, x1, y1, esp = E] of D.paredes) {
+    const dx = x1 - x0, dz = y1 - y0, c2 = dx * dx + dz * dz || 1e-9, c = Math.sqrt(c2), fo = (E / 2) / c;
+    const t = clamp(((eu.x - x0) * dx + (eu.z - y0) * dz) / c2, -fo, 1 + fo);
+    const px = x0 + dx * t, pz = y0 + dz * t, ex = eu.x - px, ez = eu.z - pz, d = Math.hypot(ex, ez), min = RAIO + esp / 2;
+    if (d < min && d > 1e-6) { eu.x = px + ex / d * min; eu.z = pz + ez / d * min; }
+  }
+  eu.x = clamp(eu.x, -5, D.LARGURA + 5); eu.z = clamp(eu.z, -6, D.PROFUNDIDADE + 6);
+}
+
+function ondeEstou() {
+  const D = atual.dados;
+  const a = D.ambientes.find((a) => eu.x >= a.x0 && eu.x <= a.x1 && eu.z >= a.y0 && eu.z <= a.y1);
+  const nome = a ? a.nome : (eu.z < 0 ? 'Na calçada' : 'No quintal');
+  if (elComodo.textContent !== nome) {
+    elComodo.textContent = nome;
+    elMedida.textContent = a ? 'as medidas de cada cômodo estão na página da casa, no e-book' : 'do lado de fora';
+  }
+  return a;
+}
+
+function desenharMapa(aqui) {
+  const D = atual.dados, M = 14, k = Math.min((mapa.width - 2 * M) / D.LARGURA, (mapa.height - 2 * M) / D.PROFUNDIDADE);
+  const ox = (mapa.width - D.LARGURA * k) / 2, oz = (mapa.height - D.PROFUNDIDADE * k) / 2;
+  // a frente da casa fica embaixo, como na planta do e-book; o x da tela acompanha quem olha da rua
+  const X = (x) => mapa.width - (ox + x * k), Z = (z) => mapa.height - (oz + z * k);
+  gm.clearRect(0, 0, mapa.width, mapa.height);
+  for (const a of D.ambientes) {
+    gm.fillStyle = a === aqui ? '#FFC857' : (FORA.includes(a.tipo) ? 'rgba(255,255,255,.14)' : 'rgba(255,255,255,.3)');
+    gm.fillRect(X(a.x1), Z(a.y1), (a.x1 - a.x0) * k, (a.y1 - a.y0) * k);
+  }
+  gm.strokeStyle = '#fff'; gm.lineWidth = 3; gm.lineCap = 'square';
+  for (const [x0, y0, x1, y1] of D.paredes) { gm.beginPath(); gm.moveTo(X(x0), Z(y0)); gm.lineTo(X(x1), Z(y1)); gm.stroke(); }
+  const fx = -Math.sin(eu.giro), fz = -Math.cos(eu.giro), px = X(eu.x), pz = Z(eu.z);
+  gm.fillStyle = '#D9372B'; gm.beginPath();
+  gm.moveTo(px - fx * 15, pz - fz * 15); gm.lineTo(px + fz * 7 + fx * 6, pz - fx * 7 + fz * 6); gm.lineTo(px - fz * 7 + fx * 6, pz + fx * 7 + fz * 6); gm.fill();
+  mapa._conv = { k, ox, oz };
+}
+
+// ---- andar ---------------------------------------------------------------
+const tecla = new Set(); let mx = 0, mz = 0, antes = performance.now();
+addEventListener('keydown', (e) => { if (/^(Arrow|Key[WASD])/.test(e.code)) { tecla.add(e.code); e.preventDefault(); sumirDica(); } });
+addEventListener('keyup', (e) => tecla.delete(e.code));
+const dica = document.querySelector('.dica'); const sumirDica = () => { dica.hidden = true; }; setTimeout(sumirDica, 12000);
+const manche = document.getElementById('manche'), pino = document.getElementById('pino');
+function mancheMove(e) { const r = manche.getBoundingClientRect(); let x = (e.clientX - r.left) / r.width * 2 - 1, y = (e.clientY - r.top) / r.height * 2 - 1; const d = Math.hypot(x, y); if (d > 1) { x /= d; y /= d; } mx = x; mz = y; pino.style.transform = `translate(${x * 34}px,${y * 34}px)`; sumirDica(); }
+manche.addEventListener('pointerdown', (e) => { manche.setPointerCapture(e.pointerId); mancheMove(e); });
+manche.addEventListener('pointermove', (e) => { if (manche.hasPointerCapture(e.pointerId)) mancheMove(e); });
+const mancheSolta = () => { mx = mz = 0; pino.style.transform = ''; };
+manche.addEventListener('pointerup', mancheSolta); manche.addEventListener('pointercancel', mancheSolta);
+
+let ult = null;
+tela.addEventListener('pointerdown', (e) => { tela.setPointerCapture(e.pointerId); ult = e; });
+tela.addEventListener('pointermove', (e) => { if (!ult || e.pointerId !== ult.pointerId) return; eu.giro -= (e.clientX - ult.clientX) * 0.005; eu.cima = clamp(eu.cima - (e.clientY - ult.clientY) * 0.004, -0.9, 0.9); ult = e; });
+const olharSolta = () => { ult = null; }; tela.addEventListener('pointerup', olharSolta); tela.addEventListener('pointercancel', olharSolta);
+
+mapa.addEventListener('click', (e) => {               // toque num cômodo da planta: vai andando até o meio dele
+  const r = mapa.getBoundingClientRect(), c = mapa._conv, D = atual.dados; if (!c) return;
+  const sx = (e.clientX - r.left) / r.width * mapa.width, sz = (e.clientY - r.top) / r.height * mapa.height;
+  const x = (mapa.width - sx - c.ox) / c.k, z = (mapa.height - sz - c.oz) / c.k;
+  const a = D.ambientes.find((a) => x >= a.x0 && x <= a.x1 && z >= a.y0 && z <= a.y1);
+  if (a) {                                              // para num canto livre do cômodo, longe dos móveis, olhando para o meio
+    let melhor = null;
+    for (let i = 1; i < 6; i++) for (let j = 1; j < 6; j++) {
+      const px = a.x0 + (a.x1 - a.x0) * i / 6, pz = a.y0 + (a.y1 - a.y0) * j / 6;
+      let livre = Math.min(px - a.x0, a.x1 - px, pz - a.y0, a.y1 - pz);
+      for (const m of (D.MOVEIS || [])) livre = Math.min(livre, Math.hypot(px - m.x, pz - m.y) - Math.max(m.w, m.d) / 2);
+      if (!melhor || livre > melhor.livre) melhor = { px, pz, livre };
+    }
+    eu.x = melhor.px; eu.z = melhor.pz; esbarrar();
+    eu.giro = Math.atan2(-((a.x0 + a.x1) / 2 - eu.x), -((a.y0 + a.y1) / 2 - eu.z)); eu.cima = -0.12; sumirDica();
+  }
+});
+document.getElementById('porta').addEventListener('click', naPorta);
+
+function quadro(agora) {
+  const dt = Math.min(0.05, (agora - antes) / 1000); antes = agora;
+  if (atual) {
+    let f = -mz, l = mx;
+    if (tecla.has('ArrowUp') || tecla.has('KeyW')) f += 1; if (tecla.has('ArrowDown') || tecla.has('KeyS')) f -= 1;
+    if (tecla.has('KeyA')) l -= 1; if (tecla.has('KeyD')) l += 1;
+    if (tecla.has('ArrowLeft')) eu.giro += 1.9 * dt; if (tecla.has('ArrowRight')) eu.giro -= 1.9 * dt;
+    const m = Math.hypot(f, l); if (m > 1) { f /= m; l /= m; }
+    if (m > 0.02) {
+      const fx = -Math.sin(eu.giro), fz = -Math.cos(eu.giro);
+      eu.x += (fx * f - fz * l) * PASSO * dt; eu.z += (fz * f + fx * l) * PASSO * dt; esbarrar();
+    }
+    const w = tela.clientWidth, h = tela.clientHeight, pr = renderer.getPixelRatio();
+    if (tela.width !== Math.round(w * pr) || tela.height !== Math.round(h * pr)) renderer.setSize(w, h, false);
+    const cam = atual.casa.camera; cam.aspect = w / h; cam.updateProjectionMatrix();
+    cam.position.set(eu.x, OLHO, eu.z); cam.rotation.set(eu.cima, eu.giro, 0);
+    atual.casa.render(); desenharMapa(ondeEstou());
+  }
+  requestAnimationFrame(quadro);
+}
+
+async function escolher(id) {
+  document.querySelectorAll('#casas button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.id === id));
+  if (!casas[id]) {
+    aviso.hidden = false;
+    const [mod, dados] = await Promise.all([MODULOS[id](), DADOS[id]()]);
+    const casa = mod.criarCasa(renderer); vestir(casa, dados); casas[id] = { casa, dados };
+  }
+  atual = casas[id]; aviso.hidden = true;
+  const m = atual.dados.META; elCasa.textContent = `${m.nome} · ${Math.round(m.area)} m² · ${m.quartos}`;
+  mapa.height = Math.round(300 * clamp(atual.dados.PROFUNDIDADE / atual.dados.LARGURA, 0.8, 2.4)); elComodo.textContent = '';
+  naPorta();
+}
+document.getElementById('casas').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) escolher(b.dataset.id); });
+
+await document.fonts.ready.catch(() => {});
+await escolher('C01');
+requestAnimationFrame(quadro);
+</script>

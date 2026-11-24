@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-ATRIBUICAO = ("\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
+ATRIBUICAO = ("\n\nCo-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>\n"
               "Claude-Session: https://claude.ai/code/session_01DYdRuF8rs2sLvVqr7VsfNR")
 
 
