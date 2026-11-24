@@ -90,9 +90,10 @@ function falta(pl, tipo, w, h) {
 function img(pl, tipo, w, h, { pos = 'center', raio = 22, borda = true, fit = 'cover', fundo = '' } = {}) {
   const src = arquivo(pl, tipo);
   if (!src) return falta(pl, tipo, w, h);
-  const selo = COM_MOVEIS.has(tipo) ? `<span class="selo${w < 420 ? ' peq' : ''}">${SELO}</span>` : '';
-  return `<div class="card${borda ? '' : ' sem-borda'}" style="width:${w}px;height:${h}px;border-radius:${raio}px${fundo ? `;background:${fundo}` : ''}">
-    <img src="${src}" style="width:100%;height:100%;object-fit:${fit};object-position:${pos}">${selo}</div>`;
+  // Na 3D o selo fica dentro, no canto; na planta 2D ele senta na borda de cima, fora das cotas e do título.
+  const selo = COM_MOVEIS.has(tipo) ? `<span class="selo${w < 420 ? ' peq' : ''}${tipo === '3d' ? '' : ' borda'}">${SELO}</span>` : '';
+  return `<div class="cardw" style="width:${w}px;height:${h}px"><div class="card${borda ? '' : ' sem-borda'}" style="width:${w}px;height:${h}px;border-radius:${raio}px${fundo ? `;background:${fundo}` : ''}">
+    <img src="${src}" style="width:100%;height:100%;object-fit:${fit};object-position:${pos}"></div>${selo}</div>`;
 }
 
 // Blueprint da Casa Compacta com recorte (em pixels da imagem original 2000 x 2500) e marcações.
@@ -155,8 +156,8 @@ posts['post-02-tres-plantas'] = () => {
   const capa = tela({
     etiqueta: 'compare antes de escolher', n: 1, total: T, capa: true, aviso: true,
     corpo: `<div class="t1">${lista.length} casas, ${lista.length} terrenos.<br>Qual ${y('cabe no seu')}?</div>
-      <div class="trio">${lista.map((pl) => `<div class="trio-i">${img(pl, 'humanizada', 300, 375, { raio: 16 })}<div class="trio-l"><b>${pl.lote.replace(' m', '')}</b><br>${pl.area}</div></div>`).join('')}</div>
-      <div class="txt">Área, quartos e o terreno mínimo de cada uma.</div>`,
+      <div class="centro" style="flex-direction:column;gap:44px"><div class="trio">${lista.map((pl) => `<div class="trio-i">${img(pl, 'humanizada', 300, 375, { raio: 16 })}<div class="trio-l"><b>${pl.lote.replace(' m', '')}</b><br>${pl.area}</div></div>`).join('')}</div>
+      <div class="txt" style="align-self:flex-start">Área, quartos e o terreno mínimo de cada uma.</div></div>`,
   });
   const telas = lista.map((pl, i) => tela({
     etiqueta: `planta ${i + 1} de ${lista.length} · ${pl.id}`, n: i + 2, total: T, aviso: true,
@@ -390,13 +391,24 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .capa-reel>.card,.capa-reel>.falta{position:absolute;inset:0}
 .capa-txt{position:absolute;left:72px;right:72px;top:600px;padding:44px 48px;border-radius:30px;background:rgba(8,59,128,.88);border:3px solid rgba(255,255,255,.6);display:flex;flex-direction:column;gap:22px}
 .split{position:absolute;inset:0;display:flex;flex-direction:column}
+.cardw{position:relative;flex:none}
+.selo{position:absolute;top:20px;right:20px;font-size:22px;font-weight:700;color:${COR.escuro};background:#fff;border:2px solid ${COR.escuro};border-radius:30px;padding:5px 16px;line-height:1.2}
+.selo.borda{top:-18px;right:28px}
+.selo.peq{font-size:14px;padding:3px 10px;border-width:1.5px}
+.selo.peq.borda{top:-12px;right:14px}
+.ficha7{position:absolute;left:0;right:0;top:900px;bottom:0;padding:34px 72px 40px;display:flex;flex-direction:column;gap:18px}
+.ficha7 .chip{font-size:26px;padding:6px 18px}
+.capa4-t{position:absolute;left:72px;right:72px;top:262px}
+.capa4-img{position:absolute;left:0;right:0;top:560px;display:flex;justify-content:center}
+.capa4-f{position:absolute;left:72px;right:72px;top:1442px;display:flex;flex-direction:column;gap:14px}
+.capa4-f .txt{font-size:32px}
 `;
 
 // ---------------------------------------------------------------------------
 // Render
 // ---------------------------------------------------------------------------
 (async () => {
-  const filtro = process.argv[2] || '';
+  const filtro = process.argv.slice(2).filter((a, i, l) => a !== '--saida' && l[i - 1] !== '--saida')[0] || '';
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
   const tmp = path.join(SAIDA, '.tmp.html');
@@ -404,9 +416,10 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
   for (const [nome, fazer] of Object.entries(posts)) {
     if (filtro && !nome.includes(filtro)) continue;
     const telas = fazer();
+    const ehCapa = nome.startsWith('capas-reels/');
     for (let i = 0; i < telas.length; i++) {
-      const pasta = nome === 'capas-reels' ? path.join(SAIDA, 'capas-reels') : path.join(SAIDA, nome);
-      const arq = nome === 'capas-reels' ? `${NOMES_CAPAS[i]}.png` : `${String(i + 1).padStart(2, '0')}.png`;
+      const pasta = path.join(SAIDA, ehCapa ? 'capas-reels' : nome);
+      const arq = ehCapa ? `${nome.slice('capas-reels/'.length)}.png` : `${String(i + 1).padStart(2, '0')}.png`;
       fs.mkdirSync(pasta, { recursive: true });
       const alto = telas[i].includes('height:1920px') ? 1920 : 1350;
       fs.writeFileSync(tmp, `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>${CSS}</style></head><body>${telas[i]}</body></html>`);
@@ -421,7 +434,7 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
   fs.rmSync(tmp, { force: true });
   await browser.close();
   if (faltando.size) {
-    console.log('\nFalta 3D (as telas saíram com aviso amarelo):');
+    console.log('\nFalta imagem (as telas saíram com aviso amarelo):');
     for (const f of faltando) console.log('  -', f);
   }
 })();

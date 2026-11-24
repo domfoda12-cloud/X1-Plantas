@@ -35,6 +35,29 @@ button:focus-visible{outline:3px solid var(--branco);outline-offset:2px}
 .aviso[hidden]{display:none}
 .selo{position:absolute;right:0;bottom:0;font:500 10.5px var(--mono);color:rgba(8,59,128,.8);pointer-events:none;
   padding:0 max(10px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) 0}
+body.noite .selo{color:rgba(220,232,250,.85)}
+body.noite .aviso{color:var(--nevoa)}
+.acao.pers-abre{background:var(--trena);color:var(--trena-tinta);border-color:var(--trena);font-weight:700}
+/* Painel de personalizar: no alto e à direita, nunca em cima do controle de andar; no celular ocupa só a metade de cima e rola por dentro. */
+.pers{position:absolute;z-index:5;top:max(10px,env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));width:min(340px,calc(100% - 20px));
+  max-height:calc(100% - 20px);overflow-y:auto;overscroll-behavior:contain;background:rgba(8,59,128,.96);border-radius:14px;padding:12px 14px 14px;
+  box-shadow:0 6px 24px rgba(0,0,0,.28);-webkit-overflow-scrolling:touch}
+.pers[hidden]{display:none}
+.pers header{display:flex;justify-content:space-between;align-items:center;gap:10px;position:sticky;top:-12px;margin:-12px -14px 4px;padding:12px 14px 8px;background:rgba(8,59,128,.98);z-index:1}
+.pers h2{font:800 1.15rem/1.1 var(--tit);letter-spacing:-.01em;margin:0}
+.pers .grupo{margin:10px 0 0}
+.pers .rot{font:500 10.5px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--trena);margin:0 0 6px}
+.pers .rot b{font:600 12.5px var(--txt);letter-spacing:0;text-transform:none;color:var(--branco);margin-left:6px}
+.pers .ops{display:flex;flex-wrap:wrap;gap:8px}
+.pers .cor{width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.55);padding:0;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(8,59,128,.9)}
+.pers .cor[aria-pressed="true"]{border-color:var(--trena);box-shadow:inset 0 0 0 2px rgba(8,59,128,.9),0 0 0 2px var(--trena)}
+.pers .chip,.pers .linha button{font:600 12.5px var(--txt);color:var(--branco);background:transparent;border:1.5px solid rgba(255,255,255,.45);min-height:40px;padding:8px 13px;border-radius:99px;cursor:pointer}
+.pers .chip[aria-pressed="true"]{background:var(--trena);color:var(--trena-tinta);border-color:var(--trena)}
+.pers .linha{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(255,255,255,.2)}
+.pers .linha button:active{background:rgba(255,255,255,.18)}
+.pers .obs{font:500 11.5px/1.4 var(--txt);color:var(--nevoa);margin:10px 0 0}
+@media (max-width:560px){ .pers{max-height:min(52%,calc(100% - 170px))} }
+@media (max-height:480px){ .pers{max-height:calc(100% - 20px);width:min(340px,calc(100% - 170px))} }
 </style>
 
 <canvas id="tela" aria-label="Visita 3D por dentro da casa. Arraste para olhar em volta; use o controle ou as setas para andar."></canvas>
@@ -54,6 +77,7 @@ button:focus-visible{outline:3px solid var(--branco);outline-offset:2px}
     </div>
     <canvas id="mapa" width="300" height="300" aria-label="Planta da casa com o lugar onde você está"></canvas>
     <button type="button" class="acao" id="porta">Voltar para a porta</button>
+    <button type="button" class="acao pers-abre" id="pers-abre" aria-expanded="false" aria-controls="pers">Personalizar</button>
   </div>
 </div>
 
@@ -61,10 +85,20 @@ button:focus-visible{outline:3px solid var(--branco);outline-offset:2px}
   <div id="manche" role="application" aria-label="Controle de andar"><i id="pino"></i></div>
   <p class="dica"><b>Arraste a tela</b> para olhar em volta. <b>Empurre o botão amarelo</b> para andar, ou use as setas e W A S D. Toque num cômodo da planta para ir até ele.</p>
 </div>
+<section class="pers" id="pers" hidden aria-label="Personalizar a casa">
+  <header><h2>Personalizar</h2><button type="button" class="acao" id="pers-fecha">Pronto</button></header>
+  <div id="pers-grupos"></div>
+  <div class="linha">
+    <button type="button" id="pers-antes" aria-label="Segure para comparar com a parede branca">Segure: ver no branco</button>
+    <button type="button" id="pers-padrao">Voltar ao padrão</button>
+  </div>
+  <p class="obs">As escolhas valem para as três casas. As medidas e os móveis da planta não mudam.</p>
+</section>
 <p class="selo">Ilustração do modelo 3D, a partir das medidas da planta de referência</p>
 
 <script type="module">
 import * as THREE from './lib/three.module.min.js';
+import { decorar, aplicarOpcoes, OPCOES, PADRAO } from './decor.js';
 
 const tela = document.getElementById('tela'), aviso = document.getElementById('aviso');
 const elComodo = document.getElementById('comodo'), elMedida = document.getElementById('medida'), elCasa = document.getElementById('casa-nome');
@@ -85,6 +119,23 @@ const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const virgula = (n, c = 1) => n.toFixed(c).replace('.', ',');
 const FORA = ['varanda', 'garagem', 'patio', 'jardim', 'futuro', 'quintal'];
 
+// escolhas de quem visita: valem para as três casas e ficam guardadas no aparelho (se ele deixar)
+const CHAVE = 'x1-visita-escolhas';
+const op = { ...PADRAO };
+try { const g = JSON.parse(localStorage.getItem(CHAVE) || '{}'); for (const k of Object.keys(PADRAO)) if (OPCOES[k].some((o) => o[0] === g[k])) op[k] = g[k]; } catch (e) { /* sem memória, a página funciona igual */ }
+const guardar = () => { try { localStorage.setItem(CHAVE, JSON.stringify(op)); } catch (e) { /* idem */ } };
+const semMovimento = matchMedia('(prefers-reduced-motion: reduce)');
+let comparando = false;
+
+function aplicarEscolhas() {                              // cores, piso e hora no motor; a decoração é refeita só quando muda o que ela usa
+  if (!atual) return; const c = atual;
+  aplicarOpcoes(c.casa, c.dados, comparando ? { ...op, parede: PADRAO.parede } : op, renderer);
+  const feito = [op.quadros, op.cama, op.sofa, op.maquina].join('|');
+  if (op.decor && (!c.decor || c.feito !== feito)) { if (c.decor) c.decor.tirar(); c.decor = decorar(c.casa, c.dados, op); c.feito = feito; }
+  if (c.decor) { c.decor.mostrar(op.decor); c.decor.hora(op.hora); }
+  document.body.classList.toggle('noite', op.hora === 'noite');
+}
+
 function vestir(casa, D) {                                // teto, vergas e luz quente: a casa inteira, não cortada
   const ALT = D.PE_DIREITO || 2.8, E = D.ESPESSURA || 0.15;
   casa.aplicar({ desenho: 1, paredes: 1, vida: 1, corte: ALT });
@@ -94,6 +145,7 @@ function vestir(casa, D) {                                // teto, vergas e luz 
     if (o.isHemisphereLight) { o.color.set('#FFF4E2'); o.groundColor.set('#C9A77C'); o.intensity = 1.25; }
   });
   const branco = new THREE.MeshStandardMaterial({ color: '#FBF7EF', roughness: 0.95, side: THREE.DoubleSide });
+  const matVerga = branco.clone();                        // as vergas acompanham a cor da parede
   for (const a of D.ambientes) {
     if (['patio', 'jardim', 'futuro', 'quintal'].includes(a.tipo)) continue;
     const teto = new THREE.Mesh(new THREE.PlaneGeometry(a.x1 - a.x0, a.y1 - a.y0), branco);
@@ -102,11 +154,11 @@ function vestir(casa, D) {                                // teto, vergas e luz 
   }
   for (const p of D.portas) {
     const cx = p.x + Math.cos(p.a0) * p.r / 2, cz = p.y + Math.sin(p.a0) * p.r / 2, h = Math.abs(Math.cos(p.a0)) > 0.5;
-    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? p.r : E, ALT - 2.1, h ? E : p.r), branco); v.position.set(cx, 2.1 + (ALT - 2.1) / 2, cz); casa.cena.add(v);
+    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? p.r : E, ALT - 2.1, h ? E : p.r), matVerga); v.userData.verga = true; v.position.set(cx, 2.1 + (ALT - 2.1) / 2, cz); casa.cena.add(v);
   }
   for (const j of D.janelas) {
     const [x0, y0, x1, y1] = j.seg, h = y0 === y1, c = Math.hypot(x1 - x0, y1 - y0);
-    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? c : E, ALT - j.verga, h ? E : c), branco); v.position.set((x0 + x1) / 2, j.verga + (ALT - j.verga) / 2, (y0 + y1) / 2); casa.cena.add(v);
+    const v = new THREE.Mesh(new THREE.BoxGeometry(h ? c : E, ALT - j.verga, h ? E : c), matVerga); v.userData.verga = true; v.position.set((x0 + x1) / 2, j.verga + (ALT - j.verga) / 2, (y0 + y1) / 2); casa.cena.add(v);
   }
   const cam = casa.camera; cam.fov = 74; cam.near = 0.06; cam.far = 120; cam.up.set(0, 1, 0); cam.rotation.order = 'YXZ';
 }
@@ -115,12 +167,14 @@ function naPorta() {                                    // começa na calçada, 
   const D = atual.dados; eu.x = D.ENTRADA_X ?? D.LARGURA / 2; eu.z = -2.4; eu.giro = Math.PI; eu.cima = -0.04;
   const frente = D.portas.filter((p) => Math.abs(Math.cos(p.a0)) > 0.5).sort((a, b) => a.y - b.y)[0];   // porta numa parede de frente
   if (frente && frente.y < D.PROFUNDIDADE * 0.4) eu.x = frente.x + Math.cos(frente.a0) * frente.r / 2;
+  if (op.decor && atual.decor && atual.decor.portao != null) { eu.x = atual.decor.portao; eu.z = -3.8; }   // com o muro, começa de frente para o portão
 }
 
 // parede não se atravessa: empurra o corpo para fora de cada trecho de parede (as portas são os vãos entre os trechos)
 function esbarrar() {
   const D = atual.dados, E = D.ESPESSURA || 0.15;
-  for (let volta = 0; volta < 3; volta++) for (const [x0, y0, x1, y1, esp = E] of D.paredes) {
+  const muros = op.decor && atual.decor ? atual.decor.barreiras : [];          // o muro da frente também não se atravessa
+  for (let volta = 0; volta < 3; volta++) for (const [x0, y0, x1, y1, esp = E] of [...D.paredes, ...muros]) {
     const dx = x1 - x0, dz = y1 - y0, c2 = dx * dx + dz * dz || 1e-9, c = Math.sqrt(c2), fo = (E / 2) / c;
     const t = clamp(((eu.x - x0) * dx + (eu.z - y0) * dz) / c2, -fo, 1 + fo);
     const px = x0 + dx * t, pz = y0 + dz * t, ex = eu.x - px, ez = eu.z - pz, d = Math.hypot(ex, ez), min = RAIO + esp / 2;
@@ -210,6 +264,7 @@ function quadro(agora) {
     if (tela.width !== Math.round(w * pr) || tela.height !== Math.round(h * pr)) renderer.setSize(w, h, false);
     const cam = atual.casa.camera; cam.aspect = w / h; cam.updateProjectionMatrix();
     cam.position.set(eu.x, OLHO, eu.z); cam.rotation.set(eu.cima, eu.giro, 0);
+    if (op.decor && atual.decor) atual.decor.animar(agora / 1000, semMovimento.matches);
     atual.casa.render(); desenharMapa(ondeEstou());
   }
   requestAnimationFrame(quadro);
@@ -220,14 +275,42 @@ async function escolher(id) {
   if (!casas[id]) {
     aviso.hidden = false;
     const [mod, dados] = await Promise.all([MODULOS[id](), DADOS[id]()]);
-    const casa = mod.criarCasa(renderer); vestir(casa, dados); casas[id] = { casa, dados };
+    const casa = mod.criarCasa(renderer); vestir(casa, dados); casas[id] = { casa, dados, decor: null, feito: '' };
   }
-  atual = casas[id]; aviso.hidden = true;
+  atual = casas[id]; aplicarEscolhas(); aviso.hidden = true;
   const m = atual.dados.META; elCasa.textContent = `${m.nome} · ${Math.round(m.area)} m² · ${m.quartos}`;
   mapa.height = Math.round(300 * clamp(atual.dados.PROFUNDIDADE / atual.dados.LARGURA, 0.8, 2.4)); elComodo.textContent = '';
   naPorta();
 }
 document.getElementById('casas').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) escolher(b.dataset.id); });
+
+// ---- painel de personalizar ------------------------------------------------
+const GRUPOS = [['parede', 'Paredes', 1], ['piso', 'Piso da sala e dos quartos', 0], ['sofa', 'Sofá', 1], ['cama', 'Roupa de cama', 1], ['quadros', 'Quadros', 0], ['hora', 'Hora do dia', 0], ['maquina', 'Área de serviço', 0], ['decor', 'Decoração', 0]];
+const pers = document.getElementById('pers'), persAbre = document.getElementById('pers-abre'), persGrupos = document.getElementById('pers-grupos');
+for (const [k, nome, cor] of GRUPOS) {
+  const d = document.createElement('div'); d.className = 'grupo'; d.dataset.k = k;
+  d.innerHTML = `<p class="rot">${nome}${cor ? '<b></b>' : ''}</p><div class="ops" role="group" aria-label="${nome}"></div>`;
+  OPCOES[k].forEach((o, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.dataset.i = i;
+    if (cor) { b.className = 'cor'; b.title = o[1]; b.setAttribute('aria-label', o[1]); b.style.background = o[2] || 'linear-gradient(135deg,#B9C7D6 50%,#E3B9A4 50%)'; } else { b.className = 'chip'; b.textContent = o[1]; }
+    d.lastChild.append(b);
+  });
+  persGrupos.append(d);
+}
+function pintarPainel() {
+  for (const d of persGrupos.children) { const k = d.dataset.k; d.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', OPCOES[k][b.dataset.i][0] === op[k])); const n = d.querySelector('.rot b'); if (n) n.textContent = (OPCOES[k].find((o) => o[0] === op[k]) || [])[1] || ''; }
+}
+persGrupos.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; const k = b.closest('.grupo').dataset.k; op[k] = OPCOES[k][b.dataset.i][0]; guardar(); pintarPainel(); aplicarEscolhas(); });
+const abrirPainel = (v) => { pers.hidden = !v; persAbre.setAttribute('aria-expanded', v); if (v) { sumirDica(); pintarPainel(); document.getElementById('pers-fecha').focus({ preventScroll: true }); } else persAbre.focus({ preventScroll: true }); };
+persAbre.addEventListener('click', () => abrirPainel(pers.hidden));
+document.getElementById('pers-fecha').addEventListener('click', () => abrirPainel(false));
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !pers.hidden) abrirPainel(false); });
+document.getElementById('pers-padrao').addEventListener('click', () => { Object.assign(op, PADRAO); guardar(); pintarPainel(); aplicarEscolhas(); });
+const btAntes = document.getElementById('pers-antes'), comparar = (v) => { if (comparando !== v) { comparando = v; aplicarEscolhas(); } };   // antes e depois da cor de parede
+btAntes.addEventListener('pointerdown', (e) => { try { btAntes.setPointerCapture(e.pointerId); } catch (er) { /* segue sem captura */ } comparar(true); });
+for (const ev of ['pointerup', 'pointercancel', 'blur']) btAntes.addEventListener(ev, () => comparar(false));
+btAntes.addEventListener('keydown', (e) => { if (e.key === ' ' || e.key === 'Enter') comparar(true); }); btAntes.addEventListener('keyup', () => comparar(false));
+if (new URLSearchParams(location.search).has('teste')) window.__visita = { eu, op, casas, get atual() { return atual; }, aplicarEscolhas };   // só para conferir a página
 
 await document.fonts.ready.catch(() => {});
 await escolher('C01');
