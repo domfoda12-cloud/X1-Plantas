@@ -37,7 +37,7 @@ const SELO = 'Imagem ilustrativa';
 const TEXTO = {
   C01: { destaque: 'sem corredor comprido, um hall curto distribui e a varanda recebe', para: 'Primeira casa' },
   E03: { destaque: 'um quarto em cada ponta, sala e copa no meio, banheiro dentro de casa', para: 'Lote estreito' },
-  F01: { destaque: 'os 3 quartos nos fundos, longe da rua, e sala com mesa de 4', para: 'Família com filhos' },
+  F01: { destaque: 'os 3 quartos nos fundos, longe da rua, e sala com mesa de\u00a04', para: 'Família com filhos' },
 };
 const slug = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const dec = (x) => x.toFixed(1).replace('.', ',');
@@ -165,13 +165,13 @@ posts['post-02-tres-plantas'] = () => {
       <div class="centro">${img(pl, 'humanizada', 600, 750, { fundo: '#fff' })}</div>
       <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>`,
   }));
-  const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Cabe no lote', 'lote'], ['No mínimo', 'minimo'], ['Para quem', 'para']];
+  const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Lote', 'lote'], ['No mínimo', 'minimo'], ['Para quem', 'para']];
   const curto = (pl) => pl.nome.replace(/^Casa /, '').replace(' ', '<br>');
   const tabela = tela({
     etiqueta: 'lado a lado', n: 5, total: T, aviso: true,
     corpo: `<div class="t2">Qual combina com ${y('o seu terreno')}?</div>
       <table class="tab"><tr><th></th>${lista.map((pl) => `<th>${curto(pl)}</th>`).join('')}</tr>
-      ${linhas.map(([rot, k]) => `<tr><td class="rot">${rot}</td>${lista.map((pl) => `<td>${String(pl[k]).replace(/ (quartos|banheiros?)$/, '')}</td>`).join('')}</tr>`).join('')}</table>
+      ${linhas.map(([rot, k]) => `<tr><td class="rot">${rot}</td>${lista.map((pl) => `<td${k === 'para' ? '' : ' class="nw"'}>${String(pl[k]).replace(/ (quartos|banheiros?)$/, '')}</td>`).join('')}</tr>`).join('')}</table>
       <div class="txt peq">O lote mínimo é frente x fundo. Os recuos mudam de cidade para cidade: confira na sua prefeitura.</div>`,
   });
   return [capa, ...telas, tabela, telaCTA(T)];
@@ -238,9 +238,9 @@ posts['post-05-checklist-pedreiro'] = () => {
   ];
 };
 
-// Post 7: Casa Família Compacta, imagem única. A 3D parada (1400 x 1207) entra inteira no alto; a ficha fica embaixo.
+// Post 7: Casa Família Compacta, imagem única. A 3D parada (1400 x 1207) entra inteira no alto, 1080 x 930; a ficha fica embaixo.
 posts['post-07-casa-familia'] = () => [
-  `<div class="tela" style="height:1350px;padding:0">${img(P.familia, '3d', 1080, 900, { raio: 0, borda: false, pos: 'center 55%' })}
+  `<div class="tela" style="height:1350px;padding:0">${img(P.familia, '3d', 1080, 930, { raio: 0, borda: false })}
     <div class="ficha7"><div class="t2" style="margin:0">${P.familia.nome}</div>${chips(P.familia)}<div class="aviso" style="position:static">${AVISO}</div>
     <div class="marca" style="margin-top:6px"><span class="logo"></span>${MARCA}</div></div></div>`,
 ];
@@ -312,7 +312,7 @@ const CAPAS = {
     return `<div class="tela capa-reel capa4" style="height:1920px">
       <div class="capa4-t t1">É possível ${y(`${pl.quartos} num lote de ${frente} metros`)} de frente?</div>
       <div class="capa4-img">${img(pl, '3d', 760, 858, { raio: 22 })}</div>
-      <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de ${pl.lote} (no mínimo ${pl.minimo})</div>
+      <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de <span class="nw">${pl.lote}</span> <span class="nw">(no mínimo ${pl.minimo})</span></div>
       <div class="aviso" style="position:static">${AVISO}</div></div></div>`;
   },
   'post-06-reel-bastidor': () => capa(`POV: a planta virando ${y('casa 3D')}`, `<div class="split">${img(P.compacta, 'blueprint', 1080, 960, { raio: 0, borda: false })}${img(P.compacta, 'perspectiva', 1080, 960, { raio: 0, borda: false })}</div>`),
@@ -367,6 +367,9 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .tab th{font-size:32px;font-weight:800;color:${COR.amarelo};text-align:center;padding:16px 8px;border-bottom:3px solid rgba(255,255,255,.6)}
 .tab td{text-align:center;padding:24px 8px;border-bottom:2px solid rgba(255,255,255,.25);font-weight:600}
 .tab td.rot{text-align:left;color:${COR.claro};font-weight:500;font-size:30px}
+.tab td.nw{white-space:nowrap;font-size:31px}
+.tela{font-feature-settings:'calt' 0}
+.nw{white-space:nowrap}
 .cta{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px}
 .botao{background:${COR.amarelo};color:${COR.escuro};font-size:64px;font-weight:600;border-radius:80px;padding:26px 64px;box-shadow:0 0 0 14px rgba(255,200,87,.25)}
 .botao b{font-weight:900}
@@ -388,7 +391,7 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .bom .y{font-weight:800}
 .faixa{position:absolute;left:0;right:0;bottom:0;padding:44px 72px 50px;background:linear-gradient(transparent,rgba(8,59,128,.92) 30%);display:flex;flex-direction:column;gap:20px}
 .capa-reel{padding:0}
-.capa-reel>.card,.capa-reel>.falta{position:absolute;inset:0}
+.capa-reel>.cardw,.capa-reel>.falta{position:absolute;inset:0}
 .capa-txt{position:absolute;left:72px;right:72px;top:600px;padding:44px 48px;border-radius:30px;background:rgba(8,59,128,.88);border:3px solid rgba(255,255,255,.6);display:flex;flex-direction:column;gap:22px}
 .split{position:absolute;inset:0;display:flex;flex-direction:column}
 .cardw{position:relative;flex:none}
@@ -396,7 +399,7 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .selo.borda{top:-18px;right:28px}
 .selo.peq{font-size:14px;padding:3px 10px;border-width:1.5px}
 .selo.peq.borda{top:-12px;right:14px}
-.ficha7{position:absolute;left:0;right:0;top:900px;bottom:0;padding:34px 72px 40px;display:flex;flex-direction:column;gap:18px}
+.ficha7{position:absolute;left:0;right:0;top:930px;bottom:0;padding:34px 72px 40px;display:flex;flex-direction:column;gap:18px}
 .ficha7 .chip{font-size:26px;padding:6px 18px}
 .capa4-t{position:absolute;left:72px;right:72px;top:262px}
 .capa4-img{position:absolute;left:0;right:0;top:560px;display:flex;justify-content:center}

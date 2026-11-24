@@ -102,7 +102,7 @@ def construir(planta):
     for k in linhas:
         linhas[k] = unir(linhas[k])
 
-    portas, vaos_por_comodo = [], {}
+    portas, vaos_por_comodo, vaos_ext = [], {}, {}
 
     def abrir(o, fixo, a, b):
         k = (o, R(fixo))
@@ -147,6 +147,7 @@ def construir(planta):
                 para_mais = lado in ("frente", "esq")
                 portas.append({"id": f"ext-{b_id}", **arco(o, fixo, a, PORTA_ENTRADA, para_mais)})
             registrar(b_id, lado, a, b)
+            vaos_ext[(b_id, lado)] = (o, fixo, a, b)
             continue
         ca, cb = por_id[a_id], por_id[b_id]
         pc = PL.parede_comum(ca, cb)
@@ -192,6 +193,16 @@ def construir(planta):
             seg = [R(a), R(fixo), R(b), R(fixo)] if o == "h" else [R(fixo), R(a), R(fixo), R(b)]
             janelas.append({"seg": seg, "peitoril": peitoril, "verga": 2.2, "id": cid})
             jan_por_comodo.setdefault(cid, []).append((lado, a, b))
+    # 2b. Veneziana em cima da porta de fora (F(..., veneziana_sobre_porta=lado)): no vão da porta, da verga dela até o topo
+    # de PL.VENEZIANA_PORTA. Fica acima do corte da planta (1,1 m): o 3D cortado não a mostra; a planta 2D a desenha tracejada.
+    for c in cs:
+        vao = vaos_ext.get((c["id"], c.get("veneziana_sobre_porta")))
+        if vao:
+            o, fixo, a, b = vao
+            m, meia = (a + b) / 2, PL.VENEZIANA_PORTA["largura"] / 2
+            seg = [R(m - meia), R(fixo), R(m + meia), R(fixo)] if o == "h" else [R(fixo), R(m - meia), R(fixo), R(m + meia)]
+            janelas.append({"seg": seg, "peitoril": PL.VENEZIANA_PORTA["base"], "verga": PL.VENEZIANA_PORTA["topo"],
+                            "id": c["id"], "tipo": "veneziana"})
 
     paredes = []
     for (o, fixo), ivs in sorted(linhas.items()):
@@ -608,13 +619,15 @@ def portas_em_fixos(planta, fixos=FIXOS):
 
 
 def janelas_sobre_portas(planta):
-    """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois)."""
+    """Pares (porta, janela) em que a janela caiu em cima do vão da porta (parede curta demais para os dois).
+    A veneziana declarada em cima da porta de fora (tipo "veneziana") fica de fora: ela é posta no vão da porta de propósito,
+    e o validador dá erro se não houver porta embaixo dela."""
     _, janelas, portas, _ = construir(planta)
     out = []
     for d in portas:
         hx, hy = d["x"], d["y"]
         ex, ey = hx + d["r"] * math.cos(d["a0"]), hy + d["r"] * math.sin(d["a0"])
-        for j in janelas:
+        for j in (j for j in janelas if j.get("tipo") != "veneziana"):
             x0, y0, x1, y1 = j["seg"]
             if abs(y0 - y1) < 1e-6 and abs(hy - ey) < 1e-6 and abs(hy - y0) < 1e-6 and min(hx, ex) < max(x0, x1) and max(hx, ex) > min(x0, x1):
                 out.append((d["id"], j["id"]))

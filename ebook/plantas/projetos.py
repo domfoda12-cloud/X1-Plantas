@@ -77,7 +77,10 @@ def todas():
                                 M("tapete", "frente", 1.06, 0.5, 2.86, 2.35, cor="#D9CBB4", borda="#B49D7C"),
                                 M("mesaCentro", "frente", 1.66, 0.92, 2.26, 1.92),
                                 M("mesaJantar", "esq", 0.275, 2.425, 1.475, 4.125)])),          # 4 lugares; 1,81 m até a parede do quarto
-                            (None, V((1.4, F("servico", "Serviço", "servico", moveis=[
+                            # 24/11/2026 (decisão do dono, passo D1: "manter a porta e pôr veneziana em cima"): a parede do fundo
+                            # tem 1,19 m livres, só cabe a porta de fora; a janela de 0,70 que caía em cima dela virou veneziana
+                            # de 0,90 x 0,50 no vão da porta, de 2,10 a 2,60 m (PL.VENEZIANA_PORTA). O validador dá o aviso.
+                            (None, V((1.4, F("servico", "Serviço", "servico", veneziana_sobre_porta="fundos", moveis=[
                                          # medidas da Portaria MCID 725 (tanque 0,52 x 0,53, máquina 0,60 x 0,65), fora do giro das 2 portas
                                          M("tanque", "esq", 0.15, 0.75, 0.68, 1.27),
                                          M("maquina", "esq", 0.15, 1.3, 0.8, 1.9)])),

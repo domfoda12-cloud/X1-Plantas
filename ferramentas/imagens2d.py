@@ -1,6 +1,6 @@
 """Imagens 2D das plantas para posts e anúncios (sem 3D): planta mobiliada, blueprint, vista da rua e casa no lote.
 
-Uso: python3 ferramentas/imagens2d.py C01 E01 F03
+Uso: python3 ferramentas/imagens2d.py C01 E03 F01   (sem IDs: as casas_lancamento de ebook/config.json)
      python3 ferramentas/imagens2d.py --previas [IDs]   (prévias mobiliadas em alta de ebook/plantas/previas/)
 Saída: animacoes-3d/plantas-2d/<pasta>/{01-blueprint,02-planta-humanizada,03-fachada,04-lote}.png (1600 x 2000, 4:5)
 Cada prévia grava em previas/carimbos.json o carimbo dos dados da casa (ebook/plantas/dados/<ID>.json); o checar.py
@@ -105,4 +105,4 @@ if __name__ == "__main__":
     elif args and args[0] == "--previas":
         main(args[1:], previas=True)
     else:
-        main(args or ["C01", "E01", "F03"])
+        main(args or json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))["casas_lancamento"])

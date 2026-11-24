@@ -63,6 +63,10 @@ ALTURA_JANELA = {"sala": 1.4, "estar": 1.4, "jantar": 1.2, "dorm": 1.2, "casal":
                  "escritorio": 1.2, "cozinha": 1.0, "servico": 1.0, "banho": 0.6, "lavabo": 0.6}
 RAZAO_JANELA = {"sala": 1 / 6, "estar": 1 / 6, "jantar": 1 / 6, "dorm": 1 / 6, "casal": 1 / 6,
                 "escritorio": 1 / 6, "cozinha": 1 / 8, "servico": 1 / 8, "banho": 1 / 8, "lavabo": 1 / 8}
+# Veneziana em cima da porta de fora (F(..., veneziana_sobre_porta="fundos"); decisão do dono para a C01, 24/11/2026):
+# na largura do vão da porta de fora (0,90 m), da verga da porta (2,10 m) até 2,60 m; sobram 20 cm de verga até o teto
+# de 2,80 m do desenho 3D. Só em cômodo de 1/8 (cozinha, serviço, banheiro) e só onde há porta de fora embaixo.
+VENEZIANA_PORTA = {"largura": 0.9, "base": 2.1, "topo": 2.6}
 CIRC_MAX = 0.14
 VAO_MAX = 4.5
 RECUOS_PADRAO = {"frente": 3.0, "fundos": 1.5, "esq": 0.0, "dir": 1.5}  # esq = parede na divisa
@@ -316,6 +320,8 @@ def auto_janelas(planta):
         for lado in c.get("pref", PREFERENCIA[t]):
             if falta <= 0.01:
                 break
+            if lado == c.get("veneziana_sobre_porta"):  # a parede da porta já tem a veneziana: janela ali cairia na porta
+                continue
             ext = _livre_para_fora(planta, c, lado)
             if ext < 1.0 - 1e-6 and not (t in ("banho", "lavabo") and ext >= 0.9):
                 continue
@@ -425,9 +431,29 @@ def validar(planta):
                 r.erro(f"{c['nome']}: janela de {larg:.1f} m na {NOMES_LADO[lado]} não cabe "
                        f"(parede que dá para fora: {ext:.1f} m)")
             a_jan += larg * ALTURA_JANELA[t]
+        ven = c.get("veneziana_sobre_porta")
+        if ven:
+            # declarada, nunca automática: tem de ter porta de fora embaixo, não divide a parede com janela e, contando o vão
+            # inteiro, chega a 1/8 do piso livre; mesmo assim vira aviso (as aletas tiram parte do ar e quase toda a luz)
+            vl, vh = VENEZIANA_PORTA["largura"], VENEZIANA_PORTA["topo"] - VENEZIANA_PORTA["base"]
+            a_ven, livre = vl * vh, util(planta, c)[2]
+            if RAZAO_JANELA[t] != 1 / 8:
+                r.erro(f"{c['nome']}: veneziana em cima da porta só em cozinha, serviço ou banheiro, não em cômodo de permanência")
+            if not any(pt[0] == "ext" and pt[1] == c["id"] and len(pt) > 2 and pt[2] == ven for pt in planta.get("portas", [])):
+                r.erro(f"{c['nome']}: veneziana na {NOMES_LADO[ven]}, mas não há porta de fora embaixo dela")
+            if any(l == ven for (l, _) in lista):
+                r.erro(f"{c['nome']}: janela e veneziana na mesma parede ({NOMES_LADO[ven]})")
+            if (a_jan + a_ven) / livre + 1e-9 < RAZAO_JANELA[t]:
+                r.erro(f"{c['nome']}: janela e veneziana somam {(a_jan + a_ven) / livre * 100:.0f}% do piso livre (mínimo de referência 12,5%)")
+            m2 = lambda v: f"{v:.2f}".replace(".", ",")
+            de = {"servico": "do serviço", "cozinha": "da cozinha", "banho": "do banheiro", "lavabo": "do lavabo"}.get(t, "do cômodo")
+            r.aviso(f"{c['nome']}: o ar entra por uma veneziana de {m2(vl)} x {m2(vh)} m em cima da porta de fora ({m2(a_ven)} m², "
+                    f"{n0((a_jan + a_ven) / livre * 100)}% do piso livre de {_f(livre)} m², contando o vão inteiro; a referência é 1/8, 12,5%). "
+                    f"As aletas tiram parte do ar e quase toda a luz: o engenheiro confere a ventilação e a luz {de}")
+            a_jan += a_ven
         razao = a_jan / area(c) if area(c) else 0
         soma_luz[c["id"]] = razao
-        if razao + 1e-9 < RAZAO_JANELA[t]:
+        if razao + 1e-9 < RAZAO_JANELA[t] and not ven:  # com veneziana, a conta é a de cima (piso livre) e o aviso
             if t in ("banho", "lavabo") and c.get("exaustao"):
                 r.aviso(f"{c['nome']}: sem janela suficiente, ventilação por exaustão mecânica (confira o código)")
             else:
@@ -787,6 +813,8 @@ def previa(planta, caminho, escala=80):
             lado = porta[2]
             pos = porta[3] if len(porta) > 3 else None
             _porta_ext(d, c, lado, pos, X, Y, escala)
+            if c.get("veneziana_sobre_porta") == lado:  # veneziana em cima da porta: só o contorno azul (fica acima do corte)
+                _porta_ext(d, c, lado, pos, X, Y, escala, veneziana=True)
             continue
         pc = parede_comum(por_id[a], por_id[b])
         if not pc:
@@ -858,16 +886,17 @@ def _f(v):
     return f"{v:.1f}".replace(".", ",")
 
 
-def _porta_ext(d, c, lado, pos, X, Y, escala):
-    larg = 0.9
+def _porta_ext(d, c, lado, pos, X, Y, escala, veneziana=False):
+    larg, e = 0.9, (9 if veneziana else 5)
+    cor = dict(fill=None, outline="#0B4FA8", width=3) if veneziana else dict(fill="#FFC857", outline="#111")
     if lado in ("frente", "fundos"):
         y = c["y0"] if lado == "frente" else c["y1"]
         cx = pos if pos is not None else (c["x0"] + c["x1"]) / 2
-        d.rectangle([X(cx - larg / 2), Y(y) - 5, X(cx + larg / 2), Y(y) + 5], fill="#FFC857", outline="#111")
+        d.rectangle([X(cx - larg / 2), Y(y) - e, X(cx + larg / 2), Y(y) + e], **cor)
     else:
         x = c["x0"] if lado == "esq" else c["x1"]
         cy = pos if pos is not None else (c["y0"] + c["y1"]) / 2
-        d.rectangle([X(x) - 5, Y(cy - larg / 2), X(x) + 5, Y(cy + larg / 2)], fill="#FFC857", outline="#111")
+        d.rectangle([X(x) - e, Y(cy - larg / 2), X(x) + e, Y(cy + larg / 2)], **cor)
 
 
 ORI_NOME = {"norte": "norte", "sul": "sul", "leste": "leste", "oeste": "oeste"}
