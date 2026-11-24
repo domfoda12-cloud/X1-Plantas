@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 20 programas
+## Os 21 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -84,6 +84,12 @@ Funções: `recortar`, `main`.
 Mockups do e-book no celular e B-roll do e-book folheado, em alta resolução.
 
 Funções: `pagina`, `celular`, `fundo`, `colar`, `mockups`, `broll`.
+
+### [`ferramentas/pdf-leve.py`](pdf-leve.py)
+
+PDF leve de emergência: copia um PDF reduzindo só as imagens (o texto e as plantas em vetor ficam iguais).
+
+Funções: `main`.
 
 ### [`ferramentas/pedido.py`](pedido.py)
 

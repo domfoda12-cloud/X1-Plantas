@@ -147,6 +147,7 @@ rodar("fichas (PLANTAS.md)", [sys.executable, "ferramentas/plantas.py", "fichas"
 rodar("lista de conserto (CONSERTOS.md)", [sys.executable, "ferramentas/plantas.py", "referencias"])
 rodar("índice e resumos das pastas (nenhum documento fora)", [sys.executable, "ferramentas/resumos.py", "--conferir"])
 rodar("fichas dos pedidos do dono (campos e fila)", [sys.executable, "ferramentas/pedido.py", "conferir"])
+rodar("plano geral (seções, dependências, no máximo 3 passos abertos em Agora)", [sys.executable, "ferramentas/plano.py", "conferir"])
 # Todo link entre documentos abre (juntar ou renomear arquivo não pode quebrar nada em silêncio).
 # Um conferidor só: o do painel (o mesmo que avisa no atualizar-painel.py).
 import importlib.util
