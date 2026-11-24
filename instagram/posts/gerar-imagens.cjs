@@ -197,7 +197,7 @@ posts['post-02-tres-plantas'] = () => {
         <div class="lote-m">${noLote(pl, 440)}<div class="txt peq">a casa no lote de ${pl.lote},<br>com a rua embaixo</div></div>${regua(pxm)}</div><div class="lado-p">${escala(pl, pxm)}</div></div>` });
     }
     return tela({ ...base, corpo: `<div class="t2">${pl.nome}</div>${chips(pl)}
-      <div class="centro">${escala(pl, caberEm([pl], 936, 780, 0))}</div>
+      <div class="centro">${escala(pl, caberEm([pl], 936, 640, 0))}</div>
       <div class="txt peq">${y('Destaque:')} ${pl.destaque}.</div>` });
   });
   const linhas = [['Área', 'area'], ['Quartos', 'quartos'], ['Banheiros', 'banhos'], ['Lote', 'lote'], ['No mínimo', 'minimo'], ['Para quem', 'para']];
@@ -345,7 +345,7 @@ const CAPAS = {
   'post-04-reel-casa-fita': () => {
     const pl = P.fita, frente = pl.lote.split(' x ')[0];
     return `<div class="tela capa-reel capa4" style="height:1920px">
-      <div class="capa4-t t1">É possível ${y(`${pl.quartos} num lote de ${frente} metros`)} de frente?</div>
+      <div class="capa4-t t1">É possível ${y(`${pl.quartos} num lote de ${frente}\u00a0metros`)} de frente?</div>
       <div class="capa4-img">${img(pl, '3d', 760, 858, { raio: 22 })}</div>
       <div class="capa4-f"><div class="txt"><b>${pl.nome}</b> · ${pl.area} · cabe num lote de <span class="nw">${pl.lote}</span>, com recuos de referência <span class="nw">(no mínimo ${pl.minimo})</span></div>
       <div class="aviso" style="position:static">${AVISO}</div></div></div>`;
@@ -449,7 +449,7 @@ body{width:1080px;font-family:Inter,sans-serif;color:#fff;background:${COR.azul}
 .ficha7{position:absolute;left:0;right:0;top:930px;bottom:0;padding:34px 72px 40px;display:flex;flex-direction:column;gap:18px}
 .ficha7 .chip{font-size:29px;padding:7px 20px}
 .ficha7 .t2{font-size:70px}
-.capa4-t{position:absolute;left:72px;right:72px;top:262px}
+.capa4-t{position:absolute;left:72px;right:72px;top:262px;text-wrap:balance}
 .capa4-img{position:absolute;left:0;right:0;top:560px;display:flex;justify-content:center}
 .capa4-f{position:absolute;left:72px;right:72px;top:1442px;display:flex;flex-direction:column;gap:14px}
 .capa4-f .txt{font-size:32px}
