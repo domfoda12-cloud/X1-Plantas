@@ -9,6 +9,10 @@
 | editor-video | n = 0, sem nota ainda | - | 14 de 15; 0 de 3; n = 2 | dono 1, prova 1 |
 | estrategista | n = 0, sem nota ainda | - | 15 de 15; 0 de 3; n = 2 | dono 1, prova 1 |
 | haiku | n = 0, sem nota ainda | - | 14 de 15; 0 de 3; n = 2 | - |
+| juri-comprador | n = 0, sem nota ainda | - | 5 de 5; 1 de 4; n = 2 | - |
+| juri-dinheiro | n = 0, sem nota ainda | - | 5 de 5; 0 de 4; n = 2 | - |
+| juri-presidente | n = 0, sem nota ainda | - | 2 de 2; 1 de 6; n = 2 | - |
+| juri-risco | n = 0, sem nota ainda | - | 5 de 5; 0 de 4; n = 2 | - |
 | maestro | n = 0, sem nota ainda | - | - | dono 6, maestro 1 |
 | pesquisador | n = 0, sem nota ainda | - | - | dono 1 |
 | revisor-de-risco | n = 0, sem nota ainda | - | 15 de 15; 0 de 3; n = 2 | prova 2 |

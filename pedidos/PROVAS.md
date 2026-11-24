@@ -52,3 +52,41 @@
 - **Prova 3:** sem versão limpa gêmea na mesma prova e sem plano que enuncie a regra medida.
 
 **Problemas reais achados fora do gabarito** (para consertar): o post 3 ensina "linha fina e dupla é janela", mas no nosso desenho a janela é um retângulo azul e o arco da porta só existe na planta mobiliada; "custo por contato" não existe em anúncio de comentário (decidir botão de mensagem ou contar pelo parceiro); teste de anúncio sem data de término; a pergunta "dá para construir direto?" tem duas respostas no `WHATSAPP.md`; a tabela da semana do `PAINEL.md` sem coluna de gasto; `EQUIPE.md` (Arquiteto em peça pública) contra `CONSELHO.md`; selo em imagem parada descrito de dois jeitos; "Comenta" contra "Comente PLANTA".
+
+## Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC)
+
+Primeira prova do júri (CONSELHO.md 5b, item 5). Pacote montado pelo Fable, fora do repositório: 5 pares de proposta (limpa e com um erro plantado), 2 grupos (X viu plantadas 1, 3 e 5; Y viu 2 e 4), nenhum jurado viu as duas gêmeas, nenhum pedido dizia que havia erro. Três ângulos por grupo (comprador, dinheiro, risco), um modelo diferente em cada ângulo, o mesmo nos dois grupos. Um conferidor leu só as limpas. Cada presidente recebeu as 3 opiniões com uma crítica falsa plantada pelo Maestro.
+
+Jurados do grupo X (3 plantadas, 2 limpas; a limpa 4 saiu da conta, ver abaixo):
+
+| Agente | Achados (de 3) | Parciais | Alarmes falsos (de 1) | O que deixou passar |
+|---|---|---|---|---|
+| juri-comprador | 3 | 0 | 0 | Nada do plantado |
+| juri-dinheiro | 3 | 0 | 0 | Crítica alta falsa na limpa 2 (derrubada pelo presidente); citou a linha 13 por 11 |
+| juri-risco | 3 | 0 | 0 | Nada do plantado |
+
+Jurados do grupo Y (2 plantadas, 3 limpas):
+
+| Agente | Achados (de 2) | Parciais | Alarmes falsos (de 3) | O que deixou passar |
+|---|---|---|---|---|
+| juri-comprador | 2 | 0 | 1 | Limpa 1: tratou a Casa Fita como não aprovada, por um documento velho do repositório; crítica errada sobre `--variante` |
+| juri-dinheiro | 2 | 0 | 0 | Validou "3488 caracteres" sem notar que são bytes |
+| juri-risco | 2 | 0 | 0 | Validou "3488 caracteres" sem notar que são bytes |
+
+Presidentes (1 crítica falsa plantada em cada grupo):
+
+| Agente | Achados (de 1) | Parciais | Alarmes falsos (de 3) | O que deixou passar |
+|---|---|---|---|---|
+| juri-presidente | 1 | 0 | 0 | Grupo X: derrubou "R$ 10 por dia"; derrubou também a crítica alta falsa da limpa 2 |
+| juri-presidente | 1 | 0 | 1 | Grupo Y: derrubou "vai usar o Instagram dele"; confirmou a crítica da Casa Fita "não aprovada" (documento velho) |
+
+**Os números do desenho:** detecção 5 de 5 (todo erro plantado foi achado pelos 3 jurados do grupo e chegou à lista do presidente); presidente 2 de 2; separação 5 de 5 (em todo par a média da limpa ficou acima da plantada: +1,3, +3,5, +2,3, +1,0 e +3,0); alarme falso 1 de 4 limpas (a Casa Fita "não aprovada"); ruído não medido.
+
+**Falha do gabarito:** a "limpa" 4 (anúncio com a Casa Compacta em lote 8 x 15) tinha um defeito de verdade: atrai o público para quem o `/oferta` está vetado (`ebook/vendas/RESPOSTAS-RAPIDAS.md`, linha 5). Conferidor, 2 jurados e o presidente acharam. Saiu da conta. O conferidor rodou junto com os jurados, não antes, como o desenho pedia: erro do Maestro.
+
+**Conclusões:**
+- O júri acha erro plantado: 100% nesta prova. Mas o par 2 (promessa proibida por regra escrita) é fácil, e todos os erros eram de um trecho só. A próxima prova precisa de erro por omissão espalhada.
+- O que o júri erra é por **documento velho no repositório**, não por invenção: `pedidos/anexos/instagram-perfil-novo.md` linha 5 e `contexto/QUADRO.md` ainda diziam que a Casa Fita esperava aprovação. Consertar os dois.
+- O presidente que confere vale a pena: derrubou as 2 críticas falsas plantadas e 1 crítica alta falsa de jurado, e achou 1 erro que nenhum jurado viu (`--saida` obrigatório).
+- Achados reais para consertar: `ESTRATEGIA.md` linha 100 sugere anúncio "C01 8 x 15", que colide com o veto do `/oferta`; a conta de R$ 280 por preço pode não chegar a 5 vendas; `livro.py --previa` sem `--conferir` regrava o PDF oficial.
+- Custo: 9 chamadas de jurado e presidente mais o conferidor; cerca de 1,6 milhão de tokens (soma dos avisos de conclusão; os 2 presidentes cortados pelo limite não informaram).

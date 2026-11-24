@@ -2,7 +2,7 @@
 
 > Redator, 23/11/2026, noite. **Pedido do dono:** "Um novo" (comentário no quadro, `pedidos/anexos/decisoes-do-dono-2026-11-23.md`, linha "Instagram"): perfil novo, só do negócio. Quem cria a conta é ele; aqui fica o material para ele escolher. **Rascunho:** nada vai ao público antes do Revisor de risco. **Ficha:** não achei ficha própria deste pedido em `pedidos/2026-11/`; quem conduz abre.
 >
-> Fontes dos números: `ebook/plantas/PLANTAS.md` (validador). Casa Compacta (C01) 51 m², 2 quartos, 1 banheiro, lote de 8 x 15 m (no mínimo 8 x 13); Casa Fita (E03) 56 m², 2 quartos, 1 banheiro, lote de 5 x 25 m (no mínimo 5 x 20,6); Família Compacta (F01) 71 m², 3 quartos, 1 banheiro, lote de 10 x 15 m (no mínimo 10 x 12,8). **A E03 e a F01 têm redesenho na fila (E03R e F01R, à espera do Arquiteto):** se ele aprovar, os números mudam e os posts 1, 4 e 7 mudam junto.
+> Fontes dos números: `ebook/plantas/PLANTAS.md` (validador). Casa Compacta (C01) 51 m², 2 quartos, 1 banheiro, lote de 8 x 15 m (no mínimo 8 x 13); Casa Fita (E03) 56 m², 2 quartos, 1 banheiro, lote de 5 x 25 m (no mínimo 5 x 20,6); Família Compacta (F01) 71 m², 3 quartos, 1 banheiro, lote de 10 x 15 m (no mínimo 10 x 12,8). **A E03 e a F01 novas já são oficiais desde 23/11, noite** (aprovadas pelo Arquiteto, por delegação do dono): os números deste arquivo já são os delas.
 >
 > O que o perfil nunca diz: preço (R$ 47 x R$ 67 está em teste), número de seguidores ou de vendas, prazo, custo ou aprovação de obra, que a planta dispensa pedreiro, engenheiro ou arquiteto.
 

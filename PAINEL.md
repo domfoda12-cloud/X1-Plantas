@@ -11,7 +11,7 @@
 ## 1. Situação agora
 
 <!-- situacao:inicio -->
-_Gerado por `ferramentas/atualizar-painel.py` em 23/11/2026, a partir dos arquivos que existem. Não edite à mão._
+_Gerado por `ferramentas/atualizar-painel.py` em 24/11/2026, a partir dos arquivos que existem. Não edite à mão._
 
 | Indicador | Situação |
 |---|---|

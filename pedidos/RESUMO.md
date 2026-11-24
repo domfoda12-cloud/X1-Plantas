@@ -49,9 +49,9 @@ Tamanho: 1921 palavras.
 
 Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
 
-Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC).
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC).
 
-Tamanho: 1144 palavras.
+Tamanho: 1801 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 
@@ -75,7 +75,7 @@ Pedido do dono (23/11, comentário no quadro; `decisoes-do-dono-2026-11-23.md`, 
 
 Seções: Como ler as contas; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; cabe num lote de 8 x 15 m); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; cabe num lote de 5 x 25 m); 3. F01 · Casa Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; cabe num lote de 10 x 15 m); 4. Medidas de móveis comuns no Brasil (as usadas nas contas); 5. Para a equipe (não vai ao público).
 
-Tamanho: 3468 palavras.
+Tamanho: 3490 palavras.
 
 ### [Decisões do dono, 23/11/2026 (respostas às perguntas pendentes)](anexos/decisoes-do-dono-2026-11-23.md)
 
@@ -111,7 +111,7 @@ Redator, 23/11/2026, noite. Pedido do dono: "Um novo" (comentário no quadro, `p
 
 Seções: 1. Nome de usuário (@): 6 opções; 2. Bio: 3 opções (limite de 150 caracteres); 3. Nome de exibição e categoria; 4. Os 9 primeiros posts (a grade de quem abre o perfil); 5. Destaques fixos (stories): 3; 6. O que só o dono faz; Para o Revisor de risco; Perguntas ao dono (curtas).
 
-Tamanho: 2940 palavras.
+Tamanho: 2936 palavras.
 
 ### [Proposta de integração das 5 adições do dono (versão 1, 23/11/2026)](anexos/integracao-novos-v1.md)
 
