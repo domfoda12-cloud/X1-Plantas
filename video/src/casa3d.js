@@ -293,7 +293,8 @@ export function desenharBlueprint(g, p, { cotas = true, nomes = true, moveis = t
       const larg = (a.x1 - a.x0) * K; let fs = 34; g.font = `700 ${fs}px Inter, sans-serif`;
       while (g.measureText(a.nome.toUpperCase()).width > larg - 16 && fs > 18) { fs -= 2; g.font = `700 ${fs}px Inter, sans-serif`; }
       g.fillText(a.nome.toUpperCase(), cx, cy - 6);
-      g.font = '500 28px Inter, sans-serif'; g.fillText(m2((a.x1 - a.x0) * (a.y1 - a.y0)), cx, cy + 30);
+      // área livre do validador, a mesma do e-book (vem pronta do planta3d.py; sem ela, não escreve número)
+      if (a.area_livre != null) { g.font = '500 28px Inter, sans-serif'; g.fillText(m2(a.area_livre), cx, cy + 30); }
     }
   }
   const pc = suave((p - 0.8) / 0.2);

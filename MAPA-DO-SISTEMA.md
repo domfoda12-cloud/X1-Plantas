@@ -11,6 +11,7 @@
 | 1 | [`ebook/plantas/projetos.py`](ebook/plantas/projetos.py) | as 24 plantas, em dados | 2 |
 | 2 | [`ferramentas/plantas.py`](ferramentas/plantas.py) | valida as regras (medidas, janelas, lote, sol) e calcula as áreas | 3, 4, 5, 9 |
 | 3 | [`ebook/plantas/dados/`](ebook/plantas/dados) e [`ebook/plantas/PLANTAS.md`](ebook/plantas/PLANTAS.md) | os números de cada casa (gerados: `plantas.py exportar` e `fichas`) | 5, 10, 13 |
+| 3b | [`ferramentas/conferir-rascunho.py`](ferramentas/conferir-rascunho.py) | antes de dizer "pronto para aplicar": roda num rascunho de `ebook/plantas/rascunhos/` (ou numa planta oficial, por ID) o validador de [`ferramentas/plantas.py`](ferramentas/plantas.py) e as conferências do 3D de [`ferramentas/planta3d.py`](ferramentas/planta3d.py) que o `checar.py` usa (porta em móvel fixo, móvel na parede, móvel sobre móvel, móvel alto na janela, janela sobre porta, cadeiras, guarda-roupa sem frente, quarto aberto) | só lê: imprime cada lista e sai com 1 se houver erro |
 
 ## 2. O e-book
 

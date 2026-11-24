@@ -1047,7 +1047,8 @@ def modulo(planta):
     r = planta["_r"]
     m = r.metricas
     amb = [{"id": c["id"], "nome": c["nome"], "tipo": c["tipo"], "x0": c["x0"], "y0": c["y0"], "x1": c["x1"], "y1": c["y1"],
-            "cor": CORES_AMB.get(c["tipo"], "#EEE"), "piso": PISO.get(c["tipo"], "madeira")}
+            "cor": CORES_AMB.get(c["tipo"], "#EEE"), "piso": PISO.get(c["tipo"], "madeira"),
+            "area_livre": m["util"][c["id"]][2]}  # a área livre do validador, a mesma do e-book (F7, 24/11/2026)
            for c in planta["comodos"] if c["tipo"] != "futuro"]
     futuros = [{"id": c["id"], "nome": c["nome"], "x0": c["x0"], "y0": c["y0"], "x1": c["x1"], "y1": c["y1"]}
                for c in planta["comodos"] if c["tipo"] == "futuro"]
