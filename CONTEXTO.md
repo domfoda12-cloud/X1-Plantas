@@ -21,7 +21,7 @@
 
 ## Em aberto (esperando o dono)
 
-- **Lançamento (decidido em 23/11, [decisões](pedidos/anexos/decisoes-do-dono-2026-11-23.md)):** 3 casas: Casa Compacta (com hall), Casa Fita (2 quartos) e Família Compacta (F01); título "Antes do primeiro tijolo"; preços em teste: R$ 47 e R$ 67, semanas alternadas, começando pelo R$ 47; só a Casa Compacta grátis; garantia de 7 dias, contados da entrega do link; Pix pelo WhatsApp, sem plataforma; e-book por link; estilo 1 nas casas, 3 na capa e no Instagram; WhatsApp no `ebook/config.json`; o arquiteto é o nosso agente (aviso legal fica). **Falta o dono:** a amostra grátis (A, B ou A agora e B depois) e o preço no PDF. Instagram: perfil novo do negócio (decidido). Decisões dele à vista no quadro de tarefas. Próximas casas: não prometer.
+- **Lançamento ([decisões de 23 e 24/11](pedidos/anexos/decisoes-do-dono-2026-11-23.md)):** 3 casas: Casa Compacta (com hall), Casa Fita e Família Compacta; R$ 47 na primeira semana (teste com R$ 67 em semanas alternadas) e **o PDF não fala de preço**; **título em troca** (3 opções, o dono escolhe; o atual fica até lá); ele vende com o **CPF** (dado só no celular dele); garantia de 7 dias da entrega do link; Pix no WhatsApp; só a Casa Compacta grátis; **e-book com uma parte por casa e uma parte geral**; Instagram novo, com nome e bio de humor pelo absurdo (ele escolhe). **O que falta e em que ordem:** [`pedidos/PLANO.md`](pedidos/PLANO.md); as decisões dele, em grupos, no quadro de tarefas e em [`decisoes-pendentes-em-grupos.md`](pedidos/anexos/decisoes-pendentes-em-grupos.md).
 - **Arranjo das plantas (22/11):** o dono reprovou o layout; o Arquiteto tem método novo ([apostila 2](ebook/referencias/ARQUITETO.md)). Em 23/11: só as 3 do lançamento refeitas, uma por vez, com o máximo de cuidado. A [pesquisa de 22/11](ebook/referencias/ARQUITETO.md) traz a régua federal e 5 ideias (seção 5).
 - **Banheiros abaixo de 1,10 m livres** (18 casas, contagem de 22/11) e nota de clima por zona bioclimática: decidir ao refazer cada casa.
 - **Calculadora do parceiro:** compartilhar a página com ele (menu Share). Os dados saem do validador; republicar a página publicada.
@@ -29,9 +29,9 @@
 - **Vídeos guardados (22/11):** assistir ao convite (`video/saida/convite/`, passeio pela F03, o último feito) e ao principal de 21/11 (`video/saida/principal/`); os outros foram apagados para refazer do zero. Dizer o que é "pagar por mais" e se libera o OpenArt para a versão realista.
 - **Vídeo (aberto pelo dono em 21/11):** refazer do zero pelo plano de `contexto/dono/RETROSPECTIVA.md`; criar o Instagram e configurar a MinoAI Frontier no PC com Windows do dono (WSL).
 - **Imagens 2D dos posts** estão desatualizadas para C03, E04, F02, F05, S03 e S09, e a C01 redesenhada: refazer quando a frente de animação abrir.
-- **Chefe de gabinete (23/11):** para o `bom-dia` ver agenda e e-mail, conectar Gmail e Google Calendar em claude.ai (Conectores) e abrir conversa nova; preencher a meta da semana (`PAINEL.md`, seção 6).
+- **Chefe de gabinete:** conectar o Google Calendar em claude.ai (Conectores) para o `bom-dia` ver a agenda.
 - Informar quanto resta do limite semanal (Configurações → Uso) para fechar o [orçamento](ORCAMENTO.md) em números.
-- Atualizar o relatório jurídico com Caixa e Confea (pedido antes, sem resposta).
+- Atualizar o relatório jurídico com Caixa e Confea.
 
 ## Ferramentas: o que cada uma é (e o que não é)
 
