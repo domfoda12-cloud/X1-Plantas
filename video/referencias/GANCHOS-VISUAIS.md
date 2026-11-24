@@ -93,3 +93,21 @@ O dono mandou como "referência de humor" para os quadrinhos cômicos do e-book:
 6. Narração em segunda pessoa ("você"), frases curtas, legenda grande palavra por palavra, 3 cortes nos primeiros 5 segundos, 26 segundos no total, e fecha com "manda para quem...".
 
 **O que trazer para nós:** a estrutura (aperto real de quem constrói, ideia absurda com lógica, escalada) e o visual isométrico low-poly, que combina com o nosso motor 3D. **O que não trazer:** os palavrões (o original tem um em quase toda frase; a análise aponta risco de alcance menor) e a marca "semigenius", que é deles. A piada nunca pode ensinar gambiarra de obra como solução de verdade: o absurdo tem de ser impossível à primeira vista, e o quadrinho fecha com o jeito certo (medir o lote, falar com o engenheiro).
+
+## Referência do dono: a obra explicada por falha e conserto (24/11/2026)
+
+O dono mandou, só com a palavra "Ref": https://www.instagram.com/reel/DfGDJfVvRlD/ (série "Desmontando o Mundo"; animação 3D low-poly, vista isométrica, boneco de pedreiro). Números que a MinoAI Frontier devolveu em 24/11/2026: 5.223.215 visualizações, 623.170 curtidas, 2.755 comentários. A transcrição completa não veio (a ferramenta estourou o tempo); o que segue é da análise quadro a quadro e da legenda.
+
+**A fórmula:**
+1. **Hipótese contra o senso comum**, falada em 4 segundos: "Se você levantar quatro paredes de tijolo em um quadrado, você não vai ter um quarto".
+2. **A falha na tela**: aos 5 segundos as quatro paredes desabam. A promessa do gancho é paga na hora.
+3. **Problema → simulação da falha → conserto de engenharia**, repetido por quase 3 minutos, uma etapa da casa por vez: terra fofa e terra firme, fundação, viga baldrame, umidade e mofo, impermeabilização, argamassa, pilares, viga de amarração, verga e contraverga, telhado, chapisco, reboco, contrapiso, caixa d'água.
+4. Uma palavra grande na tela por ideia (o nome técnico), narração clara, 3 cortes nos primeiros 4 segundos.
+5. Aviso honesto na legenda: "Animação educativa, não um projeto ou guia de construção."
+6. Fecha pedindo comentário com uma palavra ("comente pedreiro / servente").
+
+**Pontos fracos que a análise aponta:** o primeiro segundo é o boneco parado; o efeito de rebobinar cansa na segunda vez; listas paradas de material ("cimento + areia + água") baixam o ritmo.
+
+**O que trazer:** a estrutura "o que dá errado se você pular esta etapa → o que resolve", para o bônus "checklist da obra por fase" e para um vídeo; o visual low-poly isométrico, que o nosso motor 3D já faz; o aviso na legenda. **O que não trazer:** ensinar a construir (o nosso produto é a planta: o engenheiro decide fundação, pilar e viga); nenhuma medida ou traço de material.
+
+**Atenção, o título:** a legenda desse vídeo começa com "**Antes do primeiro tijolo**, já existe muita engenharia embaixo do chão." É a mesma expressão do título do nosso e-book. É frase comum, não marca que alguém registrou (não conferido em base de marcas), mas um vídeo de 5,2 milhões de visualizações com ela pode ajudar (a frase já soa familiar) ou confundir (parecer que copiamos). Decisão do dono.
