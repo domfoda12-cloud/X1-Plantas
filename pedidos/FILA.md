@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-25 | [Prompt novo que interfere no antigo: rodar o novo ou juntar ao antigo](2026-11/2026-11-25-2056-prompt-novo-que-interfere-no-antigo-rodar-o-novo-ou-juntar-a.md) | aberta | Maestro. |
 | 2026-11-25 | [Sistema do projeto fazendo o Instagram de IA; o que manter e o que nao repetir num recomeco](2026-11/2026-11-25-1635-sistema-do-projeto-fazendo-o-instagram-de-ia-o-que-manter-e-.md) | aberta | Maestro responde; com o sim do dono, monta o kit enxuto no repositório novo. |
 | 2026-11-25 | [Quais os maiores erros do projeto](2026-11/2026-11-25-1632-quais-os-maiores-erros-do-projeto.md) | aberta | Maestro responde; nada muda sem o dono decidir. |
 | 2026-11-25 | [Juri mais estrito](2026-11/2026-11-25-1625-juri-mais-estrito.md) | aberta | Maestro propõe e, com o sim do dono, reescreve `CONSELHO.md` 5b; o supervisor confere na p |
