@@ -4,6 +4,8 @@
 
 **Prompt (palavra por palavra):** Também gostaria que o juri fosse mais stricit é possivel?
 
+*Recado de 25/11 16:29:* sim, gostei das regras voce ta ficando bom!
+
 **O que ele pediu, parte por parte:** Que o júri seja mais estrito, e se isso é possível.
 
 **Por que ele pediu, ou o que quer descobrir:** Junto com "nunca confie na primeira coisa que pensar" (ficha 1623): menos aprovação fácil, menos erro que passa.

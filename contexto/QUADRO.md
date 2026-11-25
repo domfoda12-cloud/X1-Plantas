@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`)
+
+- **O dono pediu:** "Queria testar algo no nosso sistema também, 'nunca confie na primeira coisa que pensar' o que acha?" ("sim" ao teste); "Também gostaria que o juri fosse mais stricit é possivel?" ("sim, gostei das regras").
+- **O que mudou:** `CONSELHO.md` 5b: cada jurado aponta 2 defeitos com arquivo e linha antes da nota; qualquer nota abaixo de 7 reprova; o presidente confere 5 fatos e quem afirmou fato falso perde a nota; prova com erro plantado a cada 3 rodadas e quem não pegar perde peso. Máximo de 2 rodadas mantido. **Teste de 3 fichas da segunda olhada:** antes de número, frase ao público, comando que grava ou apaga, ou gasto, a ficha tem "Segunda olhada" (primeira ideia, alternativa, o que provaria o erro, o que a conferência mostrou).
+- **Todos:** escrevam a segunda olhada nesses 4 casos. **Jurados:** sem 2 defeitos com prova, a nota não conta. **Supervisor:** confere a contagem da segunda olhada na próxima auditoria. **Designer:** a D50 é a primeira ficha do teste.
+
 ## 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`)
 
 - **O dono pediu:** "o pdf está sem identidade alguma, acredito que a ultima coisa importante a se fazer antes do reset é solidificar uma identidade e deixar ela presente em tudo que criamos. Nao estava feio, estava bonito organizado mas sem chamar atencao alguma, a pessoa vai ler aquilo em 2min vai parar. Nossa geracao é a geracao dopamina".
@@ -25,9 +31,3 @@
 - **O dono pediu:** "O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem".
 - **O que mudou:** todo texto do Redator começa por um plano (para quem, o que precisa conter, fonte de cada número, o que depende do dono, "pronto quando"), montado ou conferido pelo Planejador; texto sem plano não vai ao Revisor. Convivência, linha 17.
 - **Todos:** plano curto antes de fazer; trabalho com mais de 3 passos passa pelo Planejador. **Redator:** plano no começo do anexo. **Planejador:** monta ou confere o plano de cada texto. **Maestro:** manda o plano junto do pedido ao Redator.
-
-## 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`)
-
-- **O dono pediu:** "Quero terminar o ebook o que falta. Falta uma separacao exata do que estamos trabalhando e vamos implementar pro cliente, temos que terminar tudo 1 por 1 comecando pelo E book".
-- **O que mudou:** existe a separação em `pedidos/anexos/o-que-vai-ao-cliente-2026-11-24.md`: o que o cliente recebe, o que é só ferramenta nossa, e os 10 passos que faltam para o e-book.
-- **Todos:** só se trabalha nos 10 passos do e-book, na ordem, um por vez. Sistema, Instagram, vitrines e vídeo esperam. **Planejador:** a ordem do topo do plano segue essa tabela.
