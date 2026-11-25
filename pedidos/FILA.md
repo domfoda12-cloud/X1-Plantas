@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-25 | [prompt audit (skill claude-api): relatorio e diff, nada aplicado](2026-11/2026-11-25-1544-prompt-audit-skill-claude-api-relatorio-e-diff-nada-aplicado.md) | aberta | Maestro. |
 | 2026-11-24 | [e-book inteiro: mostrar a dor do comprador e dar a solucao](2026-11/2026-11-24-2130-e-book-inteiro-mostrar-a-dor-do-comprador-e-dar-a-solucao.md) | aberta | Planejador (mapa); depois Redator com o Planejador, e Revisor. |
 | 2026-11-24 | [redator sempre com o planejador; todos planejam bem](2026-11/2026-11-24-2119-redator-sempre-com-o-planejador-todos-planejam-bem.md) | aberta | Maestro (regra e avisos). |
 | 2026-11-24 | [terminar o e-book: o que falta e separar o que vai ao cliente](2026-11/2026-11-24-2050-terminar-o-e-book-o-que-falta-e-separar-o-que-vai-ao-cliente.md) | aberta | Maestro (separação); a equipe segue os 10 passos, um por vez. |
