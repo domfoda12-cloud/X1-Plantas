@@ -10,6 +10,8 @@ Era isso que quis dizer, mas acho que está faltando algum /
 2 ok
 4pause
 
+*Recado de 25/11 23:04:* git apply -p1 pedidos/anexos/prompt-audit-2026-11-25.diff
+
 **O que ele pediu, parte por parte:** 1) "prompt audit". 2) Com o reel do comando prompt-audit da skill claude-api: "Era isso que quis dizer, mas acho que está faltando algum /" (faltou a barra: /claude-api prompt-audit).
 
 **Por que ele pediu, ou o que quer descobrir:** O reel diz que instruções escritas para modelos antigos pioram o Opus 5.5 e gastam mais; ele trocou a sessão para o Opus 5.5 e quer economizar.
@@ -28,9 +30,9 @@ Era isso que quis dizer, mas acho que está faltando algum /
 
 **Conferência:** `git apply --check -p1 pedidos/anexos/prompt-audit-2026-11-25.diff`.
 
-**Resultado:** (a preencher)
+**Resultado:** aplicado a pedido do dono ("git apply -p1 ...", 25/11 15:53): achados 1 a 8 em `ce87722`; `salvar.py` assina pelo modelo da sessão (`a554953`); `plano.py` com no máximo 2 em "Agora".
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** maestro: registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento.
 
-**Papéis afetados:** ninguém (nada aplicado)
+**Papéis afetados:** planejador, redator, maestro
 
