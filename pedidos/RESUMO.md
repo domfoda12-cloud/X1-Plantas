@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 69 documentos
+## Os 74 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: A ordem das próximas 5 tarefas (uma por vez); O objetivo da equipe; Onde estamos (24/11, 20h50, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: o júri já decidiu, agora espera o dono (cartões do Canteiro); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); ….
 
-Tamanho: 14079 palavras.
+Tamanho: 14035 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -157,6 +157,14 @@ Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-
 
 Tamanho: 517 palavras.
 
+### [Frases das 5 páginas: rascunho para o reset (25/11/2026)](anexos/frases-das-5-paginas-2026-11-25.md)
+
+Ficha: `pedidos/2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-reset.md`. Autor: Redator. É rascunho: nada mudou em `ebook/fichas/textos.py`, `ebook/gerador/livro.py` nem no `config.json`. Só entra no gerador se o dono escolher (perguntas 1 a 3 da seção 6 do mapa) e o Revisor de…
+
+Seções: 0. Plano do texto (segue o plano do Planejador: `pedidos/anexos/mapa-dor-solucao-do-ebook-2026-11-24.md`, seções 1, 3 e 5); 1. Pág. 8 · C01, "Para quem é" (jeito: a pergunta que ele já se faz, no molde da E03) · dor D1; 2. Pág. 12 · F01, "Para quem é" (jeito: o exemplo concreto da família que cresce) · dor D7, só a parte da família; 3. Pág. 23 · "Do e-book até a chave na mão", abertura nova antes do passo 1 (jeito: a cena de quem só tem o desenho) · dor D3; 4. Pág. 22 · "Ficha do meu terreno", abertura (jeito: a pergunta que ele vai ouvir) · dores D3 e D8; 5. Pág. 17 · "As palavras da obra", abertura (jeito: o detalhe que ele reconhece) · dores D3 e D8; 6. Recomendação do Redator; 7. Riscos para o Revisor de risco; 8. Reconferência dos pedidos (ficha 1612 e recado do Maestro); Leitura do Revisor (25/11).
+
+Tamanho: 2409 palavras.
+
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
 Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
@@ -164,6 +172,14 @@ Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo;
 Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
 Tamanho: 4137 palavras.
+
+### [Identidade visual forte em tudo: diagnóstico, 3 direções e amostras (D50, 25/11/2026)](anexos/identidade-2026-11-25.md)
+
+Pedido do dono (25/11), palavra por palavra: "o pdf está sem identidade alguma, acredito que a ultima coisa importante a se fazer antes do reset é solidificar uma identidade e deixar ela presente em tudo que criamos. Nao estava feio, estava bonito organizado mas sem chamar atencao alguma, a pessoa…
+
+Seções: 0. Plano (skill `design-editorial`); 1. O que o Diretor (MinoAI Frontier) disse, e o que eu levei; 2. Diagnóstico: por que o leitor larga em 2 minutos; 3. As 3 direções; 4. As amostras; 5. Recomendação; 6. Ordem de entrada no gerador (para o reset ser braçal); 7. Manual (preencher depois da escolha do dono); 8. Onde entra, arquivo por arquivo (preencher depois da escolha do dono); 9. O que só o dono decide.
+
+Tamanho: 4180 palavras.
 
 ### [Perfil novo do Instagram, 3ª rodada: a identidade do Lote Carente (24/11/2026)](anexos/instagram-identidade-lote-carente-2026-11-24.md)
 
@@ -268,6 +284,14 @@ Tamanho: 10600 palavras.
 Seções: 0. Quais anúncios podem rodar e quais esperam; 1. Diagnóstico antes de escrever (skill, seções 1 e 2); 2. O que é igual nos 3 anúncios; 3. Anúncio A: Casa Fita (lote de 5 x 25); 4. Anúncio B: Família Compacta (lote de 10 x 15); 5. Cuidado do anúncio B: quem chega com 8 ou 9 m de frente; 6. Anúncio C: Casa Compacta (lote de 8 x 15). ESPERA A DECISÃO DO DONO; 7. Como anotar a origem, sem dado pessoal no repositório; 8. O que medir por anúncio, e quando parar; 9. Para o Revisor de risco (frases, uma por linha); 10. Perguntas ao dono (uma por linha); 11. Conformidade (skill, seção 4).
 
 Tamanho: 5730 palavras.
+
+### [Kit de partida: o Instagram 100% feito por IA (25/11/2026)](anexos/kit-instagram-ia-2026-11-25.md)
+
+Decisões do dono (25/11; ULTIMO.md e ficha `2026-11-25-1612`): projeto solo, depois do e-book; estudado a partir de @science_in_8bit, sem copiar o nicho dele (ciência em 8 bits) e sem "AI slop"; o dono cria a conta e posta (a conta pede o e-mail e o telefone dele); só ferramentas grátis; língua e…
+
+Seções: 1. O que o dono faz (uma vez); 2. O estudo, em passos (cada um termina antes do próximo); 3. As regras do repositório novo (CLAUDE.md inicial); 4. O primeiro prompt da conversa nova (para o dono colar); 5. Perguntas que ficam para o dono (no início do projeto novo).
+
+Tamanho: 753 palavras.
 
 ### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
 
@@ -389,6 +413,14 @@ Seções: (a) O que a regra de hoje proíbe; (b) O que pode soltar sem risco; (c
 
 Tamanho: 966 palavras.
 
+### [Roteiro do reset: só o trabalho braçal (25/11/2026)](anexos/roteiro-do-reset-2026-11-25.md)
+
+Pedido do dono (ficha `2026-11-25-1612`): "Ate o reset quero que deixe tudo absolutamente planejado preparado e clean para quando chegar no reset voce só ter que fazer o trabalho bracal". Recado da mesma hora (ficha `2026-11-25-1613`): a identidade visual vem antes, "a ultima coisa importante a se…
+
+Seções: 0. Estado na hora de fechar (conferir antes de começar); 1. A mensagem ao dono, logo no reset (uma só, com tudo); 2. Em ordem, um por vez; 3. Depois do e-book (não no mesmo dia, a menos que o dono peça); 4. O que não fazer no reset.
+
+Tamanho: 935 palavras.
+
 ### [Skills candidatas, 24/11/2026: júri, casas, cooperação e venda (passo 1 da pesquisa)](anexos/skills-candidatas-2026-11-24.md)
 
 Pesquisador (Sonnet), 24/11/2026. Pedido do dono: "procure mais skills, talvez o júri precise de ajuda com uma". Passo 1 de 2: achados com fonte. Quem conclui é o Opus; o Revisor de risco tem veto. Nada foi baixado, instalado nem executado. Só páginas públicas lidas pelo TinyFish (busca e leitura,…
@@ -480,6 +512,12 @@ Passo A1 do `pedidos/PLANO.md`. O Revisor leu o PDF direto: 17 páginas do e-boo
 Seções: Trocas que não dependiam do dono; Depende do dono; Não conferido pelo Revisor.
 
 Tamanho: 350 palavras.
+
+### [Veto das frases das 5 páginas (rascunho, 25/11/2026)](anexos/veto-frases-das-5-paginas-2026-11-25.md)
+
+Leitura do `revisor-de-risco` no Opus (rascunho) das versões de `frases-das-5-paginas-2026-11-25.md`. Ficha `2026-11-25-1612`. A peça final volta ao Revisor no Fable (D4); até lá, este SIM é provisório. Números conferidos contra `ebook/plantas/PLANTAS.md`, `ebook/plantas/dados/C01.json`,…
+
+Tamanho: 475 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 

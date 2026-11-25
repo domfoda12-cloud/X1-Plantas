@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`); 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`); 24/11 · Terminar o e-book, um por um (ficha `2026-11-24-2050`); 24/11 · Visita 3D mais realista: guardada para depois (ficha `2026-11-24-2046`); 24/11 · Desacelerar: uma tarefa por vez (ficha `2026-11-24-2043`); Agora; 23/11 · Lançamento com 3 casas; título, preço e entrega decididos.
+Seções: 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`); 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`); 25/11 · Tudo pronto para o reset; Instagram de IA com repositório próprio (ficha `2026-11-25-1612`); 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`); 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`).
 
-Tamanho: 1151 palavras.
+Tamanho: 824 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

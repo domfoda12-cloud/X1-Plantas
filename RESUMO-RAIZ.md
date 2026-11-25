@@ -33,7 +33,7 @@ Lido por toda sessão via `CLAUDE.md`. Para rodar: a skill `conselho` (`/conselh
 
 Seções: 1. Por que existe; 2. Os membros; 3. Como uma opinião é dada; 4. Como se decide; 5. Conselho de bolso x conselho completo; 5b. Modo júri (método do llm-council, 23/11/2026); 6. Skill ou agente novo: o roteiro de entrada; 6b. Ficha do pedido e ciclo de reconferência (regra do dono, 22/11/2026); 7. Registro de decisões do Conselho.
 
-Tamanho: 3021 palavras.
+Tamanho: 3105 palavras.
 
 ### [Histórico completo: a linha do tempo dos pedidos do dono](CONTEXTO-HISTORICO.md)
 
@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1341 palavras.
+Tamanho: 1442 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 
@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 1161 palavras.
+Tamanho: 1203 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 
