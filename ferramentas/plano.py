@@ -158,7 +158,8 @@ def gravar(linhas):
 def falta_no_juri(pid):
     """O que falta à decisão J<n> no arquivo do júri (seção '## J1' ou linha de tabela '| J1 |'); lista vazia = pode fechar (F24)."""
     t = JURI.read_text(encoding="utf-8") if JURI.exists() else ""
-    m = re.search(rf"^## {pid}\b.*?(?=^## |\Z)|^\| {pid} \|[^\n]*", t, re.S | re.M)
+    # a seção vem primeiro: uma tabela de notas antes dela também tem a linha "| J1 |"
+    m = re.search(rf"^## {pid}\b.*?(?=^## |\Z)", t, re.S | re.M) or re.search(rf"^\| {pid} \|[^\n]*", t, re.M)
     if not m:
         return [f"a seção '## {pid}' (ou a linha '| {pid} |')"]
     bloco = m.group(0).replace("*", "").replace("`", "").lower()
