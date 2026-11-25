@@ -21,9 +21,9 @@
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano).
+Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano); Auditoria 25/11 (trabalho do Maestro em 24 e 25/11; gravada achado por achado, o limite de uso estava no fim).
 
-Tamanho: 6681 palavras.
+Tamanho: 7018 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 

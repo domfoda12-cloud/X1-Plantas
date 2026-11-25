@@ -1,0 +1,27 @@
+# Teste de viabilidade: reel em pixel art só com código
+
+**Resultado: funciona.** Sem nada pago, sem instalar nada (Pillow 12.3.0 e ffmpeg 6.1.1 já estavam na máquina).
+
+## Arquivos
+- `reel_pixel.py`: o script (`python3 reel_pixel.py [saida.mp4]`)
+- `reel-teste.mp4`: o reel gerado
+- `quadro-60.png`: um quadro de amostra (lâmpada acesa, contador em 67%)
+
+## Como funciona
+- Desenha numa grade de 135x240 "pixels grandes" e amplia 8x com NEAREST para 1080x1920 (borda dura, sem borrão).
+- Fundo (céu noturno com pontilhado, parede, piso xadrez) desenhado uma vez só; cada quadro copia o fundo.
+- Lâmpada desenhada à mão como mapa de caracteres; pisca nos quadros 24 a 29 e acende no 30, com halo pontilhado que pulsa e raios.
+- Contador de 0 a 100% numa fonte 3x5 desenhada à mão (dígitos e %), com sombra de 1 pixel.
+- Quadros crus vão direto para o ffmpeg pelo stdin (sem PNG no disco): libx264, CRF 18, `-tune animation`, yuv420p, faststart.
+
+## Números (medidos)
+- Render total: **1,4 s** para 90 quadros (script inteiro com ffmpeg, `time` real 1,5 s).
+- Arquivo: **40 KB**.
+- ffprobe: h264, 1080x1920, 30/1 fps, 90 quadros, 3,000 s.
+
+## O que faltou / limites
+- Sem áudio (trilha ou locução teria de entrar por outro passo do ffmpeg).
+- Arte é de teste: lâmpada pequena (13x17 células), o "%" de 3x5 lê mal; para peça final precisaria de sprites maiores, uma fonte pixel com letras e acentos (para frases em português) e uma paleta definida pelo Designer.
+- Sem easing nem transições: contador linear, acendimento binário.
+- CRF 18 com chroma 4:2:0 pode borrar levemente bordas de cores saturadas (amarelo sobre roxo); para final, testar CRF menor ou `-x264-params` ajustado, e conferir depois da recompressão do Instagram.
+- Não foi conferido no celular nem subido em rede nenhuma.
