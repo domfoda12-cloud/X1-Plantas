@@ -140,3 +140,8 @@ Para testar depois (quando houver venda): pág. 8 A contra B, medindo a resposta
 - Recomendação e riscos: **cumpre** (seções 6 e 7).
 - Leitura do Revisor (item 2 do "pronto quando" da ficha): **em aberto**, é do Revisor de risco, chamado pelo Maestro.
 - Não mudar gerador nem `config.json`: **cumpre**. Não conferi a prévia (nada foi gerado: as páginas só podem ser medidas depois da troca, no reset).
+
+
+## Leitura do Revisor (25/11)
+
+Veredito em [`veto-frases-das-5-paginas-2026-11-25.md`](veto-frases-das-5-paginas-2026-11-25.md): 9 de 10 passam (2 com troca), a 23 B vetada com correção. Na hora de colar, use a versão **com a troca do Revisor**.

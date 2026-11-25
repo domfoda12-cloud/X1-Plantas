@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 69 documentos
+## Os 72 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -157,6 +157,14 @@ Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-
 
 Tamanho: 517 palavras.
 
+### [Frases das 5 páginas: rascunho para o reset (25/11/2026)](anexos/frases-das-5-paginas-2026-11-25.md)
+
+Ficha: `pedidos/2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-reset.md`. Autor: Redator. É rascunho: nada mudou em `ebook/fichas/textos.py`, `ebook/gerador/livro.py` nem no `config.json`. Só entra no gerador se o dono escolher (perguntas 1 a 3 da seção 6 do mapa) e o Revisor de…
+
+Seções: 0. Plano do texto (segue o plano do Planejador: `pedidos/anexos/mapa-dor-solucao-do-ebook-2026-11-24.md`, seções 1, 3 e 5); 1. Pág. 8 · C01, "Para quem é" (jeito: a pergunta que ele já se faz, no molde da E03) · dor D1; 2. Pág. 12 · F01, "Para quem é" (jeito: o exemplo concreto da família que cresce) · dor D7, só a parte da família; 3. Pág. 23 · "Do e-book até a chave na mão", abertura nova antes do passo 1 (jeito: a cena de quem só tem o desenho) · dor D3; 4. Pág. 22 · "Ficha do meu terreno", abertura (jeito: a pergunta que ele vai ouvir) · dores D3 e D8; 5. Pág. 17 · "As palavras da obra", abertura (jeito: o detalhe que ele reconhece) · dores D3 e D8; 6. Recomendação do Redator; 7. Riscos para o Revisor de risco; 8. Reconferência dos pedidos (ficha 1612 e recado do Maestro); Leitura do Revisor (25/11).
+
+Tamanho: 2409 palavras.
+
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
 Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
@@ -268,6 +276,14 @@ Tamanho: 10600 palavras.
 Seções: 0. Quais anúncios podem rodar e quais esperam; 1. Diagnóstico antes de escrever (skill, seções 1 e 2); 2. O que é igual nos 3 anúncios; 3. Anúncio A: Casa Fita (lote de 5 x 25); 4. Anúncio B: Família Compacta (lote de 10 x 15); 5. Cuidado do anúncio B: quem chega com 8 ou 9 m de frente; 6. Anúncio C: Casa Compacta (lote de 8 x 15). ESPERA A DECISÃO DO DONO; 7. Como anotar a origem, sem dado pessoal no repositório; 8. O que medir por anúncio, e quando parar; 9. Para o Revisor de risco (frases, uma por linha); 10. Perguntas ao dono (uma por linha); 11. Conformidade (skill, seção 4).
 
 Tamanho: 5730 palavras.
+
+### [Kit de partida: o Instagram 100% feito por IA (25/11/2026)](anexos/kit-instagram-ia-2026-11-25.md)
+
+Decisões do dono (25/11; ULTIMO.md e ficha `2026-11-25-1612`): projeto solo, depois do e-book; estudado a partir de @science_in_8bit, sem copiar o nicho dele (ciência em 8 bits) e sem "AI slop"; o dono cria a conta e posta (a conta pede o e-mail e o telefone dele); só ferramentas grátis; língua e…
+
+Seções: 1. O que o dono faz (uma vez); 2. O estudo, em passos (cada um termina antes do próximo); 3. As regras do repositório novo (CLAUDE.md inicial); 4. O primeiro prompt da conversa nova (para o dono colar); 5. Perguntas que ficam para o dono (no início do projeto novo).
+
+Tamanho: 753 palavras.
 
 ### [Leis e regras conferidas no texto oficial (23/11/2026)](anexos/leis-conferidas-2026-11-23.md)
 
@@ -388,6 +404,14 @@ Revisor de risco, 24/11/2026 (Opus). Pedido do dono no quadro: "Quero dar uma ol
 Seções: (a) O que a regra de hoje proíbe; (b) O que pode soltar sem risco; (c) O que continua proibido, e por quê; (d) Onde o dono quer a linha (três perguntas, uma por cartão); Conferência; Nota do Maestro.
 
 Tamanho: 966 palavras.
+
+### [Roteiro do reset: só o trabalho braçal (25/11/2026)](anexos/roteiro-do-reset-2026-11-25.md)
+
+Pedido do dono (ficha `2026-11-25-1612`): "Ate o reset quero que deixe tudo absolutamente planejado preparado e clean para quando chegar no reset voce só ter que fazer o trabalho bracal". Recado da mesma hora (ficha `2026-11-25-1613`): a identidade visual vem antes, "a ultima coisa importante a se…
+
+Seções: 0. Estado na hora de fechar (conferir antes de começar); 1. A mensagem ao dono, logo no reset (uma só, com tudo); 2. Em ordem, um por vez; 3. Depois do e-book (não no mesmo dia, a menos que o dono peça); 4. O que não fazer no reset.
+
+Tamanho: 935 palavras.
 
 ### [Skills candidatas, 24/11/2026: júri, casas, cooperação e venda (passo 1 da pesquisa)](anexos/skills-candidatas-2026-11-24.md)
 

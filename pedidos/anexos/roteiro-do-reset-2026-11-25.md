@@ -13,7 +13,7 @@
 
 Mande isto e espere a resposta. O trabalho que não depende dela começa já (passo 2).
 
-> 1. **Páginas da dor e saída** (frases prontas no anexo): mudar (a) as 5, (b) só as 2 das casas (8 e 12), (c) nenhuma agora.
+> 1. **Páginas da dor e saída** (frases prontas e lidas pelo Revisor: `veto-frases-das-5-paginas-2026-11-25.md`): mudar (a) as 5, (b) só as 2 das casas (8 e 12), (c) nenhuma agora. Se a pág. 8 mudar: o título da pág. 9 passa de "Cabe num lote de 8 x 15 m" para "Deve caber num lote de 8 x 15 m"?
 > 2. **Título:** "A casa do seu lote", "Errar na planta sai caro", "Sua casa antes da obra" ou o atual, "Antes do primeiro tijolo".
 > 3. **"Gera o PDF"**: posso gravar a versão oficial em `ebook/saida/`?
 > 4. **Pasta no Drive:** posso criar? Com qual nome (sugestão: o título)?
@@ -29,7 +29,7 @@ A identidade já foi escolhida antes do reset (ficha `1613`). Se não foi, ela �
 | # | Passo | Quem | Comando ou arquivo | Pronto quando | Espera |
 |---|---|---|---|---|---|
 | 1 | Aplicar a identidade escolhida no gerador (tokens no `livro.css`, sinal próprio, ritmo de página) | Designer faz, Maestro confere | a lista "onde entra" do `identidade-2026-11-25.md` | `python3 ebook/gerador/livro.py --previa <pasta> --duas-partes` sem página estourada; as páginas-amostra aprovadas batem com a prévia | identidade escolhida |
-| 2 | Colar as frases escolhidas | Maestro (é só colar) | as linhas "trocar" do `frases-das-5-paginas-2026-11-25.md` | `pdftotext -f N -l N` de cada página mostra o texto novo, sem estouro | resposta 1 |
+| 2 | Colar as frases escolhidas, já com as trocas do Revisor | Maestro (é só colar) | as linhas "trocar" do `frases-das-5-paginas-2026-11-25.md` + as trocas do `veto-frases-das-5-paginas-2026-11-25.md` | `pdftotext -f N -l N` de cada página mostra o texto novo, sem estouro | resposta 1 |
 | 3 | Trocar o título (D48 dentro do D3) | Maestro; Redator troca os 2 arquivos da lista do J2 | `ebook/config.json`, `atributos-que-vendem.md`, `VISUAL.md` | `config.json` com o título da fala do dono; "de referência" na capa | resposta 2 |
 | 4 | `python3 ferramentas/checar.py` | Maestro | | verde | 1 a 3 |
 | 5 | Gerar o oficial (D3) | Maestro | `python3 ebook/gerador/livro.py` (grava `ebook.pdf` e `bonus.pdf`) | os 2 arquivos em `ebook/saida/` com a hora nova; `checar.py` com "o PDF não cita preço" | resposta 3 |
