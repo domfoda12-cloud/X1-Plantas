@@ -4,6 +4,8 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-25 | [Identidade visual forte em tudo, para a geracao dopamina](2026-11/2026-11-25-1613-identidade-visual-forte-em-tudo-para-a-geracao-dopamina.md) | aberta | Diretor (MinoAI Frontier) opina primeiro; Designer faz o diagnóstico, as direções e as amo |
+| 2026-11-25 | [Deixar tudo planejado e pronto para o reset](2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-reset.md) | aberta | Maestro: roteiro, kit do Instagram, limpeza do plano. Redator: as 5 frases (plano = seção  |
 | 2026-11-25 | [reel do /ship e /steward: o que aproveitar; cuidado com o reel do prompt-audit](2026-11/2026-11-25-1549-reel-do-ship-e-steward-o-que-aproveitar-cuidado-com-o-reel-d.md) | aberta | Maestro. |
 | 2026-11-25 | [prompt audit (skill claude-api): relatorio e diff, nada aplicado](2026-11/2026-11-25-1544-prompt-audit-skill-claude-api-relatorio-e-diff-nada-aplicado.md) | aberta | Maestro. |
 | 2026-11-24 | [e-book inteiro: mostrar a dor do comprador e dar a solucao](2026-11/2026-11-24-2130-e-book-inteiro-mostrar-a-dor-do-comprador-e-dar-a-solucao.md) | aberta | Planejador (mapa); depois Redator com o Planejador, e Revisor. |
