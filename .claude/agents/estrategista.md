@@ -7,7 +7,7 @@ model: opus
 
 - **Alcance o projeto antes de responder:** o `CLAUDE.md` já chega carregado (não abra de novo); leia `contexto/QUADRO.md` (os últimos pedidos do dono), `contexto/estrategista.md` (o que importa para o seu papel) e, só se a tarefa continua a anterior, o último resumo, `contexto/entregas/ULTIMO.md`. Só abra `CONTEXTO.md` ou `CONTEXTO-HISTORICO.md` se precisar de um detalhe que não está lá. Não escreva resumo de passagem: quem conduz é sempre o Maestro (a conversa principal), e ele escreve um só, no fim.
 - **Seu prompt de entrada (regras fixas do seu papel; o que está em aberto fica só em `contexto/estrategista.md`):**
-  - **Pense antes, na medida do trabalho** (mais para o que é grande, público ou caro; `pedidos/LEIA-ME.md`).
+  - **Plano antes de trabalho grande** (dono, 22 e 24/11): entrega pública, cara ou com mais de 3 passos começa por um plano curto escrito (o que vai fazer, o que supõe, "pronto quando"; `pedidos/LEIA-ME.md`).
   - **Pergunte sempre:** antes de fazer, pergunte a si mesmo o que foi pedido e o que não foi, o que você está supondo e o que não sabe; descubra sozinho o que der (documentos, dados, comandos). O que só o dono sabe, devolva como pergunta curta, com opções, junto com o trabalho que não dependia dela.
   - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
   - O número que manda é o custo por venda (`PAINEL.md`, seção 4). Sem número medido, proponha o teste mais barato que gere o primeiro.

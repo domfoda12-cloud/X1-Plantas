@@ -193,19 +193,19 @@ def cmd_respondido(n, nota):
 
 
 def cmd_subir(ids):
-    """Move a linha de cada passo para o fim da tabela de "Agora". Só passo livre (nada falta) e até o limite de 3 abertos."""
+    """Move a linha de cada passo para o fim da tabela de "Agora". Só passo livre (nada falta); sem argumento sobe um só (dono, 24/11: uma tarefa por vez), e o limite é 2 abertos (a principal e um apoio)."""
     linhas, passos, decisoes = ler()
     abertos = [p["id"] for p in passos.values() if p["secao"] == "agora" and not p["feito"]]
     livres = [p["id"] for p in passos.values() if p["secao"] != "agora" and not p["feito"] and falta(p, passos, decisoes) == ([], [])]
     if not ids:
-        ids = livres[: max(0, 3 - len(abertos))]
+        ids = livres[: max(0, 1 - len(abertos))]
     for i in ids:
         if i not in passos:
             sys.exit(f"Não existe o passo {i}.")
         if i not in livres:
             sys.exit(f"{i} não pode subir: já está em 'Agora', está feito, ou ainda depende de alguém.")
-    if len(abertos) + len(ids) > 3:
-        sys.exit(f"'Agora' ficaria com {len(abertos) + len(ids)} passos abertos; o máximo é 3.")
+    if len(abertos) + len(ids) > 2:
+        sys.exit(f"'Agora' ficaria com {len(abertos) + len(ids)} passos abertos; o máximo é 2 (a tarefa principal e um apoio).")
     if not ids:
         print("Nada para subir."); return
     textos = [linhas[passos[i]["linha"]] for i in ids]
@@ -269,8 +269,8 @@ def cmd_conferir():
         erros += [f"{p['id']} está em 'Agora' e mexe em '{p['onde']}': vídeo e animação só abrem depois do D13 feito (uma coisa por vez: primeiro o e-book vende)"
                   for p in passos.values() if p["secao"] == "agora" and not p["feito"] and re.search(r"video/|animacoes-3d/", p["onde"])]
     abertos_agora = [p["id"] for p in passos.values() if p["secao"] == "agora" and not p["feito"]]
-    if len(abertos_agora) > 3:
-        erros.append(f"'Agora' tem {len(abertos_agora)} passos abertos; o máximo é 3")
+    if len(abertos_agora) > 2:  # dono, 24/11, 20:45: uma tarefa principal e no máximo um apoio
+        erros.append(f"'Agora' tem {len(abertos_agora)} passos abertos; o máximo é 2 (a tarefa principal e um apoio)")
     # regra do dono (24/11/2026): "Sempre coloque algo no Agora, nunca pare"
     if not abertos_agora:
         erros.append("'Agora' está vazio: suba um passo livre da fila da equipe ou de 'Depois' (regra do dono, 24/11: nunca vazio)")

@@ -1,6 +1,6 @@
 # Prompt audit (25/11/2026)
 
-> Pedido do dono (25/11): "prompt audit", com o reel do comando `prompt-audit` da skill `claude-api` ("Era isso que quis dizer"). Feito com o roteiro da skill: relatório e diff proposto. **Nada foi aplicado.** O diff está em `prompt-audit-2026-11-25.diff`, ao lado deste arquivo.
+> Pedido do dono (25/11): "prompt audit", com o reel do comando `prompt-audit` da skill `claude-api` ("Era isso que quis dizer"). Feito com o roteiro da skill: relatório e diff proposto. **Aplicado em 25/11 a pedido do dono** (`git apply`), achados 1 a 8; o 7 já tinha entrado antes, de outro jeito (o nome do modelo vem de `X1_MODELO`); o aviso 9 também entrou (`plano.py`: no máximo 2 em "Agora", `subir` sem argumento sobe um). O diff está em `prompt-audit-2026-11-25.diff`, ao lado deste arquivo.
 
 ## Suposições
 

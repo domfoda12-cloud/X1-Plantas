@@ -12,7 +12,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
 
-**Pense antes e pergunte sempre** (dono, 22/11): mais quanto maior o trabalho; pergunte a si mesmo (pedido, suposição, o que não sabe) e ao dono, sem travar ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
+**Plano antes e pergunte sempre** (dono, 22 e 24/11): trabalho grande começa por plano escrito; o que só o dono sabe vira pergunta, sem travar ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 
 ## O objetivo: a alegria do comprador, que vira Pix
 
@@ -47,6 +47,6 @@ Toda entrega tem **uma ficha só**, em `pedidos/` ([`pedidos/LEIA-ME.md`](pedido
 - Planta nova só entra se passar em `python3 ferramentas/plantas.py validar`.
 - **Arquivo fica junto do que tem a mesma função** (dono, 22/11/2026): vídeo pronto em `video/saida/`, clipe em `video/broll/clipes/`. Pelo contexto, não pelo tamanho.
 - **De vez em quando, e sempre antes de entregar:** `python3 ferramentas/checar.py` (código, plantas, 3D e painel). Erro achado é corrigido antes de seguir.
-- Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos, commit e push. **A `main` é a única branch de trabalho** (22/11/2026): toda conversa parte dela e volta para ela. Mudança grande de sistema vai numa branch `sistema/<assunto>` com pull request.
+- Depois de mudar arquivos: `python3 ferramentas/atualizar-painel.py` com zero avisos e `ferramentas/salvar.py` (só salva verde). **A `main` é a única branch de trabalho** (22/11): toda conversa parte dela e volta para ela. Mudança grande de sistema vai em branch `sistema/<assunto>` com pull request.
 - Ferramentas pagas (TinyFish dataset e deep research, anúncios) só com o "sim" do dono.
 - **Skill, agente, plugin ou conector novo alcança tudo antes do primeiro uso** (decisão do dono, 20/11/2026). Segue o roteiro de entrada do [`CONSELHO.md`](CONSELHO.md), seção 6: ler o que ele roda, passar pelo Conselho, registrar, ensinar o projeto, rodar uma vez sobre o que já existe. O inventário de tudo o que a operação pode usar, com o status de cada um, está em [`ECOSSISTEMA.md`](ECOSSISTEMA.md); compare com a lista da sessão no começo de cada sessão nova. O `checar.py` confere.

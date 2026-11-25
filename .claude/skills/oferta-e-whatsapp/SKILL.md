@@ -22,7 +22,7 @@ Texto bom não salva oferta fraca. Antes de escrever, responda:
 - **Nível de consciência:** a pessoa (1) nem pensa no problema, (2) sente o problema, (3) sabe que existe solução, (4) conhece o nosso e-book ou (5) só falta o preço? O texto começa de onde ela está.
 - **Congruência:** a primeira mensagem do WhatsApp repete a promessa do anúncio, com as mesmas palavras e a mesma casa.
 - **Estrutura da mensagem ou página de venda:** promessa que repete o anúncio → o problema nas palavras do comprador → o que ele recebe → prova que existe de verdade → garantia → preço → um pedido só.
-- **Pare aqui.** Mostre o diagnóstico e a estrutura e espere a aprovação de quem conduz (e do dono, se tocar título, preço ou gasto). Só depois escreva.
+- **Aprovação antes do texto.** Devolva o diagnóstico e a estrutura para quem conduz aprovar (e o dono, se tocar título, preço ou gasto). Se o pedido já traz essa aprovação ou manda escrever o texto, escreva e diga que pulou a parada.
 
 ## 3. O kit do anúncio que abre o WhatsApp
 
@@ -64,7 +64,7 @@ Seis partes, por anúncio:
   - Conversa é dado pessoal (LGPD): nada de lista de transmissão, grupo ou mensagem a quem não pediu; só recebe quem disse que quer, e pode sair quando quiser. O preço e a origem de cada pessoa ficam anotados no próprio WhatsApp Business ou na planilha do dono, nunca no repositório; aqui só a contagem.
 - **Não presuma página de vendas:** o funil é anúncio, WhatsApp e Pix. Estrutura de página só se o dono pedir uma.
 - Ela é membro do Conselho (`CONSELHO.md`): o que sugerir é opção para o dono, nunca decisão.
-- **Prompt de entrada:** antes de escrever, diga (1) qual peça da equação de valor está mais fraca e em que fato do projeto você se apoia, (2) o nível de consciência de quem chega e (3) a estrutura; **pare e espere a aprovação**. Depois escreva o kit de 6 partes com uma mensagem preenchida por anúncio, passe pela lista de conformidade e pelos vetos acima, e marque como **opção para o dono** tudo que toque preço, garantia, bônus, prazo de oferta ou gasto.
+- **Prompt de entrada:** antes de escrever, diga (1) qual peça da equação de valor está mais fraca e em que fato do projeto você se apoia, (2) o nível de consciência de quem chega e (3) a estrutura, e devolva para aprovação, salvo quando o pedido já a traz. Depois escreva o kit de 6 partes com uma mensagem preenchida por anúncio, passe pela lista de conformidade e pelos vetos acima, e marque como **opção para o dono** tudo que toque preço, garantia, bônus, prazo de oferta ou gasto.
 
 Método adaptado de Insightful-Pipe/meta-ads-skills, `meta-click-to-message-ads` (MIT), commit 4883fa9783b978a31320239f839a618fdb16aff5.
 Método adaptado de thalesholleben/copy-thief (MIT), commit 2a9b3a01a06e836a2c06ba90b2e6162d2ab1a72e.

@@ -9,4 +9,4 @@
 - **Imagens:** foto de fachada em `visual/openart/fachadas/` (só 3 casas: C03, E07, F01); casa em 3D em `visual/3d/` (do motor próprio). Toda imagem bate com a planta: porta e janelas no mesmo lugar.
 - **A calculadora do parceiro** (`vendas/calculadora-lote.html`) tem a lista de casas reescrita pelo `livro.py` a cada geração oficial (sem `--previa` e sem `--conferir`): não edite a lista à mão.
 - **Imagem 3D de uma casa:** `python3 ferramentas/imagens3d.py ID`.
-- O e-book está no rascunho 1 e fechado. Faltam os campos do dono em `config.json`: título, preço, bônus, WhatsApp e promessa de atualização.
+- Faltam no `config.json` os campos do dono: o título (fica o atual até ele escolher), o WhatsApp e a promessa de atualização. Preço (R$ 47, que o PDF não imprime) e bônus (em `bonus.pdf`) já estão.

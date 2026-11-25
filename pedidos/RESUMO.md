@@ -351,11 +351,11 @@ Tamanho: 1698 palavras.
 
 ### [Prompt audit (25/11/2026)](anexos/prompt-audit-2026-11-25.md)
 
-Pedido do dono (25/11): "prompt audit", com o reel do comando `prompt-audit` da skill `claude-api` ("Era isso que quis dizer"). Feito com o roteiro da skill: relatório e diff proposto. Nada foi aplicado. O diff está em `prompt-audit-2026-11-25.diff`, ao lado deste arquivo.
+Pedido do dono (25/11): "prompt audit", com o reel do comando `prompt-audit` da skill `claude-api` ("Era isso que quis dizer"). Feito com o roteiro da skill: relatório e diff proposto. Aplicado em 25/11 a pedido do dono (`git apply`), achados 1 a 8; o 7 já tinha entrado antes, de outro jeito (o…
 
 Seções: Suposições; Resumo; Achados com edição proposta (no diff); Avisos, sem edição; Conferido e limpo; Como aplicar.
 
-Tamanho: 1455 palavras.
+Tamanho: 1497 palavras.
 
 ### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
 

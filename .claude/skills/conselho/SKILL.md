@@ -11,11 +11,11 @@ Regras completas: `CONSELHO.md` na raiz do projeto. Siga estes passos.
 2. **Escolha o modo.** Vai ao público ou custa dinheiro → completo. Senão → de bolso.
 3. **Chame os membros que importam** (tabela em `CONSELHO.md`, seção 2). Revisor de risco entra sempre que algo vai ao público.
    - De bolso: escreva você mesmo uma linha por membro, no formato da seção 3.
-   - Completo: abra os agentes de `.claude/agents/` em paralelo, cada um com a tarefa e a pergunta "qual skill ou ferramenta você propõe, e vale a pena?". Peça a resposta no formato de uma linha.
+   - Completo: abra os agentes de `.claude/agents/` no máximo dois de cada vez (dono, 24/11: no máximo 2 agentes juntos), cada um com a tarefa e a pergunta "qual skill ou ferramenta você propõe, e vale a pena?". Peça a resposta no formato de uma linha.
 4. **Mostre a mesa** ao dono: as linhas de cada membro e a decisão pela regra da seção 4 (maioria, sem veto, empate pelo maior efeito em venda, depois o mais barato).
 5. **Itens reservados ao dono** (preço, título, gasto, publicação, contratação, ferramenta paga): pare e peça o "sim".
 6. **Execute** só o aprovado, na ordem que o Maestro definir. Depois da execução, o Revisor confere a peça final.
-7. **Registre** em `CONSELHO.md`, seção 7 (data, tarefa, votos, decisão, o que medir), rode `python3 ferramentas/atualizar-painel.py` e faça commit.
+7. **Registre** em `CONSELHO.md`, seção 7 (data, tarefa, votos, decisão, o que medir), rode `python3 ferramentas/atualizar-painel.py` e salve com `python3 ferramentas/salvar.py "mensagem"`.
 
 ## Neste projeto (X1-Plantas)
 
@@ -26,6 +26,6 @@ Antes de usar esta skill aqui, alcance o projeto:
 - Uma coisa por vez, na ordem e-book → animações → vídeo.
 - Ela é membro do Conselho (`CONSELHO.md`): a decisão de usá-la segue as regras de lá, e o Revisor de risco tem veto em tudo que toca honestidade e lei.
 - Nunca corte nem enfraqueça os avisos de "planta de referência", que dizem que o projeto é do profissional habilitado. Também não corte nenhum texto que o Revisor exigiu.
-- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no fim de `CONTEXTO-HISTORICO.md` (não no `CONTEXTO.md`, que é resumo com limite de tamanho), faça o commit e o push na branch `main`.
+- Antes de entregar, rode `python3 ferramentas/checar.py` e `python3 ferramentas/atualizar-painel.py`. Acrescente uma linha no fim de `CONTEXTO-HISTORICO.md` (não no `CONTEXTO.md`, que é resumo com limite de tamanho), salve com `python3 ferramentas/salvar.py "mensagem"` (roda o `checar.py`, só salva verde e envia à `main`).
 - Toda skill ou agente novo passa pelo roteiro de entrada da seção 6 do `CONSELHO.md` antes do primeiro uso.
 - **Prompt de entrada:** ao abrir a mesa, leia `ECOSSISTEMA.md` para saber quem está integrado. Membro marcado como "liberado, não usado" passa pelo roteiro antes de votar. O Maestro (esta conversa) decide; em conteúdo, o Diretor (MinoAI Frontier) opina primeiro, com a fonte. As decisões do dono que ainda estão em aberto ficam no `CONTEXTO.md`: não decida por ele.
