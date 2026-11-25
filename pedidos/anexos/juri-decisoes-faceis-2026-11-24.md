@@ -28,7 +28,7 @@
 **Proposta do júri:** o cômodo a cômodo entra no e-book pago, nas 3 casas, na parte de cada casa. Só entra texto que o Revisor já passou; as páginas montadas passam pelo Designer e pelo Revisor antes do D20.
 **Membros:** comprador: SIM SE a bancada "uns 40 cm" sair ou ganhar fonte, e cuidado com a densidade (E03 tem cerca de 2.000 palavras). Dinheiro: SIM, corre junto com a leitura do profissional e não alonga o caminho. Risco: SIM SE a linha do veto 3 (serviço da Casa Compacta) deixar de dizer "mantido".
 **Como desfazer:** tirar as páginas no gerador e gerar o PDF de novo.
-**Mostrado ao dono:** cartão `j1-comodo-no-pago` criado em 24/11; ainda não visto.
+**Mostrado ao dono: sim** (25/11, na conversa: "2 ok"). Como desfazer: tirar as páginas no gerador e gerar o PDF de novo.
 
 ## J2
 **Proposta do júri:** a equipe não escolhe o título. Fica com o dono, no cartão `p14` (as 3 opções que ele pediu), agora com a nota do Diretor: "Errar na planta sai caro" é o gancho mais forte, "A casa do seu lote" é médio. Enquanto ele não escolhe, prévias seguem com o título atual; a pasta e o anúncio esperam. Quando escolher: "de referência" na capa, e trocam-se juntos `atributos-que-vendem.md`, `VISUAL.md`, a capa do grátis e a saudação.

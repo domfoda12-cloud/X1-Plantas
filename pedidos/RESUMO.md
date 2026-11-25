@@ -47,7 +47,7 @@ Pedido do dono (22/11/2026): "sempre dê um objetivo à equipe; um plano passo a
 
 Seções: A ordem das próximas 5 tarefas (uma por vez); O objetivo da equipe; Onde estamos (24/11, 20h50, conferido); O caminho mais curto até o primeiro Pix; Agora (pode começar já, sem esperar ninguém); Depois (em ordem; cada um diz de qual passo ou decisão depende); Depois: fila da equipe (para o Agora nunca ficar vazio); Depois: o júri já decidiu, agora espera o dono (cartões do Canteiro); Depois: feitos que outros passos citam; Esperando o dono; Não fazer (parece o próximo passo, mas não é); Histórico: feitos de 24/11 que nenhum passo aberto cita; Histórico: o plano de 22/11 (fases antigas); Tempo livre: deixar a equipe mais inteligente (dono, 22/11/2026); ….
 
-Tamanho: 14064 palavras.
+Tamanho: 14072 palavras.
 
 ### [Provas da equipe](PROVAS.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 4111 palavras.
+Tamanho: 4178 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -243,7 +243,7 @@ Regra do dono (24/11, cartão v6): "se é algo que pode ser facilmente alterado 
 
 Seções: J1; J2; J3; J5; J7; J8; J9.
 
-Tamanho: 1346 palavras.
+Tamanho: 1357 palavras.
 
 ### [Júri: as próximas melhorias (23/11/2026, Supervisor)](anexos/juri-proximas-melhorias.md)
 
