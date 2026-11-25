@@ -1,0 +1,23 @@
+# Ferramentas grátis para animação em código (Instagram 100% IA)
+Passo 1 da pesquisa (Pesquisador, Sonnet). Data da busca: 25/11/2026. Nada instalado. Falta conferência do Opus.
+
+## 1. Código -> vídeo 1080x1920
+- **Remotion** (React -> MP4). Licença: NÃO é open source puro; "Remotion License": grátis, inclusive uso comercial, para indivíduo ou empresa de até 3 pessoas; acima disso paga. Fonte: https://remotion.dev/docs/license/faq (data da página 23/11/2026). Certeza: confirmado no texto oficial (trecho: "an individual, whether for personal or commercial use; ... up to 3 people"). Offline: sim (Node + Chromium + ffmpeg embutido; só baixa Chromium na 1ª vez). Risco: licença muda se o dono crescer/contratar; não é OSI.
+
+- **Motion Canvas** (TypeScript, generators, canvas). MIT, uso comercial livre. Fonte: https://github.com/motion-canvas/motion-canvas (texto da licença em raw.githubusercontent.com/motion-canvas/motion-canvas/main/LICENSE). Confirmado. Offline: sim (npm; exporta PNG/vídeo pelo editor no navegador). Risco: exportar vídeo exige o editor no navegador (difícil automatizar sem cabeça); npm @motion-canvas/core 3.17.2 no registro; projeto com pouca manutenção (hipótese, não conferida).
+- **p5.js**: licença da biblioteca NÃO confirmada nesta busca (a página p5js.org/copyright diz MIT só para o site; a biblioteca é LGPL 2.1 pela minha memória: conferir). Captura de quadros via canvas + ffmpeg. Risco: precisa de navegador sem cabeça (puppeteer) para capturar; mais lento que Node puro.
+- **Manim** (Python, MIT pela memória do repo ManimCommunity/manim; NÃO conferido nesta busca). Offline: sim, mas exige Cairo/Pango/LaTeX; estilo matemático, não pixel art. Risco: instalação pesada.
+- **Canvas em Node + ffmpeg** (ex.: @napi-rs/canvas ou Pillow em Python, desenhar quadro a quadro e juntar com ffmpeg): não pesquisado; é o caminho mais leve e 100% offline para pixel art. Risco: ffmpeg é LGPL/GPL conforme o build (uso como programa externo não obriga nada sobre o nosso vídeo).
+
+## 2. Música/SFX chiptune
+- **ChipTone** (gerador de SFX no navegador/itch.io, SFBGames): sons gerados "livres para qualquer fim, comercial ou não, CC0". Fonte: https://sfbgames.itch.io/chiptone (2026-11-01). Confirmado no texto da página. Offline: é app web (pode ser baixado do itch, não conferido); sons exportados em WAV. Risco: manual, não roda em código.
+- **jsfxr / sfxr.me** (porta JS do sfxr; npm `jsfxr` gera WAV em código). Fonte: https://sfxr.me/ ; licença do pacote npm NÃO confirmada (fonte secundária agentgid.com diz "uso comercial OK"; o sfxr original é MIT). Offline: sim via npm. Risco: licença exata a conferir no repo.
+- **OpenGameArt, coleção "Audio - Commercial use OK"** e músicas CC0 (ex.: "5 Chiptunes (Action)", "Chips and a soda"). Fontes: https://opengameart.org/content/audio-commercial-use-ok ; https://opengameart.org/content/5-chiptunes-action (CC0). Confirmado por faixa. Risco: a licença é POR FAIXA (há CC-BY e GPL no meio): só pegar CC0; CC0 permite revenda por terceiros, e o Instagram pode acusar Content ID falso nas faixas conhecidas.
+- Música gerada em código (sintetizador próprio em Python/numpy, onda quadrada): sem licença de terceiros, é o mais seguro; não pesquisado, é ideia.
+
+## 3. Voz local pt-BR
+- **Piper TTS** (neural, offline, CPU). Vozes pt_BR: faber-medium (CC0), cadu-medium (CC0), edresson-low (CC BY 4.0, exige crédito). Fonte: https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR ; https://umberlab.com/localtts/licenses (secundária: "Edresson (CC-BY 4.0), Cadu (CC0)"); https://loudness.ai/research/piper-tts-voices-ranked (faber e cadu CC0). Certeza: secundária; conferir o MODEL_CARD de cada voz. Offline: sim (modelo ~60 MB baixado uma vez; pip `piper-tts`). Risco: licença do programa Piper (MIT antigo / GPL no repo novo OHF-Voice/piper1-gpl, conferir) e voz robótica/"Lessac" de base; alguns sites dizem "só não comercial" para vozes comunitárias: usar só as CC0.
+## 4. Fonte pixel OFL
+- **Press Start 2P** (Google Fonts, bitmap estilo arcade Namco). Licença SIL OFL 1.1: uso comercial livre, sem crédito, não pode vender a fonte sozinha. Fontes: https://github.com/google/fonts/blob/main/ofl/pressstart2p/OFL.txt ; https://fonts.google.com/specimen/Press+Start+2P . Confirmado no texto OFL (trecho: "used, studied, modified and redistributed freely as long as they are not sold by themselves"). Offline: sim (baixar o .ttf uma vez). Risco: só alfabeto latino básico, confirmar acentos do português (ã, ç, é) antes de usar; cresce bem só em múltiplos de 8 px.
+- Outras candidatas (Silkscreen, Pixelify Sans, VT323) estão no Google Fonts sob OFL pela memória: NÃO conferidas nesta busca.
+
