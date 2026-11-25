@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-25 | [Quais os maiores erros do projeto](2026-11/2026-11-25-1632-quais-os-maiores-erros-do-projeto.md) | aberta | Maestro responde; nada muda sem o dono decidir. |
 | 2026-11-25 | [Juri mais estrito](2026-11/2026-11-25-1625-juri-mais-estrito.md) | aberta | Maestro propõe e, com o sim do dono, reescreve `CONSELHO.md` 5b; o supervisor confere na p |
 | 2026-11-25 | [Testar a regra: nunca confie na primeira coisa que pensar](2026-11/2026-11-25-1623-testar-a-regra-nunca-confie-na-primeira-coisa-que-pensar.md) | aberta | Maestro aplica e conta; o Designer aplica na D50 (identidade); o supervisor confere a cont |
 | 2026-11-25 | [Identidade visual forte em tudo, para a geracao dopamina](2026-11/2026-11-25-1613-identidade-visual-forte-em-tudo-para-a-geracao-dopamina.md) | aberta | Diretor (MinoAI Frontier) opina primeiro; Designer faz o diagnóstico, as direções e as amo |
