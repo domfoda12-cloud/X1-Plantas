@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 72 documentos
+## Os 73 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -504,6 +504,12 @@ Passo A1 do `pedidos/PLANO.md`. O Revisor leu o PDF direto: 17 páginas do e-boo
 Seções: Trocas que não dependiam do dono; Depende do dono; Não conferido pelo Revisor.
 
 Tamanho: 350 palavras.
+
+### [Veto das frases das 5 páginas (rascunho, 25/11/2026)](anexos/veto-frases-das-5-paginas-2026-11-25.md)
+
+Leitura do `revisor-de-risco` no Opus (rascunho) das versões de `frases-das-5-paginas-2026-11-25.md`. Ficha `2026-11-25-1612`. A peça final volta ao Revisor no Fable (D4); até lá, este SIM é provisório. Números conferidos contra `ebook/plantas/PLANTAS.md`, `ebook/plantas/dados/C01.json`,…
+
+Tamanho: 475 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 
