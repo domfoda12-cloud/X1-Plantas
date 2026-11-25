@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 68 documentos
+## Os 69 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -348,6 +348,14 @@ Passo A9 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Desi
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
 Tamanho: 1698 palavras.
+
+### [Prompt audit (25/11/2026)](anexos/prompt-audit-2026-11-25.md)
+
+Pedido do dono (25/11): "prompt audit", com o reel do comando `prompt-audit` da skill `claude-api` ("Era isso que quis dizer"). Feito com o roteiro da skill: relatório e diff proposto. Nada foi aplicado. O diff está em `prompt-audit-2026-11-25.diff`, ao lado deste arquivo.
+
+Seções: Suposições; Resumo; Achados com edição proposta (no diff); Avisos, sem edição; Conferido e limpo; Como aplicar.
+
+Tamanho: 1455 palavras.
 
 ### [Prova de base: 10 planos curtos para vetar (23/11/2026)](anexos/prova-A0-planos.md)
 
