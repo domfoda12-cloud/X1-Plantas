@@ -5,12 +5,15 @@
 Roda resumos.py e checar.py; se o checar.py não sair com 0, para e mostra o erro (nada é salvo).
 Se passar: git add -A, commit com as linhas de atribuição e push para a main e para a branch atual.
 """
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-ATRIBUICAO = ("\n\nCo-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>\n"
+# o modelo da sessão muda (dono, 25/11: não assinar sempre como Fable); troque aqui ou use X1_MODELO
+MODELO = os.environ.get("X1_MODELO", "Claude Opus 5.5")
+ATRIBUICAO = (f"\n\nCo-Authored-By: {MODELO} <noreply@anthropic.com>\n"
               "Claude-Session: https://claude.ai/code/session_01DYdRuF8rs2sLvVqr7VsfNR")
 
 
