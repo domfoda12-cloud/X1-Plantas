@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 73 documentos
+## Os 74 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -172,6 +172,14 @@ Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo;
 Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
 Tamanho: 4137 palavras.
+
+### [Identidade visual forte em tudo: diagnóstico, 3 direções e amostras (D50, 25/11/2026)](anexos/identidade-2026-11-25.md)
+
+Pedido do dono (25/11), palavra por palavra: "o pdf está sem identidade alguma, acredito que a ultima coisa importante a se fazer antes do reset é solidificar uma identidade e deixar ela presente em tudo que criamos. Nao estava feio, estava bonito organizado mas sem chamar atencao alguma, a pessoa…
+
+Seções: 0. Plano (skill `design-editorial`); 1. O que o Diretor (MinoAI Frontier) disse, e o que eu levei; 2. Diagnóstico: por que o leitor larga em 2 minutos; 3. As 3 direções; 4. As amostras; 5. Recomendação; 6. Ordem de entrada no gerador (para o reset ser braçal); 7. Manual (preencher depois da escolha do dono); 8. Onde entra, arquivo por arquivo (preencher depois da escolha do dono); 9. O que só o dono decide.
+
+Tamanho: 4180 palavras.
 
 ### [Perfil novo do Instagram, 3ª rodada: a identidade do Lote Carente (24/11/2026)](anexos/instagram-identidade-lote-carente-2026-11-24.md)
 
