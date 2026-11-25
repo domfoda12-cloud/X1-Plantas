@@ -24,7 +24,7 @@ PASTAS = {
     "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono", "contexto/dono/intencoes"],
                  ["todos"]),
     "pesquisas": ("Caderno de pesquisa", "Tudo o que a equipe achou na web, por tema, com fonte, data e certeza",
-                  ["pesquisas"], ["todos"]),
+                  ["pesquisas", "pesquisas/instagram-ia"], ["todos"]),
     "ebook": ("Produto: o e-book", "O que o e-book é, o plano, o catálogo e as 24 plantas",
               ["ebook", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer", "redator", "revisor-de-risco"]),
     "ebook/referencias": ("Pesquisa e técnica", "Público, concorrentes, regras de projeto e apostilas do Arquiteto",

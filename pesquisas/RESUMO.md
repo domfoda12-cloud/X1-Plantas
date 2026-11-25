@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 7 documentos
+## Os 8 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -24,6 +24,14 @@ Tamanho: 784 palavras.
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
 Tamanho: 1748 palavras.
+
+### [Estudo: @science_in_8bit (Instagram 100% IA, ciência em pixel art)](instagram-ia/estudo-science-in-8bit.md)
+
+Pedido do dono, 25/11/2026. Passo 1 da pesquisa (Pesquisador): achados com fonte e grau de certeza; o Opus confere e conclui. Só ferramentas grátis.
+
+Seções: 1. Perfil (fonte: TinyFish fetch, 25/11/2026) -- CONFIRMADO na página; 2. Achados da busca (TinyFish search, 25/11/2026) -- fonte secundária/primária mista; 3. O método e a "máquina por trás" -- CONFIRMADO nas páginas oficiais deles (25/11/2026); 4. Análise de reels (MinoAI Frontier analyze_hook, 25/11/2026); 5. Mais achados de busca (TinyFish, 25/11/2026); 6. Como fazem de verdade: sem modelo de vídeo de IA (CONFIRMADO por 2 fontes que se confirmam; 25/11/2026); 7. Perfis parecidos (para mapear a concorrência; não confirmei métricas); 8. Regras do Instagram sobre IA (fonte SECUNDÁRIA, resultados de busca, set a nov/2026; não abri a regra oficial da Meta); 9. CONCLUSÕES (leitura do Pesquisador; o Opus confere. "Prova" = onde está o achado acima); 10. O que faltou estudar.
+
+Tamanho: 3353 palavras.
 
 ### [Pesquisa: Público, preço, demanda e números de mercado](mercado.md)
 

@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 74 documentos
+## Os 75 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -372,6 +372,14 @@ Passo A9 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Desi
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
 Tamanho: 1698 palavras.
+
+### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
+
+Quem escreveu: Planejador. Quem escreve as frases: Redator, só depois do sim do dono. Quem lê: Revisor (o de risco tem veto). Base: `pedidos/anexos/mapa-dor-solucao-do-ebook-2026-11-24.md`, seções 3, 5 e 6. Este plano não traz a frase final: traz onde, como, de onde vem a dor e quanto cabe.
+
+Seções: As 5 páginas; Pronto quando (vale para cada página); O que não conferi; Ordem do primeiro dia depois do reset.
+
+Tamanho: 1451 palavras.
 
 ### [Prompt audit (25/11/2026)](anexos/prompt-audit-2026-11-25.md)
 
