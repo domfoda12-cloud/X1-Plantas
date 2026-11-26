@@ -32,3 +32,4 @@
 - Limite renovado: os dois fluxos retomados do ponto em que pararam (o que já estava pronto não roda de novo).
 - Item 4 (26/11, `CONSELHO.md` 5b): o que passar na prova vira proposta ao dono, não regra; a 5b pede o "sim" dele.
 - Item 6 (26/11, ficha 0105): o Redator confere o rascunho contra `contexto/redator.md`; o Revisor lê uma vez, a conversa montada como vai ao sócio.
+- 26/11 ~02:00 UTC: item 1 FECHADO (agentes: 4 mudanças, 25 achados dos verificadores, 20 consertados; diagnóstico do júri gravado). Ficha 0105 fechada.

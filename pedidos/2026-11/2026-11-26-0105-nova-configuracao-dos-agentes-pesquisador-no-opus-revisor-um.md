@@ -1,6 +1,6 @@
 # nova configuracao dos agentes: pesquisador no Opus, Revisor uma leitura no Fable, organizador no planejador, juri so para decisao cara
 
-**Estado:** aberta
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** Is there a better configuartion of what agent does what that you recommend?
 
@@ -24,9 +24,9 @@ Aplique
 
 **Conferência:** checar.py; plano.py conferir; relatório dos verificadores.
 
-**Resultado:** (a preencher)
+**Resultado:** 4 mudanças na configuração dos agentes aplicadas e verificadas; diagnóstico do júri gravado
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** maestro: mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram.
 
 **Papéis afetados:** pesquisador, revisor-de-risco, planejador, redator, maestro
 
