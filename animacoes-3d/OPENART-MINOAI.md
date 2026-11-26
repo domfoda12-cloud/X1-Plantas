@@ -130,7 +130,7 @@ A fachada realista de cada casa (imagem → imagem a partir do nosso 3D) fica pa
 2. **Uma imagem, vários formatos:** gerar em 4:5 com sobra e recortar para 9:16 e 1:1 no computador. Nunca gerar de novo por causa do formato.
 3. **Variações do mesmo prompt** com "quantidade de imagens" numa chamada só; prompts diferentes, no lote (até 4 por vez).
 4. **Partir da nossa imagem** (imagem para imagem, 2 créditos a mais) sempre que a cena mostrar a casa: a planta ou a vista da rua do e-book entram como referência, e a IA não inventa outra casa.
-5. **Conferir o rascunho antes de pagar o final:** Arquiteto (é a casa certa?) e Revisor (tem texto inventado? pessoa reconhecível?).
+5. **Conferir o rascunho antes de pagar o final:** Arquiteto (é a casa certa?) e quem gerou (tem texto inventado? pessoa reconhecível? marca?), contra os pontos do Revisor. O Revisor lê a peça final montada, uma vez (dono, 26/11/2026).
 6. **Guardar o prompt aprovado** neste arquivo, para refazer sem pagar tentativa.
 7. **Orçamento da conta (4.000):** cerca de 30 rascunhos (150) + 15 finais em 4K média (300) + 2 peças em 4K alta (140) + 6 testes de vídeo no PixVerse (300) + 3 vídeos finais no Veo 3.1 (360) = **cerca de 1.250**, sobrando reserva para a segunda rodada de anúncios.
 

@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`); 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`); 25/11 · Tudo pronto para o reset; Instagram de IA com repositório próprio (ficha `2026-11-25-1612`); 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`).
+Seções: 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`); 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`).
 
-Tamanho: 969 palavras.
+Tamanho: 864 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -165,11 +165,11 @@ Tamanho: 392 palavras.
 
 ### [Contexto do Planejador](planejador.md)
 
-Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Desde 26/11 você também separa um monte grande em grupos pequenos (era o organizador). Você não executa: propõe; não move nem apaga.
+Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Desde 26/11 você também separa um monte grande em grupos pequenos. Você não executa: propõe; não move nem apaga.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 891 palavras.
+Tamanho: 839 palavras.
 
 ### [Contexto do Redator](redator.md)
 

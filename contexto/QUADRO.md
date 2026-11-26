@@ -2,11 +2,17 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`)
+
+- **O dono pediu:** "Aplique" (à proposta do Maestro de configuração melhor dos agentes).
+- **O que mudou:** o `pesquisador` roda no Opus e pesquisa num passo só (busca, confere e conclui); o Revisor de risco lê uma vez, no Fable, a peça montada; o organizador foi juntado ao `planejador`; o júri só roda para decisão cara, pública ou que não se desfaz, e a fácil de desfazer vai ao conselho de bolso (`CONSELHO.md` 5b).
+- **Pesquisador:** conclui sozinho, com fonte e grau de certeza. **Arquiteto e Estrategista:** usam a conclusão; acabou o passo 2. **Redator:** confere o rascunho contra `contexto/redator.md` antes de mandar a peça montada ao Revisor. **Revisor:** rascunho não vem a você; opinião no Conselho e veto de plano continuam. **Planejador:** agrupa um monte e manda o passo J novo ao conselho de bolso. **Maestro:** decide o passo J com três opiniões de uma linha e mostra ao dono depois.
+
 ## 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`)
 
 - **O dono pediu:** "dont ask me for permission for ANYTHING, only rules: dont fuck me up and dont spend my money"; o final do e-book e os anúncios continuam dele; "I M P R O V E M E N T ... min maxing except we can max everything".
 - **O que mudou:** nesta noite o Maestro decide sem perguntar o que não custa dinheiro, não vai ao público e se desfaz; a fila e os limites estão em `pedidos/anexos/noite-2026-11-26-fila.md`. `ebook/saida/` não é tocado.
-- **Todos:** em cada peça, liste os componentes, ache o mais fraco e melhore; nada pago, nada publicado, nada enviado, nada apagado sem volta. **Revisor:** continua lendo todo texto público antes de entrar no gerador.
+- **Todos:** em cada peça, liste os componentes, ache o mais fraco e melhore; nada pago, nada publicado, nada enviado, nada apagado sem volta. **Revisor:** lê todo texto público uma vez, no Fable, com a página montada (na prévia), antes de qualquer coisa ir ao público.
 
 ## 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`)
 
@@ -25,15 +31,3 @@
 - **O dono pediu:** "o pdf está sem identidade alguma, acredito que a ultima coisa importante a se fazer antes do reset é solidificar uma identidade e deixar ela presente em tudo que criamos. Nao estava feio, estava bonito organizado mas sem chamar atencao alguma, a pessoa vai ler aquilo em 2min vai parar. Nossa geracao é a geracao dopamina".
 - **O que mudou:** a identidade é o D50, a única tarefa do "Agora". O Diretor (MinoAI Frontier) dá a ideia principal, o Designer faz o diagnóstico, 3 direções e as amostras (do nosso gerador, sem crédito pago), e o dono escolhe. Aplicar no gerador é o primeiro passo do reset, antes do "gera".
 - **Todos:** nada que vá ao público sai sem a identidade escolhida. **Designer:** dono do D50 e do manual. **Redator:** as frases das páginas viram o gancho de cada página. **Editor de vídeo:** a identidade vale também para o que se move, depois do e-book.
-
-## 25/11 · Tudo pronto para o reset; Instagram de IA com repositório próprio (ficha `2026-11-25-1612`)
-
-- **O dono pediu:** "1 Vai ter" (repositório e conversa próprios para o Instagram de IA); "2. Só vai ter a resposta no reset"; "Ate o reset quero que deixe tudo absolutamente planejado preparado e clean para quando chegar no reset voce só ter que fazer o trabalho bracal".
-- **O que mudou:** o roteiro do reset (`pedidos/anexos/roteiro-do-reset-2026-11-25.md`) tem a mensagem única ao dono e os passos em ordem; as frases das 5 páginas ficam prontas em rascunho para colar; o kit do Instagram de IA está em `pedidos/anexos/kit-instagram-ia-2026-11-25.md`; o D29 desceu do "Agora" para a fila.
-- **Todos:** no reset, leia o roteiro e não releia o projeto. **Redator:** as 5 frases em rascunho. **Planejador:** a ordem do topo do `PLANO.md` segue o roteiro.
-
-## 24/11 · O e-book mostra a dor e dá a solução (ficha `2026-11-24-2130`)
-
-- **O dono pediu:** "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele".
-- **O que mudou:** critério novo para todo o conteúdo do PDF: cada página faz o comprador sentir uma dor real dele, de forma indireta ("daquele jeitinho": cena, exemplo, detalhe que ele reconhece, nunca anunciada), e entrega a saída. Primeiro sai o mapa página por página; texto só muda depois de o dono ver.
-- **Todos:** dor só da pesquisa do comprador ou dos dados da casa, nunca inventada nem com medo exagerado. **Planejador:** faz o mapa. **Redator:** reescreve só o que o dono marcar, com plano. **Designer:** o formato das páginas não muda sem pedido.

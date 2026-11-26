@@ -135,7 +135,7 @@ O **`pesquisador` (Opus)** busca, lê a fonte, confere e conclui, tudo na mesma 
 - Ele diz o que NÃO conferiu.
 - Ele conclui o que isso muda no projeto. Hipótese e o que não foi conferido não entram em documento como fato.
 
-O agente do assunto (o `arquiteto` para norma e planta, o `estrategista` para mercado, preço e concorrente) usa a conclusão no trabalho dele; não há mais segundo passo. A conferência do Opus no passo 5 do caminho continua (relatório de agente é afirmação, não prova).
+O agente do assunto (o `arquiteto` para norma e planta, o `estrategista` para mercado, preço e concorrente) usa a conclusão no trabalho dele; não há mais segundo passo. A conferência do Opus no passo 5 do caminho continua (relatório de agente é afirmação, não prova). Pesquisa de passo 1 feita até 26/11 e ainda marcada "falta a conferência" não é conclusão: quem for usar pede antes ao `pesquisador` que confira e conclua.
 
 ## O pacote do executor
 

@@ -30,3 +30,5 @@
 
 - 26/11 ~01:40 UTC: limite de uso de 5 horas acabou no meio dos dois fluxos (agentes: só o conserto final falhou; Canteiro: 4 de 13 agentes prontos). As 4 mudanças dos agentes e o diagnóstico do júri já estão salvos (commits até b9bcb93; diagnóstico em `diagnostico-do-juri-2026-11-26.md`: 11 rodadas, 0 decisões fechadas, cerca de 5,67 milhões de tokens anotados).
 - Limite renovado: os dois fluxos retomados do ponto em que pararam (o que já estava pronto não roda de novo).
+- Item 4 (26/11, `CONSELHO.md` 5b): o que passar na prova vira proposta ao dono, não regra; a 5b pede o "sim" dele.
+- Item 6 (26/11, ficha 0105): o Redator confere o rascunho contra `contexto/redator.md`; o Revisor lê uma vez, a conversa montada como vai ao sócio.
