@@ -57,7 +57,7 @@ Pedido do dono (20/11/2026): "toda skill nova alcança tudo" e "confira se todos
 
 Seções: 1. Como as instruções chegam a cada um; 2. Do projeto (no repositório); 2b. Que skill e ferramenta está ligada a cada agente; 3. Conectores (serviços externos); 4. Skills de plugin e do Claude Code; 5. Texto de entrada (para plugin, conector ou agente que abre sessão própria); 6. Frameworks de agentes de fora; 7. Como manter este inventário.
 
-Tamanho: 3387 palavras.
+Tamanho: 3463 palavras.
 
 ### [Estratégia de marketing: público, produto e oferta](ESTRATEGIA.md)
 
@@ -73,7 +73,7 @@ Em 22/11/2026 os vídeos, clipes e renders antigos foram apagados para refazer d
 
 Seções: 1. A planta: de onde tudo sai; 2. O e-book; 3. O 3D e as imagens; 4. O vídeo; 5. A conferência e a organização; 6. As pessoas e as regras em volta.
 
-Tamanho: 1303 palavras.
+Tamanho: 1370 palavras.
 
 ### [Orçamento: limite semanal do Claude e créditos do OpenArt](ORCAMENTO.md)
 

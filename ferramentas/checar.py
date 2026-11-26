@@ -272,6 +272,38 @@ else:
 rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executable, "ferramentas/conversas.py", "testar"])
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conferir"])
+# Fluxos fixos (dono, 26/11/2026: "ultra max"; ficha 2026-11-26-0721): existem, estão no mapa e no inventário, a sintaxe passa,
+# programa antes do juízo, gasto medido, e cada um termina na colheita; toda rodada gravada tem a forma e a linha no RODADAS.md
+rodar("fluxos: as conferências por programa pegam o erro plantado", [sys.executable, "ferramentas/fluxo.py", "testar"])
+_fluxos = {"texto-publico": ("fluxo.py texto", "fluxo.py passe", "fluxo.py registrar"), "pagina-ebook": ("fluxo.py pagina", "fluxo.py registrar"),
+           "planta": ("conferir-rascunho.py", "fluxo.py registrar"), "decisao": ("fluxo.py juri", "fluxo.py registrar"),
+           "prova-de-entrada": ("fluxo.py prova-estado", "fluxo.py prova-nota", "/tmp/x1-provas")}
+_mf = []
+for _n, _tem in _fluxos.items():
+    _f = RAIZ / ".claude" / "workflows" / f"{_n}.js"
+    if not _f.exists():
+        _mf.append(f"{_n}: falta .claude/workflows/{_n}.js"); continue
+    _s = _f.read_text(encoding="utf-8")
+    _mf += [f"{_n}: o fluxo não chama {x}" for x in _tem + ("budget.spent()",) if x not in _s]
+    _mf += [f"{_n}: meta.name diferente do arquivo"] if f"name: '{_n}'" not in _s else []
+    _mf += [f"{_n}: fora do MAPA-DO-SISTEMA.md"] if f"(.claude/workflows/{_n}.js)" not in _mapa else []
+    _mf += [f"{_n}: fora do ECOSSISTEMA.md"] if f"`{_n}`" not in ecossistema else []
+    with tempfile.NamedTemporaryFile("w", suffix=".cjs", delete=False, encoding="utf-8") as _tmp:  # o corpo roda dentro de função assíncrona
+        _tmp.write("(async function(args, budget){\n" + _s.replace("export const meta", "const meta", 1) + "\n})\n")
+    _r = subprocess.run(["node", "--check", _tmp.name], capture_output=True, text=True); Path(_tmp.name).unlink()
+    _mf += [f"{_n}: sintaxe: {_r.stderr.strip()[-300:]}"] if _r.returncode else []
+_e = _iu.spec_from_file_location("fluxo", RAIZ / "ferramentas" / "fluxo.py"); _fx = _iu.module_from_spec(_e); _e.loader.exec_module(_fx)
+_rods = sorted((RAIZ / "pedidos" / "fluxos" / "rodadas").glob("*.json")) if (RAIZ / "pedidos" / "fluxos" / "rodadas").exists() else []
+for _f in _rods:
+    _ruim = _fx.conferir_registro(json.loads(_f.read_text(encoding="utf-8")))
+    _mf += [f"rodada {_f.name}: {'; '.join(_ruim)}"] if _ruim else []
+_tab = (RAIZ / "pedidos" / "fluxos" / "RODADAS.md").read_text(encoding="utf-8") if _rods else ""
+if _rods and len(re.findall(r"^\| \d\d/\d\d \d\d:\d\d \|", _tab, re.M)) < len(_rods):
+    _mf.append("pedidos/fluxos/RODADAS.md tem menos linhas que as rodadas gravadas")
+if _mf:
+    falhas.append("fluxos fixos"); print("[ERRO] fluxos fixos:\n  " + "\n  ".join(_mf))
+else:
+    print(f"[OK ] fluxos fixos: {len(_fluxos)} salvos, no mapa e no inventário, {len(_rods)} rodada(s) com registro completo")
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 # 3D e e-book: mesma área por cômodo (F7, 24/11/2026: o desenho azul mostrava a área de eixo a eixo, 14,1 m² na sala da C01,
 # e o e-book a área livre, 12,5). O módulo de cada casa tem de trazer a área livre do validador, no formato do e-book (0,0).
