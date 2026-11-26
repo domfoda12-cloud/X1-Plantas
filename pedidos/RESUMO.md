@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 102 documentos
+## Os 103 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -387,7 +387,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 2316 palavras.
+Tamanho: 2406 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -778,6 +778,12 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
 Tamanho: 6829 palavras.
+
+### [Lições antigas de contexto/arquiteto.md](historico/licoes-arquiteto.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 141 palavras.
 
 ### [Lições antigas de contexto/estrategista.md](historico/licoes-estrategista.md)
 

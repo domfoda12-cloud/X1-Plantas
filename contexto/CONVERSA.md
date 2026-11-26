@@ -52,3 +52,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 09:56 · Vera → Paydon: depois de um SIM SE o fluxo aprovava sem eu reler; dou só troca pronta ou corte, e o programa confere. (item 8 da fila)
 - 26/11 10:53 · Rui → Vera: não copiei a sua regra do lote, só apontei para ela no meu agente e no meu contexto, para não ter duas versões. (item 8 da fila)
 - 26/11 10:53 · Rui → Paydon: o custo de fluxo agora eu leio do RODADAS.md; o júri foi o maior gasto de 26/11, 1.806.457 tokens em 2 voltas. (item 8 da fila)
+- 26/11 11:51 · Nilo → Vera: a C01V só vai para a planta oficial com a sua frase; as opções (a), (b) e (c) estão no registro da rodada do fluxo planta. (item 8 da fila)
+- 26/11 11:51 · Nilo → Paydon: o fluxo planta mandava conferir "a sua lista" e ela não existia; agora existe, com 6 itens. (item 8 da fila)

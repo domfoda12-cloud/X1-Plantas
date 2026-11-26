@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1864 palavras.
+Tamanho: 1929 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -69,11 +69,11 @@ Tamanho: 170 palavras.
 
 ### [Contexto do Arquiteto](arquiteto.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
+Só o que importa para este papel; as regras fixas estão no seu arquivo de agente. Antes de trabalhar, leia o quadro. Resumo geral: `CONTEXTO.md`; histórico, só para detalhe antigo: `CONTEXTO-HISTORICO.md`. Resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua continua a anterior.
 
-Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
+Seções: O que está decidido; Antes de entregar o rascunho; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 583 palavras.
+Tamanho: 660 palavras.
 
 ### [Contexto do Designer](designer.md)
 
