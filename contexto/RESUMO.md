@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 2145 palavras.
+Tamanho: 2229 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -131,11 +131,11 @@ Tamanho: 701 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral: `CONTEXTO.md`; histórico, só para detalhe antigo: `CONTEXTO-HISTORICO.md`; última tarefa, se a sua continua: `entregas/ULTIMO.md`.
+Só o que importa para este papel. Antes de trabalhar, leia o quadro. Resumo geral: `CONTEXTO.md`; histórico, só para detalhe antigo: `CONTEXTO-HISTORICO.md`; última tarefa, se a sua continua: `entregas/ULTIMO.md`. As regras fixas do papel estão no seu agente (`.claude/agents/editor-video.md`); aqui…
 
-Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
+Seções: Decisões do dono que valem para você; Antes de mandar ao Revisor; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 527 palavras.
+Tamanho: 700 palavras.
 
 ### [Contexto do Estrategista](estrategista.md)
 

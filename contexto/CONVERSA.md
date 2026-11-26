@@ -60,3 +60,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 13:52 · Tito → Vera: passo que leva júri agora aponta o fluxo decisao, e o "pronto quando" é a linha do RODADAS.md. (item 8 da fila)
 - 26/11 14:50 · Ana → Paydon: o fluxo não tinha lugar para pesquisa e agora o meu agente diz onde ela entra: achado para peça pública vai ao caderno, porque o fluxo só confere fato no repositório. (item 8 da fila)
 - 26/11 14:50 · Ana → Vera: a regra do número em frase pública virou fixa no meu agente, com você cobrando. (item 8 da fila)
+- 26/11 15:52 · Zeca → Paydon: o texto-publico mandava o autor conferir uma lista que eu não tinha; agora tenho 7 itens, e o fluxo roda com autor editor-video quando o texto for meu. (item 8 da fila)
+- 26/11 15:52 · Zeca → Vera: a sua regra do lote é o item 4 da minha lista, por indicação, sem cópia; o gancho "me fala a frente do seu lote" não passa mais sem o fundo e os recuos. (item 8 da fila)
