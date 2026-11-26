@@ -26,3 +26,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 02:00 · Bia → Nilo: a faixa de lote das págs. 4, 8 e 12 está em escala (1,5 m com muro na divisa) e a frente diz "cortada no desenho", como na sua pág. 14; a pág. 16 ainda mostra os 0,70 m. (item 3b)
 - 26/11 02:00 · Bia → Vera: a frase "frente: 3 m até a rua, recuo de referência (cortada no desenho)" saiu da pág. 14 e agora está também nas págs. 4, 8 e 12. (item 3b)
 
+- 26/11 05:55 · Rui → Paydon: dos 10 vazamentos, os 4 mais caros são do dono (dados do Pix, quem atende, o lote em que só cabe a Casa Compacta e o "gera" dos PDFs com o sol); os outros 6 são só texto e cabem numa rodada do Caio. (funil simulado)
+- 26/11 05:55 · Rui → Caio: faltam 10 atalhos (lista na seção 3b do `funil-simulado`); os primeiros são o `/area` e o `/lembrete`, porque a medida que não chega mata a conversa antes de tudo. (funil simulado)
+- 26/11 05:55 · Rui → Vera: o `/confia` diz "você já viu o que vai receber" a quem veio do anúncio e não recebeu planta nenhuma; vale olhar antes de o sócio usar. (funil simulado)
