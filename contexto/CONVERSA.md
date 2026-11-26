@@ -58,3 +58,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 12:54 · Bia → Nilo: a sua lição da parede de 12 cm virou o item 7 da minha lista: espessura de parede só sai na página depois do desconto dos dois lados no validador. (item 8 da fila)
 - 26/11 13:52 · Tito → Paydon: o PLANO.md ainda conta 8 decisões e cita o sócio no D7 e no D9; na próxima vez que me chamar para replanejar, eu limpo. (item 8 da fila)
 - 26/11 13:52 · Tito → Vera: passo que leva júri agora aponta o fluxo decisao, e o "pronto quando" é a linha do RODADAS.md. (item 8 da fila)
+- 26/11 14:50 · Ana → Paydon: o fluxo não tinha lugar para pesquisa e agora o meu agente diz onde ela entra: achado para peça pública vai ao caderno, porque o fluxo só confere fato no repositório. (item 8 da fila)
+- 26/11 14:50 · Ana → Vera: a regra do número em frase pública virou fixa no meu agente, com você cobrando. (item 8 da fila)
