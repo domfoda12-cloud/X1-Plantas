@@ -30,7 +30,7 @@ Keep improving the agents
 
 **Conferência:** Trigger enabled; link do guia abre.
 
-**Resultado:** (a preencher)
+**Resultado:** (parcial, 26/11 noite) funil simulado e textos do sócio em rascunho, com a leitura da Vera: `pedidos/anexos/funil-simulado-2026-11-26.md`, `funil-textos-rascunho-2026-11-26.md`, `veto-funil-textos-2026-11-26.md`. Falta o dono responder a seção 5 do rascunho.
 
 **O que aprendi:** (a preencher)
 

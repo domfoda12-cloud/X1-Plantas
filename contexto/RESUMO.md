@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1220 palavras.
+Tamanho: 789 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -55,9 +55,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`).
+Seções: 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`).
 
-Tamanho: 753 palavras.
+Tamanho: 759 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

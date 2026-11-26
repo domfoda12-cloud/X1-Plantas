@@ -244,7 +244,7 @@ R$ [preço], no Pix. 7 dias para pedir o Pix de volta.
 Te mando a chave Pix?
 ```
 
-- **Troca o quê no atual:** não existia; o `/oferta` começa por "a casa que cabe no seu lote", que não serve a quem não tem lote. "Antes de fechar um lote, confirme o recuo na prefeitura." no lugar de "Você procura o lote já sabendo a medida.", porque a pessoa vai comprar terreno com esse número (troca da Vera, 26/11). Caracteres recontados: [CONTAGEM].
+- **Troca o quê no atual:** não existia; o `/oferta` começa por "a casa que cabe no seu lote", que não serve a quem não tem lote. "Antes de fechar um lote, confirme o recuo na prefeitura." no lugar de "Você procura o lote já sabendo a medida.", porque a pessoa vai comprar terreno com esse número (troca da Vera, 26/11). Caracteres recontados: 486.
 
 #### `/doisprecos` (atalho da 3b)
 
@@ -466,7 +466,7 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 - **Contra a lista de frases vetadas** (`contexto/redator.md`): nenhum 3D prometido onde não há (o 3D das 3 casas está no `ebook.pdf` e em `ebook/visual/3d/`); nenhum "banheiro com giro"; nenhuma "ventilação cruzada"; nenhum "recebe as próximas plantas"; nenhum "todas as casas cabem"; nenhum "frente para o norte" na Casa Compacta (as mensagens não falam de sol; só a nota do `/planta`, que diz o certo, "rua ao sul").
 - **Contra os limites:** nenhuma mensagem diz ou dá a entender que dispensa pedreiro, engenheiro ou arquiteto; nenhuma promete aprovação, prazo ou custo de obra; nenhum prazo de oferta nem alta de preço; "conferida medida por medida" vem com "(não substitui o profissional)" no `/ofertasemlote`; todo "cabe" vem com "recuos de referência" e "a prefeitura confirma"; o `/lembrete` é uma vez só; toda mensagem termina com pergunta.
 - **Números:** todos do `PLANTAS.md` e da regra da calculadora, conferidos nesta sessão.
-- **Tamanho:** todas as mensagens novas com menos de 512 caracteres antes de preencher (contagem com `python3`: a maior é o `/ofertasemlote`, 470; depois o `/recebibonus`, 431, e o `/socompacta`, 424, que encolhe ao apagar a opção que não serve).
+- **Tamanho:** todas as mensagens novas com menos de 512 caracteres antes de preencher (contagem com `python3`: recontada depois das trocas da Vera: a maior é o `/ofertasemlote`, 486; depois o `/quem`, 462, o `/recebibonus`, 431, e o `/socompacta`, 424, que encolhe ao apagar a opção que não serve. A regra do preço, com 541, é nota para o topo do arquivo, não resposta rápida).
 
 ## 5. Espera o dono
 
@@ -474,7 +474,7 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 2. **Quem confere se o Pix caiu:** (a) você confere e avisa o sócio; (b) uma conta que os dois veem; (c) o sócio manda o link na hora do comprovante e você confere depois.
 3. **Quem atende e em que horário:** (a) o sócio, num horário fixo escrito na ausência; (b) os dois, em turnos; (c) você à noite e ele de dia.
 4. **Quem só cabe a Casa Compacta:** (a) usar a versão B de 24/11 quando o PDF em duas partes sair; (b) só o `/socompacta`, sem oferta, até você mudar o que vai de graça; (c) não rodar o anúncio da Família Compacta até decidir.
-5. **Os PDFs com o lado do sol certo:** (a) você manda gerar antes do primeiro `/planta`; (b) o sócio não manda PDF nenhum até lá.
+5. **Os PDFs com o lado do sol certo:** (a) você manda gerar antes do primeiro `/planta`; (b) o sócio não manda PDF nenhum até lá; a (b) só vale se nenhum post "Comente PLANTA" estiver no ar (CDC, art. 30; leitura da Vera, 26/11).
 6. **Mandar a planta grátis a quem veio do anúncio e desconfia:** (a) sim, ela vira a amostra do `/confia`; (b) não, só o texto.
 7. **Os bônus:** (a) entram só depois que um profissional ler o bonus.pdf; (b) entram já, ditos "ainda em rascunho"; (c) ficam fora por enquanto.
 8. **Cartão:** (a) só Pix; (b) aceitar cartão por um link de pagamento (tem taxa e muda o funil).
@@ -485,12 +485,20 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 13. **O preço desta semana:** qual é (R$ 47 ou R$ 67) e em que dia a semana vira?
 14. **A calculadora no celular do sócio:** (a) você publica o link (cartão C7); (b) ele usa só os atalhos `/cabe` e `/cabe1`.
 15. **O 3D das 3 casas está dado por refeito?** O topo do `RESPOSTAS-RAPIDAS.md` só deixa mandar o `/oferta` depois disso: (a) sim, já vale; (b) ainda não.
+16. **Endereço e e-mail no perfil comercial do WhatsApp** (a lei pede nome, CPF, endereço e e-mail de quem vende; hoje faltam os dois): (a) você põe o seu endereço e um e-mail do negócio; (b) você põe outro endereço de contato que possa receber correspondência (troca da Vera, 26/11).
+17. **Quem faz o Pix de volta, e em quanto tempo:** (a) você, no mesmo dia em que o sócio avisa; (b) quem tiver a conta, num prazo que você diz (troca da Vera, 26/11).
+18. **Quem recebeu R$ 47 e paga depois que a semana virou paga R$ 47?** (a) sim, sempre; (b) sim, até uma data que você diz; (c) não, paga o preço da semana nova (troca da Vera, 26/11; é a p10 refeita, que você respondeu "não entendi").
+19. **O que dizer a quem recebeu R$ 67 e pede R$ 47:** (a) dar o R$ 47; (b) manter o R$ 67 e explicar o teste; (c) você responde caso a caso (troca da Vera, 26/11).
 
 ## Reconferência do pedido (do Maestro, item 6 da fila)
 
 - 1. Consertos de texto dos vazamentos 5, 6, 7, 8, 9 e 10, com atalho, quando usar, mensagem e "troca o quê": **cumpre** (seções 1 e 2). Os atalhos de texto da 3b: `/area`, `/lembrete`, `/socompacta`, `/fita` e `/familia` (os `/primeira-A` e `/primeira-B`), `/quem`, `/formas`, `/doisprecos`, `/recebi` sem bônus, `/semlote3q` e `/semlote2q` (o `/semlote2`), `/3quartos` (o `/casa3q`): **cumpre**. Acrescentei `/falta`, `/precoantes`, `/compactapreco` e `/ofertasemlote`, que a regra do preço pede.
 - 2. Folha do sócio de uma página, com passos, quando chamar o dono e glossário: **cumpre** (seção 3).
-- 3. O que é do dono em [colchete] e na lista "Espera o dono": **cumpre** (seção 5; 15 perguntas).
+- 3. O que é do dono em [colchete] e na lista "Espera o dono": **cumpre** (seção 5; 19 perguntas, 4 delas da Vera).
 - Não editar `RESPOSTAS-RAPIDAS.md`, `WHATSAPP.md` nem `ebook/saida/`: **cumpre**.
 - Regras (dispensa, aprovação, prazo, custo, uma mensagem por dia, fechar com pergunta) e conferência contra `contexto/redator.md`: **cumpre** (seção 4).
 - **Em aberto:** a troca na calculadora (fecho e aviso "só a Casa Compacta") é código, não texto: fica para quem conduz decidir quem faz. Não conferi se o WhatsApp aceita hífen ou número no nome do atalho (por isso evitei hífen). O plano não passou pelo Planejador.
+
+## Leitura da Vera (26/11)
+
+**SIM SE**, nenhum NÃO nos atalhos. O parecer inteiro: [`veto-funil-textos-2026-11-26.md`](veto-funil-textos-2026-11-26.md). As trocas dela estão aplicadas acima, palavra por palavra, cada uma marcada "(troca da Vera, 26/11)". Continuam valendo as 3 condições gerais dela: os dois PDFs gerados de novo antes da primeira conversa; o perfil comercial com nome, CPF, endereço e e-mail de quem vende; nenhuma nota interna em colchete dentro de mensagem ao cliente. A calculadora (fecho em 3D, aviso "só a Casa Compacta" com o botão de copiar desligado, e tirar a frase "Se a sua prefeitura deixar encostar na divisa") é com o Paydon: não mexi.

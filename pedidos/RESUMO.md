@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 88 documentos
+## Os 89 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -193,9 +193,9 @@ Tamanho: 6008 palavras.
 
 Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/2026-11-26-0058-socio-entra-no-projeto-guia-quem-decide-funil-ciclo-de-1h-re.md`), a partir do funil simulado do Rui (`funil-simulado-2026-11-26.md`). Rascunho: nenhum arquivo de venda foi editado…
 
-Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila).
+Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila); Leitura da Vera (26/11).
 
-Tamanho: 6213 palavras.
+Tamanho: 6895 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1317 palavras.
+Tamanho: 1450 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -582,6 +582,14 @@ Anexo: `frases-dor-5-paginas-opcoes-2026-11-26.md`.
 Seções: Reconferência na página montada (Vera, Fable, 26/11/2026).
 
 Tamanho: 482 palavras.
+
+### [Leitura da Vera (26/11): textos do funil do sócio](anexos/veto-funil-textos-2026-11-26.md)
+
+Vera Veto (Revisora de risco), no Fable, 26/11/2026. Leitura única da peça `funil-textos-rascunho-2026-11-26.md`, seguindo a folha do sócio do anúncio ao Pix. Ela só tem ferramentas de leitura: o parecer foi gravado aqui pelo Paydon, palavra por palavra do relatório dela. Veredito geral: SIM SE.…
+
+Seções: Conferido contra os dados; Condições gerais (valem para o funil inteiro); Atalho por atalho; Calculadora (`ebook/vendas/calculadora-lote.html`); Folha do sócio: SIM SE; Faltam na seção 5 (perguntas ao dono); Notas (não são condição).
+
+Tamanho: 1548 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 

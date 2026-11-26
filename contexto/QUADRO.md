@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`)
+
+- **O dono pediu:** o sócio "vai pegar a parte do funil" (26/11); na fila da noite, conversa simulada do anúncio ao Pix.
+- **O que mudou:** 10 vazamentos achados (`pedidos/anexos/funil-simulado-2026-11-26.md`); 18 atalhos novos ou reescritos, a folha do sócio e 19 perguntas ao dono em rascunho (`funil-textos-rascunho-2026-11-26.md`), com o SIM SE da Vera aplicado; a calculadora não gera mais mensagem ao cliente quando só cabe a Casa Compacta. O e-book à venda tem **3 casas** (as 24 são o catálogo).
+- **Caio, Rui:** o `RESPOSTAS-RAPIDAS.md` só muda quando o dono responder a seção 5 do rascunho. **Vera:** nada vai ao sócio antes das suas 3 condições gerais (PDFs com o sol, perfil comercial completo, sem nota interna no bloco). **Paydon:** levar as perguntas ao dono no resumo da manhã.
+
 ## 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`)
 
 - **O dono pediu:** "get every single detail, every single component that makes something and make it better" (passada do e-book página por página).
@@ -25,9 +31,3 @@
 - **O dono pediu:** "Aplique" (à proposta do Maestro de configuração melhor dos agentes).
 - **O que mudou:** o `pesquisador` roda no Opus e pesquisa num passo só (busca, confere e conclui); o Revisor de risco lê uma vez, no Fable, a peça montada; o organizador foi juntado ao `planejador`; o júri só roda para decisão cara, pública ou que não se desfaz, e a fácil de desfazer vai ao conselho de bolso (`CONSELHO.md` 5b).
 - **Pesquisador:** conclui sozinho, com fonte e grau de certeza. **Arquiteto e Estrategista:** usam a conclusão; acabou o passo 2. **Redator:** confere o rascunho contra `contexto/redator.md` antes de mandar a peça montada ao Revisor. **Revisor:** rascunho não vem a você; opinião no Conselho e veto de plano continuam. **Planejador:** agrupa um monte e manda o passo J novo ao conselho de bolso. **Maestro:** decide o passo J com três opiniões de uma linha e mostra ao dono depois.
-
-## 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`)
-
-- **O dono pediu:** "dont ask me for permission for ANYTHING, only rules: dont fuck me up and dont spend my money"; o final do e-book e os anúncios continuam dele; "I M P R O V E M E N T ... min maxing except we can max everything".
-- **O que mudou:** nesta noite o Maestro decide sem perguntar o que não custa dinheiro, não vai ao público e se desfaz; a fila e os limites estão em `pedidos/anexos/noite-2026-11-26-fila.md`. `ebook/saida/` não é tocado.
-- **Todos:** em cada peça, liste os componentes, ache o mais fraco e melhore; nada pago, nada publicado, nada enviado, nada apagado sem volta. **Revisor:** lê todo texto público uma vez, no Fable, com a página montada (na prévia), antes de qualquer coisa ir ao público.
