@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1749 palavras.
+Tamanho: 1801 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -721,7 +721,7 @@ Tamanho: 340 palavras.
 
 Gravado por `python3 ferramentas/fluxo.py registrar` no fim de cada fluxo (`.claude/workflows/`). Não edite à mão; o detalhe de cada rodada está em `rodadas/`.
 
-Tamanho: 133 palavras.
+Tamanho: 163 palavras.
 
 ### [Os prompts do dono, palavra por palavra](historico/PROMPTS.md)
 

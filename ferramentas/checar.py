@@ -298,6 +298,10 @@ _rods = sorted((RAIZ / "pedidos" / "fluxos" / "rodadas").glob("*.json")) if (RAI
 for _f in _rods:
     _ruim = _fx.conferir_registro(json.loads(_f.read_text(encoding="utf-8")))
     _mf += [f"rodada {_f.name}: {'; '.join(_ruim)}"] if _ruim else []
+    _rj = json.loads(_f.read_text(encoding="utf-8"))  # planta pronta para aplicar tem a cópia salva (a pasta de rascunhos o git ignora)
+    if _rj.get("fluxo") == "planta" and str(_rj.get("resultado", "")).startswith("pronto"):
+        _sv = _rj.get("salvo_em") or "pedidos/anexos/rascunhos-prontos/" + Path(str(_rj["peca"]).split()[0]).name
+        _mf += [f"rodada {_f.name}: o rascunho pronto não foi salvo em {_sv}"] if not (RAIZ / _sv).exists() else []
 _tab = (RAIZ / "pedidos" / "fluxos" / "RODADAS.md").read_text(encoding="utf-8") if _rods else ""
 if _rods and len(re.findall(r"^\| \d\d/\d\d \d\d:\d\d \|", _tab, re.M)) < len(_rods):
     _mf.append("pedidos/fluxos/RODADAS.md tem menos linhas que as rodadas gravadas")

@@ -73,7 +73,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 540 palavras.
+Tamanho: 583 palavras.
 
 ### [Contexto do Designer](designer.md)
 

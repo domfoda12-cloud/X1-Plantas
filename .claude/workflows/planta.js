@@ -98,8 +98,12 @@ const resultado = falhou(prog) ? 'vai ao dono (o programa ainda falha)' :
   (obra && obra.achados.length && voltas >= 2) ? 'pronto para aplicar, com achados de obra em aberto' : 'pronto para aplicar (aplicar é outro passo: plantas.py validar e checar.py)'
 
 phase('Colheita')
+// rascunho fica em pasta que o git ignora; o pronto para aplicar ganha uma cópia salva (lição de 26/11: pasta ignorada não fica salva)
+const SALVO = `pedidos/anexos/rascunhos-prontos/${String(A.rascunho).split('/').pop()}`
+if (resultado.startsWith('pronto')) await agent(`Rode exatamente: mkdir -p pedidos/anexos/rascunhos-prontos && cp ${A.rascunho} ${SALVO} && git check-ignore -q ${SALVO} || echo salvo`,
+  { label: 'guardar o rascunho pronto', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const registro = {
-  fluxo: 'planta', peca: `${A.rascunho}${VAR}`, ficha: A.ficha || '-', resultado, voltas,
+  fluxo: 'planta', peca: `${A.rascunho}${VAR}`, salvo_em: resultado.startsWith('pronto') ? SALVO : '-', ficha: A.ficha || '-', resultado, voltas,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: Object.values(conf),
   achados: achados.map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
