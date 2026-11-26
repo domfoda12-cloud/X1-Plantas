@@ -1,0 +1,35 @@
+# fluxos fixos ultra max e licoes automaticas
+
+**Estado:** aberta, em andamento
+
+**Prompt (palavra por palavra):** Are we having issues with the agents communicating? Thats and the juri its honestly the last things i can think about improving the system, the workflow looks like it has a foundation but doesnt exist yet
+
+The jury rules that we implemented yesterday look better than those, Fact check looks nice
+Each workflow ends by writing its lessons into each agent's file automatically, so their knowledge grows the way you asked. >Is it not doing this yet even though i asked?
+1 YESSS, thats exactly what im looking for but a version ultra max!
+2 Explain
+
+**O que ele pediu, parte por parte:** (1) fluxos fixos salvos que rodam sempre igual, com passe estruturado entre agentes, "versão ultra max"; (2) explicar o passo 2 (testes baratos do júri); (3) manter as regras do júri de 25/11 e somar a conferência de fatos; (4) saber se as lições já vão sozinhas ao arquivo de cada agente.
+
+**Por que ele pediu, ou o que quer descobrir:** A comunicação entre agentes e o júri são o que falta melhorar no sistema; o fluxo "tem base mas não existe".
+
+**Objetivo dele:** Uma equipe que trabalha sempre do mesmo jeito, aprende sozinha com cada erro e gasta menos.
+
+**Ligação com as ideias gerais do projeto:** Qualidade em primeiro lugar e custo por venda: menos retrabalho e menos tokens; e-book continua a frente principal.
+
+**Perguntas que me fiz:** Lição entra sozinha ou o dono aprova? (suposição: entra sozinha, com desfazer pelo git, e o resumo mostra.) Quais fluxos primeiro? (texto público, página do e-book, decisão.)
+
+**Pronto quando:** 3 fluxos salvos em .claude/workflows/, rodados uma vez sobre peça real, lições gravadas sozinhas, checar.py confere que existem, plano em pedidos/anexos/plano-fluxos-2026-11-26.md seguido.
+
+**Suposições (o dono não disse):** Lição entra sem aprovação dele (fácil de desfazer). Mudança de sistema vai na branch sistema/fluxos antes da main.
+
+**Quem executa:** Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes.
+
+**Conferência:** (ao fechar)
+
+**Resultado:** (ao fechar)
+
+**O que aprendi:** (ao fechar)
+
+**Papéis afetados:** maestro, redator, revisor-de-risco, designer, arquiteto, supervisor, planejador
+
