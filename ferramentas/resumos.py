@@ -21,7 +21,7 @@ INI, FIM = "<!-- essencial: escrito à mão, o gerador não apaga -->", "<!-- /e
 PASTAS = {
     ".": ("Comando e contexto", "As regras, as decisões do dono e quem decide o quê", [".", "ferramentas"],
           ["todos"]),
-    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono", "contexto/dono/intencoes"],
+    "contexto": ("Contexto por papel", "O que cada agente precisa saber, o quadro de avisos e os prompts do dono", ["contexto", "contexto/dono"],
                  ["todos"]),
     "pesquisas": ("Caderno de pesquisa", "Tudo o que a equipe achou na web, por tema, com fonte, data e certeza",
                   ["pesquisas", "pesquisas/instagram-ia", "pesquisas/instagram-ia/juri-nicho", "pesquisas/ferramentas"], ["todos"]),
@@ -41,7 +41,7 @@ PASTAS = {
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
                 ["reports"], ["revisor-de-risco", "pesquisador", "estrategista"]),
     "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
-                ["pedidos", "pedidos/anexos"], ["todos"]),
+                ["pedidos", "pedidos/anexos", "pedidos/historico", "pedidos/historico/intencoes"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
                     ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer"]),
 }

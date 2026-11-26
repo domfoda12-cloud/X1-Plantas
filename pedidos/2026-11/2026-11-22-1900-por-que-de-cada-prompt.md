@@ -19,7 +19,7 @@
 
 **Perguntas que me fiz:** (ficha anterior à regra de 22/11/2026)
 
-**Pronto quando:** `contexto/dono/intencoes/` tem o porquê e o objetivo de cada prompt; `contexto/dono/IDEIAS-GERAIS.md` liga os pedidos em poucos fios, com a parte criativa dos vídeos em destaque; a ficha de todo pedido novo responde à mesma pergunta; os agentes de vídeo leem isso.
+**Pronto quando:** `pedidos/historico/intencoes/` tem o porquê e o objetivo de cada prompt; `contexto/dono/IDEIAS-GERAIS.md` liga os pedidos em poucos fios, com a parte criativa dos vídeos em destaque; a ficha de todo pedido novo responde à mesma pergunta; os agentes de vídeo leem isso.
 
 **Suposições (o dono não disse):** os prompts escritos em outras conversas entram pelo que está guardado palavra por palavra em `video/VIDEO.md`, `video/ANUNCIO-LOCUCAO.md` e nas citações do histórico; reler as outras conversas inteiras custaria caro demais. O porquê é interpretação: fica marcado como leitura nossa, não como fala dele.
 
@@ -27,5 +27,5 @@
 
 **Conferência:** Li os relatórios dos dois agentes e abri os dois arquivos: 71 blocos (16 a 20/11) e 39 blocos (21 e 22/11), sem dado pessoal (busca por cartão, e-mail e assinatura: nada). Conferi por amostra três blocos de vídeo contra os prompts originais: as citações batem. Não conferi bloco por bloco os 111. Os prompts de outras conversas entraram pelo que está escrito em `video/VIDEO.md`, `video/ANUNCIO-LOCUCAO.md` e no histórico, não pelas conversas inteiras. As ideias gerais eu mesmo escrevi.
 
-**Resultado:** Todos os prompts do dono foram relidos com a pergunta do porquê: `contexto/dono/intencoes/` (16 a 20/11, 71 blocos; 21 e 22/11, 39 blocos, com as exigências dos vídeos). As ideias que ligam os pedidos estão em `contexto/dono/IDEIAS-GERAIS.md` (nove fios, o que o vídeo tem de ter e seis perguntas para o dono). Pesquisa passa a ser em dois passos, Sonnet e Opus. Toda ficha nova responde por quê, objetivo e ligação.
+**Resultado:** Todos os prompts do dono foram relidos com a pergunta do porquê: `pedidos/historico/intencoes/` (16 a 20/11, 71 blocos; 21 e 22/11, 39 blocos, com as exigências dos vídeos). As ideias que ligam os pedidos estão em `contexto/dono/IDEIAS-GERAIS.md` (nove fios, o que o vídeo tem de ter e seis perguntas para o dono). Pesquisa passa a ser em dois passos, Sonnet e Opus. Toda ficha nova responde por quê, objetivo e ligação.
 

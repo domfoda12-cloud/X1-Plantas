@@ -1,8 +1,8 @@
 # Retrospectiva: o que foi feito no e-book e nos vídeos, o que o dono reclamou, o que funcionou
 
-> Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha: [`pedidos/2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md`](../../pedidos/2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md).
+> Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha: [`pedidos/2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md`](../2026-11/2026-11-22-1516-opus-responde-fable-supervisiona-limpeza-de-midias-releitura.md).
 >
-> **Como foi lido:** só documentos, nenhuma mídia (os vídeos e renders antigos estavam sendo apagados ao mesmo tempo). Fontes: [`PROMPTS.md`](PROMPTS.md) (palavras dele), [`intencoes/`](intencoes), [`IDEIAS-GERAIS.md`](IDEIAS-GERAIS.md), [`video/VIDEO.md`](../../video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde), [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md), [`CONTEXTO-HISTORICO.md`](../../CONTEXTO-HISTORICO.md), [`contexto/entregas/`](../entregas), [`ebook/EBOOK.md`](../../ebook/EBOOK.md), [`video/VIDEO.md`](../../video/VIDEO.md), [`TEXTOS-DESATUALIZADOS.md`](TEXTOS-DESATUALIZADOS.md).
+> **Como foi lido:** só documentos, nenhuma mídia (os vídeos e renders antigos estavam sendo apagados ao mesmo tempo). Fontes: [`PROMPTS.md`](PROMPTS.md) (palavras dele), [`intencoes/`](intencoes), [`IDEIAS-GERAIS.md`](../../contexto/dono/IDEIAS-GERAIS.md), [`video/VIDEO.md`](../../video/VIDEO.md#vídeo-tudo-o-que-o-dono-pediu-não-se-perde), [`video/ANUNCIO-LOCUCAO.md`](../../video/ANUNCIO-LOCUCAO.md), [`CONTEXTO-HISTORICO.md`](../../CONTEXTO-HISTORICO.md), [`contexto/entregas/`](../../contexto/entregas), [`ebook/EBOOK.md`](../../ebook/EBOOK.md), [`video/VIDEO.md`](../../video/VIDEO.md), [`TEXTOS-DESATUALIZADOS.md`](../../contexto/dono/TEXTOS-DESATUALIZADOS.md).
 >
 > **Como ler cada "O que funcionou":** **aprovou** = ele disse que sim ou escolheu; **manteve** = mandou seguir em cima dela; **não reclamou** = ele viu ou recebeu e não há queixa registrada (é dedução nossa, não opinião dele); **não viu** = não há registro de que ele tenha visto. Citação entre aspas é dele; quando vem do histórico (outra conversa) e não de `PROMPTS.md`, está marcado "(histórico)".
 
@@ -26,7 +26,7 @@
 - **O que funcionou:** **não reclamou.** O método (casa só a partir de imagem nossa, rascunho barato e final em extra-alta) continua valendo no `OPENART-MINOAI.md`.
 - **O que ensinou:** a foto envelhece com a planta: a fachada da C01 saiu do e-book em 22/11 porque mostrava a casa de antes do redesenho; a da E07 mostra a E07 que está na fila do redesenho.
 
-**E4 · Rascunho 1 do e-book (20/11)** · [`entregas/2026-11-20-ebook-rascunho-1.md`](../entregas/REGISTRO.md)
+**E4 · Rascunho 1 do e-book (20/11)** · [`entregas/2026-11-20-ebook-rascunho-1.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** `ebook/saida/ebook.pdf`, 61 páginas, 24 casas, mais 6 plantas grátis; revisado pelo Revisor, Arquiteto e Redator.
 - **O que o dono reclamou:** antes, "Is the e book finished?" → "Comece e termine no geral o draft 1" (20/11). Sobre o PDF entregue, sem comentário dele.
 - **O que funcionou:** **manteve**: mandou como "última tarefa do e-book" compará-lo a um e-book famoso, e daí entrou a casa 3D mobiliada vista de cima nas 24 casas. Estrutura das páginas (seção 2 e 3 do `EBOOK.md`) nunca foi reclamada.
@@ -38,25 +38,25 @@
 - **O que funcionou:** **não reclamou**: o 3D próprio continua em todas as 24 páginas.
 - **O que ensinou:** ele esperava o OpenArt onde decidiu que seria o OpenArt; quando a ferramenta muda, isso tem de ser dito antes, não descoberto por ele.
 
-**E6 · Os 26 achados da revisão aplicados (21/11)** · [`entregas/2026-11-21-1200-revisao-aplicada.md`](../entregas/REGISTRO.md)
+**E6 · Os 26 achados da revisão aplicados (21/11)** · [`entregas/2026-11-21-1200-revisao-aplicada.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** correções de código e de planta (paredes para pátio, E04, F05, calculadora gerada do validador, PDF de 30 para 22,6 MB).
 - **O que o dono reclamou:** sem comentário dele; ordem: "aplique todas" (21/11).
 - **O que funcionou:** **aprovou** (mandou aplicar tudo sem escolher).
 - **O que ensinou:** decisão técnica ele delega; quer o resultado, não a lista.
 
-**E7 · O arranjo das plantas (22/11)** · [`entregas/2026-11-22-1200-arquiteto-estuda-arranjo.md`](../entregas/REGISTRO.md), [`entregas/2026-11-22-1400-pesquisa-layouts-e-etapas.md`](../entregas/REGISTRO.md)
+**E7 · O arranjo das plantas (22/11)** · [`entregas/2026-11-22-1200-arquiteto-estuda-arranjo.md`](../../contexto/entregas/REGISTRO.md), [`entregas/2026-11-22-1400-pesquisa-layouts-e-etapas.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** as 24 plantas do rascunho 1, vistas pelo dono no vídeo da E07.
 - **O que o dono reclamou:** "Como podem os 3 quartos estar um seguido do outro? Isso é um erro gigante no layout" e "o último layout não fazia sentido" (22/11, histórico).
 - **O que funcionou:** nada das plantas foi aprovado depois disso. O estudo do Arquiteto (apostila 2, método de 10 passos) e a pesquisa da régua federal (Portaria MCID 725) **não viu** ou não comentou.
 - **O que ensinou:** o diagnóstico da apostila 2 diz que as 24 saem de 3 fôrmas, com corredor de fora a fora, sem mesa, e na série E o banheiro só se alcança por fora. Um erro de arranjo visto no vídeo derruba a confiança no produto inteiro.
 
-**E8 · C01 redesenhada (22/11)** · [`entregas/2026-11-22-1600-c01-redesenhada.md`](../entregas/REGISTRO.md)
+**E8 · C01 redesenhada (22/11)** · [`entregas/2026-11-22-1600-c01-redesenhada.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** a C01 nova (varanda, sala e jantar, cozinha nos fundos, hall curto, banheiro de 1,69 m livres; 50 m²), com PDF, planta grátis e calculadora gerados de novo.
 - **O que o dono reclamou:** o pedido: "Por enquanto só refaça 1 das plantas que vai ser usada no vídeo" (22/11, histórico). Sobre o desenho novo, sem comentário dele.
 - **O que funcionou:** **não viu** (registrado como esperando aprovação dele).
 - **O que ensinou:** redesenhar uma casa invalida tudo o que foi feito dela: mockup, clipe 3D, posts, prévia do WhatsApp, principal (`TEXTOS-DESATUALIZADOS.md`).
 
-**E9 · Textos de venda e contradições (22/11)** · [`entregas/2026-11-22-2100-pedidos-ideias-e-contradicoes.md`](../entregas/REGISTRO.md)
+**E9 · Textos de venda e contradições (22/11)** · [`entregas/2026-11-22-2100-pedidos-ideias-e-contradicoes.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** textos do e-book e do funil corrigidos pela regra mais recente; o Revisor vetou trechos em 5 de 7 textos de venda; foto antiga da C01 fora do PDF.
 - **O que o dono reclamou:** sem comentário dele.
 - **O que funcionou:** **não viu** (entrega do mesmo dia).
@@ -82,7 +82,7 @@
 - **O que funcionou:** a frase dele voltou na locução de 22/11 ("Eu volto pro Brasil em algumas semanas").
 - **O que ensinou:** ele escreve com a própria voz e espera o texto dele respeitado.
 
-**V4 · Principal e prévia do WhatsApp com OpenArt (21/11)** · [`entregas/2026-11-21-1510-videos-principal-e-previa.md`](../entregas/REGISTRO.md)
+**V4 · Principal e prévia do WhatsApp com OpenArt (21/11)** · [`entregas/2026-11-21-1510-videos-principal-e-previa.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** principal "Todo lote é uma conta" (29 s, 14,2 MB, 8 clipes Kling 3.0, 1.400 créditos) e prévia do WhatsApp (19 s, 1,2 MB, páginas do e-book e a C01 em 3D). Pedido: "remember this is a preview that will be delivered to the client on whatsapp, not the main video, altough make both" (21/11).
 - **O que o dono reclamou:** "show me the video made with openart" → "tell the editor to make the video that im asking for in Video with reference for these videos" → "Nao use openart" (21/11). O motivo do "não use" não está escrito (ver `IDEIAS-GERAIS.md`, "O que não deu para saber").
 - **O que funcionou:** a separação em dois vídeos, cada um no seu canal, que ele mesmo pediu; a prévia, **não reclamou**. O principal ele mandou refazer no estilo CONDOR.
@@ -94,7 +94,7 @@
 - **O que funcionou:** nada; a renderização parou. O Editor, interrompido, deixou o `roteiros/principal-condor.json` sem relatório.
 - **O que ensinou:** ilustração 3D limpa não passa por casa de verdade. É a exigência central dele para o vídeo.
 
-**V6 · Principal da E07, versões 1 e 2, logo e trilha (21/11)** · [`entregas/2026-11-21-2340-video-e07-logo-musica.md`](../entregas/REGISTRO.md), [`video/PRINCIPAL-E07.md`](../../video/PRINCIPAL-E07.md)
+**V6 · Principal da E07, versões 1 e 2, logo e trilha (21/11)** · [`entregas/2026-11-21-2340-video-e07-logo-musica.md`](../../contexto/entregas/REGISTRO.md), [`video/PRINCIPAL-E07.md`](../../video/PRINCIPAL-E07.md)
 - **O que era:** vídeo sem voz "3 quartos em 8 m" (15 s, 11,4 MB), abrindo no blueprint animado, com clipes Kling 3 Omni; plano quadro a quadro aprovado pelo Conselho; 6 logos em `marca/logo/`; trilha "BIG BIG" de 128 BPM em `video/musica/`. A v1 levou veto do Revisor (marcas na sala e na cozinha).
 - **O que o dono reclamou:** "busque referências melhores e me consulte"; "morango do amor é antigo, tem que ser o mais recente"; "sem batata" (21/11, histórico). Em 22/11 trocou a abertura: "abrir na casa pronta, não no blueprint" (histórico, ficha item 13).
 - **O que funcionou:** o pedido de vídeo curto com cada quadro pensado e plano aprovado antes, ele **manteve** nas ordens seguintes. Caramelo, almoço de domingo e onigiri continuam na lista dele (ficha item 3). Logo e trilha: **não viu** ou não respondeu ("falta o dono escolher", "o dono ainda não disse se gostou").
@@ -106,7 +106,7 @@
 - **O que funcionou:** **aprovou**: escolheu a ironia A (o tio no grupo) e escreveu o próprio roteiro falado em cima dela.
 - **O que ensinou:** roteiro aprovado por ele antes de gastar funciona melhor que vídeo pronto para ele corrigir.
 
-**V8 · Anúncio com a voz do dono (22/11)** · [`entregas/2026-11-22-0010-anuncio-ebook-locucao.md`](../entregas/REGISTRO.md)
+**V8 · Anúncio com a voz do dono (22/11)** · [`entregas/2026-11-22-0010-anuncio-ebook-locucao.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** a gravação dele (29 s), áudio editado primeiro pelas regras da MinoAI Frontier, dois cortes por veto do Revisor ("mandei construir, olha o resultado" e "até provar que dava certo"); `x1-plantas-e07-locucao.mp4` (25,3 s, 8,1 MB) e versão do WhatsApp (2,3 MB); pacote `kit-minoai/` para o computador do dono.
 - **O que o dono reclamou:** "Tire o imagem ilustrativa"; "Como podem os 3 quartos estar um seguido do outro? Isso é um erro gigante no layout"; "antes de qualquer vídeo ou gasto no OpenArt, quero um resumo… com a minha confirmação nos dois"; "O vídeo não é para TikTok nem Instagram" (22/11, histórico).
 - **O que funcionou:** a voz, o texto dele e o método "áudio primeiro, imagem obedece": **manteve** (o plano novo, `ANUNCIO-LOCUCAO.md` (seção "Plano de criação: anúncio do e-book com locução, com a planta nova"), guarda voz, cortes, trilha e 25 s). Os dois cortes do Revisor: **não reclamou**. O peso (8,1 e 2,3 MB): **não reclamou**.
@@ -118,13 +118,13 @@
 - **O que funcionou:** **não viu** a versão final do plano. A planta nova da E07, que o plano espera, não chegou: não há desenho no repositório.
 - **O que ensinou:** a ordem certa é planta aprovada → plano aprovado → imagens aprovadas → vídeo (as quatro paradas da seção 2 do plano).
 
-**V10 · Principal com o escaneamento da E07 (22/11)** · [`entregas/2026-11-22-1200-escaneamento.md`](../entregas/REGISTRO.md)
+**V10 · Principal com o escaneamento da E07 (22/11)** · [`entregas/2026-11-22-1200-escaneamento.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** a sequência que ele escreveu em décimos de segundo (cotas, malha 3D, etiquetas "72 m², 3 quartos, 1 suíte, 2 banheiros", casa pronta; só corte seco), por `video/scan.py`, encaixada em `roteiros/principal-condor.json` (21 s, 7,7 MB, sem OpenArt).
 - **O que o dono reclamou:** sem comentário dele sobre o vídeo.
 - **O que funcionou:** **não viu** (registrado como "o dono assistir"). O `scan.py` gera a sequência de qualquer planta com os números do validador.
 - **O que ensinou:** é rascunho porque a E07 está na fila do redesenho, e o roteiro ainda traz o selo. Ele citou "the mid-video proof beat we discussed earlier", que não chegou ao Editor: falta a referência dele.
 
-**V11 · Vídeo-convite da F03 (22/11)** · [`entregas/2026-11-22-1600-video-convite.md`](../entregas/REGISTRO.md)
+**V11 · Vídeo-convite da F03 (22/11)** · [`entregas/2026-11-22-1600-video-convite.md`](../../contexto/entregas/REGISTRO.md)
 - **O que era:** "This is an initial video that should be extremely inviting, showing an example of what the customer can receive if he pays for more…" + "Do a mix of this prompt with the last made longer video" (22/11). F03 Casa Família, passeio por dentro no motor próprio (`render-passeio.cjs`), gancho, escaneamento, e-book, chamada; `video/saida/convite/x1-plantas-convite.mp4` (26 s, 1080 x 1920).
 - **O que o dono reclamou:** sem comentário dele sobre o vídeo.
 - **O que funcionou:** **não viu**, pelo registro. Na ficha desta retrospectiva ele escreveu "OVERRULE, the last video should be saved": o convite é o único vídeo que restou em `video/saida/` na hora desta leitura. Não está escrito se isso é aprovação ou só "guardar".

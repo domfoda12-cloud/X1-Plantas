@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 79 documentos
+## Os 83 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -59,7 +59,7 @@ Tamanho: 3450 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 
-Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `contexto/dono/PROMPTS.md`, `contexto/dono/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81 achados…
+Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `pedidos/historico/PROMPTS.md`, `pedidos/historico/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81…
 
 Seções: Já eram lição ou regra (correções do Fable aplicadas às citações); Viraram lição (texto final, depois do veto); Tiradas pelo veto.
 
@@ -347,7 +347,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1059 palavras.
+Tamanho: 1103 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -628,3 +628,35 @@ Tamanho: 687 palavras.
 SIM SE. Conferido nos dados: `veneziana_sobre_porta: fundos`; 0,90 x 0,50 = 0,45 m²; 0,45 / 3,4 = 13%. A página não estoura; os avisos aparecem nas páginas 8 e 9 e na planta grátis. O veto 3 do cômodo a cômodo (serviço da C01) fica levantado, com as condições abaixo.
 
 Tamanho: 340 palavras.
+
+### [Os prompts do dono, palavra por palavra](historico/PROMPTS.md)
+
+O que o dono escreveu na conversa principal do projeto, na ordem e sem correção. Serve para tirar dúvida sobre o que ele realmente pediu: o `CONTEXTO.md` e o `QUADRO.md` são resumos, e resumo perde nuance. Leia o trecho da data que interessa, não o arquivo inteiro. Quem atende um pedido novo…
+
+Seções: 16/11/2026; 18/11/2026; 19/11/2026; 20/11/2026; 21/11/2026; 22/11/2026.
+
+Tamanho: 3509 palavras.
+
+### [Retrospectiva: o que foi feito no e-book e nos vídeos, o que o dono reclamou, o que funcionou](historico/RETROSPECTIVA.md)
+
+Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha:…
+
+Seções: E-book; Vídeos; Imagens e 3D; O que se repete; Plano para refazer do zero; O que esta leitura não conseguiu avaliar.
+
+Tamanho: 4681 palavras.
+
+### [O porquê dos prompts de 16 a 20/11/2026](historico/intencoes/2026-11-16-a-20.md)
+
+Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
+
+Seções: 16/11 · Começo do produto, ferramentas de vídeo e as primeiras referências; 18/11 · O produto vira catálogo e o projeto ganha pastas; 19/11 · MinoAI no comando, roteiro do lançamento e ferramentas de pesquisa; 20/11 · E-book do rascunho 1, Conselho, OpenArt, qualidade e contexto; Padrões deste período.
+
+Tamanho: 5945 palavras.
+
+### [O porquê dos prompts de 21 e 22/11/2026](historico/intencoes/2026-11-21-a-22.md)
+
+Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"). Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
+
+Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
+
+Tamanho: 6829 palavras.

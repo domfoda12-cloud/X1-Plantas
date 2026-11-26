@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`)
+
+- **O dono pediu:** "pasta do contexto tá bem grande".
+- **O que mudou:** o histórico saiu de `contexto/` para `pedidos/historico/` (nada apagado, links refeitos): as falas do dono palavra por palavra (`PROMPTS.md`), a retrospectiva, as intenções e as passagens de 20 a 24/11 (`REGISTRO-ate-2026-11-24.md`). `contexto/` foi de 245 KB para 90 KB. Em `contexto/dono/` ficam só as ideias gerais e os textos desatualizados.
+- **Todos:** fala antiga do dono, em `pedidos/historico/PROMPTS.md`. O que cada papel lê ao começar não mudou de lugar.
+
 ## 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`)
 
 - **O dono pediu:** "O seu nome proprio agora é Paydon Clabett / Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho".
@@ -25,9 +31,3 @@
 - **O dono pediu:** desacelerar ("if we work on all the tasks at the same time, none will be done"); visita 3D realista só depois ("save it for later"); e aplicar o prompt audit (`git apply`).
 - **O que mudou:** uma tarefa principal por vez, no máximo 2 agentes (`plano.py` aceita no máximo 2 em "Agora"); visita 3D realista guardada; prompt audit aplicado (achados 1 a 8, `ce87722`): "Plano antes de trabalho grande" no lugar de "Pense antes", "pare e espere" virou "devolva para aprovação", `salvar.py` citado nas regras e assinando pelo modelo da sessão.
 - **Todos:** salve só com `ferramentas/salvar.py`. **Planejador:** no máximo 2 em "Agora". **Redator:** devolva o diagnóstico para aprovação, salvo se o pedido já a traz.
-
-## 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`)
-
-- **O dono pediu:** "Queria testar algo no nosso sistema também, 'nunca confie na primeira coisa que pensar' o que acha?" ("sim" ao teste); "Também gostaria que o juri fosse mais stricit é possivel?" ("sim, gostei das regras").
-- **O que mudou:** `CONSELHO.md` 5b: cada jurado aponta 2 defeitos com arquivo e linha antes da nota; qualquer nota abaixo de 7 reprova; o presidente confere 5 fatos e quem afirmou fato falso perde a nota; prova com erro plantado a cada 3 rodadas e quem não pegar perde peso. Máximo de 2 rodadas mantido. **Teste de 3 fichas da segunda olhada:** antes de número, frase ao público, comando que grava ou apaga, ou gasto, a ficha tem "Segunda olhada" (primeira ideia, alternativa, o que provaria o erro, o que a conferência mostrou).
-- **Todos:** escrevam a segunda olhada nesses 4 casos. **Jurados:** sem 2 defeitos com prova, a nota não conta. **Supervisor:** confere a contagem da segunda olhada na próxima auditoria. **Designer:** a D50 é a primeira ficha do teste.

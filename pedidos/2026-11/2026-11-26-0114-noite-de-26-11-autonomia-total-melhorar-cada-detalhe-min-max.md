@@ -30,3 +30,5 @@ Always remember, I M P R O V E M E N T, get every single detail, every single co
 
 **Papéis afetados:** todos
 
+**Segunda olhada (item 11, mover arquivos de `contexto/`):** primeira ideia: mover `contexto/dono/` inteiro e o `REGISTRO.md` para uma pasta nova `historico/` na raiz. Alternativa: deixar em `contexto/dono/` o que ainda é lido como contexto vivo (`IDEIAS-GERAIS.md`, `TEXTOS-DESATUALIZADOS.md`, citados por 7 papéis) e pôr só o histórico em `pedidos/historico/`, junto dos pedidos do dono, sem pasta nova para registrar. O que provaria o erro: link quebrado, papel que lê o arquivo movido ao começar, programa que procura o caminho antigo. A conferência: `checar.py` (links entre documentos) verde; nenhum `.claude/agents/` cita os arquivos movidos; só o `resumos.py` citava o caminho e foi ajustado; `REGISTRO.md` continua no lugar (o `pedido.py` e o `CLAUDE.md` apontam para ele). Ficou a alternativa.
+

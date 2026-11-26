@@ -1,6 +1,6 @@
 # A4: correções antigas do dono, conferidas (23/11/2026)
 
-> Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `contexto/dono/PROMPTS.md`, `contexto/dono/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81 achados com repetição entre fontes; 35 já eram lição ou regra; 9 viraram lição (`pedidos/LICOES.md`).
+> Fila da noite, tarefa A4 (ficha `2026-11-23-0144`). Três leitores (Sonnet) em `pedidos/historico/PROMPTS.md`, `pedidos/historico/intencoes/` e `pedidos/entrada/` + `conversas.py`; um agente juntou e conferiu o que já existia; Revisor e Fable vetaram (Fable SIM, SE, 7). Tudo nas nossas palavras. 81 achados com repetição entre fontes; 35 já eram lição ou regra; 9 viraram lição (`pedidos/LICOES.md`).
 
 ## Já eram lição ou regra (correções do Fable aplicadas às citações)
 

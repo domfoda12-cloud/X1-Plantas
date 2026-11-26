@@ -37,3 +37,4 @@
 - 26/11 ~02:50 UTC: item 12: passagem escrita em `contexto/entregas/ULTIMO.md`; a fila continua na sessão nova.
 - 26/11 ~02:55 UTC: item 10 FECHADO (nomes e jeito nos 10 agentes e em `contexto/EQUIPE.md`; `contexto/CONVERSA.md` criado; Canteiro com a fala nova; `checar.py` confere). Ficha 0116 fechada. Achado: a cópia do Canteiro em `ebook/plantas/rascunhos/` é ignorada pelo git; restaurada só no disco a partir do artifact.
 - 26/11 ~03:05 UTC: auditoria da Olga (fichas 1027, 0105, 0116: 0 alta, 6 média, 10 baixa) e consertos; fonte do Canteiro movida para `pedidos/canteiro/`.
+- 26/11 ~03:15 UTC: item 11 FECHADO (`contexto/` de 244.938 para 89.708 bytes e de 27 para 23 arquivos: `PROMPTS.md`, `RETROSPECTIVA.md`, `intencoes/` e as passagens de 20 a 24/11 movidos para `pedidos/historico/`, 18 arquivos com links refeitos, nada apagado; nome do Paydon no `CONTEXTO.md`).

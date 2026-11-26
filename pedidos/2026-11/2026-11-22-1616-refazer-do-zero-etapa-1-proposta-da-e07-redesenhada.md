@@ -6,7 +6,7 @@
 
 *Retomada pelo lembrete agendado de 22/11 16:15 UTC, sem resposta do dono às perguntas.*
 
-**O que ele pediu, parte por parte:** "Refaça tudo do zero assim que o limite reiniciar": refazer e-book e vídeos pelo plano de `contexto/dono/RETROSPECTIVA.md`. Esta ficha é só a parte que não depende das respostas dele: a proposta da E07 redesenhada (etapa 1).
+**O que ele pediu, parte por parte:** "Refaça tudo do zero assim que o limite reiniciar": refazer e-book e vídeos pelo plano de `pedidos/historico/RETROSPECTIVA.md`. Esta ficha é só a parte que não depende das respostas dele: a proposta da E07 redesenhada (etapa 1).
 
 **Por que ele pediu, ou o que quer descobrir:** A E07 é a casa que ele chamou de "erro gigante no layout" (3 quartos em fila, 22/11). Ela está no e-book e era a casa do anúncio com a voz dele; a planta nova nunca chegou.
 

@@ -17,7 +17,7 @@
 
 ## Em aberto com você
 
-- Vídeos, clipes e renders antigos foram apagados em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Ficaram o convite, o principal de 21/11, a voz do dono e a trilha. Refazer pelo plano de `dono/RETROSPECTIVA.md`.
+- Vídeos, clipes e renders antigos foram apagados em 22/11/2026 para refazer do zero; volta pelo git (commit 079dae7). Ficaram o convite, o principal de 21/11, a voz do dono e a trilha. Refazer pelo plano de `pedidos/historico/RETROSPECTIVA.md`.
 - Assistir ao CONDOR XIII quadro a quadro no PC do dono, ou receber 3 a 5 momentos favoritos com o minuto.
 - Gravar o apresentador; criar o Instagram; configurar a MinoAI Frontier no PC com Windows (WSL).
 - Testar a palavra do comentário PLANTA contra LOTE.

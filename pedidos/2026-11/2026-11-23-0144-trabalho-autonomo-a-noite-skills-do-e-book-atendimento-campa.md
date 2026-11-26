@@ -90,7 +90,7 @@ A versão 2 (E07, funil, campanha, interface, skills) fica para depois, com o "s
 **Condições do Fable (A1), valem para cada tarefa:**
 - A2: `pedido.py licao <papel> "texto" --ficha --ponto --origem` grava num registro só de acréscimo (`pedidos/LICOES.md`) e no "Lições" do contexto; `fechar` chama esse comando; "O que aprendi" obrigatório só em ficha fechada de 23/11 em diante; contexto perto do limite: o comando recusa e manda consolidar (nunca subir o limite); conferência no `checar.py` com ficha falsa.
 - A3: `ferramentas/placar.py` gera `contexto/PLACAR.md` com o n ao lado de cada média; formato fixo das tabelas de veto de 23/11 em diante: `| Rodada | Agente | Nota | Ponto que caiu | Por quê |`; nenhuma regra muda com n menor que 5; entra no mapa.
-- A4: na nuvem o `conversas.py` só vê esta conversa: minerar também `contexto/dono/PROMPTS.md` e `intencoes/`; uma palavra por busca; cada lição com a data da fala e "leitura nossa"; conferir se a mensagem da tarefa agendada cai em `pedidos/entrada/` e, se cair, filtrar.
+- A4: na nuvem o `conversas.py` só vê esta conversa: minerar também `pedidos/historico/PROMPTS.md` e `intencoes/`; uma palavra por busca; cada lição com a data da fala e "leitura nossa"; conferir se a mensagem da tarefa agendada cai em `pedidos/entrada/` e, se cair, filtrar.
 - A5 = a prova do A0, repetida; cada erro novo de auditoria vira caso novo.
 - A6: um papel por ciclo, pesquisa em dois passos, regra no `contexto/<papel>.md` com fonte, data e "noite, o dono não viu"; só vale com um caso novo na prova.
 - A7: não à mão: o topo do `PLACAR.md` gerado, citado no quadro.

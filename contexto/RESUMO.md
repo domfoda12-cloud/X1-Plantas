@@ -16,12 +16,12 @@
 - A frente de vídeo foi aberta pelo dono em 21/11. Toda instrução dele sobre vídeo fica em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"). O convite (F03) e o principal (E07) são rascunhos e não passaram pelo Revisor (`editor-video.md`).
 - O selo "Imagem ilustrativa" saiu dos vídeos; continua em imagem parada. O aviso "Planta de referência…" continua obrigatório (`revisor-de-risco.md`).
 - Em aberto com o dono: título, preço, garantia, bônus, 12 ou 24 plantas, contato do parceiro; PLANTA ou LOTE no comentário. R$ 67 e 7 dias não são fato (`estrategista.md`, `redator.md`).
-- O que liga um pedido ao outro (nove fios) e o que o dono exige dos vídeos, com o que é firme e o que é leitura nossa: `dono/IDEIAS-GERAIS.md`; o porquê de cada prompt: `dono/intencoes/` (`dono/IDEIAS-GERAIS.md`).
-- O que o dono escreveu, palavra por palavra, está em `dono/PROMPTS.md`; na dúvida sobre um pedido, leia o trecho da data (`dono/PROMPTS.md`).
+- O que liga um pedido ao outro (nove fios) e o que o dono exige dos vídeos, com o que é firme e o que é leitura nossa: `dono/IDEIAS-GERAIS.md`; o porquê de cada prompt: `pedidos/historico/intencoes/` (`dono/IDEIAS-GERAIS.md`).
+- O que o dono escreveu, palavra por palavra, está em `pedidos/historico/PROMPTS.md`; na dúvida sobre um pedido, leia o trecho da data (`pedidos/historico/PROMPTS.md`).
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 23 documentos
+## Os 19 documentos
 
 ### [Conversa da equipe](CONVERSA.md)
 
@@ -55,9 +55,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`).
+Seções: 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`).
 
-Tamanho: 834 palavras.
+Tamanho: 746 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -99,22 +99,6 @@ Seções: A ideia central; Os nove fios; O que isso exige dos vídeos (prioridad
 
 Tamanho: 1121 palavras.
 
-### [Os prompts do dono, palavra por palavra](dono/PROMPTS.md)
-
-O que o dono escreveu na conversa principal do projeto, na ordem e sem correção. Serve para tirar dúvida sobre o que ele realmente pediu: o `CONTEXTO.md` e o `QUADRO.md` são resumos, e resumo perde nuance. Leia o trecho da data que interessa, não o arquivo inteiro. Quem atende um pedido novo…
-
-Seções: 16/11/2026; 18/11/2026; 19/11/2026; 20/11/2026; 21/11/2026; 22/11/2026.
-
-Tamanho: 3509 palavras.
-
-### [Retrospectiva: o que foi feito no e-book e nos vídeos, o que o dono reclamou, o que funcionou](dono/RETROSPECTIVA.md)
-
-Escrito em 22/11/2026 a pedido do dono: "Quero que faça uma leitura de cada trabalho feito no e-book e vídeos, veja o que foi reclamado, o que funcionou, e refaça tudo do zero assim que o limite reiniciar". Ficha:…
-
-Seções: E-book; Vídeos; Imagens e 3D; O que se repete; Plano para refazer do zero; O que esta leitura não conseguiu avaliar.
-
-Tamanho: 4681 palavras.
-
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
 Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 contradições. Três agentes no Opus resolveram as que dependiam só de texto (a regra mais recente do dono vence; texto de venda só promete o que existe; documento superado foi apagado). Aqui ficou só o que depende do dono,…
@@ -122,22 +106,6 @@ Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 con
 Seções: Decisões do dono (os textos estão com o campo entre colchetes, esperando); Revisor de risco; Já revisado em 22/11 (apagar quando conferir que ficou certo); Imagem e vídeo que ainda mostram a casa velha (texto já corrigido); Para o Revisor e o dono (achados da auditoria de 22/11, sem veredito); Ainda não conferido.
 
 Tamanho: 701 palavras.
-
-### [O porquê dos prompts de 16 a 20/11/2026](dono/intencoes/2026-11-16-a-20.md)
-
-Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md`. Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
-
-Seções: 16/11 · Começo do produto, ferramentas de vídeo e as primeiras referências; 18/11 · O produto vira catálogo e o projeto ganha pastas; 19/11 · MinoAI no comando, roteiro do lançamento e ferramentas de pesquisa; 20/11 · E-book do rascunho 1, Conselho, OpenArt, qualidade e contexto; Padrões deste período.
-
-Tamanho: 5945 palavras.
-
-### [O porquê dos prompts de 21 e 22/11/2026](dono/intencoes/2026-11-21-a-22.md)
-
-Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `../PROMPTS.md` e em `video/VIDEO.md` (seção "Vídeo: tudo o que o dono pediu (não se perde)"). Pergunta passada em cada prompt: por que essa mudança foi pedida, ou o que ele quer descobrir, e qual o objetivo dele?
-
-Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
-
-Tamanho: 6829 palavras.
 
 ### [Contexto do Editor de vídeo](editor-video.md)
 
