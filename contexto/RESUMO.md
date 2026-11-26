@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 2012 palavras.
+Tamanho: 2077 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -149,11 +149,11 @@ Tamanho: 392 palavras.
 
 ### [Contexto do Planejador](planejador.md)
 
-Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Desde 26/11 você também separa um monte grande em grupos pequenos. Você não executa: propõe; não move nem apaga.
+Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Desde 26/11 você também separa um monte grande em grupos pequenos. Você não executa: propõe; não move nem apaga. O método fixo está no seu agente…
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 869 palavras.
+Tamanho: 615 palavras.
 
 ### [Contexto do Redator](redator.md)
 

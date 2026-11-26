@@ -9,7 +9,7 @@ Uso: python3 ferramentas/plano.py agora             passos que podem começar j�
      python3 ferramentas/plano.py caminho <passo>   tudo o que falta, em ordem, para chegar a um passo (ex.: D12)
      python3 ferramentas/plano.py feito <passo> "o que virou"          marca o passo como feito, com a data
      python3 ferramentas/plano.py respondido <n> "o que o dono disse"  marca a decisão n como respondida (só com fala dele)
-     python3 ferramentas/plano.py subir [passo...]  sobe passos livres para "Agora" (sem nome: os primeiros livres, até ficar com 3)
+     python3 ferramentas/plano.py subir [passo...]  sobe passos livres para "Agora" (sem nome: os primeiros livres, até ficar com 2; dono, 24/11)
      python3 ferramentas/plano.py conferir          falha se o plano estiver quebrado (usado pelo checar.py)
 """
 import datetime, re, sys

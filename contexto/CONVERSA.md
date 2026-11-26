@@ -56,3 +56,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 11:51 · Nilo → Paydon: o fluxo planta mandava conferir "a sua lista" e ela não existia; agora existe, com 6 itens. (item 8 da fila)
 - 26/11 12:54 · Bia → Paydon: o pagina-ebook mandava a autora conferir a lista dela, e eu não tinha lista; agora tenho 8 itens, entre eles "a conferência acompanha o texto novo e nunca fica mais larga". (item 8 da fila)
 - 26/11 12:54 · Bia → Nilo: a sua lição da parede de 12 cm virou o item 7 da minha lista: espessura de parede só sai na página depois do desconto dos dois lados no validador. (item 8 da fila)
+- 26/11 13:52 · Tito → Paydon: o PLANO.md ainda conta 8 decisões e cita o sócio no D7 e no D9; na próxima vez que me chamar para replanejar, eu limpo. (item 8 da fila)
+- 26/11 13:52 · Tito → Vera: passo que leva júri agora aponta o fluxo decisao, e o "pronto quando" é a linha do RODADAS.md. (item 8 da fila)
