@@ -1324,7 +1324,7 @@ def montar(plantas, config, numeros, duas_partes=False):
       <div class="caixa azul"><b>Dica:</b> a área do cômodo é a área por dentro das paredes. A "área fechada" da ficha soma a parte da casa com paredes e telhado, sem contar varanda nem garagem.</div>""", orelha=geral)
     termos = "".join(f"<div><dt>{E(t)}</dt><dd>{E(d)}</dd></div>" for t, d in TX.GLOSSARIO)
     L.inicio["palavras"] = L.pagina(f"""{cab("palavras")}
-      <p class="abertura">As palavras que aparecem nas plantas, na prefeitura e na conversa com o engenheiro.</p>
+      <p class="abertura">Sabe quando o engenheiro fala em “pé-direito” e a gente concorda com a cabeça? Depois desta página, você concorda sabendo o que é.</p>
       <dl class="glossario">{termos}</dl>""", orelha=geral)
 
     # 7–8. os 7 erros
@@ -1398,7 +1398,7 @@ def montar(plantas, config, numeros, duas_partes=False):
     campos = ["Endereço do lote", "Frente (m)", "Fundo (m)", "Recuo da frente (m)", "Recuos laterais (m)",
               "Recuo dos fundos (m)", "Taxa de ocupação (%)", "Permeabilidade (%)", "Lado do nascente (leste)", "Para que lado fica a rua (bússola do celular)",
               "Regras do condomínio", "Casas que cabem (IDs)"]
-    L.inicio["ficha"] = L.pagina(f'{cab("ficha")}<p class="abertura">Preencha com os dados da prefeitura e leve junto na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}', orelha=geral)
+    L.inicio["ficha"] = L.pagina(f'{cab("ficha")}<p class="abertura">“Qual é o recuo do seu lote? E a taxa de ocupação?” Anote aqui o que a prefeitura informar e leve na primeira conversa com o engenheiro.</p><div class="preencher">{"".join(f"<div>{c}</div>" for c in campos)}</div>{foto("01-lote-trena", 60, pos="center 60%")}', orelha=geral)
 
     # próximos passos
     L.bloco = "passos"
@@ -1414,7 +1414,7 @@ def montar(plantas, config, numeros, duas_partes=False):
         ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
         ("Regularize a casa pronta", "Habite-se na prefeitura e registro da casa na matrícula do lote, no cartório."),
     ]
-    L.inicio["passos"] = L.pagina(f'{cab("passos")}<ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto", orelha=geral)
+    L.inicio["passos"] = L.pagina(f'{cab("passos")}<p class="abertura">O desenho é do parente, no caderno, e no balcão disseram: “a prefeitura pede projeto”. Aqui está a ordem, e onde entra o profissional.</p><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 60, pos="center 28%")}', "texto", orelha=geral)
 
     # bônus e contato
     L.bloco = "bonus"

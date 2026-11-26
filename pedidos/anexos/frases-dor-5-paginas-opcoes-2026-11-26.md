@@ -99,3 +99,9 @@ Revisor (Opus, rascunho, SIM provisório; a versão final volta no Fable), 26/11
 **Preferida pelo risco:** C01 A; F01 empate; Passos B; Ficha B; Glossário B.
 **Notas:** com a C01 A, o título da pág. 9 "Cabe num lote de 8 x 15 m." responde sem "deve" (mudar é do dono). Na pág. 16, se a abertura cobrir o aviso "Planta de referência", é veto na versão final: medir na prévia.
 **Não conferido:** a prévia (estouro da pág. 16, quebra da pág. 3); a numeração (estas são as do PDF oficial de 17 páginas; em 25/11 eram as da prévia em duas partes); a contagem de palavras do Redator.
+
+## Escolha do dono (Canteiro, 26/11 17:46) e leitura final
+
+- **15 Ficha:** A, na versão com a troca da Vera ("Qual é o recuo do seu lote? E a taxa de ocupação?" Anote aqui o que a prefeitura informar e leve na primeira conversa com o engenheiro.).
+- **5 Glossário:** B (PASSA).
+- **16 Passos:** mistura A+B pedida pelo dono: "O desenho é do parente, no caderno, e no balcão disseram: \"a prefeitura pede projeto\". Aqui está a ordem, e onde entra o profissional." Vera (Fable, leitura única): **PASSA**; falta medir na prévia se o aviso "Planta de referência" fica inteiro (se apertar, encolher a foto, não a frase).

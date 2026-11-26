@@ -177,9 +177,9 @@ Tamanho: 2409 palavras.
 
 Autor: Redator (trabalho da noite; o dono escolhe de manhã). É opção: nada mudou em `ebook/gerador/` nem em `ebook/fichas/`. Só entra depois da escolha do dono e do "Revisor: ok". Recado do dono: a dor entra "daquele jeitinho" (cena, exemplo, detalhe que o comprador reconhece), nunca anunciada ("o…
 
-Seções: 0. Plano do texto (resumo do plano obrigatório `pedidos/anexos/plano-frases-dor-5-paginas-2026-11-25.md`); 1. C01, "Para quem é" (págs. 8 e 3) · jeito: a pergunta que ele já se faz; 2. F01, "Para quem é" (pág. 12) · jeito: o filho que vem e precisa de quarto; 3. "Do e-book até a chave na mão", abertura nova (pág. 16) · jeito: a cena de quem só tem o desenho; 4. "Ficha do meu terreno", abertura (pág. 15) · jeito: a pergunta que ele vai ouvir; 5. "As palavras da obra", abertura (pág. 5) · jeito: a palavra ouvida no balcão; 6. Reconferência do pedido; Leitura do Revisor.
+Seções: 0. Plano do texto (resumo do plano obrigatório `pedidos/anexos/plano-frases-dor-5-paginas-2026-11-25.md`); 1. C01, "Para quem é" (págs. 8 e 3) · jeito: a pergunta que ele já se faz; 2. F01, "Para quem é" (pág. 12) · jeito: o filho que vem e precisa de quarto; 3. "Do e-book até a chave na mão", abertura nova (pág. 16) · jeito: a cena de quem só tem o desenho; 4. "Ficha do meu terreno", abertura (pág. 15) · jeito: a pergunta que ele vai ouvir; 5. "As palavras da obra", abertura (pág. 5) · jeito: a palavra ouvida no balcão; 6. Reconferência do pedido; Leitura do Revisor; Escolha do dono (Canteiro, 26/11 17:46) e leitura final.
 
-Tamanho: 1649 palavras.
+Tamanho: 1759 palavras.
 
 ### [Funil simulado: do anúncio ao Pix, e onde a venda se perde (26/11/2026)](anexos/funil-simulado-2026-11-26.md)
 
