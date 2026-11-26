@@ -58,6 +58,8 @@ Cada membro responde em **uma linha**, sempre no mesmo formato:
 4. **No máximo 2 rodadas** (dono, 23/11/2026): reescreve-se a proposta uma vez; se a nota não chegar a 8,5, a decisão vai ao dono com as duas notas. **Piso por jurado** (dono, 25/11/2026): se qualquer jurado der menos de 7, a peça não passa, mesmo com a média em 8,5 ou mais. Antes, o laço ia até 6 rodadas e em 23/11 caiu três vezes seguidas (6,5, 6,3, 6,0).
 5. **Calibrar:** a cada 3 rodadas (dono, 25/11/2026: eram 5), uma prova com erro plantado (`pedidos/PROVAS.md`); **o jurado que não pegar o erro perde peso** nas 3 rodadas seguintes; e a nota do júri é comparada depois com o resultado real (custo por venda, `PAINEL.md` seção 4). Júri que dá nota alta para o que não vende perde peso.
 
+**Como roda** (26/11/2026, ficha `2026-11-26-0721`): pelo fluxo fixo `decisao` (`.claude/workflows/decisao.js`; guia em [`pedidos/fluxos/LEIA-ME.md`](pedidos/fluxos/LEIA-ME.md)). O programa `fluxo.py juri` recusa a rodada que fura as regras 0 a 3 (régua, 3 ângulos e modelos, 2 defeitos com arquivo e linha que existem, revisão anônima, presidente que não votou com 5 fatos, gasto) e calcula a regra 4. O piso olha toda nota dada, até a de quem perdeu a nota por fato falso. As regras não mudaram; o fluxo só as cumpre sempre igual.
+
 **Custo:** caro (o laço de 23/11, rodadas 3 a 5, gastou cerca de 2,95 milhões de tokens de subagentes): só com o motivo escrito na ficha.
 
 **Propostas em espera** (26/11/2026): o diagnóstico do júri está em [`pedidos/anexos/diagnostico-do-juri-2026-11-26.md`](pedidos/anexos/diagnostico-do-juri-2026-11-26.md), com 5 mudanças de método. Nenhuma vale: só viram regra depois de uma prova com gabarito e do "sim" do dono.

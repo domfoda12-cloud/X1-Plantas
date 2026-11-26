@@ -61,7 +61,7 @@ Ainda só no catálogo (ideia): F06, F07, S01, S02, S06, S08, S10, O01, O02, O03
               │ comentário "PLANTA"    │
               ▼                        │
    ┌──────────────────────────────────┴──┐
-   │ Funil no WhatsApp (parceiro):       │
+   │ Funil no WhatsApp (dono):           │
    │ planta grátis → conversa → oferta   │
    └─────────────────────────────────────┘
 ```
@@ -129,9 +129,9 @@ Preencha toda segunda-feira. Compare cada semana com a anterior, não com contas
 | Vídeo | Tempo médio assistido; % que chega aos 27 s (o desfecho) | Instagram (estatísticas do reel) | Metade sai antes do erro 2: o gancho não prendeu |
 | Vídeo | Custo por contato | Gerenciador de Anúncios | Subindo 3 semanas seguidas: trocar o gancho |
 | Instagram | Comentários "PLANTA" por reel; seguidores novos | Instagram | 3 reels fracos seguidos diminuem o alcance do próximo |
-| Funil | Contatos → compras (taxa de conversão) | Parceiro | Abaixo da semana anterior: revisar a planta grátis e a oferta |
-| Funil | % que manda o tamanho do lote; **lote mais pedido** | Parceiro | Pouca gente manda o lote: mudar a primeira mensagem. O lote mais pedido define as próximas plantas e anúncios |
-| E-book | Vendas; pedidos de reembolso | Anotação do parceiro (Pix no WhatsApp, sem plataforma) | Reembolsos: o e-book não entregou o que o anúncio prometeu |
+| Funil | Contatos → compras (taxa de conversão) | Dono | Abaixo da semana anterior: revisar a planta grátis e a oferta |
+| Funil | % que manda o tamanho do lote; **lote mais pedido** | Dono | Pouca gente manda o lote: mudar a primeira mensagem. O lote mais pedido define as próximas plantas e anúncios |
+| E-book | Vendas; pedidos de reembolso | Anotação do dono (Pix no WhatsApp, sem plataforma) | Reembolsos: o e-book não entregou o que o anúncio prometeu |
 | 3D | Plantas novas por semana | Seção 1 deste painel | Sem planta nova: o Instagram fica sem "planta da semana" |
 
 | Semana | Gasto | Custo por contato | Contatos | Vendas | Conversão | Custo por venda | Preço | Observação |
@@ -188,7 +188,7 @@ A rotina da semana está em [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FR
 | **Maestro: a conversa principal (Opus)** e **Diretor: MinoAI Frontier** | O Maestro decide e rege; o Diretor dá a ideia do conteúdo e opina primeiro nele, com a fonte, e edita no computador do dono | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier) |
 | **Conselho** (Redator, Estrategista, Arquiteto, Designer, Editor de vídeo, Pesquisador; Revisor de risco com veto) | Opina e executa só o que foi aprovado | [`CONSELHO.md`](CONSELHO.md), `contexto/<papel>.md` |
 | **Modelos** | A conversa principal interpreta e confere; Opus executa o trabalho do projeto e pesquisa a fundo (`pesquisador`, um passo só); Haiku faz a tarefa simples e pessoal do dono | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
-| **Parceiro** | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas) |
+| **Dono (funil)** | Funil: WhatsApp, sequência de mensagens, venda e reembolso (o sócio saiu em 26/11) | [`ebook/vendas/`](ebook/vendas) |
 | **Arquiteto registrado** (a contratar, decisão do dono) | Revisar as plantas e o texto de responsabilidade técnica | [`reports/`](reports/RESUMO.md) |
 
 Antes de entregar: `python3 ferramentas/checar.py` sem erro e `python3 ferramentas/atualizar-painel.py` com zero avisos ([`CLAUDE.md`](CLAUDE.md)).

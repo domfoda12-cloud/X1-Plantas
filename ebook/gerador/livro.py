@@ -2413,8 +2413,14 @@ class _CaC01:
         ven = P.jan["servico"]
         if ven.get("tipo") != "veneziana":
             _ca_aviso("o serviço não tem a veneziana nos dados")
-        if T.get("veneziana") not in p["_r"].avisos:
-            _ca_aviso("a nota da veneziana do texto não é igual ao aviso dos dados")
+        # o cuidado do 8 leva a veneziana (26/11/2026): os números dele são os do aviso do validador (PLANTAS.md)
+        av_ven = [a for a in p["_r"].avisos if "veneziana" in a]
+        # e as duas condições do veto da veneziana (Vera, 24 e 26/11): passa menos ar, e o engenheiro confere se ventilação e luz bastam
+        if (len(av_ven) != 1 or any(x not in it[8]["cuid"] for x in re.findall(r"\d+,\d+", av_ven[0]))
+                or not all(re.search(x, it[8]["cuid"]) for x in (r"menos ar", r"engenheiro confere se bast", r"só cabe com",
+                                                                     r"quase nenhuma luz", r"código de obras da sua cidade"))):
+            _ca_aviso("o cuidado do serviço (8) perdeu uma condição do veto da veneziana: os números, 'só cabe com', 'menos ar', "
+                      "'quase nenhuma luz' ou 'o engenheiro confere se bastam no código de obras da sua cidade'")
         vp = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "varanda-sala"))
         P.folha_porta = max(vp[0][1], vp[1][1], vp[2][1])
         P.mesa = g.mv("mesaJantar", "sala")
@@ -2617,8 +2623,9 @@ def _ca_paginas_C01(L, p, T, casa, orelha):
     rec_main = (-.52, W + rec + .3, D + .55, -1.05)   # -.52: o rótulo "divisa" inteiro
     rec_hall = (3.05, 4.75, 5.55, 2.85)               # o hall e um pedaço das 3 portas
     it = T["itens"]
-    nota = f'<p class="nota-ca"><b>{E(TX.COMODO["tomadas"])}</b> {_ca_esc(T["nota"])}</p>'
-    ven = f'<p class="nota-ca ven"><b>{E(TX.COMODO["atencao"])}</b> {_ca_esc(T["veneziana"])}</p>'
+    # a nota das tomadas vai no vão do cartão do 4, no tamanho do texto dos cartões (antes: nota cinza solta, 26/11)
+    nota = (f'<p class="nota-ca" style="grid-column:2;font-size:9.4pt;line-height:1.36;color:var(--tinta);margin-top:2mm">'
+            f'<b style="color:var(--tinta)">{E(TX.COMODO["tomadas"])}</b> {_ca_esc(T["nota"])}</p>')
     alv = f'<p class="alv">{_ca_esc(T["alvenaria"])}</p>'
     col = 40
     k = (CA_LARG - col - 5 - 3) / (rec_main[1] - rec_main[0])
@@ -2635,11 +2642,15 @@ def _ca_paginas_C01(L, p, T, casa, orelha):
       </div>
       {_ca_heroi(it[3], largo=True, leg=TX.COMODO["destaque"]["C01"])}
       {alv}""", "q ca", orelha=orelha, aviso=True)
-    cartoes = "".join(_ca_cartao(i) if i["n"] != 4 else "" for i in it) + f'<div class="cd nota-cd">{ven}{nota}</div>'
-    L.pagina(f"""{_ca_eti2(p, T)}
+    # pág. 2: manchete própria; o 4 (destaque da pág. 1) fica no lugar dele na grade, apontando para lá; a nota da
+    # alvenaria fica só na pág. 1 (as duas formam um par) e a da veneziana entrou no cuidado do 8 (26/11/2026)
+    ref4 = (f'<article class="cd">{_ca_cab_item(it[3])}<p class="ca-id">'
+            f'{_ca_esc(TX.COMODO["ref_c01"])}</p>{nota}</article>')
+    cartoes = "".join(_ca_cartao(i) if i["n"] != 4 else ref4 for i in it)
+    L.pagina(f"""<div><div class="ca-eti"><span>{E(TX.COMODO["eti"])}</span><i>{E(p["id"])}</i><span class="f">{E(T["eti2"])}</span></div>
+      <h2 style="font-size:28pt">{E(T["titulo2"])}</h2></div>
       <div class="cartoes">{cartoes}</div>
-      {_ca_perguntas(T)}
-      {alv}""", "q ca c01", orelha=orelha, aviso=True)
+      {_ca_perguntas(T)}""", "q ca c01", orelha=orelha, aviso=True)
     return n
 
 
@@ -3010,6 +3021,10 @@ if __name__ == "__main__":
         SAIDA = Path(tempfile.mkdtemp(prefix="ebook-conferir-"))
     if "--previa" in sys.argv:
         prev = Path(sys.argv[sys.argv.index("--previa") + 1]).resolve()
+        # a prévia copia o ebook.pdf para a pasta dela: dentro de ebook/saida/ apagaria o PDF oficial (auditoria da Olga, 26/11)
+        if prev == EBOOK / "saida" or (EBOOK / "saida").resolve() in prev.parents or prev == (EBOOK / "saida").resolve():
+            sys.exit("ERRO: a prévia não vai a ebook/saida/: lá fica o PDF oficial, que só muda com o \"gera\" do dono. "
+                     "Use uma pasta fora do repositório. Nada foi gerado.")
     if "--duas-partes" in sys.argv and not prev:
         sys.exit(RECUSA_DUAS_PARTES)
     if "--placa" in sys.argv and not prev:

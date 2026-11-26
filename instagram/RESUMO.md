@@ -41,4 +41,4 @@ Tamanho: 4771 palavras.
 
 Seções: C01 redesenhada em 22/11/2026: o que vale agora; Ajustes depois da estratégia (20/11/2026); Resumo; Como gerar as imagens de novo; Regras que valem para todas as legendas; Post 1 · Reel · Passeio 3D da Casa Compacta; Post 2 · Carrossel · Três plantas lado a lado; Post 3 · Carrossel · Como ler uma planta baixa; Post 4 · Reel · Passeio 3D da Casa Fita; Post 5 · Carrossel · Checklist antes de contratar o pedreiro; Post 6 · Reel · Bastidor: a planta virando 3D; Post 7 · Imagem · Casa Família Compacta; Post 8 · Carrossel · 3 erros comuns na planta; Post 9 · Reel · O material gratuito; ….
 
-Tamanho: 4315 palavras.
+Tamanho: 4325 palavras.

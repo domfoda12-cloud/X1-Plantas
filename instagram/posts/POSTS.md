@@ -295,7 +295,7 @@ Planta de referência, não é projeto executivo. A obra precisa de responsável
 
 | Tela | Texto |
 |---|---|
-| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m) · no canto: Planta de referência, não é projeto executivo. A obra precisa de responsável técnico. · selo **Imagem ilustrativa** |
+| 1 | Perspectiva 3D em tela cheia; faixa embaixo: **Casa Família Compacta** · 71 m² · 3 quartos · 1 banheiro · cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m), com os recuos de referência · no canto: Planta de referência, não é projeto executivo. A obra precisa de responsável técnico. · selo **Imagem ilustrativa** |
 
 **Legenda:**
 
@@ -305,7 +305,7 @@ Casa Família Compacta: 3 quartos em 71 m². 🏡
 📐 71 m²
 🛏️ 3 quartos
 🚿 1 banheiro
-📏 cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m)
+📏 cabe num lote de 10 x 15 m (no mínimo 10,0 x 12,8 m), com os recuos de referência
 
 Os 3 quartos ficam nos fundos, longe da rua. Na sala cabe a mesa de 4, e o serviço tem porta para fora, para a faixa livre de 1,5 m ao lado da casa (recuo de referência).
 

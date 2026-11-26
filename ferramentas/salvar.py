@@ -3,7 +3,8 @@
   python3 ferramentas/salvar.py "mensagem do commit"
 
 Roda resumos.py e checar.py; se o checar.py não sair com 0, para e mostra o erro (nada é salvo).
-Se passar: git add -A, commit com as linhas de atribuição e push para a main e para a branch atual.
+Se passar: git add -A, commit com as linhas de atribuição e push para a main e para a branch atual
+(numa branch sistema/<assunto>, só para ela: a main recebe na junção, com tudo verde).
 """
 import os
 import subprocess
@@ -13,8 +14,10 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 # o modelo da sessão muda (dono, 25/11: não assinar sempre como Fable); troque aqui ou use X1_MODELO
 MODELO = os.environ.get("X1_MODELO", "Claude Opus 5.5")
+# a conversa que salvou (26/11: a linha estava fixa numa conversa de 25/11); X1_SESSAO troca, se precisar
+SESSAO = os.environ.get("X1_SESSAO") or os.environ.get("CLAUDE_CODE_REMOTE_SESSION_ID", "").replace("cse_", "session_", 1) or "session_01DYdRuF8rs2sLvVqr7VsfNR"
 ATRIBUICAO = (f"\n\nCo-Authored-By: {MODELO} <noreply@anthropic.com>\n"
-              "Claude-Session: https://claude.ai/code/session_01DYdRuF8rs2sLvVqr7VsfNR")
+              f"Claude-Session: https://claude.ai/code/{SESSAO}")
 
 
 def rodar(*cmd):
@@ -25,6 +28,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 2 or not sys.argv[1].strip() or sys.argv[1].lstrip().startswith("-"):  # "--help" virou commit (48a1345)
         sys.exit(__doc__)
     rodar(sys.executable, "ferramentas/resumos.py")
+    rodar("git", "add", "-A")  # antes do checar: arquivo novo também é conferido (26/11: um rascunho novo passou sem o mapa)
     c = rodar(sys.executable, "ferramentas/checar.py")
     if c.returncode != 0:
         print(c.stdout[-3000:], c.stderr[-1000:])
@@ -40,7 +44,8 @@ if __name__ == "__main__":
     if m.returncode:
         sys.exit("a junção com a main deu conflito: resolva à mão\n" + m.stdout + m.stderr)
     ramo = rodar("git", "branch", "--show-current").stdout.strip()
-    for alvo in ("HEAD:main", f"HEAD:{ramo}"):
+    # mudança grande de sistema fica na branch sistema/<assunto> até a junção (CLAUDE.md; 26/11: o push na main anulava a branch)
+    for alvo in ([f"HEAD:{ramo}"] if ramo.startswith("sistema/") else ["HEAD:main", f"HEAD:{ramo}"]):
         p = rodar("git", "push", "-q", "origin", alvo)
         if p.returncode:
             sys.exit(f"push para {alvo} falhou:\n{p.stderr}")

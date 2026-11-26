@@ -10,8 +10,10 @@ Uso: python3 ferramentas/pedido.py nova "assunto curto"   cria a ficha com o úl
           cada lição vai ao "Lições" do contexto/<papel>.md e a pedidos/LICOES.md;
           recusa se o contexto/QUADRO.md não tiver o aviso da ficha (o código 2026-11-24-1144 dela) com as 3 partes: "pediu:", "mudou:"
           e o que muda para cada papel; e avisa se o contexto/<papel>.md de quem está em "Papéis afetados" não mudou desde que ela abriu)
-     python3 ferramentas/pedido.py licao <papel> "lição" [--ficha X] [--ponto 1-5] [--origem dono|prova|auditoria|juri|maestro]
+     python3 ferramentas/pedido.py licao <papel> "lição" [--ficha X] [--ponto 1-5] [--origem dono|prova|auditoria|juri|maestro|fluxo] [--consolidar]
                                                            grava uma lição no contexto/<papel>.md e em pedidos/LICOES.md
+                                                           (--consolidar: arquivo cheio manda as lições mais antigas, inteiras, para
+                                                            pedidos/historico/licoes-<papel>.md, com link no lugar; nada se descarta)
      python3 ferramentas/pedido.py quadro                  tira do contexto/QUADRO.md o aviso mais antigo se passar de 5 ou do tamanho
      python3 ferramentas/pedido.py indice                  regenera pedidos/FILA.md
      python3 ferramentas/pedido.py conferir                falha se alguma ficha estiver sem campo obrigatório; avisa (sem falhar) da auditoria atrasada
@@ -35,7 +37,7 @@ VAZIO = "(a preencher)"
 APRENDI = "O que aprendi"  # obrigatório só em ficha fechada de 23/11/2026 em diante (as antigas não quebram)
 DESDE_APRENDI = "2026-11-23"
 AFETADOS = "Papéis afetados"  # a pergunta do fechar (F31): nomes de contexto/<papel>.md, ou "ninguém"
-ORIGENS = ("dono", "prova", "auditoria", "juri", "maestro", "ficha")
+ORIGENS = ("dono", "prova", "auditoria", "juri", "maestro", "ficha", "fluxo")
 LIMITE_CONTEXTO = 5000  # o mesmo do checar.py (subiu de 3500 em 24/11/2026, com o sim do dono: cartão p21)
 
 
@@ -221,6 +223,35 @@ def inserir_licao(txt, linha):
     return novo if len(novo) <= LIMITE_CONTEXTO else None
 
 
+APONTA_ANTIGAS = "- **Lições antigas:**"
+
+
+def consolidar(txt, papel, falta):
+    """Tira do "## Lições" as lições mais antigas (as primeiras) até sobrar `falta` caracteres; devolve (texto, tiradas).
+    Quem chama grava as tiradas, inteiras, em pedidos/historico/licoes-<papel>.md (dono, 26/11: consolida, não descarta)."""
+    m = re.search(r"^## Lições[^\n]*\n", txt, re.M)
+    if not m:
+        return txt, []
+    prox = re.search(r"^## ", txt[m.end():], re.M)
+    fim = m.end() + prox.start() if prox else len(txt)
+    linhas = txt[m.end():fim].split("\n")
+    aponta = f"{APONTA_ANTIGAS} [`pedidos/historico/licoes-{papel}.md`](../pedidos/historico/licoes-{papel}.md), inteiras; leia antes de trabalho grande."
+    tiradas, sobra = [], len(txt) + (0 if any(l.startswith(APONTA_ANTIGAS) for l in linhas) else len(aponta) + 1)
+    for i, l in enumerate(linhas):
+        if sobra + falta <= LIMITE_CONTEXTO:
+            break
+        marca = l[4:l.find(":**")] if ":**" in l else ""
+        if l.startswith("- **") and not l.startswith(APONTA_ANTIGAS) and not re.search(r"dono|auditoria", marca):  # essas ficam (auditoria, 26/11)
+            tiradas.append(l); linhas[i] = None; sobra -= len(l) + 1
+    if not tiradas:
+        return txt, []
+    linhas = [l for l in linhas if l is not None]
+    if not any(l.startswith(APONTA_ANTIGAS) for l in linhas):
+        primeira = next((i for i, l in enumerate(linhas) if l.startswith("- ")), len(linhas))
+        linhas.insert(primeira, aponta)
+    return txt[:m.end()] + "\n".join(linhas) + txt[fim:], tiradas
+
+
 def _contexto(papel):
     arq = RAIZ / "contexto" / f"{papel}.md"
     if not re.fullmatch(r"[a-z][a-z-]*", papel) or not arq.is_file():
@@ -228,7 +259,7 @@ def _contexto(papel):
     return arq
 
 
-def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, base=None):
+def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, base=None, consolidar_cheio=False):
     """Confere (e, com gravar, grava) a lição no contexto do papel e no registro único pedidos/LICOES.md.
     Sem gravar, devolve o contexto como ficaria; `base` é esse texto da lição anterior (duas lições do mesmo papel somam)."""
     arq = _contexto(papel)
@@ -243,11 +274,23 @@ def licao(papel, texto, ficha="-", ponto="-", origem="maestro", gravar=True, bas
     novo = inserir_licao(atual, linha)
     if novo is None and not re.search(r"^## Lições", atual, re.M):
         sys.exit(f"Não grava: contexto/{papel}.md não tem a seção '## Lições'.")
+    tiradas = []
+    if novo is None and consolidar_cheio:
+        menor, tiradas = consolidar(atual, papel, len(linha) + 1)
+        novo = inserir_licao(menor, linha) if tiradas else None
     if novo is None:
         sys.exit(f"Não grava: contexto/{papel}.md passaria de {LIMITE_CONTEXTO} caracteres (tem {len(atual)}; a lição pede {len(linha) + 1}). "
                  "Consolide: mova as lições mais antigas ao CONTEXTO-HISTORICO.md e tente de novo.")
     if not gravar:
         return novo
+    if tiradas:
+        hist = PEDIDOS / "historico" / f"licoes-{papel}.md"
+        hist.parent.mkdir(parents=True, exist_ok=True)
+        cab = "" if hist.exists() else (f"# Lições antigas de contexto/{papel}.md\n\n> Saíram inteiras do \"Lições\" quando o arquivo encheu "
+                                        "(`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.\n\n")
+        with open(hist, "a", encoding="utf-8") as h:
+            h.write(cab + "\n".join(tiradas) + "\n")
+        print(f"{len(tiradas)} lição(ões) antiga(s) foram inteiras para pedidos/historico/licoes-{papel}.md (link no lugar)")
     arq.write_text(novo, encoding="utf-8")
     reg = PEDIDOS / "LICOES.md"
     if not reg.exists():
@@ -345,10 +388,12 @@ if __name__ == "__main__":
     elif cmd == "fechar" and len(a) == 3:
         fechar(a[1], a[2])
     elif cmd == "licao" and len(a) >= 3:
+        cons = "--consolidar" in a
+        a = [x for x in a if x != "--consolidar"]
         if len(a) % 2 == 0 or any(k not in ("--ficha", "--ponto", "--origem") for k in a[3::2]):
             sys.exit(__doc__)
         op = {k: a[a.index(f"--{k}") + 1] for k in ("ficha", "ponto", "origem") if f"--{k}" in a}
-        licao(a[1], a[2], op.get("ficha", "-"), op.get("ponto", "-"), op.get("origem", "maestro"))
+        licao(a[1], a[2], op.get("ficha", "-"), op.get("ponto", "-"), op.get("origem", "maestro"), consolidar_cheio=cons)
     elif cmd == "quadro":
         quadro()
     elif cmd == "indice":

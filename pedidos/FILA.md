@@ -4,8 +4,9 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [imaginar no e-book a cena 3D da torre (The Last Boring Slide)](2026-11/2026-11-26-1701-imaginar-no-e-book-a-cena-3d-da-torre-the-last-boring-slide.md) | aberta | Paydon (motor 3D e página do esboço); se ele quiser no PDF: Bia monta, Caio escreve, Vera  |
 | 2026-11-26 | [socio sai do projeto, dono termina sozinho](2026-11/2026-11-26-0926-socio-sai-do-projeto-dono-termina-sozinho.md) | aberta | Paydon. |
-| 2026-11-26 | [fluxos fixos ultra max e licoes automaticas](2026-11/2026-11-26-0721-fluxos-fixos-ultra-max-e-licoes-automaticas.md) | aberta, em andamento | Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes. |
+| 2026-11-26 | [fluxos fixos ultra max e licoes automaticas](2026-11/2026-11-26-0721-fluxos-fixos-ultra-max-e-licoes-automaticas.md) | fechada em 26/11/2026 | Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes. |
 | 2026-11-26 | [Canteiro lido sozinho? Canal de IA em inglês, e talvez PT/EN/ES](2026-11/2026-11-26-0712-canteiro-lido-sozinho-e-canal-de-ia-em-ingles-pt-es.md) | aberta | Paydon (registro e cartões); Ana (pesquisa grátis); o vídeo e o gancho, no repositório do  |
 | 2026-11-26 | [nome do Maestro (Paydon Clabett), nomes dos agentes e conversa da equipe no Canteiro](2026-11/2026-11-26-0116-nome-do-maestro-paydon-clabett-nomes-dos-agentes-e-conversa-.md) | fechada em 26/11/2026 | Paydon (Maestro); entra depois do fluxo que está mexendo nos arquivos dos agentes. |
 | 2026-11-26 | [noite de 26/11: autonomia total, melhorar cada detalhe (min-maxing)](2026-11/2026-11-26-0114-noite-de-26-11-autonomia-total-melhorar-cada-detalhe-min-max.md) | aberta | Maestro e a equipe, em fluxos. |

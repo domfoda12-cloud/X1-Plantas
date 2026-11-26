@@ -8,7 +8,7 @@ Cada item é uma troca que o Revisor já pediu; de onde veio, entre parênteses.
 
 - **Frases vetadas que não voltam:** 3D prometido onde não há; "banheiro com giro" sem conferência; "ventilação cruzada" sem janelas opostas; "recebe as próximas plantas" sem o "sim" do dono; "todas as casas cabem"; o lado do sol de memória (vem do `PLANTAS.md`; a tabela estava espelhada, 26/11).
 - **Bloco ao cliente só com o que vai ao cliente.** Nota ao sócio ou "o dono decide" fica fora, no "Quando usar" (Vera, `/compactapreco` e `/formas`, 26/11).
-- **Lote, recuo ou medida de terreno:** junto vai "o recuo da sua cidade, a prefeitura confirma"; para quem ainda vai comprar o lote, "antes de fechar" (Vera, `/semlote`, `/ofertasemlote`, 26/11). Prefeitura e banco, com a condição: "se for financiar" (Vera, pág. 23, 25/11).
+- **Lote, recuo ou medida de terreno** (regra da Vera, 26/11): frente e fundo juntos, nunca só a frente; todo "cabe" com "com os recuos de referência" na mesma frase; "o recuo da sua cidade, a prefeitura confirma" junto de resultado sobre o lote da pessoa e de número para comprar terreno ("antes de fechar"; `/semlote`, `/ofertasemlote`). Em post e anúncio que chamam para o WhatsApp, as duas primeiras bastam. Prefeitura e banco, com a condição: "se for financiar" (Vera, pág. 23, 25/11).
 - **Nada que soe como desenho do lote da pessoa:** dizemos qual casa cabe, pelos recuos de referência (Vera, `/quem`, 26/11).
 - **Sem futuro que o dono não prometeu:** "ainda", "em breve" (Vera, "ainda não temos CNPJ", 26/11).
 - **A frase vale para quem a recebe?** Quem veio do anúncio não viu planta nenhuma; "aqui está" só com o anexo na conversa (Rui e Vera, `/confia`, `/planta`, 26/11).
@@ -28,3 +28,11 @@ Os fios do que o dono quer: [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Pr
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 - **24/11, ficha 2026-11-23-0200:** no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão.
+- **26/11, fluxo:** (texto-publico) Quando um atalho herda a promessa de outro, copie para o 'Quando usar' a condição que trava o original enquanto o dono não responde.
+- **26/11, fluxo:** (texto-publico) Antes de escrever 'a pessoa já tem', confira cada origem (anúncio A, B e post PLANTA); se uma delas não recebeu, abra um colchete ou separe o caso.
+- **26/11, fluxo:** (texto-publico) Quando uma frase é corrigida por uma regra, procure a mesma frase em todos os atalhos antes de marcar algum como 'fica como está'.
+- **26/11, fluxo:** (texto-publico) Só escreva 'palavra por palavra' depois de comparar os dois blocos com diff; se mudou um colchete, diga qual.
+- **26/11, fluxo:** (texto-publico) Tire a data de um arquivo do pdfinfo ou do git log, não da memória.
+- **26/11, fluxo:** (texto-publico) Antes de escrever "fica como está", releia o atalho antigo com a pergunta "vale para quem veio do anúncio e não recebeu a planta grátis?".
+- **26/11, fluxo:** (texto-publico) Quando a mensagem que vai ao cliente mora no código, peça a troca do código antes da leitura: atalho e calculadora chegam iguais à revisora.
+- **26/11, prova:** Prova de entrada, nível 1: deixei passar medida de lote sem o aviso do recuo (Fala da medida do lote (10 m de frente) e liga a casa a ele sem "o recuo da sua cidade, a prefeitura confirma" (contexto/redator.md, linha 11: lote, recuo ou medida de terreno vai junto com essa frase). A Família Compacta pede também no mínimo 12,8 m de fundo (ebook/plantas/PLANTAS.md, F01, "no mínimo 10,0 x 12,8 m"), e a legenda não diz nem o fundo nem os recuos de referência.).

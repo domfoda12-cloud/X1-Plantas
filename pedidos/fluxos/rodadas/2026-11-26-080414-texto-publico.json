@@ -1,0 +1,110 @@
+{
+ "fluxo": "texto-publico",
+ "peca": "pedidos/anexos/funil-textos-rascunho-2026-11-26.md",
+ "ficha": "2026-11-26-0721",
+ "resultado": "vai ao dono (2 voltas gastas; condições da Vera em aberto)",
+ "voltas": 2,
+ "gasto": {
+  "tokens_saida": 108710,
+  "por_conferidor": {
+   "programa:texto": 6892,
+   "autor": 47707,
+   "programa:passe": 7537,
+   "fatos:opus": 17241,
+   "vera": 29333
+  },
+  "tokens_ferramenta": 929300
+ },
+ "conferidores": [
+  {
+   "nome": "programa:texto",
+   "tipo": "P",
+   "achados_proprios": 33
+  },
+  {
+   "nome": "autor",
+   "tipo": "A",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "programa:passe",
+   "tipo": "P",
+   "achados_proprios": 1
+  },
+  {
+   "nome": "fatos:opus",
+   "tipo": "A",
+   "achados_proprios": 5
+  },
+  {
+   "nome": "vera",
+   "tipo": "A",
+   "achados_proprios": 2
+  }
+ ],
+ "achados": [
+  {
+   "autor": "redator",
+   "chave": "condicao-do-dono-omitida",
+   "texto": "O 'Quando usar' do /oferta (l. 230) e o do /ofertasemlote (l. 235) mandam a oferta 'na hora' a quem perguntou o preço. Nenhum dos dois diz que o /oferta só pode sair quando as 3 casas tiverem o 3D refeito. Essa condição está em ebook/vendas/RESPOSTAS-RAPIDAS.md, l. 3, e ainda espera o dono (seção 5,",
+   "licao": "Quando um atalho herda a promessa de outro, copie para o 'Quando usar' a condição que trava o original enquanto o dono não responde.",
+   "achado_por": "fatos:opus"
+  },
+  {
+   "autor": "redator",
+   "chave": "suposicao-sobre-o-que-o-cliente-tem",
+   "texto": "A l. 308 escolhe o 3D da Casa Fita no /semlote2q 'porque a Casa Compacta a pessoa já tem', e a l. 279 diz que o /semlote cita a Casa Compacta 'que a pessoa já ganhou'. Quem chegou pelos anúncios A ou B não recebeu a planta grátis: o próprio rascunho admite isso nas l. 184, 318 e 330. Para essa pesso",
+   "licao": "Antes de escrever 'a pessoa já tem', confira cada origem (anúncio A, B e post PLANTA); se uma delas não recebeu, abra um colchete ou separe o caso.",
+   "achado_por": "fatos:opus"
+  },
+  {
+   "autor": "redator",
+   "chave": "texto-mantido-contra-regra",
+   "texto": "A l. 231 diz que o /oferta 'fica como está', e a l. 401 deixa o /caro sem mudança. Os dois têm 'desenhada no lote' e '3 casas desenhadas no lote' (ebook/vendas/RESPOSTAS-RAPIDAS.md, l. 147 e 215). É a mesma frase que a l. 170 manda trocar na calculadora, porque soa como desenho do lote da pessoa (co",
+   "licao": "Quando uma frase é corrigida por uma regra, procure a mesma frase em todos os atalhos antes de marcar algum como 'fica como está'.",
+   "achado_por": "fatos:opus"
+  },
+  {
+   "autor": "redator",
+   "chave": "palavra-por-palavra-falso",
+   "texto": "A l. 379 diz que o /recebibonus é 'o /recebi de hoje, palavra por palavra (já lido pela Vera)'. Não é: o /recebi de hoje traz '[título do e-book]' (RESPOSTAS-RAPIDAS.md, l. 174), e o rascunho escreve 'Antes do primeiro tijolo'. A troca é pequena e o título já foi decidido (CONTEXTO.md, l. 27), mas a",
+   "licao": "Só escreva 'palavra por palavra' depois de comparar os dois blocos com diff; se mudou um colchete, diga qual.",
+   "achado_por": "fatos:opus"
+  },
+  {
+   "autor": "redator",
+   "chave": "data-errada",
+   "texto": "A l. 396 diz 'o de hoje (25/11) não diz'. Pelo pdfinfo, o ebook/saida/ebook.pdf foi criado em 24/11/2026 às 16:09 UTC. A conclusão está certa (a última página não fala em bonus.pdf), mas a data está errada.",
+   "licao": "Tire a data de um arquivo do pdfinfo ou do git log, não da memória.",
+   "achado_por": "fatos:opus"
+  },
+  {
+   "autor": "redator",
+   "chave": "frase-falsa-para-quem-veio-do-anuncio",
+   "texto": "A seção 2.9 diz que `/naocabe` e `/pensar` \"ficam como estão\". Os dois dizem \"A planta grátis fica com você.\" (`/home/user/X1-Plantas/ebook/vendas/RESPOSTAS-RAPIDAS.md`, linhas 123 e 217). Quem veio do anúncio da Casa Fita ou da Família Compacta não recebeu planta nenhuma, e é para o `/naocabe` que ",
+   "licao": "Antes de escrever \"fica como está\", releia o atalho antigo com a pergunta \"vale para quem veio do anúncio e não recebeu a planta grátis?\".",
+   "achado_por": "vera"
+  },
+  {
+   "autor": "redator",
+   "chave": "desenho-do-lote-na-calculadora",
+   "texto": "O \"Quando usar\" do `/cabe` (linha 142 do rascunho) diz: \"O normal é colar a mensagem pronta da calculadora\". A mensagem dela ainda diz \"No seu lote de ... m cabem ... casas do e-book ... Cada uma vem desenhada no lote\". Logo depois de \"No seu lote\", isso se lê como desenho do lote da pessoa, que o e",
+   "licao": "Quando a mensagem que vai ao cliente mora no código, peça a troca do código antes da leitura: atalho e calculadora chegam iguais à revisora.",
+   "achado_por": "vera"
+  }
+ ],
+ "perguntas_ao_dono": [
+  "Nada novo para o dono nesta passada. As 19 perguntas da seção 5 continuam abertas, e não decidi nenhuma delas."
+ ],
+ "registrado_em": "2026-11-26T08:04:14Z",
+ "licoes_novas": [
+  "redator|condicao-do-dono-omitida",
+  "redator|suposicao-sobre-o-que-o-cliente-tem",
+  "redator|texto-mantido-contra-regra",
+  "redator|palavra-por-palavra-falso",
+  "redator|data-errada",
+  "redator|frase-falsa-para-quem-veio-do-anuncio",
+  "redator|desenho-do-lote-na-calculadora"
+ ],
+ "voltaram": []
+}

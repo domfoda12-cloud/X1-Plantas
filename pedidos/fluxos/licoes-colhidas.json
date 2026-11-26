@@ -1,0 +1,57 @@
+{
+ "redator|condicao-do-dono-omitida": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|suposicao-sobre-o-que-o-cliente-tem": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|texto-mantido-contra-regra": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|palavra-por-palavra-falso": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|data-errada": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|frase-falsa-para-quem-veio-do-anuncio": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "redator|desenho-do-lote-na-calculadora": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-080414"
+ },
+ "designer|cuidado-8-veneziana-ventilacao": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-083158"
+ },
+ "designer|sala-tv-parede-12cm": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-083158"
+ },
+ "designer|sem-manchete": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-083158"
+ },
+ "arquiteto|aviso-tracejada-falso": {
+  "desde": "2026-11-26",
+  "vezes": 1,
+  "rodada": "2026-11-26-084008"
+ }
+}

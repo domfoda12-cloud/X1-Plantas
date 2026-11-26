@@ -15,15 +15,15 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 93 documentos
+## Os 107 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano); Auditoria 25/11 (trabalho do Maestro em 24 e 25/11; gravada achado por achado, o limite de uso estava no fim); Auditoria de 26/11/2026 (noite): 3 fichas fechadas.
+Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano); Auditoria 25/11 (trabalho do Maestro em 24 e 25/11; gravada achado por achado, o limite de uso estava no fim); Auditoria de 26/11/2026 (noite): 3 fichas fechadas; Auditoria de 26/11/2026 (manhã): os fluxos fixos.
 
-Tamanho: 9262 palavras.
+Tamanho: 9530 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1359 palavras.
+Tamanho: 2193 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -53,9 +53,9 @@ Tamanho: 14164 palavras.
 
 Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
 
-Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC); Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC).
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC); Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC); Prova 4, calibração do júri pelo fluxo `decisao` (26/11/2026, 08:41 a 08:53 UTC); Prova 5, primeira prova de entrada pelo fluxo `prova-de-entrada` (26/11/2026, 08:58 a 09:10 UTC).
 
-Tamanho: 3450 palavras.
+Tamanho: 3994 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 
@@ -165,6 +165,14 @@ Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-
 
 Tamanho: 517 palavras.
 
+### [Fila da conversa de uso livre, no computador do dono (26/11/2026)](anexos/fila-sessao-livre-2026-11-26.md)
+
+Dono, 26/11: "Queue whats needed to do to the free use session". Esta é a conversa que roda no computador dele, com acesso total, e daqui em diante é a única que mexe no e-book. Escrita pelo Paydon da conversa na nuvem, que para de mexer no e-book.
+
+Seções: Antes de tudo; Fila (uma por vez, salva com `python3 ferramentas/salvar.py` antes da próxima); Esperando o dono.
+
+Tamanho: 341 palavras.
+
 ### [Frases das 5 páginas: rascunho para o reset (25/11/2026)](anexos/frases-das-5-paginas-2026-11-25.md)
 
 Ficha: `pedidos/2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-reset.md`. Autor: Redator. É rascunho: nada mudou em `ebook/fichas/textos.py`, `ebook/gerador/livro.py` nem no `config.json`. Só entra no gerador se o dono escolher (perguntas 1 a 3 da seção 6 do mapa) e o Revisor de…
@@ -195,7 +203,7 @@ Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/
 
 Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila); Leitura da Vera (26/11).
 
-Tamanho: 6918 palavras.
+Tamanho: 7700 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
@@ -309,6 +317,22 @@ Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku)
 
 Tamanho: 10600 palavras.
 
+### [Proposta para o júri, 2ª rodada: primeira resposta mais curta no anúncio da Casa Fita (teste do fluxo `decisao`, 26/11/2026)](anexos/juri-teste-fluxo-2026-11-26-v2.md)
+
+Reescrita única da `juri-teste-fluxo-2026-11-26.md` (o original fica como estava), depois da 1ª rodada: notas 4, 4 e 2, média 3,3, os três abaixo do piso de 7 (`CONSELHO.md:58`). É a última rodada: se não chegar a 8,5 com todo jurado em 7 ou mais, a decisão vai ao dono com as duas notas…
+
+Seções: A pergunta, agora; O que muda; Por que; Como aplica (só nesta ordem; nada entra em uso antes do último passo); Como medir; Quanto custa e o que deixa de ser feito; Como desfazer; Perguntas ao dono (nada aqui está decidido); Resposta a cada defeito da 1ª rodada; Conferência antes de mandar ao júri.
+
+Tamanho: 1965 palavras.
+
+### [Proposta para o júri: primeira resposta mais curta no anúncio da Casa Fita (teste do fluxo `decisao`, 26/11/2026)](anexos/juri-teste-fluxo-2026-11-26.md)
+
+Rodada de teste do fluxo `.claude/workflows/decisao.js` (ficha `2026-11-26-0721`). Motivo de ir ao júri: o texto vai ao público (o cliente do anúncio lê no WhatsApp). Esta proposta é também a prova de calibração da regra 5 do júri (`CONSELHO.md`, seção 5b): tem erro plantado, e o gabarito fica fora…
+
+Seções: O que muda; Por que; Como aplica; Como desfazer.
+
+Tamanho: 225 palavras.
+
 ### [Kit do anúncio pago que abre o WhatsApp (rascunho)](anexos/kit-anuncio-whatsapp.md)
 
 24/11/2026. Escrito pelo Redator com a skill `oferta-e-whatsapp` (passo a passo) e a `redacao-que-vende`, conferido com a `marketing-psychology` (vontade, facilidade, um pedido só). Origem: achados 1, 2 e 5 de `skills-primeiro-uso.md`. RASCUNHO: nada aqui vai ao público. Antes, três coisas: o…
@@ -341,6 +365,14 @@ Seções: Como ler as marcações; Família 1: letreiro de obra e de placa pinta
 
 Tamanho: 2923 palavras.
 
+### [Mapa das conferências (26/11/2026)](anexos/mapa-conferencias-2026-11-26.md)
+
+Passo 1 do plano `pedidos/anexos/plano-fluxos-2026-11-26.md` (ficha `2026-11-26-0721`). Fontes: as lições de `pedidos/LICOES.md` e do "Lições" de cada `contexto/<papel>.md`, as provas de `pedidos/PROVAS.md` e os vetos da Vera em `pedidos/anexos/veto-*.md`. Regra do dono: tudo é conferido, pela…
+
+Seções: 1. Texto que vai ao público (anúncio, legenda, WhatsApp, página do e-book); 2. Página do e-book (prévia); 3. Planta; 4. Decisão (júri e conselho de bolso); 5. Passe entre agentes, salvar e passagem; 6. O que fica com agente, e por quê.
+
+Tamanho: 1209 palavras.
+
 ### [Mapa dor e saída do e-book, página por página (24/11/2026)](anexos/mapa-dor-solucao-do-ebook-2026-11-24.md)
 
 Pedido do dono (ficha `2026-11-24-2130`): "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele". Recado dele, 21:34: "Nao precisa mostrar a dor diretamente, mostra indiretamente sabe daquele jeitinho". Autor: Planejador. É só o mapa: nenhum…
@@ -363,7 +395,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 2065 palavras.
+Tamanho: 3002 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -611,9 +643,9 @@ Tamanho: 482 palavras.
 
 Vera Veto (Revisora de risco), no Fable, 26/11/2026. Leitura única da peça `funil-textos-rascunho-2026-11-26.md`, seguindo a folha do sócio do anúncio ao Pix. Ela só tem ferramentas de leitura: o parecer foi gravado aqui pelo Paydon, palavra por palavra do relatório dela. Veredito geral: SIM SE.…
 
-Seções: Conferido contra os dados; Condições gerais (valem para o funil inteiro); Atalho por atalho; Calculadora (`ebook/vendas/calculadora-lote.html`); Folha do sócio: SIM SE; Faltam na seção 5 (perguntas ao dono); Notas (não são condição).
+Seções: Conferido contra os dados; Condições gerais (valem para o funil inteiro); Atalho por atalho; Calculadora (`ebook/vendas/calculadora-lote.html`); Folha do sócio: SIM SE; Faltam na seção 5 (perguntas ao dono); Notas (não são condição); Reconferência (26/11, fluxo `texto-publico`, primeira rodada real).
 
-Tamanho: 1548 palavras.
+Tamanho: 2541 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 
@@ -677,9 +709,9 @@ Tamanho: 647 palavras.
 
 [Revisor] SIM no post 2; SIM SE nos posts 4 e 7 e nas notas. Rodou no Opus, em rascunho; a peça final passa pelo Fable. Conferido contra `PLANTAS.md`, os dados da E03 e da F01, o `config.json` e as imagens 3D paradas. Os números batem (E03: 56 m², 2 quartos, 1 banheiro, 5 x 25, mínimo 5,0 x 20,6;…
 
-Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE; Telas dos posts 2, 4 e 7 (rascunho do Designer, passo F20): SIM SE · Revisor, 24/11, Opus.
+Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE; Telas dos posts 2, 4 e 7 (rascunho do Designer, passo F20): SIM SE · Revisor, 24/11, Opus; Reconferência (26/11, item 8 da fila da noite; gravada pelo Paydon, a Vera só lê).
 
-Tamanho: 844 palavras.
+Tamanho: 1022 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 
@@ -700,6 +732,20 @@ Tamanho: 687 palavras.
 SIM SE. Conferido nos dados: `veneziana_sobre_porta: fundos`; 0,90 x 0,50 = 0,45 m²; 0,45 / 3,4 = 13%. A página não estoura; os avisos aparecem nas páginas 8 e 9 e na planta grátis. O veto 3 do cômodo a cômodo (serviço da C01) fica levantado, com as condições abaixo.
 
 Tamanho: 340 palavras.
+
+### [Fluxos fixos: como usar](fluxos/LEIA-ME.md)
+
+Pedido do dono, 26/11/2026: "YESSS, thats exactly what im looking for but a version ultra max" (ficha `2026-11-26-0721`; plano em `pedidos/anexos/plano-fluxos-2026-11-26.md`; mapa das conferências em `pedidos/anexos/mapa-conferencias-2026-11-26.md`).
+
+Seções: A ideia; Os 5 fluxos (`.claude/workflows/`); O que fica gravado; Quem confere os fluxos.
+
+Tamanho: 433 palavras.
+
+### [Rodadas dos fluxos fixos](fluxos/RODADAS.md)
+
+Gerado por `python3 ferramentas/fluxo.py` (`registrar` e `gasto`) a partir de `rodadas/`. Não edite à mão. Tokens: os de saída que o `budget.spent()` devolve e o total de subagentes que a ferramenta Workflow devolve ao terminar (o Paydon anota com `fluxo.py gasto`; sem ele, o `checar.py` fica…
+
+Tamanho: 230 palavras.
 
 ### [Os prompts do dono, palavra por palavra](historico/PROMPTS.md)
 
@@ -740,3 +786,53 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
 Tamanho: 6829 palavras.
+
+### [Lições antigas de contexto/arquiteto.md](historico/licoes-arquiteto.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 141 palavras.
+
+### [Lições antigas de contexto/designer.md](historico/licoes-designer.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 184 palavras.
+
+### [Lições antigas de contexto/editor-video.md](historico/licoes-editor-video.md)
+
+Saíram inteiras do "Lições" (dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 135 palavras.
+
+### [Lições antigas de contexto/estrategista.md](historico/licoes-estrategista.md)
+
+Saíram inteiras do "Lições" quando o arquivo foi refeito (dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 368 palavras.
+
+### [Lições antigas de contexto/maestro.md](historico/licoes-maestro.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py` consolidar, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 349 palavras.
+
+### [Lições antigas de contexto/planejador.md](historico/licoes-planejador.md)
+
+Saíram inteiras do "Lições" quando o arquivo foi refeito (dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 463 palavras.
+
+### [Lições antigas de contexto/revisor-de-risco.md](historico/licoes-revisor-de-risco.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 182 palavras.
+
+### [Prova de entrada, 26/11/2026 09:10 UTC](provas/rodada-2026-11-26-0910.md)
+
+Gravado por `python3 ferramentas/fluxo.py prova-nota` (fluxo `.claude/workflows/prova-de-entrada.js`). Nota por programa: problema achado = linha certa (1 de folga); caso limpo apontado = alarme falso. Passou (tudo achado, nenhum alarme falso): o próximo nível fica mais difícil.
+
+Seções: Gabarito (revelado depois da nota).
+
+Tamanho: 1567 palavras.

@@ -272,6 +272,51 @@ else:
 rodar("máscara da busca nas conversas (dados pessoais e chaves)", [sys.executable, "ferramentas/conversas.py", "testar"])
 rodar("caderno de pesquisa (formato e fonte)", [sys.executable, "ferramentas/pesquisa.py", "conferir"])
 rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conferir"])
+# Fluxos fixos (dono, 26/11/2026: "ultra max"; ficha 2026-11-26-0721): existem, estão no mapa e no inventário, a sintaxe passa,
+# programa antes do juízo, gasto medido, e cada um termina na colheita; toda rodada gravada tem a forma e a linha no RODADAS.md
+rodar("fluxos: as conferências por programa pegam o erro plantado", [sys.executable, "ferramentas/fluxo.py", "testar"])
+rodar("fluxos: ensaio de ponta a ponta com agentes de mentira (pega variável sem declarar)", ["node", "ferramentas/fluxos-ensaio.cjs"])
+_fluxos = {"texto-publico": ("fluxo.py texto", "fluxo.py passe", "fluxo.py registrar"), "pagina-ebook": ("fluxo.py pagina", "fluxo.py registrar"),
+           "planta": ("conferir-rascunho.py", "fluxo.py registrar"), "decisao": ("fluxo.py juri", "fluxo.py registrar"),
+           "prova-de-entrada": ("fluxo.py prova-estado", "fluxo.py prova-nota", "/tmp/x1-provas")}
+_mf = []
+for _n, _tem in _fluxos.items():
+    _f = RAIZ / ".claude" / "workflows" / f"{_n}.js"
+    if not _f.exists():
+        _mf.append(f"{_n}: falta .claude/workflows/{_n}.js"); continue
+    _s = _f.read_text(encoding="utf-8")
+    _corpo = _s.split("\n}\n", 1)[-1]  # depois do meta: a descrição do meta não conta como chamada (auditoria, 26/11)
+    _mf += [f"{_n}: o fluxo não chama {x}" for x in _tem + ("budget.spent()",) if x not in _corpo]
+    _mf += [f"{_n}: o fluxo não fecha conferindo ebook/saida e projetos.py"] if _n != "prova-de-entrada" and "git status --porcelain -- ebook/saida" not in _corpo else []
+    _mf += [f"{_n}: meta.name diferente do arquivo"] if f"name: '{_n}'" not in _s else []
+    _mf += [f"{_n}: fora do MAPA-DO-SISTEMA.md"] if f"(.claude/workflows/{_n}.js)" not in _mapa else []
+    _mf += [f"{_n}: fora do ECOSSISTEMA.md"] if f"`{_n}`" not in ecossistema else []
+    with tempfile.NamedTemporaryFile("w", suffix=".cjs", delete=False, encoding="utf-8") as _tmp:  # o corpo roda dentro de função assíncrona
+        _tmp.write("(async function(args, budget){\n" + _s.replace("export const meta", "const meta", 1) + "\n})\n")
+    _r = subprocess.run(["node", "--check", _tmp.name], capture_output=True, text=True); Path(_tmp.name).unlink()
+    _mf += [f"{_n}: sintaxe: {_r.stderr.strip()[-300:]}"] if _r.returncode else []
+_e = _iu.spec_from_file_location("fluxo", RAIZ / "ferramentas" / "fluxo.py"); _fx = _iu.module_from_spec(_e); _e.loader.exec_module(_fx)
+_rods = sorted((RAIZ / "pedidos" / "fluxos" / "rodadas").glob("*.json")) if (RAIZ / "pedidos" / "fluxos" / "rodadas").exists() else []
+for _f in _rods:
+    _ruim = _fx.conferir_registro(json.loads(_f.read_text(encoding="utf-8")))
+    if not isinstance(json.loads(_f.read_text(encoding="utf-8"))["gasto"].get("tokens_ferramenta"), int):
+        _ruim.append("falta o total de tokens que a ferramenta Workflow devolveu (python3 ferramentas/fluxo.py gasto <rodada> <tokens>)")
+    _mf += [f"rodada {_f.name}: {'; '.join(_ruim)}"] if _ruim else []
+    _rj = json.loads(_f.read_text(encoding="utf-8"))  # planta pronta para aplicar tem a cópia salva (a pasta de rascunhos o git ignora)
+    if _rj.get("fluxo") == "planta" and str(_rj.get("resultado", "")).startswith("pronto"):
+        _sv = _rj.get("salvo_em") or "pedidos/anexos/rascunhos-prontos/" + Path(str(_rj["peca"]).split()[0]).name
+        _mf += [f"rodada {_f.name}: o rascunho pronto não foi salvo em {_sv}"] if not (RAIZ / _sv).exists() else []
+_tab = (RAIZ / "pedidos" / "fluxos" / "RODADAS.md").read_text(encoding="utf-8") if _rods else ""
+if _rods and len(re.findall(r"^\| \d\d/\d\d \d\d:\d\d \|", _tab, re.M)) < len(_rods):
+    _mf.append("pedidos/fluxos/RODADAS.md tem menos linhas que as rodadas gravadas")
+_dec = [json.loads(f.read_text(encoding="utf-8")) for f in _rods if f.name.endswith("-decisao.json")]
+_desde = next((k for k, r in enumerate(reversed(_dec)) if r.get("calibracao")), len(_dec))
+if _desde >= 3:  # CONSELHO.md 5b, regra 5: a cada 3 rodadas, uma calibração com erro plantado
+    print(f"[AVISO] {_desde} rodadas de júri sem calibração: rode o decisao com calibracao: true (regra 5 da 5b)")
+if _mf:
+    falhas.append("fluxos fixos"); print("[ERRO] fluxos fixos:\n  " + "\n  ".join(_mf))
+else:
+    print(f"[OK ] fluxos fixos: {len(_fluxos)} salvos, no mapa e no inventário, {len(_rods)} rodada(s) com registro completo")
 rodar("módulos do motor 3D", [sys.executable, "ferramentas/planta3d.py"])
 # 3D e e-book: mesma área por cômodo (F7, 24/11/2026: o desenho azul mostrava a área de eixo a eixo, 14,1 m² na sala da C01,
 # e o e-book a área livre, 12,5). O módulo de cada casa tem de trazer a área livre do validador, no formato do e-book (0,0).
@@ -411,6 +456,15 @@ if _h.returncode == 0 or _mexeu:
     print(f"[ERRO] livro.py --help devia recusar sem gerar (saída {_h.returncode}; mexeu em {_mexeu})")
 else:
     print("[OK ] livro.py recusa opção desconhecida sem tocar em ebook/saida/")
+# Prévia dentro de ebook/saida/ apagaria o PDF oficial (auditoria da Olga, 26/11): o livro.py recusa antes de gerar
+_t0 = {f: f.stat().st_mtime for f in (RAIZ / "ebook" / "saida").glob("*.pdf")}
+_h = subprocess.run([sys.executable, "ebook/gerador/livro.py", "--previa", "ebook/saida/previa-teste"], cwd=RAIZ, capture_output=True, text=True)
+_mexeu = [f.name for f in (RAIZ / "ebook" / "saida").glob("*.pdf") if _t0.get(f) != f.stat().st_mtime] + (["previa-teste"] if (RAIZ / "ebook" / "saida" / "previa-teste").exists() else [])
+if _h.returncode == 0 or _mexeu:
+    falhas.append("livro.py aceita prévia dentro de ebook/saida/")
+    print(f"[ERRO] livro.py --previa ebook/saida/... devia recusar sem gerar (saída {_h.returncode}; mexeu em {_mexeu})")
+else:
+    print("[OK ] livro.py recusa prévia dentro de ebook/saida/")
 # Edição de lançamento (dono, 23/11/2026: 3 casas): a calculadora e as plantas grátis só com casas da edição
 # ("casas_lancamento" no config.json; vazia = todas). As 24 plantas continuam no validador, acima.
 _cfg_ed = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))

@@ -1,0 +1,50 @@
+{
+ "fluxo": "planta",
+ "peca": "ebook/plantas/rascunhos/C01V.py",
+ "ficha": "2026-11-26-0721",
+ "resultado": "pronto para aplicar (aplicar é outro passo: plantas.py validar e checar.py)",
+ "voltas": 1,
+ "gasto": {
+  "tokens_saida": 32848,
+  "por_conferidor": {
+   "autor": 22801,
+   "programa:rascunho": 4379,
+   "obra:opus": 5668
+  },
+  "tokens_ferramenta": 510641
+ },
+ "conferidores": [
+  {
+   "nome": "autor",
+   "tipo": "A",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "programa:rascunho",
+   "tipo": "P",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "obra:opus",
+   "tipo": "A",
+   "achados_proprios": 1
+  }
+ ],
+ "achados": [
+  {
+   "autor": "arquiteto",
+   "chave": "aviso-tracejada-falso",
+   "texto": "Com o rascunho rodando, o comprador ainda recebe a frase 'no desenho ela aparece tracejada' (ferramentas/plantas.py:568). Só que a parede agora é desenhada cheia na planta e no 3D: rodei o rascunho e saiu uma parede única externa de 15 cm em x = 0, de y = 0 a 8,50, emendada na da divisa. Então o avi",
+   "licao": "Quando o desenho muda o que o aviso descreve, a frase nova do aviso entra no mesmo rascunho e passa na conferência junto com o desenho. Não deixe para depois um texto ao comprador que fica falso enquanto isso.",
+   "achado_por": "obra:opus"
+  }
+ ],
+ "perguntas_ao_dono": [
+  "Para a frase da varanda da C01 que vai ao comprador, qual fica? (a) 'essa lateral é parede cheia até a cobertura, como está no desenho, sem vista para o vizinho' (a do rascunho); (b) 'essa lateral é parede cheia até a cobertura, sem vista para o vizinho' (a antiga, sem citar o desenho); (c) outra que a Vera escrever."
+ ],
+ "registrado_em": "2026-11-26T08:40:08Z",
+ "licoes_novas": [
+  "arquiteto|aviso-tracejada-falso"
+ ],
+ "voltaram": []
+}
