@@ -29,3 +29,6 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 - **23/11, dono:** Imagens de teste do gerador ficaram no repositório, e o dono mandou apagar quando soube o que eram. Teste fica fora do repositório ou sai ao terminar; só fica o que tem função. Vale também para clipe de teste (leitura nossa da fala de 21/11)
+- **26/11, fluxo:** (pagina-ebook) Ao fundir dois textos aprovados num só, confira que a frase que era condição do Revisor sobreviveu inteira (aqui: menos ar, e o engenheiro confere se ventilação e luz bastam), não só os números.
+- **26/11, fluxo:** (pagina-ebook) Espessura de parede só se imprime depois de conferir o desconto dos dois lados no validador: quando a linha encosta na varanda, ela não é a interna de 12 cm. Saída sugerida: 'na parede do quarto da frente', sem o número.
+- **26/11, fluxo:** (pagina-ebook) Folha que continua outra ganha manchete própria com a conclusão dela (por exemplo, o que se decide nos 7 lugares), nunca só o sobretítulo repetido.

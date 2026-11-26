@@ -81,7 +81,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 406 palavras.
+Tamanho: 518 palavras.
 
 ### [Contexto do Diretor (MinoAI Frontier)](diretor.md)
 

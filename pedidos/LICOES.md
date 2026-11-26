@@ -43,3 +43,6 @@
 | 26/11/2026 | redator | fluxo | - | - | (texto-publico) Tire a data de um arquivo do pdfinfo ou do git log, não da memória. |
 | 26/11/2026 | redator | fluxo | - | - | (texto-publico) Antes de escrever "fica como está", releia o atalho antigo com a pergunta "vale para quem veio do anúncio e não recebeu a planta grátis?". |
 | 26/11/2026 | redator | fluxo | - | - | (texto-publico) Quando a mensagem que vai ao cliente mora no código, peça a troca do código antes da leitura: atalho e calculadora chegam iguais à revisora. |
+| 26/11/2026 | designer | fluxo | - | - | (pagina-ebook) Ao fundir dois textos aprovados num só, confira que a frase que era condição do Revisor sobreviveu inteira (aqui: menos ar, e o engenheiro confere se ventilação e luz bastam), não só os números. |
+| 26/11/2026 | designer | fluxo | - | - | (pagina-ebook) Espessura de parede só se imprime depois de conferir o desconto dos dois lados no validador: quando a linha encosta na varanda, ela não é a interna de 12 cm. Saída sugerida: 'na parede do quarto da frente', sem o número. |
+| 26/11/2026 | designer | fluxo | - | - | (pagina-ebook) Folha que continua outra ganha manchete própria com a conclusão dela (por exemplo, o que se decide nos 7 lugares), nunca só o sobretítulo repetido. |

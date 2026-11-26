@@ -228,7 +228,7 @@ COMODO = {
     "ideia": "Ideia:", "cuidado": "Cuidado:",
     "perguntas": "Pergunte ao seu engenheiro ou eletricista",
     "tomadas": "Tomadas:",
-    "atencao": "Atenção (8).",
+    "ref_c01": "Em destaque na página anterior, com o hall ampliado ao lado da planta.",
     "ref": "Em destaque na página anterior, com a parede ampliada.",
     "selo": {"E03": "Imagem ilustrativa: móveis e acabamentos são sugestão",
              "C01": "Imagem ilustrativa: móveis e acabamentos são sugestão",
@@ -341,18 +341,16 @@ COMODOS = {'E03': {'titulo': 'Antes de fechar a parede',
                       'onde o projeto previu. Quem diz é o engenheiro.'},
  'C01': {'titulo': 'Antes de fechar a parede',
          'sub': '8 lugares da Casa Compacta, cômodo a cômodo',
+         'titulo2': 'Uma ideia e um cuidado em cada lugar',   # a manchete da 2ª folha (pág. 11)
+         'eti2': 'Casa Compacta, os 8 lugares',               # o sobretítulo da 2ª folha, sem repetir "cômodo a cômodo"
          'abre': 'Tomada, cano e armário se decidem com a parede aberta. Cada número aponta um lugar da planta, com '
                  'a medida para levar à obra.',
          'nota': 'Os pontos de tomada desta página são sugestão; o mínimo é o eletricista que confere na norma '
                  'vigente.',
-         'veneziana': 'Serviço: não tem janela. A ventilação vem de uma veneziana de 0,90 x 0,50 m em cima da porta '
-                      'de fora, que só cabe com pé-direito de uns 2,80 m. Ela deixa passar menos ar e quase nenhuma '
-                      'luz: o engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da sua '
-                      'cidade.',
          'itens': [{'n': 1,
                     'nome': 'Varanda',
                     'dim': '3,35 x 1,20 m',
-                    'resto': '(uns 3,20 m entre a divisa e o quarto)',
+                    'resto': '',
                     'ideia': 'Ganchos de rede entre a divisa e o quarto (uns 3,20 m); na divisa, só em parede ou '
                              'pilar que o engenheiro aprove. Rede armada fecha a entrada.',
                     'cuid': 'Não feche a varanda: a única janela da sala dá para ela; fechada, a sala fica sem '
@@ -373,8 +371,8 @@ COMODOS = {'E03': {'titulo': 'Antes de fechar a parede',
                     'ideia': 'Troque a TV de parede: no desenho, ela está na parede do quarto. Na divisa, num rack '
                              'de até 1,35 m, com o sofá de 2 lugares na parede do quarto, a 1,86 m dela. Eletricista '
                              'confere.',
-                    'cuid': 'Do jeito da planta, a TV fica na parede de 12 cm do quarto da frente, logo depois do pé '
-                            'de uma cama: o som passa.'},
+                    'cuid': 'Do jeito da planta, a TV fica na parede do quarto da frente, logo depois do pé de uma '
+                            'cama: o som passa.'},
                    {'n': 4,
                     'nome': 'Hall',
                     'dim': '1,04 x 1,68 m',
@@ -411,17 +409,17 @@ COMODOS = {'E03': {'titulo': 'Antes de fechar a parede',
                     'nome': 'Serviço',
                     'dim': '1,19 x 2,89 m',
                     'resto': '',
-                    'ideia': 'Prateleira em cima da máquina, na divisa, para sabão e balde. Na parede do fundo, não: '
-                             'em cima da porta fica a veneziana.',
-                    'cuid': 'A veneziana (0,90 x 0,50 m) só cabe com pé-direito de uns 2,80 m. Ventilação e luz, o '
-                            'engenheiro confere.'}],
+                    'ideia': 'Prateleira em cima da máquina, na divisa, para sabão e balde. No fundo, não: lá fica a '
+                             'veneziana.',
+                    'cuid': 'Não tem janela: o ar vem da veneziana (0,90 x 0,50 m) em cima da porta, que só cabe com '
+                            'pé-direito de uns 2,80 m. Passa menos ar e quase nenhuma luz: o engenheiro confere se '
+                            'bastam no código de obras da sua cidade.'}],
          'perguntas': [('Ao engenheiro:',
-                        'qual vai ser o pé-direito da obra? Com menos de uns 2,80 m, como fica a ventilação do '
-                        'serviço?',
+                        'qual vai ser o pé-direito da obra? A veneziana do serviço cabe nele?',
                         [8]),
                        ('Ao eletricista:', 'a caixa da TV pode ir na divisa? Por onde desce o fio da antena?', [3]),
                        ('Ao engenheiro:',
-                        'o recuo de 1,5 m da divisa é medido até a face de fora da parede?',
+                        'o recuo de 1,5 m, que a prefeitura confirma, conta até a face de fora da parede?',
                         [2, 5])],
          'alvenaria': 'Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só '
                       'onde o projeto previu. Quem diz é o engenheiro.'},

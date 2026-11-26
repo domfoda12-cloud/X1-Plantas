@@ -1,0 +1,97 @@
+{
+ "fluxo": "pagina-ebook",
+ "peca": "ebook/gerador/paginas.py (dicionário COMODO e os textos cômodo a cômodo da C01) e ebook/gerador/livro.py (a montagem da página cômodo a cômodo) (página 11)",
+ "ficha": "2026-11-26-0721",
+ "resultado": "aprovada na prévia, com as condições da Vera",
+ "voltas": 2,
+ "gasto": {
+  "tokens_saida": 73502,
+  "por_conferidor": {
+   "programa:pagina": 9566,
+   "autor": 21330,
+   "bia": 10297,
+   "nilo": 15759,
+   "vera": 16550
+  }
+ },
+ "conferidores": [
+  {
+   "nome": "programa:pagina",
+   "tipo": "P",
+   "achados_proprios": 1
+  },
+  {
+   "nome": "autor",
+   "tipo": "A",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "bia",
+   "tipo": "A",
+   "achados_proprios": 5
+  },
+  {
+   "nome": "nilo",
+   "tipo": "A",
+   "achados_proprios": 1
+  },
+  {
+   "nome": "vera",
+   "tipo": "A",
+   "achados_proprios": 1
+  }
+ ],
+ "achados": [
+  {
+   "autor": "designer",
+   "chave": "sala-tv-parede-12cm",
+   "texto": "Cômodo 3, Cuidado: 'a TV fica na parede de 12 cm do quarto da frente'. O validador não trata essa parede como de 12 cm. Como a mesma linha de parede encosta na varanda, ele desconta 15 cm do lado do quarto da frente (útil 2,85 = 3,15 - 0,15 - 0,15) e 6 cm do lado da sala (útil 3,14). O rack termina ",
+   "licao": "Espessura de parede só se imprime depois de conferir o desconto dos dois lados no validador: quando a linha encosta na varanda, ela não é a interna de 12 cm. Saída sugerida: 'na parede do quarto da frente', sem o número.",
+   "achado_por": "nilo"
+  },
+  {
+   "autor": "designer",
+   "chave": "sem-manchete",
+   "texto": "A página 11 não tem manchete. Abre só com o sobretítulo em fonte de medida, pequeno: \"Cômodo a cômodo  C01  8 lugares da Casa Compacta, cômodo a cômodo\". Fica parecendo um \"continua\" da página 10, o \"cômodo a cômodo\" aparece duas vezes na mesma linha e o olho não tem por onde entrar na folha.",
+   "licao": "Folha que continua outra ganha manchete própria com a conclusão dela (por exemplo, o que se decide nos 7 lugares), nunca só o sobretítulo repetido.",
+   "achado_por": "bia"
+  },
+  {
+   "autor": "designer",
+   "chave": "numero-4-some",
+   "texto": "Os números da grade pulam do 3 para o 5 (1, 2, 3, 5, 6, 7, 8), com \"8 lugares\" no topo. O Hall (4) está em destaque na página 10, mas nada na 11 diz isso. Quem abre direto na 11, pelo celular, acha que faltou um cômodo.",
+   "licao": "Quando um número da lista mora em outra folha, deixe na lista o lugar dele com o aviso \"4 · Hall, na pág. 10\"; nunca pule o número em silêncio.",
+   "achado_por": "bia"
+  },
+  {
+   "autor": "designer",
+   "chave": "veneziana-tres-vezes",
+   "texto": "A mesma informação aparece três vezes na folha: o Cuidado do 8 (\"A veneziana (0,90 x 0,50 m) só cabe com pé-direito de uns 2,80 m. Ventilação e luz, o engenheiro confere.\"), a caixa \"Atenção (8). Serviço: não tem janela... uns 2,80 m...\" e a pergunta \"qual vai ser o pé-direito da obra? Com menos de ",
+   "licao": "Cada fato aparece uma vez na folha: deixe-o onde ele pesa mais (a caixa de Atenção, ou a pergunta ao engenheiro) e corte o resto.",
+   "achado_por": "bia"
+  },
+  {
+   "autor": "designer",
+   "chave": "pe-pequeno-e-caixas-demais",
+   "texto": "Embaixo da grade se empilham cinco estilos de caixa: a tracejada amarela \"Atenção (8)\", a nota solta \"Tomadas:\", a caixa creme \"Pergunte ao seu engenheiro ou eletricista\", a caixa de barra preta da alvenaria e o aviso legal. As três primeiras notas estão em cinza e menores que o texto dos cards, dif",
+   "licao": "No pé, no máximo um estilo de caixa de apoio, com texto na mesma letra e cor do corpo; aviso que importa não fica em cinza pequeno.",
+   "achado_por": "bia"
+  },
+  {
+   "autor": "designer",
+   "chave": "alvenaria-repetida",
+   "texto": "A nota \"Se a sua casa for de alvenaria estrutural, parede não se corta depois: nicho, cano e fio só onde o projeto previu. Quem diz é o engenheiro.\" aparece igual no pé da página 10 e no pé da página 11, que formam um par.",
+   "licao": "Nota que vale para as duas folhas do par entra uma vez só, na primeira; na segunda, o espaço fica para o conteúdo.",
+   "achado_por": "bia"
+  },
+  {
+   "autor": "designer",
+   "chave": "cuidado-8-veneziana-ventilacao",
+   "texto": "Trecho na página: \"Cuidado: Não tem janela: o ar vem da veneziana (0,90 x 0,50 m) em cima da porta, que só cabe com pé-direito de uns 2,80 m e quase não deixa passar luz. O engenheiro confere no código de obras da sua cidade.\" Motivo: ao juntar a caixa \"Atenção (8)\" com o Cuidado, caíram duas coisas",
+   "licao": "Ao fundir dois textos aprovados num só, confira que a frase que era condição do Revisor sobreviveu inteira (aqui: menos ar, e o engenheiro confere se ventilação e luz bastam), não só os números.",
+   "achado_por": "vera"
+  }
+ ],
+ "perguntas_ao_dono": [],
+ "registrado_em": "2026-11-26T08:31:58Z"
+}
