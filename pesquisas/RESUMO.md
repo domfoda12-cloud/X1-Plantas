@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 13 documentos
+## Os 14 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -64,6 +64,14 @@ Data: 26/11/2026. Jurado estrito, sem ver os outros. Base: `pesquisas/instagram-
 Seções: Riscos que valem para TODAS as ideias; Avaliação das 5 ideias (seção 9), da ideia 6 do coordenador e uma sétima minha; O que o projeto precisa ter, qualquer que seja o nicho; Tabela final.
 
 Tamanho: 2029 palavras.
+
+### [Júri do nicho: PRESIDENTE (síntese da rodada 1)](instagram-ia/juri-nicho/presidente.md)
+
+26/11/2026. Presidente: Fable 5.2, não opinou nesta rodada. Método: `CONSELHO.md`, seção 5b. Li os três pareceres desta pasta, `../estudo-science-in-8bit.md`, `../referencia-math-phonk.md`, `../ferramentas-gratis-animacao.md` e `../prototipo/`. Nenhum número de alcance aqui é meu: todos estão nos…
+
+Seções: 1. Fatos conferidos no repositório (13; a regra pede 5); 2. Notas por ideia; 3. Síntese: o que o júri recomenda; 4. Chegou a 8,5?; 5. Os 3 testes de produção, em ordem.
+
+Tamanho: 2360 palavras.
 
 ### [Referência do dono: "Buckshot Roulette, mas é matemática" (26/11/2026)](instagram-ia/referencia-math-phonk.md)
 
