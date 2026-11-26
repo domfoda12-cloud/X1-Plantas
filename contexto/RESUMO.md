@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1378 palavras.
+Tamanho: 1597 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -55,9 +55,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`).
+Seções: 26/11 · Fluxos fixos "ultra max": a equipe trabalha sempre do mesmo jeito e aprende sozinha (ficha `2026-11-26-0721`); 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`).
 
-Tamanho: 719 palavras.
+Tamanho: 824 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -137,7 +137,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 1044 palavras.
+Tamanho: 1083 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -153,7 +153,7 @@ Só o que importa para este papel. Leia antes o quadro. Você diz o passo a pass
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 839 palavras.
+Tamanho: 869 palavras.
 
 ### [Contexto do Redator](redator.md)
 
@@ -177,4 +177,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 235 palavras.
+Tamanho: 267 palavras.

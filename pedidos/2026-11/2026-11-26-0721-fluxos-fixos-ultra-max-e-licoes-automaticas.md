@@ -25,11 +25,13 @@ Each workflow ends by writing its lessons into each agent's file automatically, 
 
 **Quem executa:** Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes.
 
-**Conferência:** (ao fechar)
+**Conferência:** cada fluxo rodou uma vez sobre peça real (`pedidos/fluxos/RODADAS.md`): texto-publico no funil do sócio (Vera SIM SE, 2 condições aplicadas), pagina-ebook na pág. 11 da C01 (Vera SIM SE aplicado, prévia sem estouro), planta no rascunho C01V (0 de 11 com erro, pronto para aplicar), decisao na calibração (os 3 jurados pegaram os 3 erros plantados), prova de entrada (Caio, Rui e Vera: 5 de 6, sem alarme falso; item em disputa confirmado pela Olga). `checar.py` roda `fluxo.py testar` e o ensaio dos 5 fluxos com agentes de mentira. Olga auditou (ver Resultado). As "3 perguntas de entrada" do plano foram lidas como as 3 perguntas dos ângulos do júri (comprador, dinheiro, risco), escolha do Maestro.
 
 **Resultado:** (ao fechar)
 
-**O que aprendi:** (ao fechar)
+**O que aprendi:** maestro: Fluxo novo roda primeiro com agentes de mentira, em modo estrito (fluxos-ensaio.cjs); a sintaxe passou e mesmo assim o 'passe' sem declarar derrubou a rodada real.
+maestro: Erro plantado de propósito (calibração, prova) nunca vira lição de quem plantou; marque a rodada antes de colher.
+supervisor: Quando todos os papéis deixam passar o mesmo item, a suspeita cai primeiro no gabarito; arbitre antes da nota.
 
 **Papéis afetados:** maestro, redator, revisor-de-risco, designer, arquiteto, supervisor, planejador
 

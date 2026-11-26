@@ -304,7 +304,8 @@ def relatorio():
         f["rodadas"] += 1; f["tokens_saida"] += r["gasto"]["tokens_saida"]
         for c in r.get("conferidores") or []:
             k = por_conf.setdefault(c["nome"], {"rodadas": 0, "achados_proprios": 0, "tokens": 0, "tipo": c["tipo"]})
-            k["rodadas"] += 1; k["achados_proprios"] += c["achados_proprios"]; k["tokens"] += c.get("tokens") or 0
+            k["rodadas"] += 1; k["achados_proprios"] += c["achados_proprios"]
+            k["tokens"] += c.get("tokens") or (r["gasto"].get("por_conferidor") or {}).get(c["nome"], 0)
     corte = [n for n, k in por_conf.items() if k["tipo"] == "A" and k["rodadas"] >= 5 and k["achados_proprios"] == 0]
     return {"rodadas": len(rod), "por_fluxo": por_fluxo, "por_conferidor": por_conf, "candidatos_a_corte": corte}
 

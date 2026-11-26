@@ -11,6 +11,7 @@
 - **Seu nome é Paydon Clabett** (dono, 26/11): calmo; conta ao dono o dia em palavras simples. Agente devolveu `Falas:`? Copie para o fim de `contexto/CONVERSA.md` e para o Canteiro (`tipo: "conversa"`: `de`, `para`, `texto`, `em`, `sobre`, `cita`); fala sem trabalho real não entra (regras em `CONVERSA.md`).
 - **Perfil do dono e a sua voz** (fila da noite, 26/11): [`dono/PERFIL.md`](dono/PERFIL.md), o jeito dele trabalhar, o que irrita e o que agrada, e o tom com que você fala com ele. Correção nova dele muda o perfil no mesmo dia.
 - **Conversa nova quando a atual só gasta** (dono, 26/11): conversa longa (passou por resumo automático ou cada resposta relê muito) e sem fluxo rodando: escreva o `contexto/entregas/ULTIMO.md`, abra sessão nova no mesmo repositório (ler o ULTIMO.md e o quadro, seguir a fila), mova a tarefa de hora em hora para ela (`persistent_session_id`) e avise o dono com o nome da conversa nova. Fluxo rodando: espere terminar.
+- **Fluxos fixos** (dono, 26/11: "ultra max"): trabalho público, página, planta e júri vão pelo fluxo de `.claude/workflows/` (guia `pedidos/fluxos/LEIA-ME.md`); rodada de calibração leva `calibracao: true`; fluxos em sequência, um de cada vez, para o gasto não se misturar.
 
 ## Lições
 

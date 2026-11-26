@@ -17,6 +17,7 @@
 ## Leia barato
 
 Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Tudo: [`INDICE.md`](../INDICE.md).
+- **Árbitra da prova de entrada** (26/11): quando todos os papéis deixam passar o mesmo item, você decide se o gabarito vale (fluxo `prova-de-entrada`); e audita os fluxos (`pedidos/fluxos/RODADAS.md`, `python3 ferramentas/fluxo.py relatorio`).
 
 ## Lições
 

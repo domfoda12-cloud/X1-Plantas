@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Fluxos fixos "ultra max": a equipe trabalha sempre do mesmo jeito e aprende sozinha (ficha `2026-11-26-0721`)
+
+- **O dono pediu:** "YESSS, thats exactly what im looking for but a version ultra max"; lições "Automatically"; a prova "making the questions harder each time"; tudo conferido, pela conferência mais barata.
+- **O que mudou:** 5 fluxos salvos em `.claude/workflows/` (`texto-publico`, `pagina-ebook`, `planta`, `decisao`, `prova-de-entrada`), cada um rodado uma vez sobre peça real. O programa `ferramentas/fluxo.py` confere primeiro o que é regra (frases vetadas, promessas, números contra o `PLANTAS.md`, passe com forma fixa, rodada do júri incompleta), grava o gasto e põe as lições no seu `contexto/<papel>.md` sozinho (até 3 por rodada). Guia: `pedidos/fluxos/LEIA-ME.md`.
+- **Todos:** trabalho que vai ao público passa pelo fluxo dele, não por chamada solta. A lição que aparece no seu arquivo com "fluxo" veio de um erro seu que outro pegou: leia antes do próximo trabalho. **Caio, Rui, Vera:** prova de entrada nível 1, 5 de 6 cada um; todos deixaram passar o mesmo gancho ("Lote com 10 m de frente?" sem recuo nem fundo), e ele volta na próxima prova. **Vera:** a Olga deixou um texto mais claro para a regra do lote em `contexto/redator.md`, e falta você dizer se em post curto basta "com os recuos de referência". **Nilo:** o rascunho da parede da varanda da C01 está pronto para aplicar (`pedidos/anexos/rascunhos-prontos/C01V.py`); a frase nova do aviso espera a Vera. **Olga:** árbitra da prova quando todos perdem o mesmo item.
+
 ## 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`)
 
 - **O dono escolheu:** "2 · A Placa" (06:44).
@@ -25,9 +31,3 @@
 - **O dono pediu:** "pasta do contexto tá bem grande".
 - **O que mudou:** o histórico saiu de `contexto/` para `pedidos/historico/` (nada apagado, links refeitos): as falas do dono palavra por palavra (`PROMPTS.md`), a retrospectiva, as intenções e as passagens de 20 a 24/11 (`REGISTRO-ate-2026-11-24.md`). `contexto/` foi de 245 KB para 90 KB. Em `contexto/dono/` ficam só as ideias gerais e os textos desatualizados.
 - **Todos:** fala antiga do dono, em `pedidos/historico/PROMPTS.md`. O que cada papel lê ao começar não mudou de lugar.
-
-## 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`)
-
-- **O dono pediu:** "O seu nome proprio agora é Paydon Clabett / Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho".
-- **O que mudou:** cada agente tem nome e jeito no topo do próprio arquivo e em `contexto/EQUIPE.md` (Tito Prumo, Nilo Esquadro, Bia Traço, Caio Vírgula, Vera Veto, Rui Lance, Ana Fonte, Zeca Corte, Olga Lupa, Juca; o Diretor mantém o nome); existe `contexto/CONVERSA.md`; o Canteiro já mostra a "Conversa da equipe"; o `checar.py` confere o nome e a leitura da conversa em cada agente.
-- **Todos:** ao começar, leiam as últimas 10 falas de `contexto/CONVERSA.md`; ao terminar, fechem o relatório com `Falas:` (1 a 3, só trabalho real). **Paydon:** copia as falas para a conversa e para o Canteiro.

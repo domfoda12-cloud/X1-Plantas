@@ -21,6 +21,7 @@
 
 ## Em aberto (esperando o dono)
 
+- **Fluxos fixos (26/11, ficha `0721`): FEITO e na `main`.** 5 fluxos em `.claude/workflows/` (guia `pedidos/fluxos/LEIA-ME.md`); lições entram sozinhas; prova de entrada em `pedidos/provas/`. Nada espera o dono; a Vera fecha a regra do lote em post curto.
 - **Reset do limite (25/11):** o roteiro do que fazer, em ordem, está em [`pedidos/anexos/roteiro-do-reset-2026-11-25.md`](pedidos/anexos/roteiro-do-reset-2026-11-25.md), com a mensagem única de perguntas ao dono (as 5 páginas, título, "gera", Drive, profissional, grátis). As respostas só vêm no reset.
 - **Identidade visual (25/11, ficha `1613`): DECIDIDA, 26/11 06:44, "2 · A Placa"** (Canteiro). Direção 2 de `pedidos/anexos/identidade-2026-11-25.md`: o Lote Carente fala numa placa (branca, borda preta, letra vermelha, Londrina Solid, capa amarela); a voz dele só nas placas, nunca no aviso, na ficha ou nos números. Em aplicação na prévia; falta o dono dizer se "tudo o que criamos" inclui WhatsApp e Instagram de IA.
 - **Instagram de IA (25/11):** repositório e conversa próprios ("Vai ter"); kit de partida em [`pedidos/anexos/kit-instagram-ia-2026-11-25.md`](pedidos/anexos/kit-instagram-ia-2026-11-25.md). Depois do e-book.

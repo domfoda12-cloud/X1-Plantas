@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 98 documentos
+## Os 99 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -724,6 +724,14 @@ Tamanho: 687 palavras.
 SIM SE. Conferido nos dados: `veneziana_sobre_porta: fundos`; 0,90 x 0,50 = 0,45 m²; 0,45 / 3,4 = 13%. A página não estoura; os avisos aparecem nas páginas 8 e 9 e na planta grátis. O veto 3 do cômodo a cômodo (serviço da C01) fica levantado, com as condições abaixo.
 
 Tamanho: 340 palavras.
+
+### [Fluxos fixos: como usar](fluxos/LEIA-ME.md)
+
+Pedido do dono, 26/11/2026: "YESSS, thats exactly what im looking for but a version ultra max" (ficha `2026-11-26-0721`; plano em `pedidos/anexos/plano-fluxos-2026-11-26.md`; mapa das conferências em `pedidos/anexos/mapa-conferencias-2026-11-26.md`).
+
+Seções: A ideia; Os 5 fluxos (`.claude/workflows/`); O que fica gravado; Quem confere os fluxos.
+
+Tamanho: 433 palavras.
 
 ### [Rodadas dos fluxos fixos](fluxos/RODADAS.md)
 

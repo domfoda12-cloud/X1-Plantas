@@ -20,6 +20,7 @@
 
 ## Leia barato
 [`INDICE.md`](../INDICE.md); [`pedidos/RESUMO.md`](../pedidos/RESUMO.md); [`CONTEXTO.md`](../CONTEXTO.md), "Em aberto". Estado real: `checar.py`, `git log`, `git status` (anexo sem commit conta), `pedido.py listar`.
+- **Fluxos fixos** (26/11): no plano, todo passo que vai ao público, mexe em página ou planta, ou leva júri aponta o fluxo de `.claude/workflows/` que o roda (guia `pedidos/fluxos/LEIA-ME.md`).
 
 ## Lições
 Uma linha cada, com data e fonte.
