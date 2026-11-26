@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [nova configuracao dos agentes: pesquisador no Opus, Revisor uma leitura no Fable, organizador no planejador, juri so para decisao cara](2026-11/2026-11-26-0105-nova-configuracao-dos-agentes-pesquisador-no-opus-revisor-um.md) | aberta | Maestro, com um fluxo de agentes: um por mudança, em sequência, e três verificadores. |
 | 2026-11-26 | [socio entra no projeto: guia, quem decide, funil; ciclo de 1h religado](2026-11/2026-11-26-0058-socio-entra-no-projeto-guia-quem-decide-funil-ciclo-de-1h-re.md) | aberta | Maestro. |
 | 2026-11-26 | [noite livre ate de manha (dono cansado)](2026-11/2026-11-26-0012-noite-livre-ate-de-manha-dono-cansado.md) | aberta | Maestro (esta conversa); Redator, Revisor, Pesquisador, júri, um agente de código. |
 | 2026-11-25 | [Prompt novo que interfere no antigo: rodar o novo ou juntar ao antigo](2026-11/2026-11-25-2056-prompt-novo-que-interfere-no-antigo-rodar-o-novo-ou-juntar-a.md) | aberta | Maestro. |

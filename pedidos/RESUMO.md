@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 4440 palavras.
+Tamanho: 4515 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
