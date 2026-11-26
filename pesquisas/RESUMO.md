@@ -23,7 +23,7 @@ Tamanho: 784 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 1748 palavras.
+Tamanho: 1934 palavras.
 
 ### [Estudo: @science_in_8bit (Instagram 100% IA, ciência em pixel art)](instagram-ia/estudo-science-in-8bit.md)
 
@@ -77,9 +77,9 @@ Tamanho: 2360 palavras.
 
 O dono mandou (26/11, 00:40): https://www.instagram.com/p/DeO_kdLAYSb/ ; "the sounds are really nice really gets the attention, nice visuals and i honestly like the math real world application idea (i like math)". Análise: MinoAI Frontier `analyze_hook`, 26/11.
 
-Seções: Mais referências do dono (26/11, madrugada); Referência 5: música famosa animada em low-poly 3D (26/11).
+Seções: Mais referências do dono (26/11, madrugada); Referência 5: música famosa animada em low-poly 3D (26/11); 4. Casa em L, "simulador de cidade" (26/11/2026).
 
-Tamanho: 603 palavras.
+Tamanho: 1402 palavras.
 
 ### [Pesquisa: Público, preço, demanda e números de mercado](mercado.md)
 
