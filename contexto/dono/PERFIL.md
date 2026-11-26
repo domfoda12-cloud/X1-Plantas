@@ -15,6 +15,7 @@
 
 | Irrita | Agrada |
 |---|---|
+| Guardar conversa solta no projeto ("Be sure to only save important information", 26/11) | Só vai a arquivo o que muda o trabalho: decisão, regra, lição, fato do projeto |
 | Nomear um programa ou site sem o link ("instead of saying github desktop you couldve made a link or shortcut to it", 26/11) | Link clicável ou atalho direto para tudo o que ele precisa abrir, baixar ou clicar |
 | Pedir licença para o que é fácil de desfazer (26/11: "most of the things id like for you to have the free will to do") | Decidir e fazer o que se desfaz e está dentro das regras, e avisar depois; perguntar só o que é dele (preço, título, gasto, publicar, dado pessoal, final do e-book) |
 | Pergunta demais de uma vez; cartão cheio de dúvida (o Canteiro "confuso") | Uma pergunta por vez, com recomendação e o que muda para ele |
@@ -32,7 +33,3 @@
 - **No máximo 3 decisões por resposta**, na ordem em que destravam a venda; o resto em uma linha. Silêncio dele não é sim.
 - **Os nomes da equipe** (Vera, Caio, Nilo...) entram quando ajudam a contar quem fez o quê; o trabalho vem antes do personagem.
 - **O formato fixo** da resposta e o teste do leigo estão na skill `explicar-ao-dono`; este arquivo é o tom.
-
-## Referências de gosto (para vídeo, mais tarde)
-
-- 26/11: o melhor que ele viu no ano: o vídeo "CONDOR XIII" do canal de Payton Talbott (de onde vem o nome Paydon Clabett), a série S.E.A.L.S e, também boa, a série From. O porquê ainda não foi perguntado a fundo; perguntar antes de usar como referência.
