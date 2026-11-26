@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 89 documentos
+## Os 90 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1543 palavras.
+Tamanho: 1590 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -468,6 +468,14 @@ Revisor de risco, 24/11/2026 (Opus). Pedido do dono no quadro: "Quero dar uma ol
 Seções: (a) O que a regra de hoje proíbe; (b) O que pode soltar sem risco; (c) O que continua proibido, e por quê; (d) Onde o dono quer a linha (três perguntas, uma por cartão); Conferência; Nota do Maestro.
 
 Tamanho: 966 palavras.
+
+### [Bom dia: o que a equipe fez nesta noite (26/11)](anexos/resumo-da-manha-2026-11-26.md)
+
+Escrito pelo Paydon para o dono, na fila da noite (item 9). Nada foi pago, publicado ou enviado a ninguém, e o PDF oficial do e-book (`ebook/saida/`) não foi tocado. Para desfazer qualquer coisa, escreva "desfaz" e o número da linha; o código entre parênteses é para a equipe achar.
+
+Seções: O que mudou; O que deu errado (já consertado); Você precisa decidir (3, na ordem em que destravam a venda); O que a equipe faz enquanto isso.
+
+Tamanho: 805 palavras.
 
 ### [Roteiro do reset: só o trabalho braçal (25/11/2026)](anexos/roteiro-do-reset-2026-11-25.md)
 

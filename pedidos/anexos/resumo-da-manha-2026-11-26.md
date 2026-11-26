@@ -22,11 +22,13 @@
 ## Você precisa decidir (3, na ordem em que destravam a venda)
 
 1. **Qual visual o e-book vai ter?** São três: a **Trena** (uma fita métrica amarela no topo de toda página, marcando a medida daquela casa), a **Placa** (o lote "fala" numa placa de terreno pintada à mão, com humor) ou a **Porta acesa** (páginas escuras, com a porta da casa acesa em amarelo; gasta tinta se alguém imprimir). Recomendo a Trena: é séria e se lê bem no celular. Quando você escolher, eu monto a prévia final com esse visual. Se não responder, o PDF final fica parado.
-2. **As 5 frases novas entram no e-book?** São frases curtas, no alto da página, com a dúvida que o comprador tem ali (por exemplo, na Casa Compacta e na Família Compacta). Se disser "nas 5 páginas", eu coloco todas. Se disser "só nas 2 das casas", entram só as das duas casas, e as outras 3 páginas ficam como estão. Se disser "em nenhuma", o e-book fica como está hoje.
-3. **Quem confere se o Pix caiu?** Hoje só você vê o banco, então o sócio não consegue fechar uma venda sozinho. Se você conferir e avisar o sócio, ele atende e manda o e-book logo depois do seu aviso (é a minha recomendação). Se o sócio tiver acesso ao extrato, ele fecha a venda sozinho. Se não responder, toda venda espera você. (Quem atende e em que horário vem depois, em outra pergunta.)
+2. **As 5 frases novas entram no e-book?** São frases curtas, no alto da página, com a dúvida que o comprador tem ali: duas nas páginas das casas (Casa Compacta e Família Compacta) e três nas páginas de apoio (glossário, ficha do terreno e passos). Se disser "nas 5 páginas", eu coloco todas. Se disser "só nas 2 das casas", entram só as das duas casas, e as outras 3 páginas ficam como estão. Se disser "em nenhuma", o e-book fica como está hoje.
+3. **Quem confere se o Pix caiu?** Hoje só você vê o banco, então o sócio não consegue fechar uma venda sozinho. Se você conferir e avisar o sócio, ele atende e manda o e-book logo depois do seu aviso (é a minha recomendação). Se você der ao sócio acesso ao extrato (só você sabe se o seu banco permite), ele fecha a venda sozinho. Se não responder, toda venda espera você. (Quem atende e em que horário vem depois, em outra pergunta.)
 
 **As outras decisões, em uma linha:** o título da capa, o seu "gera" para o PDF oficial, o que mandar a quem só cabe a Casa Compacta, e mais 16 perguntas do funil (estão no fim do rascunho dos textos, uma por linha).
 
 ## O que a equipe faz enquanto isso
 
 Um agente por hora melhora o próprio jeito de trabalhar com as lições da noite (o Caio já fez o dele). Nada pago, nada publicado.
+
+> Teste do leigo (skill `explicar-ao-dono`): as 3 decisões não passaram de primeira (faltava dizer o que é cada visual e o efeito de "só nas 2"); reescritas, passaram na segunda leitura, com dois ajustes de clareza.
