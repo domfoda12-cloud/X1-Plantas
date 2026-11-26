@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`)
+
+- **O dono pediu:** "get every single detail, every single component that makes something and make it better" (passada do e-book página por página).
+- **O que mudou:** o Nilo achou a tabela `ORIENTACAO` do validador espelhada nos lados; corrigida, com prova no `checar.py`. **A Casa Compacta (C01) e a Casa Fita (E03) ficam melhores com a rua ao sul** (antes "ao norte"); a F01 continua ao sul; 13 das 24 plantas trocam. Mais 8 consertos na prévia (`pedidos/anexos/passada-do-ebook-2026-11-26.md`).
+- **Caio, Bia, Rui, Zeca:** nunca mais "C01 frente para o norte"; o número vem do `PLANTAS.md`. **Nilo:** desenhar a parede da varanda da C01 (planta e 3D) e avisar a Vera. **Vera:** ler as outras 13 páginas em tamanho cheio antes do PDF final.
+
 ## 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`)
 
 - **O dono pediu:** "pasta do contexto tá bem grande".
@@ -25,9 +31,3 @@
 - **O dono pediu:** "dont ask me for permission for ANYTHING, only rules: dont fuck me up and dont spend my money"; o final do e-book e os anúncios continuam dele; "I M P R O V E M E N T ... min maxing except we can max everything".
 - **O que mudou:** nesta noite o Maestro decide sem perguntar o que não custa dinheiro, não vai ao público e se desfaz; a fila e os limites estão em `pedidos/anexos/noite-2026-11-26-fila.md`. `ebook/saida/` não é tocado.
 - **Todos:** em cada peça, liste os componentes, ache o mais fraco e melhore; nada pago, nada publicado, nada enviado, nada apagado sem volta. **Revisor:** lê todo texto público uma vez, no Fable, com a página montada (na prévia), antes de qualquer coisa ir ao público.
-
-## 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`)
-
-- **O dono pediu:** desacelerar ("if we work on all the tasks at the same time, none will be done"); visita 3D realista só depois ("save it for later"); e aplicar o prompt audit (`git apply`).
-- **O que mudou:** uma tarefa principal por vez, no máximo 2 agentes (`plano.py` aceita no máximo 2 em "Agora"); visita 3D realista guardada; prompt audit aplicado (achados 1 a 8, `ce87722`): "Plano antes de trabalho grande" no lugar de "Pense antes", "pare e espere" virou "devolva para aprovação", `salvar.py` citado nas regras e assinando pelo modelo da sessão.
-- **Todos:** salve só com `ferramentas/salvar.py`. **Planejador:** no máximo 2 em "Agora". **Redator:** devolva o diagnóstico para aprovação, salvo se o pedido já a traz.

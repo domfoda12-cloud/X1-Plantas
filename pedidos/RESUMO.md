@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 84 documentos
+## Os 85 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -203,7 +203,7 @@ Pedido do dono (no quadro, 24/11, sobre a 2ª rodada, `instagram-nomes-e-bios-ab
 
 Seções: O que a MinoAI Frontier devolveu (só isto; a leitura minha vem marcada); 1. O personagem em 6 linhas; 2. Cinco bios na voz dele; 3. Três nomes de exibição (o campo ao lado do @); 4. O que fica fixo fora da bio (lei e honestidade); 5. Seis ideias de post na voz dele (uma linha cada); 6. Se @lotecarente estiver ocupado; 7. Recomendação do Redator: @lotecarente + nome "Plantas térreas de referência" + Bio 1; Para o Revisor de risco; O que não conferi.
 
-Tamanho: 2662 palavras.
+Tamanho: 2672 palavras.
 
 ### [Perfil novo do Instagram: 8 nomes e 4 bios no humor pelo absurdo (24/11/2026)](anexos/instagram-nomes-e-bios-absurdos-2026-11-24.md)
 
@@ -347,7 +347,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1103 palavras.
+Tamanho: 1167 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -396,6 +396,14 @@ Passo A9 do `pedidos/PLANO.md`. Autor: Redator, 24/11/2026. Rascunho para o Desi
 Seções: Ideia principal (Diretor, MinoAI Frontier); Atributos (escada e nota D/P/E); TEXTO DA PÁGINA; Para o Designer e para quem confere (não vai ao público).
 
 Tamanho: 1698 palavras.
+
+### [Passada do e-book página por página (fila da noite, item 3, 26/11/2026)](anexos/passada-do-ebook-2026-11-26.md)
+
+Prévia em duas partes, 24 páginas. Olhares: Bia (Designer e comprador), Nilo (técnica), Vera (risco, uma leitura no fim). Nada foi para `ebook/saida/`; o PDF final é do dono. Imagens da prévia, com as 5 frases marcadas em amarelo "PROPOSTA": `previa-noite-2026-11-26/`.
+
+Seções: Aplicado no gerador (commits `bf2266c` e `5b025d6`; como desfazer: `git revert` de cada um); Proposto, ainda não aplicado (em ordem de efeito); As 5 frases (proposta marcada; o dono escolhe); Leitura da Vera.
+
+Tamanho: 672 palavras.
 
 ### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
 
@@ -555,7 +563,9 @@ Tamanho: 475 palavras.
 
 Anexo: `frases-dor-5-paginas-opcoes-2026-11-26.md`.
 
-Tamanho: 412 palavras.
+Seções: Reconferência na página montada (Vera, Fable, 26/11/2026).
+
+Tamanho: 482 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 

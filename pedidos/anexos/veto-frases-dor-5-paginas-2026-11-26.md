@@ -20,3 +20,8 @@ Revisor (Opus, rascunho, SIM provisório; a versão final volta no Fable), 26/11
 **Preferida pelo risco:** C01 A; F01 empate; Passos B; Ficha B; Glossário B.
 **Notas:** com a C01 A, o título da pág. 9 "Cabe num lote de 8 x 15 m." responde sem "deve" (mudar é do dono). Na pág. 16, se a abertura cobrir o aviso "Planta de referência", é veto na versão final: medir na prévia.
 **Não conferido:** a prévia (estouro da pág. 16, quebra da pág. 3); a numeração (estas são as do PDF oficial de 17 páginas; em 25/11 eram as da prévia em duas partes); a contagem de palavras do Redator.
+
+## Reconferência na página montada (Vera, Fable, 26/11/2026)
+
+As 5 frases, na prévia com as trocas aplicadas (C01 pág. 8, F01 pág. 12, glossário pág. 17, ficha pág. 22, passos pág. 23, opção A): **SIM** em todas. A pág. 23 não cobre aviso; a pág. 3 mostra o "para quem" curto da C01, sem a frase nova. O rótulo "PROPOSTA" e a caixa amarela saem antes do final. Páginas: `previa-noite-2026-11-26/`.
+

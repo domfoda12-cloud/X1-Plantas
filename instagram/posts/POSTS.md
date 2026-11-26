@@ -9,7 +9,7 @@
 
 ## C01 redesenhada em 22/11/2026: o que vale agora
 
-- **Casa Compacta (C01): 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m), frente para o norte** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: um hall curto distribui, a varanda recebe e o banheiro passa de 1,80 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais).
+- **Casa Compacta (C01): 51 m², 2 quartos, 1 banheiro, cabe num lote de 8 x 15 m (no mínimo 8,0 x 13,0 m), melhor com a rua ao sul** ([`PLANTAS.md`](../../ebook/plantas/PLANTAS.md)). Sem corredor comprido: um hall curto distribui, a varanda recebe e o banheiro passa de 1,80 m de largura. A varanda encosta na divisa da esquerda; o banheiro tem prumada própria (custa mais).
 - **Toda imagem da C01 nesta pasta é do desenho antigo** (`imagens/`, gerada em 20/11, antes do redesenho): posts 2 (tela 2), 3, 6, 8, 9 e a reserva estão marcados **refazer: C01 redesenhada**. Gere as imagens 2D da C01 de novo e rode o gerador antes de publicar. Os textos das telas que ficam dentro do `gerar-imagens.cjs` também são do desenho antigo.
 
 ## Ajustes depois da estratégia (20/11/2026)

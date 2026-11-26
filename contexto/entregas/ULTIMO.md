@@ -1,10 +1,10 @@
 # Último resumo de passagem
 
-## 2026-11-26-0305-auditoria-da-olga-e-consertos
+## 2026-11-26-0400-passada-do-ebook
 
-**Tarefa:** auditoria de rotina das fichas 1027, 0105 e 0116 (a Olga, no Fable) e os consertos que ela pediu.
-**Feito:** resultado em `pedidos/AUDITORIAS.md` (0 alta, 6 média, 10 baixa). Consertos: `CONSELHO.md` 5b com as 3 escolhas do aplicador marcadas "espera o sim"; `pedidos/LEIA-ME.md` ("Limites honestos": quem chama repete no pedido o que mudou no agente até a conversa seguinte); `contexto/maestro.md` abaixo de 5.000, com a lição nova; ficha 0116 com data e a primeira prova das falas (as 3 da Olga, em `contexto/CONVERSA.md` e no Canteiro); ficha 0105 com a nota dos 5 achados não gravados; nomes "escolhidos pelo Paydon"; fala do dono como ele escreveu; fonte do Canteiro agora em `pedidos/canteiro/quadro-tarefas.html`, que o git acompanha.
-**Como conferir:** `python3 ferramentas/checar.py`; `python3 ferramentas/pedido.py auditar` (0).
-**Não feito / ressalva:** os 5 achados e a proposta do "Aplique" se perderam com a conversa anterior. O nome do Maestro no `CONTEXTO.md` fica para o item 11 (o arquivo está no teto).
-**Decisão do dono pendente:** "júri também para o que não se desfaz, mesmo sem custo e sem público: sim ou não?"; o passo J pelo conselho de bolso; ele precisa saber que uma linha do `CLAUDE.md` mudou na 0105 ("a pesquisa vai ao Opus").
-**Próximo passo:** item 11 (`contexto/` enxuto). Em todo pedido a agente nesta conversa, escrever o nome dele e "feche com `Falas:`".
+**Tarefa:** fila da noite, item 3: passada de melhoria do e-book página por página, em prévia (24 páginas, duas partes).
+**Feito:** Bia (Designer e comprador) e Nilo (técnica) olharam as 24 páginas; Vera leu uma vez, no Fable, com a peça montada: SIM. Consertos no gerador: lado do sol espelhado em `ferramentas/plantas.py` (C01 e E03 melhores com a rua ao sul; prova no `checar.py`), frente do lote na faixa da rua, rodapé fora da fita, varanda da C01 (págs. 9 e 11), "parte do sol", vão da F01, "área construída", "Melhor com a rua: ao sul", textos de venda e de post. As 5 frases na prévia marcada em amarelo.
+**Como conferir:** `pedidos/anexos/passada-do-ebook-2026-11-26.md` e `veto-passada-do-ebook-2026-11-26.md`; imagens em `pedidos/anexos/previa-noite-2026-11-26/`; `python3 ferramentas/checar.py`.
+**Não feito / ressalva:** 12 propostas guardadas (a maior: a casa no lote ilegível no celular); a parede da varanda da C01 não está desenhada; `ebook/saida/` e `ebook/revisao/` têm a orientação antiga até o "gera" do dono.
+**Decisão do dono pendente:** as 5 frases (quais páginas), identidade, título, "gera"; o "sim" do júri para o que não se desfaz.
+**Próximo passo:** item 5 da fila (3 reels piloto do Instagram de IA), na próxima hora (um fluxo grande por hora).

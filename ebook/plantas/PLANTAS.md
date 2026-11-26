@@ -19,7 +19,7 @@
 **Atenção**
 
 - Serviço: não tem janela. A ventilação vem de uma veneziana de 0,90 x 0,50 m em cima da porta de fora, que só cabe com pé-direito de uns 2,80 m. Ela deixa passar menos ar e quase nenhuma luz: o engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da sua cidade.
-- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
+- Varanda encosta na divisa da esquerda: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m
 - Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## C02 · Casa Studio
@@ -62,7 +62,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
+- Varanda encosta na divisa da esquerda: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## C05 · Casa Popular
 
@@ -106,7 +106,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
+- Varanda encosta na divisa da esquerda: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## E01 · Casa Estreita
 
@@ -266,7 +266,7 @@
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
+- Varanda encosta na divisa da esquerda: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m
 - Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F04 · Casa Família Suíte
@@ -347,7 +347,7 @@
 
 **Atenção**
 
-- Varandão encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
+- Varandão encosta na divisa da esquerda: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## S07 · Casa Gourmet
 

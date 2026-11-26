@@ -2550,8 +2550,8 @@ def melhor_lado(o):
     pts = o.get("pontos", {})
     seg = o.get("segunda")
     if seg and pts and pts[o["melhor"]] - pts[seg] <= 0.05 * abs(pts[o["melhor"]]):
-        return f"{ORI[o['melhor']]} ou {ORI[seg]}"
-    return ORI[o["melhor"]]
+        return f"{PL.ORI_AO[o['melhor']]} ou {PL.ORI_AO[seg]}"
+    return PL.ORI_AO[o["melhor"]]  # "ao sul": "Melhor lado da rua: sul" se lia ao contrário (Vera, 26/11/2026)
 
 
 def avisos_juntos(p):
@@ -2627,7 +2627,7 @@ def dupla(L, p, por_id, numeros):
           {linha('Banheiros', p['banheiros'])}
           {linha('Corredor', f"{n0(r['circulacao'] * 100)}% da casa" if r['circulacao'] else ('externo' if any(c['id'] == 'corr' for c in p['comodos']) else 'não tem'), 'bom: até 14%')}
           {linha('Janela nos quartos' if any(c['tipo'] in ('dorm', 'casal') for c in p['comodos']) else 'Janela no ambiente', '✓', 'mín. 1/6 do piso')}
-          {linha('Melhor lado da rua', melhor_lado(r['orientacao']))}
+          {linha('Melhor com a rua', melhor_lado(r['orientacao']))}
           {linha('Pode espelhar', 'sim', 'troca o lado')}
           <div class="r-nota">Conferido medida por medida pelo X1-Plantas, com recuos de referência. Não substitui o profissional: confira os da sua cidade.</div></div></div>
       {('<div class="atencao"><h4>Atenção: leve ao engenheiro</h4><ul>' + ''.join(f'<li>{E(a)}</li>' for a in avisos_juntos(p)) + '</ul></div>') if (p['_r'].avisos or p['_r'].info) else ''}

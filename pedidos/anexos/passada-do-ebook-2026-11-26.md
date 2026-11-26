@@ -39,4 +39,4 @@ Na prévia, em amarelo, as opções recomendadas, com as trocas da Vera: C01 (p�
 
 ## Leitura da Vera
 
-(a preencher quando ela voltar)
+SIM para a prévia; as 5 frases passam na página montada; as trocas que ela pediu para o PDF final já estão no gerador. Tabela e o que ela não conferiu: [`veto-passada-do-ebook-2026-11-26.md`](veto-passada-do-ebook-2026-11-26.md).

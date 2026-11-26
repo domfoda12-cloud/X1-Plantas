@@ -560,11 +560,12 @@ def validar(planta):
         r.info.append("Casa acessível: o engenheiro confere o resto da NBR 9050 (barras, portas, área de transferência, entrada sem degrau)")
 
     # Varanda encostada numa divisa: a lateral dela fica fechada (Código Civil, art. 1.301)
+    # Quando a parede for desenhada na planta e no 3D, tire "(no desenho ela aparece tracejada)" e volte a "é parede cheia" (Vera, 26/11/2026)
     for c in cs:
         if c["tipo"] == "varanda" and c["id"] != "corr":
             for lado in ("esq", "dir"):
                 if _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4:
-                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m")
+                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral precisa ser fechada com parede cheia até a cobertura, sem vista para o vizinho (no desenho ela aparece tracejada), porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta no seu caso, o engenheiro confirma; se não, a varanda recua 1,5 m")
                     break
 
     # Áreas molhadas juntas

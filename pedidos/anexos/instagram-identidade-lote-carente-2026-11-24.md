@@ -4,7 +4,7 @@
 >
 > **O que isso quer dizer:** um personagem com voz própria, não uma bio que explica o produto. Rascunho do Redator. **Ainda não passou pelo Revisor de risco.** Quem escolhe é o dono. **Ficha:** não achei ficha própria deste pedido em `pedidos/2026-11/`; quem conduz abre.
 >
-> **Números:** só os do validador (`ebook/plantas/PLANTAS.md`). Casa Compacta: 51 m² fechados, 2 quartos, lote de 8 x 15 m, frente para o norte. Frentes das 3 casas do lançamento: 5, 8 e 10 m (lotes de 5 x 25, 8 x 15 e 10 x 15). O Lote Carente é o lote de 8 x 15 da Casa Compacta.
+> **Números:** só os do validador (`ebook/plantas/PLANTAS.md`). Casa Compacta: 51 m² fechados, 2 quartos, lote de 8 x 15 m, melhor com a rua ao sul (até 26/11 o validador dizia norte, por erro). Frentes das 3 casas do lançamento: 5, 8 e 10 m (lotes de 5 x 25, 8 x 15 e 10 x 15). O Lote Carente é o lote de 8 x 15 da Casa Compacta.
 
 ## O que a MinoAI Frontier devolveu (só isto; a leitura minha vem marcada)
 

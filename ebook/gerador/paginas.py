@@ -320,8 +320,8 @@ COMODOS = {'E03': {'titulo': 'Antes de fechar a parede',
                     'ideia': 'Ganchos de rede entre a divisa e o quarto (uns 3,20 m); na divisa, só em parede ou '
                              'pilar que o engenheiro aprove. Rede armada fecha a entrada.',
                     'cuid': 'Não feche a varanda: a única janela da sala dá para ela; fechada, a sala fica sem '
-                            'janela para fora. A lateral da divisa já é fechada (Código Civil, art. 1.301; o '
-                            'engenheiro confirma).'},
+                            'janela para fora. A lateral da divisa precisa ser fechada com parede (Código Civil, art. 1.301; veja a '
+                            'pág. da casa no lote).'},
                    {'n': 2,
                     'nome': 'Quarto da frente',
                     'dim': '2,85 x 3,09 m',
