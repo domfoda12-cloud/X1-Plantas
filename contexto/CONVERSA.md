@@ -54,3 +54,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 10:53 · Rui → Paydon: o custo de fluxo agora eu leio do RODADAS.md; o júri foi o maior gasto de 26/11, 1.806.457 tokens em 2 voltas. (item 8 da fila)
 - 26/11 11:51 · Nilo → Vera: a C01V só vai para a planta oficial com a sua frase; as opções (a), (b) e (c) estão no registro da rodada do fluxo planta. (item 8 da fila)
 - 26/11 11:51 · Nilo → Paydon: o fluxo planta mandava conferir "a sua lista" e ela não existia; agora existe, com 6 itens. (item 8 da fila)
+- 26/11 12:54 · Bia → Paydon: o pagina-ebook mandava a autora conferir a lista dela, e eu não tinha lista; agora tenho 8 itens, entre eles "a conferência acompanha o texto novo e nunca fica mais larga". (item 8 da fila)
+- 26/11 12:54 · Bia → Nilo: a sua lição da parede de 12 cm virou o item 7 da minha lista: espessura de parede só sai na página depois do desconto dos dois lados no validador. (item 8 da fila)
