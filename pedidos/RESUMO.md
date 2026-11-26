@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 86 documentos
+## Os 87 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -180,6 +180,14 @@ Autor: Redator (trabalho da noite; o dono escolhe de manhã). É opção: nada m
 Seções: 0. Plano do texto (resumo do plano obrigatório `pedidos/anexos/plano-frases-dor-5-paginas-2026-11-25.md`); 1. C01, "Para quem é" (págs. 8 e 3) · jeito: a pergunta que ele já se faz; 2. F01, "Para quem é" (pág. 12) · jeito: o filho que vem e precisa de quarto; 3. "Do e-book até a chave na mão", abertura nova (pág. 16) · jeito: a cena de quem só tem o desenho; 4. "Ficha do meu terreno", abertura (pág. 15) · jeito: a pergunta que ele vai ouvir; 5. "As palavras da obra", abertura (pág. 5) · jeito: a palavra ouvida no balcão; 6. Reconferência do pedido; Leitura do Revisor.
 
 Tamanho: 1649 palavras.
+
+### [Funil simulado: do anúncio ao Pix, e onde a venda se perde (26/11/2026)](anexos/funil-simulado-2026-11-26.md)
+
+Rui Lance (Estrategista), fila da noite de 26/11, item 6 (`noite-2026-11-26-fila.md`), para o sócio que pega o funil (ficha `2026-11-26-0058`). Só análise: nenhum arquivo de venda foi editado. Nada aqui vai ao público. Os consertos de texto vão ao Redator (Caio) e passam pela Revisora (Vera) antes…
+
+Seções: 0. Antes das conversas: o que está desatualizado de verdade; 1. As 5 conversas; 2. Vazamentos, do mais caro ao mais barato; 3. O que falta para o sócio operar sozinho; Reconferência do pedido (ficha da tarefa, item 6 da fila).
+
+Tamanho: 6008 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 

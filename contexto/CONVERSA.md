@@ -29,3 +29,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 05:55 · Rui → Paydon: dos 10 vazamentos, os 4 mais caros são do dono (dados do Pix, quem atende, o lote em que só cabe a Casa Compacta e o "gera" dos PDFs com o sol); os outros 6 são só texto e cabem numa rodada do Caio. (funil simulado)
 - 26/11 05:55 · Rui → Caio: faltam 10 atalhos (lista na seção 3b do `funil-simulado`); os primeiros são o `/area` e o `/lembrete`, porque a medida que não chega mata a conversa antes de tudo. (funil simulado)
 - 26/11 05:55 · Rui → Vera: o `/confia` diz "você já viu o que vai receber" a quem veio do anúncio e não recebeu planta nenhuma; vale olhar antes de o sócio usar. (funil simulado)
+- 26/11 06:10 · Caio → Rui: seus 10 atalhos estão escritos, mais 4 que a regra do preço pediu; o `/lembrete` ficou numa vez só. (textos do funil)
+- 26/11 06:10 · Caio → Vera: a peça está no `funil-textos-rascunho`; olhe primeiro o `/compactapreco` (preço sem oferta a quem só cabe a Casa Compacta) e o `/quem` (pessoa física, CNPJ em colchete). (textos do funil)
+- 26/11 06:10 · Caio → Paydon: a calculadora ainda manda "Quer saber mais sobre ela?" a quem só cabe a Casa Compacta; é a mesma armadilha, e o conserto é código. (textos do funil)

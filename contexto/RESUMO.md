@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 996 palavras.
+Tamanho: 1097 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 

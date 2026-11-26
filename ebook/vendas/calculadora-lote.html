@@ -74,12 +74,14 @@ function atualizar() {
     lista.append(li);
   }
   if (!cabem.length) { msg.textContent = `Com ${fmt(f)} x ${fmt(d)} m e os recuos de referência, nenhuma casa do e-book cabe. Me confirma as medidas? Se a sua prefeitura deixar encostar na divisa, a conta muda.`; return; }
+  // Só cabe a Casa Compacta, que a pessoa já ganha de graça: o /oferta está vetado (Vera, 23/11); o sócio usa o /socompacta
+  if (cabem.length === 1 && cabem[0].id === 'C01') { msg.textContent = 'PARA VOCÊ, NÃO ENVIE: só cabe a Casa Compacta, que a pessoa já ganha de graça. Não mande esta calculadora nem o /oferta: use o atalho /socompacta.'; return; }
   const TOPO = 3;
   const top = cabem.slice(0, TOPO).map(c => `🏠 ${c.nome} · ${c.area} m² · ${c.q}`).join('\n');
   const n = cabem.length, varias = n > 1;
   // "As 3 maiores" (por área) só quando a lista corta casas; com 1 casa, tudo no singular
   const intro = n > TOPO ? `As ${TOPO} maiores:` : varias ? 'São estas:' : 'É esta:';
-  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m ${varias ? 'cabem' : 'cabe'} ${n} casa${varias ? 's' : ''} do e-book, com os recuos de referência. ${intro}\n\n${top}\n\n${varias ? 'Cada uma vem' : 'Ela vem'} desenhada no lote, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\n${varias ? 'Quer saber mais de alguma delas?' : 'Quer saber mais sobre ela?'}`;
+  msg.textContent = `No seu lote de ${fmt(f)} x ${fmt(d)} m ${varias ? 'cabem' : 'cabe'} ${n} casa${varias ? 's' : ''} do e-book, com os recuos de referência. ${intro}\n\n${top}\n\n${varias ? 'Cada uma vem' : 'Ela vem'} desenhada no lote, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.\n\n${varias ? 'Qual delas você quer ver por dentro, em 3D?' : 'Quer ver como ela é por dentro, em 3D?'}`;
 }
 document.getElementById('form').addEventListener('input', atualizar);
 document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
