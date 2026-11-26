@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 20 documentos
+## Os 22 documentos
 
 ### [Conversa da equipe](CONVERSA.md)
 
@@ -74,6 +74,20 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
 Tamanho: 540 palavras.
+
+### [Registro do que o Paydon fez no computador do dono](computador-registro.md)
+
+Uma linha por ação que não seja só ler (regra em `computador.md`): data, o que fez, como desfazer.
+
+Tamanho: 30 palavras.
+
+### [No computador do dono: o que o Paydon pode e não pode](computador.md)
+
+Rede de segurança pedida pelo dono (26/11) antes de dar acesso total ao computador dele. Vale para toda conversa que rode no computador dele (app do Claude ou Remote Control). Afrouxar qualquer linha só com o "sim" dele.
+
+Seções: Pode, sem perguntar; Pergunta antes, sempre; Nunca; Registro.
+
+Tamanho: 284 palavras.
 
 ### [Contexto do Designer](designer.md)
 

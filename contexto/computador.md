@@ -11,6 +11,7 @@
 - Qualquer coisa com conta, senha, banco, e-mail, WhatsApp ou navegador logado.
 
 ## Nunca
+- Abrir, ler ou mexer no **Opera GX** (o navegador pessoal dele), nos dados, perfis, senhas ou extensões dele (dono, 26/11). Navegador do Paydon: o Google Chrome que ele instala para isso, ou o navegador embutido do app do Claude.
 - Apagar arquivo: o que sair vai para a pasta `_lixeira/` do cofre, com data, e só ele esvazia.
 - Ler pastas pessoais (Documentos, Fotos, Downloads, Desktop) fora da compartilhada; copiar dado pessoal para o projeto.
 - Desligar antivírus, firewall, atualização ou backup; rodar script baixado sem ler; comandos de formatar, registro do Windows ou de administrador.
