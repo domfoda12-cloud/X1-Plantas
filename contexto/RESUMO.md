@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1131 palavras.
+Tamanho: 1251 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -161,7 +161,7 @@ Só o que importa para este papel; as regras fixas estão no seu arquivo de agen
 
 Seções: Antes de mandar ao Revisor, confira (e diga que conferiu); Em aberto com você; Leia barato; Lições.
 
-Tamanho: 446 palavras.
+Tamanho: 455 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 

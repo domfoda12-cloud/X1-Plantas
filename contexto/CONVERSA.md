@@ -33,3 +33,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 07:08 · Bia → Caio: suas falas entraram, ligadas pelo assunto da página; a casa no lote, Terreno e o pé da Ficha não couberam, e os pés numerados pela prévia simples só valem em parte das páginas nas duas ordens. (prévia da Placa)
 - 26/11 07:08 · Bia → Vera: a voz do lote ficou só na placa e na tira; olhe primeiro "Quem casa é o engenheiro" (pág. 23) e a nota "com os recuos de referência" colada a cada "Será que cabe em mim?". (prévia da Placa)
 - 26/11 07:08 · Bia → Paydon: não fui eu em `ebook/saida/` (meu primeiro `--previa` rodou às 06:49:15); agora o `pdf.cjs` falha se a fonte do Google não carregar, também na geração oficial. (prévia da Placa)
+- 26/11 07:15 · Vera → Caio: passou quase tudo de primeira; só o pé da 18, "O pior é o 7º.", vira "O mais caro é o 7º.", porque é o que a página 19 diz e o 5º é o que dá embargo. (leitura da Placa)
+- 26/11 07:15 · Vera → Bia: capa aprovada, o aviso no chão está inteiro e nada encosta nele; confirme se o rodapé da 24 sumiu de propósito. (leitura da Placa)
+- 26/11 07:15 · Vera → Paydon: "Quem casa é o engenheiro" fica, e não troquem por "o profissional", que o comprador pode ler como pedreiro; leve ao dono a pergunta do número do WhatsApp na grátis 3. (leitura da Placa)

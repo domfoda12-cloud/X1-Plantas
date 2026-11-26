@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [Canteiro lido sozinho? Canal de IA em inglês, e talvez PT/EN/ES](2026-11/2026-11-26-0712-canteiro-lido-sozinho-e-canal-de-ia-em-ingles-pt-es.md) | aberta | Paydon (registro e cartões); Ana (pesquisa grátis); o vídeo e o gancho, no repositório do  |
 | 2026-11-26 | [nome do Maestro (Paydon Clabett), nomes dos agentes e conversa da equipe no Canteiro](2026-11/2026-11-26-0116-nome-do-maestro-paydon-clabett-nomes-dos-agentes-e-conversa-.md) | fechada em 26/11/2026 | Paydon (Maestro); entra depois do fluxo que está mexendo nos arquivos dos agentes. |
 | 2026-11-26 | [noite de 26/11: autonomia total, melhorar cada detalhe (min-maxing)](2026-11/2026-11-26-0114-noite-de-26-11-autonomia-total-melhorar-cada-detalhe-min-max.md) | aberta | Maestro e a equipe, em fluxos. |
 | 2026-11-26 | [repensar o Canteiro do zero; deixar o Claude mais pessoal](2026-11/2026-11-26-0112-repensar-o-canteiro-do-zero-deixar-o-claude-mais-pessoal.md) | aberta | Maestro, com um fluxo: 2 agentes entendem, 3 desenham, 3 julgam, 1 sintetiza, 1 constrói,  |

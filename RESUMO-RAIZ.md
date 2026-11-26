@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 9380 palavras.
+Tamanho: 9448 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 
@@ -49,7 +49,7 @@ Resumo que todo mundo lê. Cada pedido do dono tem um motivo e continua valendo 
 
 Seções: O que nunca muda; Em aberto (esperando o dono); Ferramentas: o que cada uma é (e o que não é); Mapa: onde está cada coisa; Passagem entre tarefas.
 
-Tamanho: 1493 palavras.
+Tamanho: 1501 palavras.
 
 ### [Ecossistema: tudo o que a operação pode usar, e se já alcançou o projeto](ECOSSISTEMA.md)
 

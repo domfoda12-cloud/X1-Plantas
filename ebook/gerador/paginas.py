@@ -141,7 +141,7 @@ ONDE_BONUS = ("Os bônus", "{a} e {b} estão em outro arquivo, que vem junto com
 # e grátis 2, "Respeitou os meus recuos de referência." + "O da sua cidade, a prefeitura confirma."), "Terreno e recuos"
 # ("Meu recuo, quem diz é a prefeitura.") e o pé da "Ficha do meu terreno" ("Do papel até a chave?"). O desenho aceita:
 # volte com a chave ("lote:<ID>", "gratis-lote:C01", "terreno", "ficha") quando a página ganhar espaço.
-RASCUNHO_PLACA = True
+RASCUNHO_PLACA = False  # SIM SE da Vera, 26/11 (veto-placa-2026-11-26.md); troca do pé da pág. 18 aplicada
 CABE = "com os recuos de referência"
 PLACAS = {
     "capa": dict(fala=["Lote de {lote}", "Procura-se casa"]),
@@ -149,7 +149,7 @@ PLACAS = {
     "ache": dict(fala=["Três lotes, três casas. Ache a sua frente."]),
     "ler": dict(fala=["Não respondo casa sem medida."], pe="E as palavras da obra?"),
     "palavras": dict(fala=["Divisa é onde termina o meu abraço."], pe="O que sai caro?"),
-    "erros": dict(fala=["Sete jeitos de partir o meu coração."], pe="O pior é o 7º."),
+    "erros": dict(fala=["Sete jeitos de partir o meu coração."], pe="O mais caro é o 7º."),
     "erros2": dict(fala=["Respeita meu recuo."]),
     "passos": dict(fala=["Eu escolho o noivo. Quem casa é o engenheiro."], pe="O que perguntar primeiro?"),
     "fim": dict(fala=["Lote de {lote}. Procura-se engenheiro."]),
