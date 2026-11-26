@@ -28,6 +28,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 2 or not sys.argv[1].strip() or sys.argv[1].lstrip().startswith("-"):  # "--help" virou commit (48a1345)
         sys.exit(__doc__)
     rodar(sys.executable, "ferramentas/resumos.py")
+    rodar("git", "add", "-A")  # antes do checar: arquivo novo também é conferido (26/11: um rascunho novo passou sem o mapa)
     c = rodar(sys.executable, "ferramentas/checar.py")
     if c.returncode != 0:
         print(c.stdout[-3000:], c.stderr[-1000:])
