@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [socio sai do projeto, dono termina sozinho](2026-11/2026-11-26-0926-socio-sai-do-projeto-dono-termina-sozinho.md) | aberta | Paydon. |
 | 2026-11-26 | [fluxos fixos ultra max e licoes automaticas](2026-11/2026-11-26-0721-fluxos-fixos-ultra-max-e-licoes-automaticas.md) | aberta, em andamento | Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes. |
 | 2026-11-26 | [Canteiro lido sozinho? Canal de IA em inglês, e talvez PT/EN/ES](2026-11/2026-11-26-0712-canteiro-lido-sozinho-e-canal-de-ia-em-ingles-pt-es.md) | aberta | Paydon (registro e cartões); Ana (pesquisa grátis); o vídeo e o gancho, no repositório do  |
 | 2026-11-26 | [nome do Maestro (Paydon Clabett), nomes dos agentes e conversa da equipe no Canteiro](2026-11/2026-11-26-0116-nome-do-maestro-paydon-clabett-nomes-dos-agentes-e-conversa-.md) | fechada em 26/11/2026 | Paydon (Maestro); entra depois do fluxo que está mexendo nos arquivos dos agentes. |

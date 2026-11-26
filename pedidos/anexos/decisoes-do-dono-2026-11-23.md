@@ -177,3 +177,4 @@
 | 26/11 07:32 (Canteiro, n3) | "Sim: o mesmo número do e-book pago" | A última página da planta grátis diz "Responde aqui no WhatsApp ou chama no" e o número do `config.json` (`montar_gratis`, prévia). |
 | 26/11 07:33 (Canteiro, p17) | "Mostrei pra um amigo arquiteto ele nao falou mt mas achou legal" | Não responde à pergunta (vender antes da leitura dos bônus?); fica em aberto; resposta no cartão: o amigo pode ser quem lê, se topar apontar o que está errado. |
 | 26/11 07:34 (Canteiro, recado) | "Escolhi 2 das frases e nao consegui mais continuar!" | Erro nosso: a frase seguinte só aparecia na leitura de hora em hora. As 3 que faltam foram ao Canteiro, cada uma no seu cartão. |
+- **26/11, 09:26:** o sócio saiu do projeto; o dono termina sozinho ("we're finishing this alone"). Funil, WhatsApp e Pix voltam para ele.

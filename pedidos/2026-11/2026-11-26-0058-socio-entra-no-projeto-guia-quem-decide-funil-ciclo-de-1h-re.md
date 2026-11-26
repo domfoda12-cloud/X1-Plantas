@@ -36,3 +36,5 @@ Keep improving the agents
 
 **Papéis afetados:** todos
 
+
+**Atualização (26/11, 09:26):** o sócio saiu do projeto; o dono termina sozinho (ficha `2026-11-26-0926`). O guia e o funil do sócio ficam arquivados, nada apagado.

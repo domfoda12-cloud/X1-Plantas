@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`)
+
+- **O dono pediu:** "we're finishing this alone" (26/11, 09:26): o sócio não entra mais no projeto.
+- **O que mudou:** o funil, o WhatsApp e a conferência do Pix voltam para o dono. A "folha do sócio" do rascunho do funil vira folha do dono; a pergunta "quem confere o Pix" está respondida (o dono). O guia do sócio e o cartão `aviso-socio` do Canteiro ficam arquivados, nada apagado.
+- **Caio, Rui:** texto nenhum é escrito para o sócio; a folha do funil é para o dono, que atende sozinho (pense no horário dele, que trabalha de dia). **Vera:** a condição "nada vai ao sócio" vira "nada vai ao público". **Paydon:** não se escreve no repositório nada sobre o motivo da saída.
+
 ## 26/11 · Fluxos fixos "ultra max": a equipe trabalha sempre do mesmo jeito e aprende sozinha (ficha `2026-11-26-0721`)
 
 - **O dono pediu:** "YESSS, thats exactly what im looking for but a version ultra max"; lições "Automatically"; a prova "making the questions harder each time"; tudo conferido, pela conferência mais barata.
@@ -25,9 +31,3 @@
 - **O dono pediu:** "get every single detail, every single component that makes something and make it better" (passada do e-book página por página).
 - **O que mudou:** o Nilo achou a tabela `ORIENTACAO` do validador espelhada nos lados; corrigida, com prova no `checar.py`. **A Casa Compacta (C01) e a Casa Fita (E03) ficam melhores com a rua ao sul** (antes "ao norte"); a F01 continua ao sul; 13 das 24 plantas trocam. Mais 8 consertos na prévia (`pedidos/anexos/passada-do-ebook-2026-11-26.md`).
 - **Caio, Bia, Rui, Zeca:** nunca mais "C01 frente para o norte"; o número vem do `PLANTAS.md`. **Nilo:** desenhar a parede da varanda da C01 (planta e 3D) e avisar a Vera. **Vera:** ler as outras 13 páginas em tamanho cheio antes do PDF final.
-
-## 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`)
-
-- **O dono pediu:** "pasta do contexto tá bem grande".
-- **O que mudou:** o histórico saiu de `contexto/` para `pedidos/historico/` (nada apagado, links refeitos): as falas do dono palavra por palavra (`PROMPTS.md`), a retrospectiva, as intenções e as passagens de 20 a 24/11 (`REGISTRO-ate-2026-11-24.md`). `contexto/` foi de 245 KB para 90 KB. Em `contexto/dono/` ficam só as ideias gerais e os textos desatualizados.
-- **Todos:** fala antiga do dono, em `pedidos/historico/PROMPTS.md`. O que cada papel lê ao começar não mudou de lugar.
