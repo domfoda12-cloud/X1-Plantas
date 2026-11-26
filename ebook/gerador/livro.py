@@ -1414,7 +1414,7 @@ def montar(plantas, config, numeros, duas_partes=False):
         ("Construa com acompanhamento", "A obra precisa de responsável técnico, com ART ou RRT. Se for financiar, pergunte ao banco quais documentos ele pede."),
         ("Regularize a casa pronta", "Habite-se na prefeitura e registro da casa na matrícula do lote, no cartório."),
     ]
-    L.inicio["passos"] = L.pagina(f'{cab("passos")}<p class="abertura">O desenho é do parente, no caderno, e no balcão disseram: “a prefeitura pede projeto”. Aqui está a ordem, e onde entra o profissional.</p><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 74, pos="center 28%")}', "texto", orelha=geral)
+    L.inicio["passos"] = L.pagina(f'{cab("passos")}<p class="abertura">O desenho é do parente, no caderno, e no balcão disseram: “a prefeitura pede projeto”. Aqui está a ordem, e onde entra o profissional.</p><ol class="passos">{"".join(f"<li><b>{t}</b><span>{d}</span></li>" for t, d in passos)}</ol>{foto("03-planta-canteiro", 60, pos="center 28%")}', "texto", orelha=geral)
 
     # bônus e contato
     L.bloco = "bonus"
