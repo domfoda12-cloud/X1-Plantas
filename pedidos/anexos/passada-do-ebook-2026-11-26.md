@@ -17,9 +17,9 @@
 
 ## Proposto, ainda não aplicado (em ordem de efeito)
 
-1. **Casa no lote ilegível no celular (págs. 5, 9, 13 e 20):** pôr a planta de verdade no lote (`svg_no_lote`, já usada na pág. 3) e letra de uns 8 pt. Bia.
+1. **(APLICADO 26/11, item 3b, Bia)** **Casa no lote ilegível no celular (págs. 5, 9, 13 e 20):** pôr a planta de verdade no lote (`svg_no_lote`, já usada na pág. 3) e letra de uns 8 pt. Bia.
 2. **Parede da varanda da C01 desenhada** na planta e no 3D (hoje tracejada, aberta). Nilo. Mexe no desenho e no motor 3D.
-3. **Faixa de lote em volta da casa (capa e págs. 4, 8, 12) com recuos menores que os de referência** ao lado da régua: fazer como a pág. 14. Nilo.
+3. **(APLICADO nas págs. 4, 8 e 12; capa e pág. 16 esperam a identidade)** **Faixa de lote em volta da casa (capa e págs. 4, 8, 12) com recuos menores que os de referência** ao lado da régua: fazer como a pág. 14. Nilo.
 4. **Vista da rua:** cortar o céu, desenhar muro e portão no recuo da entrada, fita "5 m" no chão. Bia.
 5. **Ganchos das casas** [texto público, Caio e Vera]: E03 "5 m de frente e cabem 2 quartos. 56 m²."; F01 "10 m de frente. 3 quartos, todos com janela. 71 m²."; `.gancho` de 14 para 17 pt. Bia.
 6. **Págs. 18 e 19 com 25% e 40% em branco:** tabela "Qual casa evita qual erro". Bia.

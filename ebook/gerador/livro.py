@@ -504,9 +504,12 @@ def _piso(tipo, x, y, w, h, K):
 PISO_TIPO = {k: {"pMadeira": "madeira", "pPorc": "porc", "pAzulejo": "banho", "pVaranda": "varanda", "pCalcada": "calcada", "pGrama": "grama"}[v] for k, v in PISO.items()}
 
 
-def svg_humanizada(p, estilo="revista"):
+def svg_humanizada(p, estilo="revista", lote_escala=False):
     """Planta humanizada com o entorno: recuos de referência, muro da divisa, jardim, caminho da entrada, calçada e rua.
-    A frente da casa fica para baixo (o leitor chega da rua). Medidas e áreas do validador; o resto do motor 3D."""
+    A frente da casa fica para baixo (o leitor chega da rua). Medidas e áreas do validador; o resto do motor 3D.
+    lote_escala=True (página da casa): os recuos dos lados e do fundo em escala, com o muro na divisa do lote, e a
+    frente cortada no desenho, dito por escrito (antes o jardim mostrava uns 0,70 m ao lado da régua de escala e o livro
+    dizia 1,5 m; achado do Nilo, 26/11/2026). Sem ele, o desenho de antes (capa, cômodo a cômodo, "Como ler")."""
     S = ESTILOS[estilo]
     W, D = p["W"], p["D"]
     MET = p["_r"].metricas
@@ -543,7 +546,21 @@ def svg_humanizada(p, estilo="revista"):
         return tot
 
     pl, pr, pt, pb = 1.25, .95, 1.3, 2.15  # margens: cota à esquerda, cota em cima, jardim e rua embaixo
+    # o que o recuo em escala acrescenta além da faixa de antes (.8 à esquerda, .7 à direita e no fundo)
+    dxl, dxr, dyt = ((REC["esq"] - min(.8, REC["esq"]), REC["dir"] - min(.7, REC["dir"]), REC["fundos"] - min(.7, REC["fundos"]))
+                     if lote_escala else (0, 0, 0))
+    pl, pt = pl + dxl, pt + dyt
+    pr = pr + dxr + (.15 if lote_escala and REC["dir"] > 0 else 0)  # o muro da divisa do lado com recuo
     vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
+    txt_frente, ff = "", 0
+    if lote_escala:  # a frente cortada, escrita na calçada; casa estreita: a rua alarga até a frase caber (escala igual)
+        k0 = min(171 / vb[2], 165 / vb[3])
+        txt_frente = TX.COMODO["desenho"]["frente"].format(_ca_num(REC["frente"]))  # o mesmo número da pág. cômodo a cômodo
+        ff = max(.16, 7 * 25.4 / 72 / k0)
+        meia = (len(txt_frente) * ff * .61 + ff * 1.2) / 2 + .15  # a frase fica no meio do lote, e a rua passa dela
+        xm = (-min(.8, REC["esq"]) - dxl + Wm + min(.7, REC["dir"]) + dxr) / 2
+        pl, pr = max(pl, meia - xm), max(pr, xm + meia - Wm)
+        vb = (-pl, -pt, Wm + pl + pr, Dm + pt + pb)
     # letra mínima: na página da casa a planta ocupa uns 171 x 165 mm; casa estreita e comprida sai em escala menor,
     # então etiquetas e cotas crescem (kl) para ficarem do tamanho das casas largas (nome do cômodo com ~3,6 mm)
     kl = min(1.7, max(1.0, 13.85 / min(171 / vb[2], 165 / vb[3])))
@@ -551,9 +568,9 @@ def svg_humanizada(p, estilo="revista"):
          ]
     K = S["piso"]
     # terreno: só o que os recuos de referência deixam ver (recuo 0 = muro da divisa)
-    jx0 = -min(.8, REC["esq"])
-    jx1 = Wm + min(.7, REC["dir"])
-    jy_fundo = Y(Dm) - min(.7, REC["fundos"])
+    jx0 = -min(.8, REC["esq"]) - dxl
+    jx1 = Wm + min(.7, REC["dir"]) + dxr
+    jy_fundo = Y(Dm) - min(.7, REC["fundos"]) - dyt
     if S.get("sombra_lote"):  # o lote "pousado" sobre o papel azul (sombra em vetor, sem filtro: imprime nítido)
         s.append(f'<rect x="{f3(jx0 + .12)}" y="{f3(jy_fundo + .16)}" width="{f3(jx1 - jx0)}" height="{f3(Dm + 1.25 - jy_fundo)}" fill="{S["sombra_lote"]}"/>')
     s.append(_piso("grama", jx0, jy_fundo, jx1 - jx0, Dm + 1.25 - jy_fundo, K))
@@ -566,6 +583,12 @@ def svg_humanizada(p, estilo="revista"):
             s.append(f'<rect x="{f3(xm)}" y="{f3(jy_fundo)}" width=".12" height="{f3(Dm + 1.25 - jy_fundo)}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
                      f'<path d="{hach}" stroke="#B5AFA4" stroke-width=".02"/>')
             s.append(f'<text x="{f3(xt)}" y="{f3(Dm + .75)}" font-size=".15" fill="#7A7467" transform="rotate(-90 {f3(xt)} {f3(Dm + .75)})">divisa</text>')
+    if lote_escala:
+        for lado, xm in (("esq", jx0 - .12), ("dir", jx1)):
+            if REC[lado] > 0:
+                hach = "".join(f"M{f3(xm)} {f3(yy + .12)}l.12 -.12" for yy in [jy_fundo + k * .12 for k in range(int((Dm + 1.25 - jy_fundo) / .12))])
+                s.append(f'<rect x="{f3(xm)}" y="{f3(jy_fundo)}" width=".12" height="{f3(Dm + 1.25 - jy_fundo)}" fill="#E4E1DA" stroke="#8F887C" stroke-width=".01"/>'
+                         f'<path d="{hach}" stroke="#B5AFA4" stroke-width=".02"/>')
     # caminho da rua até a entrada
     ex = p.get("_entrada_x")
     if ex is None:
@@ -721,11 +744,17 @@ def svg_humanizada(p, estilo="revista"):
     s[i_moveis] = "".join(f'<g transform="{tr(mv)}">{_movel(mv, S)}</g>' for mv in mov if mv["tipo"] != "tapete")
     # cotas (do validador) e escala gráfica
     cz = S["cota"]
+    # as cotas ficam fora do jardim: com o recuo em escala, sobem e vão para a esquerda o mesmo tanto que ele cresceu
     s.append(f'<g stroke="{cz}" stroke-width=".022" fill="{cz}" font-size="{.26 * min(kl, 1.35):.3f}" class="mono">'
-             f'<line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
-             f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">casa {m(W)} m</text>'
-             f'<line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
-             f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">casa {m(D)} m</text></g>')
+             f'<g transform="translate(0 {f3(-dyt)})"><line x1="0" y1="-.92" x2="{f3(W)}" y2="-.92"/><line x1="0" y1="-1.04" x2="0" y2="-.8"/><line x1="{f3(W)}" y1="-1.04" x2="{f3(W)}" y2="-.8"/>'
+             f'<text x="{f3(W / 2)}" y="-1.03" text-anchor="middle" stroke="none" font-weight="700">casa {m(W)} m</text></g>'
+             f'<g transform="translate({f3(-dxl)} 0)"><line x1="-.72" y1="{f3(Y(D))}" x2="-.72" y2="{f3(Dm)}"/><line x1="-.84" y1="{f3(Y(D))}" x2="-.6" y2="{f3(Y(D))}"/><line x1="-.84" y1="{f3(Dm)}" x2="-.6" y2="{f3(Dm)}"/>'
+             f'<text x="-.84" y="{f3(Y(D / 2))}" text-anchor="middle" stroke="none" font-weight="700" transform="rotate(-90 -.84 {f3(Y(D / 2))})">casa {m(D)} m</text></g></g>')
+    if txt_frente:  # "frente: 3 m até a rua, recuo de referência (cortada no desenho)", na calçada (a frase da pág. cômodo a cômodo)
+        xc, yc = (jx0 + jx1) / 2, Dm + 1.46
+        wp = len(txt_frente) * ff * .61 + ff * 1.2
+        s.append(f'<rect x="{f3(xc - wp / 2)}" y="{f3(yc - ff * .72)}" width="{f3(wp)}" height="{f3(ff * 1.44)}" rx="{f3(ff * .72)}" fill="#fff" stroke="#B5AFA4" stroke-width=".015"/>'
+                 f'<text x="{f3(xc)}" y="{f3(yc + ff * .36)}" text-anchor="middle" font-size="{f3(ff)}" font-weight="700" class="mono" fill="#17202B">{E(txt_frente)}</text>')
     ec, ex0, ey = S["escala"], Wm + pr - 2.15, Dm + 1.98  # régua de escala na faixa da rua, fora da calçada
     s.append(f'<g font-size=".15" class="mono" font-weight="700" fill="{ec}">' + "".join(
         f'<rect x="{f3(ex0 + i * .5)}" y="{f3(ey)}" width=".5" height=".07" fill="{ec if i % 2 == 0 else "#fff"}" stroke="{ec}" stroke-width=".01"/>' for i in range(4))
@@ -829,32 +858,81 @@ def svg_fachada(p, legenda=True):
     return "".join(s)
 
 
-def svg_lote(p):
+PT = 25.4 / 72  # 1 pt impresso, em mm
+
+
+def svg_lote(p, k=None, caixa=(74, 78), tamanho=False):
+    """A casa (a planta de verdade, cores de sempre, como na pág. "Qual casa cabe") no lote MÍNIMO, com a rua embaixo,
+    a frente mínima na faixa da rua, o fundo mínimo cotado ao lado, o recuo da frente escrito e a bússola.
+    A letra é medida em pontos impressos: k é a escala (mm por m); sem k, a maior que cabe na caixa (largura x altura,
+    em mm). tamanho=True põe a largura e a altura em mm no próprio desenho (página do lote e "Terreno e recuos").
+    Antes era um bloco azul com o código e letra de uns 3 pt (achado da Bia, 26/11/2026)."""
     r = p["_r"].metricas
     LW, LD = r["lote"]
     rec = r["recuos"]
-    pad, rua = .4, 1.6
-    Y = lambda y: LD - y
     fut = [c for c in p["comodos"] if c["tipo"] == "futuro"]
-    s = [f'<svg viewBox="{-pad - 1.2} {-pad - .3} {LW + pad * 2 + 2.4} {LD + pad + rua + 1.1}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A casa no lote mínimo">']
-    s.append(f'<rect x="0" y="0" width="{LW}" height="{LD}" fill="#F3E6C4" stroke="#17202B" stroke-width=".07" stroke-dasharray=".3 .15"/>')
-    hx, hy = rec["esq"], rec["frente"]
-    for c in fut:
-        s.append(f'<rect x="{hx + c["x0"]}" y="{Y(hy + c["y1"])}" width="{c["x1"] - c["x0"]}" height="{c["y1"] - c["y0"]}" fill="none" stroke="#E0A92E" stroke-width=".07" stroke-dasharray=".25 .15"/>')
-    s.append(f'<rect x="{hx}" y="{Y(hy + p["D"])}" width="{p["W"]}" height="{p["D"]}" fill="#0B4FA8"/>')
-    s.append(f'<text x="{hx + p["W"] / 2}" y="{Y(hy + p["D"] / 2) + .2}" text-anchor="middle" font-size=".6" font-weight="800" fill="#fff" class="tit">{p["id"]}</text>')
-    s.append(f'<rect x="-1.2" y="{LD + .15}" width="{LW + 2.4}" height="{rua}" fill="#C9CED6"/>')
-    # A medida da frente fica na faixa da rua (antes ficava no fundo do lote, e o comprador lia "frente" no lado errado;
-    # achado da Bia, 26/11/2026). Letra proporcional ao lote: lote estreito não deixa a frase passar da faixa.
-    fs = max(.42, min(.8, LW / 10))
-    s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua * .38}" text-anchor="middle" font-size="{fs * .8:.2f}" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
-    s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua * .38 + fs * 1.05:.2f}" text-anchor="middle" font-size="{fs:.2f}" font-weight="700" class="mono" fill="#17202B">frente mínima {m(LW)} m</text>')
-    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size="{max(.42, min(.8, LD / 18)):.2f}" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">fundo mínimo {m(LD)} m</text>')
-    s.append(f'<text x="{LW / 2}" y="{Y(rec["frente"] / 2) + .15}" text-anchor="middle" font-size=".36" class="mono" fill="#6B5A2E">recuo {m1(rec["frente"])} m</text>')
+    Dm = max([p["D"]] + [c["y1"] for c in fut])
+    Wm = max([p["W"]] + [c["x1"] for c in fut])
+    frente_txt, fundo_txt, recuo_txt = f"frente mínima {m(LW)} m", f"fundo mínimo {m(LD)} m", f"recuo {m1(rec['frente'])} m"
     ang = {"sul": 0, "norte": 180, "leste": 90, "oeste": -90}[r["orientacao"]["melhor"]]
-    s.append(f'<g transform="translate({LW + .65} .75) rotate({ang})"><circle r=".55" fill="#fff" stroke="#17202B" stroke-width=".04"/>'
+
+    def medidas(k):
+        mm = 1 / k                                 # 1 mm da página, em metros do desenho
+        f8, f7 = 8 * PT * mm, 7 * PT * mm          # cotas e "frente mínima" com 8 pt; "RUA" e o N com 7 pt
+        R = 2.4 * mm                               # raio da bússola
+        esq = 2.2 * mm + 1 * mm + .8 * f8 + .6 * mm            # cota do fundo: linha, folga e a letra deitada
+        dir_ = 1.2 * mm + 2 * R + f7 + .4 * mm                 # bússola fora do lote, à direita (o N pode ir para o lado)
+        tw = len(frente_txt) * .61 * f8
+        x0 = min(-esq, LW / 2 - tw / 2 - 1.5 * mm)
+        x1 = max(LW + dir_, LW / 2 + tw / 2 + 1.5 * mm)
+        hr = 1.2 * mm + f7 * 1.05 + f8 * 1.15 + 1.2 * mm      # faixa da rua: RUA e a frente mínima
+        y0 = -(R * .09 + f7 * 1.1 + .5 * mm)
+        y1 = LD + .8 * mm + hr + .3 * mm
+        return mm, f8, f7, R, x0, x1, y0, y1, hr
+
+    if k is None:
+        k = 4.0
+        for _ in range(6):  # a letra depende da escala e a escala do tamanho do desenho: poucas voltas bastam
+            _, _, _, _, x0, x1, y0, y1, _ = medidas(k)
+            k = min(caixa[0] / (x1 - x0), caixa[1] / (y1 - y0))
+    mm, f8, f7, R, x0, x1, y0, y1, hr = medidas(k)
+    vw, vh = x1 - x0, y1 - y0
+    estilo = f' style="width:{vw * k:.1f}mm;height:{vh * k:.1f}mm"' if tamanho else ""
+    Y = lambda y: LD - y
+    s = [f'<svg viewBox="{f3(x0)} {f3(y0)} {f3(vw)} {f3(vh)}"{estilo} xmlns="http://www.w3.org/2000/svg" role="img" '
+         f'aria-label="{E(p["nome"])} no lote mínimo de {m(LW)} x {m(LD)} m">']
+    s.append(f'<rect x="0" y="0" width="{LW}" height="{LD}" fill="#F3E6C4" stroke="#17202B" stroke-width="{f3(.35 * mm)}" stroke-dasharray="{f3(1.4 * mm)} {f3(.8 * mm)}"/>')
+    # a planta de verdade (a mesma da pág. "Qual casa cabe"), no lugar que os recuos de referência deixam
+    s.append(svg_planta(p, nomes=False, cotas=False, pad=0, moveis=True).replace(
+        "<svg ", f'<svg x="{f3(rec["esq"])}" y="{f3(Y(rec["frente"]) - Dm)}" width="{f3(Wm)}" height="{f3(Dm)}" ', 1))
+    for c in fut:  # a ampliação futura, tracejada por cima (a planta já pinta o cômodo; aqui o contorno fica visível)
+        s.append(f'<rect x="{f3(rec["esq"] + c["x0"])}" y="{f3(Y(rec["frente"] + c["y1"]))}" width="{f3(c["x1"] - c["x0"])}" height="{f3(c["y1"] - c["y0"])}" '
+                 f'fill="none" stroke="#E0A92E" stroke-width="{f3(.45 * mm)}" stroke-dasharray="{f3(1.3 * mm)} {f3(.8 * mm)}"/>')
+    # o recuo da frente, escrito no recuo (em duas linhas se o lote for estreito)
+    yr = Y(rec["frente"] / 2)
+    if len(recuo_txt) * .62 * f8 <= LW - 4 * mm:
+        s.append(f'<text x="{f3(LW / 2)}" y="{f3(yr + .35 * f8)}" text-anchor="middle" font-size="{f3(f8)}" class="mono" font-weight="700" fill="#6B5A2E">{recuo_txt}</text>')
+    else:
+        a, b = recuo_txt.split(" ", 1)
+        s.append(f'<text x="{f3(LW / 2)}" y="{f3(yr - .2 * f8)}" text-anchor="middle" font-size="{f3(f8)}" class="mono" font-weight="700" fill="#6B5A2E">{a}'
+                 f'<tspan x="{f3(LW / 2)}" dy="{f3(1.1 * f8)}">{b}</tspan></text>')
+    # a rua embaixo, com a frente mínima nela (o comprador lê "frente" do lado da rua)
+    yrua = LD + .8 * mm
+    s.append(f'<rect x="{f3(x0)}" y="{f3(yrua)}" width="{f3(vw)}" height="{f3(hr)}" fill="#C9CED6"/>')
+    s.append(f'<text x="{f3(LW / 2)}" y="{f3(yrua + 1.2 * mm + .78 * f7)}" text-anchor="middle" font-size="{f3(f7)}" font-weight="700" fill="#4F5B69" letter-spacing="{f3(.12 * f7)}">RUA</text>')
+    s.append(f'<text x="{f3(LW / 2)}" y="{f3(yrua + 1.2 * mm + f7 * 1.05 + .9 * f8)}" text-anchor="middle" font-size="{f3(f8)}" font-weight="700" class="mono" fill="#17202B">{frente_txt}</text>')
+    # o fundo mínimo, cotado do lado de fora do lote
+    xc, t = -2.2 * mm, .9 * mm
+    s.append(f'<g stroke="#4F5B69" stroke-width="{f3(.3 * mm)}"><line x1="{f3(xc)}" y1="0" x2="{f3(xc)}" y2="{LD}"/>'
+             f'<line x1="{f3(xc - t)}" y1="0" x2="{f3(xc + t)}" y2="0"/><line x1="{f3(xc - t)}" y1="{LD}" x2="{f3(xc + t)}" y2="{LD}"/></g>')
+    xt = xc - 1 * mm
+    s.append(f'<text x="{f3(xt)}" y="{f3(LD / 2)}" text-anchor="middle" font-size="{f3(f8)}" class="mono" font-weight="700" fill="#17202B" '
+             f'transform="rotate(-90 {f3(xt)} {f3(LD / 2)})">{fundo_txt}</text>')
+    # a bússola: gira pelo melhor lado da rua (o validador); o N aponta o norte
+    e = R / .55
+    s.append(f'<g transform="translate({f3(LW + 1.2 * mm + R)} {f3(R)}) rotate({ang}) scale({e:.4f})"><circle r=".55" fill="#fff" stroke="#17202B" stroke-width=".04"/>'
              f'<path d="M0 -.48 L.16 .1 L0 0 L-.16 .1 Z" fill="#C0392B"/>'
-             f'<text y="-.6" text-anchor="middle" font-size=".32" font-weight="800" fill="#17202B">N</text></g>')
+             f'<text y="-.62" text-anchor="middle" font-size="{f7 / e:.3f}" font-weight="800" fill="#17202B">N</text></g>')
     s.append("</svg>")
     return "".join(s)
 
@@ -1257,9 +1335,9 @@ def montar(plantas, config, numeros, duas_partes=False):
 
     # terreno
     L.bloco = "terreno"
-    # cada coluna com a largura do desenho do lote: os 3 saem na mesma escala (o de 5 m parece mesmo mais estreito)
+    # os 3 lotes na mesma escala (o de 5 m parece mesmo mais estreito), a maior em que a fileira cabe em 160 x 100 mm;
+    # cada desenho com o tamanho em mm, para a letra sair com 8 pt impressos
     import re
-    largura_vb = lambda svg: float(re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2])
     lotes_ex = [i for i in ["E03", "C01", "F02"] if i in por_id]
     if len(lotes_ex) < min(3, len(plantas)):
         uma_por_largura = {}
@@ -1267,10 +1345,13 @@ def montar(plantas, config, numeros, duas_partes=False):
             uma_por_largura.setdefault(lote_frente(p), p["id"])
         lotes_ex = list(uma_por_largura.values())
         lotes_ex = [lotes_ex[0], lotes_ex[len(lotes_ex) // 2], lotes_ex[-1]] if len(lotes_ex) > 3 else lotes_ex
-    colunas_lotes = " ".join(f"{largura_vb(svg_lote(por_id[i])):.2f}fr" for i in lotes_ex)
-    # o lote mais fundo manda na altura: a fileira estreita até ele caber em 100 mm (a E03 de 2 quartos pede lote de 20,6 m)
-    _vb = [[float(v) for v in re.search(r'viewBox="([^"]+)"', svg_lote(por_id[i])).group(1).split()[2:]] for i in lotes_ex]
-    largura_lotes = min(170.0, 100.0 * sum(w for w, _ in _vb) / max(h for _, h in _vb))
+    tam_vb = lambda svg: [float(v) for v in re.search(r'viewBox="([^"]+)"', svg).group(1).split()[2:]]
+    k_lotes = 4.0
+    for _ in range(6):  # a letra depende da escala e a escala do tamanho dos desenhos
+        _vb = [tam_vb(svg_lote(por_id[i], k=k_lotes)) for i in lotes_ex]
+        k_lotes = min((160.0 - 5 * (len(lotes_ex) - 1)) / sum(w for w, _ in _vb), 100.0 / max(h for _, h in _vb))
+    _vb = [tam_vb(svg_lote(por_id[i], k=k_lotes)) for i in lotes_ex]
+    colunas_lotes = " ".join(f"{w * k_lotes:.1f}mm" for w, _ in _vb)
     L.inicio["terreno"] = L.pagina(f"""{cab("terreno")}
       <p class="abertura">Confira com a conta abaixo <b>antes</b> de pagar qualquer projeto: a planta só serve se couber nas regras do seu lote.</p>
       <div class="duas">
@@ -1287,7 +1368,7 @@ def montar(plantas, config, numeros, duas_partes=False):
         <div class="caixa azul"><h3>A conta que você faz em casa</h3><p>(frente − recuos laterais) × (fundo − recuo da frente − recuo dos fundos) = espaço para a casa.</p>
           <p>Lote 10 x 20 com recuo de 3 m na frente, 1,5 m numa lateral e 1,5 m nos fundos: sobram 8,5 x 15,5 m. Cabem as casas de até 8,50 m de largura e 15,50 m de comprimento, se a taxa de ocupação da sua cidade deixar. A lateral sem recuo só vale se a prefeitura permitir encostar na divisa, e essa parede fica sem janela.</p>
           <p class="pequeno">Exemplo com recuos de referência. Os do seu lote são os da sua prefeitura.</p></div></div>
-      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};width:{largura_lotes:.0f}mm;margin:0 auto">{''.join(f'<figure>{svg_lote(por_id[i])}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto", orelha=geral)
+      <div class="lotes-ex" style="grid-template-columns:{colunas_lotes};justify-content:center">{''.join(f'<figure>{svg_lote(por_id[i], k=k_lotes, tamanho=True)}<figcaption>{i} no lote de {lote_frente(por_id[i])} m</figcaption></figure>' for i in lotes_ex)}</div>""", "texto", orelha=geral)
     if duas_partes:  # a página "A parede que não pode ter janela" (D21): só no e-book em duas partes, ao lado de "Terreno e recuos"
         L.bloco = "parede"
         L.inicio["parede"] = pagina_parede(L, por_id, orelha=geral)
@@ -2596,7 +2677,7 @@ def dupla(L, p, por_id, numeros):
     L.inicio[p["id"]] = L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · {cat.upper()}</span><h2 class="nome">{E(p['nome'])}</h2>
         <p class="gancho">{E(gancho)}</p>{chips(p, gancho)}</div>
-      <div class="planta-grande moldura">{svg_planta(p, humanizada=True)}</div>
+      <div class="planta-grande moldura">{svg_humanizada(p, lote_escala=True)}</div>
       <div class="selo-tec">Planta de referência humanizada · medidas em metros · móveis para dar escala</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
         <div><h4>{erros_tit}</h4><ul class="erros-mini">{erros_html}</ul></div></div>""",
@@ -2615,7 +2696,7 @@ def dupla(L, p, por_id, numeros):
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
       <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]} m.</h2></div>
-      <div class="lado"><div class="lote-fig">{svg_lote(p)}</div>
+      <div class="lado"><div class="lote-fig">{svg_lote(p, tamanho=True)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
           <div class="r-por">Lote comum {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
           <div class="r-cab"><span></span><span>nesta casa</span><span>referência</span></div>

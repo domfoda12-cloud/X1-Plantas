@@ -92,7 +92,8 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .erros-mini { list-style: none; display: grid; gap: 1.2mm; font-size: 9.5pt; }
 .erro-mini { display: inline-grid; place-items: center; width: 4.5mm; height: 4.5mm; border-radius: 50%; background: var(--azul); color: #fff; font-size: 7pt; font-weight: 700; margin-right: 2mm; }
 .lado { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; }
-.lote-fig svg { width: 100%; height: auto; max-height: 78mm; }
+.lote-fig { display: flex; justify-content: center; }
+.lote-fig svg { display: block; max-width: 100%; max-height: 78mm; }  /* o livro.py dá o tamanho em mm (letra de 8 pt) */
 .casa.dir .lado { grid-template-columns: 1fr 1.25fr; }  /* ficha mais larga: a coluna "referência" cabe numa linha */
 .casa.dir .pensou > div { font-size: 9.8pt; }
 .rotulo { border: 0.6mm solid var(--tinta); padding: 1.8mm 2.2mm; font-size: 8.4pt; line-height: 1.3; }
@@ -122,7 +123,7 @@ h4 { font-size: 7.5pt; letter-spacing: .13em; text-transform: uppercase; color: 
 .galeria-leg { font-size: 8pt; color: var(--cinza); text-align: center; margin-top: -2mm; }
 .lotes-ex { display: grid; gap: 5mm; align-items: end; }  /* colunas proporcionais à largura de cada lote (livro.py): os 3 na mesma escala, grandes, sem buraco */
 .lotes-ex figure { display: grid; gap: 1mm; justify-items: center; }
-.lotes-ex svg { width: 100%; height: auto; }
+.lotes-ex svg { display: block; }  /* tamanho em mm vindo do livro.py: os 3 na mesma escala */
 .lotes-ex figcaption { font-size: 8pt; color: var(--cinza); }
 
 .fachada svg { width: 100%; height: auto; max-height: 44mm; display: block; }

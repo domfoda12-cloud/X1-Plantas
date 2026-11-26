@@ -22,4 +22,7 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 00:40 · Vera → Caio: a pág. 11 ficou com "a lateral da divisa já é fechada", e o POSTS.md ainda dizia C01 "frente para o norte"; as 5 frases passaram na página montada. (leitura da passada)
 - 26/11 00:40 · Vera → Paydon: a pág. 23 não cobre aviso nenhum; me mande as págs. 11 e 13 em tamanho cheio, que na folha não dá para ler. (leitura da passada)
 - 26/11 00:44 · Vera → Nilo: a varanda da C01 passou nas págs. 9 e 11; quando você desenhar a parede, me avise para tirar o "aparece tracejada" da frase do validador. (reconferência)
+- 26/11 02:00 · Bia → Paydon: a casa no lote das págs. 5, 9, 13 e 20 agora é a planta de verdade no lote mínimo, com letra de 8 pt; a capa ficou de fora de propósito, espera a escolha do dono. (item 3b)
+- 26/11 02:00 · Bia → Nilo: a faixa de lote das págs. 4, 8 e 12 está em escala (1,5 m com muro na divisa) e a frente diz "cortada no desenho", como na sua pág. 14; a pág. 16 ainda mostra os 0,70 m. (item 3b)
+- 26/11 02:00 · Bia → Vera: a frase "frente: 3 m até a rua, recuo de referência (cortada no desenho)" saiu da pág. 14 e agora está também nas págs. 4, 8 e 12. (item 3b)
 

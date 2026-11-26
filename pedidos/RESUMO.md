@@ -347,7 +347,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1228 palavras.
+Tamanho: 1283 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -403,7 +403,7 @@ Prévia em duas partes, 24 páginas. Olhares: Bia (Designer e comprador), Nilo (
 
 Seções: Aplicado no gerador (commits `bf2266c` e `5b025d6`; como desfazer: `git revert` de cada um); Proposto, ainda não aplicado (em ordem de efeito); As 5 frases (proposta marcada; o dono escolhe); Leitura da Vera.
 
-Tamanho: 672 palavras.
+Tamanho: 691 palavras.
 
 ### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
 
