@@ -16,7 +16,7 @@ PADRAO = ["Qual é o recuo da minha rua e do meu lote?", "Que fundação o meu s
 
 TEXTOS = {
     "C01": dict(gancho="8 m de frente. 2 quartos, varanda e banheiro largo. 51 m².",
-                para_quem="Casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.",
+                para_quem="Quem mede com a trena os 8 m de frente do lote e se pergunta se ali dá para 2 quartos e varanda.",  # frase 1 do dono, 26/11 07:04 (opção B; Vera: PASSA)
                 nao_serve=("Quem quer suíte.", "C06"), erros=[1, 2, 4], perguntas=PADRAO),
     "C02": dict(gancho="6 m de frente. Tudo num ambiente só. 32 m².",
                 para_quem="Quem mora sozinho, ou quem quer construir uma casa pequena no fundo do lote para alugar.",
