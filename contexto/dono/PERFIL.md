@@ -15,6 +15,7 @@
 
 | Irrita | Agrada |
 |---|---|
+| Pedir licença para o que é fácil de desfazer (26/11: "most of the things id like for you to have the free will to do") | Decidir e fazer o que se desfaz e está dentro das regras, e avisar depois; perguntar só o que é dele (preço, título, gasto, publicar, dado pessoal, final do e-book) |
 | Pergunta demais de uma vez; cartão cheio de dúvida (o Canteiro "confuso") | Uma pergunta por vez, com recomendação e o que muda para ele |
 | Tirar ou mudar algo sem ele mandar ("Porque removeu a skill do nada?") | Acrescentar sem apagar; dizer o que vai mudar antes |
 | Só revisar a forma ("Dont only review, try to think how to improve") | Melhorar o conteúdo e mostrar o antes e o depois |
