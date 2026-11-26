@@ -414,13 +414,13 @@
    "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
-    "segunda": "oeste",
+    "segunda": "norte",
     "pior": "leste",
     "pontos": {
-     "norte": 12.9,
-     "leste": -8.0,
-     "sul": 17.0,
-     "oeste": 13.5
+     "norte": 14.3,
+     "leste": -8.7,
+     "sul": 15.6,
+     "oeste": 14.2
     }
    }
   },

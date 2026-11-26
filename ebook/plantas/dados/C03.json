@@ -210,13 +210,13 @@
    "frente_estreita": false,
    "orientacao": {
     "melhor": "norte",
-    "segunda": "sul",
+    "segunda": "oeste",
     "pior": "leste",
     "pontos": {
-     "norte": 8.0,
-     "leste": 2.1,
-     "sul": 7.2,
-     "oeste": 3.6
+     "norte": 8.8,
+     "leste": -1.3,
+     "sul": 6.3,
+     "oeste": 7.0
     }
    }
   },

@@ -156,7 +156,7 @@
  },
  "destaque": "Pátio de luz entre os quartos: o quarto casal abre janela para ele",
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Pátio de luz: o quarto casal abre janela para o pátio, com luz e ar sem dar para o vizinho.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
@@ -237,14 +237,14 @@
    "circulacao_ref": 0.12,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "norte",
+    "melhor": "sul",
     "segunda": "oeste",
     "pior": "leste",
     "pontos": {
-     "norte": 13.1,
-     "leste": 2.8,
-     "sul": 4.4,
-     "oeste": 6.8
+     "norte": 4.3,
+     "leste": 3.8,
+     "sul": 13.2,
+     "oeste": 5.8
     }
    }
   },

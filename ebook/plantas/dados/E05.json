@@ -168,7 +168,7 @@
   "esq": 1.5
  },
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
@@ -252,14 +252,14 @@
    "circulacao_ref": 0.256,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "norte",
+    "melhor": "sul",
     "segunda": "oeste",
-    "pior": "sul",
+    "pior": "leste",
     "pontos": {
-     "norte": 16.8,
-     "leste": 4.2,
-     "sul": 2.7,
-     "oeste": 8.6
+     "norte": 4.9,
+     "leste": 2.9,
+     "sul": 14.6,
+     "oeste": 9.9
     }
    }
   },

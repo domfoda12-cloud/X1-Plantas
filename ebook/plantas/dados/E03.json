@@ -334,7 +334,7 @@
  },
  "destaque": "Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa",
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua ao norte. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
   "Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
@@ -410,14 +410,14 @@
    "circulacao_ref": 0.059,
    "frente_estreita": true,
    "orientacao": {
-    "melhor": "norte",
+    "melhor": "sul",
     "segunda": "oeste",
-    "pior": "sul",
+    "pior": "norte",
     "pontos": {
-     "norte": 11.4,
-     "leste": 6.1,
-     "sul": 5.5,
-     "oeste": 6.2
+     "norte": 5.4,
+     "leste": 5.7,
+     "sul": 11.4,
+     "oeste": 6.6
     }
    }
   },

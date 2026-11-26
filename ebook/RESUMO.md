@@ -7,7 +7,7 @@
 <!-- essencial: escrito à mão, o gerador não apaga -->
 - PDF A4 de 61 páginas com 24 casas térreas, 2 páginas por casa (páginas 10 a 57); o catálogo propõe 35 plantas em 3 levas: 12, 12 e 11 (`EBOOK.md`, `catalogo.md`, `gerador/livro.py`).
 - Gerar: `python3 ebook/gerador/livro.py` cria `ebook/saida/ebook.pdf` e a planta grátis da Casa Compacta (`plantas_gratis` do `config.json`; só as 3 casas de `casas_lancamento`); `--previa <pasta>` salva um PNG por página, numa pasta temporária, sem regravar `ebook/saida` nem a calculadora. Página estourada é erro; o aviso legal nunca fica coberto (`CLAUDE.md`).
-- Números vêm do validador, nunca digitados: em caso de dúvida vale `plantas/PLANTAS.md` (C01: 51 m², frente norte, lote 8 x 15). Textos das casas: `fichas/textos.py`. Mudança de texto passa pelo Revisor de risco (`CLAUDE.md`).
+- Números vêm do validador, nunca digitados: em caso de dúvida vale `plantas/PLANTAS.md` (C01: 51 m², melhor com a rua ao sul (até 26/11 o validador dizia norte, por erro), lote 8 x 15). Textos das casas: `fichas/textos.py`. Mudança de texto passa pelo Revisor de risco (`CLAUDE.md`).
 - Cada casa tem planta mobiliada, casa no lote, "Informação da casa", vista da rua (foto ilustrativa em C01, C03, E07 e F01; desenho nas outras) e a casa em 3D nas 24 (`visual/3d/`). Não tem blueprint separado, perspectivas, animação, QR nem checklist de obra (`EBOOK.md`, seção 3).
 - Regra fixa: a planta é de referência. Nunca dizer que dispensa engenheiro, arquiteto ou pedreiro, nem prometer aprovação, prazo ou custo de obra (`EBOOK.md`).
 - Em aberto (dono): título, preço, bônus, contato, promessa de atualização, garantia e se o 1º lançamento sai com 12 ou 24; revisão das 24 por arquiteto registrado (`EBOOK.md`, seção 8).

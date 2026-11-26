@@ -334,7 +334,7 @@
  },
  "destaque": "Hall curto no lugar do corredor, varanda na entrada e banheiro de 1,84 x 1,68 m livres",
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
   "Áreas molhadas: o banheiro fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
@@ -419,14 +419,14 @@
    "circulacao_ref": 0.039,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "norte",
+    "melhor": "sul",
     "segunda": "oeste",
-    "pior": "sul",
+    "pior": "leste",
     "pontos": {
-     "norte": 15.5,
-     "leste": 0.9,
-     "sul": 0.7,
-     "oeste": 8.4
+     "norte": 4.7,
+     "leste": 2.7,
+     "sul": 11.5,
+     "oeste": 6.6
     }
    }
   },

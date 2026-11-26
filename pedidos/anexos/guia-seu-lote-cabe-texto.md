@@ -1,5 +1,7 @@
 # Guia "Seu lote cabe?": o texto real (RASCUNHO)
 
+> **Atenção (26/11/2026):** o validador estava com o lado do sol espelhado; corrigido, a Casa Compacta (C01) e a Casa Fita (E03) ficam melhores com a rua **ao sul**, não ao norte. Toda frase abaixo que diz "rua ao norte" para elas precisa ser refeita antes de usar.
+
 > **Conferido pelo Arquiteto em 24/11/2026.** As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
 
 > Redator, 24/11/2026. **Rascunho: não vai ao público** antes do Arquiteto e do Revisor de risco (listas no fim) e antes de o dono escolher entre A, B ou C ([`amostra-gratis-opcoes.md`](amostra-gratis-opcoes.md)). Este texto só é usado se ele escolher a B, agora ou depois.

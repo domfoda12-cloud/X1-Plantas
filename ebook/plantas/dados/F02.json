@@ -201,7 +201,7 @@
   ]
  },
  "pensou": [
-  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
@@ -295,14 +295,14 @@
    "circulacao_ref": 0.095,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "sul",
-    "segunda": "norte",
+    "melhor": "norte",
+    "segunda": "sul",
     "pior": "leste",
     "pontos": {
-     "norte": 17.4,
-     "leste": -5.3,
-     "sul": 19.6,
-     "oeste": 13.2
+     "norte": 18.9,
+     "leste": -6.0,
+     "sul": 18.2,
+     "oeste": 13.9
     }
    }
   },

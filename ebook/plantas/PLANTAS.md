@@ -6,13 +6,13 @@
 
 ![C01](previas/C01.png)
 
-**51 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 13,0 m) · frente para o **norte**
+**51 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **8 x 15 m** (no mínimo 8,0 x 13,0 m) · frente para o **sul**
 
 *Hall curto no lugar do corredor, varanda na entrada e banheiro de 1,84 x 1,68 m livres*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
 - Áreas molhadas: o banheiro fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
@@ -82,11 +82,11 @@
 
 ![C06](previas/C06.png)
 
-**57 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,1 m) · frente para o **sul**
+**57 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,1 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -112,13 +112,13 @@
 
 ![E01](previas/E01.png)
 
-**58 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 23,7 m) · frente para o **norte**
+**58 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 23,7 m) · frente para o **sul**
 
 *Garagem na frente e todos os cômodos abrindo para o corredor*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -130,11 +130,11 @@
 
 ![E02](previas/E02.png)
 
-**40 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **7 x 20 m** (no mínimo 6,6 x 19,8 m) · frente para o **norte**
+**40 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **7 x 20 m** (no mínimo 6,6 x 19,8 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua ao norte. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -147,13 +147,13 @@
 
 ![E03](previas/E03.png)
 
-**56 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **5 x 25 m** (no mínimo 5,0 x 20,6 m) · frente para o **norte**
+**56 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **5 x 25 m** (no mínimo 5,0 x 20,6 m) · frente para o **sul**
 
 *Dois quartos num lote de 5 m: um em cada ponta, sala e copa no meio, banheiro por dentro de casa*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua ao norte. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -161,13 +161,13 @@
 
 ![E04](previas/E04.png)
 
-**55 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,5 m) · frente para o **norte**
+**55 m² fechados** · 2 quartos · 1 banheiro(s) · cabe num lote de **9 x 15 m** (no mínimo 9,0 x 12,5 m) · frente para o **sul**
 
 *Pátio de luz entre os quartos: o quarto casal abre janela para ele*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Pátio de luz: o quarto casal abre janela para o pátio, com luz e ar sem dar para o vizinho.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -175,11 +175,11 @@
 
 ![E05](previas/E05.png)
 
-**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 20 m** (no mínimo 7,9 x 19,5 m) · frente para o **norte**
+**59 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 20 m** (no mínimo 7,9 x 19,5 m) · frente para o **sul**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -191,13 +191,13 @@
 
 ![E06](previas/E06.png)
 
-**68 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 25 m** (no mínimo 8,6 x 22,5 m) · frente para o **norte**
+**68 m² fechados** · 2 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **9 x 25 m** (no mínimo 8,6 x 22,5 m) · frente para o **sul**
 
 *Área gourmet nos fundos, aberta para o corredor*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -209,13 +209,13 @@
 
 ![E07](previas/E07.png)
 
-**72 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 22,4 m) · frente para o **norte**
+**72 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **8 x 25 m** (no mínimo 8,0 x 22,4 m) · frente para o **sul**
 
 *3 quartos, um deles suíte, num lote de 8 m de frente*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao sul; evite a rua ao norte. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
@@ -244,11 +244,11 @@
 
 ![F02](previas/F02.png)
 
-**86 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **12 x 15 m** (no mínimo 11,5 x 13,1 m) · frente para o **sul**
+**86 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **12 x 15 m** (no mínimo 11,5 x 13,1 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -289,11 +289,11 @@
 
 ![F05](previas/F05.png)
 
-**91 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **13 x 15 m** (no mínimo 12,9 x 13,1 m) · frente para o **sul**
+**91 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **13 x 15 m** (no mínimo 12,9 x 13,1 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -353,13 +353,13 @@
 
 ![S07](previas/S07.png)
 
-**74 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **11 x 15 m** (no mínimo 10,9 x 13,1 m) · frente para o **sul**
+**74 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **11 x 15 m** (no mínimo 10,9 x 13,1 m) · frente para o **oeste**
 
 *Cozinha aberta para a área gourmet, a casa que recebe*
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua a oeste; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Luz e ar: sala, cozinha e quartos têm janela para fora. Nos cômodos onde a família fica (sala e quartos), a janela tem pelo menos um sexto do piso; na cozinha, pelo menos um oitavo (valores de referência; o código de obras da sua cidade pode pedir outro).
 - Banheiro colado na área de serviço e no outro banheiro: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
@@ -367,11 +367,11 @@
 
 ![S09](previas/S09.png)
 
-**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **14 x 15 m** (no mínimo 13,9 x 14,6 m) · frente para o **sul**
+**78 m² fechados** · 3 quartos (1 suíte) · 2 banheiro(s) · cabe num lote de **14 x 15 m** (no mínimo 13,9 x 14,6 m) · frente para o **norte**
 
 **Por que esta planta é assim**
 
-- Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
+- Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
 - Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 

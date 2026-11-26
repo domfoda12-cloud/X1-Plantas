@@ -201,7 +201,7 @@
   "esq": 3.0
  },
  "pensou": [
-  "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
   "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
@@ -296,14 +296,14 @@
    "circulacao_ref": 0.133,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "sul",
+    "melhor": "norte",
     "segunda": "oeste",
     "pior": "leste",
     "pontos": {
-     "norte": 6.9,
-     "leste": 1.6,
-     "sul": 18.9,
-     "oeste": 9.8
+     "norte": 17.4,
+     "leste": -0.6,
+     "sul": 8.6,
+     "oeste": 11.9
     }
    }
   },

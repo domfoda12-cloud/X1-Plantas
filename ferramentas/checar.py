@@ -385,6 +385,18 @@ if _quartos:
     falhas.append("quarto aberto para área externa ou gourmet"); print("[ERRO] quarto sem parede para área externa ou gourmet: " + "; ".join(_quartos))
 else:
     print("[OK ] nenhum quarto aberto para área externa ou gourmet")
+# Lado do sol (achado do Nilo, 26/11/2026: a tabela estava espelhada nos lados). Rua embaixo do desenho: quem olha da rua
+# para a casa tem à direita o ponto anterior ao da frente na volta N, L, S, O (rua ao norte = direita a oeste).
+_volta = ["N", "E", "S", "W"]
+def _lados_certos(tab):
+    return [o for o, m in tab.items() if not (m["dir"] == _volta[(_volta.index(m["frente"]) - 1) % 4]
+            and m["esq"] == _volta[(_volta.index(m["frente"]) + 1) % 4] and m["fundos"] == _volta[(_volta.index(m["frente"]) + 2) % 4])]
+_plantado = {k: dict(v) for k, v in _p3.PL.ORIENTACAO.items()}
+_plantado["norte"]["dir"], _plantado["norte"]["esq"] = "E", "W"  # o erro antigo, posto de propósito
+if _lados_certos(_p3.PL.ORIENTACAO) or not _lados_certos(_plantado):
+    falhas.append("lado do sol"); print(f"[ERRO] lado do sol espelhado em ORIENTACAO (plantas.py): {_lados_certos(_p3.PL.ORIENTACAO) or 'a prova não pegou o erro plantado'}")
+else:
+    print("[OK ] lado do sol: rua ao norte, direita a oeste (prova: pegou o erro posto de propósito)")
 # Janela em cima da porta (achado do Arquiteto, 23/11/2026): aviso até as casas de fora do lançamento serem refeitas
 _jp = [f"{pl['id']} {jan} sobre a porta {porta}" for pl in _p3.PL.carregar() for (porta, jan) in _p3.janelas_sobre_portas(pl)]
 if _jp:

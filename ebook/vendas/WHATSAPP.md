@@ -290,7 +290,7 @@ Se a Casa Compacta não couber no lote da pessoa, diga com franqueza e confira n
 
 ### 2. Ficha da Casa Compacta (para mandar em texto)
 
-**C01 · Casa Compacta** · 51 m² fechados · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8 x 13 m, com recuos de referência; confira os da sua cidade) · melhor com a rua ao norte
+**C01 · Casa Compacta** · 51 m² fechados · 2 quartos · 1 banheiro · cabe num lote de 8 x 15 m (no mínimo 8 x 13 m, com recuos de referência; confira os da sua cidade) · melhor com a rua ao sul
 
 **Para quem é:** casal com 1 ou 2 filhos que quer dois quartos, varanda na entrada e banheiro largo, sem corredor comprido.
 

@@ -188,7 +188,7 @@
  },
  "destaque": "3 quartos, um deles suíte, num lote de 8 m de frente",
  "pensou": [
-  "Sol: melhor com a rua ao norte; evite a rua ao sul. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
+  "Sol: melhor com a rua ao sul; evite a rua ao norte. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
   "Corredor coberto ao lado: todos os cômodos abrem para ele e ganham janela, mesmo num lote estreito. Da sala para o banheiro e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para área coberta conta como ventilação.",
   "Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento."
  ],
@@ -279,14 +279,14 @@
    "circulacao_ref": 0.25,
    "frente_estreita": false,
    "orientacao": {
-    "melhor": "norte",
+    "melhor": "sul",
     "segunda": "oeste",
-    "pior": "sul",
+    "pior": "norte",
     "pontos": {
-     "norte": 24.1,
-     "leste": 8.4,
-     "sul": -5.7,
-     "oeste": 12.0
+     "norte": -2.8,
+     "leste": 9.6,
+     "sul": 21.2,
+     "oeste": 10.8
     }
    }
   },

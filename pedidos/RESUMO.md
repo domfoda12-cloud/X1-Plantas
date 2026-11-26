@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 83 documentos
+## Os 84 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -111,7 +111,7 @@ Pedido do dono (24/11/2026, ficha `pedidos/2026-11/2026-11-24-1119-casas-comodo-
 
 Seções: Como ler; 1. C01 · Casa Compacta (6,50 x 8,50 m, 51 m², 2 quartos; lote de 8 x 15 m, mínimo 8 x 13); 2. E03 · Casa Fita (3,50 x 16,10 m, 56 m², 2 quartos; lote de 5 x 25 m, mínimo 5 x 20,6); 3. F01 · Família Compacta (8,50 x 8,30 m, 71 m², 3 quartos; lote de 10 x 15 m, mínimo 10 x 12,8); 4. O que disso vira o quê (recomendação; quem decide é o dono); 5. Para a equipe (não vai ao público); 6. O que ainda não pode virar página.
 
-Tamanho: 9958 palavras.
+Tamanho: 9978 palavras.
 
 ### [Conferência técnica do Arquiteto: página "A parede que não pode ter janela" (passo D19), 24/11/2026](anexos/conferencia-arquiteto-parede-sem-janela-2026-11-24.md)
 
@@ -183,11 +183,11 @@ Tamanho: 1649 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
-Conferido pelo Arquiteto em 24/11/2026. As trocas já estão nas tabelas abaixo; o que mudou e por quê, item por item, está em "Resposta do Arquiteto", depois da lista dele. A lista do Revisor de risco não foi tocada e continua valendo para o texto novo.
+Atenção (26/11/2026): o validador estava com o lado do sol espelhado; corrigido, a Casa Compacta (C01) e a Casa Fita (E03) ficam melhores com a rua ao sul, não ao norte. Toda frase abaixo que diz "rua ao norte" para elas precisa ser refeita antes de usar.
 
 Seções: Antes de escrever (skills `redacao-que-vende` e `oferta-e-whatsapp`); Página 1 (B-p1): "Meça o lote com a trena, de muro a muro."; Página 2 (B-p2): "Recuo é o espaço que a casa deixa livre no lote."; Página 3 (B-p3): "Anote de que lado o sol nasce no seu lote."; Página 4 (B-p4): "Anote a sua medida e mande no WhatsApp."; Entrega no formato do Redator; O Arquiteto precisa conferir; Resposta do Arquiteto (24/11/2026); O Revisor de risco precisa ver; Em aberto (para quem conduz levar ao dono).
 
-Tamanho: 4137 palavras.
+Tamanho: 4185 palavras.
 
 ### [Identidade visual forte em tudo: diagnóstico, 3 direções e amostras (D50, 25/11/2026)](anexos/identidade-2026-11-25.md)
 
@@ -636,6 +636,14 @@ O que o dono escreveu na conversa principal do projeto, na ordem e sem correçã
 Seções: 16/11/2026; 18/11/2026; 19/11/2026; 20/11/2026; 21/11/2026; 22/11/2026.
 
 Tamanho: 3509 palavras.
+
+### [Registro dos resumos de passagem: 20/11 a 24/11/2026](historico/REGISTRO-ate-2026-11-24.md)
+
+Movido de `contexto/entregas/REGISTRO.md` em 26/11/2026 (fila da noite, item 11: "pasta do contexto tá bem grande"). Nada foi apagado; as passagens mais novas continuam no `REGISTRO.md`.
+
+Seções: 2026-11-20-contexto-enxuto; 2026-11-20-ebook-rascunho-1; 2026-11-21-1200-revisao-aplicada; 2026-11-21-1510-videos-principal-e-previa; 2026-11-21-2340-video-e07-logo-musica; 2026-11-22-0010-anuncio-ebook-locucao; 2026-11-22-1200-arquiteto-estuda-arranjo; 2026-11-22-1200-escaneamento; 2026-11-22-1400-pesquisa-layouts-e-etapas; 2026-11-22-1500-main-unica-e-compressao; 2026-11-22-1600-c01-redesenhada; 2026-11-22-1600-modelos-limpeza-auditorias; 2026-11-22-1600-video-convite; 2026-11-22-1700-indice-resumos-e-prompts; ….
+
+Tamanho: 4196 palavras.
 
 ### [Retrospectiva: o que foi feito no e-book e nos vídeos, o que o dono reclamou, o que funcionou](historico/RETROSPECTIVA.md)
 

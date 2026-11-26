@@ -301,13 +301,13 @@
    "frente_estreita": false,
    "orientacao": {
     "melhor": "sul",
-    "segunda": "oeste",
+    "segunda": "norte",
     "pior": "leste",
     "pontos": {
-     "norte": 13.3,
-     "leste": -6.8,
-     "sul": 18.1,
-     "oeste": 13.7
+     "norte": 14.7,
+     "leste": -7.5,
+     "sul": 16.7,
+     "oeste": 14.4
     }
    }
   },

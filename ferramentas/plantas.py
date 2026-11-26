@@ -72,12 +72,16 @@ VAO_MAX = 4.5
 RECUOS_PADRAO = {"frente": 3.0, "fundos": 1.5, "esq": 0.0, "dir": 1.5}  # esq = parede na divisa
 
 NOMES_LADO = {"frente": "frente", "fundos": "fundos", "esq": "esquerda", "dir": "direita"}
-# Para cada orientação da frente da casa, o ponto cardeal de cada lado da planta
+# Para cada orientação da frente da casa, o ponto cardeal de cada lado da planta.
+# O desenho põe a rua embaixo; quem está na rua olha para dentro do lote, e a direita do desenho é a direita dele.
+# Rua ao norte = ele olha para o sul = a direita é o oeste. Até 26/11/2026 a tabela estava espelhada nos lados
+# (achado do Nilo, o Arquiteto, na passada do e-book); o checar.py agora confere pela regra: direita = o ponto
+# anterior a "frente" na volta N, L, S, O.
 ORIENTACAO = {
-    "norte": {"frente": "N", "dir": "E", "fundos": "S", "esq": "W"},
-    "leste": {"frente": "E", "dir": "S", "fundos": "W", "esq": "N"},
-    "sul": {"frente": "S", "dir": "W", "fundos": "N", "esq": "E"},
-    "oeste": {"frente": "W", "dir": "N", "fundos": "E", "esq": "S"},
+    "norte": {"frente": "N", "dir": "W", "fundos": "S", "esq": "E"},
+    "leste": {"frente": "E", "dir": "N", "fundos": "W", "esq": "S"},
+    "sul": {"frente": "S", "dir": "E", "fundos": "N", "esq": "W"},
+    "oeste": {"frente": "W", "dir": "S", "fundos": "E", "esq": "N"},
 }
 PESO_SOL = {  # por metro de janela: manhã (L) vale muito nos quartos, tarde (O) pesa contra
     "dorm": {"N": 2, "E": 3, "S": 1, "W": -3}, "casal": {"N": 2, "E": 3, "S": 1, "W": -3},
