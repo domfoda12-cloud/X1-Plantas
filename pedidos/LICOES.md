@@ -33,3 +33,4 @@
 | 24/11/2026 | maestro | ficha | 2026-11-24-1027 | - | agente novo avalia o próprio arquivo de papel na primeira rodada; as duas avaliações acharam falhas reais (limite de grupo, como contar, onde está o estado real). |
 | 24/11/2026 | revisor-de-risco | maestro | - | - | Palavra técnica ambígua ("lote comercial") também confunde o comprador: conferir o vocabulário, não só os números. |
 | 24/11/2026 | maestro | maestro | - | - | Comentário novo no quadro: reler uns minutos depois; em 24/11 li às 11:08 e perdi 6 respostas escritas até 11:15, e outras 30 ficaram 2 horas sem leitura durante o limite de uso. |
+| 26/11/2026 | maestro | ficha | 2026-11-25-1544 | - | registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento. |

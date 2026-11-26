@@ -41,7 +41,7 @@ Só abra este arquivo quando precisar de um detalhe antigo ("o que ficou combina
 
 Seções: Linha do tempo dos pedidos.
 
-Tamanho: 9089 palavras.
+Tamanho: 9294 palavras.
 
 ### [Contexto do projeto: tudo o que o dono pediu, e o que cada pedido quer dizer](CONTEXTO.md)
 

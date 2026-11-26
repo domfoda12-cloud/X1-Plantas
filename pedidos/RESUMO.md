@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1254 palavras.
+Tamanho: 1286 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 4274 palavras.
+Tamanho: 4333 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 

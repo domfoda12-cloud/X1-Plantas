@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`)
+
+- **O dono pediu:** desacelerar ("if we work on all the tasks at the same time, none will be done"); visita 3D realista só depois ("save it for later"); e aplicar o prompt audit (`git apply`).
+- **O que mudou:** uma tarefa principal por vez, no máximo 2 agentes (`plano.py` aceita no máximo 2 em "Agora"); visita 3D realista guardada; prompt audit aplicado (achados 1 a 8, `ce87722`): "Plano antes de trabalho grande" no lugar de "Pense antes", "pare e espere" virou "devolva para aprovação", `salvar.py` citado nas regras e assinando pelo modelo da sessão.
+- **Todos:** salve só com `ferramentas/salvar.py`. **Planejador:** no máximo 2 em "Agora". **Redator:** devolva o diagnóstico para aprovação, salvo se o pedido já a traz.
+
 ## 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`)
 
 - **O dono pediu:** "Queria testar algo no nosso sistema também, 'nunca confie na primeira coisa que pensar' o que acha?" ("sim" ao teste); "Também gostaria que o juri fosse mais stricit é possivel?" ("sim, gostei das regras").
@@ -25,9 +31,3 @@
 - **O dono pediu:** "No conteudo do pdf no geral quero saber mostrar a dor que o usuario tem ou teria, e dar a solucao pra ele".
 - **O que mudou:** critério novo para todo o conteúdo do PDF: cada página faz o comprador sentir uma dor real dele, de forma indireta ("daquele jeitinho": cena, exemplo, detalhe que ele reconhece, nunca anunciada), e entrega a saída. Primeiro sai o mapa página por página; texto só muda depois de o dono ver.
 - **Todos:** dor só da pesquisa do comprador ou dos dados da casa, nunca inventada nem com medo exagerado. **Planejador:** faz o mapa. **Redator:** reescreve só o que o dono marcar, com plano. **Designer:** o formato das páginas não muda sem pedido.
-
-## 24/11 · Redator sempre com o Planejador; todos planejam antes de fazer (ficha `2026-11-24-2119`)
-
-- **O dono pediu:** "O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem".
-- **O que mudou:** todo texto do Redator começa por um plano (para quem, o que precisa conter, fonte de cada número, o que depende do dono, "pronto quando"), montado ou conferido pelo Planejador; texto sem plano não vai ao Revisor. Convivência, linha 17.
-- **Todos:** plano curto antes de fazer; trabalho com mais de 3 passos passa pelo Planejador. **Redator:** plano no começo do anexo. **Planejador:** monta ou confere o plano de cada texto. **Maestro:** manda o plano junto do pedido ao Redator.

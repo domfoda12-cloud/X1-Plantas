@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [noite livre ate de manha (dono cansado)](2026-11/2026-11-26-0012-noite-livre-ate-de-manha-dono-cansado.md) | aberta | Maestro (esta conversa); Redator, Revisor, Pesquisador, júri, um agente de código. |
 | 2026-11-25 | [Prompt novo que interfere no antigo: rodar o novo ou juntar ao antigo](2026-11/2026-11-25-2056-prompt-novo-que-interfere-no-antigo-rodar-o-novo-ou-juntar-a.md) | aberta | Maestro. |
 | 2026-11-25 | [Sistema do projeto fazendo o Instagram de IA; o que manter e o que nao repetir num recomeco](2026-11/2026-11-25-1635-sistema-do-projeto-fazendo-o-instagram-de-ia-o-que-manter-e-.md) | aberta | Maestro responde; com o sim do dono, monta o kit enxuto no repositório novo. |
 | 2026-11-25 | [Quais os maiores erros do projeto](2026-11/2026-11-25-1632-quais-os-maiores-erros-do-projeto.md) | aberta | Maestro responde; nada muda sem o dono decidir. |
@@ -12,12 +13,12 @@
 | 2026-11-25 | [Identidade visual forte em tudo, para a geracao dopamina](2026-11/2026-11-25-1613-identidade-visual-forte-em-tudo-para-a-geracao-dopamina.md) | aberta | Diretor (MinoAI Frontier) opina primeiro; Designer faz o diagnóstico, as direções e as amo |
 | 2026-11-25 | [Deixar tudo planejado e pronto para o reset](2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-reset.md) | aberta | Maestro: roteiro, kit do Instagram, limpeza do plano. Redator: as 5 frases (plano = seção  |
 | 2026-11-25 | [reel do /ship e /steward: o que aproveitar; cuidado com o reel do prompt-audit](2026-11/2026-11-25-1549-reel-do-ship-e-steward-o-que-aproveitar-cuidado-com-o-reel-d.md) | aberta | Maestro. |
-| 2026-11-25 | [prompt audit (skill claude-api): relatorio e diff, nada aplicado](2026-11/2026-11-25-1544-prompt-audit-skill-claude-api-relatorio-e-diff-nada-aplicado.md) | aberta | Maestro. |
+| 2026-11-25 | [prompt audit (skill claude-api): relatorio e diff, nada aplicado](2026-11/2026-11-25-1544-prompt-audit-skill-claude-api-relatorio-e-diff-nada-aplicado.md) | fechada em 26/11/2026 | Maestro. |
 | 2026-11-24 | [e-book inteiro: mostrar a dor do comprador e dar a solucao](2026-11/2026-11-24-2130-e-book-inteiro-mostrar-a-dor-do-comprador-e-dar-a-solucao.md) | aberta | Planejador (mapa); depois Redator com o Planejador, e Revisor. |
-| 2026-11-24 | [redator sempre com o planejador; todos planejam bem](2026-11/2026-11-24-2119-redator-sempre-com-o-planejador-todos-planejam-bem.md) | aberta | Maestro (regra e avisos). |
+| 2026-11-24 | [redator sempre com o planejador; todos planejam bem](2026-11/2026-11-24-2119-redator-sempre-com-o-planejador-todos-planejam-bem.md) | fechada em 26/11/2026 | Maestro (regra e avisos). |
 | 2026-11-24 | [terminar o e-book: o que falta e separar o que vai ao cliente](2026-11/2026-11-24-2050-terminar-o-e-book-o-que-falta-e-separar-o-que-vai-ao-cliente.md) | aberta | Maestro (separação); a equipe segue os 10 passos, um por vez. |
-| 2026-11-24 | [visita 3D com modelos mais realistas (guardar para depois)](2026-11/2026-11-24-2046-visita-3d-com-modelos-mais-realistas-guardar-para-depois.md) | aberta | Ninguém agora. Quando ele mandar: Pesquisador (bibliotecas e licenças), Revisor (veto), De |
-| 2026-11-24 | [desacelerar: uma tarefa por vez](2026-11/2026-11-24-2043-desacelerar-uma-tarefa-por-vez.md) | aberta | Maestro (regra, quadro, tarefa agendada); Planejador (ordem no plano). |
+| 2026-11-24 | [visita 3D com modelos mais realistas (guardar para depois)](2026-11/2026-11-24-2046-visita-3d-com-modelos-mais-realistas-guardar-para-depois.md) | fechada em 26/11/2026 | Ninguém agora. Quando ele mandar: Pesquisador (bibliotecas e licenças), Revisor (veto), De |
+| 2026-11-24 | [desacelerar: uma tarefa por vez](2026-11/2026-11-24-2043-desacelerar-uma-tarefa-por-vez.md) | fechada em 26/11/2026 | Maestro (regra, quadro, tarefa agendada); Planejador (ordem no plano). |
 | 2026-11-24 | [visita 3D mais detalhada e personalizavel; Agora nunca vazio; agente parado trabalha em si, no sistema ou em outro agente](2026-11/2026-11-24-1144-visita-3d-mais-detalhada-e-personalizavel-agora-nunca-vazio-.md) | aberta | Agente de código (visita 3D); Pesquisador (referências); Planejador (fila e Agora); Reviso |
 | 2026-11-24 | [casas comodo a comodo, visita 3D, canteiro como lugar de trabalho, revisar regras, skills](2026-11/2026-11-24-1119-casas-comodo-a-comodo-visita-3d-canteiro-como-lugar-de-traba.md) | aberta | Arquiteto (cômodo a cômodo); Maestro (visita 3D e Canteiro); Supervisor (auditoria das reg |
 | 2026-11-24 | [melhorar o planejador](2026-11/2026-11-24-1103-melhorar-o-planejador.md) | aberta | Maestro (ferramenta, papel, conferência); `planejador` (segunda rodada). |

@@ -1,6 +1,6 @@
 # visita 3D com modelos mais realistas (guardar para depois)
 
-**Estado:** aberta
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** I like the 3d visit but can it use more realistic models?
 
@@ -24,9 +24,9 @@ Dont start working on it if yes, i think it costs a lot of credit, save it for l
 
 **Conferência:** Nada a conferir agora.
 
-**Resultado:** (a preencher)
+**Resultado:** Guardado: visita 3D realista espera a ordem do dono; ninguém trabalhou nela
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** nada novo
 
 **Papéis afetados:** ninguém
 

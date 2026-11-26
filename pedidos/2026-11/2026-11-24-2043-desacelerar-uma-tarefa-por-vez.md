@@ -1,6 +1,6 @@
 # desacelerar: uma tarefa por vez
 
-**Estado:** aberta
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** "What used the most storage last time?" (20:42, mensagem que a caixa de entrada não guardou)
 
@@ -24,9 +24,9 @@ Slow down on it, if we work on all the tasks at the same time, none will be done
 
 **Conferência:** `python3 ferramentas/checar.py`; ler o prompt novo da tarefa agendada.
 
-**Resultado:** (a preencher)
+**Resultado:** Regra aplicada: uma tarefa principal por vez, no máximo 2 agentes; tarefa de hora em hora reescrita e depois pausada pelo dono
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** nada novo
 
 **Papéis afetados:** maestro, planejador
 

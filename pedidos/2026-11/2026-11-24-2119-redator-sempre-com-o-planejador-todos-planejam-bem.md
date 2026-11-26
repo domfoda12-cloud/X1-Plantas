@@ -1,6 +1,6 @@
 # redator sempre com o planejador; todos planejam bem
 
-**Estado:** aberta
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem
 
@@ -22,9 +22,9 @@
 
 **Conferência:** `grep -c Planejador .claude/agents/redator.md contexto/redator.md`.
 
-**Resultado:** (a preencher)
+**Resultado:** Regra escrita: plano antes do texto do Redator, conferido pelo Planejador; convivência 17
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** nada novo
 
 **Papéis afetados:** redator, planejador, maestro
 

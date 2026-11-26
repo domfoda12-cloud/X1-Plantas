@@ -1,6 +1,6 @@
 # prompt audit (skill claude-api): relatorio e diff, nada aplicado
 
-**Estado:** aberta
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** prompt audit
 
@@ -30,7 +30,7 @@ Era isso que quis dizer, mas acho que está faltando algum /
 
 **Conferência:** `git apply --check -p1 pedidos/anexos/prompt-audit-2026-11-25.diff`.
 
-**Resultado:** aplicado a pedido do dono ("git apply -p1 ...", 25/11 15:53): achados 1 a 8 em `ce87722`; `salvar.py` assina pelo modelo da sessão (`a554953`); `plano.py` com no máximo 2 em "Agora".
+**Resultado:** Prompt audit aplicado a pedido do dono (achados 1 a 8, ce87722); salvar.py e plano.py ajustados
 
 **O que aprendi:** maestro: registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento.
 
