@@ -19,3 +19,8 @@ O dono: "A lot of it its about the sound im realizing!"
 3. **Gancho do carro** (https://www.instagram.com/p/DdC8RL-B4hZ/, `analyze_hook`): 33.933 curtidas. O dono: "take the viral car crash hook and take it to an extreme". O gancho: história relatável falada + imagem absurda (cadeira no meio da estrada com carro vindo); o vídeo perde força quando vira anúncio. Para nós: o primeiro segundo com uma situação absurda e tensa, e a explicação (a conta) é o que segura, sem virar propaganda.
 
 **Padrão das referências do dono:** o som carrega a informação (gerado pela própria conta ou animação), desafio ao espectador (adivinhar, achar, comentar a nota), fonte e honestidade na legenda, e um gancho de tensão no primeiro segundo.
+
+## Referência 5: música famosa animada em low-poly 3D (26/11)
+
+https://www.instagram.com/p/DgF5FOXuD1F/ (`analyze_hook`): 926.201 views, 69.892 curtidas, 331 comentários. A letra de "Homecoming" (Kanye West) virou cena: Chicago em 3D low-poly, legenda palavra por palavra, cada verso encenado. Força: reconhecimento instantâneo da música e um estilo visual único que não parece "IA genérica". Fraqueza apontada: o primeiro segundo é uma rua vazia, sem título do conceito.
+**Para nós:** (1) o estilo visual único é o que separa do "slop"; (2) cada frase vira cena, nada fica parado; (3) **cuidado:** usar música famosa de terceiro é direito autoral; para nós vale só a ideia (a conta encenada passo a passo), com som próprio; (4) título do conceito no primeiro segundo.

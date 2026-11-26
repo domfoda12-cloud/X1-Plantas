@@ -77,9 +77,9 @@ Tamanho: 2360 palavras.
 
 O dono mandou (26/11, 00:40): https://www.instagram.com/p/DeO_kdLAYSb/ ; "the sounds are really nice really gets the attention, nice visuals and i honestly like the math real world application idea (i like math)". Análise: MinoAI Frontier `analyze_hook`, 26/11.
 
-Seções: Mais referências do dono (26/11, madrugada).
+Seções: Mais referências do dono (26/11, madrugada); Referência 5: música famosa animada em low-poly 3D (26/11).
 
-Tamanho: 485 palavras.
+Tamanho: 603 palavras.
 
 ### [Pesquisa: Público, preço, demanda e números de mercado](mercado.md)
 
