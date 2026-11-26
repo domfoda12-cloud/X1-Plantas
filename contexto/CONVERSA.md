@@ -36,3 +36,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 07:15 · Vera → Caio: passou quase tudo de primeira; só o pé da 18, "O pior é o 7º.", vira "O mais caro é o 7º.", porque é o que a página 19 diz e o 5º é o que dá embargo. (leitura da Placa)
 - 26/11 07:15 · Vera → Bia: capa aprovada, o aviso no chão está inteiro e nada encosta nele; confirme se o rodapé da 24 sumiu de propósito. (leitura da Placa)
 - 26/11 07:15 · Vera → Paydon: "Quem casa é o engenheiro" fica, e não troquem por "o profissional", que o comprador pode ler como pedreiro; leve ao dono a pergunta do número do WhatsApp na grátis 3. (leitura da Placa)
+- 26/11 07:17 · Ana → Paydon: o Instagram e o TikTok só mostram a tela de login, então nenhum perfil foi aberto direto e nenhum seguidor saiu de página oficial; @matharium continua sem estilo conferido. (nicho do canal de IA)
+- 26/11 07:17 · Ana → Vera: três contas com o mesmo vídeo traduzido não têm regra escrita nem a favor nem contra; a tradução da Meta numa conta só está confirmada e vem com o rótulo "Translated with Meta AI". (nicho do canal de IA)
+- 26/11 07:17 · Ana → Zeca: a dublagem da Meta troca só a voz; se o vídeo for som e texto na tela, sem fala, cada língua vai precisar da própria versão do texto. (nicho do canal de IA)

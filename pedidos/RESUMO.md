@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 91 documentos
+## Os 92 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1947 palavras.
+Tamanho: 1981 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -658,6 +658,12 @@ Vera Veto (Revisora de risco), no Fable 5.2 (`claude-fable-5-2`), 26/11/2026. Pe
 Seções: Reconferência das págs. 9, 11 e 13 (Vera, Fable 5.2, 26/11/2026).
 
 Tamanho: 473 palavras.
+
+### [Leitura da Vera (26/11): a prévia com a Placa](anexos/veto-placa-2026-11-26.md)
+
+Vera Veto (Revisora de risco), no Fable, 26/11/2026, leitura única da peça montada: as 29 imagens de `previa-placa-2026-11-26/` (24 do pago, 3 da grátis, 2 do bônus), o `PLACAS` de `ebook/gerador/paginas.py` e os números contra `ebook/plantas/PLANTAS.md`. Ela só lê: o Paydon gravou o parecer,…
+
+Tamanho: 647 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 

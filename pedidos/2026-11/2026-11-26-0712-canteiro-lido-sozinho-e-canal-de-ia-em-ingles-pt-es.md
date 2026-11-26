@@ -24,7 +24,7 @@
 
 **Conferência:** (a preencher)
 
-**Resultado:** (a preencher)
+**Resultado:** (parcial) a Ana respondeu (`pesquisas/instagram-ia/nicho-ou-sem-nicho-2026-11-26.md`): nicho pesa de forma moderada (em virar seguidor e o sistema achar o público), começar pela matemática faz sentido, e a dublagem do Instagram cobre as 3 línguas numa conta só; cartão `ig-nicho-resposta` no Canteiro. Falta o sim dele e a segunda leitura por hora.
 
 **O que aprendi:** (a preencher)
 
