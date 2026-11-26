@@ -32,3 +32,7 @@
 - **No máximo 3 decisões por resposta**, na ordem em que destravam a venda; o resto em uma linha. Silêncio dele não é sim.
 - **Os nomes da equipe** (Vera, Caio, Nilo...) entram quando ajudam a contar quem fez o quê; o trabalho vem antes do personagem.
 - **O formato fixo** da resposta e o teste do leigo estão na skill `explicar-ao-dono`; este arquivo é o tom.
+
+## Referências de gosto (para vídeo, mais tarde)
+
+- 26/11: o melhor que ele viu no ano: o vídeo "CONDOR XIII" do canal de Payton Talbott (de onde vem o nome Paydon Clabett), a série S.E.A.L.S e, também boa, a série From. O porquê ainda não foi perguntado a fundo; perguntar antes de usar como referência.
