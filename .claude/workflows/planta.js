@@ -54,7 +54,7 @@ const lerJson = (s, padrao) => {
   return padrao
 }
 
-let voltas = -1  // a primeira passada do autor é a conferência dele, não volta de conserto, passe = null
+let voltas = -1, passe = null  // a primeira passada do autor é a conferência dele, não volta de conserto
 async function autor(oque) {
   voltas++
   const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`

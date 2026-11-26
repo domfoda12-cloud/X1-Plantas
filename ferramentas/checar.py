@@ -275,6 +275,7 @@ rodar("placar do veto em dia", [sys.executable, "ferramentas/placar.py", "--conf
 # Fluxos fixos (dono, 26/11/2026: "ultra max"; ficha 2026-11-26-0721): existem, estão no mapa e no inventário, a sintaxe passa,
 # programa antes do juízo, gasto medido, e cada um termina na colheita; toda rodada gravada tem a forma e a linha no RODADAS.md
 rodar("fluxos: as conferências por programa pegam o erro plantado", [sys.executable, "ferramentas/fluxo.py", "testar"])
+rodar("fluxos: ensaio de ponta a ponta com agentes de mentira (pega variável sem declarar)", ["node", "ferramentas/fluxos-ensaio.cjs"])
 _fluxos = {"texto-publico": ("fluxo.py texto", "fluxo.py passe", "fluxo.py registrar"), "pagina-ebook": ("fluxo.py pagina", "fluxo.py registrar"),
            "planta": ("conferir-rascunho.py", "fluxo.py registrar"), "decisao": ("fluxo.py juri", "fluxo.py registrar"),
            "prova-de-entrada": ("fluxo.py prova-estado", "fluxo.py prova-nota", "/tmp/x1-provas")}

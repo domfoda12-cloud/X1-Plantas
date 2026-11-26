@@ -75,7 +75,7 @@ conf['programa:pagina'].achados_proprios = prog.achados.length
 for (const e of prog.achados.filter(x => x.tipo === 'erro'))
   achados.push({ autor: AUTOR, chave: 'programa-pagina', texto: `pág. ${A.pagina}: ${e.msg}`, licao: `antes de dizer pronta, gere a prévia e rode fluxo.py pagina: ${e.msg}`, achado_por: 'programa:pagina' })
 
-let voltas = -1  // a primeira passada do autor é a conferência dele, não volta de conserto, passe = null
+let voltas = -1, passe = null  // a primeira passada do autor é a conferência dele, não volta de conserto
 async function autor(oque) {
   voltas++
   const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
