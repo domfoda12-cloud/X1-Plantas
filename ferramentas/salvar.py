@@ -22,7 +22,7 @@ def rodar(*cmd):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2 or not sys.argv[1].strip():
+    if len(sys.argv) != 2 or not sys.argv[1].strip() or sys.argv[1].lstrip().startswith("-"):  # "--help" virou commit (48a1345)
         sys.exit(__doc__)
     rodar(sys.executable, "ferramentas/resumos.py")
     c = rodar(sys.executable, "ferramentas/checar.py")
