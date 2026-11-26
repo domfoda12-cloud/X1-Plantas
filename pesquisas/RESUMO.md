@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 12 documentos
+## Os 13 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -49,6 +49,14 @@ Seções: Critérios que tirei do estudo; Notas; Leitura final (curta).
 
 Tamanho: 1224 palavras.
 
+### [Júri do nicho: jurado 3, PRODUÇÃO E SUSTENTO](instagram-ia/juri-nicho/jurado-producao.md)
+
+26/11/2026. Júri estrito, sem ver os outros jurados. Pergunta: dá para fazer 1 reel bom por dia, por meses, só com código e ferramentas grátis, sem cair em AI slop? Quanto custa verificar cada fato? Som e visual podem ser nossos (não o pixel 8 bits, que é a marca deles)? Há produto depois?
+
+Seções: O que a prova já mostra (vale para as 8 ideias); Notas; Leitura do jurado.
+
+Tamanho: 1332 palavras.
+
 ### [Júri do nicho: jurado de HONESTIDADE E RISCO](instagram-ia/juri-nicho/jurado-risco.md)
 
 Data: 26/11/2026. Jurado estrito, sem ver os outros. Base: `pesquisas/instagram-ia/estudo-science-in-8bit.md` (lido inteiro, seções 1 a 11). Onde cito regra fora do estudo (OAB, CVM, CDC), digo que é conhecimento meu, não verificado com ferramenta nesta rodada: precisa ser aberto na fonte oficial…
@@ -61,7 +69,9 @@ Tamanho: 2029 palavras.
 
 O dono mandou (26/11, 00:40): https://www.instagram.com/p/DeO_kdLAYSb/ ; "the sounds are really nice really gets the attention, nice visuals and i honestly like the math real world application idea (i like math)". Análise: MinoAI Frontier `analyze_hook`, 26/11.
 
-Tamanho: 242 palavras.
+Seções: Mais referências do dono (26/11, madrugada).
+
+Tamanho: 485 palavras.
 
 ### [Pesquisa: Público, preço, demanda e números de mercado](mercado.md)
 
