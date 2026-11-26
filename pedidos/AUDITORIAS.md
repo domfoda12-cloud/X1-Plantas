@@ -145,3 +145,16 @@ Fichas cobertas por auditorias anteriores a esta regra (24/11/2026): 2026-11-22-
 **Fora das fichas (média):** a fonte do Canteiro, `ebook/plantas/rascunhos/quadro-tarefas.html`, está em pasta que o git ignora (`.gitignore` linha 3) e o pedido de entrada da sessão a chama de "a fonte". Trocou a máquina, sumiu. Conserto: guardar a cópia em pasta que o git acompanha.
 
 **Não conferido:** o Canteiro publicado (só a cópia local, que tem "Conversa da equipe" e documentos `tipo: "conversa"`); o que o Maestro propôs e o dono leu antes do "Aplique"; os commits da 1027 (o histórico desta máquina começa em 24/11 21:19, 59 commits) e os "9 grupos" (o arquivo é a versão da tarde); a Prova 4, relida; o diagnóstico do júri número por número; se o Revisor roda de fato no Fable; os itens da fila fora destas fichas (Canteiro refeito, `18e2dd1`).
+
+## Auditoria de 26/11/2026 (manhã): os fluxos fixos
+
+> Feita pela Olga (supervisor) a pedido do Paydon, por volta das 09:25 UTC. A trava negou a escrita; entrada refeita no mesmo dia, com base na ficha (campo "Conferência"), no commit `38ad61f`, em `pedidos/PROVAS.md` e nas falas das 09:10 e 09:25 em `contexto/CONVERSA.md`. Gravada pelo Paydon às 17:53 UTC.
+
+| Data | Fichas conferidas | Erros (alta / média / baixa) | Principal achado |
+|---|---|---|---|
+| 26/11/2026 (manhã) | 1: fluxos fixos (2026-11-26-0721) | 3 altos; 7 entre média e baixa (a divisão não ficou gravada) | Os fluxos estavam verdes, mas `texto-publico`, `pagina-ebook` e `planta` diziam "aprovado" com o programa quebrado. |
+
+- ALTA (3): fluxo aprovava com o programa quebrado; o gasto gravado era só o de saída; o programa de texto tinha 6 furos (passava "A obra custa R$ 80 mil").
+- Os outros 7, pelos consertos do commit (ele lista 8; não se sabe qual par era um achado só): trava de `ebook/saida/` no fim do fluxo; júri com motivo e ficha; citação ruim tira a nota; registro sem repetição; prova com nível e iscas (item de nível 3 em prova de nível 1); lição repetida conta como "voltou"; lição do dono não sai na consolidação; veneziana com as 5 condições.
+- **Conferido depois do conserto (26/11, 17:50 UTC, Olga):** `checar.py` em "Tudo certo" (roda `fluxo.py testar` e o ensaio com o programa quebrado); `fluxo.py texto` acusa "A obra custa R$ 80 mil" como erro; `RODADAS.md` tem as duas colunas de gasto nas 4 rodadas. **Não conferido:** os outros 7 consertos, um a um.
+

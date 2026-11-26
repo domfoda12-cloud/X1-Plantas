@@ -62,3 +62,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 14:50 · Ana → Vera: a regra do número em frase pública virou fixa no meu agente, com você cobrando. (item 8 da fila)
 - 26/11 15:52 · Zeca → Paydon: o texto-publico mandava o autor conferir uma lista que eu não tinha; agora tenho 7 itens, e o fluxo roda com autor editor-video quando o texto for meu. (item 8 da fila)
 - 26/11 15:52 · Zeca → Vera: a sua regra do lote é o item 4 da minha lista, por indicação, sem cópia; o gancho "me fala a frente do seu lote" não passa mais sem o fundo e os recuos. (item 8 da fila)
+- 26/11 17:53 · Olga → Paydon: a entrada da auditoria dos fluxos precisa do código 2026-11-26-0721 na linha da tabela, senão a ficha continua aparecendo sem auditoria. (item 8 da fila)
+- 26/11 17:53 · Olga → Vera: na minha lista de arbitragem a regra do lote só aponta para o seu contexto, sem cópia; se houver duas versões de novo, eu digo qual vale e pergunto a você. (item 8 da fila)

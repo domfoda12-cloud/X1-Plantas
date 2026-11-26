@@ -21,9 +21,9 @@
 
 Uma linha por auditoria, escrita pelo agente `supervisor` (regras em `LEIA-ME.md`). A cada 3 fichas fechadas, `ferramentas/pedido.py` avisa que é hora da próxima.
 
-Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano); Auditoria 25/11 (trabalho do Maestro em 24 e 25/11; gravada achado por achado, o limite de uso estava no fim); Auditoria de 26/11/2026 (noite): 3 fichas fechadas.
+Seções: Auditoria das regras, 24/11/2026; Auditoria de 24/11/2026 (tarde): as 3 fichas que escaparam (passo F17 do plano); Auditoria 25/11 (trabalho do Maestro em 24 e 25/11; gravada achado por achado, o limite de uso estava no fim); Auditoria de 26/11/2026 (noite): 3 fichas fechadas; Auditoria de 26/11/2026 (manhã): os fluxos fixos.
 
-Tamanho: 9262 palavras.
+Tamanho: 9530 palavras.
 
 ### [Pedidos do dono: como cada prompt vira trabalho](LEIA-ME.md)
 
@@ -387,7 +387,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 2893 palavras.
+Tamanho: 3002 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 

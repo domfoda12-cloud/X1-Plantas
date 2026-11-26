@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 2229 palavras.
+Tamanho: 2303 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -187,8 +187,8 @@ Tamanho: 678 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro.
+Só o que muda; as regras fixas estão no seu arquivo de agente. Antes de trabalhar, leia o quadro. Os nove fios do que o dono quer: `dono/IDEIAS-GERAIS.md`. Tudo: `INDICE.md`.
 
-Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
+Seções: Decisões do dono que valem para você; Antes de fechar uma auditoria; Quando arbitrar a prova de entrada; Em aberto com você; Lições.
 
-Tamanho: 290 palavras.
+Tamanho: 748 palavras.
