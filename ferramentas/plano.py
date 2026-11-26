@@ -16,7 +16,7 @@ import datetime, re, sys
 from pathlib import Path
 
 PLANO = Path(__file__).resolve().parent.parent / "pedidos" / "PLANO.md"
-JURI = PLANO.parent / "anexos" / "juri-decisoes-faceis-2026-11-24.md"  # as decisões que o júri tomou e mostra ao dono (cartão v6)
+JURI = PLANO.parent / "anexos" / "juri-decisoes-faceis-2026-11-24.md"  # as decisões fáceis de desfazer (júri em 24/11; conselho de bolso desde 26/11) mostradas ao dono (cartão v6)
 SECOES = ["## Agora", "## Depois", "## Esperando o dono", "## Não fazer"]
 RE_PASSO = re.compile(r"^\| ([A-Z]\d+) \|")
 RE_DEC = re.compile(r"^(\d+)\. ")
@@ -172,9 +172,9 @@ def cmd_feito(pid, nota):
         sys.exit(f"Não existe o passo {pid}.")
     if passos[pid]["feito"]:
         sys.exit(f"{pid} já está marcado como feito.")
-    if re.fullmatch(r"J\d+", pid) and falta_no_juri(pid):  # regra v6 do dono: o júri decide, mas mostra e diz como desfazer
+    if re.fullmatch(r"J\d+", pid) and falta_no_juri(pid):  # regra v6 do dono: decide-se sem ele (conselho de bolso desde 26/11), mas mostra e diz como desfazer
         sys.exit(f"Não marca {pid}: em pedidos/anexos/{JURI.name} falta " + " e ".join(falta_no_juri(pid))
-                 + ". Decisão do júri só fecha com o \"como desfazer\" escrito e \"mostrado ao dono: sim\".")
+                 + ". Decisão fácil de desfazer (passo J) só fecha com o \"como desfazer\" escrito e \"mostrado ao dono: sim\".")
     hoje = datetime.date.today().strftime("%d/%m")
     i = passos[pid]["linha"]
     linhas[i] = linhas[i].replace(f"| {pid} | ", f"| {pid} | **Feito {hoje}:** {nota.rstrip('.')}. ", 1)
