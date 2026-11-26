@@ -35,3 +35,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **26/11, maestro (repetido na mesma noite):** anotei horários de cabeça e passei da hora real (06:35 e 06:45 às 06:16). Antes de escrever hora em registro, conversa ou Canteiro, rodar `date -u` e usar o que ele devolveu.
 - **26/11, maestro:** pedi à Vera para gravar o parecer, e ela só tem ferramentas de leitura (de propósito). Pedido à Revisora: "devolva o texto pronto"; quem grava é o Paydon.
 - **26/11, dono (repetida):** "Responder as 5 perguntas ao mesmo tempo é confuso, o ideal seria responder uma por vez" (cartão das 5 frases). A regra de 24/11 vale também para opções dentro de um cartão: uma escolha por cartão, e o próximo só depois da resposta.
+- **26/11, dono:** "Escolhi 2 das frases e nao consegui mais continuar!" Uma pergunta por cartão, sim; mas o próximo cartão já fica à vista, porque o Canteiro só é lido de hora em hora. Nunca esconder a pergunta seguinte atrás da leitura.
