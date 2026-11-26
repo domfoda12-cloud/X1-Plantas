@@ -21,7 +21,15 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 22 documentos
+## Os 23 documentos
+
+### [Conversa da equipe](CONVERSA.md)
+
+Dono, 26/11/2026: "faça eles interagirem uns com os outros como amigos/colegas de trabalho, ver essa interação me parece interessante". Cada agente lê as últimas 10 falas ao começar e fecha o relatório com `Falas:` (1 a 3 falas curtas). O Paydon copia para cá e para o Canteiro (documento `tipo:…
+
+Seções: Falas.
+
+Tamanho: 215 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
