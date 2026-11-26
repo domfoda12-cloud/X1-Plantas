@@ -1,0 +1,36 @@
+# Júri do nicho: jurado 3, PRODUÇÃO E SUSTENTO
+
+26/11/2026. Júri estrito, sem ver os outros jurados. Pergunta: dá para fazer 1 reel bom por dia, por meses, só com código e ferramentas grátis, sem cair em AI slop? Quanto custa verificar cada fato? Som e visual podem ser nossos (não o pixel 8 bits, que é a marca deles)? Há produto depois?
+
+Arquivos lidos: `estudo-science-in-8bit.md` (o estudo), `ferramentas-gratis-animacao.md` (ferramentas), `referencia-math-phonk.md` (a referência do dono), `prototipo/LEIA-ME-prototipo.txt` (o teste).
+
+## O que a prova já mostra (vale para as 8 ideias)
+
+- **Renderizar não é o gargalo.** O protótipo fez 90 quadros 1080x1920 em 1,4 s, com Pillow e ffmpeg já instalados, nada pago (LEIA-ME-prototipo). O gargalo é outro: arte (o teste usou lâmpada de 13x17 células e um "%" que "lê mal"), som (o teste saiu **sem áudio**) e a conferência dos fatos.
+- **Cada desenho novo custa trabalho; cada conta nova quase não custa.** Ideia que pede personagem novo por reel (órgão com rosto, prédio antigo, panela) cobra arte todo dia. Ideia que reaproveita um "mundo" fixo e só troca números aguenta meses.
+- **O som próprio é possível, mas ainda não foi testado.** Sintetizador em Python/numpy está marcado como "ideia, não pesquisado" (ferramentas, seção 2). As vozes do Piper pt-BR faber e cadu são CC0 só por fonte secundária, falta abrir o MODEL_CARD (seção 3). O ChipTone é manual (seção 2).
+- **Fonte com acento ainda falta.** A Press Start 2P tem "acentos a confirmar" e é pixel (ferramentas, seção 4). Estilo próprio pede outra fonte OFL, ainda não conferida.
+- **Visual próprio:** eles trocam de estilo (vetor, papel, lousa, blueprint, neon; estudo, seção 3), então o pixel é marca, não técnica. O que sai mais barato em código é linha, gráfico, grade e tipografia (o "osciloscópio" da referência). Personagem fofo em argila ou aquarela é o mais caro.
+- **Volume deles:** 125 posts em 16 dias com "equipe de 6 agentes" e um verificador de fatos (estudo, seção 3). O tropeço deles também está lá: reels recentes com 745 e 6.676 views (seção 4). Fórmula repetida esfria, e é por aí que entra o slop.
+- **Produto:** a conta estudada vende o próprio método por US$ 49 (estudo, seções 3 e 6). O dono ainda não disse se quer vender. A nota abaixo só mede se o produto é *possível*.
+
+## Notas
+
+| # | Ideia | Nota | Motivo (com prova) | Maior risco de produção |
+|---|---|---|---|---|
+| 1 | Dinheiro de casa em números | **7** | É conta com fonte pública (tarifa Aneel), e gráfico e moeda saem baratos em código. O produto é natural, uma planilha (estudo, seção 9, ideia 1). O nicho está cheio de gente com rosto, sem animação (seção 11b). | O número envelhece e muda por lugar: a tarifa varia por distribuidora e por bandeira, todo mês. Cada reel precisa de data e de "exemplo", e reconferir sai caro. Também pode parecer conselho financeiro. |
+| 2 | Direitos em 40 s | **3** | O artigo tem fonte primária (Planalto), mas a conferência é a mais cara: lei, interpretação e veto do Revisor de risco (seção 9, ideia 2). Concorre com advogados que já fazem "artigo + direito" (seção 11b). | Cada filme pede leitura jurídica, e um erro vira dano real a quem segue. O produto quase não existe sem virar aconselhamento. O "papel recortado" é arte cara por cena. |
+| 3 | Seu corpo, hoje | **4** | É o motor que mais deu certo para eles (3/3 reels sobre o corpo; seção 4). Mas é o nicho deles traduzido (seção 9, risco "não copiar"), e eles mesmos usam 3 fontes científicas mais aviso médico por post. | A conferência é cara (saúde, 3 fontes por filme). Cada reel pede um personagem-órgão novo em argila ou aquarela, e esse é o estilo mais caro em código. Fica perto demais da marca deles. |
+| 4 | Física da cozinha | **6** | A fonte é fácil e o espectador faz o experimento na hora, com o que tem na cozinha (seção 9, ideia 4). Concorrentes BR fazem isso em vídeo com gente (seção 11b). | Cada reel pede um objeto novo desenhado (panela, micro-ondas, botijão). Há risco de segurança: o superaquecimento no micro-ondas aparece num concorrente (seção 11b). Gás e pressão pedem o veto do Revisor. |
+| 5 | História da cidade | **3** | Tem cadência diária natural, mas a fonte é primária e local (IBGE, arquivos; seção 9, ideia 5): a mais lenta de achar e conferir. Cada cidade é um público pequeno e separado. | Conferir data local custa horas, e as fontes se contradizem. Cada cidade pede arte nova em "gravura", então não dá para manter 1 por dia por meses. O produto é fraco. |
+| 6 | Matemática do mundo real | **9** | A conta se confere sozinha: o mesmo script calcula, desenha e testa o resultado. Só os dados de entrada (preço, medida) pedem fonte. Grade, linhas e fórmulas são nativas de código e não são pixel, e o som pode sair da própria fórmula (f · 2^s, "o ouvido sente a resposta"; referência math-phonk). Tem pauta sem fim (juros, desconto, tinta da parede, tijolos da obra), a referência do dono dá prova de alcance (107.118 curtidas) e o dono gosta de matemática. | Virar molde repetido: a ferramenta apontou "8 rodadas iguais cansam" e "tela inicial lotada de fórmula" (referência). Sem variar o ritmo e o "mundo", vira slop em semanas. O som que carrega a conta ainda é ideia não testada (o protótipo saiu sem áudio), então é o primeiro teste a fazer. |
+| 7 | Teste em casa | **6** | É o gatilho mais forte dos dados: ação física no frame 0 em 3 de 3 reels, e o campeão tem 210.572 curtidas (seção 4). Teste de percepção ("Count the F's", seção 2) não pede fonte médica. | É o formato exato deles (seção 6, traço 1), com risco de parecer cópia. Teste com o corpo cai na conferência de saúde. A pauta de testes bons e seguros acaba mais rápido que a de contas. |
+| 8 | De onde vem essa palavra | **6** | Tipografia animada é a arte mais barata em código e não acaba nunca. Fica longe da marca deles. | Etimologia popular falsa é comum e as fontes divergem, então cada palavra pede dicionário confiável e às vezes não há certeza. O visual só de letras tende a ficar parado e com cara de slop. O som não tem informação para carregar, e o produto é fraco. |
+
+## Leitura do jurado
+
+- **A 6 é a única que aguenta 1 por dia por meses sem desenho novo e com conferência quase grátis.** A prova da conta é o próprio código, e uma fórmula errada falha antes de renderizar. Junta o que o dono pediu (som carregando a matemática) com o que sai mais barato em código (linha, grade, número).
+- **Combinação que vale testar:** 6 como espinha, com o gatilho da 7 ("faça a conta comigo agora", palpite nos comentários, como o "comente sua nota /8" da referência) e temas da 1 (a conta escondida na conta de luz) usados como rodada, não como nicho.
+- **Produto possível (se o dono quiser):** na 6, "caderno de contas do dia a dia" ou planilhas. Tem ponte natural com o e-book de plantas pela conta da obra (tijolo, tinta, piso), mas isso é hipótese e o dono decide.
+- **Antes de decidir, três testes de produção:** (1) sintetizar o som da fórmula em numpy e juntar ao vídeo com ffmpeg; (2) achar e conferir uma fonte OFL com ã, ç, é; (3) fazer 3 reels diferentes no mesmo "mundo" para medir se a variação aguenta.
+- Nenhum número de alcance aqui é estimativa minha: todos vêm dos arquivos citados, devolvidos por ferramenta ou declarados pela conta estudada.
