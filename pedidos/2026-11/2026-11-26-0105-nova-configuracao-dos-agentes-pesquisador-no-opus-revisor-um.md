@@ -18,7 +18,7 @@ Aplique
 
 **Pronto quando:** Pesquisador no Opus em um passo; Revisor com uma leitura no Fable; organizador juntado ao planejador; júri só para decisão cara ou pública; diagnóstico do júri gravado; três verificadores sem achado aberto; checar.py verde.
 
-**Suposições (o dono não disse):** Que "Aplique" vale para as quatro. Que a troca mínima no CLAUDE.md está incluída.
+**Suposições (o dono não disse):** Que "Aplique" vale para as quatro. Que a troca mínima no CLAUDE.md está incluída. Na seção 5b do `CONSELHO.md` (escolhas do aplicador, a confirmar com o dono): júri também para o que "não se desfaz", mesmo sem custo e sem público; sai "muda o sistema inteiro"; a decisão do conselho de bolso entra como passo J, com seção em `juri-decisoes-faceis-2026-11-24.md`; e o que vai ao público fica no júri mesmo se for fácil de desfazer (bio, pôster, quadrinho). Pergunta ao dono: "júri também para o que não se desfaz, mesmo sem custo e sem público: sim ou não?"
 
 **Quem executa:** Maestro, com um fluxo de agentes: um por mudança, em sequência, e três verificadores.
 
