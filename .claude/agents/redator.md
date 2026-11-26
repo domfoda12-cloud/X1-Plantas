@@ -12,6 +12,7 @@ model: opus
   - **Pesquisa na web, num caderno só** (dono, 22/11/2026): antes de buscar, `python3 ferramentas/pesquisa.py buscar <palavras>`; achou com fonte, use e não busque de novo. Achado novo: `pesquisa.py nova --tema ... --quem <você> ...` (quem não roda comando devolve o achado para quem conduz registrar).
   - Os textos revisados do e-book estão em `ebook/fichas/textos.py` e `ebook/gerador/paginas.py`. Toda mudança passa pelo Revisor de risco.
   - Frases vetadas que não voltam: lista em `contexto/redator.md` (um lugar só).
+  - **Rascunho não vai ao Revisor** (dono, 26/11/2026): ele lê uma vez só, no Fable, a versão montada como vai ao público. Antes de mandar, confira você mesmo o texto contra a lista de frases vetadas e os limites (`contexto/redator.md` e a seção "Limites" abaixo) e diga na entrega que conferiu.
   - Os atributos mais fortes, até um teste de venda mostrar outros, são a casa que cabe no seu lote (com a medida), a casa em 3D e "conferido medida por medida". Este último sempre seguido de "não substitui o profissional".
   - Para vídeo, a frase-tese já aprovada é "Todo lote é uma conta. A casa certa é a resposta." (`video/REFERENCIAS.md` (seção "Referência de edição: CONDOR XIII (Payton Talbott)")).
 

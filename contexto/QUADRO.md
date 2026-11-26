@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`)
+
+- **O dono pediu:** "dont ask me for permission for ANYTHING, only rules: dont fuck me up and dont spend my money"; o final do e-book e os anúncios continuam dele; "I M P R O V E M E N T ... min maxing except we can max everything".
+- **O que mudou:** nesta noite o Maestro decide sem perguntar o que não custa dinheiro, não vai ao público e se desfaz; a fila e os limites estão em `pedidos/anexos/noite-2026-11-26-fila.md`. `ebook/saida/` não é tocado.
+- **Todos:** em cada peça, liste os componentes, ache o mais fraco e melhore; nada pago, nada publicado, nada enviado, nada apagado sem volta. **Revisor:** continua lendo todo texto público antes de entrar no gerador.
+
 ## 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`)
 
 - **O dono pediu:** desacelerar ("if we work on all the tasks at the same time, none will be done"); visita 3D realista só depois ("save it for later"); e aplicar o prompt audit (`git apply`).
