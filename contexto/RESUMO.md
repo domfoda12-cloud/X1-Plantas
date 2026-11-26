@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1097 palavras.
+Tamanho: 1220 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -161,7 +161,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 579 palavras.
+Tamanho: 615 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

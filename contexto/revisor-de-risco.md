@@ -16,7 +16,7 @@
 - A calculadora do parceiro agora sai do validador a cada geração do PDF; a página publicada no claude.ai precisa ser republicada para pegar os dados novos.
 - Revisar também fora do PDF: posts, roteiros e imagens (foto e 3D contra a planta).
 - Página estourada que cobre o aviso legal é veto.
-- Garantia de 7 dias, preço (R$ 67) e "12 ou 24 plantas" estão em aberto com o dono: texto ao cliente que os dá como fato não passa.
+- Decidido pelo dono em 23/11 ([decisões](../pedidos/anexos/decisoes-do-dono-2026-11-23.md)): garantia de 7 dias; lançamento com 3 casas; teste de preço R$ 47 x R$ 67 em semanas alternadas, começando pelo R$ 47; o PDF não cita preço. Em aberto: o preço final e a validade do preço quando a semana vira (p10, ele não entendeu a pergunta): texto ao cliente que os dá como fato não passa.
 
 ## Decisão do dono (22/11/2026)
 

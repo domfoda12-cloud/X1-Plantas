@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 87 documentos
+## Os 88 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -188,6 +188,14 @@ Rui Lance (Estrategista), fila da noite de 26/11, item 6 (`noite-2026-11-26-fila
 Seções: 0. Antes das conversas: o que está desatualizado de verdade; 1. As 5 conversas; 2. Vazamentos, do mais caro ao mais barato; 3. O que falta para o sócio operar sozinho; Reconferência do pedido (ficha da tarefa, item 6 da fila).
 
 Tamanho: 6008 palavras.
+
+### [Funil do WhatsApp: os consertos de texto e a folha do sócio (RASCUNHO, 26/11/2026)](anexos/funil-textos-rascunho-2026-11-26.md)
+
+Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/2026-11-26-0058-socio-entra-no-projeto-guia-quem-decide-funil-ciclo-de-1h-re.md`), a partir do funil simulado do Rui (`funil-simulado-2026-11-26.md`). Rascunho: nenhum arquivo de venda foi editado…
+
+Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila).
+
+Tamanho: 6213 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 

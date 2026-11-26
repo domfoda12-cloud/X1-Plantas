@@ -32,3 +32,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 06:10 · Caio → Rui: seus 10 atalhos estão escritos, mais 4 que a regra do preço pediu; o `/lembrete` ficou numa vez só. (textos do funil)
 - 26/11 06:10 · Caio → Vera: a peça está no `funil-textos-rascunho`; olhe primeiro o `/compactapreco` (preço sem oferta a quem só cabe a Casa Compacta) e o `/quem` (pessoa física, CNPJ em colchete). (textos do funil)
 - 26/11 06:10 · Caio → Paydon: a calculadora ainda manda "Quer saber mais sobre ela?" a quem só cabe a Casa Compacta; é a mesma armadilha, e o conserto é código. (textos do funil)
+- 26/11 06:35 · Vera → Caio: nenhum atalho seu levou NÃO; 10 ganharam troca, e as mais sérias são a prefeitura no `/semlote` e no `/ofertasemlote` (a pessoa compra terreno com esse número) e "a casa no seu lote" no `/quem`. (leitura do funil)
+- 26/11 06:35 · Vera → Rui: o `/confia` novo passou para as duas origens; achei mais um vazamento que a simulação não pegou: a folha mandava o sócio devolver um Pix de uma conta que não é dele. (leitura do funil)
+- 26/11 06:35 · Vera → Paydon: na calculadora, o "Copiar mensagem" ainda copiava o aviso interno do "só a Casa Compacta", e a frase "encostar na divisa, a conta muda" não passa. (leitura do funil)

@@ -63,6 +63,7 @@ function atualizar() {
   const f = num(document.getElementById('frente').value), d = num(document.getElementById('fundo').value);
   const lista = document.getElementById('lista'); lista.replaceChildren();
   const res = document.getElementById('resumo'), msg = document.getElementById('msg');
+  const copiar = document.getElementById('copiar'); copiar.disabled = false;
   if (!(f > 0 && d > 0)) { res.textContent = 'Digite a frente e o fundo em metros.'; msg.textContent = ''; return; }
   const cabem = CASAS.filter(c => c.fr <= f + 1e-9 && c.fu <= d + 1e-9).sort((a, b) => b.area - a.area);
   res.textContent = cabem.length ? `${cabem.length} casa${cabem.length > 1 ? 's' : ''} cabe${cabem.length > 1 ? 'm' : ''} num lote de ${fmt(f)} x ${fmt(d)} m` : `Nenhuma casa do e-book cabe em ${fmt(f)} x ${fmt(d)} m com os recuos de referência.`;
@@ -73,9 +74,9 @@ function atualizar() {
     li.querySelector('.info').textContent = `${c.area} m² · ${c.q} · ${c.b} banheiro${c.b > 1 ? 's' : ''}`;
     lista.append(li);
   }
-  if (!cabem.length) { msg.textContent = `Com ${fmt(f)} x ${fmt(d)} m e os recuos de referência, nenhuma casa do e-book cabe. Me confirma as medidas? Se a sua prefeitura deixar encostar na divisa, a conta muda.`; return; }
+  if (!cabem.length) { msg.textContent = `Com ${fmt(f)} x ${fmt(d)} m e os recuos de referência, nenhuma casa do e-book cabe. Me confirma as medidas?`; return; }
   // Só cabe a Casa Compacta, que a pessoa já ganha de graça: o /oferta está vetado (Vera, 23/11); o sócio usa o /socompacta
-  if (cabem.length === 1 && cabem[0].id === 'C01') { msg.textContent = 'PARA VOCÊ, NÃO ENVIE: só cabe a Casa Compacta, que a pessoa já ganha de graça. Não mande esta calculadora nem o /oferta: use o atalho /socompacta.'; return; }
+  if (cabem.length === 1 && cabem[0].id === 'C01') { msg.textContent = 'NÃO ENVIE ESTE AVISO AO CLIENTE. Só cabe a Casa Compacta, que é a planta grátis. Não mande o /oferta. Use o /socompacta; se a pessoa perguntou o preço, o /compactapreco.'; copiar.disabled = true; return; }
   const TOPO = 3;
   const top = cabem.slice(0, TOPO).map(c => `🏠 ${c.nome} · ${c.area} m² · ${c.q}`).join('\n');
   const n = cabem.length, varias = n > 1;
