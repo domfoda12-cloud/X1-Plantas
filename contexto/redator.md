@@ -1,31 +1,28 @@
 # Contexto do Redator
 
-> Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
+> Só o que importa para este papel; as regras fixas estão no seu arquivo de agente. **Antes de trabalhar, leia o [quadro](QUADRO.md).** Resumo geral: [`CONTEXTO.md`](../CONTEXTO.md); histórico, só para detalhe antigo: [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
-## Decisões do dono que valem para você
+## Antes de mandar ao Revisor, confira (e diga que conferiu)
 
-- **Você trabalha sempre com o Planejador** ("O redator sempre com a ajuda do planejador, quero todo mundo planejando as coisas muito bem" (dono, 24/11, 21:19)). Antes de escrever qualquer texto: o plano do texto, feito com ele ou conferido por ele (para quem é, o que a peça precisa conter, de onde vem cada número, o que depende do dono, a ordem das partes e o "pronto quando"). O plano vai no começo do anexo. Texto sem plano não vai ao Revisor.
-- **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
+Cada item é uma troca que o Revisor já pediu; de onde veio, entre parênteses.
 
-- Cada frase existe para a alegria do comprador, que vira Pix; atributo campeão na primeira linha.
-- Nunca prometer que dispensa engenheiro ou arquiteto, aprovação, prazo ou custo de obra.
-- **Rascunho não vai ao Revisor** (dono, 26/11): ele lê uma vez só, no Fable, a versão montada como vai ao público. Antes de mandar, confira o texto contra a linha de cima (os limites) e a de baixo (as frases vetadas).
-- Frases vetadas que não voltam: 3D prometido onde não há, "banheiro com giro" sem conferência, "ventilação cruzada" sem janelas opostas, "recebe as próximas plantas" sem o "sim" do dono, "todas as casas cabem".
+- **Frases vetadas que não voltam:** 3D prometido onde não há; "banheiro com giro" sem conferência; "ventilação cruzada" sem janelas opostas; "recebe as próximas plantas" sem o "sim" do dono; "todas as casas cabem"; o lado do sol de memória (vem do `PLANTAS.md`; a tabela estava espelhada, 26/11).
+- **Bloco ao cliente só com o que vai ao cliente.** Nota ao sócio ou "o dono decide" fica fora, no "Quando usar" (Vera, `/compactapreco` e `/formas`, 26/11).
+- **Lote, recuo ou medida de terreno:** junto vai "o recuo da sua cidade, a prefeitura confirma"; para quem ainda vai comprar o lote, "antes de fechar" (Vera, `/semlote`, `/ofertasemlote`, 26/11). Prefeitura e banco, com a condição: "se for financiar" (Vera, pág. 23, 25/11).
+- **Nada que soe como desenho do lote da pessoa:** dizemos qual casa cabe, pelos recuos de referência (Vera, `/quem`, 26/11).
+- **Sem futuro que o dono não prometeu:** "ainda", "em breve" (Vera, "ainda não temos CNPJ", 26/11).
+- **A frase vale para quem a recebe?** Quem veio do anúncio não viu planta nenhuma; "aqui está" só com o anexo na conversa (Rui e Vera, `/confia`, `/planta`, 26/11).
+- **Cada afirmação contra o dado, e sem prometer mais do que a peça tem:** "em cada lote cabe uma casa diferente" era falso (Vera, `/area`, 26/11); "costuma", "o pedreiro pede" sem fonte (Vera, 25/11); "cada palavra" prometia glossário completo; "a conta muda" acenava com uma conta que ninguém fez (Vera, 26/11).
 
 ## Em aberto com você
 
-- Título, bônus e contato do e-book são espaço reservado na página 61.
-- Preço, garantia de 7 dias e número de plantas do lançamento estão em aberto com o dono: não escreva como fato (R$ 67 é recomendação, `ESTRATEGIA.md`, seção 7).
-- A promessa de atualização só entra se o dono preencher `promessa_atualizacao` em `ebook/config.json`.
+- **Preço:** R$ 47 na primeira semana, teste com R$ 67; o PDF não fala de preço. **Garantia:** 7 dias da entrega do link. **Título:** é do dono (cartão `p14`); o atual fica até ele escolher, não o venda como definitivo. Fonte: `CONTEXTO.md`, "Lançamento".
+- Promessa de atualização só se o dono preencher `promessa_atualizacao` em `ebook/config.json` (hoje vazio).
 - Testar PLANTA contra LOTE como palavra do comentário.
-
-## Onde olhar
-
-`ebook/vendas/atributos-que-vendem.md`, `ebook/fichas/textos.py`, `ebook/gerador/paginas.py`, `ESTRATEGIA.md` (seção 9).
 
 ## Leia barato
 
-Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta; o documento inteiro só quando a tarefa pedir. Seus resumos: [Produto: o e-book](../ebook/RESUMO.md), [Venda e WhatsApp](../ebook/vendas/RESUMO.md), [Instagram](../instagram/RESUMO.md). Tudo: [`INDICE.md`](../INDICE.md).
+Os fios do que o dono quer: [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Primeiro o resumo da pasta: [e-book](../ebook/RESUMO.md), [venda e WhatsApp](../ebook/vendas/RESUMO.md), [Instagram](../instagram/RESUMO.md); tudo: [`INDICE.md`](../INDICE.md).
 
 ## Lições
 

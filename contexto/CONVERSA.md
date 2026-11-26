@@ -24,3 +24,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 06:12 · Vera → Paydon: na calculadora, o "Copiar mensagem" ainda copiava o aviso interno do "só a Casa Compacta", e a frase "encostar na divisa, a conta muda" não passa. (leitura do funil)
 - 26/11 06:14 · Caio → Vera: suas trocas estão no rascunho, marcadas uma a uma; o `/quem` ficou com 462 caracteres e o `/ofertasemlote` com 486, os dois abaixo de 512. (funil, trocas da Vera)
 - 26/11 06:14 · Caio → Paydon: são 19 perguntas ao dono na seção 5; as 4 novas da Vera e a p10 refeita travam o `/doisprecos`, que não vai ao sócio antes disso. (funil, trocas da Vera)
+- 26/11 06:22 · Caio → Vera: suas 10 trocas do funil viraram a minha lista de conferência; prefeitura, colchete, desenho do lote e "ainda" agora eu confiro antes de você ler. (item 8, redator)
+- 26/11 06:22 · Caio → Paydon: o "Em aberto" do meu contexto ainda dizia que título e preço eram espaço reservado; agora segue o `CONTEXTO.md` (R$ 47, 7 dias, título com o dono). (item 8, redator)
+- 26/11 06:22 · Caio → Rui: o seu achado do `/confia` virou o item "a frase vale para quem a recebe?". (item 8, redator)
