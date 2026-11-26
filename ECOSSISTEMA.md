@@ -25,7 +25,8 @@
 |---|---|---|
 | `conselho`, `redacao-que-vende`, `ponytail`, `ponytail-review`, `ponytail-audit` | Skills | Integrado: seção "Neste projeto" em cada uma. As do Ponytail são do Arquiteto, só para código; a auditoria de 20/11 foi a rodada de alcance |
 | `make-pdf` (do gstack) | Skill | **Em teste.** Registrada sem o preâmbulo (telemetria, sincronização de memória, mudanças no `CLAUDE.md`). O binário é compilado **fora do repositório**, em `~/.cache/gstack`, e some quando a máquina é trocada. Serve para documento em markdown (guia do parceiro, relatório jurídico); não para o e-book, que sai do `livro.py` |
-| `arquiteto`, `designer`, `editor-video`, `estrategista`, `redator`, `revisor-de-risco` | Agentes, **Opus** | Integrado: lê `CLAUDE.md`, `contexto/QUADRO.md` e o seu `contexto/<papel>.md` |
+| `arquiteto`, `designer`, `editor-video`, `estrategista`, `redator` | Agentes, **Opus** | Integrado: lê `CLAUDE.md`, `contexto/QUADRO.md` e o seu `contexto/<papel>.md` |
+| `revisor-de-risco` | Agente, **Fable** | Integrado: lê o mesmo que os outros. Uma leitura só, com o texto ou a peça montada como vai ao público; rascunho não vai a ele (quem escreve confere antes contra `contexto/redator.md`). Até 26/11 era Opus no rascunho e Fable na peça final |
 | `pesquisador` | Agente, **Opus** | Integrado: pesquisa em um passo só (busca, lê a fonte, confere e conclui; diz o que é fonte confirmada, secundária ou hipótese e o que não conferiu). Até 26/11 era Sonnet, passo 1 de dois |
 | Ambiente de nuvem "x1-plantas" | Ambiente pessoal | Criado em 22/11: o script de preparação instala o motor 3D (`npm install` em `video/`) em toda conversa nova. Rede limitada: fontes do Google, OpenArt e instaladores de pacote. Para usar, escolher "x1-plantas" no menu de ambiente |
 | `supervisor` | Agente, **Fable** | Integrado em 22/11: socorro quando o Opus (conversa principal) trava ou erra, e auditoria a cada 3 fichas fechadas (`pedidos/AUDITORIAS.md`). Só aponta; quem fez corrige |
@@ -49,7 +50,7 @@ Pedido do dono (22/11/2026): ver com clareza o que cada agente usa. A lista que 
 | `designer` (Opus; `tools:` sem gerar nem publicar desde 23/11) | Diretor MinoAI, `impeccable` (só detectar), `design-editorial` (planejar e conferir), `artifact-design`, `make-pdf`, `livro.py` | imagem no OpenArt |
 | `editor-video` (Opus; `tools:` sem gerar nem publicar desde 23/11) | Diretor MinoAI, `watch`, `video/render*.cjs`, `montar.py` | `transcribe_video` da MinoAI (não se sabe se gasta crédito: o Maestro roda), `openart:*` (`performance-ads`, `hook-variants`, `ugc`, `tvc`, `talking-head`...) |
 | `pesquisador` (Opus) | busca e leitura do TinyFish, web, `deep-research`, `watch`, `analyze_hook` | TinyFish dataset e deep research |
-| `revisor-de-risco` (Opus; Fable na peça final) | leitura do projeto e da web | |
+| `revisor-de-risco` (Fable; uma leitura, com a peça montada) | leitura do projeto e da web | |
 | `supervisor` (Fable) | `checar.py`, `pedido.py`, leitura de tudo | |
 | `ajudante` (Haiku) | busca rápida na web, só para o dono | nada pago |
 | `planejador` (Opus) | leitura do projeto, `pedido.py listar`, `git log`; escreve só o `pedidos/PLANO.md` | |

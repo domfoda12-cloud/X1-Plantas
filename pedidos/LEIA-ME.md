@@ -114,13 +114,14 @@ Erro achado não é só corrigido: a causa vira **regra escrita ou conferência 
 |---|---|---|
 | Ler o prompt, interpretar, dividir, conferir e responder ao dono | **Opus** | a conversa principal |
 | Socorro quando o Opus trava ou erra; auditoria a cada 3 fichas | **Fable** | `supervisor` |
-| Trabalho do projeto: planta, texto, vídeo, código, design, revisão de risco | **Opus** | o agente do papel (`arquiteto`, `redator`, `designer`, `editor-video`, `estrategista`, `revisor-de-risco`); sem papel certo, agente geral com `model: opus` |
+| Trabalho do projeto: planta, texto, vídeo, código, design | **Opus** | o agente do papel (`arquiteto`, `redator`, `designer`, `editor-video`, `estrategista`); sem papel certo, agente geral com `model: opus` |
+| Revisão de risco do texto ou da peça montada, antes de ir ao público | **Fable** | `revisor-de-risco`, uma leitura só (abaixo) |
 | Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Opus** | `pesquisador`, em um passo só (abaixo) |
 | Tarefa simples **para o dono** (não para os agentes): organizar um evento, responder uma pergunta, uma busca rápida, um lembrete | **Haiku** | `ajudante` |
 
 - Na dúvida entre dois modelos: **qualidade primeiro** para o que vai ao público; o mais barato para o que é simples e pessoal.
 - Tarefa de uma linha (trocar uma palavra, rodar a conferência) o Opus faz: delegar custa mais que fazer.
-- O Revisor de risco roda no Opus no rascunho e **no Fable na peça final** (chamada com `model: fable`; dono, 22/11/2026). Continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
+- O Revisor de risco lê **uma vez só, no Fable, quando o texto ou a peça está montada** como vai ao público (dono, 26/11/2026; de 22 a 26/11 eram duas leituras: rascunho no Opus e peça final no Fable). **Rascunho não vai ao Revisor:** quem escreve confere antes contra a lista de frases vetadas e os limites (`contexto/redator.md`) e só manda a versão montada. Depois de um veto, ele reconfere o que foi corrigido, no mesmo anexo. Continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
 
 ### Pesquisa em um passo só
 

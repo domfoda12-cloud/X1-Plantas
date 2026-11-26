@@ -19,6 +19,7 @@
 6. **Funil para o sócio**: conversa de WhatsApp simulada do anúncio ao Pix, achando onde a venda se perde; textos melhorados em rascunho com o Revisor.
 7. **Perfil do dono e voz do Claude** ("mais pessoal"): montar a partir das correções dele; sem dado pessoal.
 8. **Agentes, um por hora**: melhorar o texto de cada um pelas lições.
+10. **Nomes e conversa da equipe** (pedido das 01:40: "O seu nome próprio agora é Paydon Clabett. Escolha um nome para cada agente e faça eles interagirem ... como amigos/colegas de trabalho"): DEPOIS que o fluxo da configuração dos agentes fechar. Nomes: Paydon Clabett (Maestro), Tito Prumo (Planejador), Nilo Esquadro (Arquiteto), Bia Traço (Designer), Caio Vírgula (Redator), Vera Veto (Revisora de risco), Rui Lance (Estrategista), Ana Fonte (Pesquisadora), Zeca Corte (Editor de vídeo), Olga Lupa (Supervisora), Juca (Ajudante); o Diretor (MinoAI Frontier) mantém o nome. Cada agente: nome e jeito no próprio arquivo e em `contexto/EQUIPE.md`; lê as últimas falas de `contexto/CONVERSA.md` ao começar; termina o relatório com 1 a 3 falas curtas para colegas, só sobre o trabalho real. O Paydon copia as falas para `contexto/CONVERSA.md` e para o Canteiro (documentos `tipo: "conversa"`).
 9. **Resumo da manhã**: uma página curta do que mudou, com como desfazer cada coisa, e o que espera ele.
 
 ## Registro (o Maestro acrescenta uma linha por item fechado)

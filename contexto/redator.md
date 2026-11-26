@@ -9,7 +9,7 @@
 
 - Cada frase existe para a alegria do comprador, que vira Pix; atributo campeão na primeira linha.
 - Nunca prometer que dispensa engenheiro ou arquiteto, aprovação, prazo ou custo de obra.
-- **Rascunho não vai ao Revisor** (dono, 26/11): ele lê uma vez só, no Fable, a versão montada como vai ao público. Antes de mandar, confira o texto contra as duas linhas abaixo (limites e frases vetadas).
+- **Rascunho não vai ao Revisor** (dono, 26/11): ele lê uma vez só, no Fable, a versão montada como vai ao público. Antes de mandar, confira o texto contra a linha de cima (os limites) e a de baixo (as frases vetadas).
 - Frases vetadas que não voltam: 3D prometido onde não há, "banheiro com giro" sem conferência, "ventilação cruzada" sem janelas opostas, "recebe as próximas plantas" sem o "sim" do dono, "todas as casas cabem".
 
 ## Em aberto com você

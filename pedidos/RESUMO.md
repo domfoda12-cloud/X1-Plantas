@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 77 documentos
+## Os 79 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -31,7 +31,7 @@ Regra do dono (22/11/2026). Todo prompt dele é guardado, interpretado por um mo
 
 Seções: Quem manda no sistema; Pensar antes de fazer (dono, 22/11/2026); Perguntar sempre (dono, 22/11/2026); O plano de tudo; Plano vetado antes de fazer (dono, 22/11/2026); Erro de sintonia entre agentes (dono, 22/11/2026); Ferramenta ou agente novo (dono, 23/11/2026); Buscar o que o dono já disse (22/11/2026); Faltou informação do dono? Sugira, não espere (dono, 22/11/2026); Consertar de vez (dono, 22/11/2026: "não só conserte, remende"); O caminho de um prompt; Quem faz o quê; O pacote do executor; A ficha; ….
 
-Tamanho: 3073 palavras.
+Tamanho: 3149 palavras.
 
 ### [Lições da equipe (registro único, só acréscimo)](LICOES.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 4708 palavras.
+Tamanho: 4784 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -134,6 +134,14 @@ Proposta do `organizador`, segunda versão (passo F2 do `pedidos/PLANO.md`; a pr
 Seções: O que mudou desde a manhã; Contagem; Decisões do dono, na ordem em que ele deveria tratar; Saíram da lista de decisões; Cartão → grupo (para o Maestro atualizar o Canteiro).
 
 Tamanho: 3876 palavras.
+
+### [Diagnóstico do júri (26/11/2026)](anexos/diagnostico-do-juri-2026-11-26.md)
+
+Pedido do dono (26/11): "Nosso juri nao parece estar sendo muito eficaz". Ficha: `pedidos/2026-11/2026-11-26-0105-nova-configuracao-dos-agentes-pesquisador-no-opus-revisor-um.md`. Este documento é só leitura e proposta. Nenhuma regra mudou por causa dele. Os números são os que já estavam escritos…
+
+Seções: Resumo em 6 linhas (para o dono); 1. Todas as rodadas que achei; 2. Quantas rodadas fecharam uma decisão; 3. O que só o júri achou, e o que foi repetição; 4. As causas, cada uma com a prova; 5. As mudanças propostas, em ordem de efeito; 6. O que NÃO mudar; 7. O que eu não conferi.
+
+Tamanho: 4305 palavras.
 
 ### [E07 e a parede na divisa: o que fazer com a parede sem janela](anexos/e07-parede-na-divisa-ideias.md)
 
@@ -332,6 +340,14 @@ Pedido do dono (24/11, resposta à decisão 8 no quadro): o e-book terá "uma pa
 Seções: 1. As 17 páginas de hoje e para onde vão; 2. A ordem proposta: a casa primeiro, o geral depois; 3. Onde entram as páginas novas; 4. Como o leitor sabe em que parte está (sem trocar a identidade); 5. Esboço do sumário novo; 6. O que muda no gerador (para o D17; eu não mexi); 7. Perguntas; 8. O que não conferi.
 
 Tamanho: 2786 palavras.
+
+### [Noite de 26/11: autonomia e fila de trabalho](anexos/noite-2026-11-26-fila.md)
+
+O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go crazy, dont ask me for permission for ANYTHING, only rules: dont fuck me up and dont spend my money. This doesnt apply only for the ads and ebook, i still want to decide on the final but feel free to keep tweaking it and…
+
+Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
+
+Tamanho: 653 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 

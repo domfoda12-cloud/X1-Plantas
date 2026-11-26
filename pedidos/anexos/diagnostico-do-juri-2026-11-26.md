@@ -10,7 +10,7 @@
 3. O gasto anotado passa de 5,6 milhões de tokens (a unidade que come o seu limite de uso), e 6 das 11 rodadas nem têm o gasto anotado. Uma leitura do Revisor gasta de 70 a 91 mil e achou todos os erros plantados nas duas provas dele.
 4. As causas principais: o mínimo de 8,5 nunca foi atingido por ninguém; os jurados julgam um texto sobre a peça, não a peça pronta; o júri foi usado em perguntas que só você responde; e as regras novas não têm quem obrigue (na rodada de hoje, várias foram puladas).
 5. Proponho 5 mudanças, em ordem de efeito. A primeira: aprovar quando não sobra defeito grave confirmado, em vez de exigir a média 8,5. Nenhuma vira regra antes de um teste com erro plantado.
-6. **Você decide uma coisa:** se dizer "sim", rodamos UMA prova com erro plantado (a prova 3 gastou cerca de 1,6 milhão) e só depois mexemos na regra. Se disser "não" ou não responder, o júri fica como está, só com o que você já aprovou hoje (júri só para decisão cara ou pública), e nada mais muda.
+6. **Você decide uma coisa:** se você disser "sim", rodamos UMA prova com erro plantado (a prova 3 gastou cerca de 1,6 milhão) e só depois mexemos na regra. Se disser "não" ou não responder, o júri fica como está, só com o que você já aprovou hoje (júri só para decisão cara ou pública), e nada mais muda.
 
 ---
 

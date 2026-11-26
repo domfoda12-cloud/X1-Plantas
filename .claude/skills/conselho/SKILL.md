@@ -14,7 +14,7 @@ Regras completas: `CONSELHO.md` na raiz do projeto. Siga estes passos.
    - Completo: abra os agentes de `.claude/agents/` no máximo dois de cada vez (dono, 24/11: no máximo 2 agentes juntos), cada um com a tarefa e a pergunta "qual skill ou ferramenta você propõe, e vale a pena?". Peça a resposta no formato de uma linha.
 4. **Mostre a mesa** ao dono: as linhas de cada membro e a decisão pela regra da seção 4 (maioria, sem veto, empate pelo maior efeito em venda, depois o mais barato).
 5. **Itens reservados ao dono** (preço, título, gasto, publicação, contratação, ferramenta paga): pare e peça o "sim".
-6. **Execute** só o aprovado, na ordem que o Maestro definir. Depois da execução, o Revisor confere a peça final.
+6. **Execute** só o aprovado, na ordem que o Maestro definir. Depois da execução, o Revisor confere a peça montada, uma vez só, no Fable (dono, 26/11/2026); rascunho não vai a ele: quem escreve confere antes contra `contexto/redator.md`.
 7. **Registre** em `CONSELHO.md`, seção 7 (data, tarefa, votos, decisão, o que medir), rode `python3 ferramentas/atualizar-painel.py` e salve com `python3 ferramentas/salvar.py "mensagem"`.
 
 ## Neste projeto (X1-Plantas)
