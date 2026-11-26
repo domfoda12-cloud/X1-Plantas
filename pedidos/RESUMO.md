@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 100 documentos
+## Os 101 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -387,7 +387,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 2065 palavras.
+Tamanho: 2215 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -701,9 +701,9 @@ Tamanho: 647 palavras.
 
 [Revisor] SIM no post 2; SIM SE nos posts 4 e 7 e nas notas. Rodou no Opus, em rascunho; a peça final passa pelo Fable. Conferido contra `PLANTAS.md`, os dados da E03 e da F01, o `config.json` e as imagens 3D paradas. Os números batem (E03: 56 m², 2 quartos, 1 banheiro, 5 x 25, mínimo 5,0 x 20,6;…
 
-Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE; Telas dos posts 2, 4 e 7 (rascunho do Designer, passo F20): SIM SE · Revisor, 24/11, Opus.
+Seções: Post 4 (Casa Fita): SIM SE; Post 7 (Casa Família Compacta): SIM SE; Notas e outros arquivos: SIM SE; Telas dos posts 2, 4 e 7 (rascunho do Designer, passo F20): SIM SE · Revisor, 24/11, Opus; Reconferência (26/11, item 8 da fila da noite; gravada pelo Paydon, a Vera só lê).
 
-Tamanho: 844 palavras.
+Tamanho: 1022 palavras.
 
 ### [Veto do Revisor de risco: porta, Casa Fita, kit do anúncio, guia, pôster C e "como mobiliar" (24/11/2026)](anexos/veto-rascunhos-2026-11-24.md)
 
@@ -784,6 +784,12 @@ Tamanho: 6829 palavras.
 Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py` consolidar, dono 26/11: consolida, não descarta). Continuam valendo.
 
 Tamanho: 325 palavras.
+
+### [Lições antigas de contexto/revisor-de-risco.md](historico/licoes-revisor-de-risco.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py licao --consolidar`, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 182 palavras.
 
 ### [Prova de entrada, 26/11/2026 09:10 UTC](provas/rodada-2026-11-26-0910.md)
 

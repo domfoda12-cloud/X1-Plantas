@@ -8,7 +8,7 @@ Cada item é uma troca que o Revisor já pediu; de onde veio, entre parênteses.
 
 - **Frases vetadas que não voltam:** 3D prometido onde não há; "banheiro com giro" sem conferência; "ventilação cruzada" sem janelas opostas; "recebe as próximas plantas" sem o "sim" do dono; "todas as casas cabem"; o lado do sol de memória (vem do `PLANTAS.md`; a tabela estava espelhada, 26/11).
 - **Bloco ao cliente só com o que vai ao cliente.** Nota ao sócio ou "o dono decide" fica fora, no "Quando usar" (Vera, `/compactapreco` e `/formas`, 26/11).
-- **Lote, recuo ou medida de terreno:** junto vai "o recuo da sua cidade, a prefeitura confirma"; para quem ainda vai comprar o lote, "antes de fechar" (Vera, `/semlote`, `/ofertasemlote`, 26/11). Prefeitura e banco, com a condição: "se for financiar" (Vera, pág. 23, 25/11).
+- **Lote, recuo ou medida de terreno** (regra da Vera, 26/11): frente e fundo juntos, nunca só a frente; todo "cabe" com "com os recuos de referência" na mesma frase; "o recuo da sua cidade, a prefeitura confirma" junto de resultado sobre o lote da pessoa e de número para comprar terreno ("antes de fechar"; `/semlote`, `/ofertasemlote`). Em post e anúncio que chamam para o WhatsApp, as duas primeiras bastam. Prefeitura e banco, com a condição: "se for financiar" (Vera, pág. 23, 25/11).
 - **Nada que soe como desenho do lote da pessoa:** dizemos qual casa cabe, pelos recuos de referência (Vera, `/quem`, 26/11).
 - **Sem futuro que o dono não prometeu:** "ainda", "em breve" (Vera, "ainda não temos CNPJ", 26/11).
 - **A frase vale para quem a recebe?** Quem veio do anúncio não viu planta nenhuma; "aqui está" só com o anexo na conversa (Rui e Vera, `/confia`, `/planta`, 26/11).

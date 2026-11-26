@@ -79,7 +79,7 @@ Funções: `sem_acento`, `mascarar`, `pasta_do_projeto`, `falas`, `buscar`, `tes
 
 Fluxos fixos (dono, 26/11/2026: "ultra max"): a conferência mais barata que pega o erro, primeiro por programa.
 
-Funções: `negado`, `casas`, `conferir_texto`, `conferir_passe`, `conferir_juri`, `conferir_registro`, `tabela`, `gasto`, `registrar`, `relatorio`, `nivel_desc`, `prova_estado`, `prova_nota`, `testar`, `main`.
+Funções: `negado`, `casas`, `conferir_texto`, `conferir_trocas`, `conferir_passe`, `conferir_juri`, `conferir_registro`, `tabela`, `gasto`, `registrar`, `relatorio`, `nivel_desc`, `prova_estado`, `prova_nota`, `testar`, `main`.
 
 ### [`ferramentas/guardar-pedido.py`](guardar-pedido.py)
 

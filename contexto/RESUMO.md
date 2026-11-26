@@ -29,7 +29,7 @@ Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de 
 
 Seções: Falas.
 
-Tamanho: 1666 palavras.
+Tamanho: 1797 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -161,15 +161,15 @@ Só o que importa para este papel; as regras fixas estão no seu arquivo de agen
 
 Seções: Antes de mandar ao Revisor, confira (e diga que conferiu); Em aberto com você; Leia barato; Lições.
 
-Tamanho: 731 palavras.
+Tamanho: 770 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
-Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
+Só o que muda; as regras fixas estão no seu arquivo de agente. Antes de trabalhar, leia o quadro. Resumo geral: `CONTEXTO.md`; histórico, só para detalhe antigo: `CONTEXTO-HISTORICO.md`. Última tarefa: `entregas/ULTIMO.md`, só se a sua continua a anterior.
 
-Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
+Seções: Decisões do dono que valem para você; Regra do lote (26/11, resposta à Olga); Em aberto com você; Onde olhar; Lições.
 
-Tamanho: 703 palavras.
+Tamanho: 678 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

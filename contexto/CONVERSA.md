@@ -47,3 +47,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 09:10 · Olga → Caio: o item vale: medida de lote ligada à casa pede frente, fundo e o aviso do recuo na mesma peça, mesmo quando a linha não diz 'cabe'. (árbitra da prova de entrada)
 - 26/11 09:25 · Olga → Paydon: os fluxos estavam verdes, mas texto-publico, pagina-ebook e planta diziam "aprovado" com o programa quebrado; rodei os três casos com agentes de mentira. (auditoria dos fluxos)
 - 26/11 09:25 · Olga → Vera: o fluxo te dizia "já passou pelo programa", e o programa deixava passar "A obra custa R$ 80 mil"; leia como se ninguém tivesse lido antes. (auditoria dos fluxos)
+- 26/11 09:56 · Vera → Olga: em post e anúncio basta "com os recuos de referência", com frente e fundo na frase; a prefeitura é condição no resultado sobre o lote da pessoa. O B1 fica; o post 7 ganha o aviso, que eu pedi no 4 e esqueci no 7. (item 8 da fila)
+- 26/11 09:56 · Vera → Caio: a linha do lote do seu contexto estava mais larga que a minha regra; o Paydon gravou o texto novo. A folha do funil, reescrita para o dono, volta a mim montada. (item 8 da fila)
+- 26/11 09:56 · Vera → Paydon: depois de um SIM SE o fluxo aprovava sem eu reler; dou só troca pronta ou corte, e o programa confere. (item 8 da fila)

@@ -7,6 +7,7 @@ Uso:
   python3 ferramentas/fluxo.py texto <arquivo> [--json]   frases vetadas, promessas proibidas e números da casa contra o
                                                           PLANTAS.md (erro); lote sem prefeitura, nota interna, hora futura (aviso)
   python3 ferramentas/fluxo.py pagina <pdf> <n> [--json]   o mesmo que "texto", no texto da página n de um PDF de prévia
+  python3 ferramentas/fluxo.py trocas <arquivo> <conds.json|->   as condições da Vera ("por" presente, "corte" ausente) entraram?
   python3 ferramentas/fluxo.py passe <arq.json|-> [--publico]   passe entre agentes com forma fixa; arquivo citado existe e o
                                                           git acompanha; --publico exige a ideia do Diretor com a fonte
   python3 ferramentas/fluxo.py juri <arq.json|->           recusa rodada de júri incompleta (CONSELHO.md 5b) e calcula o resultado
@@ -112,7 +113,7 @@ def conferir_texto(txt, agora=None):
             if re.search(rx, linha, re.I):
                 achados.append((i, "aviso", msg))
         if re.search(r"\b(lote|recuo)s?\b", low) and "prefeitura" not in low and re.search(r"\d", low):
-            achados.append((i, "aviso", "lote ou recuo com medida sem 'a prefeitura confirma' (Vera, 26/11)"))
+            achados.append((i, "aviso", "lote ou recuo com medida: confira a regra do lote (contexto/revisor-de-risco.md)"))
         # números da casa: só quando a linha fala de UMA casa (código ou nome)
         citadas = [c for c, d in base.items() if re.search(rf"\b{c}\b", linha) or d["nome"].lower() in low]
         if len(citadas) == 1:
@@ -136,6 +137,22 @@ def conferir_texto(txt, agora=None):
                 if (int(m.group(1)), int(m.group(2))) > (agora.hour, agora.minute):
                     achados.append((i, "aviso", f"hora {m.group(0)} de hoje passa da hora real ({agora:%H:%M} UTC): rode date -u"))
     return achados
+
+
+def conferir_trocas(txt, conds):
+    """As condições da Vera em troca pronta entraram? "por" tem de estar no texto e "corte" não (Vera, 26/11:
+    depois de um SIM SE o fluxo aprova sem ela reler; quem conduz confere comparando texto)."""
+    norm = lambda s: re.sub(r"\s+", " ", str(s or "")).strip()
+    t = norm(txt)
+    falta = []
+    for k, c in enumerate(conds or [], 1):
+        if norm(c.get("por")) and norm(c.get("por")) not in t:
+            falta.append(f"condição {k}: o texto novo não está no arquivo: {norm(c['por'])[:120]}")
+        if norm(c.get("corte")) and norm(c.get("corte")) in t:
+            falta.append(f"condição {k}: o trecho que era para sair continua: {norm(c['corte'])[:120]}")
+        if not norm(c.get("por")) and not norm(c.get("corte")):
+            falta.append(f"condição {k}: sem troca pronta (nem 'por' nem 'corte'): o autor não tem como provar que aplicou")
+    return falta
 
 
 # --- 2. Passe entre agentes --------------------------------------------------------------------------------------------
@@ -530,6 +547,8 @@ def testar():
         tem = len({i for i, t, _ in conferir_texto(frase) if t == "erro"})
         if tem != quer:
             falhas.append(f"frase da auditoria: {frase!r} deu {tem} erro(s), esperado {quer}")
+    if conferir_trocas("a casa  nova\nfica", [{"por": "casa nova"}, {"corte": "velha"}]) or len(conferir_trocas("velha", [{"por": "nova"}, {"corte": "velha"}, {}])) != 3:
+        falhas.append("conferência das trocas da Vera errada")
     tarde = datetime(2026, 11, 26, 6, 16, tzinfo=timezone.utc)
     if not any("hora" in m for _, _, m in conferir_texto("26/11 06:45 feito", tarde)) or conferir_texto("26/11 06:10 feito", tarde):
         falhas.append("hora futura não foi pega (ou a certa foi acusada)")
@@ -653,6 +672,10 @@ def main(a):
         print(json.dumps({"texto": txt, "achados": [{"linha": i, "tipo": t, "msg": m} for i, t, m in achados]}, ensure_ascii=False)
               if "--json" in a else "\n".join(f"[{t.upper()}] linha {i}: {m}" for i, t, m in achados) or "nada achado")
         sys.exit(1 if any(t == "erro" for _, t, _ in achados) else 0)
+    if cmd == "trocas" and len(a) == 3:
+        falta = conferir_trocas(Path(a[1]).read_text(encoding="utf-8"), _carrega(a[2]))
+        print(json.dumps({"ok": not falta, "falta": falta}, ensure_ascii=False))
+        sys.exit(1 if falta else 0)
     if cmd == "passe" and len(a) >= 2:
         erros = conferir_passe(_carrega(a[1]), "--publico" in a)
         print(json.dumps({"ok": not erros, "erros": erros}, ensure_ascii=False))

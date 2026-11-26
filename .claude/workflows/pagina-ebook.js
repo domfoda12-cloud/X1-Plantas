@@ -33,9 +33,12 @@ const ACHADO = {
   required: ['chave', 'texto', 'licao'],
 }
 const ACHADOS = { type: 'object', properties: { achados: { type: 'array', items: ACHADO }, nota: { type: 'string' } }, required: ['achados'] }
+const CONDICAO = { type: 'object', properties: { ...ACHADO.properties,
+  por: { type: 'string', description: 'o texto novo, palavra por palavra, como vai ficar no arquivo' },
+  corte: { type: 'string', description: 'o trecho exato que sai (quando a condição é cortar)' } }, required: ACHADO.required }
 const VERA = {
   type: 'object',
-  properties: { veredito: { type: 'string', enum: ['SIM', 'SIM SE', 'NÃO'] }, condicoes: { type: 'array', items: ACHADO }, nota: { type: 'string' } },
+  properties: { veredito: { type: 'string', enum: ['SIM', 'SIM SE', 'NÃO'] }, condicoes: { type: 'array', items: CONDICAO }, nota: { type: 'string' } },
   required: ['veredito', 'condicoes'],
 }
 
@@ -123,7 +126,7 @@ if (tecvis.length && voltas < 2) {
 phase('Vera')
 const vera = await medir('vera', 'A', () => agent(
   `Leia uma vez, como vai ao comprador, a página ${A.pagina} do e-book (${PNG}; texto: ${JSON.stringify(prog.texto).slice(0, 4000)}). ` +
-  `Veredito SIM, SIM SE ou NÃO; cada condição com o trecho, o motivo e uma lição de uma linha para quem fez a página. Passe do autor: ${JSON.stringify(passe)}.`,
+  `Veredito SIM, SIM SE ou NÃO; cada condição com o trecho, o motivo, a troca pronta ("por": o texto novo palavra por palavra; ou "corte": o trecho que sai) e uma lição de uma linha para quem fez a página. Passe do autor: ${JSON.stringify(passe)}.`,
   { label: 'vera (revisora de risco)', phase: 'Vera', agentType: 'revisor-de-risco', schema: VERA }))
 for (const c of (vera && vera.condicoes) || []) achados.push({ autor: AUTOR, ...c, achado_por: 'vera' })
 conf['vera'].achados_proprios = ((vera && vera.condicoes) || []).length
@@ -133,6 +136,9 @@ if (vera && vera.veredito === 'SIM SE') {
   if (voltas < 2) {
     passe = await autor('Aplique as condições da Vera, uma por uma, sem mudar mais nada:\n' + vera.condicoes.map(c => `- ${c.texto}`).join('\n'))
     prog = await programa()
+    // a página sai do gerador: a troca da Vera é conferida no texto extraído da página montada
+    const tc = lerJson((await rodar('programa:trocas', `python3 - <<'FIM'\nimport json,sys\nsys.path.insert(0,'ferramentas')\nimport fluxo\nprint(json.dumps({'falta': fluxo.conferir_trocas(${JSON.stringify(JSON.stringify(prog.texto))}, json.loads(${JSON.stringify(JSON.stringify(vera.condicoes.map(c => ({ por: c.por, corte: c.corte }))))}))}))\nFIM`)).saida, { falta: ['saída ilegível'] })
+    if ((tc.falta || []).length) prog.achados.push(...tc.falta.map(m => ({ linha: 0, tipo: 'erro', msg: 'troca da Vera: ' + m })))
     resultado = !limpa() ? 'vai ao dono (conserto não passou no programa)' : 'aprovada na prévia, com as condições da Vera'
   } else resultado = 'vai ao dono (2 voltas gastas; condições da Vera em aberto)'
 }
