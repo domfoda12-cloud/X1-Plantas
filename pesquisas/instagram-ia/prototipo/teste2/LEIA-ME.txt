@@ -1,0 +1,41 @@
+TESTE 2 DO PRESIDENTE DO JURI: (a) som que carrega a conta e (b) letra com acento num estilo proprio
+Data: 26/11/2026. Tudo grátis, só com o que já estava na máquina (Pillow 12.3.0, numpy 2.5.3, ffmpeg 6.1.1, fonte Inter OFL-1.1 do sistema). Nada postado, nada pago, sem commit.
+
+ARQUIVOS
+- reel2.py   o script (python3 reel2.py [saida.mp4]); QUADROS=0,100 QDIR=pasta salva quadros de amostra
+- reel2.mp4  o reel
+
+O QUE O REEL FAZ (depois do recado do dono: "a pergunta é boa, a apresentação estava meh")
+- Quadro 0 já é uma CENA de duelo: A (1 pizza de 35 cm) à esquerda, B (2 de 25 cm) à direita, "VS" no meio, "QUAL TEM MAIS?" por 1 s. Impacto (baque + tremida) no início.
+- A conta acontece EM CIMA das pizzas: o raio é riscado a giz (r = 17,5 e r = 12,5), "área = π · r²" aparece, e as fatias enchem como tinta, uma a uma; o placar de cada lado sobe junto.
+- A enche primeiro até 962. B corre atrás e freia perto do fim (15 fatias = 921, ainda perde); a 16ª e última fatia vira para 982. Virada na última fatia: é a conta real, não um efeito.
+- Trava: risco vermelho na pizza grande, "PEGADINHA!" (só aparece porque o código calculou que a intuição, a pizza maior, perdeu), "+20 cm² (uns 2% a mais)", fecho "e aí, acertou?" e "comenta A ou B".
+- Todos os números saem do cálculo no script (assert confere 962 e 982): A = π·17,5² = 962,11; B = 2·π·12,5² = 981,75; diferença 19,63 cm² (2,0%).
+- Estilo: lousa escura com traço de giz (contorno tremido à mão, borda da massa tracejada). Troquei o caderno pela lousa porque o dono pediu tensão de duelo e o caderno claro ficava com cara de aula. Mesma escala nos dois lados (13 px por cm), então o tamanho na tela é honesto.
+
+O SOM (numpy, ondas senoidais com harmônicos; nada de terceiros; AAC 192k estéreo 48 kHz)
+- 0 a 1 s, assinatura: baque grave + "3 1 4 1 5" (os dígitos do π como graus de Dó maior).
+- Raios: chiado de giz enquanto risca; cada raio vira nota (17,5 → nota 58, 12,5 → nota 52, régua logarítmica).
+- "=" da fórmula: glissando subindo.
+- Cada fatia é uma nota cuja altura é o placar daquele lado, mesma régua para os dois (0 cm² grave, maior área agudo, arredondado ao semitom). A toca 48→71 no lado esquerdo; B toca 47→72 no lado direito. A última nota de B (72) é a primeira a passar a última de A (71): o ouvido ouve a virada.
+- Zumbido grave crescendo enquanto B corre atrás (tensão). Trava: baque + acorde maior forte na nota do vencedor. Fecho: duas notas subindo sem resolver ("e aí?").
+
+NÚMEROS MEDIDOS
+- Render: 18,9 s no total (real 19,8 s com o Python subindo), 360 quadros.
+- Arquivo: 3.233 KB (3,3 MB).
+- ffprobe: h264 1080x1920, 30/1 fps, 360 quadros, 12,000 s; aac 48000 Hz, 2 canais.
+- Acentos e sinais conferidos na Inter: á, í, π, ², ·.
+
+O QUE OLHEI E CORRIGI (3 quadros lidos, 2 rodadas)
+- Quadro 0 saía acinzentado por um flash e o título vazava da tela: flash tirado do quadro 0, título cabendo em 960 px.
+- Pizzas vazias no quadro 0 pareciam só círculos: entrou uma "sombra" da cor de cada pizza desde o início.
+- VS encostava no raio e na pizza grande; legenda final ficava baixa demais (área da legenda do Instagram): tudo subiu, fecho termina em y ≈ 1560.
+- "comenta A ou B" sem A e B na tela: os rótulos viraram "A: 1 de 35 cm" e "B: 2 de 25 cm".
+
+O QUE FICOU FRACO
+- Não ouvi o som (sem alto-falante aqui): a mistura, o volume do giz e se o acorde soa "forte" precisam de ouvido humano. O teste de "olhos fechados acertar só pelo som" ainda não foi feito.
+- A diferença de verdade é de 2%: no som ela vira 1 semitom (71 contra 72). Dá para ouvir que B termina mais alto, mas é sutil; talvez repetir as duas notas finais lado a lado antes do acorde.
+- Os pepperonis são bolinhas escuras genéricas e as linhas de corte pretas ficam duras; o traço branco do raio fica sobre uma linha de corte.
+- "PEGADINHA!", a diferença e o fecho ficam apertados no fim; nos 2 s finais a tela está cheia.
+- Sem voz. Não conferido no celular nem depois da recompressão do Instagram.
+- Inter é limpa demais para "giz"; o Designer pode querer uma letra mais de mão (precisa licença livre e acentos).
