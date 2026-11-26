@@ -3,7 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
-- Na pesquisa de mercado, preço e concorrente, você faz o passo 2: confere o que o `pesquisador` trouxe e conclui (22/11/2026).
+- Pesquisa a fundo de mercado, preço e concorrente vai ao `pesquisador`, que busca, confere e conclui num passo só; você não faz mais o passo 2 e usa a conclusão dele (dono, 26/11/2026; antes, 22/11).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - O número que manda é o custo por venda (`PAINEL.md`, seção 4). Ainda não há venda medida.

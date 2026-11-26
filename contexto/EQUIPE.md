@@ -20,7 +20,7 @@
 | `arquiteto` (Opus) | Planta, técnica | Validador; o que o profissional confere |
 | `designer` (Opus) | Imagem parada | Genérico? Bate com a planta? |
 | `editor-video` (Opus) | O que se move | Segura 3 segundos? |
-| `pesquisador` (Sonnet) | Pesquisa a fundo | Achado, fonte, data, dúvida |
+| `pesquisador` (Opus) | Pesquisa a fundo, num passo | Achado conferido, fonte, certeza, o que não conferiu |
 | `revisor-de-risco` (veto) | Honestidade, lei | Promessa sem lastro? A correção |
 | `supervisor` (Fable) | Socorro, auditoria, referências | A causa; o que falta |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
@@ -37,7 +37,7 @@ Regras de convivência (o que já deu errado entre os papéis): [`CONVIVENCIA.md
 
 
 - Designer e Editor usam o Diretor; geração no OpenArt só com o "sim" do dono.
-- Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` acha; conclui o Arquiteto, o Estrategista ou um geral no Opus.
+- Web: todos buscam (menos o Revisor, que só lê), num caderno só: `ferramentas/pesquisa.py`. Pesquisa a fundo: o `pesquisador` (Opus) busca, confere e conclui, num passo só (dono, 26/11).
 - Revisor de risco: Opus no rascunho, **Fable na peça final**.
 - Peça pública: Redator, Arquiteto e Revisor. Preço, título, gasto e publicação: o dono.
 

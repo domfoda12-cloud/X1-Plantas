@@ -3,7 +3,7 @@
 > Só o que importa para este papel. **Antes de trabalhar, leia o [quadro](QUADRO.md).** O resumo geral está em [`CONTEXTO.md`](../CONTEXTO.md); o histórico completo, em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md) (abra só se precisar de um detalhe antigo). O resumo da última tarefa: [`entregas/ULTIMO.md`](entregas/ULTIMO.md), só se a sua tarefa continua a anterior.
 
 ## Decisões do dono que valem para você
-- Você busca na web e registra no caderno (`ferramentas/pesquisa.py`); pesquisa a fundo vai ao `pesquisador`, e você faz o passo 2 (22/11/2026).
+- Você busca na web e registra no caderno (`ferramentas/pesquisa.py`); pesquisa a fundo vai ao `pesquisador`, que busca, confere e conclui num passo só; você não faz mais o passo 2 e usa a conclusão dele (dono, 26/11/2026; antes, 22/11).
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Medidas da casa por fora; área dos cômodos por dentro (parede externa 15 cm, interna 12 cm).

@@ -10,7 +10,7 @@ Leia [`CONTEXTO.md`](CONTEXTO.md): o resumo curto com o que nunca muda e o que e
 
 **Cada agente lê só o seu contexto** (`contexto/<agente>.md`), não o histórico inteiro; a web vai ao caderno `pesquisas/` (`ferramentas/pesquisa.py`). **Tarefa com mais de uns 30 arquivos em contexto é grande demais: divida no planejamento.** **Ao terminar uma tarefa, quem a conduziu escreve um resumo de passagem** no fim de `contexto/entregas/REGISTRO.md` (modelo: `MODELO.md`, até 15 linhas) e copia para `ULTIMO.md`; quem pega a próxima lê o `ULTIMO.md`, não a conversa.
 
-**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Sonnet** e ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
+**Cada prompt do dono vira ficha** (regra dele, 22/11/2026; [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)): o **Opus** responde, executa e confere; o **Fable** (`supervisor`) socorre quando ele trava ou erra e audita a cada 3 fichas; a pesquisa vai ao **Opus**; o **Haiku** (`ajudante`) faz o simples e pessoal do dono.
 
 **Plano antes e pergunte sempre** (dono, 22 e 24/11): trabalho grande começa por plano escrito; o que só o dono sabe vira pergunta, sem travar ([`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md)).
 

@@ -115,17 +115,26 @@ Erro achado não é só corrigido: a causa vira **regra escrita ou conferência 
 | Ler o prompt, interpretar, dividir, conferir e responder ao dono | **Opus** | a conversa principal |
 | Socorro quando o Opus trava ou erra; auditoria a cada 3 fichas | **Fable** | `supervisor` |
 | Trabalho do projeto: planta, texto, vídeo, código, design, revisão de risco | **Opus** | o agente do papel (`arquiteto`, `redator`, `designer`, `editor-video`, `estrategista`, `revisor-de-risco`); sem papel certo, agente geral com `model: opus` |
-| Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Sonnet + Opus** | em dois passos (abaixo) |
+| Pesquisa a fundo: o Arquiteto aprender na web, norma, mercado, concorrente | **Opus** | `pesquisador`, em um passo só (abaixo) |
 | Tarefa simples **para o dono** (não para os agentes): organizar um evento, responder uma pergunta, uma busca rápida, um lembrete | **Haiku** | `ajudante` |
 
 - Na dúvida entre dois modelos: **qualidade primeiro** para o que vai ao público; o mais barato para o que é simples e pessoal.
 - Tarefa de uma linha (trocar uma palavra, rodar a conferência) o Opus faz: delegar custa mais que fazer.
 - O Revisor de risco roda no Opus no rascunho e **no Fable na peça final** (chamada com `model: fable`; dono, 22/11/2026). Continua com veto, e o dono continua decidindo preço, título, gasto e publicação.
 
-### Pesquisa em dois passos
+### Pesquisa em um passo só
 
-1. **`pesquisador` (Sonnet)** busca e lê as fontes e devolve uma lista: cada achado com a fonte, a data, o trecho que o sustenta e o que ele NÃO conseguiu confirmar.
-2. **O agente do assunto, no Opus** (o `arquiteto` para norma e planta, o `estrategista` para mercado, preço e concorrente; fora disso, agente geral no Opus) recebe essa lista e as fontes: confere se cada achado está mesmo na fonte, cruza os que se contradizem, separa fato de opinião e conclui o que isso muda no projeto. Só o resultado do passo 2 entra em documento.
+Dono, 26/11/2026. Antes eram dois passos: o `pesquisador` no Sonnet achava e um agente no Opus conferia e concluía.
+
+O **`pesquisador` (Opus)** busca, lê a fonte, confere e conclui, tudo na mesma chamada:
+
+- Cada achado vem com a fonte, a data e o trecho que o sustenta.
+- Ele confere se o achado está mesmo na fonte, cruza os que se contradizem e separa fato de opinião.
+- Ele diz o grau de certeza de cada achado: **fonte confirmada**, **fonte secundária** ou **hipótese**.
+- Ele diz o que NÃO conferiu.
+- Ele conclui o que isso muda no projeto. Hipótese e o que não foi conferido não entram em documento como fato.
+
+O agente do assunto (o `arquiteto` para norma e planta, o `estrategista` para mercado, preço e concorrente) usa a conclusão no trabalho dele; não há mais segundo passo. A conferência do Opus no passo 5 do caminho continua (relatório de agente é afirmação, não prova).
 
 ## O pacote do executor
 
@@ -175,7 +184,7 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 | Ficha podia ficar pela metade | `pedido.py conferir` roda dentro do `checar.py` |
 | Agente recebia "leia o projeto" ou um pedido solto | pacote do executor, com a ficha e os resumos |
 | O relatório do agente era aceito como verdade | campo "Conferência", a regra "afirmação não é prova" e a auditoria do Fable |
-| "Sonnet com Opus" na pesquisa não dizia quem faz o quê | pesquisa em dois passos |
+| "Sonnet com Opus" na pesquisa não dizia quem faz o quê | pesquisa em dois passos (até 26/11/2026; hoje, um passo só, no Opus) |
 | Ninguém ligava um pedido ao outro | campo "Ligação com as ideias gerais" e `IDEIAS-GERAIS.md` |
 
 ## Limites honestos

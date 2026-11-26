@@ -4,6 +4,7 @@
 
 | Data | Pedido | Estado | Quem executa |
 |---|---|---|---|
+| 2026-11-26 | [repensar o Canteiro do zero; deixar o Claude mais pessoal](2026-11/2026-11-26-0112-repensar-o-canteiro-do-zero-deixar-o-claude-mais-pessoal.md) | aberta | Maestro, com um fluxo: 2 agentes entendem, 3 desenham, 3 julgam, 1 sintetiza, 1 constrói,  |
 | 2026-11-26 | [nova configuracao dos agentes: pesquisador no Opus, Revisor uma leitura no Fable, organizador no planejador, juri so para decisao cara](2026-11/2026-11-26-0105-nova-configuracao-dos-agentes-pesquisador-no-opus-revisor-um.md) | aberta | Maestro, com um fluxo de agentes: um por mudança, em sequência, e três verificadores. |
 | 2026-11-26 | [socio entra no projeto: guia, quem decide, funil; ciclo de 1h religado](2026-11/2026-11-26-0058-socio-entra-no-projeto-guia-quem-decide-funil-ciclo-de-1h-re.md) | aberta | Maestro. |
 | 2026-11-26 | [noite livre ate de manha (dono cansado)](2026-11/2026-11-26-0012-noite-livre-ate-de-manha-dono-cansado.md) | aberta | Maestro (esta conversa); Redator, Revisor, Pesquisador, júri, um agente de código. |

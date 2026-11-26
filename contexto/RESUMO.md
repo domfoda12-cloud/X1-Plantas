@@ -35,7 +35,7 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 590 palavras.
+Tamanho: 595 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 
@@ -65,7 +65,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 523 palavras.
+Tamanho: 540 palavras.
 
 ### [Contexto do Designer](designer.md)
 
@@ -145,7 +145,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 524 palavras.
+Tamanho: 538 palavras.
 
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
@@ -169,7 +169,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 378 palavras.
+Tamanho: 392 palavras.
 
 ### [Contexto do Planejador](planejador.md)
 

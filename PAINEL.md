@@ -187,7 +187,7 @@ A rotina da semana está em [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FR
 | **Dono** | Decide preço, título, bônus, gasto, publicação e contratação; diz "sim" a cada uso do OpenArt e a cada post | Este painel e [`CONTEXTO.md`](CONTEXTO.md) |
 | **Maestro: a conversa principal (Opus)** e **Diretor: MinoAI Frontier** | O Maestro decide e rege; o Diretor dá a ideia do conteúdo e opina primeiro nele, com a fonte, e edita no computador do dono | [`instagram/MINOAI-FRONTIER.md`](instagram/MINOAI-FRONTIER.md#maestro-e-diretor-a-sessão-do-claude-no-seu-computador-com-a-minoai-frontier) |
 | **Conselho** (Redator, Estrategista, Arquiteto, Designer, Editor de vídeo, Pesquisador; Revisor de risco com veto) | Opina e executa só o que foi aprovado | [`CONSELHO.md`](CONSELHO.md), `contexto/<papel>.md` |
-| **Modelos** | A conversa principal interpreta e confere; Opus executa o trabalho do projeto; Sonnet pesquisa a fundo; Haiku faz a tarefa simples e pessoal do dono | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
+| **Modelos** | A conversa principal interpreta e confere; Opus executa o trabalho do projeto e pesquisa a fundo (`pesquisador`, um passo só); Haiku faz a tarefa simples e pessoal do dono | [`pedidos/LEIA-ME.md`](pedidos/LEIA-ME.md) |
 | **Parceiro** | Funil: WhatsApp, sequência de mensagens, venda e reembolso | [`ebook/vendas/`](ebook/vendas) |
 | **Arquiteto registrado** (a contratar, decisão do dono) | Revisar as plantas e o texto de responsabilidade técnica | [`reports/`](reports/RESUMO.md) |
 

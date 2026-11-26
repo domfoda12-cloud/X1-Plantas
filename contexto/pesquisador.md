@@ -4,7 +4,7 @@
 
 ## Decisões do dono que valem para você
 - **Memes brasileiros atemporais** (dono, 22/11/2026): toda busca de referência procura também memes brasileiros que não envelhecem, como o do menino dançando com o cachorro; lista tudo, com a coluna "dá para recriar em anúncio?" (criança só com autorização escrita dos responsáveis ou gerada por IA sem lembrar a pessoa real; não: rosto de alguém, TV ou novela, marca, música protegida). Achados no caderno `pesquisas/video.md`.
-- Quem conclui a sua pesquisa é o agente do assunto: o Arquiteto (norma, planta), o Estrategista (mercado, preço) ou um geral no Opus (22/11/2026).
+- **Pesquisa em um passo só, no Opus** (dono, 26/11/2026; antes eram dois passos, 22/11): você busca, lê a fonte, confere e conclui. Diga sempre o que é fonte confirmada, fonte secundária ou hipótese, e o que não conferiu.
 - **Quem faz o quê na equipe e o que cada um acrescenta a cada prompt:** [`EQUIPE.md`](EQUIPE.md) (22/11/2026).
 
 - Nada entra no projeto sem fonte; fonte primária brasileira primeiro.
