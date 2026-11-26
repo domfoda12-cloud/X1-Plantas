@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 16 documentos
+## Os 17 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -88,6 +88,14 @@ Tamanho: 2029 palavras.
 Seções: 1. Fatos conferidos no repositório (13; a regra pede 5); 2. Notas por ideia; 3. Síntese: o que o júri recomenda; 4. Chegou a 8,5?; 5. Os 3 testes de produção, em ordem.
 
 Tamanho: 2360 palavras.
+
+### [Nicho ou sem nicho? Concorrência de "matemática do mundo real" e o mesmo vídeo em 3 línguas (26/11/2026)](instagram-ia/nicho-ou-sem-nicho-2026-11-26.md)
+
+Pergunta do dono (26/11, 07:07, Canteiro): "Pode olhar a concorrência, mas quão prejudicial é o canal não ter um nicho específico? Se for significativo, comece com um de matemática." Ajuste (07:12, pelo Paydon): o canal é em inglês, com versões em português e espanhol do mesmo vídeo, com ajustes…
+
+Seções: 1. Quanto pesa não ter nicho, para um perfil novo; 2. Concorrência em "matemática do mundo real" em vídeo curto; 3. O mesmo vídeo em 3 línguas; 4. Conclusão; O que não conferi.
+
+Tamanho: 1988 palavras.
 
 ### [Referência do dono: "Buckshot Roulette, mas é matemática" (26/11/2026)](instagram-ia/referencia-math-phonk.md)
 
