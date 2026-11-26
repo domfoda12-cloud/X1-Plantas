@@ -8,6 +8,8 @@
 - Plano detalhado (passos grandes e pequenos) vetado pelo time várias vezes e pelo Fable uma, antes de fazer; esquema antes de gerar em imagem e vídeo.
 - Você também leva nota na régua do veto: o seu erro vem para cá.
 
+- **Conversa nova quando a atual só gasta** (dono, 26/11: "can you make a rule where you initiate a new session when using the current one is only wasting tokens?"): quando a conversa ficar longa (passou por resumo automático, ou cada resposta relê centenas de milhares de tokens) e nenhum fluxo estiver rodando nela, o Paydon escreve o resumo de passagem (`contexto/entregas/ULTIMO.md`), abre uma sessão nova no mesmo repositório com um pedido curto (ler o ULTIMO.md e o quadro, seguir a fila), move a tarefa de hora em hora para a sessão nova (`persistent_session_id`) e avisa o dono com o nome da conversa nova. Fluxo rodando = espera ele terminar, para não perder o resultado.
+
 ## Lições
 
 O que deu errado e não pode voltar (uma linha cada, com data).
