@@ -129,7 +129,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 881 palavras.
+Tamanho: 923 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 

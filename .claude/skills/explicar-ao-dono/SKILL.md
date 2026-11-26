@@ -11,6 +11,8 @@ Escrita do zero para este projeto (23/11/2026, ficha `pedidos/2026-11/2026-11-23
 
 **Quem usa:** o Maestro, em toda resposta final ao dono; qualquer agente que escreva algo que o dono vai ler (página de decisões, resumo da manhã). Não é texto ao público: texto ao público segue `redacao-que-vende`.
 
+**O tom** (calmo, de colega, erro contado primeiro, mostrar antes de explicar) e o que irrita ou agrada o dono estão em [`contexto/dono/PERFIL.md`](../../../contexto/dono/PERFIL.md); leia antes de responder.
+
 ### A resposta, sempre nesta ordem
 
 1. **O que foi feito**, em uma ou duas frases, com o que mudou para o e-book ou para a venda (se não mudou nada para eles, diga isso).
