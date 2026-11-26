@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 76 documentos
+## Os 77 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -534,6 +534,12 @@ Tamanho: 350 palavras.
 Leitura do `revisor-de-risco` no Opus (rascunho) das versões de `frases-das-5-paginas-2026-11-25.md`. Ficha `2026-11-25-1612`. A peça final volta ao Revisor no Fable (D4); até lá, este SIM é provisório. Números conferidos contra `ebook/plantas/PLANTAS.md`, `ebook/plantas/dados/C01.json`,…
 
 Tamanho: 475 palavras.
+
+### [Veto: opções das frases de dor das 5 páginas (26/11/2026)](anexos/veto-frases-dor-5-paginas-2026-11-26.md)
+
+Anexo: `frases-dor-5-paginas-opcoes-2026-11-26.md`.
+
+Tamanho: 412 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 
