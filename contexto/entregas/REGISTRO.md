@@ -60,7 +60,7 @@ Novas de 24/11: se a primeira página (mostra rascunho do e-book e 3 erros inter
 **Decisão do dono pendente:** "júri também para o que não se desfaz, mesmo sem custo e sem público: sim ou não?"; o passo J pelo conselho de bolso; ele precisa saber que uma linha do `CLAUDE.md` mudou na 0105 ("a pesquisa vai ao Opus").
 **Próximo passo:** item 11 (`contexto/` enxuto). Em todo pedido a agente nesta conversa, escrever o nome dele e "feche com `Falas:`".
 
-## 2026-11-26-0400-passada-do-ebook
+## 2026-11-26-0344-passada-do-ebook
 
 **Tarefa:** fila da noite, item 3: passada de melhoria do e-book página por página, em prévia (24 páginas, duas partes).
 **Feito:** Bia (Designer e comprador) e Nilo (técnica) olharam as 24 páginas; Vera leu uma vez, no Fable, com a peça montada: SIM. Consertos no gerador: lado do sol espelhado em `ferramentas/plantas.py` (C01 e E03 melhores com a rua ao sul; prova no `checar.py`), frente do lote na faixa da rua, rodapé fora da fita, varanda da C01 (págs. 9 e 11), "parte do sol", vão da F01, "área construída", "Melhor com a rua: ao sul", textos de venda e de post. As 5 frases na prévia marcada em amarelo.

@@ -1,6 +1,6 @@
 # Último resumo de passagem
 
-## 2026-11-26-0400-passada-do-ebook
+## 2026-11-26-0344-passada-do-ebook
 
 **Tarefa:** fila da noite, item 3: passada de melhoria do e-book página por página, em prévia (24 páginas, duas partes).
 **Feito:** Bia (Designer e comprador) e Nilo (técnica) olharam as 24 páginas; Vera leu uma vez, no Fable, com a peça montada: SIM. Consertos no gerador: lado do sol espelhado em `ferramentas/plantas.py` (C01 e E03 melhores com a rua ao sul; prova no `checar.py`), frente do lote na faixa da rua, rodapé fora da fita, varanda da C01 (págs. 9 e 11), "parte do sol", vão da F01, "área construída", "Melhor com a rua: ao sul", textos de venda e de post. As 5 frases na prévia marcada em amarelo.

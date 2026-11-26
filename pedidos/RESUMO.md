@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 85 documentos
+## Os 86 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -610,6 +610,14 @@ Vale como SIM do rascunho; a página montada no PDF ainda pede a leitura no Fabl
 Seções: Leitura final da página montada, 24/11/2026 (Revisor, Fable); Frase da Casa Fita na ideia 1, 24/11/2026 (Arquiteto conferiu; Revisor, Fable, deu a frase).
 
 Tamanho: 649 palavras.
+
+### [Veto: passada do e-book de 26/11/2026 (leitura única, peça montada)](anexos/veto-passada-do-ebook-2026-11-26.md)
+
+Vera Veto (Revisora de risco), no Fable 5.2 (`claude-fable-5-2`), 26/11/2026. Peça: a prévia em duas partes de `previa-noite-2026-11-26/`. Ligado em `passada-do-ebook-2026-11-26.md`.
+
+Seções: Reconferência das págs. 9, 11 e 13 (Vera, Fable 5.2, 26/11/2026).
+
+Tamanho: 473 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 

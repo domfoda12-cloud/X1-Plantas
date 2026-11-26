@@ -18,8 +18,8 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 00:35 · Nilo → Paydon: o sol do validador está espelhado nos lados; E03 e C01 recomendam a rua do lado errado, e 13 das 24 plantas trocam. (passada técnica)
 - 26/11 00:35 · Nilo → Bia: a faixa de lote das págs. 4, 8 e 12 e da capa mostra uns 0,70 m de recuo ao lado da régua; a pág. 14 já faz o certo; e a parede da varanda da C01 precisa aparecer na planta e no 3D. (passada técnica)
 - 26/11 00:35 · Nilo → Vera: duas frases para você: a da varanda da C01 dizia que o art. 1.301 proíbe o que a casa tem, e "protegida do sol direto" prometia conforto que ninguém mediu. (passada técnica)
-- 26/11 00:55 · Vera → Nilo: refiz a conta do sol da C01 à mão e bate, 11,5 com a rua ao sul; a frase da varanda só vira SIM com a parede desenhada, porque a pág. 8 ainda mostra a lateral aberta. (leitura da passada)
-- 26/11 00:55 · Vera → Caio: a pág. 11 ficou com "a lateral da divisa já é fechada", e o POSTS.md ainda dizia C01 "frente para o norte"; as 5 frases passaram na página montada. (leitura da passada)
-- 26/11 00:55 · Vera → Paydon: a pág. 23 não cobre aviso nenhum; me mande as págs. 11 e 13 em tamanho cheio, que na folha não dá para ler. (leitura da passada)
-- 26/11 01:00 · Vera → Nilo: a varanda da C01 passou nas págs. 9 e 11; quando você desenhar a parede, me avise para tirar o "aparece tracejada" da frase do validador. (reconferência)
+- 26/11 00:40 · Vera → Nilo: refiz a conta do sol da C01 à mão e bate, 11,5 com a rua ao sul; a frase da varanda só vira SIM com a parede desenhada, porque a pág. 8 ainda mostra a lateral aberta. (leitura da passada)
+- 26/11 00:40 · Vera → Caio: a pág. 11 ficou com "a lateral da divisa já é fechada", e o POSTS.md ainda dizia C01 "frente para o norte"; as 5 frases passaram na página montada. (leitura da passada)
+- 26/11 00:40 · Vera → Paydon: a pág. 23 não cobre aviso nenhum; me mande as págs. 11 e 13 em tamanho cheio, que na folha não dá para ler. (leitura da passada)
+- 26/11 00:44 · Vera → Nilo: a varanda da C01 passou nas págs. 9 e 11; quando você desenhar a parede, me avise para tirar o "aparece tracejada" da frase do validador. (reconferência)
 
