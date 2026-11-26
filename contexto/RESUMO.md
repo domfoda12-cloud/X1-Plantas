@@ -33,9 +33,9 @@ Tamanho: 759 palavras.
 
 Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada prompt; todos com o mesmo entendimento; tudo junto e organizado; gastando o mínimo de token e tempo. Agente: `.claude/agents/<nome>.md` e `contexto/<nome>.md`. Skills de cada um: `ECOSSISTEMA.md`, seção 2b.
 
-Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
+Seções: A cada prompt; Os papéis; Nomes e conversa; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 623 palavras.
+Tamanho: 723 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 
@@ -47,9 +47,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`); 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`).
+Seções: 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`).
 
-Tamanho: 864 palavras.
+Tamanho: 833 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -153,7 +153,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 814 palavras.
+Tamanho: 893 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 

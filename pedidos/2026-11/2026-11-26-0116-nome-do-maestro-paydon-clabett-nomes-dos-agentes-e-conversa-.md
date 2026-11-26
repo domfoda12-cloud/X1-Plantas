@@ -1,6 +1,6 @@
 # nome do Maestro (Paydon Clabett), nomes dos agentes e conversa da equipe no Canteiro
 
-**Estado:** aberta
+**Estado:** fechada
 
 **Prompt (palavra por palavra):** O seu nome proprio agora é Paydon Clabett
 Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho, ver essa interacao me parece interessante. Uma boa ideia do que adicionar no canteiro fx
@@ -23,9 +23,9 @@ Escolha um nome para cada agente e faca eles interagem uns com os outros como am
 
 **Conferência:** grep do nome em cada agente; um agente rodado devolve as falas; captura do Canteiro.
 
-**Resultado:** (a preencher)
+**Resultado:** (26/11, fila da noite item 10) Nome e jeito no topo de cada um dos 10 agentes (`.claude/agents/`) e na tabela de `contexto/EQUIPE.md` (seção "Nomes e conversa"); regra de ler as últimas 10 falas e fechar o relatório com `Falas:`; `contexto/CONVERSA.md` criado com as 3 falas que já existiam; o Paydon copia as falas (regra em `contexto/maestro.md`); o Canteiro já tinha a "Conversa da equipe" e ganhou a fala dos nomes; o `checar.py` acusa agente sem nome ou sem a conversa. Como desfazer: `git revert` deste commit. Conferência pendente: o primeiro agente rodado na fila (item 3) devolve as falas.
 
-**O que aprendi:** (a preencher)
+**O que aprendi:** maestro: a cópia do Canteiro que o registro dava como salva estava numa pasta que o git ignora (`ebook/plantas/rascunhos/`); só existe no disco desta sessão. A fonte de verdade é o próprio artifact (`Artifact read`).
 
 **Papéis afetados:** todos
 

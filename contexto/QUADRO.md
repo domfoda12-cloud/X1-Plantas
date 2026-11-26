@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`)
+
+- **O dono pediu:** "O seu nome próprio agora é Paydon Clabett. Escolha um nome para cada agente e faça eles interagirem uns com os outros como amigos/colegas de trabalho".
+- **O que mudou:** cada agente tem nome e jeito no topo do próprio arquivo e em `contexto/EQUIPE.md` (Tito Prumo, Nilo Esquadro, Bia Traço, Caio Vírgula, Vera Veto, Rui Lance, Ana Fonte, Zeca Corte, Olga Lupa, Juca; o Diretor mantém o nome); existe `contexto/CONVERSA.md`; o Canteiro já mostra a "Conversa da equipe"; o `checar.py` confere o nome e a leitura da conversa em cada agente.
+- **Todos:** ao começar, leiam as últimas 10 falas de `contexto/CONVERSA.md`; ao terminar, fechem o relatório com `Falas:` (1 a 3, só trabalho real). **Paydon:** copia as falas para a conversa e para o Canteiro.
+
 ## 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`)
 
 - **O dono pediu:** "Aplique" (à proposta do Maestro de configuração melhor dos agentes).
@@ -25,9 +31,3 @@
 - **O dono pediu:** "Queria testar algo no nosso sistema também, 'nunca confie na primeira coisa que pensar' o que acha?" ("sim" ao teste); "Também gostaria que o juri fosse mais stricit é possivel?" ("sim, gostei das regras").
 - **O que mudou:** `CONSELHO.md` 5b: cada jurado aponta 2 defeitos com arquivo e linha antes da nota; qualquer nota abaixo de 7 reprova; o presidente confere 5 fatos e quem afirmou fato falso perde a nota; prova com erro plantado a cada 3 rodadas e quem não pegar perde peso. Máximo de 2 rodadas mantido. **Teste de 3 fichas da segunda olhada:** antes de número, frase ao público, comando que grava ou apaga, ou gasto, a ficha tem "Segunda olhada" (primeira ideia, alternativa, o que provaria o erro, o que a conferência mostrou).
 - **Todos:** escrevam a segunda olhada nesses 4 casos. **Jurados:** sem 2 defeitos com prova, a nota não conta. **Supervisor:** confere a contagem da segunda olhada na próxima auditoria. **Designer:** a D50 é a primeira ficha do teste.
-
-## 25/11 · Identidade visual forte em tudo, antes do reset (ficha `2026-11-25-1613`)
-
-- **O dono pediu:** "o pdf está sem identidade alguma, acredito que a ultima coisa importante a se fazer antes do reset é solidificar uma identidade e deixar ela presente em tudo que criamos. Nao estava feio, estava bonito organizado mas sem chamar atencao alguma, a pessoa vai ler aquilo em 2min vai parar. Nossa geracao é a geracao dopamina".
-- **O que mudou:** a identidade é o D50, a única tarefa do "Agora". O Diretor (MinoAI Frontier) dá a ideia principal, o Designer faz o diagnóstico, 3 direções e as amostras (do nosso gerador, sem crédito pago), e o dono escolhe. Aplicar no gerador é o primeiro passo do reset, antes do "gera".
-- **Todos:** nada que vá ao público sai sem a identidade escolhida. **Designer:** dono do D50 e do manual. **Redator:** as frases das páginas viram o gancho de cada página. **Editor de vídeo:** a identidade vale também para o que se move, depois do e-book.

@@ -303,3 +303,12 @@ Novas de 24/11: se a primeira página (mostra rascunho do e-book e 3 erros inter
 **Não feito / ressalva:** o rtk não foi instalado (a trava da sessão recusou; não contornar). Na prova do júri (item 4) gastam-se ~1,6 M tokens: só com o "sim" do dono. O banco do Canteiro só deixa o dono escrever (o sócio ainda não).
 **Decisão do dono pendente:** identidade (Trena, Placa ou Porta acesa), as 5 frases de dor, o título (p14), "gera o PDF", o "sim" da prova do júri, se decisão irreversível vai ao júri, as perguntas Q1 a Q8 do grill-me do Instagram, o sócio escrever no Canteiro e a instalação do rtk.
 **Próximo passo:** seguir a fila pelo item 10 (nomes e conversa da equipe em `contexto/EQUIPE.md`, `contexto/CONVERSA.md` e nos agentes), depois o 11 (`contexto/` enxuto), o 3 (e-book página por página, só em prévia), o 5, o 6, o 7 e o 8, e por último o 9 (resumo da manhã). Um fluxo grande por hora, para racionar o limite. Não gravar `ebook/saida/`, não publicar nada, não gastar nada.
+
+## 2026-11-26-0255-nomes-e-conversa-da-equipe
+
+**Tarefa:** fila da noite, item 10: nome para cada agente e a equipe conversando como colegas (ficha 0116).
+**Feito:** nome e jeito no topo dos 10 agentes (`.claude/agents/`) e em `contexto/EQUIPE.md`; `contexto/CONVERSA.md` criado; regra do Paydon copiar as falas em `contexto/maestro.md`; aviso no quadro; fala nova no Canteiro; `checar.py` acusa agente sem nome ou sem a conversa.
+**Como conferir:** `python3 ferramentas/checar.py`; `grep -l "Seu nome é" .claude/agents/*.md`.
+**Não feito / ressalva:** nenhum agente rodou ainda com a regra nova (a primeira prova é o item 3). A cópia do Canteiro em `ebook/plantas/rascunhos/` é ignorada pelo git: a fonte de verdade é o artifact.
+**Decisão do dono pendente:** as mesmas de antes (identidade, 5 frases, título p14, "gera", prova do júri, rtk); ele pode trocar qualquer nome.
+**Próximo passo:** auditoria da Olga (3 fichas fechadas), depois o item 11 (`contexto/` enxuto).

@@ -35,3 +35,4 @@
 - 26/11 ~02:00 UTC: item 1 FECHADO (agentes: 4 mudanças, 25 achados dos verificadores, 20 consertados; diagnóstico do júri gravado). Ficha 0105 fechada.
 - 26/11 ~02:45 UTC: item 2 FECHADO (Canteiro refeito: página nova no mesmo link, 54 cartões migrados ou criados, 99 antigos arquivados com `nivel: "arquivo"`, nada apagado; 3 revisores deram 7, 7,5 e 6,5; 38 de 39 achados consertados; cópia em `ebook/plantas/rascunhos/quadro-tarefas.html`).
 - 26/11 ~02:50 UTC: item 12: passagem escrita em `contexto/entregas/ULTIMO.md`; a fila continua na sessão nova.
+- 26/11 ~02:55 UTC: item 10 FECHADO (nomes e jeito nos 10 agentes e em `contexto/EQUIPE.md`; `contexto/CONVERSA.md` criado; Canteiro com a fala nova; `checar.py` confere). Ficha 0116 fechada. Achado: a cópia do Canteiro em `ebook/plantas/rascunhos/` é ignorada pelo git; restaurada só no disco a partir do artifact.

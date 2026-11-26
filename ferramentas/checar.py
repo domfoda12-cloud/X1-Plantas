@@ -79,6 +79,9 @@ for ag in sorted((RAIZ / ".claude" / "agents").glob("*.md")):
         fora.append(f"agente {ag.stem}: não manda ler o seu contexto/{ag.stem}.md")
     if not (RAIZ / "contexto" / f"{ag.stem}.md").exists():
         fora.append(f"agente {ag.stem}: falta o arquivo contexto/{ag.stem}.md")
+    # Nome e conversa da equipe (dono, 26/11/2026: nome para cada agente e eles conversando como colegas)
+    if "Seu nome é" not in ag.read_text(encoding="utf-8") or "contexto/CONVERSA.md" not in ag.read_text(encoding="utf-8"):
+        fora.append(f"agente {ag.stem}: falta o nome ('Seu nome é') ou a leitura de contexto/CONVERSA.md")
 # Orçamento de contexto: o que todo mundo lê não pode voltar a inchar (caracteres)
 # Tetos subidos em 24/11/2026 com o "sim" do dono (cartão p21 do quadro: "Sobe os limites, como recomendado. Tente sempre
 # deixar os arquivos o menor possível, claro com o mesmo resultado"). A auditoria das regras mostrou 9 de 26 arquivos no teto

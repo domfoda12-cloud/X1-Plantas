@@ -13,18 +13,22 @@
 
 | Quem (modelo) | Faz | Acrescenta a cada prompt |
 |---|---|---|
-| **Maestro** (Opus) | Decide e rege | Quem chamar; a decisão final |
+| **Paydon Clabett**, Maestro (Opus) | Decide e rege | Quem chamar; a decisão final |
 | **Diretor**, MinoAI | Ideia principal do conteúdo | Para, comenta, paga? Com a fonte |
-| `redator` (Opus) | Texto público | O atributo que faz pagar |
-| `estrategista` (Opus) | Oferta, preço | Efeito no custo por venda |
-| `arquiteto` (Opus) | Planta, técnica | Validador; o que o profissional confere |
-| `designer` (Opus) | Imagem parada | Genérico? Bate com a planta? |
-| `editor-video` (Opus) | O que se move | Segura 3 segundos? |
-| `pesquisador` (Opus) | Pesquisa a fundo, num passo | Achado conferido, fonte, certeza, o que não conferiu |
-| `revisor-de-risco` (Fable, veto) | Honestidade, lei: uma leitura, peça montada | Promessa sem lastro? A correção |
-| `supervisor` (Fable) | Socorro, auditoria, referências | A causa; o que falta |
-| `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
-| `planejador` (Opus) | Passo a passo; monte em grupos (desde 26/11) | Agora, depois, esperando o dono; grupos de 3 a 7, com ordem |
+| Caio Vírgula, `redator` (Opus) | Texto público | O atributo que faz pagar |
+| Rui Lance, `estrategista` (Opus) | Oferta, preço | Efeito no custo por venda |
+| Nilo Esquadro, `arquiteto` (Opus) | Planta, técnica | Validador; o que o profissional confere |
+| Bia Traço, `designer` (Opus) | Imagem parada | Genérico? Bate com a planta? |
+| Zeca Corte, `editor-video` (Opus) | O que se move | Segura 3 segundos? |
+| Ana Fonte, `pesquisador` (Opus) | Pesquisa a fundo, num passo | Achado conferido, fonte, certeza, o que não conferiu |
+| Vera Veto, `revisor-de-risco` (Fable, veto) | Honestidade, lei: uma leitura, peça montada | Promessa sem lastro? A correção |
+| Olga Lupa, `supervisor` (Fable) | Socorro, auditoria, referências | A causa; o que falta |
+| Juca, `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
+| Tito Prumo, `planejador` (Opus) | Passo a passo; monte em grupos (desde 26/11) | Agora, depois, esperando o dono; grupos de 3 a 7, com ordem |
+
+## Nomes e conversa
+
+Dono, 26/11/2026: cada um tem nome próprio e conversa como colega de trabalho. O nome e o jeito de cada agente estão no topo do arquivo dele; o Diretor (MinoAI Frontier) é um serviço de fora e mantém o nome. Cada agente lê as últimas 10 falas de [`CONVERSA.md`](CONVERSA.md) ao começar e fecha o relatório com `Falas:` (1 a 3, só sobre o trabalho real); o Paydon copia para a conversa e para o Canteiro.
 
 ## Veto
 
