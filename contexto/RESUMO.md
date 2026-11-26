@@ -105,7 +105,7 @@ Montado em 26/11/2026 (fila da noite, item 7) a partir das falas e correções d
 
 Seções: Como ele trabalha; O que irrita e o que agrada; A voz do Paydon com ele.
 
-Tamanho: 609 palavras.
+Tamanho: 650 palavras.
 
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
