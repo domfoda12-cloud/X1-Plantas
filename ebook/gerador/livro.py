@@ -12,6 +12,7 @@ Uso:
     python3 ebook/gerador/livro.py --previa DIR    salva um PNG de cada página em DIR (as dos bônus em DIR/bonus) e uma
                                                    cópia dos 2 PDFs (ebook.pdf e bonus.pdf); gera tudo numa pasta
                                                    temporária e NÃO mexe em ebook/saida nem na calculadora
+                                                   (as páginas da planta grátis vão para DIR/gratis-<ID>)
     python3 ebook/gerador/livro.py --conferir      confere numa pasta temporária, sem mexer em ebook/saida
                                                    nem na calculadora
 
@@ -20,6 +21,11 @@ Uso:
                                                    do lote; abertura, parte 1 (cada casa, com as 2 páginas "cômodo a
                                                    cômodo" depois da dupla dela, D20), parte 2 (casas em geral, com
                                                    a aba azul "geral"), fecho; sumário na página 2. Sem --previa, recusa.
+    python3 ebook/gerador/livro.py --previa DIR --duas-partes --placa
+                                                   prévia com a identidade da Placa (escolha do dono, 26/11/2026):
+                                                   placa.css por cima do livro.css, a placa do Lote (falas em
+                                                   paginas.py, PLACAS) na capa, nas aberturas e na página de cada
+                                                   casa, e a tira do pé. Sem --previa, recusa.
 
 O PDF oficial e a calculadora só são gravados sem --previa e sem --conferir.
 
@@ -1066,6 +1072,16 @@ def fachada_bloco(p):
     return f'<div class="fachada vistas{tipo}"><div class="v-rua">{rua}</div><div class="v-3d"><h4>A casa em 3D</h4>{v3d}</div></div>'
 
 
+def capa_meio(plantas, config):
+    """O meio da capa: a planta da capa (maquete) ou, no modo --placa, a placa grande do Lote fincada no chão,
+    com a pergunta do e-book e o aviso de planta de referência no chão, logo acima da fita."""
+    pc = next((p for p in plantas if p["id"] == config.get("planta_da_capa", "C01")), plantas[0])
+    if not PLACA:
+        return f'<div class="capa-planta maquete">{svg_planta(pc, humanizada=True, estilo="maquete")}</div>'
+    return (f'<div class="capa-placa">{placa("capa", pc["_r"].metricas["lote_comercial"], grande=True)}</div>'
+            f'<div class="capa-chao"><b>{E(TX.TITULOS["ache"])}</b><span>{E(AVISO)}</span></div>')
+
+
 def capa_fundo():
     """Fundo da capa: o papel azul de projeto (OpenArt), escurecido para o título ler bem.
     Cortado na proporção da página A4 (o que o "cover" mostrava) e com 1600 px de largura: uns 190 dpi
@@ -1139,6 +1155,9 @@ class Livro:
             rod = (f'<div class="rodape {"par" if par else "impar"}"><span class="num">{n}</span>'
                    f'<span>{AVISO if aviso else E(self.config.get("titulo_curto") or titulo_do(self.config))}</span></div>')
         atributo_estilo = f' style="{estilo}"' if estilo else ""
+        if PLACA:  # a tira do pé da página que tem placa, com a página seguinte (sai certa também depois de reordenar)
+            achou = re.search(r'data-placa="([^"]+)"', conteudo)
+            conteudo = (conteudo + (tira(html.unescape(achou.group(1))) if achou else "")).replace("§PROX§", str(n + 1))
         return f'<section class="pagina {classe}"{atributo_estilo}>{tab}<div class="miolo">{conteudo}</div>{rod}</section>'
 
     def reordenar(self, ordem):
@@ -1224,6 +1243,8 @@ def montar(plantas, config, numeros, duas_partes=False):
     for p in plantas:
         contagem[lote_frente(p)] = contagem.get(lote_frente(p), 0) + 1
     titulo = titulo_do(config)
+    global LOTE_PLACA  # o "{lote}" das placas das páginas gerais: o lote comum da casa da capa
+    LOTE_PLACA = next((p for p in plantas if p["id"] == config.get("planta_da_capa", "C01")), plantas[0])["_r"].metricas["lote_comercial"]
     pequena = len(plantas) <= POUCAS  # edição pequena: "Ache a sua casa" no lugar de "pelo lote", "pela família" e índice
     pag_frente = {}
     for p in plantas:
@@ -1236,8 +1257,8 @@ def montar(plantas, config, numeros, duas_partes=False):
       <div class="capa-topo"><span class="eti">{qtd} · {E(config.get('ano', '2026'))}</span>
         <h1 class="capa-titulo">{E(titulo)}</h1>
         <p class="capa-sub">Casas organizadas pela frente do terreno. Meça a frente do seu lote, ache a medida na régua abaixo e abra a página.</p></div>
-      <div class="capa-planta maquete">{svg_planta(next((p for p in plantas if p['id'] == config.get('planta_da_capa', 'C01')), plantas[0]), humanizada=True, estilo="maquete")}</div>
-      {svg_fita(contagem, pag_frente)}""", "capa", rodape=False, estilo=capa_fundo())
+      {capa_meio(plantas, config)}
+      {svg_fita(contagem, pag_frente)}""", "capa", rodape=False, estilo="" if PLACA else capa_fundo())
 
     # 2. aviso e como usar (no modo duas partes, o sumário entra e a foto encolhe)
     L.bloco = "usar"
@@ -1312,7 +1333,8 @@ def montar(plantas, config, numeros, duas_partes=False):
         return f'<div class="erro"><div class="erro-n">{i}</div><div><h3>{"O mais caro: " + E(t[0].lower() + t[1:]) if i == 7 else E(t)}</h3><p>{E(porque)}</p><p class="certo"><b>O jeito certo:</b> {certo[0].lower() + certo[1:]}</p></div></div>'
     bl = [erro(i, *e) for i, e in enumerate(TX.ERROS, start=1)]
     L.inicio["erros"] = L.pagina(f'{cab("erros")}<p class="abertura">Cada casa deste e-book mostra quais desses erros ela evita. Use como lista de conferência antes de fechar a sua planta.</p>{"".join(bl[:4])}', orelha=geral)
-    L.pagina(f'<span class="sobre">{TX.SOBRE["erros"]}</span>{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>', orelha=geral)
+    sobre_erros = com_placa(f'<span class="sobre">{TX.SOBRE["erros"]}</span>', "erros2")
+    L.pagina(f'{sobre_erros}{"".join(bl[4:])}<div class="caixa amarela"><b>Cada item que você confere agora é uma parede que não vai ser quebrada depois.</b></div>', orelha=geral)
 
     # 9. índice
     L.bloco = "indice"
@@ -1436,8 +1458,58 @@ def aba_geral_mm(plantas):
 
 
 def cab(chave):
-    """Sobretítulo e título de uma página fixa, do lugar único (paginas.py: SOBRE e TITULOS)."""
-    return f'<span class="sobre">{TX.SOBRE[chave]}</span><h2>{TX.TITULOS[chave]}</h2>'
+    """Sobretítulo e título de uma página fixa, do lugar único (paginas.py: SOBRE e TITULOS).
+    No modo --placa, as páginas que têm fala (TX.PLACAS) ganham a placa do Lote ao lado do título."""
+    return com_placa(f'<span class="sobre">{TX.SOBRE[chave]}</span><h2>{TX.TITULOS[chave]}</h2>', chave)
+
+
+# A Placa (identidade escolhida pelo dono em 26/11/2026; só prévia: python3 ebook/gerador/livro.py --previa DIR --placa).
+# A voz do Lote fica só na placa e na tira do pé; o aviso, a ficha, os números e a planta não mudam de texto.
+PLACA = False
+PLACA_CSS = AQUI / "placa.css"
+LOTE_PLACA = None  # o lote comum da casa da capa (montar): o "{lote}" das placas das páginas gerais
+
+
+def chave_placa(chave, gratis=False):
+    """Na planta grátis vale a fala própria dela (gratis-<chave>), se houver."""
+    return f"gratis-{chave}" if gratis and f"gratis-{chave}" in TX.PLACAS else chave
+
+
+def com_placa(titulo, chave, lote=None):
+    """O título com a placa do Lote ao lado (modo --placa); sem fala, só a marca do pé; fora do modo, o título."""
+    if not PLACA or chave not in TX.PLACAS:
+        return titulo
+    if not TX.PLACAS[chave].get("fala"):
+        return titulo + placa(chave)
+    return f'<div class="cab-placa"><div class="cab-tit">{titulo}</div>{placa(chave, lote)}</div>'
+
+
+def placa(chave, lote=None, grande=False):
+    """A placa branca de borda preta, letra vermelha, fincada em duas estacas, com a fala do Lote (TX.PLACAS).
+    lote = (frente, fundo) do validador, para o "{lote}" da fala e da assinatura. Sem fala: só a marca do pé."""
+    d = TX.PLACAS[chave]
+    if not d.get("fala"):
+        return f'<span data-placa="{E(chave)}" hidden></span>'
+    lote = lote or LOTE_PLACA
+    lt = f"{n0(lote[0])} x {n0(lote[1])}" if lote else ""
+    inteira = lambda s: re.sub(r"(\S+-\S+)", r'<span class="nq">\1</span>', E(s))  # "Procura-se" não quebra no hífen
+    falas = "".join(f'<div class="pl-fala">{inteira(x.format(lote=lt))}</div>' for x in d["fala"])
+    linha = f'<div class="pl-linha">{E(d["linha"])}</div>' if d.get("linha") else ""
+    ass = TX.ASSINATURA_PLACA + (f" {lt}" if lt and not grande else "")
+    rasc = '<span class="pl-rasc">rascunho: falta o Revisor</span>' if TX.RASCUNHO_PLACA else ""
+    return (f'<div class="placa-lote{" grande" if grande else ""}" data-placa="{E(chave)}">'
+            f'{falas}{linha}<div class="pl-ass">{E(ass)}</div>{rasc}</div>')
+
+
+def tira(chave):
+    """A tira do pé: a pergunta do Lote, a nota colada (todo "cabe" leva "com os recuos de referência") e a página
+    seguinte (o §PROX§ vira o número em Livro._folha)."""
+    d = TX.PLACAS.get(chave, {})
+    if not d.get("pe"):
+        return ""
+    nota = f'<i>{E(d["nota"])}</i>' if d.get("nota") else ""
+    vira = f'<span>{E(TX.VIRA.format("§PROX§"))}</span>' if d.get("vira", True) else ""
+    return f'<div class="tira-lote"><div class="tl-q"><b>{E(d["pe"])}</b>{nota}</div>{vira}</div>'
 
 
 def reservada(L, titulo, casa=None, lado="", orelha=None):
@@ -2597,7 +2669,7 @@ def ache_a_sua_casa(plantas, numeros, recuos_txt):
     casas = sorted(plantas, key=lambda p: (lote_frente(p), p["id"]))
     filas = [casas] if len(casas) <= 3 else [casas[:(len(casas) + 1) // 2], casas[(len(casas) + 1) // 2:]]
     lote = lambda p: p["_r"].metricas["lote_comercial"]
-    gap, alto = 9.0, (144.0 if len(filas) == 1 else 54.0)  # mm; "alto" = lote mais fundo de cada fila
+    gap, alto = 9.0, ((124.0 if PLACA else 144.0) if len(filas) == 1 else 54.0)  # mm; "alto" = lote mais fundo de cada fila (a placa come 20 mm)
     col_min = min(49.0, (176.0 - gap * (max(len(fl) for fl in filas) - 1)) / max(len(fl) for fl in filas))  # o texto cabe
     k = min(alto / max(lote(p)[1] for p in casas),
             *[(176.0 - 12 - gap * (len(fila) - 1)) / sum(lote(p)[0] + .1 for p in fila) for fila in filas])
@@ -2674,9 +2746,14 @@ def dupla(L, p, por_id, numeros):
     ne = numeros.get("erros")
     erros_tit = f"Dos {len(TX.ERROS)} erros " + (f"da pág. {ne}" if isinstance(ne, int) and ne else "do e-book") + ", esta casa evita"
     cat = CATEGORIAS[p["id"][0]]
+    cab_casa = (f'<span class="mono id">{p["id"]} · {cat.upper()}</span><h2 class="nome">{E(p["nome"])}</h2>'
+                f'<p class="gancho">{E(gancho)}</p>{chips(p, gancho)}')
+    gratis = numeros.get("erros") == "e-book"  # a planta grátis (montar_gratis) não tem o capítulo dos erros
+    k_casa = chave_placa("casa:" + p["id"], gratis)
+    if PLACA and k_casa in TX.PLACAS:  # a placa do Lote ao lado do nome (só prévia, modo --placa)
+        cab_casa = f'<div class="cab-tit">{cab_casa}</div>{placa(k_casa, r["lote_comercial"])}'
     L.inicio[p["id"]] = L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · {cat.upper()}</span><h2 class="nome">{E(p['nome'])}</h2>
-        <p class="gancho">{E(gancho)}</p>{chips(p, gancho)}</div>
+      <div class="cab{' cab-placa' if PLACA and k_casa in TX.PLACAS else ''}">{cab_casa}</div>
       <div class="planta-grande moldura">{svg_humanizada(p, lote_escala=True)}</div>
       <div class="selo-tec">Planta de referência humanizada · medidas em metros · móveis para dar escala</div>
       <div class="duas"><div><h4>Para quem é</h4><p>{E(t.get('para_quem', ''))}</p></div>
@@ -2692,10 +2769,13 @@ def dupla(L, p, por_id, numeros):
         if not veja and "suíte" in nao[0] and not any("suíte" in q["quartos_txt"] for q in por_id.values()):
             veja = " O e-book completo não tem casa com suíte." if numeros.get("erros") == "e-book" else " Este e-book não tem casa com suíte."
         nao_html = f'<div><h4>Para quem não serve</h4><p>{E(nao[0])}{veja}</p></div>'
+    cab_lote = com_placa(f'<span class="mono id">{p["id"]} · A CASA NO SEU LOTE</span>'
+                         f'<h2 class="nome">Cabe num lote de {f} x {r["lote_comercial"][1]} m.</h2>',
+                         chave_placa("lote:" + p["id"], gratis), r["lote_comercial"])
     perg = [q for q in t.get("perguntas", []) if q not in FICHAS.PADRAO] or ["As perguntas que valem para toda casa estão em \"Pergunte em qualquer casa\", no fim do e-book" + (" completo" if numeros.get("erros") == "e-book" else "") + "."]
     linha = lambda a, b, c="": f'<div class="r-l"><span>{a}</span><b>{b}</b><span>{c}</span></div>'
     L.pagina(f"""
-      <div class="cab"><span class="mono id">{p['id']} · A CASA NO SEU LOTE</span><h2 class="nome">Cabe num lote de {f} x {r['lote_comercial'][1]} m.</h2></div>
+      <div class="cab">{cab_lote}</div>
       <div class="lado"><div class="lote-fig">{svg_lote(p, tamanho=True)}</div>
         <div class="rotulo"><div class="r-tit">INFORMAÇÃO DA CASA</div>
           <div class="r-por">Lote comum {f} x {r['lote_comercial'][1]} m · mínimo {m(r['lote'][0])} x {m(r['lote'][1])} m</div>
@@ -2777,7 +2857,7 @@ def montar_gratis(plantas, config, pid):
             frase_ima = (f"O e-book tem mais {casas_txt(outras)}, cada uma com o lote mínimo calculado." if outras > 1
                          else f"O e-book tem mais {casas_txt(outras)}, também com o lote mínimo calculado." if outras else "")
             legenda_ima = ""
-    L.pagina(f"""<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>
+    L.pagina(f"""{com_placa(f'<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>', "gratis-ima", p["_r"].metricas["lote_comercial"])}
       <p class="abertura">A {E(p['nome'])} cabe num lote de {f} m de frente. {E(frase_ima)}</p>
       {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}
       <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
@@ -2786,9 +2866,16 @@ def montar_gratis(plantas, config, pid):
     return L
 
 
-def gerar(previa=None, duas_partes=False):
+def gerar(previa=None, duas_partes=False, placa_modo=False):
+    global PLACA, CSS
     if duas_partes and (not previa or SAIDA == EBOOK / "saida"):
         sys.exit(RECUSA_DUAS_PARTES)
+    if placa_modo:  # a Placa (dono, 26/11/2026) só em prévia: o PDF oficial continua o de antes até o "gera"
+        if not previa or SAIDA == EBOOK / "saida":
+            sys.exit(RECUSA_PLACA)
+        PLACA = True
+        imp, regras = PLACA_CSS.read_text(encoding="utf-8").split("\n", 1)  # o @import da fonte tem de vir antes das regras
+        CSS = imp + "\n" + CSS + "\n" + regras
     config = json.loads((EBOOK / "config.json").read_text(encoding="utf-8"))
     plantas = PL.carregar()
     for p in plantas:
@@ -2846,13 +2933,18 @@ def gerar(previa=None, duas_partes=False):
         G = montar_gratis(plantas, config, pid)
         arq = SAIDA / f"planta-gratis-{pid}.html"
         arq.write_text(sem_quebra(doc.split("<body>")[0] + "<body>" + "".join(G.paginas) + "</body></html>"), encoding="utf-8")
-        r = subprocess.run(["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")], env=env, capture_output=True, text=True)
+        cmd = ["node", str(AQUI / "pdf.cjs"), str(arq), str(SAIDA / f"planta-gratis-{pid}.pdf")]
+        if previa:  # a prévia guarda também as páginas da planta grátis, para conferir com os olhos
+            cmd.append(str(previa / f"gratis-{pid}"))
+        r = subprocess.run(cmd, env=env, capture_output=True, text=True)
         print(r.stdout.strip(), r.stderr.strip())
         falhou = falhou or r.returncode != 0
     if falhou or AVISOS:
         sys.exit("ERRO: página estourada, gancho que não bate com o validador ou falha ao gerar o PDF (veja os avisos acima)")
 
 
+RECUSA_PLACA = ("ERRO: --placa só roda junto com --previa <pasta> (identidade da Placa, 26/11/2026): o PDF oficial em "
+                "ebook/saida/ só muda com o \"gera\" do dono.\nUse: python3 ebook/gerador/livro.py --previa <pasta> --duas-partes --placa")
 RECUSA_DUAS_PARTES = ("ERRO: --duas-partes só roda junto com --previa <pasta> nesta etapa (D17). O e-book em duas partes "
                       "ainda é prévia: o PDF oficial em ebook/saida/ e a calculadora não podem mudar agora.\n"
                       "Use: python3 ebook/gerador/livro.py --previa <pasta> --duas-partes")
@@ -2905,6 +2997,12 @@ def atualizar_calculadora(plantas, numeros, gravar=True):
 
 if __name__ == "__main__":
     prev = None
+    # Opção desconhecida (ex.: --help) não pode cair na geração oficial (26/11: "--help" regravou ebook/saida/)
+    _args = sys.argv[1:]
+    _valor = {_args[i + 1] for i, a in enumerate(_args[:-1]) if a == "--previa"}
+    _estranhas = [a for a in _args if a not in {"--conferir", "--previa", "--duas-partes", "--placa"} and a not in _valor]
+    if _estranhas or ("--previa" in _args and not _valor):
+        sys.exit(f"Opção não reconhecida: {' '.join(_estranhas) or '--previa sem pasta'}. Nada foi gerado.\n{__doc__}")
     if "--conferir" in sys.argv or "--previa" in sys.argv:
         # conferência e prévia: gera numa pasta temporária e não mexe em ebook/saida nem na calculadora.
         # O PDF oficial só é gravado sem --previa e sem --conferir.
@@ -2914,4 +3012,6 @@ if __name__ == "__main__":
         prev = Path(sys.argv[sys.argv.index("--previa") + 1]).resolve()
     if "--duas-partes" in sys.argv and not prev:
         sys.exit(RECUSA_DUAS_PARTES)
-    gerar(prev, duas_partes="--duas-partes" in sys.argv)
+    if "--placa" in sys.argv and not prev:
+        sys.exit(RECUSA_PLACA)
+    gerar(prev, duas_partes="--duas-partes" in sys.argv, placa_modo="--placa" in sys.argv)

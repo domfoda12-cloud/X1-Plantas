@@ -39,7 +39,7 @@ A linguagem visual e de animação, os livros de plantas com 3D e a análise de 
 
 Seções: Linguagem, visual e animação do e-book; Referência: livros de plantas com 3D e um guia de apresentação; Análise dos catálogos de porcelanato (referência de formato).
 
-Tamanho: 2394 palavras.
+Tamanho: 2823 palavras.
 
 ### [Anúncios e posts de referência: 39 peças reais de quem vende planta de casa, projeto pronto, e-book ou curso de obra no Brasil](anuncios-ref/ANUNCIOS.md)
 

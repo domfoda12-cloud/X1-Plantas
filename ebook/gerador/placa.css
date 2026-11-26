@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
+/* A Placa: identidade escolhida pelo dono em 26/11/2026 ("2 · A Placa"; pedidos/anexos/identidade-2026-11-25.md, direção 2).
+   Só no modo --placa do livro.py, e só em prévia: o livro.py junta este arquivo DEPOIS do livro.css (a 1ª linha, o @import,
+   vai para o topo). Tinta, vermelho-placa, amarelo na capa, branco, terra, mato; o azul de projeto fica só na planta
+   (e na aba "geral", que o sumário chama de "aba azul"). Londrina Solid 900 nos títulos e na placa, Inter no texto,
+   JetBrains Mono nas medidas. Licença da Londrina Solid: OFL 1.1 (Google Fonts; caderno de pesquisa, 24/11/2026). */
+:root { --tinta: #161616; --verm: #C8102E; --terra: #C9A56B; --terra-claro: #F6EFE3; --mato: #3E8E41; --cinza: #4A4F57;
+  --azul: #161616; --azul-escuro: #161616; --azul-claro: #F6EFE3; --azul-planta: #0B4FA8;
+  --tit: "Londrina Solid", "Inter", Arial, sans-serif; }
+body { color: var(--tinta); }
+
+/* títulos: letra de placa, tinta, caixa alta; a frase de gancho continua em Inter (a Londrina é só para gritar) */
+h2 { font-family: var(--tit); font-weight: 900; font-size: 30pt; line-height: .92; letter-spacing: 0; text-transform: uppercase; color: var(--tinta); }
+.nome { font-size: 42pt; }
+h4 { font-family: var(--tit); font-weight: 900; font-size: 9.5pt; letter-spacing: .03em; color: var(--verm); }
+.gancho, .cab-psj .sub, .ca .ca-sub { font-family: "Inter", Arial, sans-serif; font-weight: 600; }
+.gancho { font-size: 12.5pt; }
+.rodape .num { color: var(--verm); }
+.erro-mini { background: var(--tinta); border-radius: 1mm; }
+.pagina.q { background-image: linear-gradient(rgba(22,22,22,.045) .25mm, transparent .25mm), linear-gradient(90deg, rgba(22,22,22,.045) .25mm, transparent .25mm); }
+.orelha.geral, .sum-aba.az { background: var(--azul-planta); }
+
+/* a placa: branca, borda preta grossa, letra vermelha, fincada em duas estacas na linha de mato do cabeçalho */
+.cab-placa { display: grid; grid-template-columns: 1fr 72mm; column-gap: 6mm; align-items: end; border-bottom: 1.2mm solid var(--mato); }
+.cab-placa .cab-tit { display: grid; gap: 1mm; padding-bottom: 2.6mm; align-self: end; }
+.placa-lote { position: relative; z-index: 1; background: #fff; border: 1mm solid var(--tinta); border-radius: 1.5mm;
+  box-shadow: 1.4mm 1.8mm 0 var(--tinta); padding: 2.6mm 4mm 2.4mm; margin-bottom: 6mm; transform: rotate(-1.6deg); }
+.placa-lote::before, .placa-lote::after { content: ""; position: absolute; z-index: -1; bottom: -8.2mm; width: 3mm; height: 8mm;
+  background: var(--terra); border: .5mm solid var(--tinta); }
+.placa-lote::before { left: 16%; } .placa-lote::after { right: 16%; }
+.pl-fala { font-family: var(--tit); font-weight: 900; text-transform: uppercase; color: var(--verm); font-size: 19pt; line-height: .95; }
+.pl-linha { font-family: "Inter", Arial, sans-serif; font-weight: 600; font-size: 7.5pt; line-height: 1.25; color: var(--tinta); margin-top: 1.2mm; }
+.pl-ass { font-family: var(--tit); font-weight: 900; text-transform: uppercase; font-size: 10pt; color: var(--tinta); margin-top: 1.6mm; }
+.pl-rasc { position: absolute; right: 2.5mm; top: -2.6mm; background: var(--fita); border: .3mm solid var(--tinta); border-radius: .6mm;
+  font-family: var(--mono); font-weight: 700; font-size: 5.8pt; line-height: 1; padding: .6mm 1.4mm; color: var(--tinta); transform: rotate(2deg); }
+
+/* a tira do pé: a pergunta do Lote e a página seguinte */
+.tira-lote { display: flex; justify-content: flex-end; align-items: center; gap: 3mm; margin-top: auto; flex: 0 0 auto;
+  font-family: var(--tit); font-weight: 900; text-transform: uppercase; font-size: 14pt; line-height: 1; color: var(--tinta); }
+.tira-lote .tl-q { display: grid; justify-items: end; gap: .8mm; }
+.tira-lote i { font-family: "Inter", Arial, sans-serif; font-style: normal; font-weight: 600; font-size: 9pt; text-transform: none; color: var(--cinza); }
+.tira-lote span { background: var(--verm); color: #fff; padding: 1.3mm 3mm 1.1mm; border-radius: 1mm; white-space: nowrap; }
+
+/* capa: amarela, título de cartaz, a placa grande fincada no chão do lote, a fita embaixo */
+.capa { background: var(--fita); color: var(--tinta); }
+.capa .miolo { inset: 20mm 18mm 0 18mm; gap: 5mm; }
+.capa .eti { color: var(--tinta); }
+.capa-titulo { font-family: var(--tit); font-weight: 900; font-size: 74pt; line-height: .87; letter-spacing: 0; text-transform: uppercase; max-width: none; color: var(--tinta); }
+.capa-sub { color: var(--tinta); font-weight: 500; font-size: 12pt; max-width: 118mm; }
+.capa-placa { flex: 1 1 auto; min-height: 0; display: grid; align-items: center; padding: 0 1mm; }
+.placa-lote.grande { border-width: 1.4mm; box-shadow: 2.2mm 2.8mm 0 var(--tinta); padding: 8mm 9mm 7mm; margin-bottom: 14mm; transform: rotate(-2.2deg); }
+.placa-lote.grande::before, .placa-lote.grande::after { width: 5mm; height: 60mm; bottom: -61mm; border-width: .8mm; }
+.placa-lote.grande .pl-fala { font-size: 80pt; line-height: .86; margin: 2mm 0 3mm; }
+.placa-lote.grande .pl-fala:first-child { font-size: 34pt; line-height: 1; color: var(--tinta); margin: 0; }
+.placa-lote.grande .pl-ass { font-size: 20pt; }
+.placa-lote.grande .pl-rasc { font-size: 7pt; top: -3.4mm; right: 4mm; }
+.capa-chao { position: relative; z-index: 2; margin: 0 -18mm -5mm; background: var(--terra); border-top: 5mm solid var(--mato); padding: 6mm 18mm 5mm; display: grid; gap: 1.6mm; }
+.capa-chao b { font-family: var(--tit); font-weight: 900; font-size: 26pt; line-height: 1; text-transform: uppercase; }
+.capa-chao span { font-size: 7.5pt; font-weight: 600; }
+
+/* os números do "Como usar": vermelho cheio (o contorno da letra antiga fica estranho na Londrina) */
+.passos3 li::before { color: var(--verm); -webkit-text-stroke: 0; font-weight: 900; }
+/* "Como ler uma planta": a placa no cabeçalho come uns 10 mm; a legenda alarga um pouco para a página não estourar */
+.leitura { grid-template-columns: 1.5fr 1fr; }
+/* capa: o chão e a fita ficam por cima das estacas da placa grande (as estacas entram na terra) */
+.capa .fita-box { z-index: 3; }

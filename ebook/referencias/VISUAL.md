@@ -39,7 +39,25 @@
 
 ### 2. Visual
 
-Identidade: azul de projeto `#0B4FA8`, amarelo `#FFC857`, fundo quadriculado, títulos em Bricolage Grotesque, texto em Inter. É a que o gerador usa hoje (`../gerador/livro.css`).
+**Identidade: A Placa** (escolha do dono, 26/11/2026, "2 · A Placa"; direção 2 de [`identidade-2026-11-25.md`](../../pedidos/anexos/identidade-2026-11-25.md)). Quem conta o e-book é o lote que procura casa, numa placa de terreno; os dados continuam sérios. **Hoje só na prévia:** `python3 ebook/gerador/livro.py --previa <pasta> --duas-partes --placa` (estilos em [`../gerador/placa.css`](../gerador/placa.css), por cima do `livro.css`; falas em `PLACAS` de [`../gerador/paginas.py`](../gerador/paginas.py)). O PDF oficial continua o de antes (azul de projeto, Bricolage) até o "gera" do dono.
+
+| Token | Valor | Papel |
+|---|---|---|
+| Tinta | `#161616` | texto, títulos, borda e sombra da placa |
+| Vermelho-placa | `#C8102E` | letra da placa, tira do pé, número da página, sobretítulo dos blocos (h4) |
+| Amarelo | `#FFC857` | fundo da capa; continua na fita métrica, nas abas de frente e na porta de entrada (o texto diz "aba amarela" e "fita amarela") |
+| Branco | `#FFFFFF` | papel e placa |
+| Terra | `#C9A56B` | chão da capa e estacas; o claro `#F6EFE3` nas caixas de apoio |
+| Mato | `#3E8E41` | a linha de chão do cabeçalho, onde a placa finca |
+| Azul de projeto | `#0B4FA8` | **só na planta** (janelas, cotas) e na aba "geral" da parte 2 (o sumário diz "aba azul") |
+| Letras | Londrina Solid 900 (OFL 1.1, Google Fonts) | títulos (caixa alta), placa, tira; Inter no texto e na frase do gancho; JetBrains Mono nas medidas |
+
+- **O sinal:** a placa branca, borda preta de 1 mm, letra vermelha, fincada em duas estacas na linha de mato do cabeçalho, inclinada 1,6°. Fica no topo da capa (grande, 80 pt), das aberturas (págs. "Como usar", "Qual casa cabe", "Como ler uma planta", "Agora é com você") e da página da planta de cada casa. Com selo "rascunho" enquanto a fala não for a final do Redator.
+- **Ritmo:** topo, a placa com a fala do lote; meio, a planta; pé, a tira "pergunta do lote + Vira: pág. N" (N sai do gerador). Página cheia demais (Qual casa cabe, Como ler) fica sem tira.
+- **A voz do lote mora só na placa e na tira.** Nunca no aviso "Planta de referência", na ficha "Informação da casa", nos números nem na planta. O aviso continua na caixa amarela clara, que não parece placa.
+- **Faça:** um número ou uma fala por placa, curta (até umas 6 palavras por linha); a placa sempre no mesmo canto (direita do título).
+- **Não faça:** moldura de placa na planta (só a placa é placa); vermelho em texto corrido; Londrina em frase longa.
+- A identidade anterior (azul de projeto `#0B4FA8`, amarelo `#FFC857`, quadriculado, Bricolage Grotesque e Inter) é a do PDF oficial até o "gera".
 
 | Elemento | Regra |
 |---|---|

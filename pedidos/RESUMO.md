@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 90 documentos
+## Os 91 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1766 palavras.
+Tamanho: 1818 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -420,6 +420,14 @@ Prévia em duas partes, 24 páginas. Olhares: Bia (Designer e comprador), Nilo (
 Seções: Aplicado no gerador (commits `bf2266c` e `5b025d6`; como desfazer: `git revert` de cada um); Proposto, ainda não aplicado (em ordem de efeito); As 5 frases (proposta marcada; o dono escolhe); Leitura da Vera.
 
 Tamanho: 691 palavras.
+
+### [Falas das placas do Lote Carente: e-book pago e planta grátis (26/11/2026)](anexos/placa-falas-2026-11-26.md)
+
+Pedido do dono (26/11, 06:44, no Canteiro): escolheu a identidade "2 · A Placa" (Direção 2 de `identidade-2026-11-25.md`). Ficha: `2026-11-25-1613`. Pedido do Paydon ao Redator: as falas das placas (até ~8 palavras) e o pé de cada página, 2 opções por placa, a recomendada marcada. Rascunho do…
+
+Seções: 0. Plano; 1. Regras de montagem (para a Bia); 2. As falas, página por página; 3. Escada dos atributos (as 3 notas mais altas entraram); 4. Conferido contra "Antes de mandar ao Revisor" (`contexto/redator.md`) e os Limites; 5. Para a Vera (o que eu olharia primeiro); 6. O que não conferi.
+
+Tamanho: 2394 palavras.
 
 ### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
 

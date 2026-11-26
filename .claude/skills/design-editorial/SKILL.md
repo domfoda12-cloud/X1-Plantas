@@ -54,7 +54,7 @@ Escreva, em poucas linhas:
 
 - **Quem usa:** o `designer`. O `editor-video` só recebe a imagem pronta. O `impeccable` continua só detectando; esta skill planeja e confere.
 - **Leia antes:** `contexto/designer.md`, `ebook/referencias/VISUAL.md`, `ebook/referencias/visual-ref/EDITORIAL.md` e `ebook/CLAUDE.md`.
-- **Identidade fixa:** azul de projeto `#0B4FA8`, amarelo `#FFC857`, fundo quadriculado, títulos em Bricolage Grotesque, texto em Inter (`ebook/gerador/livro.css`). Mudar cor, fonte ou logo é **opção para o dono**, nunca decisão do Designer.
+- **Identidade fixa: A Placa** (escolha do dono, 26/11/2026): tinta `#161616`, vermelho-placa `#C8102E`, amarelo `#FFC857` (fundo da capa, fita, abas de frente, porta), branco, terra `#C9A56B`, mato `#3E8E41`; azul de projeto `#0B4FA8` só na planta. Londrina Solid 900 nos títulos e na placa, Inter no texto, JetBrains Mono nas medidas. O sinal é a placa do Lote (branca, borda preta, letra vermelha, duas estacas) no topo da capa, das aberturas e da página de cada casa, com a tira do pé "pergunta + Vira: pág. N"; a voz do lote só na placa e na tira. Regras e tokens: `ebook/referencias/VISUAL.md`, seção 2. **No gerador, por ora só na prévia** (`--placa`, `ebook/gerador/placa.css`); o PDF oficial segue azul e Bricolage (`livro.css`) até o "gera" do dono. Mudar cor, fonte ou logo é **opção para o dono**, nunca decisão do Designer.
 - **Vetos que não mudam:**
   - **Nenhum estilo de arte, tema, paleta ou fonte de terceiros** (dono: "use o nosso próprio"). Das referências do `EDITORIAL.md` vem só o jeito de organizar; nada é copiado.
   - **Nenhuma fonte baixada, nenhum script de fora, nenhum MCP de fora.** O PDF sai do `livro.py`; quem mede é o detector dele e o `ferramentas/checar.py`.

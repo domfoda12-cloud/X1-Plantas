@@ -18,6 +18,18 @@ const { chromium } = require('playwright');
   await pagina.emulateMedia({ media: 'print' });
   await pagina.setViewportSize({ width: 794, height: 1123 });
 
+  // As letras vêm do Google Fonts (@import no livro.css e no placa.css): sem rede, o Chromium troca a letra sem avisar.
+  // Avisa se uma família pedida não chegou (nenhuma face dela no documento) ou se alguma face deu erro ao carregar.
+  const semFonte = await pagina.evaluate(() => {
+    const css = [...document.querySelectorAll('style')].map((s) => s.textContent).join('\n');
+    const pedidas = new Set();
+    for (const url of css.match(/fonts\.googleapis\.com\/css2\?[^'")]+/g) || [])
+      for (const f of url.match(/family=[^:&]+/g) || []) pedidas.add(decodeURIComponent(f.slice(7)).replace(/\+/g, ' '));
+    const faces = [...document.fonts].map((f) => ({ fam: f.family.replace(/["']/g, ''), st: f.status }));
+    return [...pedidas].filter((fam) => !faces.some((f) => f.fam === fam) || faces.some((f) => f.fam === fam && f.st === 'error'));
+  });
+  if (semFonte.length) { console.warn('AVISO: fonte não carregou (sem rede?): ' + semFonte.join(', ')); process.exitCode = 1; }
+
   // Confere se algum texto passou do limite da página (sinal de página estourada).
   const estouradas = await pagina.evaluate(() =>
     [...document.querySelectorAll('.pagina')]

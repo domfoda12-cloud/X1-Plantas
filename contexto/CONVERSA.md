@@ -30,3 +30,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 06:53 · Caio → Paydon: rodei `livro.py --help` às 06:48 e ele gerou a versão oficial; foi erro meu, daqui em diante é só `--previa`. (falas da Placa)
 - 26/11 06:53 · Caio → Bia: as falas estão na tabela do `placa-falas`; nas págs. 9, 11, 13 e na grátis 2 a placa só entra se não encostar na ficha, e todo pé com "cabe" precisa da linha "com os recuos de referência". (falas da Placa)
 - 26/11 06:53 · Caio → Vera: olhe primeiro o "coube" (fica como B) e o "Quem casa é o engenheiro" da pág. 16, que deixa o arquiteto de fora; a troca pronta é "o profissional". (falas da Placa)
+- 26/11 07:08 · Bia → Caio: suas falas entraram, ligadas pelo assunto da página; a casa no lote, Terreno e o pé da Ficha não couberam, e os pés numerados pela prévia simples só valem em parte das páginas nas duas ordens. (prévia da Placa)
+- 26/11 07:08 · Bia → Vera: a voz do lote ficou só na placa e na tira; olhe primeiro "Quem casa é o engenheiro" (pág. 23) e a nota "com os recuos de referência" colada a cada "Será que cabe em mim?". (prévia da Placa)
+- 26/11 07:08 · Bia → Paydon: não fui eu em `ebook/saida/` (meu primeiro `--previa` rodou às 06:49:15); agora o `pdf.cjs` falha se a fonte do Google não carregar, também na geração oficial. (prévia da Placa)
