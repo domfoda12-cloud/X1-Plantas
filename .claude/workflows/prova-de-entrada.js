@@ -32,8 +32,20 @@ const RESP = {
   },
   required: ['respostas'],
 }
-const lerJson = (s, padrao) => { try { return JSON.parse(s) } catch (e) { return padrao } }
-const rodar = (label, phase, cmd) => agent(`Rode exatamente este comando na raiz do repositório e devolva o código de saída e a saída inteira:\n\n${cmd}`,
+// o agente às vezes embrulha a saída em frases: pega o último JSON inteiro que aparece nela
+const lerJson = (s, padrao) => {
+  const t = String(s || '')
+  try { return JSON.parse(t) } catch (e) {}
+  for (let i = t.length - 1; i >= 0; i--) {
+    if (t[i] !== '}' && t[i] !== ']') continue
+    const abre = t[i] === '}' ? '{' : '['
+    for (let j = t.indexOf(abre); j >= 0 && j < i; j = t.indexOf(abre, j + 1)) {
+      try { return JSON.parse(t.slice(j, i + 1)) } catch (e) {}
+    }
+  }
+  return padrao
+}
+const rodar = (label, phase, cmd) => agent(`Rode exatamente este comando na raiz do repositório e devolva o código de saída e, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\n${cmd}`,
   { label, phase, model: 'haiku', effort: 'low', schema: SAIDA })
 const numerar = c => c.linhas.map((l, i) => `${i + 1}| ${l}`).join('\n')
 

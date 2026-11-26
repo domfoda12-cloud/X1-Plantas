@@ -56,12 +56,12 @@ A sequência dos dias (Dia 1, Dia 3, Dia 5, Dia 7) é só para quem parou de res
 ```text
 [nome], a Casa Fita é a do anúncio: 2 quartos, 56 m², um quarto em cada ponta, com sala e copa no meio.
 
-Ela pede um lote de no mínimo 5 x 20,6 m, com os recuos de referência (cabe num 5 x 25).
+Ela pede um lote de no mínimo 5 x 20,6 m (cabe num 5 x 25), com os recuos de referência; o da sua cidade, a prefeitura confirma.
 
 O seu lote tem quanto de frente e de fundo?
 ```
 
-- **Troca o quê no atual:** o texto existia só no rascunho do kit (seção 3); sai o "Oi! Aqui é [seu nome]", que a saudação automática já disse, e a pergunta fica uma só.
+- **Troca o quê no atual:** o texto existia só no rascunho do kit (seção 3); sai o "Oi! Aqui é [seu nome]", que a saudação automática já disse, e a pergunta fica uma só. Entrou "o da sua cidade, a prefeitura confirma" junto do lote mínimo, porque a pessoa pode procurar terreno com esse número (troca do Caio, 26/11).
 
 #### `/familia`
 
@@ -70,12 +70,12 @@ O seu lote tem quanto de frente e de fundo?
 ```text
 [nome], a Família Compacta é a do anúncio: 3 quartos, 71 m², os 3 nos fundos, longe da rua, e sala com lugar para a mesa de 4.
 
-Ela pede um lote de no mínimo 10 x 12,8 m, com os recuos de referência (cabe num 10 x 15).
+Ela pede um lote de no mínimo 10 x 12,8 m (cabe num 10 x 15), com os recuos de referência; o da sua cidade, a prefeitura confirma.
 
 O seu lote tem quanto de frente e de fundo?
 ```
 
-- **Troca o quê no atual:** o mesmo do `/fita` (kit, seção 4).
+- **Troca o quê no atual:** o mesmo do `/fita` (kit, seção 4), com a prefeitura junto do lote mínimo.
 
 ### 2.2 A planta grátis (Instagram)
 
@@ -86,14 +86,14 @@ O seu lote tem quanto de frente e de fundo?
 ```text
 Aqui está, [nome]: a Casa Compacta, 51 m², 2 quartos, com varanda na entrada.
 
-Ela cabe num lote de 8 x 15 m (no mínimo 8 x 13 m), com os recuos de referência.
+Ela cabe num lote de 8 x 15 m (no mínimo 8 x 13 m), com os recuos de referência; o da sua cidade, a prefeitura confirma.
 
 E o seu lote, tem quanto de frente e de fundo?
 ```
 
-> **Nota nova para o sócio (troca a de hoje):** anexe o PDF da planta grátis. **Hoje não mande o PDF que está na pasta:** ele diz o lado do sol trocado para a Casa Compacta (diz "rua ao norte"; o certo, desde 26/11, é "rua ao sul"). Espere o PDF novo [o dono manda gerar]. Sem o PDF anexado, não envie o /planta: "Aqui está" sem a planta é promessa não cumprida (troca da Vera, 26/11). Se a pessoa já mandou a medida na mesma mensagem, apague a última linha.
+> **Nota nova para o sócio (troca a de hoje):** anexe o PDF da planta grátis. **Hoje não mande o PDF que está na pasta:** ele diz o lado do sol trocado para a Casa Compacta (diz "rua ao norte"; o certo, desde 26/11, é "rua ao sul"). Espere o PDF novo [o dono manda gerar]. Sem o PDF anexado, não envie o /planta: "Aqui está" sem a planta é promessa não cumprida (troca da Vera, 26/11). Se a pessoa já mandou a medida na mesma mensagem, apague a última linha e mande logo depois a mensagem da calculadora, que fecha com a pergunta (troca do Caio, 26/11: sem isso, a conversa parava numa mensagem sem pergunta).
 
-- **Troca o quê no atual:** a última linha fica mais curta (era o terceiro pedido da medida seguido, conversa b do Rui), e a nota passa a dar o motivo certo para não mandar o PDF de hoje (o sol, não "24 casas").
+- **Troca o quê no atual:** a última linha fica mais curta (era o terceiro pedido da medida seguido, conversa b do Rui), e a nota passa a dar o motivo certo para não mandar o PDF de hoje (o sol, não "24 casas"). Entrou "o da sua cidade, a prefeitura confirma" (troca do Caio, 26/11).
 
 ### 2.3 A medida
 
@@ -102,12 +102,12 @@ E o seu lote, tem quanto de frente e de fundo?
 - **Quando usar:** a pessoa mandou só a área ("é uns 200 metros").
 
 ```text
-[nome], só a área não me diz se a casa cabe. Um lote de 200 m² pode ser 10 x 20 ou 8 x 25, e as casas que cabem num não são as mesmas do outro.
+[nome], só a área não me diz se a casa cabe. Um lote de 200 m² pode ser 10 x 20 ou 8 x 25 e, pelos recuos de referência, as casas que cabem num não são as mesmas do outro.
 
 Me manda primeiro só a frente: quantos metros o seu lote tem do lado da rua?
 ```
 
-- **Troca o quê no atual:** não existia; o sócio "chutava" a frente e o fundo. "e as casas que cabem num não são as mesmas do outro" no lugar de "e em cada um cabe uma casa diferente", porque a Casa Compacta cabe nos dois exemplos (troca da Vera, 26/11). Conta conferida na regra da calculadora: num 10 x 20 cabem a Família Compacta e a Casa Compacta; num 8 x 25, a Casa Compacta e a Casa Fita.
+- **Troca o quê no atual:** não existia; o sócio "chutava" a frente e o fundo. "e as casas que cabem num não são as mesmas do outro" no lugar de "e em cada um cabe uma casa diferente", porque a Casa Compacta cabe nos dois exemplos (troca da Vera, 26/11). Entrou "pelos recuos de referência", porque a frase diz o que cabe e a conta é feita com eles (troca do Caio, 26/11). Conta conferida na regra da calculadora: num 10 x 20 cabem a Família Compacta e a Casa Compacta; num 8 x 25, a Casa Compacta e a Casa Fita.
 
 #### `/falta` (vazamento 5)
 
@@ -128,7 +128,7 @@ Agora só falta [o fundo: da rua até o muro de trás | a frente: o lado que dá
 ```text
 Oi, [nome]! Conseguiu ver a medida do lote?
 
-Se o fundo ainda não tiver, me manda só a frente (o lado da rua). Com ela eu já te digo quais das 3 casas têm chance de caber.
+Se não tiver o fundo, me manda só a frente (o lado da rua). Com ela eu já te digo quais das 3 casas têm chance de caber.
 
 Quantos metros tem a frente?
 ```
@@ -139,7 +139,7 @@ Quantos metros tem a frente?
 
 #### `/cabe` e `/cabe1` (vazamento 9)
 
-- **Quando usar:** a calculadora disse que cabe uma casa ou mais. **O normal é colar a mensagem pronta da calculadora**; os dois atalhos são para quando ela não abrir, e usam as mesmas palavras dela. **Se a única casa que cabe for a Casa Compacta, não use nenhum dos dois: use `/socompacta`.** Se a pessoa já perguntou o preço, mande o `/oferta` logo depois, sem o 3D.
+- **Quando usar:** a calculadora disse que cabe uma casa ou mais. **O normal é colar a mensagem pronta da calculadora**; os dois atalhos são para quando ela não abrir, e usam as palavras dela, com uma troca que ainda falta no código (abaixo). **Se a única casa que cabe for a Casa Compacta, não use nenhum dos dois: use `/socompacta`.** Se a pessoa já perguntou o preço, mande o `/oferta` logo depois, sem o 3D. **O `/oferta` só sai quando as 3 casas tiverem o 3D refeito** (`RESPOSTAS-RAPIDAS.md`, linha 3; espera o dono, seção 5, item 15): até ele responder, não mande e chame o dono.
 
 `/cabe` (2 ou 3 casas):
 
@@ -149,7 +149,7 @@ No seu lote de [frente] x [fundo] m cabem [2 | 3] casas do e-book, com os recuos
 - [nome da casa]: [área] m², [quartos] quartos
 - [nome da casa]: [área] m², [quartos] quartos
 
-Cada uma vem desenhada no lote, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.
+Cada uma vem desenhada no lote mínimo dela, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.
 
 Qual delas você quer ver por dentro, em 3D?
 ```
@@ -161,13 +161,13 @@ No seu lote de [frente] x [fundo] m cabe 1 casa do e-book, com os recuos de refe
 
 - [nome da casa]: [área] m², [quartos] quartos
 
-Ela vem desenhada no lote, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.
+Ela vem desenhada no lote mínimo dela, com móveis desenhados para dar escala e o porquê de cada escolha. Os recuos da sua cidade você confirma na prefeitura.
 
 Quer ver como ela é por dentro, em 3D?
 ```
 
 - **Troca o quê no atual:** o `/cabe` de hoje tem 2 linhas fixas, fala "cabe/ela" no singular com três casas e termina num pedido diferente do da calculadora. Agora é uma mensagem só, a da calculadora, com o fecho trocado.
-- **Troca no código (não é minha; quem conduz decide quem faz):** na `calculadora-lote.html`, a última linha da mensagem pronta passa de "Quer saber mais de alguma delas?" / "Quer saber mais sobre ela?" para "Qual delas você quer ver por dentro, em 3D?" / "Quer ver como ela é por dentro, em 3D?" (o "saber mais" não é um pedido claro); e, **quando a única casa for a Casa Compacta**, a calculadora mostra no lugar da mensagem o aviso "Só cabe a Casa Compacta: use /socompacta". Hoje ela gera "É esta: Casa Compacta... Quer saber mais sobre ela?", que leva direto à conversa sem saída da Daiane.
+- **Troca no código (não é minha; quem conduz decide quem faz):** o fecho em 3D e o aviso "só a Casa Compacta" com o botão de copiar desligado **já estão** na `calculadora-lote.html` (conferido em 26/11). Falta uma: "desenhada no lote" vira "desenhada no lote mínimo dela" na mensagem pronta, como nos dois atalhos acima, porque logo depois de "No seu lote de..." a frase pode ser lida como o desenho do lote da pessoa (`contexto/redator.md`, troca do Caio, 26/11). Até lá, a mensagem da calculadora e o atalho diferem só nessa palavra.
 
 #### `/socompacta` (vazamento 3, a parte de texto; até o dono decidir)
 
@@ -181,7 +181,7 @@ Prefiro te falar isso do que te vender casa que não cabe.
 [Ficou alguma dúvida sobre a Casa Compacta no seu lote? | Te mando a planta dela agora?]
 ```
 
-- **Troca o quê no atual:** hoje não há mensagem nenhuma (o topo do `RESPOSTAS-RAPIDAS.md` só proíbe o `/oferta`), e a conversa morre. É a saída honesta enquanto o dono não decide a oferta dessa pessoa (versão B do `oferta-so-casa-compacta-2026-11-24.md`). Quem veio do anúncio da Família Compacta com 8 m de frente ainda não tem a planta grátis: para ele, a segunda opção de cada colchete (e o PDF só quando o novo estiver pronto).
+- **Troca o quê no atual:** hoje não há mensagem nenhuma (o topo do `RESPOSTAS-RAPIDAS.md` só proíbe o `/oferta`), e a conversa morre. É a saída honesta enquanto o dono não decide a oferta dessa pessoa (versão B do `oferta-so-casa-compacta-2026-11-24.md`). Quem veio do anúncio da Família Compacta com 8 m de frente não recebeu a planta grátis: para ele, a segunda opção de cada colchete (e o PDF só quando o novo estiver pronto).
 
 #### `/compactapreco` (vazamentos 3 e 6)
 
@@ -199,7 +199,7 @@ Ficou alguma dúvida sobre a Casa Compacta no seu lote?
 
 #### `/3quartos` (atalho da 3b, `/casa3q`)
 
-- **Quando usar:** "E a de 3 quartos cabe no meu?" e o lote tem menos de 10 m de frente.
+- **Quando usar:** "E a de 3 quartos cabe no meu?" e o lote tem menos de 10 m de frente. Em [casa que cabe] vai a casa que a calculadora deu; se ela deu duas, escreva as duas ("Casa Compacta e a Casa Fita"); se ela disse que nenhuma cabe, use o `/naocabe` no lugar deste (troca do Caio, 26/11).
 
 ```text
 [nome], a de 3 quartos é a Família Compacta, e ela pede no mínimo 10 m de frente (e 12,8 m de fundo), com os recuos de referência. Com [frente] m de frente, ela não cabe no seu lote. O recuo da sua cidade, a prefeitura confirma.
@@ -220,22 +220,22 @@ Ficou alguma dúvida sobre a [casa que cabe] no seu lote?
 ```text
 É R$ [preço], [nome], no Pix, aqui mesmo, com 7 dias para pedir o Pix de volta, inteiro.
 
-Antes de você pagar, eu confiro se alguma das 3 casas cabe no seu lote. Qual é a frente e o fundo dele?
+Antes de você pagar, eu confiro se alguma das 3 casas cabe no seu lote, pelos recuos de referência. Qual é a frente e o fundo dele?
 ```
 
-- **Troca o quê no atual:** não existia; responde ao preço na hora e ainda pega a medida, que evita vender a quem só cabe a Casa Compacta ou nenhuma.
+- **Troca o quê no atual:** não existia; responde ao preço na hora e ainda pega a medida, que evita vender a quem só cabe a Casa Compacta ou nenhuma. "Pelos recuos de referência" diz como a conferência é feita (troca do Caio, 26/11).
 
 #### `/oferta` (vazamento 6; o texto de hoje fica)
 
-- **Quando usar:** a casa cabe (e não é só a Casa Compacta) e a pessoa perguntou o preço, ou gostou do 3D.
-- **Troca o quê no atual:** o texto fica como está (a Vera já leu; tem 506 caracteres, perto do limite). Só a nota muda: com duas ou três casas, o sócio escreve "a Casa Fita e a Casa Compacta, que cabem no seu lote, estão no e-book". Nunca vai a quem só cabe a Casa Compacta nem a quem não tem lote.
+- **Quando usar:** a casa cabe (e não é só a Casa Compacta) e a pessoa perguntou o preço, ou gostou do 3D. **O `/oferta` só sai quando as 3 casas tiverem o 3D refeito** (`RESPOSTAS-RAPIDAS.md`, linha 3; espera o dono, seção 5, item 15): até ele responder, não mande e chame o dono.
+- **Troca o quê no atual:** uma frase do texto muda (a Vera leu a de hoje; a nova volta a ela). "Cada uma vem com os móveis desenhados para dar escala, com as medidas, desenhada no lote, em 3D e com as perguntas para o engenheiro." passa a **"Cada uma vem com as medidas, desenhada no lote mínimo, com móveis no desenho para dar escala, em 3D e com as perguntas para o engenheiro."**: logo depois de "que cabe no seu lote", "desenhada no lote" soa como o desenho do lote da pessoa (a mesma troca da calculadora, `contexto/redator.md`). Sem o "dela" da calculadora porque, com ele, a mensagem passaria de 506 para 515 caracteres; assim fica com 510. O `RESPOSTAS-RAPIDAS.md` só muda quando o dono responder a seção 5. A nota também muda: com duas ou três casas, o sócio escreve "a Casa Fita e a Casa Compacta, que cabem no seu lote, estão no e-book". Nunca vai a quem só cabe a Casa Compacta nem a quem não tem lote.
 
 #### `/ofertasemlote` (vazamento 10)
 
-- **Quando usar:** a pessoa não tem lote e gostou da casa (ou perguntou o preço).
+- **Quando usar:** a pessoa não tem lote e gostou da casa (ou perguntou o preço). **Promete o 3D das 3 casas, como o `/oferta`: só sai quando as 3 tiverem o 3D refeito** (`RESPOSTAS-RAPIDAS.md`, linha 3; espera o dono, seção 5, item 15): até ele responder, não mande e chame o dono.
 
 ```text
-[nome], o e-book [título do e-book] tem 3 casas térreas, cada uma com o lote mínimo, com os recuos de referência: a Casa Fita (5 x 20,6 m), a Casa Compacta (8 x 13 m) e a Família Compacta, de 3 quartos (10 x 12,8 m). Antes de fechar um lote, confirme o recuo na prefeitura.
+[nome], o e-book "Antes do primeiro tijolo" tem 3 casas térreas, cada uma com o lote mínimo, com os recuos de referência: a Casa Fita (5 x 20,6 m), a Casa Compacta (8 x 13 m) e a Família Compacta, de 3 quartos (10 x 12,8 m). Antes de fechar um lote, confirme o recuo na prefeitura.
 
 Cada uma vem com as medidas, em 3D e com as perguntas para o engenheiro. Conferida medida por medida (não substitui o profissional).
 
@@ -244,7 +244,7 @@ R$ [preço], no Pix. 7 dias para pedir o Pix de volta.
 Te mando a chave Pix?
 ```
 
-- **Troca o quê no atual:** não existia; o `/oferta` começa por "a casa que cabe no seu lote", que não serve a quem não tem lote. "Antes de fechar um lote, confirme o recuo na prefeitura." no lugar de "Você procura o lote já sabendo a medida.", porque a pessoa vai comprar terreno com esse número (troca da Vera, 26/11). Caracteres recontados: 486.
+- **Troca o quê no atual:** não existia; o `/oferta` começa por "a casa que cabe no seu lote", que não serve a quem não tem lote. "Antes de fechar um lote, confirme o recuo na prefeitura." no lugar de "Você procura o lote já sabendo a medida.", porque a pessoa vai comprar terreno com esse número (troca da Vera, 26/11). Caracteres recontados: 493, com o título já escrito (troca do Caio, 26/11).
 
 #### `/doisprecos` (atalho da 3b)
 
@@ -276,18 +276,18 @@ O recuo muda de cidade para cidade: confirme na prefeitura antes de fechar um lo
 Quantas pessoas vão morar na casa?
 ```
 
-- **Troca o quê no atual:** hoje só cita a Casa Compacta, que a pessoa já ganhou; agora mostra as 3, que é o que se vende. A linha do recuo depois da lista (troca da Vera, 26/11).
+- **Troca o quê no atual:** hoje só cita a Casa Compacta, que só quem veio do post PLANTA ganhou (quem veio dos anúncios A ou B não recebeu planta nenhuma); agora mostra as 3, que é o que se vende. A linha do recuo depois da lista (troca da Vera, 26/11).
 
 #### `/semlote3q` e `/semlote2q` (vazamento 10; o `/semlote2` da 3b)
 
-- **Quando usar:** a resposta ao "quantas pessoas". Família com filhos que quer um quarto para cada: `/semlote3q`. Casal, ou quem se arranja com 2 quartos: `/semlote2q`. Na dúvida, pergunte "Vocês querem 2 ou 3 quartos?".
+- **Quando usar:** a resposta ao "quantas pessoas". Família com filhos que quer um quarto para cada: `/semlote3q`. Casal, ou quem se arranja com 2 quartos: `/semlote2q`. Na dúvida, pergunte "Vocês querem 2 ou 3 quartos?". **No colchete do `/semlote2q`:** "a Casa Fita" só se o PDF grátis da Casa Compacta foi enviado nesta conversa; "as duas" para quem veio dos anúncios A ou B, que não recebeu planta nenhuma.
 
 `/semlote3q`:
 
 ```text
 Se vocês querem 3 quartos, a casa é a Família Compacta: 71 m², os 3 quartos nos fundos, longe da rua.
 
-Ela pede um lote de no mínimo 10 x 12,8 m, com os recuos de referência; o da sua cidade, a prefeitura confirma. Com essa medida na mão, você já sabe que tamanho de lote procurar.
+Ela pede um lote de no mínimo 10 x 12,8 m, com os recuos de referência; o da sua cidade, confirme na prefeitura antes de fechar o lote. Com essa medida na mão, você já sabe que tamanho de lote procurar.
 
 Quer ver como ela é por dentro, em 3D?
 ```
@@ -300,12 +300,12 @@ Se 2 quartos servem para vocês, são duas casas no e-book:
 - Casa Compacta, 51 m²: lote de no mínimo 8 x 13 m
 - Casa Fita, 56 m²: lote de no mínimo 5 x 20,6 m, para lote estreito e comprido
 
-Com os recuos de referência; o da sua cidade, a prefeitura confirma.
+Com os recuos de referência; o da sua cidade, confirme na prefeitura antes de fechar o lote.
 
-Quer ver a Casa Fita por dentro, em 3D?
+Quer ver [a Casa Fita | as duas] por dentro, em 3D?
 ```
 
-- **Troca o quê no atual:** não havia resposta pronta; o `WHATSAPP.md` mandava "indicar uma categoria do catálogo" (o catálogo de 24, que não se vende). Depois do 3D, vai o `/ofertasemlote`. No `/semlote2q` o 3D é o da Casa Fita porque a Casa Compacta a pessoa já tem. No `/semlote3q`, "você já sabe que tamanho de lote procurar" no lugar de "você já procura o lote certo" (troca da Vera, 26/11).
+- **Troca o quê no atual:** não havia resposta pronta; o `WHATSAPP.md` mandava "indicar uma categoria do catálogo" (o catálogo de 24, que não se vende). Depois do 3D, vai o `/ofertasemlote`. No `/semlote2q`, o 3D só da Casa Fita vale para quem já recebeu a Casa Compacta grátis; quem veio dos anúncios A ou B não recebeu, e por isso o fecho tem colchete ("as duas"). No `/semlote3q`, "você já sabe que tamanho de lote procurar" no lugar de "você já procura o lote certo" (troca da Vera, 26/11). Nos dois, "confirme na prefeitura antes de fechar o lote", porque quem recebe ainda vai comprar terreno (troca do Caio, 26/11, pela regra de `contexto/redator.md`).
 
 #### `/custo` (vazamento 10; só o fecho)
 
@@ -325,37 +325,37 @@ Antes de pagar, eu te mando o nome e o CPF de quem vende, e o Pix mostra o nome 
 Quer que eu te mostre como as casas vêm no e-book?
 ```
 
-> **Para o sócio:** se a pessoa disser sim e **não** tem a planta grátis, mande o `/planta`. Sem o PDF novo, mande o /3d da casa que cabe no lote dela (troca da Vera, 26/11). Se já tem, mande o `/3d` da casa que cabe no lote dela.
+> **Para o sócio:** se a pessoa disser sim, **não** tem a planta grátis e o PDF novo já está na sua mão, mande o `/planta`. Nos outros casos (sem o PDF novo, ou ela já tem a planta grátis), mande o `/3d` da casa que cabe no lote dela (troca da Vera, 26/11; só a ordem das frases mudou, troca do Caio, 26/11).
 
 - **Troca o quê no atual:** sai "Por isso a planta grátis vem antes: ela é igual às páginas do e-book, você já viu o que vai receber", que é falso para quem veio do anúncio. Entra o que é verdade para todos: o nome no Pix e os 7 dias. O fecho deixa de pedir o lote que a pessoa às vezes já mandou.
 
 #### `/quem` (vazamento 7)
 
-- **Quando usar:** "Quem são vocês? Tem CNPJ? Tem loja? Qual o Instagram?".
+- **Quando usar:** "Quem são vocês? Tem CNPJ? Tem loja? Qual o Instagram?". Se a pessoa não tem lote, apague a frase "Antes de você pagar, eu te digo se alguma das 3 casas cabe no seu lote, pelos recuos de referência." (troca do Caio, 26/11).
 
 ```text
 Somos [quem vende, em poucas palavras]. A venda é só aqui pelo WhatsApp, sem loja, no nome de pessoa física: [nome de quem vende]. O CPF eu te mando antes de você pagar, e no Pix aparece [nome de quem recebe]. [Não temos CNPJ.] [Nosso Instagram é @ do perfil.]
 
-Antes de você pagar, eu te digo qual casa cabe no seu lote, pelos recuos de referência. Depois de pagar, você tem 7 dias para pedir o Pix de volta.
+Antes de você pagar, eu te digo se alguma das 3 casas cabe no seu lote, pelos recuos de referência. Depois de pagar, você tem 7 dias para pedir o Pix de volta.
 
 Quer que eu te mostre como as casas vêm no e-book?
 ```
 
-- **Troca o quê no atual:** não existia. Sem depoimento e sem número de clientes, porque não temos (a skill proíbe inventar). Tudo o que é dado do dono está em colchete. **Trocas da Vera, 26/11:** o nome de quem vende e o CPF antes do Pix; "[Não temos CNPJ.]" sem o "ainda" (só volta se o dono disser que vai abrir); a frase do Instagram inteira no colchete, apagada se o perfil não existir; a linha "Antes de você pagar, eu te digo qual casa cabe..." no lugar de "O que eu posso te mostrar... é a casa no seu lote", que dava a entender um desenho do lote dela. **Só vai com o perfil comercial completo** (nome, CPF, endereço e e-mail de quem vende; Decreto 7.962/2013, art. 2º).
+- **Troca o quê no atual:** não existia. Sem depoimento e sem número de clientes, porque não temos (a skill proíbe inventar). Tudo o que é dado do dono está em colchete. **Trocas da Vera, 26/11:** o nome de quem vende e o CPF antes do Pix; "[Não temos CNPJ.]" sem o "ainda" (só volta se o dono disser que vai abrir); a frase do Instagram inteira no colchete, apagada se o perfil não existir; a linha "Antes de você pagar, eu te digo se alguma das 3 casas cabe..." ("se alguma das 3" no lugar de "qual casa", que dava a entender que sempre cabe uma; ajuste da Vera, 26/11) no lugar de "O que eu posso te mostrar... é a casa no seu lote", que dava a entender um desenho do lote dela. **Só vai com o perfil comercial completo** (nome, CPF, endereço e e-mail de quem vende; Decreto 7.962/2013, art. 2º).
 
 #### `/formas` (vazamento 7)
 
 - **Quando usar:** "Aceita cartão?", "Posso pagar depois que receber?".
 
 ```text
-[nome], hoje é só Pix, aqui mesmo pelo WhatsApp.
+[nome], é só Pix, aqui mesmo pelo WhatsApp.
 
 Funciona assim: primeiro o Pix, e eu te mando o link do e-book assim que conferir que ele caiu. Dali você tem 7 dias para pedir o Pix de volta, inteiro, se achar que não é para você.
 
 Ficou mais alguma dúvida antes de decidir?
 ```
 
-- **Troca o quê no atual:** não existia atalho (só o FAQ dizia "Pix"). "Assim que conferir" no lugar de "logo depois", porque quem confere o Pix à noite ainda não está decidido (seção 5). Saiu do bloco a nota "[Cartão: o dono decide.]"; se o dono aceitar cartão, o texto novo volta à Vera (troca da Vera, 26/11).
+- **Troca o quê no atual:** não existia atalho (só o FAQ dizia "Pix"). "Assim que conferir" no lugar de "logo depois", porque quem confere o Pix à noite não está decidido (seção 5). "É só Pix" no lugar de "hoje é só Pix", que acenava com cartão que o dono não prometeu (troca do Caio, 26/11). Saiu do bloco o colchete do cartão, que era recado ao sócio; se o dono aceitar cartão, o texto novo volta à Vera (troca da Vera, 26/11).
 
 ### 2.8 Pix e entrega
 
@@ -366,7 +366,7 @@ Ficou mais alguma dúvida antes de decidir?
 ```text
 Recebi, [nome]. Obrigado pela confiança!
 
-Aqui está o seu e-book [título do e-book]:
+Aqui está o seu e-book "Antes do primeiro tijolo":
 [link do Drive]
 
 Abre no celular e dá para baixar e imprimir. Os seus 7 dias de garantia contam de hoje.
@@ -376,12 +376,12 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 
 #### `/recebibonus` (vazamento 8; só quando o dono liberar)
 
-- **Quando usar:** só quando o bonus.pdf estiver na pasta do Drive e o dono disser que os bônus vão. O texto é o `/recebi` de hoje, palavra por palavra (já lido pela Vera).
+- **Quando usar:** só quando o bonus.pdf estiver na pasta do Drive e o dono disser que os bônus vão. O texto é o `/recebi` de hoje (já lido pela Vera) com uma diferença, conferida com diff: o colchete "[título do e-book]" já vem preenchido com "Antes do primeiro tijolo", entre aspas. O resto é igual, palavra por palavra.
 
 ```text
 Recebi, [nome]. Obrigado pela confiança!
 
-Aqui está o seu e-book [título do e-book], com o arquivo dos bônus:
+Aqui está o seu e-book "Antes do primeiro tijolo", com o arquivo dos bônus:
 [link do Drive]
 
 No link estão o e-book e o bonus.pdf, com o checklist da obra por fase e as perguntas para levar ao engenheiro.
@@ -393,12 +393,12 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 
 > Se o dono escolher a opção 7(b) da seção 5, a frase do bonus.pdf ganha "(ainda em rascunho)" e volta à Vera (leitura da Vera, 26/11).
 
-- **Troca o quê no atual:** o `/recebi` de hoje promete o bonus.pdf, que não existe em `ebook/saida/` e tem selo de rascunho (promessa na entrega que não se cumpre, CDC art. 30). Agora há duas, e o sócio abre a pasta antes de escolher. **Cuidado:** se o PDF do e-book da pasta disser na última página que o bonus.pdf vem junto, o bonus.pdf tem que estar lá; o de hoje (25/11) não diz.
+- **Troca o quê no atual:** o `/recebi` de hoje promete o bonus.pdf, que não existe em `ebook/saida/` e tem selo de rascunho (promessa na entrega que não se cumpre, CDC art. 30). Agora há duas, e o sócio abre a pasta antes de escolher. **Cuidado:** se o PDF do e-book da pasta disser na última página que o bonus.pdf vem junto, o bonus.pdf tem que estar lá; o de hoje (gerado em 24/11/2026, 16:09 UTC, pelo `pdfinfo`) não diz (conferido com `pdftotext`: nenhuma menção a bônus).
 - **Também no `WHATSAPP.md`, "Quando o Pix cair" e o FAQ "Como recebo?":** a mesma troca (a frase do bonus.pdf só na versão com bônus).
 
 ### 2.9 O que não muda
 
-`/medida`, `/naocabe`, `/3d`, `/pix`, `/garantia`, `/devolver`, `/caro`, `/pensar`, `/arquiteto`, a saudação e a ausência ficam como estão. Só o `WHATSAPP.md` tem duas sobras para alinhar: "Se a pessoa ainda não tem terreno" passa a apontar para `/semlote`, `/semlote3q` e `/semlote2q`; o "É caro" e o Dia 3 perdem o [preço do concorrente], que nunca foi preenchido, e ficam iguais ao `/caro` e ao `/oferta`.
+`/medida`, `/3d`, `/pix`, `/garantia`, `/devolver`, `/arquiteto`, a saudação e a ausência ficam como estão. No `/caro`, "3 casas desenhadas no lote, com móveis no desenho para dar escala" passa a **"3 casas, cada uma desenhada no lote mínimo dela, com móveis no desenho para dar escala"** (a mesma troca do `/oferta`; 401 caracteres; o `RESPOSTAS-RAPIDAS.md` espera o dono). No `/naocabe` e no `/pensar`, a frase "A planta grátis fica com você." só vai a quem recebeu o PDF grátis nesta conversa; para os outros, apague a frase (condição da Vera, 26/11: quem veio do anúncio não recebeu planta nenhuma). Só o `WHATSAPP.md` tem duas sobras para alinhar: "Se a pessoa ainda não tem terreno" passa a apontar para `/semlote`, `/semlote3q` e `/semlote2q`; o "É caro" e o Dia 3 perdem o [preço do concorrente], que nunca foi preenchido, e ficam iguais ao `/caro` e ao `/oferta`.
 
 ## 3. Folha do sócio (uma página)
 
@@ -464,9 +464,9 @@ Me conta: qual casa você mais gostou? E você vai construir agora, financiar ou
 ## 4. Conferência antes de mandar à Vera
 
 - **Contra a lista de frases vetadas** (`contexto/redator.md`): nenhum 3D prometido onde não há (o 3D das 3 casas está no `ebook.pdf` e em `ebook/visual/3d/`); nenhum "banheiro com giro"; nenhuma "ventilação cruzada"; nenhum "recebe as próximas plantas"; nenhum "todas as casas cabem"; nenhum "frente para o norte" na Casa Compacta (as mensagens não falam de sol; só a nota do `/planta`, que diz o certo, "rua ao sul").
-- **Contra os limites:** nenhuma mensagem diz ou dá a entender que dispensa pedreiro, engenheiro ou arquiteto; nenhuma promete aprovação, prazo ou custo de obra; nenhum prazo de oferta nem alta de preço; "conferida medida por medida" vem com "(não substitui o profissional)" no `/ofertasemlote`; todo "cabe" vem com "recuos de referência" e "a prefeitura confirma"; o `/lembrete` é uma vez só; toda mensagem termina com pergunta.
+- **Contra os limites:** nenhuma mensagem diz ou dá a entender que dispensa pedreiro, engenheiro ou arquiteto; nenhuma promete aprovação, prazo ou custo de obra; nenhum prazo de oferta nem alta de preço; "conferida medida por medida" vem com "(não substitui o profissional)" no `/ofertasemlote`; todo "cabe" vem com "recuos de referência"; a frase da prefeitura vai junto de todo resultado sobre o lote da pessoa e de todo número que ela pode usar para comprar terreno ("antes de fechar", para quem ainda não tem lote); na promessa de conferir (`/precoantes`, `/quem`, `/lembrete`), não precisa; o `/lembrete` é uma vez só; toda mensagem termina com pergunta.
 - **Números:** todos do `PLANTAS.md` e da regra da calculadora, conferidos nesta sessão.
-- **Tamanho:** todas as mensagens novas com menos de 512 caracteres antes de preencher (contagem com `python3`: recontada depois das trocas da Vera: a maior é o `/ofertasemlote`, 486; depois o `/quem`, 462, o `/recebibonus`, 431, e o `/socompacta`, 424, que encolhe ao apagar a opção que não serve. A regra do preço, com 541, é nota para o topo do arquivo, não resposta rápida).
+- **Tamanho:** todas as mensagens novas com menos de 512 caracteres antes de preencher (contagem com `python3` sobre cada bloco, refeita em 26/11 depois das trocas do `/quem` e do `/semlote2q`: a maior é o `/ofertasemlote`, 493; depois o `/quem`, 473, o `/recebibonus`, 438, o `/socompacta`, 423, que encolhe ao apagar a opção que não serve, e o `/area`, 249. Com a troca de "desenhada no lote", o `/oferta` fica com 510 e o `/caro` com 401. A regra do preço, com 540, é nota para o topo do arquivo, não resposta rápida).
 
 ## 5. Espera o dono
 

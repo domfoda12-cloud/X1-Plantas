@@ -59,7 +59,19 @@ const PRES = {
   required: ['fatos', 'sintese', 'corrigir_ja'],
 }
 const SAIDA = { type: 'object', properties: { codigo: { type: 'integer' }, saida: { type: 'string' } }, required: ['codigo', 'saida'] }
-const lerJson = (s, padrao) => { try { return JSON.parse(s) } catch (e) { return padrao } }
+// o agente às vezes embrulha a saída em frases: pega o último JSON inteiro que aparece nela
+const lerJson = (s, padrao) => {
+  const t = String(s || '')
+  try { return JSON.parse(t) } catch (e) {}
+  for (let i = t.length - 1; i >= 0; i--) {
+    if (t[i] !== '}' && t[i] !== ']') continue
+    const abre = t[i] === '}' ? '{' : '['
+    for (let j = t.indexOf(abre); j >= 0 && j < i; j = t.indexOf(abre, j + 1)) {
+      try { return JSON.parse(t.slice(j, i + 1)) } catch (e) {}
+    }
+  }
+  return padrao
+}
 
 const gasto = {}, conf = {}, achados = []
 async function medir(nome, tipo, fn) {
@@ -111,7 +123,7 @@ async function umaRodada(n, proposta) {
   }
   phase('Programa')
   const v = await medir('programa:juri', 'P', () => agent(
-    `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e a saída inteira:\n\npython3 ferramentas/fluxo.py juri - <<'FIM'\n${JSON.stringify(rodada)}\nFIM`,
+    `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py juri - <<'FIM'\n${JSON.stringify(rodada)}\nFIM`,
     { label: 'programa:juri', phase: 'Programa', model: 'haiku', effort: 'low', schema: SAIDA }))
   const veredito = lerJson(v && v.saida, { completa: false, erros: ['saída ilegível do programa'], proximo: 'recusada: complete a rodada' })
   conf['programa:juri'].achados_proprios += (veredito.erros || []).length
@@ -148,7 +160,7 @@ const registro = {
   juri: rodadas.map(r => ({ rodada: r.rodada.rodada, notas: r.veredito.notas, media: r.veredito.media, perderam_a_nota: r.veredito.perderam_a_nota, erros: r.veredito.erros })),
 }
 const reg = await agent(
-  `Rode exatamente este comando na raiz do repositório e devolva a saída inteira:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
+  `Rode exatamente este comando na raiz do repositório e devolva, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
   { label: 'registrar', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const gravado = lerJson(reg && reg.saida, null)
 if (!gravado || !gravado.gravado) log('ATENÇÃO: o registro não gravou; o Maestro grava com o "registro" devolvido')

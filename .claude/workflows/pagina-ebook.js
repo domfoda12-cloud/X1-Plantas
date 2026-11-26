@@ -48,9 +48,21 @@ async function medir(nome, tipo, fn) {
   return r
 }
 const rodar = (nome, cmd) => medir(nome, 'P', () => agent(
-  `Rode exatamente estes comandos na raiz do repositório, nesta ordem, sem mudar nada, e devolva o código de saída do último e a saída inteira do último:\n\n${cmd}`,
+  `Rode exatamente estes comandos na raiz do repositório, nesta ordem, sem mudar nada, e devolva o código de saída do último e, em "saida", SÓ o que o último imprimiu, sem comentário seu:\n\n${cmd}`,
   { label: nome, phase: 'Programa', model: 'haiku', effort: 'low', schema: SAIDA }))
-const lerJson = (s, padrao) => { try { return JSON.parse(s) } catch (e) { return padrao } }
+// o agente às vezes embrulha a saída em frases: pega o último JSON inteiro que aparece nela
+const lerJson = (s, padrao) => {
+  const t = String(s || '')
+  try { return JSON.parse(t) } catch (e) {}
+  for (let i = t.length - 1; i >= 0; i--) {
+    if (t[i] !== '}' && t[i] !== ']') continue
+    const abre = t[i] === '}' ? '{' : '['
+    for (let j = t.indexOf(abre); j >= 0 && j < i; j = t.indexOf(abre, j + 1)) {
+      try { return JSON.parse(t.slice(j, i + 1)) } catch (e) {}
+    }
+  }
+  return padrao
+}
 
 async function programa() {
   const r = await rodar('programa:pagina', `${GERAR} > /dev/null && python3 ferramentas/fluxo.py pagina ${A.previa}/ebook.pdf ${A.pagina} --json`)
@@ -63,15 +75,16 @@ conf['programa:pagina'].achados_proprios = prog.achados.length
 for (const e of prog.achados.filter(x => x.tipo === 'erro'))
   achados.push({ autor: AUTOR, chave: 'programa-pagina', texto: `pág. ${A.pagina}: ${e.msg}`, licao: `antes de dizer pronta, gere a prévia e rode fluxo.py pagina: ${e.msg}`, achado_por: 'programa:pagina' })
 
-let voltas = 0, passe = null
+let voltas = -1  // a primeira passada do autor é a conferência dele, não volta de conserto, passe = null
 async function autor(oque) {
   voltas++
+  const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
   return medir('autor', 'A', () => agent(
     `Você fez a página ${A.pagina} do e-book (${PEDIDO}). O texto sai de: ${A.fonte}. Só edite esses arquivos; nunca grave ebook/saida/. ` +
     `Para ver a página: ${GERAR} e abra ${PNG}.\n\nO que conferir e consertar agora:\n${oque}\n\n` +
     `Depois, confira a página contra a sua lista em contexto/${AUTOR}.md e conserte o que falhar. Número só o que o PLANTAS.md traz. ` +
     `Devolva o passe (fonte_diretor: de onde veio a ideia principal desta página).`,
-    { label: `autor:${AUTOR} (volta ${voltas})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
+    { label: `autor:${AUTOR} (${rotulo})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
 }
 phase('Autor')
 passe = await autor(prog.achados.length ? prog.achados.map(x => `- (${x.tipo}) ${x.msg}`).join('\n') : '- o programa não achou nada; só a sua lista.')
@@ -127,7 +140,7 @@ const registro = {
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(
-  `Rode exatamente este comando na raiz do repositório e devolva a saída inteira:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
+  `Rode exatamente este comando na raiz do repositório e devolva, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
   { label: 'registrar', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const gravado = lerJson(reg && reg.saida, null)
 if (!gravado || !gravado.gravado) log('ATENÇÃO: o registro não gravou; o Maestro grava com o "registro" devolvido')

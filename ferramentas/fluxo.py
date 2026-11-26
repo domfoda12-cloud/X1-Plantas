@@ -30,6 +30,7 @@ FLUXOS = RAIZ / "pedidos" / "fluxos"
 PROVAS = RAIZ / "pedidos" / "provas"
 PASSE = ("feito", "suposicoes", "faltando", "arquivos", "perguntas_ao_dono")
 ANGULOS = ("comprador", "dinheiro", "risco")
+LICOES_POR_RODADA = 3  # por autor; as outras ficam no registro da rodada
 
 # --- 1. Texto que vai ao público -------------------------------------------------------------------------------------
 # Frases vetadas pela Vera que não voltam (contexto/redator.md) e as promessas que o CLAUDE.md proíbe.
@@ -222,8 +223,10 @@ def _licao(papel, texto, origem):
     import importlib.util as iu
     e = iu.spec_from_file_location("pedido", Path(__file__).resolve().parent / "pedido.py"); p = iu.module_from_spec(e); e.loader.exec_module(p)
     p.RAIZ, p.PEDIDOS = RAIZ, RAIZ / "pedidos"
+    import contextlib
     try:
-        p.licao(papel, texto, origem=origem, consolidar_cheio=True)
+        with contextlib.redirect_stdout(sys.stderr):  # a saída do registrar é só o JSON (o fluxo lê o stdout)
+            p.licao(papel, texto, origem=origem, consolidar_cheio=True)
         return True
     except SystemExit as x:
         print(f"lição de {papel} não gravada: {x}")
@@ -259,8 +262,9 @@ def registrar(r, agora=None):
     _grava_json(FLUXOS / "rodadas" / f"{marca}-{r['fluxo']}.json", r)
     colhidas = _json(FLUXOS / "licoes-colhidas.json", {})
     voltam = _json(PROVAS / "voltam.json", [])
-    papeis, novas, repetidas = _papeis(), [], []
-    for a in r.get("achados") or []:
+    papeis, novas, repetidas, por_autor = _papeis(), [], [], {}
+    ordem = {"vera": 0, "presidente": 1}  # a leitura final pesa mais; as de programa por último (o programa já as pega sozinho)
+    for a in sorted(r.get("achados") or [], key=lambda a: ordem.get(a.get("achado_por"), 2 if not str(a.get("achado_por", "")).startswith("programa") else 3)):
         chave = f"{a['autor']}|{re.sub(r'[^a-z0-9-]', '-', a['chave'].lower())}"
         if a["autor"] not in papeis or not str(a.get("licao") or "").strip():
             continue
@@ -268,7 +272,10 @@ def registrar(r, agora=None):
             colhidas[chave]["vezes"] += 1
             voltam.append({"papel": a["autor"], "chave": a["chave"], "texto": a["texto"], "rodada": marca})
             repetidas.append(chave)
-        elif _licao(a["autor"], f"Fluxo {r['fluxo']}, {agora:%d/%m}: {a['licao']}", "fluxo"):
+        elif por_autor.get(a["autor"], 0) >= LICOES_POR_RODADA:  # o resto fica no registro da rodada, para não encher o arquivo de uma vez
+            continue
+        elif _licao(a["autor"], f"({r['fluxo']}) {a['licao']}", "fluxo"):
+            por_autor[a["autor"]] = por_autor.get(a["autor"], 0) + 1
             colhidas[chave] = {"desde": f"{agora:%Y-%m-%d}", "vezes": 1, "rodada": marca}
             novas.append(chave)
     _grava_json(FLUXOS / "licoes-colhidas.json", colhidas)

@@ -17,7 +17,7 @@
 - Número ao público sai do validador com `PL.n0` (0,5 sobe). Textos das casas: `ebook/fichas/textos.py`; fixos: `ebook/gerador/paginas.py` (ebook/CLAUDE.md).
 <!-- /essencial -->
 
-## Os 24 programas
+## Os 25 programas
 
 ### [`ebook/fichas/textos.py`](../ebook/fichas/textos.py)
 
@@ -74,6 +74,12 @@ Funções: `carregar_rascunho`, `conferencias`, `main`.
 Escrito do zero; não usa nem contém código do cass (vetado pela licença, ficha 2151).
 
 Funções: `sem_acento`, `mascarar`, `pasta_do_projeto`, `falas`, `buscar`, `testar`.
+
+### [`ferramentas/fluxo.py`](fluxo.py)
+
+Fluxos fixos (dono, 26/11/2026: "ultra max"): a conferência mais barata que pega o erro, primeiro por programa.
+
+Funções: `casas`, `conferir_texto`, `conferir_passe`, `conferir_juri`, `conferir_registro`, `registrar`, `relatorio`, `nivel_desc`, `prova_estado`, `prova_nota`, `testar`, `main`.
 
 ### [`ferramentas/guardar-pedido.py`](guardar-pedido.py)
 

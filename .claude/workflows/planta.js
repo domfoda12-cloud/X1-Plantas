@@ -38,20 +38,33 @@ async function medir(nome, tipo, fn) {
   return r
 }
 const rodar = (nome, cmd) => medir(nome, 'P', () => agent(
-  `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e a saída inteira:\n\n${cmd}`,
+  `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\n${cmd}`,
   { label: nome, phase: 'Programa', model: 'haiku', effort: 'low', schema: SAIDA }))
-const lerJson = (s, padrao) => { try { return JSON.parse(s) } catch (e) { return padrao } }
+// o agente às vezes embrulha a saída em frases: pega o último JSON inteiro que aparece nela
+const lerJson = (s, padrao) => {
+  const t = String(s || '')
+  try { return JSON.parse(t) } catch (e) {}
+  for (let i = t.length - 1; i >= 0; i--) {
+    if (t[i] !== '}' && t[i] !== ']') continue
+    const abre = t[i] === '}' ? '{' : '['
+    for (let j = t.indexOf(abre); j >= 0 && j < i; j = t.indexOf(abre, j + 1)) {
+      try { return JSON.parse(t.slice(j, i + 1)) } catch (e) {}
+    }
+  }
+  return padrao
+}
 
-let voltas = 0, passe = null
+let voltas = -1  // a primeira passada do autor é a conferência dele, não volta de conserto, passe = null
 async function autor(oque) {
   voltas++
+  const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
   return medir('autor', 'A', () => agent(
     `Rascunho de planta da ${A.casa}: ${A.rascunho}${VAR}. Objetivo: ${A.objetivo}.\n` +
     `Escreva ou conserte SÓ o rascunho (um .py que monta a planta num dicionário com "comodos" e "portas", como pede ferramentas/conferir-rascunho.py; ` +
     `parta da oficial em ebook/plantas/projetos.py). Nunca edite projetos.py, ebook/saida/ nem as prévias. ` +
     `Antes de devolver, rode python3 ferramentas/conferir-rascunho.py ${A.rascunho}${VAR} até sair limpo, e confira contra a sua lista em contexto/arquiteto.md.\n\n` +
     `O que fazer agora:\n${oque}\n\nDevolva o passe (em suposicoes, o que você decidiu sem o dono dizer).`,
-    { label: `nilo (volta ${voltas})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
+    { label: `nilo (${rotulo})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
 }
 phase('Autor')
 passe = await autor('- desenhe o rascunho para o objetivo acima.')
@@ -93,7 +106,7 @@ const registro = {
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(
-  `Rode exatamente este comando na raiz do repositório e devolva a saída inteira:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
+  `Rode exatamente este comando na raiz do repositório e devolva, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
   { label: 'registrar', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const gravado = lerJson(reg && reg.saida, null)
 if (!gravado || !gravado.gravado) log('ATENÇÃO: o registro não gravou; o Maestro grava com o "registro" devolvido')

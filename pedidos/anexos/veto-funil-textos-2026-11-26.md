@@ -73,3 +73,59 @@
 - A leitura do art. 6º, II do CDC (igualdade nas contratações) no caso dos dois preços é dela e não está no caderno.
 
 **Não conferido por ela:** o `git diff`; o texto do `ebook.pdf`; o 3D janela por janela; o kit do anúncio; as contagens de caracteres.
+
+## Reconferência (26/11, fluxo `texto-publico`, primeira rodada real)
+
+> Leitura única da Vera dentro do fluxo `.claude/workflows/texto-publico.js` (ficha `2026-11-26-0721`), gravada pelo Paydon (ela só lê). Registro da rodada: `pedidos/fluxos/RODADAS.md`.
+
+**Veredito:** SIM SE. **As duas condições, aplicadas pelo Paydon em 26/11:** (1) na seção 2.9 do rascunho, `/naocabe` e `/pensar` saem do "ficam como estão", e "A planta grátis fica com você." só vai a quem recebeu o PDF grátis na conversa; (2) na `ebook/vendas/calculadora-lote.html`, "desenhada no lote" virou "desenhada no lote mínimo dela".
+
+[Revisor] SIM SE. Li a seção 2 (linhas 46 a 401) uma vez, na ordem da conversa. As 22 mensagens novas e os 4 consertos desta passada passam. As duas condições estão fora dos blocos novos: uma frase antiga que a 2.9 mantém e a mensagem da calculadora. Este parecer entra como seção nova "Reconferência" em `/home/user/X1-Plantas/pedidos/anexos/veto-funil-textos-2026-11-26.md` (eu só leio; quem conduz grava).
+
+OS 4 CONSERTOS
+- `/area`: SIM. Refiz a conta com os dados da calculadora: num 10 x 20 cabem a Família Compacta e a Casa Compacta; num 8 x 25, a Casa Compacta e a Casa Fita.
+- Nota do `/planta`: SIM, com um ajuste (abaixo).
+- "Quando usar" do `/3quartos`: SIM.
+- Nota do `/confia`: SIM, com um aviso sobre a pergunta 6 (abaixo).
+
+CONFERIDO CONTRA OS DADOS
+- Áreas, quartos, lote mínimo e lote comum das 3 casas batem com o `PLANTAS.md` e com a lista da calculadora.
+- A faixa "só a Casa Compacta" (frente de 8 a 9,9 m, fundo de 13 a 20,5 m) bate com a regra da calculadora.
+- Na calculadora, o botão de copiar fica desligado no aviso "só a Casa Compacta", e a frase "encostar na divisa" saiu.
+- O 3D das 3 casas existe em `ebook/visual/3d/`.
+- No `livro.py`, cada página de casa tem "Leve ao seu engenheiro", "A casa em 3D" e a casa no lote mínimo.
+
+SUPOSIÇÕES DO CAIO
+1. Aceito. "A prefeitura confirma" vai junto de resultado sobre o lote da pessoa e de número que ela pode usar para comprar terreno; na promessa de conferir (`/precoantes`, `/quem`, `/lembrete`, `/area`) não precisa. Então a frase da seção 4 "todo 'cabe' vem com 'recuos de referência' e 'a prefeitura confirma'" está larga demais: quem atualizar a seção 4 ajusta.
+2. Aceito. Na Casa Compacta, a caixa aponta para "Pergunte em qualquer casa", no fim do e-book.
+3. Aceito. "Qual casa você mais gostou?" não é assunto de honestidade.
+
+AJUSTES QUE NÃO SÃO CONDIÇÃO (nota para o sócio, não vai ao cliente)
+- Nota do `/planta`: "a mensagem da calculadora, que fecha com a pergunta" não vale quando só cabe a Casa Compacta (a calculadora mostra o aviso, não uma mensagem). Sugestão: "Se a pessoa já mandou a medida, na mesma mensagem ou antes, apague a última linha e siga a calculadora: a mensagem pronta, o /socompacta ou o /naocabe."
+- Nota do `/confia`: mandar o `/planta` a quem veio do anúncio é a opção (a) da pergunta 6, que está aberta. O `WHATSAPP.md` tem a regra do dono de 23/11 "mande planta-gratis-C01.pdf para todo mundo", então não veto. Se ele responder (b), a primeira frase da nota sai. Falta o caso de quem ainda não mandou a medida: o `/3d` é o da casa do anúncio.
+- `/cabe`: o bloco tem duas linhas de casa. Com [3], o sócio pode mandar "cabem 3 casas" e listar duas. Sugestão: três linhas no bloco e "apague a que sobrar".
+- `/quem`: "eu te digo qual casa cabe no seu lote" é troca minha e supõe que alguma cabe. Fica melhor "eu te digo se alguma das 3 casas cabe no seu lote", por volta de 10 caracteres a mais.
+- `/area`: o exemplo fica em 200 m² para qualquer área. Se o sócio trocar o número, a frase pode virar falsa (num lote de 360 m², as mesmas casas cabem nos dois formatos).
+- `/oferta`, `/3d` e `/caro` também dizem "desenhada(s) no lote". Ali o risco é menor, porque falam das 3 casas, mas vale alinhar quando o `RESPOSTAS-RAPIDAS.md` for editado. No `/oferta`, "no lote mínimo dela" no lugar de "desenhada no lote" soma 2 caracteres aos 506 declarados.
+
+CONTINUAM VALENDO
+- As condições gerais de 26/11: os dois PDFs gerados de novo e o perfil comercial com nome, CPF, endereço e e-mail. A terceira (sem nota interna no bloco) está cumprida.
+- O `/doisprecos` só depois da pergunta 18; o `/recebibonus` só depois da 7.
+- Não decidi nenhuma das 19 perguntas da seção 5. Uma observação para o Paydon: `contexto/redator.md` dá o título como decidido em 26/11 às 07:01, e a pergunta 12 ainda o pergunta.
+
+NÃO CONFERI
+- As contagens de caracteres (não rodo comandos).
+- O texto do `ebook.pdf` de 25/11 (olhei o gerador, não o PDF).
+- O 3D janela por janela.
+- Se o WhatsApp aceita hífen ou número no nome do atalho.
+- O `WHATSAPP.md` inteiro e o kit do anúncio.
+
+PEDIDOS DA FICHA `2026-11-26-0058`
+- Parte 5 ("ele vai pegar a parte do funil"): esta leitura cumpre a minha parte, o veredito dos textos.
+- Partes 1 a 4 e 6: não são minhas (Maestro).
+- Em aberto: as respostas do dono à seção 5, a troca na calculadora (Paydon) e a contagem velha da seção 4 (quem conduz).
+
+Falas:
+Vera → Caio: os 4 consertos passaram e as 22 mensagens novas também. O que pegou foi velho: o `/naocabe` e o `/pensar` dizem "A planta grátis fica com você" a quem veio do anúncio e não recebeu nada. A 2.9 precisa dessa regra.
+Vera → Paydon: a calculadora ainda manda "desenhada no lote" logo depois de "No seu lote de...". Troque para "no lote mínimo dela", ou o sócio usa só o `/cabe` e o `/cabe1` até lá. Grave este parecer como "Reconferência" no `veto-funil-textos-2026-11-26.md`.
+Vera → Rui: na simulação, o `/pensar` da Kelly traz a mesma frase da planta grátis. Vale olhar de que anúncio ela veio.

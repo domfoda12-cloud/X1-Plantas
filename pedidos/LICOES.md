@@ -36,3 +36,10 @@
 | 26/11/2026 | maestro | ficha | 2026-11-25-1544 | - | registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento. |
 | 26/11/2026 | maestro | ficha | 2026-11-26-0105 | - | mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram. |
 | 26/11/2026 | maestro | auditoria | 2026-11-26-0116 | - | Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada). |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Quando um atalho herda a promessa de outro, copie para o 'Quando usar' a condição que trava o original enquanto o dono não responde. |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Antes de escrever 'a pessoa já tem', confira cada origem (anúncio A, B e post PLANTA); se uma delas não recebeu, abra um colchete ou separe o caso. |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Quando uma frase é corrigida por uma regra, procure a mesma frase em todos os atalhos antes de marcar algum como 'fica como está'. |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Só escreva 'palavra por palavra' depois de comparar os dois blocos com diff; se mudou um colchete, diga qual. |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Tire a data de um arquivo do pdfinfo ou do git log, não da memória. |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Antes de escrever "fica como está", releia o atalho antigo com a pergunta "vale para quem veio do anúncio e não recebeu a planta grátis?". |
+| 26/11/2026 | redator | fluxo | - | - | (texto-publico) Quando a mensagem que vai ao cliente mora no código, peça a troca do código antes da leitura: atalho e calculadora chegam iguais à revisora. |

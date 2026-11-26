@@ -161,7 +161,7 @@ Só o que importa para este papel; as regras fixas estão no seu arquivo de agen
 
 Seções: Antes de mandar ao Revisor, confira (e diga que conferiu); Em aberto com você; Leia barato; Lições.
 
-Tamanho: 455 palavras.
+Tamanho: 643 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 

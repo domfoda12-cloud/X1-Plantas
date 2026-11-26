@@ -28,3 +28,10 @@ Os fios do que o dono quer: [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-GERAIS.md). Pr
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 - **24/11, ficha 2026-11-23-0200:** no primeiro teste (ficha 0947), a marketing-psychology rendeu mais para conferir texto pronto do que para ter ideia nova; use-a na revisão.
+- **26/11, fluxo:** (texto-publico) Quando um atalho herda a promessa de outro, copie para o 'Quando usar' a condição que trava o original enquanto o dono não responde.
+- **26/11, fluxo:** (texto-publico) Antes de escrever 'a pessoa já tem', confira cada origem (anúncio A, B e post PLANTA); se uma delas não recebeu, abra um colchete ou separe o caso.
+- **26/11, fluxo:** (texto-publico) Quando uma frase é corrigida por uma regra, procure a mesma frase em todos os atalhos antes de marcar algum como 'fica como está'.
+- **26/11, fluxo:** (texto-publico) Só escreva 'palavra por palavra' depois de comparar os dois blocos com diff; se mudou um colchete, diga qual.
+- **26/11, fluxo:** (texto-publico) Tire a data de um arquivo do pdfinfo ou do git log, não da memória.
+- **26/11, fluxo:** (texto-publico) Antes de escrever "fica como está", releia o atalho antigo com a pergunta "vale para quem veio do anúncio e não recebeu a planta grátis?".
+- **26/11, fluxo:** (texto-publico) Quando a mensagem que vai ao cliente mora no código, peça a troca do código antes da leitura: atalho e calculadora chegam iguais à revisora.

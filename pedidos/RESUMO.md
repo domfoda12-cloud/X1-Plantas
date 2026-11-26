@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 93 documentos
+## Os 96 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1359 palavras.
+Tamanho: 1610 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -195,7 +195,7 @@ Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/
 
 Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila); Leitura da Vera (26/11).
 
-Tamanho: 6895 palavras.
+Tamanho: 7677 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
@@ -309,6 +309,14 @@ Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku)
 
 Tamanho: 10600 palavras.
 
+### [Proposta para o júri: primeira resposta mais curta no anúncio da Casa Fita (teste do fluxo `decisao`, 26/11/2026)](anexos/juri-teste-fluxo-2026-11-26.md)
+
+Rodada de teste do fluxo `.claude/workflows/decisao.js` (ficha `2026-11-26-0721`). Motivo de ir ao júri: o texto vai ao público (o cliente do anúncio lê no WhatsApp). Esta proposta é também a prova de calibração da regra 5 do júri (`CONSELHO.md`, seção 5b): tem erro plantado, e o gabarito fica fora…
+
+Seções: O que muda; Por que; Como aplica; Como desfazer.
+
+Tamanho: 225 palavras.
+
 ### [Kit do anúncio pago que abre o WhatsApp (rascunho)](anexos/kit-anuncio-whatsapp.md)
 
 24/11/2026. Escrito pelo Redator com a skill `oferta-e-whatsapp` (passo a passo) e a `redacao-que-vende`, conferido com a `marketing-psychology` (vontade, facilidade, um pedido só). Origem: achados 1, 2 e 5 de `skills-primeiro-uso.md`. RASCUNHO: nada aqui vai ao público. Antes, três coisas: o…
@@ -340,6 +348,14 @@ Pedido do dono (quadro, 24/11/2026), palavra por palavra: "Procure na rede e me 
 Seções: Como ler as marcações; Família 1: letreiro de obra e de placa pintada à mão (letreiramento popular, "abridor de letras"); Família 2: estêncil e carimbo de caixote; Família 3: letra de planta técnica e de normógrafo; Família 4: letra "estranha" ou alienígena (forma inventada, ainda legível); Família 5: letra de quadrinho e de gibi; Família 6: display gorda e engraçada; Quais 3 eu levaria ao Designer para testar no nome "Lote Carente" (leitura minha, não decisão); O que não consegui conferir; Reconferência do pedido (um por um).
 
 Tamanho: 2923 palavras.
+
+### [Mapa das conferências (26/11/2026)](anexos/mapa-conferencias-2026-11-26.md)
+
+Passo 1 do plano `pedidos/anexos/plano-fluxos-2026-11-26.md` (ficha `2026-11-26-0721`). Fontes: as lições de `pedidos/LICOES.md` e do "Lições" de cada `contexto/<papel>.md`, as provas de `pedidos/PROVAS.md` e os vetos da Vera em `pedidos/anexos/veto-*.md`. Regra do dono: tudo é conferido, pela…
+
+Seções: 1. Texto que vai ao público (anúncio, legenda, WhatsApp, página do e-book); 2. Página do e-book (prévia); 3. Planta; 4. Decisão (júri e conselho de bolso); 5. Passe entre agentes, salvar e passagem; 6. O que fica com agente, e por quê.
+
+Tamanho: 1209 palavras.
 
 ### [Mapa dor e saída do e-book, página por página (24/11/2026)](anexos/mapa-dor-solucao-do-ebook-2026-11-24.md)
 
@@ -611,9 +627,9 @@ Tamanho: 482 palavras.
 
 Vera Veto (Revisora de risco), no Fable, 26/11/2026. Leitura única da peça `funil-textos-rascunho-2026-11-26.md`, seguindo a folha do sócio do anúncio ao Pix. Ela só tem ferramentas de leitura: o parecer foi gravado aqui pelo Paydon, palavra por palavra do relatório dela. Veredito geral: SIM SE.…
 
-Seções: Conferido contra os dados; Condições gerais (valem para o funil inteiro); Atalho por atalho; Calculadora (`ebook/vendas/calculadora-lote.html`); Folha do sócio: SIM SE; Faltam na seção 5 (perguntas ao dono); Notas (não são condição).
+Seções: Conferido contra os dados; Condições gerais (valem para o funil inteiro); Atalho por atalho; Calculadora (`ebook/vendas/calculadora-lote.html`); Folha do sócio: SIM SE; Faltam na seção 5 (perguntas ao dono); Notas (não são condição); Reconferência (26/11, fluxo `texto-publico`, primeira rodada real).
 
-Tamanho: 1548 palavras.
+Tamanho: 2541 palavras.
 
 ### [Revisor de risco: identidade "Lote Carente" do Instagram, 24/11/2026 · Opus, rascunho](anexos/veto-instagram-lote-carente-2026-11-24.md)
 
@@ -700,6 +716,12 @@ Tamanho: 687 palavras.
 SIM SE. Conferido nos dados: `veneziana_sobre_porta: fundos`; 0,90 x 0,50 = 0,45 m²; 0,45 / 3,4 = 13%. A página não estoura; os avisos aparecem nas páginas 8 e 9 e na planta grátis. O veto 3 do cômodo a cômodo (serviço da C01) fica levantado, com as condições abaixo.
 
 Tamanho: 340 palavras.
+
+### [Rodadas dos fluxos fixos](fluxos/RODADAS.md)
+
+Gravado por `python3 ferramentas/fluxo.py registrar` no fim de cada fluxo (`.claude/workflows/`). Não edite à mão; o detalhe de cada rodada está em `rodadas/`.
+
+Tamanho: 85 palavras.
 
 ### [Os prompts do dono, palavra por palavra](historico/PROMPTS.md)
 

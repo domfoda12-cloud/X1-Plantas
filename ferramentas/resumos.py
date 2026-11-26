@@ -41,7 +41,7 @@ PASTAS = {
     "reports": ("Jurídico", "O que a lei exige de arquiteto e engenheiro, preços e critérios",
                 ["reports"], ["revisor-de-risco", "pesquisador", "estrategista"]),
     "pedidos": ("Pedidos do dono", "Como cada prompt vira trabalho: quem interpreta, quem executa e as fichas dos pedidos",
-                ["pedidos", "pedidos/anexos", "pedidos/historico", "pedidos/historico/intencoes"], ["todos"]),
+                ["pedidos", "pedidos/anexos", "pedidos/historico", "pedidos/historico/intencoes", "pedidos/fluxos", "pedidos/provas"], ["todos"]),
     "ferramentas": ("Código", "Os programas que validam as plantas e geram PDF, 3D, fichas e painel",
                     ["ferramentas", "ebook/gerador", "ebook/plantas", "ebook/fichas"], ["arquiteto", "designer"]),
 }

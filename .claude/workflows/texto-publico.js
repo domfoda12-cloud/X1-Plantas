@@ -52,9 +52,21 @@ async function medir(nome, tipo, fn) {
   return r
 }
 const rodar = (nome, cmd) => medir(nome, 'P', () => agent(
-  `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e a saída inteira:\n\n${cmd}`,
+  `Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\n${cmd}`,
   { label: nome, phase: 'Programa', model: 'haiku', effort: 'low', schema: SAIDA }))
-const lerJson = (s, padrao) => { try { return JSON.parse(s) } catch (e) { return padrao } }
+// o agente às vezes embrulha a saída em frases: pega o último JSON inteiro que aparece nela
+const lerJson = (s, padrao) => {
+  const t = String(s || '')
+  try { return JSON.parse(t) } catch (e) {}
+  for (let i = t.length - 1; i >= 0; i--) {
+    if (t[i] !== '}' && t[i] !== ']') continue
+    const abre = t[i] === '}' ? '{' : '['
+    for (let j = t.indexOf(abre); j >= 0 && j < i; j = t.indexOf(abre, j + 1)) {
+      try { return JSON.parse(t.slice(j, i + 1)) } catch (e) {}
+    }
+  }
+  return padrao
+}
 
 const achados = []
 const passes = []
@@ -69,9 +81,10 @@ for (const e of errosIniciais) achados.push({ autor: AUTOR, chave: 'programa-' +
 log(`programa: ${errosIniciais.length} erro(s), ${lista.length - errosIniciais.length} aviso(s)`)
 
 // 2. Autor: conserta e confere a própria lista ("Antes de mandar ao Revisor", contexto/<autor>.md)
-let voltas = 0
+let voltas = -1  // a primeira passada do autor é a conferência dele, não volta de conserto
 async function autor(oque) {
   voltas++
+  const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
   return medir('autor', 'A', () => agent(
     `Você é o autor deste texto público (${PEDIDO}). Arquivo: ${A.arquivo}. Só pode editar esse arquivo.\n\n` +
     `O que conferir e consertar agora:\n${oque}\n\n` +
@@ -80,7 +93,7 @@ async function autor(oque) {
     `A ideia principal de todo conteúdo é do Diretor (MinoAI Frontier): em fonte_diretor, diga de onde veio (ficha, anexo ou a busca na MinoAI Frontier que você fez agora)` +
     (A.fonte_diretor ? `; o Maestro indicou: ${A.fonte_diretor}` : '') + '.\n' +
     `Devolva o passe: feito, suposicoes (o que você supôs sem o dono dizer), faltando, arquivos (caminho relativo), perguntas_ao_dono, fonte_diretor.`,
-    { label: `autor:${AUTOR} (volta ${voltas})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
+    { label: `autor:${AUTOR} (${rotulo})`, phase: 'Autor', agentType: AUTOR, schema: PASSE }))
 }
 let passe = await autor(lista.length ? lista.map(x => `- linha ${x.linha} (${x.tipo}): ${x.msg}`).join('\n') : '- o programa não achou nada; só a sua lista.')
 passes.push(passe)
@@ -148,7 +161,7 @@ const registro = {
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(
-  `Rode exatamente este comando na raiz do repositório e devolva a saída inteira:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
+  `Rode exatamente este comando na raiz do repositório e devolva, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,
   { label: 'registrar', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const gravado = lerJson(reg && reg.saida, null)
 if (!gravado || !gravado.gravado) log('ATENÇÃO: o registro não gravou; o Maestro grava com o "registro" devolvido abaixo')
