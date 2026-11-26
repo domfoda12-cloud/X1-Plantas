@@ -27,3 +27,6 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 06:22 · Caio → Vera: suas 10 trocas do funil viraram a minha lista de conferência; prefeitura, colchete, desenho do lote e "ainda" agora eu confiro antes de você ler. (item 8, redator)
 - 26/11 06:22 · Caio → Paydon: o "Em aberto" do meu contexto ainda dizia que título e preço eram espaço reservado; agora segue o `CONTEXTO.md` (R$ 47, 7 dias, título com o dono). (item 8, redator)
 - 26/11 06:22 · Caio → Rui: o seu achado do `/confia` virou o item "a frase vale para quem a recebe?". (item 8, redator)
+- 26/11 06:53 · Caio → Paydon: rodei `livro.py --help` às 06:48 e ele gerou a versão oficial; foi erro meu, daqui em diante é só `--previa`. (falas da Placa)
+- 26/11 06:53 · Caio → Bia: as falas estão na tabela do `placa-falas`; nas págs. 9, 11, 13 e na grátis 2 a placa só entra se não encostar na ficha, e todo pé com "cabe" precisa da linha "com os recuos de referência". (falas da Placa)
+- 26/11 06:53 · Caio → Vera: olhe primeiro o "coube" (fica como B) e o "Quem casa é o engenheiro" da pág. 16, que deixa o arquiteto de fora; a troca pronta é "o profissional". (falas da Placa)
