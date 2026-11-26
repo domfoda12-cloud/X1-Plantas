@@ -192,8 +192,11 @@ def conferir_juri(r):
     notas = [None if n + 1 in falsos else j.get("nota") for n, j in enumerate(jur)]
     validas = [x for x in notas if isinstance(x, (int, float))]
     media = round(sum(validas) / len(validas), 2) if validas else None
-    piso = bool(validas) and min(validas) >= 7
-    passa = not erros and media is not None and media >= 8.5 and piso
+    # o piso olha TODAS as notas dadas: perder a nota por fato falso tira o jurado da média, nunca abre o piso
+    # (rodada real de 26/11: o jurado do 5 errou um fato e a média ficou só com o 8); e passar pede 2 notas válidas
+    dadas = [j.get("nota") for j in jur if isinstance(j.get("nota"), (int, float))]
+    piso = bool(dadas) and min(dadas) >= 7
+    passa = not erros and media is not None and media >= 8.5 and piso and len(validas) >= 2
     rodada = r.get("rodada", 1)
     proximo = "aprovada" if passa else ("recusada: complete a rodada" if erros else ("reescrever uma vez" if rodada < 2 else "vai ao dono com as duas notas"))
     return {"completa": not erros, "erros": erros, "notas": notas, "perderam_a_nota": sorted(falsos), "media": media,
@@ -433,6 +436,15 @@ def testar():
         falhas.append(f"rodada de júri incompleta passou: {conferir_juri(ruim_j)['erros']}")
     piso = json.loads(json.dumps(bom_j)); piso["jurados"][2]["nota"] = 6.5
     falso = json.loads(json.dumps(bom_j)); falso["presidente"]["fatos"][0].update(confirmado=False, de=1); falso["jurados"][1]["nota"] = 6
+    baixo_falso = json.loads(json.dumps(bom_j)); baixo_falso["jurados"][0]["nota"] = 5
+    baixo_falso["presidente"]["fatos"][0].update(confirmado=False, de=1)
+    if conferir_juri(baixo_falso)["passa"] or conferir_juri(baixo_falso)["piso_ok"]:
+        falhas.append("jurado de nota baixa que errou um fato abriu o piso")
+    um_so = json.loads(json.dumps(bom_j))
+    for k in (0, 1):
+        um_so["presidente"]["fatos"][k].update(confirmado=False, de=k + 1)
+    if conferir_juri(um_so)["passa"]:
+        falhas.append("passou com uma nota válida só")
     if conferir_juri(piso)["passa"] or conferir_juri(falso)["notas"][0] is not None or conferir_juri(dict(piso, rodada=2))["proximo"] != "vai ao dono com as duas notas":
         falhas.append("piso 7, nota perdida por fato falso ou ida ao dono na 2ª rodada não funcionou")
     if not conferir_registro({}) or conferir_registro({"fluxo": "x", "peca": "y", "resultado": "z", "gasto": {"tokens_saida": 1},

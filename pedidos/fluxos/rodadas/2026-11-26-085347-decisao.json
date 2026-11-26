@@ -1,0 +1,134 @@
+{
+ "fluxo": "decisao",
+ "peca": "pedidos/anexos/juri-teste-fluxo-2026-11-26.md",
+ "ficha": "2026-11-26-0721",
+ "resultado": "vai ao dono com as notas (3.33 e 8)",
+ "voltas": 2,
+ "gasto": {
+  "tokens_saida": 124142,
+  "por_conferidor": {
+   "jurados r1": 21027,
+   "revisao r1": 2479,
+   "presidente r1": 9708,
+   "programa:juri": 11985,
+   "reescrita": 11567,
+   "jurados r2": 30778,
+   "revisao r2": 2144,
+   "presidente r2": 34454
+  }
+ },
+ "conferidores": [
+  {
+   "nome": "presidente r1",
+   "tipo": "A",
+   "achados_proprios": 6
+  },
+  {
+   "nome": "programa:juri",
+   "tipo": "P",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "reescrita",
+   "tipo": "A",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "presidente r2",
+   "tipo": "A",
+   "achados_proprios": 0
+  },
+  {
+   "nome": "jurados",
+   "tipo": "A",
+   "achados_proprios": 23
+  }
+ ],
+ "achados": [
+  {
+   "autor": "maestro",
+   "chave": "medida-do-lote",
+   "texto": "Linha 11: trocar 'Ela cabe num lote de 5 x 20 m' pela medida de ebook/plantas/PLANTAS.md:150: 'Ela pede um lote de no mínimo 5 x 20,6 m (cabe num 5 x 25)'.",
+   "licao": "Número de planta se copia do PLANTAS.md, que sai do validador; nunca se arredonda nem se digita de cabeça.",
+   "achado_por": "presidente"
+  },
+  {
+   "autor": "maestro",
+   "chave": "ressalva-da-prefeitura",
+   "texto": "Manter na versão curta 'com os recuos de referência; o da sua cidade, a prefeitura confirma' (rascunho, linhas 59 e 64). Sugestão de texto em dois blocos, ainda sujeita ao Revisor e à Vera: '[nome], a Casa Fita é a do anúncio: 2 quartos, 56 m², um quarto em cada ponta. Ela pede um lote de no mínimo ",
+   "licao": "Ao encurtar, corte palavra repetida, nunca a ressalva que protege o comprador e que alguém pôs de propósito.",
+   "achado_por": "presidente"
+  },
+  {
+   "autor": "maestro",
+   "chave": "passo-antes-do-sim",
+   "texto": "Linha 23: tirar 'hoje mesmo, para o sócio já usar'. Escrever a ordem: nota do júri, Revisor de risco, Vera lê a peça montada, dono decide a publicação. Só depois o texto entra no arquivo de venda.",
+   "licao": "Texto para o público não entra em uso antes do Revisor, da Vera e do dono, por mais fácil que seja desfazer.",
+   "achado_por": "presidente"
+  },
+  {
+   "autor": "maestro",
+   "chave": "alvo-que-nao-existe",
+   "texto": "Linhas 8, 23 e 28: o /fita não existe em ebook/vendas/RESPOSTAS-RAPIDAS.md, só no rascunho (linha 52). Dizer que é um atalho novo, que entra na lista dos atalhos (RESPOSTAS-RAPIDAS.md, linhas 15 a 35) e na seção 2. Reescrever o 'como desfazer': apagar o atalho do arquivo e do celular; mensagem já en",
+   "licao": "Abra o arquivo que você manda trocar antes de escrever o passo e o 'como desfazer'.",
+   "achado_por": "presidente"
+  },
+  {
+   "autor": "maestro",
+   "chave": "razao-2",
+   "texto": "Linha 19: reescrever a razão 2. A 'uma medida só' foi obtida cortando o mínimo verdadeiro, e a pergunta da linha 13 continua pedindo dois números. Se a razão for só o tamanho da mensagem, fique com a razão 1.",
+   "licao": "A justificativa descreve o texto que está no bloco; se não bate com ele, saia com ela ou mude o texto.",
+   "achado_por": "presidente"
+  },
+  {
+   "autor": "maestro",
+   "chave": "medicao",
+   "texto": "Linha 24: usar a métrica que já existe, '% que manda o tamanho do lote' (PAINEL.md:133). Dizer que hoje não há linha de base porque o atalho é novo, quantas conversas o sócio conta antes de comparar e qual resultado faz voltar ao texto de três linhas. Não escrever nenhum número que não venha da plan",
+   "licao": "Teste sem linha de base, tamanho de amostra e critério de volta não mede nada.",
+   "achado_por": "presidente"
+  }
+ ],
+ "perguntas_ao_dono": [
+  "A ressalva dos recuos ('o da sua cidade, a prefeitura confirma') deve continuar em todo texto que diz 'cabe num lote de', como estava no /fita aprovado?",
+  "Na versão curta do /fita, que medida o senhor quer que fique: só o mínimo (5 x 20,6 m), só a de referência (5 x 25 m) ou as duas, como no rascunho?",
+  "O /fita pode entrar no RESPOSTAS-RAPIDAS.md, para o sócio usar, antes de a Vera ler a peça montada e antes do seu sim?",
+  "O dono quer gastar atenção agora com um teste A/B de texto, ou prefere só o /fita de três linhas até o funil ir ao ar e existir uma linha de base de conversas reais?",
+  "Se o teste for em frente, qual diferença mínima na '% que manda o lote' o dono aceita como real, e quantas conversas por texto ele espera ter no primeiro mês (a meta é de 10 a 50 vendas)? Só ele sabe o volume que o anúncio vai trazer.",
+  "Se testar, a regra é comparar depois de 30 conversas de cada texto e ficar com a curta só se ganhar por 10 pontos? Com 30 por texto, uma diferença de 10 pontos pode ser acaso. Você aceita decidir com essa amostra ou prefere esperar mais conversas?",
+  "Se alguém entender que a Casa Fita cabe num lote menor que 5 x 20,6 m: o sócio manda a medida de novo com a ressalva da prefeitura e te chama na hora?",
+  "O número da planilha (001, 002...) é dado já na primeira mensagem, antes do /fita, para servir de sorteio entre os dois textos?",
+  "Vale gastar o tempo do sócio (duas anotações por conversa e um atalho a mais) num teste cujo ganho declarado é de 26 caracteres, ou o /fita fica só com a de três linhas?",
+  "A saudação automática já pede a medida do lote e o /fita pede de novo logo depois: o senhor quer que o /fita só seja enviado a quem não respondeu à saudação, ou que vá sempre?",
+  "Se o teste rodar: 30 conversas de cada texto bastam para o senhor decidir, sabendo que 10 pontos de diferença são 3 pessoas?"
+ ],
+ "juri": [
+  {
+   "rodada": 1,
+   "notas": [
+    4,
+    4,
+    2
+   ],
+   "media": 3.33,
+   "perderam_a_nota": [],
+   "erros": []
+  },
+  {
+   "rodada": 2,
+   "notas": [
+    null,
+    8,
+    null
+   ],
+   "media": 8,
+   "perderam_a_nota": [
+    1,
+    3
+   ],
+   "erros": []
+  }
+ ],
+ "registrado_em": "2026-11-26T08:53:47Z",
+ "calibracao": true,
+ "nota_maestro": "rodada de calibração (erros plantados pelo Maestro): as 3 lições colhidas foram desfeitas, não eram erro real"
+}

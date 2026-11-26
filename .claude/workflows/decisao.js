@@ -1,7 +1,7 @@
 export const meta = {
   name: 'decisao',
   description: 'Júri (CONSELHO.md 5b, regras de 25/11): 3 ângulos com régua, revisão anônima, presidente que não votou confere 5 fatos, programa recusa rodada incompleta',
-  whenToUse: 'Só para decisão que custa dinheiro, vai ao público ou não se desfaz, com o motivo escrito na ficha. args: {proposta, pergunta, motivo, autor?, rodizio?, ficha?}',
+  whenToUse: 'Só para decisão que custa dinheiro, vai ao público ou não se desfaz, com o motivo escrito na ficha. args: {proposta, pergunta, motivo, autor?, rodizio?, ficha?, calibracao?}',
   phases: [
     { title: 'Jurados', detail: '3 modelos, um ângulo cada (comprador, dinheiro, risco); 2 defeitos com arquivo e linha antes da nota' },
     { title: 'Revisão anônima', detail: 'cada jurado ordena as outras opiniões sem saber de quem são' },
@@ -155,7 +155,10 @@ const registro = {
   fluxo: 'decisao', peca: A.proposta, ficha: A.ficha || '-', resultado, voltas: rodadas.length,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: [...Object.values(conf), { nome: 'jurados', tipo: 'A', achados_proprios: rodadas.reduce((s, r) => s + r.ops.filter(Boolean).reduce((t, o) => t + o.defeitos.length, 0), 0) }],
-  achados: achados.map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
+  calibracao: !!A.calibracao,
+  // rodada de calibração (erro plantado de propósito): o achado fica no registro, mas não vira lição de ninguém
+  achados: (A.calibracao ? [] : achados).map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
+  achados_da_calibracao: A.calibracao ? achados.map(a => ({ chave: a.chave, texto: String(a.texto).slice(0, 300) })) : [],
   perguntas_ao_dono: rodadas.flatMap(r => r.ops.filter(Boolean).flatMap(o => o.perguntas_ao_dono || [])),
   juri: rodadas.map(r => ({ rodada: r.rodada.rodada, notas: r.veredito.notas, media: r.veredito.media, perderam_a_nota: r.veredito.perderam_a_nota, erros: r.veredito.erros })),
 }

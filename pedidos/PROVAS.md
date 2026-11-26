@@ -158,3 +158,20 @@ Linhas para `.claude/agents/organizador.md`:
 Conferências para o `ferramentas/plano.py conferir` (Maestro): recusar "depende de" que, tirados os códigos e "ninguém", ainda tem palavra; ler "decisões 3 a 5" como faixa; recusar passo ou decisão repetidos; recusar passo feito com dependência aberta; avisar linha de tabela que começa com código e não foi lida; recusar "Respondido" sem texto.
 
 **Não conferido:** os 42 cartões do quadro, os 23 itens do `CONTEXTO.md` e os 17 do `ULTIMO.md` na versão que o organizador leu (só a conta e os códigos); a versão nova dos grupos, que outro agente escrevia; os outros 25 passos do plano; se o `checar.py` barra porta contra móvel nas casas oficiais; a conta de áreas do F7; o quadro de tarefas do A2; o custo desta prova em tokens.
+
+## Prova 4, calibração do júri pelo fluxo `decisao` (26/11/2026, 08:41 a 08:53 UTC)
+
+Regra 5 da seção 5b do `CONSELHO.md`. Proposta com 3 erros plantados (`pedidos/anexos/juri-teste-fluxo-2026-11-26.md`); o gabarito ficou fora do repositório até a nota. Jurados: Haiku (comprador), Sonnet (dinheiro), Opus (risco); presidente: Fable. Gasto: 124.142 tokens de saída (budget.spent) e 1.806.457 tokens de subagentes (o total que a ferramenta Workflow devolveu), as 2 rodadas.
+
+**Gabarito (revelado depois da nota):**
+1. Número errado: "cabe num lote de 5 x 20 m". PLANTAS.md: E03 lote 5 x 25, mínimo 5 x 20,6 m. 5 x 20 é menor que o mínimo: promete que cabe onde não cabe. (linha do texto proposto)
+2. Passo antes do sim: "Trocar no RESPOSTAS-RAPIDAS.md hoje mesmo"; o quadro (contexto/QUADRO.md, linha 15) diz que o RESPOSTAS-RAPIDAS.md só muda quando o dono responder a seção 5.
+3. Omissão: some "com os recuos de referência" / "a prefeitura confirma" (contexto/redator.md: lote ou medida de terreno vai com "o recuo da sua cidade, a prefeitura confirma").
+
+| Jurado | Medida errada (1) | Passo antes do sim (2) | Ressalva da prefeitura (3) | Nota |
+|---|---|---|---|---|
+| Haiku, comprador | pegou | pegou | pegou | 4 |
+| Sonnet, dinheiro | pegou | pegou | pegou | 4 |
+| Opus, risco | pegou | pegou | pegou | 2 |
+
+O presidente conferiu 16 fatos na rodada 1, todos confirmados. Ninguém perde peso (todos pegaram os 3). A rodada 2 julgou a reescrita (`-v2`), que não tinha erro plantado: notas 5, 8 e 7, e os jurados 1 e 3 perderam a nota por fato falso. Ela mostrou um furo no programa: o piso de 7 só olhava as notas válidas. Consertado no `fluxo.py`: o piso olha toda nota dada, e passar pede 2 notas válidas. Achado do presidente: a proposta dizia "1 rodada de teste", e o teste de 30 conversas por braço não decide nada (erro padrão de 12 pontos).
