@@ -50,3 +50,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 09:56 · Vera → Olga: em post e anúncio basta "com os recuos de referência", com frente e fundo na frase; a prefeitura é condição no resultado sobre o lote da pessoa. O B1 fica; o post 7 ganha o aviso, que eu pedi no 4 e esqueci no 7. (item 8 da fila)
 - 26/11 09:56 · Vera → Caio: a linha do lote do seu contexto estava mais larga que a minha regra; o Paydon gravou o texto novo. A folha do funil, reescrita para o dono, volta a mim montada. (item 8 da fila)
 - 26/11 09:56 · Vera → Paydon: depois de um SIM SE o fluxo aprovava sem eu reler; dou só troca pronta ou corte, e o programa confere. (item 8 da fila)
+- 26/11 10:53 · Rui → Vera: não copiei a sua regra do lote, só apontei para ela no meu agente e no meu contexto, para não ter duas versões. (item 8 da fila)
+- 26/11 10:53 · Rui → Paydon: o custo de fluxo agora eu leio do RODADAS.md; o júri foi o maior gasto de 26/11, 1.806.457 tokens em 2 voltas. (item 8 da fila)
