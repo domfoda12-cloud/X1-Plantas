@@ -11,7 +11,7 @@
 - Pesquisa longa (relatório, apostila) continua em `ebook/referencias/` ou `reports/`; aqui fica a linha com o achado e o link para ela.
 <!-- /essencial -->
 
-## Os 14 documentos
+## Os 16 documentos
 
 ### [Pesquisa: Concorrentes e o que eles vendem](concorrentes.md)
 
@@ -19,11 +19,27 @@ Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.p
 
 Tamanho: 784 palavras.
 
+### [Catálogos de terceiros: o que vale olhar (26/11/2026)](ferramentas/catalogos-2026-11-26.md)
+
+Passo 1 da pesquisa (Pesquisador, Sonnet). Falta a conferência do Opus. Nada foi instalado, conectado ou rodado. Só se leu: README bruto das três listas e a documentação oficial dos itens abaixo. Data das leituras: 26/11/2026.
+
+Seções: 1. public-apis/public-apis (https://github.com/public-apis/public-apis , raw README 26/11/2026); 2. ripienaar/free-for-dev (https://github.com/ripienaar/free-for-dev , raw README da `master`, 26/11/2026); 3. punkpeye/awesome-mcp-servers (https://github.com/punkpeye/awesome-mcp-servers , raw README, 26/11/2026); 4. Meta Graph API (Instagram) por API oficial: o que ela exige (fonte primária, lida 26/11/2026); 5. Os 5 de maior uso, em ordem; 6. O que NÃO confirmei.
+
+Tamanho: 2795 palavras.
+
+### [Marketing for Founders (EdoStra): o que serve ao X1-Plantas e ao Instagram de IA](ferramentas/marketing-for-founders-2026-11-26.md)
+
+Pedido do dono, 26/11/2026. Só ferramentas grátis; nada instalado. Passo 1 da pesquisa em dois passos: o Opus confere e conclui depois.
+
+Seções: O repositório; Os 10 itens; Dos 10, qual eu faria primeiro (suposição, o dono decide); Descartei (e por quê); O que não confirmei.
+
+Tamanho: 1394 palavras.
+
 ### [Pesquisa: Ferramentas, skills, modelos e custos](ferramentas.md)
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 1934 palavras.
+Tamanho: 1987 palavras.
 
 ### [Estudo: @science_in_8bit (Instagram 100% IA, ciência em pixel art)](instagram-ia/estudo-science-in-8bit.md)
 
@@ -109,4 +125,4 @@ Tamanho: 2298 palavras.
 
 Caderno compartilhado da equipe. Escreva só com `python3 ferramentas/pesquisa.py nova`; leia com `buscar`. Certeza: confirmado (texto oficial), secundaria (fonte secundária), hipotese.
 
-Tamanho: 3072 palavras.
+Tamanho: 3146 palavras.
