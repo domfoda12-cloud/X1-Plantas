@@ -40,7 +40,7 @@ function saidaDe(p) {
   if (p.includes('fluxo.py juri')) return '{"completa": true, "erros": [], "notas": [8, 8, 8], "media": 8, "passa": false, "proximo": "reescrever uma vez"}';
   if (p.includes('fluxo.py registrar')) return 'lição gravada\n{"gravado": true}';
   if (p.includes('fluxo.py prova-estado')) return '{"redator": {"nivel": 2, "voltam": []}, "_niveis": {"2": "n"}}';
-  if (p.includes('fluxo.py prova-nota')) return '{"redator": {"passou": true}}';
+  if (p.includes('fluxo.py prova-nota')) return p.includes('confirmados') ? '{"redator": {"passou": true}}' : '{"_em_disputa": ["1:1"]}';
   return '[ERRO] porta que bate\nPassou nas conferências: 1 de 11 com erro.';
 }
 

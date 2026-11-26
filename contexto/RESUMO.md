@@ -129,7 +129,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Onde olhar; Leia barato; Lições.
 
-Tamanho: 538 palavras.
+Tamanho: 626 palavras.
 
 ### [Contexto do Maestro (a conversa principal)](maestro.md)
 
@@ -161,7 +161,7 @@ Só o que importa para este papel; as regras fixas estão no seu arquivo de agen
 
 Seções: Antes de mandar ao Revisor, confira (e diga que conferiu); Em aberto com você; Leia barato; Lições.
 
-Tamanho: 643 palavras.
+Tamanho: 731 palavras.
 
 ### [Contexto do Revisor de risco](revisor-de-risco.md)
 
@@ -169,7 +169,7 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo g
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Decisão do dono (22/11/2026); Onde olhar; Leia barato; Lições.
 
-Tamanho: 615 palavras.
+Tamanho: 703 palavras.
 
 ### [Contexto do Supervisor (Fable)](supervisor.md)
 

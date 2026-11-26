@@ -343,8 +343,21 @@ def prova_nota(d, agora=None, gravar=True):
     est = _json(PROVAS / "NIVEIS.json", {})
     if "gabarito_arquivo" in d:  # o gabarito fica fora do repositório até a nota (provas 1 e 2); depois entra aqui, revelado
         d = dict(d, casos=json.loads(Path(d["gabarito_arquivo"]).read_text(encoding="utf-8"))["casos"])
-    casos = {c["id"]: c for c in d["casos"]}
-    out = {}
+    casos = {c["id"]: c for c in json.loads(json.dumps(d["casos"]))}  # cópia: quem chama não perde o gabarito
+    # item que TODOS os papéis (2 ou mais) deixaram passar fica em disputa: na prova 1 o gabarito errou em 3 planos.
+    # Não conta nem vira lição até o árbitro decidir ("confirmados" volta a contar; "anulados" sai do gabarito).
+    chave = lambda cid, g: f"{cid}:{g['linha']}"
+    conf, anul = set(d.get("confirmados") or []), set(d.get("anulados") or [])
+    for c in casos.values():
+        c["problemas"] = [g for g in c["problemas"] if chave(c["id"], g) not in anul]
+    resp_de = {p: {x["id"]: x.get("problemas") or [] for x in rs or []} for p, rs in d["respostas"].items()}
+    disputa = [chave(cid, g) for cid, c in casos.items() for g in c["problemas"]
+               if len(resp_de) >= 2 and chave(cid, g) not in conf and not any(_acertou(g, r.get(cid, [])) for r in resp_de.values())]
+    for c in casos.values():
+        c["problemas"] = [g for g in c["problemas"] if chave(c["id"], g) not in disputa]
+    out = {"_em_disputa": disputa} if disputa else {}
+    if disputa and gravar:  # a nota só é gravada depois do árbitro
+        return out
     for papel, resps in d["respostas"].items():
         r = {x["id"]: x.get("problemas") or [] for x in resps or []}
         achou, perdeu, falso = 0, [], []
@@ -381,8 +394,9 @@ def prova_nota(d, agora=None, gravar=True):
                   "Passou (tudo achado, nenhum alarme falso): o próximo nível fica mais difícil.", "",
                   f"**Gasto:** {d.get('gasto_tokens', 'não anotado')} tokens de saída (budget.spent() do fluxo, sem a nota).", "",
                   "| Papel | Nível | Achou | Alarmes falsos | Passou | Próximo nível |", "|---|---|---|---|---|---|"]
+        linhas += ([f"**Árbitro:** confirmou {sorted(conf) or 'nada'}; anulou {sorted(anul) or 'nada'}.", ""] if conf or anul else [])
         linhas += [f"| {p} | {o['nivel']} | {o['achou']} de {o['de']} | {len(o['alarmes_falsos'])} | {'sim' if o['passou'] else 'não'} | {o['proximo_nivel']} |"
-                   for p, o in out.items()]
+                   for p, o in out.items() if not p.startswith("_")]
         linhas += ["", "## Gabarito (revelado depois da nota)", ""]
         for cid, c in casos.items():
             prob = "; ".join(f"linha {g['linha']}: {g['categoria']} ({g['porque']})" for g in c["problemas"]) or "limpo"
@@ -392,7 +406,7 @@ def prova_nota(d, agora=None, gravar=True):
         _grava_json(PROVAS / "NIVEIS.json", est)
         voltam = _json(PROVAS / "voltam.json", [])
         voltam += [{"papel": p, "chave": x["categoria"], "texto": casos[x["caso"]]["texto"][:600], "rodada": f"prova {agora:%Y-%m-%d}"}
-                   for p, o in out.items() for x in o["perdeu"]]
+                   for p, o in out.items() if not p.startswith("_") for x in o["perdeu"]]
         _grava_json(PROVAS / "voltam.json", voltam)
     return out
 
@@ -453,6 +467,11 @@ def testar():
     casos = [{"id": 1, "texto": "a", "problemas": [{"linha": 3, "categoria": "x", "porque": "y"}]}, {"id": 2, "texto": "b", "problemas": []}]
     n = prova_nota({"casos": casos, "respostas": {"a": [{"id": 1, "problemas": [{"linha": 4}]}], "b": [{"id": 2, "problemas": [{"linha": 1}]}]}},
                    gravar=False)
+    todos_perdem = prova_nota({"casos": casos, "respostas": {"a": [], "b": []}}, gravar=False)
+    if todos_perdem.get("_em_disputa") != ["1:3"] or not todos_perdem["a"]["passou"]:
+        falhas.append(f"item que todos perderam não ficou em disputa: {todos_perdem}")
+    if prova_nota({"casos": json.loads(json.dumps(casos)), "respostas": {"a": [], "b": []}, "confirmados": ["1:3"]}, gravar=False)["a"]["passou"]:
+        falhas.append("item confirmado pelo árbitro não voltou a contar")
     if not n["a"]["passou"] or n["b"]["passou"] or n["b"]["alarmes_falsos"] != [2] or n["b"]["perdeu"][0]["caso"] != 1:
         falhas.append(f"nota da prova errada: {n}")
     falhas += _testar_colheita()

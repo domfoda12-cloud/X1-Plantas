@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 96 documentos
+## Os 98 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 1801 palavras.
+Tamanho: 2092 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -308,6 +308,14 @@ Saída do laço do júri (ficha `0156`), sem edição. Base da v6 curta, que é 
 Seções: v3: média 6.5 (presidente: fable); v4: média 6.3 (presidente: haiku); v5: média 6 (presidente: sonnet).
 
 Tamanho: 10600 palavras.
+
+### [Proposta para o júri, 2ª rodada: primeira resposta mais curta no anúncio da Casa Fita (teste do fluxo `decisao`, 26/11/2026)](anexos/juri-teste-fluxo-2026-11-26-v2.md)
+
+Reescrita única da `juri-teste-fluxo-2026-11-26.md` (o original fica como estava), depois da 1ª rodada: notas 4, 4 e 2, média 3,3, os três abaixo do piso de 7 (`CONSELHO.md:58`). É a última rodada: se não chegar a 8,5 com todo jurado em 7 ou mais, a decisão vai ao dono com as duas notas…
+
+Seções: A pergunta, agora; O que muda; Por que; Como aplica (só nesta ordem; nada entra em uso antes do último passo); Como medir; Quanto custa e o que deixa de ser feito; Como desfazer; Perguntas ao dono (nada aqui está decidido); Resposta a cada defeito da 1ª rodada; Conferência antes de mandar ao júri.
+
+Tamanho: 1965 palavras.
 
 ### [Proposta para o júri: primeira resposta mais curta no anúncio da Casa Fita (teste do fluxo `decisao`, 26/11/2026)](anexos/juri-teste-fluxo-2026-11-26.md)
 
@@ -762,3 +770,11 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
 Tamanho: 6829 palavras.
+
+### [Prova de entrada, 26/11/2026 09:10 UTC](provas/rodada-2026-11-26-0910.md)
+
+Gravado por `python3 ferramentas/fluxo.py prova-nota` (fluxo `.claude/workflows/prova-de-entrada.js`). Nota por programa: problema achado = linha certa (1 de folga); caso limpo apontado = alarme falso. Passou (tudo achado, nenhum alarme falso): o próximo nível fica mais difícil.
+
+Seções: Gabarito (revelado depois da nota).
+
+Tamanho: 1567 palavras.

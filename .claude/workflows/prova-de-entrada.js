@@ -7,7 +7,7 @@ export const meta = {
     { title: 'Montar', detail: 'Opus monta os casos do nível, dos erros reais (pedidos/LICOES.md)' },
     { title: 'Conferir gabarito', detail: 'outro Opus confere cada problema plantado e cada caso limpo; o gabarito vai para fora do repositório' },
     { title: 'Prova', detail: 'cada papel responde do seu lugar, com as 3 perguntas do júri, sem ver o gabarito' },
-    { title: 'Nota', detail: 'fluxo.py prova-nota: nota por programa, nível, lições e casos que voltam' },
+    { title: 'Nota', detail: 'fluxo.py prova-nota: nota por programa; item que todos perderam vai à árbitra (Olga) antes; nível, lições e casos que voltam' },
   ],
 }
 
@@ -96,7 +96,20 @@ for (const [nivel, papeis] of Object.entries(porNivel)) {
 
 phase('Nota')
 const gravaGab = await rodar('gabarito fora do repositório', 'Nota', `mkdir -p /tmp/x1-provas && cat > ${GAB} <<'FIM'\n${JSON.stringify({ casos: todos })}\nFIM\necho gravado`)
-const nota = await rodar('programa:nota', 'Nota', `python3 ferramentas/fluxo.py prova-nota - <<'FIM'\n${JSON.stringify({ gabarito_arquivo: GAB, respostas, gasto_tokens: budget.spent() - gastoAntes })}\nFIM`)
-const resultado = lerJson(nota && nota.saida, null)
+const notaCom = extra => rodar('programa:nota', 'Nota', `python3 ferramentas/fluxo.py prova-nota - <<'FIM'\n${JSON.stringify({ gabarito_arquivo: GAB, respostas, gasto_tokens: budget.spent() - gastoAntes, ...extra })}\nFIM`)
+let resultado = lerJson((await notaCom({})).saida, null)
+// item que todos deixaram passar fica em disputa (o gabarito pode estar errado, como na prova 1): a Olga, que não montou
+// nem conferiu o gabarito, decide; só então a nota é gravada
+let arbitro = null
+if (resultado && resultado._em_disputa && resultado._em_disputa.length) {
+  const ARB = { type: 'object', properties: { confirmados: { type: 'array', items: { type: 'string' } }, anulados: { type: 'array', items: { type: 'string' } }, porque: { type: 'string' } }, required: ['confirmados', 'anulados', 'porque'] }
+  const itens = resultado._em_disputa.map(k => { const [cid, ln] = k.split(':').map(Number); const c = todos.find(x => x.id === cid); return { chave: k, caso: c && c.texto, problema: c && c.problemas.find(g => g.linha === ln) } })
+  arbitro = await agent(
+    `Você é árbitro da prova de entrada. Todos os papéis deixaram passar estes itens do gabarito, e o gabarito pode estar errado (na prova 1 errou em 3 planos). ` +
+    `Para cada item, abra a regra citada e decida: "confirmados" se a linha fere mesmo uma regra escrita, aplicada ao caso como está; "anulados" se a regra não alcança o caso ou é leitura larga. ` +
+    `Use as chaves exatas. Uma frase de porquê por item.\n\n${JSON.stringify(itens).slice(0, 8000)}`,
+    { label: 'árbitro: Olga', phase: 'Nota', agentType: 'supervisor', schema: ARB })
+  resultado = lerJson((await notaCom({ confirmados: arbitro ? arbitro.confirmados : [], anulados: arbitro ? arbitro.anulados : [] })).saida, null)
+}
 if (!resultado) log('ATENÇÃO: a nota não saiu; o Maestro roda prova-nota com "casos" e "respostas" devolvidos')
-return { resultado, gabarito_em: GAB, gravou_gabarito: gravaGab && gravaGab.saida, casos: todos, respostas }
+return { resultado, arbitro, gabarito_em: GAB, gravou_gabarito: gravaGab && gravaGab.saida, casos: todos, respostas }
