@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 75 documentos
+## Os 76 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -164,6 +164,14 @@ Ficha: `pedidos/2026-11/2026-11-25-1612-deixar-tudo-planejado-e-pronto-para-o-re
 Seções: 0. Plano do texto (segue o plano do Planejador: `pedidos/anexos/mapa-dor-solucao-do-ebook-2026-11-24.md`, seções 1, 3 e 5); 1. Pág. 8 · C01, "Para quem é" (jeito: a pergunta que ele já se faz, no molde da E03) · dor D1; 2. Pág. 12 · F01, "Para quem é" (jeito: o exemplo concreto da família que cresce) · dor D7, só a parte da família; 3. Pág. 23 · "Do e-book até a chave na mão", abertura nova antes do passo 1 (jeito: a cena de quem só tem o desenho) · dor D3; 4. Pág. 22 · "Ficha do meu terreno", abertura (jeito: a pergunta que ele vai ouvir) · dores D3 e D8; 5. Pág. 17 · "As palavras da obra", abertura (jeito: o detalhe que ele reconhece) · dores D3 e D8; 6. Recomendação do Redator; 7. Riscos para o Revisor de risco; 8. Reconferência dos pedidos (ficha 1612 e recado do Maestro); Leitura do Revisor (25/11).
 
 Tamanho: 2409 palavras.
+
+### [Frases das 5 páginas: a dor do jeito indireto, opções para o dono (26/11/2026)](anexos/frases-dor-5-paginas-opcoes-2026-11-26.md)
+
+Autor: Redator (trabalho da noite; o dono escolhe de manhã). É opção: nada mudou em `ebook/gerador/` nem em `ebook/fichas/`. Só entra depois da escolha do dono e do "Revisor: ok". Recado do dono: a dor entra "daquele jeitinho" (cena, exemplo, detalhe que o comprador reconhece), nunca anunciada ("o…
+
+Seções: 0. Plano do texto (resumo do plano obrigatório `pedidos/anexos/plano-frases-dor-5-paginas-2026-11-25.md`); 1. C01, "Para quem é" (págs. 8 e 3) · jeito: a pergunta que ele já se faz; 2. F01, "Para quem é" (pág. 12) · jeito: o filho que vem e precisa de quarto; 3. "Do e-book até a chave na mão", abertura nova (pág. 16) · jeito: a cena de quem só tem o desenho; 4. "Ficha do meu terreno", abertura (pág. 15) · jeito: a pergunta que ele vai ouvir; 5. "As palavras da obra", abertura (pág. 5) · jeito: a palavra ouvida no balcão; 6. Reconferência do pedido; Leitura do Revisor.
+
+Tamanho: 1649 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
