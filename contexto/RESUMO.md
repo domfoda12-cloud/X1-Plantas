@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 22 documentos
+## Os 20 documentos
 
 ### [Conversa da equipe](CONVERSA.md)
 
@@ -50,22 +50,6 @@ Tamanho: 723 palavras.
 Saída de `python3 ferramentas/placar.py`. Quem chama um veto cola no pedido a linha do agente. Nota = a que o Maestro deu ao veto pela régua, de 0 a 5 (a do maestro é dele para si mesmo); n = quantas vezes foi medido; com n menor que 5, nenhuma regra muda por causa do número. Prova = erros…
 
 Tamanho: 442 palavras.
-
-### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
-
-Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
-
-Seções: 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`); 26/11 · Fluxos fixos "ultra max": a equipe trabalha sempre do mesmo jeito e aprende sozinha (ficha `2026-11-26-0721`); 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`).
-
-Tamanho: 865 palavras.
-
-### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
-
-Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
-
-Seções: 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`); 26/11 · Fluxos fixos "ultra max": a equipe trabalha sempre do mesmo jeito e aprende sozinha (ficha `2026-11-26-0721`); 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`).
-
-Tamanho: 865 palavras.
 
 ### [Quadro de avisos: o que o dono acabou de pedir](QUADRO.md)
 
@@ -153,7 +137,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 1083 palavras.
+Tamanho: 815 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
@@ -193,4 +177,4 @@ Só o que importa para este papel. Antes de trabalhar, leia o quadro.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 267 palavras.
+Tamanho: 290 palavras.

@@ -1,6 +1,6 @@
 # fluxos fixos ultra max e licoes automaticas
 
-**Estado:** aberta, em andamento
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** Are we having issues with the agents communicating? Thats and the juri its honestly the last things i can think about improving the system, the workflow looks like it has a foundation but doesnt exist yet
 
@@ -25,12 +25,11 @@ Each workflow ends by writing its lessons into each agent's file automatically, 
 
 **Quem executa:** Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes.
 
-**Conferência:** cada fluxo rodou uma vez sobre peça real (`pedidos/fluxos/RODADAS.md`): texto-publico no funil do sócio (Vera SIM SE, 2 condições aplicadas), pagina-ebook na pág. 11 da C01 (Vera SIM SE aplicado, prévia sem estouro), planta no rascunho C01V (0 de 11 com erro, pronto para aplicar), decisao na calibração (os 3 jurados pegaram os 3 erros plantados), prova de entrada (Caio, Rui e Vera: 5 de 6, sem alarme falso; item em disputa confirmado pela Olga). `checar.py` roda `fluxo.py testar` e o ensaio dos 5 fluxos com agentes de mentira. Olga auditou (ver Resultado). As "3 perguntas de entrada" do plano foram lidas como as 3 perguntas dos ângulos do júri (comprador, dinheiro, risco), escolha do Maestro.
+**Conferência:** cada fluxo rodou uma vez sobre peça real (`pedidos/fluxos/RODADAS.md`): texto-publico no funil do sócio (Vera SIM SE, 2 condições aplicadas), pagina-ebook na pág. 11 da C01 (Vera SIM SE aplicado, prévia sem estouro), planta no rascunho C01V (0 de 11 com erro, pronto para aplicar), decisao na calibração (os 3 jurados pegaram os 3 erros plantados), prova de entrada (Caio, Rui e Vera: 5 de 6, sem alarme falso; item em disputa confirmado pela Olga). `checar.py` roda `fluxo.py testar` e o ensaio dos 5 fluxos com agentes de mentira. Olga auditou: 10 achados (3 altos: fluxo que aprovava com o programa quebrado, gasto só de saída, 6 furos no programa de texto), todos consertados com prova no `checar.py`. As "3 perguntas de entrada" do plano foram lidas como as 3 perguntas dos ângulos do júri (comprador, dinheiro, risco), escolha do Maestro.
 
-**Resultado:** (ao fechar)
+**Resultado:** 5 fluxos fixos em .claude/workflows/ (texto-publico, pagina-ebook, planta, decisao, prova-de-entrada), programa antes do juízo (ferramentas/fluxo.py), gasto por rodada, lições sozinhas no contexto de cada agente, prova de entrada que endurece; cada fluxo rodado uma vez em peça real; auditoria da Olga aplicada
 
-**O que aprendi:** maestro: Fluxo novo roda primeiro com agentes de mentira, em modo estrito (fluxos-ensaio.cjs); a sintaxe passou e mesmo assim o 'passe' sem declarar derrubou a rodada real.
-maestro: Erro plantado de propósito (calibração, prova) nunca vira lição de quem plantou; marque a rodada antes de colher.
+**O que aprendi:** maestro: Fluxo novo passa no ensaio estrito e com o programa quebrado antes da rodada real; erro plantado nunca vira lição.
 supervisor: Quando todos os papéis deixam passar o mesmo item, a suspeita cai primeiro no gabarito; arbitre antes da nota.
 
 **Papéis afetados:** maestro, redator, revisor-de-risco, designer, arquiteto, supervisor, planejador

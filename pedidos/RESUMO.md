@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 99 documentos
+## Os 100 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 2092 palavras.
+Tamanho: 2155 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -778,6 +778,12 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
 Tamanho: 6829 palavras.
+
+### [Lições antigas de contexto/maestro.md](historico/licoes-maestro.md)
+
+Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py` consolidar, dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 325 palavras.
 
 ### [Prova de entrada, 26/11/2026 09:10 UTC](provas/rodada-2026-11-26-0910.md)
 

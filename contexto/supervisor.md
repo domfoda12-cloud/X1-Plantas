@@ -23,3 +23,4 @@ Os nove fios do que o dono quer estão em [`dono/IDEIAS-GERAIS.md`](dono/IDEIAS-
 
 O que deu errado e não pode voltar (uma linha cada, com data; vem das auditorias e das correções do dono).
 - **24/11, ficha 2026-11-23-1946:** opinião de júri erra número e julga peça que não existe; conferir cada fato antes de somar as notas.
+- **26/11, ficha 2026-11-26-0721:** Quando todos os papéis deixam passar o mesmo item, a suspeita cai primeiro no gabarito; arbitre antes da nota.
