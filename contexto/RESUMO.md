@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 19 documentos
+## Os 20 documentos
 
 ### [Conversa da equipe](CONVERSA.md)
 
@@ -99,6 +99,14 @@ Seções: A ideia central; Os nove fios; O que isso exige dos vídeos (prioridad
 
 Tamanho: 1121 palavras.
 
+### [Perfil do dono e a voz do Paydon](dono/PERFIL.md)
+
+Montado em 26/11/2026 (fila da noite, item 7) a partir das falas e correções do dono (`pedidos/historico/PROMPTS.md`, lições em `contexto/maestro.md` e `pedidos/LICOES.md`). Só jeito de trabalhar, nenhum dado pessoal (nada de nome, conta, lugar ou vida dele). Quem lê: o Paydon, antes de responder;…
+
+Seções: Como ele trabalha; O que irrita e o que agrada; A voz do Paydon com ele.
+
+Tamanho: 551 palavras.
+
 ### [O que ainda não bate: pendências depois da limpeza de 22/11/2026](dono/TEXTOS-DESATUALIZADOS.md)
 
 Em 22/11/2026 quatro agentes leram todos os documentos e acharam cerca de 60 contradições. Três agentes no Opus resolveram as que dependiam só de texto (a regra mais recente do dono vence; texto de venda só promete o que existe; documento superado foi apagado). Aqui ficou só o que depende do dono,…
@@ -129,7 +137,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 923 palavras.
+Tamanho: 954 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 
