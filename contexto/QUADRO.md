@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`)
+
+- **O dono pediu:** "we're finishing this alone" (26/11, 09:26): o sócio não entra mais no projeto.
+- **O que mudou:** o funil, o WhatsApp e a conferência do Pix voltam para o dono. A "folha do sócio" do rascunho do funil vira folha do dono; a pergunta "quem confere o Pix" está respondida (o dono). O guia do sócio e o cartão `aviso-socio` do Canteiro ficam arquivados, nada apagado.
+- **Caio, Rui:** texto nenhum é escrito para o sócio; a folha do funil é para o dono, que atende sozinho (pense no horário dele, que trabalha de dia). **Vera:** a condição "nada vai ao sócio" vira "nada vai ao público". **Paydon:** não se escreve no repositório nada sobre o motivo da saída.
+
 ## 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`)
 
 - **O dono escolheu:** "2 · A Placa" (06:44).

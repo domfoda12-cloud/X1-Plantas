@@ -2,6 +2,8 @@
 
 > Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/2026-11-26-0058-socio-entra-no-projeto-guia-quem-decide-funil-ciclo-de-1h-re.md`), a partir do funil simulado do Rui (`funil-simulado-2026-11-26.md`). **Rascunho: nenhum arquivo de venda foi editado** (`RESPOSTAS-RAPIDAS.md`, `WHATSAPP.md` e `ebook/saida/` ficaram como estavam). Nada aqui vai ao público nem ao sócio antes de a Vera ler a peça montada. Tudo o que está entre [colchetes] e é do dono fica vazio e vai para a seção 5.
 
+> **Atualização, 26/11 09:26:** o sócio saiu do projeto. Onde está "sócio", leia "dono": ele atende o WhatsApp e confere o Pix sozinho.
+
 ## 0. Plano do texto
 
 - **Para quem:** quem recebe as mensagens é o Marcos do anúncio (classe C, celular, à noite, com medo de golpe de Pix); quem lê o resto é o sócio, que nunca usou nada técnico.

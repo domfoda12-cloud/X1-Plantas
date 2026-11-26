@@ -55,9 +55,9 @@ Tamanho: 442 palavras.
 
 Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5…
 
-Seções: 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`).
+Seções: 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`); 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`); 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`); 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`); 26/11 · Pasta `contexto/` enxuta (fila da noite, item 11; ficha `2026-11-26-0114`); 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`).
 
-Tamanho: 719 palavras.
+Tamanho: 856 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 

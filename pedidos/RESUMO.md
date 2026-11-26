@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 5584 palavras.
+Tamanho: 5607 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -195,7 +195,7 @@ Caio Vírgula (Redator), fila da noite de 26/11, item 6 (ficha `pedidos/2026-11/
 
 Seções: 0. Plano do texto; 1. A regra do preço (vazamento 6); 2. Os atalhos, na ordem da conversa; 3. Folha do sócio (uma página); 4. Conferência antes de mandar à Vera; 5. Espera o dono; Reconferência do pedido (do Maestro, item 6 da fila); Leitura da Vera (26/11).
 
-Tamanho: 6895 palavras.
+Tamanho: 6918 palavras.
 
 ### [Guia "Seu lote cabe?": o texto real (RASCUNHO)](anexos/guia-seu-lote-cabe-texto.md)
 
