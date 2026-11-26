@@ -4,7 +4,7 @@
 
 ## 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`)
 
-- **O dono pediu:** "O seu nome próprio agora é Paydon Clabett. Escolha um nome para cada agente e faça eles interagirem uns com os outros como amigos/colegas de trabalho".
+- **O dono pediu:** "O seu nome proprio agora é Paydon Clabett / Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho".
 - **O que mudou:** cada agente tem nome e jeito no topo do próprio arquivo e em `contexto/EQUIPE.md` (Tito Prumo, Nilo Esquadro, Bia Traço, Caio Vírgula, Vera Veto, Rui Lance, Ana Fonte, Zeca Corte, Olga Lupa, Juca; o Diretor mantém o nome); existe `contexto/CONVERSA.md`; o Canteiro já mostra a "Conversa da equipe"; o `checar.py` confere o nome e a leitura da conversa em cada agente.
 - **Todos:** ao começar, leiam as últimas 10 falas de `contexto/CONVERSA.md`; ao terminar, fechem o relatório com `Falas:` (1 a 3, só trabalho real). **Paydon:** copia as falas para a conversa e para o Canteiro.
 

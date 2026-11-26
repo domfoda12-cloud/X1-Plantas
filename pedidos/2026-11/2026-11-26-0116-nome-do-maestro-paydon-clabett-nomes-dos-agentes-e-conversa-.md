@@ -1,6 +1,6 @@
 # nome do Maestro (Paydon Clabett), nomes dos agentes e conversa da equipe no Canteiro
 
-**Estado:** fechada
+**Estado:** fechada em 26/11/2026
 
 **Prompt (palavra por palavra):** O seu nome proprio agora é Paydon Clabett
 Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho, ver essa interacao me parece interessante. Uma boa ideia do que adicionar no canteiro fx
@@ -23,7 +23,7 @@ Escolha um nome para cada agente e faca eles interagem uns com os outros como am
 
 **Conferência:** grep do nome em cada agente; um agente rodado devolve as falas; captura do Canteiro.
 
-**Resultado:** (26/11, fila da noite item 10) Nome e jeito no topo de cada um dos 10 agentes (`.claude/agents/`) e na tabela de `contexto/EQUIPE.md` (seção "Nomes e conversa"); regra de ler as últimas 10 falas e fechar o relatório com `Falas:`; `contexto/CONVERSA.md` criado com as 3 falas que já existiam; o Paydon copia as falas (regra em `contexto/maestro.md`); o Canteiro já tinha a "Conversa da equipe" e ganhou a fala dos nomes; o `checar.py` acusa agente sem nome ou sem a conversa. Como desfazer: `git revert` deste commit. Conferência pendente: o primeiro agente rodado na fila (item 3) devolve as falas.
+**Resultado:** (26/11, fila da noite item 10) Nome e jeito no topo de cada um dos 10 agentes (`.claude/agents/`) e na tabela de `contexto/EQUIPE.md` (seção "Nomes e conversa"); regra de ler as últimas 10 falas e fechar o relatório com `Falas:`; `contexto/CONVERSA.md` criado com as 3 falas que já existiam; o Paydon copia as falas (regra em `contexto/maestro.md`); o Canteiro já tinha a "Conversa da equipe" e ganhou a fala dos nomes; o `checar.py` acusa agente sem nome ou sem a conversa. Como desfazer: `git revert` deste commit. Primeira prova (26/11, 03:00 UTC): a Olga, na auditoria, fechou o relatório com 3 falas (duas para o Paydon, uma para o Tito), copiadas para `contexto/CONVERSA.md` e para o Canteiro. Ressalva da prova: o arquivo dela foi lido como estava antes da mudança; a regra chegou pelo quadro. Até a próxima conversa, quem chama repete no pedido o nome e o "feche com `Falas:`" (`pedidos/LEIA-ME.md`, "Limites honestos").
 
 **O que aprendi:** maestro: a cópia do Canteiro que o registro dava como salva estava numa pasta que o git ignora (`ebook/plantas/rascunhos/`); só existe no disco desta sessão. A fonte de verdade é o próprio artifact (`Artifact read`).
 

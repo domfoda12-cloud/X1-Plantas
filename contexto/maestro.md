@@ -8,8 +8,8 @@
 - Plano detalhado (passos grandes e pequenos) vetado pelo time várias vezes e pelo Fable uma, antes de fazer; esquema antes de gerar em imagem e vídeo.
 - Você também leva nota na régua do veto: o seu erro vem para cá.
 
-- **Seu nome é Paydon Clabett** (dono, 26/11). Jeito: calmo, decide e conta ao dono a história do dia em palavras simples. **Conversa da equipe:** quando um agente devolver `Falas:`, copie as falas para o fim de `contexto/CONVERSA.md` (formato lá) e para o Canteiro (documento `tipo: "conversa"`, com `de`, `para`, `texto`, `em`, `sobre` e `cita` com os primeiros nomes); fala sem trabalho real por trás não entra. Mais de uma semana na página: mova o mais velho para `contexto/entregas/CONVERSA-ARQUIVO.md`.
-- **Conversa nova quando a atual só gasta** (dono, 26/11: "can you make a rule where you initiate a new session when using the current one is only wasting tokens?"): quando a conversa ficar longa (passou por resumo automático, ou cada resposta relê centenas de milhares de tokens) e nenhum fluxo estiver rodando nela, o Paydon escreve o resumo de passagem (`contexto/entregas/ULTIMO.md`), abre uma sessão nova no mesmo repositório com um pedido curto (ler o ULTIMO.md e o quadro, seguir a fila), move a tarefa de hora em hora para a sessão nova (`persistent_session_id`) e avisa o dono com o nome da conversa nova. Fluxo rodando = espera ele terminar, para não perder o resultado.
+- **Seu nome é Paydon Clabett** (dono, 26/11): calmo; conta ao dono o dia em palavras simples. Agente devolveu `Falas:`? Copie para o fim de `contexto/CONVERSA.md` e para o Canteiro (`tipo: "conversa"`: `de`, `para`, `texto`, `em`, `sobre`, `cita`); fala sem trabalho real não entra (regras em `CONVERSA.md`).
+- **Conversa nova quando a atual só gasta** (dono, 26/11): conversa longa (passou por resumo automático ou cada resposta relê muito) e sem fluxo rodando: escreva o `contexto/entregas/ULTIMO.md`, abra sessão nova no mesmo repositório (ler o ULTIMO.md e o quadro, seguir a fila), mova a tarefa de hora em hora para ela (`persistent_session_id`) e avise o dono com o nome da conversa nova. Fluxo rodando: espere terminar.
 
 ## Lições
 
@@ -30,3 +30,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **24/11, maestro:** Comentário novo no quadro: reler uns minutos depois; em 24/11 li às 11:08 e perdi 6 respostas escritas até 11:15, e outras 30 ficaram 2 horas sem leitura durante o limite de uso.
 - **26/11, ficha 2026-11-25-1544:** registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento.
 - **26/11, ficha 2026-11-26-0105:** mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram.
+- **26/11, auditoria, ficha 2026-11-26-0116:** Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada).

@@ -1,0 +1,831 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Canteiro X1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: papel de projeto azul. Barra presa com a hora da ultima passada; faixa quadriculada com a frase,
+   a conta calculada e a trilha ate o 1o Pix; depois: precisa de voce, pronto para ver, recados, ao lado,
+   conversa da equipe; um botao para o resto; caixa de recado presa no pe. Duas colunas a partir de 900 px. */
+:root{
+  --papel:#f3f6fa; --folha:#ffffff; --tinta:#12233b; --tinta2:#51627a; --linha:#d6dee9;
+  --azul:#0b4fa8; --azul-escuro:#083a7d; --barra-tinta:#c9dbf5;
+  --amarelo:#ffc857; --amarelo-tinta:#4a3600; --amarelo-claro:#fff3d6; --amarelo-borda:#f0d48a;
+  --verde:#1b7548; --verde-claro:#e2f3ea; --ponto-ok:#4ed58a; --vermelho:#b3261e;
+  --faixa:#0b4fa8; --faixa-tinta2:#c9dbf5; --faixa-grade:rgba(255,255,255,.085); --faixa-vazio:rgba(255,255,255,.3); --faixa-caixa:rgba(4,22,52,.32);
+  --sombra:0 8px 28px rgba(18,35,59,.18); --visor:#0a1220; --visor-tinta:#eef3fa; --visor-tinta2:#a9b8cc;
+  --c-vera:#b5532f; --c-caio:#2f7d3b; --c-nilo:#2462b8; --c-bia:#7646b0; --c-tito:#a8560f; --c-olga:#5b6f86;
+  --c-rui:#7b5233; --c-ana:#1f7a7a; --c-zeca:#c2407a; --c-juca:#7a600c;
+  --titulo:"Bricolage Grotesque","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --texto:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --papel:#0b1524; --folha:#132034; --tinta:#e9eff8; --tinta2:#9daec6; --linha:#293a55;
+  --azul:#8bb8f8; --azul-escuro:#06224a; --amarelo-claro:#3a2f14; --amarelo-borda:#6b5520;
+  --verde:#6fd0a0; --verde-claro:#143326; --vermelho:#ff8a80;
+  --faixa:#0a2f66; --faixa-tinta2:#b9cdeb; --sombra:0 8px 28px rgba(0,0,0,.5); color-scheme:dark } }
+:root[data-theme="dark"]{
+  --papel:#0b1524; --folha:#132034; --tinta:#e9eff8; --tinta2:#9daec6; --linha:#293a55;
+  --azul:#8bb8f8; --azul-escuro:#06224a; --amarelo-claro:#3a2f14; --amarelo-borda:#6b5520;
+  --verde:#6fd0a0; --verde-claro:#143326; --vermelho:#ff8a80;
+  --faixa:#0a2f66; --faixa-tinta2:#b9cdeb; --sombra:0 8px 28px rgba(0,0,0,.5); color-scheme:dark }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+section,[data-k]{scroll-margin-top:calc(52px + env(safe-area-inset-top,0px) + 12px)}
+body{margin:0;background:var(--papel);color:var(--tinta);font:16px/1.45 var(--texto);padding-bottom:96px;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--azul-escuro)}
+.miolo{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{cursor:default}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+h2,h3{text-wrap:balance}
+.link{background:none;border:0;padding:0;color:var(--azul);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.link:disabled{color:var(--tinta2);text-decoration:none}
+
+/* A: barra presa */
+.barra{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;background:var(--azul-escuro);color:#fff}
+.barra .miolo{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px;padding-block:6px}
+.marca{display:block;font:700 15px/1.1 var(--titulo);letter-spacing:.12em;text-transform:uppercase}
+.pulso{display:block;font:500 12px/1.2 var(--texto);color:var(--barra-tinta);margin-top:3px}
+.pulso::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ponto-ok);margin-right:6px;vertical-align:1px}
+.pulso.velho{color:var(--amarelo)}.pulso.velho::before{background:var(--amarelo)}
+.pulso.caiu{color:var(--amarelo)}.pulso.caiu::before{background:transparent;border:1.5px solid var(--amarelo);box-sizing:border-box}
+.esperam{background:var(--amarelo);color:var(--amarelo-tinta);border:0;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;white-space:nowrap}
+.esperam.zero{background:transparent;color:var(--barra-tinta);border:1px solid rgba(255,255,255,.35)}
+.tarja{background:var(--amarelo-claro);color:var(--tinta);border-bottom:1px solid var(--amarelo-borda);font-size:14px}
+.tarja .miolo{padding-block:8px;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+
+/* B: faixa azul */
+.faixa{background:linear-gradient(var(--faixa-grade) 1px,transparent 1px) 0 0/100% 24px,linear-gradient(90deg,var(--faixa-grade) 1px,transparent 1px) 0 0/24px 100%,var(--faixa);color:#fff}
+.faixa .miolo{padding-block:10px 10px;display:flex;flex-direction:column;gap:6px}
+.faixa .miolo>*{min-width:0}
+.alerta{background:var(--amarelo);color:var(--amarelo-tinta);border-radius:8px;padding:8px 12px;font-size:14px;font-weight:600;line-height:1.35}
+.alerta.calmo{background:var(--faixa-caixa);color:#fff;font-weight:500}
+.frase{font:700 21px/1.2 var(--titulo);margin:0}
+.conta{font-size:17px;line-height:1.35;margin:0;font-weight:600}
+.conta b{color:var(--amarelo)}
+.enquanto{margin:0;font-size:14.5px;color:var(--faixa-tinta2)}
+.enquanto b{color:#fff;font-weight:600}
+.trilha{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.trilha::before{content:"";position:absolute;left:10%;right:10%;top:9px;height:2px;background:var(--faixa-vazio)}
+.trilha li{position:relative;min-width:0}
+.trilha button{display:block;width:100%;background:none;border:0;padding:0 0 2px;text-align:center;font-size:12px;line-height:1.2;color:var(--faixa-tinta2);border-radius:6px}
+.trilha .pt{display:block;margin:0 auto 5px;width:20px;height:20px;border-radius:50%;background:var(--faixa);border:2px solid var(--faixa-vazio)}
+.trilha .feito .pt{background:var(--faixa-vazio);border-color:transparent}
+.trilha .at .pt{background:var(--amarelo);border-color:var(--amarelo)}
+.trilha .fim .pt{border-style:dashed}
+.trilha .at button{color:#fff;font-weight:700}
+.trilha button[aria-expanded="true"]{background:var(--faixa-caixa)}
+.trilha small{display:block;white-space:nowrap;font-weight:500;font-size:11px;color:var(--faixa-tinta2);min-height:1.2em}
+.trilha .at small{color:var(--amarelo)}
+.trilha-det{background:var(--faixa-caixa);border-radius:10px;padding:10px 12px;font-size:14px}
+.trilha-det h3{margin:0 0 4px;font:700 15px/1.3 var(--texto)}
+.trilha-det ul{margin:0;padding-left:18px}
+.trilha-det li{margin:2px 0}
+.trilha-det .de{color:var(--amarelo);font-weight:600}
+.trilha-det p{margin:4px 0 0;color:var(--faixa-tinta2)}
+
+/* corpo */
+.corpo{display:flex;flex-direction:column;gap:20px;padding-block:16px 8px}
+.col{display:contents}
+#sec-precisa{order:1}#sec-pronto{order:2}#sec-recados{order:3}#sec-lado{order:4}#sec-conversa{order:5}
+section{min-width:0}
+.cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:0 0 10px}
+.cab h2{font:700 20px/1.2 var(--titulo);margin:0}
+.cab span{font-size:13.5px;color:var(--tinta2);white-space:nowrap}
+.nota{margin:0 0 10px;font-size:14px;color:var(--tinta2)}
+.nota.socio{background:var(--amarelo-claro);border:1px solid var(--amarelo-borda);color:var(--tinta);border-radius:10px;padding:8px 12px}
+.vazio{padding:14px;color:var(--tinta2);font-size:14.5px}
+
+/* C: perguntas */
+.lista{background:var(--folha);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.q{border-top:1px solid var(--linha)}
+.q:first-child{border-top:0}
+.q-toque{display:flex;gap:12px;width:100%;padding:10px 12px;background:none;border:0;text-align:left;align-items:flex-start}
+.q-toque:hover{background:var(--papel)}
+.col-mini{flex:none;display:flex;flex-direction:column;align-items:center;gap:4px}
+.mini{flex:none;width:44px;height:44px;border-radius:8px;overflow:hidden;position:relative;background:var(--papel);border:1px solid var(--linha);display:block}
+.mini img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.mini b{position:absolute;left:0;top:0;background:var(--amarelo);color:var(--amarelo-tinta);font-size:11px;padding:1px 5px;border-bottom-right-radius:6px}
+.mini.num{display:grid;place-items:center;font-weight:700;color:var(--azul);font-size:18px}
+.etq{display:inline-block;background:var(--amarelo);color:var(--amarelo-tinta);font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;letter-spacing:.03em}
+.q-txt{display:block;min-width:0;flex:1}
+.q-tit{display:block;font-size:16px;line-height:1.32;font-weight:650}
+.q-sub{display:block;margin-top:3px;font-size:14px;color:var(--tinta2);line-height:1.35}
+.q-sub b{color:var(--tinta);font-weight:600}
+.q.ok{background:var(--verde-claro)}
+.q.ok .mini.num{color:var(--verde)}
+.q.ok .q-tit{font-weight:500;color:var(--tinta2);font-size:14.5px}
+.tua{display:inline-block;background:var(--amarelo);color:var(--amarelo-tinta);font-weight:700;font-size:14px;border-radius:6px;padding:0 6px;margin:3px 6px 0 0}
+.rec{display:block;font-size:12.5px;color:var(--tinta2);margin-top:3px}
+.rec.lido{color:var(--verde);font-weight:600}
+.resp-p{display:block;font-size:14px;margin-top:3px}
+.ok-linha{display:flex;gap:12px;padding:10px 12px;align-items:flex-start}
+.compacta .q-toque{padding:9px 12px}
+.compacta .q-tit{font-size:15px;font-weight:550}
+.decidiu{margin-top:8px;font-size:14px}
+.amarela{display:block;margin-top:4px;background:var(--amarelo-claro);border:1px solid var(--amarelo-borda);color:var(--tinta);border-radius:6px;padding:3px 8px;font-size:13.5px;line-height:1.35;font-weight:500}
+.dec{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-top:1px solid var(--linha);font-size:14.5px}
+.dec:first-child{border-top:0}
+.dec b{font-weight:600}
+.dec q{color:var(--tinta)}
+.dec small{color:var(--tinta2);font-size:12.5px}
+.trilha-det .enq{margin-top:6px;font-size:13.5px}
+
+/* pergunta aberta */
+.q.aberta{background:var(--folha);box-shadow:inset 4px 0 0 var(--azul)}
+.q-corpo{padding:0 14px 14px 14px;display:flex;flex-direction:column;gap:12px}
+.q.aberta .q-tit{font-size:17px}
+.antes{font-size:14px;color:var(--tinta2);background:var(--papel);border-radius:8px;padding:6px 10px;margin:0}
+.porque{margin:0;font-size:15px}
+.rot{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta2);font-weight:700;margin-bottom:4px}
+.ver-tira{display:flex;gap:8px;align-items:flex-start}
+.ver-tira button{flex:1 1 0;min-width:0;max-width:110px;padding:0;border:0;background:none;text-align:center;color:var(--tinta)}
+.ver-tira .fig{display:block;height:84px;border-radius:8px;overflow:hidden;border:1px solid var(--linha);background:var(--papel)}
+.ver-tira img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.ver-tira .leg{display:block;margin-top:4px;font-size:12.5px;line-height:1.25;font-weight:600}
+.ver-tira .mais .fig{display:grid;place-items:center;font-weight:700;color:var(--azul);font-size:13.5px;padding:4px}
+.sugere{display:flex;gap:10px;background:var(--amarelo-claro);border:1px solid var(--amarelo-borda);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.sugere .ini{flex:none;width:26px;height:26px;border-radius:50%;background:var(--azul-escuro);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.sugere b{display:block;font-size:13px}
+.ops{display:flex;flex-direction:column;gap:8px}
+.op{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;background:var(--papel);border:1.5px solid var(--linha);border-radius:10px;padding:12px 14px;font-weight:600;font-size:15.5px;color:var(--tinta)}
+.op:hover:not(:disabled){border-color:var(--azul)}
+.op:disabled{opacity:.55}
+.op .sug{flex:none;font-size:11.5px;font-weight:600;color:var(--tinta2);border:1px solid var(--linha);border-radius:999px;padding:1px 8px;background:var(--folha)}
+.mais-acoes{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14.5px}
+.escreve{display:flex;flex-direction:column;gap:8px}
+.escreve textarea,.pe textarea{width:100%;font:inherit;color:var(--tinta);background:var(--papel);border:1px solid var(--linha);border-radius:10px;padding:10px 12px;resize:vertical;min-height:84px}
+.botoes{display:flex;gap:10px;align-items:center}
+.btn{background:var(--azul);color:var(--folha);border:0;border-radius:999px;padding:10px 20px;font-weight:700}
+.btn:disabled{opacity:.45}
+.btn.claro{background:none;color:var(--azul);border:1.5px solid var(--linha)}
+
+/* D: pecas */
+.tira{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.peca{flex:none;width:132px;background:none;border:0;padding:0;text-align:left;color:var(--tinta);text-decoration:none;display:block}
+.capa{display:block;height:120px;border-radius:10px;overflow:hidden;position:relative;border:1px solid var(--linha);background:var(--folha)}
+.capa img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.capa .etq{position:absolute;left:6px;top:6px}
+.capa-txt{display:grid;place-items:center;height:100%;padding:10px;text-align:center;font-size:13px;color:var(--azul);font-weight:600}
+.peca-tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:5px;font-size:13px;line-height:1.3}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.grade .peca{width:auto}
+@media (max-width:899px){.tira .capa{height:96px}}
+
+/* E, F, G */
+.recados,.lado,.falas{background:var(--folha);border:1px solid var(--linha);border-radius:14px}
+.recado{padding:10px 14px;border-top:1px solid var(--linha);font-size:15px}
+.recado:first-child{border-top:0}
+.recado p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.lado-item{padding:12px 14px;border-top:1px solid var(--linha);font-size:15px}
+.lado-item:first-child{border-top:0}
+.lado-item p{margin:2px 0 6px;color:var(--tinta2);font-size:14.5px}
+.fala{display:flex;gap:10px;padding:10px 14px;border-top:1px solid var(--linha);align-items:flex-start}
+.fala:first-child{border-top:0}
+.avs{flex:none;display:flex;width:48px}
+.av{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;border:2px solid var(--folha)}
+.av+.av{margin-left:-6px}
+.fala p{margin:0;font-size:15px;line-height:1.4}
+.fala small{display:block;color:var(--tinta2);font-size:12.5px;margin-top:2px}
+.mais-linha{padding:8px 14px 12px;border-top:1px solid var(--linha);font-size:14px}
+
+/* H: ver tudo */
+.tudo-btn{width:100%;background:var(--folha);border:1.5px solid var(--linha);border-radius:12px;padding:13px;font-weight:700;color:var(--azul);font-size:15.5px}
+.gavetas{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+details{background:var(--folha);border:1px solid var(--linha);border-radius:12px}
+details>summary{list-style:none;cursor:pointer;padding:12px 14px;font-weight:650;display:flex;justify-content:space-between;gap:10px}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"+";color:var(--azul);font-weight:700}
+details[open]>summary::after{content:"–"}
+details>summary .n{color:var(--tinta2);font-weight:500;margin-left:auto}
+.gav-corpo{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px}
+.gav-corpo details{background:var(--papel)}
+.gav-corpo details .lista{border-radius:0 0 12px 12px;border-width:1px 0 0}
+.gav-corpo p{margin:0;font-size:14.5px}
+.gav-corpo ul{margin:0;padding-left:18px;font-size:14.5px}
+.gav-corpo li{margin:4px 0}
+.aviso-c{background:var(--papel);border-radius:10px;padding:10px 12px;font-size:14.5px;display:flex;flex-direction:column;gap:6px}
+.aviso-c p{margin:0}
+.aviso-c .desfaz{color:var(--tinta2)}
+.aviso-c .btn{align-self:flex-start;padding:7px 14px;font-size:14px}
+
+/* I: rodape */
+.rodape{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:18px 8px;font-size:14px;color:var(--tinta2)}
+.tema{display:inline-flex;border:1px solid var(--linha);border-radius:999px;overflow:hidden}
+.tema button{background:none;border:0;padding:5px 12px;color:var(--tinta2);font-size:13.5px}
+.tema button[aria-pressed="true"]{background:var(--azul);color:var(--folha);font-weight:600}
+
+/* pe */
+.pe{position:fixed;left:0;right:0;bottom:0;background:var(--folha);border-top:1px solid var(--linha);z-index:7;padding-bottom:env(safe-area-inset-bottom,0px)}
+.pe .miolo{display:flex;gap:10px;padding-block:10px 12px;align-items:flex-end}
+.pe textarea{flex:1;min-width:0;min-height:44px;max-height:132px;border-radius:22px;padding:11px 16px;resize:none;line-height:1.35}
+.pe .btn{height:44px;flex:none}
+.pe textarea.so-dono{font-size:14px;padding-inline:14px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:9;background:var(--tinta);color:var(--papel);border-radius:10px;padding:10px 16px;font-size:14.5px;box-shadow:var(--sombra);width:max-content;max-width:calc(100% - 32px)}
+
+/* visor */
+.visor{width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--visor);color:var(--visor-tinta)}
+.visor::backdrop{background:rgba(0,0,0,.6)}
+.visor-in{display:flex;flex-direction:column;height:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.visor-cab{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px))}
+.visor-cab h2{margin:0;font:700 16px/1.25 var(--titulo);min-width:0}
+.visor-cab .btn{background:var(--visor-tinta);color:var(--visor);padding:7px 16px;flex:none}
+.visor-img{flex:1;min-height:120px;overflow:hidden;padding:0 12px}
+.visor-img img,.visor-img video{display:block;width:100%;height:100%;object-fit:contain}
+.visor-img video{background:#000}
+.visor-pe{flex:none;padding:8px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:8px;max-height:55%;overflow-y:auto}
+.legenda{margin:0;font-size:14.5px;text-align:center}
+.nav{display:flex;justify-content:center;align-items:center;gap:14px;font-size:14px;color:var(--visor-tinta2);font-variant-numeric:tabular-nums}
+.nav button{background:none;border:1px solid var(--visor-tinta2);color:var(--visor-tinta);border-radius:999px;padding:6px 14px}
+.visor-q{background:var(--folha);color:var(--tinta);border-radius:12px;max-width:640px;width:100%;margin:0 auto}
+.visor-q .q{border:0}
+@media (min-width:900px){
+  .corpo{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:start}
+  .col{display:flex;flex-direction:column;gap:24px;min-width:0}
+  .frase{font-size:30px}
+  .faixa .miolo{display:grid;grid-template-columns:1.15fr 1fr;column-gap:40px;padding-block:18px 20px}
+  .faixa .miolo>*{grid-column:1}
+  .faixa .miolo>.trilha-lado{grid-column:2;grid-row:1/span 6;align-self:center}
+  .tira{flex-wrap:wrap;overflow:visible}
+  .pe .miolo{max-width:700px;margin-left:max(0px,calc((100vw - 1080px)/2))}
+  .resto{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:no-preference){.toast{animation:sobe .2s ease-out}@keyframes sobe{from{opacity:0;transform:translate(-50%,8px)}}}
+</style>
+
+<header class="barra"><div class="miolo">
+  <div><span class="marca">Canteiro</span><span class="pulso" id="pulso">…</span></div>
+  <button class="esperam" id="esperam" type="button">…</button>
+</div></header>
+<div class="tarja" id="tarja" hidden><div class="miolo" id="tarja-in"></div></div>
+<div class="faixa"><div class="miolo" id="faixa"></div></div>
+
+<main class="miolo corpo" id="corpo">
+  <div class="col">
+    <section id="sec-precisa" aria-labelledby="h-precisa"></section>
+    <section id="sec-recados" hidden></section>
+  </div>
+  <div class="col">
+    <section id="sec-pronto"></section>
+    <section id="sec-lado" hidden></section>
+    <section id="sec-conversa" hidden></section>
+  </div>
+  <section class="resto" id="sec-resto" style="order:6"></section>
+</main>
+<footer class="miolo rodape" id="rodape"></footer>
+
+<div class="pe"><div class="miolo">
+  <textarea id="recado-txt" rows="1" maxlength="2000" placeholder="Recado para o Paydon…" aria-label="Recado para o Paydon"></textarea>
+  <button class="btn" id="recado-env" type="button" disabled>Enviar</button>
+</div></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog class="visor" id="visor" aria-labelledby="visor-tit"><div class="visor-in">
+  <div class="visor-cab"><h2 id="visor-tit"></h2><button class="btn" id="visor-fecha" type="button">Fechar</button></div>
+  <div class="visor-img"><img id="visor-img" alt=""><video id="visor-video" controls playsinline preload="metadata" hidden></video></div>
+  <div class="visor-pe">
+    <p class="legenda" id="visor-leg"></p>
+    <div class="nav"><button id="visor-ant" type="button">Anterior</button><span id="visor-pos"></span><button id="visor-prox" type="button">Próxima</button></div>
+    <div id="visor-q"></div>
+  </div>
+</div></dialog>
+
+<script type="application/json" id="copia">{"gerada_em": "2026-11-26T02:32:47Z", "docs": [{"tipo": "estado", "versao": 1, "em": "2026-11-26T02:32:47Z", "lido_ate": "2026-11-26T02:32:47Z", "ritmo": null, "frase": "O texto e as plantas do e-book estão prontos.", "para": "a prévia final; depois, o seu \"gera\" para o PDF oficial", "depois": "monto a prévia final e te chamo aqui para você ver e dizer \"gera\".", "enquanto": "eu melhoro as páginas em rascunho, sem publicar nem gastar nada.", "precisa": ["n1-identidade", "n2-frases", "p14"], "prontos": ["identidade", "frases", "reels", "guia-socio"], "feito_recente": ["As 3 casas ganharam as páginas \"cômodo a cômodo\", e você aprovou a entrada delas no e-book pago.", "Os 2 bônus (checklist da obra e perguntas ao engenheiro) agora saem num arquivo separado, junto do e-book. Ficam marcados como rascunho até um profissional ler.", "A página \"A parede que não pode ter janela\" entrou na parte geral do e-book.", "A Casa Compacta ganhou a veneziana em cima da porta de serviço, como você escolheu.", "3 visuais novos para o e-book foram desenhados, cada um com a capa e uma página de casa.", "As 5 frases novas foram escritas, com 2 opções cada, e lidas pela Vera.", "Instagram feito por IA: estudo do perfil de referência, tema recomendado e 2 testes de vídeo, só com ferramenta grátis.", "O guia para o seu sócio está publicado."], "etapa": 0, "etapas": [{"nome": "E-book", "sub": "", "falta": [{"texto": "Suas 3 respostas", "de": "voce"}, {"texto": "Montar a prévia final", "de": "equipe"}, {"texto": "Seu \"gera\" no PDF oficial", "de": "voce"}]}, {"nome": "Entrega", "sub": "ao cliente", "falta": [{"texto": "Um profissional registrado lê o checklist dos bônus", "de": "voce"}, {"texto": "Seu \"sim\" para a pasta no Drive", "de": "voce"}]}, {"nome": "Funil", "sub": "do sócio", "falta": [{"texto": "WhatsApp, grátis, prévia e Pix", "de": "socio"}]}, {"nome": "Anúncio", "sub": "", "falta": [{"texto": "Seu \"sim\" e o valor da campanha", "de": "voce"}, {"texto": "Textos do anúncio", "de": "equipe"}]}, {"nome": "1ª venda", "sub": "o 1º Pix", "falta": []}], "lado": [{"nome": "Instagram feito por IA", "situacao": "Tema recomendado e 2 testes de vídeo prontos. Sem pressa: nada aqui segura o e-book.", "assunto": "Instagram"}], "socio_grava": false, "_id": "estado-atual"}, {"tipo": "pergunta", "estado": "voce", "resumo": null, "sugestao": "A Trena. A fita métrica aparece em toda página marcando a frente do lote, e o número grande se lê no celular sem dar zoom.", "sugerida": 0, "livre": null, "ver": "identidade", "reservado": false, "perguntado_em": "2026-11-26T02:32:47Z", "em": "2026-11-26T02:32:47Z", "titulo": "Qual visual o e-book vai ter: Trena, Placa ou Porta acesa?", "por_que": "É o primeiro passo do PDF final: todas as páginas são montadas com esse visual, e você pediu que nada saia sem ele.", "destrava": "a montagem do PDF final.", "opcoes": ["1 · A Trena", "2 · A Placa", "3 · A Porta acesa", "Nenhuma: quero ver outras"], "etapa": 0, "nivel": "agora", "_id": "n1-identidade"}, {"tipo": "pergunta", "estado": "voce", "resumo": "A dúvida do comprador, no alto da página.", "sugestao": null, "sugerida": null, "livre": 3, "ver": "frases", "reservado": false, "perguntado_em": "2026-11-26T02:32:47Z", "em": "2026-11-26T02:32:47Z", "titulo": "Frases novas: nas 5 páginas, só nas 2 das casas, ou em nenhuma?", "por_que": "Com a sua resposta eu colo as frases e fecho a prévia final. A Vera leu as 10 frases: 8 passaram e 2 ganharam troca. Quantas páginas mudam é escolha sua.", "destrava": "a prévia final do e-book.", "opcoes": ["Nas 5 páginas", "Só nas 2 das casas", "Em nenhuma por enquanto", "Quero trocar alguma frase"], "etapa": 0, "nivel": "agora", "_id": "n2-frases"}, {"em": "2026-11-26T02:32:47Z", "estado": "voce", "opcoes": ["A casa do seu lote", "Errar na planta sai caro", "Veja a casa antes da obra", "Fica o atual: Antes do primeiro tijolo"], "titulo": "Qual título vai na capa: um dos 3 novos ou o atual?", "resumo": null, "por_que": "O título entra na capa antes de eu gerar o PDF final (para não gerar duas vezes) e dá o nome à pasta que o cliente recebe.", "destrava": "a capa do PDF final.", "sugestao": "\"A casa do seu lote\", com \"de referência\" por perto na capa, como a Vera pediu: o comprador repete no WhatsApp (\"quero a casa do meu lote\"). Se quiser o mais chamativo, é \"Errar na planta sai caro\". A escolha é sua.", "sugerida": 0, "livre": null, "ver": null, "etapa": 0, "nivel": "agora", "reservado": true, "perguntado_em": "2026-11-26T02:32:47Z", "_id": "p14"}, {"tipo": "conversa", "de": "Paydon", "para": "todos", "texto": "A Vera leu as 10 frases novas do Caio: 8 passaram, 2 ganharam troca.", "em": "2026-11-26T00:20:42.000Z", "sobre": "frases novas", "cita": ["Vera", "Caio"], "_id": "conversa-20261126002042000"}, {"tipo": "conversa", "de": "Paydon", "para": "todos", "texto": "A Olga conferiu o trabalho de 24 e 25/11: está tudo funcionando, mas os registros ficaram para trás.", "em": "2026-11-25T23:04:53.000Z", "sobre": "conferência", "cita": ["Olga"], "_id": "conversa-20261125230453000"}]}</script>
+<script>
+/* ---------- estado da pagina ---------- */
+let todos=[], banco=null, galeria=null, galeriaErro=false;
+let deCopia=true, semBanco=false, antigo=false, copiaEm=null;
+let leitor=false, modoSocio=false, vistos=[], tema=null;
+try{leitor=localStorage.getItem("x1leitor")==="1"; modoSocio=localStorage.getItem("x1socio")==="1"; vistos=JSON.parse(localStorage.getItem("x1vistos")||"[]"); tema=localStorage.getItem("x1tema");}catch(e){}
+if(!Array.isArray(vistos))vistos=[];
+const abertas=new Set(), trocando=new Set(), ocupado=new Set(), escrevendo={}, rascunho={}, vista={}, detAberto={};
+let tudoAberto=false, etapaAberta=null, verRecados=false, verFalas=false, jaAbriu=false, olho=null;
+let semConexao=false, erroDados=false, ultimoBom=null, copiaDocs=[];
+const L=x=>Array.isArray(x)?x:[];
+
+const $=id=>document.getElementById(id);
+const el=(t,c,x)=>{const e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;};
+const T=iso=>Date.parse(iso||"")||0;
+const largo=()=>window.innerWidth>=900;
+const editando=()=>[...document.querySelectorAll(".q textarea, .visor textarea")].some(t=>t.value.trim()!==""||t===document.activeElement)||document.activeElement===$("recado-txt")&&$("recado-txt").value.trim()!=="";
+
+/* ---------- horas (Brasilia) ---------- */
+const TZ="America/Sao_Paulo";
+const hora=iso=>new Date(iso).toLocaleTimeString("pt-BR",{timeZone:TZ,hour:"2-digit",minute:"2-digit"});
+const dia=iso=>new Date(iso).toLocaleDateString("pt-BR",{timeZone:TZ,day:"2-digit",month:"2-digit"});
+function quandoTxt(iso){const d=dia(iso), hoje=dia(Date.now()), ontem=dia(Date.now()-864e5);
+  return d===hoje?"hoje, "+hora(iso):d===ontem?"ontem, "+hora(iso):d+", "+hora(iso);}
+const quando=()=>{const e=estado(); const x=T(e.lido_ate||e.em); return new Date(Math.max(Date.now(), x?x+1000:0)).toISOString();};
+
+/* ---------- leitura dos dados ---------- */
+const doc=id=>todos.find(d=>d._id===id);
+const estado=()=>doc("estado-atual")||{};
+const ehPergunta=d=>!!d&&!!d.nivel&&(!d.tipo||d.tipo==="pergunta");
+const ehAviso=d=>!!d&&d.tipo==="aviso";
+const viva=d=>d.estado!=="feito"&&d.nivel!=="arquivo";
+const respondida=d=>!!d.comentario&&(!d.perguntado_em||T(d.comentado_em)>T(d.perguntado_em));
+const lida=d=>respondida(d)&&!!d.lido_em&&T(d.lido_em)>=T(d.comentado_em);
+const naoEntendeu=d=>d.comentario==="Não entendi a pergunta";
+const resolvida=d=>respondida(d)&&!naoEntendeu(d);         // "Não entendi" não conta como resposta
+const fora=d=>lida(d)&&!naoEntendeu(d);                         // lida pelo Paydon: sai da frente
+const nova=d=>!!d.perguntado_em&&!respondida(d)&&Date.now()-T(d.perguntado_em)<48*36e5;
+function frente(){return L(estado().precisa).map(doc).filter(d=>ehPergunta(d)&&viva(d)&&!fora(d)).slice(0,3);}
+const faltam=()=>frente().filter(d=>!resolvida(d)).length;
+function frenteSocio(){const ids=new Set(); const out=[];
+  for(const d of [...frente(),...todos.filter(d=>ehPergunta(d)&&d.nivel==="depois")]){
+    if(ids.has(d._id)||!viva(d)||fora(d)||!(d.etapa===2||d.etapa===3))continue; ids.add(d._id); out.push(d);}
+  return out.slice(0,3);}
+function esperam(){const f=new Set(frente().map(d=>d._id));
+  return todos.filter(d=>ehPergunta(d)&&d.nivel==="depois"&&viva(d)&&!f.has(d._id)&&!fora(d))
+    .sort((a,b)=>T(b.perguntado_em)-T(a.perguntado_em));}
+// tudo o que ele respondeu nos últimos 7 dias, arquivado ou não; uma pergunta reescrita e ainda sem resposta nova não conta
+function decididas(){const f=new Set(frente().map(d=>d._id)), lim=Date.now()-7*864e5;
+  return todos.filter(d=>!["recado","conversa","estado"].includes(d.tipo)&&typeof d.comentario==="string"&&d.comentario.trim()&&!naoEntendeu(d)
+      &&T(d.comentado_em)>=lim&&!f.has(d._id)&&!(ehPergunta(d)&&viva(d)&&!respondida(d)))
+    .sort((a,b)=>T(b.comentado_em)-T(a.comentado_em));}
+const avisos=()=>todos.filter(d=>ehAviso(d)&&viva(d)).sort((a,b)=>T(b.em)-T(a.em));
+const recados=()=>todos.filter(d=>d.tipo==="recado").sort((a,b)=>T(b.comentado_em)-T(a.comentado_em));
+const falas=()=>todos.filter(d=>d.tipo==="conversa"&&Date.now()-T(d.em)<=14*864e5).sort((a,b)=>T(b.em)-T(a.em));
+const grupo=id=>(galeria||[]).find(g=>g.id===id);
+function nomeEtapa(et){const e=estado();
+  if(typeof et==="number")return (L(e.etapas)[et]||{}).nome||"Mais adiante";
+  if(et==="lado")return (L(e.lado)[0]||{}).assunto||"Ao lado do e-book";
+  if(et==="sistema")return "Sistema";
+  return "Outras";}
+const ordemEtapa=et=>typeof et==="number"?et:et==="lado"?10:et==="sistema"?11:12;
+
+/* ---------- uma pergunta aberta por vez ---------- */
+function abreSo(id,trocar){abertas.clear(); trocando.clear(); if(id){abertas.add(id); if(trocar)trocando.add(id);}}
+function abrePrimeira(){const p=frente().find(d=>!resolvida(d)); if(p)abreSo(p._id); return p;}
+
+/* ---------- quem pode gravar ---------- */
+const socioTrava=()=>modoSocio&&!estado().socio_grava;
+const podeGravar=()=>!!banco&&!semBanco&&!antigo&&!deCopia&&!leitor&&!socioTrava();
+function porQueNao(){
+  if(semBanco)return "Esta é a cópia guardada. Para responder, abra pelo claude.ai.";
+  if(antigo)return "A página está sendo arrumada. Volte em alguns minutos.";
+  if(deCopia||!banco)return "Ainda conectando. Tente de novo em alguns segundos.";
+  if(leitor)return "Só o dono da página responde por aqui.";
+  if(socioTrava())return "Por enquanto só o dono responde; ele decide se você também pode.";
+  return "";}
+
+/* ---------- aviso rapido ---------- */
+let somToast=0;
+function avisa(t){const e=$("toast"); e.textContent=t; e.hidden=false; clearTimeout(somToast); somToast=setTimeout(()=>{e.hidden=true;},4000);}
+
+/* ---------- gravar ---------- */
+function viraLeitor(){leitor=true; try{localStorage.setItem("x1leitor","1");}catch(e){} avisa("Só o dono da página responde por aqui.");}
+async function gravar(id,texto){
+  texto=(texto||"").trim(); if(!texto)return false;
+  if(!podeGravar()){avisa(porQueNao()); render(); return false;}
+  const atual=doc(id); if(!atual)return false;
+  if(id in vista && (atual.perguntado_em||null)!==vista[id]){
+    vista[id]=atual.perguntado_em||null;
+    avisa("A pergunta mudou enquanto você escrevia. Seu texto continua aqui; veja a pergunta nova.");
+    render(); return false;}
+  if(ocupado.has(id))return false;
+  ocupado.add(id); render();
+  let ok=false;
+  try{
+    // lê o documento de novo antes de gravar: outro aparelho pode ter respondido e o retrato ainda não chegou aqui
+    let fresco=null;
+    try{const s=await banco.collection("tarefas").get(); const x=s&&L(s.docs).find(k=>k.id===id); if(x)fresco=Object.assign({},x.data()||{});}catch(e){}
+    if(fresco&&((fresco.comentado_em||null)!==(atual.comentado_em||null)||(fresco.perguntado_em||null)!==(atual.perguntado_em||null))){
+      const i=todos.findIndex(x=>x._id===id); if(i>=0)todos[i]=Object.assign({},fresco,{_id:id});
+      if(fresco.perguntado_em!==atual.perguntado_em){vista[id]=fresco.perguntado_em||null; avisa("A pergunta mudou enquanto você escrevia. Seu texto continua aqui; veja a pergunta nova.");}
+      else{abertas.delete(id); trocando.delete(id); avisa("Esta pergunta acabou de ser respondida em outro aparelho"+(fresco.comentario?": "+fresco.comentario:"")+". Confira antes de trocar.");}
+      setTimeout(()=>{render(); if(olho)pintaOlho();},0);
+      return false;}
+    const base=fresco||atual;
+    const campos={comentario:texto, comentado_em:quando(), versao_vista:base.perguntado_em||null, autor:modoSocio?"socio":"dono",
+      historico: base.comentario?[...L(base.historico).slice(-9),{comentario:base.comentario,comentado_em:base.comentado_em||null}]:L(base.historico)};
+    await banco.doc("tarefas/"+id).update(campos);
+    const i=todos.findIndex(x=>x._id===id); if(i>=0)todos[i]=Object.assign({},todos[i],campos);
+    ok=true; trocando.delete(id); abertas.delete(id); delete escrevendo[id]; delete rascunho[id]; delete vista[id];
+  }catch(e){
+    if(e&&e.code==="invalid_argument")viraLeitor(); else avisa("Não salvou. Parece a internet. Tente de novo.");
+  }finally{ocupado.delete(id);}
+  if(ok){
+    const nao=texto==="Não entendi a pergunta";
+    avisa(nao?"Anotado. A pergunta continua aberta; o Paydon reescreve.":"Guardado. Eu leio na próxima passada.");
+    const f=frente(); if(f.some(d=>d._id===id)&&!olho&&!trocando.size&&!abertas.size){const prox=f.find(d=>!resolvida(d)&&d._id!==id); if(prox)abreSo(prox._id);}
+  }
+  render(); if(olho)pintaOlho();
+  return ok;}
+
+/* ---------- pecas de interface ---------- */
+function miniDe(d,i,comNumero){
+  const g=d.ver&&grupo(d.ver), src=g&&g.imagens&&g.imagens[0]&&g.imagens[0].src;
+  if(resolvida(d)&&!trocando.has(d._id))return el("span","mini num","✓");
+  if(!src)return el("span","mini num",String(i+1));
+  const m=el("span","mini"); const im=el("img"); im.src=src; im.alt=""; im.loading="lazy"; m.append(im);
+  if(comNumero)m.append(el("b",null,String(i+1))); return m;}
+
+function recibo(d){
+  const r=el("span","rec");
+  if(lida(d)){r.className="rec lido"; r.textContent="lido às "+hora(d.lido_em);}
+  else r.textContent="guardada às "+hora(d.comentado_em)+" · o Paydon ainda não leu";
+  return r;}
+
+function linhaFeita(d,i,opts){
+  const w=el("div","q ok"); const l=el("div","ok-linha");
+  if(!opts.compacto){const cm=el("span","col-mini"); cm.append(miniDe(d,i,false)); l.append(cm);}
+  const tx=el("div","q-txt");
+  tx.append(el("span","q-tit",d.titulo||d.o_que||""));
+  if(naoEntendeu(d)){tx.append(el("span","resp-p","Você não entendeu esta. Eu reescrevo na próxima passada."));}
+  else if(ehAviso(d)){tx.append(el("span","resp-p","Você pediu diferente."));}
+  else{
+    const quem=d.autor==="socio"?"O sócio: ":"Você: ";
+    tx.append(el("span","tua",quem+d.comentario));
+    if(ehPergunta(d)&&viva(d)){const b=el("button","link","trocar"); b.type="button"; b.disabled=!podeGravar(); b.onclick=()=>{abreSo(d._id,true); render(); if(olho)pintaOlho();}; tx.append(b);}
+  }
+  tx.append(recibo(d));
+  if(lida(d)&&d.resposta)tx.append(el("span","resp-p","Paydon: "+d.resposta));
+  l.append(tx); w.append(l); return w;}
+
+function linhaFechada(d,i,opts){
+  const w=el("div","q"+(opts.compacto?" compacta":"")); const b=el("button","q-toque"); b.type="button";
+  b.setAttribute("aria-expanded","false");
+  if(!opts.compacto){const cm=el("span","col-mini"); cm.append(miniDe(d,i,false)); if(nova(d))cm.append(el("span","etq","NOVA")); b.append(cm);}
+  const tx=el("span","q-txt"); tx.append(el("span","q-tit",d.titulo||""));
+  if(!opts.compacto){
+    if(d.destrava){const s=el("span","q-sub"); s.append(el("b",null,"Destrava: "),document.createTextNode(d.destrava)); tx.append(s);}
+  }
+  if(naoEntendeu(d)&&respondida(d))tx.append(el("span","amarela","Você pediu outra explicação. O Paydon reescreve."));
+  b.append(tx); b.onclick=()=>{abreSo(d._id); render(); if(olho)pintaOlho();}; w.append(b); return w;}
+
+function caixaTexto(d,modo){
+  const box=el("div","escreve");
+  const ta=el("textarea"); ta.id="txt-"+d._id; ta.maxLength=1000; ta.rows=3;
+  ta.placeholder=modo==="livre"?"Escreva aqui qual frase quer trocar e como…":"Escreva aqui a sua resposta…";
+  ta.value=rascunho[d._id]||""; ta.setAttribute("aria-label","Sua resposta");
+  const bt=el("div","botoes"); const env=el("button","btn","Enviar"); env.type="button";
+  const can=el("button","btn claro","Cancelar"); can.type="button";
+  const liga=()=>{env.disabled=!ta.value.trim()||!podeGravar()||ocupado.has(d._id);};
+  ta.oninput=()=>{rascunho[d._id]=ta.value; liga();}; liga();
+  env.onclick=()=>{let t=ta.value.trim(); if(!t)return;
+    if(modo==="livre"){const base=(L(d.opcoes)[d.livre]||"").replace(/\s*\(.*\)\s*$/,""); t=base+": "+t;}
+    gravar(d._id,t);};
+  can.onclick=()=>{delete escrevendo[d._id]; delete rascunho[d._id]; render(); if(olho)pintaOlho();};
+  bt.append(env,can); box.append(ta,bt); return box;}
+
+function linhaAberta(d,i,opts){
+  vista[d._id]=d.perguntado_em||null;
+  const pode=podeGravar(), ocup=ocupado.has(d._id);
+  const w=el("div","q aberta");
+  const cab=el("button","q-toque"); cab.type="button"; cab.setAttribute("aria-expanded","true");
+  const tx=el("span","q-txt"); tx.append(el("span","q-tit",d.titulo||"")); if(d.resumo)tx.append(el("span","q-sub",d.resumo));
+  cab.append(tx);
+  cab.onclick=()=>{if(opts.visor)return; abertas.delete(d._id); trocando.delete(d._id); render();};
+  if(opts.visor)cab.disabled=true;
+  w.append(cab);
+  const c=el("div","q-corpo");
+  if(naoEntendeu(d)&&respondida(d))c.append(el("p","amarela","Você pediu outra explicação. O Paydon reescreve. Se já entendeu, pode responder."));
+  else if(d.comentario&&!respondida(d))c.append(el("p","antes","Antes você tinha dito: "+d.comentario));
+  if(trocando.has(d._id)&&d.comentario)c.append(el("p","antes","Agora está: "+d.comentario+". Toque numa opção para trocar."));
+  if(!opts.visor){
+    if(d.por_que){const p=el("p","porque"); p.append(el("b",null,"Por que importa: "),document.createTextNode(d.por_que)); c.append(p);}
+    const g=d.ver&&grupo(d.ver), ims=g?L(g.imagens):[];
+    if(ims.length){
+      // uma miniatura por opção (a 1ª imagem de cada nome antes do ":"), com o nome embaixo; o resto fica no visor
+      const v=el("div"); v.append(el("span","rot","Veja antes de responder")); const tr=el("div","ver-tira");
+      const vistosNome=new Set(), mostra=[];
+      ims.forEach((im,k)=>{const nome=String(im.legenda||"").split(":")[0].trim(); if(mostra.length<3&&!vistosNome.has(nome)){vistosNome.add(nome); mostra.push([k,nome]);}});
+      mostra.forEach(([k,nome])=>{const im=ims[k]; const b=el("button"); b.type="button"; b.setAttribute("aria-label","Ver "+(im.legenda||"imagem"));
+        const f=el("span","fig"); const m=el("img"); m.src=im.src; m.alt=""; m.loading="lazy"; f.append(m); b.append(f,el("span","leg",nome)); b.onclick=()=>abreOlho(g.id,k); tr.append(b);});
+      if(ims.length>mostra.length){const b=el("button","mais"); b.type="button"; b.append(el("span","fig","Ver as "+ims.length),el("span","leg","no visor")); b.onclick=()=>abreOlho(g.id,0); tr.append(b);}
+      v.append(tr); c.append(v);}
+    if(d.sugestao){const s=el("div","sugere"); s.append(el("span","ini","P")); const st=el("div"); st.append(el("b",null,"Paydon sugere"),document.createTextNode(d.sugestao)); s.append(st); c.append(s);}
+  }
+  const ops=el("div","ops");
+  L(d.opcoes).forEach((o,k)=>{
+    const b=el("button","op"); b.type="button"; b.append(el("span",null,o));
+    if(d.sugerida===k)b.append(el("span","sug","sugestão"));
+    b.disabled=!pode||ocup;
+    b.onclick=()=>{ if(d.livre===k){escrevendo[d._id]="livre"; render(); if(olho)pintaOlho(); const t=$("txt-"+d._id); if(t)t.focus();} else gravar(d._id,o); };
+    ops.append(b);});
+  c.append(ops);
+  if(escrevendo[d._id])c.append(caixaTexto(d,escrevendo[d._id]));
+  else{
+    const m=el("div","mais-acoes");
+    const a=el("button","link","Responder com as minhas palavras"); a.type="button"; a.disabled=!pode;
+    a.onclick=()=>{escrevendo[d._id]="palavras"; render(); if(olho)pintaOlho(); const t=$("txt-"+d._id); if(t)t.focus();};
+    m.append(a);
+    if(!(naoEntendeu(d)&&respondida(d))){const n=el("button","link","Não entendi a pergunta"); n.type="button"; n.disabled=!pode||ocup; n.onclick=()=>gravar(d._id,"Não entendi a pergunta"); m.append(n);}
+    if(trocando.has(d._id)){const x=el("button","link","Deixar como estava"); x.type="button"; x.onclick=()=>{trocando.delete(d._id); abertas.delete(d._id); render(); if(olho)pintaOlho();}; m.append(x);}
+    c.append(m);}
+  if(!pode)c.append(el("p","nota",porQueNao()));
+  w.append(c); return w;}
+
+function linhaPergunta(d,i,opts){
+  opts=opts||{};
+  if(trocando.has(d._id)||(!resolvida(d)&&(abertas.has(d._id)||opts.visor)))return linhaAberta(d,i,opts);
+  if(resolvida(d))return linhaFeita(d,i,opts);
+  return linhaFechada(d,i,opts);}
+
+/* ---------- A e B: barra, tarja e faixa ---------- */
+function pintaBarra(){
+  const e=estado(), n=faltam(), pu=$("pulso"), es=$("esperam");
+  const h=e.em?(Date.now()-T(e.em))/36e5:0;
+  if(semConexao&&!semBanco){pu.textContent="sem conexão, tentando de novo"; pu.className="pulso caiu";}
+  else if(!e.em){pu.textContent="esperando a primeira passada"; pu.className="pulso velho";}
+  else if(h>3){pu.textContent="parado desde "+quandoTxt(e.em); pu.className="pulso velho";}
+  else{pu.textContent="Paydon passou às "+hora(e.em); pu.className="pulso";}
+  if(modoSocio){const s=frenteSocio().length; es.textContent=s?s+" para você saber":"Nada para você"; es.className="esperam"+(s?"":" zero");}
+  else{es.textContent=n?n+(n>1?" perguntas para você":" pergunta para você"):"Nada esperando você"; es.className="esperam"+(n?"":" zero");}
+  // leva a "Precisa de você" (sem ficar embaixo da barra: scroll-margin no CSS) e já abre a 1ª pergunta sem resposta
+  es.onclick=()=>{if(!modoSocio&&!olho){const p=frente().find(d=>!resolvida(d)); if(p&&!abertas.has(p._id)){abreSo(p._id); render();}}
+    $("sec-precisa").scrollIntoView({behavior:"smooth",block:"start"});};
+  const ta=$("tarja"), ti=$("tarja-in"); ti.textContent="";
+  const linhas=[];
+  if(modoSocio)linhas.push(["Vendo como sócio","voltar",()=>{modoSocio=false; try{localStorage.removeItem("x1socio");}catch(e){} etapaAberta=null; render();}]);
+  if(leitor)linhas.push(["Você está vendo como leitor","Tentar de novo",()=>{leitor=false; try{localStorage.removeItem("x1leitor");}catch(e){} render();}]);
+  linhas.forEach(([t,b,f],k)=>{if(k)ti.append(el("span",null,"·")); ti.append(el("span",null,t+" · ")); const x=el("button","link",b); x.type="button"; x.onclick=f; ti.append(x);});
+  ta.hidden=!linhas.length;}
+
+function pintaFaixa(){
+  const e=estado(), f=$("faixa"), n=faltam(), fr=frente(); f.textContent="";
+  const h=e.em?(Date.now()-T(e.em))/36e5:0;
+  if(semBanco&&copiaEm)f.append(el("div","alerta calmo","Cópia guardada de "+dia(copiaEm)+", "+hora(copiaEm)+". Para responder, abra pelo claude.ai."));
+  else if(antigo)f.append(el("div","alerta calmo","A página nova está sendo arrumada. Volte em alguns minutos."));
+  if(erroDados)f.append(el("div","alerta calmo","Algo veio errado do banco; mostro a última versão boa."));
+  if(e.em&&h>3){const q=h>=48?Math.floor(h/24)+" dias":Math.floor(h)+" horas";
+    f.append(el("div","alerta","Faz "+q+" que eu não passo aqui. O que está abaixo pode estar velho. Se tiver pressa, me chame no chat."));}
+  f.append(el("p","frase",e.frase||"Carregando o canteiro…"));
+  const c=el("p","conta");
+  if(modoSocio){c.textContent="O dono tem "+n+(n===1?" resposta pendente":" respostas pendentes")+" sobre o e-book.";}
+  else if(n){c.append("Faltam ",el("b",null,n+(n>1?" respostas suas":" resposta sua"))," para "+(e.para||"seguir")+".");}
+  else if(fr.length||e.depois){c.append("Você respondeu tudo. ",el("b",null,"Agora é comigo:")," "+(e.depois||"eu sigo daqui."));}
+  if(c.textContent)f.append(c);
+  const lado=el("div","trilha-lado"); const ol=el("ol","trilha"); const ets=L(e.etapas); const at=typeof e.etapa==="number"?e.etapa:0;
+  if(modoSocio&&etapaAberta===null)etapaAberta=2;
+  ets.forEach((et,i)=>{
+    const li=el("li",(i<at?"feito":i===at?"at":"")+(i===ets.length-1?" fim":""));
+    const b=el("button"); b.type="button"; b.setAttribute("aria-expanded",String(etapaAberta===i));
+    b.append(el("span","pt"),document.createTextNode(et.nome||""));
+    const sub=i===at?(n?"estamos aqui":"comigo agora"):(et.sub||"");
+    b.append(el("small",null,sub||"\u00a0"));
+    b.onclick=()=>{etapaAberta=etapaAberta===i?null:i; pintaFaixa();};
+    li.append(b); ol.append(li);});
+  lado.append(ol);
+  if(etapaAberta!==null&&ets[etapaAberta]){
+    const et=ets[etapaAberta], dd=el("div","trilha-det"); dd.style.marginTop="10px";
+    dd.append(el("h3",null,(et.nome||"")+": o que falta"));
+    const DE={voce:"(você)",equipe:"(a equipe)",socio:"(o sócio)"};
+    const fl=L(et.falta).filter(x=>x&&x.texto);
+    if(fl.length){const ul=el("ul"); fl.slice(0,3).forEach(x=>{const li=el("li",null,x.texto+" "); li.append(el("span","de",DE[x.de]||"")); ul.append(li);}); dd.append(ul);}
+    const meu=modoSocio?"socio":"voce";
+    if(!fl.some(x=>x.de===meu))dd.append(el("p",null,modoSocio?"Nada seu aqui.":"Nada seu por agora. Quando chegarmos aqui, eu te chamo."));
+    else if(modoSocio&&etapaAberta>at)dd.append(el("p",null,"Ainda não chegou a sua vez; eu te chamo."));
+    if(etapaAberta===at&&e.enquanto){const p=el("p","enq"); p.append(el("b",null,"Enquanto isso: "),document.createTextNode(e.enquanto)); dd.append(p);}
+    if(etapaAberta===at&&!modoSocio&&faltam()){const b=el("button","link","Ir para as perguntas ›"); b.type="button"; b.style.color="#fff"; b.style.marginTop="6px";
+      b.onclick=()=>{abrePrimeira(); render(); $("sec-precisa").scrollIntoView({behavior:"smooth",block:"start"});}; dd.append(b);}
+    lado.append(dd);}
+  f.append(lado);}
+
+/* ---------- C: precisa de voce ---------- */
+function pintaPrecisa(){
+  const s=$("sec-precisa"); s.textContent="";
+  const cab=el("div","cab"); const h=el("h2",null,modoSocio?"Para o sócio saber":"Precisa de você"); h.id="h-precisa"; cab.append(h);
+  const lista=modoSocio?frenteSocio():frente(); const feitas=lista.filter(resolvida).length;
+  if(lista.length&&!modoSocio)cab.append(el("span",null,feitas+" de "+lista.length+" respondidas"));
+  s.append(cab);
+  if(modoSocio&&!estado().socio_grava)s.append(el("p","nota socio","Aqui você lê tudo. Por enquanto só o dono responde; ele decide se você também pode."));
+  const L=el("div","lista");
+  if(!lista.length)L.append(el("div","vazio",modoSocio?"Nada do funil esperando por agora.":"Nada esperando você agora. Quando eu precisar, aparece aqui."));
+  lista.forEach((d,i)=>L.append(linhaPergunta(d,i)));
+  s.append(L);
+  const dec=decididas().length;
+  if(dec&&!modoSocio){const b=el("button","link decidiu","Você decidiu "+dec+(dec>1?" coisas":" coisa")+" esta semana ›"); b.type="button";
+    b.onclick=()=>{tudoAberto=true; detAberto.decidiu=true; render(); const g=document.querySelector('[data-k="decidiu"]'); if(g)g.scrollIntoView({behavior:"smooth",block:"center"});}; s.append(b);}
+}
+
+/* ---------- D: pronto para ver ---------- */
+function capaPeca(g,emLinha){
+  const nov=L(estado().prontos).includes(g.id)&&!vistos.includes(g.id);
+  const so_link=g.link&&!(g.imagens&&g.imagens.length);
+  const p=so_link?el("a","peca"):el("button","peca");
+  if(so_link){p.href=g.link; p.target="_blank"; p.rel="noopener"; p.onclick=()=>{marcaVisto(g.id); setTimeout(render,50);};}
+  else{p.type="button"; p.onclick=()=>abreOlho(g.id,0);}
+  const c=el("span","capa");
+  if(so_link){c.append(el("span","capa-txt",(g.titulo||"")+" · abre outra página"));}
+  else{const im=el("img"); im.src=g.imagens[0].src; im.alt=""; im.loading=emLinha?"eager":"lazy"; c.append(im);}
+  if(nov)c.append(el("span","etq","NOVO"));
+  p.append(c,el("span","peca-tit",g.titulo||"")); return p;}
+function marcaVisto(id){if(!vistos.includes(id)){vistos.push(id); try{localStorage.setItem("x1vistos",JSON.stringify(vistos.slice(-60)));}catch(e){}}}
+function pintaPronto(){
+  const s=$("sec-pronto"); s.textContent="";
+  const cab=el("div","cab"); cab.append(el("h2",null,"Pronto para ver")); s.append(cab);
+  if(!galeria){s.append(el("p","nota",galeriaErro?"As peças não carregaram. Recarregue a página.":"Carregando as peças…")); return;}
+  let ids=L(estado().prontos).slice(0,4);
+  if(modoSocio&&grupo("guia-socio"))ids=["guia-socio",...ids.filter(x=>x!=="guia-socio")].slice(0,4);
+  const gs=ids.map(grupo).filter(Boolean);
+  const novas=gs.filter(g=>!vistos.includes(g.id)).length;
+  if(novas)cab.append(el("span",null,novas+(novas>1?" novas":" nova")));
+  const tira=el("div","tira"); gs.forEach(g=>tira.append(capaPeca(g,true)));
+  const outras=galeria.length-gs.length;
+  if(outras>0){const b=el("button","peca"); b.type="button"; const c=el("span","capa"); c.append(el("span","capa-txt","Ver todas as "+galeria.length+" peças")); b.append(c,el("span","peca-tit","Todas as peças"));
+    b.onclick=()=>{tudoAberto=true; detAberto.pecas=true; render(); const g=document.querySelector('[data-k="pecas"]'); if(g)g.scrollIntoView({behavior:"smooth",block:"start"});}; tira.append(b);}
+  s.append(tira);}
+
+/* ---------- E: recados ---------- */
+function pintaRecados(){
+  const s=$("sec-recados"); s.textContent="";
+  const lim=Date.now()-7*864e5, todosR=recados(), r=todosR.filter(d=>T(d.comentado_em)>=lim);
+  s.hidden=!r.length; if(!r.length)return;
+  const cab=el("div","cab"); cab.append(el("h2",null,"Seus recados")); s.append(cab);
+  const box=el("div","recados"); const mostra=verRecados?todosR:r.slice(0,3);
+  const ritmo=estado().ritmo;
+  mostra.forEach(d=>{const w=el("div","recado"); w.append(el("p",null,d.comentario||""));
+    const rc=el("span","rec");
+    if(d.lido_em&&T(d.lido_em)>=T(d.comentado_em)){rc.className="rec lido"; rc.textContent="lido às "+hora(d.lido_em);}
+    else rc.textContent="Entregue às "+hora(d.comentado_em)+". O Paydon lê na próxima passada"+(ritmo?" ("+ritmo+")":"")+".";
+    w.append(rc); if(d.resposta)w.append(el("span","resp-p","Paydon: "+d.resposta)); box.append(w);});
+  if(todosR.length>mostra.length){const m=el("div","mais-linha"); const b=el("button","link","Ver anteriores ("+(todosR.length-mostra.length)+")"); b.type="button"; b.onclick=()=>{verRecados=true; render();}; m.append(b); box.append(m);}
+  s.append(box);}
+
+/* ---------- F: ao lado ---------- */
+function pintaLado(){
+  const s=$("sec-lado"); s.textContent=""; const lado=L(estado().lado).slice(0,2);
+  s.hidden=!lado.length; if(!lado.length)return;
+  const cab=el("div","cab"); cab.append(el("h2",null,"Ao lado do e-book")); s.append(cab);
+  const box=el("div","lado");
+  lado.forEach(x=>{const w=el("div","lado-item"); w.append(el("b",null,x.nome||"")); w.append(el("p",null,x.situacao||""));
+    const n=esperam().filter(d=>d.etapa==="lado").length;
+    if(n){const b=el("button","link",n+(n>1?" perguntas sem pressa ›":" pergunta sem pressa ›")); b.type="button";
+      b.onclick=()=>{tudoAberto=true; detAberto.esperam=true; detAberto["g-lado"]=true; render(); const g=document.querySelector('[data-k="g-lado"]'); if(g)g.scrollIntoView({behavior:"smooth",block:"center"});}; w.append(b);}
+    box.append(w);});
+  s.append(box);}
+
+/* ---------- G: conversa da equipe ---------- */
+const COR={Vera:"--c-vera",Caio:"--c-caio",Nilo:"--c-nilo",Bia:"--c-bia",Tito:"--c-tito",Olga:"--c-olga",Rui:"--c-rui",Ana:"--c-ana",Zeca:"--c-zeca",Juca:"--c-juca"};
+function textoComNomes(t,nomes){
+  const p=el("p"); if(!nomes.length){p.textContent=t; return p;}
+  const re=new RegExp("\\b("+nomes.map(n=>n.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|")+")\\b","g");
+  let i=0,m; while((m=re.exec(t))){p.append(document.createTextNode(t.slice(i,m.index)),el("b",null,m[0])); i=m.index+m[0].length;}
+  p.append(document.createTextNode(t.slice(i))); return p;}
+function pintaConversa(){
+  const s=$("sec-conversa"); s.textContent=""; const fs=falas();
+  s.hidden=!fs.length; if(!fs.length)return;
+  const cab=el("div","cab"); cab.append(el("h2",null,"Conversa da equipe"),el("span",null,"contada pelo Paydon")); s.append(cab);
+  const box=el("div","falas"); const mostra=verFalas?fs.slice(0,10):fs.slice(0,2);
+  mostra.forEach(d=>{const w=el("div","fala"); const av=el("span","avs");
+    const cita=(Array.isArray(d.cita)?d.cita:[]).filter(n=>typeof n==="string"&&n);
+    cita.slice(0,2).forEach(n=>{const a=el("span","av",n[0]); a.style.background="var("+(COR[n]||"--c-olga")+")"; a.title=n; av.append(a);});
+    w.append(av); const tx=el("div"); tx.style.minWidth="0"; tx.append(textoComNomes(d.texto||"",cita));
+    tx.append(el("small",null,quandoTxt(d.em)+(d.sobre?" · "+d.sobre:""))); w.append(tx); box.append(w);});
+  if(fs.length>2){const m=el("div","mais-linha"); const b=el("button","link",verFalas?"Mostrar só as 2 últimas":"Ver as anteriores ("+(Math.min(fs.length,10)-2)+")"); b.type="button"; b.onclick=()=>{verFalas=!verFalas; render();}; m.append(b); box.append(m);}
+  s.append(box);}
+
+/* ---------- H: ver tudo o resto ---------- */
+function gaveta(k,titulo,n,monta){
+  const d=el("details"); d.dataset.k=k; if(detAberto[k])d.open=true;
+  const sm=el("summary"); sm.append(el("span",null,titulo),el("span","n",String(n))); d.append(sm);
+  const c=el("div","gav-corpo"); d.append(c);
+  let montado=false; const faz=()=>{if(!montado&&d.open){montado=true; monta(c);}};
+  d.addEventListener("toggle",()=>{detAberto[k]=d.open; faz();}); faz();
+  return d;}
+function pintaResto(){
+  const s=$("sec-resto"); s.textContent="";
+  const b=el("button","tudo-btn",tudoAberto?"Fechar o resto":"Ver tudo o resto"); b.type="button"; b.setAttribute("aria-expanded",String(tudoAberto));
+  b.onclick=()=>{tudoAberto=!tudoAberto; render();}; s.append(b);
+  if(!tudoAberto)return;
+  const G=el("div","gavetas");
+  const esp=esperam(), mostra=esp.slice(0,10);
+  G.append(gaveta("esperam","Podem esperar",esp.length,c=>{
+    if(!esp.length)c.append(el("p",null,"Nenhuma por agora."));
+    const grupos={}; mostra.forEach(d=>{const k=String(d.etapa); (grupos[k]=grupos[k]||[]).push(d);});
+    Object.keys(grupos).sort((a,b)=>ordemEtapa(grupos[a][0].etapa)-ordemEtapa(grupos[b][0].etapa)).forEach(k=>{
+      const gr=grupos[k];
+      c.append(gaveta("g-"+k,nomeEtapa(gr[0].etapa),gr.length,cc=>{const L=el("div","lista"); gr.forEach((d,i)=>L.append(linhaPergunta(d,i,{compacto:true}))); cc.style.padding="0"; cc.append(L);}));});
+    if(esp.length>10)c.append(el("p",null,"Há "+(esp.length-10)+" a mais; o Paydon arruma na próxima passada."));
+    const adi=todos.filter(d=>d.nivel==="arquivo"&&d.volta_quando&&d.estado!=="feito").length;
+    if(adi)c.append(el("p","nota","Outras ficam para mais adiante e voltam quando a etapa delas chegar."));
+  }));
+  const dec=decididas();
+  if(dec.length)G.append(gaveta("decidiu","Você decidiu esta semana",dec.length,c=>{
+    const box=el("div","lista");
+    dec.slice(0,10).forEach(d=>{const w=el("div","dec"); w.append(el("b",null,d.titulo||d.o_que||""));
+      const t=d.comentario.trim().replace(/\s+/g," "); const q=el("span"); q.append("Você: ",el("q",null,t.length>110?t.slice(0,108)+"…":t)); w.append(q);
+      w.append(el("small",null,quandoTxt(d.comentado_em))); box.append(w);});
+    c.append(box);
+    if(dec.length>10)c.append(el("p","nota","E mais "+(dec.length-10)+" desta semana."));}));
+  const av=avisos();
+  G.append(gaveta("avisos","Decidimos por você",av.length,c=>{
+    if(!av.length)c.append(el("p",null,"Nada decidido por você agora."));
+    av.forEach(d=>{const w=el("div","aviso-c"); w.append(el("p",null,d.o_que||"")); if(d.como_desfazer)w.append(el("p","desfaz",d.como_desfazer));
+      if(respondida(d)){const r=el("p"); r.append(el("b",null,"Você pediu diferente"),document.createTextNode(" · "+(lida(d)?"lido às "+hora(d.lido_em):"o Paydon ainda não leu"))); w.append(r); if(lida(d)&&d.resposta)w.append(el("p",null,"Paydon: "+d.resposta));}
+      else{const b=el("button","btn claro","Quero diferente"); b.type="button"; b.disabled=!podeGravar()||ocupado.has(d._id); b.onclick=()=>gravar(d._id,"Quero diferente"); w.append(b);}
+      c.append(w);});}));
+  const fr=L(estado().feito_recente);
+  G.append(gaveta("feito","Ficou pronto esta semana",Math.min(fr.length,8),c=>{
+    if(!fr.length){c.append(el("p",null,"Nada novo esta semana.")); return;}
+    const ul=el("ul"); fr.slice(0,8).forEach(t=>ul.append(el("li",null,t))); c.append(ul);}));
+  G.append(gaveta("pecas","Todas as peças",galeria?galeria.length:0,c=>{
+    if(!galeria){c.append(el("p",null,"Carregando as peças…")); return;}
+    const gr=el("div","grade"); galeria.forEach(g=>gr.append(capaPeca(g,false))); c.append(gr);}));
+  const feitos=todos.filter(d=>d.estado==="feito").length, velhos=todos.filter(d=>d.nivel==="arquivo"&&!d.volta_quando&&d.estado!=="feito").length;
+  G.append(gaveta("guardado","Guardado",feitos+velhos,c=>{
+    c.append(el("p",null,(feitos+velhos)+" itens guardados ("+feitos+" tarefas feitas e "+velhos+" cartões antigos). Nada foi apagado. Quer rever algum? Peça no recado."));}));
+  s.append(G);}
+
+/* ---------- I: rodape ---------- */
+function pintaRodape(){
+  const r=$("rodape"); r.textContent="";
+  const a=el("span"); if(modoSocio){a.append("Vendo como sócio · "); const b=el("button","link","Ver como dono"); b.type="button"; b.onclick=()=>{modoSocio=false; try{localStorage.removeItem("x1socio");}catch(e){} etapaAberta=null; render();}; a.append(b);}
+  else{a.append("É o sócio? "); const b=el("button","link","Ver como sócio"); b.type="button"; b.onclick=()=>{modoSocio=true; try{localStorage.setItem("x1socio","1");}catch(e){} etapaAberta=null; render(); window.scrollTo({top:0});}; a.append(b);}
+  const t=el("span","tema"); const escuro=document.documentElement.dataset.theme?document.documentElement.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  [["Claro","light"],["Escuro","dark"]].forEach(([n,v])=>{const b=el("button",null,n); b.type="button"; b.setAttribute("aria-pressed",String((v==="dark")===escuro));
+    b.onclick=()=>{document.documentElement.dataset.theme=v; try{localStorage.setItem("x1tema",v);}catch(e){} pintaRodape();}; t.append(b);});
+  r.append(a,t);}
+
+/* ---------- pe: recado ---------- */
+function pintaPe(){
+  const ta=$("recado-txt"), b=$("recado-env");
+  ta.placeholder=socioTrava()?"Por enquanto, só o dono manda recado.":"Recado para o Paydon…";
+  ta.disabled=socioTrava(); ta.classList.toggle("so-dono",socioTrava()); b.hidden=socioTrava();
+  b.disabled=!ta.value.trim()||!podeGravar();}
+$("recado-txt").addEventListener("input",()=>{const ta=$("recado-txt"); ta.style.height="auto"; ta.style.height=Math.min(ta.scrollHeight+2,132)+"px"; pintaPe();});
+$("recado-txt").addEventListener("blur",()=>{if(!editando())setTimeout(()=>{if(!editando())render();},0);});
+$("recado-env").onclick=async()=>{
+  const ta=$("recado-txt"), txt=ta.value.trim(); if(!txt)return;
+  if(!podeGravar()){avisa(porQueNao()); return;}
+  // o id vem do relógio do aparelho + sorteio (nunca repete); a hora gravada continua vindo de quando()
+  const t=quando(), id="recado-"+new Date().toISOString().replace(/[^0-9]/g,"").slice(0,17)+"-"+Math.random().toString(36).slice(2,7);
+  const dados={tipo:"recado",comentario:txt,comentado_em:t,em:t,autor:modoSocio?"socio":"dono"};
+  $("recado-env").disabled=true;
+  try{await banco.doc("tarefas/"+id).set(dados); ta.value=""; ta.style.height=""; todos.push(Object.assign({},dados,{_id:id}));
+    avisa("Recado entregue às "+hora(t)+". Está em Seus recados."); render();
+    const s=$("sec-recados"); if(s&&!s.hidden)s.scrollIntoView({behavior:"smooth",block:"center"});}
+  catch(e){if(e&&e.code==="invalid_argument")viraLeitor(); else avisa("Não salvou. Parece a internet. Tente de novo."); render();}
+};
+
+/* ---------- visor de imagem ---------- */
+function abreOlho(id,i){const g=grupo(id); if(!g||!g.imagens||!g.imagens.length)return; olho={g,i:Math.min(i||0,g.imagens.length-1)}; marcaVisto(id); pintaOlho(); const v=$("visor"); if(!v.open){try{v.showModal();}catch(e){v.setAttribute("open","");}}}
+function pintaOlho(){
+  if(!olho)return; const g=grupo(olho.g.id)||olho.g; const im=g.imagens[olho.i];
+  $("visor-tit").textContent=g.titulo||""; const vi=$("visor-video"), ig=$("visor-img");
+  if(im.video){if(vi.getAttribute("src")!==im.video){vi.src=im.video; vi.poster=im.src||"";} vi.hidden=false; ig.hidden=true;}
+  else{vi.pause&&vi.pause(); vi.hidden=true; ig.hidden=false; ig.src=im.src; ig.alt=im.legenda||"";}
+  $("visor-leg").textContent=im.legenda||""; $("visor-pos").textContent=(olho.i+1)+" de "+g.imagens.length;
+  $("visor-ant").disabled=L(g.imagens).length<2; $("visor-prox").disabled=g.imagens.length<2;
+  const q=$("visor-q"); q.textContent=""; const d=g.cartao&&doc(g.cartao);
+  if(d&&ehPergunta(d)&&viva(d)&&!fora(d)){const w=el("div","visor-q"); w.append(linhaPergunta(d,0,{visor:true,compacto:true})); q.append(w);}}
+function fechaOlho(){try{$("visor-video").pause();}catch(e){} const v=$("visor"); if(v.open){try{v.close();}catch(e){v.removeAttribute("open");}} olho=null; render();}
+$("visor-fecha").onclick=fechaOlho;
+$("visor").addEventListener("close",()=>{if(olho){olho=null; render();}});
+$("visor-ant").onclick=()=>{if(!olho)return; const n=olho.g.imagens.length; olho.i=(olho.i-1+n)%n; pintaOlho();};
+$("visor-prox").onclick=()=>{if(!olho)return; const n=olho.g.imagens.length; olho.i=(olho.i+1)%n; pintaOlho();};
+$("visor").addEventListener("keydown",e=>{if(e.target.tagName==="TEXTAREA")return; if(e.key==="ArrowLeft")$("visor-ant").click(); if(e.key==="ArrowRight")$("visor-prox").click();});
+
+/* ---------- desenhar tudo ---------- */
+function desenha(){
+  if(!jaAbriu&&largo()&&!deCopia){const p=frente().find(d=>!resolvida(d)); if(p){if(!abertas.size)abreSo(p._id); jaAbriu=true;}}
+  pintaBarra(); pintaFaixa(); pintaPrecisa(); pintaPronto(); pintaRecados(); pintaLado(); pintaConversa(); pintaResto(); pintaRodape(); pintaPe();
+  if(olho)pintaOlho();}
+// se um dado torto do banco quebrar o desenho, volta à última versão boa (ou à cópia embutida) e avisa com calma
+function render(){
+  try{desenha(); ultimoBom=todos;}
+  catch(e){console.error(e); erroDados=true;
+    todos=(ultimoBom&&ultimoBom!==todos)?ultimoBom:copiaDocs.map(d=>Object.assign({},d));
+    try{desenha();}catch(e2){console.error(e2);}}
+  if(window.__depoisDeDesenhar)window.__depoisDeDesenhar();}
+
+/* ---------- comeco: tema, copia embutida, galeria ---------- */
+if(tema==="dark"||tema==="light")document.documentElement.dataset.theme=tema;
+try{const c=JSON.parse($("copia").textContent||"{}"); copiaEm=c.gerada_em||null; copiaDocs=L(c.docs); todos=copiaDocs.map(d=>Object.assign({},d));}catch(e){todos=[];}
+fetch("galeria.json").then(x=>{if(!x.ok)throw 0; return x.json();}).then(g=>{galeria=Array.isArray(g)?g:[]; if(!editando())render();}).catch(()=>{galeriaErro=true; if(!editando())render();});
+render();
+
+/* ---------- o banco (camada copiada da pagina anterior) ---------- */
+(async()=>{
+  const t=setTimeout(()=>{if(deCopia){semBanco=true; render();}},10000);
+  try{
+    const db=window.claude?await window.claude.use("db"):null; banco=db;
+    if(!db){clearTimeout(t); semBanco=true; render(); return;}
+    let assin="";
+    const recebe=s=>{clearTimeout(t);
+      try{
+        const voltou=semConexao; semConexao=false;
+        const novos=L(s&&s.docs).map(d=>Object.assign({},d.data()||{},{_id:d.id}));
+        const a=JSON.stringify(novos); const mudou=a!==assin||deCopia; assin=a;
+        if(!mudou){if(voltou&&!editando())pintaBarra(); return;}
+        if(!novos.some(d=>d._id==="estado-atual")){antigo=true; semBanco=false; if(!editando())render(); return;}
+        const est=novos.find(d=>d._id==="estado-atual");
+        const torto=["etapas","precisa","prontos","feito_recente","lado"].filter(k=>est[k]!=null&&!Array.isArray(est[k]));
+        if(torto.length){console.error("estado-atual com campo torto:",torto); erroDados=true; if(deCopia){todos=novos.filter(d=>d._id!=="estado-atual").concat(todos.filter(d=>d._id==="estado-atual")); deCopia=false; semBanco=false;} if(!editando())render(); return;}
+        todos=novos; erroDados=false; deCopia=false; antigo=false; semBanco=false; if(!editando())render();
+      }catch(e){console.error(e); erroDados=true; if(!editando())render();}};
+    const col=db.collection("tarefas");
+    const ouvir=()=>col.onSnapshot(recebe,()=>{semConexao=true; if(!editando())pintaBarra(); setTimeout(ouvir,15000);});
+    ouvir();
+    setInterval(()=>{if(document.hidden)return;col.get().then(recebe).catch(()=>{});},45000);
+    document.addEventListener("visibilitychange",()=>{if(!document.hidden)col.get().then(recebe).catch(()=>{});});
+  }catch(e){clearTimeout(t); semBanco=true; render();}
+})();
+setInterval(()=>{if(!editando())pintaBarra(),pintaFaixa();},60000);
+</script>
+
+</body></html>

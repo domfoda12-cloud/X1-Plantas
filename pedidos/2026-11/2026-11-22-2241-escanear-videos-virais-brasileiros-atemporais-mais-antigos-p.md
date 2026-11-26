@@ -18,7 +18,7 @@
 
 **Suposições (o dono não disse):** Período 2005 a 2016; Brasil; só lista e fonte, nada baixado; sem gasto (TinyFish pago só com o sim).
 
-**Quem executa:** `pesquisador` (Sonnet) acha; `editor-video` (Opus) conclui, com o Diretor (MinoAI) quando der; `revisor-de-risco` marca o que dá para recriar.
+**Quem executa:** (desde 26/11, ficha 0105: o `pesquisador` roda no Opus e acha e conclui num passo só) `pesquisador` (Sonnet) acha; `editor-video` (Opus) conclui, com o Diretor (MinoAI) quando der; `revisor-de-risco` marca o que dá para recriar.
 
 **Conferência:** (no fim)
 

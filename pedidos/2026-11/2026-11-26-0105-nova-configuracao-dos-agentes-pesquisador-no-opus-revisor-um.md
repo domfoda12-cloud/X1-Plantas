@@ -24,7 +24,7 @@ Aplique
 
 **Conferência:** checar.py; plano.py conferir; relatório dos verificadores.
 
-**Resultado:** 4 mudanças na configuração dos agentes aplicadas e verificadas; diagnóstico do júri gravado
+**Resultado:** 4 mudanças na configuração dos agentes aplicadas e verificadas; diagnóstico do júri gravado Nota da auditoria de 26/11 (Olga): dos 25 achados dos verificadores, 20 foram consertados; os outros 5 e o relatório dos verificadores ficaram na conversa anterior e não foram gravados no repositório, então não há como listá-los (o "sem achado aberto" do Pronto quando não tem prova). O texto da proposta que recebeu o "Aplique" também não foi gravado. As três escolhas do aplicador na seção 5b do `CONSELHO.md` foram marcadas "espera o sim do dono".
 
 **O que aprendi:** maestro: mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram.
 

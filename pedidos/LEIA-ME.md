@@ -190,7 +190,7 @@ Antes de rodar, o sistema foi revisto. Fraquezas achadas e o que foi feito:
 
 ## Limites honestos
 
-- **`CLAUDE.md` mudado só vale na próxima conversa** (o Claude Code o lê quando a conversa começa). **Arquivo de agente mudado vale já nas próximas chamadas** (visto na auditoria 4, 22/11/2026: as listas de ferramentas valeram 12 minutos depois); no teste da equipe, mais cedo, ele ainda não tinha sido relido.
+- **`CLAUDE.md` mudado só vale na próxima conversa** (o Claude Code o lê quando a conversa começa). **Arquivo de agente mudado vale já nas próximas chamadas** (visto na auditoria 4, 22/11/2026: as listas de ferramentas valeram 12 minutos depois); no teste da equipe, mais cedo, ele ainda não tinha sido relido, e na auditoria de 26/11 a supervisora recebeu o arquivo de antes da mudança feita 5 minutos antes, na mesma conversa. **Regra:** depois de mudar um agente, quem chama repete no pedido o que mudou (por exemplo, o nome e "feche com `Falas:`") até a próxima conversa.
 
 - O modelo padrão da conversa é o Opus (`.claude/settings.json`); o dono pode trocar com `/model`. Se a conversa estiver em outro modelo, as regras valem igual.
 - O gancho só roda em conversa aberta **neste repositório** e depois que a conversa carrega o `.claude/settings.json` (conversa já aberta pode precisar ser reaberta). Prompts antigos: `contexto/dono/PROMPTS.md`.

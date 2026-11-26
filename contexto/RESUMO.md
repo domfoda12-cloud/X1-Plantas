@@ -25,11 +25,11 @@
 
 ### [Conversa da equipe](CONVERSA.md)
 
-Dono, 26/11/2026: "faça eles interagirem uns com os outros como amigos/colegas de trabalho, ver essa interação me parece interessante". Cada agente lê as últimas 10 falas ao começar e fecha o relatório com `Falas:` (1 a 3 falas curtas). O Paydon copia para cá e para o Canteiro (documento `tipo:…
+Dono, 26/11/2026: "faca eles interagem uns com os outros como amigos/colegas de trabalho, ver essa interacao me parece interessante". Cada agente lê as últimas 10 falas ao começar e fecha o relatório com `Falas:` (1 a 3 falas curtas). O Paydon copia para cá e para o Canteiro (documento `tipo:…
 
 Seções: Falas.
 
-Tamanho: 215 palavras.
+Tamanho: 339 palavras.
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -57,7 +57,7 @@ Todo agente e toda conversa lê este quadro antes de trabalhar (regra do dono, 2
 
 Seções: 26/11 · A equipe tem nome e conversa (ficha `2026-11-26-0116`); 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`); 26/11 · Noite de autonomia: melhorar cada detalhe (ficha `2026-11-26-0114`); 24 e 25/11 · Fechamento de três pedidos (fichas `2026-11-24-2043`, `2026-11-24-2046`, `2026-11-25-1544`); 25/11 · Júri mais estrito e a segunda olhada (fichas `2026-11-25-1625` e `2026-11-25-1623`).
 
-Tamanho: 833 palavras.
+Tamanho: 834 palavras.
 
 ### [Contexto do Ajudante](ajudante.md)
 
@@ -161,7 +161,7 @@ O Maestro é a conversa principal (Opus): decide, rege a equipe, escreve as fich
 
 Seções: Decisões do dono que valem para você; Lições.
 
-Tamanho: 893 palavras.
+Tamanho: 842 palavras.
 
 ### [Contexto do Pesquisador](pesquisador.md)
 

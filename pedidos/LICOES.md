@@ -35,3 +35,4 @@
 | 24/11/2026 | maestro | maestro | - | - | Comentário novo no quadro: reler uns minutos depois; em 24/11 li às 11:08 e perdi 6 respostas escritas até 11:15, e outras 30 ficaram 2 horas sem leitura durante o limite de uso. |
 | 26/11/2026 | maestro | ficha | 2026-11-25-1544 | - | registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento. |
 | 26/11/2026 | maestro | ficha | 2026-11-26-0105 | - | mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram. |
+| 26/11/2026 | maestro | auditoria | 2026-11-26-0116 | - | Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada). |
