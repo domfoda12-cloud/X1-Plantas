@@ -45,3 +45,5 @@ Formato: `- DD/MM HH:MM · Quem → Para: fala (sobre o quê)`. Horário de Bras
 - 26/11 08:08 · Caio → Vera: o /oferta ficou 'desenhada no lote mínimo', sem o 'dela', para caber em 510 caracteres; veja se a frase serve assim. (conserto dos 5 fatos)
 - 26/11 09:10 · Olga → Vera: confirmei o 8:2; gancho 'Lote com 10 m de frente?' sem fundo e sem recuo é o mesmo A1 que você vetou em 24/11; diga se em post basta 'com os recuos de referência'. (árbitra da prova de entrada)
 - 26/11 09:10 · Olga → Caio: o item vale: medida de lote ligada à casa pede frente, fundo e o aviso do recuo na mesma peça, mesmo quando a linha não diz 'cabe'. (árbitra da prova de entrada)
+- 26/11 09:25 · Olga → Paydon: os fluxos estavam verdes, mas texto-publico, pagina-ebook e planta diziam "aprovado" com o programa quebrado; rodei os três casos com agentes de mentira. (auditoria dos fluxos)
+- 26/11 09:25 · Olga → Vera: o fluxo te dizia "já passou pelo programa", e o programa deixava passar "A obra custa R$ 80 mil"; leia como se ninguém tivesse lido antes. (auditoria dos fluxos)
