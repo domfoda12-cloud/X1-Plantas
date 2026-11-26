@@ -126,6 +126,42 @@ TITULOS = {
 # Só aparece se o arquivo dos bônus sai. Texto novo: espera a leitura do Revisor de risco.
 ONDE_BONUS = ("Os bônus", "{a} e {b} estão em outro arquivo, que vem junto com este e-book: {arquivo}.")
 
+# A Placa (identidade escolhida pelo dono, 26/11/2026: "2 · A Placa"; pedidos/anexos/identidade-2026-11-25.md, direção 2).
+# Só o modo --placa do livro.py usa, e só em prévia. A voz do Lote fica SÓ aqui: nunca no aviso, na ficha, nos números
+# nem na planta. Falas: a recomendada de cada página em pedidos/anexos/placa-falas-2026-11-26.md (Redator, 26/11), ligadas
+# pelo assunto da página, não pelo número (o Redator contou a prévia simples; o modo duas partes muda a ordem).
+# RASCUNHO até o Revisor ler a página montada: com o "sim" dele, ponha RASCUNHO_PLACA = False (o selo some da placa).
+# Cada chave: fala (linhas da placa; {lote} vira "8 x 15", o lote comum da casa, do validador), linha (letra menor dentro
+# da placa), pe (pergunta da tira do pé, com "Vira: pág. N" do gerador) e nota (linha pequena colada ao pé: todo pé
+# com "cabe" leva "com os recuos de referência"). Sem fala: só o pé. Pé só onde a página seguinte é a que o Redator
+# supôs, na ordem em duas partes (as outras falas de pé estão no anexo, esperando a ordem final).
+# Chaves: "capa"; as de cab() ("usar", "ache", "ler", "palavras", "erros", "terreno", "ficha", "passos", "fim");
+# "erros2" (continuação dos 7 erros); "casa:<ID>" (planta) e "lote:<ID>" (a casa no lote); "gratis-..." na planta grátis.
+# NÃO COUBERAM na prévia de 26/11 (estouram a página; regra do Redator: "só se couber"): a casa no lote (págs. 5, 9, 13
+# e grátis 2, "Respeitou os meus recuos de referência." + "O da sua cidade, a prefeitura confirma."), "Terreno e recuos"
+# ("Meu recuo, quem diz é a prefeitura.") e o pé da "Ficha do meu terreno" ("Do papel até a chave?"). O desenho aceita:
+# volte com a chave ("lote:<ID>", "gratis-lote:C01", "terreno", "ficha") quando a página ganhar espaço.
+RASCUNHO_PLACA = False  # SIM SE da Vera, 26/11 (veto-placa-2026-11-26.md); troca do pé da pág. 18 aplicada
+CABE = "com os recuos de referência"
+PLACAS = {
+    "capa": dict(fala=["Lote de {lote}", "Procura-se casa"]),
+    "usar": dict(fala=["Me mede de trena. No olho, não."], pe="Já tem a sua medida?"),
+    "ache": dict(fala=["Três lotes, três casas. Ache a sua frente."]),
+    "ler": dict(fala=["Não respondo casa sem medida."], pe="E as palavras da obra?"),
+    "palavras": dict(fala=["Divisa é onde termina o meu abraço."], pe="O que sai caro?"),
+    "erros": dict(fala=["Sete jeitos de partir o meu coração."], pe="O mais caro é o 7º."),
+    "erros2": dict(fala=["Respeita meu recuo."]),
+    "passos": dict(fala=["Eu escolho o noivo. Quem casa é o engenheiro."], pe="O que perguntar primeiro?"),
+    "fim": dict(fala=["Lote de {lote}. Procura-se engenheiro."]),
+    "casa:E03": dict(fala=["Lote estreito também ama."], pe="Será que cabe em mim?", nota=CABE),
+    "casa:C01": dict(fala=["Feita pra lote de 8. Eu tenho 8,00."], pe="Será que cabe em mim?", nota=CABE),
+    "casa:F01": dict(fala=["Tenho 10 de frente. Quero casa cheia."], pe="Será que cabe em mim?", nota=CABE),
+    "gratis-ima": dict(fala=["Meus amigos de 5 e de 10 também procuram."], pe="Qual é a frente do seu?",
+                       nota="Responde aqui no WhatsApp.", vira=False),
+}
+ASSINATURA_PLACA = "Ass.: o Lote"  # com o lote comum da casa: "Ass.: o Lote 8 x 15"; nas páginas gerais, o de 8 x 15
+VIRA = "Vira: pág. {}"
+
 DUAS_PARTES = {
     "parte1": ("parte 1", "A casa do seu lote", "Uma casa por frente de terreno"),      # cada casa: aba amarela
     "parte2": ("parte 2", "Para qualquer casa", "Aba azul na borda"),                   # casas em geral: aba azul

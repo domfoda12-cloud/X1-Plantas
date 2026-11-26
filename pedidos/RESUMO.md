@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 90 documentos
+## Os 92 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 4888 palavras.
+Tamanho: 5383 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1590 palavras.
+Tamanho: 1981 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -421,6 +421,14 @@ Seções: Aplicado no gerador (commits `bf2266c` e `5b025d6`; como desfazer: `gi
 
 Tamanho: 691 palavras.
 
+### [Falas das placas do Lote Carente: e-book pago e planta grátis (26/11/2026)](anexos/placa-falas-2026-11-26.md)
+
+Pedido do dono (26/11, 06:44, no Canteiro): escolheu a identidade "2 · A Placa" (Direção 2 de `identidade-2026-11-25.md`). Ficha: `2026-11-25-1613`. Pedido do Paydon ao Redator: as falas das placas (até ~8 palavras) e o pé de cada página, 2 opções por placa, a recomendada marcada. Rascunho do…
+
+Seções: 0. Plano; 1. Regras de montagem (para a Bia); 2. As falas, página por página; 3. Escada dos atributos (as 3 notas mais altas entraram); 4. Conferido contra "Antes de mandar ao Revisor" (`contexto/redator.md`) e os Limites; 5. Para a Vera (o que eu olharia primeiro); 6. O que não conferi.
+
+Tamanho: 2394 palavras.
+
 ### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
 
 Quem escreveu: Planejador. Quem escreve as frases: Redator, só depois do sim do dono. Quem lê: Revisor (o de risco tem veto). Base: `pedidos/anexos/mapa-dor-solucao-do-ebook-2026-11-24.md`, seções 3, 5 e 6. Este plano não traz a frase final: traz onde, como, de onde vem a dor e quanto cabe.
@@ -473,9 +481,9 @@ Tamanho: 966 palavras.
 
 Escrito pelo Paydon para o dono, na fila da noite (item 9). Nada foi pago, publicado ou enviado a ninguém, e o PDF oficial do e-book (`ebook/saida/`) não foi tocado. Para desfazer qualquer coisa, escreva "desfaz" e o número da linha; o código entre parênteses é para a equipe achar.
 
-Seções: O que mudou; O que deu errado (já consertado); Você precisa decidir (3, na ordem em que destravam a venda); O que a equipe faz enquanto isso.
+Seções: O que mudou; O que deu errado (já consertado); Você precisa decidir (3, na ordem em que destravam a venda; a 1 você já respondeu); O que a equipe faz enquanto isso.
 
-Tamanho: 805 palavras.
+Tamanho: 721 palavras.
 
 ### [Roteiro do reset: só o trabalho braçal (25/11/2026)](anexos/roteiro-do-reset-2026-11-25.md)
 
@@ -650,6 +658,12 @@ Vera Veto (Revisora de risco), no Fable 5.2 (`claude-fable-5-2`), 26/11/2026. Pe
 Seções: Reconferência das págs. 9, 11 e 13 (Vera, Fable 5.2, 26/11/2026).
 
 Tamanho: 473 palavras.
+
+### [Leitura da Vera (26/11): a prévia com a Placa](anexos/veto-placa-2026-11-26.md)
+
+Vera Veto (Revisora de risco), no Fable, 26/11/2026, leitura única da peça montada: as 29 imagens de `previa-placa-2026-11-26/` (24 do pago, 3 da grátis, 2 do bônus), o `PLACAS` de `ebook/gerador/paginas.py` e os números contra `ebook/plantas/PLANTAS.md`. Ela só lê: o Paydon gravou o parecer,…
+
+Tamanho: 647 palavras.
 
 ### [Revisor de risco: posts 2, 4 e 7 reescritos (passo F19), 24/11/2026](anexos/veto-posts-2-4-7-2026-11-24.md)
 

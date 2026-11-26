@@ -33,7 +33,7 @@ Funções: `em_arquivo`, `limpa`, `inline`, `secoes`, `ler_checklist`, `ler_perg
 
 Gera o e-book (título em ebook/config.json: "Antes do primeiro tijolo"; PDF A4) a partir das plantas validadas.
 
-Funções: `m`, `m1`, `svg_planta`, `porta_de_entrada`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_fundo`, `svg_no_lote`, `galeria`, `Livro`, `titulo_do`.
+Funções: `m`, `m1`, `svg_planta`, `porta_de_entrada`, `svg_humanizada`, `chips`, `svg_fachada`, `svg_lote`, `icone`, `svg_fita`, `arquivo_foto`, `foto`, `fachada_bloco`, `capa_meio`, `capa_fundo`, `svg_no_lote`, `galeria`, `Livro`.
 
 ### [`ebook/gerador/paginas.py`](../ebook/gerador/paginas.py)
 

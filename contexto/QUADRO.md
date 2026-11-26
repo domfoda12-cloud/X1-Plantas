@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · O e-book vai ter a identidade da Placa (Canteiro, cartão n1; ficha `2026-11-25-1613`)
+
+- **O dono escolheu:** "2 · A Placa" (06:44).
+- **O que muda:** direção 2 de `pedidos/anexos/identidade-2026-11-25.md`: o Lote Carente fala numa placa (branca, borda preta, letra vermelha, Londrina Solid, capa amarela); a voz dele **só nas placas**, nunca no aviso, na ficha, nos números ou na planta. Em aplicação na prévia; nada em `ebook/saida/`.
+- **Bia:** aplica no gerador (prévia). **Caio:** escreve as falas das placas (`placa-falas-2026-11-26.md`). **Vera:** lê as páginas montadas. **Zeca e Rui:** a Trena e a Porta acesa saem de cena; peça nova segue a Placa. Em aberto com o dono: se "tudo o que criamos" inclui WhatsApp e Instagram de IA.
+
 ## 26/11 · Funil do sócio simulado, textos novos em rascunho (fila da noite, item 6; ficha `2026-11-26-0058`)
 
 - **O dono pediu:** o sócio "vai pegar a parte do funil" (26/11); na fila da noite, conversa simulada do anúncio ao Pix.
@@ -25,9 +31,3 @@
 - **O dono pediu:** "O seu nome proprio agora é Paydon Clabett / Escolha um nome para cada agente e faca eles interagem uns com os outros como amigos/colegas de trabalho".
 - **O que mudou:** cada agente tem nome e jeito no topo do próprio arquivo e em `contexto/EQUIPE.md` (Tito Prumo, Nilo Esquadro, Bia Traço, Caio Vírgula, Vera Veto, Rui Lance, Ana Fonte, Zeca Corte, Olga Lupa, Juca; o Diretor mantém o nome); existe `contexto/CONVERSA.md`; o Canteiro já mostra a "Conversa da equipe"; o `checar.py` confere o nome e a leitura da conversa em cada agente.
 - **Todos:** ao começar, leiam as últimas 10 falas de `contexto/CONVERSA.md`; ao terminar, fechem o relatório com `Falas:` (1 a 3, só trabalho real). **Paydon:** copia as falas para a conversa e para o Canteiro.
-
-## 26/11 · Nova configuração dos agentes (ficha `2026-11-26-0105`)
-
-- **O dono pediu:** "Aplique" (à proposta do Maestro de configuração melhor dos agentes).
-- **O que mudou:** o `pesquisador` roda no Opus e pesquisa num passo só (busca, confere e conclui); o Revisor de risco lê uma vez, no Fable, a peça montada; o organizador foi juntado ao `planejador`; o júri só roda para decisão cara, pública ou que não se desfaz, e a fácil de desfazer vai ao conselho de bolso (`CONSELHO.md` 5b).
-- **Pesquisador:** conclui sozinho, com fonte e grau de certeza. **Arquiteto e Estrategista:** usam a conclusão; acabou o passo 2. **Redator:** confere o rascunho contra `contexto/redator.md` antes de mandar a peça montada ao Revisor. **Revisor:** rascunho não vem a você; opinião no Conselho e veto de plano continuam. **Planejador:** agrupa um monte e manda o passo J novo ao conselho de bolso. **Maestro:** decide o passo J com três opiniões de uma linha e mostra ao dono depois.

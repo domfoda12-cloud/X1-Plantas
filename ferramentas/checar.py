@@ -402,6 +402,15 @@ _jp = [f"{pl['id']} {jan} sobre a porta {porta}" for pl in _p3.PL.carregar() for
 if _jp:
     print(f"[AVISO] janela em cima de porta ({len(_jp)}): " + "; ".join(_jp))
 rodar("e-book, plantas grátis e calculadora (sem página estourada)", [sys.executable, "ebook/gerador/livro.py", "--conferir"])
+# Opção desconhecida não pode virar geração oficial (26/11: "livro.py --help" regravou ebook/saida/)
+_t0 = {f: f.stat().st_mtime for f in (RAIZ / "ebook" / "saida").glob("*.pdf")}
+_h = subprocess.run([sys.executable, "ebook/gerador/livro.py", "--help"], cwd=RAIZ, capture_output=True, text=True)
+_mexeu = [f.name for f in (RAIZ / "ebook" / "saida").glob("*.pdf") if _t0.get(f) != f.stat().st_mtime]
+if _h.returncode == 0 or _mexeu:
+    falhas.append("livro.py aceita opção desconhecida")
+    print(f"[ERRO] livro.py --help devia recusar sem gerar (saída {_h.returncode}; mexeu em {_mexeu})")
+else:
+    print("[OK ] livro.py recusa opção desconhecida sem tocar em ebook/saida/")
 # Edição de lançamento (dono, 23/11/2026: 3 casas): a calculadora e as plantas grátis só com casas da edição
 # ("casas_lancamento" no config.json; vazia = todas). As 24 plantas continuam no validador, acima.
 _cfg_ed = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))

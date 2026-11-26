@@ -16,7 +16,7 @@ Cada item é uma troca que o Revisor já pediu; de onde veio, entre parênteses.
 
 ## Em aberto com você
 
-- **Preço:** R$ 47 na primeira semana, teste com R$ 67; o PDF não fala de preço. **Garantia:** 7 dias da entrega do link. **Título:** é do dono (cartão `p14`); o atual fica até ele escolher, não o venda como definitivo. Fonte: `CONTEXTO.md`, "Lançamento".
+- **Preço:** R$ 47 na primeira semana, teste com R$ 67; o PDF não fala de preço. **Garantia:** 7 dias da entrega do link. **Título:** decidido, "Antes do primeiro tijolo" (dono, 26/11 07:01); "quero a casa do meu lote" pode ser a frase pronta que o comprador manda no WhatsApp. Fonte: `CONTEXTO.md`, "Lançamento".
 - Promessa de atualização só se o dono preencher `promessa_atualizacao` em `ebook/config.json` (hoje vazio).
 - Testar PLANTA contra LOTE como palavra do comentário.
 
