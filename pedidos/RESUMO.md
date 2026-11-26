@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 92 documentos
+## Os 93 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -125,7 +125,7 @@ Respondidas pelo dono nesta data, em 6 blocos de perguntas (ficha `pedidos/2026-
 
 Seções: 24/11/2026, comentários no quadro de tarefas (11:07 UTC); 24/11/2026, mais comentários no quadro (11:09 a 11:15 UTC; lidos às 12:00, na reforma do Canteiro); 24/11/2026, respostas no Canteiro novo (13:15 a 13:39 UTC; lidas às 15:45, depois do limite de uso).
 
-Tamanho: 5410 palavras.
+Tamanho: 5584 palavras.
 
 ### [Decisões pendentes do dono, em grupos (24/11/2026, tarde)](anexos/decisoes-pendentes-em-grupos.md)
 
@@ -363,7 +363,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 1981 palavras.
+Tamanho: 2065 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
@@ -428,6 +428,14 @@ Pedido do dono (26/11, 06:44, no Canteiro): escolheu a identidade "2 · A Placa"
 Seções: 0. Plano; 1. Regras de montagem (para a Bia); 2. As falas, página por página; 3. Escada dos atributos (as 3 notas mais altas entraram); 4. Conferido contra "Antes de mandar ao Revisor" (`contexto/redator.md`) e os Limites; 5. Para a Vera (o que eu olharia primeiro); 6. O que não conferi.
 
 Tamanho: 2394 palavras.
+
+### [Fluxos fixos, ultra max (plano, 26/11/2026)](anexos/plano-fluxos-2026-11-26.md)
+
+Ficha `pedidos/2026-11/2026-11-26-0721-fluxos-fixos-ultra-max-e-licoes-automaticas.md`. Dono, 26/11: "YESSS, thats exactly what im looking for but a version ultra max"; lições "Automatically"; "most of the things id like for you to have the free will to do"; gate test "making the questions harder…
+
+Seções: Ideia central; O que se constrói (branch `sistema/fluxos`, depois `main`); Ordem.
+
+Tamanho: 492 palavras.
 
 ### [Plano: a dor, do jeito indireto, nas 5 páginas que só têm a saída (25/11/2026)](anexos/plano-frases-dor-5-paginas-2026-11-25.md)
 

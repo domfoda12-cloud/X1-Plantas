@@ -66,7 +66,7 @@ TEXTOS = {
                 para_quem="Família de 4 ou mais com lote estreito e comprido, que precisa de 3 quartos sem abrir mão da suíte.",
                 nao_serve=("Quem tem lote largo e quer a casa mais compacta.", "F01"), erros=[2, 3, 4], perguntas=PADRAO),
     "F01": dict(gancho="10 m de frente. 3 quartos. 71 m².",
-                para_quem="Família de 4 ou 5 que precisa de 3 quartos com pouca área (71 m²), sem perder nenhum quarto.",
+                para_quem="Família de 4 ou 5 que já pensa onde vai dormir o filho que vem, ou onde fica o escritório: 3 quartos em 71 m².",  # frase 2 do dono, 26/11 07:31 (opção B; Vera: PASSA)
                 nao_serve=("Quem quer suíte.", "F03"), erros=[2, 3, 4], perguntas=PADRAO),
     "F02": dict(gancho="12 m de frente. Sala, jantar e cozinha num ambiente só.",
                 para_quem="Família que quer a casa aberta: quem está na cozinha conversa com quem está na sala.",

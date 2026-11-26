@@ -2860,7 +2860,7 @@ def montar_gratis(plantas, config, pid):
     L.pagina(f"""{com_placa(f'<span class="sobre">Essa foi 1 de {len(plantas)}</span><h2>{titulo_ima}</h2>', "gratis-ima", p["_r"].metricas["lote_comercial"])}
       <p class="abertura">A {E(p['nome'])} cabe num lote de {f} m de frente. {E(frase_ima)}</p>
       {galeria(plantas, [q['id'] for q in mesmas[:6]], legenda_ima)}
-      <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
+      <div class="caixa amarela"><h3>Me fala a frente do seu lote</h3><p>Responde aqui no WhatsApp{(" ou chama no " + E(config.get("contato", ""))) if config.get("contato") else ""} com a medida que eu te digo quais casas cabem nele com os recuos de referência. Os da sua cidade, você confirma na prefeitura.</p></div>
       <p class="pequeno"><b>Planta de referência:</b> não é projeto executivo nem legal, não serve para aprovar nem para construir direto. Leve a um arquiteto ou engenheiro.</p>
       {svg_fita(contagem)}""", "fim")
     return L
