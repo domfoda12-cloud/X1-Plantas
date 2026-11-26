@@ -9,7 +9,7 @@
 - Todo prompt do dono é gravado sozinho em `pedidos/entrada/` (fora do git) pelo gancho, que também devolve o lembrete da regra (`LEIA-ME.md`).
 - Trabalho novo: `python3 ferramentas/pedido.py nova "assunto"` cria a ficha com o prompt copiado; recado de pedido aberto: `pedido.py recado <ficha>`; fechar: `pedido.py fechar <ficha> "o que virou"`, que também escreve o histórico (`LEIA-ME.md`).
 - A ficha responde: por que ele pediu, qual o objetivo e qual a ligação com `contexto/dono/IDEIAS-GERAIS.md`, antes de qualquer delegação (`LEIA-ME.md`).
-- Modelos: Opus executa o trabalho do projeto; pesquisa em dois passos (Sonnet busca, Opus confere e conclui); Haiku (`ajudante`) faz a tarefa simples e pessoal do dono (`LEIA-ME.md`).
+- Modelos: Opus executa o trabalho do projeto e pesquisa a fundo (`pesquisador`, um passo só); o Revisor de risco lê uma vez, no Fable, a peça montada; Haiku (`ajudante`) faz a tarefa simples e pessoal do dono (`LEIA-ME.md`).
 - Todo pedido a agente leva o pacote do executor: ficha, o que ler, o que já está decidido, pronto quando e o que devolver (`LEIA-ME.md`).
 - Relatório de agente é afirmação, não prova: quem conduz confere e escreve em "Conferência" (`LEIA-ME.md`).
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
@@ -347,7 +347,7 @@ O dono, 26/11 (~01:30 UTC), antes de dormir: "for this night i want you to go cr
 
 Seções: O que isso libera e o que não libera (leitura do Maestro); Fila da noite (uma frente por vez; cada item fecha salvo antes do próximo); Registro (o Maestro acrescenta uma linha por item fechado).
 
-Tamanho: 778 palavras.
+Tamanho: 858 palavras.
 
 ### [O que vai ao cliente e o que é só nosso (24/11/2026)](anexos/o-que-vai-ao-cliente-2026-11-24.md)
 
