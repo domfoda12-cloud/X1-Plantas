@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 101 documentos
+## Os 102 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -778,6 +778,12 @@ Leitura nossa (interpretação), não fala do dono. As palavras dele estão em `
 Seções: Parte 1 · Produção criativa (vídeo do WhatsApp, vídeo do anúncio, Instagram); Parte 2 · Sistema e organização (branches, índice, resumos, pedidos, modelos); Parte 3 · O que ele quer ver no vídeo, juntando tudo.
 
 Tamanho: 6829 palavras.
+
+### [Lições antigas de contexto/estrategista.md](historico/licoes-estrategista.md)
+
+Saíram inteiras do "Lições" quando o arquivo foi refeito (dono 26/11: consolida, não descarta). Continuam valendo.
+
+Tamanho: 368 palavras.
 
 ### [Lições antigas de contexto/maestro.md](historico/licoes-maestro.md)
 
