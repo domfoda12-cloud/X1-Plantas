@@ -15,7 +15,7 @@
 - O que está aberto: `FILA.md`, gerada (`FILA.md`).
 <!-- /essencial -->
 
-## Os 106 documentos
+## Os 107 documentos
 
 ### [Auditorias do Supervisor (Fable)](AUDITORIAS.md)
 
@@ -164,6 +164,14 @@ Tamanho: 8430 palavras.
 Ficha `2026-11-22-2237-busca-nas-conversas-propria-opcao-c-e-e-mail-ao-autor-do-cas.md`. O dono troca os campos entre colchetes e manda do e-mail dele, em particular (não como issue pública). Esta sessão não manda e-mail. O endereço do autor não está aqui: pegue no perfil dele no GitHub…
 
 Tamanho: 517 palavras.
+
+### [Fila da conversa de uso livre, no computador do dono (26/11/2026)](anexos/fila-sessao-livre-2026-11-26.md)
+
+Dono, 26/11: "Queue whats needed to do to the free use session". Esta é a conversa que roda no computador dele, com acesso total, e daqui em diante é a única que mexe no e-book. Escrita pelo Paydon da conversa na nuvem, que para de mexer no e-book.
+
+Seções: Antes de tudo; Fila (uma por vez, salva com `python3 ferramentas/salvar.py` antes da próxima); Esperando o dono.
+
+Tamanho: 341 palavras.
 
 ### [Frases das 5 páginas: rascunho para o reset (25/11/2026)](anexos/frases-das-5-paginas-2026-11-25.md)
 

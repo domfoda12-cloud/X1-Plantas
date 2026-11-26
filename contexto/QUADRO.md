@@ -2,6 +2,12 @@
 
 > **Todo agente e toda conversa lê este quadro antes de trabalhar** (regra do dono, 22/11/2026: "depois de cada pedido, SEMPRE informe todo mundo do que está acontecendo, crie um contexto a partir disso e alimente todos"). Quem atende o pedido escreve aqui, no topo, e apaga o mais antigo: ficam os 5 últimos. O histórico inteiro está em [`CONTEXTO-HISTORICO.md`](../CONTEXTO-HISTORICO.md).
 
+## 26/11 · Os fluxos fixos entraram na `main` (ficha `2026-11-26-0721`)
+
+- **O dono pediu:** "se nao [foi adicionado] adicione e finalize essa sessao" (26/11, 19:27).
+- **O que mudou:** os 5 fluxos (`.claude/workflows/`), o `ferramentas/fluxo.py` e as lições automáticas agora valem na `main`, para toda conversa. Por nome (`/texto-publico`, `/decisao`...) eles aparecem em conversa nova.
+- **Todos:** a partir de agora, peça que vai ao público passa pelo fluxo dela ([guia](../pedidos/fluxos/LEIA-ME.md)). A sessão que montou os fluxos terminou.
+
 ## 26/11 · O sócio saiu; o dono termina o projeto sozinho (ficha `2026-11-26-0926`)
 
 - **O dono pediu:** "we're finishing this alone" (26/11, 09:26): o sócio não entra mais no projeto.
@@ -25,9 +31,3 @@
 - **O dono pediu:** o sócio "vai pegar a parte do funil" (26/11); na fila da noite, conversa simulada do anúncio ao Pix.
 - **O que mudou:** 10 vazamentos achados (`pedidos/anexos/funil-simulado-2026-11-26.md`); 18 atalhos novos ou reescritos, a folha do sócio e 19 perguntas ao dono em rascunho (`funil-textos-rascunho-2026-11-26.md`), com o SIM SE da Vera aplicado; a calculadora não gera mais mensagem ao cliente quando só cabe a Casa Compacta. O e-book à venda tem **3 casas** (as 24 são o catálogo).
 - **Caio, Rui:** o `RESPOSTAS-RAPIDAS.md` só muda quando o dono responder a seção 5 do rascunho. **Vera:** nada vai ao sócio antes das suas 3 condições gerais (PDFs com o sol, perfil comercial completo, sem nota interna no bloco). **Paydon:** levar as perguntas ao dono no resumo da manhã.
-
-## 26/11 · O lado do sol estava espelhado (fila da noite, item 3; ficha `2026-11-26-0114`)
-
-- **O dono pediu:** "get every single detail, every single component that makes something and make it better" (passada do e-book página por página).
-- **O que mudou:** o Nilo achou a tabela `ORIENTACAO` do validador espelhada nos lados; corrigida, com prova no `checar.py`. **A Casa Compacta (C01) e a Casa Fita (E03) ficam melhores com a rua ao sul** (antes "ao norte"); a F01 continua ao sul; 13 das 24 plantas trocam. Mais 8 consertos na prévia (`pedidos/anexos/passada-do-ebook-2026-11-26.md`).
-- **Caio, Bia, Rui, Zeca:** nunca mais "C01 frente para o norte"; o número vem do `PLANTAS.md`. **Nilo:** desenhar a parede da varanda da C01 (planta e 3D) e avisar a Vera. **Vera:** ler as outras 13 páginas em tamanho cheio antes do PDF final.
