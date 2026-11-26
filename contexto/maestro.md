@@ -34,3 +34,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **26/11, auditoria, ficha 2026-11-26-0116:** Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada).
 - **26/11, maestro (repetido na mesma noite):** anotei horários de cabeça e passei da hora real (06:35 e 06:45 às 06:16). Antes de escrever hora em registro, conversa ou Canteiro, rodar `date -u` e usar o que ele devolveu.
 - **26/11, maestro:** pedi à Vera para gravar o parecer, e ela só tem ferramentas de leitura (de propósito). Pedido à Revisora: "devolva o texto pronto"; quem grava é o Paydon.
+- **26/11, dono (repetida):** "Responder as 5 perguntas ao mesmo tempo é confuso, o ideal seria responder uma por vez" (cartão das 5 frases). A regra de 24/11 vale também para opções dentro de um cartão: uma escolha por cartão, e o próximo só depois da resposta.

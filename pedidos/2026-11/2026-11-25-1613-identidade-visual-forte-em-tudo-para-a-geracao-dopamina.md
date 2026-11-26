@@ -22,7 +22,7 @@
 
 **Conferência:** (a preencher)
 
-**Resultado:** (a preencher)
+**Resultado:** (parcial) 26/11 06:44, o dono escolheu "2 · A Placa" no Canteiro; em aplicação na prévia (Bia no gerador, Caio nas falas, Vera lê a página montada).
 
 **O que aprendi:** (a preencher)
 
