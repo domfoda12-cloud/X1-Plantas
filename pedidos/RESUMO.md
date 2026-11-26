@@ -39,7 +39,7 @@ Gravado por `python3 ferramentas/pedido.py licao` e pelo `fechar`. Não edite à
 
 Seções: Saídas do contexto/maestro.md por falta de espaço (24/11/2026).
 
-Tamanho: 2155 palavras.
+Tamanho: 2193 palavras.
 
 ### [Plano de trabalho: o que a equipe faz, em que ordem, e para quê](PLANO.md)
 
@@ -783,7 +783,7 @@ Tamanho: 6829 palavras.
 
 Saíram inteiras do "Lições" quando o arquivo encheu (`pedido.py` consolidar, dono 26/11: consolida, não descarta). Continuam valendo.
 
-Tamanho: 325 palavras.
+Tamanho: 349 palavras.
 
 ### [Lições antigas de contexto/revisor-de-risco.md](historico/licoes-revisor-de-risco.md)
 

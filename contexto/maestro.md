@@ -29,4 +29,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **26/11, auditoria, ficha 2026-11-26-0116:** Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada).
 - **26/11, dono (repetida):** "Responder as 5 perguntas ao mesmo tempo é confuso, o ideal seria responder uma por vez" (cartão das 5 frases). A regra de 24/11 vale também para opções dentro de um cartão: uma escolha por cartão, e o próximo só depois da resposta.
 - **26/11, dono:** "Escolhi 2 das frases e nao consegui mais continuar!" Uma pergunta por cartão, sim; mas o próximo cartão já fica à vista, porque o Canteiro só é lido de hora em hora. Nunca esconder a pergunta seguinte atrás da leitura.
-- **26/11, ficha 2026-11-26-0721:** Fluxo novo passa no ensaio estrito e com o programa quebrado antes da rodada real; erro plantado nunca vira lição.
+- **26/11, maestro:** Hora no Canteiro (ArtifactData) também sai de date -u, rodado na hora: o programa só confere arquivo; em 26/11 escrevi 10:05 às 09:56, a terceira vez.
