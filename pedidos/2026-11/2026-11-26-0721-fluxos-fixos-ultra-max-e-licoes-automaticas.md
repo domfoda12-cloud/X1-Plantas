@@ -21,7 +21,7 @@ Each workflow ends by writing its lessons into each agent's file automatically, 
 
 **Pronto quando:** 3 fluxos salvos em .claude/workflows/, rodados uma vez sobre peça real, lições gravadas sozinhas, checar.py confere que existem, plano em pedidos/anexos/plano-fluxos-2026-11-26.md seguido.
 
-**Suposições (o dono não disse):** Lição entra sem aprovação dele (fácil de desfazer). Mudança de sistema vai na branch sistema/fluxos antes da main.
+**Suposições (o dono não disse):** (Decidido pelo dono, 26/11: lição entra sozinha, "Automatically".) Mudança de sistema vai na branch sistema/fluxos antes da main.
 
 **Quem executa:** Paydon (Opus) monta; Olga (supervisor) audita; Vera lê o que for texto público nos testes.
 
