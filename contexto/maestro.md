@@ -31,3 +31,4 @@ O que deu errado e não pode voltar (uma linha cada, com data).
 - **26/11, ficha 2026-11-25-1544:** registrar na ficha a fala do dono que muda o pedido (aqui, de "só propor" para "aplicar") no mesmo momento.
 - **26/11, ficha 2026-11-26-0105:** mudança em muitos arquivos vai em sequência, um agente por mudança, com verificadores de ângulos diferentes; eles acharam 25 pontos que os aplicadores não viram.
 - **26/11, auditoria, ficha 2026-11-26-0116:** Cópia de trabalho vai a pasta que o git acompanha; antes de escrever 'salvo', conferir com git ls-files (o Canteiro estava em pasta ignorada).
+- **26/11, maestro (repetido na mesma noite):** anotei horários de cabeça e passei da hora real (06:35 e 06:45 às 06:16). Antes de escrever hora em registro, conversa ou Canteiro, rodar `date -u` e usar o que ele devolveu.
