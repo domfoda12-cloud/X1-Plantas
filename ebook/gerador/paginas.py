@@ -57,7 +57,7 @@ ERROS = [
 ]
 
 GLOSSARIO = [
-    ("Área construída", "Área total da casa, medida por fora das paredes. É a que conta para a prefeitura e para o orçamento."),
+    ("Área construída", "Área coberta da casa, medida por fora das paredes, com a varanda e a garagem cobertas. A prefeitura e o orçamento partem dela; como a sua prefeitura conta, confira lá."),
     ("Área útil", "Área de piso por dentro das paredes, a que você realmente usa. É menor que a construída."),
     ("Área fechada", "A parte da casa com paredes e telhado, medida por fora, sem contar varanda nem garagem."),
     ("Cota", "Número na planta que mostra uma medida, em metros. Ex.: 6,50 m de frente."),

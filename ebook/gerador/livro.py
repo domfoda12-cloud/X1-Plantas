@@ -844,9 +844,12 @@ def svg_lote(p):
     s.append(f'<rect x="{hx}" y="{Y(hy + p["D"])}" width="{p["W"]}" height="{p["D"]}" fill="#0B4FA8"/>')
     s.append(f'<text x="{hx + p["W"] / 2}" y="{Y(hy + p["D"] / 2) + .2}" text-anchor="middle" font-size=".6" font-weight="800" fill="#fff" class="tit">{p["id"]}</text>')
     s.append(f'<rect x="-1.2" y="{LD + .15}" width="{LW + 2.4}" height="{rua}" fill="#C9CED6"/>')
-    s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua / 2 + .18}" text-anchor="middle" font-size=".5" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
-    s.append(f'<text x="{LW / 2}" y="-.12" text-anchor="middle" font-size=".36" class="mono" fill="#17202B">frente mínima {m(LW)} m</text>')
-    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size=".42" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">fundo mínimo {m(LD)} m</text>')
+    # A medida da frente fica na faixa da rua (antes ficava no fundo do lote, e o comprador lia "frente" no lado errado;
+    # achado da Bia, 26/11/2026). Letra proporcional ao lote: lote estreito não deixa a frase passar da faixa.
+    fs = max(.42, min(.8, LW / 10))
+    s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua * .38}" text-anchor="middle" font-size="{fs * .8:.2f}" font-weight="700" fill="#4F5B69" letter-spacing=".1">RUA</text>')
+    s.append(f'<text x="{LW / 2}" y="{LD + .15 + rua * .38 + fs * 1.05:.2f}" text-anchor="middle" font-size="{fs:.2f}" font-weight="700" class="mono" fill="#17202B">frente mínima {m(LW)} m</text>')
+    s.append(f'<text x="-.45" y="{LD / 2}" text-anchor="middle" font-size="{max(.42, min(.8, LD / 18)):.2f}" class="mono" fill="#17202B" transform="rotate(-90 -.45 {LD / 2})">fundo mínimo {m(LD)} m</text>')
     s.append(f'<text x="{LW / 2}" y="{Y(rec["frente"] / 2) + .15}" text-anchor="middle" font-size=".36" class="mono" fill="#6B5A2E">recuo {m1(rec["frente"])} m</text>')
     ang = {"sul": 0, "norte": 180, "leste": 90, "oeste": -90}[r["orientacao"]["melhor"]]
     s.append(f'<g transform="translate({LW + .65} .75) rotate({ang})"><circle r=".55" fill="#fff" stroke="#17202B" stroke-width=".04"/>'
@@ -1330,7 +1333,7 @@ def montar(plantas, config, numeros, duas_partes=False):
           <h3>Ficou em dúvida sobre qual casa cabe?</h3><p>Mande a frente e o fundo do seu lote e receba as casas que devem caber, como referência (não substitui o profissional): {E(contato) if contato and not contato.startswith('[') else '<span class="pendente">[contato do parceiro]</span>'}</p>
           <h3>Conhece alguém que vai construir?</h3><p>Mostre este e-book para quem também tem um lote esperando.</p></div></div>
       {foto("05-familia-lote", 78, pos="center 22%")}
-      {svg_fita(contagem, pag_frente)}""", "fim")
+      {svg_fita(contagem, pag_frente)}""", "fim", rodape=False)  # o rodapé cobria a fita amarela (Bia, 26/11/2026)
     if duas_partes:
         L.reordenar(ORDEM_DUAS_PARTES)
     return L
@@ -2565,7 +2568,7 @@ def avisos_juntos(p):
         art = [("a " if n.split()[0].lower().endswith("a") else "o ") + n.lower() for n in nomes]
         lista = art[0] if len(art) == 1 else ", ".join(art[:-1]) + " e " + art[-1]
         lista = lista[0].upper() + lista[1:]
-        outros.append(f"{lista} {'tem' if len(nomes) == 1 else 'têm'} vão livre (sem parede no meio) de {vao.replace('.', ',')} m: {resto}")
+        outros.append(f"{lista} {'tem' if len(nomes) == 1 else 'têm'} vão de {vao.replace('.', ',')} m entre as paredes, sem parede no meio: {resto}")
     return outros
 
 

@@ -157,13 +157,13 @@
  "destaque": "Varanda larga para a rede e a cadeira de fim de tarde",
  "pensou": [
   "Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.",
-  "Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.",
+  "Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.",
   "Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro."
  ],
  "validacao": {
   "erros": [],
   "avisos": [
-   "Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)"
+   "Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m"
   ],
   "info": [],
   "metricas": {

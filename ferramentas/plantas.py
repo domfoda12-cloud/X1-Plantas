@@ -564,7 +564,7 @@ def validar(planta):
         if c["tipo"] == "varanda" and c["id"] != "corr":
             for lado in ("esq", "dir"):
                 if _na_borda(planta, c, lado) and _rec(planta)[lado] < 1.4:
-                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)")
+                    r.aviso(f"{c['nome']} encosta na divisa da {NOMES_LADO[lado]}: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m")
                     break
 
     # Áreas molhadas juntas
@@ -930,7 +930,7 @@ def pensou(planta):
                    "e os quartos se passa por ele, então vale fechar a frente com portão. O código de obras da sua cidade diz se janela para "
                    "área coberta conta como ventilação.")
     elif any(c["tipo"] == "varanda" and c["id"] in portas_ext for c in cs):
-        out.append("Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.")
+        out.append("Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.")
     else:
         luz = m.get("luz", {})
         ok = lambda ts, lim: all(luz.get(c["id"], 0) + 1e-9 >= lim for c in cs if c["tipo"] in ts)

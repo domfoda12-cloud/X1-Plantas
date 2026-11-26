@@ -13,13 +13,13 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Áreas molhadas: o banheiro fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
 - Serviço: não tem janela. A ventilação vem de uma veneziana de 0,90 x 0,50 m em cima da porta de fora, que só cabe com pé-direito de uns 2,80 m. Ela deixa passar menos ar e quase nenhuma luz: o engenheiro confere se a ventilação e a luz do serviço bastam no código de obras da sua cidade.
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
+- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
 - Banheiro não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## C02 · Casa Studio
@@ -57,12 +57,12 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
+- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## C05 · Casa Popular
 
@@ -101,12 +101,12 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
+- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## E01 · Casa Estreita
 
@@ -261,12 +261,12 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
 
-- Varanda encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
+- Varanda encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
 - Banho da suíte não encosta em cozinha, serviço ou outro banheiro: prumada própria, um cano que desce só para esse banheiro (custa mais)
 
 ## F04 · Casa Família Suíte
@@ -326,7 +326,7 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 - Sala tem vão de 4.8 m: o engenheiro confere laje e vigas
@@ -342,12 +342,12 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao sul; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Banheiro colado na cozinha e na área de serviço: os canos ficam juntos, num trecho só, com menos parede para abrir. O traçado final é do engenheiro.
 
 **Atenção**
 
-- Varandão encosta na divisa da esquerda: essa lateral fica fechada, sem abertura para o vizinho (o Código Civil, art. 1.301, não deixa fazer varanda a menos de 1,5 m do terreno vizinho: o engenheiro confirma)
+- Varandão encosta na divisa da esquerda: essa lateral é parede cheia até a cobertura, sem vista para o vizinho, porque o Código Civil (art. 1.301) proíbe varanda a menos de 1,5 m do terreno vizinho. Se a parede basta na sua cidade, o engenheiro confirma; se não, a varanda recua 1,5 m
 
 ## S07 · Casa Gourmet
 
@@ -372,7 +372,7 @@
 **Por que esta planta é assim**
 
 - Sol: melhor com a rua ao norte; evite a rua a leste. Se o seu lote for diferente, a planta pode ser espelhada ou as janelas mudadas.
-- Varanda: a porta da sala fica coberta, protegida da chuva e do sol direto.
+- Varanda: a porta da sala fica coberta, protegida da chuva e de parte do sol.
 - Áreas molhadas: o banheiro da suíte fica longe da cozinha e pede tubulação própria. Pergunte ao engenheiro quanto isso pesa no orçamento.
 
 **Atenção**
