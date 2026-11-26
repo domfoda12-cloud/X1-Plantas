@@ -285,7 +285,9 @@ for _n, _tem in _fluxos.items():
     if not _f.exists():
         _mf.append(f"{_n}: falta .claude/workflows/{_n}.js"); continue
     _s = _f.read_text(encoding="utf-8")
-    _mf += [f"{_n}: o fluxo não chama {x}" for x in _tem + ("budget.spent()",) if x not in _s]
+    _corpo = _s.split("\n}\n", 1)[-1]  # depois do meta: a descrição do meta não conta como chamada (auditoria, 26/11)
+    _mf += [f"{_n}: o fluxo não chama {x}" for x in _tem + ("budget.spent()",) if x not in _corpo]
+    _mf += [f"{_n}: o fluxo não fecha conferindo ebook/saida e projetos.py"] if _n != "prova-de-entrada" and "git status --porcelain -- ebook/saida" not in _corpo else []
     _mf += [f"{_n}: meta.name diferente do arquivo"] if f"name: '{_n}'" not in _s else []
     _mf += [f"{_n}: fora do MAPA-DO-SISTEMA.md"] if f"(.claude/workflows/{_n}.js)" not in _mapa else []
     _mf += [f"{_n}: fora do ECOSSISTEMA.md"] if f"`{_n}`" not in ecossistema else []
@@ -297,6 +299,8 @@ _e = _iu.spec_from_file_location("fluxo", RAIZ / "ferramentas" / "fluxo.py"); _f
 _rods = sorted((RAIZ / "pedidos" / "fluxos" / "rodadas").glob("*.json")) if (RAIZ / "pedidos" / "fluxos" / "rodadas").exists() else []
 for _f in _rods:
     _ruim = _fx.conferir_registro(json.loads(_f.read_text(encoding="utf-8")))
+    if not isinstance(json.loads(_f.read_text(encoding="utf-8"))["gasto"].get("tokens_ferramenta"), int):
+        _ruim.append("falta o total de tokens que a ferramenta Workflow devolveu (python3 ferramentas/fluxo.py gasto <rodada> <tokens>)")
     _mf += [f"rodada {_f.name}: {'; '.join(_ruim)}"] if _ruim else []
     _rj = json.loads(_f.read_text(encoding="utf-8"))  # planta pronta para aplicar tem a cópia salva (a pasta de rascunhos o git ignora)
     if _rj.get("fluxo") == "planta" and str(_rj.get("resultado", "")).startswith("pronto"):
@@ -305,6 +309,10 @@ for _f in _rods:
 _tab = (RAIZ / "pedidos" / "fluxos" / "RODADAS.md").read_text(encoding="utf-8") if _rods else ""
 if _rods and len(re.findall(r"^\| \d\d/\d\d \d\d:\d\d \|", _tab, re.M)) < len(_rods):
     _mf.append("pedidos/fluxos/RODADAS.md tem menos linhas que as rodadas gravadas")
+_dec = [json.loads(f.read_text(encoding="utf-8")) for f in _rods if f.name.endswith("-decisao.json")]
+_desde = next((k for k, r in enumerate(reversed(_dec)) if r.get("calibracao")), len(_dec))
+if _desde >= 3:  # CONSELHO.md 5b, regra 5: a cada 3 rodadas, uma calibração com erro plantado
+    print(f"[AVISO] {_desde} rodadas de júri sem calibração: rode o decisao com calibracao: true (regra 5 da 5b)")
 if _mf:
     falhas.append("fluxos fixos"); print("[ERRO] fluxos fixos:\n  " + "\n  ".join(_mf))
 else:
@@ -448,6 +456,15 @@ if _h.returncode == 0 or _mexeu:
     print(f"[ERRO] livro.py --help devia recusar sem gerar (saída {_h.returncode}; mexeu em {_mexeu})")
 else:
     print("[OK ] livro.py recusa opção desconhecida sem tocar em ebook/saida/")
+# Prévia dentro de ebook/saida/ apagaria o PDF oficial (auditoria da Olga, 26/11): o livro.py recusa antes de gerar
+_t0 = {f: f.stat().st_mtime for f in (RAIZ / "ebook" / "saida").glob("*.pdf")}
+_h = subprocess.run([sys.executable, "ebook/gerador/livro.py", "--previa", "ebook/saida/previa-teste"], cwd=RAIZ, capture_output=True, text=True)
+_mexeu = [f.name for f in (RAIZ / "ebook" / "saida").glob("*.pdf") if _t0.get(f) != f.stat().st_mtime] + (["previa-teste"] if (RAIZ / "ebook" / "saida" / "previa-teste").exists() else [])
+if _h.returncode == 0 or _mexeu:
+    falhas.append("livro.py aceita prévia dentro de ebook/saida/")
+    print(f"[ERRO] livro.py --previa ebook/saida/... devia recusar sem gerar (saída {_h.returncode}; mexeu em {_mexeu})")
+else:
+    print("[OK ] livro.py recusa prévia dentro de ebook/saida/")
 # Edição de lançamento (dono, 23/11/2026: 3 casas): a calculadora e as plantas grátis só com casas da edição
 # ("casas_lancamento" no config.json; vazia = todas). As 24 plantas continuam no validador, acima.
 _cfg_ed = json.loads((RAIZ / "ebook" / "config.json").read_text(encoding="utf-8"))

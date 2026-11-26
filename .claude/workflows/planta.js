@@ -29,6 +29,7 @@ const ACHADO = {
 }
 const ACHADOS = { type: 'object', properties: { achados: { type: 'array', items: ACHADO }, nota: { type: 'string' } }, required: ['achados'] }
 
+const ID_INICIO = budget.spent()  // identifica a rodada (o registrar recusa gravar duas vezes)
 const gasto = {}, conf = {}, achados = []
 async function medir(nome, tipo, fn) {
   const antes = budget.spent()
@@ -58,7 +59,7 @@ let voltas = -1, passe = null  // a primeira passada do autor é a conferência 
 async function autor(oque) {
   voltas++
   const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
-  return medir('autor', 'A', () => agent(
+  return medir('autor', 'F', () => agent(
     `Rascunho de planta da ${A.casa}: ${A.rascunho}${VAR}. Objetivo: ${A.objetivo}.\n` +
     `Escreva ou conserte SÓ o rascunho (um .py que monta a planta num dicionário com "comodos" e "portas", como pede ferramentas/conferir-rascunho.py; ` +
     `parta da oficial em ebook/plantas/projetos.py). Nunca edite projetos.py, ebook/saida/ nem as prévias. ` +
@@ -71,11 +72,12 @@ passe = await autor('- desenhe o rascunho para o objetivo acima.')
 
 phase('Programa')
 async function programa() {
-  const r = await rodar('programa:rascunho', `python3 ferramentas/conferir-rascunho.py ${A.rascunho}${VAR}; echo "=== oficial"; python3 ferramentas/conferir-rascunho.py ${A.casa}`)
+  const r = await rodar('programa:rascunho', `python3 ferramentas/conferir-rascunho.py ${A.rascunho}${VAR}; echo "CODIGO_RASCUNHO=$?"; echo "=== oficial"; python3 ferramentas/conferir-rascunho.py ${A.casa}`)
   return r || { codigo: 1, saida: 'programa não respondeu' }
 }
 let prog = await programa()
-const falhou = p => /\[ERRO|Traceback|: [1-9]\d* de \d+ com erro|^\s*ERRO/m.test(String(p.saida).split('=== oficial')[0])
+// falha fechada: só passou com o código 0 do rascunho E "Passou nas conferências: 0 de N" (auditoria: código perdido no ';')
+const falhou = p => { const s = String(p.saida).split('=== oficial')[0]; return !/CODIGO_RASCUNHO=0\b/.test(s) || !/Passou nas conferências: 0 de \d+/.test(s) || /\[ERRO|Traceback/.test(s) }
 if (falhou(prog)) {
   conf['programa:rascunho'].achados_proprios += 1
   achados.push({ autor: AUTOR, chave: 'rascunho-nao-passou', texto: String(prog.saida).slice(0, 300), licao: 'rode conferir-rascunho.py até sair limpo antes de entregar o rascunho', achado_por: 'programa:rascunho' })
@@ -94,19 +96,28 @@ if (obra && obra.achados.length && voltas < 2) {
   passe = await autor(obra.achados.map(a => `- ${a.texto}`).join('\n'))
   prog = await programa()
 }
-const resultado = falhou(prog) ? 'vai ao dono (o programa ainda falha)' :
+let resultado = falhou(prog) ? 'vai ao dono (o programa ainda falha)' :
   (obra && obra.achados.length && voltas >= 2) ? 'pronto para aplicar, com achados de obra em aberto' : 'pronto para aplicar (aplicar é outro passo: plantas.py validar e checar.py)'
 
 phase('Colheita')
+const pp = lerJson((await rodar('programa:passe', `python3 ferramentas/fluxo.py passe - <<'FIM'\n${JSON.stringify(Object.assign({}, passe, { arquivos: [] }))}\nFIM`)).saida, { ok: false, erros: ['saída ilegível'] })
+if (!pp.ok && resultado.startsWith('pronto')) resultado = 'vai ao dono (passe fora da forma: ' + (pp.erros || []).join('; ').slice(0, 200) + ')'
+
+// fecho por programa: o fluxo não pode ter mexido em ebook/saida/ nem em projetos.py (auditoria, 26/11)
+const guarda = await rodar('programa:guarda', 'git status --porcelain -- ebook/saida ebook/plantas/projetos.py; echo FIM_GUARDA')
+const mexeu = !guarda || !/FIM_GUARDA/.test(String(guarda.saida)) || String(guarda.saida).split('FIM_GUARDA')[0].trim() !== ''
+if (mexeu) resultado = 'PAROU: ebook/saida/ ou projetos.py mudaram (ou a conferência não respondeu); o Maestro olha antes de tudo'
 // rascunho fica em pasta que o git ignora; o pronto para aplicar ganha uma cópia salva (lição de 26/11: pasta ignorada não fica salva)
 const SALVO = `pedidos/anexos/rascunhos-prontos/${String(A.rascunho).split('/').pop()}`
 if (resultado.startsWith('pronto')) await agent(`Rode exatamente: mkdir -p pedidos/anexos/rascunhos-prontos && cp ${A.rascunho} ${SALVO} && git check-ignore -q ${SALVO} || echo salvo`,
   { label: 'guardar o rascunho pronto', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA })
 const registro = {
+  id: `${A.ficha || '-'}:${String(A.arquivo || A.fonte || A.rascunho || A.proposta).slice(0, 60)}:${ID_INICIO}`,
   fluxo: 'planta', peca: `${A.rascunho}${VAR}`, salvo_em: resultado.startsWith('pronto') ? SALVO : '-', ficha: A.ficha || '-', resultado, voltas,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: Object.values(conf),
   achados: achados.map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
+  n_achados: achados.length,
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(

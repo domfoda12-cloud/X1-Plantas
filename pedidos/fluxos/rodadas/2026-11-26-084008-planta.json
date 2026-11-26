@@ -10,7 +10,8 @@
    "autor": 22801,
    "programa:rascunho": 4379,
    "obra:opus": 5668
-  }
+  },
+  "tokens_ferramenta": 510641
  },
  "conferidores": [
   {
@@ -41,5 +42,9 @@
  "perguntas_ao_dono": [
   "Para a frase da varanda da C01 que vai ao comprador, qual fica? (a) 'essa lateral é parede cheia até a cobertura, como está no desenho, sem vista para o vizinho' (a do rascunho); (b) 'essa lateral é parede cheia até a cobertura, sem vista para o vizinho' (a antiga, sem citar o desenho); (c) outra que a Vera escrever."
  ],
- "registrado_em": "2026-11-26T08:40:08Z"
+ "registrado_em": "2026-11-26T08:40:08Z",
+ "licoes_novas": [
+  "arquiteto|aviso-tracejada-falso"
+ ],
+ "voltaram": []
 }

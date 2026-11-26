@@ -16,10 +16,10 @@ if (!A.papeis || !A.papeis.length || !A.tag) throw new Error('args: {papeis: ["r
 const N = A.n_casos || 10, P = A.n_problemas || 5
 const GAB = `/tmp/x1-provas/gabarito-${A.tag}.json`  // fora do repositório até a nota (provas 1 e 2)
 const SAIDA = { type: 'object', properties: { codigo: { type: 'integer' }, saida: { type: 'string' } }, required: ['codigo', 'saida'] }
-const PROB = { type: 'object', properties: { linha: { type: 'integer' }, categoria: { type: 'string' }, porque: { type: 'string', description: 'a regra ferida, com arquivo e linha' } }, required: ['linha', 'categoria', 'porque'] }
+const PROB = { type: 'object', properties: { linha: { type: 'integer' }, categoria: { type: 'string' }, porque: { type: 'string', description: 'a regra ferida, com arquivo e linha' }, nivel: { type: 'integer', description: 'o nível do problema (1 a 6), pela tabela de níveis' } }, required: ['linha', 'categoria', 'porque', 'nivel'] }
 const CASOS = {
   type: 'object',
-  properties: { casos: { type: 'array', items: { type: 'object', properties: { id: { type: 'integer' }, linhas: { type: 'array', items: { type: 'string' } }, problemas: { type: 'array', items: PROB } }, required: ['id', 'linhas', 'problemas'] } } },
+  properties: { casos: { type: 'array', items: { type: 'object', properties: { id: { type: 'integer' }, linhas: { type: 'array', items: { type: 'string' } }, problemas: { type: 'array', items: PROB }, iscas: { type: 'array', items: { type: 'integer' }, description: 'linhas que parecem erro e não são' } }, required: ['id', 'linhas', 'problemas', 'iscas'] } } },
   required: ['casos'],
 }
 const RESP = {
@@ -71,18 +71,19 @@ for (const [nivel, papeis] of Object.entries(porNivel)) {
     `Tire os problemas dos erros reais: pedidos/LICOES.md, pedidos/PROVAS.md, pedidos/anexos/veto-*.md, contexto/redator.md (frases vetadas), CLAUDE.md (regras que não mudam), ` +
     `ebook/plantas/PLANTAS.md (números), pedidos/anexos/decisoes-do-dono-2026-11-23.md (o que o dono decidiu). ` +
     (voltam.length ? `Inclua, reescritos com outras palavras, estes erros que voltaram: ${JSON.stringify(voltam).slice(0, 4000)}. ` : '') +
-    `Para cada problema: a linha (1 = primeira linha do caso), a categoria e o porquê, com o arquivo e a linha da regra. Ids de ${proximoId} a ${proximoId + N - 1}. Não grave nada.`,
+    `Para cada problema: a linha (1 = primeira linha do caso), a categoria, o porquê (arquivo e linha da regra) e o nível dele na tabela (${JSON.stringify(niveis)}); ` +
+    `todo problema é do nível ${nivel} ou abaixo, e pelo menos metade é do nível ${nivel}. Em "iscas", as linhas que parecem erro e não são (obrigatório a partir do nível 5). Ids de ${proximoId} a ${proximoId + N - 1}. Não grave nada.`,
     { label: `montar nível ${nivel}`, phase: 'Montar', model: 'opus', schema: CASOS })
   phase('Conferir gabarito')
   const conferido = await agent(
     `Confira o gabarito desta prova sem confiar em quem montou. Para cada caso com problema, abra a regra citada e confirme que a linha indicada fere a regra ` +
-    `(se a linha estiver errada, corrija; se não houver problema de verdade, deixe "problemas" vazio). Para cada caso limpo, procure problema real ` +
+    `(se a linha estiver errada, corrija; se não houver problema de verdade, deixe "problemas" vazio; confira o nível de cada um e se cada isca é mesmo limpa). Para cada caso limpo, procure problema real ` +
     `contra CLAUDE.md, contexto/redator.md, ebook/plantas/PLANTAS.md e as decisões do dono; se achar, ponha no gabarito. Devolva os casos corrigidos, mesmos ids.\n\n` +
     JSON.stringify(montado ? montado.casos : []),
     { label: `conferir gabarito nível ${nivel}`, phase: 'Conferir gabarito', model: 'opus', schema: CASOS })
   const casos = (conferido || montado || { casos: [] }).casos
   proximoId += N
-  todos.push(...casos.map(c => ({ id: c.id, texto: numerar(c), problemas: c.problemas })))
+  todos.push(...casos.map(c => ({ id: c.id, texto: numerar(c), problemas: c.problemas, iscas: c.iscas || [] })))
   phase('Prova')
   const rs = await parallel(papeis.map(p => () => agent(
     `Prova de entrada do seu papel (nível ${nivel}). Para cada caso, responda às 3 perguntas do júri do seu lugar: ` +

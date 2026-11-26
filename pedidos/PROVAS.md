@@ -175,3 +175,11 @@ Regra 5 da seção 5b do `CONSELHO.md`. Proposta com 3 erros plantados (`pedidos
 | Opus, risco | pegou | pegou | pegou | 2 |
 
 O presidente conferiu 16 fatos na rodada 1, todos confirmados. Ninguém perde peso (todos pegaram os 3). A rodada 2 julgou a reescrita (`-v2`), que não tinha erro plantado: notas 5, 8 e 7, e os jurados 1 e 3 perderam a nota por fato falso. Ela mostrou um furo no programa: o piso de 7 só olhava as notas válidas. Consertado no `fluxo.py`: o piso olha toda nota dada, e passar pede 2 notas válidas. Achado do presidente: a proposta dizia "1 rodada de teste", e o teste de 30 conversas por braço não decide nada (erro padrão de 12 pontos).
+
+## Prova 5, primeira prova de entrada pelo fluxo `prova-de-entrada` (26/11/2026, 08:58 a 09:10 UTC)
+
+Nível 1 (erro escrito), 10 casos e 5 com problema plantado, tirados dos erros reais; o gabarito ficou em `/tmp`, fora do repositório, até a nota. Responderam Caio (redator), Rui (estrategista) e Vera (revisor-de-risco), cada um com as 3 perguntas do júri. Nota por programa (`fluxo.py prova-nota`). Resultado e gabarito revelado: `pedidos/provas/rodada-2026-11-26-0910.md`.
+
+- Os três acharam 5 de 6, sem alarme falso, e ficam no nível 1. Os três deixaram passar o mesmo item: o gancho "Lote com 10 m de frente?" sem fundo e sem recuo (caso 8, linha 2), que o conferidor do gabarito tinha somado. A Olga arbitrou e confirmou: é o mesmo gancho que a Vera vetou no anúncio A1 em 24/11. O programa `fluxo.py texto` já acusa essa linha como aviso.
+- Gasto: 68.978 tokens de saída (budget.spent) e 750.568 tokens de subagentes (o total que a ferramenta Workflow devolveu), mais 66.819 da árbitra.
+- A auditoria da Olga (26/11) apontou que esse item é omissão (nível 3), numa prova de nível 1. Consertado no `fluxo.py`: cada problema do gabarito leva o nível dele, e problema acima do nível da prova não conta. A partir da próxima, isca apontada e tiro em muitas linhas contam como alarme falso.

@@ -39,6 +39,7 @@ const VERA = {
   required: ['veredito', 'condicoes'],
 }
 
+const ID_INICIO = budget.spent()  // identifica a rodada (o registrar recusa gravar duas vezes)
 const gasto = {}, conf = {}, achados = []
 async function medir(nome, tipo, fn) {
   const antes = budget.spent()
@@ -79,7 +80,7 @@ let voltas = -1, passe = null  // a primeira passada do autor é a conferência 
 async function autor(oque) {
   voltas++
   const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
-  return medir('autor', 'A', () => agent(
+  return medir('autor', 'F', () => agent(
     `Você fez a página ${A.pagina} do e-book (${PEDIDO}). O texto sai de: ${A.fonte}. Só edite esses arquivos; nunca grave ebook/saida/. ` +
     `Para ver a página: ${GERAR} e abra ${PNG}.\n\nO que conferir e consertar agora:\n${oque}\n\n` +
     `Depois, confira a página contra a sua lista em contexto/${AUTOR}.md e conserte o que falhar. Número só o que o PLANTAS.md traz. ` +
@@ -93,17 +94,21 @@ prog = await programa()
 // Técnica e visual: uma leitura de cada, em paralelo (ângulos diferentes; cada um sabe o que o programa já pegou)
 phase('Técnica e visual')
 const jaPego = JSON.stringify(prog.achados.map(x => x.msg))
+// o paralelo é medido por fora (medir dentro do parallel contava em dobro; auditoria)
+const antesTV = budget.spent()
+conf.nilo = { nome: 'nilo', tipo: 'A', achados_proprios: 0 }; conf.bia = { nome: 'bia', tipo: 'A', achados_proprios: 0 }
 const [nilo, bia] = await parallel([
-  () => medir('nilo', 'A', () => agent(
+  () => (agent(
     `Confira a parte técnica da página ${A.pagina} (imagem ${PNG}; texto extraído: ${JSON.stringify(prog.texto).slice(0, 4000)}). ` +
     `Cada número, medida, lado do sol, ventilação, divisa, lei: contra ebook/plantas/PLANTAS.md e ebook/referencias/ARQUITETO.md. ` +
     `Devolva só o que falhou, com arquivo e linha da prova e uma lição de uma linha para quem fez a página. O programa já pegou: ${jaPego}.`,
     { label: 'nilo (técnica)', phase: 'Técnica e visual', agentType: 'arquiteto', schema: ACHADOS })),
-  () => medir('bia', 'A', () => agent(
+  () => (agent(
     `Olhe a página ${A.pagina} (${PNG}) com o método da skill design-editorial: a Placa no lugar certo (a voz do Lote Carente só nas placas), ` +
     `hierarquia, leitura no celular, nada cortado, nada genérico. Devolva só o que falhou, com o trecho e uma lição de uma linha para quem fez a página.`,
     { label: 'bia (visual)', phase: 'Técnica e visual', agentType: 'designer', schema: ACHADOS })),
 ])
+gasto['nilo e bia'] = budget.spent() - antesTV
 for (const [nome, r] of [['nilo', nilo], ['bia', bia]]) {
   const xs = (r && r.achados) || []
   conf[nome].achados_proprios = xs.length
@@ -122,21 +127,32 @@ const vera = await medir('vera', 'A', () => agent(
   { label: 'vera (revisora de risco)', phase: 'Vera', agentType: 'revisor-de-risco', schema: VERA }))
 for (const c of (vera && vera.condicoes) || []) achados.push({ autor: AUTOR, ...c, achado_por: 'vera' })
 conf['vera'].achados_proprios = ((vera && vera.condicoes) || []).length
-let resultado = !vera ? 'vai ao dono (Vera não respondeu)' : vera.veredito === 'SIM' ? 'aprovada na prévia' : vera.veredito === 'NÃO' ? 'vetada: vai ao dono' : 'SIM SE'
+const limpa = () => !prog.achados.some(x => x.tipo === 'erro')  // aprovada só com prova positiva do programa
+let resultado = !vera ? 'vai ao dono (Vera não respondeu)' : vera.veredito === 'SIM' ? (limpa() ? 'aprovada na prévia' : 'vai ao dono (Vera disse SIM, mas o programa tem erro em aberto)') : vera.veredito === 'NÃO' ? 'vetada: vai ao dono' : 'SIM SE'
 if (vera && vera.veredito === 'SIM SE') {
   if (voltas < 2) {
     passe = await autor('Aplique as condições da Vera, uma por uma, sem mudar mais nada:\n' + vera.condicoes.map(c => `- ${c.texto}`).join('\n'))
     prog = await programa()
-    resultado = prog.achados.some(x => x.tipo === 'erro') ? 'vai ao dono (conserto não passou no programa)' : 'aprovada na prévia, com as condições da Vera'
+    resultado = !limpa() ? 'vai ao dono (conserto não passou no programa)' : 'aprovada na prévia, com as condições da Vera'
   } else resultado = 'vai ao dono (2 voltas gastas; condições da Vera em aberto)'
 }
 
 phase('Colheita')
+// o passe também passa pelo programa: forma fixa, arquivos que o git guarda, ideia do Diretor com a fonte
+const pp = lerJson((await rodar('programa:passe', `python3 ferramentas/fluxo.py passe - --publico <<'FIM'\n${JSON.stringify(passe)}\nFIM`)).saida, { ok: false, erros: ['saída ilegível'] })
+if (!pp.ok && resultado.startsWith('aprovada')) resultado = 'vai ao dono (passe fora da forma: ' + (pp.erros || []).join('; ').slice(0, 200) + ')'
+
+// fecho por programa: o fluxo não pode ter mexido em ebook/saida/ nem em projetos.py (auditoria, 26/11)
+const guarda = await rodar('programa:guarda', 'git status --porcelain -- ebook/saida ebook/plantas/projetos.py; echo FIM_GUARDA')
+const mexeu = !guarda || !/FIM_GUARDA/.test(String(guarda.saida)) || String(guarda.saida).split('FIM_GUARDA')[0].trim() !== ''
+if (mexeu) resultado = 'PAROU: ebook/saida/ ou projetos.py mudaram (ou a conferência não respondeu); o Maestro olha antes de tudo'
 const registro = {
+  id: `${A.ficha || '-'}:${String(A.arquivo || A.fonte || A.rascunho || A.proposta).slice(0, 60)}:${ID_INICIO}`,
   fluxo: 'pagina-ebook', peca: `${A.fonte} (página ${A.pagina})`, ficha: A.ficha || '-', resultado, voltas,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: Object.values(conf),
   achados: achados.map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
+  n_achados: achados.length,
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(

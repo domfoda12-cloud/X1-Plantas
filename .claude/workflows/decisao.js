@@ -43,7 +43,7 @@ const OPINIAO = {
     defeitos: { type: 'array', items: CITA, minItems: 2, description: 'pelo menos 2, cada um com arquivo e linha' },
     criticas: { type: 'array', items: CITA },
     fatos_afirmados: { type: 'array', items: { type: 'object', properties: { fato: { type: 'string' }, arquivo: { type: 'string' }, linha: { type: 'integer' } }, required: ['fato', 'arquivo', 'linha'] } },
-    perguntas_ao_dono: { type: 'array', items: { type: 'string' } },
+  perguntas_ao_dono: { type: 'array', items: { type: 'string' } },
     nota: { type: 'number' }, motivo_da_nota: { type: 'string' },
   },
   required: ['defeitos', 'criticas', 'fatos_afirmados', 'nota', 'motivo_da_nota'],
@@ -73,6 +73,7 @@ const lerJson = (s, padrao) => {
   return padrao
 }
 
+const ID_INICIO = budget.spent()  // identifica a rodada (o registrar recusa gravar duas vezes)
 const gasto = {}, conf = {}, achados = []
 async function medir(nome, tipo, fn) {
   const antes = budget.spent()
@@ -112,10 +113,11 @@ async function umaRodada(n, proposta) {
     `Você preside o júri (CONSELHO.md 5b, regra 3) e não opinou nesta rodada. Decisão: ${A.pergunta}; proposta: ${proposta}.\n` +
     `Confira no repositório pelo menos 5 dos fatos que os jurados afirmaram (abra cada arquivo na linha citada) e diga se se confirmou; ` +
     `"de" é o número do jurado que afirmou. Depois escreva a síntese e o que corrigir já na proposta (cada item com uma lição de uma linha para quem a escreveu). ` +
+    `Ordem da revisão anônima (cada jurado ordenou as opiniões dos outros): ${JSON.stringify(revs.map((r, i) => ({ jurado: i + 1, ordem: r && r.ordem, porque: r && r.porque })))}\n` +
     `Fatos afirmados: ${JSON.stringify(fatos).slice(0, 12000)}\nOpiniões: ${JSON.stringify(ops.map(o => o && { defeitos: o.defeitos, nota: o.nota, motivo: o.motivo_da_nota })).slice(0, 12000)}`,
     { label: `presidente (${presidente})`, phase: 'Presidente', model: presidente, schema: PRES }))
   const rodada = {
-    rodada: n, motivo: A.motivo, regua: REGUA,
+    rodada: n, motivo: A.motivo, ficha: A.ficha || '-', regua: REGUA,
     jurados: jurados.map((j, i) => ({ ...j, nota: ops[i] ? ops[i].nota : null, defeitos: ops[i] ? ops[i].defeitos : [] })),
     revisao_anonima: revs.map(r => ({ ordem: r ? r.ordem : [] })),
     presidente: { modelo: presidente, fatos: pres ? pres.fatos : [] },
@@ -139,7 +141,7 @@ conf[`presidente r1`].achados_proprios = ((r1.pres && r1.pres.corrigir_ja) || []
 if (r1.veredito.proximo === 'reescrever uma vez') {
   phase('Reescrita')
   const v2 = String(A.proposta).replace(/(\.\w+)?$/, '-v2$1')
-  await medir('reescrita', 'A', () => agent(
+  await medir('reescrita', 'F', () => agent(
     `Reescreva a proposta ${A.proposta} uma vez, em ${v2} (arquivo novo; não apague o original), aplicando o que o presidente do júri mandou corrigir ` +
     `e respondendo a cada defeito dos jurados. Não mude o que o dono já decidiu. O que depende do dono vira pergunta, não suposição.\n` +
     `Síntese: ${r1.pres ? r1.pres.sintese : ''}\nCorrigir já: ${JSON.stringify(r1.pres ? r1.pres.corrigir_ja : [])}\n` +
@@ -148,10 +150,16 @@ if (r1.veredito.proximo === 'reescrever uma vez') {
   final = await umaRodada(2, v2)
   rodadas.push(final)
 }
-const resultado = final.veredito.passa ? 'aprovada pelo júri' : final.veredito.completa ? `vai ao dono com as notas (${rodadas.map(r => r.veredito.media).join(' e ')})` : 'rodada recusada pelo programa: complete e rode de novo'
+let resultado = final.veredito.passa ? 'aprovada pelo júri' : final.veredito.completa ? `vai ao dono com as notas (${rodadas.map(r => r.veredito.media).join(' e ')})` : 'rodada recusada pelo programa: complete e rode de novo'
 
 phase('Colheita')
+// fecho por programa: o júri (e a reescrita) não pode ter mexido em ebook/saida/ nem em projetos.py (auditoria, 26/11)
+const guarda = await medir('programa:guarda', 'P', () => agent(`Rode exatamente este comando na raiz do repositório, sem mudar nada, e devolva o código de saída e, em "saida", SÓ o que ele imprimiu:\n\ngit status --porcelain -- ebook/saida ebook/plantas/projetos.py; echo FIM_GUARDA`,
+  { label: 'programa:guarda', phase: 'Colheita', model: 'haiku', effort: 'low', schema: SAIDA }))
+if (!guarda || !/FIM_GUARDA/.test(String(guarda.saida)) || String(guarda.saida).split('FIM_GUARDA')[0].trim() !== '')
+  resultado = 'PAROU: ebook/saida/ ou projetos.py mudaram (ou a conferência não respondeu); o Maestro olha antes de tudo'
 const registro = {
+  id: `${A.ficha || '-'}:${String(A.arquivo || A.fonte || A.rascunho || A.proposta).slice(0, 60)}:${ID_INICIO}`,
   fluxo: 'decisao', peca: A.proposta, ficha: A.ficha || '-', resultado, voltas: rodadas.length,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: [...Object.values(conf), { nome: 'jurados', tipo: 'A', achados_proprios: rodadas.reduce((s, r) => s + r.ops.filter(Boolean).reduce((t, o) => t + o.defeitos.length, 0), 0) }],
@@ -159,8 +167,11 @@ const registro = {
   // rodada de calibração (erro plantado de propósito): o achado fica no registro, mas não vira lição de ninguém
   achados: (A.calibracao ? [] : achados).map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
   achados_da_calibracao: A.calibracao ? achados.map(a => ({ chave: a.chave, texto: String(a.texto).slice(0, 300) })) : [],
+  n_achados: (A.calibracao ? [] : achados).length,
   perguntas_ao_dono: rodadas.flatMap(r => r.ops.filter(Boolean).flatMap(o => o.perguntas_ao_dono || [])),
-  juri: rodadas.map(r => ({ rodada: r.rodada.rodada, notas: r.veredito.notas, media: r.veredito.media, perderam_a_nota: r.veredito.perderam_a_nota, erros: r.veredito.erros })),
+  juri: rodadas.map(r => ({ rodada: r.rodada.rodada, notas: r.veredito.notas, media: r.veredito.media, perderam_a_nota: r.veredito.perderam_a_nota, erros: r.veredito.erros,
+    jurados: r.rodada.jurados.map(j => ({ modelo: j.modelo, angulo: j.angulo, nota: j.nota, defeitos: (j.defeitos || []).map(d => `${d.arquivo}:${d.linha}`) })),
+    presidente: r.rodada.presidente.modelo, fatos: (r.rodada.presidente.fatos || []).map(x => ({ de: x.de, onde: `${x.arquivo}:${x.linha}`, confirmado: x.confirmado })) })),
 }
 const reg = await agent(
   `Rode exatamente este comando na raiz do repositório e devolva, em "saida", SÓ o que o comando imprimiu, sem comentário seu:\n\npython3 ferramentas/fluxo.py registrar - <<'FIM'\n${JSON.stringify(registro)}\nFIM`,

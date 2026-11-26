@@ -2,7 +2,7 @@
  "fluxo": "decisao",
  "peca": "pedidos/anexos/juri-teste-fluxo-2026-11-26.md",
  "ficha": "2026-11-26-0721",
- "resultado": "vai ao dono com as notas (3.33 e 8)",
+ "resultado": "os 3 erros plantados pegos pelos 3 jurados na 1ª rodada (notas 4, 4 e 2); não vai ao dono",
  "voltas": 2,
  "gasto": {
   "tokens_saida": 124142,
@@ -15,7 +15,8 @@
    "jurados r2": 30778,
    "revisao r2": 2144,
    "presidente r2": 34454
-  }
+  },
+  "tokens_ferramenta": 1806457
  },
  "conferidores": [
   {
@@ -130,5 +131,7 @@
  ],
  "registrado_em": "2026-11-26T08:53:47Z",
  "calibracao": true,
- "nota_maestro": "rodada de calibração (erros plantados pelo Maestro): as 3 lições colhidas foram desfeitas, não eram erro real"
+ "nota_maestro": "rodada de calibração (erros plantados pelo Maestro): as 3 lições colhidas foram desfeitas, não eram erro real",
+ "licoes_novas": [],
+ "voltaram": []
 }

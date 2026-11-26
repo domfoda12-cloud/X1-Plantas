@@ -53,9 +53,9 @@ Tamanho: 14164 palavras.
 
 Fila da noite (ficha `2026-11-23-0144`), tarefa A0: a régua que diz se a equipe aprende. Planos com erro plantado e gabarito guardado fora do repositório até a nota; os agentes vetam sem ver o gabarito; o Fable dá a nota. Nenhuma regra muda com n menor que 5 (condição do Fable).
 
-Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC); Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC); Prova 4, calibração do júri pelo fluxo `decisao` (26/11/2026, 08:41 a 08:53 UTC).
+Seções: Prova 1, base (23/11/2026, 04:47 a 04:55 UTC); Prova 2 (23/11/2026, 14:10 a 14:40 UTC); Prova 3: o júri (23/11/2026, 22:10 UTC, a 24/11, 00:55 UTC); Prova 4: planejador e organizador (24/11/2026, 12:20 a 13:00 UTC); Prova 4, calibração do júri pelo fluxo `decisao` (26/11/2026, 08:41 a 08:53 UTC); Prova 5, primeira prova de entrada pelo fluxo `prova-de-entrada` (26/11/2026, 08:58 a 09:10 UTC).
 
-Tamanho: 3776 palavras.
+Tamanho: 3994 palavras.
 
 ### [A4: correções antigas do dono, conferidas (23/11/2026)](anexos/a4-correcoes-do-dono.md)
 
@@ -735,9 +735,9 @@ Tamanho: 433 palavras.
 
 ### [Rodadas dos fluxos fixos](fluxos/RODADAS.md)
 
-Gravado por `python3 ferramentas/fluxo.py registrar` no fim de cada fluxo (`.claude/workflows/`). Não edite à mão; o detalhe de cada rodada está em `rodadas/`.
+Gerado por `python3 ferramentas/fluxo.py` (`registrar` e `gasto`) a partir de `rodadas/`. Não edite à mão. Tokens: os de saída que o `budget.spent()` devolve e o total de subagentes que a ferramenta Workflow devolve ao terminar (o Paydon anota com `fluxo.py gasto`; sem ele, o `checar.py` fica…
 
-Tamanho: 207 palavras.
+Tamanho: 230 palavras.
 
 ### [Os prompts do dono, palavra por palavra](historico/PROMPTS.md)
 

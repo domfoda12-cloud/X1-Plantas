@@ -2417,8 +2417,10 @@ class _CaC01:
         av_ven = [a for a in p["_r"].avisos if "veneziana" in a]
         # e as duas condições do veto da veneziana (Vera, 24 e 26/11): passa menos ar, e o engenheiro confere se ventilação e luz bastam
         if (len(av_ven) != 1 or any(x not in it[8]["cuid"] for x in re.findall(r"\d+,\d+", av_ven[0]))
-                or not re.search(r"menos ar", it[8]["cuid"]) or not re.search(r"engenheiro confere se bast", it[8]["cuid"])):
-            _ca_aviso("o cuidado do serviço (8) não traz os números do aviso da veneziana, o 'menos ar' ou o que o engenheiro confere")
+                or not all(re.search(x, it[8]["cuid"]) for x in (r"menos ar", r"engenheiro confere se bast", r"só cabe com",
+                                                                     r"quase nenhuma luz", r"código de obras da sua cidade"))):
+            _ca_aviso("o cuidado do serviço (8) perdeu uma condição do veto da veneziana: os números, 'só cabe com', 'menos ar', "
+                      "'quase nenhuma luz' ou 'o engenheiro confere se bastam no código de obras da sua cidade'")
         vp = PL.porta_dobradica(p, next(d for d in portas if d["id"] == "varanda-sala"))
         P.folha_porta = max(vp[0][1], vp[1][1], vp[2][1])
         P.mesa = g.mv("mesaJantar", "sala")
@@ -3019,6 +3021,10 @@ if __name__ == "__main__":
         SAIDA = Path(tempfile.mkdtemp(prefix="ebook-conferir-"))
     if "--previa" in sys.argv:
         prev = Path(sys.argv[sys.argv.index("--previa") + 1]).resolve()
+        # a prévia copia o ebook.pdf para a pasta dela: dentro de ebook/saida/ apagaria o PDF oficial (auditoria da Olga, 26/11)
+        if prev == EBOOK / "saida" or (EBOOK / "saida").resolve() in prev.parents or prev == (EBOOK / "saida").resolve():
+            sys.exit("ERRO: a prévia não vai a ebook/saida/: lá fica o PDF oficial, que só muda com o \"gera\" do dono. "
+                     "Use uma pasta fora do repositório. Nada foi gerado.")
     if "--duas-partes" in sys.argv and not prev:
         sys.exit(RECUSA_DUAS_PARTES)
     if "--placa" in sys.argv and not prev:

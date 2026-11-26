@@ -12,7 +12,8 @@
    "bia": 10297,
    "nilo": 15759,
    "vera": 16550
-  }
+  },
+  "tokens_ferramenta": 819136
  },
  "conferidores": [
   {
@@ -93,5 +94,11 @@
   }
  ],
  "perguntas_ao_dono": [],
- "registrado_em": "2026-11-26T08:31:58Z"
+ "registrado_em": "2026-11-26T08:31:58Z",
+ "licoes_novas": [
+  "designer|cuidado-8-veneziana-ventilacao",
+  "designer|sala-tv-parede-12cm",
+  "designer|sem-manchete"
+ ],
+ "voltaram": []
 }

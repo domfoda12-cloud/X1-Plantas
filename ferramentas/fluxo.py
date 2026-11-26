@@ -11,6 +11,7 @@ Uso:
                                                           git acompanha; --publico exige a ideia do Diretor com a fonte
   python3 ferramentas/fluxo.py juri <arq.json|->           recusa rodada de júri incompleta (CONSELHO.md 5b) e calcula o resultado
   python3 ferramentas/fluxo.py registrar <arq.json|->      grava a rodada e o gasto em pedidos/fluxos/ e colhe as lições sozinho
+  python3 ferramentas/fluxo.py gasto <rodada|ultima> <tokens>  anota o total de subagentes que a ferramenta Workflow devolveu
   python3 ferramentas/fluxo.py relatorio                   gasto por fluxo e conferidor sem achado próprio (candidato a corte)
   python3 ferramentas/fluxo.py prova-estado                nível de cada papel na prova de entrada e os casos que voltam
   python3 ferramentas/fluxo.py prova-nota <arq.json|->     dá a nota (por programa), sobe o nível de quem passou, grava lição de quem errou
@@ -44,14 +45,26 @@ PROMESSAS = [
     (r"dispens\w*\s+(?:o |a |de |do |da )?(?:pedreiro|engenheiro|arquiteto|profissional|projeto)",
      "promessa proibida: dispensar pedreiro, engenheiro ou arquiteto (CLAUDE.md)"),
     (r"\bsem (?:precisar de |contratar )?(?:pedreiro|engenheiro|arquiteto)\b", "promessa proibida: obra sem profissional (CLAUDE.md)"),
+    (r"\bn[ãa]o (?:vai )?precisa(?:r)? (?:de |contratar |pagar )?(?:pedreiro|engenheiro|arquiteto|profissional)", "promessa proibida: obra sem profissional (CLAUDE.md)"),
     (r"aprova[çc][ãa]o (?:garantida|certa)|garant\w+ (?:a )?aprova[çc]|aprova(?:da|do)? na prefeitura com certeza|j[áa] aprovad[ao]",
      "promessa proibida: aprovação na prefeitura (CLAUDE.md)"),
-    (r"(?:custo|pre[çc]o|valor) (?:exato|certo|fechado) (?:da|de) obra|obra (?:sai|custa|fica) (?:por )?(?:exatamente |s[óo] )?R\$",
+    (r"(?:custo|pre[çc]o|valor) (?:exato|certo|fechado) (?:da|de) obra|(?:obra|constru[çc][ãa]o|casa pronta) (?:sai|custa|fica)(?: por| em)? (?:exatamente |s[óo] |uns |cerca de )?r\$",
      "promessa proibida: custo exato de obra (CLAUDE.md)"),
     (r"prazo (?:garantido|exato|certo) (?:da|de) obra|(?:fica|fica pronta|termina) em \d+ (?:dias|meses) com certeza",
      "promessa proibida: prazo de obra (CLAUDE.md)"),
 ]
-NEGA = re.compile(r"\b(n[ãa]o|nunca|nem|jamais|nenhum|nenhuma|sem que)\b", re.I)  # negação antes, na mesma linha: "nunca prometer..."
+NEGA = re.compile(r"\b(n[ãa]o|nunca|nem|jamais|nenhum|nenhuma|sem que)\b", re.I)
+LISTA_NEGADA = re.compile(r"^\W*(?:nunca|n[ãa]o|nenhum|nenhuma|jamais|vetad\w*|proibid\w*)\W*:", re.I)  # "**Nunca:** a, b, c"
+
+
+def negado(low, ini):
+    """A frase está negada: a linha é uma lista do que não se faz ("Nunca: ..."), ou a negação vem colada antes, na mesma
+    oração (até 50 letras, sem ponto, dois-pontos ou ponto e vírgula no meio). Auditoria da Olga, 26/11: qualquer "não"
+    antes na linha anulava "Não perca tempo: a planta dispensa o engenheiro"."""
+    if LISTA_NEGADA.search(low):
+        return True
+    oracao = re.split(r"[.:;!?]", low[:ini])[-1]
+    return bool(NEGA.search(oracao[-50:]))
 AVISOS = [
     (r"\bventila[çc][ãa]o cruzada\b", "'ventilação cruzada': só com janelas opostas, conferidas no PLANTAS.md (contexto/redator.md)"),
     (r"\bainda n[ãa]o (?:temos|tem|tenho)\b", "'ainda não': soa como promessa de futuro (contexto/redator.md)"),
@@ -77,15 +90,23 @@ def conferir_texto(txt, agora=None):
     achados, base = [], casas()
     agora = agora or datetime.now(timezone.utc)
     num = lambda s: float(s.replace(",", "."))
-    for i, linha in enumerate(txt.splitlines(), 1):
+    linhas = txt.splitlines()
+    # frase partida em duas linhas (o texto do PDF quebra onde a página quebra): confere também o parágrafo juntado
+    ini = 0
+    for k in range(len(linhas) + 1):
+        if k == len(linhas) or not linhas[k].strip():
+            if k - ini > 1:
+                par = " ".join(l.strip() for l in linhas[ini:k]).lower()
+                for rx, msg in VETADAS + PROMESSAS:
+                    for m in re.finditer(rx, par):
+                        if not negado(par, m.start()) and not any(re.search(rx, l.lower()) for l in linhas[ini:k]):
+                            achados.append((ini + 1, "erro", msg + " (frase partida entre linhas)"))
+            ini = k + 1
+    for i, linha in enumerate(linhas, 1):
         low = linha.lower()
-        for rx, msg in VETADAS:
+        for rx, msg in VETADAS + PROMESSAS:
             for m in re.finditer(rx, low):
-                if not NEGA.search(low[:m.start()]):
-                    achados.append((i, "erro", msg))
-        for rx, msg in PROMESSAS:
-            for m in re.finditer(rx, low):
-                if not NEGA.search(low[:m.start()]):
+                if not negado(low, m.start()):
                     achados.append((i, "erro", msg))
         for rx, msg in AVISOS:
             if re.search(rx, linha, re.I):
@@ -96,16 +117,18 @@ def conferir_texto(txt, agora=None):
         citadas = [c for c, d in base.items() if re.search(rf"\b{c}\b", linha) or d["nome"].lower() in low]
         if len(citadas) == 1:
             d = base[citadas[0]]
-            for m in re.finditer(r"(\d+(?:,\d+)?) ?m²(?: fechados| constru[íi]dos| de (?:casa|área))", low):
-                if round(num(m.group(1))) != d["area"]:
-                    achados.append((i, "erro", f"{citadas[0]}: {m.group(1)} m² no texto, {d['area']} m² fechados no PLANTAS.md"))
-            for m in re.finditer(r"lote (?:de )?(\d+(?:,\d+)?) ?x ?(\d+(?:,\d+)?)", low):
+            nome = re.escape(d["nome"].lower()) + "|" + citadas[0].lower()
+            for m in re.finditer(rf"(\d+(?:,\d+)?) ?m²(?: fechados| constru[íi]dos| de (?:casa|área))|(?:{nome})[^.;:]{{0,25}}?\b(?:tem|com|são|de) (\d+(?:,\d+)?) ?m²(?! de (?:sala|quarto|cozinha|banheiro|varanda|servi))", low):
+                n = m.group(1) or m.group(2)
+                if round(num(n)) != d["area"]:
+                    achados.append((i, "erro", f"{citadas[0]}: {n} m² no texto, {d['area']} m² fechados no PLANTAS.md"))
+            for m in re.finditer(r"(?:lote|terreno) (?:de |com )?(\d+(?:,\d+)?) ?m? ?x ?(\d+(?:,\d+)?)", low):
                 par = (num(m.group(1)), num(m.group(2)))
                 if par not in (d["lote"], d["minimo"]):
                     achados.append((i, "erro", f"{citadas[0]}: lote {m.group(1)} x {m.group(2)} no texto; no PLANTAS.md, "
                                                f"{d['lote'][0]:g} x {d['lote'][1]:g} (mínimo {d['minimo'][0]:g} x {d['minimo'][1]:g})"))
             for m in re.finditer(r"(?:frente para o|melhor com a rua a[o]?) (" + "|".join(DIRECOES) + r")\b", low):
-                if m.group(1) != d["frente"] and not NEGA.search(low[:m.start()]):
+                if m.group(1) != d["frente"] and not negado(low, m.start()):
                     achados.append((i, "erro", f"{citadas[0]}: rua ao {m.group(1)} no texto, ao {d['frente']} no PLANTAS.md (o lado vem do PLANTAS.md)"))
         hoje = f"{agora:%d/%m}"
         if hoje in linha:
@@ -159,8 +182,11 @@ def conferir_juri(r):
     regua = r.get("regua") or {}
     if not all(str(regua.get(k) or "").strip() for k in ("3", "6", "9")):
         erros.append("sem régua com o que vale 3, 6 e 9 (regra 0)")
-    if not str(r.get("motivo") or "").strip():
-        erros.append("sem o motivo de ir ao júri (custa dinheiro, vai ao público ou não se desfaz)")
+    if not re.search(r"custa dinheiro|vai ao p[úu]blico|n[ãa]o se desfaz|o dono pediu", str(r.get("motivo") or ""), re.I):
+        erros.append("motivo fora da 5b: escreva 'custa dinheiro', 'vai ao público', 'não se desfaz' ou 'o dono pediu' (auditoria, 26/11: 'porque sim' passava)")
+    ficha = str(r.get("ficha") or "").strip()
+    if not re.fullmatch(r"\d{4}-\d\d-\d\d-\d{4}", ficha) or not list((RAIZ / "pedidos").glob(f"*/{ficha}*.md")):
+        erros.append(f"ficha '{ficha or '-'}' não existe em pedidos/: o motivo do júri fica escrito na ficha (5b)")
     jur = r.get("jurados") or []
     if len(jur) != 3:
         erros.append(f"{len(jur)} jurados; a regra 1 pede 3")
@@ -169,13 +195,22 @@ def conferir_juri(r):
     modelos = [str(j.get("modelo", "")).lower() for j in jur]
     if len(set(modelos)) != len(modelos):
         erros.append("dois jurados no mesmo modelo (regra 1: 3 modelos)")
+    sem_defeito, descartadas = set(), []
     for n, j in enumerate(jur):
         if not isinstance(j.get("nota"), (int, float)) or not 0 <= j["nota"] <= 10:
             erros.append(f"jurado {n + 1}: nota fora de 0 a 10")
-        defs = j.get("defeitos") or []
-        if len(defs) < 2:
-            erros.append(f"jurado {n + 1}: {len(defs)} defeito(s); a regra pede pelo menos 2 com arquivo e linha")
-        erros += [e for e in (_cita(d, f"jurado {n + 1}, defeito {k + 1}") for k, d in enumerate(defs)) if e]
+        # crítica com citação que não existe não conta (regra 1); repetida na mesma linha conta uma vez. O jurado que
+        # fica com menos de 2 defeitos válidos perde a nota; a rodada não cai inteira (auditoria, 26/11)
+        vistos, validos = set(), 0
+        for k, dd in enumerate(j.get("defeitos") or []):
+            e = _cita(dd, f"jurado {n + 1}, defeito {k + 1}")
+            onde = (str(dd.get("arquivo")), dd.get("linha"))
+            if e:
+                descartadas.append(e)
+            elif onde not in vistos:
+                vistos.add(onde); validos += 1
+        if validos < 2:
+            sem_defeito.add(n + 1)
     rev = r.get("revisao_anonima") or []
     if len(rev) != len(jur) or any(len(x.get("ordem") or []) != len(jur) - 1 for x in rev):
         erros.append("revisão anônima incompleta: cada jurado ordena as outras opiniões (regra 2)")
@@ -183,12 +218,16 @@ def conferir_juri(r):
     if str(pres.get("modelo", "")).lower() in modelos or not pres.get("modelo"):
         erros.append("o presidente tem de ser o modelo que não opinou (regra 3)")
     fatos = pres.get("fatos") or []
-    if len(fatos) < 5:
-        erros.append(f"presidente conferiu {len(fatos)} fato(s); a regra 3 pede 5")
-    erros += [e for e in (_cita(f, f"fato {k + 1}") for k, f in enumerate(fatos)) if e]
+    ruins = [k for k, f in enumerate(fatos) if _cita(f, "")]
+    descartadas += [_cita(fatos[k], f"fato {k + 1}") for k in ruins]
+    if len(fatos) - len(ruins) < 5:
+        erros.append(f"presidente conferiu {len(fatos) - len(ruins)} fato(s) com citação que existe; a regra 3 pede 5")
+    for k in ruins:  # fato afirmado com linha que não existe é fato falso de quem afirmou
+        fatos[k] = dict(fatos[k], confirmado=False)
     if not isinstance((r.get("gasto") or {}).get("tokens_saida"), int) or r["gasto"]["tokens_saida"] <= 0:
         erros.append("rodada sem o gasto anotado (tokens de saída do budget.spent())")
     falsos = {f.get("de") for f in fatos if f.get("confirmado") is False and isinstance(f.get("de"), int)}
+    falsos |= sem_defeito
     notas = [None if n + 1 in falsos else j.get("nota") for n, j in enumerate(jur)]
     validas = [x for x in notas if isinstance(x, (int, float))]
     media = round(sum(validas) / len(validas), 2) if validas else None
@@ -199,7 +238,8 @@ def conferir_juri(r):
     passa = not erros and media is not None and media >= 8.5 and piso and len(validas) >= 2
     rodada = r.get("rodada", 1)
     proximo = "aprovada" if passa else ("recusada: complete a rodada" if erros else ("reescrever uma vez" if rodada < 2 else "vai ao dono com as duas notas"))
-    return {"completa": not erros, "erros": erros, "notas": notas, "perderam_a_nota": sorted(falsos), "media": media,
+    return {"completa": not erros, "erros": erros, "notas": notas, "perderam_a_nota": sorted(falsos), "sem_2_defeitos": sorted(sem_defeito),
+            "citacoes_descartadas": descartadas, "media": media,
             "piso_ok": piso, "passa": passa, "proximo": proximo}
 
 
@@ -236,6 +276,22 @@ def _licao(papel, texto, origem):
         return False
 
 
+def _ja_escrita(papel, licao):
+    """A lição nova repete uma linha que o contexto do papel já tem? (comparação de palavras, sem juízo)."""
+    import difflib
+    arq = RAIZ / "contexto" / f"{papel}.md"
+    if not arq.exists():
+        return False
+    palavras = lambda s: re.findall(r"[a-záéíóúâêôãõç]{4,}", s.lower())
+    nova = palavras(licao)
+    for l in arq.read_text(encoding="utf-8").splitlines():
+        velha = palavras(l)
+        if len(velha) >= 5 and (difflib.SequenceMatcher(None, nova, velha).ratio() >= 0.5
+                                or len(set(nova) & set(velha)) >= 0.6 * max(1, len(set(nova)))):
+            return True
+    return False
+
+
 def conferir_registro(r):
     erros = []
     for k in ("fluxo", "peca", "resultado"):
@@ -247,12 +303,45 @@ def conferir_registro(r):
     if not isinstance(confs, list) or not confs:
         erros.append("falta a lista de conferidores (nome, tipo P ou A, achados_proprios)")
     for c in confs or []:
-        if c.get("tipo") not in ("P", "A") or not isinstance(c.get("achados_proprios"), int) or not c.get("nome"):
+        if c.get("tipo") not in ("P", "A", "F") or not isinstance(c.get("achados_proprios"), int) or not c.get("nome"):
             erros.append(f"conferidor fora da forma: {c}")
     for a in r.get("achados") or []:
         if not all(str(a.get(k) or "").strip() for k in ("autor", "chave", "texto")):
             erros.append(f"achado sem autor, chave ou texto: {a}")
+    # o JSON passa pela mão de um agente: a contagem tem de bater com a que o fluxo mandou (auditoria, 26/11)
+    if "n_achados" in r and r["n_achados"] != len(r.get("achados") or []):
+        erros.append(f"o fluxo mandou {r['n_achados']} achados e chegaram {len(r.get('achados') or [])}: o JSON foi mexido no caminho")
     return erros
+
+
+def tabela():
+    """O RODADAS.md sai sempre dos JSON de rodadas/ (ninguém edita a tabela à mão)."""
+    linhas = ["# Rodadas dos fluxos fixos", "", "> Gerado por `python3 ferramentas/fluxo.py` (`registrar` e `gasto`) a partir de `rodadas/`. "
+              "Não edite à mão. Tokens: os de saída que o `budget.spent()` devolve e o total de subagentes que a ferramenta Workflow "
+              "devolve ao terminar (o Paydon anota com `fluxo.py gasto`; sem ele, o `checar.py` fica vermelho).", "",
+              "| Quando (UTC) | Fluxo | Peça | Resultado | Voltas | Tokens de saída | Tokens da ferramenta | Achados | Lições novas | Erro que voltou |",
+              "|---|---|---|---|---|---|---|---|---|---|"]
+    for f in sorted((FLUXOS / "rodadas").glob("*.json")) if (FLUXOS / "rodadas").exists() else []:
+        r = json.loads(f.read_text(encoding="utf-8"))
+        q = r.get("registrado_em", "")
+        quando = f"{q[8:10]}/{q[5:7]} {q[11:16]}" if len(q) >= 16 else "-"
+        res = ("calibração: " if r.get("calibracao") else "") + str(r["resultado"])
+        linhas.append(f"| {quando} | {r['fluxo']} | `{str(r['peca'])[:90]}` | {res} | {r.get('voltas', 0)} | {r['gasto']['tokens_saida']} | "
+                      f"{r['gasto'].get('tokens_ferramenta', 'falta')} | {len(r.get('achados') or [])} | {len(r.get('licoes_novas') or [])} | {len(r.get('voltaram') or [])} |")
+    (FLUXOS / "RODADAS.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
+
+
+def gasto(qual, tokens):
+    """Anota o total de tokens de subagentes que a ferramenta Workflow devolveu (o budget.spent() só vê os de saída)."""
+    arqs = sorted((FLUXOS / "rodadas").glob("*.json"))
+    alvo = [f for f in arqs if qual in f.name] if qual != "ultima" else arqs[-1:]
+    if len(alvo) != 1:
+        sys.exit(f"'{qual}' não acha uma rodada só em pedidos/fluxos/rodadas/")
+    r = json.loads(alvo[0].read_text(encoding="utf-8"))
+    r["gasto"]["tokens_ferramenta"] = int(tokens)
+    _grava_json(alvo[0], r)
+    tabela()
+    return alvo[0].name
 
 
 def registrar(r, agora=None):
@@ -261,8 +350,11 @@ def registrar(r, agora=None):
         return {"gravado": False, "erros": erros}
     agora = agora or datetime.now(timezone.utc)
     marca = f"{agora:%Y-%m-%d-%H%M%S}"
+    if r.get("id"):  # rodar o registrar duas vezes não grava duas rodadas nem marca as lições como "voltou"
+        for f in (FLUXOS / "rodadas").glob("*.json") if (FLUXOS / "rodadas").exists() else []:
+            if json.loads(f.read_text(encoding="utf-8")).get("id") == r["id"]:
+                return {"gravado": False, "erros": [f"a rodada {r['id']} já está gravada em {f.name}"]}
     r = dict(r, registrado_em=f"{agora:%Y-%m-%dT%H:%M:%SZ}")
-    _grava_json(FLUXOS / "rodadas" / f"{marca}-{r['fluxo']}.json", r)
     colhidas = _json(FLUXOS / "licoes-colhidas.json", {})
     voltam = _json(PROVAS / "voltam.json", [])
     papeis, novas, repetidas, por_autor = _papeis(), [], [], {}
@@ -271,8 +363,9 @@ def registrar(r, agora=None):
         chave = f"{a['autor']}|{re.sub(r'[^a-z0-9-]', '-', a['chave'].lower())}"
         if a["autor"] not in papeis or not str(a.get("licao") or "").strip():
             continue
-        if chave in colhidas:  # a lição já estava no arquivo e o erro voltou: o caso vai para a próxima prova
-            colhidas[chave]["vezes"] += 1
+        ja_tem = _ja_escrita(a["autor"], a["licao"])  # a regra já estava no arquivo com outras palavras (auditoria, 26/11)
+        if chave in colhidas or ja_tem:  # o erro voltou depois da lição: o caso vai para a próxima prova, não vira lição de novo
+            colhidas.setdefault(chave, {"desde": f"{agora:%Y-%m-%d}", "vezes": 0, "rodada": marca, "ja_escrita": ja_tem})["vezes"] += 1
             voltam.append({"papel": a["autor"], "chave": a["chave"], "texto": a["texto"], "rodada": marca})
             repetidas.append(chave)
         elif por_autor.get(a["autor"], 0) >= LICOES_POR_RODADA:  # o resto fica no registro da rodada, para não encher o arquivo de uma vez
@@ -284,15 +377,8 @@ def registrar(r, agora=None):
     _grava_json(FLUXOS / "licoes-colhidas.json", colhidas)
     if repetidas:
         _grava_json(PROVAS / "voltam.json", voltam)
-    tabela = FLUXOS / "RODADAS.md"
-    if not tabela.exists():
-        tabela.write_text("# Rodadas dos fluxos fixos\n\n> Gravado por `python3 ferramentas/fluxo.py registrar` no fim de cada fluxo "
-                          "(`.claude/workflows/`). Não edite à mão; o detalhe de cada rodada está em `rodadas/`.\n\n"
-                          "| Quando (UTC) | Fluxo | Peça | Resultado | Voltas | Tokens de saída | Achados | Lições novas | Erro que voltou |\n"
-                          "|---|---|---|---|---|---|---|---|---|\n", encoding="utf-8")
-    with open(tabela, "a", encoding="utf-8") as h:
-        h.write(f"| {agora:%d/%m %H:%M} | {r['fluxo']} | `{r['peca']}` | {r['resultado']} | {r.get('voltas', 0)} | "
-                f"{r['gasto']['tokens_saida']} | {len(r.get('achados') or [])} | {len(novas)} | {len(repetidas)} |\n")
+    _grava_json(FLUXOS / "rodadas" / f"{marca}-{r['fluxo']}.json", dict(r, licoes_novas=novas, voltaram=repetidas))
+    tabela()
     return {"gravado": True, "arquivo": f"pedidos/fluxos/rodadas/{marca}-{r['fluxo']}.json", "licoes_novas": novas, "voltaram": repetidas}
 
 
@@ -305,7 +391,8 @@ def relatorio():
         for c in r.get("conferidores") or []:
             k = por_conf.setdefault(c["nome"], {"rodadas": 0, "achados_proprios": 0, "tokens": 0, "tipo": c["tipo"]})
             k["rodadas"] += 1; k["achados_proprios"] += c["achados_proprios"]
-            k["tokens"] += c.get("tokens") or (r["gasto"].get("por_conferidor") or {}).get(c["nome"], 0)
+            pc = r["gasto"].get("por_conferidor") or {}
+            k["tokens"] += c.get("tokens") or pc.get(c["nome"]) or sum(v for n, v in pc.items() if n.startswith(c["nome"] + " "))
     corte = [n for n, k in por_conf.items() if k["tipo"] == "A" and k["rodadas"] >= 5 and k["achados_proprios"] == 0]
     return {"rodadas": len(rod), "por_fluxo": por_fluxo, "por_conferidor": por_conf, "candidatos_a_corte": corte}
 
@@ -361,19 +448,23 @@ def prova_nota(d, agora=None, gravar=True):
         return out
     for papel, resps in d["respostas"].items():
         r = {x["id"]: x.get("problemas") or [] for x in resps or []}
-        achou, perdeu, falso = 0, [], []
+        nivel = est.get(papel, {}).get("nivel", 1)
+        achou, perdeu, falso, total = 0, [], [], 0
         for cid, c in casos.items():
             dada = r.get(cid, [])
-            if c["problemas"]:
-                for g in c["problemas"]:
-                    if _acertou(g, dada):
-                        achou += 1
-                    else:
-                        perdeu.append({"caso": cid, **g})
-            elif dada:
+            # problema acima do nível desta prova não conta (auditoria, 26/11: uma omissão de nível 3 segurou o nível 1)
+            probs = [g for g in c["problemas"] if int(g.get("nivel") or 1) <= nivel]
+            total += len(probs)
+            for g in probs:
+                if _acertou(g, dada):
+                    achou += 1
+                else:
+                    perdeu.append({"caso": cid, **g})
+            iscas = set(c.get("iscas") or [])
+            fora = [x for x in dada if isinstance(x.get("linha"), int) and not any(abs(x["linha"] - g["linha"]) <= 1 for g in c["problemas"])]
+            # alarme falso: caso limpo apontado, isca apontada, ou tiro em muitas linhas de uma vez (mais de 2 além do gabarito)
+            if (dada and not c["problemas"]) or any(x["linha"] in iscas for x in fora) or len(fora) > 2:
                 falso.append(cid)
-        total = sum(len(c["problemas"]) for c in casos.values())
-        nivel = est.get(papel, {}).get("nivel", 1)
         passou = not perdeu and not falso
         out[papel] = {"nivel": nivel, "achou": achou, "de": total, "alarmes_falsos": falso, "perdeu": perdeu, "passou": passou,
                       "proximo_nivel": nivel + 1 if passou else nivel}
@@ -383,7 +474,8 @@ def prova_nota(d, agora=None, gravar=True):
             h["nivel"] = out[papel]["proximo_nivel"]
             if papel in _papeis():
                 for p in perdeu[:2]:  # no máximo 2 lições por prova, para o arquivo não encher de uma vez
-                    _licao(papel, f"Prova de entrada, nível {nivel}: deixei passar {p['categoria']} ({p['porque']}).", "prova")
+                    txt = f"Prova de entrada, nível {nivel}: deixei passar {p['categoria']} ({p['porque']})"
+                    _licao(papel, (txt[:197].rsplit(' ', 1)[0] + "…)") if len(txt) > 200 else txt + ".", "prova")
                 if falso:
                     _licao(papel, f"Prova de entrada, nível {nivel}: apontei problema em {len(falso)} caso(s) limpo(s); "
                                   "só aponto o que a regra escrita sustenta, com arquivo e linha.", "prova")
@@ -395,7 +487,8 @@ def prova_nota(d, agora=None, gravar=True):
                   "Passou (tudo achado, nenhum alarme falso): o próximo nível fica mais difícil.", "",
                   f"**Gasto:** {d.get('gasto_tokens', 'não anotado')} tokens de saída (budget.spent() do fluxo, sem a nota).", "",
                   "| Papel | Nível | Achou | Alarmes falsos | Passou | Próximo nível |", "|---|---|---|---|---|---|"]
-        linhas += ([f"**Árbitro:** confirmou {sorted(conf) or 'nada'}; anulou {sorted(anul) or 'nada'}.", ""] if conf or anul else [])
+        if conf or anul:
+            linhas[-2:-2] = [f"**Árbitro:** confirmou {sorted(conf) or 'nada'}; anulou {sorted(anul) or 'nada'}.", ""]
         linhas += [f"| {p} | {o['nivel']} | {o['achou']} de {o['de']} | {len(o['alarmes_falsos'])} | {'sim' if o['passou'] else 'não'} | {o['proximo_nivel']} |"
                    for p, o in out.items() if not p.startswith("_")]
         linhas += ["", "## Gabarito (revelado depois da nota)", ""]
@@ -428,6 +521,15 @@ def testar():
         falhas.append(f"texto plantado: erros nas linhas {linhas_ruins}, esperado 1 a 5")
     if [x for x in conferir_texto(bom) if x[1] == "erro"]:
         falhas.append(f"texto limpo acusado: {conferir_texto(bom)}")
+    olga = {  # auditoria de 26/11: cada uma passava sem achado
+        "A obra custa R$ 80 mil.": 1, "Não perca tempo: a planta dispensa o engenheiro.": 1, f"A Casa Compacta tem {c['area'] + 48} m².": 1,
+        "Todas as casas\ncabem no seu lote.": 1, "Você não precisa de engenheiro com esta planta.": 1, "A C01 cabe num terreno de 6 x 15 m.": 1,
+        "**Nunca:** prometer aprovação; dizer que dá para construir sem pedreiro.": 0, "Nenhum 'todas as casas cabem' no texto.": 0, "nenhuma mensagem diz ou dá a entender que dispensa pedreiro.": 0,
+        f"A Casa Compacta tem {c['area']} m² fechados; a sala tem 12,5 m².": 0}
+    for frase, quer in olga.items():
+        tem = len({i for i, t, _ in conferir_texto(frase) if t == "erro"})
+        if tem != quer:
+            falhas.append(f"frase da auditoria: {frase!r} deu {tem} erro(s), esperado {quer}")
     tarde = datetime(2026, 11, 26, 6, 16, tzinfo=timezone.utc)
     if not any("hora" in m for _, _, m in conferir_texto("26/11 06:45 feito", tarde)) or conferir_texto("26/11 06:10 feito", tarde):
         falhas.append("hora futura não foi pega (ou a certa foi acusada)")
@@ -436,7 +538,7 @@ def testar():
     if len(conferir_passe({"feito": [], "arquivos": ["nao-existe.md", "ebook/saida/x.pdf"]}, publico=True)) < 6:
         falhas.append("passe errado passou")
     cita = lambda k: {"arquivo": "CLAUDE.md", "linha": k}
-    bom_j = {"motivo": "vai ao público", "regua": {"3": "a", "6": "b", "9": "c"}, "rodada": 1, "gasto": {"tokens_saida": 10},
+    bom_j = {"motivo": "vai ao público", "ficha": "2026-11-26-0721", "regua": {"3": "a", "6": "b", "9": "c"}, "rodada": 1, "gasto": {"tokens_saida": 10},
              "jurados": [{"modelo": m, "angulo": a, "nota": 9, "defeitos": [cita(1), cita(2)]} for m, a in zip(("haiku", "sonnet", "opus"), ANGULOS)],
              "revisao_anonima": [{"ordem": [1, 2]}] * 3,
              "presidente": {"modelo": "fable", "fatos": [dict(cita(k), confirmado=True) for k in range(1, 6)]}}
@@ -447,8 +549,12 @@ def testar():
     ruim_j["jurados"][0]["defeitos"] = [{"arquivo": "CLAUDE.md", "linha": 99999}]
     ruim_j["presidente"]["modelo"] = "haiku"; ruim_j["presidente"]["fatos"] = ruim_j["presidente"]["fatos"][:3]
     ruim_j["regua"] = {}; ruim_j["gasto"] = {}; ruim_j["revisao_anonima"] = []
-    if len(conferir_juri(ruim_j)["erros"]) < 7:
-        falhas.append(f"rodada de júri incompleta passou: {conferir_juri(ruim_j)['erros']}")
+    vr = conferir_juri(dict(ruim_j, motivo="porque sim", ficha="2026-01-01-0000"))
+    if len(vr["erros"]) < 7 or vr["sem_2_defeitos"] != [1] or not vr["citacoes_descartadas"] or vr["passa"]:
+        falhas.append(f"rodada de júri incompleta passou, ou a citação ruim não tirou a nota: {vr}")
+    dup = json.loads(json.dumps(bom_j)); dup["jurados"][1]["defeitos"] = [cita(1), cita(1)]
+    if conferir_juri(dup)["notas"][1] is not None:
+        falhas.append("dois defeitos na mesma linha contaram como dois")
     piso = json.loads(json.dumps(bom_j)); piso["jurados"][2]["nota"] = 6.5
     falso = json.loads(json.dumps(bom_j)); falso["presidente"]["fatos"][0].update(confirmado=False, de=1); falso["jurados"][1]["nota"] = 6
     baixo_falso = json.loads(json.dumps(bom_j)); baixo_falso["jurados"][0]["nota"] = 5
@@ -473,6 +579,14 @@ def testar():
         falhas.append(f"item que todos perderam não ficou em disputa: {todos_perdem}")
     if prova_nota({"casos": json.loads(json.dumps(casos)), "respostas": {"a": [], "b": []}, "confirmados": ["1:3"]}, gravar=False)["a"]["passou"]:
         falhas.append("item confirmado pelo árbitro não voltou a contar")
+    tiro = [{"id": 1, "texto": "a", "problemas": [{"linha": 3, "categoria": "x", "porque": "y"}], "iscas": [6]}]
+    if prova_nota({"casos": tiro, "respostas": {"a": [{"id": 1, "problemas": [{"linha": k} for k in (2, 5, 8, 11)]}]}}, gravar=False)["a"]["passou"]:
+        falhas.append("tiro em muitas linhas passou na prova")
+    if prova_nota({"casos": tiro, "respostas": {"a": [{"id": 1, "problemas": [{"linha": 3}, {"linha": 6}]}]}}, gravar=False)["a"]["passou"]:
+        falhas.append("isca apontada não contou como alarme falso")
+    alto = [{"id": 1, "texto": "a", "problemas": [{"linha": 3, "categoria": "x", "porque": "y", "nivel": 3}]}]
+    if not prova_nota({"casos": alto, "respostas": {"a": [{"id": 1, "problemas": []}]}}, gravar=False)["a"]["passou"]:
+        falhas.append("problema acima do nível da prova contou")
     if not n["a"]["passou"] or n["b"]["passou"] or n["b"]["alarmes_falsos"] != [2] or n["b"]["perdeu"][0]["caso"] != 1:
         falhas.append(f"nota da prova errada: {n}")
     falhas += _testar_colheita()
@@ -497,8 +611,10 @@ def _testar_colheita():
                                   {"autor": "ninguem", "chave": "x", "texto": "t", "licao": "não grava"}]}
             import contextlib, io
             with contextlib.redirect_stdout(io.StringIO()):
-                r1 = registrar(rodada)
-                r2 = registrar(rodada)
+                r1 = registrar(dict(rodada, id="ensaio-1"), datetime(2026, 11, 26, 9, 0, tzinfo=timezone.utc))
+                r2 = registrar(dict(rodada, id="ensaio-2"), datetime(2026, 11, 26, 9, 1, tzinfo=timezone.utc))
+                r3 = registrar(dict(rodada, id="ensaio-2"), datetime(2026, 11, 26, 9, 2, tzinfo=timezone.utc))
+                r4 = registrar(dict(rodada, id="ensaio-4", n_achados=5), datetime(2026, 11, 26, 9, 3, tzinfo=timezone.utc))
             ctx = (d / "contexto" / "redator.md").read_text(encoding="utf-8")
             hist = (d / "pedidos" / "historico" / "licoes-redator.md")
             movidas = hist.read_text(encoding="utf-8") if hist.exists() else ""
@@ -508,6 +624,8 @@ def _testar_colheita():
                     and (FLUXOS / "RODADAS.md").read_text(encoding="utf-8").count("texto-publico") == 2
                     and len(list((FLUXOS / "rodadas").glob("*.json"))) >= 1):
                 falhas.append(f"colheita de lições: {r1} {r2} tamanho {len(ctx)} todas {todas}")
+            if r3["gravado"] or r4["gravado"]:
+                falhas.append("registro repetido (mesmo id) ou com contagem que não bate foi gravado")
             if registrar({"fluxo": "x"})["gravado"]:
                 falhas.append("registro fora da forma foi gravado")
         finally:
@@ -547,6 +665,12 @@ def main(a):
         v = registrar(_carrega(a[1]))
         print(json.dumps(v, ensure_ascii=False))
         sys.exit(0 if v["gravado"] else 1)
+    if cmd == "gasto" and len(a) == 3:
+        print(f"anotado em {gasto(a[1], a[2])}; RODADAS.md refeito")
+        return
+    if cmd == "tabela":
+        tabela(); print("RODADAS.md refeito dos JSON")
+        return
     if cmd == "relatorio":
         print(json.dumps(relatorio(), ensure_ascii=False, indent=1))
         return

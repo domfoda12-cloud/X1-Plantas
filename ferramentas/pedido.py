@@ -240,7 +240,8 @@ def consolidar(txt, papel, falta):
     for i, l in enumerate(linhas):
         if sobra + falta <= LIMITE_CONTEXTO:
             break
-        if l.startswith("- **") and not l.startswith(APONTA_ANTIGAS):
+        marca = l[4:l.find(":**")] if ":**" in l else ""
+        if l.startswith("- **") and not l.startswith(APONTA_ANTIGAS) and not re.search(r"dono|auditoria", marca):  # essas ficam (auditoria, 26/11)
             tiradas.append(l); linhas[i] = None; sobra -= len(l) + 1
     if not tiradas:
         return txt, []

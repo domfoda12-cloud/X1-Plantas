@@ -15,9 +15,10 @@ const ARGS = {
 };
 
 // valor de mentira na forma do schema; "saida" de programa devolve um JSON plausível para cada comando
+let QUEBRADO = false;  // 2ª passada: todo programa devolve lixo e a Vera diz SIM; nenhum fluxo pode aprovar
 function falso(schema, prompt) {
   if (!schema) return 'ok';
-  if (schema.enum) return schema.enum[1] || schema.enum[0];
+  if (schema.enum) return QUEBRADO ? schema.enum[0] : (schema.enum[1] || schema.enum[0]);
   switch (schema.type) {
     case 'object': {
       const o = {};
@@ -34,6 +35,7 @@ function falso(schema, prompt) {
   }
 }
 function saidaDe(p) {
+  if (QUEBRADO && !p.includes('registrar') && !p.includes('prova-')) return 'Traceback (most recent call last):\n  File x';
   if (p.includes('fluxo.py texto')) return 'Comando rodado.\n[{"linha": 3, "tipo": "erro", "msg": "frase vetada: x"}]';
   if (p.includes('fluxo.py pagina')) return '{"texto": "t", "achados": [{"linha": 1, "tipo": "erro", "msg": "m"}]}';
   if (p.includes('fluxo.py passe')) return '{"ok": false, "erros": ["e"]}';
@@ -55,6 +57,7 @@ async function ensaiar(nome) {
   const r = await fn(agent, parallel, null, () => {}, () => {}, budget, ARGS[nome], null);
   if (!r || typeof r !== 'object') throw new Error('não devolveu objeto');
   if (nome !== 'prova-de-entrada' && !r.registro) throw new Error('não montou o registro da rodada');
+  if (QUEBRADO && /^(aprovad|pronto)/.test(String(r.resultado))) throw new Error(`aprovou com o programa quebrado: "${r.resultado}"`);
   return n;
 }
 
@@ -63,8 +66,11 @@ async function ensaiar(nome) {
   for (const f of fs.readdirSync(PASTA).filter(f => f.endsWith('.js')).sort()) {
     const nome = f.replace(/\.js$/, '');
     if (!ARGS[nome]) { console.log(`[ERRO] ${nome}: sem args de ensaio em ferramentas/fluxos-ensaio.cjs`); falhou++; continue; }
-    try { console.log(`[OK ] ${nome}: ensaio até o fim (${await ensaiar(nome)} agentes de mentira)`); }
-    catch (e) { console.log(`[ERRO] ${nome}: ${e.message}`); falhou++; }
+    try {
+      QUEBRADO = false; const n = await ensaiar(nome);
+      QUEBRADO = true; await ensaiar(nome);
+      console.log(`[OK ] ${nome}: ensaio até o fim (${n} agentes de mentira) e falha fechada com o programa quebrado`);
+    } catch (e) { console.log(`[ERRO] ${nome}${QUEBRADO ? ' (programa quebrado)' : ''}: ${e.message}`); falhou++; }
   }
   process.exit(falhou ? 1 : 0);
 })();

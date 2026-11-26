@@ -12,7 +12,8 @@
    "programa:passe": 7537,
    "fatos:opus": 17241,
    "vera": 29333
-  }
+  },
+  "tokens_ferramenta": 929300
  },
  "conferidores": [
   {
@@ -95,5 +96,15 @@
  "perguntas_ao_dono": [
   "Nada novo para o dono nesta passada. As 19 perguntas da seção 5 continuam abertas, e não decidi nenhuma delas."
  ],
- "registrado_em": "2026-11-26T08:04:14Z"
+ "registrado_em": "2026-11-26T08:04:14Z",
+ "licoes_novas": [
+  "redator|condicao-do-dono-omitida",
+  "redator|suposicao-sobre-o-que-o-cliente-tem",
+  "redator|texto-mantido-contra-regra",
+  "redator|palavra-por-palavra-falso",
+  "redator|data-errada",
+  "redator|frase-falsa-para-quem-veio-do-anuncio",
+  "redator|desenho-do-lote-na-calculadora"
+ ],
+ "voltaram": []
 }

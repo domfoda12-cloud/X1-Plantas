@@ -42,6 +42,7 @@ const VERA = {
   required: ['veredito', 'condicoes'],
 }
 
+const ID_INICIO = budget.spent()  // identifica a rodada (o registrar recusa gravar duas vezes)
 const gasto = {}
 const conf = {}
 async function medir(nome, tipo, fn) {
@@ -74,7 +75,8 @@ const passes = []
 // 1. Programa
 phase('Programa')
 let prog = await rodar('programa:texto', `python3 ferramentas/fluxo.py texto ${A.arquivo} --json`)
-let lista = lerJson(prog && prog.saida, [])
+const ILEGIVEL = [{ linha: 0, tipo: 'erro', msg: 'saída do programa ilegível: conferência não feita' }]  // falha fechada (auditoria)
+let lista = lerJson(prog && prog.saida, ILEGIVEL)
 const errosIniciais = lista.filter(x => x.tipo === 'erro')
 conf['programa:texto'].achados_proprios = lista.length
 for (const e of errosIniciais) achados.push({ autor: AUTOR, chave: 'programa-' + e.msg.split(':')[0].replace(/[^a-z]+/gi, '-').toLowerCase(), texto: `linha ${e.linha}: ${e.msg}`, licao: `antes de entregar, rode python3 ferramentas/fluxo.py texto no arquivo: ${e.msg}`, achado_por: 'programa:texto' })
@@ -85,7 +87,7 @@ let voltas = -1  // a primeira passada do autor é a conferência dele, não vol
 async function autor(oque) {
   voltas++
   const rotulo = voltas === 0 ? 'conferência própria' : `conserto ${voltas}`
-  return medir('autor', 'A', () => agent(
+  return medir('autor', 'F', () => agent(
     `Você é o autor deste texto público (${PEDIDO}). Arquivo: ${A.arquivo}. Só pode editar esse arquivo.\n\n` +
     `O que conferir e consertar agora:\n${oque}\n\n` +
     `Depois, confira o texto contra a sua lista "Antes de mandar ao Revisor" em contexto/${AUTOR}.md, item por item, e conserte o que falhar. ` +
@@ -102,7 +104,7 @@ passes.push(passe)
 async function conferirDeNovo() {
   const t = await rodar('programa:texto', `python3 ferramentas/fluxo.py texto ${A.arquivo} --json`)
   const p = await rodar('programa:passe', `python3 ferramentas/fluxo.py passe - --publico <<'FIM'\n${JSON.stringify(passe)}\nFIM`)
-  return { erros: lerJson(t && t.saida, []).filter(x => x.tipo === 'erro'), passe: lerJson(p && p.saida, { ok: false, erros: ['saída ilegível'] }) }
+  return { erros: lerJson(t && t.saida, ILEGIVEL).filter(x => x.tipo === 'erro'), passe: lerJson(p && p.saida, { ok: false, erros: ['saída ilegível'] }) }
 }
 let depois = await conferirDeNovo()
 if ((depois.erros.length || !depois.passe.ok) && voltas < 2) {
@@ -135,17 +137,19 @@ phase('Vera')
 const vera = await medir('vera', 'A', () => agent(
   `Leia uma vez, como vai ao público, o texto em ${A.arquivo} (${PEDIDO}). Dê o veredito (SIM, SIM SE, NÃO). ` +
   `Em SIM SE ou NÃO, cada condição com o trecho, o motivo e uma lição de uma linha para o autor. ` +
-  `Já passou pelo programa de frases vetadas e pela conferência de fatos; o passe do autor: ${JSON.stringify(passe)}.`,
+  `O programa, na última passada: ${depois.erros.length} erro(s) ${JSON.stringify(depois.erros.map(x => x.msg)).slice(0, 1500)}; passe ${depois.passe.ok ? 'certo' : 'com erro: ' + JSON.stringify(depois.passe.erros)}. ` +
+  `Programa e fatos não pegam tudo: leia como se ninguém tivesse lido antes. Passe do autor: ${JSON.stringify(passe)}.`,
   { label: 'vera (revisora de risco)', phase: 'Vera', agentType: 'revisor-de-risco', schema: VERA }))
 for (const c of (vera && vera.condicoes) || []) achados.push({ autor: AUTOR, ...c, achado_por: 'vera' })
 conf['vera'].achados_proprios = ((vera && vera.condicoes) || []).length
-let resultado = !vera ? 'vai ao dono (Vera não respondeu)' : vera.veredito === 'SIM' ? 'aprovado' : vera.veredito === 'NÃO' ? 'vetado: vai ao dono' : 'SIM SE'
+const limpo = () => !depois.erros.length && depois.passe.ok  // aprovado só com prova positiva do programa
+let resultado = !vera ? 'vai ao dono (Vera não respondeu)' : vera.veredito === 'SIM' ? (limpo() ? 'aprovado' : 'vai ao dono (Vera disse SIM, mas o programa tem erro em aberto)') : vera.veredito === 'NÃO' ? 'vetado: vai ao dono' : 'SIM SE'
 if (vera && vera.veredito === 'SIM SE') {
   if (voltas < 2) {
     passe = await autor('Aplique as condições da Vera, uma por uma, sem mudar mais nada:\n' + vera.condicoes.map(c => `- ${c.texto}`).join('\n'))
     passes.push(passe)
     depois = await conferirDeNovo()
-    resultado = depois.erros.length || !depois.passe.ok ? 'vai ao dono (conserto não passou no programa)' : 'aprovado com as condições da Vera aplicadas'
+    resultado = !limpo() ? 'vai ao dono (conserto não passou no programa)' : 'aprovado com as condições da Vera aplicadas'
   } else {
     resultado = 'vai ao dono (2 voltas gastas; condições da Vera em aberto)'
   }
@@ -153,11 +157,18 @@ if (vera && vera.veredito === 'SIM SE') {
 
 // 5. Colheita: registro, gasto e lições, sozinhos
 phase('Colheita')
+
+// fecho por programa: o fluxo não pode ter mexido em ebook/saida/ nem em projetos.py (auditoria, 26/11)
+const guarda = await rodar('programa:guarda', 'git status --porcelain -- ebook/saida ebook/plantas/projetos.py; echo FIM_GUARDA')
+const mexeu = !guarda || !/FIM_GUARDA/.test(String(guarda.saida)) || String(guarda.saida).split('FIM_GUARDA')[0].trim() !== ''
+if (mexeu) resultado = 'PAROU: ebook/saida/ ou projetos.py mudaram (ou a conferência não respondeu); o Maestro olha antes de tudo'
 const registro = {
+  id: `${A.ficha || '-'}:${String(A.arquivo || A.fonte || A.rascunho || A.proposta).slice(0, 60)}:${ID_INICIO}`,
   fluxo: 'texto-publico', peca: A.arquivo, ficha: A.ficha || '-', resultado, voltas,
   gasto: { tokens_saida: Object.values(gasto).reduce((s, x) => s + x, 0), por_conferidor: gasto },
   conferidores: Object.values(conf),
   achados: achados.map(a => ({ autor: a.autor, chave: a.chave, texto: String(a.texto).slice(0, 300), licao: String(a.licao || '').slice(0, 300), achado_por: a.achado_por })),
+  n_achados: achados.length,
   perguntas_ao_dono: passe ? passe.perguntas_ao_dono : [],
 }
 const reg = await agent(
