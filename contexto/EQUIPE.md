@@ -24,8 +24,7 @@
 | `revisor-de-risco` (Fable, veto) | Honestidade, lei: uma leitura, peça montada | Promessa sem lastro? A correção |
 | `supervisor` (Fable) | Socorro, auditoria, referências | A causa; o que falta |
 | `ajudante` (Haiku) | Pessoal do dono | O resultado, curto |
-| `planejador` (Opus) | Passo a passo | Agora, depois, esperando o dono |
-| `organizador` (Opus) | Monte em grupos | Grupos de 3 a 7, com ordem |
+| `planejador` (Opus) | Passo a passo; monte em grupos (desde 26/11) | Agora, depois, esperando o dono; grupos de 3 a 7, com ordem |
 
 ## Veto
 

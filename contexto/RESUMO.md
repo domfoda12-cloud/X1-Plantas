@@ -21,7 +21,7 @@
 - Documentos que se contradizem estão listados em `dono/TEXTOS-DESATUALIZADOS.md`: enquanto o item estiver lá, vale a regra mais recente (`dono/TEXTOS-DESATUALIZADOS.md`).
 <!-- /essencial -->
 
-## Os 23 documentos
+## Os 22 documentos
 
 ### [Regras de convivência da equipe](CONVIVENCIA.md)
 
@@ -35,7 +35,7 @@ Dono, 22/11/2026: cada agente sabe a sua função e o que acrescentar a cada pro
 
 Seções: A cada prompt; Os papéis; Veto; Fronteiras; Economia; Tempo livre; Prompt sem papel.
 
-Tamanho: 627 palavras.
+Tamanho: 623 palavras.
 
 ### [Placar do veto (gerado: não edite)](PLACAR.md)
 
@@ -155,14 +155,6 @@ Seções: Decisões do dono que valem para você; Lições.
 
 Tamanho: 670 palavras.
 
-### [Contexto do Organizador](organizador.md)
-
-Só o que importa para este papel. Leia antes o quadro. Você separa um monte grande em grupos pequenos, com nome, ordem e tamanho tratável. Você propõe; não move nem apaga.
-
-Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
-
-Tamanho: 195 palavras.
-
 ### [Contexto do Pesquisador](pesquisador.md)
 
 Só o que importa para este papel. Antes de trabalhar, leia o quadro. O resumo geral está em `CONTEXTO.md`; o histórico completo, em `CONTEXTO-HISTORICO.md` (abra só se precisar de um detalhe antigo). O resumo da última tarefa: `entregas/ULTIMO.md`, só se a sua tarefa continua a anterior.
@@ -173,11 +165,11 @@ Tamanho: 392 palavras.
 
 ### [Contexto do Planejador](planejador.md)
 
-Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Você não executa.
+Só o que importa para este papel. Leia antes o quadro. Você diz o passo a passo: o que fazer agora, o que vem depois e o que espera o dono. Desde 26/11 você também separa um monte grande em grupos pequenos (era o organizador). Você não executa: propõe; não move nem apaga.
 
 Seções: Decisões do dono que valem para você; Em aberto com você; Leia barato; Lições.
 
-Tamanho: 766 palavras.
+Tamanho: 836 palavras.
 
 ### [Contexto do Redator](redator.md)
 
